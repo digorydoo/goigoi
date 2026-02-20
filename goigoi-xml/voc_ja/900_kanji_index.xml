@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <kanji>
+        <!--
+            These are manual kanji-index corrections. They will override the levels extracted by extractKanjiList,
+            which is based on the levels of the words they appear in.
+        -->
+
+        <!-- N5 according to jlptstudy.net -->
+        <set lvl="n5">一七万三上下中九二五人今休会何先入八六円出分前北十千午半南友口古右名四国土外多大</set>
+        <set lvl="n5">天女子学安小少山川左年店後手新日時書月木本来東校母毎気水火父生男白百目社空立耳聞</set>
+        <set lvl="n5">花行西見言話語読買足車週道金長間雨電食飲駅高魚</set>
+
+        <!-- N4 according to jlptstudy.net (altough I moved some) -->
+        <set lvl="n4">不世主代以低住借光別力区医合味品員回地堂場売屋森業菜験室工市帰度建弱強思急悪意教</set>
+        <set lvl="n4">文旅族映昼暑暗曜有服考者習首歌止正民注洋洗漢牛特産用画界病発県着短研秋究紙終館顔</set>
+        <set lvl="n4">飯親計試説貸質走起軽送通進運都野銀開院集音頭題</set>
+
+        <!-- I force these to N5 even though jlptstudy.net rates them N4 -->
+        <set lvl="n5">乗事京仕体作使便働元兄写真冬切勉動去同図夏夜太好姉始字家寒広引所持料方早明春朝村</set>
+        <set lvl="n5">林楽歩死池海理田知私肉自色英薬赤転近遠門青鳥物町</set>
+
+        <!-- N3 according to jlptstudy.net (although I moved some) -->
+        <set lvl="n3">丁争付令仲伝位例係倉倍候停健側億兆児全共兵具典冷刀列利刷副功加類飛貨貯費</set>
+        <set lvl="n3">助努労勇勝包協博印原参反受史司各向告命和唱商喜器囲固園坂型士夫録関郡里量</set>
+        <set lvl="n3">央失委季孫完官定実客宮害察局岩岸州巣差希帯帳平底府庫庭康式弓形役未遊達選</set>
+        <set lvl="n3">径徒得必念想愛感成戦才打投折拾挙改放救敗散数整旗昔星昭景晴曲望期陸追速連</set>
+        <set lvl="n3">札材束松板柱栄根梅械植極標橋機欠歴殺毒氏求汽法波泣泳流路麦辞農返養談議訓</set>
+        <set lvl="n3">浅浴消深清温湖湯満漁灯炭然焼照熱牧玉王球由申畑登皮省矢礼祝票賞陽身軍輪詩</set>
+        <set lvl="n3">祭福科秒種積章童競笛第等算管箱節粉紀約級細組給絵線置羊羽老育鼻馬隊静順課</set>
+        <set lvl="n3">胃脈腸臣航船良芸芽苦落葉街衣要観</set>
+
+        <!-- I forced these to N4 even though jlptstudy.net rates them N3 -->
+        <set lvl="n4">歯毛点鳴米糸美草虫血覚角辺部酒雪雲面願谷豆象貝負竹氷油丸予公</set>
+
+        <!-- Rated N4, because they appear in GENKI1 kanji section -->
+        <set lvl="n4" rem="GENKI1 p.346">々</set>
+
+        <!-- Rated N4, because they appear in GENKI2 kanji section -->
+        <set lvl="n4" rem="GENKI2 p.274">特港</set>
+        <set lvl="n4" rem="GENKI2 p.281">彼代留族親急医者</set>
+        <set lvl="n4" rem="GENKI2 p.287">意味注寺借走場建地鉄通</set>
+        <set lvl="n4" rem="GENKI2 p.293">世界考開運教室以</set>
+        <set lvl="n4" rem="GENKI2 p.299">野習歳集発表品活結婚</set>
+        <set lvl="n4" rem="GENKI2 p.306">的洋服堂力授業試験貸館終宿題</set>
+        <set lvl="n4" rem="GENKI2 p.313">様不漢卒工研究質</set>
+        <set lvl="n4" rem="GENKI2 p.321">止枚両無払笑絶対痛最続</set>
+        <set lvl="n4" rem="GENKI2 p.328">信経若送幸計遅配</set>
+        <set lvl="n4" rem="GENKI2 p.334">記銀回用末残説案内守</set>
+        <set lvl="n4" rem="GENKI2 p.340">顔悲怒違比調化横相</set>
+
+        <!-- Rated N5, even though they appear in GENKI2 kanji section -->
+        <set lvl="n5" rem="GENKI2 p.313">問</set>
+        <set lvl="n5" rem="GENKI2 p.321">皿声茶心</set>
+        <set lvl="n5" rem="GENKI2 p.328">風犬台初弟妹重</set>
+        <set lvl="n5" rem="GENKI2 p.334">黒待番夕忘</set>
+        <set lvl="n5" rem="GENKI2 p.340">変果答</set>
+
+        <!--
+           Jisho kanji details JLPT levels may not be accurate:
+           jisho rates 果 as N3 even though it appears in GENKI2 kanji section
+           jisho rates 結 as N1 even though it appears in GENKI2 kanji section
+           jisho rates 無 as Nx even though it appears in GENKI2 kanji section
+           etc.
+        -->
+
+        <!--
+            I disagree with jisho kanji details.
+            For instance, jisho has nx for 蹴, but 蹴る is an n2 word and not marked as usually in kana; but if it's
+            a kanji that hardly anybody knows, the word should be usually in kana. I moved it from nx to n1 instead.
+        -->
+        <set lvl="n5">靴晩背号曇乳卵傘取閉勤吹困可辛丈次昨当石呂机棚箸猫邪供易</set>
+        <set lvl="n4">椅飴他誰忙甘汚危狭難嫌押呼並聴脱弾咲座寝貼疲降灰匹冊君僕直治優</set>
+        <set lvl="n3">匂咳噛殆坊張厚尋描叩泉俺</set>
+        <set lvl="n2">嘩喧痩鹸濡鍵誘</set>
+        <set lvl="n1">遣噌碗醤馳賑蹴</set>
+
+        <!-- Rated N4 according to jisho kanji details -->
+        <set lvl="n4">有室教題族洋習漢野</set>
+
+        <!-- Rated N3 according to jisho kanji details -->
+        <set lvl="n3">静構欲吸頼渡遊成居側雑箱局辞段差腹散除窓官警関徒達機飛険財交皆幾緒祖</set>
+        <set lvl="n3">込常非杯偶確適単恥怖迎訪増亡倒眠暮決戻探捕盗逃過似越途因支術際規政慣割</set>
+        <set lvl="n3">舞神存夢席寄妻値済髪宅務退報指娘息性師観参加頂御処刻</set>
+
+        <!-- Rated N2 according to jisho kanji details -->
+        <set lvl="n2">薄黄緑磨被筆誌郵筒封菓塩階喫蔵濯掃瓶紅符奥勢練砂悩績専券税布荷帽零涼戸詰</set>
+        <set lvl="n2">個久複簡珍硬片換伺混移触届祈召塗捨捜沸泊替介紹拝震技貿則周復講絡律隅裏畳</set>
+        <set lvl="n2">団贈郊踊棒泥柔将綿袋島枝腕床駐普減編乾再</set>
+
+        <!-- Rated N1 according to jisho kanji details -->
+        <set lvl="n1">隣締撮跳履鉛鏡廊玄縦暇糖誕緊攻保眼豚弁巡派麗綺煩暖伯懸暫駄寧盛敵素寂酷舎</set>
+        <set lvl="n1">厳堅謝飼揺騒驚褒飾漬頑致仰踏滑壊呉渇覧展興慮剤障義携房為臭趣壁訳翻射漫</set>
+        <set lvl="n1">絹釣故嬢護看輩如陰免嬉扇抵痴蚊殴詐欺塾也叶又宜智悠</set>
+
+        <!-- Rated Nx according to jisho kanji details -->
+        <set lvl="-">鞄斯頃貰苛筈兎喉萄葡髭騙〜</set>
+
+        <!-- By school year https://en.wikipedia.org/wiki/Ky%C5%8Diku_kanji -->
+        <set schoolyear="1">
+            一二三四五六七八九十百千上下左右中大小月日年早木林山川土空田天生花草虫犬人名女男
+            子目耳口手足見音力気円入出立休先夕本文字学校村町森正水火玉王石竹糸貝車金雨赤青白
+        </set>
+        <set schoolyear="2">
+            数多少万半形太細広長点丸交光角計直線矢弱強高同親母父姉兄弟妹自友体毛頭顔首心時曜
+            朝昼夜分週春夏秋冬今新古間方北南東西遠近前後内外場地国園谷野原里市京風雪雲池海岩
+            星室戸家寺通門道話言答声聞語読書記紙画絵図工教晴思考知才理算作元食肉馬牛魚鳥羽鳴
+            麦米茶色黄黒来行帰歩走止活店買売午汽弓回会組船明社切電毎合当台楽公引科歌刀番用何
+        </set>
+        <set schoolyear="3">
+            丁世両主乗予事仕他代住使係倍全具写列助勉動勝化区医去反取受号向君味命和品員商問坂
+            央始委守安定実客宮宿寒対局屋岸島州帳平幸度庫庭式役待急息悪悲想意感所打投拾持指放
+            整旅族昔昭暑暗曲有服期板柱根植業様横橋次歯死氷決油波注泳洋流消深温港湖湯漢炭物球
+            由申界畑病発登皮皿相県真着短研礼神祭福秒究章童笛第筆等箱級終緑練羊美習者育苦荷落
+            葉薬血表詩調談豆負起路身転軽農返追送速進遊運部都配酒重鉄銀開院陽階集面題飲館駅鼻
+        </set>
+        <set schoolyear="4">
+            不争付令以仲伝位低例便信倉候借停健側働億兆児共兵典冷初別利刷副功加努労勇包卒協単
+            博印参史司各告周唱喜器囲固型堂塩士変夫失好季孫完官害察巣差希席帯底府康建径徒得必
+            念愛成戦折挙改救敗散料旗昨景最望未末札材束松果栄案梅械極標機欠歴残殺毒氏民求治法
+            泣浅浴清満漁灯無然焼照熱牧特産的省祝票種積競笑管節粉紀約結給続置老胃脈腸臣航良芸
+            芽英菜街衣要覚観訓試説課議象貨貯費賞軍輪辞辺連達選郡量録鏡関陸隊静順願類飛飯養験
+        </set>
+        <set schoolyear="5">
+            久仏仮件任似余価保修俵個備像再刊判制券則効務勢厚句可営因団圧在均基報境墓増夢妻婦
+            容寄富導居属布師常幹序弁張往復徳志応快性恩情態慣承技招授採接提損支政故敵断旧易暴
+            条枝査格桜検構武比永河液混減測準演潔災燃版犯状独率現留略益眼破確示祖禁移程税築精
+            素経統絶綿総編績織罪群義耕職肥能興舌舎術衛製複規解設許証評講謝識護豊財貧責貸貿賀
+            資賛質輸述迷退逆造過適酸鉱銅銭防限険際雑非預領額飼
+        </set>
+        <set schoolyear="6">
+            並乱乳亡仁供俳値傷優党冊処刻割創劇勤危卵厳収后否吸呼善困垂城域奏奮姿存孝宅宇宗宙
+            宝宣密寸専射将尊就尺届展層己巻幕干幼庁座延律従忘忠憲我批担拝拡捨探推揮操敬映晩暖
+            暮朗机枚染株棒模権樹欲段沿泉洗派済源潮激灰熟片班異疑痛皇盛盟看砂磁私秘穀穴窓筋策
+            簡糖系紅納純絹縦縮署翌聖肺背胸脳腹臓臨至若著蒸蔵蚕衆裁装裏補視覧討訪訳詞誌認誕誠
+            誤論諸警貴賃遺郵郷針鋼閉閣降陛除障難革頂骨
+        </set>
+        <!--
+            jisho says 'taught in junior high' for these, so maybe schoolyear="7"
+            扇俺蹴
+        -->
+
+        <!--
+            Visually similar kanjis.
+               Do not include non-Japanese characters, because doing so could lead to missing glyph problems in Goigoi.
+            Also, learners should be presented characters that they're going to learn at some point; presenting
+            additional characters only leads to confusion.
+               Note that kanjis that are not used by any word cannot be used here, because they are removed from the
+            list of kanjis by frequency before the check against non-standard kanjis is performed.
+               Note that it's OK to have just two kanjis in a group, because Goigoi multiplies the possibilities for
+            words that are made of multiple kanjis.
+        -->
+        <dont_confuse>人入</dont_confuse>
+        <dont_confuse>犬太</dont_confuse>
+        <dont_confuse>大六穴立</dont_confuse>
+        <dont_confuse>木本体休</dont_confuse>
+        <dont_confuse>夫矢失央</dont_confuse><!-- 夫 and 末 are too similar -->
+        <dont_confuse>十土末</dont_confuse><!-- 土 and 士 are too similar -->
+        <dont_confuse>上士止吐</dont_confuse>
+        <dont_confuse>三川山出</dont_confuse>
+        <dont_confuse>父交</dont_confuse>
+        <dont_confuse>来米光半</dont_confuse>
+        <dont_confuse>先洗缶</dont_confuse>
+        <dont_confuse>文才丈又</dont_confuse>
+        <dont_confuse>仕壮針汁</dont_confuse>
+        <dont_confuse>行作任件</dont_confuse>
+        <dont_confuse>天元示完</dont_confuse>
+        <dont_confuse>年牛午生</dont_confuse>
+        <dont_confuse>千チ干平</dont_confuse>
+        <dont_confuse>手毛未テ</dont_confuse>
+        <dont_confuse>王正玉主</dont_confuse>
+        <dont_confuse>方万坊肪</dont_confuse>
+        <dont_confuse>五互瓦</dont_confuse>
+        <dont_confuse>写与号汚</dont_confuse>
+        <dont_confuse>工功虹紅</dont_confuse>
+        <dont_confuse>不下丁</dont_confuse>
+        <dont_confuse>刀力九丸</dont_confuse>
+        <dont_confuse>刃切初幼</dont_confuse>
+        <dont_confuse>クマ々</dont_confuse>
+        <dont_confuse>日白目自</dont_confuse>
+        <dont_confuse>月耳母身</dont_confuse>
+        <dont_confuse>兄豆克</dont_confuse>
+        <dont_confuse>祝況児視</dont_confuse>
+        <dont_confuse>競鋭脱説</dont_confuse>
+        <dont_confuse>血皿且旧</dont_confuse>
+        <dont_confuse>甘音昔普</dont_confuse>
+        <dont_confuse>其基甚碁</dont_confuse>
+        <dont_confuse>見貝具臭</dont_confuse>
+        <dont_confuse>買員貴景</dont_confuse>
+        <dont_confuse>覧貸貨賃</dont_confuse>
+        <dont_confuse>貿質貧資</dont_confuse>
+        <dont_confuse>積漬潰演</dont_confuse>
+        <dont_confuse>算県省昇</dont_confuse>
+        <dont_confuse>宿直値</dont_confuse>
+        <dont_confuse>営労栄賞</dont_confuse>
+        <dont_confuse>覚党堂常</dont_confuse>
+        <dont_confuse>学字宇宅</dont_confuse>
+        <dont_confuse>了子予</dont_confuse>
+        <dont_confuse>町釘頂</dont_confuse>
+        <dont_confuse>竹付打灯</dont_confuse>
+        <dont_confuse>村材対</dont_confuse>
+        <dont_confuse>早卓草章</dont_confuse>
+        <dont_confuse>田申由曲</dont_confuse>
+        <dont_confuse>苗笛宙</dont_confuse>
+        <dont_confuse>単卑里黒</dont_confuse>
+        <dont_confuse>胃畳塁異</dont_confuse>
+        <dont_confuse>果巣菓東</dont_confuse>
+        <dont_confuse>界思男鬼</dont_confuse>
+        <dont_confuse>車重乗軍</dont_confuse>
+        <dont_confuse>黄典勇横</dont_confuse>
+        <dont_confuse>毎海梅悔</dont_confuse>
+        <dont_confuse>番審畜蓄</dont_confuse>
+        <dont_confuse>略細袖畑</dont_confuse>
+        <dont_confuse>弾禅神戦</dont_confuse>
+        <dont_confuse>副幅福塩</dont_confuse>
+        <dont_confuse>押挿捜縄</dont_confuse>
+        <dont_confuse>増僧憎贈</dont_confuse>
+        <dont_confuse>留瑠溜湧</dont_confuse>
+        <dont_confuse>観親現規</dont_confuse>
+        <dont_confuse>背育骨滑</dont_confuse>
+        <dont_confuse>明昭昨肥</dont_confuse>
+        <dont_confuse>肘勝胴脳</dont_confuse>
+        <dont_confuse>朝潮胡湖</dont_confuse>
+        <dont_confuse>恨根朗期</dont_confuse>
+        <dont_confuse>棚脚膨胸</dont_confuse>
+        <dont_confuse>気汽</dont_confuse>
+        <dont_confuse>分公谷介</dont_confuse>
+        <dont_confuse>今会舎含</dont_confuse>
+        <dont_confuse>合命令冷</dont_confuse>
+        <dont_confuse>金余全企</dont_confuse>
+        <dont_confuse>傘卒爽念</dont_confuse>
+        <dont_confuse>答等笑策</dont_confuse>
+        <dont_confuse>管節筆筒</dont_confuse>
+        <dont_confuse>寺侍詩封</dont_confuse>
+        <dont_confuse>時持待特</dont_confuse>
+        <dont_confuse>事書妻喜</dont_confuse>
+        <dont_confuse>専薄博尊</dont_confuse>
+        <dont_confuse>尋噂奪彙</dont_confuse>
+        <dont_confuse>寝帰掃婦</dont_confuse>
+        <dont_confuse>国園図団</dont_confuse>
+        <dont_confuse>固因困囲</dont_confuse>
+        <dont_confuse>回可向</dont_confuse>
+        <dont_confuse>司同伺個</dont_confuse>
+        <dont_confuse>衣表依俵</dont_confuse>
+        <dont_confuse>何句旬匂</dont_confuse>
+        <dont_confuse>俺偶僚僅</dont_confuse>
+        <dont_confuse>但伯借伸</dont_confuse>
+        <dont_confuse>候喉係孫</dont_confuse>
+        <dont_confuse>停傷修偉</dont_confuse>
+        <dont_confuse>慣損憤慎</dont_confuse>
+        <dont_confuse>憶臆情清</dont_confuse>
+        <dont_confuse>慌慨懐壊</dont_confuse>
+        <dont_confuse>快決沈悩</dont_confuse>
+        <dont_confuse>性姓社祉</dont_confuse>
+        <dont_confuse>州訓順側</dont_confuse>
+        <dont_confuse>刊判列例</dont_confuse>
+        <dont_confuse>到倒割剰</dont_confuse>
+        <dont_confuse>剥創劇製</dont_confuse>
+        <dont_confuse>刺制剤剣</dont_confuse>
+        <dont_confuse>前削則揃測</dont_confuse>
+        <dont_confuse>別刷堀塀</dont_confuse>
+        <dont_confuse>円門問間</dont_confuse>
+        <dont_confuse>聞開閉閑</dont_confuse>
+        <dont_confuse>閣閲関</dont_confuse>
+        <dont_confuse>世地池他</dont_confuse>
+        <dont_confuse>言信訂計</dont_confuse>
+        <dont_confuse>記託訪討</dont_confuse>
+        <dont_confuse>訴証詐評</dont_confuse>
+        <dont_confuse>詰話読請</dont_confuse>
+        <dont_confuse>語悟設談</dont_confuse>
+        <dont_confuse>認課謎誘</dont_confuse>
+        <dont_confuse>論愉諸譜</dont_confuse>
+        <dont_confuse>誌誤誰護</dont_confuse>
+        <dont_confuse>譲謡謙嫌</dont_confuse>
+        <dont_confuse>識謝儲獄</dont_confuse>
+        <dont_confuse>謀講構溝</dont_confuse>
+        <dont_confuse>家象像稼</dont_confuse>
+        <dont_confuse>勿物</dont_confuse>
+        <dont_confuse>小少ホ</dont_confuse>
+        <dont_confuse>当ヨ</dont_confuse>
+        <dont_confuse>去法払拡</dont_confuse>
+        <dont_confuse>仏伝伎仮</dont_confuse>
+        <dont_confuse>収双牧版</dont_confuse>
+        <dont_confuse>狐狭猿猪</dont_confuse>
+        <dont_confuse>猫描独狼</dont_confuse>
+        <dont_confuse>拍担括措</dont_confuse>
+        <dont_confuse>拾捨捻</dont_confuse>
+        <dont_confuse>抗技抜扱</dont_confuse>
+        <dont_confuse>拝揮振抵</dont_confuse>
+        <dont_confuse>挟採揺援</dont_confuse>
+        <dont_confuse>探接挨換</dont_confuse>
+        <dont_confuse>掛搬捧擦</dont_confuse>
+        <dont_confuse>抑仰迎</dont_confuse>
+        <dont_confuse>包抱泡胞</dont_confuse>
+        <dont_confuse>電雷雪霊</dont_confuse>
+        <dont_confuse>雲雰曇零</dont_confuse>
+        <dont_confuse>震霧露霜</dont_confuse>
+        <dont_confuse>心必</dont_confuse>
+        <dont_confuse>ヒ七</dont_confuse>
+        <dont_confuse>化北比批</dont_confuse>
+        <dont_confuse>花死</dont_confuse>
+        <dont_confuse>島鳥鳴鳩</dont_confuse>
+        <dont_confuse>足促捉距</dont_confuse>
+        <dont_confuse>皇泉星是</dont_confuse>
+        <dont_confuse>提撮最</dont_confuse>
+        <dont_confuse>量豊農鼻</dont_confuse>
+        <dont_confuse>冒置羅罰</dont_confuse>
+        <dont_confuse>唱喧晴壇</dont_confuse>
+        <dont_confuse>灰圧厄辰</dont_confuse>
+        <dont_confuse>反皮度席</dont_confuse>
+        <dont_confuse>応床広庁</dont_confuse>
+        <dont_confuse>序府庶産</dont_confuse>
+        <dont_confuse>麻座庭廊</dont_confuse>
+        <dont_confuse>原源盾厚</dont_confuse>
+        <dont_confuse>庫康唐痩</dont_confuse>
+        <dont_confuse>疲疾病症</dont_confuse>
+        <dont_confuse>彼波被破</dont_confuse>
+        <dont_confuse>突空究充</dont_confuse>
+        <dont_confuse>客室窒</dont_confuse>
+        <dont_confuse>定宝宣害</dont_confuse>
+        <dont_confuse>型壁堅塗</dont_confuse>
+        <dont_confuse>望聖墜整</dont_confuse>
+        <dont_confuse>恋窓変麦</dont_confuse>
+        <dont_confuse>周週風嵐</dont_confuse>
+        <dont_confuse>調綱網銅</dont_confuse>
+        <dont_confuse>南滴商</dont_confuse>
+        <dont_confuse>百面画両</dont_confuse>
+        <dont_confuse>柵価倫偏</dont_confuse>
+        <dont_confuse>冊用再亜</dont_confuse>
+        <dont_confuse>声戸</dont_confuse>
+        <dont_confuse>内肉</dont_confuse>
+        <dont_confuse>巾市布友</dont_confuse>
+        <dont_confuse>在存有</dont_confuse>
+        <dont_confuse>古占店点</dont_confuse>
+        <dont_confuse>吉舌告活</dont_confuse>
+        <dont_confuse>辛幸束</dont_confuse>
+        <dont_confuse>左右石</dont_confuse>
+        <dont_confuse>妬拓研</dont_confuse>
+        <dont_confuse>砂砲碑硬</dont_confuse>
+        <dont_confuse>確磁碗腕</dont_confuse>
+        <dont_confuse>如好妊妖</dont_confuse>
+        <dont_confuse>妙姉娘</dont_confuse>
+        <dont_confuse>婚娠嫁嫉</dont_confuse>
+        <dont_confuse>嬉嬢</dont_confuse>
+        <dont_confuse>岩岸炭崇</dont_confuse>
+        <dont_confuse>駅訳沢択</dont_confuse>
+        <dont_confuse>騒験駆駄</dont_confuse>
+        <dont_confuse>馬為駐駒</dont_confuse>
+        <dont_confuse>首真宜査</dont_confuse>
+        <dont_confuse>夏復複宴</dont_confuse>
+        <dont_confuse>優腹陵悠</dont_confuse>
+        <dont_confuse>迫道追</dont_confuse>
+        <dont_confuse>息忠忘志</dont_confuse>
+        <dont_confuse>中虫史</dont_confuse>
+        <dont_confuse>仲沖泊油</dont_confuse>
+        <dont_confuse>恵悪寒塞</dont_confuse>
+        <dont_confuse>負漁魚急</dont_confuse>
+        <dont_confuse>色角危争</dont_confuse>
+        <dont_confuse>免逸勉晩</dont_confuse>
+        <dont_confuse>亀竜滝毒</dont_confuse>
+        <dont_confuse>静解触</dont_confuse>
+        <dont_confuse>水氷泳永</dont_confuse>
+        <dont_confuse>易場腸掲</dont_confuse>
+        <dont_confuse>欠次吹火</dont_confuse>
+        <dont_confuse>炊炒煩焼</dont_confuse>
+        <dont_confuse>歌欺欲歓</dont_confuse>
+        <dont_confuse>呂品叩</dont_confuse>
+        <dont_confuse>巨臣医</dont_confuse>
+        <dont_confuse>匹西酒四</dont_confuse>
+        <dont_confuse>配酔酢酷</dont_confuse>
+        <dont_confuse>忙亡</dont_confuse>
+        <dont_confuse>進唯推曜</dont_confuse>
+        <dont_confuse>権催堆濯</dont_confuse>
+        <dont_confuse>務絡路踊</dont_confuse>
+        <dont_confuse>部郡郊都</dont_confuse>
+        <dont_confuse>邪郭郵郷</dont_confuse>
+        <dont_confuse>阪阻防限</dont_confuse>
+        <dont_confuse>院降陥隊</dont_confuse>
+        <dont_confuse>険除陰陸</dont_confuse>
+        <dont_confuse>障際隠隣</dont_confuse>
+        <dont_confuse>陽階隅隙</dont_confuse>
+        <dont_confuse>新析祈所</dont_confuse>
+        <dont_confuse>断斬折</dont_confuse>
+        <dont_confuse>丘兵岳</dont_confuse>
+        <dont_confuse>哲暫漸脈</dont_confuse>
+        <dont_confuse>派浜近</dont_confuse>
+        <dont_confuse>辞執報服</dont_confuse>
+        <dont_confuse>的約酌釣</dont_confuse>
+        <dont_confuse>鍋鉄鉢銀</dont_confuse>
+        <dont_confuse>錠鐘録鑑</dont_confuse>
+        <dont_confuse>鎖鎮鏡境</dont_confuse>
+        <dont_confuse>長帳畏</dont_confuse>
+        <dont_confuse>発登澄</dont_confuse>
+        <dont_confuse>輪輸軒勤</dont_confuse>
+        <dont_confuse>動転働軌</dont_confuse>
+        <dont_confuse>加助効勧</dont_confuse>
+        <dont_confuse>埋理野</dont_confuse>
+        <dont_confuse>弱溺羽翻</dont_confuse>
+        <dont_confuse>引強張弧</dont_confuse>
+        <dont_confuse>弓弟沸第</dont_confuse>
+        <dont_confuse>走徒赴起</dont_confuse>
+        <dont_confuse>越超趣</dont_confuse>
+        <dont_confuse>召招紹沼</dont_confuse>
+        <dont_confuse>井丼共弁</dont_confuse>
+        <dont_confuse>供洪棋惜</dont_confuse>
+        <dont_confuse>羊洋並益</dont_confuse>
+        <dont_confuse>鮮詳群許</dont_confuse>
+        <dont_confuse>案実萎要</dont_confuse>
+        <dont_confuse>美業奉奏</dont_confuse>
+        <dont_confuse>委季秀香</dont_confuse>
+        <dont_confuse>売青責費</dont_confuse>
+        <dont_confuse>差春着看</dont_confuse>
+        <dont_confuse>義羨善養</dont_confuse>
+        <dont_confuse>議儀僕撲</dont_confuse>
+        <dont_confuse>巻港券挙</dont_confuse>
+        <dont_confuse>注住往柱</dont_confuse>
+        <dont_confuse>高富意億</dont_confuse>
+        <dont_confuse>童瞳憧裏</dont_confuse>
+        <dont_confuse>京哀宮官</dont_confuse>
+        <dont_confuse>涼温湯渡</dont_confuse>
+        <dont_confuse>味咲昧暗</dont_confuse>
+        <dont_confuse>叱叶吟呼</dont_confuse>
+        <dont_confuse>株殊珠妹</dont_confuse>
+        <dont_confuse>呆保凍陳</dont_confuse>
+        <dont_confuse>燥操繰綿</dont_confuse>
+        <dont_confuse>暮幕墓募</dont_confuse>
+        <dont_confuse>葉薬茶菜</dont_confuse>
+        <dont_confuse>森楽柔棄</dont_confuse>
+        <dont_confuse>染梨架築</dont_confuse>
+        <dont_confuse>台治沿始</dont_confuse>
+        <dont_confuse>殆鉛飴餌</dont_confuse>
+        <dont_confuse>貯貼粘</dont_confuse>
+        <dont_confuse>吏更使便</dont_confuse>
+        <dont_confuse>君伊</dont_confuse>
+        <dont_confuse>歩求赤参</dont_confuse>
+        <dont_confuse>糸系玄</dont_confuse>
+        <dont_confuse>素紫緊繋</dont_confuse>
+        <dont_confuse>私秋利称</dont_confuse>
+        <dont_confuse>移秒秘稀</dont_confuse>
+        <dont_confuse>程稿稽穏</dont_confuse>
+        <dont_confuse>種稲稚穫</dont_confuse>
+        <dont_confuse>和知短税</dont_confuse>
+        <dont_confuse>食倉良</dont_confuse>
+        <dont_confuse>飲館飯飽</dont_confuse>
+        <dont_confuse>眠眼睡唾</dont_confuse>
+        <dont_confuse>尻尾尿居</dont_confuse>
+        <dont_confuse>昼局届眉</dont_confuse>
+        <dont_confuse>屈掘屋握</dont_confuse>
+        <dont_confuse>展履属層</dont_confuse>
+        <dont_confuse>肩房扇扉</dont_confuse>
+        <dont_confuse>連運通遅</dont_confuse>
+        <dont_confuse>達遠違逮</dont_confuse>
+        <dont_confuse>遣還遭適</dont_confuse>
+        <dont_confuse>選遷遥透</dont_confuse>
+        <dont_confuse>辺込返述</dont_confuse>
+        <dont_confuse>送迷逆逃</dont_confuse>
+        <dont_confuse>退速遂遊</dont_confuse>
+        <dont_confuse>造途遇過</dont_confuse>
+        <dont_confuse>遜遡避</dont_confuse>
+        <dont_confuse>頭願頼顔</dont_confuse>
+        <dont_confuse>題頻預類</dont_confuse>
+        <dont_confuse>靴傾頃頑</dont_confuse>
+        <dont_confuse>女支安守</dont_confuse>
+        <dont_confuse>区枢欧殴</dont_confuse>
+        <dont_confuse>林杯机柄</dont_confuse>
+        <dont_confuse>校枕枚枝</dont_confuse>
+        <dont_confuse>桜板坂検</dont_confuse>
+        <dont_confuse>松格枠砕</dont_confuse>
+        <dont_confuse>棟様橋欄</dont_confuse>
+        <dont_confuse>械極標樹</dont_confuse>
+        <dont_confuse>植椅箱想</dont_confuse>
+        <dont_confuse>相組狙祖</dont_confuse>
+        <dont_confuse>粗料科斜</dont_confuse>
+        <dont_confuse>粉粋粒粧</dont_confuse>
+        <dont_confuse>精糖糧継</dont_confuse>
+        <dont_confuse>戻涙泥混</dont_confuse>
+        <dont_confuse>浴消浄津</dont_confuse>
+        <dont_confuse>浮流浅濡</dont_confuse>
+        <dont_confuse>激淡深添</dont_confuse>
+        <dont_confuse>慢漫渇湾</dont_confuse>
+        <dont_confuse>夜液宛夢</dont_confuse>
+        <dont_confuse>飛刑</dont_confuse>
+        <dont_confuse>夕久外多</dont_confuse>
+        <dont_confuse>名各冬条</dont_confuse>
+        <dont_confuse>以似乏及</dont_confuse>
+        <dont_confuse>吸処拠随</dont_confuse>
+        <dont_confuse>奇寄器</dont_confuse>
+        <dont_confuse>賛賢贅</dont_confuse>
+        <dont_confuse>替皆智習</dont_confuse>
+        <dont_confuse>暦歴磨魔</dont_confuse>
+        <dont_confuse>歯噛菌箇</dont_confuse>
+        <dont_confuse>奥恩愚患</dont_confuse>
+        <dont_confuse>位泣倍済</dont_confuse>
+        <dont_confuse>代式拭試</dont_confuse>
+        <dont_confuse>成戒或武</dont_confuse>
+        <dont_confuse>戚威歳蔵</dont_confuse>
+        <dont_confuse>残銭践裁</dont_confuse>
+        <dont_confuse>無焦集舞</dont_confuse>
+        <dont_confuse>城球救敷</dont_confuse>
+        <dont_confuse>改攻政故</dont_confuse>
+        <dont_confuse>致敵数教</dont_confuse>
+        <dont_confuse>取敢敬散</dont_confuse>
+        <dont_confuse>放倣旅族</dont_confuse>
+        <dont_confuse>旋施旗勘</dont_confuse>
+        <dont_confuse>恥聴職賑</dont_confuse>
+        <dont_confuse>幾機戴繊</dont_confuse>
+        <dont_confuse>難維雑離</dont_confuse>
+        <dont_confuse>感惑怒憩</dont_confuse>
+        <dont_confuse>受妥授愛</dont_confuse>
+        <dont_confuse>径怪軽鼓</dont_confuse>
+        <dont_confuse>後従縦疑</dont_confuse>
+        <dont_confuse>得律徳徐</dont_confuse>
+        <dont_confuse>御微徴徹</dont_confuse>
+        <dont_confuse>役投段没</dont_confuse>
+        <dont_confuse>殺殻殿股</dont_confuse>
+        <dont_confuse>航船舶般</dont_confuse>
+        <dont_confuse>容溶俗裕</dont_confuse>
+        <dont_confuse>老考孝劣</dont_confuse>
+        <dont_confuse>者煮暑署</dont_confuse>
+        <dont_confuse>著箸蓋</dont_confuse>
+        <dont_confuse>若苦革茸</dont_confuse>
+        <dont_confuse>英映芽苛</dont_confuse>
+        <dont_confuse>茂茎芸至</dont_confuse>
+        <dont_confuse>指脂詣能</dont_confuse>
+        <dont_confuse>龍籠態熊</dont_confuse>
+        <dont_confuse>乳乱札礼</dont_confuse>
+        <dont_confuse>卵即印叫</dont_confuse>
+        <dont_confuse>熱熟黙然</dont_confuse>
+        <dont_confuse>烈照燃蒸</dont_confuse>
+        <dont_confuse>落漢漠満</dont_confuse>
+        <dont_confuse>状献獣</dont_confuse>
+        <dont_confuse>兆桃眺跳</dont_confuse>
+        <dont_confuse>形彩彫影</dont_confuse>
+        <dont_confuse>氏民底低</dont_confuse>
+        <dont_confuse>紙紐紺絹</dont_confuse>
+        <dont_confuse>紀納紛絶</dont_confuse>
+        <dont_confuse>結続統綺</dont_confuse>
+        <dont_confuse>終経給絵</dont_confuse>
+        <dont_confuse>締絞純級</dont_confuse>
+        <dont_confuse>線緒練績</dont_confuse>
+        <dont_confuse>縮織縁縫</dont_confuse>
+        <dont_confuse>総緑編緩</dont_confuse>
+        <dont_confuse>術街衛衝</dont_confuse>
+        <dont_confuse>備捕痛補</dont_confuse>
+        <dont_confuse>建健鍵誕</dont_confuse>
+        <dont_confuse>姿努勢協</dont_confuse>
+        <dont_confuse>怖希帯滞</dont_confuse>
+        <dont_confuse>師肺飾諦</dont_confuse>
+        <dont_confuse>非俳悲罪</dont_confuse>
+        <dont_confuse>察票祭禁</dont_confuse>
+        <dont_confuse>盆盗盛盤監</dont_confuse>
+        <dont_confuse>敗財販賭</dont_confuse>
+        <dont_confuse>刻該咳核</dont_confuse>
+        <dont_confuse>髪警驚鬱</dont_confuse>
+
+        <!--
+            List by frequency
+            https://docs.google.com/spreadsheets/d/1MBYfKPrlST3F51KIKbAlsGw1x4c_atuHfPwSSRN5sLs/edit?pli=1#gid=496425456
+        -->
+        <freq>
+            人日一大出本中行年分時上事見生間会自合子方手前国者入場地後学気月目言下部新的長発
+            同動高理内体家作代社度通思立来用定当物明実対最力今小金話全意名業関書女知三外性山
+            田所二心成以取現表開文多不持道法世東化先近問回主連記市戦考無相野数教要機感水情私
+            使面変結第安正原画川経信初次品何報決海活集向点強少民期平真語車加食員利題京公引口
+            在受重身解神付界調男能切和別電十特聞屋保天選元続様味指楽有円空都木政組産島美運得
+            制直流料北校確店番治売進約着込終件送村可風必朝仕議死過説広始際万白果置町葉半足好
+            違四常式参五勝位認交計格配務頭西支落然土起住他線応親予状音古形達共氏示反良論院台
+            声容八色帰転伝彼設愛想係石張放由士権役質乗告県太工夫注供止光価門判育悪残早待千観
+            術夜投構種義返団読九限買歩米病井命基資総断追消打戸象南存優職態号商改歳郎済軍字区
+            母藤呼図顔急花映再両検客念条馬族任笑側求素助宮験室等府登難松写営備査個友局路介像
+            細単科例首建満館増福失段研造六影火視演案歌識技深若座比勢武父青害究師非横離望去収
+            英提王規覚証七殺降試型黒負根医赤働量派各器谷右護史割差周移類録走守岡振談答統球申
+            居御旅園程異吉官評百接毎左兵準沢久与処速末頼城突独州争製衛値辺帯江境渡極寄低階習
+            橋絶紙銀除域宅姿春撃協系苦週修越戻企材展未佐策費具遠率管党熱鉄願崎抜察船夏復休労
+            防飛景幸完歴君巻宿曲警退波飲探載装庫故編効興施寺算源森蔵精減導酒香洋富普挙更隊農
+            囲軽専駅秋将為席遊版温健織響許背省及阪服押担血含領並婚薬激整清破息積芸換我伊肉便
+            給児緒丸雨適援疑林余雑静級焼額老険茶監紀草印舞志昨途税司環豊泉端河誰冷僕超玉星津
+            払角喜午従裏板株補散布街絵欲敗似頃推仲訪夢盛昭賞痛康留寝攻財庭密標授浜倒委被節況
+            順短般婦危模岩競略鮮堂課遺因著陸訳逆了療講港章障奥掛恐照鳥浮養圧述尾革練貴妻列描
+            坂永敵逃致替責博属善池之片皇困迎忘徳納裁聴暮諸植陽継羽奈紹底罪里曜枚簡傷房毛嫌承
+            抱亡称遅刻夕勤晴筋固秘娘衆創央折督震輪築徒届倉厳暗犯兄乱誌劇油爆岸札快弾恵皆腹就
+            禁候弱閉恋華染脱雪宗闘飯撮絡礼宇詳令雄典伸希拡祭混催触販弟群純討暴捕請採辞竹跡幕
+            否携抗敷賀倍魚充鹿壊則益功惑旧掲樹互犬秀骨隠遣韓射丁易仏依延悲拠眼俺占測己複甲吹
+            洗欠栄迷脳厚避齢頂仮踏刺航湯停借審幹昼吸層束索季眠扱昔柄荷徴壁救聖筆項魔隣衣腕妙
+            耳刊冬輸鳴露胸怒微卒薄操謝到驚沖針瞬窓包廃律歯締巨削髪誘泊丈稿郷訴宣黄繰至荒択泣
+            宝浦覧迫刑菜症幅袋融瀬麻杯縄昇砂詰損怖那殿庁駆牛雲貸床乳勉陣維翌災批免梅臣盤甘億
+            舎握躍姉皮濃阿緊裕浅捨悩箱縁憶滅燃儀績診奇腰寒憲籍幼範均疲傾矢券即肩剣票閣貨塩執
+            慮帝崩較汚副慣祖摘浴豆欧概塚努既煙句献湾購患寿誤縮玄郡仙熊誕彦募伴契騒臨看怪鈴尊
+            脚虫襲又妹祝敬智豪趣徹是猫詩童懸霊緑漢忠紅酸桜液勇杉衝才干招勧飾抑距陰輝盗晩穴頑
+            捜盟署奪輩鏡銭宙郵涙奏哲黙慢釈毒柳湖駄賃核埋巡沿獲潮沈鬼析釣帳須艦呂竜狙枝威也鼻
+            揺稲辛渋龍渉添堀併揚訓邪揮奴仁貧封還双透灯如刀芝柔賛坊邦詞炎剤懐繁彩狭排魅珍尽摩
+            畑姫却叫麗乾咲誠駐茂孫兼肌狂沼譲拝棄亀挑屈滑稼隆踊伏鶴耐臓勘侵唱漁控斎牧潜飼棒唯
+            旨往岐炭塗網貫銃酔汗仰預糸暖恥弘丹雇弥礎裂粉鑑秒暇悟掃浪没僚柱刷滞促羅暑序償冊俊
+            亜氷卓雅掘臭債垣丘軒履抵焦旗械尋熟腐孝慶吐殊歓偽砲漫顧絞敏吾綱圏託葬卵菊贈紫磨唐
+            貯眺墓拒枠尻遇誇舗祈忍悔戒遂随賢俗括忙脇尚俳魂嫁奉喫嬉旬菓翼肝慎靴縦偶潟奮硬虚匹
+            烈幻沙旦緩泳麦獄堅雰肥陥紛冒煮淡脈貢胞亭宜覆銘幾雷寛虎罰荘騎凍岳邸穂鎖浄糖寧寂恩
+            僧需幌誉隔藩溶笠棚斜涼伯猛梨斉桃孤湿云匠脂偉励酷漏謀乃鎌哀蒸愚滝舌塔栗征泥脅拾粧
+            噴駒拍浸倫塾寸稚傍朗癒隅垂巣獣抽鍋鋭晶召兆芳逸筒凄貼貞措姓汁慰畳菌叩剛偏峰狩揃泰
+            宴舟埼膨裸啓逮弁拓昌劣妊霧澤浩鍵翻撲軸欄膝殖涯帽紋傘皿棟綿克架冠柴遭惨粒灰撤葛洞
+            乏虐斬壇澄椅謎蓄挨貿彫廊庄李把摂扉顕粋睡犠佳覇疾袖潤鶏頻闇拶祉該惜径漂豚牲嵐陳嘉
+            壮徐盾呉芽拘祥蘭簿憂恒鎮偵珠机銅穏胃凡憎潔緯秩匂薦癖乙曇蓮衰凝廷披軟炉錦戯其鼓噂
+            陶瓶磁猿奨幡胆巧貝培耕蘇蛇盆嬢腸符塁鷹郊飽跳刃鉱縛鉢嶋粘茨綾践悠曹蹴溜弓侍此暦羊
+            暫漬桂膚辻筑鍛拳琴孔賊嘆痴菅掌附謙誓逢殴錯欺廻苗妖挿畜綺墨桐湧枕朱喪粗菱尺缶唇斗
+            潰尿濯稽肺据堪溝繊班矛燥阜胡箇庵妥捉扇訂滋崇訟疎酬縫枯挟喉喧釜膜栽慌旋爪於娠軌宰
+            拭股禅辰刈漠閲爵塞朴棋譜桑叔冗堤淵濡懇阻呪糧帆塊磯炊妨泡彰恨篠峠擦砕淳鴨婆甚敢眉
+            懲怠鬱剰斐洪鐘搭蓋擁呆褒宛昧猪卑喚餅愉幽某靖寮坪鋼慈弦曽媒唄腫頁諾籠狼覗詐鈍伺呈
+            遍蝶陵栃沸笛謡貌憧憩尼膳篇賭悦疫凶隙藍鉛昆笹零殻叱紳庶汰恭瓦窮辱駿芋稀弊伐肢循樽
+            諭椎儲峡傑濁騰瞳妄郭艇肪穫后碑忌勿嘩妃滴或霞柿迅但餌槽鳩賠遮搬萌戴赴幣吟穀胴蜂槍
+            痕暁絹尉爽飢猟囚戚渦拙憤隻渓禄赦翁閑薫酢碁厄璧醒遥酵汽茎畿楼盲扶粛衡裾隷陛墜吊抹
+            胎肯閥享伎俵卸遷杖拉箸紺贅窟曖詠叶僅錠勲唆嘘頓骸壌髄蜜擬挫篤捧醸丼顎蚊岬虹媛虜諦
+            艶襟墳乞妬牙怨餓狐鯨蛮巾串崖逐匿桁逝肖轄紐苛叙痩賜喝醜麓嫉朽堕累獅奔賄繋玩漆渇硫
+            猶腎錬詣弄勃侮枢鮎剖煩蛍瑠羨慕慨綻藻釘蔑舶畔酎臼娯雌宵琶塀罵肘冥詮剥麺侯悼癌溺芯
+            愁霜韻侶萎廉嗣凹謹睦拐斑瞭嗅炒薪捻且硝窯蟹搾酌矯淫紡碗窒咽准痺梗唾煎璃勅柵鯉惧帥
+            耗鋳礁臆儒泌栓桟屯繕婿采遡腺旺蔽脊抄瘍升濫俸吏凸棺坑淑勾庸壱姻賓堆鯛倣醤痢飴租漸
+            冶汎諮茸弔禍寡弧傲窃殉褐刹糾拷嚇嘲貪畏箋毀踪遜賦鮭憾喩款緻摯慄厘蚕鮫嘱斥嫡遵哺惰
+            陪舷畝羞餃氾捗彙罷詔辣衷弐酪恣賂迭諧逓倹頒虞丙謁墾斤訃謄繭痘沃劾塑憬璽朕楷錮剝頰
+            <!-- kanjis with unknown frequency -->
+            塡咳噛殆賑
+        </freq>
+    </kanji>
+</vocabulary>

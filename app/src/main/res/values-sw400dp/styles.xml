@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        e.g. my Samsung Galaxy S10
+        Note that these values will NOT be inherited by values-sw400dp-land
+    -->
+
+    <style name="MyLightTheme" parent="MyBaseLightTheme">
+        <item name="progStudyElementSpacing">4dp</item>
+        <item name="progStudyKeyboardLRPadding">24dp</item>
+        <item name="progStudyKeyboardTBPadding">16dp</item>
+        <item name="progStudyAnswerTextSize">30sp</item>
+        <item name="progStudyWhatToDoTextSize">14sp</item>
+        <item name="progStudyRevealedKanjiOrKanaTextSize">26sp</item>
+    </style>
+
+    <style name="MyDarkTheme" parent="MyBaseDarkTheme">
+        <item name="progStudyElementSpacing">4dp</item>
+        <item name="progStudyKeyboardLRPadding">24dp</item>
+        <item name="progStudyKeyboardTBPadding">16dp</item>
+        <item name="progStudyAnswerTextSize">30sp</item>
+        <item name="progStudyWhatToDoTextSize">14sp</item>
+        <item name="progStudyRevealedKanjiOrKanaTextSize">26sp</item>
+    </style>
+</resources>

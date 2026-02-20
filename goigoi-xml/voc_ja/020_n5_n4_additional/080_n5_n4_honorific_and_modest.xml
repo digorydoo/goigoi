@@ -1,0 +1,915 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <!-- subheader cannot be in a file of its own, because it's just a state of the parser -->
+    <subheader
+      name_en="Levels of politeness"
+      name_de="Ebenen der Höflichkeit"
+      name_fr="Niveaux de politesse"
+      name_it="Livelli di cortesia"
+    />
+    <unit
+      name_en="Honorific and modest expressions"
+      name_de="Ehrende und bescheidene Ausdrücke"
+      name_fr="Expressions honorifiques et modestes"
+      name_it="Espressioni onorifiche e modeste"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="n5, n4"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="true"
+    >
+        <!--
+            There are three forms of 敬語・けいご:
+            丁寧語 teineigo: just using ます・です
+            尊敬語 sonkeigo: honorific and respectful
+            謙譲語 kenjōgo: extra-modest
+        -->
+        <section
+          name_en="尊敬語・そんけいご: Honorific, respectful"
+          name_de="尊敬語・そんけいご: Ehrend"
+          name_fr="尊敬語・そんけいご: Honorifique"
+          name_it="尊敬語・そんけいご: Onorifiche"
+        >
+            <word
+              w="いらっしゃる"
+              rom="irassharu"
+              tr_en="to come; to go; to be (somewhere)"
+              tr_de="kommen; gehen; (an einem Ort) sein"
+              hint_en="honorific form of いる, 行く, 来る"
+              hint_de="respektvolle Form von いる, 行く, 来る"
+              studyInContext="required"
+              lvl="n4"
+              id="irassharu-comego"
+              rem="appears in GENKI2 p.164; HIDDEN, because MAX_NUM_CHARS_IN_ANSWER would need to be set too long"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="oideninaru-comego" />
+                <!--
+                    irassharu is the honorific form of iru, iku, kuru
+                    Irregular conjugation: irasshaimasu (NOT irassharimasu)
+                    ている becomes ていらっしゃいます
+                -->
+                <phrase
+                  ph="いらっしゃいませ"
+                  rom="irasshaimase"
+                  tr_en="expression used in shops to welcome clients"
+                  tr_de="Ausdruck, der in Geschäften verwendet wird, um Kunden zu begrüssen"
+                  lvl="n4"
+                />
+                <phrase
+                  ph="いらっしゃるお【客：きゃく】【様：さま】"
+                  rom="irassharu o-kyaku-sama"
+                  tr_en="the customers who are present (honorific)"
+                  tr_de="die anwesenden Kunden (respektvoll)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="こちらへいらっしゃる"
+                  rom="kochira e irassharu"
+                  tr_en="to come here (honorific)"
+                  tr_de="hierher kommen (respektvoll)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <!--
+                  ph="そちらへいらっしゃる"
+                  rom="sochira e irassharu"
+                  tr_en="to go there (honorific)"
+                  tr_de="dorthin gehen (respektvoll)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                -->
+                <sentence
+                  s="【先：せん】【生：せい】は【東：とう】【京：きょう】へよくいらっしゃいますか。"
+                  rom="Sensei wa Tōkyō e yoku irasshaimasu ka?"
+                  tr_en="Teacher, do you often go to Tokyo? (honorific)"
+                  tr_de="Herr Lehrer, gehen Sie oft nach Tokyo? (respektvoll)"
+                  lvl="n4"
+                  origin="Oxford p.112"
+                />
+                <sentence
+                  s="どちらに【住：す】んでいらっしゃいますか。"
+                  rom="Dochira ni sunde irasshaimasu ka?"
+                  tr_en="Where do you live? (honorific)"
+                  tr_de="Wo wohnen Sie? (respektvoll)"
+                  explanation_en="どちら is used instead of どこ to sound more respectful"
+                  explanation_de="どちら wird statt どこ verwendet für einen respektvollen Ton"
+                  lvl="n4"
+                  origin="GENKI2 p.192"
+                  rem="from audio; verified with ChatGPT"
+                />
+                <sentence
+                  s="【谷：たに】【口：ぐち】さんがいらっしゃるかどうか【分：わ】かりません。"
+                  rom="Taniguchi-san ga irassharu ka dō ka wakarimasen."
+                  tr_en="I don't know if Mrs Taniguchi is present."
+                  tr_de="Ich weiss nicht, ob Frau Taniguchi anwesend ist."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【召：め】し【上：あ】がる"
+              rom="meshiagaru"
+              tr_en="to eat; to drink"
+              tr_de="essen; trinken; zu sich nehmen"
+              hint_en="honorific form of 食べる, 飲む"
+              hint_de="respektvolle Form von 食べる, 飲む"
+              studyInContext="preferred"
+              lvl="n4"
+              id="meshiagaru-eatdrink"
+              category="gastronomy"
+              rem="appears in GENKI2 p.164"
+            >
+                <!-- meshiagaru is the honorific (sonkeigo) version of taberu, nomu -->
+                <see id="omeshiagari-eatdrink" rem="noun" />
+                <phrase
+                  ph="ご【飯：はん】を【召：め】し【上：あ】がる"
+                  rom="go-han o meshiagaru"
+                  tr_en="to eat rice (honorific)"
+                  tr_de="Reis essen (respektvoll)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="お【飲：の】み【物：もの】を【召：め】し【上：あ】がる"
+                  rom="o-nomimono o meshiagaru"
+                  tr_en="to drink a beverage (honorific)"
+                  tr_de="ein Getränk trinken (respektvoll)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【夕：ゆう】【飯：はん】は、いつも【何：なん】【時：じ】ごろ【召：め】し【上：あ】がりますか。"
+                  rom="Yūhan wa, itsumo nanji goro meshiagarimasu ka?"
+                  tr_en="About what time do you usually have supper? (honorific)"
+                  tr_de="Um welche Zeit ungefähr essen Sie normalerweise zu Abend? (respektvoll)"
+                  lvl="n4"
+                  origin="500mon q410"
+                />
+                <sentence
+                  s="【何：なに】を【召：め】し【上：あ】がりますか。"
+                  rom="Nani o meshiagarimasu ka?"
+                  tr_en="What will you eat/drink? (honorific)"
+                  tr_de="Was möchten Sie essen/trinken? (respektvoll)"
+                  lvl="n4"
+                  origin="GENKI2 p.165"
+                />
+                <sentence
+                  s="お【酒：さけ】をよく【召：め】し【上：あ】がりますか。"
+                  rom="O-sake o yoku meshiagarimasu ka?"
+                  tr_en="Do you often drink alcohol? (honorific)"
+                  tr_de="Drinken Sie häufig Alkohol? (respektvoll)"
+                  lvl="n4"
+                  origin="GENKI2 p.192"
+                  rem="from audio; verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【為：な】さる"
+              rom="nasaru"
+              tr_en="to do"
+              tr_de="tun; machen"
+              hint_en="honorific form of する"
+              hint_de="respektvolle Form von する"
+              usuallyInKana="true"
+              lvl="n4"
+              id="nasaru-todo"
+              rem="should use studyInContext, but I can't find good phrases in dictionary form"
+            >
+                <!--
+                    なさる is a honorific form (sonkeigo) of する
+                    It appears in n5 as なさい, e.g. お休みなさい
+                    Irregular conjugation: nasaimasu (NOT nasarimasu)
+                    なさい is the imperative form of なさる
+                -->
+                <phrase
+                  ph="お【仕：し】【事：ごと】をなさる"
+                  rom="o-shigoto o nasaru"
+                  tr_en="to do work (honorific)"
+                  tr_de="arbeiten (respektvoll)"
+                  explanation_en="なさる is a honorific form of する"
+                  explanation_de="なさる is eine höfliche Form des Verbes する"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="お【休：やす】みなさい"
+                  rom="o-yasumi nasai"
+                  tr_en="Good night (honorific)"
+                  tr_de="Gute Nacht (respektvoll)"
+                  explanation_en="「なさい」is the imperative form of「なさる」, a honorific form of「する」."
+                  explanation_de="「なさい」ist die imperative Form von「なさる」, eine respektvolle Form von「する」."
+                  lvl="n4"
+                  rem="the expression may be n5"
+                />
+                <sentence
+                  s="どうなさいましたか。"
+                  rom="Dō nasaimashita ka?"
+                  tr_en="What's the matter? (honorific)"
+                  tr_de="Ist etwas nicht in Ordnung? (respektvoll)"
+                  lvl="n4"
+                  origin="500mon q396"
+                />
+                <sentence
+                  s="【何：なに】をなさるつもりですか。"
+                  rom="Nani o nasaru tsumori desu ka?"
+                  tr_en="What do you intend to do? (honorific)"
+                  tr_de="Was gedenken Sie zu tun? (respektvoll)"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【何：なに】かスポーツをなさいますか。"
+                  rom="Nanika supōtsu o nasaimasu ka?"
+                  tr_en="Do you play any sports? (honorific)"
+                  tr_de="Machen Sie irgendwelchen Sport? (respektvoll)"
+                  explanation_en="Note the irregular conjugation of the verb なさる."
+                  explanation_de="Beachte die unregelmässige Konjugation des Verbs なさる."
+                  lvl="n4"
+                  origin="GENKI2 p.192"
+                  rem="from audio; verified with ChatGPT"
+                />
+                <sentence
+                  s="【毎：まい】【日：にち】【何：なん】【時：じ】【間：かん】【日：に】【本：ほん】【語：ご】を【勉：べん】【強：きょう】なさいますか。"
+                  rom="Mai-nichi nan-jikan Nihon-go o benkyō nasaimasu ka?"
+                  tr_en="How many hours do you study Japanese every day? (honorific)"
+                  tr_de="Wieviele Stunden studieren Sie Japanisch jeden Tag? (respektvoll)"
+                  lvl="n4"
+                  origin="GENKI2 p.192"
+                  rem="from audio; verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="ご【覧：らん】"
+              rom="go-ran"
+              tr_en="seeing; looking; watching"
+              tr_de="Sehen; Sicht"
+              hint_en="noun; honorific"
+              hint_de="Nomen; respektvoll"
+              studyInContext="required"
+              lvl="n4"
+              category="looking"
+              id="goran-see"
+              rem="appears in GENKI2 p.164; jisho has n2"
+            >
+                <!-- go-ran ni naru is the honorific form (sonkeigo) of miru -->
+                <phrase
+                  ph="ご【覧：らん】になる"
+                  rom="go-ran ni naru"
+                  tr_en="to look; to watch (honorific)"
+                  tr_de="sehen; schauen (respektvoll)"
+                  explanation_en="This is a honorific expression for 見る"
+                  explanation_de="Dies ist ein ehrerbietiger Ausdruck für 見る"
+                  lvl="n4"
+                  origin="GENKI2 p.164"
+                />
+                <phrase
+                  ph="ご【覧：らん】ください"
+                  rom="go-ran kudasai"
+                  tr_en="please look (honorific)"
+                  tr_de="bitte schauen Sie (respektvoll)"
+                  lvl="n4"
+                  origin="GENKI2 p.166"
+                />
+                <sentence
+                  s="【先：せん】【生：せい】がレポートをご【覧：らん】になりました。"
+                  rom="Sensei ga repōto o go-ran ni narimashita."
+                  tr_en="The teacher had a look at the report."
+                  tr_de="Der Lehrer schaute sich den Bericht an."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="この【映：えい】【画：が】はもうご【覧：らん】になりましたか。"
+                  rom="Kono eiga wa mō go-ran ni narimashita ka?"
+                  tr_en="Have you already seen this film? (honorific)"
+                  tr_de="Haben Sie diesen Film schon gesehen? (respektvoll)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【仰：おっしゃ】る"
+              rom="ossharu"
+              tr_en="to say; to tell"
+              tr_de="sagen; erzählen"
+              hint_en="honorific form of 言う"
+              hint_de="respektvolle Form von 言う"
+              usuallyInKana="true"
+              lvl="n4"
+              id="ossharu-say"
+              rem="appears in GENKI2 p.164; I can't find phrases that are short enough for studyInContext"
+            >
+                <!--
+                    ossharu is the honorific form (sonkeigo) of iu
+                    Irregular conjugation: osshaimasu (NOT ossharimasu)
+                -->
+                <phrase
+                  ph="おっしゃるように"
+                  rom="ossharu yō ni"
+                  tr_en="as you say (honorific)"
+                  tr_de="wie Sie es sagen (respektvoll)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="さっきおっしゃっていたことについて"
+                  rom="sakki osshatte ita koto ni tsuite"
+                  tr_en="regarding what you were saying earlier (honorific)"
+                  tr_de="betreffend dem, was Sie vorher gesagt haben (respektvoll)"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【何：なに】とおっしゃいましたか。"
+                  rom="Nani to osshaimashita ka?"
+                  tr_en="What did he say? (honorific)"
+                  tr_de="Was hat er gesagt? (respektvoll)"
+                  explanation_en="Note the irregular conjugation of the verb おっしゃる"
+                  explanation_de="Beachte die unregelmässige Konjugation des Verbs おっしゃる"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【何：なに】をおっしゃりたいのですか。"
+                  rom="Nani o ossharitai no desu ka?"
+                  tr_en="What do you want to say? (honorific)"
+                  tr_de="Was willst du sagen? (respektvoll)"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【山：やま】【口：ぐち】【先：せん】【生：せい】は【来：らい】【週：しゅう】は【授：じゅ】【業：ぎょう】がないとおっしゃっていました。"
+                  rom="Yamaguchi-sensei wa raishū wa jugyō ga nai to osshatte imashita."
+                  tr_en="Professor Yamaguchi said there would be no class next week."
+                  tr_de="Professor Yamaguchi sagte, dass die Lektion nächste Woche ausfallen würde."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+        </section>
+        <section
+          name_en="謙譲語・けんじょうご: Extra-modest, humble"
+          name_de="謙譲語・けんじょうご: Bescheiden"
+          name_fr="謙譲語・けんじょうご: Modeste"
+          name_it="謙譲語・けんじょうご: Modeste"
+        >
+            <word
+              w="【参：まい】る"
+              rom="mairu"
+              tr_en="to come; to go"
+              tr_de="kommen; gehen"
+              hint_en="extra-modest form of 行く, 来る"
+              hint_de="bescheidene Form von 行く, 来る"
+              studyInContext="preferred"
+              lvl="n4"
+              id="mairu-comego"
+              rem="appears in GENKI2 L20 vocab section; GENKI2 uses kanji, jisho says usuallyInKana; lib0 has both; jisho has n3 for the kanji"
+            >
+                <!-- mairu is the extra-modest form of iku, kuru -->
+                <phrase
+                  ph="ご【説：せつ】【明：めい】に【参：まい】ります"
+                  rom="go-setsumei ni mairimasu"
+                  tr_en="to go and explain (extra-modest)"
+                  tr_de="erklären gehen (bescheiden)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【行：い】って【参：まい】ります。"
+                  rom="Itte mairimasu."
+                  tr_en="I'm off! (I go and will come again; extra-modest)"
+                  tr_de="Ich bin mal weg! (Ich gehe und werde wieder kommen; bescheiden)"
+                  lvl="n4"
+                />
+                <sentence
+                  s="【電：でん】【車：しゃ】が【参：まい】ります。"
+                  rom="Densha ga mairimasu."
+                  tr_en="The train is coming. (extra-modest)"
+                  tr_de="Der Zug kommt. (bescheiden)"
+                  lvl="n4"
+                  origin="GENKI2 p.191"
+                />
+                <sentence
+                  s="【明日：あした】もう【一：いち】【度：ど】【参：まい】ります。"
+                  rom="Ashita mō ichi-do mairimasu."
+                  tr_en="I will come again tomorrow. (extra-modest)"
+                  tr_de="Ich werde morgen wieder kommen. (bescheiden)"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【週：しゅう】【末：まつ】、【美：び】【術：じゅつ】【館：かん】へ【参：まい】りました。"
+                  rom="Shūmatsu, bijutsukan e mairimashita."
+                  tr_en="I visited the art gallery on the weekend. (extra-modest)"
+                  tr_de="Ich habe am Wochenende die Kunstgallerie besucht. (bescheiden)"
+                  lvl="n4"
+                  origin="GENKI2 p.192 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【申：もう】す"
+              rom="mōsu"
+              tr_en="to say; to be called"
+              tr_de="sagen; genannt werden"
+              hint_en="extra-modest form of 言う"
+              hint_de="bescheidene Form von 言う"
+              studyInContext="preferred"
+              lvl="n4"
+              category="talking"
+              id="mōsu-say"
+              rem="appears in GENKI2 L20 vocab section"
+            >
+                <!-- mōsu is the extra-modest variant of iu -->
+                <keep_apart_from id="hanasu-talk" />
+                <keep_apart_from id="iu-say" />
+                <keep_apart_from id="mōshiageru-tell" />
+                <keep_apart_from id="hanashiau-discuss" />
+                <keep_apart_from id="hanashikakeru-addresssb" />
+                <keep_apart_from id="ronjiru-discuss" />
+                <keep_apart_from id="kataru-recite" />
+
+                <keep_apart_from id="mōshiwake-apology" />
+                <phrase
+                  ph="【申：もう】しわけ"
+                  rom="mōshiwake"
+                  tr_en="apology; excuse"
+                  tr_de="Entschuldigung"
+                  lvl="n4"
+                  rem="jisho has n3; I use kanji for in mōshiwake-apology"
+                />
+                <phrase
+                  ph="もう【一：いち】【度：ど】【申：もう】す"
+                  rom="mō ichi-do mōsu"
+                  tr_en="to say it once again (extra-modest)"
+                  tr_de="es noch einmal sagen (bescheiden)"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【私：わたくし】は【小：お】【川：がわ】ケンと【申：もう】します。"
+                  rom="Watakushi wa Ogawa Ken to mōshimasu."
+                  tr_en="My name is Ken Ogawa. (extra-modest)"
+                  tr_de="Mein Name ist Ken Ogawa. (bescheiden)"
+                  lvl="n4"
+                  origin="GENKI2 p.184 modified"
+                />
+            </word>
+            <word
+              w="【致：いた】す"
+              rom="itasu"
+              tr_en="to do"
+              tr_de="tun; machen"
+              hint_en="extra-modest form of する"
+              hint_de="bescheidene Form von する"
+              studyInContext="required"
+              usuallyInKana="true"
+              lvl="n4"
+              id="itasu-todo"
+              rem="appears in GENKI2 L20 vocab section"
+            >
+                <!-- itasu is the extra-modest form of suru -->
+                <phrase
+                  ph="お【手：て】【伝：つだ】いいたす"
+                  rom="o-tetsudai itasu"
+                  tr_en="to assist sb. (extra-modest)"
+                  tr_de="jem. assistieren (bescheiden)"
+                  explanation_en="いたす is a form of する that is used to show humility"
+                  explanation_de="いたす ist eine Form von する, die verwendet wird, um Bescheidenheit anzuzeigen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="ご【案：あん】【内：ない】いたす"
+                  rom="go-annai itasu"
+                  tr_en="to guide sb. (extra-modest)"
+                  tr_de="jem. herumführen (bescheiden)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="どういたしまして"
+                  rom="dō itashimashite"
+                  tr_en="you're welcome (extra-modest)"
+                  tr_de="gern geschehen (bescheiden)"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="lib0 has kanji どう致しまして"
+                />
+                <sentence
+                  s="【毎：まい】【日：にち】【二：に】【時：じ】【間：かん】ぐらい【勉：べん】【強：きょう】いたします。"
+                  rom="Mainichi ni-jikan gurai benkyō itashimasu."
+                  tr_en="I study for about two hours every day. (extra-modest)"
+                  tr_de="Ich studiere jeden Tag etwa zwei Stunden. (bescheiden)"
+                  lvl="n4"
+                  origin="GENKI2 p.192 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【私：わたくし】は【今：こ】【年：とし】の【六：ろく】【月：がつ】に【大：だい】【学：がく】を【卒：そつ】【業：ぎょう】いたしました。"
+                  rom="Watakushi wa kotoshi no roku-gatsu ni daigaku o sotsugyō itashimashita."
+                  tr_en="I graduated from college this June. (extra-modest)"
+                  tr_de="Ich habe die Universität im Juni dieses Jahres abgeschlossen. (bescheiden)"
+                  lvl="n4"
+                  origin="GENKI2 p.184"
+                />
+                <sentence
+                  s="ご【連：れん】【絡：らく】いたすまでお【待：ま】ちください。"
+                  rom="Go-renraku itasu made o-machi kudasai."
+                  tr_en="Please wait until I will (humbly) contact you."
+                  tr_de="Bitte warten Sie, bis ich Sie kontaktiere. (bescheiden)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【頂：いただ】く"
+              rom="itadaku"
+              tr_en="to receive; to eat; to drink"
+              tr_de="erhalten; essen; trinken"
+              hint_en="extra-modest form of 食べる, 飲む, もらう"
+              hint_de="bescheidene Form von 食べる, 飲む, もらう"
+              usuallyInKana="true"
+              lvl="n4"
+              id="itadaku-receive"
+              rem="appears in GENKI2 L20 vocab section; jisho has n3; I can't find phrases that are short enough for studyInContext"
+            >
+                <!-- itadaku is the extra-modest form (kenjōgo) of taberu, nomu, morau -->
+                <phrase
+                  ph="いただきます"
+                  rom="itadakimasu"
+                  tr_en="expression of gratitude before meals"
+                  tr_de="Guten Appetit!"
+                  lvl="n4"
+                />
+                <!--
+                  ph="【空：くう】【港：こう】へ【迎：むか】えに【来：き】ていただく"
+                  rom="kūkō e mukae ni kite itadaku"
+                  tr_en="to have so. come pick me up at the airport (extra-modest)"
+                  tr_de="von jem. am Flughafen abgeholt werden (bescheiden)"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                -->
+                <sentence
+                  s="【町：まち】の【地：ち】【図：ず】をいただきたいのです。"
+                  rom="Machi no chizu o itadakitai no desu."
+                  tr_en="I would like a map of the town."
+                  tr_de="Ich möchte gern einen Stadtplan."
+                  lvl="n4"
+                  origin="Langenscheidt"
+                />
+                <sentence
+                  s="【塩：しお】を【取：と】っていただけませんか。"
+                  rom="Shio o totte itadakemasen ka?"
+                  tr_en="Could I have the salt, please? (extra-modest)"
+                  tr_de="Kann ich das Salz haben, bitte? (bescheiden)"
+                  explanation_en="lit. 'Can you take the salt for me?'"
+                  explanation_de="wörtl. 'Können Sie für mich das Salz nehmen?'"
+                  lvl="n4"
+                  origin="GENKI2 p.166"
+                />
+                <sentence
+                  s="お【酒：さけ】を【少：すこ】しいただきます。"
+                  rom="O-sake o sukoshi itadakimasu."
+                  tr_en="I will have a little alcohol. (extra-modest)"
+                  tr_de="Ich trinke etwas Alkohol. (bescheiden)"
+                  lvl="n4"
+                  origin="GENKI2 p.192 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ナイフとフォークをいただけませんか。"
+                  rom="Naifu to fōku o itadakemasen ka?"
+                  tr_en="Could you bring me knife and fork?"
+                  tr_de="Könnte ich ein Messer und eine Gabel bekommen?"
+                  lvl="n4"
+                  origin="Langenscheidt"
+                />
+                <!--
+                  s="【道：みち】を【教：おし】えていただきました。"
+                  rom="Michi o oshiete itadakimashita."
+                  tr_en="Someone kindly told me the way."
+                  tr_de="Jemand hat mir freundlicherweise den Weg gezeigt."
+                  lvl="n4"
+                  rem="itadaku is polite for kureru"
+                  href="https://hinative.com/en-US/questions/21821235"
+                -->
+                <!--
+                  s="【来：らい】【週：しゅう】の【金：きん】【曜：よう】【日：び】【休：やす】ませていただけませんか。"
+                  rom="Raishū no kinyōbi yasumasete itadakemasen ka?"
+                  tr_en="Could you allow me to have next Friday as a holiday? (extra-modest)"
+                  tr_de="Könnten Sie mir erlauben, nächsten Freitag frei zu nehmen? (bescheiden)"
+                  explanation_en="「休ませる」is the causative form of「休む」"
+                  explanation_de="「休ませる」ist die kausative Form von「休む」"
+                  lvl="n3"
+                  origin="Oxford p.77"
+                -->
+            </word>
+            <word
+              w="【拝：はい】【見：けん】"
+              rom="haiken"
+              tr_en="seeing; looking"
+              tr_de="Sicht; Sehen"
+              hint_en="extra-modest form of 見る; noun; suru-verb"
+              hint_de="bescheidene Form von 見る; Nomen; Suru-Verb"
+              studyInContext="preferred"
+              lvl="n4"
+              category="looking"
+              id="haiken-seeing"
+            >
+                <phrase
+                  ph="お【客：きゃく】【様：さま】のご【意：い】【見：けん】を【拝：はい】【見：けん】する"
+                  rom="o-kyaku-sama no go-iken o haiken suru"
+                  tr_en="to hear out a customer's opinion (extra-modest)"
+                  tr_de="die Meinung eines Kunden anhören (bescheiden)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【切：きっ】【符：ぷ】を【拝：はい】【見：けん】します。"
+                  rom="Kippu o haiken shimasu."
+                  tr_en="May I see your ticket? (extra-modest)"
+                  tr_de="Kann ich Ihre Fahrkarte sehen? (bescheiden)"
+                  explanation_en="lit. I will look at your ticket."
+                  explanation_de="wörtl. Ich schau mir Ihre Fahrkarte an."
+                  lvl="n4"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="お【手：て】【紙：がみ】を【拝：はい】【見：けん】いたしました。"
+                  rom="O-tegami o haiken itashimashita."
+                  tr_en="I looked at your letter. (humbly)"
+                  tr_de="Ich habe mir Ihren Brief angesehen. (bescheiden)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【伺：うかが】う"
+              rom="ukagau"
+              tr_en="to ask; to be told; to visit"
+              tr_de="fragen; jem. besuchen"
+              hint_en="extra-modest form of 聞く, 訪ねる"
+              hint_de="bescheidene Form von 聞く, 訪ねる"
+              studyInContext="preferred"
+              lvl="n4"
+              rem="appears in 500mon q315, GENKI2 L20 vocab section"
+              id="ukagau-ask"
+            >
+                <phrase
+                  ph="ご【意：い】【見：けん】を【伺：うかが】う"
+                  rom="go-iken o ukagau"
+                  tr_en="to (politely) ask about the opinion (extra-modest)"
+                  tr_de="(höflich) nach der Meinung fragen (bescheiden)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="また【明日：あした】【伺：うかが】います。"
+                  rom="Mata ashita ukagaimasu."
+                  tr_en="I will visit again tomorrow. (extra-modest)"
+                  tr_de="Ich werden morgen nochmals vorbeikommen. (bescheiden)"
+                  lvl="n4"
+                  origin="GENKI2 p.195"
+                  rem="GENKI2 uses kana for both ashita and ukagau; verified with ChatGPT"
+                />
+                <sentence
+                  s="【昨日：きのう】、【先：せん】【生：せい】のお【宅：たく】に【伺：うかが】いました。"
+                  rom="Kinō, sensei no o-taku ni ukagaimashita."
+                  tr_en="Yesterday, I went to my teacher's house. (extra-modest)"
+                  tr_de="Ich habe gestern das Haus meiner Lehrerin besucht. (bescheiden)"
+                  lvl="n4"
+                  origin="500mon q315"
+                />
+                <sentence
+                  s="【私：わたし】は【先：せん】【生：せい】にテストについて【伺：うかが】いました。"
+                  rom="Watashi wa sensei ni tesuto ni tsuite ukagaimashita."
+                  tr_en="I asked my professor about the exam. (extra-modest)"
+                  tr_de="Ich habe bei meinem Lehrer bezüglich der Prüfung nachgefragt. (bescheiden)"
+                  origin="GENKI2 p.186"
+                  lvl="n4"
+                  rem="GENKI2 uses ukagau in kana for both senses; jisho does not have usuallyInKana flag; lib0 has more kanji examples than kana"
+                />
+            </word>
+            <word
+              w="【差：さ】し【上：あ】げる"
+              rom="sashiageru"
+              tr_en="to give; to offer"
+              tr_de="geben; anbieten"
+              hint_en="extra-modest form of あげる"
+              hint_de="bescheidene Form von あげる"
+              studyInContext="preferred"
+              lvl="n4"
+              id="sashiageru-give"
+            >
+                <keep_apart_from id="okuru-give" />
+                <keep_apart_from id="ageru-give" />
+                <keep_apart_from id="ataeru-grant" />
+                <phrase
+                  ph="お【手：て】【伝：つだ】いを【差：さ】し【上：あ】げる"
+                  rom="o-tetsudai o sashiageru"
+                  tr_en="to offer help (extra-modest)"
+                  tr_de="Hilfe anbieten (bescheiden)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                  rem="typically used with -masu"
+                />
+                <sentence
+                  s="これをあなたに【差：さ】し【上：あ】げます。"
+                  rom="Kore o anata ni sashiagemasu."
+                  tr_en="This is for you. (extra-modest)"
+                  tr_de="Das ist für dich. (bescheiden)"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【飲：の】み【物：もの】を【差：さ】し【上：あ】げましょうか。"
+                  rom="Nomimono o sashiagemashō ka?"
+                  tr_en="May I offer you a drink?"
+                  tr_de="Kann ich Ihnen einen Drink anbieten?"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】は【先：せん】【生：せい】に【花：はな】を【差：さ】し【上：あ】げます。"
+                  rom="Watashi wa sensei ni hana o sashiagemasu."
+                  tr_en="I will give my professor flowers. (extra-modest)"
+                  tr_de="Ich werde meiner Lehrerin Blumen geben. (bescheiden)"
+                  lvl="n4"
+                  origin="GENKI2 p.186"
+                  rem="GENKI2 uses さしあげる in kana here; but jisho does not have usuallyInKana flag, and lib0 has more kanji examples than kana"
+                />
+            </word>
+        </section>
+        <section
+          name_en="Nouns with honorific prefix"
+          name_de="Nomen mit höflicher Vorsilbe"
+          name_fr="Noms avec préfixe honorifique"
+          name_it="Nomi con il prefisso onorifico"
+        >
+            <!--
+                Nouns with honorific prefixes are typically used in teineigo (masu/desu) and sonkeigo (honorific),
+                but NOT typically with kenjōgo (modest), except when referring to the other person's items
+            -->
+            <word
+              w="お【休：やす】み"
+              rom="o-yasumi"
+              tr_en="vacation; holiday; rest; break"
+              tr_de="Urlaub; Ferien; Rast; Pause"
+              lvl="n5"
+              rem="jisho has n2 for o-yasumi, n5 for yasumi"
+              id="oyasumi-rest"
+            >
+                <phrase
+                  ph="お【休：やす】みになる"
+                  rom="o-yasumi ni naru"
+                  tr_en="to go to sleep (honorific)"
+                  tr_de="schlafen gehen (respektvoll)"
+                  explanation_en="This is a honorific expression for 寝る"
+                  explanation_de="Dies ist ein ehrerbietiger Ausdruck für 寝る"
+                  lvl="n4"
+                  origin="GENKI2 p.164"
+                />
+                <sentence
+                  s="たいてい【何：なん】【時：じ】ごろお【休：やす】みになりますか。"
+                  rom="Taitei nanji goro o-yasumi ni narimasu ka?"
+                  tr_en="Around what time do you usually go to bed?"
+                  tr_de="Um welche Zeit etwa gehen Sie gewöhnlicherweise schlafen?"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="ご【兄：きょう】【弟：だい】"
+              rom="go-kyōdai"
+              tr_en="brothers and sisters; siblings"
+              tr_de="Geschwister"
+              lvl="n4"
+              id="gokyōdai-siblings"
+              rem="appears in GENKI2 p.192; jisho has nx for go-kyōdai, n5 for kyōdai"
+            >
+                <keep_apart_from id="kyōdai-siblings" />
+                <phrase
+                  ph="ご【兄：きょう】【弟：だい】に【連：れん】【絡：らく】を【入：い】れる"
+                  rom="go-kyōdai ni renraku o ireru"
+                  tr_en="to get in contact with your siblings"
+                  tr_de="mit Ihren Geschwistern Kontakt aufnehmen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ご【兄：きょう】【弟：だい】がいらっしゃいますか。"
+                  rom="Go-kyōdai ga irasshaimasu ka?"
+                  tr_en="Do you have any siblings? (honorific)"
+                  tr_de="Haben Sie Geschwister? (respektvoll)"
+                  lvl="n4"
+                  origin="GENKI2 p.192"
+                  rem="from audio; verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="お【召：め】し【上：あ】がり"
+              rom="o-meshiagari"
+              tr_en="eating; drinking"
+              tr_de="Essen; Trinken"
+              hint_en="noun; respectful"
+              hint_de="Nomen; respektvoll"
+              lvl="n4"
+              id="omeshiagari-eatdrink"
+            >
+                <see id="meshiagaru-eatdrink" rem="verb" />
+                <phrase
+                  ph="お【召：め】し【上：あ】がりになる"
+                  rom="o-meshiagari ni naru"
+                  tr_en="to have a meal; to eat (honorific)"
+                  tr_de="eine Mahlzeit zu sich nehmen; essen (respektvoll)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="お【召：め】し【上：あ】がりください。"
+                  rom="O-meshiagari kudasai."
+                  tr_en="Please help yourself. (honorific)"
+                  tr_de="Bitte bedienen Sie sich. (respektvoll)"
+                  lvl="n4"
+                  origin="GENKI2 p.166"
+                />
+            </word>
+            <word
+              w="お【帰：かえ】り"
+              rom="o-kaeri"
+              tr_en="return (home); coming back"
+              tr_de="Rückkehr (nach Hause); Zurückkehren"
+              hint_en="noun; respectful"
+              hint_de="Nomen; respektvoll"
+              lvl="n4"
+              id="okaeri-return"
+              rem="jisho has n4 for kaeri, n2 for o-kaeri"
+            >
+                <keep_apart_from id="kaeri-return" />
+                <phrase
+                  ph="お【帰：かえ】りになる"
+                  rom="o-kaeri ni naru"
+                  tr_en="to go home (honorific)"
+                  tr_de="nach Hause gehen (respektvoll)"
+                  lvl="n4"
+                  origin="GENKI2 p.165"
+                />
+                <sentence
+                  s="【青：あお】【木：き】【先：せん】【生：せい】はもうお【帰：かえ】りになりました。"
+                  rom="Aoki-sensei wa mō o-kaeri ni narimashita."
+                  tr_en="Professor Aoki has already gone home. (honorific)"
+                  tr_de="Professor Aoki ist bereits nach Hause gegangen. (respektvoll)"
+                  explanation_en="お帰りになる is a honorific expression for 帰る"
+                  explanation_de="お帰りになる ist ein ehrerbietiger Ausdruck für 帰る"
+                  lvl="n4"
+                  origin="GENKI2 p.165 modified"
+                />
+            </word>
+            <word
+              w="ご【注：ちゅう】【意：い】"
+              rom="go-chūi"
+              tr_en="caution; attention; warning"
+              tr_de="Vorsicht; Achtung; Warnung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n4"
+              id="gochūi-caution"
+              rem="appears in GENKI2 p.166; jisho has n4 for chūi, nx for go-chūi"
+            >
+                <keep_apart_from id="chūi-caution" />
+                <phrase
+                  ph="ご【注：ちゅう】【意：い】ください"
+                  rom="go-chūi kudasai"
+                  tr_en="please watch out (honorific)"
+                  tr_de="bitte geben Sie acht (respektvoll)"
+                  lvl="n4"
+                  origin="GENKI2 p.166"
+                />
+                <sentence
+                  s="【犬：いぬ】にご【注：ちゅう】【意：い】ください。"
+                  rom="Inu ni go-chūi kudasai."
+                  tr_en="Please beware of the dog."
+                  tr_de="Bitte nehmen Sie sich vor dem Hund in acht."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

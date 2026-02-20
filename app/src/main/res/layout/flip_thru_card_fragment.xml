@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  style="?attr/myCardViewStyle"
+  >
+    <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="8dp"
+      android:layout_marginBottom="16dp"
+      android:orientation="vertical"
+      >
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="2"
+          />
+        <TextView
+          android:id="@+id/text1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:layout_gravity="center_horizontal"
+          android:paddingStart="32dp"
+          android:paddingEnd="32dp"
+          style="?attr/myPrimaryTextStyle"
+          tools:text="This is the word or expression to be studied. It may be quite long."
+          />
+        <TextView
+          android:id="@+id/text2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:layout_gravity="center_horizontal"
+          android:paddingStart="32dp"
+          android:paddingEnd="32dp"
+          style="?attr/serifSecondaryTextStyle"
+          tools:text="This may be the secondary form or a hint. It may be quite long."
+          />
+        <View
+          android:id="@+id/middle_gap"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="1"
+          />
+        <TextView
+          android:id="@+id/text3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:layout_gravity="center_horizontal"
+          android:paddingStart="32dp"
+          android:paddingEnd="32dp"
+          style="?attr/myPrimaryTextStyle"
+          tools:text="This is the translation, or the primary form of the word."
+          />
+        <TextView
+          android:id="@+id/text4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          android:layout_gravity="center_horizontal"
+          android:paddingStart="32dp"
+          android:paddingEnd="32dp"
+          style="?attr/serifSecondaryTextStyle"
+          tools:text="This may be a hint, or the secondary form of the word."
+          />
+        <TextView
+          android:id="@+id/text5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="16dp"
+          android:layout_gravity="center_horizontal"
+          android:paddingStart="32dp"
+          android:paddingEnd="32dp"
+          style="?attr/mySecondaryTextStyle"
+          tools:text="This can only be the info of a phrase or sentence."
+          />
+        <View
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_weight="2"
+          />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

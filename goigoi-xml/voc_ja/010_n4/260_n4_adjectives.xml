@@ -1,0 +1,1569 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N4 adjectives"
+      name_de="N4-Adjektive"
+      name_fr="Les adjectifs N4"
+      name_it="Aggettivi N4"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="adjective"
+      defaultHint_de="Adjektiv"
+      lvl="n4"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="true"
+    >
+        <section>
+            <!-- i-adjective -->
+            <word
+              w="【熱：あつ】い"
+              rom="atsui"
+              tr_en="hot; intense; passionate"
+              tr_de="heiss; intensiv; leidenschaftlich"
+              hint_en="temper; food; iron; etc."
+              hint_de="Essen, Eisen, Temperament, etc."
+              lvl="n4"
+              category="temperature"
+              id="atsui-passionate"
+              rem="jisho has n5; appears in GENKI1 L5; moved to n4, because 熱 is not n5, which causes ambiguity with atsui-hotweather"
+            >
+                <!-- the noun is 熱さ, nx, not marked as common -->
+                <phrase
+                  ph="【熱：あつ】い【飲：の】み【物：もの】"
+                  rom="atsui nomimono"
+                  tr_en="a hot beverage"
+                  tr_de="ein heisses Getränk"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="このお【茶：ちゃ】はとても【熱：あつ】い。"
+                  rom="Kono o-cha wa totemo atsui."
+                  tr_en="This tea is very hot."
+                  tr_de="Dieser Tee ist sehr heiss."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【深：ふか】い"
+              rom="fukai"
+              tr_en="deep"
+              tr_de="tief"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              id="fukai-deep"
+            >
+                <!-- the noun is 深さ, nx, common -->
+                <see id="asai-shallow" rem="antonym" />
+                <phrase
+                  ph="【深：ふか】い【湖：みずうみ】"
+                  rom="fukai mizūmi"
+                  tr_en="a deep lake"
+                  tr_de="ein tiefer See"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="このプールは、【真：ま】ん【中：なか】が【一：いち】【番：ばん】【深：ふか】いから、【気：き】を【付：つ】けてください。"
+                  rom="Kono pūru wa, mannaka ga ichiban fukai kara, ki o tsukete kudasai."
+                  tr_en="The centre of this pool is the most deep, so please be careful."
+                  tr_de="In diesem Pool ist die Mitte am tiefsten, also bitte seien Sie vorsichtig."
+                  lvl="n4"
+                  origin="500mon q184"
+                />
+            </word>
+            <word
+              w="【浅：あさ】い"
+              rom="asai"
+              tr_en="shallow; superficial"
+              tr_de="oberflächlich; untief"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              id="asai-shallow"
+            >
+                <see id="fukai-deep" rem="antonym" />
+                <phrase
+                  ph="【浅：あさ】く【眠：ねむ】る"
+                  rom="asaku nemuru"
+                  tr_en="to sleep lightly; to have a shallow sleep"
+                  tr_de="untief schlafen; einen flachen Schlaf haben"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="この【川：かわ】はあそこで【浅：あさ】くなっている。"
+                  rom="Kono kawa wa asoko de asaku natte iru."
+                  tr_en="This river becomes shallow at that point."
+                  tr_de="Der Fluss wird dort untief."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【硬：かた】い"
+              rom="katai"
+              tr_en="hard; tough; firm"
+              tr_de="hart; steif"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              id="katai-hard"
+            >
+                <keep_apart_from id="katai-hardaltkanji" />
+                <phrase
+                  ph="【硬：かた】い【飴：あめ】"
+                  rom="katai ame"
+                  tr_en="hard candy"
+                  tr_de="Hartbonbon"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="このベッドは【硬：かた】くて、【寝：ね】にくい。"
+                  rom="Kono beddo wa katakute, ne-nikui."
+                  tr_en="This bed is hard and difficult to sleep in."
+                  tr_de="Dieses Bett ist hart, es ist schwer, drin zu schlafen."
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/qKbysEzHWXw"
+                />
+                <sentence
+                  s="すみません。お【肉：にく】は【硬：かた】いですが。"
+                  rom="Sumimasen. O-niku wa katai desu ga."
+                  tr_en="Excuse me. The meat is tough."
+                  tr_de="Entschuldigen Sie. Das Fleisch ist zäh."
+                  lvl="n4"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="【堅：かた】い"
+              rom="katai"
+              tr_en="hard (wood); tough (meat)"
+              lvl="n4"
+              id="katai-hardaltkanji"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="katai-hard" />
+            </word>
+            <word
+              w="【珍：めずら】しい"
+              rom="mezurashii"
+              tr_en="unusual; rare"
+              tr_de="ungewöhnlich; selten"
+              Langenscheidt="selten; ungewöhnlich"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              id="mezurashii-unusual"
+            >
+                <phrase
+                  ph="【珍：めずら】しい【花：はな】"
+                  rom="mezurashii hana"
+                  tr_en="a rare flower"
+                  tr_de="eine seltene Blume"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT and the web"
+                />
+                <sentence
+                  s="【色：いろ】【々：いろ】な【珍：めずら】しい【食：た】べ【物：もの】を【出：だ】してくれた。"
+                  rom="Iro-iro na mezurashii tabemono o dashite kureta."
+                  tr_en="They served me various unusual foods."
+                  tr_de="Sie tischten mir diverse ungewöhnliche Esswaren auf."
+                  lvl="n4"
+                  origin="Oxford p.102"
+                />
+                <sentence
+                  s="【妻：つま】が 【今日：きょう】 【珍：めずら】しく【弁：べん】【当：とう】を【作：つく】ってくれた。"
+                  rom="Tsuma ga kyō mezurashiku bentō o tsukutte kureta."
+                  tr_en="Most unusually, my wife made me a boxed lunch today."
+                  tr_de="Ungewöhnlicherweise hat mir meine Frau heute eine Lunchbox gemacht."
+                  allowSpaces="true"
+                  lvl="n4"
+                  origin="Oxford p.48"
+                />
+                <sentence
+                  s="【先：せん】【生：せい】に【珍：めずら】しい【漢：かん】【字：じ】を【教：おし】えていただきました。"
+                  rom="Sensei ni mezurashii kanji o oshiete itadakimashita."
+                  tr_en="I had my professor teach me some rare kanji."
+                  tr_de="Ich habe von meinem Lehrer seltene Kanjis gelehrt bekommen."
+                  lvl="n4"
+                  origin="GENKI2 p.186 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【優：やさ】しい"
+              rom="yasashii"
+              tr_en="gentle; kind; amiable"
+              tr_de="freundlich; nett; lieb"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              category="relationships"
+              id="yasashii-gentle"
+            >
+                <phrase
+                  ph="【優：やさ】しいおじいさん"
+                  rom="yasashii o-jīsan"
+                  tr_en="an amiable grandfather"
+                  tr_de="ein liebenswerter Grossvater"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="それは【優：やさ】しいですね。"
+                  rom="Sore wa yasashii desu ne."
+                  tr_en="That's kind."
+                  tr_de="Das ist lieb."
+                  lvl="n4"
+                />
+                <sentence
+                  s="【木：き】【村：むら】さんは【優：やさ】しい【人：ひと】です。"
+                  rom="Kimura-san wa yasashii hito desu."
+                  tr_en="Miss Kimura is a kind person."
+                  tr_de="Frau Kimura ist eine nette Person."
+                  lvl="n4"
+                  origin="Oxford p.97 modified"
+                />
+            </word>
+            <word
+              w="【正：ただ】しい"
+              rom="tadashii"
+              tr_en="right; correct; truthful"
+              tr_de="richtig; korrekt; wahr"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              category="education"
+              id="tadashii-right"
+            >
+                <keep_apart_from id="seikai-correct" />
+                <phrase
+                  ph="【正：ただ】しい【答：こた】え"
+                  rom="tadashii kotae"
+                  tr_en="the correct answer"
+                  tr_de="die richtige Antwort"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="あなたの【言：い】うことは【正：ただ】しいと【思：おも】います。"
+                  rom="Anata no iu koto wa tadashii to omoimasu."
+                  tr_en="I think what you're saying is correct."
+                  tr_de="Ich denke, es ist korrekt, was du sagst."
+                  lvl="n4"
+                  origin="500mon q275"
+                />
+                <sentence
+                  s="どれが【正：ただ】しいか【分：わ】かりません。"
+                  rom="Dore ga tadashii ka wakarimasen."
+                  tr_en="I don't know which one is correct."
+                  tr_de="Ich weiss nicht, welcher der richtige ist."
+                  lvl="n4"
+                  origin="ChatGPT"
+                  rem="uses the same grammatical structure as the sentence in GENKI2 p.189"
+                />
+            </word>
+            <word
+              w="おかしい"
+              rom="okashii"
+              tr_en="funny; ridiculous; weird"
+              tr_de="lustig; lächerlich; komisch"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              id="okashii-funny"
+            >
+                <phrase
+                  ph="おかしい【話：はなし】"
+                  rom="okashii hanashi"
+                  tr_en="a funny story"
+                  tr_de="eine lustige Geschichte"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="おかしいメール"
+                  rom="okashii mēru"
+                  tr_en="a suspicious e-mail"
+                  tr_de="eine verdächtige E-Mail"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】の【車：くるま】はどこかおかしい。"
+                  rom="Watashi no kuruma wa dokoka okashii."
+                  tr_en="There is something wrong with my car."
+                  tr_de="Etwas stimmt mit meinem Auto nicht."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【頭：あたま】がおかしくなりそうだな〜"
+                  rom="Atama ga okashiku narisō da na~"
+                  tr_en="I think I'm going crazy…"
+                  tr_de="Ich glaub, ich werd verrückt…"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【厳：きび】しい"
+              rom="kibishii"
+              tr_en="strict; harsh"
+              tr_de="streng; hart"
+              Langenscheidt="streng (Lehrer); hart (Winter)"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              id="kibishii-strict"
+            >
+                <keep_apart_from id="hidoi-cruel" rem="ambiguity in phrases" />
+                <phrase
+                  ph="【厳：きび】しい【先：せん】【生：せい】"
+                  rom="kibishii sensei"
+                  tr_en="a strict teacher"
+                  tr_de="ein strenger Lehrer"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【厳：きび】しい【冬：ふゆ】"
+                  rom="kibishii fuyu"
+                  tr_en="a harsh winter"
+                  tr_de="ein harter Winter"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="その【先：せん】【生：せい】は【生：せい】【徒：と】に【厳：きび】しい。"
+                  rom="Sono sensei wa seito ni kibishii."
+                  tr_en="That teacher is strict with his students."
+                  tr_de="Dieser Lehrer ist streng zu seinen Schülern."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【細：こま】かい"
+              rom="komakai"
+              tr_en="minor; fine; detailed"
+              tr_de="gering; fein; detailliert"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              id="komakai-minor"
+            >
+                <phrase
+                  ph="【細：こま】かい【問：もん】【題：だい】"
+                  rom="komakai mondai"
+                  tr_en="a minor issue"
+                  tr_de="ein geringes Problem"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【細：こま】かい【砂：すな】"
+                  rom="komakai suna"
+                  tr_en="fine sand"
+                  tr_de="feiner Sand"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【細：こま】かい【説：せつ】【明：めい】"
+                  rom="komakai setsumei"
+                  tr_en="a detailed explanation"
+                  tr_de="eine detaillierte Erklärung"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【細：こま】かい【雨：あめ】が【降：ふ】っていた。"
+                  rom="Komakai ame ga futte ita."
+                  tr_en="It was raining lightly."
+                  tr_de="Es regnete leicht."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="すごい"
+              rom="sugoi"
+              tr_en="amazing; great"
+              tr_de="toll; erstaunlich; wahnsinnig"
+              Langenscheidt="wahnsinnig; total"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              category="mood"
+              id="sugoi-amazing"
+              href="https://hinative.com/questions/22626238 (difference between sugoi and monosugoi)"
+            >
+                <phrase
+                  ph="すごい【車：くるま】"
+                  rom="sugoi kuruma"
+                  tr_en="an amazing car"
+                  tr_de="ein toller Wagen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="すごく【速：はや】い【電：でん】【車：しゃ】"
+                  rom="sugoku hayai densha"
+                  tr_en="a very fast train"
+                  tr_de="ein wahnsinnig schneller Zug"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【山：やま】【下：した】さんはすごい【雪：ゆき】のために【遅：おく】れた。"
+                  rom="Yamashita-san wa sugoi yuki no tame ni okureta."
+                  tr_en="Mr Yamashita was late because of the heavy snow."
+                  tr_de="Herr Yamashita verspätete sich wegen des starken Schnees."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="lib0 has monosugoi"
+                  href="https://hinative.com/questions/22626238"
+                />
+            </word>
+            <word
+              w="よろしい"
+              rom="yoroshii"
+              tr_en="very well; will do; acceptable"
+              tr_de="sehr gut; das passt; akzeptabel"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              id="yoroshii-fine"
+              rem="jisho has n3; appears in GENKI2 L20 vocab section as yoroshikattara, if it's okay"
+            >
+                <phrase
+                  ph="よろしい【計：けい】【画：かく】"
+                  rom="yoroshii keikaku"
+                  tr_en="an acceptable plan"
+                  tr_de="ein akzeptabler Plan"
+                  explanation_en="よろしい is more formal 良い or いい"
+                  explanation_de="よろしい ist formeller als 良い oder いい"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="よろしくお【願：ねが】いします！"
+                  rom="Yoroshiku o-negai shimasu!"
+                  tr_en="Nice to meet you!"
+                  tr_de="Schön, Sie kennenzulernen!"
+                  lvl="n4"
+                  rem="jisho has n3 for yoroshiku"
+                />
+                <sentence
+                  s="【汚：きたな】い【灰：はい】【皿：ざら】を【取：と】ってもよろしいでしょうか。"
+                  rom="Kitanai haizara o totte mo yoroshii deshō ka?"
+                  tr_en="Is it alright if I take the dirty ashtray?"
+                  tr_de="Ist es in Ordnung, wenn ich den dreckigen Aschenbecher mitnehme?"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【苦：にが】い"
+              rom="nigai"
+              tr_en="bitter"
+              tr_de="bitter"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              category="food"
+              id="nigai-bitter"
+            >
+                <phrase
+                  ph="【苦：にが】い【飲：の】み【物：もの】"
+                  rom="nigai nomimono"
+                  tr_en="a bitter beverage"
+                  tr_de="ein bitteres Getränk"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="このコーヒー、【苦：にが】いよ。"
+                  rom="Kono kōhī, nigai yo."
+                  tr_en="This coffee is bitter."
+                  tr_de="Dieser Kaffee ist bitter."
+                  lvl="n4"
+                  origin="500mon q300"
+                />
+                <sentence
+                  s="この【薬：くすり】は【苦：にが】い【味：あじ】がする。"
+                  rom="Kono kusuri wa nigai aji ga suru."
+                  tr_en="This medicine has a bitter taste."
+                  tr_de="Diese Medizin hat einen bitteren Geschmack."
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【柔：やわ】らかい"
+              rom="yawarakai"
+              tr_en="soft; tender; gentle"
+              tr_de="weich; zart; sanft"
+              Langenscheidt="weich"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              id="yawarakai-soft"
+            >
+                <phrase
+                  ph="【柔：やわ】らかい【洗：せん】【濯：たく】【物：もの】"
+                  rom="yawarakai sentakumono"
+                  tr_en="soft laundry"
+                  tr_de="weiche Wäsche"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="この【牛：ぎゅう】【肉：にく】は【柔：やわ】らかい。"
+                  rom="Kono gyūniku wa yawarakai."
+                  tr_en="This beef is tender."
+                  tr_de="Dieses Rindfleisch ist zart."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】は【柔：やわ】らかいベッドで【眠：ねむ】るのが【好：す】きです。"
+                  rom="Watashi wa yawarakai beddo de nemuru no ga suki desu."
+                  tr_en="I like sleeping in a soft bed."
+                  tr_de="Ich mag es, in einem weichen Bett zu schlafen."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【悲：かな】しい"
+              rom="kanashii"
+              tr_en="sad; sorrowful"
+              tr_de="traurig; besorgt"
+              lvl="n4"
+              category="mood, not-good"
+              id="kanashii-sad"
+            >
+                <!-- the noun is 悲しさ, nx, not marked as common -->
+                <phrase
+                  ph="その【悲：かな】しい【日：ひ】"
+                  rom="sono kanashii hi"
+                  tr_en="that sad day"
+                  tr_de="jener trauriger Tag"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="そんな【悲：かな】しい【目：め】で【見：み】ないで。"
+                  rom="Sonna kanashii me de minaide."
+                  tr_en="Don't give me such a sad look."
+                  tr_de="Schau nicht mit so traurigen Augen."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【犬：いぬ】が【死：し】んで【悲：かな】しかったでしょう。"
+                  rom="Inu ga shinde kanashikatta deshō."
+                  tr_en="You must have been sad when the dog died."
+                  tr_de="Du warst sicher traurig, als der Hund starb."
+                  lvl="n4"
+                  origin="Oxford p.101"
+                  rem="deshō is tentative, see Oxford p.118"
+                />
+            </word>
+            <word
+              w="【寂：さび】しい"
+              rom="sabishii"
+              tr_en="lonely"
+              tr_de="einsam"
+              lvl="n4"
+              category="mood, not-good"
+              id="sabishii-lonely"
+            >
+                <!-- the noun is 寂しさ, nx, not marked as common -->
+                <phrase
+                  ph="【寂：さび】しそうな【顔：かお】"
+                  rom="sabishisō na kao"
+                  tr_en="a lonely-looking face"
+                  tr_de="ein einsam dreinschauendes Gesicht"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【君：きみ】がいなくて【寂：さび】しいよ。"
+                  rom="Kimi ga inakute sabishii yo."
+                  tr_en="I miss you."
+                  tr_de="Ich vermisse dich."
+                  explanation_en="lit.: You are not there, and it's lonely."
+                  explanation_de="wörtl.: Du bist nicht da, und es ist einsam."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【眠：ねむ】い"
+              rom="nemui"
+              tr_en="sleepy"
+              tr_de="schläfrig"
+              lvl="n4"
+              category="mood"
+              id="nemui-sleepy"
+            >
+                <phrase
+                  ph="【眠：ねむ】い【猫：ねこ】"
+                  rom="nemui neko"
+                  tr_en="a sleepy cat"
+                  tr_de="eine schläfrige Katze"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【眠：ねむ】そうだね。【大：だい】【丈：じょう】【夫：ぶ】？"
+                  rom="Nemusō da ne. Daijōbu?"
+                  tr_en="You look sleepy. Are you okay?"
+                  tr_de="Du schaust schläfrig aus. Alles in Ordnung?"
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/l7xZ1TDZ7MU"
+                />
+            </word>
+            <word
+              w="【怖：こわ】い"
+              rom="kowai"
+              tr_en="scary; frightening"
+              tr_de="beängstigend"
+              Langenscheidt="Angst haben"
+              lvl="n4"
+              category="mood, not-good"
+              id="kowai-scary"
+            >
+                <!-- to be frightened is kowagaru, which is nx -->
+                <phrase
+                  ph="【怖：こわ】い【映：えい】【画：が】"
+                  rom="kowai eiga"
+                  tr_en="scary movie"
+                  tr_de="gruseliger Film"
+                  lvl="n4"
+                />
+                <sentence
+                  s="【犬：いぬ】が【怖：こわ】いですか。"
+                  rom="Inu ga kowai desu ka?"
+                  tr_en="Are you frightened of dogs?"
+                  tr_de="Hast du Angst vor Hunden?"
+                  lvl="n4"
+                  origin="Oxford p.103"
+                />
+            </word>
+            <word
+              w="【恥：は】ずかしい"
+              rom="hazukashii"
+              tr_en="embarrassing; shameful"
+              tr_de="peinlich; beschämend"
+              lvl="n4"
+              category="mood, not-good"
+              id="hazukashii-embarrassing"
+            >
+                <phrase
+                  ph="【恥：は】ずかしい【失：しっ】【敗：ぱい】"
+                  rom="hazukashii shippai"
+                  tr_en="an embarrassing blunder"
+                  tr_de="ein peinliches Versehen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="みんなの【前：まえ】で【間：ま】【違：ちが】えて とても 【恥：は】ずかしかった。"
+                  rom="Minna no mae de machigaete totemo hazukashikatta."
+                  tr_en="I was so embarrassed after making a mistake in front of everyone."
+                  tr_de="Es war so peinlich, als ich vor allen einen Fehler machte."
+                  allowSpaces="true"
+                  lvl="n4"
+                  origin="500mon q270"
+                />
+                <sentence
+                  s="【初：はじ】めて【人：ひと】に【会：あ】うのはとても【恥：は】ずかしい。"
+                  rom="Hajimete hito ni au no wa totemo hazukashii."
+                  tr_en="I feel totally embarrassed when I meet somebody for the first time."
+                  tr_de="Ich fühle mich total verlegen, wenn ich jemanden zum ersten Mal treffe."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【嬉：うれ】しい"
+              rom="ureshii"
+              tr_en="happy; glad"
+              tr_de="erfreut; froh"
+              lvl="n4"
+              category="happiness, mood"
+              id="ureshii-glad"
+              rem="appears in GENKI2 p.24 vocab section; jisho has n3"
+            >
+                <phrase
+                  ph="【嬉：うれ】しそうなお【年：とし】【寄：よ】り"
+                  rom="ureshisō na o-toshiyori"
+                  tr_en="a happy-looking elderly person"
+                  tr_de="eine glücklich dreinschauende ältere Person"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【台：たい】【風：ふう】が【過：す】ぎたと【聞：き】いて【嬉：うれ】しかった。"
+                  rom="Taifū ga sugita to kīte ureshikatta."
+                  tr_en="I was glad to hear that the typhoon had passed."
+                  tr_de="Ich war froh, als ich hörte, dass der Taifun vorüber ist."
+                  lvl="n4"
+                  origin="self"
+                  rem="corrected by ChatGPT"
+                />
+            </word>
+
+            <!-- na-adjective -->
+            <word
+              w="【駄：ダ】【目：メ】"
+              rom="dame"
+              tr_en="no good; useless"
+              tr_de="schlecht; zwecklos"
+              hint_en="colloquial"
+              hint_de="umgangssprachlich"
+              lvl="n4"
+              id="dame-nogood"
+              usuallyInKana="true"
+              rem="appears in 500mon q434; jisho has n3"
+            >
+                <keep_apart_from id="ikenai-wrong" />
+                <phrase
+                  ph="ダメな【説：せつ】【明：めい】"
+                  rom="dame na setsumei"
+                  tr_en="a poor explanation"
+                  tr_de="eine schlechte Erklärung"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="やっぱりダメでしたか。"
+                  rom="Yappari dame deshita ka?"
+                  tr_en="So it was no good after all?"
+                  tr_de="War es doch nicht gut?"
+                  lvl="n4"
+                  origin="500mon q434"
+                  rem="jisho has n2 for yappari, n3 for dame"
+                />
+                <sentence
+                  s="もうダメだ！"
+                  rom="Mō dame da!"
+                  tr_en="It's all in vain!"
+                  tr_de="Es bringt alles nichts!"
+                  lvl="n4"
+                />
+            </word>
+            <word
+              w="【素：す】【敵：てき】"
+              rom="suteki"
+              tr_en="lovely; wonderful"
+              tr_de="hübsch; wundervoll"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n4"
+              id="suteki-lovely"
+              rem="appears in 500mon q45; jisho has n3"
+            >
+                <keep_apart_from id="kirei-pretty" />
+                <keep_apart_from id="utsukushii-lovely" />
+                <phrase
+                  ph="【素：す】【敵：てき】なシャツ"
+                  rom="suteki na shatsu"
+                  tr_en="a lovely shirt"
+                  tr_de="ein hübsches Shirt"
+                  lvl="n4"
+                  origin="500mon q45"
+                  rem="500mon uses kana すてき"
+                />
+                <sentence
+                  s="【父：ちち】は【私：わたし】に【素：す】【敵：てき】な【時：と】【計：けい】をくれた。"
+                  rom="Chichi wa watashi ni suteki na tokei o kureta."
+                  tr_en="My father gave me a nice watch."
+                  tr_de="Mein Vater hat mir eine hübsche Uhr gegeben."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【無：む】【理：り】"
+              rom="muri"
+              tr_en="impossible; unreasonable; excessive"
+              tr_de="unmöglich; unvernünftig; übertrieben"
+              hint_en="na-adjective; suru verb"
+              hint_de="Na-Adjektiv; Suru-Verb"
+              lvl="n4"
+              id="muri-impossible"
+            >
+                <phrase
+                  ph="【無：む】【理：り】をする"
+                  rom="muri o suru"
+                  tr_en="to overdo it; to push oneself too hard"
+                  tr_de="etw. übermässig machen; sich überfordern"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【無：む】【理：り】を【言：い】う"
+                  rom="muri o iu"
+                  tr_en="to ask for the impossible"
+                  tr_de="das Unmögliche verlangen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ちょっと【無：む】【理：り】ですね。"
+                  rom="Chotto muri desu ne."
+                  tr_en="It's a bit difficult."
+                  tr_de="Es ist etwas schwierig."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="あまり【無：む】【理：り】するなよ。"
+                  rom="Amari muri suru na yo."
+                  tr_en="Don't overdo it."
+                  tr_de="Übertreibe es nicht."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【変：へん】"
+              rom="hen"
+              tr_en="strange; odd; peculiar"
+              tr_de="seltsam; merwürdig; eigenartig"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n4"
+              id="hen-odd"
+              rem="appears in GENKI2 L21 vocab section"
+            >
+                <phrase
+                  ph="【変：へん】な【魚：さかな】"
+                  rom="hen na sakana"
+                  tr_en="a strange fish"
+                  tr_de="ein merkwürdiger Fisch"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【変：へん】な【音：おと】が【聞：き】こえる。"
+                  rom="Hen na oto ga kikoeru."
+                  tr_en="I hear a strange sound."
+                  tr_de="Man hört ein seltsames Geräusch."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【牛：ぎゅう】【乳：にゅう】、【変：へん】なにおいがしているよ。"
+                  rom="Kono gyūnyū, hen na nioi ga shite iru yo."
+                  tr_en="This milk smells strange."
+                  tr_de="Diese Milch riecht komisch."
+                  lvl="n4"
+                  origin="500mon q324"
+                  rem="jisho has n3 for nioi"
+                />
+            </word>
+            <word
+              w="【大：だい】【事：じ】"
+              rom="daiji"
+              tr_en="important; valuable"
+              tr_de="wichtig; wertvoll"
+              Langenscheidt="wichtig; daiji ni suru: wertschätzen, schonen"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n4"
+              id="daiji-valuable"
+              rem="ChatGPT says taisetsu is more about personal value, while daiji is more sth of general significance"
+            >
+                <see id="taisetsu-important" rem="closely related" />
+                <phrase
+                  ph="【大：だい】【事：じ】なこと"
+                  rom="daiji na koto"
+                  tr_en="an important thing"
+                  tr_de="eine wichtige Sache"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【大：だい】【事：じ】にする"
+                  rom="daiji ni suru"
+                  tr_en="to treat sth. with importance; to cherish sb."
+                  tr_de="sorgfältig mit etw. umgehen; jem. wertschätzen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="お【大：だい】【事：じ】に。"
+                  rom="O-daiji ni."
+                  tr_en="Get well soon."
+                  tr_de="Gute Besserung."
+                  explanation_en="short for お大事にしてください"
+                  explanation_de="Kurzform von お大事にしてください"
+                  lvl="n4"
+                  origin="500mon q413"
+                  rem="jisho has n2 for o-daiji ni; also appears in GENKI1 p.269 vocab section"
+                />
+                <sentence
+                  s="この【時：と】【計：けい】は、【祖：そ】【父：ふ】がくれたものなので、【大：だい】【事：じ】にしています。"
+                  rom="Kono tokei wa, sofu ga kureta mono na no de, daiji ni shite imasu."
+                  tr_en="I treat this watch with great importance, because my grandfather gave it to me."
+                  tr_de="Da ich diese Uhr von meinem Grossvater bekommen habe, gehe ich sehr sorgfältig damit um."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【必：ひつ】【要：よう】"
+              rom="hitsuyō"
+              tr_en="necessary; required; essential"
+              tr_de="notwendig; benötigt; essentiell"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n4"
+              id="hitsuyō-necessary"
+            >
+                <keep_apart_from id="jūyō-essential" />
+                <phrase
+                  ph="【必：ひつ】【要：よう】なお【金：かね】"
+                  rom="hitsuyō na o-kane"
+                  tr_en="the required money"
+                  tr_de="das benötigte Geld"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【鍵：かぎ】が【必：ひつ】【要：よう】です。"
+                  rom="Kagi ga hitsuyō desu."
+                  tr_en="I need a key."
+                  tr_de="Ich brauche einen Schlüssel."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【乗：の】り【換：か】える【必：ひつ】【要：よう】がありますか。"
+                  rom="Norikaeru hitsuyō ga arimasu ka?"
+                  tr_en="Do I need to transfer (change trains)?"
+                  tr_de="Muss ich umsteigen?"
+                  lvl="n4"
+                  origin="Langenscheidt"
+                  rem="hitsuyō is a noun here, though"
+                />
+                <sentence
+                  s="このはがきは【切：きっ】【手：て】を【貼：は】る【必：ひつ】【要：よう】がありません。"
+                  rom="Kono hagaki wa kitte o haru hitsuyō ga arimasen."
+                  tr_en="There is no need to put a stamp on this postcard."
+                  tr_de="Bei dieser Postkarte muss man keine Briefmarke drauf kleben."
+                  lvl="n4"
+                  origin="500mon q303"
+                />
+            </word>
+            <word
+              w="【適：てき】【当：とう】"
+              rom="tekitō"
+              tr_en="suitable; proper"
+              tr_de="passend; angemessen"
+              Langenscheidt="passend; angemessen"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n4"
+              id="tekitō-suitable"
+            >
+                <keep_apart_from id="manzoku-adequate" />
+                <keep_apart_from id="tekisetsu-suitable" />
+                <keep_apart_from id="tekido-proper" />
+                <keep_apart_from id="sōtō-suitable" />
+                <phrase
+                  ph="【適：てき】【当：とう】な【言：こと】【葉：ば】"
+                  rom="tekitō na kotoba"
+                  tr_en="suitable words"
+                  tr_de="passende Worte"
+                  explanation_en="Can have a negative connotation, so it could mean 'inappropriate words' depending on the situation."
+                  explanation_de="Kann einen negativen Beiklang haben, deshalb kann es unter Umständen auch 'unpassende Worte' heissen."
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT; ChatGPT says it may have a negative connotation"
+                />
+                <sentence
+                  s="【適：てき】【当：とう】な【時：とき】にナオミにそれを【言：い】いましょう。"
+                  rom="Tekitō na toki ni Naomi ni sore o īmashō."
+                  tr_en="I will tell Naomi at the proper time."
+                  tr_de="Ich werde es Naomi zur passenden Zeit sagen."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="lib0 uses kana ときに"
+                />
+            </word>
+            <word
+              w="【残：ざん】【念：ねん】"
+              rom="zannen"
+              tr_en="disappointing; unfortunate; regrettable"
+              tr_de="enttäuschend; bedauerlich; beklagenswert"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n4"
+              id="zannen-deplorable"
+            >
+                <phrase
+                  ph="【残：ざん】【念：ねん】な【失：しっ】【敗：ぱい】"
+                  rom="zannen na shippai"
+                  tr_en="a disappointing failure"
+                  tr_de="ein enttäuschendes Versagen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【残：ざん】【念：ねん】です。"
+                  rom="Zannen desu."
+                  tr_en="That's too bad."
+                  tr_de="Das ist schade."
+                  lvl="n4"
+                  origin="500mon q434"
+                />
+                <sentence
+                  s="【残：ざん】【念：ねん】ながら、【今日：きょう】はダメです。"
+                  rom="Zannen nagara, kyō wa dame desu."
+                  tr_en="Unfortunately, it's impossible today."
+                  tr_de="Heute geht es leider nicht."
+                  lvl="n4"
+                  origin="Oxford p.120"
+                />
+            </word>
+            <word
+              w="【簡：かん】【単：たん】"
+              rom="kantan"
+              tr_en="simple; easy"
+              tr_de="einfach; leicht"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n4"
+              id="kantan-simple"
+            >
+                <phrase
+                  ph="【簡：かん】【単：たん】な【料：りょう】【理：り】"
+                  rom="kantan na ryōri"
+                  tr_en="a simple meal"
+                  tr_de="ein einfaches Gericht"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【簡：かん】【単：たん】そう！"
+                  rom="Kantansō!"
+                  tr_en="(It) looks easy!"
+                  tr_de="(Es) schaut einfach aus!"
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/l7xZ1TDZ7MU"
+                />
+                <sentence
+                  s="【簡：かん】【単：たん】じゃなさそう！"
+                  rom="Kantan janasasō!"
+                  tr_en="(It) doesn't look easy!"
+                  tr_de="(Es) schaut nicht (gerade) einfach aus!"
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/l7xZ1TDZ7MU"
+                />
+            </word>
+            <word
+              w="【確：たし】か"
+              rom="tashika"
+              tr_en="definite; sure; reliable (source, etc.)"
+              tr_de="gesichert; sicher; zuverlässig(e Quelle, etc.)"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n4"
+              id="tashika-sure"
+            >
+                <see id="tashikameru-check" rem="verb" />
+                <keep_apart_from id="tashikani-surely" />
+                <keep_together id="tashikani-surely" />
+                <keep_apart_from id="kitto-mostlikely" />
+                <phrase
+                  ph="【確：たし】かに"
+                  rom="tashika ni"
+                  tr_en="surely; certainly"
+                  tr_de="bestimmt; gewiss"
+                  lvl="n4"
+                />
+                <phrase
+                  ph="【確：たし】かな【理：り】【由：ゆう】"
+                  rom="tashika na riyū"
+                  tr_en="a solid motive"
+                  tr_de="ein triftiger Grund"
+                  lvl="n4"
+                  origin="ChatGPT"
+                  rem="verified with the web"
+                />
+                <sentence
+                  s="【確：たし】かなことが【一：ひと】つある。"
+                  rom="Tashika na koto ga hito-tsu aru."
+                  tr_en="There is one thing that is certain."
+                  tr_de="Eins ist sicher."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【確：たし】かに"
+              rom="tashika ni"
+              tr_en="surely; certainly"
+              lvl="n4"
+              id="tashikani-surely"
+              HIDDEN="true"
+              rem="is now a phrase in tashika-sure"
+            >
+                <keep_apart_from id="tashika-sure" />
+                <keep_together id="tashika-sure" />
+            </word>
+            <word
+              w="【急：きゅう】"
+              rom="kyū"
+              tr_en="sudden; urgent; emergency"
+              tr_de="plötzlich; dringend; Dringlichkeit"
+              hint_en="na-adjective; noun"
+              hint_de="Na-Adjektiv; Nomen"
+              lvl="n4"
+              id="kyū-urgent"
+            >
+                <phrase
+                  ph="【急：きゅう】に"
+                  rom="kyū ni"
+                  tr_en="suddenly; swiftly; rapidly"
+                  tr_de="plötzlich; schnell"
+                  lvl="n4"
+                  rem="appears in 500mon q256; jisho has n3 for kyū ni, but n4 for kyū"
+                />
+                <phrase
+                  ph="【急：きゅう】な【道：みち】"
+                  rom="kyū na michi"
+                  tr_en="a steep road"
+                  tr_de="ein steiler Weg"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【赤：あか】ちゃんが【急：きゅう】に【泣：な】き【出：だ】した。"
+                  rom="Aka-chan ga kyū ni nakidashita."
+                  tr_en="The baby suddenly started crying."
+                  tr_de="Das Baby hat plötzlich zu schreien angefangen."
+                  lvl="n4"
+                  origin="500mon q256"
+                  rem="jisho has nx for nakidasu"
+                />
+            </word>
+            <word
+              w="【急：きゅう】に"
+              rom="kyū ni"
+              tr_en="suddenly; swiftly; rapidly"
+              lvl="n4"
+              id="kyūni-suddenly"
+              HIDDEN="true"
+              rem="is now a phrase in kyū-urgent"
+            >
+                <keep_apart_from id="sutto-quickly" />
+            </word>
+            <word
+              w="【意：い】【地：じ】【悪：わる】"
+              rom="ijiwaru"
+              tr_en="malicious; meanness; to be mean"
+              tr_de="böswillig; Gemeinheit; gemein sein"
+              hint_en="na-adjective; noun; suru verb"
+              hint_de="Na-Adjektiv; Nomen; Suru-Verb"
+              lvl="n4"
+              id="ijiwaru-malicious"
+              rem="appears in GENKI1 p.210 vocab section; jisho has n2"
+            >
+                <phrase
+                  ph="【意：い】【地：じ】【悪：わる】な【人：ひと】"
+                  rom="ijiwaru na hito"
+                  tr_en="a malicious person"
+                  tr_de="eine gemeine Person"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ヨシはいつも【私：わたし】に【意：い】【地：じ】【悪：わる】するよ。"
+                  rom="Yoshi wa itsumo watashi ni ijiwaru suru yo."
+                  tr_en="Yoshi is always being mean to me."
+                  tr_de="Yoshi ist immer gemein zu mir."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="けち"
+              rom="kechi"
+              tr_en="stingy; pinchpenny"
+              tr_de="geizig; Geizhals"
+              hint_en="na-adjective; noun"
+              hint_de="Na-Adjektiv; Nomen"
+              lvl="n4"
+              category="people, finances"
+              id="kechi-cheapskate"
+              rem="appears in GENKI2 p.49 vocabulary section; jisho has n3 with katakana ケチ; Langenscheidt: けち geizig"
+            >
+                <phrase
+                  ph="けちな【人：ひと】"
+                  rom="kechi na hito"
+                  tr_en="a miserly person"
+                  tr_de="eine geizige Person"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="お【金：かね】【持：も】ちかもしれないけど、ケチだ。"
+                  rom="O-kanemochi kamo shirenai kedo, kechi da."
+                  tr_en="He may be rich, but he's a cheapskate."
+                  tr_de="Er mag zwar reich sein, aber er ist ein Geizhals."
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; using katakana, because it seems equally common and improves readability here"
+                />
+            </word>
+            <word
+              w="【盛：さか】ん"
+              rom="sakan"
+              tr_en="thriving; flourishing; popular"
+              tr_de="florierend; blühend; beliebt"
+              Langenscheidt="blühend; belebt (sic!)"
+              lvl="n4"
+              category="work, business"
+              id="sakan-flourishing"
+            >
+                <!--
+                    ChatGPT says 盛ん sakan is not the best choice of word when talking about 経済 keizai.
+                    better use 活発 kappatsu (n1) lively
+                    or 順調 junchō (n3) favourable
+                    Unclear why, though. Maybe because sakan has the nuance of 'popular'.
+                -->
+                <phrase
+                  ph="【盛：さか】んなスポーツ"
+                  rom="sakan na supōtsu"
+                  tr_en="a popular sport"
+                  tr_de="ein beliebter Sport"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="あなたの【町：まち】はどんな【産：さん】【業：ぎょう】が【盛：さか】んですか。"
+                  rom="Anata no machi wa donna sangyō ga sakan desu ka?"
+                  tr_en="What industries are thriving in your town?"
+                  tr_de="Welche Industrie ist in deiner Stadt am florieren?"
+                  lvl="n4"
+                  origin="500mon q281"
+                />
+                <sentence
+                  s="【映：えい】【画：が】【産：さん】【業：ぎょう】は【盛：さか】んだと【思：おも】う。"
+                  rom="Eiga sangyō wa sakan da to omou."
+                  tr_en="I think the film industry is thriving."
+                  tr_de="Ich denke, die Filmindustrie floriert."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【十：じゅう】【分：ぶん】"
+              rom="jūbun"
+              tr_en="enough; sufficient; plenty"
+              tr_de="genug; genügend; reichlich"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n4"
+              id="jūbun-enough"
+            >
+                <phrase
+                  ph="【十：じゅう】【分：ぶん】な【食：しょく】【料：りょう】【品：ひん】"
+                  rom="jūbun na shokuryōhin"
+                  tr_en="a sufficient amount of groceries"
+                  tr_de="genügend Lebensmittel"
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="まだ【十：じゅう】【分：ぶん】な【時：じ】【間：かん】がある。"
+                  rom="Mada jūbun na jikan ga aru."
+                  tr_en="There is still plenty of time."
+                  tr_de="Wir haben immer noch genügend Zeit."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【丁：てい】【寧：ねい】"
+              rom="teinei"
+              tr_en="polite; courteous; careful"
+              tr_de="höflich; sorgfältig; vorsichtig"
+              Langenscheidt="höflich; sorgfältig; vorsichtig"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n4"
+              id="teinei-polite"
+            >
+                <phrase
+                  ph="【丁：てい】【寧：ねい】な【人：ひと】"
+                  rom="teinei na hito"
+                  tr_en="a polite person"
+                  tr_de="eine höfliche Person"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【丁：てい】【寧：ねい】な【言：こと】【葉：ば】"
+                  rom="teinei na kotoba"
+                  tr_en="courteous words"
+                  tr_de="höfliche Worte"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【丁：てい】【寧：ねい】な【仕：し】【事：ごと】"
+                  rom="teinei na shigoto"
+                  tr_en="meticulous work"
+                  tr_de="sorgfältige Arbeit"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【谷：たに】【口：ぐち】さんは【電：でん】【話：わ】で【丁：てい】【寧：ねい】に【話：はな】していらっしゃいます。"
+                  rom="Taniguchi-san wa denwa de teinei ni hanashite irasshaimasu."
+                  tr_en="Mrs Taniguchi is politely talking on the phone."
+                  tr_de="Frau Taniguchi redet (gerade) höflich am Telefon."
+                  explanation_en="いらっしゃる is more polite than いる"
+                  explanation_de="いらっしゃる ist höflicher als いる"
+                  lvl="n4"
+                  origin="GENKI2 p.165 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【自：じ】【由：ゆう】"
+              rom="jiyū"
+              tr_en="freedom; liberty; free"
+              tr_de="Freiheit; frei"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n4"
+              id="jiyū-freedom"
+              rem="appears in GENKI2 L22 vocab section"
+            >
+                <phrase
+                  ph="【自：じ】【由：ゆう】な【社：しゃ】【会：かい】"
+                  rom="jiyū na shakai"
+                  tr_en="free society"
+                  tr_de="freie Gesellschaft"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【経：けい】【済：ざい】の【自：じ】【由：ゆう】"
+                  rom="keizai no jiyū"
+                  tr_en="economic freedom"
+                  tr_de="wirtschaftliche Freiheit"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【自：じ】【由：ゆう】に【意：い】【見：けん】を【言：い】えることは【大：たい】【切：せつ】です。"
+                  rom="Jiyū ni iken o ieru koto wa taisetsu desu."
+                  tr_en="It is important to be able to say one's opinions freely."
+                  tr_de="Es ist wichtig, dass man die eigene Meinung frei sagen kann."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【親：しん】【切：せつ】"
+              rom="shinsetsu"
+              tr_en="kind; friendly; helpful"
+              tr_de="nett; freundlich; hilfsbereit"
+              lvl="n4"
+              category="mood, relationships"
+              id="shinsetsu-friendly"
+            >
+                <!--
+                    Cf. やさしい. According to ChatGPT, shinsetsu emphasises acts of kindness and helpfulness. It conveys
+                    that someone is considerate and actively does kind things for others.
+                -->
+                <phrase
+                  ph="【親：しん】【切：せつ】なおじいさん"
+                  rom="shinsetsu na o-jīsan"
+                  tr_en="a kind old man"
+                  tr_de="ein hilfsbereiter alter Mann"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="あそこの【店：てん】【員：いん】さんは【親：しん】【切：せつ】です。"
+                  rom="Asoko no ten'in-san wa shinsetsu desu."
+                  tr_en="That place's store attendant is really nice."
+                  tr_de="Die Verkäuferin von jenem Ort ist sehr freundlich."
+                  lvl="n4"
+                  origin="500mon q171"
+                />
+            </word>
+            <word
+              w="【熱：ねっ】【心：しん】"
+              rom="nesshin"
+              tr_en="enthusiastic; keen; eager"
+              tr_de="begeistert; eifrig; erpicht"
+              lvl="n4"
+              category="mood, happiness"
+              id="nesshin-keen"
+            >
+                <phrase
+                  ph="【熱：ねっ】【心：しん】な【研：けん】【究：きゅう】【者：しゃ】"
+                  rom="nesshin na kenkyūsha"
+                  tr_en="an enthusiastic researcher"
+                  tr_de="ein begeisterter Forscher"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【小：こ】【山：やま】さんは【熱：ねっ】【心：しん】に【仕：し】【事：ごと】をしています。"
+                  rom="Koyama-san wa nesshin ni shigoto o shite imasu."
+                  tr_en="Mrs Koyama is working eagerly."
+                  tr_de="Frau Koyama arbeitet eifrig."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【特：とく】【別：べつ】"
+              rom="tokubetsu"
+              tr_en="special; extraordinary"
+              tr_de="speziell; aussergewöhnlich"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n4"
+              id="tokubetsu-special"
+            >
+                <keep_apart_from id="betsu-exception" />
+                <keep_apart_from id="tokuni-especially" />
+                <phrase
+                  ph="【特：とく】【別：べつ】な【日：ひ】"
+                  rom="tokubetsu na hi"
+                  tr_en="a special day"
+                  tr_de="ein spezieller Tag"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="そんな【珍：めずら】しい【魚：さかな】を【食：た】べるのはすごく【特：とく】【別：べつ】な【経：けい】【験：けん】だった。"
+                  rom="Sonna mezurashii sakana o taberu no wa sugoku tokubetsu na keiken datta."
+                  tr_en="To eat such a rare fish was a very extraordinary experience."
+                  tr_de="Einen solch seltenen Fisch essen war eine ganz aussergewöhnliche Erfahrung."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【非：ひ】【常：じょう】"
+              rom="hijō"
+              tr_en="extreme; extraordinary; emergency"
+              tr_de="extrem; aussergewöhnlich; Not"
+              Langenscheidt="hijō na: aussergewöhnlich; extrem"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n4"
+              id="hijō-emergency"
+              rem="jisho has n3 for hijō, but n4 for hijō ni"
+            >
+                <phrase
+                  ph="【非：ひ】【常：じょう】な【危：き】【険：けん】"
+                  rom="hijō na kiken"
+                  tr_en="extreme danger"
+                  tr_de="extreme Gefahr"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【非：ひ】【常：じょう】【口：ぐち】"
+                  rom="hijōguchi"
+                  tr_en="emergency exit"
+                  tr_de="Notausgang"
+                  lvl="n4"
+                  origin="jpod101 audio"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【非：ひ】【常：じょう】に【怒：おこ】っている"
+                  rom="hijō ni okotte iru"
+                  tr_en="to be extremely angry"
+                  tr_de="extrem wütend sein"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【非：ひ】【常：じょう】に【困：こま】っています。"
+                  rom="Hijō ni komatte imasu."
+                  tr_en="I am in deep trouble."
+                  tr_de="Ich befinde mich in einer extrem schwierigen Lage."
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【非：ひ】【常：じょう】に"
+              rom="hijō ni"
+              tr_en="extremely; exceedingly"
+              lvl="n4"
+              id="hijōni-extremely"
+              HIDDEN="true"
+              rem="now a phrase of hijō"
+            />
+        </section>
+    </unit>
+</vocabulary>

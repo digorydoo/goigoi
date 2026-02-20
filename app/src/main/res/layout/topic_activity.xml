@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  >
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/my_toolbar"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentEnd="true"
+      android:layout_width="0dp"
+      android:layout_height="?attr/actionBarSize"
+      android:elevation="0dp"
+      android:translationZ="0dp"
+      android:theme="?attr/myAppBarTheme"
+      android:background="?attr/appBarColour"
+      />
+    <!--
+       FIXME verify: shouldn't unyts_list be rightOf left_gap and leftOf right_gap? They currently overlap!
+       How is this used in code?
+    -->
+    <View
+      android:id="@+id/left_gap"
+      android:layout_width="32dp"
+      android:layout_height="0dp"
+      android:layout_alignParentStart="true"
+      android:layout_below="@id/my_toolbar"
+      android:layout_alignParentBottom="true"
+      android:background="?attr/behindCardsColour"
+      android:translationZ="1dp"
+      />
+    <!--
+        The large bottom padding is necessary, because the nav bar overlaps the content
+        on api level 27 (at least in the simulator)
+    -->
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/unyts_list"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentEnd="true"
+      android:layout_below="@id/my_toolbar"
+      android:layout_alignParentBottom="true"
+      android:paddingTop="0dp"
+      android:paddingBottom="48dp"
+      android:clipToPadding="false"
+      android:choiceMode="singleChoice"
+      android:divider="@null"
+      android:scrollbars="vertical"
+      android:translationZ="3dp"
+      android:scrollbarStyle="outsideOverlay"
+      app:layoutManager="LinearLayoutManager"
+      />
+    <View
+      android:id="@+id/right_gap"
+      android:layout_width="32dp"
+      android:layout_height="0dp"
+      android:layout_alignParentEnd="true"
+      android:layout_below="@id/my_toolbar"
+      android:layout_alignParentBottom="true"
+      android:background="?attr/behindCardsColour"
+      android:translationZ="1dp"
+      />
+</RelativeLayout>

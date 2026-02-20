@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 verbs ⑤"
+      name_de="N3-Verben ⑤"
+      name_fr="Les verbes N3 ⑤"
+      name_it="Verbi N3 ⑤"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="verb"
+      defaultHint_de="Verb"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【表：あらわ】す"
+              rom="arawasu"
+              tr_en="to represent; to stand for; to express"
+              tr_de="etw. repräsentieren; für etw. stehen; etw. ausdrücken"
+              lvl="n3"
+              category="talking"
+              id="arawasu-represent"
+              rem="must not be together with shimesu"
+            >
+                <keep_apart_from id="mōshiageru-tell" />
+                <keep_apart_from id="tsutaeru-convey" />
+                <keep_apart_from id="noberu-mention" />
+                <phrase
+                  ph="【迷：めい】【惑：わく】している【気：き】【持：も】ちを【表：あらわ】す"
+                  rom="meiwaku shite iru kimochi o arawasu"
+                  tr_en="to express the feeling of being annoyed"
+                  tr_de="das Gefühl ausdrücken, genervt zu sein"
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+                <sentence
+                  s="これは【何：なに】を【表：あらわ】しますか。"
+                  rom="Kore wa nani o arawashimasu ka?"
+                  tr_en="What does this stand for?"
+                  tr_de="Für was steht dies?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【離：はな】れる"
+              rom="hanareru"
+              tr_en="to be separated; to drift away"
+              tr_de="auseinander gehen; abdriften"
+              hint_en="v.i."
+              lvl="n3"
+              category="motion, mood"
+              id="hanareru-drift"
+            >
+                <keep_apart_from id="hanasu-separate" />
+                <phrase
+                  ph="【船：ふね】を【離：はな】れる"
+                  rom="fune o hanareru"
+                  tr_en="to abandon (leave) the ship"
+                  tr_de="das Schiff aufgeben (verlassen)"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【彼：かれ】と【彼：かの】【女：じょ】は【離：はな】れてしまった。"
+                  rom="Kare to kanojo wa hanarete shimatta."
+                  tr_en="He and she ended up growing apart."
+                  tr_de="Er und sie haben sich leider getrennt."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【駅：えき】は【少：すこ】し【離：はな】れている。"
+                  rom="Eki wa sukoshi hanarete iru."
+                  tr_en="The station is a little way off."
+                  tr_de="Der Bahnhof ist ein Stück weit entfernt."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="なぜ【頭：あたま】から【離：はな】れない？"
+                  rom="Naze atama kara hanarenai?"
+                  tr_en="Why can't I get it out of my head?"
+                  tr_de="Warum kann ich es nicht aus meinem Kopf bekommen?"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【握：にぎ】る"
+              rom="nigiru"
+              tr_en="to grasp; to grip; to hold"
+              tr_de="etw. fassen; etw. halten"
+              hint_en="v.t."
+              lvl="n3"
+              id="nigiru-grasp"
+            >
+                <see id="onigiri-riceball" rem="noun" />
+                <keep_apart_from id="motsu-carry" />
+                <keep_apart_from id="tsukamu-grab" />
+                <keep_apart_from id="tsukamaru-tobecaught" />
+            </word>
+            <word
+              w="【横：よこ】【切：ぎ】る"
+              rom="yokogiru"
+              tr_en="to cross (e.g. road); to traverse"
+              tr_de="überqueren (z.B. die Strasse); traversieren"
+              hint_en="v.t."
+              lvl="n3"
+              category="transportation"
+              id="yokogiru-cross"
+            >
+                <keep_apart_from id="n5-wataru" />
+            </word>
+            <word
+              w="【抱：いだ】く"
+              rom="idaku"
+              tr_en="to embrace; to hug; to hold in one's arms"
+              tr_de="umarmen; in Armen halten"
+              lvl="n3"
+              category="relationships"
+              id="idaku-embrace"
+            >
+                <keep_apart_from id="kakaeru-hold" />
+            </word>
+            <word
+              w="【苦：くる】しむ"
+              rom="kurushimu"
+              tr_en="to suffer; to groan; to be worried"
+              tr_de="leiden; stöhnen; besorgt sein"
+              lvl="n3"
+              category="mood, not-good"
+              id="kurushimu-suffer"
+            >
+                <!-- the noun is kurushimi, which is nx -->
+            </word>
+            <word
+              w="【求：もと】める"
+              rom="motomeru"
+              tr_en="to wish for sth.; to demand; to pursue (a pleasure)"
+              tr_de="sich etw. wünschen; etw. verlangen; (einem Vergnügen) nachgehen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="motomeru-wishfor"
+            >
+                <!-- the noun is motome, nx -->
+            </word>
+            <word
+              w="【黙：だま】る"
+              rom="damaru"
+              tr_en="to be silent; to say nothing"
+              tr_de="schweigen; nichts sagen"
+              hint_en="v.i."
+              lvl="n3"
+              category="talking"
+              id="damaru-besilent"
+            >
+                <phrase
+                  ph="【黙：だま】り【込：こ】む"
+                  rom="damarikomu"
+                  tr_en="to fall silent; to say no more"
+                  tr_de="still werden; nichts mehr sagen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】たちはみんな【黙：だま】っていた。"
+                  rom="Watashi-tachi wa minna damatte ita."
+                  tr_en="All of us were silent."
+                  tr_de="Wir waren alle still."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【黙：だま】って【聞：き】きなさい。"
+                  rom="Damatte kikinasai."
+                  tr_en="Shut up and listen."
+                  tr_de="Halt den Mund und höre zu."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【疑：うたが】う"
+              rom="utagau"
+              tr_en="to doubt; to distrust; to suspect"
+              tr_de="etw. bezweifeln; misstrauen; einen Verdacht haben"
+              hint_en="v.t."
+              lvl="n3"
+              category="relationships, thinking"
+              id="utagau-doubt"
+            />
+            <word
+              w="【優：すぐ】れる"
+              rom="sugureru"
+              tr_en="to surpass; to outstrip; to excel"
+              tr_de="übertreffend sein; hervorragen; brillieren"
+              hint_en="v.i."
+              lvl="n3"
+              category="general"
+              id="sugureru-excel"
+            />
+            <word
+              w="【論：ろん】じる"
+              rom="ronjiru"
+              tr_en="to discuss sth.; to talk about sth."
+              tr_de="etw. diskutieren; (ein Thema) behandeln"
+              Langenscheidt="diskutieren, (Thema) behandeln"
+              hint_en="v.t."
+              lvl="n3"
+              category="talking"
+              id="ronjiru-discuss"
+            >
+                <keep_apart_from id="hanasu-talk" />
+                <keep_apart_from id="iu-say" />
+                <keep_apart_from id="mōsu-say" />
+                <keep_apart_from id="mōshiageru-tell" />
+                <keep_apart_from id="hanashiau-discuss" />
+                <keep_apart_from id="hanashikakeru-addresssb" />
+                <keep_apart_from id="kataru-recite" />
+            </word>
+            <word
+              w="【欠：か】ける"
+              rom="kakeru"
+              tr_en="to be damaged; to be lacking; to be missing"
+              tr_de="beschädigt sein; fehlen"
+              lvl="n3"
+              category="not-good, technical"
+              id="kakeru-damaged"
+            />
+            <word
+              w="【罹：かか】る"
+              rom="kakaru"
+              tr_en="to suffer from (an illness, disease)"
+              tr_de="(an einer Krankheit) leiden"
+              usuallyInKana="true"
+              lvl="n3"
+              category="health, not-good"
+              id="kakaru-suffer"
+            />
+            <word
+              w="【刈：か】る"
+              rom="karu"
+              tr_en="to cut (grass, hair, etc.); to trim"
+              tr_de="schneiden (Gras, Haar, usw.); trimmen"
+              lvl="n3"
+              category="general"
+              id="karu-trim"
+            />
+            <word
+              w="【詰：つ】める"
+              rom="tsumeru"
+              tr_en="to stuff into; to pack; to move closer together"
+              tr_de="etw. hineinstopfen; etw. hineinpacken; zusammenrücken"
+              hint_en="v.t. &amp; i."
+              lvl="n3"
+              category="hands, motion"
+              id="tsumeru-pack"
+            />
+            <word
+              w="【防：ふせ】ぐ"
+              rom="fusegu"
+              tr_en="to defend against; to protect against; to avert"
+              tr_de="sich gegen etw. verteidigen; sich gegen etw. schützen; etw. abwenden"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, politics"
+              id="fusegu-avert"
+            />
+            <word
+              w="【解：と】ける"
+              rom="tokeru"
+              tr_en="to be solved; to come undone; (spell) to be broken"
+              tr_de="gelöst sein; lose werden; (Bann) aufgehoben sein"
+              hint_en="v.i."
+              lvl="n3"
+              category="general"
+              id="tokeru-besolved"
+            />
+            <word
+              w="【支：ささ】える"
+              rom="sasaeru"
+              tr_en="to support; to defend; to hold at bay"
+              tr_de="etw. unterstützen; etw. verteidigen; etw. in Schach halten"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, politics"
+              id="sasaeru-support"
+            />
+            <word
+              w="【避：さ】ける"
+              rom="sakeru"
+              tr_en="to avoid; to ward off; to move out of the way"
+              tr_de="etw. umgehen; etw. abwenden; etw. aus dem Weg gehen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, motion"
+              id="sakeru-avoid"
+            />
+            <word
+              w="【除：のぞ】く"
+              rom="nozoku"
+              tr_en="to remove sth.; to eliminate; to exclude"
+              tr_de="etw. entfernen; eliminieren; ausschliessen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="nozoku-eliminate"
+            />
+            <word
+              w="【増：ま】す"
+              rom="masu"
+              tr_en="to increase; to grow"
+              tr_de="mehr werden; etw. vermehren"
+              hint_en="v.t. &amp; i."
+              lvl="n3"
+              category="general, maths"
+              id="masu-grow"
+            />
+            <word
+              w="【生：しょう】じる"
+              rom="shōjiru"
+              tr_en="to produce; to yield; to arise"
+              tr_de="etw. produzieren; etw. abgeben; aufkommen"
+              hint_en="v.t. &amp; i."
+              lvl="n3"
+              category="general, work"
+              id="shōjiru-yield"
+            />
+            <word
+              w="【用：もち】いる"
+              rom="mochiiru"
+              tr_en="to use; to make use of; to utilise"
+              tr_de="etw. verwenden; von etw. Gebrauch machen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, technical"
+              id="mochiiru-use"
+            />
+            <word
+              w="【備：そな】える"
+              rom="sonaeru"
+              tr_en="to furnish with; to equip with; to prepare for"
+              tr_de="mit etw. ausrüsten; ausstatten; für etw. vorbereiten"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, technical"
+              id="sonaeru-furnish"
+            />
+            <word
+              w="【扱：あつか】う"
+              rom="atsukau"
+              tr_en="to deal with (a person, problem); to operate (a machine)"
+              tr_de="sich (einem Problem, einer Person) annehmen; (Maschine) bedienen"
+              lvl="n3"
+              category="work, technical"
+              id="atsukau-dealwith"
+            />
+            <word
+              w="【飽：あ】きる"
+              rom="akiru"
+              tr_en="to lose interest in; to be fed up with"
+              tr_de="das Interesse an etw. verlieren; etw. satt haben"
+              lvl="n3"
+              category="mood"
+              id="akiru-fedupwith"
+            />
+            <word
+              w="【得：う】る"
+              rom="uru"
+              tr_en="to be able to; to acquire sth.; to gain"
+              tr_de="etw. können; sich etw. aneignen; etw. gewinnen"
+              hint_en="v.t."
+              lvl="n3"
+              category="work"
+              id="uru-obtain"
+            />
+            <word
+              w="【頼：たよ】る"
+              rom="tayoru"
+              tr_en="to rely on; to count on; to turn to (for help)"
+              tr_de="sich auf etw. stützen; auf etw. zählen; sich an jem. wenden"
+              hint_en="v.i."
+              lvl="n3"
+              category="relationships, technical"
+              id="tayoru-relyon"
+            />
+            <word
+              w="【恐：おそ】れる"
+              rom="osoreru"
+              tr_en="to fear; to be afraid of"
+              tr_de="etw. fürchten; etw. befürchten"
+              hint_en="v.t."
+              lvl="n3"
+              category="mood, not-good"
+              id="osoreru-fear"
+            />
+            <word
+              w="【関：かん】する"
+              rom="kan suru"
+              tr_en="to concern; to be related"
+              tr_de="etw. betreffen; auf etw. bezogen sein"
+              Langenscheidt="betreffen"
+              lvl="n3"
+              category="general"
+              id="kansuru-concern"
+            />
+        </section>
+    </unit>
+</vocabulary>

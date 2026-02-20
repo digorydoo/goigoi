@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <!-- WelcomeActivity -->
+    <string name="app_name" translatable="false">Go Go Japanese</string>
+    <string name="preferences">Preferences</string>
+    <string name="todays_progress">Today\'s progress</string>
+    <string name="continue_studying">Click here to continue studying</string>
+    <string name="learnt_n_of_m_words">You\'ve learnt ${N} of ${M} words</string>
+
+    <!-- PrefsActivity -->
+    <string name="changeThemePrimary">Theme</string>
+    <string name="changeThemeSecondary">Enable for dark mode</string>
+    <string name="aboutAppPrimary">About Go Go Japanese</string>
+    <string name="aboutAppSecondary">Copyrights and license</string>
+
+    <!-- ProgStudyActivity -->
+    <string name="n_of_m">${N} of ${M}</string>
+    <string name="correct_wrong_counts">Correct: ${N} &#160; Wrong: ${M}</string>
+    <string name="study_set_restarted">Study set restarted</string>
+    <string name="next_word">Next word</string>
+    <string name="reveal_btn">Reveal</string>
+
+    <!-- FlipThruWordsActivity -->
+    <string name="skip_action_text">SKIP</string>
+    <string name="info_action_text">INFORMATION</string>
+
+    <!-- ProgStudyActivity -->
+    <string name="hint_when_show_kanji_ask_kana">Write in kana how you would pronounce this.</string>
+    <string name="hint_when_show_kana_ask_kanji_singular">Select the kanji that is pronounced as shown.</string>
+    <string name="hint_when_show_kana_ask_kanji_plural">Select the kanjis that are pronounced as shown.</string>
+    <string name="hint_when_show_romaji_ask_kana">Write this in kana.</string>
+    <string name="hint_when_show_translation_ask_kana">Write the matching word in kana.</string>
+    <string name="hint_when_show_translation_ask_kanji_among_similar">Select the kanji matching the translation.</string>
+    <string name="hint_when_show_translation_ask_kanji_among_words">Write the matching word in kanji.</string>
+    <string name="hint_when_show_s_or_ph_ask_kanji">Select the word that goes into the gap.</string>
+    <string name="hint_when_new_word">Have a look at this new word.</string>
+    <string name="hint_when_asking_nothing">Pronounce this aloud.</string>
+    <string name="hint_when_show_ph_translation_ask_ph_kana">Write this phrase in kana.</string>
+    <string name="asking_phrase">phrase</string>
+    <string name="answer_correct">That was correct! Nice!</string>
+    <string name="answer_wrong">Oops, that\'s not right!</string>
+    <string name="answer_correct_except_kana_size">Almost correct! Pay attention to kana size!</string>
+    <string name="backspace_key">Backspace</string>
+    <string name="enter_key">Enter</string>
+    <string name="transforms_key">Transform</string>
+
+    <!-- UnytActivity -->
+    <string name="show_romaji" translatable="false">Rōmaji</string>
+    <string name="show_kana" translatable="false">Kana</string>
+    <string name="show_translation">Translation</string>
+    <string name="start_btn">Start</string>
+    <string name="too_few_words">Too few words in unit</string>
+
+    <!-- UnitCtxDialogFragment -->
+    <string name="item_reset_unyt_progress">Reset progress</string>
+    <string name="confirm_reset_unyt_progress_msg">The progress statistics of the selected unit and its containing ${N} word(s) will be reset</string>
+    <string name="confirm_reset_unyt_progress_ok">RESET</string>
+
+    <!-- UnitsOverviewActivity -->
+    <string name="n_words">${N} words</string>
+
+    <!-- Utils -->
+    <string-array name="language_ids" translatable="false">
+        <item>zh</item>
+        <item>nl</item>
+        <item>en</item>
+        <item>fi</item>
+        <item>fr</item>
+        <item>de</item>
+        <item>el</item>
+        <item>it</item>
+        <item>ga</item>
+        <item>ja</item>
+        <item>no</item>
+        <item>pl</item>
+        <item>po</item>
+        <item>rm</item>
+        <item>ru</item>
+        <item>es</item>
+        <item>sv</item>
+        <item>tr</item>
+        <item>cy</item>
+        <item>zz</item>
+    </string-array>
+    <string-array name="language_names">
+        <item>Chinese</item>
+        <item>Dutch</item>
+        <item>English</item>
+        <item>Finnish</item>
+        <item>French</item>
+        <item>German</item>
+        <item>Greek</item>
+        <item>Italian</item>
+        <item>Irish</item>
+        <item>Japanese</item>
+        <item>Norwegian</item>
+        <item>Polish</item>
+        <item>Portuguese</item>
+        <item>Romansh</item>
+        <item>Russian</item>
+        <item>Spanish</item>
+        <item>Swedish</item>
+        <item>Turkish</item>
+        <item>Welsh</item>
+        <item>Other</item>
+    </string-array>
+    <string name="just_now">Just now</string>
+
+    <!-- WordCtxDialogFragment -->
+    <string name="item_reset_word_progress">Reset progress</string>
+    <string name="item_add_word">Add to my words</string>
+    <string name="item_remove_word">Remove from my words</string>
+    <string name="confirm_reset_word_progress_msg">The progress statistics of the selected word will be reset</string>
+    <string name="confirm_reset_word_progress_ok">RESET</string>
+
+    <!-- WordInfoBottomSheet -->
+    <string name="look_it_up">Look up ${word}</string>
+    <string name="kanji_details">Kanji details</string>
+    <string name="jlpt_level_unknown">JLPT level unknown</string>
+    <string name="not_studied_yet">Not studied yet</string>
+    <string name="studied_n_times">Studied ${N} times</string>
+    <string name="sometimes_with_kanji">Sometimes written with kanji: ${kanji}</string>
+    <string name="kanji_more_difficult">For ${level}, you only need to know the word in kana: ${kana}</string>
+    <string name="progress">Progress</string>
+    <string name="rating">Rating</string>
+    <string name="examples">Examples</string>
+    <string name="see_also">See also</string>
+    <string name="functions">Functions</string>
+    <string name="other_languages">Other languages</string>
+    <string name="transitive_verb">Transitive verb</string>
+    <string name="intransitive_verb">Intransitive verb</string>
+    <string name="noun">Noun</string>
+    <string name="verb">Verb</string>
+    <string name="adjective">Adjective</string>
+    <string name="antonym">Antonym</string>
+    <string name="same_reading">Same reading</string>
+    <string name="same_kanji">Same kanji</string>
+    <string name="similar_meaning">Similar meaning</string>
+    <string name="closely_related">Related term</string>
+
+    <!-- words_list_header -->
+    <string name="overflow_btn">Actions</string>
+
+    <!-- MyDlgBuilder -->
+    <string name="got_it">GOT IT</string>
+
+    <!-- HintDialogManager -->
+    <string name="rate_us_message">Would you like to tell us how we could improve this app?</string>
+    <string name="rate_us_btn">RATE US</string>
+    <string name="not_now_btn">NOT NOW</string>
+    <string name="first_time_extkb_shown">This is the extended kana keyboard. Drag the buttons left, right, up or down to see additional characters.</string>
+    <string name="first_time_extkb_small_kana">Small kana can be produced by first writing the kana in normal size, and then making it smaller by pulling the transforms key downwards.</string>
+    <string name="first_time_extkb_dakuten_handakuten">Dakuten such as ば and handakuten such as ぱ can be produced by first writing the kana は and then pulling the transforms key to the left or right.</string>
+
+    <!-- AboutActivity -->
+    <string name="copyright_and_license" translatable="false"><![CDATA[
+        <p>
+            <b>Go Go Japanese</b> is distributed under the GPL 3.0 license.<br />
+            GitHub project is at github.com/digorydoo/goigoi-app.
+        </p><p>
+            <b>Font: Dela Gothic One</b><br />
+            Available from fonts.google.com for free download.<br />
+            Github link: github.com/syakuzen/DelaGothic<br />
+            License: Open Font License version 1.1<br />
+            The font was stripped before including it in Go Go Japanese for smaller download size.
+        </p><p>
+            <b>Font: Mochiy Pop One</b><br />
+            Available from fonts.google.com for free download.<br />
+            License: Open Font License version 1.1<br />
+            The font was stripped before including it in Go Go Japanese for smaller download size.
+        </p><p>
+            <b>Font: Zen Kurenaido</b><br />
+            Available from fonts.google.com for free download.<br />
+            License: Open Font License version 1.1
+        </p><p>
+            <b>Font: EPSON Tai Xing Shu Tib 2</b><br />
+            © 2000 SEIKO EPSON CORP. All rights reserved.<br />
+            EPSON and EPSON-FUTO-GYOSHO is a trademark of SEIKO EPSON CORPORATION.<br />
+            The TTF\'s copyright notice also states: No embedding restrictions.
+        </p>
+    ]]></string>
+</resources>

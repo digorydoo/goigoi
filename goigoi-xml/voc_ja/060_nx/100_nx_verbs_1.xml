@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Even more verbs"
+      name_de="Noch mehr Verben"
+      name_fr="Encore plus de verbes"
+      name_it="Ancora più verbi"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="-"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <word
+              w="【試：し】【着：ちゃく】"
+              rom="shichaku"
+              tr_en="to try on clothes"
+              tr_de="Kleider anprobieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="-"
+              id="shichaku-tryonclothes"
+              category="shopping, fashion"
+            >
+                <sentence
+                  s="【試：し】【着：ちゃく】してもいいですか。"
+                  rom="Shichaku shite mo ii desu ka?"
+                  tr_en="Can I try it on?"
+                  tr_de="Kann ich es anprobieren?"
+                  lvl="-"
+                  origin="Langenscheidt p.135"
+                />
+            </word>
+            <word
+              w="【投：な】げ【返：かえ】す"
+              rom="nagekaesu"
+              tr_en="to throw back"
+              tr_de="zurückwerfen"
+              lvl="-"
+              id="nagekaesu-throwback"
+            />
+            <word
+              w="【走：はし】り【回：まわ】る"
+              rom="hashirimawaru"
+              tr_en="to run around"
+              tr_de="herumrennen"
+              lvl="-"
+              id="hashirimawaru-runaround"
+            />
+            <word
+              w="【噛：か】み【付：つ】く"
+              rom="kamitsuku"
+              tr_en="to bite at; to snap at"
+              tr_de="etw. anbeissen; nach etw. schnappen"
+              lvl="-"
+              category="animal"
+              id="kamitsuku-snapat"
+            />
+            <word
+              w="【引：ひ】っ【込：こ】める"
+              rom="hikkomeru"
+              tr_en="to draw in; to retract"
+              tr_de="zurückziehen; etw. einziehen"
+              lvl="-"
+              id="hikkomeru-retract"
+            />
+            <word
+              w="【言：い】い【合：あ】う"
+              rom="iiau"
+              tr_en="to say to each-other; to dispute"
+              tr_de="einander sagen; diskutieren"
+              lvl="-"
+              category="relationships, talking"
+              id="iiau-dispute"
+            />
+            <word
+              w="【飛：と】び【乗：の】る"
+              rom="tobinoru"
+              tr_en="to jump onto"
+              tr_de="auf etw. aufspringen"
+              hint_en="onto a moving object"
+              hint_de="auf ein sich bewegendes Objekt"
+              lvl="-"
+              category="motion, transportation"
+              id="tobinoru-jumponto"
+            />
+            <word
+              w="【飛：と】び【跳：は】ねる"
+              rom="tobihaneru"
+              tr_en="to jump up and down; to hop"
+              tr_de="auf und ab springen; hüpfen"
+              lvl="-"
+              id="tobihaneru-hop"
+            >
+                <keep_apart_from id="haneru-leap" />
+                <keep_apart_from id="tobu-fly" />
+            </word>
+            <word
+              w="【跳：と】び【上：あ】がる"
+              rom="tobiagaru"
+              tr_en="to jump up; to fly into the air"
+              tr_de="hochspringen; in die Luft springen"
+              lvl="-"
+              id="tobiagaru-jumpup"
+            />
+            <word
+              w="【駆：か】け【出：だ】す"
+              rom="kakedasu"
+              tr_en="to run off; to break into a run"
+              tr_de="davonrennen; losrennen"
+              lvl="-"
+              id="kakedasu-runoff"
+            />
+            <word
+              w="【駆：か】け【上：あ】がる"
+              rom="kakeagaru"
+              tr_en="to run up; to dash up"
+              tr_de="hochrennen; hinaufrennen"
+              hint_en="a hill, the stairs, etc."
+              hint_de="den Hügel hinauf, die Treppe hoch, usw."
+              lvl="-"
+              id="kakeagaru-runup"
+            />
+            <word
+              w="【踏：ふ】み【潰：つぶ】す"
+              rom="fumitsubusu"
+              tr_en="to trample; to crush underfoot"
+              tr_de="draufstehen; zertreten"
+              lvl="-"
+              id="fumitsubusu-trample"
+            />
+            <word
+              w="【乗：の】り【遅：おく】れる"
+              rom="noriokureru"
+              tr_en="to miss (a train, bus, etc.)"
+              tr_de="(den Zug, Bus) verpassen"
+              lvl="-"
+              id="noriokureru-miss"
+              rem="appears in GENKI2 p.95"
+            >
+                <keep_apart_from id="norisokonau-miss" />
+            </word>
+            <word
+              w="【迷：まよ】う"
+              rom="mayou"
+              tr_en="to get lost; to waver"
+              tr_de="sich verlieren; sich verlaufen"
+              lvl="-"
+              id="mayou-getlost"
+              rem="appears in GENKI2 p.95; needs studyInContext"
+              HIDDEN="true"
+            >
+                <phrase
+                  ph="【道：みち】に【迷：まよ】う"
+                  rom="michi ni mayou"
+                  tr_en="to lose one's way; to become lost"
+                  tr_de="vom Weg abkommen; sich verlaufen"
+                  lvl="-"
+                  origin="GENKI2 p.95"
+                />
+            </word>
+            <word
+              w="【乗：の】り【損：そこ】なう"
+              rom="norisokonau"
+              tr_en="to miss"
+              tr_de="verpassen"
+              hint_en="a train, bus, etc."
+              hint_de="den Zug, Bus, usw."
+              lvl="-"
+              category="transportation"
+              id="norisokonau-miss"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="noriokureru-miss" />
+            </word>
+            <word
+              w="【振：ふ】られる"
+              rom="furareru"
+              tr_en="to get dumped; to be given the cold shoulder"
+              tr_de="abgeladen werden; abgelehnt werden"
+              hint_en="v.i."
+              lvl="-"
+              category="relationships, quarrel"
+              id="furareru-getdumped"
+              HIDDEN="true"
+            />
+            <word
+              w="【咳：せ】き【込：こ】む"
+              rom="sekikomu"
+              tr_en="to have a coughing fit"
+              lvl="n3"
+              id="sekikomu-coughingfit"
+              HIDDEN="true"
+              rem="to provide the furigana"
+            />
+        </section>
+    </unit>
+</vocabulary>

@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Date and time ①"
+      name_de="Datum und Uhrzeit ①"
+      name_fr="La date et l'heure ①"
+      name_it="Data e ora ①"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="n5, n4"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="true"
+    >
+        <section
+          name_en="The twelve months"
+          name_de="Die zwölf Monate"
+          name_fr="Les douze mois"
+          name_it="I dodici mesi"
+        >
+            <word
+              w="【一：いち】【月：がつ】"
+              rom="ichi-gatsu"
+              tr_en="January"
+              tr_de="Januar"
+              lvl="n5"
+              id="ichigatsu-january"
+              category="months"
+            >
+                <phrase
+                  ph="【一：いち】【月：がつ】から"
+                  rom="ichi-gatsu kara"
+                  tr_en="starting from January"
+                  tr_de="ab Januar"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【今：こ】【年：とし】の 【一：いち】【月：がつ】【一日：ついたち】は 【火：か】【曜：よう】【日：び】です。"
+                  rom="Kotoshi no ichi-gatsu tsuitachi wa kayōbi desu."
+                  tr_en="January 1st falls on a Tuesday this year."
+                  tr_de="Dieses Jahr fällt der 1. Januar auf einen Dienstag."
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【二：に】【月：がつ】"
+              rom="ni-gatsu"
+              tr_en="February"
+              tr_de="Februar"
+              lvl="n5"
+              id="nigatsu-february"
+              category="months"
+            >
+                <phrase
+                  ph="【来：らい】【年：ねん】の【二：に】【月：がつ】"
+                  rom="rainen no ni-gatsu"
+                  tr_en="February next year"
+                  tr_de="Februar nächstes Jahr"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【二：に】【月：がつ】には 【雪：ゆき】が 【多：おお】い。"
+                  rom="Ni-gatsu ni wa yuki ga ōi."
+                  tr_en="We have a lot of snow in February."
+                  tr_de="Wir haben viel Schnee im Februar."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【三：さん】【月：がつ】"
+              rom="san-gatsu"
+              tr_en="March"
+              tr_de="März"
+              lvl="n5"
+              id="sangatsu-march"
+              category="months"
+            >
+                <phrase
+                  ph="【三：さん】【月：がつ】の【初：はじ】めに"
+                  rom="san-gatsu no hajime ni"
+                  tr_en="at the beginning of March"
+                  tr_de="anfangs März"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【三：さん】【月：がつ】には もっと 【暖：あたた】かくなると 【思：おも】います。"
+                  rom="San-gatsu ni wa motto atatakaku naru to omoimasu."
+                  tr_en="It will become much warmer in March, I guess."
+                  tr_de="Es wird wärmer werden im März, denke ich."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【四：し】【月：がつ】"
+              rom="shi-gatsu"
+              tr_en="April"
+              tr_de="April"
+              lvl="n5"
+              id="shigatsu-april"
+              category="months"
+            >
+                <phrase
+                  ph="【四：し】【月：がつ】の【終：お】わりに"
+                  rom="shi-gatsu no owari ni"
+                  tr_en="at the end of April"
+                  tr_de="ende März"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【学：がっ】【校：こう】は 【四：し】【月：がつ】から 【始：はじ】まります。"
+                  rom="Gakkō wa shi-gatsu kara hajimarimasu."
+                  tr_en="School begins in April."
+                  tr_de="Die Schule fängt im April an."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【五：ご】【月：がつ】"
+              rom="go-gatsu"
+              tr_en="May"
+              tr_de="Mai"
+              lvl="n5"
+              id="gogatsu-may"
+              category="months"
+            >
+                <phrase
+                  ph="さ【来：らい】【年：ねん】の【五：ご】【月：がつ】"
+                  rom="sarainen no go-gatsu"
+                  tr_en="the year after next in May"
+                  tr_de="übernächstes Jahr im Mai"
+                  lvl="n5"
+                  origin="self"
+                />
+                <!--
+                   五月に雪が降るときは、四月が終わります。
+                   When it snows in May, April must be over.
+                   Schneit es im Mai, ist der April vorbei.
+                   They did not get the point on hinative: https://hinative.com/questions/22731370
+                   五月に雪が降ると、四月が終わる。ChatGPT didn't get the point either.
+                -->
+                <sentence
+                  s="【明日：あした】からもう 【五：ご】【月：がつ】だね。"
+                  rom="Ashita kara mō go-gatsu da ne."
+                  tr_en="It's already May tomorrow!"
+                  tr_de="Morgen ist es bereits Mai!"
+                  lvl="n5"
+                  origin="hinative"
+                  href="https://hinative.com/questions/21753269"
+                />
+            </word>
+            <word
+              w="【六：ろく】【月：がつ】"
+              rom="roku-gatsu"
+              tr_en="June"
+              tr_de="Juni"
+              lvl="n5"
+              id="rokugatsu-june"
+              category="months"
+            >
+                <phrase
+                  ph="【一昨年：おととし】の【六：ろく】【月：がつ】"
+                  rom="ototoshi no roku-gatsu"
+                  tr_en="the year before last in June"
+                  tr_de="vorletztes Jahr im Juni"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【六：ろく】【月：がつ】は 【来：く】る【日：ひ】も 【来：く】る【日：ひ】も 【雨：あめ】が 【降：ふ】る。"
+                  rom="Roku-gatsu wa kuru hi mo kuru hi mo ame ga furu."
+                  tr_en="In June, it rains day after day."
+                  tr_de="Im Juni regnet es Tag für Tag."
+                  lvl="n5"
+                  origin="lib0"
+                  rem="jisho has nx for kuru hi mo kuru hi mo"
+                />
+            </word>
+            <word
+              w="【七：しち】【月：がつ】"
+              rom="shichi-gatsu"
+              tr_en="July"
+              tr_de="Juli"
+              lvl="n5"
+              id="shichigatsu-july"
+              category="months"
+            >
+                <phrase
+                  ph="【去：きょ】【年：ねん】の【七：しち】【月：がつ】"
+                  rom="kyonen no shichi-gatsu"
+                  tr_en="last year in July"
+                  tr_de="letztes Jahr im Juli"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【今日：きょう】は、【七：しち】【月：がつ】 【十：とお】【日：か】 【土：ど】【曜：よう】【日：び】です。"
+                  rom="Kyō wa, shichi-gatsu tōka doyōbi desu."
+                  tr_en="Today is Saturday, July 10th."
+                  tr_de="Heute ist Samstag, der 10. Juli."
+                  lvl="n5"
+                  origin="jpod101 audio modified"
+                />
+            </word>
+            <word
+              w="【八：はち】【月：がつ】"
+              rom="hachi-gatsu"
+              tr_en="August"
+              tr_de="August"
+              lvl="n5"
+              id="hachigatsu-august"
+              category="months"
+            >
+                <phrase
+                  ph="【一昨年：おととし】の【八：はち】【月：がつ】"
+                  rom="ototoshi no hachi-gatsu"
+                  tr_en="the year before last in August"
+                  tr_de="vorletztes Jahr im August"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="もう【八：はち】【月：がつ】で 【夏：なつ】【休：やす】みも 【終：お】わろうと して いる。"
+                  rom="Mō hachi-gatsu de natsu-yasumi mo owarō to shite iru."
+                  tr_en="It's already August, and summer vacation is nearly over."
+                  tr_de="Es ist bereits August, und die Sommerferien sind fast vorüber."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【九：く】【月：がつ】"
+              rom="ku-gatsu"
+              tr_en="September"
+              tr_de="September"
+              lvl="n5"
+              id="kugatsu-september"
+              category="months"
+            >
+                <phrase
+                  ph="【九：く】【月：がつ】まで"
+                  rom="ku-gatsu made"
+                  tr_en="until September"
+                  tr_de="bis September"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【私：わたし】は 【九：く】【月：がつ】に 【16：じゅうろく】【歳：さい】に なります。"
+                  rom="Watashi wa ku-gatsu ni jū-roku-sai ni narimasu."
+                  tr_en="I'll be sixteen in September."
+                  tr_de="Im September werde ich sechzehn."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【十：じゅう】【月：がつ】"
+              rom="jū-gatsu"
+              tr_en="October"
+              tr_de="Oktober"
+              lvl="n5"
+              id="jūgatsu-october"
+              category="months"
+            >
+                <phrase
+                  ph="【十：じゅう】【月：がつ】から"
+                  rom="jū-gatsu kara"
+                  tr_en="starting from October"
+                  tr_de="ab Oktober"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【十：じゅう】【月：がつ】は 【葉：は】の 【色：いろ】が きれいです。"
+                  rom="Jū-gatsu wa ha no iro ga kirei desu."
+                  tr_en="In October, the colours of the leaves are beautiful."
+                  tr_de="Im Oktober sind die Farben der Blätter hübsch."
+                  origin="self"
+                  lvl="n5"
+                  href="https://hinative.com/questions/22816577"
+                />
+            </word>
+            <word
+              w="【十：じゅう】【一：いち】【月：がつ】"
+              rom="jū-ichi-gatsu"
+              tr_en="November"
+              tr_de="November"
+              lvl="n5"
+              id="jūichigatsu-november"
+              category="months"
+            >
+                <phrase
+                  ph="【今：こ】【年：とし】の【十：じゅう】【一：いち】【月：がつ】に"
+                  rom="kotoshi no jū-ichi-gatsu ni"
+                  tr_en="in November this year"
+                  tr_de="im November dieses Jahres"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【私：わたし】の 【誕：たん】【生：じょう】【日：び】は 【十：じゅう】【一：いち】【月：がつ】です。"
+                  rom="Watashi no tanjōbi wa jū-ichi-gatsu desu."
+                  tr_en="My birthday is in November."
+                  tr_de="Mein Geburtstag ist im November."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【十：じゅう】【二：に】【月：がつ】"
+              rom="jū-ni-gatsu"
+              tr_en="December"
+              tr_de="Dezember"
+              lvl="n5"
+              id="jūnigatsu-december"
+              category="months"
+            >
+                <phrase
+                  ph="【十：じゅう】【二：に】【月：がつ】まで"
+                  rom="jū-ni-gatsu made"
+                  tr_en="until December"
+                  tr_de="bis Dezember"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="ナオミは 【十：じゅう】【二：に】【月：がつ】に 【日：に】【本：ほん】に くる。"
+                  rom="Naomi wa jū-ni-gatsu ni Nihon ni kuru."
+                  tr_en="Naomi will come to Japan in December."
+                  tr_de="Naomi wird im Dezember nach Japan kommen."
+                  lvl="n5"
+                  origin="hinative modified"
+                  href="https://hinative.com/questions/10574191"
+                />
+            </word>
+        </section>
+        <section
+          name_en="Days of the week"
+          name_de="Wochentage"
+          name_fr="Les jours de la semaine"
+          name_it="Giorni della settimana"
+        >
+            <word
+              w="【月：げつ】【曜：よう】【日：び】"
+              rom="getsu-yōbi"
+              tr_en="Monday"
+              tr_de="Montag"
+              lvl="n5"
+              category="days-of-the-week"
+              id="getsuyōbi-monday"
+            >
+                <phrase
+                  ph="【来：らい】【週：しゅう】の【月：げつ】【曜：よう】【日：び】"
+                  rom="raishū no getsu-yōbi"
+                  tr_en="Monday next week"
+                  tr_de="Montag nächste Woche"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【夏：なつ】【休：やす】みは 【来：らい】【週：しゅう】の 【月：げつ】【曜：よう】【日：び】から 【始：はじ】まる。"
+                  rom="Natsu-yasumi wa raishū no getsu-yōbi kara hajimaru."
+                  tr_en="Summer vacation begins next Monday."
+                  tr_de="Die Sommerferien fangen am nächsten Montag an."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【火：か】【曜：よう】【日：び】"
+              rom="ka-yōbi"
+              tr_en="Tuesday"
+              tr_de="Dienstag"
+              lvl="n5"
+              category="days-of-the-week, fire"
+              id="kayōbi-tuesday"
+            >
+                <phrase
+                  ph="【先：せん】【週：しゅう】の【火：か】【曜：よう】【日：び】"
+                  rom="senshū no ka-yōbi"
+                  tr_en="Tuesday last week"
+                  tr_de="Dienstag letzte Woche"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with lib0"
+                />
+                <sentence
+                  s="できたら【火：か】【曜：よう】【日：び】に【来：き】てね。"
+                  rom="Dekitara ka-yōbi ni kite ne."
+                  tr_en="Come on Tuesday, if possible."
+                  tr_de="Kommen Sie am Dienstag, wenn es möglich ist."
+                  lvl="n5"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【水：すい】【曜：よう】【日：び】"
+              rom="sui-yōbi"
+              tr_en="Wednesday"
+              tr_de="Mittwoch"
+              lvl="n5"
+              category="days-of-the-week"
+              id="suiyōbi-wednesday"
+            >
+                <phrase
+                  ph="【水：すい】【曜：よう】【日：び】から"
+                  rom="sui-yōbi kara"
+                  tr_en="starting on Wednesday"
+                  tr_de="ab Mittwoch"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【水：すい】【曜：よう】【日：び】のクラスでは【辞：じ】【書：しょ】を【使：つか】います。"
+                  rom="Sui-yōbi no kurasu de wa jisho o tsukaimasu."
+                  tr_en="We'll use the dictionary in the class on Wednesday."
+                  tr_de="Wir werden das Wörterbuch in der Klasse am Mittwoch benutzen."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【木：もく】【曜：よう】【日：び】"
+              rom="moku-yōbi"
+              tr_en="Thursday"
+              tr_de="Donnerstag"
+              lvl="n5"
+              category="days-of-the-week"
+              id="mokuyōbi-thursday"
+            >
+                <phrase
+                  ph="【木：もく】【曜：よう】【日：び】まで"
+                  rom="moku-yōbi made"
+                  tr_en="until Thursday"
+                  tr_de="bis Donnerstag"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【木：もく】【曜：よう】【日：び】の 【夜：よる】 【九：く】【時：じ】から、テレビを 【見：み】ます。"
+                  rom="Moku-yōbi no yoru ku-ji kara, terebi o mimasu."
+                  tr_en="I watch TV from nine o'clock on Thursday nights."
+                  tr_de="Donnerstag abends ab neun Uhr schaue ich jeweils fern."
+                  lvl="n5"
+                  origin="500mon q207 modified"
+                />
+            </word>
+            <word
+              w="【金：きん】【曜：よう】【日：び】"
+              rom="kin-yōbi"
+              tr_en="Friday"
+              tr_de="Freitag"
+              lvl="n5"
+              category="days-of-the-week"
+              id="kinyōbi-friday"
+            >
+                <phrase
+                  ph="【金：きん】【曜：よう】【日：び】の【天：てん】【気：き】"
+                  rom="kin-yōbi no tenki"
+                  tr_en="the weather on Friday"
+                  tr_de="das Wetter am Freitag"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【金：きん】【曜：よう】【日：び】の 【夜：よる】なのに、【暇：ひま】です。"
+                  rom="Kin-yōbi no yoru na no ni, hima desu."
+                  tr_en="Even though it's Friday evening, I have nothing planned."
+                  tr_de="Obwohl es Freitag Abend ist, habe ich nichts geplant."
+                  lvl="n5"
+                  origin="hinative"
+                  href="https://hinative.com/questions/4716996"
+                />
+            </word>
+            <word
+              w="【土：ど】【曜：よう】【日：び】"
+              rom="do-yōbi"
+              tr_en="Saturday"
+              tr_de="Samstag"
+              lvl="n5"
+              category="days-of-the-week"
+              id="doyōbi-saturday"
+            >
+                <phrase
+                  ph="【土：ど】【曜：よう】【日：び】の【夜：よる】"
+                  rom="do-yōbi no yoru"
+                  tr_en="Saturday night"
+                  tr_de="Samstag Nacht"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【今：こん】【度：ど】の【土：ど】【曜：よう】【日：び】にあなたの【家：いえ】に【行：い】ってもいい？"
+                  rom="Kondo no do-yōbi ni anata no ie ni itte mo ii?"
+                  tr_en="Can I come over to your house this Saturday?"
+                  tr_de="Kann ich diesen Samstag bei dir vorbeikommen?"
+                  lvl="n4"
+                  origin="hinative modified"
+                  href="https://hinative.com/questions/19973080"
+                  rem="rated n4 because of mo ii"
+                />
+            </word>
+            <word
+              w="【日：にち】【曜：よう】【日：び】"
+              rom="nichi-yōbi"
+              tr_en="Sunday"
+              tr_de="Sonntag"
+              lvl="n5"
+              category="days-of-the-week"
+              id="nichiyōbi-sunday"
+            >
+                <phrase
+                  ph="【日：にち】【曜：よう】【日：び】の【朝：あさ】"
+                  rom="nichi-yōbi no asa"
+                  tr_en="Sunday morning"
+                  tr_de="Sonntag Morgen"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【日：にち】【曜：よう】【日：び】でも、あの 【店：みせ】は 【開：あ】いて います。"
+                  rom="Nichi-yōbi demo, ano mise wa aite imasu."
+                  tr_en="That store is open even on Sundays."
+                  tr_de="Dieser Laden dort hat sogar sonntags offen."
+                  lvl="n5"
+                  origin="Oxford p.143"
+                />
+            </word>
+            <word
+              w="【月：げつ】【曜：よう】"
+              rom="getsuyō"
+              tr_en="Monday"
+              lvl="n3"
+              id="getsuyō-monday"
+              HIDDEN="true"
+            />
+            <word
+              w="【火：か】【曜：よう】"
+              rom="kayō"
+              tr_en="Tuesday"
+              lvl="n3"
+              id="kayō-tuesday"
+              HIDDEN="true"
+            />
+            <word
+              w="【水：すい】【曜：よう】"
+              rom="suiyō"
+              tr_en="Wednesday"
+              lvl="n3"
+              id="suiyō-wednesday"
+              HIDDEN="true"
+            />
+            <word
+              w="【木：もく】【曜：よう】"
+              rom="mokuyō"
+              tr_en="Thursday"
+              lvl="n3"
+              id="mokuyō-thursday"
+              HIDDEN="true"
+            />
+            <word
+              w="【金：きん】【曜：よう】"
+              rom="kinyō"
+              tr_en="Friday"
+              lvl="n3"
+              id="kinyō-friday"
+              HIDDEN="true"
+            />
+            <word
+              w="【土：ど】【曜：よう】"
+              rom="doyō"
+              tr_en="Saturday"
+              lvl="n3"
+              id="doyō-saturday"
+              HIDDEN="true"
+            />
+            <word
+              w="【日：にち】【曜：よう】"
+              rom="nichiyō"
+              tr_en="Sunday"
+              lvl="n3"
+              id="nichiyō-sunday"
+              HIDDEN="true"
+            />
+            <word
+              w="【週：しゅう】"
+              rom="shū"
+              tr_en="week"
+              tr_de="Woche"
+              studyInContext="required"
+              lvl="n5"
+              category="time"
+              id="shū-week"
+              rem="jisho has n3"
+            >
+                <keep_apart_from id="shūkan-week" />
+                <keep_together id="shūkan-week" />
+                <phrase
+                  ph="【一：いっ】【週：しゅう】【間：かん】"
+                  rom="isshū-kan"
+                  tr_en="for one week"
+                  tr_de="eine Woche lang"
+                  lvl="n5"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【二：に】【週：しゅう】【間：かん】"
+                  rom="ni-shū-kan"
+                  tr_en="for two weeks"
+                  tr_de="zwei Wochen lang"
+                  lvl="n5"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【四：よん】【週：しゅう】【間：かん】"
+                  rom="yon-shū-kan"
+                  tr_en="for four weeks"
+                  tr_de="vier Wochen lang"
+                  lvl="n5"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【六：ろく】【週：しゅう】【間：かん】"
+                  rom="roku-shū-kan"
+                  tr_en="for six weeks"
+                  tr_de="sechs Wochen lang"
+                  lvl="n5"
+                  origin="GENKI2 p.387"
+                -->
+                <!--
+                  ph="【七：なな】【週：しゅう】【間：かん】"
+                  rom="nana-shū-kan"
+                  tr_en="for seven weeks"
+                  tr_de="sieben Wochen lang"
+                  lvl="n5"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【八：はっ】【週：しゅう】【間：かん】"
+                  rom="hasshū-kan"
+                  tr_en="for eight weeks"
+                  tr_de="acht Wochen lang"
+                  lvl="n5"
+                  origin="GENKI2 p.387"
+                />
+                <phrase
+                  ph="【十：じゅっ】【週：しゅう】【間：かん】"
+                  rom="jusshū-kan"
+                  tr_en="for ten weeks"
+                  tr_de="zehn Wochen lang"
+                  lvl="n5"
+                  origin="GENKI2 p.387"
+                />
+                <sentence
+                  s="その【仕：し】【事：ごと】は【七：なな】【週：しゅう】【間：かん】くらいかかりそうです。"
+                  rom="Sono shigoto wa nana-shū-kan kurai kakari-sō desu."
+                  tr_en="That job will probably take about seven weeks."
+                  tr_de="Diese Arbeit wird wahrscheinlich etwa sieben Wochen dauern."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【先：せん】【週：しゅう】は、【一：いっ】【週：しゅう】【間：かん】のうち【四：よっ】【日：か】も【休：やす】んでしまった。"
+                  rom="Senshū wa, isshū-kan no uchi yokka mo yasunde shimatta."
+                  tr_en="Last week, I took off four days out of the week."
+                  tr_de="Letzte Woche habe ich vier Tage von der Woche freigenommen."
+                  explanation_en="「しまった」 adds feelings of regret"
+                  explanation_de="「しまった」 drückt Bedauern aus"
+                  lvl="n4"
+                  origin="500mon q154"
+                />
+            </word>
+            <word
+              w="【週：しゅう】【間：かん】"
+              rom="shū-kan"
+              tr_en="duration of a week; for ~ weeks"
+              studyInContext="required"
+              lvl="n5"
+              id="shūkan-week"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="shū-week" />
+                <keep_together id="shū-week" />
+            </word>
+        </section>
+        <section
+          name_en="Time"
+          name_de="Uhrzeit"
+          name_fr="L'heure"
+          name_it="Ora"
+        >
+            <word
+              w="【時：とき】"
+              rom="toki"
+              tr_en="time; hour"
+              tr_de="Zeit; Stunde"
+              lvl="n5"
+              category="time"
+              id="toki-time"
+              rem="jisho has n3"
+            >
+                <keep_apart_from id="ichiji-oneoclockalt" />
+                <keep_apart_from id="yoji-fouroclockalt" />
+                <keep_apart_from id="rokuji-sixoclockalt" />
+                <keep_apart_from id="shichiji-sevenoclockalt" />
+                <keep_apart_from id="kuji-nineoclockalt" />
+                <keep_together id="ichiji-oneoclockalt" />
+                <keep_together id="yoji-fouroclockalt" />
+                <keep_together id="rokuji-sixoclockalt" />
+                <keep_together id="shichiji-sevenoclockalt" />
+                <keep_together id="kuji-nineoclockalt" />
+                <phrase
+                  ph="とても【楽：たの】しい【時：とき】"
+                  rom="totemo tanoshii toki"
+                  tr_en="a very enjoyable time"
+                  tr_de="eine total schöne Zeit"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【一：いち】【時：じ】"
+                  rom="ichi-ji"
+                  tr_en="one o'clock"
+                  tr_de="ein Uhr"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  origin="GENKI1 p.57"
+                />
+                <phrase
+                  ph="【一：いち】【時：じ】【間：かん】"
+                  rom="ichi-ji-kan"
+                  tr_en="(span of) one hour"
+                  tr_de="eine Stunde (Dauer)"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【今：いま】、【一：いち】【時：じ】【半：はん】です。"
+                  rom="Ima, ichi-ji-han desu."
+                  tr_en="It's half past one now."
+                  tr_de="Es ist jetzt halb zwei."
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  origin="GENKI1 p.49"
+                />
+                <!--
+                  s="【今：いま】、【三：さん】【時：じ】です。"
+                  rom="Ima, san-ji desu."
+                  tr_en="It's three o'clock now."
+                  tr_de="Es ist jetzt drei Uhr."
+                  lvl="n5"
+                  origin="GENKI1 p.49"
+                -->
+                <sentence
+                  s="【今：いま】、【四：よ】【時：じ】です。"
+                  rom="Ima, yo-ji desu."
+                  tr_en="It's four o'clock now."
+                  tr_de="Es ist jetzt vier Uhr."
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  origin="500mon q7"
+                />
+            </word>
+            <word
+              w="【１：いち】【時：じ】"
+              rom="ichi-ji"
+              tr_en="one o'clock"
+              lvl="n5"
+              id="ichiji-oneoclockalt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="toki-time" />
+                <keep_together id="toki-time" />
+            </word>
+            <word
+              w="【４：よ】【時：じ】"
+              rom="yo-ji"
+              tr_en="four o'clock"
+              lvl="n5"
+              id="yoji-fouroclockalt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="toki-time" />
+                <keep_together id="toki-time" />
+            </word>
+            <word
+              w="【６：ろく】【時：じ】"
+              rom="roku-ji"
+              tr_en="six o'clock"
+              lvl="n5"
+              id="rokuji-sixoclockalt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="toki-time" />
+                <keep_together id="toki-time" />
+            </word>
+            <word
+              w="【７：しち】【時：じ】"
+              rom="shichi-ji"
+              tr_en="seven o'clock"
+              lvl="n5"
+              id="shichiji-sevenoclockalt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="toki-time" />
+                <keep_together id="toki-time" />
+            </word>
+            <word
+              w="【９：く】【時：じ】"
+              rom="ku-ji"
+              tr_en="nine o'clock"
+              lvl="n5"
+              id="kuji-nineoclockalt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="toki-time" />
+                <keep_together id="toki-time" />
+            </word>
+            <word
+              w="【分：ふん】"
+              rom="fun"
+              tr_en="minute (time)"
+              tr_de="Minute"
+              studyInContext="preferred"
+              lvl="n5"
+              category="time"
+              id="fun-minute"
+            >
+                <keep_apart_from id="roppun-6minutesalt" />
+                <keep_together id="roppun-6minutesalt" />
+                <keep_apart_from id="juppun-10minutesalt" />
+                <keep_together id="juppun-10minutesalt" />
+                <phrase
+                  ph="【一：いっ】【分：ぷん】"
+                  rom="ippun"
+                  tr_en="one minute"
+                  tr_de="eine Minute"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                />
+                <phrase
+                  ph="【二：に】【分：ふん】"
+                  rom="ni-fun"
+                  tr_en="two minutes"
+                  tr_de="zwei Minuten"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                />
+                <phrase
+                  ph="【三：さん】【分：ぷん】"
+                  rom="san-pun"
+                  tr_en="three minutes"
+                  tr_de="drei Minuten"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                />
+                <phrase
+                  ph="【四：よん】【分：ぷん】"
+                  rom="yon-pun"
+                  tr_en="four minutes"
+                  tr_de="vier Minuten"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  ph="【五：ご】【分：ふん】"
+                  rom="go-fun"
+                  tr_en="five minutes"
+                  tr_de="fünf Minuten"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【六：ろっ】【分：ぷん】"
+                  rom="roppun"
+                  tr_en="six minutes"
+                  tr_de="sechs Minuten"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  ph="【七：なな】【分：ふん】"
+                  rom="nana-fun"
+                  tr_en="seven minutes"
+                  tr_de="sieben Minuten"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【八：はっ】【分：ぷん】"
+                  rom="happun"
+                  tr_en="eight minutes"
+                  tr_de="acht Minuten"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  rem="hachi-fun is also possible; see GENKI2 p.386"
+                />
+                <!--
+                  ph="【九：きゅう】【分：ふん】"
+                  rom="kyū-fun"
+                  tr_en="nine minutes"
+                  tr_de="neun Minuten"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【十：じゅっ】【分：ぷん】"
+                  rom="juppun"
+                  tr_en="ten minutes"
+                  tr_de="zehn Minuten"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  rem="jippun is also possible; see GENKI2 p.386"
+                />
+                <sentence
+                  s="【車：くるま】で 【何：なん】【分：ぷん】かかりますか。"
+                  rom="Kuruma de nanpun kakarimasu ka?"
+                  tr_en="How many minutes does it take by car?"
+                  tr_de="Wieviele Minuten geht es mit dem Auto?"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  origin="Langenscheidt"
+                  rem="see also GENKI2 p.386"
+                />
+            </word>
+            <word
+              w="【６：ろっ】【分：ぷん】"
+              rom="roppun"
+              tr_en="six minutes"
+              lvl="n5"
+              id="roppun-6minutesalt"
+              HIDDEN="true"
+              rem="just for the furigana check of sentences"
+            >
+                <keep_apart_from id="fun-minute" />
+                <keep_together id="fun-minute" />
+            </word>
+            <word
+              w="【10：じゅっ】【分：ぷん】"
+              rom="juppun"
+              tr_en="ten minutes"
+              hasCombinedReading="true"
+              lvl="n5"
+              id="juppun-10minutesalt"
+              HIDDEN="true"
+              rem="just for the furigana check of sentences"
+            >
+                <keep_apart_from id="fun-minute" />
+                <keep_together id="fun-minute" />
+            </word>
+        </section>
+        <section
+          name_en="Related terms"
+          name_de="Verwandte Wörter"
+          name_fr="Les termes connexes"
+          name_it="Parole correlate"
+        >
+            <!-- week -->
+            <word
+              w="【週：しゅう】【末：まつ】"
+              rom="shūmatsu"
+              tr_en="weekend"
+              tr_de="Wochenende"
+              lvl="n4"
+              category="time"
+              id="shūmatsu-weekend"
+              rem="appears in GENKI, jisho has nx"
+            >
+                <phrase
+                  ph="【週：しゅう】【末：まつ】【旅：りょ】【行：こう】"
+                  rom="shūmatsu ryokō"
+                  tr_en="weekend getaway"
+                  tr_de="Wochenendausflug"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【週：しゅう】【末：まつ】に【何：なに】をしたの？"
+                  rom="Shūmatsu ni nani o shita no?"
+                  tr_en="What did you do on the weekend?"
+                  tr_de="Was haben Sie am Wochenende gemacht?"
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+            </word>
+
+            <!-- day -->
+            <word
+              w="【一：いち】【日：にち】【目：め】"
+              rom="ichi-nichi-me"
+              tr_en="the first day"
+              tr_de="der erste Tag"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n4"
+              category="time"
+              id="ichinichime-firstday"
+              rem="appears in GENKI2 p.73 vocab section"
+            >
+                <phrase
+                  ph="【旅：りょ】【行：こう】の【一：いち】【日：にち】【目：め】"
+                  rom="ryokō no ichi-nichi-me"
+                  tr_en="the first day of the trip"
+                  tr_de="der erste Tag der Reise"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【一：いち】【日：にち】【目：め】からこんなに【疲：つか】れるとは【思：おも】わなかった。"
+                  rom="Ichi-nichi-me kara konna ni tsukareru to wa omowanakatta."
+                  tr_en="I didn’t think I’d be this tired after the first day."
+                  tr_de="Ich hätte nicht gedacht, dass ich nach dem ersten Tag so müde wäre."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【旅：りょ】【行：こう】の【一：いち】【日：にち】【目：め】は【京：きょう】【都：と】を【観：かん】【光：こう】しました。"
+                  rom="Ryokō no ichi-nichi-me wa Kyōto o kankō shimashita."
+                  tr_en="On the first day of the trip, we did some sightseeing in Kyoto."
+                  tr_de="Am ersten Tag der Reise besichtigten wir Kyoto."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【一：いち】【日：にち】【中：じゅう】"
+              rom="ichi-nichi-jū"
+              tr_en="throughout the day; all day long"
+              tr_de="den ganzen Tag lang"
+              lvl="n5"
+              id="ichinichijū-alldaylong"
+              rem="appears in GENKI2 p.73 vocab section"
+            >
+                <phrase
+                  ph="【一：いち】【日：にち】【中：じゅう】【運：うん】【動：どう】する"
+                  rom="ichi-nichi-jū undō suru"
+                  tr_en="to do workout all day long"
+                  tr_de="den ganzen Tag lang trainieren"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【今日：きょう】は【一：いち】【日：にち】【中：じゅう】【寒：さむ】くて、【冬：ふゆ】のようでした。"
+                  rom="Kyō wa ichi-nichi-jū samukute, fuyu no yō deshita."
+                  tr_en="It was cold all day today, like it was winter."
+                  tr_de="Heute war es den ganzen Tag lang kalt, als ob es Winter wäre."
+                  lvl="n4"
+                  origin="500mon q432"
+                  rem="see q458 for じゅう vs. ちゅう"
+                />
+            </word>
+            <word
+              w="【日：にっ】【中：ちゅう】"
+              rom="nicchū"
+              tr_en="daytime; during the day"
+              tr_de="Tageszeit; tagsüber"
+              lvl="n5"
+              category="time"
+              id="nicchū-daytime"
+              HIDDEN="true"
+              rem="must not be together with ichi-nichi-jū"
+            />
+
+            <!-- unsorted -->
+            <word
+              w="【誕：たん】【生：じょう】【日：び】"
+              rom="tanjōbi"
+              tr_en="birthday"
+              tr_de="Geburtstag"
+              lvl="n5"
+              id="tanjōbi-birthday"
+            >
+                <phrase
+                  ph="【私：わたし】の【誕：たん】【生：じょう】【日：び】"
+                  rom="watashi no tanjōbi"
+                  tr_en="my birthday"
+                  tr_de="mein Geburtstag"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="あなたの 【誕：たん】【生：じょう】【日：び】は いつですか。"
+                  rom="Anata no tanjōbi wa itsu desu ka?"
+                  tr_en="When is your birthday?"
+                  tr_de="Wann ist dein Geburtstag?"
+                  lvl="n5"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

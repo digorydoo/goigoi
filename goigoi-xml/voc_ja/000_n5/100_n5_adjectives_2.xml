@@ -1,0 +1,1282 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N5 adjectives ②"
+      name_de="N5-Adjektive ②"
+      name_fr="Les adjectifs N5 ②"
+      name_it="Aggettivi N5 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="adjective"
+      defaultHint_de="Adjektiv"
+      lvl="n5"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="true"
+    >
+        <section>
+            <!-- far, near -->
+            <word
+              w="【遠：とお】い"
+              rom="tōi"
+              tr_en="far; distant"
+              tr_de="weit; distant"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              id="tōi-far"
+            >
+                <!-- the noun is 遠さ, nx, not marked as common -->
+                <!--
+                    The adjective 遠い is not commonly used before a noun; use 遠くの instead.
+                    However, when a subclause modifies the adjective, use 遠い rather than 遠くの before nouns.
+                    Also, when tōi refers to time rather than distance, tōku no is not used.
+                    See examples below and at tōku-distant.
+                    However, ChatGPT disagrees and thinks 遠い場所に行きたい slightly better than 遠くの場所に行きたい...
+                -->
+                <see id="tōku-distant" rem="noun" />
+                <phrase
+                  ph="【遠：とお】い【国：くに】に【住：す】んでいる【人：ひと】"
+                  rom="tōi kuni ni sunde iru hito"
+                  tr_en="a person who lives in a distant country"
+                  tr_de="eine Person, die in einem entfernten Land lebt"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ここまで 【遠：とお】かったでしょう。"
+                  rom="Koko made tōkatta deshō."
+                  tr_en="(You) must have had a long (trip) here."
+                  tr_de="Es ist wohl ein weiter (Weg) bis hierher gewesen."
+                  lvl="n5"
+                  origin="500mon q89"
+                />
+                <sentence
+                  s="うちから 【遠：とお】いデパートまで 【行：い】かないと ワインを 【買：か】えないんだ。"
+                  rom="Uchi kara tōi depāto made ikanai to wain o kaenai n da."
+                  tr_en="Unless we go to a department store a long way from home, we can't buy wine."
+                  tr_de="Wenn wir nicht ins Kaufhaus gehen, das weit weg von Zuhause ist, können wir keinen Wein kaufen."
+                  lvl="n5"
+                  origin="Oxford p.108 modified"
+                  rem="the subclause 'uchi kara' modifies tōi, so it's not tōku no here"
+                />
+            </word>
+            <word
+              w="【近：ちか】い"
+              rom="chikai"
+              tr_en="near; close"
+              tr_de="nah; in der Nähe"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              id="chikai-near"
+            >
+                <!--
+                    The adjective 近い is not commonly used before a noun; use 近くの instead.
+                    However, when a subclause modifies the adjective, use 近い rather than 近くの before nouns.
+                    Also, when chikai refers to time rather than distance, chikaku no is not used.
+                    See examples below and at chikaku-neighbourhood.
+                -->
+                <see id="chikaku-neighbourhood" rem="noun" />
+                <phrase
+                  ph="あまり【近：ちか】くない"
+                  rom="amari chikakunai"
+                  tr_en="not very close"
+                  tr_de="nicht sehr nahe"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【駅：えき】は ここから 【近：ちか】いです。"
+                  rom="Eki wa koko kara chikai desu."
+                  tr_en="The station is near from here."
+                  tr_de="Der Bahnhof ist (ganz) nah."
+                  lvl="n5"
+                  origin="duolingo"
+                />
+            </word>
+
+            <!-- expensive, tall, cheap -->
+            <word
+              w="【高：たか】い"
+              rom="takai"
+              tr_en="expensive; tall; high"
+              tr_de="teuer; hoch"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              category="shopping, top-words"
+              id="takai-expensive"
+            >
+                <!-- the noun is 高さ, nx, common -->
+                <see id="takameru-raise" rem="verb" />
+                <phrase
+                  ph="【高：たか】い【木：き】"
+                  rom="takai ki"
+                  tr_en="a tall tree"
+                  tr_de="ein hoher Baum"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【高：たか】いレストラン"
+                  rom="takai resutoran"
+                  tr_en="an expensive restaurant"
+                  tr_de="ein teures Restaurant"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【高：たか】くないですか。"
+                  rom="Takakunai desu ka?"
+                  tr_en="Isn't it expensive?"
+                  tr_de="Ist es nicht teuer?"
+                  lvl="n5"
+                />
+                <sentence
+                  s="ちょっと【高：たか】いですね。"
+                  rom="Chotto takai desu ne."
+                  tr_en="It's a little expensive."
+                  tr_de="Das ist mir zu teuer."
+                  lvl="n5"
+                  origin="Langenscheidt p.134"
+                />
+                <sentence
+                  s="【東：とう】【京：きょう】と、ロンドンと、どちらが【高：たか】いですか。"
+                  rom="Tōkyō to, Rondon to, dochira ga takai desu ka?"
+                  tr_en="Which is more expensive, Tokyo or London?"
+                  tr_de="Wo ist es teurer, in Tokyo oder in London?"
+                  lvl="n5"
+                  origin="Oxford p.105"
+                  rem="jisho has nx for Tōkyō, Rondon"
+                />
+            </word>
+            <word
+              w="【安：やす】い"
+              rom="yasui"
+              tr_en="inexpensive; cheap"
+              tr_de="günstig; billig"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              category="shopping, top-words"
+              id="yasui-cheap"
+            >
+                <phrase
+                  ph="【安：やす】い【店：みせ】"
+                  rom="yasui mise"
+                  tr_en="an inexpensive shop"
+                  tr_de="ein billiger Laden"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この レストランは 【安：やす】くて おいしい。"
+                  rom="Kono resutoran wa yasukute oishii."
+                  tr_en="This restaurant is cheap and good."
+                  tr_de="Dieses Restaurant ist günstig und gut."
+                  lvl="n5"
+                  origin="Oxford p.101"
+                />
+                <sentence
+                  s="【安：やす】くなりましたので、【買：か】いましょうか。"
+                  rom="Yasuku narimashita no de, kaimashō ka?"
+                  tr_en="It's become cheaper, shall we buy it?"
+                  tr_de="Es wurde billiger, sollen wir es kaufen?"
+                  lvl="n5"
+                  origin="Oxford p.143"
+                  rem="ので may be n4"
+                />
+            </word>
+
+            <!-- slow, late, early, fast -->
+            <word
+              w="【早：はや】い"
+              rom="hayai"
+              tr_en="early; fast"
+              tr_de="früh; schnell"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              category="time, motion"
+              id="hayai-early"
+            >
+                <!-- 早い usually means early, 速い usually means fast; however this does not seem to be a strict rule -->
+                <!-- the noun is 早さ, nx, common -->
+                <phrase
+                  ph="【早：はや】く【起：お】きる"
+                  rom="hayaku okiru"
+                  tr_en="to get up early"
+                  tr_de="früh aufstehen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【速：はや】い【車：くるま】"
+                  rom="hayai kuruma"
+                  tr_en="a fast car"
+                  tr_de="ein schnelles Auto"
+                  explanation_en="When describing speed, the kanji 速 is usually preferred over 早"
+                  explanation_de="Wenn es um Geschwindigkeit geht, verwendet man meistens das Kanji 速 statt 早"
+                  lvl="n5"
+                  hasDifferentForm="true"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="お【早：はよ】うございます！"
+                  rom="O-hayō gozaimasu!"
+                  tr_en="Good morning!"
+                  tr_de="Guten Morgen!"
+                  lvl="n5"
+                  hasDifferentForm="true"
+                />
+                <sentence
+                  s="みんな、こっちへ 【速：はや】く【来：き】なさい。"
+                  rom="Minna, kocchi e hayaku ki-nasai."
+                  tr_en="Come here quickly, everyone!"
+                  tr_de="Kommt alle schnell hierher!"
+                  lvl="n5"
+                  origin="Oxford p.119"
+                  hasDifferentForm="true"
+                  rem="they use 早く here even though the meaning is 'fast'"
+                />
+                <sentence
+                  s="【時：と】【計：けい】は 【二：に】【分：ふん】【速：はや】い。"
+                  rom="Tokei wa ni-fun hayai."
+                  tr_en="The clock is two minutes fast."
+                  tr_de="Die Uhr geht zwei Minuten vor."
+                  lvl="n5"
+                  hasDifferentForm="true"
+                  origin="lib0 modified"
+                  rem="lib0 has 早い here, but the translation is 'fast'"
+                />
+            </word>
+            <word
+              w="【速：はや】い"
+              rom="hayai"
+              tr_en="fast"
+              tr_de="schnell"
+              lvl="n5"
+              category="time, motion"
+              id="hayai-fast"
+              HIDDEN="true"
+              rem="just to provide the kanji..."
+            >
+                <!-- the noun is 速さ, nx, common -->
+            </word>
+            <word
+              w="【遅：おそ】い"
+              rom="osoi"
+              tr_en="slow; late"
+              tr_de="langsam; spät"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              category="time, motion"
+              id="osoi-slow"
+            >
+                <phrase
+                  ph="【遅：おそ】い【電：でん】【車：しゃ】"
+                  rom="osoi densha"
+                  tr_en="a slow train"
+                  tr_de="eine langsame Bahn"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【遅：おそ】い【時：じ】【間：かん】に【帰：かえ】る"
+                  rom="osoi jikan ni kaeru"
+                  tr_en="to go home at a late time"
+                  tr_de="zu später Stunde heimkehren"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="あなた、【今日：きょう】も 【遅：おそ】くなるの？"
+                  rom="Anata, kyō mo osoku naru no?"
+                  tr_en="Will you be late again today?"
+                  tr_de="Wird es bei dir heute wieder spät?"
+                  lvl="n5"
+                  origin="500mon q447"
+                />
+            </word>
+
+            <!-- strong, weak -->
+            <word
+              w="【強：つよ】い"
+              rom="tsuyoi"
+              tr_en="strong; powerful"
+              tr_de="stark"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              id="tsuyoi-strong"
+            >
+                <!-- the noun is 強さ, nx, common -->
+                <phrase
+                  ph="【強：つよ】い【風：かぜ】"
+                  rom="tsuyoi kaze"
+                  tr_en="a strong wind"
+                  tr_de="ein starker Wind"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【木：き】【村：むら】さんは 【私：わたし】より 【強：つよ】い。"
+                  rom="Kimura-san wa watashi yori tsuyoi."
+                  tr_en="Miss Kimura is stronger than I."
+                  tr_de="Frau Kimura ist stärker als ich."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【風：かぜ】は あまり 【強：つよ】くないです。"
+                  rom="Kaze wa amari tsuyokunai desu."
+                  tr_en="The wind is not very strong."
+                  tr_de="Der Wind ist nicht sehr stark."
+                  lvl="n5"
+                  origin="duolingo"
+                />
+            </word>
+            <word
+              w="【弱：よわ】い"
+              rom="yowai"
+              tr_en="weak"
+              tr_de="schwach"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              id="yowai-weak"
+            >
+                <!-- the noun is 弱さ, nx, not marked as common -->
+                <see id="yowaru-weaken" rem="verb" />
+                <phrase
+                  ph="【弱：よわ】い【風：かぜ】"
+                  rom="yowai kaze"
+                  tr_en="a weak wind"
+                  tr_de="ein schwacher Wind"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【夏：なつ】は 【風：かぜ】が 【弱：よわ】く【吹：ふ】きます。"
+                  rom="Natsu wa kaze ga yowaku fukimasu."
+                  tr_en="The wind blows weakly in summer."
+                  tr_de="Der Wind weht schwach im Sommer."
+                  lvl="n5"
+                  origin="duolingo"
+                />
+            </word>
+
+            <!-- narrow, spacious -->
+            <word
+              w="【狭：せま】い"
+              rom="semai"
+              tr_en="narrow; confined; small"
+              tr_de="eng; klein (Raum)"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              id="semai-narrow"
+            >
+                <phrase
+                  ph="【狭：せま】い【道：みち】"
+                  rom="semai michi"
+                  tr_en="a narrow path"
+                  tr_de="ein schmaler Pfad"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【狭：せま】い 【家：いえ】ですが、【一：いち】【度：ど】 【遊：あそ】びに 【来：き】てください。"
+                  rom="Semai ie desu ga, ichi-do asobi ni kite kudasai."
+                  tr_en="My house is small, but please come and visit me sometime."
+                  tr_de="Mein Haus ist zwar klein, aber bitte komme mich mal besuchen."
+                  lvl="n5"
+                  origin="500mon q83"
+                />
+            </word>
+            <word
+              w="【広：ひろ】い"
+              rom="hiroi"
+              tr_en="spacious; large (room); wide"
+              tr_de="geräumig; gross (Raum); breit"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              id="hiroi-spacious"
+            >
+                <!-- the verb is hirogeru, which is n2 -->
+                <see id="hirosa-extent" rem="noun" />
+                <phrase
+                  ph="【広：ひろ】い【庭：にわ】"
+                  rom="hiroi niwa"
+                  tr_en="a wide (big) garden"
+                  tr_de="ein breiter (grosser) Garten"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【中：なか】【村：むら】さんは 【広：ひろ】い【家：いえ】に 【住：す】んで いる。"
+                  rom="Nakamura-san wa hiroi ie ni sunde iru."
+                  tr_en="Mrs Nakamura lives in a big (spacious) house."
+                  tr_de="Frau Nakamura wohnt in einem grossen (geräumigen) Haus."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="その 【川：かわ】は 【広：ひろ】い。"
+                  rom="Sono kawa wa hiroi."
+                  tr_en="That river is wide."
+                  tr_de="Jener Fluss ist breit."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- i-adjective -->
+            <word
+              w="【危：あぶ】ない"
+              rom="abunai"
+              tr_en="dangerous"
+              tr_de="gefährlich"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              id="abunai-dangerous"
+            >
+                <keep_apart_from id="kiken-risk" />
+                <phrase
+                  ph="【危：あぶ】ない【橋：はし】"
+                  rom="abunai hashi"
+                  tr_en="a dangerous bridge"
+                  tr_de="eine gefährliche Brücke"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【危：あぶ】ないところへ 【行：い】かないで ほしい。"
+                  rom="Abunai tokoro e ikanaide hoshii."
+                  tr_en="I don't want you to go anywhere dangerous."
+                  tr_de="Ich will nicht, dass du an einen gefährlichen Ort gehst."
+                  lvl="n5"
+                  origin="Oxford p.60"
+                />
+            </word>
+            <word
+              w="【汚：きたな】い"
+              rom="kitanai"
+              tr_en="dirty; messy; untidy"
+              tr_de="dreckig; schmutzig; unordentlich"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              category="not-good"
+              id="kitanai-dirty"
+            >
+                <phrase
+                  ph="【汚：きたな】い【服：ふく】"
+                  rom="kitanai fuku"
+                  tr_en="dirty clothes"
+                  tr_de="dreckige Kleider"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【金：かね】【子：こ】さんの 【部：へ】【屋：や】は 【汚：きたな】い。"
+                  rom="Kaneko-san no heya wa kitanai."
+                  tr_en="Mr Kaneko's apartment is untidy."
+                  tr_de="Herr Kanekos Wohnung ist unordentlich."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【丸：まる】い"
+              rom="marui"
+              tr_en="round; circular; ball-shaped"
+              tr_de="rund; kreisförmig; kugelförmig"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              id="marui-round"
+            >
+                <phrase
+                  ph="【丸：まる】いテーブル"
+                  rom="marui tēburu"
+                  tr_en="a round table"
+                  tr_de="ein runder Tisch"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【高：たか】【橋：はし】さんは 【丸：まる】い【顔：かお】を して いる。"
+                  rom="Takahashi-san wa marui kao o shite iru."
+                  tr_en="Miss Takahashi has a round face."
+                  tr_de="Frau Takahashi hat ein rundes Gesicht."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【欲：ほ】しい"
+              rom="hoshii"
+              tr_en="desired; I want"
+              tr_de="gewünscht; ich will"
+              lvl="n5"
+              id="hoshii-desired"
+              usuallyInKana="true"
+            >
+                <phrase
+                  ph="ほん〜とうにほしい"
+                  rom="hon~tō ni hoshii"
+                  tr_en="I really, really want"
+                  tr_de="ich will unbedingt"
+                  explanation_en="Stretching 本当に like this adds a dramatic, exaggerated tone."
+                  explanation_de="Wenn man 本当に so dehnt, wirkt es dramatischer, theatralischer."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【新：あたら】しい【自：じ】【転：てん】【車：しゃ】が ほしい。"
+                  rom="Atarashii jitensha ga hoshii."
+                  tr_en="I want a new bicycle."
+                  tr_de="Ich möchte ein neues Fahrrad."
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【明日：あした】またこの【時：じ】【間：かん】に 【来：き】てほしい。"
+                  rom="Ashita mata kono jikan ni kite hoshii."
+                  tr_en="I want you to come again at the same time tomorrow."
+                  tr_de="Ich will, dass du morgen um die gleiche Zeit wieder kommst."
+                  lvl="n5"
+                  origin="Oxford p.104"
+                />
+            </word>
+            <word
+              w="【甘：あま】い"
+              rom="amai"
+              tr_en="sweet; sugary"
+              tr_de="süss; zuckrig"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              category="food"
+              id="amai-sweet"
+            >
+                <see id="amami-sweetness" rem="noun" />
+                <phrase
+                  ph="あまり【甘：あま】くない"
+                  rom="amari amakunai"
+                  tr_en="not very sweet"
+                  tr_de="nicht besonders süss"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="チョコレートは 【甘：あま】い。"
+                  rom="Chokorēto wa amai."
+                  tr_en="Chocolate is sweet."
+                  tr_de="Schokolade ist süss."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【痛：いた】い"
+              rom="itai"
+              tr_en="painful; sore"
+              tr_de="schmerzhaft"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              category="health"
+              id="itai-painful"
+            >
+                <see id="itami-pain" rem="noun" />
+                <see id="itamu-hurt" rem="verb" />
+                <phrase
+                  ph="【痛：いた】くなかった"
+                  rom="itakunakatta"
+                  tr_en="didn't hurt"
+                  tr_de="hat nicht weh getan"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="お【腹：なか】が 【痛：いた】い。"
+                  rom="O-naka ga itai."
+                  tr_en="I have a stomachache."
+                  tr_de="Ich habe Bauchschmerzen."
+                  lvl="n5"
+                  origin="500mon q134"
+                />
+                <sentence
+                  s="ここが 【痛：いた】いです。"
+                  rom="Koko ga itai desu."
+                  tr_en="Here's where it hurts."
+                  tr_de="Hier habe ich Schmerzen."
+                  lvl="n5"
+                  origin="Langenscheidt p.195"
+                />
+            </word>
+            <word
+              w="【忙：いそが】しい"
+              rom="isogashii"
+              tr_en="busy; occupied"
+              tr_de="beschäftigt"
+              lvl="n5"
+              id="isogashii-busy"
+            >
+                <phrase
+                  ph="【一：いち】【日：にち】【中：じゅう】【忙：いそが】しい"
+                  rom="ichi-nichi-jū isogashii"
+                  tr_en="busy all day"
+                  tr_de="den ganzen Tag beschäftigt"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【今日：きょう】は 【忙：いそが】しい。"
+                  rom="Kyō wa isogashii."
+                  tr_en="I am busy today."
+                  tr_de="Ich bin heute beschäftigt."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【煩：うるさ】い"
+              rom="urusai"
+              tr_en="noisy; annoying"
+              tr_de="lärmend; nervig"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              usuallyInKana="true"
+              lvl="n5"
+              category="mood, hearing"
+              id="urusai-noisy"
+              rem="appears in GENKI2 L22 vocab section"
+            >
+                <phrase
+                  ph="うるさい【音：おん】【楽：がく】"
+                  rom="urusai ongaku"
+                  tr_en="annoyingly loud music"
+                  tr_de="nervig laute Musik"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【隣：となり】の 【部：へ】【屋：や】が うるさいのです。"
+                  rom="Tonari no heya ga urusai no desu."
+                  tr_en="It's noisy next door."
+                  tr_de="Nebenan ist es laut."
+                  lvl="n5"
+                  origin="lib0"
+                  rem="needs explanation about no desu..."
+                />
+            </word>
+            <word
+              w="【多：おお】い"
+              rom="ōi"
+              tr_en="many; much; numerous"
+              tr_de="viele; viel; zahlreich"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              id="ōi-many"
+            >
+                <!--
+                    The adjective 多い is not commonly used before nouns; use 多くの instead.
+                    However, when another clause modifies the adjective, 多い and not 多くの　is used before nouns.
+                    See examples below and examples at 多くの.
+                -->
+                <see id="ōku-plenty" rem="noun" />
+                <phrase
+                  ph="【多：おお】くの【本：ほん】"
+                  rom="ōku no hon"
+                  tr_en="many books"
+                  tr_de="viele Bücher"
+                  explanation_en="多い is not usually used directly before a noun; instead, 多くの is used."
+                  explanation_de="多い wird normalerweise nicht direkt vor einem Nomen verwendet; verwende stattdessen 多くの."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【一：いち】【年：ねん】【中：じゅう】 【雨：あめ】が 【多：おお】い。"
+                  rom="Ichi-nen-jū ame ga ōi."
+                  tr_en="We have much rain all the year round."
+                  tr_de="Es regnet viel über das ganze Jahr."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="レストランが 【多：おお】いところに 【行：い】きましょう。"
+                  rom="Resutoran ga ōi tokoro ni ikimashō."
+                  tr_en="Let's go to a place where there are a lot of restaurants."
+                  tr_de="Lass uns an einen Ort gehen, wo es viele Restaurants hat."
+                  lvl="n5"
+                  origin="Oxford p.108"
+                  rem="the subclause modifies ooi, so it's not ooku no"
+                />
+            </word>
+            <word
+              w="【少：すく】ない"
+              rom="sukunai"
+              tr_en="few; scarce"
+              tr_de="nicht viele; wenige"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              id="sukunai-few"
+            >
+                <!-- 少ない cannot stand in front of a noun; instead, 少しの is used. -->
+                <see id="sukoshi-alittle" rem="closely related" />
+                <phrase
+                  ph="【少：すく】なかった"
+                  rom="sukunakatta"
+                  tr_en="weren't many"
+                  tr_de="waren nicht viele"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【英：えい】【語：ご】が とても【上：じょう】【手：ず】な 【日：に】【本：ほん】【人：じん】が 【少：すく】ない。"
+                  rom="Eigo ga totemo jōzu na Nihon-jin ga sukunai."
+                  tr_en="The are only few Japanese people who are very good in English."
+                  tr_de="Es gibt nicht viele Japaner, die sehr gut in Englisch sind."
+                  lvl="n5"
+                  origin="Oxford p.109"
+                />
+            </word>
+            <word
+              w="【辛：から】い"
+              rom="karai"
+              tr_en="spicy; hot"
+              tr_de="scharf"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n5"
+              category="food, gastronomy"
+              id="karai-spicy"
+            >
+                <phrase
+                  ph="【辛：から】い【料：りょう】【理：り】"
+                  rom="karai ryōri"
+                  tr_en="a spicy dish"
+                  tr_de="ein scharfes Gericht"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【森：もり】【田：た】さんは 【辛：から】いカレーが 【好：す】きです。"
+                  rom="Morita-san wa karai karē ga suki desu."
+                  tr_en="Mr Morita likes spicy curry."
+                  tr_de="Herr Morita mag scharfes Curry."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+
+            <!-- na-adjective -->
+            <word
+              w="【有：ゆう】【名：めい】"
+              rom="yūmei"
+              tr_en="famous"
+              tr_de="berühmt"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n5"
+              id="yūmei-famous"
+            >
+                <phrase
+                  ph="【有：ゆう】【名：めい】な【料：りょう】【理：り】【人：にん】"
+                  rom="yūmei na ryōrinin"
+                  tr_en="a famous chef"
+                  tr_de="ein berühmter Koch"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT; jisho has nx for ryōrinin"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】の 【一：いち】【番：ばん】【有：ゆう】【名：めい】な 【山：やま】は 【富：ふ】【士：じ】【山：さん】です。"
+                  rom="Nihon no ichi-ban yūmei na yama wa Fujisan desu."
+                  tr_en="The most famous mountain in Japan is Mt Fuji."
+                  tr_de="Der berühmteste Berg in Japan ist der Berg Fuji."
+                  lvl="n5"
+                  origin="Oxford p.106"
+                  rem="jisho has nx for Fujisan"
+                />
+            </word>
+            <word
+              w="【賑：にぎ】やか"
+              rom="nigiyaka"
+              tr_en="bustling; busy; lively"
+              tr_de="belebt; gut besucht"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n5"
+              id="nigiyaka-busy"
+              rem="similar, but with a negative touch: sawagashii"
+            >
+                <!-- the noun is 賑やかさ, nx, not marked as common -->
+                <!-- ChatGPT says it's usually written in kana, but jisho and Langenscheidt have kanji -->
+                <phrase
+                  ph="【賑：にぎ】やかな【道：みち】"
+                  rom="nigiyaka na michi"
+                  tr_en="a lively street"
+                  tr_de="eine belebte Strasse"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="その 【喫：きっ】【茶：さ】【店：てん】は 【町：まち】の 【賑：にぎ】やかな 【所：ところ】に ある。"
+                  rom="Sono kissaten wa machi no nigiyaka na tokoro ni aru."
+                  tr_en="That café is in a busy part of town."
+                  tr_de="Dieses Café ist in einem belebten Teil der Stadt."
+                  lvl="n5"
+                  origin="self"
+                  href="https://hinative.com/questions/22719120"
+                />
+            </word>
+            <word
+              w="【便：べん】【利：り】"
+              rom="benri"
+              tr_en="convenient; handy"
+              tr_de="praktisch; bequem"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n5"
+              id="benri-convenient"
+            >
+                <!-- the noun is 便利さ, nx, common -->
+                <phrase
+                  ph="【便：べん】【利：り】なもの"
+                  rom="benri na mono"
+                  tr_en="a convenient thing"
+                  tr_de="ein praktisches Ding"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【便：べん】【利：り】なところに"
+                  rom="benri na tokoro ni"
+                  tr_en="at a convenient place"
+                  tr_de="an einem praktischen Ort"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この スーパーは、【遅：おそ】くまで 【開：あ】いて いるので 【便：べん】【利：り】です。"
+                  rom="Kono sūpā wa, osoku made aite iru no de benri desu."
+                  tr_en="This supermarket is convenient, because it's open so late."
+                  tr_de="Dieser Supermarkt ist praktisch, weil er bis so spät geöffnet hat."
+                  lvl="n5"
+                  origin="500mon q151"
+                />
+            </word>
+            <word
+              w="【丈：じょう】【夫：ぶ】"
+              rom="jōbu"
+              tr_en="strong; solid; durable"
+              tr_de="stark; solide; dauerhaft"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n5"
+              id="jōbu-strong"
+            >
+                <phrase
+                  ph="【丈：じょう】【夫：ぶ】な【机：つくえ】"
+                  rom="jōbu na tsukue"
+                  tr_en="a sturdy desk"
+                  tr_de="ein solider Schreibtisch"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="この 【紙：かみ】は 【薄：うす】いですが、とても【丈：じょう】【夫：ぶ】です。"
+                  rom="Kono kami wa usui desu ga, totemo jōbu desu."
+                  tr_en="This paper is thin, but very strong."
+                  tr_de="Dieses Papier ist dünn, aber sehr reissfest."
+                  lvl="n5"
+                  origin="500mon q38"
+                />
+            </word>
+            <word
+              w="【大：たい】【変：へん】"
+              rom="taihen"
+              tr_en="enormous; dreadful"
+              tr_de="enorm; schrecklich"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n5"
+              id="taihen-enormous"
+            >
+                <phrase
+                  ph="【大：たい】【変：へん】な【仕：し】【事：ごと】"
+                  rom="taihen na shigoto"
+                  tr_en="a hard job"
+                  tr_de="ein harter Job"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この 【仕：し】【事：ごと】は 【大：たい】【変：へん】すぎる。"
+                  rom="Kono shigoto wa taihen sugiru."
+                  tr_en="This job is too tough."
+                  tr_de="Dieser Job ist zu hart."
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/iDFFO3hkxVA; sugiru may be n4"
+                />
+            </word>
+            <word
+              w="【大：たい】【切：せつ】"
+              rom="taisetsu"
+              tr_en="important; necessary"
+              tr_de="wichtig; nötig"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n5"
+              id="taisetsu-important"
+              rem="ChatGPT says taisetsu is more about personal value, while daiji is more sth of general significance"
+            >
+                <see id="daiji-valuable" rem="closely related" />
+                <phrase
+                  ph="【大：たい】【切：せつ】にする"
+                  rom="taisetsu ni suru"
+                  tr_en="to value sth.; to cherish"
+                  tr_de="etw. schätzen; wertschätzen"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="これは 【大：たい】【切：せつ】な 【手：て】【紙：がみ】だ。"
+                  rom="Kore wa taisetsu na tegami da."
+                  tr_en="This is an important letter."
+                  tr_de="Dies ist ein wichtiger Brief."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【結：けっ】【構：こう】"
+              rom="kekkō"
+              tr_en="splendid; sufficient; tolerable"
+              tr_de="prächtig; genügend; passabel"
+              Langenscheidt="herrlich, wunderbar; genügend, ausreichend"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n5"
+              id="kekkō-splendid"
+            >
+                <phrase
+                  ph="【結：けっ】【構：こう】な【部：へ】【屋：や】"
+                  rom="kekkō na heya"
+                  tr_en="a decent room (adequate but not exceptional)"
+                  tr_de="ein passables Zimmer (adäquat, aber nicht hervorragend)"
+                  explanation_en="結構 can carry a nuance of polite understatement"
+                  explanation_de="結構 kann die Nuance von höflicher Untertreibung tragen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="それで 【結：けっ】【構：こう】です。"
+                  rom="Sore de kekkō desu."
+                  tr_en="That will do."
+                  tr_de="Das sollte reichen."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="どんな 【本：ほん】でも 【結：けっ】【構：こう】です。"
+                  rom="Donna hon de mo kekkō desu."
+                  tr_en="Any book will do."
+                  tr_de="Irgend ein Buch ist gut genug."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【綺：き】【麗：れい】"
+              rom="kirei"
+              tr_en="pretty; tidy; clean"
+              tr_de="hübsch; sauber"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              usuallyInKana="true"
+              lvl="n5"
+              id="kirei-pretty"
+            >
+                <keep_apart_from id="utsukushii-lovely" />
+                <keep_apart_from id="suteki-lovely" />
+                <phrase
+                  ph="きれいな【服：ふく】"
+                  rom="kirei na fuku"
+                  tr_en="clean clothes"
+                  tr_de="saubere Kleider"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【部：へ】【屋：や】を きれいに した。"
+                  rom="Heya o kirei ni shita."
+                  tr_en="I tidied the room."
+                  tr_de="Ich habe das Zimmer aufgeräumt."
+                  lvl="n5"
+                  origin="Oxford p.92"
+                />
+                <sentence
+                  s="【田：た】【中：なか】さんは きれいで 【優：やさ】しい【人：ひと】 です。"
+                  rom="Tanaka-san wa kirei de yasashii hito desu."
+                  tr_en="Ms Tanaka is pretty and kind."
+                  tr_de="Frau Tanaka ist hübsch und nett."
+                  lvl="n5"
+                  origin="500mon q30"
+                />
+            </word>
+            <word
+              w="【立：りっ】【派：ぱ】"
+              rom="rippa"
+              tr_en="splendid; handsome"
+              tr_de="prächtig; stattlich"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n5"
+              id="rippa-splendid"
+            >
+                <keep_apart_from id="hansamu-handsome" />
+                <phrase
+                  ph="【立：りっ】【派：ぱ】な【建：たて】【物：もの】"
+                  rom="rippa na tatemono"
+                  tr_en="a magnificient building"
+                  tr_de="ein stattliches Gebäude"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="その 【学：がっ】【校：こう】には 【立：りっ】【派：ぱ】な プールが ある。"
+                  rom="Sono gakkō ni wa rippa na pūru ga aru."
+                  tr_en="That school has a splendid swimming pool."
+                  tr_de="In dieser Schule gibt's einen prächtigen Swimmingpool."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【上：じょう】【手：ず】"
+              rom="jōzu"
+              tr_en="skilled; good (at)"
+              tr_de="begabt; geschickt"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n5"
+              id="jōzu-skilled"
+            >
+                <see id="heta-unskilled" rem="antonym" />
+                <phrase
+                  ph="【上：じょう】【手：ず】な【料：りょう】【理：り】【人：にん】"
+                  rom="jōzu na ryōrinin"
+                  tr_en="a skilled chef"
+                  tr_de="ein begabter Koch"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT; jishi has nx for ryōrinin"
+                />
+                <sentence
+                  s="【父：ちち】は フランス【語：ご】が 【上：じょう】【手：ず】です。"
+                  rom="Chichi wa furansu-go ga jōzu desu."
+                  tr_en="My father is good at French."
+                  tr_de="Mein Vater beherrscht die französische Sprache."
+                  lvl="n5"
+                  origin="500mon q19"
+                />
+            </word>
+            <word
+              w="【下手：へた】"
+              rom="heta"
+              tr_en="unskilful; poor"
+              tr_de="unbegabt; ungeschickt"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n5"
+              id="heta-unskilled"
+              hasCombinedReading="true"
+            >
+                <see id="jōzu-skilled" rem="antonym" />
+                <!-- a see-also link to nigate may be confusing, see nigate-notlike -->
+                <keep_apart_from id="nigate-notlike" />
+                <phrase
+                  ph="【下手：へた】な【医：い】【者：しゃ】"
+                  rom="heta na isha"
+                  tr_en="an unskilled doctor"
+                  tr_de="ein unbegabter Arzt"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【谷：たに】【口：ぐち】さんは 【料：りょう】【理：り】が 【下手：へた】だ。"
+                  rom="Taniguchi-san wa ryōri ga heta da."
+                  tr_en="Mrs Taniguchi is poor at cooking."
+                  tr_de="Frau Taniguchi kann nicht gut kochen."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【嫌：いや】"
+              rom="iya"
+              tr_en="disagreeable; detestable; unpleasant"
+              tr_de="abscheulich; widerwärtig; unangenehm"
+              usuallyInKana="true"
+              lvl="n5"
+              category="mood"
+              id="iya-disagreeable"
+            >
+                <!-- although iya can be a noun, there is also 嫌み, nx, not marked as common -->
+                <see id="kirai-hateful" rem="closely related" />
+                <phrase
+                  ph="いやな【人：ひと】"
+                  rom="iya na hito"
+                  tr_en="an unpleasant person"
+                  tr_de="eine unangenehme Person"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="いや、そんな こと しないよ。"
+                  rom="Iya, sonna koto shinai yo."
+                  tr_en="No, I would never do such a thing."
+                  tr_de="Nein, ich würde niemals so etwas tun."
+                  lvl="n5"
+                  origin="500mon q158"
+                  rem="shouldn't it be sonna koto *o* shinai yo ???"
+                />
+                <sentence
+                  s="【明日：あした】は テストが あるから、【学：がっ】【校：こう】へ 【行：い】くのが いやです。"
+                  rom="Ashita wa tesuto ga aru kara, gakkō e iku no ga iya desu."
+                  tr_en="I don't want to go to school tomorrow, because I have a test."
+                  tr_de="Ich will nicht in die Schule morgen, weil ich eine Prüfung habe."
+                  lvl="n5"
+                  origin="500mon q59"
+                />
+                <!-- is this from iya, or is it something else?
+                  w="やだ！"
+                  rom="Yada!"
+                  tr_en="Oh no! Not a chance!"
+                  tr_de="Oh nein! Keine Chance!"
+                -->
+            </word>
+            <word
+              w="【静：しず】か"
+              rom="shizuka"
+              tr_en="quiet; silent; calm"
+              tr_de="leise; ruhig; still"
+              lvl="n5"
+              category="mood, hearing"
+              id="shizuka-quiet"
+            >
+                <see id="shizumaru-calmdown" rem="verb" />
+                <phrase
+                  ph="【静：しず】かな【公：こう】【園：えん】"
+                  rom="shizuka na kōen"
+                  tr_en="a quiet park"
+                  tr_de="ein stiller Park"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【町：まち】が 【静：しず】かでした。"
+                  rom="Machi ga shizuka deshita."
+                  tr_en="The town was quiet."
+                  tr_de="In der Stadt war es still."
+                  lvl="n5"
+                  origin="Oxford p.99"
+                />
+                <sentence
+                  s="ちょっと 【静：しず】かに しなさい。"
+                  rom="Chotto shizuka ni shi-nasai."
+                  tr_en="Be quiet!"
+                  tr_de="Sei still!"
+                  lvl="n5"
+                  origin="Oxford p.37"
+                  rem="nasai sounds rather commanding"
+                />
+            </word>
+            <word
+              w="【色：いろ】【々：いろ】"
+              rom="iro-iro"
+              tr_en="various; all sorts of"
+              tr_de="verschiedene; alle Arten von"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n5"
+              id="iroiro-various"
+            >
+                <phrase
+                  ph="【色：いろ】【々：いろ】な【問：もん】【題：だい】"
+                  rom="iro-iro na mondai"
+                  tr_en="various problems"
+                  tr_de="diverse Probleme"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【色：いろ】【々：いろ】な お【菓：か】【子：し】が あった。"
+                  rom="Iro-iro na o-kashi ga atta."
+                  tr_en="There were various kinds of sweets."
+                  tr_de="Es hatte allerlei Sorten von Süssigkeiten."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【大：だい】【丈：じょう】【夫：ぶ】"
+              rom="daijōbu"
+              tr_en="okay; all right"
+              tr_de="in Ordnung; okay"
+              lvl="n5"
+              category="mood"
+              id="daijōbu-okay"
+            >
+                <phrase
+                  ph="【彼：かの】【女：じょ】に【大：だい】【丈：じょう】【夫：ぶ】かどうか【聞：き】く"
+                  rom="kanojo ni daijōbu ka dō ka kiku"
+                  tr_en="to ask her whether she is alright"
+                  tr_de="sie fragen, ob alles in Ordnung sei"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【大：だい】【丈：じょう】【夫：ぶ】です。"
+                  rom="Daijōbu desu."
+                  tr_en="It's alright."
+                  tr_de="Es ist in Ordnung."
+                  lvl="n5"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

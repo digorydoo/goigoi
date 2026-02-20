@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Even more words"
+      name_de="Noch mehr Wörter"
+      name_fr="Encore plus de mots"
+      name_it="Ancora più parole"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="-"
+      translations="en, de"
+      requiresSentences="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- very high numbers -->
+            <word
+              w="【一：いっ】【兆：ちょう】"
+              rom="icchō"
+              tr_en="1 trillion"
+              tr_de="1 Billione"
+              hint_en="number"
+              hint_de="Zahl"
+              id="icchō-onetrillion"
+              lvl="-"
+            />
+            <word
+              w="【二：に】【兆：ちょう】"
+              rom="ni-chō"
+              tr_en="2 trillions"
+              tr_de="2 Billionen"
+              hint_en="number"
+              hint_de="Zahl"
+              id="nichō-twotrillions"
+              lvl="-"
+            />
+            <word
+              w="【一：いっ】【京：けい】"
+              rom="ikkei"
+              tr_en="10^16"
+              lvl="-"
+              hint_en="number"
+              hint_de="Zahl"
+              id="ikkei-1e16"
+              HIDDEN="true"
+            />
+            <word
+              w="【二：に】【京：けい】"
+              rom="ni-kei"
+              tr_en="2 * 10^16"
+              lvl="-"
+              hint_en="number"
+              hint_de="Zahl"
+              id="nikei-2e16"
+              HIDDEN="true"
+            />
+            <word
+              w="【六：ろっ】【京：けい】"
+              rom="rokkei"
+              tr_en="6 * 10^16"
+              lvl="-"
+              hint_en="number"
+              hint_de="Zahl"
+              id="rokkei-6e16"
+              HIDDEN="true"
+            />
+            <word
+              w="【八：はっ】【京：けい】"
+              rom="hakkei"
+              tr_en="8 * 10^16"
+              lvl="-"
+              hint_en="number"
+              hint_de="Zahl"
+              id="hakkei-8e16"
+              HIDDEN="true"
+            />
+            <word
+              w="【十：じゅっ】【京：けい】"
+              rom="jukkei"
+              tr_en="10 * 10^16"
+              lvl="-"
+              hint_en="number"
+              hint_de="Zahl"
+              id="jukkei-10e16"
+              HIDDEN="true"
+            />
+            <word
+              w="【百：ひゃっ】【京：けい】"
+              rom="hyakkei"
+              tr_en="100 * 10^16"
+              lvl="-"
+              hint_en="number"
+              hint_de="Zahl"
+              id="hyakkei-100e16"
+              HIDDEN="true"
+            />
+
+            <!-- eyes -->
+            <word
+              w="【見：み】【当：あ】たる"
+              rom="miataru"
+              tr_en="to be found"
+              tr_de="gefunden werden"
+              lvl="-"
+              category="looking"
+              id="miataru-befound"
+            >
+                <sentence
+                  s="【私：わたし】の【靴：くつ】が【見：み】【当：あ】たらない。"
+                  rom="Watashi no kutsu ga miataranai."
+                  tr_en="I can't find my shoes."
+                  tr_de="Ich kann meine Schuhe nicht finden."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【見：み】つめる"
+              rom="mitsumeru"
+              tr_en="to stare (at); to watch intently"
+              tr_de="anstarren; konzentriert beobachten"
+              lvl="-"
+              category="looking"
+              id="mitsumeru-stareat"
+            >
+                <sentence
+                  s="【人：ひと】をじっと【見：み】つめるのは【無：ぶ】【礼：れい】である。"
+                  rom="Hito o jitto mitsumeru no wa burei de aru."
+                  tr_en="It is impolite to stare at people."
+                  tr_de="Es ist unhöflich, die Leute anzustarren."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- mouth -->
+            <!--
+              w="〜と【言：い】えば"
+              rom="~toieba"
+              tr_en="speaking of ~; apropos ~"
+              lvl="-"
+              id="toieba-speakingof"
+            -->
+
+            <!-- body -->
+            <word
+              w="【頷：うなず】く"
+              rom="unazuku"
+              tr_en="to nod"
+              tr_de="nicken"
+              lvl="-"
+              id="unazuku-nod"
+            />
+            <word
+              w="くすぐる"
+              rom="kusuguru"
+              tr_en="to tickle"
+              tr_de="kitzeln"
+              lvl="-"
+              id="kusuguru-tickle"
+            />
+
+            <!-- not clearly a noun -->
+            <word
+              w="【人：ひと】【々：びと】"
+              rom="hito-bito"
+              tr_en="people; each person"
+              tr_de="die Menschen; jede Person"
+              lvl="-"
+              category="people"
+              id="hitobito-eachperson"
+            >
+                <sentence
+                  s="【人：ひと】【々：びと】は【村：むら】に【住：す】んでいた。"
+                  rom="Hito-bito wa mura ni sunde ita."
+                  tr_en="People lived in villages."
+                  tr_de="Die Menschen lebten in Dörfern."
+                  lvl="-"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【多：おお】くの【人：ひと】【々：びと】が【工：こう】【業：ぎょう】【都：と】【市：し】で【働：はたら】いている。"
+                  rom="Ōku no hito-bito ga kōgyō-toshi de hataraite iru."
+                  tr_en="Many people work in industrial towns."
+                  tr_de="Viele Leute arbeiten in Industriestädten."
+                  lvl="-"
+                  origin="lib0"
+                  rem="rated nx because of hito-bito"
+                />
+            </word>
+
+            <!-- loanwords -->
+            <word
+              w="リムジン"
+              rom="rimujin"
+              tr_en="limousine; shuttle bus (to airport)"
+              tr_de="Limusine; Shuttlebus (zum Flughafen)"
+              lvl="-"
+              category="transportation"
+              id="rimujin-limousine"
+            />
+            <word
+              w="ヘッドホン"
+              rom="heddohon"
+              tr_en="headphones"
+              tr_de="Kopfhörer"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="-"
+              id="heddohon-headphones"
+              rem="appears in GENKI2 L20 vocab section"
+            />
+
+            <!-- i-adjective -->
+            <word
+              w="【苛：い】【立：らだ】たしい"
+              rom="iradatashii"
+              tr_en="irritating; annoying"
+              tr_de="irritierend; nervig"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="-"
+              category="mood, not-good"
+              id="iradatashii-irritating"
+            />
+            <word
+              w="やばい"
+              rom="yabai"
+              tr_en="dangerous; terrible; crazy"
+              tr_de="gefährlich; schrecklich; verrückt"
+              hint_en="colloquial"
+              hint_de="umgangssprachlich"
+              lvl="-"
+              id="yabai-crazy"
+            />
+
+            <!-- na-adjectives -->
+            <!-- can't find a good sentence
+              w="ふんだん"
+              rom="fundan"
+              tr_en="plentiful; abundant"
+              lvl="-"
+              id="fundan-plentiful"
+            -->
+
+            <!-- conjunction -->
+            <word
+              w="それなら"
+              rom="sorenara"
+              tr_en="if that's the case"
+              tr_de="wenn das so ist"
+              lvl="-"
+              id="sorenara-if"
+              rem="isn't this n4?"
+            >
+                <sentence
+                  s="ハルトが【行：い】くんですか。それなら【絶：ぜっ】【対：たい】に【行：い】かない。"
+                  rom="Haruto ga iku n desu ka? Sore nara zettai ni ikanai."
+                  tr_en="Haruto is going? In that case, there's no way I'm going!"
+                  tr_de="Haruto geht da hin? Wenn das so ist, gehe ich auf keinen Fall!"
+                  lvl="-"
+                  origin="Oxford p.139 modified"
+                />
+            </word>
+
+            <!-- suffix -->
+            <!--
+              w="～っぽい"
+              rom="~ppoi"
+              tr_en="-ish"
+              lvl="-"
+              id="ppoi-ish"
+            -->
+            <word
+              w="～みたい"
+              rom="~mitai"
+              tr_en="-like; sort of"
+              hint_en="suffix"
+              lvl="-"
+              id="mitai-like"
+              HIDDEN="true"
+              rem="not a good word; appears in GENKI2 L20 vocab section"
+            />
+
+            <!-- expression -->
+            <!--
+              w="【何：なん】【日：にち】も"
+              rom="nannichi mo"
+              tr_en="for many days"
+              lvl="-"
+              id="nannichimo-formanydays"
+            -->
+            <!--
+              w="【今：いま】まで"
+              rom="ima made"
+              tr_en="until now; so far"
+              lvl="-"
+              id="imamade-sofar"
+            -->
+            <!--
+              w="あるある"
+              rom="aruaru"
+              tr_en="oh yeah; of course, it is so"
+              lvl="-"
+              id="aruaru-itisso"
+            -->
+            <word
+              w="やって【来：く】る"
+              rom="yattekuru"
+              tr_en="to come along; to turn up"
+              tr_de="daherkommen; erscheinen; auftauchen"
+              lvl="-"
+              id="yattekuru-turnup"
+            >
+                <sentence
+                  s="ついにヨシさんはやって【来：き】た。"
+                  rom="Tsui ni Yoshi-san wa yattekita."
+                  tr_en="Yoshi turned up at last."
+                  tr_de="Endlich tauchte Yoshi auf."
+                  lvl="-"
+                  origin="lib0 modified"
+                  hasDifferentForm="true"
+                />
+            </word>
+            <word
+              w="だろう"
+              rom="darō"
+              tr_en="it seems; I think; I suppose"
+              tr_de="es scheint; ich denke; ich vermute"
+              lvl="-"
+              rem="appears in 500mon q327; isn't this n5?"
+              id="darō-itseems"
+            >
+                <sentence
+                  s="【電：でん】【車：しゃ】が【遅：おく】れているから、まだ【家：いえ】に【着：つ】いていないだろう。"
+                  rom="Densha ga okurete iru kara, mada ie ni tsuite inai darō."
+                  tr_en="I think he's not reached home yet, because trains are late."
+                  tr_de="Ich vermute, dass er noch nicht zuhause angekommen ist, weil die Züge Verspätung haben."
+                  lvl="-"
+                  origin="Oxford p.143"
+                />
+            </word>
+            <word
+              w="イケてる"
+              rom="iketeru"
+              tr_en="to be cool; stylish; fashionable"
+              tr_de="cool sein; stilvoll; modisch"
+              lvl="-"
+              category="fashion"
+              id="iketeru-cool"
+            />
+
+            <!-- unsorted -->
+            <word
+              w="【多：おお】く"
+              rom="ōku"
+              tr_en="a lot; plenty"
+              tr_de="eine Menge; viele"
+              hint_en="noun; adverb"
+              hint_de="Nomen; Adverb"
+              lvl="-"
+              id="ōku-plenty"
+            >
+                <!--
+                    The adjective 多い is not commonly used before nouns; use 多くの instead.
+                    However, when another clause modifies the adjective, 多い and not 多くの　is used before nouns.
+                    See examples below and examples at 多い.
+                -->
+                <see id="ōi-many" rem="adjective" />
+                <phrase
+                  ph="【多：おお】くの【人：ひと】"
+                  rom="ōku no hito"
+                  tr_en="many people"
+                  tr_de="viele Leute"
+                  lvl="-"
+                  origin="Oxford p.108"
+                />
+                <sentence
+                  s="【多：おお】くの【学：がく】【生：せい】が【試：し】【験：けん】に【落：お】ちた。"
+                  rom="Ōku no gakusei ga shiken ni ochita."
+                  tr_en="Many students failed the test."
+                  tr_de="Viele Schüler sind durch die Prüfung gefallen."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="オバケ"
+              rom="obake"
+              tr_en="ghost; demon; apparition"
+              tr_de="Gespenst; Dämon; Erscheinung"
+              lvl="-"
+              rem="with kanji it's お化け, but we can't combine this with katakana because of the honorific お"
+              category="manga-anime, games"
+              id="obake-ghost"
+            >
+                <keep_apart_from id="akuma-devil" />
+                <keep_apart_from id="oni-demon" />
+                <keep_apart_from id="yūrei-ghost" />
+                <keep_apart_from id="mononoke-vengefulspirit" />
+                <sentence
+                  s="【夜：よる】になるとオバケが【出：で】てくる。"
+                  rom="Yoru ni naru to obake ga dete kuru."
+                  tr_en="Ghosts come out when it gets dark."
+                  tr_de="Wenn es dunkel wird, kommen die Gespenster heraus."
+                  lvl="-"
+                  origin="Oxford p.135"
+                />
+            </word>
+            <word
+              w="【大：おお】きさ"
+              rom="ōkisa"
+              tr_en="size; dimensions; volume"
+              tr_de="Grösse; Dimensionen; Volumen"
+              lvl="-"
+              id="ōkisa-size"
+              rem="appears in GENKI2 p.94 vocab section"
+            >
+                <see id="ōkii-big" rem="adjective" />
+                <sentence
+                  s="この【靴：くつ】は【同：おな】じ【大：おお】きさだ。"
+                  rom="Kono kutsu wa onaji ōkisa da."
+                  tr_en="These shoes are the same size."
+                  tr_de="Diese Schuhe haben die gleiche Grösse."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【重：おも】さ"
+              rom="omosa"
+              tr_en="weight"
+              tr_de="Gewicht"
+              lvl="-"
+              id="omosa-weight"
+            >
+                <!--
+                    重さ: weight in a general sense; how heavy something is
+                    重り (nx): counter-weight for balance; an object specifically designed to provide weight
+                    体重・たいじゅう (nx): body weight
+                -->
+                <see id="omoi-heavy" rem="adjective" />
+                <sentence
+                  s="【雪：ゆき】の【重：おも】さで【家：いえ】が【潰：つぶ】れた。"
+                  rom="Yuki no omosa de ie ga tsubureta."
+                  tr_en="The house collapsed under the weight of snow."
+                  tr_de="Das Haus ist unter dem Gewicht des Schnees eingestürzt."
+                  lvl="-"
+                  origin="lib0"
+                  rem="lib0 uses kana つぶれた"
+                />
+            </word>
+            <word
+              w="【甘：あま】み"
+              rom="amami"
+              tr_en="sweetness; sugary taste"
+              tr_de="süsser Geschmack; Süsse"
+              lvl="-"
+              id="amami-sweetness"
+            >
+                <see id="amai-sweet" rem="adjective" />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

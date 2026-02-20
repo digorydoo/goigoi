@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Hidden N3 verbs"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="verb"
+      defaultHint_de="Verb"
+      lvl="n3"
+      translations="en"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="false"
+      HIDDEN="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【向：む】く"
+              rom="muku"
+              tr_en="to turn toward; to look (up, down, etc.); to face (e.g. east)"
+              tr_de="sich in eine Richtung drehen; in eine bestimmte Richtung schauen"
+              studyInContext="preferred"
+              hint_en="v.i."
+              lvl="n3"
+              category="directions"
+              id="muku-turntoward"
+              HIDDEN="true"
+            >
+                <see id="muki-direction" rem="noun" />
+                <see id="mukō-opposite" rem="closely related" />
+            </word>
+            <word
+              w="【受：う】かる"
+              rom="ukaru"
+              tr_en="to pass (examination)"
+              hint_en="v.i."
+              lvl="n3"
+              id="ukaru-pass"
+              rem="jisho has n1"
+            >
+                <see id="ukeru-receive" rem="v.t." />
+            </word>
+            <word
+              w="【勧：すす】める"
+              rom="susumeru"
+              tr_en="to advise; to encourage; to urge"
+              hint_en="v.t."
+              lvl="n3"
+              id="susumeru-recommend"
+            >
+                <keep_apart_from id="keikoku-advice" />
+            </word>
+            <word
+              w="【取：と】り【調：しら】べる"
+              rom="tori-shiraberu"
+              tr_en="to investigate; to examine"
+              hint_en="v.t."
+              lvl="n3"
+              rem="jisho has n1"
+              id="torishiraberu-investigate"
+            >
+                <keep_apart_from id="shiraberu-lookup" />
+            </word>
+            <word
+              w="【望：のぞ】む"
+              rom="nozomu"
+              tr_en="to desire; to wish for; to expect"
+              hint_en="v.t."
+              lvl="n3"
+              id="nozomu-desire"
+            >
+                <see id="nozomi-wish" rem="noun" />
+            </word>
+            <word
+              w="【解：と】く"
+              rom="toku"
+              tr_en="to unfasten; to unbind; to untangle"
+              hint_en="v.t."
+              lvl="n3"
+              id="toku-untie"
+            />
+            <word
+              w="【通：つう】じる"
+              rom="tsūjiru"
+              tr_en="to lead to; to flow; to get through to"
+              hint_en="v.i."
+              lvl="n3"
+              id="tsūjiru-getthru"
+            />
+            <word
+              w="【燃：も】える"
+              rom="moeru"
+              tr_en="to burn; to get fired up"
+              hint_en="v.i."
+              lvl="n3"
+              id="moeru-burn"
+            />
+            <word
+              w="【罰：ばっ】する"
+              rom="bassuru"
+              tr_en="to punish; to penalize; to penalise"
+              hint_en="suru verb"
+              lvl="n3"
+              id="bassuru-punish"
+            />
+            <word
+              w="【異：こと】なる"
+              rom="kotonaru"
+              tr_en="to differ; to be different; to diverge"
+              hint_en="v.i."
+              lvl="n3"
+              id="kotonaru-differ"
+            />
+            <word
+              w="【引：ひ】っ【張：ぱ】る"
+              rom="hipparu"
+              tr_en="to pull tight; to string (lines); to run (cable); to put on"
+              hint_en="v.t."
+              lvl="n3"
+              id="hipparu-run"
+            />
+            <word
+              w="【戦：たたか】う"
+              rom="tatakau"
+              tr_en="to wage war; to fight (with); to compete (against)"
+              hint_en="v.i."
+              lvl="n3"
+              id="tatakau-fight"
+            />
+            <word
+              w="【対：たい】する"
+              rom="tai suru"
+              tr_en="to face; to be facing; to be related to"
+              hint_en="suru verb (special class)"
+              lvl="n3"
+              id="taisuru-face"
+            />
+            <word
+              w="【達：たっ】する"
+              rom="tassuru"
+              id="tassuru-reach"
+              tr_en="to reach; to get to; to arrive at"
+              hint_en="suru verb (special class)"
+              lvl="n3"
+            />
+        </section>
+    </unit>
+</vocabulary>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <!-- WelcomeActivity -->
+    <string name="preferences">Einstellungen</string>
+    <string name="todays_progress">Fortschritt heute</string>
+    <string name="continue_studying">Hier klicken, um weiterzustudieren</string>
+    <string name="learnt_n_of_m_words">Du hast ${N} von ${M} Wörtern gelernt</string>
+
+    <!-- PrefsActivity -->
+    <string name="changeThemePrimary">Farbschema</string>
+    <string name="changeThemeSecondary">Aktivieren für dunklen Modus</string>
+    <string name="aboutAppPrimary">Über Go Go Japanese</string>
+    <string name="aboutAppSecondary">Copyrights und Lizenzen</string>
+
+    <!-- ChallengeStudyActivity -->
+    <string name="n_of_m">${N} von ${M}</string>
+    <string name="correct_wrong_counts">Richtig: ${N} &#160; Falsch: ${M}</string>
+    <string name="study_set_restarted">Ende der Liste erreicht</string>
+    <string name="next_word">Nächstes Wort</string>
+    <string name="reveal_btn">Zeigen</string>
+
+    <!-- FlipThruWordsActivity -->
+    <string name="skip_action_text">ÜBERSPRINGEN</string>
+    <string name="info_action_text">INFORMATIONEN</string>
+
+    <!-- ProgStudyActivity -->
+    <string name="hint_when_show_kanji_ask_kana">Schreibe in Kana, wie du dies aussprechen würdest.</string>
+    <string name="hint_when_show_kana_ask_kanji_singular">Wähle das Kanji, das wie gezeigt ausgesprochen wird.</string>
+    <string name="hint_when_show_kana_ask_kanji_plural">Wähle die Kanjis, die wie gezeigt ausgesprochen werden.</string>
+    <string name="hint_when_show_romaji_ask_kana">Schreibe dies in Kana.</string>
+    <string name="hint_when_show_translation_ask_kana">Schreibe das passende Wort in Kana.</string>
+    <string name="hint_when_show_translation_ask_kanji_among_similar">Wähle das Kanji, welches zur Übersetzung passt.</string>
+    <string name="hint_when_show_translation_ask_kanji_among_words">Schreibe das passende Wort in Kanji.</string>
+    <string name="hint_when_show_s_or_ph_ask_kanji">Wähle das Wort, das in die Lücke passt.</string>
+    <string name="hint_when_new_word">Schau dir dieses neue Wort an.</string>
+    <string name="hint_when_asking_nothing">Sprich dies laut aus.</string>
+    <string name="hint_when_show_ph_translation_ask_ph_kana">Schreibe diese Phrase in Kana.</string>
+    <string name="asking_phrase">Ausdruck</string>
+    <string name="answer_correct">Das ist richtig! Sehr schön!</string>
+    <string name="answer_wrong">Hoppla! Das ist leider nicht richtig!</string>
+    <string name="answer_correct_except_kana_size">Beinahe richtig! Pass auf die Größe der Kana-Zeichen auf!</string>
+    <string name="backspace_key">Rücktaste</string>
+    <string name="enter_key">Eingabetaste</string>
+    <string name="transforms_key">Umwandeln</string>
+
+    <!-- UnytActivity -->
+    <string name="show_translation">Übersetzung</string>
+    <string name="start_btn">Starten</string>
+    <string name="too_few_words">Zu wenige Wörter in dieser Lektion</string>
+
+    <!-- UnitCtxDialogFragment -->
+    <string name="item_reset_unyt_progress">Fortschritt zurücksetzen</string>
+    <string name="confirm_reset_unyt_progress_msg">Die Fortschritts-Statistik der gewählten Lektion und den enthaltenen ${N} Wörtern wird zurückgesetzt</string>
+    <string name="confirm_reset_unyt_progress_ok">ZURÜCKSETZEN</string>
+
+    <!-- UnitsOverviewActivity -->
+    <string name="n_words">${N} Wörter</string>
+
+    <!-- Utils -->
+    <string-array name="language_names">
+        <item>Chinesisch</item>
+        <item>Niederländisch</item>
+        <item>Englisch</item>
+        <item>Finnisch</item>
+        <item>Französisch</item>
+        <item>Deutsch</item>
+        <item>Griechisch</item>
+        <item>Italienisch</item>
+        <item>Irish</item>
+        <item>Japanisch</item>
+        <item>Norwegisch</item>
+        <item>Polnisch</item>
+        <item>Portugiesisch</item>
+        <item>Romantsch</item>
+        <item>Russisch</item>
+        <item>Spanisch</item>
+        <item>Schwedisch</item>
+        <item>Türkisch</item>
+        <item>Welsch</item>
+        <item>Sonstige</item>
+    </string-array>
+    <string name="just_now">Gerade eben</string>
+
+    <!-- WordCtxDialogFragment -->
+    <string name="item_reset_word_progress">Fortschritt zurücksetzen</string>
+    <string name="item_add_word">Zu meinen Wörtern hinzufügen</string>
+    <string name="item_remove_word">Von meinen Wörtern entfernen</string>
+    <string name="confirm_reset_word_progress_msg">Die Fortschritts-Statistik des gewählten Wortes wird zurückgesetzt</string>
+    <string name="confirm_reset_word_progress_ok">ZURÜCKSETZEN</string>
+
+    <!-- WordInfoBottomSheet -->
+    <string name="look_it_up">Nachschlagen von ${word}</string>
+    <string name="kanji_details">Informationen zu den Kanjis</string>
+    <string name="jlpt_level_unknown">JLPT-Stufe nicht bekannt</string>
+    <string name="not_studied_yet">Noch nicht studiert</string>
+    <string name="studied_n_times">${N} Mal studiert</string>
+    <string name="sometimes_with_kanji">Manchmal geschrieben mit Kanji: ${kanji}</string>
+    <string name="kanji_more_difficult">Für ${level} musst du das Wort nur in Kana kennen: ${kana}</string>
+    <string name="progress">Fortschritt</string>
+    <string name="rating">Punktzahl</string>
+    <string name="examples">Beispiele</string>
+    <string name="see_also">Siehe auch</string>
+    <string name="functions">Funktionen</string>
+    <string name="other_languages">Weitere Sprachen</string>
+    <string name="transitive_verb">Transitives Verb</string>
+    <string name="intransitive_verb">Intransitives Verb</string>
+    <string name="noun">Nomen</string>
+    <string name="verb">Verb</string>
+    <string name="adjective">Adjektiv</string>
+    <string name="antonym">Gegenwort</string>
+    <string name="same_reading">Gleiche Lesart</string>
+    <string name="same_kanji">Gleiche Kanjis</string>
+    <string name="similar_meaning">Ähnliche Bedeutung</string>
+    <string name="closely_related">Verwandter Begriff</string>
+
+    <!-- words_list_header -->
+    <string name="overflow_btn">Aktionen</string>
+
+    <!-- MyDlgBuilder -->
+    <string name="got_it">ALLES KLAR</string>
+
+    <!-- HintDialogManager -->
+    <string name="rate_us_message">Möchtest du uns mitteilen, wie wir diese App verbessern könnten?</string>
+    <string name="rate_us_btn">BEWERTEN</string>
+    <string name="not_now_btn">NICHT JETZT</string>
+    <string name="first_time_extkb_shown">Dies ist die erweiterte Kana-Tastatur. Ziehe die Tasten nach links, rechts, oben oder unten, um weitere Zeichen zu sehen.</string>
+    <string name="first_time_extkb_small_kana">Kleine Kana-Zeichen können erzeugt werden, indem du zuerst das Kana in normaler Größe schreibst und dann die Transformier-Taste nach unten ziehst.</string>
+    <string name="first_time_extkb_dakuten_handakuten">Dakuten, z.B. ば, und Handakuten, z.B. ぱ, können erzeugt werden, indem zu zunächst das Kana は schreibst und dann die Transformier-Taste nach links oder rechts ziehst.</string>
+</resources>

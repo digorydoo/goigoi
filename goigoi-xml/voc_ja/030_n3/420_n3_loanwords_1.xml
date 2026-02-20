@@ -1,0 +1,799 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 loanwords ①"
+      name_de="N3-Lehnwörter ①"
+      name_fr="Les mots d'emprunt N3 ①"
+      name_it="Parole di prestito N3 ①"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="false"
+      defaultHint_en="loanword"
+      defaultHint_de="Lehnwort"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresIds="true"
+    >
+        <section>
+            <word
+              w="パスポート"
+              rom="pasupōto"
+              tr_en="passport"
+              tr_de="Reisepass"
+              lvl="n3"
+              category="travelling"
+              id="pasupōto-passport"
+            >
+                <sentence
+                  s="パスポートが【切：き】れています。"
+                  rom="Pasupōto ga kirete imasu."
+                  tr_en="Your passport has expired."
+                  tr_de="Ihr Pass ist abgelaufen."
+                  lvl="n3"
+                  origin="Langenscheidt"
+                />
+                <sentence
+                  s="パスポートを【持：も】っていますか。"
+                  rom="Pasupōto o motte imasu ka?"
+                  tr_en="Do you have a passport?"
+                  tr_de="Haben Sie einen Reisepass?"
+                  origin="jpod101 audio"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="バイオリン"
+              rom="baiorin"
+              tr_en="violin"
+              tr_de="Violine"
+              lvl="n3"
+              category="entertainment"
+              id="baiorin-violin"
+            >
+                <phrase
+                  ph="バイオリンを【弾：ひ】く"
+                  rom="baiorin o hiku"
+                  tr_en="to play the violin"
+                  tr_de="Violine spielen"
+                  lvl="n3"
+                />
+                <sentence
+                  s="【誰：だれ】がバイオリンを【弾：ひ】いてるの？"
+                  rom="Dare ga baiorin o hīteru no?"
+                  tr_en="Who is playing the violin?"
+                  tr_de="Wer spielt die Geige?"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="rephrased by ChatGPT; lib0 uses kana ひて, which is wrong (missing い)"
+                />
+            </word>
+            <word
+              w="トラック"
+              rom="torakku"
+              tr_en="truck (vehicle); running track"
+              tr_de="Truck (Fahrzeug); Rennstrecke"
+              lvl="n3"
+              category="transportation"
+              id="torakku-truck"
+            >
+                <phrase
+                  ph="トラックを【走：はし】る"
+                  rom="torakku o hashiru"
+                  tr_en="to run on a track"
+                  tr_de="auf einer Rennstrecke rennen"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【車：くるま】がトラックに【衝：しょう】【突：とつ】した。"
+                  rom="Kuruma ga torakku ni shōtotsu shita."
+                  tr_en="The car collided with a truck."
+                  tr_de="Das Auto kollidierte mit einem Truck."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="タオル"
+              rom="taoru"
+              tr_en="towel"
+              tr_de="Handtuch"
+              lvl="n3"
+              category="home"
+              id="taoru-towel"
+            >
+                <phrase
+                  ph="【柔：やわ】らかいタオル"
+                  rom="yawarakai taoru"
+                  tr_en="a soft towel"
+                  tr_de="ein weiches Handtuch"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【乾：かわ】いたタオルを【持：も】ってきて。"
+                  rom="Kawaita taoru o motte kite."
+                  tr_en="Bring me a dry towel."
+                  tr_de="Bring mir ein trockenes Handtuch."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ビール"
+              rom="bīru"
+              tr_en="beer"
+              tr_de="Bier"
+              lvl="n3"
+              category="beverage"
+              id="bīru-beer"
+            >
+                <phrase
+                  ph="【冷：つめ】たいビール"
+                  rom="tsumetai bīru"
+                  tr_en="cold beer"
+                  tr_de="kaltes Bier"
+                  origin="jpod101 audio"
+                  lvl="n3"
+                />
+                <sentence
+                  s="このビールを【飲：の】んでもいい？"
+                  rom="Kono bīru o nonde mo ii?"
+                  tr_en="Can I drink this beer?"
+                  tr_de="Kann ich dieses Bier trinken?"
+                  lvl="n3"
+                  origin="Miku"
+                  href="https://youtu.be/IBzblHryNJE"
+                />
+                <sentence
+                  s="ビールをたくさん【飲：の】んじゃった。"
+                  rom="Bīru o takusan nonjatta."
+                  tr_en="I drank a lot of beer (and I regret it)."
+                  tr_de="Ich habe viele Biere getrunken (und ich bereue es)."
+                  explanation_en="「飲んじゃった」＝「飲んでしまった」"
+                  lvl="n3"
+                />
+                <sentence
+                  s="【今日：きょう】はビールを【六：ろっ】【本：ぽん】も【飲：の】んでしまった。"
+                  rom="Kyō wa bīru o roppon mo nonde shimatta."
+                  tr_en="I drank six bottles of beer today."
+                  tr_de="Ich habe heute sechs Flaschen Bier getrunken."
+                  explanation_en="「しまった」 adds feelings of regret"
+                  explanation_de="「しまった」 drückt Bedauern aus"
+                  lvl="n3"
+                  href="https://www.tofugu.com/japanese/japanese-counter-hon/"
+                />
+            </word>
+            <word
+              w="グラス"
+              rom="gurasu"
+              tr_en="glass cup"
+              tr_de="Trinkglas"
+              lvl="n3"
+              id="gurasu-cup"
+            >
+                <see id="garasu-glass" rem="closely related" />
+                <phrase
+                  ph="ビールの【入：はい】ったグラス"
+                  rom="bīru no haitta gurasu"
+                  tr_en="a glass with beer in it"
+                  tr_de="ein Glas Bier"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="グラスはガラスでできています。"
+                  rom="Gurasu wa garasu de dekite imasu."
+                  tr_en="Glass cups are made of glass."
+                  tr_de="Trinkgläser sind aus Glas."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="パーセント"
+              rom="pāsento"
+              tr_en="percent; percentage"
+              tr_de="Prozent; Prozentsatz"
+              lvl="n3"
+              category="business, science"
+              id="pāsento-percent"
+            >
+                <phrase
+                  ph="【30：さんじゅう】パーセント"
+                  rom="san-jū pāsento"
+                  tr_en="thirty percent"
+                  tr_de="dreissig Prozent"
+                  lvl="n3"
+                  origin="self"
+                />
+                <sentence
+                  s="【私：わたし】は【100：ひゃく】パーセント【間：ま】【違：ちが】っていない。"
+                  rom="Watashi wa hyaku pāsento machigatte inai."
+                  tr_en="I am not a hundred percent wrong."
+                  tr_de="Ich liege nicht hundert Prozent falsch."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has n1 for machigau, n3 for machigai"
+                />
+            </word>
+            <word
+              w="オフィス"
+              rom="ofisu"
+              tr_en="office"
+              tr_de="Büro"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="n3"
+              category="work"
+              id="ofisu-office"
+            >
+                <keep_apart_from id="jimusho-office" />
+                <keep_apart_from id="kyoku-bureau" />
+                <phrase
+                  ph="オフィス【時：じ】【間：かん】"
+                  rom="ofisu jikan"
+                  tr_en="office hours"
+                  tr_de="Bürozeiten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="オフィスに【時：じ】【間：かん】ぴったりに【着：つ】いた。"
+                  rom="Ofisu ni jikan pittari ni tsuita."
+                  tr_en="I arrived at the office on time."
+                  tr_de="Ich kam rechtzeitig beim Büro at."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="テント"
+              rom="tento"
+              tr_en="tent"
+              tr_de="Zelt"
+              lvl="n3"
+              category="holidays"
+              id="tento-tent"
+            >
+                <sentence
+                  s="ここにテントを【張：は】ろう。"
+                  rom="Koko ni tento o harō."
+                  tr_en="Let's put up (our) tent here."
+                  tr_de="Lass uns (unser) Zelt hier aufschlagen."
+                  origin="lib0"
+                  lvl="n3"
+                />
+                <sentence
+                  s="テントをどこに【張：は】ればいいですか。"
+                  rom="Tento o doko ni hareba ii desu ka?"
+                  tr_en="Where should I put up the tent?"
+                  tr_de="Wo soll ich das Zelt aufstellen?"
+                  lvl="n3"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="スープ"
+              rom="sūpu"
+              tr_en="soup"
+              tr_de="Suppe"
+              hint_en="Western-style"
+              hint_de="im westlichen Stil"
+              lvl="n3"
+              category="food, gastronomy"
+              id="sūpu-soup"
+            >
+                <phrase
+                  ph="【野：や】【菜：さい】スープ"
+                  rom="yasai sūpu"
+                  tr_en="vegetable soup"
+                  tr_de="Gemüsesuppe"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="レオくんはスプーンをスープの【中：なか】につけた。"
+                  rom="Reo-kun wa supūn o sūpu no naka ni tsuketa."
+                  tr_en="Reo dipped his spoon into the soup."
+                  tr_de="Reo tauchte seinen Löffel in die Suppe."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="このスープは【熱：あつ】すぎて、【飲：の】めません。"
+                  rom="Kono sūpu wa atsu sugite, nomemasen."
+                  tr_en="This soup is too hot, I cannot drink it."
+                  tr_de="Diese Suppe ist zu heiss, ich kann sie nicht trinken."
+                  lvl="n3"
+                  origin="Miku"
+                  href="https://youtu.be/iDFFO3hkxVA"
+                  rem="rated n3 because of sūpu"
+                  hasDifferentForm="true"
+                />
+            </word>
+            <word
+              w="ライター"
+              rom="raitā"
+              tr_en="lighter"
+              tr_de="Feuerzeug"
+              lvl="n3"
+              category="light, fire"
+              id="raitā-lighter"
+            >
+                <sentence
+                  s="このライターは【火：ひ】がつかない。"
+                  rom="Kono raitā wa hi ga tsukanai."
+                  tr_en="This lighter won't catch."
+                  tr_de="Dieses Feuerzeug funktioniert nicht."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="ライターがついている。"
+                  rom="Raitā ga tsuite iru."
+                  tr_en="The lighter is lit."
+                  tr_de="Das Feuerzeug ist an."
+                  origin="jpod101 audio"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="ペンキ"
+              rom="penki"
+              tr_en="paint"
+              tr_de="Malfarbe"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="n3"
+              category="arts"
+              id="penki-paint"
+            >
+                <keep_apart_from id="enogu-paint" />
+                <sentence
+                  s="【手：て】にペンキが【付：つ】いた。"
+                  rom="Te ni penki ga tsuita."
+                  tr_en="I got paint on my hands."
+                  tr_de="Ich habe Farbe an den Händen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【塗：ぬ】り【立：た】てのペンキに【触：さわ】るな。"
+                  rom="Nuritate no penki ni sawaru na."
+                  tr_en="Don't touch the wet paint!"
+                  tr_de="Die nasse Farbe nicht berühren!"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for 塗り立て; 塗る is n4; 立つ is n5; 触る is n4"
+                />
+            </word>
+            <word
+              w="ハイキング"
+              rom="haikingu"
+              tr_en="hiking"
+              tr_de="Wandern"
+              lvl="n3"
+              category="holidays"
+              id="haikingu-hiking"
+            >
+                <sentence
+                  s="【週：しゅう】【末：まつ】にハイキングに【行：い】こう。"
+                  rom="Shūmatsu ni haikingu ni ikō."
+                  tr_en="Let's go hiking on the weekend."
+                  tr_de="Lass uns am Wochenende wandern gehen."
+                  origin="lib0"
+                  lvl="n3"
+                />
+                <sentence
+                  s="ハイキングは【秋：あき】に【限：かぎ】る。"
+                  rom="Haikingu wa aki ni kagiru."
+                  tr_en="Autumn is the best season for hiking."
+                  tr_de="Herbst ist die beste Saison zum Wandern."
+                  explanation_en="lit.: Hiking is restricted to autumn"
+                  explanation_de="wörtl.: Wandern ist auf den Herbst beschränkt."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ドラマ"
+              rom="dorama"
+              tr_en="drama"
+              tr_de="Drama"
+              lvl="n3"
+              category="entertainment"
+              id="dorama-drama"
+            >
+                <sentence
+                  s="【日：に】【本：ほん】のテレビドラマを【見：み】たらどうですか。"
+                  rom="Nihon no terebi-dorama o mitara dō desu ka?"
+                  tr_en="How about watching Japanese TV dramas?"
+                  tr_de="Wie wär's, wenn wir ein japanisches Fernsehdrama schauen würden?"
+                  lvl="n3"
+                  origin="Oxford p.130"
+                />
+                <sentence
+                  s="【私：わたし】は【一：いち】【度：ど】テレビドラマで【彼：かの】【女：じょ】を【見：み】たことがある。"
+                  rom="Watashi wa ichi-do terebi-dorama de kanojo o mita koto ga aru."
+                  tr_en="I have seen her once in a TV drama."
+                  tr_de="Ich habe sie einmal in einem Fernsehdrama gesehen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="キャンプ"
+              rom="kyanpu"
+              tr_en="camp; to camp"
+              tr_de="Camp; zelten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="holidays"
+              id="kyanpu-camp"
+            >
+                <sentence
+                  s="【湖：みずうみ】の【近：ちか】くでキャンプをした。"
+                  rom="Mizūmi no chikaku de kyanpu o shita."
+                  tr_en="(We) camped near the lake."
+                  tr_de="(Wir) zelteten in der Nähe des Sees."
+                  origin="lib0"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="トンネル"
+              rom="tonneru"
+              tr_en="tunnel"
+              tr_de="Tunnel"
+              lvl="n3"
+              category="city"
+              id="tonneru-tunnel"
+            >
+                <sentence
+                  s="【山：やま】を【通：とお】してトンネルを【通：とお】した。"
+                  rom="Yama o tōshite tonneru o tōshita."
+                  tr_en="They drove a tunnel through the mountain."
+                  tr_de="Man hat ein Tunnel durch den Berg gebohrt."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="スタンド"
+              rom="sutando"
+              tr_en="newspaper stand; inkstand; desk lamp"
+              tr_de="Ständer; Zeitungsablage; Tischlampe"
+              lvl="n3"
+              category="home"
+              id="sutando-stand"
+            >
+                <sentence
+                  s="【私：わたし】は【大：おお】きな【電：でん】【気：き】スタンドは【嫌：きら】いだ。"
+                  rom="Watashi wa ōki na denki-sutando wa kirai da."
+                  tr_en="I don't like big desk lamps."
+                  tr_de="Ich mag keine grossen Tischlampen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="アルバム"
+              rom="arubamu"
+              tr_en="album"
+              tr_de="Album"
+              lvl="n3"
+              category="entertainment"
+              id="arubamu-album"
+            >
+                <!-- kind of outdated... -->
+                <sentence
+                  s="アルバムを【見：み】せてくれませんか。"
+                  rom="Arubamu o misete kuremasen ka?"
+                  tr_en="Will you show me your photo album?"
+                  tr_de="Zeigst du mir dein Fotoalbum?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="チーム"
+              rom="chīmu"
+              tr_en="team"
+              tr_de="Mannschaft; Team"
+              lvl="n3"
+              category="sports"
+              id="chīmu-team"
+            >
+                <sentence
+                  s="【新：あたら】しいチームには【優：ゆう】【勝：しょう】する【力：ちから】がある。"
+                  rom="Atarashii chīmu ni wa yūshō suru chikara ga aru."
+                  tr_en="The new team has the capability to win."
+                  tr_de="Das neue Team hat die Kraft, gewinnen zu können."
+                  lvl="n3"
+                  origin="lib0"
+                  href="https://hinative.com/questions/22704077"
+                />
+            </word>
+            <word
+              w="コーチ"
+              rom="kōchi"
+              tr_en="coach"
+              tr_de="Trainer; Coach"
+              hint_en="of a sports team"
+              hint_de="von einem Sportteam"
+              lvl="n3"
+              category="sports"
+              id="kōchi-coach"
+            >
+                <keep_apart_from id="shidō-guidance" />
+                <sentence
+                  s="そのチームは【誰：だれ】がコーチしているのですか。"
+                  rom="Sono chīmu wa dare ga kōchi shite iru no desu ka?"
+                  tr_en="Who coaches that team?"
+                  tr_de="Wer coacht diese Mannschaft?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="エンジン"
+              rom="enjin"
+              tr_en="engine"
+              tr_de="Motor"
+              lvl="n3"
+              id="enjin-engine"
+            >
+                <sentence
+                  s="エンジンが【故：こ】【障：しょう】してしまいました。"
+                  rom="Enjin ga koshō shite shimaimashita."
+                  tr_en="The engine broke down."
+                  tr_de="Der Motor ist kaputt."
+                  lvl="n3"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="ミス"
+              rom="misu"
+              tr_en="mistake; error; to blunder"
+              tr_de="Fehler; Missgeschick; einen Schnitzer machen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="misu-mistake"
+            >
+                <sentence
+                  s="たくさんミスがあってすみませんでした。"
+                  rom="Takusan misu ga atte sumimasen deshita."
+                  tr_en="I am sorry about all the errors."
+                  tr_de="Verzeihen Sie, dass es so viele Fehler hatte."
+                  lvl="n3"
+                  origin="Oxford p.75"
+                />
+            </word>
+            <word
+              w="クリスマス"
+              rom="kurisumasu"
+              tr_en="Christmas"
+              tr_de="Weihnachten"
+              lvl="n3"
+              category="culture"
+              id="kurisumasu-christmas"
+            >
+                <sentence
+                  s="クリスマスの【前：まえ】にプレゼントを【買：か】う。"
+                  rom="Kurisumasu no mae ni purezento o kau."
+                  tr_en="I will buy a present before Christmas."
+                  tr_de="Ich werde vor Weihnachten ein Geschenk kaufen."
+                  lvl="n3"
+                  origin="Miku"
+                  href="https://youtu.be/964fq7NJKms"
+                />
+            </word>
+            <word
+              w="サイン"
+              rom="sain"
+              tr_en="signature; sign; signal"
+              tr_de="Signatur; Unterschrift"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="sain-sign"
+            >
+                <keep_apart_from id="shomei-signature" />
+                <keep_apart_from id="aizu-sign" />
+                <sentence
+                  s="ここにサインしてください。"
+                  rom="Koko ni sain shite kudasai."
+                  tr_en="Please sign here."
+                  tr_de="Bitte unterschreiben Sie hier."
+                  lvl="n3"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="ドレス"
+              rom="doresu"
+              tr_en="dress"
+              tr_de="Kleid; Anzug"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="n3"
+              category="fashion"
+              id="doresu-dress"
+            >
+                <sentence
+                  s="そのドレスを【着：き】ると【素：す】【敵：てき】よ。"
+                  rom="Sono doresu o kiru to suteki yo."
+                  tr_en="You look nice in that dress."
+                  tr_de="Du siehst hübsch in dem Kleid aus."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ボート"
+              rom="bōto"
+              tr_en="boat; rowing"
+              tr_de="Boot; Rudern"
+              lvl="n3"
+              category="beach, sports"
+              id="bōto-boat"
+            >
+                <sentence
+                  s="ボートでその【川：かわ】を【渡：わた】ります。"
+                  rom="Bōto de sono kawa o watarimasu."
+                  tr_en="We will cross that river in a boat."
+                  tr_de="Wir werden den Fluss mit dem Boot überqueren."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="ポスター"
+              rom="posutā"
+              tr_en="poster"
+              tr_de="Poster"
+              lvl="n3"
+              id="posutā-poster"
+              rem="appears in GENKI2 L21 vocab section; jisho has n2"
+            >
+                <sentence
+                  s="この【絵：え】のポスターはありますか。"
+                  rom="Kono e no posutā wa arimasu ka?"
+                  tr_en="Do you have this picture as a poster?"
+                  tr_de="Haben Sie dieses Bild als Poster?"
+                  lvl="n3"
+                  origin="Langenscheidt p.183"
+                />
+            </word>
+            <word
+              w="トランプ"
+              rom="toranpu"
+              tr_en="playing-cards"
+              tr_de="Spielkarten"
+              hint_en="Western-style"
+              hint_de="im westlichen Stil"
+              lvl="n3"
+              category="games"
+              id="toranpu-cards"
+            >
+                <sentence
+                  s="トランプをしましょう。"
+                  rom="Toranpu o shimashō."
+                  tr_en="Let's play cards!"
+                  tr_de="Lasst uns Karten spielen!"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ダンス"
+              rom="dansu"
+              tr_en="dance"
+              tr_de="Tanz"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="n3"
+              category="entertainment"
+              id="dansu-dance"
+            >
+                <keep_apart_from id="odoru-todance" />
+                <keep_apart_from id="odori-dance" />
+                <sentence
+                  s="ダンスがお【上：じょう】【手：ず】ですね。"
+                  rom="Dansu ga o-jōzu desu ne."
+                  tr_en="You're skilled at dancing."
+                  tr_de="Sie tanzen sehr gut."
+                  lvl="n3"
+                  origin="Langenscheidt p.192"
+                />
+            </word>
+            <word
+              w="アイスクリーム"
+              rom="aisukurīmu"
+              tr_en="ice cream"
+              tr_de="Eis; Eiscrème; Glacé"
+              lvl="n3"
+              category="food"
+              id="aisukuriimu-icecream"
+            >
+                <keep_apart_from id="kuriimu-cream" />
+                <sentence
+                  s="【夏：なつ】はアイスクリームに【限：かぎ】る。"
+                  rom="Natsu wa aisukurīmu ni kagiru."
+                  tr_en="There is nothing like ice cream in summer."
+                  tr_de="Im Sommer gibt es nichts besseres als Eiscrème."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ドライブ"
+              rom="doraibu"
+              tr_en="trip by car; driving"
+              tr_de="Autofahrt; Auto fahren"
+              lvl="n3"
+              category="transportation"
+              id="doraibu-driving"
+            >
+                <keep_apart_from id="unten-operation" />
+                <sentence
+                  s="【湖：みずうみ】までドライブしよう。"
+                  rom="Mizūmi made doraibu shiyō."
+                  tr_en="Let's drive to the lake."
+                  tr_de="Lass uns eine Autofahrt zum See machen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="チャンス"
+              rom="chansu"
+              tr_en="chance; opportunity"
+              tr_de="Chance; Gelegenheit"
+              lvl="n3"
+              id="chansu-chance"
+            >
+                <phrase
+                  ph="【最：さい】【後：ご】のチャンス"
+                  rom="saigo no chansu"
+                  tr_en="the last chance"
+                  tr_de="die letzte Chance"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="スピーチ"
+              rom="supīchi"
+              tr_en="speech"
+              tr_de="Rede"
+              lvl="n3"
+              id="supīchi-speech"
+              rem="appears in GENKI2 L21 vocab section"
+            />
+            <word
+              w="ファイル"
+              rom="fairu"
+              tr_en="folder; portfolio; file"
+              tr_de="Ordner; Sichtmappe; Datei"
+              lvl="n3"
+              id="fairu-file"
+              rem="appears in GENKI2 p.94 vocab section; jisho has n1"
+            />
+            <word
+              w="サラリーマン"
+              rom="sararīman"
+              tr_en="office worker"
+              tr_de="Büroangestellter"
+              lvl="n3"
+              id="sararīman-salaryman"
+              rem="appears in GENKI2 p.116 vocab section; jisho has n2"
+            />
+        </section>
+    </unit>
+</vocabulary>

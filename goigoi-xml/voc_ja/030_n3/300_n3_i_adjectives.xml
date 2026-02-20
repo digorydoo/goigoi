@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 i-adjectives"
+      name_de="N3 I-Adjektive"
+      name_fr="Les i-adjectifs N3"
+      name_it="I-aggettivi N3"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="i-adjective"
+      defaultHint_de="I-Adjektiv"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="false"
+    >
+        <section>
+            <!--
+                FIXME: verify that all of these words are i-adjectives!
+            -->
+
+            <!-- i-adjective -->
+            <word
+              w="【厚：あつ】い"
+              rom="atsui"
+              tr_en="thick"
+              tr_de="dick"
+              hint_en="e.g. ice, book, etc."
+              hint_de="z.B. Eisschicht, Buch"
+              lvl="n3"
+              id="atsui-thick"
+              rem="jisho has n5; moved to n3, because 厚 is not n5, which would cause ambiguity with atsui-hotweather"
+            >
+                <see id="usui-thin" rem="antonym" />
+                <phrase
+                  ph="【厚：あつ】い【封：ふう】【筒：とう】"
+                  rom="atsui fūtō"
+                  tr_en="a thick envelope"
+                  tr_de="ein dicker Umschlag"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="その【本：ほん】はとても【厚：あつ】い。"
+                  rom="Sono hon wa totemo atsui."
+                  tr_en="That book is very thick."
+                  tr_de="Dieses Buch ist sehr dick."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with lib0"
+                />
+            </word>
+            <word
+              w="【緊：きつ】い"
+              rom="kitsui"
+              tr_en="tough; demanding; harsh"
+              tr_de="hart; streng; anspruchsvoll"
+              lvl="n3"
+              id="kitsui-tough"
+              usuallyInKana="true"
+            >
+                <keep_apart_from id="kurushii-tough" />
+                <phrase
+                  ph="きつい【仕：し】【事：ごと】"
+                  rom="kitsui shigoto"
+                  tr_en="hard work"
+                  tr_de="harte Arbeit"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="うまい"
+              rom="umai"
+              tr_en="clever; skillful; delicious"
+              tr_de="schlau; geschickt; lecker"
+              lvl="n3"
+              category="top-words"
+              id="umai-clever"
+            >
+                <keep_apart_from id="kiyō-clever" />
+                <keep_apart_from id="kashikoi-smart" />
+                <keep_apart_from id="rikō-clever" />
+                <!-- 旨い, 美味い usually mean delicious, while 上手い, 巧い usually mean skillful -->
+                <!-- the noun is 旨み, nx, not marked as common; has a special meaning -->
+                <!--
+                  meccha is nx...
+                  s="めっちゃうまい！"
+                  rom="Meccha umai!"
+                  tr_en="It's very delicious!"
+                  tr_de="Es ist sehr lecker!"
+                -->
+                <sentence
+                  s="その【子：こ】はナイフとフォークをうまく【使：つか】う。"
+                  rom="Sono ko wa naifu to fōku o umaku tsukau."
+                  tr_en="That child handles a knife and fork well."
+                  tr_de="Dieses Kind kann gut mit Messer und Gabel umgehen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【賢：かしこ】い"
+              rom="kashikoi"
+              tr_en="clever; smart; wise"
+              lvl="n3"
+              id="kashikoi-smart"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="umai-clever" />
+                <keep_apart_from id="kiyō-clever" />
+                <keep_apart_from id="rikō-clever" />
+                <sentence
+                  s="あなたは【何：なん】と【賢：かしこ】い【生：せい】【徒：と】なのでしょう！"
+                  rom="Anata wa nanto kashikoi seito na no deshō!"
+                  tr_en="What a clever student you are!"
+                  tr_de="Du bist aber ein schlauer Schüler!"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【詳：くわ】しい"
+              rom="kuwashii"
+              tr_en="detailed; well-informed; familiar with"
+              tr_de="detailliert; gut informiert; vertraut mit"
+              lvl="n3"
+              id="kuwashii-detailed"
+            >
+                <sentence
+                  s="この【辺：へん】に【詳：くわ】しいですか。"
+                  rom="Kono hen ni kuwashii desu ka?"
+                  tr_en="Are you familiar with this area?"
+                  tr_de="Kennst du dich in dieser Gegend aus?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【彼：かれ】は【日：に】【本：ほん】の【文：ぶん】【化：か】に【詳：くわ】しい。"
+                  rom="Kare wa Nihon no bunka ni kuwashii."
+                  tr_en="He is well-informed about Japanese culture."
+                  tr_de="Er kennt sich mit der japanischen Kultur gut aus."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【羨：うらや】ましい"
+              rom="urayamashii"
+              tr_en="envious; jealous"
+              tr_de="neidisch; eifersüchtig"
+              lvl="n3"
+              category="quarrel"
+              id="urayamashii-envious"
+              rem="appears in GENKI2 p.116 vocab section; jisho has n2"
+            >
+                <phrase
+                  ph="【羨：うらや】ましくなる"
+                  rom="urayamashiku naru"
+                  tr_en="to become envious"
+                  tr_de="neidisch werden"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【小：こ】【林：ばやし】さんは【私：わたし】のことを【羨：うらや】ましいと【思：おも】っているみたい。"
+                  rom="Kobayashi-san wa watashi no koto o urayamashii to omotte iru mitai."
+                  tr_en="Mr Kobayashi seems to envy me."
+                  tr_de="Herr Kobayashi scheint mich zu beneiden."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="ChatGPT rephrased it to be less blunt/direct."
+                />
+            </word>
+            <word
+              w="【煙：けむ】い"
+              rom="kemui"
+              tr_en="smoky"
+              tr_de="rauchig"
+              lvl="n3"
+              category="fire"
+              id="kemui-smoky"
+              rem="jisho has n2, but n3 for kemuri"
+            >
+                <keep_apart_from id="kemuru-smoulder" rem="too similar" />
+                <!--
+                    a smoky taste would be: 燻製の香りがする味 (ChatGPT); but 燻製・くんせい is nx
+                    or: スモーキーな味
+                -->
+                <phrase
+                  ph="【煙：けむ】い【部：へ】【屋：や】"
+                  rom="kemui heya"
+                  tr_en="a smoky room"
+                  tr_de="ein rauchiger Raum"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; also possible: 煙がいっぱいの部屋"
+                />
+                <sentence
+                  s="【台：だい】【所：どころ】が【煙：けむ】くて、【窓：まど】を【開：あ】けた。"
+                  rom="Daidokoro ga kemukute, mado o aketa."
+                  tr_en="The kitchen was smoky, and I opened the window."
+                  tr_de="Die Küche war rauchig, also öffnete ich das Fenster."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【緩：ゆる】い"
+              rom="yurui"
+              tr_en="loose; lax; gentle (curve, slope)"
+              tr_de="lose; lasch; sanft (Kurve)"
+              lvl="n3"
+              id="yurui-lax"
+              rem="jisho has n2"
+            >
+                <sentence
+                  s="そのシャツは【緩：ゆる】いですか。"
+                  rom="Sono shatsu wa yurui desu ka?"
+                  tr_en="Is that shirt loose?"
+                  tr_de="Ist dieses Hemd locker?"
+                  lvl="n3"
+                  origin="duolingo modified"
+                  rem="duolingo used kana alone"
+                />
+            </word>
+            <word
+              w="【粗：あら】い"
+              rom="arai"
+              tr_en="coarse; rough"
+              tr_de="rauh; grob"
+              lvl="n3"
+              id="arai-coarse"
+            >
+                <!-- 粗い石 (arai ishi) - a rough rock (ChatGPT) -->
+                <!-- 粗い砂 (arai suna) - coarse sand (ChatGPT) -->
+            </word>
+            <word
+              w="【苦：くる】しい"
+              rom="kurushii"
+              tr_en="distressing; tough; difficult"
+              lvl="n3"
+              id="kurushii-tough"
+              HIDDEN="true"
+            >
+                <!-- the noun is 苦しみ, nx, common -->
+                <keep_apart_from id="kitsui-tough" />
+            </word>
+            <word
+              w="【可：か】【愛：わい】らしい"
+              rom="kawairashii"
+              tr_en="lovely; sweet"
+              tr_de="lieblich; süss"
+              lvl="n3"
+              id="kawairashii-lovely"
+            />
+            <word
+              w="【幼：おさな】い"
+              rom="osanai"
+              tr_en="very young; childish; immature"
+              tr_de="sehr jung; kindlich; kindisch"
+              lvl="n3"
+              id="osanai-childish"
+            />
+            <word
+              w="【激：はげ】しい"
+              rom="hageshii"
+              tr_en="furious; fierce; incessant"
+              tr_de="wütend; erbittert; unaufhörlich"
+              lvl="n3"
+              id="hageshii-violent"
+            >
+                <!-- 激しい台風 (hageshii taifū) - a violent typhoon (ChatGPT) -->
+                <!-- 激しく揺れる (はげしくゆれる) shakes violently (ChatGPT) -->
+            </word>
+            <word
+              w="【恐：おそ】ろしい"
+              rom="osoroshii"
+              tr_en="terrible; frightening; startling"
+              tr_de="schrecklich; erschreckend; alarmierend"
+              lvl="n3"
+              category="not-good"
+              id="osoroshii-terrible"
+            >
+                <!-- 恐ろしい事故 (おそろしいじこ, osoroshii jiko) - Horrible accident (ChatGPT) -->
+            </word>
+            <word
+              w="【辛：つら】い"
+              rom="tsurai"
+              tr_en="painful; bitter; heart-breaking"
+              tr_de="schmerzlich; bitter; herzzerreissend"
+              usuallyInKana="true"
+              lvl="n3"
+              id="tsurai-painful"
+            />
+            <word
+              w="【臭：くさ】い"
+              rom="kusai"
+              tr_en="stinking; smelly"
+              tr_de="stinkend; übel riechend"
+              lvl="n3"
+              id="kusai-smelly"
+            >
+                <keep_apart_from id="nioi-stench" />
+                <see id="nioi-stench" rem="closely related" />
+                <!-- is this from kusai, or is it something else??
+                  w="くそ！"
+                  rom="Kuso!"
+                  tr_en="Damn!"
+                  tr_de="Verdammt!"
+                -->
+            </word>
+            <word
+              w="【鋭：するど】い"
+              rom="surudoi"
+              tr_en="sharp (blade); stabbing (pain); quick (mind)"
+              tr_de="scharf (Messer); stechend (Schmerz); scharf (Verstand)"
+              lvl="n3"
+              id="surudoi-sharp"
+            />
+            <word
+              w="【素：す】【晴：ば】らしい"
+              rom="subarashii"
+              tr_en="wonderful; splendid"
+              tr_de="wundervoll; prächtig"
+              lvl="n3"
+              id="subarashii-splendid"
+            />
+            <word
+              w="【親：した】しい"
+              rom="shitashii"
+              tr_en="close (friend, relative); intimate"
+              tr_de="enger (Freund, Verwandter); intim"
+              lvl="n3"
+              category="relationships"
+              id="shitashii-close"
+            />
+            <word
+              w="【濃：こ】い"
+              rom="koi"
+              tr_en="deep (colour); strong (flavour); dense"
+              hint_en="i-adjective"
+              lvl="n3"
+              id="koi-deep"
+              HIDDEN="true"
+              rem="rōmaji not unique"
+            />
+            <word
+              w="【貧：まず】しい"
+              rom="mazushii"
+              tr_en="poor; needy; lacking (quantity and quality-wise); poor; scanty; skimpy; slight; inadequate"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【等：ひと】しい"
+              rom="hitoshii"
+              tr_en="equal; identical; the same; no different (to); just like; equivalent"
+              lvl="n3"
+              HIDDEN="true"
+            />
+        </section>
+    </unit>
+</vocabulary>

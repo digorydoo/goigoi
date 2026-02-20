@@ -1,0 +1,1726 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N5 loanwords"
+      name_de="N5-Lehnwörter"
+      name_fr="Les mots d'emprunt N5"
+      name_it="Parole di prestito N5"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="false"
+      defaultHint_en="loanword"
+      defaultHint_de="Lehnwort"
+      lvl="n5"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="true"
+    >
+        <section>
+            <!-- at home -->
+            <word
+              w="テーブル"
+              rom="tēburu"
+              tr_en="table"
+              tr_de="Tisch"
+              lvl="n5"
+              category="home"
+              id="tēburu-table"
+            >
+                <phrase
+                  ph="テーブルの【上：うえ】に"
+                  rom="tēburu no ue ni"
+                  tr_en="on the table"
+                  tr_de="auf dem Tisch"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="この テーブルは 【空：あ】いて いますか。"
+                  rom="Kono tēburu wa aite imasu ka?"
+                  tr_en="Is this table still free?"
+                  tr_de="Ist dieser Tisch noch frei?"
+                  lvl="n5"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="ベッド"
+              rom="beddo"
+              tr_en="bed"
+              tr_de="Bett"
+              lvl="n5"
+              category="home"
+              id="beddo-bed"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="shindai-bed" />
+            </word>
+            <word
+              w="シャワー"
+              rom="shawā"
+              tr_en="shower"
+              tr_de="Dusche"
+              lvl="n5"
+              id="shawā-shower"
+            >
+                <phrase
+                  ph="シャワーを【浴：あ】びる"
+                  rom="shawā o abiru"
+                  tr_en="to take a shower"
+                  tr_de="duschen; eine Dusche nehmen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="シャワーの【水：みず】が【出：で】ません。"
+                  rom="Shawā no mizu ga demasen."
+                  tr_en="Water does not come out of the shower."
+                  tr_de="Aus der Dusche kommt kein Wasser."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ストーブ"
+              rom="sutōbu"
+              tr_en="(portable) room heater"
+              tr_de="(tragbare) Heizung"
+              lvl="n5"
+              category="home, fire"
+              id="sutōbu-heater"
+            >
+                <phrase
+                  ph="ストーブをつける"
+                  rom="sutōbu o tsukeru"
+                  tr_en="to turn on the heater"
+                  tr_de="die Heizung einschalten"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="ストーブを【消：け】す"
+                  rom="sutōbu o kesu"
+                  tr_en="to turn off the heater"
+                  tr_de="die Heizung ausschalten"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ストーブをつけると、【部：へ】【屋：や】が【暖：あたた】かくなる。"
+                  rom="Sutōbu o tsukeru to, heya ga atatakaku naru."
+                  tr_en="When you turn on the heater, the room becomes warm."
+                  tr_de="Wenn du die Heizung anmachst, wird der Raum warm."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="トイレ"
+              rom="toire"
+              tr_en="toilet; bathroom"
+              tr_de="Toilette"
+              lvl="n5"
+              id="toire-toilet"
+            >
+                <phrase
+                  ph="トイレに【行：い】く"
+                  rom="toire ni iku"
+                  tr_en="to go to the toilet"
+                  tr_de="auf die Toilette gehen"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="おトイレは どこですか。"
+                  rom="O-toire wa doko desu ka?"
+                  tr_en="Where's the bathroom?"
+                  tr_de="Wo ist die Toilette?"
+                  lvl="n5"
+                />
+            </word>
+            <word
+              w="テレビ"
+              rom="terebi"
+              tr_en="television set"
+              tr_de="Fernseher"
+              lvl="n5"
+              id="terebi-television"
+            >
+                <phrase
+                  ph="【大：おお】きなテレビ"
+                  rom="ōki na terebi"
+                  tr_en="a big TV"
+                  tr_de="ein grosser Fernseher"
+                  lvl="n5"
+                  origin="Oxford p.101"
+                />
+                <sentence
+                  s="まだ テレビを 【見：み】て いるの？"
+                  rom="Mada terebi o mite iru no?"
+                  tr_en="Are you still watching TV?"
+                  tr_de="Schaust du immer noch fern?"
+                  lvl="n5"
+                  origin="500mon q215"
+                  rem="no at end makes it casual and is mainly used by children and women"
+                  href="https://hinative.com/en-US/questions/21828797"
+                />
+            </word>
+            <word
+              w="アパート"
+              rom="apāto"
+              tr_en="apartment"
+              tr_de="Wohnung"
+              lvl="n5"
+              category="home"
+              id="apāto-apartment"
+            >
+                <phrase
+                  ph="【広：ひろ】いアパート"
+                  rom="hiroi apāto"
+                  tr_en="a spacious apartment"
+                  tr_de="eine geräumige Wohnung"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【山：やま】【田：だ】さんは アパートを 【借：か】りた。"
+                  rom="Yamada-san wa apāto o karita."
+                  tr_en="Mr Yamada rented an apartment."
+                  tr_de="Herr Yamada hat eine Wohnung gemietet."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ドア"
+              rom="doa"
+              tr_en="door"
+              tr_de="Türe"
+              lvl="n5"
+              category="home"
+              id="doa-door"
+            >
+                <keep_apart_from id="to-door" />
+                <keep_apart_from id="fusuma-slidingdoor" />
+                <keep_apart_from id="uraguchi-backdoor" />
+                <keep_apart_from id="shōji-door" />
+                <keep_apart_from id="amado-stormshutter" />
+                <keep_apart_from id="tobira-door" />
+                <phrase
+                  ph="ドアを【閉：と】じる"
+                  rom="doa o tojiru"
+                  tr_en="to close the door"
+                  tr_de="die Tür schliessen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT; ChatGPT says ドアを閉じる is more often used than ドアを締める"
+                />
+                <sentence
+                  s="それは 【自：じ】【動：どう】ドアです。"
+                  rom="Sore wa jidōdoa desu."
+                  tr_en="This is an automatic door."
+                  tr_de="Dies ist eine automatische Tür."
+                  lvl="n5"
+                  origin="500mon q129"
+                />
+            </word>
+
+            <!-- tableware -->
+            <word
+              w="スプーン"
+              rom="supūn"
+              tr_en="spoon"
+              tr_de="Löffel"
+              lvl="n5"
+              category="gastronomy"
+              id="supūn-spoon"
+            >
+                <keep_apart_from id="saji-spoon" />
+                <phrase
+                  ph="【長：なが】いスプーン"
+                  rom="nagai supūn"
+                  tr_en="a long spoon"
+                  tr_de="ein langer Löffel"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="スプーンは ありません。"
+                  rom="Supūn wa arimasen."
+                  tr_en="There is no spoon."
+                  tr_de="Da ist kein Löffel."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="フォーク"
+              rom="fōku"
+              tr_en="fork"
+              tr_de="Gabel"
+              lvl="n5"
+              category="gastronomy"
+              id="fōku-fork"
+            >
+                <phrase
+                  ph="ナイフとフォークを【使：つか】う"
+                  rom="naifu to fōku o tsukau"
+                  tr_en="to use knife and fork"
+                  tr_de="Messer und Gabel benutzen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="フォークを くださいませんか。"
+                  rom="Fōku o kudasai masen ka?"
+                  tr_en="Could you get me a fork?"
+                  tr_de="Könnten Sie mir eine Gabel bringen?"
+                  lvl="n5"
+                  origin="500mon q271"
+                />
+                <sentence
+                  s="フォークを テーブルの 【上：うえ】に 【置：お】いた。"
+                  rom="Fōku o tēburu no ue ni oita."
+                  tr_en="I (did) put the fork on the table."
+                  tr_de="Ich legte die Gabel auf den Tisch."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with lib0"
+                />
+            </word>
+            <word
+              w="ナイフ"
+              rom="naifu"
+              tr_en="knife"
+              tr_de="Messer"
+              lvl="n5"
+              category="gastronomy"
+              id="naifu-knife"
+            >
+                <phrase
+                  ph="ナイフで【肉：にく】を【切：き】る"
+                  rom="naifu de niku o kiru"
+                  tr_en="to cut meat with a knife"
+                  tr_de="mit dem Messer Fleisch schneiden"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ナイフが 【切：き】れなくなった。"
+                  rom="Naifu ga kirenaku natta."
+                  tr_en="The knife has lost its edge."
+                  tr_de="Das Messer hat seine Schneide verloren."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="カップ"
+              rom="kappu"
+              tr_en="cup"
+              tr_de="Tasse"
+              lvl="n5"
+              category="gastronomy"
+              id="kappu-cup"
+            >
+                <phrase
+                  ph="カップに【入：はい】った【紅：こう】【茶：ちゃ】"
+                  rom="kappu ni haitta kōcha"
+                  tr_en="cup of black tea"
+                  tr_de="eine Tasse Schwarztee"
+                  lvl="n5"
+                  origin="jpod101 modified"
+                />
+                <sentence
+                  s="あなたの カップは どっちですか。"
+                  rom="Anata no kappu wa docchi desu ka?"
+                  tr_en="Which one is your cup?"
+                  tr_de="Welches ist deine Tasse?"
+                  lvl="n5"
+                  origin="500mon q143"
+                />
+                <sentence
+                  s="【青：あお】いカップは【私：わたし】のだ。"
+                  rom="Aoi kappu wa watashi no da."
+                  tr_en="The blue cup is mine."
+                  tr_de="Die blaue Tasse ist meine."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="コップ"
+              rom="koppu"
+              tr_en="glass"
+              tr_de="Glas"
+              hint_en="drinking vessel"
+              hint_de="Trinkgefäss"
+              lvl="n5"
+              category="gastronomy"
+              id="koppu-glass"
+            >
+                <phrase
+                  ph="コップ【一：いっ】【杯：ぱい】の【水：みず】"
+                  rom="koppu ippai no mizu"
+                  tr_en="a glass of water"
+                  tr_de="ein Glas Wasser"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="テーブルの 【上：うえ】に コップが ある。"
+                  rom="Tēburu no ue ni koppu ga aru."
+                  tr_en="There is a glass on the table."
+                  tr_de="Auf dem Tisch steht ein Glas."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- food, beverages, cooking -->
+            <word
+              w="コーヒー"
+              rom="kōhī"
+              tr_en="coffee"
+              tr_de="Kaffee"
+              lvl="n5"
+              category="beverage"
+              id="kōhī-coffee"
+            >
+                <phrase
+                  ph="コーヒーを【飲：の】む"
+                  rom="kōhī o nomu"
+                  tr_en="to drink coffee"
+                  tr_de="Kaffee trinken"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="コーヒーを 【飲：の】みませんか。"
+                  rom="Kōhī o nomimasen ka?"
+                  tr_en="Would you like a coffee?"
+                  tr_de="Möchten Sie einen Kaffee?"
+                  lvl="n5"
+                  origin="Oxford p.33"
+                />
+                <sentence
+                  s="あなたのコーヒーカップは どれですか。"
+                  rom="Anata no kōhī-kappu wa dore desu ka?"
+                  tr_en="Which one is your coffee cup?"
+                  tr_de="Welches ist deine Kaffeetasse?"
+                  lvl="n5"
+                  origin="500mon q33"
+                />
+                <sentence
+                  s="コーヒーでも いかがですか。"
+                  rom="Kōhī demo ikaga desu ka?"
+                  tr_en="Would you like a coffee or something?"
+                  tr_de="Möchtest du einen Kaffee oder etwas?"
+                  lvl="n5"
+                  origin="Oxford p.143"
+                />
+            </word>
+            <word
+              w="バター"
+              rom="batā"
+              tr_en="butter"
+              tr_de="Butter"
+              lvl="n5"
+              category="food, cooking"
+              id="batā-butter"
+            >
+                <phrase
+                  ph="バターを【渡：わた】す"
+                  rom="batā o watasu"
+                  tr_en="to hand over the butter"
+                  tr_de="die Butter reichen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="バターは 【牛：ぎゅう】【乳：にゅう】から 【作：つく】る。"
+                  rom="Batā wa gyūnyū kara tsukuru."
+                  tr_en="Butter is made from milk."
+                  tr_de="Butter macht man aus Milch."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="カレー"
+              rom="karē"
+              tr_en="curry"
+              tr_de="Curry"
+              hint_en="dish"
+              hint_de="Gericht"
+              lvl="n5"
+              category="food"
+              id="karē-curry"
+            >
+                <phrase
+                  ph="【辛：から】いカレー"
+                  rom="karai karē"
+                  tr_en="spicy curry"
+                  tr_de="scharfes Curry"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="まだカレーが すこしありますよ。"
+                  rom="Mada karē ga sukoshi arimasu yo."
+                  tr_en="There's still a little curry left."
+                  tr_de="Es hat immer noch etwas vom Curry übrig."
+                  lvl="n5"
+                  origin="Oxford p.113 modified"
+                />
+            </word>
+            <word
+              w="レストラン"
+              rom="resutoran"
+              tr_en="restaurant"
+              tr_de="Restaurant"
+              lvl="n5"
+              category="gastronomy"
+              id="resutoran-restaurant"
+            >
+                <phrase
+                  ph="【近：ちか】くのレストラン"
+                  rom="chikaku no resutoran"
+                  tr_en="the restaurant nearby"
+                  tr_de="das Restaurant gleich nebenan"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【弟：おとうと】は レストランで 【働：はたら】いて います。"
+                  rom="Otōto wa resutoran de hataraite imasu."
+                  tr_en="My younger brother works at a restaurant."
+                  tr_de="Mein jüngerer Bruder arbeitet in einem Restaurant."
+                  lvl="n5"
+                  origin="500mon q88"
+                />
+            </word>
+
+            <!-- clothes, fashion -->
+            <word
+              w="セーター"
+              rom="sētā"
+              tr_en="pullover"
+              tr_de="Pullover"
+              rem="sweater"
+              lvl="n5"
+              category="fashion"
+              id="sētā-pullover"
+            >
+                <keep_apart_from id="janpā-jumper" />
+                <phrase
+                  ph="【暖：あたた】かいセーター"
+                  rom="atatakai sētā"
+                  tr_en="a warm sweater"
+                  tr_de="ein warmer Pullover"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="この セーターは 【小：ちい】さすぎます。"
+                  rom="Kono sētā wa chīsa-sugimasu."
+                  tr_en="This sweater is too small."
+                  tr_de="Dieser Pullover ist zu klein."
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="コート"
+              rom="kōto"
+              tr_en="coat"
+              tr_de="Mantel"
+              lvl="n5"
+              category="fashion"
+              id="kōto-coat"
+            >
+                <phrase
+                  ph="コートを【忘：わす】れる"
+                  rom="kōto o wasureru"
+                  tr_en="to forget one's coat"
+                  tr_de="den Mantel vergessen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="そのコートは【暖：あたた】かそう！"
+                  rom="Sono kōto wa atatakasō!"
+                  tr_en="That coat looks warm!"
+                  tr_de="Diese Jacke schaut warm aus!"
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/l7xZ1TDZ7MU"
+                />
+                <sentence
+                  s="コートを【玄：げん】【関：かん】にかけてください。"
+                  rom="Kōto o genkan ni kakete kudasai."
+                  tr_en="Please hang your coat in the entrance area."
+                  tr_de="Bitte hänge den Mantel im Eingangsbereich auf."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="ワイシャツ"
+              rom="waishatsu"
+              tr_en="business shirt"
+              tr_de="weisses Hemd"
+              lvl="n5"
+              category="fashion, business"
+              id="waishatsu-businessshirt"
+            >
+                <phrase
+                  ph="ワイシャツを【着：き】ている"
+                  rom="waishatsu o kite iru"
+                  tr_en="to wear a business shirt"
+                  tr_de="ein weisses Hemd tragen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【会：かい】【社：しゃ】ではワイシャツを【着：き】なければなりません。"
+                  rom="Kaisha de wa waishatsu o kinakereba narimasen."
+                  tr_en="In the company, you have to wear a business shirt."
+                  tr_de="An der Arbeit müssen Sie ein weisses Hemd tragen."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT; the grammar construct may be n4"
+                />
+            </word>
+            <word
+              w="シャツ"
+              rom="shatsu"
+              tr_en="shirt"
+              tr_de="Hemd"
+              lvl="n5"
+              category="fashion"
+              id="shatsu-shirt"
+            >
+                <phrase
+                  ph="Tシャツを【洗：あら】う"
+                  rom="T-shatsu o arau"
+                  tr_en="to wash the T-shirt"
+                  tr_de="das T-Shirt waschen"
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="あなたに Tシャツを 【買：か】ってきたのよ。"
+                  rom="Anata ni T-shatsu o katte kita no yo."
+                  tr_en="I bought a T-shirt for you."
+                  tr_de="Ich habe ein T-Shirt für dich gekauft."
+                  lvl="n5"
+                  origin="500mon q316"
+                />
+            </word>
+            <word
+              w="スカート"
+              rom="sukāto"
+              tr_en="skirt"
+              tr_de="Rock (Kleidungsstück); Jupe"
+              lvl="n5"
+              id="sukāto-skirt"
+            >
+                <phrase
+                  ph="【短：みじか】いスカート"
+                  rom="mijikai sukāto"
+                  tr_en="a short skirt"
+                  tr_de="ein kurzer Rock"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【学：がっ】【校：こう】では 【短：みじか】いスカートを【履：は】いては いけません。"
+                  rom="Gakkō de wa mijikai sukāto o haite wa ikemasen."
+                  tr_en="You must not wear short skirts at school."
+                  tr_de="An der Schule darf man keine kurzen Röcke tragen."
+                  lvl="n5"
+                  origin="ChatGPT"
+                  rem="the grammar construct may be n4"
+                />
+            </word>
+            <word
+              w="スリッパ"
+              rom="surippa"
+              tr_en="slippers"
+              tr_de="Hausschuhe"
+              lvl="n5"
+              id="surippa-slippers"
+            >
+                <phrase
+                  ph="スリッパをはく"
+                  rom="surippa o haku"
+                  tr_en="to put on slippers"
+                  tr_de="Hausschuhe anziehen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【新：あたら】しいスリッパを【買：か】った。"
+                  rom="Atarashii surippa o katta."
+                  tr_en="I bought new slippers."
+                  tr_de="Ich habe neue Hausschuhe gekauft."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="ネクタイ"
+              rom="nekutai"
+              tr_en="necktie"
+              tr_de="Krawatte; Schlips"
+              lvl="n5"
+              category="fashion"
+              id="nekutai-necktie"
+            >
+                <phrase
+                  ph="ネクタイを【締：し】める"
+                  rom="nekutai o shimeru"
+                  tr_en="to put on a necktie"
+                  tr_de="eine Krawatte anziehen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【父：ちち】は 【珍：めずら】しくネクタイを した。"
+                  rom="Chichi wa mezurashiku nekutai o shita."
+                  tr_en="Unusually, dad wore a tie."
+                  tr_de="Vater trug ungewöhnlicherweise eine Krawatte."
+                  lvl="n5"
+                  origin="Oxford p.93"
+                />
+                <sentence
+                  s="【高：たか】【木：ぎ】さんはネクタイをしています。"
+                  rom="Takagi-san wa nekutai o shite imasu."
+                  tr_en="Mr Takagi is wearing a necktie."
+                  tr_de="Herr Takagi trägt einen Schlips."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="ハンカチ"
+              rom="hankachi"
+              tr_en="handkerchief"
+              tr_de="Taschentuch"
+              hint_en="reusable cloth item"
+              hint_de="wiederverwendbares Tuch"
+              lvl="n5"
+              id="hankachi-handkerchief"
+              rem="according to ChatGPT, hankachi is not a disposable tissue, but a reusable cloth item"
+            >
+                <phrase
+                  ph="【大：おお】きなハンカチ"
+                  rom="ōki na hankachi"
+                  tr_en="a big handkerchief"
+                  tr_de="ein grosses Taschentuch"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ハンカチを【持：も】っていますか。"
+                  rom="Hankachi o motte imasu ka?"
+                  tr_en="Do you have a handkerchief?"
+                  tr_de="Haben Sie ein Taschentuch?"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="ポケット"
+              rom="poketto"
+              tr_en="pocket"
+              tr_de="Hosentasche"
+              lvl="n5"
+              id="poketto-pocket"
+            >
+                <phrase
+                  ph="ハンカチをポケットに【入：い】れる"
+                  rom="hankachi o poketto ni ireru"
+                  tr_en="to put the handkerchief into the pocket"
+                  tr_de="das Taschentuch in die Hosentasche tun"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="このズボンはポケットがない。"
+                  rom="Kono zubon wa poketto ga nai."
+                  tr_en="These trousers do not have pockets."
+                  tr_de="Diese Hosen haben keine Taschen."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+
+            <!-- school, university -->
+            <word
+              w="クラス"
+              rom="kurasu"
+              tr_en="class"
+              tr_de="Klasse"
+              lvl="n5"
+              category="education"
+              id="kurasu-class"
+            >
+                <keep_apart_from id="kyōshitsu-classroom" />
+                <phrase
+                  ph="クラスを【休：やす】む"
+                  rom="kurasu o yasumu"
+                  tr_en="to skip a class; to take a day off"
+                  tr_de="in der Klasse fehlen; nicht in den Unterricht kommen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】とマリは 【同：おな】じクラスだ。"
+                  rom="Watashi to Mari wa onaji kurasu da."
+                  tr_en="I and Mari are in the same class."
+                  tr_de="Ich und Mari sind in derselben Klasse."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="ノート"
+              rom="nōto"
+              tr_en="notebook; note"
+              tr_de="Notizbuch; Notizen"
+              lvl="n5"
+              id="nōto-notebook"
+            >
+                <phrase
+                  ph="ノートを【貸：か】す"
+                  rom="nōto o kasu"
+                  tr_en="to lend the notebook to sb."
+                  tr_de="jem. das Notizbuch ausleihen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】のノートを 【返：かえ】してください。"
+                  rom="Watashi no nōto o kaeshite kudasai."
+                  tr_en="Please return my notebook."
+                  tr_de="Bitte gib mir mein Notizbuch zurück."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="テスト"
+              rom="tesuto"
+              tr_en="test; exam"
+              tr_de="Test; Prüfung"
+              lvl="n5"
+              category="education"
+              id="tesuto-test"
+            >
+                <keep_apart_from id="shiken-exam" />
+                <phrase
+                  ph="【難：むずか】しいテスト"
+                  rom="muzukashii tesuto"
+                  tr_en="a difficult exam"
+                  tr_de="eine schwierige Prüfung"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="テストを もっと【難：むずか】しくしましょう。"
+                  rom="Tesuto o motto muzukashiku shimashō."
+                  tr_en="Let's make the test more difficult!"
+                  tr_de="Machen wir die Prüfung noch schwerer!"
+                  lvl="n5"
+                  origin="Oxford p.92"
+                />
+                <sentence
+                  s="【明日：あした】が テストなのに まだ 【勉：べん】【強：きょう】して いません。"
+                  rom="Ashita ga tesuto na no ni mada benkyō shite imasen."
+                  tr_en="There is a test tomorrow, but I haven't done any studying yet."
+                  tr_de="Morgen ist ein Test, aber ich habe noch nichts gelernt."
+                  lvl="n5"
+                  origin="Oxford p.43"
+                />
+            </word>
+            <word
+              w="テープ"
+              rom="tēpu"
+              tr_en="tape"
+              tr_de="Klebband; Tonband"
+              lvl="n5"
+              id="tēpu-tape"
+            >
+                <phrase
+                  ph="【写：しゃ】【真：しん】をテープで【紙：かみ】に【貼：は】る"
+                  rom="shashin o tēpu de kami ni haru"
+                  tr_en="to stick a photo to a (piece of) paper with tape"
+                  tr_de="ein Foto mit Klebband aufs Papier kleben"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="テープがないので、【買：か】いに 【行：い】ってきます。"
+                  rom="Tēpu ga nai no de, kai ni itte kimasu."
+                  tr_en="Since we're out of tape, I will go and buy some."
+                  tr_de="Da wir kein Klebband haben, werde ich welches kaufen gehen."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+
+            <!-- kind of outdated -->
+            <word
+              w="テープレコーダー"
+              rom="tēpurekōdā"
+              tr_en="tape recorder"
+              tr_de="Tonbandgerät; Kassettenrekorder"
+              lvl="n5"
+              category="old-fashioned"
+              id="tēpurekōdā-taperecorder"
+              HIDDEN="true"
+            />
+            <word
+              w="ラジオ"
+              rom="rajio"
+              tr_en="radio"
+              tr_de="Radio"
+              lvl="n5"
+              category="old-fashioned"
+              id="rajio-radio"
+            >
+                <phrase
+                  ph="【古：ふる】いラジオ"
+                  rom="furui rajio"
+                  tr_en="an old radio"
+                  tr_de="ein altes Radio"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="ラジオで 【聞：き】いた。"
+                  rom="Rajio de kiita."
+                  tr_en="I heard it on the radio."
+                  tr_de="Ich habe es im Radio gehört."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="ラジオが 【少：すこ】し うるさい。"
+                  rom="Rajio ga sukoshi urusai."
+                  tr_en="The radio is a bit loud."
+                  tr_de="Das Radio ist etwas laut."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ラジカセ"
+              rom="rajikase"
+              tr_en="radio cassette player"
+              tr_de="Radio-Kassettenspieler"
+              lvl="n5"
+              category="old-fashioned"
+              id="rajikase-radiocassette"
+            >
+                <phrase
+                  ph="ラジカセを【消：け】す"
+                  rom="rajikase o kesu"
+                  tr_en="to turn off the radio cassette player"
+                  tr_de="den Radio-Kassettenspieler ausmachen"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="おじいさんはまだラジカセを【使：つか】う。"
+                  rom="O-jī-san wa mada rajikase o tsukau."
+                  tr_en="Grandpa still uses a radio cassette player."
+                  tr_de="Grossvater benutzt immer noch einen Radio-Kassettenspieler."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="レコード"
+              rom="rekōdo"
+              tr_en="record"
+              tr_de="Aufnahme"
+              hint_en="typically a vinyl record"
+              hint_de="typischerweise eine Schallplatte"
+              lvl="n5"
+              category="old-fashioned"
+              id="rekōdo-record"
+            >
+                <phrase
+                  ph="レコードを【聞：き】く"
+                  rom="rekōdo o kiku"
+                  tr_en="to listen to a vinyl record"
+                  tr_de="eine Schallplatte hören"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="その【店：みせ】は【古：ふる】いレコードを【売：う】ります。"
+                  rom="Sono mise wa furui rekōdo o urimasu."
+                  tr_en="That store sells old vinyl records."
+                  tr_de="Dieser Laden verkauft alte Schallplatten."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="コピー"
+              rom="kopī"
+              tr_en="a copy; to copy"
+              tr_de="Kopie; kopieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n5"
+              id="kopī-copy"
+              rem="appears in GENKI2 L22 vocab section as コピーを取る"
+            >
+                <phrase
+                  ph="コピーを【取：と】る"
+                  rom="kopī o toru"
+                  tr_en="to make a copy"
+                  tr_de="eine Kopie machen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                  rem="Apparently, コピーする would also be correct"
+                />
+                <sentence
+                  s="コピーを【取：と】ってください。"
+                  rom="Kopī o totte kudasai."
+                  tr_en="Please make a copy."
+                  tr_de="Bitte machen Sie eine Kopie."
+                  lvl="n5"
+                  origin="ChatGPT"
+                  rem="Apparently, コピーをしてください would also be correct"
+                />
+            </word>
+            <word
+              w="カメラ"
+              rom="kamera"
+              tr_en="camera"
+              tr_de="Fotoapparat"
+              lvl="n5"
+              id="kamera-camera"
+            >
+                <phrase
+                  ph="すごく【高：たか】いカメラ"
+                  rom="sugoku takai kamera"
+                  tr_en="a very expensive camera"
+                  tr_de="eine sehr teure Kamera"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【石：いし】【川：かわ】さんは 【古：ふる】いカメラを【使：つか】います。"
+                  rom="Ishikawa-san wa furui kamera o tsukaimasu."
+                  tr_en="Mr Ishikawa uses an old camera."
+                  tr_de="Herr Ishikawa verwendet eine alte Kamera."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="フィルム"
+              rom="firumu"
+              tr_en="roll of film"
+              tr_de="Filmrolle"
+              hint_en="for a camera"
+              hint_de="für eine Kamera"
+              lvl="n5"
+              category="old-fashioned"
+              id="firumu-film"
+              rem="outdated, should be n2"
+            >
+                <phrase
+                  ph="カメラにフィルムを【入：い】れる"
+                  rom="kamera ni firumu o ireru"
+                  tr_en="to put a film into the camera"
+                  tr_de="einen Film in die Kamera tun"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="フィルムが ないので、そのカメラを【使：つか】えません。"
+                  rom="Firumu ga nai no de, sono kamera o tsukaemasen."
+                  tr_en="Since I don't have any film, I can't use that camera."
+                  tr_de="Da ich keinen Film haben, kann ich jene Kamera nicht verwenden."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+
+            <!-- unsorted -->
+            <word
+              w="ニュース"
+              rom="nyūsu"
+              tr_en="news"
+              tr_de="Neuigkeiten; Nachrichten"
+              lvl="n5"
+              category="news"
+              id="nyūsu-news"
+            >
+                <phrase
+                  ph="テレビでニュースを【見：み】る"
+                  rom="terebi de nyūsu o miru"
+                  tr_en="to watch the news on TV"
+                  tr_de="die Nachrichten am Fernseher schauen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【毎：まい】【朝：あさ】 ニュースを【読：よ】みます。"
+                  rom="Mai-asa nyūsu o yomimasu."
+                  tr_en="I read the news every morning."
+                  tr_de="Jeden Morgen lese ich die Nachrichten."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="ペット"
+              rom="petto"
+              tr_en="pet"
+              tr_de="Haustier"
+              lvl="n5"
+              category="animal"
+              id="petto-pet"
+            >
+                <phrase
+                  ph="ペットを【飼：か】う"
+                  rom="petto o kau"
+                  tr_en="to have a pet"
+                  tr_de="ein Haustier haben"
+                  lvl="n5"
+                  origin="ChatGPT"
+                  rem="jisho has n4; keeping it here, because it's idiomatic"
+                />
+                <sentence
+                  s="【私：わたし】のペットの【写：しゃ】【真：しん】を【撮：と】った。"
+                  rom="Watashi no petto no shashin o totta."
+                  tr_en="I took a photo of my pet."
+                  tr_de="Ich habe ein Foto von meinem Haustier gemacht."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="エレベーター"
+              rom="erebētā"
+              tr_en="lift"
+              tr_de="Lift"
+              lvl="n5"
+              id="erebētā-lift"
+            >
+                <phrase
+                  ph="エレベーターを【使：つか】う"
+                  rom="erebētā o tsukau"
+                  tr_en="to use the lift"
+                  tr_de="den Lift benutzen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】はエレベーターをあまり【使：つか】わないよ。"
+                  rom="Watashi wa erebētā o amari tsukawanai yo."
+                  tr_en="I don't use the lift much."
+                  tr_de="Ich benutze den Lift kaum."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="マッチ"
+              rom="macchi"
+              tr_en="matches (to light fire with)"
+              tr_de="Streichhölzer"
+              lvl="n5"
+              id="macchi-matches"
+            >
+                <phrase
+                  ph="マッチをつける"
+                  rom="macchi o tsukeru"
+                  tr_en="to light a match"
+                  tr_de="ein Streichholz anzünden"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="マッチを【持：も】っていますか。"
+                  rom="Macchi o motte imasu ka?"
+                  tr_en="Do you have a match?"
+                  tr_de="Haben Sie Streichhölzer dabei?"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="カレンダー"
+              rom="karendā"
+              tr_en="calendar"
+              tr_de="Kalender"
+              lvl="n5"
+              id="karendā-calendar"
+            >
+                <phrase
+                  ph="かわいいカレンダー"
+                  rom="kawaii karendā"
+                  tr_en="a cute calendar"
+                  tr_de="ein niedlicher Kalender"
+                  lvl="n5"
+                  origin="ChatGPT"
+                  rem="verified with the web"
+                />
+                <sentence
+                  s="このカレンダーには 【美：うつく】しい【写：しゃ】【真：しん】が たくさんある。"
+                  rom="Kono karendā ni wa utsukushii shashin ga takusan aru."
+                  tr_en="This calendar has many beautiful pictures."
+                  tr_de="In diesem Kalender hat es viele schöne Bilder."
+                  lvl="n5"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; jisho has n4 for utsukushii"
+                />
+            </word>
+            <word
+              w="ギター"
+              rom="gitā"
+              tr_en="guitar"
+              tr_de="Gitarre"
+              lvl="n5"
+              category="entertainment, hearing"
+              id="gitā-guitar"
+            >
+                <phrase
+                  ph="ギターの【練：れん】【習：しゅう】をする"
+                  rom="gitā no renshū o suru"
+                  tr_en="to practice the guitar"
+                  tr_de="Gitarre üben"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="カオルは 【毎：まい】【日：にち】 ギターを【弾：ひ】きます。"
+                  rom="Kaoru wa mai-nichi gitā o hikimasu."
+                  tr_en="Kaoru plays the guitar every day."
+                  tr_de="Kaoru spielt jeden Tag Gitarre."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <!--
+                    Interestingly, 500mon uses 聞く here, not 聴く...
+                -->
+                <sentence
+                  s="【休：やす】みの【日：ひ】は【家：いえ】で【音：おん】【楽：がく】を【聞：き】いたりギターを【引：ひ】いたりしています。"
+                  rom="Yasumi no hi wa ie de ongaku o kītari gitā o hītari shite imasu."
+                  tr_en="On my days off, I listen to music and play the guitar at home (and so on)."
+                  tr_de="An meinen freien Tagen höre ich zuhause Musik und spiele Gitarre (usw.)."
+                  lvl="n5"
+                  origin="500mon q178"
+                  rem="The grammar ~tari may be n4"
+                />
+            </word>
+            <word
+              w="デパート"
+              rom="depāto"
+              tr_en="department store"
+              tr_de="Kaufhaus"
+              lvl="n5"
+              category="shopping"
+              id="depāto-department"
+            >
+                <keep_apart_from id="ōdana-largestore" />
+                <keep_apart_from id="shoppingumōru-mall" />
+                <!--
+                    Apparently, a デパート is usu. a multi-storey building of a single store, while モール (nx) often
+                    includes multiple stores, restaurants, entertainment facilities.
+                -->
+                <phrase
+                  ph="【賑：にぎ】やかなデパート"
+                  rom="nigiyaka na depāto"
+                  tr_en="a lively department store"
+                  tr_de="ein gut besuchtes Kaufhaus"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【友：とも】だちと【駅：えき】で【別：わか】れてから【一：ひと】【人：り】でデパートに【行：い】きました。"
+                  rom="Tomodachi to eki de wakarete kara hitori de depāto ni ikimashita."
+                  tr_en="After parting with my friend at the station, I went into the department store on my own."
+                  tr_de="Nachdem ich mich von meinem Freund beim Bahnhof verabschiedet hatte, ging ich alleine ins Kaufhaus."
+                  lvl="n4"
+                  origin="500mon q333"
+                />
+                <sentence
+                  s="デパートは【近：ちか】くて、とても【便：べん】【利：り】だ。"
+                  rom="Depāto wa chikakute, totemo benri da."
+                  tr_en="The department store is nearby and very convenient."
+                  tr_de="Das Kaufhaus ist gleich nebenan und sehr praktisch."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="パーティー"
+              rom="pātī"
+              tr_en="party (social event)"
+              tr_de="Party"
+              lvl="n5"
+              category="entertainment"
+              id="pātī-party"
+            >
+                <phrase
+                  ph="パーティーに【行：い】く"
+                  rom="pātī ni iku"
+                  tr_en="to go to the party"
+                  tr_de="zur Party gehen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with lib0"
+                />
+                <sentence
+                  s="【昨日：きのう】は パーティーを しました。"
+                  rom="Kinō wa pātī o shimashita."
+                  tr_en="I had a party yesterday."
+                  tr_de="Ich machte Party gestern."
+                  lvl="n5"
+                  origin="duolingo"
+                  hasDifferentForm="true"
+                />
+                <sentence
+                  s="【田：た】【中：なか】さんは、【仕：し】【事：ごと】が【忙：いそが】しいのでパーティーには【行：い】けないって【言：い】ってたよ。"
+                  rom="Tanaka-san wa, shigoto ga isogashii no de pātī ni wa ikenai tte itteta yo."
+                  tr_en="Mr Tanaka said he was busy with work, so he cannot go to the party."
+                  tr_de="Herr Tanaka sagte, er sei beschäftigt mit Arbeit und könne nicht an die Party gehen."
+                  lvl="n5"
+                  origin="500mon q191"
+                  rem="ikenai may be n4, even though it is not ikenai-wrong"
+                />
+            </word>
+            <word
+              w="タバコ"
+              rom="tabako"
+              tr_en="tobacco; cigarettes"
+              tr_de="Tabak; Zigaretten"
+              lvl="n5"
+              id="tabako-tobacco"
+            >
+                <phrase
+                  ph="タバコの【箱：はこ】"
+                  rom="tabako no hako"
+                  tr_en="a pack of cigarettes"
+                  tr_de="eine Zigarettenschachtel"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【座：すわ】って タバコを 【吸：す】った。"
+                  rom="Suwatte tabako o sutta."
+                  tr_en="I sat and smoked."
+                  tr_de="Ich sass und rauchte."
+                  lvl="n5"
+                />
+                <sentence
+                  s="ここではタバコを【吸：す】ってはいけない。"
+                  rom="Koko de wa tabako o sutte wa ikenai."
+                  tr_en="You must not smoke here."
+                  tr_de="Man darf hier nicht rauchen."
+                  lvl="n5"
+                  origin="Oxford p.53 modified"
+                  rem="verified with lib0; ikenai may be n4"
+                />
+            </word>
+            <word
+              w="ペン"
+              rom="pen"
+              tr_en="pen"
+              tr_de="Schreibstift"
+              lvl="n5"
+              category="education, arts"
+              id="pen-schreibstift"
+              HIDDEN="true"
+              rem="rom same as tr_en"
+            />
+            <word
+              w="ページ"
+              rom="pēji"
+              tr_en="page"
+              tr_de="Seite (in einem Buch)"
+              lvl="n5"
+              id="pēji-page"
+            >
+                <phrase
+                  ph="【四：よん】ページ"
+                  rom="yon pēji"
+                  tr_en="four pages"
+                  tr_de="vier Seiten (in einem Buch)"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【三：さん】ページを【読：よ】んでください。"
+                  rom="San-pēji o yonde kudasai."
+                  tr_en="Please read three pages."
+                  tr_de="Bitte lies drei Seiten."
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="ボタン"
+              rom="botan"
+              tr_en="button"
+              tr_de="Knopf; Taste; Schalter"
+              lvl="n5"
+              id="botan-button"
+            >
+                <phrase
+                  ph="【赤：あか】いボタン"
+                  rom="akai botan"
+                  tr_en="red button"
+                  tr_de="roter Knopf"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="そのボタンを【押：お】しないでください。"
+                  rom="Sono botan o oshinaide kudasai."
+                  tr_en="Please do not push that button."
+                  tr_de="Bitte drücken Sie nicht auf diesen Knopf."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="ポスト"
+              rom="posuto"
+              tr_en="letterbox; mailbox"
+              tr_de="Briefkasten"
+              lvl="n5"
+              id="posuto-post"
+              rem="According to ChatGPT, ポスト does not usually mean mail (which contradicts jisho); 郵便 (yūbin) is mail"
+            >
+                <phrase
+                  ph="ポストに【手：て】【紙：がみ】を【入：い】れる"
+                  rom="posuto ni tegami o ireru"
+                  tr_en="to put a letter into the letterbox"
+                  tr_de="einen Brief in den Briefkasten tun"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ポストに【手：て】【紙：がみ】が【入：はい】っている。"
+                  rom="Posuto ni tegami ga haitte iru."
+                  tr_en="There is a letter in the letterbox."
+                  tr_de="Im Briefkasten ist ein Brief."
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="ボールペン"
+              rom="bōrupen"
+              tr_en="ball-point pen"
+              tr_de="Kugelschreiber"
+              lvl="n5"
+              id="bōrupen-ballpointpen"
+            >
+                <phrase
+                  ph="【黒：くろ】いボールペン"
+                  rom="kuroi bōrupen"
+                  tr_en="a black ball-point pen"
+                  tr_de="ein schwarzer Kugelschreiber"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="ボールペンで【書：か】いてください。"
+                  rom="Bōrupen de kaite kudasai."
+                  tr_en="Please write with a ball-point pen."
+                  tr_de="Bitte schreiben Sie mit Kugelschreiber."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ワイン"
+              rom="wain"
+              tr_en="wine"
+              tr_de="Wein"
+              lvl="n5"
+              category="beverage"
+              id="wain-wine"
+              rem="appears in 500mon q141; jisho has n3"
+            >
+                <phrase
+                  ph="【高：たか】いワイン"
+                  rom="takai wain"
+                  tr_en="an expensive wine"
+                  tr_de="ein teurer Wein"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="このワインは いくらですか。"
+                  rom="Kono wain wa ikura desu ka?"
+                  tr_en="How much is this wine? (price)"
+                  tr_de="Wieviel kostet dieser Wein?"
+                  lvl="n5"
+                  origin="500mon q141"
+                  rem="jisho has n3 for wain"
+                />
+            </word>
+            <word
+              w="メール"
+              rom="mēru"
+              tr_en="e-mail"
+              tr_de="E-Mail"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n5"
+              rem="appears in 500mon q136; jisho has nx"
+              category="business, work"
+              id="mēru-email"
+            >
+                <phrase
+                  ph="メールする"
+                  rom="mēru suru"
+                  tr_en="to write an e-mail"
+                  tr_de="eine E-Mail schreiben"
+                  lvl="n5"
+                />
+                <sentence
+                  s="メールします。"
+                  rom="Mēru shimasu."
+                  tr_en="I'll e-mail you."
+                  tr_de="Ich werde Ihnen eine E-Mail schicken."
+                  lvl="n5"
+                  origin="500mon q136"
+                  rem="jisho has nx for mēru"
+                />
+                <sentence
+                  s="メールで【連：れん】【絡：らく】を【取：と】りましょう。"
+                  rom="Mēru de renraku o torimashō."
+                  tr_en="Let's keep in touch by e-mail."
+                  tr_de="Lass uns via E-Mail in Kontakt bleiben."
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="グラム"
+              rom="guramu"
+              tr_en="gram"
+              tr_de="Gramm"
+              hint_en="unit of mass"
+              hint_de="Gewichtseinheit"
+              lvl="n5"
+              id="guramu-gramme"
+              rem="gramme appears to be an older British spelling"
+            >
+                <phrase
+                  ph="【200：にひゃく】グラム"
+                  rom="ni-hyaku guramu"
+                  tr_en="200 grams"
+                  tr_de="200 Gramm"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【砂：さ】【糖：とう】を【150：ひゃくごじゅう】グラム【入：い】れてください。"
+                  rom="Satō o hyaku go-jū guramu irete kudasai."
+                  tr_en="Please add 150 grams of sugar."
+                  tr_de="Bitte gib 150 Gramm Zucker dazu."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="キログラム"
+              rom="kiroguramu"
+              tr_en="kilogramme"
+              tr_de="Kilogramm"
+              lvl="n5"
+              id="kiroguramu-kilogramme"
+            >
+                <phrase
+                  ph="【22：にじゅうに】キログラム"
+                  rom="ni-jū-ni kiroguramu"
+                  tr_en="twenty-two kilogrammes"
+                  tr_de="zweiundzwanzig Kilogramm"
+                  lvl="n5"
+                  origin="jpod101 audio"
+                  rem="acc. to ChatGPT, kiroguramu is usually written with Arabic number rather than kanji"
+                />
+                <sentence
+                  s="この【車：くるま】の【重：おも】さは【1500：せんごひゃく】キログラムです。"
+                  rom="Kono kuruma no omosa wa sen go-hyaku kiroguramu desu."
+                  tr_en="This car weighs 1500 kilogrammes."
+                  tr_de="Dieses Auto ist 1500 Kilogramm schwer."
+                  explanation_en="重さ is a noun meaning 'weight'."
+                  explanation_de="重さ ist ein Nomen, das 'Gewicht' bedeutet."
+                  lvl="n5"
+                  origin="ChatGPT"
+                  rem="jisho has nx for omosa; キロ is common in everyday speech for both キログラム and クロメートル"
+                />
+            </word>
+            <word
+              w="メートル"
+              rom="mētoru"
+              tr_en="metre"
+              tr_de="Meter"
+              hint_en="unit of length"
+              hint_de="Längeneinheit"
+              lvl="n5"
+              id="mētoru-metre"
+            >
+                <phrase
+                  ph="【22：にじゅうに】メートル"
+                  rom="ni-jū-ni mētoru"
+                  tr_en="22 metres"
+                  tr_de="22 Meter"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="この【家：いえ】は【高：たか】さ【20：にじゅう】メートルです。"
+                  rom="Kono ie wa takasa ni-jū mētoru desu."
+                  tr_en="This house is 20 metres high."
+                  tr_de="Dieses Haus ist 20 Meter hoch."
+                  explanation_en="高さ is a noun meaning 'height'."
+                  explanation_de="高さ ist ein Nomen, das 'Höhe' bedeutet."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT; jisho has nx for takasa"
+                />
+            </word>
+            <word
+              w="キロメートル"
+              rom="kiromētoru"
+              tr_en="kilometre"
+              tr_de="Kilometer"
+              lvl="n5"
+              id="kiromētoru-kilometre"
+            >
+                <!--
+                    Acc. to ChatGPT, half a kilometre is １キロの半分, but simply ５００メートル is far more common.
+                -->
+                <phrase
+                  ph="【４：よん】キロメートル"
+                  rom="yon kiromētoru"
+                  tr_en="four kilometres"
+                  tr_de="vier Kilometer"
+                  lvl="n5"
+                  origin="self"
+                  rem="acc. to ChatGPT, kiromētoru is usually written with Arabic number rather than kanji"
+                />
+                <sentence
+                  s="【学：がっ】【校：こう】から【家：いえ】までの【帰：かえ】り【道：みち】は【２：に】キロメートルです。"
+                  rom="Gakkō kara ie made no kaerimichi wa ni kiromētoru desu."
+                  tr_en="My way home from school is two kilometres."
+                  tr_de="Mein Weg von der Schule nach Hause beträgt zwei Kilometer."
+                  lvl="n4"
+                  origin="ChatGPT"
+                  rem="Acc. to ChatGPT, キロ is common in everyday speech for both キログラム and クロメートル"
+                />
+            </word>
+            <word
+              w="チョコレート"
+              rom="chokorēto"
+              tr_en="chocolate"
+              tr_de="Schokolade"
+              lvl="n5"
+              category="food"
+              id="chokorēto-chocolate"
+              rem="appears in 500mon q283; jisho has nx"
+            >
+                <phrase
+                  ph="【甘：あま】いチョコレート"
+                  rom="amai chokorēto"
+                  tr_en="sweet chocolate"
+                  tr_de="süsse Schokolade"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="リサちゃんはチョコレートが【大：だい】【好：す】きだ。"
+                  rom="Risa-chan wa chokorēto ga daisuki da."
+                  tr_en="Risa loves chocolate."
+                  tr_de="Risa liebt Schokolade über alles."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="クッキー"
+              rom="kukkī"
+              tr_en="cookie; biscuit"
+              tr_de="Keks; Biscuit"
+              lvl="n5"
+              category="food"
+              id="kukkī-cookie"
+              rem="appears in 500mon q283; jisho has nx"
+            >
+                <phrase
+                  ph="【美味：おい】しいクッキー"
+                  rom="oishii kukkī"
+                  tr_en="a delicious cookie"
+                  tr_de="ein feiner Keks"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【私：わたし】は、チョコレートとかクッキーとか【甘：あま】いものが【好：す】きです。"
+                  rom="Watashi wa, chokorēto toka kukkī toka amai mono ga suki desu."
+                  tr_en="I like sweet things like chocolate or cookies."
+                  tr_de="Ich mag Süssigkeiten wie Schokolade oder Kekse."
+                  lvl="n5"
+                  origin="500mon q283"
+                  rem="toka may be n4"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

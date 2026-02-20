@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    data_extraction_rules.xml
+    See AndroidManifest.xml android:dataExtractionRules
+    This is only used for Android api level 31 and above.
+    See https://developer.android.com/guide/topics/data/autobackup.html
+-->
+<data-extraction-rules>
+    <cloud-backup>
+        <!--
+            By default, Auto Backup includes almost all app files. If you specify an <include> element, the system no
+            longer includes any files by default and backs up only the files specified.
+        -->
+        <!-- include domain="sharedpref" path="." -->
+    </cloud-backup>
+</data-extraction-rules>

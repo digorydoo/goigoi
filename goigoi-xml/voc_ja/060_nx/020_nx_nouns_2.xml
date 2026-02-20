@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Even more nouns ②"
+      name_de="Noch mehr Nomen ②"
+      name_fr="Encore plus de noms ②"
+      name_it="Ancora più sostantivi ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="-"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【氷：ひょう】【河：が】"
+              rom="hyōga"
+              tr_en="glacier"
+              tr_de="Gletscher"
+              lvl="-"
+              category="nature"
+              id="hyōga-glacier"
+            >
+                <sentence
+                  s="【氷：ひょう】【河：が】はゆっくり【動：うご】いている。"
+                  rom="Hyōga wa yukkuri ugoite iru."
+                  tr_en="Glaciers move slowly."
+                  tr_de="Gletscher bewegen sich langsam."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【海：うみ】【辺：べ】"
+              rom="umibe"
+              tr_en="beach; seashore"
+              tr_de="Strand; Meeresufer"
+              lvl="-"
+              category="beach, nature"
+              id="umibe-beach"
+            >
+                <keep_apart_from id="engan-coast" />
+                <keep_apart_from id="hama-beach" />
+                <keep_apart_from id="hamabe-foreshore" />
+                <keep_apart_from id="kaigan-coast" />
+                <keep_apart_from id="kishi-shore" />
+            </word>
+            <word
+              w="【天：てん】"
+              rom="ten"
+              tr_en="sky; heaven; weather"
+              tr_de="Himmel; Wetter"
+              lvl="-"
+              category="nature, weather"
+              id="ten-sky"
+            >
+                <keep_apart_from id="sora-sky" />
+            </word>
+            <word
+              w="【新：しん】【芽：め】"
+              rom="shinme"
+              tr_en="sprout; shoot"
+              tr_de="Sprössling; Spross"
+              lvl="-"
+              category="plant"
+              id="shinme-sprout"
+            >
+                <keep_apart_from id="me-sprout" />
+            </word>
+            <word
+              w="【減：げん】【殺：さい】"
+              rom="gensai"
+              tr_en="lessening; diminishing; reducing"
+              tr_de="Verringerung; Abnahme; reduzieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="-"
+              id="gensai-lessening"
+              common="false"
+              rem="high up in jisho-top-words"
+            />
+            <word
+              w="ゴミ【箱：ばこ】"
+              rom="gomibako"
+              tr_en="trashcan"
+              tr_de="Mülleimer"
+              lvl="-"
+              id="gomibako-trashcan"
+            />
+            <word
+              w="【草：くさ】【地：ち】"
+              rom="kusachi"
+              tr_en="grassland; meadow"
+              tr_de="Wiese; Weide"
+              lvl="-"
+              category="nature"
+              id="kusachi-meadow"
+            />
+            <word
+              w="【小：お】【川：がわ】"
+              rom="ogawa"
+              tr_en="brook; creek"
+              tr_de="Bach"
+              lvl="-"
+              category="nature"
+              id="ogawa-brook"
+            />
+            <word
+              w="【茂：しげ】み"
+              rom="shigemi"
+              tr_en="thicket; brushwood"
+              tr_de="Dickicht; Gestrüpp"
+              lvl="-"
+              category="nature"
+              id="shigemi-thicket"
+            />
+            <word
+              w="【密：みつ】【林：りん】"
+              rom="mitsurin"
+              tr_en="dense forest; jungle"
+              tr_de="dichter Wald; Dschungel"
+              lvl="-"
+              category="nature"
+              id="mitsurin-jungle"
+            />
+            <word
+              w="【竹：ちく】【林：りん】"
+              rom="chikurin"
+              tr_en="bamboo thicket"
+              tr_de="Bambus-Dickicht"
+              lvl="-"
+              category="nature"
+              id="chikurin-bamboothicket"
+            />
+            <word
+              w="【砂：さ】【丘：きゅう】"
+              rom="sakyū"
+              tr_en="sand dune"
+              tr_de="Sanddüne"
+              lvl="-"
+              category="nature, scenery"
+              id="sakyū-dune"
+            />
+            <word
+              w="【青：あお】【空：ぞら】"
+              rom="aozora"
+              tr_en="blue sky"
+              tr_de="blauer Himmel"
+              lvl="-"
+              category="weather"
+              id="aozora-bluesky"
+            >
+                <sentence
+                  s="【青：あお】【空：ぞら】を【見：み】たくなったら、【屋：おく】【上：じょう】に【行：い】きます。"
+                  rom="Aozora o mitaku nattara, okujō ni ikimasu."
+                  tr_en="I go up to the rooftop when I want to see the blue sky."
+                  tr_de="Ich gehe aufs Dach, wenn ich den blauen Himmel sehen will."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【雷：らい】【雲：うん】"
+              rom="raiun"
+              tr_en="storm cloud"
+              tr_de="Sturmwolke"
+              hint_en="lit. thunder cloud"
+              hint_de="wörtl. Donnerwolke"
+              lvl="-"
+              category="weather"
+              id="raiun-stormcloud"
+            />
+            <word
+              w="【雨：あめ】【降：ふ】り"
+              rom="amefuri"
+              tr_en="rainfall"
+              tr_de="Regenfall"
+              lvl="-"
+              category="weather"
+              id="amefuri-rainfall"
+            />
+            <word
+              w="【大：おお】【雨：あめ】"
+              rom="ōame"
+              tr_en="heavy rain"
+              tr_de="starker Regen"
+              lvl="-"
+              category="weather"
+              id="ōame-heavyrain"
+            />
+            <word
+              w="【霧：きり】【雨：さめ】"
+              rom="kirisame"
+              tr_en="drizzle"
+              tr_de="Nieselregen"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="-"
+              category="weather"
+              id="kirisame-drizzle"
+            />
+            <word
+              w="【氷：ひ】【雨：さめ】"
+              rom="hisame"
+              tr_en="ice rain; sleet"
+              tr_de="Eisregen"
+              lvl="-"
+              category="weather"
+              id="hisame-sleet"
+            />
+            <word
+              w="【雹：ひょう】"
+              rom="hyō"
+              tr_en="hail"
+              tr_de="Hagel (grosse Körner)"
+              lvl="-"
+              category="weather"
+              id="hyō-hail"
+            >
+                <keep_apart_from id="arare-graupel" />
+            </word>
+            <word
+              w="【雷：らい】【雨：う】"
+              rom="raiu"
+              tr_en="thunderstorm"
+              tr_de="Gewitter"
+              lvl="-"
+              id="raiu-thunderstorm"
+              category="weather"
+            >
+                <keep_apart_from id="arashi-storm" />
+            </word>
+            <word
+              w="【淡：あわ】【雪：ゆき】"
+              rom="awayuki"
+              tr_en="light snowfall"
+              tr_de="leichter Schneefall"
+              lvl="-"
+              category="weather"
+              id="awayuki-lightsnowfall"
+            />
+            <word
+              w="【粉：こな】【雪：ゆき】"
+              rom="konayuki"
+              tr_en="powder snow"
+              tr_de="Pulverschnee"
+              lvl="-"
+              category="weather"
+              id="konayuki-powdersnow"
+            />
+            <word
+              w="【砂：さ】【塵：じん】【嵐：あらし】"
+              rom="sajin'arashi"
+              tr_en="sand storm; dust storm"
+              tr_de="Sandsturm"
+              lvl="-"
+              category="weather"
+              id="sajinarashi-duststorm"
+            />
+            <word
+              w="【荒：あら】【波：なみ】"
+              rom="aranami"
+              tr_en="stormy sea; raging waves"
+              tr_de="stürmisches Meer; tobende Wellen"
+              lvl="-"
+              category="weather, beach"
+              id="aranami-stormysea"
+            />
+            <word
+              w="【津：つ】【波：なみ】"
+              rom="tsunami"
+              tr_en="big tidal wave"
+              tr_de="grosse Flutwelle"
+              lvl="-"
+              category="nature"
+              id="tsunami-bigtidalwave"
+            />
+            <word
+              w="【竜：たつ】【巻：まき】"
+              rom="tatsumaki"
+              tr_en="tornado"
+              tr_de="Tornado"
+              lvl="-"
+              category="weather"
+              id="tatsumaki-tornado"
+            >
+                <keep_apart_from id="taifū-typhoon" />
+            </word>
+            <word
+              w="【梅雨：つゆ】【入：い】り"
+              rom="tsuyu-iri"
+              tr_en="beginning of the rainy season"
+              tr_de="Anfang der Regenzeit"
+              hasCombinedReading="true"
+              lvl="-"
+              category="weather, seasons"
+              id="tsuyuiri-beginrainyseason"
+            />
+            <word
+              w="【梅雨：つゆ】【明：あ】け"
+              rom="tsuyu-ake"
+              tr_en="end of the rainy season"
+              tr_de="Ende der Regenzeit"
+              hasCombinedReading="true"
+              lvl="-"
+              category="weather, seasons"
+              id="tsuyuake-endrainyseason"
+            >
+                <sentence
+                  s="【今：こ】【年：とし】は【梅雨：つゆ】【明：あ】けが【遅：おそ】かった。"
+                  rom="Kotoshi wa tsuyuake ga osokatta."
+                  tr_en="The end of the rainy season came late this year."
+                  tr_de="Das Ende der Regensaison kam dieses Jahr spät."
+                  lvl="-"
+                />
+            </word>
+            <word
+              w="【雨：あま】【水：みず】"
+              rom="amamizu"
+              tr_en="rain water"
+              tr_de="Regenwasser"
+              lvl="-"
+              category="weather"
+              id="amamizu-rainwater"
+            />
+            <word
+              w="【朝：あさ】【露：つゆ】"
+              rom="asa-tsuyu"
+              tr_en="morning dew"
+              tr_de="Morgentau"
+              lvl="-"
+              category="nature"
+              id="asatsuyu-morningdew"
+            />
+            <word
+              w="【氷：ひょう】【海：かい】"
+              rom="hyōkai"
+              tr_en="frozen sea; icy waters"
+              tr_de="zugefrorener See; Eiswasser"
+              lvl="-"
+              category="weather, nature"
+              id="hyōkai-frozensea"
+            />
+            <word
+              w="【裏：うら】【庭：にわ】"
+              rom="uraniwa"
+              tr_en="backyard; rear garden"
+              tr_de="Hinterhof; Garten hinter dem Haus"
+              lvl="-"
+              category="garden"
+              id="uraniwa-backyard"
+              rem="jisho has nx, ura is n4, niwa is n5"
+            >
+                <keep_apart_from id="niwa-garden" />
+                <keep_apart_from id="sono-orchard" />
+                <sentence
+                  s="【私：わたし】は【裏：うら】【庭：にわ】に【小：こ】【屋：や】を【立：た】てた。"
+                  rom="Watashi wa uraniwa ni koya o tateta."
+                  tr_en="I put up a small hut in the backyard."
+                  tr_de="Ich habe eine kleine Hütte im Hinterhof errichtet."
+                  explanation_en="「立てた」is a colloquial shortening of「立ていた」"
+                  explanation_de="「立てた」ist eine umgangssprachliche Kurzform von「立ていた」"
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【庭：にわ】【木：き】【戸：ど】"
+              rom="niwakido"
+              tr_en="garden gate"
+              tr_de="Gartentür"
+              lvl="-"
+              category="garden"
+              id="niwakido-gardengate"
+            />
+            <word
+              w="【遣：や】り【水：みず】"
+              rom="yarimizu"
+              tr_en="narrow stream"
+              tr_de="schmaler Bach"
+              hint_en="in a Japanese garden"
+              hint_de="in einem japanischen Garten"
+              lvl="-"
+              category="nature, garden"
+              id="yarimizu-narrowstream"
+            />
+            <word
+              w="【盆：ぼん】【栽：さい】"
+              rom="bonsai"
+              tr_en="Japanese miniature tree"
+              tr_de="japanischer Miniaturbaum"
+              lvl="-"
+              category="garden, top-words"
+              id="bonsai-miniaturetree"
+              rem="bonsai actually refers to a miniature garden, not just a tree; see ja.wikipedia.org"
+            />
+            <word
+              w="【薔：バ】【薇：ラ】"
+              rom="bara"
+              tr_en="rose"
+              tr_de="Rose"
+              usuallyInKana="true"
+              lvl="-"
+              category="plant, garden"
+              id="bara-rose"
+            >
+                <sentence
+                  s="このバラは【美：うつく】しい。"
+                  rom="Kono bara wa utsukushii."
+                  tr_en="This rose is beautiful."
+                  tr_de="Diese Rose ist wunderschön."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【雑：ざっ】【草：そう】"
+              rom="zassō"
+              tr_en="weed"
+              tr_de="Unkraut"
+              lvl="-"
+              category="garden, plant"
+              id="zassō-weed"
+            >
+                <phrase
+                  ph="【雑：ざっ】【草：そう】を【抜：ぬ】く"
+                  rom="zassō o nuku"
+                  tr_en="to weed"
+                  tr_de="jäten"
+                  lvl="-"
+                  origin="lib0"
+                />
+                <sentence
+                  s="うちの【庭：にわ】は【雑：ざっ】【草：そう】だらけだった。"
+                  rom="Uchi no niwa wa zassō darake datta."
+                  tr_en="Our garden was full of weeds."
+                  tr_de="Unser Garten war voller Unkraut."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【低：てい】【木：ぼく】"
+              rom="teiboku"
+              tr_en="shrub"
+              tr_de="Strauch"
+              lvl="-"
+              category="garden, plant"
+              id="teiboku-shrub"
+            />
+            <word
+              w="スコップ"
+              rom="sukoppu"
+              tr_en="shovel; spade"
+              tr_de="Schaufel; Spaten"
+              lvl="-"
+              category="garden, hobby"
+              id="sukoppu-shovel"
+            />
+            <word
+              w="【芝：しば】【刈：か】り【機：き】"
+              rom="shiba-kariki"
+              tr_en="lawnmower"
+              tr_de="Rasenmäher"
+              lvl="-"
+              category="garden, hobby"
+              id="shibakariki-lawnmower"
+            />
+            <word
+              w="【猫：ねこ】【車：ぐるま】"
+              rom="nekoguruma"
+              tr_en="wheelbarrow"
+              tr_de="Schubkarre"
+              hint_en="lit. catcar"
+              hint_de="wörtl. Katzenauto"
+              lvl="-"
+              category="hobby, garden"
+              id="nekoguruma-wheelbarrow"
+            />
+            <word
+              w="【刈：か】り【込：こ】み【鋏：ばさみ】"
+              rom="karikomi-basami"
+              tr_en="hedge clippers"
+              tr_de="Heckenschere"
+              lvl="-"
+              category="garden, hobby"
+              id="karikomibasami-hedgeclippers"
+            />
+            <word
+              w="【鍬：くわ】"
+              rom="kuwa"
+              tr_en="hoe"
+              tr_de="Hacke"
+              hint_en="for digging"
+              hint_de="zum graben"
+              lvl="-"
+              category="garden, hobby"
+              id="kuwa-hoe"
+            />
+            <word
+              w="【雁：がん】【爪：づめ】"
+              rom="gandzume"
+              tr_en="rake"
+              tr_de="Harke"
+              hint_en="for loosening the soil"
+              hint_de="zum Lockern des Bodens"
+              lvl="-"
+              category="garden"
+              id="gandzume-rake"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="rēki-rake" />
+            </word>
+            <word
+              w="【水：みず】【差：さ】し"
+              rom="mizusashi"
+              tr_en="watering can; water jug"
+              tr_de="Wasserkanne; Wasserkrug"
+              hint_en="for watering flowers or drinking"
+              hint_de="zum Wässern von Blumen oder zum Trinken"
+              lvl="-"
+              id="mizusashi-wateringcan"
+            />
+            <word
+              w="【堆：たい】【肥：ひ】"
+              rom="taihi"
+              tr_en="compost"
+              tr_de="Kompost"
+              hint_en="decomposed organic matter"
+              hint_de="zersetzendes organisches Material"
+              lvl="-"
+              category="nature, garden"
+              id="taihi-compost"
+            />
+            <word
+              w="【収：しゅう】【納：のう】【庫：こ】"
+              rom="shūnōko"
+              tr_en="toolshed; closet"
+              tr_de="Werkzeugschuppen"
+              lvl="-"
+              category="garden, hobby"
+              id="shūnōko-toolshed"
+            />
+            <word
+              w="【巻：まき】【尺：じゃく】"
+              rom="makijaku"
+              tr_en="tape measure"
+              tr_de="Massband"
+              lvl="-"
+              category="hobby, diy"
+              id="makijaku-tapemeasure"
+            />
+            <word
+              w="【植：しょく】【物：ぶつ】【園：えん】"
+              rom="shokubutsuen"
+              tr_en="botanical garden"
+              tr_de="botanischer Garten"
+              lvl="-"
+              category="garden"
+              id="shokubutsuen-botanicalgarden"
+            >
+                <keep_apart_from id="niwa-garden" />
+            </word>
+            <word
+              w="ラーメン"
+              rom="rāmen"
+              tr_en="Chinese-style noodles"
+              tr_de="chinesische Nudeln"
+              lvl="-"
+              category="food"
+              id="rāmen-noodles"
+            >
+                <sentence
+                  s="ラーメンを【食：た】べに【行：い】かない？"
+                  rom="Rāmen o tabe ni ikanai?"
+                  tr_en="Why don't (we) go and eat rāmen?"
+                  tr_de="Wollen (wir) nicht Rāmen essen gehen?"
+                  lvl="-"
+                  rem="rated nx because of rāmen"
+                  origin="Miku"
+                  href="https://youtu.be/TjmlAiqjpmk"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

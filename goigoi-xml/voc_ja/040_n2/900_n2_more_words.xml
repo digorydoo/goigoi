@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="More N2 words"
+      name_de="Weitere N2-Wörter"
+      name_fr="Plus de mots N2"
+      name_it="Più parole N2"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="n2"
+      translations="en"
+      requiresSentences="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- noun -->
+            <word
+              w="【瓦：かわら】"
+              rom="kawara"
+              tr_en="roof tile"
+              tr_de="Dachziegel"
+              lvl="n2"
+              id="kawara-rooftile"
+            />
+
+            <!-- not clearly a noun -->
+            <word
+              w="【等：とう】【分：ぶん】"
+              rom="tōbun"
+              tr_en="division into equal parts"
+              tr_de="in gleiche Teile zerteilen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="hands, maths"
+              id="tōbun-division"
+            />
+            <word
+              w="【一：いっ】【定：てい】"
+              rom="ittei"
+              tr_en="fixed; settled; constant; definite; uniform; regularised; defined; standardised"
+              hint_en="noun; suru verb; na-adjective"
+              lvl="n2"
+              HIDDEN="true"
+              id="ittei-fixed"
+            >
+                <!-- 一定の単位で - in fixed units -->
+            </word>
+
+            <!-- prefix/suffix -->
+            <word
+              w="【汁：しる】"
+              rom="shiru"
+              tr_en="juice; sap / soup; broth / (dipping) sauce"
+              hint_en="noun; noun, used as a suffix / noun; only applies to つゆ"
+              lvl="n2"
+              id="shiru-soup"
+              HIDDEN="true"
+            />
+            <word
+              w="【付：ふ】【近：きん】"
+              rom="fukin"
+              tr_en="neighborhood; vicinity; environs; district / approaching"
+              hint_en="noun; noun, used as a suffix"
+              lvl="n2"
+              id="fukin-vicinity"
+              HIDDEN="true"
+            />
+            <word
+              w="【未：み】【満：まん】"
+              rom="miman"
+              tr_en="less than; insufficient"
+              hint_en="noun; suffix"
+              lvl="n2"
+              id="miman-insufficient"
+              HIDDEN="true"
+            />
+            <word
+              w="【全：ぜん】【集：しゅう】"
+              rom="zenshū"
+              tr_en="complete works; complete collection; complete series"
+              hint_en="noun; suffix"
+              lvl="n2"
+              id="zenshū-complete"
+              HIDDEN="true"
+            />
+            <word
+              w="【前：ぜん】【後：ご】"
+              rom="zengo"
+              tr_en="front and rear; front and back; before and behind; back and forth; before and after; around; about; approximately; order; context; consequences; just when; around the time of; inversion; reversion; getting out of order; co-occurring"
+              hint_en="noun; suffix; noun; suru verb"
+              lvl="n2"
+              id="zengo-frontrear"
+              HIDDEN="true"
+            />
+            <word
+              w="【欄：らん】"
+              rom="ran"
+              tr_en="section (e.g. in a newspaper); column; page; field (in a form, web page, etc.); blank; handrail; railing; banister; balustrade"
+              hint_en="noun; suffix"
+              lvl="n2"
+              id="ran-section"
+              HIDDEN="true"
+            />
+            <word
+              w="【峠：とうげ】"
+              rom="tōge"
+              tr_en="(mountain) pass; highest point on a mountain road; ridge / peak (e.g. of summer); worst (e.g. of an illness); crisis; critical point; most difficult part / Mountain pass"
+              hint_en="noun; noun, used as a suffix"
+              lvl="n2"
+              id="tōge-pass"
+              HIDDEN="true"
+            />
+
+            <!-- onomatopoeia -->
+            <word
+              w="ドキドキ"
+              rom="doki-doki"
+              tr_en="thump-thump (heart); one's heart beating fast"
+              tr_de="bumm-bumm (Herz); das Herz schlägt schnell"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n2"
+              category="onomatopoeia"
+              id="dokidoki-heartbeating"
+            >
+                <sentence
+                  s="【胸：むね】をドキドキさせながら【高：たか】【橋：はし】さんはドアを【開：あ】けた。"
+                  rom="Mune o doki-doki sase-nagara Takahashi-san wa doa o aketa."
+                  tr_en="With her heart pounding, Miss Takahashi opened the door."
+                  tr_de="Mit klopfendem Herz öffnete Frau Takahashi die Tür."
+                  lvl="n2"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="ふわふわ"
+              rom="fuwa-fuwa"
+              tr_en="soft; fluffy; spongy"
+              tr_de="weich; flauschig"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n2"
+              category="onomatopoeia"
+              id="fuwafuwa-soft"
+            >
+                <sentence
+                  s="この【枕：まくら】はふわふわで【気：き】【持：も】ちがいい。"
+                  rom="Kono makura wa fuwa-fuwa de kimochi ga ii."
+                  tr_en="This pillow feels soft and nice."
+                  tr_de="Dieses Kissen fühlt sich flauschig an."
+                  lvl="n2"
+                  origin="self"
+                  href="https://hinative.com/questions/22284918; found at https://www.nitori-net.jp/ec/product/7550701s/"
+                />
+            </word>
+            <word
+              w="ぎっしり"
+              rom="gisshiri"
+              tr_en="tightly packed; densely; crammed"
+              tr_de="dicht; vollgestopft; rappelvoll"
+              lvl="n2"
+              category="onomatopoeia"
+              id="gisshiri-crammed"
+            >
+                <sentence
+                  s="【電：でん】【車：しゃ】の【中：なか】に【通：つう】【勤：きん】【客：きゃく】がぎっしり【詰：つ】まっていた。"
+                  rom="Densha no naka ni tsūkinkyaku ga gisshiri tsumatte ita."
+                  tr_en="The commuters were jam-packed inside the train."
+                  tr_de="Die Pendler standen dicht an dicht im Zug."
+                  lvl="n2"
+                  origin="Oxford p.119"
+                />
+            </word>
+            <word
+              w="こっそり"
+              rom="kossori"
+              tr_en="stealthily; secretly"
+              tr_de="heimlich; insgeheim"
+              lvl="n2"
+              category="onomatopoeia"
+              id="kossori-secretly"
+            >
+                <sentence
+                  s="このゲームでは、こっそりとお【城：しろ】への【道：みち】をみつけなきゃ。"
+                  rom="Kono gēmu de wa, kossori to o-shiro e no michi o mitsukenakya."
+                  tr_en="In this game, you have to sneak your way into the castle."
+                  tr_de="In diesem Spiel muss man schleichend den Weg ins Schloss finden."
+                  lvl="n2"
+                  origin="self"
+                  href="https://hinative.com/questions/22303123"
+                />
+            </word>
+            <word
+              w="ニコニコ"
+              rom="niko-niko"
+              tr_en="with a friendly grin; smilingly"
+              tr_de="mit einem freundlichen Grinsen"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n2"
+              category="onomatopoeia"
+              id="nikoniko-grin"
+            >
+                <keep_apart_from id="nikkori-broadgrin" />
+                <sentence
+                  s="あの【子：こ】はいつもニコニコしている。"
+                  rom="Ano ko wa itsumo niko-niko shite iru."
+                  tr_en="That child is always smiling."
+                  tr_de="Das Kind dort grinst immer."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="うろうろ"
+              rom="uro-uro"
+              tr_en="aimlessly wandering about; restless"
+              tr_de="ziellos umherirrend; rastlos"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n2"
+              category="onomatopoeia"
+              id="urouro-wandering"
+            >
+                <sentence
+                  s="【犬：いぬ】が【近：きん】【所：じょ】をうろうろしている。"
+                  rom="Inu ga kinjo o uro-uro shite iru."
+                  tr_en="(Our) dog is restlessly wandering about in the neighbourhood."
+                  tr_de="(Unser) Hund wandert rastlos in der Nachbarschaft herum."
+                  lvl="n2"
+                  href="https://www.city.yokosuka.kanagawa.jp/3180/faq/1591.html"
+                />
+            </word>
+
+            <!-- expression -->
+            <word
+              w="【仕様：しょう】がない"
+              rom="shō ga nai"
+              tr_en="it can't be helped; there's no point"
+              tr_de="da kann man nichts machen; das bringt nichts"
+              hasCombinedReading="true"
+              usuallyInKana="true"
+              lvl="n2"
+              id="shōganai-cantbehelped"
+            >
+                <sentence
+                  s="ハラダさんが【来：こ】なくてもしょうがない、【会：かい】【議：ぎ】を【始：はじ】めましょう。"
+                  rom="Harada-san ga konakute mo shō ga nai, kaigi o hajimemashō."
+                  tr_en="Let's start the meeting even though Harada didn't come, it can't be helped."
+                  tr_de="Fangen wir mit der Sitzung an, obwohl Harada nicht gekommen ist, da kann man nichts machen."
+                  lvl="n2"
+                  origin="Oxford p.57"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

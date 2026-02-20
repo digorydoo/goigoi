@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Hidden N3 Counters"
+      name_de="N3 Zählwörter"
+      name_fr="Les mots de compter N3"
+      name_it="Parole da contare N3"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="n3"
+      translations="en"
+      requiresIds="true"
+      ignoresCombinedReadings="false"
+      HIDDEN="true"
+    >
+        <section>
+            <word
+              w="【ヶ：か】【月：げつ】"
+              rom="kagetsu"
+              tr_en="~ months (period of)"
+              tr_de="~ Monate (Zeitdauer)"
+              hint_en="counter"
+              hint_de="Zählwort"
+              studyInContext="required"
+              lvl="n3"
+              category="time"
+              id="kagetsu-months"
+              rem="jisho has n1"
+            >
+                <!--
+                    date_time_3 has ikkagetsu-1month as n4, but using か instead of small ヶ
+                -->
+                <keep_apart_from id="ikkagetsu-1month" />
+                <keep_apart_from id="rokkagetsu-6months" />
+                <phrase
+                  ph="【１：いっ】【ヶ：か】【月：げつ】"
+                  rom="ikkagetsu"
+                  tr_en="one month"
+                  tr_de="ein Monat"
+                  lvl="n3"
+                />
+                <phrase
+                  ph="【６：ろっ】【ヶ：か】【月：げつ】"
+                  rom="rokkagetsu"
+                  tr_en="six months"
+                  tr_de="sechs Monate"
+                  lvl="n3"
+                />
+                <sentence
+                  s="【一：いち】【年：ねん】は【十：じゅう】【二：に】【ヶ：か】【月：げつ】あります。"
+                  rom="Ichi-nen wa jū-ni kagetsu arimasu."
+                  tr_en="There are twelve months in a year."
+                  tr_de="Ein Jahr hat zwölf Monate."
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】に【６：ろっ】【ヶ：か】【月：げつ】【住：す】んでいました。"
+                  rom="Nihon ni rokkagetsu sunde imashita."
+                  tr_en="I lived in Japan for six months."
+                  tr_de="Ich habe sechs Monate lang in Japan gewohnt."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <!--
+              jisho has n3
+              秒：びょう：seconds
+              いちびょう
+              よんびょう
+              ななびょう
+            -->
+            <word
+              w="【十：じゅう】【秒：びょう】【間：かん】"
+              rom="jū-byō-kan"
+              tr_en="for ten seconds"
+              tr_de="zehn Sekunden lang"
+              lvl="n3"
+              id="jūbyōkan-for10seconds"
+              HIDDEN="true"
+            />
+            <word
+              w="【段：だん】"
+              rom="dan"
+              tr_en="(flight of) steps; (row of) stitches; counter for breaks in written language (or speech, etc.)"
+              lvl="n3"
+              id="dan-flightofsteps"
+              HIDDEN="true"
+            />
+            <word
+              w="【氏：し】"
+              rom="shi"
+              tr_en="Mr; Mrs; Miss; clan; counter for people"
+              hint_en="suffix"
+              lvl="n3"
+              id="shi-clan"
+              HIDDEN="true"
+            />
+            <word
+              w="【課：か】"
+              rom="ka"
+              tr_en="lesson; section (in an organization); division; counter for lessons and chapters (of a book)"
+              hint_en="suffix"
+              lvl="n3"
+              id="ka-lesson"
+              HIDDEN="true"
+            />
+            <!-- rōmaji not unique
+              w="【箇：か】"
+              rom="ka"
+              tr_en="counter for the ichi-ni-san counting system (usu. directly preceding the item being counted)"
+              lvl="n1"
+              id="ka-counter"
+              HIDDEN="true"
+            -->
+            <word
+              w="【筋：すじ】"
+              rom="suji"
+              tr_en="artery; muscle; fibre; storyline; source; channel; counter for long thin things; counter for roads or blocks when giving directions"
+              lvl="n3"
+              id="suji-counter"
+              HIDDEN="true"
+            >
+                <!-- should make two entries, one here as a counter, another for the word -->
+                <!-- 確かな筋 - tashika na suji - reliable source (of information) - lib0 -->
+            </word>
+            <word
+              w="【種：しゅ】【類：るい】"
+              rom="shurui"
+              tr_en="variety; kind; type; category"
+              hint_en="counter"
+              studyInContext="preferred"
+              lvl="n3"
+              id="shurui-type"
+              HIDDEN="true"
+              rem="is this always biological, or more general?"
+            >
+                <keep_apart_from id="shu-species" />
+                <keep_apart_from id="isshu-kind" />
+                <phrase
+                  ph="【二：に】【種：しゅ】【類：るい】の【魚：さかな】"
+                  rom="ni-shurui no sakana"
+                  tr_en="two types of fish"
+                  tr_de="zwei Arten von Fisch"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【題：だい】"
+              rom="dai"
+              tr_en="title; subject; theme; topic; problem (on a test); question; counter for questions (on a test)"
+              lvl="n3"
+              id="dai-topic"
+              HIDDEN="true"
+            />
+            <word
+              w="【対：つい】"
+              rom="tsui"
+              tr_en="pair; set; antithesis; counter for items that come in pairs; counter for sets (of clothes, small furniture, utensils, etc.)"
+              lvl="n3"
+              id="tsui-pair"
+              HIDDEN="true"
+            />
+            <word
+              w="【語：ご】"
+              rom="go"
+              tr_en="counter for words"
+              lvl="n3"
+              id="go-word"
+              HIDDEN="true"
+            >
+                <!-- ５０語以内で書きなさい - Write in less than 50 words (lib0) -->
+            </word>
+            <!-- section
+              name_en="番: Position, turn, sport matches"
+              name_de="番: Position, Spielrunde, Sport-Match"
+            -->
+            <!-- 番 is N3 (but 一番 is N5) -->
+            <!--
+                にばん
+                なんばん？
+            -->
+            <!-- /section -->
+            <!-- section
+              name_en="切れ: Slices, pieces, scraps"
+              name_de="切れ: Stücke, Schnitte, Scheiben"
+            -->
+            <!-- 切れ is N3 -->
+            <!--
+              w="【一：ひと】【切：き】れの【牛：ぎゅう】【肉：にく】"
+              rom="hitokire no gyūniku"
+              tr_en="one slice of beef"
+              tr_de="ein Stück Rindfleisch"
+              lvl="-"
+              Jpod101 has 一切れのチョコレートケーキ
+              Aber 二切れの牛肉 ist anscheinend falsch: https://hinative.com/questions/20325749
+              牛肉を二切れ買いました。
+              lib0 has どうか私にパンを一切れください。Please give me a piece of bread.
+              Ausserdem gibt es noch 切り: counter for thick slices; counter for cuts (fish, meat)
+           -->
+            <!-- /section -->
+            <!-- section
+              name_en="円: Yen"
+              name_de="円: Yen"
+            -->
+            <!-- 円：えん is n3 ??? -->
+            <!-- /section -->
+
+            <!-- n2 counters -->
+            <!-- section
+              name_en="粒: Grains, beads, drops"
+              name_de="粒: Körner, Kügelchen"
+            -->
+            <!-- 粒：つぶ is n2 -->
+            <!-- /section -->
+        </section>
+    </unit>
+</vocabulary>

@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N2 adverbs"
+      name_de="N2 Adverbien"
+      name_fr="Les adverbes N2"
+      name_it="N2 avverbi"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="adverb"
+      defaultHint_de="Adverb"
+      lvl="n2"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="false"
+    >
+        <section>
+            <word
+              w="【漸：ようや】く"
+              rom="yōyaku"
+              tr_en="at last; narrowly; hardly"
+              tr_de="endlich; knapp; kaum"
+              lvl="n2"
+              id="yōyaku-finally"
+              usuallyInKana="true"
+            >
+                <sentence
+                  s="【探：さが】していたものがようやく【見：み】つかった。"
+                  rom="Sagashite ita mono ga yōyaku mitsukatta."
+                  tr_en="The thing I was looking for has finally turned up!"
+                  tr_de="Endlich habe ich gefunden, was ich gesucht habe!"
+                  lvl="n2"
+                  origin="Oxford p.91"
+                />
+            </word>
+            <word
+              w="【早：さっ】【速：そく】"
+              rom="sassoku"
+              tr_en="at once; immediately"
+              tr_de="sofort; unmittelbar"
+              lvl="n2"
+              id="sassoku-atonce"
+            >
+                <keep_apart_from id="sugu-immediately" />
+            </word>
+            <word
+              w="【流石：さすが】"
+              rom="sasuga"
+              tr_en="as one would expect; all the same"
+              tr_de="wie erwartet; nichtsdestotrotz"
+              lvl="n2"
+              hasCombinedReading="true"
+              id="sasuga-asexpected"
+              usuallyInKana="true"
+            />
+            <word
+              w="【転：てん】【々：てん】"
+              rom="ten-ten"
+              tr_en="moving from place to place; being passed around repeatedly"
+              tr_de="von Ort zu Ort ziehend; wiederholt herumgereicht werden"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n2"
+              category="motion"
+              id="tenten-moving"
+            />
+            <word
+              w="【飽：あ】くまで"
+              rom="aku made"
+              tr_en="to the bitter end; stubbornly"
+              tr_de="bis zum bitteren Ende; stur"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n2"
+              id="akumade-stubbornly"
+            />
+            <word
+              w="あちらこちら"
+              rom="achira kochira"
+              tr_en="here and there; all around"
+              tr_de="hier und dort; überall"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n2"
+              id="achirakochira-hereandthere"
+            />
+            <word
+              w="【改：あらた】めて"
+              rom="aratamete"
+              tr_en="yet again; anew; deliberately"
+              tr_de="schon wieder; einmal mehr; absichtlich"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n2"
+              id="aratamete-yetagain"
+            />
+            <word
+              w="【行：い】き【成：な】り"
+              rom="ikinari"
+              tr_en="abruptly; all of a sudden"
+              tr_de="abrupt; plötzlich"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n2"
+              id="ikinari-abruptly"
+            />
+            <word
+              w="【一：いち】【々：いち】"
+              rom="ichi-ichi"
+              tr_en="one by one; each and every"
+              tr_de="einer nach dem anderen; jeder"
+              lvl="n2"
+              id="ichiichi-onebyone"
+            />
+            <word
+              w="【間：ま】もなく"
+              rom="mamonaku"
+              tr_en="soon; shortly; before long"
+              tr_de="bald; nächstens; in Kürze"
+              lvl="n2"
+              id="mamonaku-soon"
+            />
+            <word
+              w="すっきり"
+              rom="sukkiri"
+              tr_en="feeling refreshed; shapely"
+              tr_de="sich erholt fühlen; wohlgeformt"
+              lvl="n2"
+              id="sukkiri-feelingrefreshed"
+            />
+            <word
+              w="【思：おも】い【切：き】り"
+              rom="omoikiri"
+              tr_en="with all one's strength; with all one's heart"
+              tr_de="mit aller Kraft; von Herzen"
+              lvl="n2"
+              id="omoikiri-withallstrength"
+            />
+            <word
+              w="【相：あい】【変：か】わらず"
+              rom="aikawarazu"
+              tr_en="as ever; as usual; the same"
+              tr_de="wie immer; wie gewöhnlich; dasselbe"
+              lvl="n2"
+              id="aikawarazu-asever"
+            />
+            <word
+              w="【若：も】しかすると"
+              rom="moshikasuruto"
+              tr_en="perhaps; possibly; maybe"
+              tr_de="vielleicht; möglicherweise"
+              lvl="n2"
+              id="moshikasuruto-perhaps"
+            />
+
+            <!-- HIDDEN -->
+            <word
+              w="【再：さい】【三：さん】"
+              rom="saisan"
+              tr_en="again and again; repeatedly"
+              hint_en="adverb"
+              lvl="n2"
+              id="saisan-repeatedly"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="tabitabi-often" />
+            </word>
+            <word
+              w="【大：おお】【凡：よそ】"
+              rom="ōyoso"
+              tr_en="about; roughly; approximately / generally; on the whole; as a rule"
+              hint_en="adverb; noun"
+              lvl="n2"
+              id="ōyoso-roughly"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="hobo-almost" />
+                <keep_apart_from id="yaku-about" />
+                <keep_apart_from id="kurai-approximately" />
+                <keep_apart_from id="goro-approxtime" />
+                <keep_apart_from id="ōzappa-rough" />
+                <keep_apart_from id="zatto-roughly" />
+            </word>
+            <word
+              w="ぶつぶつ"
+              rom="butsu-butsu"
+              tr_en="grunt; grumble; complaint; mutter / pimples; spots; eruption; rash / cutting into small pieces / simmering"
+              hint_en="noun; adverb (fukushi); adverb taking the 'to' particle"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【続：ぞく】【々：ぞく】"
+              rom="zoku-zoku"
+              tr_en="successively; one after another"
+              hint_en="adverb (fukushi); adverb taking the 'to' particle"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【一：いち】【段：だん】"
+              rom="ichidan"
+              tr_en="more; much more; still more; all the more; step; rung; level; rank; paragraph; passage"
+              hint_en="adverb taking the 'to' particle; adverb; noun"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【思：おも】いっきり"
+              rom="omoikkiri"
+              tr_en="with all one's strength; with all one's heart; to the utmost; resolution; decisiveness"
+              hint_en="adverb; noun"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【着：ちゃく】【々：ちゃく】"
+              rom="chaku-chaku"
+              tr_en="steadily"
+              hint_en="adverb (fukushi); adverb taking the 'to' particle"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【月：げつ】【末：まつ】"
+              rom="getsumatsu"
+              tr_en="end of the month"
+              hint_en="noun; adverb (fukushi)"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="うんと"
+              rom="unto"
+              tr_en="a great deal; very much; a lot; with a great amount of effort"
+              hint_en="adverb"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="その【上：うえ】"
+              rom="sono ue"
+              tr_en="in addition; furthermore; above (which); on top of (which)"
+              hint_en="conjunction; adverbial noun"
+              lvl="n2"
+              id="sonoue-furthermore"
+              HIDDEN="true"
+            />
+            <word
+              w="【元：もと】【々：もと】"
+              rom="moto-moto"
+              tr_en="originally; by nature; from the start"
+              hint_en="adverb; no-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="あれこれ"
+              rom="are-kore"
+              tr_en="this and that; this or that; one thing or another; this way and that"
+              hint_en="adverb; pronoun"
+              lvl="n2"
+              id="arekore-thisandthat"
+              HIDDEN="true"
+            />
+            <word
+              w="【一：ひと】【先：ま】ず"
+              rom="hitomazu"
+              tr_en="for now; for the time being; after a fashion"
+              hint_en="adverb"
+              lvl="n2"
+              usuallyInKana="true"
+              id="hitomazu-fornow"
+              HIDDEN="true"
+            />
+            <word
+              w="【一：ひと】【通：とお】り"
+              rom="hitotōri"
+              tr_en="generally; in the main; roughly; ordinary; common"
+              hint_en="noun; adverb"
+              lvl="n2"
+              id="hitotōri-generally"
+              HIDDEN="true"
+            />
+            <word
+              w="【何：なに】しろ"
+              rom="nani shiro"
+              tr_en="in any case; at any rate; anyhow; anyway; as you know; for you see; particularly / because; since; for; after all"
+              hint_en="adverb (fukushi)"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【何：なん】となく"
+              rom="nanto naku"
+              tr_en="somehow or other; for some reason or another; without knowing why"
+              hint_en="adverb (fukushi)"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【点：てん】【々：てん】"
+              rom="ten-ten"
+              tr_en="here and there; little by little; spots"
+              hint_en="adverb"
+              lvl="n2"
+              id="tenten-hereandthere"
+              HIDDEN="true"
+            />
+            <word
+              w="【生：い】き【生：い】き"
+              rom="ikīki"
+              tr_en="in a lively way; vividly; freshly; animatedly; actively; energetically"
+              hint_en="adverb; adverb taking the 'to' particle; suru verb"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【愈：いよいよ】"
+              rom="iyoiyo"
+              tr_en="more and more; all the more; increasingly; at last; finally; beyond doubt; (at the) last moment; worst possible time"
+              hint_en="adverb"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【是：ぜ】【非：ひ】とも"
+              rom="zehitomo"
+              tr_en="by all means; at all costs; absolutely"
+              hint_en="adverb (fukushi)"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="いつの【間：ま】にか"
+              rom="itsu no ma ni ka"
+              tr_en="before one knows; before one becomes aware of; unnoticed; unawares"
+              hint_en="adverb"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="そっと"
+              rom="sotto"
+              tr_en="softly; gently; quietly; secretly; stealthily; to leave alone; to leave as it is"
+              hint_en="adverb; suru verb; suru verb"
+              lvl="n2"
+              id="sotto-softly"
+              HIDDEN="true"
+            />
+            <word
+              w="どっと"
+              rom="dotto"
+              tr_en="bursting out (laughter); breaking out (applause); roaring; whooping; in a rush; in a surge; flooding in; pouring in; suddenly; all of a sudden"
+              hint_en="adverb"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="はきはき"
+              rom="haki-haki"
+              tr_en="briskly; smartly; promptly; clearly; lucidly"
+              hint_en="adverb taking the 'to' particle; adverb; suru verb"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【兎：と】も【角：かく】"
+              rom="tomokaku"
+              tr_en="anyhow; anyway; somehow or other; generally speaking; in any case; be that as it may / apart from ...; setting ... aside"
+              hint_en="adverb (fukushi)"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【沁：し】み【沁：じ】み"
+              rom="shimi-jimi"
+              tr_en="keenly; deeply; fully; heartily; seriously; earnestly / calmly; quietly; softly / fixedly (gazing, staring); intently"
+              hint_en="adverb (fukushi); adverb taking the 'to' particle"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【順：じゅん】【々：じゅん】"
+              rom="jun-jun"
+              tr_en="in order; in turn"
+              hint_en="adverb (fukushi); noun"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【一：いち】【応：おう】"
+              rom="ichiō"
+              tr_en="more or less; though not quite satisfactorily"
+              hint_en="noun; adverb"
+              lvl="n2"
+              id="ichiō-moreorless"
+              HIDDEN="true"
+            />
+            <word
+              w="【割：わり】と"
+              rom="warito"
+              tr_en="comparatively; relatively; fairly; rather; pretty; unexpectedly"
+              hint_en="adverb"
+              lvl="n2"
+              id="warito-fairly"
+              HIDDEN="true"
+            />
+            <word
+              w="まごまご"
+              rom="mago-mago"
+              tr_en="confused; flustered; at a loss"
+              hint_en="adverb (fukushi); suru verb"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="うっかり"
+              rom="ukkari"
+              tr_en="carelessly; thoughtlessly; inadvertently"
+              hint_en="adverb (fukushi); adverb taking the 'to' particle; suru verb"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【疾：と】っくに"
+              rom="tokku ni"
+              tr_en="long ago; a long time ago; already"
+              hint_en="adverb (fukushi)"
+              lvl="n2"
+              HIDDEN="true"
+            />
+        </section>
+    </unit>
+</vocabulary>

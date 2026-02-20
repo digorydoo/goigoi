@@ -1,0 +1,604 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 adverbs ③"
+      name_de="N3 Adverbien ③"
+      name_fr="Les adverbes N3 ③"
+      name_it="N3 avverbi ③"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="adverb"
+      defaultHint_de="Adverb"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="false"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="がっかり"
+              rom="gakkari"
+              tr_en="disappointed; downhearted; exhausted"
+              tr_de="enttäuscht; niedergeschlagen; erschöpft"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n3"
+              category="onomatopoeia, mood"
+              id="gakkari-disappointed"
+            >
+                <sentence
+                  s="【少：すこ】しがっかりしたよ。"
+                  rom="Sukoshi gakkari shita yo."
+                  tr_en="I was a little disappointed."
+                  tr_de="Ich war ein wenig enttäuscht."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】をがっかりさせないでね。"
+                  rom="Watashi o gakkari sasenai de ne."
+                  tr_en="Don't let me down."
+                  tr_de="Enttäusche mich nicht."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【会：かい】【議：ぎ】の【後：あと】【中：なか】【川：がわ】さんはがっかりした【顔：かお】で【帰：かえ】ってきた。"
+                  rom="Kaigi no ato Nakagawa-san wa gakkari shita kao de kaette kita."
+                  tr_en="After the meeting Ms Nakagawa returned looking downcast."
+                  tr_de="Nach der Sitzung kehrte Frau Nakagawa mit bekümmertem Gesicht zurück."
+                  lvl="n3"
+                  origin="Oxford p.110"
+                />
+            </word>
+            <word
+              w="イライラ"
+              rom="ira-ira"
+              tr_en="to get annoyed; to lose patience; to be on edge"
+              tr_de="sich ärgern; die Geduld verlieren; nervös sein"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n3"
+              category="onomatopoeia"
+              id="iraira-nervous"
+            >
+                <phrase
+                  ph="イライラしている"
+                  rom="ira-ira shite iru"
+                  tr_en="to be upset"
+                  tr_de="aufgebracht sein"
+                  lvl="n3"
+                  origin="Oxford p.93"
+                />
+                <sentence
+                  s="【本：ほん】【当：とう】にイライラします。"
+                  rom="Hontō ni ira-ira shimasu."
+                  tr_en="It really gets on my nerves."
+                  tr_de="Es nervt wirklich."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="lib0 has いらいら"
+                />
+            </word>
+            <word
+              w="ぐっすり"
+              rom="gussuri"
+              tr_en="soundly (sleeping); fast (asleep)"
+              tr_de="tief und fest (schlafend)"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n3"
+              category="onomatopoeia"
+              id="gussuri-soundly"
+            >
+                <phrase
+                  ph="ぐっすり【眠：ねむ】っている"
+                  rom="gussuri nemutte iru"
+                  tr_en="to be fast asleep"
+                  tr_de="tief schlafen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="ぐっすりお【休：やす】みなさい。"
+                  rom="Gussuri o-yasumi nasai."
+                  tr_en="Sleep tight."
+                  tr_de="Schlaf tief."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【夕：ゆう】べはぐっすり【眠：ねむ】れたよ。"
+                  rom="Yūbe wa gussuri nemureta yo."
+                  tr_en="I was able to sleep well last night."
+                  tr_de="Ich konnte letzte Nacht gut schlafen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【中：なか】【々：なか】"
+              rom="naka-naka"
+              tr_en="fairly; rather; not readily"
+              tr_de="einigermassen; ziemlich; nicht leicht"
+              hint_en="adverb; noun"
+              hint_de="Adverb; noun"
+              lvl="n3"
+              id="nakanaka-fairly"
+              usuallyInKana="true"
+              rem="jisho says it's also a na-adjective, but ChatGPT disagrees"
+            >
+                <keep_apart_from id="daibu-greatly" />
+                <keep_apart_from id="taishita-bigdeal" />
+                <keep_apart_from id="ōini-verymuch" />
+                <keep_apart_from id="kanari-fairly" />
+                <keep_apart_from id="zuibun-very" />
+                <!--
+                    Acc. to jisho, kanji 中々 is used for the meaning of middle, half-way; but this is unverified
+                -->
+                <sentence
+                  s="【三：さん】【回：かい】もやってみたけどなかなかできません。"
+                  rom="San-kai mo yatte mita kedo naka-naka dekimasen."
+                  tr_en="I've tried it three times, but I just can't do it."
+                  tr_de="Ich habe es dreimal versucht, aber ich schaff' es einfach nicht."
+                  explanation_en="In this context,「なかなか」suggests difficulty and lack of success."
+                  explanation_de="In diesem Kontext deutet「なかなか」auf Schwierigkeiten und Erfolglosigkeit hin."
+                  lvl="n3"
+                  origin="Oxford p.115"
+                />
+            </word>
+            <word
+              w="【寧：むし】ろ"
+              rom="mushiro"
+              tr_en="(I would) rather; prefer; instead"
+              tr_de="(Ich würde) lieber; bevorzugen; stattdessen"
+              usuallyInKana="true"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n3"
+              id="mushiro-wouldrather"
+            >
+                <phrase
+                  ph="【甘：あま】いよりむしろ【辛：から】い"
+                  rom="amai yori mushiro karai"
+                  tr_en="better spicy than sweet"
+                  tr_de="lieber scharf als süss"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】はむしろここにいたい。"
+                  rom="Watashi wa mushiro koko ni itai."
+                  tr_en="I would rather stay here."
+                  tr_de="Ich würde lieber hier bleiben."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="バスよりむしろ【歩：ある】きたい。"
+                  rom="Basu yori mushiro arukitai."
+                  tr_en="I'd rather walk than take a bus."
+                  tr_de="Ich würde lieber gehen, als den Bus zu nehmen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【不：ふ】【図：と】"
+              rom="futo"
+              tr_en="incidentally; unexpectedly; unintentionally"
+              tr_de="nebenbei; unerwarteterweise; unabsichtlich"
+              lvl="n3"
+              id="futo-incidentally"
+            >
+                <keep_apart_from id="hyotto-perhaps" />
+                <keep_apart_from id="omowazu-unintentionally" />
+            </word>
+            <word
+              w="ざっと"
+              rom="zatto"
+              tr_en="roughly; approximately; more or less"
+              tr_de="ungefähr; schätzungsweise; mehr oder weniger"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n3"
+              id="zatto-roughly"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="hobo-almost" />
+                <keep_apart_from id="yaku-about" />
+                <keep_apart_from id="kurai-approximately" />
+                <keep_apart_from id="goro-approxtime" />
+                <keep_apart_from id="ōzappa-rough" />
+                <keep_apart_from id="ōyoso-roughly" />
+            </word>
+            <word
+              w="【偶：たま】【々：たま】"
+              rom="tama-tama"
+              tr_en="occasionally; once in a while; seldom; casually; unexpectedly; accidentally; by chance"
+              hint_en="adverb"
+              lvl="n3"
+              id="tamatama-seldom"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="tamani-occasionally" />
+                <keep_apart_from id="mettani-rarely" />
+                <keep_apart_from id="mare-rare" />
+            </word>
+            <word
+              w="【度：たび】【々：たび】"
+              rom="tabi-tabi"
+              tr_en="often; again and again; over and over again; repeatedly"
+              hint_en="adverb"
+              lvl="n3"
+              id="tabitabi-often"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="yoku-often" />
+                <keep_apart_from id="kurikaesu-repeat" />
+                <keep_apart_from id="kureguremo-ovandov" />
+                <keep_apart_from id="shibashiba-repeatedly" />
+                <keep_apart_from id="saisan-repeatedly" />
+            </word>
+            <word
+              w="【近：ちか】【頃：ごろ】"
+              rom="chika goro"
+              tr_en="lately; recently; nowadays"
+              hint_en="noun; adverb"
+              lvl="n3"
+              id="chikagoro-lately"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="saikin-recent" />
+                <keep_apart_from id="konogoro-nowadays" />
+                <keep_apart_from id="sakini-ahead" />
+                <keep_apart_from id="sendatte-otherday" />
+            </word>
+            <word
+              w="【真：ま】【逆：さか】"
+              rom="masaka"
+              tr_en="by no means; you don't say; unexpectedly"
+              tr_de="sicher nicht; was du nicht sagst; unerwartet"
+              hint_en="noun; adverb"
+              lvl="n3"
+              usuallyInKana="true"
+              id="masaka-bynomeans"
+              HIDDEN="true"
+              rem="needs studyInContext"
+            >
+                <!--
+                    by no means! never! well, I never! you don't say!
+                -->
+            </word>
+            <word
+              w="あいにく"
+              rom="ainiku"
+              tr_en="unfortunately; sorry, but..."
+              tr_de="leider; tut mir leid, aber..."
+              lvl="n3"
+              id="ainiku-unfortunately"
+            />
+            <word
+              w="のんびり"
+              rom="nonbiri"
+              tr_en="at leisure; in a relaxed manner; quietly"
+              tr_de="entspannt; ruhig; friedlich"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n3"
+              category="onomatopoeia"
+              id="nonbiri-quietly"
+            />
+            <word
+              w="お【互：たが】い"
+              rom="o-tagai"
+              tr_en="each other; one another; mutual"
+              tr_de="einander; gegenseitig"
+              lvl="n3"
+              id="otagai-eachother"
+            />
+            <word
+              w="【態：わざ】と"
+              rom="wazato"
+              tr_en="on purpose; deliberately"
+              tr_de="beabsichtigt; vorsätzlich; bewusst"
+              lvl="n3"
+              id="wazato-onpurpose"
+              usuallyInKana="true"
+            />
+
+            <!-- HIDDEN -->
+            <word
+              w="【略：ほぼ】"
+              rom="hobo"
+              tr_en="almost; roughly; approximately"
+              hint_en="adverb"
+              lvl="n3"
+              id="hobo-almost"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="yaku-about" />
+                <keep_apart_from id="kurai-approximately" />
+                <keep_apart_from id="goro-approxtime" />
+                <keep_apart_from id="ōzappa-rough" />
+                <keep_apart_from id="ōyoso-roughly" />
+                <keep_apart_from id="zatto-roughly" />
+            </word>
+            <word
+              w="【矢：や】【張：は】り"
+              rom="yahari"
+              tr_en="as expected; sure enough; after all"
+              hint_en="adverb"
+              lvl="n3"
+              usuallyInKana="true"
+              id="yahari-asexpected"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="yappari-afterall" />
+            </word>
+            <word
+              w="【程：てい】【度：ど】"
+              rom="teido"
+              tr_en="degree; amount; grade; standard; of the order of (following a number); about; approximately"
+              hint_en="noun; adverb; noun, used as a suffix"
+              lvl="n3"
+              id="teido-degree"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="suijun-level" />
+            </word>
+            <word
+              w="【直：ただ】ちに"
+              rom="tadachi ni"
+              tr_en="at once; immediately; right away; without delay; directly (face, lead to, etc.); automatically (mean, result in, etc.)"
+              hint_en="adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【半：なか】ば"
+              rom="nakaba"
+              tr_en="middle; halfway; midway; half (of); one half; half (e.g. done, jokingly); partly; in part; partially; mostly; almost; nearly"
+              hint_en="noun; suffix; adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【後：のち】"
+              rom="nochi"
+              tr_en="later; afterwards; future; after one's death; descendant"
+              hint_en="noun; adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【再：ふたた】び"
+              rom="futatabi"
+              tr_en="again; once more; a second time"
+              hint_en="adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【唯：ゆい】【一：いつ】"
+              rom="yuiitsu"
+              tr_en="only; sole; unique"
+              hint_en="noun; adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【徐：じょ】【々：じょ】"
+              rom="jo-jo"
+              tr_en="slow; gradual; steady; calm; composed; relaxed"
+              hint_en="adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="どうしても"
+              rom="dōshite mo"
+              tr_en="by all means; at any cost; no matter what; at any rate; surely; whether (one is) willing or not; willingly or unwillingly; willy-nilly; on no account; by no means; in the end; in the long run; after all; eventually"
+              hint_en="expression; adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【少：すこ】しも"
+              rom="sukoshi mo"
+              tr_en="anything of; not one bit"
+              tr_de="irgend etwas; kein bisschen"
+              hint_en="expression; adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【何：いず】れ"
+              rom="izure"
+              tr_en="where; which; who; anyway; anyhow; at any rate; sooner or later; one of these days"
+              hint_en="adverb; pronoun"
+              lvl="n3"
+              usuallyInKana="true"
+              HIDDEN="true"
+            />
+            <word
+              w="【益：ます】【々：ます】"
+              rom="masu-masu"
+              tr_en="increasingly; more and more; decreasingly (when declining); less and less"
+              hint_en="adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【多：た】【少：しょう】"
+              rom="tashō"
+              tr_en="a little; some; somewhat; slightly; to some degree; to some extent / amount; quantity; number"
+              hint_en="adverb; noun"
+              lvl="n3"
+              id="tashō-slightly"
+              HIDDEN="true"
+            />
+            <word
+              w="【精：せい】【々：ぜい】"
+              rom="sei-zei"
+              tr_en="at the most; at best / to the utmost; as much as possible; as much as one can"
+              hint_en="adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【途：と】【端：たん】"
+              rom="totan"
+              tr_en="just (now, at the moment, etc.); just as; in the act of; as soon as; at the moment that"
+              hint_en="noun; adverb"
+              lvl="n3"
+              id="totan-just"
+              HIDDEN="true"
+            />
+            <word
+              w="【常：つね】に"
+              rom="tsune ni"
+              tr_en="always; constantly"
+              hint_en="adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【正：まさ】に"
+              rom="masa ni"
+              tr_en="exactly; just; precisely; really; truly; surely; certainly; without doubt / right (when); just (as) / just (about to); on the point of; on the verge of; on the brink of / really (ought to); certainly (should); naturally"
+              hint_en="adverb"
+              lvl="n3"
+              id="masani-just"
+              HIDDEN="true"
+            />
+            <word
+              w="【直：じか】に"
+              rom="jika ni"
+              tr_en="directly; in person; firsthand"
+              hint_en="adverb"
+              lvl="n3"
+              id="jikani-directly"
+              HIDDEN="true"
+            />
+            <word
+              w="【単：たん】に"
+              rom="tan ni"
+              tr_en="simply; merely; only; solely"
+              hint_en="adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【共：とも】に"
+              rom="tomo ni"
+              tr_en="together; jointly / at the same time; with; as ...; including; along with / both"
+              hint_en="adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【稍：やや】"
+              rom="yaya"
+              tr_en="a little; partially; somewhat; slightly; semi-; -ish; on the ... side; a short time; a while"
+              hint_en="adverb; noun or verb acting prenominally"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【既：すで】に"
+              rom="sude ni"
+              tr_en="already / previously; before / undeniably; unmistakably; in the first place"
+              hint_en="expression; adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【頻：しき】りに"
+              rom="shikiri ni"
+              tr_en="frequently; repeatedly; often; incessantly; constantly / eagerly; keenly; strongly; intently / hard; terribly; extremely; severely"
+              hint_en="expression; adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【更：さら】に"
+              rom="sara ni"
+              tr_en="furthermore; again; after all; more and more; moreover; even more"
+              hint_en="adverb; conjunction"
+              lvl="n3"
+              usuallyInKana="true"
+              HIDDEN="true"
+            />
+            <word
+              w="どんなに"
+              rom="donna ni"
+              tr_en="how; how much"
+              hint_en="adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【何時：いつ】か"
+              rom="itsu ka"
+              tr_en="sometime; someday; one day; some time or other; the other day; in due course; in time"
+              hint_en="adverb"
+              hasCombinedReading="true"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【遂：つい】に"
+              rom="tsui ni"
+              tr_en="finally; at last; in the end; after all; never (happened)"
+              hint_en="adverb"
+              lvl="n3"
+              usuallyInKana="true"
+              HIDDEN="true"
+            />
+            <word
+              w="【要：よう】するに"
+              rom="yōsuru ni"
+              tr_en="in short; in a word; to sum up; to put it simply; to make a long story short; after all"
+              hint_en="expression; adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="まあ"
+              rom="mā"
+              tr_en="just (e.g. 'just wait here'); come now; now, now; tolerably; passably; moderately; oh dear"
+              hint_en="adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="その【内：うち】"
+              rom="sono uchi"
+              tr_en="before very long; soon; someday; one of these days; sooner or later; of the previously mentioned; of that number; among them; among others"
+              hint_en="expression; adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【万：まん】【一：いち】"
+              rom="man'ichi"
+              tr_en="(unlikely event of) emergency; the worst(-case scenario); 10000 to 1 / (if) by some chance; by some possibility; in the unlikely event that"
+              hint_en="noun / adverb"
+              lvl="n3"
+              HIDDEN="true"
+            />
+            <word
+              w="【年：ねん】【中：じゅう】"
+              rom="nenjū"
+              tr_en="whole year; all year round; throughout the year; always; all the time; perpetually; during an era; middle class (of a nursery school, etc.)"
+              hint_en="noun; adverb; only applies to ねんじゅう; only applies to ねんぢゅう; noun; only applies to ねんちゅう"
+              lvl="n3"
+              HIDDEN="true"
+            />
+        </section>
+    </unit>
+</vocabulary>

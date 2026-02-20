@@ -1,0 +1,828 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N2 verbs ①"
+      name_de="N2-Verben ①"
+      name_fr="Les verbes N2 ①"
+      name_it="Verbi N2 ①"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="verb"
+      defaultHint_de="Verb"
+      lvl="n2"
+      translations="en"
+      requiresSentences="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【承：うけたまわ】る"
+              rom="uketamawaru"
+              tr_en="to receive (a request); to hear"
+              tr_de="(eine Anfrage) bekommen; hören"
+              hint_en="extra-modest form of 受ける, 聞く"
+              hint_de="bescheidene Form von 受ける, 聞く"
+              lvl="n2"
+              id="uketamawaru-receive"
+            >
+                <phrase
+                  ph="お【話：はなし】を【承：うけたまわ】る"
+                  rom="o-hanashi o uketamawaru"
+                  tr_en="to receive the message; to hear a story (extra-modest)"
+                  tr_de="die Nachricht erhalten; eine Rede anhören (bescheiden)"
+                  lvl="n2"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ご【注：ちゅう】【文：もん】を【承：うけたまわ】りました。"
+                  rom="Go-chūmon o uketamawarimashita."
+                  tr_en="We have received your order. (extra-modest)"
+                  tr_de="Wir haben Ihre Bestellung erhalten. (bescheiden)"
+                  lvl="n2"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【萎：しぼ】む"
+              rom="shibomu"
+              tr_en="to wither (of flowers, etc.); to fade (away)"
+              tr_de="verwelken (Blumen, usw.); verblassen"
+              hint_en="v.i."
+              usuallyInKana="true"
+              lvl="n2"
+              category="plant, nature"
+              id="shibomu-wither"
+            >
+                <phrase
+                  ph="しぼんだ【花：はな】"
+                  rom="shibonda hana"
+                  tr_en="wilted flower"
+                  tr_de="verwelkte Blume"
+                  lvl="n2"
+                />
+                <sentence
+                  s="【花：はな】がしぼんだ。"
+                  rom="Hana ga shibonda."
+                  tr_en="The flowers withered up."
+                  tr_de="Die Blumen sind verwelkt."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【放：ほう】る"
+              rom="hōru"
+              tr_en="to throw sth. (carelessly); to neglect sth.; to abandon sth."
+              tr_de="etw. (achtlos) werfen; etw. vernachlässigen; etw. aufgeben"
+              hint_en="v.t."
+              lvl="n2"
+              id="hōru-fling"
+              studyInContext="preferred"
+              rem="appears in GENKI2 L22 vocab section as 放っておく"
+            >
+                <keep_apart_from id="hotteoku-leavealone" />
+                <keep_together id="hotteoku-leavealone" />
+                <phrase
+                  ph="【放：ほ】っておく"
+                  rom="hotteoku"
+                  tr_en="to leave sb. alone; to neglect sth."
+                  tr_de="jem. sein lassen; etw. vernachlässigen"
+                  hasDifferentForm="true"
+                  lvl="n2"
+                  origin="GENKI2 p.231"
+                  rem="often pronounced hotteoku instead of hōtteoku"
+                />
+                <sentence
+                  s="カバンを【隅：すみ】に【放：ほう】って、ソファに【座：すわ】った。"
+                  rom="Kaban o sumi ni hōtte, sofa ni suwatta."
+                  tr_en="I tossed the bag into a corner, and sat down on the sofa."
+                  tr_de="Ich schmiss die Tasche in eine Ecke und setzte mich auf das Sofa."
+                  lvl="n2"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【少：すこ】し【放：ほ】っておいてよ。"
+                  rom="Sukoshi hotteoite yo."
+                  tr_en="Give me some space."
+                  tr_de="Lass mich mal alleine."
+                  hasDifferentForm="true"
+                  lvl="n2"
+                  origin="GENKI2 p.228"
+                />
+            </word>
+            <word
+              w="【飢：う】える"
+              rom="ueru"
+              tr_en="to starve; to be famished; to be hungry"
+              tr_de="hungern; am verhungern sein; hungrig sein"
+              hint_en="v.i."
+              lvl="n2"
+              id="ueru-starve"
+            >
+                <phrase
+                  ph="【飢：う】えた【虎：とら】"
+                  rom="ueta tora"
+                  tr_en="a hungry tiger"
+                  tr_de="ein hungriger Tiger"
+                  lvl="n2"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【畳：たた】む"
+              rom="tatamu"
+              tr_en="to fold (clothes, umbrella); to close (a shop, business)"
+              tr_de="(Kleider) zusammenfalten; (Schirm) zuklappen; (Geschäft) schliessen"
+              hint_en="v.t."
+              lvl="n2"
+              id="tatamu-fold"
+              usuallyInKana="true"
+            >
+                <see id="tatami-floor" rem="noun" />
+                <sentence
+                  s="【布：ふ】【団：とん】をたたみなさい。"
+                  rom="Futon o tatami-nasai."
+                  tr_en="Fold up your mattress."
+                  tr_de="Falte deine Matratze zusammen."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【打：ぶ】【付：つ】かる"
+              rom="butsukaru"
+              tr_en="to collide; to bump into"
+              tr_de="kollidieren; zusammenprallen"
+              hint_en="v.i."
+              usuallyInKana="true"
+              lvl="n2"
+              category="motion"
+              id="butsukaru-collide"
+            >
+                <see id="butsukeru-hitsb" rem="v.t." />
+                <keep_apart_from id="butsukaru-alt1" />
+                <keep_apart_from id="butsukaru-alt2" />
+                <keep_together id="butsukaru-alt1" />
+                <keep_together id="butsukaru-alt2" />
+                <sentence
+                  s="【波：なみ】は【激：はげ】しく【岸：きし】にぶつかった。"
+                  rom="Nami wa hageshiku kishi ni butsukatta."
+                  tr_en="The waves crashed fiercly on the shore."
+                  tr_de="Die Wellen schlugen heftig gegen die Küste."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【打：ぶ】【付：つ】ける"
+              rom="butsukeru"
+              tr_en="to hit (e.g. one's head); to collide with sth."
+              hint_en="v.t."
+              usuallyInKana="true"
+              lvl="n2"
+              category="not-good"
+              id="butsukeru-hitsb"
+            >
+                <see id="butsukaru-collide" rem="v.i." />
+            </word>
+            <word
+              w="【打：ぶ】つかる"
+              rom="butsukaru"
+              tr_en="to strike against; to collide with; to clash"
+              lvl="n2"
+              id="butsukaru-alt1"
+              rem="alternative spelling; just to silence find-missing-goigoi"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="butsukaru-collide" />
+                <keep_together id="butsukaru-collide" />
+            </word>
+            <word
+              w="ぶつかる"
+              rom="butsukaru"
+              tr_en="to bump into; to run into; to collide with; to strike"
+              lvl="n2"
+              id="butsukaru-alt2"
+              rem="alternative spelling; just to silence find-missing-goigoi"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="butsukaru-collide" />
+                <keep_together id="butsukaru-collide" />
+            </word>
+            <word
+              w="【近：ちか】づける"
+              rom="chikadzukeru"
+              tr_en="to bring sth. near; to let sth. go near"
+              tr_de="etw. näher bringen; etw. näherkommen lassen"
+              hint_en="v.t."
+              lvl="n2"
+              id="chikadzukeru-bringnear"
+            >
+                <see id="chikadzuku-approach" rem="v.i." />
+            </word>
+            <word
+              w="【増：ふ】やす"
+              rom="fuyasu"
+              tr_en="to increase sth; to augment sth."
+              tr_de="etw. erhöhen; etw. erweitern"
+              hint_en="v.t."
+              lvl="n2"
+              category="general, maths"
+              id="fuyasu-increasesth"
+            >
+                <see id="fueru-increase" rem="v.i." />
+            </word>
+            <word
+              w="【足：た】る"
+              rom="taru"
+              tr_en="to be sufficient; to be enough; to be worth doing"
+              hint_en="v.i."
+              lvl="n2"
+              id="taru-beenough"
+            >
+                <keep_apart_from id="tariru-beenough" />
+                <keep_apart_from id="manzoku-adequate" />
+            </word>
+            <word
+              w="【放：ほ】っておく"
+              rom="hotteoku"
+              tr_en="to leave sb. alone; to neglect sth."
+              lvl="n2"
+              id="hotteoku-leavealone"
+              HIDDEN="true"
+              rem="is a phrase of hōru-fling"
+            >
+                <keep_apart_from id="hōru-fling" />
+                <keep_together id="hōru-fling" />
+            </word>
+            <word
+              w="【刻：きざ】む"
+              rom="kizamu"
+              tr_en="to cut fine; to chop up; to shred"
+              tr_de="fein schneiden; zerhacken; schnetzeln"
+              hint_en="v.t."
+              lvl="n2"
+              category="cooking"
+              id="kizamu-cutfine"
+            >
+                <phrase
+                  ph="【野：や】【菜：さい】を【刻：きざ】む"
+                  rom="yasai o kizamu"
+                  tr_en="to chop vegetables"
+                  tr_de="Gemüse schneiden"
+                  lvl="n2"
+                />
+                <!-- 心に刻む (こころにきざむ) To engrave something in one's heart; to remember deeply (ChatGPT) -->
+            </word>
+            <word
+              w="【誓：ちか】う"
+              rom="chikau"
+              tr_en="to swear; to vow; to take an oath"
+              tr_de="schwören; geloben; einen Eid ablegen"
+              hint_en="v.t."
+              lvl="n2"
+              id="chikau-vow"
+            >
+                <sentence
+                  s="もっと【本：ほん】を【読：よ】もうと【誓：ちか】いました。"
+                  rom="Motto hon o yomō to chikaimashita."
+                  tr_en="I've promised myself to read more books."
+                  tr_de="Ich habe mir geschworen, mehr Bücher zu lesen."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【出：で】【来：き】【上：あ】がる"
+              rom="dekiagaru"
+              tr_en="to be finished; to be ready (e.g. to serve or eat); to be very drunk"
+              hint_en="v.i."
+              lvl="n2"
+              id="dekiagaru-befinished"
+            >
+                <sentence
+                  s="【出：で】【来：き】【上：あ】がり！"
+                  rom="Dekiagari!"
+                  tr_en="Done! I'm finished!"
+                  tr_de="Fertig! Ich bin fertig!"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【刺：さ】さる"
+              rom="sasaru"
+              tr_en="to prick; to pierce; to get stuck (in)"
+              tr_de="stechen; durchstechen; steckenbleiben"
+              hint_en="v.i."
+              lvl="n2"
+              id="sasaru-prick"
+            >
+                <sentence
+                  s="【蜂：はち】に【刺：さ】されました。"
+                  rom="Hachi ni sasaremashita."
+                  tr_en="I was stung by a bee."
+                  tr_de="Ich bin von einer Biene gestochen worden."
+                  lvl="n2"
+                  origin="lib0"
+                  rem="similar Langenscheidt p.205; shouldn't it be sasararemashita???"
+                />
+            </word>
+            <word
+              w="【冷：ひ】やす"
+              rom="hiyasu"
+              tr_en="to cool; to chill; to refrigerate"
+              tr_de="kühlen; in den Kühlschrank tun"
+              lvl="n2"
+              id="hiyasu-cool"
+            >
+                <sentence
+                  s="ビールを【冷：ひ】やしておきます。"
+                  rom="Bīru o hiyashite okimasu."
+                  tr_en="I will chill the beer."
+                  tr_de="Ich werde das Bier kühlen."
+                  explanation_en="「〜ておきます」shows that an action is done to prepare something for future use"
+                  explanation_de="「〜ておきます」zeigt auf, dass die Aktion eine Vorbereitung für späteren Gebrauch ist"
+                  lvl="n2"
+                  origin="Oxford p.52"
+                />
+            </word>
+            <word
+              w="【固：かた】まる"
+              rom="katamaru"
+              tr_en="to harden; to solidify; to become firm"
+              tr_de="hart werden; erhärten"
+              hint_en="v.i."
+              lvl="n2"
+              id="katamaru-harden"
+            >
+                <sentence
+                  s="【雨：あめ】【降：ふ】って【地：じ】【固：かた】まる。"
+                  rom="Ame futte ji katamaru."
+                  tr_en="The ground hardens after it rains."
+                  tr_de="Die Erde wird hart, wenn es regnet."
+                  explanation_en="Proverb that is similar to 'What doesn't kill you makes you stronger'."
+                  explanation_de="Sprichwort, welches ähnlich ist zu 'Was dich nicht umbringt, macht dich stärker'."
+                  lvl="n2"
+                  origin="ChatGPT"
+                  rem="verified with jisho"
+                />
+            </word>
+            <word
+              w="【嗅：か】ぐ"
+              rom="kagu"
+              tr_en="to sniff; to smell sth."
+              tr_de="schnüffeln; etw. riechen"
+              hint_en="v.t."
+              lvl="n2"
+              id="kagu-sniff"
+            >
+                <sentence
+                  s="【匂：にお】いを【嗅：か】いだ。"
+                  rom="Nioi o kaida."
+                  tr_en="I smelled it."
+                  tr_de="Ich roch es."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【飛：と】び【込：こ】む"
+              rom="tobikomu"
+              tr_en="to jump in; to plunge into"
+              tr_de="in etw. hineinspringen"
+              hint_en="v.i."
+              lvl="n2"
+              id="tobikomu-jumpin"
+            >
+                <sentence
+                  s="プールに【飛：と】び【込：こ】んだ。"
+                  rom="Pūru ni tobikonda."
+                  tr_en="I jumped into the swimming pool."
+                  tr_de="Ich sprang in den Swimming-Pool."
+                  lvl="n2"
+                  origin="lib0"
+                />
+                <sentence
+                  s="ボールが【窓：まど】から【飛：と】び【込：こ】んできた。"
+                  rom="Bōru ga mado kara tobikonde kita."
+                  tr_en="A ball flew in through the window."
+                  tr_de="Ein Ball kam durchs Fenster geflogen."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【追：お】いかける"
+              rom="oikakeru"
+              tr_en="to chase; to pursue; to run after"
+              tr_de="verfolgen; nachjagen"
+              lvl="n2"
+              id="oikakeru-chase"
+            >
+                <!-- 夢を追いかける - Pursue one's aspirations or goals (ChatGPT) -->
+                <sentence
+                  s="【犬：いぬ】はウサギを【追：お】いかけた。"
+                  rom="Inu wa usagi o oikaketa."
+                  tr_en="The dog ran after the rabbit."
+                  tr_de="Der Hund rannte hinter dem Hasen her."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【慌：あわ】てる"
+              rom="awateru"
+              tr_en="to become confused; to panic"
+              tr_de="verwirrt sein; in Panik geraten"
+              lvl="n2"
+              category="mood, not-good"
+              id="awateru-confused"
+            >
+                <sentence
+                  s="【慌：あわ】てて【財：さい】【布：ふ】を【捜：さが】しました。"
+                  rom="Awatete saifu o sagashimashita."
+                  tr_en="I frantically searched for my wallet."
+                  tr_de="Ich suchte panisch nach meinem Portemonnaie."
+                  lvl="n2"
+                  origin="Oxford p.41"
+                />
+            </word>
+            <word
+              w="【潜：もぐ】る"
+              rom="moguru"
+              tr_en="to dive; to go under"
+              tr_de="tauchen; untertauchen"
+              lvl="n2"
+              category="holidays, sports"
+              id="moguru-dive"
+              common="false"
+            >
+                <!-- the noun is moguri, which is nx -->
+                <sentence
+                  s="【海：うみ】に【潜：もぐ】ると、【珍：めずら】しい【生：い】き【物：もの】をたくさん【見：み】ることができる。"
+                  rom="Umi ni moguru to, mezurashii ikimono o takusan miru koto ga dekiru."
+                  tr_en="Dive in the sea, and you can see a lot of rare creatures."
+                  tr_de="Tauche im Meer, und du kannst viele seltene Lebewesen sehen."
+                  lvl="n2"
+                  href="https://hinative.com/questions/13199098"
+                  rem="changed yūnikuna (n1) to mezurashii (n4)"
+                />
+            </word>
+            <word
+              w="【点：つ】く"
+              rom="tsuku"
+              tr_en="to be lit; to be turned on; to catch fire"
+              tr_de="angezündet sein; eingeschaltet sein; Feuer fangen"
+              hint_en="v.i."
+              lvl="n2"
+              id="tsuku-tobelit"
+              usuallyInKana="true"
+            >
+                <see id="tsukeru-lightup" rem="v.t." />
+                <!-- too similar to the word itself
+                  ph="ついている"
+                  rom="tsuite iru"
+                  tr_en="to be lit; to be lighted; to be turned on"
+                  tr_de="leuchten; angezündet sein; eingeschaltet sein"
+                  lvl="n2"
+                -->
+                <sentence
+                  s="カーテンに【火：ひ】が【点：つ】いた。"
+                  rom="Kāten ni hi ga tsuita."
+                  tr_en="The curtain caught fire."
+                  tr_de="Der Vorgang fing Feuer."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【落：お】ち【着：つ】く"
+              rom="ochitsuku"
+              tr_en="to calm down; to compose oneself; to settle down"
+              tr_de="sich beruhigen; sich niederlassen"
+              hint_en="v.i."
+              lvl="n2"
+              id="ochitsuku-calmdown"
+            >
+                <phrase
+                  ph="【落：お】ち【着：つ】いている"
+                  rom="ochitsuite iru"
+                  tr_en="to be calm; to be at ease"
+                  tr_de="ruhig sein; sich wohlfühlen"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【嫌：いや】がる"
+              rom="iyagaru"
+              tr_en="to hate; to dislike"
+              tr_de="etw. hassen; etw. nicht mögen"
+              hint_en="v.t."
+              lvl="n2"
+              id="iyagaru-hate"
+            >
+                <sentence
+                  s="【息：むす】【子：こ】は【学：がっ】【校：こう】を【嫌：いや】がっている。"
+                  rom="Musuko wa gakkō o iyagatte iru."
+                  tr_en="The son hates school."
+                  tr_de="Der Sohn hasst Schule."
+                  lvl="n2"
+                  origin="Oxford p.104 modified"
+                />
+            </word>
+            <word
+              w="【散：ち】る"
+              rom="chiru"
+              tr_en="to fall (e.g. blossoms, leaves); to dissolve"
+              tr_de="fallen (z.B. Blüten, Blätter); sich auflösen"
+              hint_en="v.i."
+              lvl="n2"
+              id="chiru-fall"
+            >
+                <sentence
+                  s="【日：に】【本：ほん】に【戻：もど】ったら【桜：さくら】の【花：はな】が【散：ち】っていた。"
+                  rom="Nihon ni modottara sakura no hana ga chitte ita."
+                  tr_en="When I returned to Japan, the cherry blossom had fallen."
+                  tr_de="Als ich nach Japan zurückkam, waren die Kirschblüten gefallen."
+                  lvl="n2"
+                  origin="Oxford p.44"
+                />
+            </word>
+            <word
+              w="【捕：と】る"
+              rom="toru"
+              tr_en="to take; to catch; to capture"
+              hint_en="v.t."
+              lvl="n2"
+              category="hands"
+              id="toru-catch"
+            >
+                <sentence
+                  s="【海：うみ】や【川：かわ】で【魚：さかな】を【捕：と】ります。"
+                  rom="Umi ya kawa de sakana o torimasu."
+                  tr_en="I catch fish in the oceans and rivers."
+                  tr_de="Ich fange Fische im Meer und im Fluss."
+                  lvl="n2"
+                  origin="500mon q153"
+                  rem="rated n2 because of 捕る"
+                />
+            </word>
+            <word
+              w="【締：し】め【切：き】る"
+              rom="shimekiru"
+              tr_en="to shut up (behind doors, etc.); to cut off"
+              tr_de="etw. verschliessen (z.B. hinter Türen); etw. ausschliessen"
+              hint_en="v.t."
+              lvl="n2"
+              id="shimekiru-shutup"
+            >
+                <see id="shimekiri-deadline" rem="noun" />
+            </word>
+            <word
+              w="【帰：かえ】す"
+              rom="kaesu"
+              tr_en="to send sb. back; to send sb. home"
+              tr_de="jem. zurückschicken; jem. nach Hause schicken"
+              hint_en="v.t."
+              lvl="n2"
+              id="kaesu-sendback"
+            >
+                <see id="kaeru-return" rem="v.i." />
+            </word>
+            <word
+              w="【匂：にお】う"
+              rom="niou"
+              tr_en="to smell; it smells (good, bad)"
+              tr_de="riechen; etw. riecht (gut, schlecht)"
+              hint_en="v.i."
+              lvl="n2"
+              id="niou-smell"
+              rem="jisho has n4 for nioi; niou might be uncommon, because you commonly say (ii) nioi ga suru"
+            >
+                <see id="nioi-fragrance" rem="noun" />
+            </word>
+            <word
+              w="【点：つ】ける"
+              rom="tsukeru"
+              tr_en="to turn on sth.; to switch on; to light up"
+              tr_de="etw. einschalten; aufleuchten lassen"
+              hint_en="v.t."
+              lvl="n2"
+              rem="付ける is n5, 漬ける is n4"
+              id="tsukeru-lightup"
+            >
+                <see id="tsuku-tobelit" rem="v.i." />
+            </word>
+            <word
+              w="【見：み】【送：おく】る"
+              rom="miokuru"
+              tr_en="to see someone off"
+              tr_de="jemanden verabschieden"
+              hint_en="at an airport, etc."
+              hint_de="am Flughafen, usw."
+              lvl="n2"
+              category="travelling, transportation"
+              id="miokuru-seesboff"
+            >
+                <see id="miokuri-farewell" rem="noun" />
+            </word>
+            <word
+              w="【茹：ゆ】でる"
+              rom="yuderu"
+              tr_en="to boil sth. in hot water"
+              tr_de="etw. in heissem Wasser kochen"
+              hint_en="v.t."
+              lvl="n2"
+              category="cooking"
+              id="yuderu-boil"
+            >
+                <keep_apart_from id="wakasu-boil" />
+            </word>
+            <word
+              w="【次：つ】ぐ"
+              rom="tsugu"
+              tr_en="to rank next to; to come after"
+              tr_de="neben etw. rangieren; nach jem. kommen"
+              hint_en="v.i."
+              lvl="n2"
+              id="tsugu-comeafter"
+            >
+                <keep_apart_from id="toritsugu-passon" />
+                <keep_together id="toritsugu-passon" />
+            </word>
+            <word
+              w="【取：と】り【次：つ】ぐ"
+              rom="toritsugu"
+              tr_en="to pass on (a message); to convey; to transmit; to relay; to tell"
+              hint_en="v.t."
+              lvl="n2"
+              id="toritsugu-passon"
+              HIDDEN="true"
+              rem="jisho has n1; should be a phrase of tsugu-comeafter"
+            >
+                <keep_apart_from id="tsugu-comeafter" />
+                <keep_together id="tsugu-comeafter" />
+            </word>
+            <word
+              w="【替：か】える"
+              rom="kaeru"
+              tr_en="to replace sth."
+              tr_de="etw. ersetzen"
+              hint_en="v.t."
+              lvl="n2"
+              id="kaeru-replace"
+              rem="jisho has n3; rated n2, because the kanji 替 is n2; keeping it n3 would generate ambiguity with kaeru-exchange"
+            >
+                <see id="kawaru-takeplaceof" rem="v.i." />
+                <!-- implicit see-also links to kaeru-exchange, kaeru-substitute -->
+            </word>
+            <word
+              w="【替：か】わる"
+              rom="kawaru"
+              tr_en="to succeed; to take over for; to change (places with)"
+              hint_en="v.i."
+              lvl="n2"
+              id="kawaru-takeplaceof"
+            >
+                <see id="kaeru-replace" rem="v.t." />
+            </word>
+            <word
+              w="【止：とど】まる"
+              rom="todomaru"
+              tr_en="to stay (in the one place); to be limited to; to be confined to"
+              tr_de="(an Ort und Stelle) bleiben; eingeschränkt sein"
+              hint_en="v.i."
+              lvl="n2"
+              id="todomaru-confined"
+            >
+                <!-- implicit see-also link to tomaru-stop -->
+            </word>
+            <word
+              w="【温：あたた】まる"
+              rom="atatamaru"
+              tr_en="to warm oneself; to warm up"
+              hint_en="v.i."
+              lvl="n2"
+              category="temperature, body"
+              id="atatamaru-warmup"
+            />
+            <word
+              w="【嚏：くしゃみ】をする"
+              rom="kushami o suru"
+              tr_en="to sneeze"
+              tr_de="niesen"
+              lvl="n2"
+              category="health"
+              id="kushamiosuru-sneeze"
+            />
+            <word
+              w="【出：で】【迎：むか】える"
+              rom="demukaeru"
+              tr_en="to meet (sb. upon arrival); to welcome; to greet"
+              tr_de="(jem. bei Ankunft) abholen; treffen; entgegenkommen"
+              Langenscheidt="abholen, entgegenkommen"
+              lvl="n2"
+              id="demukaeru-meet"
+            />
+            <word
+              w="【通：とお】りかかる"
+              rom="tōrikakaru"
+              tr_en="to (happen to) pass by"
+              tr_de="an etw. vorbei gehen"
+              lvl="n2"
+              id="tōrikakaru-happentopassby"
+            />
+            <word
+              w="ひっくり【返：かえ】る"
+              rom="hikkurikaeru"
+              tr_en="to be overturned; to tumble down"
+              tr_de="etw. umstossen; herunterfallen"
+              lvl="n2"
+              id="hikkurikaeru-overturned"
+            />
+            <word
+              w="【取：と】り【消：け】す"
+              rom="torikesu"
+              tr_en="to cancel; to withdraw; to take back"
+              tr_de="abbrechen; zurückziehen; zurück nehmen"
+              lvl="n2"
+              category="hands"
+              id="torikesu-cancel"
+            />
+            <word
+              w="【曲：ま】げる"
+              rom="mageru"
+              tr_en="to bend sth.; to twist sth.; to depart (from a principle)"
+              tr_de="etw. verbiegen; etw. verdrehen; (von einem Prinzip) abweichen"
+              hint_en="v.t."
+              lvl="n2"
+              id="mageru-bend"
+            />
+            <word
+              w="【言：い】い【出：だ】す"
+              rom="iidasu"
+              tr_en="to start talking; to bring up; to propose"
+              tr_de="mit Sprechen beginnen; etw. erwähnen; etw. vorschlagen"
+              hint_en="v.t."
+              lvl="n2"
+              id="iidasu-bringup"
+            />
+            <word
+              w="【鳴：な】らす"
+              rom="narasu"
+              tr_en="to ring (a bell); to make it ring"
+              tr_de="erklingen lassen; (Glocke) anklingen"
+              hint_en="v.t."
+              lvl="n2"
+              id="narasu-ring"
+            />
+            <word
+              w="【味：あじ】わう"
+              rom="ajiwau"
+              tr_en="to taste; to savour; to appreciate"
+              tr_de="schmecken; kosten; geniessen"
+              lvl="n2"
+              category="cooking"
+              id="ajiwau-savour"
+            />
+            <word
+              w="【干：ほ】す"
+              rom="hosu"
+              tr_en="to dry; to air"
+              tr_de="trocknen; zum Trocknen aufhängen"
+              hint_en="e.g. laundry"
+              hint_de="z.B. Wäsche"
+              lvl="n2"
+              category="cleaning, home"
+              id="hosu-toair"
+            />
+            <word
+              w="【溢：あふ】れる"
+              rom="afureru"
+              tr_en="to overflow; to brim over; to flood"
+              hint_en="v.i."
+              lvl="n2"
+              id="afureru-overflow"
+            />
+            <word
+              w="【物：もの】【語：がた】る"
+              rom="monogataru"
+              tr_en="to tell (a story); to give an account of (an event); to indicate"
+              hint_en="v.t."
+              lvl="n2"
+              id="monogataru-tell"
+            />
+            <word
+              w="【心：こころ】【得：え】る"
+              rom="kokoroeru"
+              tr_en="to know; to understand; to be aware of; to regard as"
+              hint_en="v.t."
+              lvl="n2"
+              id="kokoroeru-know"
+            />
+        </section>
+    </unit>
+</vocabulary>

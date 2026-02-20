@@ -1,0 +1,1619 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Counters ②"
+      name_de="Zählwörter ②"
+      name_fr="Les mots de compter ②"
+      name_it="Parole da contare ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="counter"
+      defaultHint_de="Zählwort"
+      lvl="n4"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="true"
+    >
+        <section>
+            <!--
+                name_en="度: Degree, occurrences"
+                name_de="度: Grad, Anzahl"
+                Appears in GENKI2 p.386.
+                Note that above 四度, it's uncommon to use it for occurrences; 四回 is more common
+                see https://japanese.stackexchange.com/questions/3037/differences-between-%E5%BA%A6-and-%E5%9B%9E-when-counting-occurrences
+            -->
+            <word
+              w="【度：ど】"
+              rom="do"
+              tr_en="counter for occurrences, degrees"
+              tr_de="Zählwort für Vorkommnisse, Grad"
+              studyInContext="required"
+              lvl="n4"
+              id="do-counter"
+              rem="see GENKI2 p.386"
+            >
+                <keep_apart_from id="kai-counter" />
+                <keep_apart_from id="ichidoni-allatonce" />
+                <keep_together id="ichidoni-allatonce" />
+                <phrase
+                  ph="もう【一：いち】【度：ど】"
+                  rom="mō ichido"
+                  tr_en="once more; again"
+                  tr_de="nochmals; noch einmal"
+                  lvl="n4"
+                  origin="GENKI2 p.73"
+                />
+                <phrase
+                  ph="【一：いち】【度：ど】に"
+                  rom="ichi-do ni"
+                  tr_en="all at once"
+                  tr_de="alles auf einmal"
+                  lvl="n4"
+                  rem="jisho has n3"
+                />
+                <phrase
+                  ph="【二：に】【度：ど】"
+                  rom="ni-do"
+                  tr_en="twice; two degrees"
+                  tr_de="zweimal; zwei Grad"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  ph="【三：さん】【度：ど】"
+                  rom="san-do"
+                  tr_en="three times; three degrees"
+                  tr_de="dreimal; drei Grad"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【四：よん】【度：ど】"
+                  rom="yon-do"
+                  tr_en="four degrees"
+                  tr_de="vier Grad"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                  rem="sometimes used for 'four times', but 四回 is more common"
+                />
+                <!--
+                  ph="【五：ご】【度：ど】"
+                  rom="go-do"
+                  tr_en="five degrees"
+                  tr_de="fünf Grad"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                  rem="jpod audio has 'five degrees'; sometimes used for 'five times', but uncommon"
+                -->
+                <!--
+                  ph="【六：ろく】【度：ど】"
+                  rom="roku-do"
+                  tr_en="six degrees"
+                  tr_de="sechs Grad"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【七：なな】【度：ど】"
+                  rom="nana-do"
+                  tr_en="seven degrees"
+                  tr_de="sieben Grad"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  ph="【八：はち】【度：ど】"
+                  rom="hachi-do"
+                  tr_en="eight degrees"
+                  tr_de="acht Grad"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                -->
+                <!--
+                  ph="【九：きゅう】【度：ど】"
+                  rom="kyū-do"
+                  tr_en="nine degrees"
+                  tr_de="neun Grad"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                -->
+                <!--
+                  ph="【十：じゅう】【度：ど】"
+                  rom="jū-do"
+                  tr_en="ten degrees"
+                  tr_de="zehn Grad"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【何：なん】【度：ど】も"
+                  rom="nan-do mo"
+                  tr_en="many times"
+                  tr_de="viele Male"
+                  lvl="n4"
+                  rem="appears in GENKI2 L22 vocab section"
+                />
+                <sentence
+                  s="よし、もう【一：いち】【度：ど】やろう。"
+                  rom="Yoshi, mō ichi-do yarō."
+                  tr_en="All right, I will do it again."
+                  tr_de="Gut, ich mache es nochmals."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="jisho has nx for yoshi"
+                />
+                <sentence
+                  s="【京：きょう】【都：と】へはまだ【一：いち】【度：ど】も【行：い】ったことがありません。"
+                  rom="Kyōto e wa mada ichi-do mo itta koto ga arimasen."
+                  tr_en="I have not even once been to Kyoto."
+                  tr_de="Ich bin noch kein einziges Mal in Kyoto gewesen."
+                  lvl="n4"
+                  origin="500mon q334"
+                />
+                <sentence
+                  s="では、【土：ど】【曜：よう】【日：び】か【日：にち】【曜：よう】【日：び】にもう【一：いち】【度：ど】【電：でん】【話：わ】します。"
+                  rom="De wa, do-yōbi ka nichi-yōbi ni mō ichi-do denwa shimasu."
+                  tr_en="Okay then, (I'll) call (you) again on Saturday or Sunday."
+                  tr_de="Gut, dann (werde ich dich) am Samstag oder Sonntag nochmals anrufen."
+                  lvl="n4"
+                  origin="500mon q15"
+                />
+            </word>
+            <word
+              w="【一：いち】【度：ど】に"
+              rom="ichi-do ni"
+              tr_en="all at once"
+              tr_de="alles auf einmal"
+              lvl="n3"
+              id="ichidoni-allatonce"
+              HIDDEN="true"
+              rem="is now a phrase of ichi-do; jisho has n3; kept in to silence find-missing"
+            >
+                <keep_apart_from id="do-counter" />
+                <keep_together id="do-counter" />
+            </word>
+
+            <!--
+              name_en="枚: Flat objects, e.g. sheet of paper, plate, shirt"
+              name_de="枚: Flache Objekte, z.B. Blatt Papier, Teller, Hemd"
+            -->
+            <word
+              w="【枚：まい】"
+              rom="mai"
+              tr_en="counter for flat objects"
+              tr_de="Zählwort für flache Objekte"
+              studyInContext="required"
+              lvl="n4"
+              id="mai-flatobj"
+              rem="appears in GENKI2 p.386, therefore n4; jisho has n1"
+            >
+                <keep_apart_from id="gomai-5flat" />
+                <keep_together id="gomai-5flat" />
+                <phrase
+                  ph="【一：いち】【枚：まい】"
+                  rom="ichi-mai"
+                  tr_en="one flat object"
+                  tr_de="ein flaches Objekt"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  w="【二：に】【枚：まい】"
+                  rom="ni-mai"
+                  tr_en="two flat objects"
+                  tr_de="zwei flache Objekte"
+                  lvl="n4"
+                  rem="see GENKI2 p.386"
+                -->
+                <!--
+                  w="【三：さん】【枚：まい】"
+                  rom="san-mai"
+                  tr_en="three flat objects"
+                  tr_de="drei flache Objekte"
+                  lvl="n4"
+                  rem="see GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【四：よん】【枚：まい】"
+                  rom="yon-mai"
+                  tr_en="four flat objects"
+                  tr_de="vier flache Objekte"
+                  lvl="n4"
+                  rem="see GENKI2 p.386"
+                />
+                <!--
+                  w="【五：ご】【枚：まい】"
+                  rom="go-mai"
+                  tr_en="five flat objects"
+                  tr_de="fünf flache Objekte"
+                  lvl="n4"
+                  rem="see GENKI2 p.386"
+                -->
+                <!--
+                  w="【六：ろく】【枚：まい】"
+                  rom="roku-mai"
+                  tr_en="six flat objects"
+                  tr_de="sechs flache Objekte"
+                  lvl="n4"
+                  rem="see GENKI2 p.386"
+                -->
+                <!--
+                  w="【七：なな】【枚：まい】"
+                  rom="nana-mai"
+                  tr_en="seven flat objects"
+                  tr_de="sieben flache Objekte"
+                  lvl="n4"
+                  rem="see GENKI2 p.386"
+                -->
+                <!--
+                  w="【八：はち】【枚：まい】"
+                  rom="hachi-mai"
+                  tr_en="eight flat objects"
+                  tr_de="acht flache Objekte"
+                  lvl="n4"
+                  rem="see GENKI2 p.386"
+                -->
+                <!--
+                  w="【九：きゅう】【枚：まい】"
+                  rom="kyū-mai"
+                  tr_en="nine flat objects"
+                  tr_de="neun flache Objekte"
+                  lvl="n4"
+                  rem="see GENKI2 p.386"
+                -->
+                <!--
+                  w="【十：じゅう】【枚：まい】"
+                  rom="jū-mai"
+                  tr_en="ten flat objects"
+                  tr_de="zehn flache Objekte"
+                  lvl="n4"
+                  rem="see GENKI2 p.386"
+                -->
+                <!--
+                  w="【何：なん】【枚：まい】"
+                  rom="nan-mai"
+                  tr_en="how many flat objects"
+                  tr_de="wieviele flache Objekte"
+                  lvl="n4"
+                -->
+                <sentence
+                  s="【紙：かみ】を【一：いち】【枚：まい】ください。"
+                  rom="Kami o ichi-mai kudasai."
+                  tr_en="One sheet of paper, please."
+                  tr_de="Ein Blatt Papier, bitte."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="シャツが【一：いち】【枚：まい】あります。"
+                  rom="Shatsu ga ichi-mai arimasu."
+                  tr_en="There is one shirt."
+                  tr_de="Es hat ein Hemd."
+                  lvl="n4"
+                  origin="GENKI2 p.54"
+                />
+                <sentence
+                  s="この【二：に】【枚：まい】の【葉：は】は【似：に】ている。"
+                  rom="Kono ni-mai no ha wa nite iru."
+                  tr_en="These two leaves look alike."
+                  tr_de="Diese zwei Blätter schauen gleich aus."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【写：しゃ】【真：しん】が【四：よん】【枚：まい】あります。"
+                  rom="Shashin ga yon-mai arimasu."
+                  tr_en="There are four photos."
+                  tr_de="Es hat vier Fotos."
+                  lvl="n4"
+                />
+                <sentence
+                  s="【10：じゅう】【円：えん】【切：きっ】【手：て】を【五：ご】【枚：まい】【買：か】った。"
+                  rom="Jū-en kitte o go-mai katta."
+                  tr_en="I bought five 10-yen stamps."
+                  tr_de="Ich habe fünf Zehn-Yen-Briefmarken gekauft."
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【５：ご】【枚：まい】"
+              rom="go-mai"
+              tr_en="five flat objects"
+              id="gomai-5flat"
+              lvl="n4"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="mai-flatobj" />
+                <keep_together id="mai-flatobj" />
+            </word>
+
+            <!--
+                name_en="階: Floor, storey"
+                name_de="階: Etage, Stockwerk"
+            -->
+            <word
+              w="【階：かい】"
+              rom="kai"
+              tr_en="counter for storeys, floors"
+              tr_de="Zählwort für Stockwerke, Etagen"
+              studyInContext="required"
+              lvl="n4"
+              category="city"
+              id="kai-storey"
+              rem="jisho has n1"
+            >
+                <keep_apart_from id="nikaidate-2storeyed" />
+                <keep_together id="nikaidate-2storeyed" />
+                <keep_apart_from id="sangaidate-3storeyed" />
+                <keep_together id="sangaidate-3storeyed" />
+                <phrase
+                  ph="【一：いっ】【階：かい】"
+                  rom="ikkai"
+                  tr_en="one storey; first floor"
+                  tr_de="ein Stockwerk; erste Etage"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                  rem="also appears in GENKI2 L20 vocab section; jisho has n1 for kai"
+                />
+                <phrase
+                  ph="【二：に】【階：かい】【建：だ】ての【家：いえ】"
+                  rom="ni-kai-date no ie"
+                  tr_en="two-storeyed house"
+                  tr_de="zweistöckiges Haus"
+                  lvl="n4"
+                  origin="jpod101 audio"
+                  rem="verified with ChatGPT; storeys and storeyed is correct in British English"
+                />
+                <phrase
+                  ph="【三：さん】【階：がい】【建：だ】ての【家：いえ】"
+                  rom="sangai-date no ie"
+                  tr_en="three-storeyed house"
+                  tr_de="dreistöckiges Haus"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                  rem="verified with ChatGPT"
+                />
+                <!--
+                  ph="【四：よん】【階：かい】"
+                  rom="yon-kai"
+                  tr_en="four storeys; fourth floor"
+                  tr_de="vier Stockwerke; vierte Etage"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <!--
+                  ph="【五：ご】【階：かい】"
+                  rom="go-kai"
+                  tr_en="five storeys; fifth floor"
+                  tr_de="fünf Stockwerke; fünfte Etage"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【六：ろっ】【階：かい】【建：だ】ての【家：いえ】"
+                  rom="rokkai-date no ie"
+                  tr_en="six-storeyed house"
+                  tr_de="sechsstöckiges Haus"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【七：なな】【階：かい】"
+                  rom="nana-kai"
+                  tr_en="seven storeys; seventh floor"
+                  tr_de="sieben Stockwerke; siebte Etage"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【八：はっ】【階：かい】【建：だ】ての【家：いえ】"
+                  rom="hakkai-date no ie"
+                  tr_en="eight-storeyed house"
+                  tr_de="achtstöckiges Haus"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【九：きゅう】【階：かい】"
+                  rom="kyū-kai"
+                  tr_en="nine storeys; ninth floor"
+                  tr_de="neun Stockwerke; neunte Etage"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【十：じゅっ】【階：かい】【建：だ】ての【家：いえ】"
+                  rom="jukkai-date no ie"
+                  tr_en="ten-storeyed house"
+                  tr_de="zehnstöckiges Haus"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                  rem="also pronounced jikkai"
+                />
+                <phrase
+                  ph="【何：なん】【階：がい】"
+                  rom="nangai"
+                  tr_en="how many storeys; which floor"
+                  tr_de="wieviele Stockwerke; welche Etage"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <sentence
+                  s="お【手：て】【洗：あら】いは【二：に】【階：かい】にございます。"
+                  rom="O-tearai wa ni-kai ni gozaimasu."
+                  tr_en="The lavatory is on the second floor."
+                  tr_de="Die Toilette ist auf dem zweiten Stock."
+                  lvl="n4"
+                  origin="GENKI2 p.191"
+                />
+                <sentence
+                  s="エレベーターを【使：つか】って【三：さん】【階：がい】に【行：い】ってください。"
+                  rom="Erebētā o tsukatte sangai ni itte kudasai."
+                  tr_en="Please use the lift to get to the third floor."
+                  tr_de="Bitte verwenden Sie den Lift, um auf die dritte Etage zu gelangen."
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="この【家：いえ】は【四：よん】【階：かい】【建：だ】てです。"
+                  rom="Kono ie wa yon-kai date desu."
+                  tr_en="This house is four-storied."
+                  tr_de="Dieses Haus ist vierstöckig."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【高：たか】【木：ぎ】さんの【事：じ】【務：む】【所：しょ】は【何：なん】【階：がい】ですか。"
+                  rom="Takagi-san no jimusho wa nangai desu ka?"
+                  tr_en="What floor is Mr Takagi's office on?"
+                  tr_de="Auf welcher Etage ist Herrn Takagis Büro?"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【高：たか】【木：ぎ】さんの【事：じ】【務：む】【所：しょ】は【六：ろっ】【階：かい】にございます。"
+                  rom="Takagi-san no jimusho wa rokkai ni gozaimasu."
+                  tr_en="Mr Takagi's office is on the sixth floor."
+                  tr_de="Herr Takagis Büro ist im sechsten Stock."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【二：に】【階：かい】【建：だ】て"
+              rom="ni-kai-date"
+              tr_en="two-storeyed (building)"
+              lvl="n4"
+              id="nikaidate-2storeyed"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="kai-storey" />
+                <keep_together id="kai-storey" />
+            </word>
+            <word
+              w="【三：さん】【階：がい】【建：だ】て"
+              rom="sangai-date"
+              tr_en="three-storeyed (building)"
+              lvl="n4"
+              id="sangaidate-3storeyed"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="kai-storey" />
+                <keep_together id="kai-storey" />
+            </word>
+
+            <!--
+              name_en="冊: Bound volumes, e.g. book, magazine, dictionary"
+              name_de="冊: Gebundene Bände, z.B. Buch, Magazin, Wörterbuch"
+            -->
+            <word
+              w="【冊：さつ】"
+              rom="satsu"
+              tr_en="counter for books; volumes"
+              tr_de="Zähler für Bücher; Bände"
+              studyInContext="required"
+              lvl="n4"
+              category="literature"
+              id="satsu-books"
+              rem="appears in GENKI2 p.387, therefore n4; jisho has n1"
+            >
+                <phrase
+                  ph="【一：いっ】【冊：さつ】"
+                  rom="issatsu"
+                  tr_en="one volume"
+                  tr_de="ein Band"
+                  lvl="n4"
+                  rem="see GENKI2 p.387"
+                />
+                <!--
+                  w="【二：に】【冊：さつ】"
+                  rom="ni-satsu"
+                  tr_en="two volumes"
+                  tr_de="zwei Bände"
+                  lvl="n4"
+                  rem="see GENKI2 p.387"
+                -->
+                <!--
+                  w="【三：さん】【冊：さつ】"
+                  rom="san-satsu"
+                  tr_en="three volumes"
+                  tr_de="drei Bände"
+                  lvl="n4"
+                  rem="see GENKI2 p.387"
+                -->
+                <!--
+                  w="【四：よん】【冊：さつ】"
+                  rom="yon-satsu"
+                  tr_en="four volumes"
+                  tr_de="vier Bände"
+                  lvl="n4"
+                  rem="see GENKI2 p.387"
+                -->
+                <!--
+                  w="【五：ご】【冊：さつ】"
+                  rom="go-satsu"
+                  tr_en="five volumes"
+                  tr_de="fünf Bände"
+                  lvl="n4"
+                  rem="see GENKI2 p.387"
+                -->
+                <!--
+                  w="【六：ろく】【冊：さつ】"
+                  rom="roku-satsu"
+                  tr_en="six volumes"
+                  tr_de="sechs Bände"
+                  lvl="n4"
+                  rem="see GENKI2 p.387"
+                -->
+                <!--
+                  w="【七：なな】【冊：さつ】"
+                  rom="nana-satsu"
+                  tr_en="seven volumes"
+                  tr_de="sieben Bände"
+                  lvl="n4"
+                  rem="see GENKI2 p.387"
+                -->
+                <!--
+                  w="【八：はっ】【冊：さつ】"
+                  rom="hassatsu"
+                  tr_en="eight volumes"
+                  tr_de="acht Bände"
+                  lvl="n4"
+                  rem="see GENKI2 p.387"
+                -->
+                <!--
+                  w="【九：きゅう】【冊：さつ】"
+                  rom="kyū-satsu"
+                  tr_en="nine volumes"
+                  tr_de="neun Bände"
+                  lvl="n4"
+                  rem="see GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【十：じゅっ】【冊：さつ】"
+                  rom="jussatsu"
+                  tr_en="ten volumes"
+                  tr_de="zehn Bände"
+                  lvl="n4"
+                  rem="see GENKI2 p.387; also pronounced jissatsu"
+                />
+                <phrase
+                  ph="【十：じゅう】【八：はっ】【冊：さつ】"
+                  rom="jū-hassatsu"
+                  tr_en="eighteen volumes"
+                  tr_de="achtzehn Bände"
+                  lvl="n4"
+                  href="https://hinative.com/questions/24830034"
+                />
+                <!--
+                  w="【何：なん】【冊：さつ】"
+                  rom="nan-satsu"
+                  tr_en="how many volumes"
+                  tr_de="wieviele Bände"
+                  lvl="n4"
+                -->
+                <sentence
+                  s="【私：わたし】は【日：に】【本：ほん】【語：ご】の【本：ほん】を【一：いっ】【冊：さつ】しか【持：も】っていません。"
+                  rom="Watashi wa Nihon-go no hon o issatsu shika motte imasen."
+                  tr_en="I have only one Japanese book."
+                  tr_de="Ich habe nur ein einziges japanisches Buch."
+                  explanation_en="しか + negative form has the meaning of 'only'"
+                  explanation_de="しか + negative Form hat die Bedeutung von 'nur'"
+                  lvl="n4"
+                  origin="GENKI2 p.55"
+                />
+                <sentence
+                  s="【辞：じ】【書：しょ】が【二：に】【冊：さつ】あるから【一：いっ】【冊：さつ】【貸：か】してあげる。"
+                  rom="Jisho ga ni-satsu aru kara issatsu kashite ageru."
+                  tr_en="I've got two dictionaries, I'll lend you one."
+                  tr_de="Ich habe zwei Wörterbücher, ich leih dir eines."
+                  lvl="n4"
+                  origin="Oxford p.48"
+                />
+                <sentence
+                  s="【雑：ざっ】【誌：し】が【三：さん】【冊：さつ】あります。"
+                  rom="Zasshi ga san-satsu arimasu."
+                  tr_en="There are three magazines."
+                  tr_de="Es hat drei Zeitschriften."
+                  lvl="n4"
+                  origin="GENKI2 p.54"
+                />
+                <sentence
+                  s="【本：ほん】を【四：よん】【冊：さつ】【買：か】った。"
+                  rom="Hon o yon-satsu katta."
+                  tr_en="I bought four books."
+                  tr_de="Ich habe vier Bücher gekauft."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【机：つくえ】の【上：うえ】に【本：ほん】が【八：はっ】【冊：さつ】ある。"
+                  rom="Tsukue no ue ni hon ga hassatsu aru."
+                  tr_en="There are eight books on the desk."
+                  tr_de="Auf dem Schreibtisch hat es acht Bücher."
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+            </word>
+
+            <!--
+                name_en="台: Devices or vehicles, e.g. computer, TV, car, bicycle"
+                name_de="台: Geräte oder Fahrzeuge, z.B. Computer, TV, Auto, Fahrrad"
+            -->
+            <word
+              w="【台：だい】"
+              rom="dai"
+              tr_en="counter for devices or vehicles"
+              tr_de="Zählwort für Geräte oder Fahrzeuge"
+              studyInContext="required"
+              lvl="n4"
+              id="dai-device"
+              rem="appears in GENKI2 p.69, therefore n4; jisho has n3"
+            >
+                <keep_apart_from id="jūdai-significant" />
+                <phrase
+                  ph="【一：いち】【台：だい】"
+                  rom="ichi-dai"
+                  tr_en="one device or vehicle"
+                  tr_de="ein Gerät oder Fahrzeug"
+                  lvl="n4"
+                  origin="GENKI2 p.69"
+                />
+                <!--
+                  ph="【二：に】【台：だい】"
+                  rom="ni-dai"
+                  tr_en="two devices or vehicles"
+                  tr_de="zwei Geräte oder Fahrzeuge"
+                  lvl="n4"
+                -->
+                <phrase
+                  ph="【三：さん】【台：だい】"
+                  rom="san-dai"
+                  tr_en="three devices or vehicles"
+                  tr_de="drei Geräte oder Fahrzeuge"
+                  lvl="n4"
+                />
+                <!--
+                  ph="【四：よん】【台：だい】"
+                  rom="yon-dai"
+                  tr_en="four devices or vehicles"
+                  tr_de="vier Geräte oder Fahrzeuge"
+                  lvl="n4"
+                -->
+                <!--
+                  ph="【五：ご】【台：だい】"
+                  rom="go-dai"
+                  tr_en="five devices or vehicles"
+                  tr_de="fünf Geräte oder Fahrzeuge"
+                  lvl="n4"
+                -->
+                <!--
+                  ph="【六：ろく】【台：だい】"
+                  rom="roku-dai"
+                  tr_en="six devices or vehicles"
+                  tr_de="sechs Geräte oder Fahrzeuge"
+                  lvl="n4"
+                -->
+                <!--
+                  ph="【七：なな】【台：だい】"
+                  rom="nana-dai"
+                  tr_en="seven devices or vehicles"
+                  tr_de="sieben Geräte oder Fahrzeuge"
+                  lvl="n4"
+                -->
+                <!--
+                  ph="【八：はち】【台：だい】"
+                  rom="hachi-dai"
+                  tr_en="eight devices or vehicles"
+                  tr_de="acht Geräte oder Fahrzeuge"
+                  lvl="n4"
+                -->
+                <!--
+                  ph="【九：きゅう】【台：だい】"
+                  rom="kyū-dai"
+                  tr_en="nine devices or vehicles"
+                  tr_de="neun Geräte oder Fahrzeuge"
+                  lvl="n4"
+                -->
+                <phrase
+                  ph="【十：じゅう】【台：だい】"
+                  rom="jū-dai"
+                  tr_en="ten devices or vehicles"
+                  tr_de="zehn Geräte oder Fahrzeuge"
+                  lvl="n4"
+                />
+                <!--
+                  ph="【何：なん】【台：だい】"
+                  rom="nan-dai"
+                  tr_en="how many devices or vehicles"
+                  tr_de="wieviele Geräte oder Fahrzeuge"
+                  lvl="n4"
+                -->
+                <sentence
+                  s="ラジオが【一：いち】【台：だい】あります。"
+                  rom="Rajio ga ichi-dai arimasu."
+                  tr_en="There is one radio."
+                  tr_de="Es hat ein Radio."
+                  lvl="n4"
+                  origin="GENKI2 p.54"
+                />
+                <sentence
+                  s="この【会：かい】【社：しゃ】にはパソコンが【二：に】【台：だい】しかありません。"
+                  rom="Kono kaisha ni wa pasokon ga ni-dai shika arimasen."
+                  tr_en="There are only two computers in this company."
+                  tr_de="In dieser Firma gibt es gerade mal zwei Computer."
+                  explanation_en="しか + negative form has the meaning of 'only'"
+                  explanation_de="しか + negative Form hat die Bedeutung von 'nur'"
+                  lvl="n4"
+                  origin="GENKI2 p.55"
+                />
+            </word>
+
+            <!--
+                name_en="匹: Small animals, e.g. cat, dog, snake"
+                name_de="匹: Kleine Tiere, z.B. Katze, Hund, Schlange"
+            -->
+            <word
+              w="【匹：ひき】"
+              rom="hiki"
+              tr_en="counter for small animals"
+              tr_de="Zählwort für kleine Tiere"
+              studyInContext="required"
+              lvl="n4"
+              id="hiki-smallanimal"
+              rem="appears in GENKI2 p.386, therefore n4; jisho has n1"
+            >
+                <keep_apart_from id="ippiki-1animal" />
+                <keep_together id="ippiki-1animal" />
+                <keep_apart_from id="sanbiki-3animals" />
+                <keep_together id="sanbiki-3animals" />
+                <phrase
+                  ph="【一：いっ】【匹：ぴき】"
+                  rom="ippiki"
+                  tr_en="one small animal"
+                  tr_de="ein kleines Tier"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <phrase
+                  ph="【二：に】【匹：ひき】"
+                  rom="ni-hiki"
+                  tr_en="two small animals"
+                  tr_de="zwei kleine Tiere"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <phrase
+                  ph="【三：さん】【匹：びき】"
+                  rom="sanbiki"
+                  tr_en="three small animals"
+                  tr_de="drei kleine Tiere"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <phrase
+                  ph="【四：よん】【匹：ひき】"
+                  rom="yon-hiki"
+                  tr_en="four small animals"
+                  tr_de="vier kleine Tiere"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  ph="【五：ご】【匹：ひき】"
+                  rom="go-hiki"
+                  tr_en="five small animals"
+                  tr_de="fünf kleine Tiere"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【六：ろっ】【匹：ぴき】"
+                  rom="roppiki"
+                  tr_en="six small animals"
+                  tr_de="sechs kleine Tiere"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  ph="【七：なな】【匹：ひき】"
+                  rom="nana-hiki"
+                  tr_en="seven small animals"
+                  tr_de="sieben kleine Tiere"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【八：はっ】【匹：ぴき】"
+                  rom="happiki"
+                  tr_en="eight small animals"
+                  tr_de="acht kleine Tiere"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  ph="【九：きゅう】【匹：ひき】"
+                  rom="kyū-hiki"
+                  tr_en="nine small animals"
+                  tr_de="neun kleine Tiere"
+                  lvl="n4"
+                  origin="see GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【十：じゅっ】【匹：ぴき】"
+                  rom="juppiki"
+                  tr_en="ten small animals"
+                  tr_de="zehn kleine Tiere"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                  rem="also pronounced jippiki"
+                />
+                <!--
+                  ph="【何：なん】【匹：びき】"
+                  rom="nanbiki"
+                  tr_en="how many small animals"
+                  tr_de="wieviele kleine Tiere"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                -->
+                <sentence
+                  s="【猫：ねこ】が【二：に】【匹：ひき】います。"
+                  rom="Neko ga ni-hiki imasu."
+                  tr_en="There are two cats."
+                  tr_de="Es hat zwei Katzen."
+                  lvl="n4"
+                  origin="GENKI2 p.54"
+                />
+                <sentence
+                  s="【私：わたし】のうちには【猫：ねこ】が【三：さん】【匹：びき】います。"
+                  rom="Watashi no uchi ni wa neko ga sanbiki imasu."
+                  tr_en="There are three cats in our house."
+                  tr_de="Wir haben drei Katzen zu Hause."
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.54"
+                />
+                <sentence
+                  s="【魚：さかな】が【五：ご】【匹：ひき】います。"
+                  rom="Sakana ga go-hiki imasu."
+                  tr_en="There are five fish."
+                  tr_de="Es hat drei Fische."
+                  lvl="n4"
+                  origin="GENKI2 p.65"
+                />
+                <sentence
+                  s="【魚：さかな】を【八：はっ】【匹：ぴき】【釣：つ】った。"
+                  rom="Sakana o happiki tsutta."
+                  tr_en="I caught eight fish."
+                  tr_de="Ich habe acht Fische gefangen."
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【一：いっ】【匹：ぴき】"
+              rom="ippiki"
+              tr_en="one small animal"
+              lvl="n4"
+              id="ippiki-1animal"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="hiki-smallanimal" />
+                <keep_together id="hiki-smallanimal" />
+            </word>
+            <word
+              w="【三：さん】【匹：びき】"
+              rom="sanbiki"
+              tr_en="three small animals"
+              lvl="n4"
+              id="sanbiki-3animals"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="hiki-smallanimal" />
+                <keep_together id="hiki-smallanimal" />
+            </word>
+
+            <!--
+                name_en="足: Pairs of shoes, socks"
+                name_de="足: Paar Schuhe, Paar Socken"
+            -->
+            <word
+              w="【足：そく】"
+              rom="soku"
+              tr_en="counter for pairs of shoes or socks"
+              tr_de="Zählwort für Paare von Schuhen oder Socken"
+              studyInContext="required"
+              lvl="n4"
+              category="fashion"
+              id="soku-pair"
+              rem="appears in GENKI2 p.387; jisho has nx"
+            >
+                <phrase
+                  ph="【一：いっ】【足：そく】"
+                  rom="issoku"
+                  tr_en="one pair (of shoes or socks)"
+                  tr_de="ein Paar (Schuhe oder Socken)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【二：に】【足：そく】"
+                  rom="ni-soku"
+                  tr_en="two pairs (of shoes or socks)"
+                  tr_de="zwei Paar (Schuhe oder Socken)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【三：さん】【足：ぞく】"
+                  rom="sanzoku"
+                  tr_en="three pairs (of shoes or socks)"
+                  tr_de="drei Paar (Schuhe oder Socken)"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <phrase
+                  ph="【四：よん】【足：そく】"
+                  rom="yon-soku"
+                  tr_en="four pairs (of shoes or socks)"
+                  tr_de="vier Paar (Schuhe oder Socken)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【五：ご】【足：そく】"
+                  rom="go-soku"
+                  tr_en="five pairs (of shoes or socks)"
+                  tr_de="fünf Paar (Schuhe oder Socken)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <!--
+                  ph="【六：ろく】【足：そく】"
+                  rom="roku-soku"
+                  tr_en="six pairs (of shoes or socks)"
+                  tr_de="sechs Paar (Schuhe oder Socken)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <!--
+                  ph="【七：なな】【足：そく】"
+                  rom="nana-soku"
+                  tr_en="seven pairs (of shoes or socks)"
+                  tr_de="sieben Paar (Schuhe oder Socken)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【八：はっ】【足：そく】"
+                  rom="hassoku"
+                  tr_en="eight pairs (of shoes or socks)"
+                  tr_de="acht Paar (Schuhe oder Socken)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【九：きゅう】【足：そく】"
+                  rom="kyū-soku"
+                  tr_en="nine pairs (of shoes or socks)"
+                  tr_de="neun Paar (Schuhe oder Socken)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【十：じゅっ】【足：そく】"
+                  rom="jussoku"
+                  tr_en="ten pairs (of shoes or socks)"
+                  tr_de="zehn Paar (Schuhe oder Socken)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                  rem="also pronounced jissoku"
+                />
+                <phrase
+                  ph="【何：なん】【足：ぞく】"
+                  rom="nanzoku"
+                  tr_en="how many pairs (of shoes or socks)"
+                  tr_de="wieviele Paare (Schuhe oder Socken)"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <sentence
+                  s="【祖：そ】【母：ぼ】が【靴：くつ】【下：した】を【八：はっ】【足：そく】くれた。"
+                  rom="Sobo ga kutsushita o hassoku kureta."
+                  tr_en="My grandmother gave me eight pairs of socks."
+                  tr_de="Meine Grossmutter hat mir acht Paar Socken geschenkt."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【三：さん】【足：ぞく】の【山：さん】【賊：ぞく】は【靴：くつ】【下：した】を【三：さん】【足：ぞく】【盗：ぬす】んだ。"
+                  rom="Sanzoku no sanzoku wa kutsushita o sanzoku nusunda."
+                  tr_en="The three-legged bandit stole three pairs of socks."
+                  tr_de="Der dreibeinige Bandit stahl drei Paar Socken."
+                  hasDifferentForm="true"
+                  origin="self"
+                  lvl="n4"
+                  rem="verified with ChatGPT; 山賊 is nx"
+                />
+            </word>
+
+            <!--
+                name_en="通: Message, letter, note, document"
+                name_de="通: Nachricht, Brief, Notiz, Dokument"
+            -->
+            <word
+              w="【通：つう】"
+              rom="tsū"
+              tr_en="counter for messages, documents"
+              tr_de="Zählwort für Nachrichten, Dokumente"
+              studyInContext="required"
+              lvl="n4"
+              rem="see GENKI2 p.387; jisho has n1"
+              id="tsū-messages"
+            >
+                <phrase
+                  ph="【一：いっ】【通：つう】"
+                  rom="ittsū"
+                  tr_en="one message or document"
+                  tr_de="eine Nachricht oder ein Dokument"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【二：に】【通：つう】"
+                  rom="ni-tsū"
+                  tr_en="two messages or documents"
+                  tr_de="zwei Nachrichten oder Dokumente"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【三：さん】【通：つう】"
+                  rom="san-tsū"
+                  tr_en="three messages or documents"
+                  tr_de="drei Nachrichten oder Dokumente"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【四：よん】【通：つう】"
+                  rom="yon-tsū"
+                  tr_en="four messages or documents"
+                  tr_de="vier Nachrichten oder Dokumente"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <!--
+                  ph="【五：ご】【通：つう】"
+                  rom="go-tsū"
+                  tr_en="five messages or documents"
+                  tr_de="fünf Nachrichten oder Dokumente"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【六：ろく】【通：つう】"
+                  rom="roku-tsū"
+                  tr_en="six messages or documents"
+                  tr_de="sechs Nachrichten oder Dokumente"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【七：なな】【通：つう】"
+                  rom="nana-tsū"
+                  tr_en="seven messages or documents"
+                  tr_de="sieben Nachrichten oder Dokumente"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【八：はっ】【通：つう】"
+                  rom="hattsū"
+                  tr_en="eight messages or documents"
+                  tr_de="acht Nachrichten oder Dokumente"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【九：きゅう】【通：つう】"
+                  rom="kyū-tsū"
+                  tr_en="nine messages or documents"
+                  tr_de="neun Nachrichten oder Dokumente"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【十：じゅっ】【通：つう】"
+                  rom="juttsū"
+                  tr_en="ten messages or documents"
+                  tr_de="zehn Nachrichten oder Dokumente"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                  rem="also pronounced jittsū"
+                />
+                <phrase
+                  ph="【何：なん】【通：つう】"
+                  rom="nan-tsū"
+                  tr_en="how many messages or documents"
+                  tr_de="wieviele Nachrichten oder Dokumente"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <sentence
+                  s="メールを【一：いっ】【通：つう】も【受：う】けなかった。"
+                  rom="Mēru o ittsū mo ukenakatta."
+                  tr_en="I didn't receive even a single e-mail."
+                  tr_de="Ich habe nicht mal ein E-Mail erhalten."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【今朝：けさ】、【手：て】【紙：がみ】を【八：はっ】【通：つう】も【書：か】いた。"
+                  rom="Kesa, tegami o hattsū mo kaita."
+                  tr_en="I have written as many as eight letters this morning."
+                  tr_de="Heute Morgen habe ich ganze acht Briefe geschrieben."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+
+            <!--
+                name_en="個: Small round objects, e.g. candy, tomato, bag"
+                name_de="個: Kleine runde Objekte, z.B. Bonbon, Tomate, Tasche"
+            -->
+            <word
+              w="【個：こ】"
+              rom="ko"
+              tr_en="counter for small round objects"
+              tr_de="Zählwort für kleine runde Objekte"
+              studyInContext="required"
+              lvl="n4"
+              id="ko-smallround"
+              rem="appears in GENKI2 p.69, therefore n4; jisho has n1"
+            >
+                <phrase
+                  ph="【一：いっ】【個：こ】"
+                  rom="ikko"
+                  tr_en="one small round object"
+                  tr_de="ein kleines rundes Objekt"
+                  lvl="n4"
+                  origin="GENKI2 p.69"
+                />
+                <!--
+                  ph="【二：に】【個：こ】"
+                  rom="ni-ko"
+                  tr_en="two small round objects"
+                  tr_de="zwei kleine runde Objekte"
+                  lvl="n4"
+                -->
+                <!--
+                  ph="【三：さん】【個：こ】"
+                  rom="san-ko"
+                  tr_en="three small round objects"
+                  tr_de="drei kleine runde Objekte"
+                  lvl="n4"
+                -->
+                <!--
+                  ph="【四：よん】【個：こ】"
+                  rom="yon-ko"
+                  tr_en="four small round objects"
+                  tr_de="vier kleine runde Objekte"
+                  lvl="n4"
+                -->
+                <!--
+                  ph="【五：ご】【個：こ】"
+                  rom="go-ko"
+                  tr_en="five small round objects"
+                  tr_de="fünf kleine runde Objekte"
+                  lvl="n4"
+                -->
+                <phrase
+                  ph="【六：ろっ】【個：こ】"
+                  rom="rokko"
+                  tr_en="six small round objects"
+                  tr_de="sechs kleine runde Objekte"
+                  lvl="n4"
+                />
+                <!--
+                  ph="【七：なな】【個：こ】"
+                  rom="nana-ko"
+                  tr_en="seven small round objects"
+                  tr_de="sieben kleine runde Objekte"
+                  lvl="n4"
+                -->
+                <phrase
+                  ph="【八：はっ】【個：こ】"
+                  rom="hakko"
+                  tr_en="eight small round objects"
+                  tr_de="acht kleine runde Objekte"
+                  lvl="n4"
+                />
+                <!--
+                  ph="【九：きゅう】【個：こ】"
+                  rom="kyū-ko"
+                  tr_en="nine small round objects"
+                  tr_de="neun kleine runde Objekte"
+                  lvl="n4"
+                -->
+                <phrase
+                  ph="【十：じゅっ】【個：こ】"
+                  rom="jukko"
+                  tr_en="ten small round objects"
+                  tr_de="zehn kleine runde Objekte"
+                  lvl="n4"
+                  rem="also pronounced jikko"
+                />
+                <!--
+                  ph="【何：なん】【個：こ】"
+                  rom="nan-ko"
+                  tr_en="how many small round objects"
+                  tr_de="wieviele kleine runde Objekte"
+                  lvl="n4"
+                -->
+                <sentence
+                  s="パンを【一：いっ】【個：こ】【買：か】った。"
+                  rom="Pan o ikko katta."
+                  tr_en="I bought one loaf of bread."
+                  tr_de="Ich habe ein Laib Brot gekauft."
+                  lvl="n4"
+                  origin="lib0"
+                  href="https://forvo.com/word/%E4%B8%80%E5%80%8B%E4%B8%AD%E9%9A%8A"
+                />
+                <sentence
+                  s="ミカンが【二：に】【個：こ】あります。"
+                  rom="Mikan ga ni-ko arimasu."
+                  tr_en="There are two mandarines."
+                  tr_de="Es hat zwei Mandarinen."
+                  lvl="n4"
+                  origin="GENKI2 p.54"
+                />
+                <sentence
+                  s="ケーキを【８：はっ】【個：こ】【焼：や】いた。"
+                  rom="Kēki o hakko yaita."
+                  tr_en="I baked eight cakes."
+                  tr_de="Ich habe acht Kuchen gebacken."
+                  lvl="n4"
+                  href="https://hinative.com/questions/20379217 and https://forvo.com/search/8%E5%80%8B/"
+                />
+                <sentence
+                  s="【荷：に】【物：もつ】は【何：なん】【個：こ】ですか。"
+                  rom="Nimotsu wa nan-ko desu ka?"
+                  tr_en="How many bags (do you have)?"
+                  tr_de="Wieviele Gepäckstücke (haben Sie)?"
+                  origin="lib0"
+                  lvl="n4"
+                />
+            </word>
+
+            <!--
+                name_en="丁目: Street address, district"
+                name_de="丁目: Strassennummer, Bezirk"
+            -->
+            <word
+              w="【丁：ちょう】【目：め】"
+              rom="chōme"
+              tr_en="counter for streets (address)"
+              tr_de="Zählwort für Strassen (Adresse)"
+              studyInContext="required"
+              lvl="n4"
+              rem="appears in GENKI2 p.387; jisho has n1"
+              id="chōme-street"
+            >
+                <phrase
+                  ph="【一：いっ】【丁：ちょう】【目：め】"
+                  rom="icchōme"
+                  tr_en="1st street (address)"
+                  tr_de="Strasse 1 (Adresse)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【二：に】【丁：ちょう】【目：め】"
+                  rom="ni-chōme"
+                  tr_en="2nd street (address)"
+                  tr_de="Strasse 2 (Adresse)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <!--
+                  ph="【三：さん】【丁：ちょう】【目：め】"
+                  rom="san-chōme"
+                  tr_en="3rd street (address)"
+                  tr_de="Strasse 3 (Adresse)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <!--
+                  ph="【四：よん】【丁：ちょう】【目：め】"
+                  rom="yon-chōme"
+                  tr_en="4th street (address)"
+                  tr_de="Strasse 4 (Adresse)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <!--
+                  ph="【五：ご】【丁：ちょう】【目：め】"
+                  rom="go-chōme"
+                  tr_en="5th street (address)"
+                  tr_de="Strasse 5 (Adresse)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <!--
+                  ph="【六：ろく】【丁：ちょう】【目：め】"
+                  rom="roku-chōme"
+                  tr_en="6th street (address)"
+                  tr_de="Strasse 6 (Adresse)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <!--
+                  ph="【七：なな】【丁：ちょう】【目：め】"
+                  rom="nana-chōme"
+                  tr_en="7th street (address)"
+                  tr_de="Strasse 7 (Adresse)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【八：はっ】【丁：ちょう】【目：め】"
+                  rom="hacchōme"
+                  tr_en="8th street (address)"
+                  tr_de="Strasse 8 (Adresse)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  ph="【九：きゅう】【丁：ちょう】【目：め】"
+                  rom="kyū-chōme"
+                  tr_en="9th street (address)"
+                  tr_de="Strasse 9 (Adresse)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【十：じゅっ】【丁：ちょう】【目：め】"
+                  rom="jucchōme"
+                  tr_en="10th street (address)"
+                  tr_de="Strasse 10 (Adresse)"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                  rem="also pronounced jicchōme"
+                />
+                <phrase
+                  ph="【何：なん】【丁：ちょう】【目：め】"
+                  rom="nan-chōme"
+                  tr_en="which street number"
+                  tr_de="welche Strassennummer"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                    東京都新宿区西新宿八丁目
+                    Tokyo-to, Shinjuku-ku, Nishi-Shinjuku 8-chōme
+                    8th block of Nishi-Shinjuku, Shinjuku Ward, Tokyo
+                    ChatGPT
+                -->
+                <sentence
+                  s="【三：さん】【丁：ちょう】【目：め】の【古：ふる】い【喫：きっ】【茶：さ】【店：てん】によく【通：かよ】っていた。"
+                  rom="San-chōme no furui kissaten ni yoku kayotte ita."
+                  tr_en="I often visited an old café in the third street."
+                  tr_de="Ich besuchte oft das alte Café in der achten Strasse."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【八：はっ】【丁：ちょう】【目：め】の【交：こう】【差：さ】【点：てん】を【右：みぎ】に【曲：ま】がってください。"
+                  rom="Hacchōme no kōsaten o migi ni magatte kudasai."
+                  tr_en="Please turn right at the intersection in the 8th block."
+                  tr_de="Bitte biege bei der Kreuzung im achten Block nach rechts ab."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+
+            <!--
+                name_en="杯: Number of fills, e.g. cups, portions"
+                name_de="杯: Anzahl Füllungen, z.B. Tassen, Becher, Portionen"
+            -->
+            <word
+              w="【杯：はい】"
+              rom="hai"
+              tr_en="counter for number of fills, portions"
+              tr_de="Zählwort für Anzahl Becher, Portionen"
+              studyInContext="required"
+              lvl="n4"
+              category="cooking"
+              id="hai-fills"
+              rem="appears in GENKI2 p.386; jisho has nx"
+            >
+                <!-- see also ippai-full -->
+                <keep_apart_from id="sanbai-3cupfuls" />
+                <keep_together id="sanbai-3cupfuls" />
+                <phrase
+                  ph="【一：いっ】【杯：ぱい】"
+                  rom="ippai"
+                  tr_en="one cupful; one portion"
+                  tr_de="eine Tasse voll; eine Portion"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <phrase
+                  ph="【二：に】【杯：はい】"
+                  rom="ni-hai"
+                  tr_en="two cupfuls; two portions"
+                  tr_de="zwei Tassen voll; zwei Portionen"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <phrase
+                  ph="【三：さん】【杯：ばい】"
+                  rom="sanbai"
+                  tr_en="three cupfuls; three portions"
+                  tr_de="drei Tassen voll; drei Portionen"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <phrase
+                  ph="【四：よん】【杯：はい】"
+                  rom="yon-hai"
+                  tr_en="four cupfuls; four portions"
+                  tr_de="vier Tassen voll; vier Portionen"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  ph="【五：ご】【杯：はい】"
+                  rom="go-hai"
+                  tr_en="five cupfuls; five portions"
+                  tr_de="fünf Tassen voll; fünf Portionen"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【六：ろっ】【杯：ぱい】"
+                  rom="roppai"
+                  tr_en="six cupfuls; six portions"
+                  tr_de="sechs Tassen voll; sechs Portionen"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  ph="【七：なな】【杯：はい】"
+                  rom="nana-hai"
+                  tr_en="seven cupfuls; seven portions"
+                  tr_de="sieben Tassen voll; sieben Portionen"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                  rem="GENKI2 table has nana-hai, but ChatGPT says shichi-hai is more common"
+                -->
+                <phrase
+                  ph="【八：はっ】【杯：ぱい】"
+                  rom="happai"
+                  tr_en="eight cupfuls; eight portions"
+                  tr_de="acht Tassen voll; acht Portionen"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  ph="【九：きゅう】【杯：はい】"
+                  rom="kyū-hai"
+                  tr_en="nine cupfuls; nine portions"
+                  tr_de="neun Tassen voll; neun Portionen"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【十：じゅっ】【杯：ぱい】"
+                  rom="juppai"
+                  tr_en="ten cupfuls; ten portions"
+                  tr_de="zehn Tassen voll; zehn Portionen"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                  rem="may also be pronounced jippai"
+                />
+                <phrase
+                  ph="【何：なん】【杯：ばい】"
+                  rom="nanbai"
+                  tr_en="how many cupfuls; how many portions"
+                  tr_de="wieviele Tassen voll; wieviele Portionen"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <sentence
+                  s="【茶：ちゃ】が【一：いっ】【杯：ぱい】ほしい。"
+                  rom="Cha ga ippai hoshii."
+                  tr_en="I want one cup of tea."
+                  tr_de="Ich will eine Tasse Tee."
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="もう【一：いっ】【杯：ぱい】いかがですか。"
+                  rom="Mō ippai ikaga desu ka?"
+                  tr_en="Would you like another serving?"
+                  tr_de="Möchten Sie eine weitere Portion?"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="500mon q252"
+                />
+                <sentence
+                  s="【昨日：きのう】のパーティーでビールを【七：なな】【杯：はい】も【飲：の】んでしまった。"
+                  rom="Kinō no pātī de bīru o nana-hai mo nonde shimatta."
+                  tr_en="I ended up drinking as many as seven beers at yesterday’s party."
+                  tr_de="Ich habe gestern an der Party ganze sieben Biere getrunken."
+                  lvl="n4"
+                  origin="ChatGPT"
+                  rem="GENKI2 table has nana-hai, but ChatGPT says shichi-hai is more common"
+                />
+            </word>
+            <word
+              w="【三：さん】【杯：ばい】"
+              rom="sanbai"
+              tr_en="three cupfuls; three portions"
+              lvl="n4"
+              id="sanbai-3cupfuls"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="hai-fills" />
+                <keep_together id="hai-fills" />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

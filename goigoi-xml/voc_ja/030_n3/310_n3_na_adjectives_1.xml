@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 na-adjectives ①"
+      name_de="N3 Na-Adjektive ①"
+      name_fr="Les na-adjectifs N3 ①"
+      name_it="Na-aggettivi N3 ①"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="na-adjective"
+      defaultHint_de="Na-Adjektiv"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!--
+                FIXME: verify that all of these words are na-adjectives!
+            -->
+
+            <!-- na-adjective -->
+            <word
+              w="【重：じゅう】【要：よう】"
+              rom="jūyō"
+              tr_en="essential; principal; major"
+              tr_de="essentiell; wichtig"
+              Langenscheidt="wichtig"
+              lvl="n3"
+              id="jūyō-essential"
+            >
+                <keep_apart_from id="hitsuyō-necessary" />
+                <phrase
+                  ph="【重：じゅう】【要：よう】な【役：やく】"
+                  rom="jūyō na yaku"
+                  tr_en="an important role (function)"
+                  tr_de="eine wichtige Rolle (Funktion)"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="いい【教：きょう】【育：いく】は【重：じゅう】【要：よう】です。"
+                  rom="Ii kyōiku wa jūyō desu."
+                  tr_en="A good education is key."
+                  tr_de="Eine gute Ausbildung ist essentiell."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【幸：しあわ】せ"
+              rom="shiawase"
+              tr_en="happy; lucky"
+              tr_de="glücklich; froh"
+              hint_en="e.g. a happy person"
+              hint_de="z.B. eine frohe Person"
+              lvl="n3"
+              category="happiness, mood"
+              id="shiawase-happy"
+            >
+                <keep_apart_from id="kōun-fortune" />
+                <phrase
+                  ph="【幸：しあわ】せな【生：せい】【活：かつ】を【送：おく】る"
+                  rom="shiawase na seikatsu o okuru"
+                  tr_en="to lead a happy life"
+                  tr_de="ein glückliches Leben führen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="あのカップルは【幸：しあわ】せそう！"
+                  rom="Ano kappuru wa shiawasesō!"
+                  tr_en="That couple over there looks happy!"
+                  tr_de="Dieses Paar dort schaut glücklich aus!"
+                  lvl="n3"
+                  origin="Miku"
+                  href="https://youtu.be/l7xZ1TDZ7MU"
+                />
+            </word>
+            <word
+              w="【楽：らく】"
+              rom="raku"
+              tr_en="ease; relief; relaxed"
+              tr_de="mit Leichtigkeit; Erleichterung; entspannt"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="mood"
+              id="raku-ease"
+              rem="appears in GENKI2 L22 vocab section"
+            >
+                <phrase
+                  ph="【楽：らく】な【生：せい】【活：かつ】"
+                  rom="raku na seikatsu"
+                  tr_en="a relaxed life; easy living"
+                  tr_de="ein entspanntes Leben"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【近：ちか】【頃：ごろ】は【旅：りょ】【行：こう】は【楽：らく】だ。"
+                  rom="Chikagoro wa ryokō wa raku da."
+                  tr_en="Travelling is easy these days."
+                  tr_de="Reisen ist heutzutage leicht."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【彼：かれ】は【楽：らく】に【英：えい】【語：ご】が【読：よ】める。"
+                  rom="Kare wa raku ni eigo ga yomeru."
+                  tr_en="He can read English easily."
+                  tr_de="Er kann Englisch mit Leichtigkeit lesen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【貴：き】【重：ちょう】"
+              rom="kichō"
+              tr_en="precious; valuable"
+              tr_de="kostbar; wertvoll"
+              lvl="n3"
+              id="kichō-precious"
+              rem="appears in GENKI2 p.328"
+            >
+                <phrase
+                  ph="【貴：き】【重：ちょう】【品：ひん】"
+                  rom="kichōhin"
+                  tr_en="valuables"
+                  tr_de="Wertsachen"
+                  lvl="n3"
+                  origin="GENKI2 p.328"
+                />
+                <phrase
+                  ph="【貴：き】【重：ちょう】な【経：けい】【験：けん】"
+                  rom="kichō na keiken"
+                  tr_en="a valuable experience"
+                  tr_de="eine wertvolle Erfahrung"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【有：ゆう】【能：のう】"
+              rom="yūnō"
+              tr_en="talented; efficient; capable"
+              tr_de="talentiert; effizient; fähig"
+              lvl="n3"
+              id="yūnō-capable"
+            >
+                <phrase
+                  ph="【有：ゆう】【能：のう】な【画：が】【家：か】"
+                  rom="yūnō na gaka"
+                  tr_en="talented artist"
+                  tr_de="talentierter Maler"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【巨：きょ】【大：だい】"
+              rom="kyodai"
+              tr_en="huge; gigantic"
+              tr_de="riesig; gigantisch"
+              lvl="n3"
+              id="kyodai-huge"
+            >
+                <phrase
+                  ph="【巨：きょ】【大：だい】な【都：と】【市：し】"
+                  rom="kyodai na toshi"
+                  tr_en="a gigantic city"
+                  tr_de="eine gigantische Stadt"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <!-- verify: na?
+                  ph="【巨：きょ】【大：だい】【台：たい】【風：ふう】"
+                  rom="kyodai taifū"
+                  tr_en="gigantic typhoon"
+                  tr_de="gigantischer Taifun"
+                  lvl="n3"
+                -->
+            </word>
+            <word
+              w="【穏：おだ】やか"
+              rom="odayaka"
+              tr_en="calm; moderate; mild"
+              tr_de="gelassen; bescheiden; mild"
+              lvl="n3"
+              category="general, weather"
+              id="odayaka-calm"
+            >
+                <keep_apart_from id="ondan-warm" />
+                <!-- odayaka na kikō is possible, but ondan na kikō is more idiomatic -->
+                <phrase
+                  ph="【穏：おだ】やかな【海：うみ】に"
+                  rom="odayaka na umi ni"
+                  tr_en="on a calm sea"
+                  tr_de="auf ruhiger See"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【新：しん】【鮮：せん】"
+              rom="shinsen"
+              tr_en="fresh"
+              tr_de="frisch"
+              lvl="n3"
+              id="shinsen-fresh"
+            >
+                <phrase
+                  ph="【新：しん】【鮮：せん】な【牛：ぎゅう】【乳：にゅう】"
+                  rom="shinsen na gyūnyū"
+                  tr_en="fresh milk"
+                  tr_de="frische Milch"
+                  lvl="n3"
+                />
+                <!--
+                新鮮な下着を着ると気持ちが良いです。
+                (しんせんなしたぎをきるときもちがよいです。)
+                Wearing fresh underwear feels good.
+                ChatGPT
+                -->
+            </word>
+            <word
+              w="【真：ま】【面：じ】【目：め】"
+              rom="majime"
+              tr_en="serious; earnest; diligent"
+              tr_de="ernst; ernsthaft; fleissig"
+              lvl="n3"
+              category="mood"
+              id="majime-serious"
+            >
+                <!--
+                    jisho doesn't have usuallyInKana flag
+                    ChatGPT says hiragana is the most common; kanji is common in formal texts
+                    I keep it as kanji, because they should be all known to an n3 learner
+                -->
+                <phrase
+                  ph="【真：ま】【面：じ】【目：め】な【人：ひと】"
+                  rom="majime na hito"
+                  tr_en="earnest person"
+                  tr_de="ernsthafte Person"
+                  lvl="n3"
+                />
+                <sentence
+                  s="【真：ま】【面：じ】【目：め】に【受：う】け【取：と】らないで。"
+                  rom="Majime ni uketoranaide."
+                  tr_en="Don't take it seriously."
+                  tr_de="Nimm es nicht ernst."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【様：さま】【々：ざま】"
+              rom="sama-zama"
+              tr_en="various; diverse; all sorts of"
+              tr_de="vielerlei; diverse; alle Arten von"
+              lvl="n3"
+              id="samazama-various"
+              rem="jisho doesn't have usuallyInKana flag, but ChatGPT says it's usually in kana"
+            >
+                <sentence
+                  s="【様：さま】【々：ざま】な【若：わか】い【人：ひと】が【話：はな】し【合：あ】えるチャンスです。"
+                  rom="Sama-zama na wakai hito ga hanashiaeru chansu desu."
+                  tr_en="It's a chance for all kinds of young people to be able to meet and chat."
+                  tr_de="Es ist eine Chance für vielerlei junge Leute, um sich zu treffen und zu plaudern."
+                  lvl="n3"
+                  origin="Oxford p.102"
+                />
+            </word>
+            <word
+              w="【苦：にが】【手：て】"
+              rom="nigate"
+              tr_en="not one's cup of tea; not one's favourite thing"
+              tr_de="nicht mein Ding; etw. nicht gern tun"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="nigate-notlike"
+            >
+                <!--
+                    A see-also link to heta-unskilled may be confusing.
+                    nigate is more when one does not like something
+                    see https://hinative.com/questions/22231680
+                -->
+                <keep_apart_from id="heta-unskilled" />
+                <phrase
+                  ph="【苦：にが】【手：て】な【科：か】【目：もく】"
+                  rom="nigate na kamoku"
+                  tr_en="a (school) subject that is not my favourite"
+                  tr_de="ein Schulfach, das ich nicht gern habe"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】はスポーツが【苦：にが】【手：て】です。"
+                  rom="Watashi wa supōtsu ga nigate desu."
+                  tr_en="Sports is not my cup of tea."
+                  tr_de="Sport ist nicht so mein Ding."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【利：り】【口：こう】"
+              rom="rikō"
+              tr_en="clever; intelligent; wise"
+              tr_de="schlau; intelligent; weise"
+              lvl="n3"
+              id="rikō-clever"
+            >
+                <keep_apart_from id="umai-clever" />
+                <keep_apart_from id="kashikoi-smart" />
+                <keep_apart_from id="kiyō-clever" />
+                <phrase
+                  ph="【利：り】【口：こう】な【少：しょう】【年：ねん】"
+                  rom="rikō na shōnen"
+                  tr_en="a clever lad"
+                  tr_de="ein schlaues Bürschchen"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【高：こう】【価：か】"
+              rom="kōka"
+              tr_en="highly priced; costly; valuable"
+              tr_de="hochteuer; kostspielig; wertvoll"
+              hint_en="na-adjective; noun"
+              hint_de="Na-Adjektiv; Nomen"
+              lvl="n3"
+              category="finances"
+              id="kōka-valuable"
+            >
+                <phrase
+                  ph="【高：こう】【価：か】な【指：ゆび】【輪：わ】"
+                  rom="kōka na yubiwa"
+                  tr_en="a highly priced ring"
+                  tr_de="ein hochteurer Fingerring"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【家：いえ】は【高：こう】【価：か】です。"
+                  rom="Ie wa kōka desu."
+                  tr_en="A house is expensive."
+                  tr_de="Ein (eigenes) Haus ist teuer."
+                  lvl="n3"
+                />
+            </word>
+
+            <!-- unsorted -->
+            <word
+              w="【必：ひっ】【死：し】"
+              rom="hisshi"
+              tr_en="desperate; frantic"
+              tr_de="verzweifelt; krampfhaft"
+              lvl="n3"
+              category="mood, not-good"
+              id="hisshi-desperate"
+              rem="appears in GENKI2 p.286 kanji section"
+            />
+            <word
+              w="【真：ま】っ【白：しろ】"
+              rom="masshiro"
+              tr_en="pure white; (mind, paper) blank"
+              tr_de="pures Weiss; schneeweiss; (Gedanken, Papier) leer"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="colour"
+              id="masshiro-blank"
+              rem="jisho has n2, but n3 for makka"
+            />
+            <word
+              w="【真：ま】っ【青：さお】"
+              rom="massao"
+              tr_en="deep blue; (face) pale"
+              tr_de="tiefblau; leuchtendes Blau; (Gesicht) bleich"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="colour"
+              id="massao-deepblue"
+              rem="jissho has n2, but n5 for aoi, n4 for mannaka, n3 for makka, majime, mane"
+            />
+            <word
+              w="【真：ま】っ【赤：か】"
+              rom="makka"
+              tr_en="deep red; bright red; (face) flushed"
+              tr_de="tiefrot; leuchtendes Rot; (Gesicht) errötet"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="colour"
+              id="makka-deepred"
+            />
+            <word
+              w="【目：め】【茶：ちゃ】【苦：く】【茶：ちゃ】"
+              rom="mecha-kucha"
+              tr_en="messy; disorganized; absurd"
+              tr_de="durcheinander; chaotisch; absurd"
+              lvl="n3"
+              id="mechakucha-absurd"
+              usuallyInKana="true"
+              rem="appears in GENKI2 L21 vocab section; jisho has n2"
+            />
+            <word
+              w="【幸：さいわ】い"
+              rom="saiwai"
+              tr_en="fortunately; fortunate"
+              tr_de="glücklicherweise; vom Glück begünstigt"
+              hint_en="adverb; na-adjective"
+              hint_de="Adverb; Na-Adjektiv"
+              lvl="n3"
+              id="saiwai-happiness"
+              rem="appears in GENKI2 p.329 kanji section"
+            />
+            <word
+              w="【重：じゅう】【大：だい】"
+              rom="jūdai"
+              tr_en="important; significant; grave"
+              tr_de="ernst; (Folgen) weit reichend; gravierend"
+              Langenscheidt="ernst; (Folgen) weit reichend"
+              lvl="n3"
+              id="jūdai-significant"
+            >
+                <keep_apart_from id="dai-device" />
+            </word>
+            <word
+              w="【適：てき】【度：ど】"
+              rom="tekido"
+              tr_en="moderate; proper; suitable"
+              tr_de="gemässigt; angemessen; passend"
+              Langenscheidt="mässig, gemässigt"
+              hint_en="na-adjective; noun"
+              lvl="n3"
+              id="tekido-proper"
+            >
+                <keep_apart_from id="sōtō-suitable" />
+                <keep_apart_from id="tekisetsu-suitable" />
+                <keep_apart_from id="tekitō-suitable" />
+            </word>
+            <word
+              w="かわいそう"
+              rom="kawaisō"
+              tr_en="pitiable; poor; pathetic"
+              tr_de="erbärmlich; elend; jämmerlich"
+              lvl="n3"
+              id="kawaisō-poor"
+            >
+                <keep_apart_from id="aware-pitiable" />
+            </word>
+            <word
+              w="【見：み】【事：ごと】"
+              rom="migoto"
+              tr_en="gorgeous; magnificent"
+              tr_de="hinreissend; wunderschön"
+              hint_en="na-adjective; adverb"
+              hint_de="Na-Adjektiv; Adverb"
+              lvl="n3"
+              category="top-words"
+              id="migoto-splendid"
+            >
+                <!-- migoto ni - utter (jisho) -->
+            </word>
+            <word
+              w="【新：あら】た"
+              rom="arata"
+              tr_en="new; novel"
+              tr_de="neu; neuartig"
+              lvl="n3"
+              id="arata-new"
+            >
+                <!-- 新たな始まり (あらたなはじまり) A new beginning (ChatGPT) -->
+            </word>
+            <word
+              w="【不：ふ】【安：あん】"
+              rom="fuan"
+              tr_en="worried; uneasy; insecurity"
+              tr_de="besorgt; unbehaglich; Unsicherheit"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="fuan-uneasy"
+            >
+                <!-- 不安な将来 - fuan na shōrai (ChatGPT) -->
+            </word>
+            <word
+              w="【不：ふ】【平：へい】"
+              rom="fuhei"
+              tr_en="complaint; discontent; dissatisfaction"
+              tr_de="sich beklagen; unzufrieden; unbefriedigend"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="fuhei-discontent"
+            >
+                <!-- 彼らは不平ばかり言う。	They do nothing but complain. (lib0) -->
+            </word>
+            <word
+              w="【夢：む】【中：ちゅう】"
+              rom="muchū"
+              tr_en="absorbed in; crazy about; ecstasy"
+              tr_de="absorbiert sein; verrückt sein nach; Ekstase"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="muchū-ecstasy"
+            >
+                <!-- 夢中になる (Be absorbed in) To be deeply engrossed or fascinated by something (ChatGPT) -->
+            </word>
+            <word
+              w="そっくり"
+              rom="sokkuri"
+              tr_en="altogether; completely; exactly like"
+              tr_de="komplett; vollständig; genau wie"
+              hint_en="adverb; na-adjective"
+              hint_de="Adverb; Na-Adjektiv"
+              lvl="n3"
+              category="onomatopoeia"
+              id="sokkuri-altogether"
+            >
+                <!-- そっくりに似る (Sokkuri ni niru) - Resemble exactly (ChatGPT) -->
+            </word>
+            <word
+              w="【不：ふ】【利：り】"
+              rom="furi"
+              tr_en="disadvantage; handicap; unfavorable position"
+              tr_de="Nachteil; Handicap; schlechte Position"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="furi-disadvantage"
+            />
+        </section>
+    </unit>
+</vocabulary>

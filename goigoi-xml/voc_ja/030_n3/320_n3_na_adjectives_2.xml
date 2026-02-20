@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 na-adjectives ②"
+      name_de="N3 Na-Adjektive ②"
+      name_fr="Les na-adjectifs N3 ②"
+      name_it="Na-aggettivi N3 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="na-adjective"
+      defaultHint_de="Na-Adjektiv"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!--
+                FIXME: verify that all of these words are na-adjectives!
+            -->
+
+            <!-- na-adjective -->
+            <word
+              w="【温：おん】【暖：だん】"
+              rom="ondan"
+              tr_en="(climate) warm; mild"
+              tr_de="(Klima) warm; mild"
+              lvl="n3"
+              id="ondan-warm"
+            >
+                <keep_apart_from id="odayaka-calm" />
+                <phrase
+                  ph="【温：おん】【暖：だん】な【気：き】【候：こう】"
+                  rom="ondan na kikō"
+                  tr_en="a mild climate"
+                  tr_de="ein mildes Klima"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【満：まん】【足：ぞく】"
+              rom="manzoku"
+              tr_en="adequate; satisfaction; sufficient"
+              tr_de="adäquat sein; Zufriedenheit; genügen"
+              hint_en="na-adjective; noun; suru verb"
+              hint_de="Na-Adjektiv; Nomen; Suru-Verb"
+              lvl="n3"
+              id="manzoku-adequate"
+            >
+                <keep_apart_from id="tariru-beenough" />
+                <keep_apart_from id="taru-beenough" />
+                <keep_apart_from id="tekitō-suitable" />
+            </word>
+            <word
+              w="【優：ゆう】【秀：しゅう】"
+              rom="yūshū"
+              tr_en="superior; excellent; brilliant"
+              tr_de="überragend; exzellent; brilliant"
+              hint_en="na-adjective; noun"
+              hint_de="Na-Adjektiv; Nomen"
+              lvl="n3"
+              id="yūshū-superior"
+            />
+
+            <!-- unsorted -->
+            <word
+              w="【幸：こう】【運：うん】"
+              rom="kōun"
+              tr_en="good luck; blessed by fortune"
+              tr_de="Glück; vom Glück begünstigt"
+              Langenscheidt="Glück; (な) glücklich"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="kōun-fortune"
+              rem="appears in GENKI2 p.329 kanji section"
+            >
+                <keep_apart_from id="shiawase-happy" />
+                <sentence
+                  s="【幸：こう】【運：うん】を【祈：いの】る。"
+                  rom="Kōun o inoru."
+                  tr_en="I wish you good luck."
+                  tr_de="Ich wünsch dir viel Glück."
+                  lvl="n3"
+                  origin="Doraemon 7, p.83"
+                />
+            </word>
+            <word
+              w="【逆：ぎゃく】"
+              rom="gyaku"
+              tr_en="reverse; opposite"
+              tr_de="umgekehrt; gegenteilig"
+              lvl="n3"
+              id="gyaku-reverse"
+            />
+            <word
+              w="【気：き】の【毒：どく】"
+              rom="ki no doku"
+              tr_en="unfortunate; miserable; wretched"
+              tr_de="bedauerlich; unglücklich; kümmerlich"
+              lvl="n3"
+              id="kinodoku-unfortunate"
+            />
+            <word
+              w="【一：いっ】【般：ぱん】"
+              rom="ippan"
+              tr_en="general; universal; common"
+              tr_de="allgemein; universell"
+              lvl="n3"
+              category="general"
+              id="ippan-general"
+            />
+            <word
+              w="【完：かん】【全：ぜん】"
+              rom="kanzen"
+              tr_en="perfect; complete"
+              tr_de="perfekt; komplett"
+              lvl="n3"
+              id="kanzen-perfect"
+            />
+            <word
+              w="【明：あき】らか"
+              rom="akiraka"
+              tr_en="obvious; evident; bright"
+              tr_de="offensichtlich; augenscheinlich; hell"
+              lvl="n3"
+              category="general, light"
+              id="akiraka-obvious"
+            />
+            <word
+              w="【奇：き】【妙：みょう】"
+              rom="kimyō"
+              tr_en="strange; odd; peculiar"
+              tr_de="seltsam; merkwürdig; eigenartig"
+              lvl="n3"
+              id="kimyō-strange"
+            />
+            <word
+              w="【強：きょう】【力：りょく】"
+              rom="kyōryoku"
+              tr_en="powerful; strong"
+              tr_de="mächtig; stark"
+              lvl="n3"
+              id="kyōryoku-powerful"
+            />
+            <word
+              w="【意：い】【外：がい】"
+              rom="igai"
+              tr_en="unexpected; surprising"
+              tr_de="unerwartet; überraschend"
+              lvl="n3"
+              id="igai-unexpected"
+            />
+            <word
+              w="【最：さい】【低：てい】"
+              rom="saitei"
+              tr_en="lowest; minimum; least; worst"
+              tr_de="tiefst; minimal; am wenigsten"
+              lvl="n3"
+              id="saitei-lowest"
+            />
+            <word
+              w="【正：しょう】【直：じき】"
+              rom="shōjiki"
+              tr_en="honest; frank; straightforward"
+              tr_de="ehrlich; offen; aufrichtig"
+              lvl="n3"
+              id="shōjiki-honest"
+            />
+            <word
+              w="【偉：い】【大：だい】"
+              rom="idai"
+              tr_en="grand; magnificent; outstanding"
+              tr_de="grossartig; prächtig; ausserordentlich"
+              lvl="n3"
+              id="idai-grand"
+            />
+            <word
+              w="【可：か】【能：のう】"
+              rom="kanō"
+              tr_en="practicable; feasible"
+              tr_de="machbar; durchführbar"
+              lvl="n3"
+              id="kanō-feasible"
+            />
+            <word
+              w="【急：きゅう】【速：そく】"
+              rom="kyūsoku"
+              tr_en="rapid"
+              tr_de="schnell"
+              hint_en="e.g. progress"
+              hint_de="z.B. Fortschritt"
+              lvl="n3"
+              category="motion"
+              id="kyūsoku-rapid"
+            />
+            <word
+              w="【快：かい】【適：てき】"
+              rom="kaiteki"
+              tr_en="pleasant; agreeable; comfortable"
+              tr_de="angenehm; wohltuend; gemütlich"
+              lvl="n3"
+              id="kaiteki-pleasant"
+            />
+            <word
+              w="【共：きょう】【通：つう】"
+              rom="kyōtsū"
+              tr_en="common; shared"
+              tr_de="gemeinsam"
+              lvl="n3"
+              id="kyōtsū-common"
+            />
+            <word
+              w="【哀：あわ】れ"
+              rom="aware"
+              tr_en="pitiable; pathetic; miserable"
+              tr_de="erbärmlich; bemitleidenswert; elend"
+              lvl="n3"
+              id="aware-pitiable"
+            >
+                <keep_apart_from id="kawaisō-poor" />
+            </word>
+
+            <!-- HIDDEN -->
+            <word
+              w="【適：てき】【切：せつ】"
+              rom="tekisetsu"
+              tr_en="appropriate; suitable; fitting; apt; proper; right; pertinent; relevant"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              id="tekisetsu-suitable"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="tekido-proper" />
+                <keep_apart_from id="sōtō-suitable" />
+                <keep_apart_from id="tekitō-suitable" />
+            </word>
+            <word
+              w="【相：そう】【当：とう】"
+              rom="sōtō"
+              tr_en="corresponding; equivalent; appropriate; suitable; befitting; proportionate; to be proportionate to; to be in keeping with; to be deserving of; to be worthy of; considerable; substantial; considerably; rather; quite; fairly; pretty"
+              hint_en="noun; suru verb; na-adjective; adverb"
+              lvl="n3"
+              id="sōtō-suitable"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="tekido-proper" />
+                <keep_apart_from id="tekisetsu-suitable" />
+                <keep_apart_from id="tekitō-suitable" />
+            </word>
+            <word
+              w="【無：ぶ】【事：じ】"
+              rom="buji"
+              tr_en="safety; security; peace; quiet; safely; without incident; successfully; good health; inaction; ennui"
+              hint_en="noun; na-adjective (keiyodoshi); noun; adverb (fukushi); noun; na-adjective (keiyodoshi)"
+              lvl="n3"
+              id="buji-safety"
+              HIDDEN="true"
+            >
+                <see id="anzen-safety" rem="closely related" />
+            </word>
+            <word
+              w="【器：き】【用：よう】"
+              rom="kiyō"
+              tr_en="clever; skillful; adroit"
+              tr_de="schlau; geschickt; gewandt"
+              lvl="n3"
+              id="kiyō-clever"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="umai-clever" />
+                <keep_apart_from id="kashikoi-smart" />
+                <keep_apart_from id="rikō-clever" />
+            </word>
+            <word
+              w="【急：きゅう】【激：げき】"
+              rom="kyūgeki"
+              tr_en="sudden; abrupt; radical"
+              lvl="n3"
+              id="kyūgeki-radical"
+              HIDDEN="true"
+              rem="must not be together with totsuzen"
+            />
+            <word
+              w="【空：から】っぽ"
+              rom="karappo"
+              tr_en="empty; vacant; hollow"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              HIDDEN="true"
+              id="karappo-empty"
+              rem="jisho has n2"
+            />
+            <word
+              w="【慎：しん】【重：ちょう】"
+              rom="shinchō"
+              tr_en="careful; cautious"
+              tr_de="vorsichtig; behutsam"
+              lvl="n3"
+              category="mood"
+              id="shinchō-careful"
+              HIDDEN="true"
+            />
+            <word
+              w="【複：ふく】【雑：ざつ】"
+              rom="fukuzatsu"
+              tr_en="complex (mechanism); complicated (matters)"
+              tr_de="komplex (Mechanismus); kompliziert (Angelegenheit)"
+              lvl="n3"
+              id="fukuzatsu-complex"
+              HIDDEN="true"
+              rem="not in GENKI1 nor 2 index; not in 500mon N5/N4 nor N3 index; jisho has n4, but n2 for the kanji"
+            />
+            <word
+              w="【冷：れい】【静：せい】"
+              rom="reisei"
+              tr_en="calmness; composure; coolness; serenity; presence of mind"
+              hint_en="noun; na-adjective (keiyodoshi)"
+              lvl="n3"
+              id="reisei-serenity"
+              HIDDEN="true"
+            />
+            <word
+              w="【明：めい】【確：かく】"
+              rom="meikaku"
+              tr_en="clear; precise; definite; distinct"
+              hint_en="na-adjective (keiyodoshi)"
+              lvl="n3"
+              id="meikaku-clear"
+              HIDDEN="true"
+            />
+            <word
+              w="【有：ゆう】【利：り】"
+              rom="yūri"
+              tr_en="advantageous; favourable; better; stronger / profitable; lucrative; gainful; paying"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              id="yūri-favourable"
+              HIDDEN="true"
+            />
+            <word
+              w="【我：わが】【儘：まま】"
+              rom="wagamama"
+              tr_en="selfish; egoist / self-indulgent; wilful; willful"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              usuallyInKana="true"
+              id="wagamama-selfish"
+              HIDDEN="true"
+            />
+            <word
+              w="たっぷり"
+              rom="tappuri"
+              tr_en="plentifully; amply; abundantly; copiously; generously; fully; a lot / loosely; with room to spare; with enough space; (large) enough / a good (e.g. two weeks, ten kilometres); a full; at least; no less than"
+              hint_en="adverb; na-adjective (keiyodoshi); suffix; suru verb"
+              lvl="n3"
+              id="tappuri-amply"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="yutaka-abundant" />
+                <keep_apart_from id="hōfu-abundant" />
+            </word>
+            <word
+              w="【豊：ゆた】か"
+              rom="yutaka"
+              tr_en="abundant; wealthy; plentiful; rich; affluent; very; extremely; full of; great"
+              hint_en="na-adjective; suffix"
+              lvl="n3"
+              id="yutaka-abundant"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="tappuri-amply" />
+                <keep_apart_from id="hōfu-abundant" />
+            </word>
+            <word
+              w="【豊：ほう】【富：ふ】"
+              rom="hōfu"
+              tr_en="abundant; plentiful; rich; ample"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              id="hōfu-abundant"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="yutaka-abundant" />
+                <keep_apart_from id="tappuri-amply" />
+            </word>
+            <word
+              w="【密：みつ】"
+              rom="mitsu"
+              tr_en="dense; thick; crowded / close (relationship); intimate / minute; fine; careful / secret / esoteric Buddhism; secret Buddhist teachings"
+              hint_en="na-adjective (keiyodoshi); noun / noun"
+              lvl="n3"
+              id="mitsu-dense"
+              HIDDEN="true"
+            />
+            <word
+              w="【厄：やっ】【介：かい】"
+              rom="yakkai"
+              tr_en="trouble; burden; nuisance; bother; worry / care; dependence; support; kindness; obligation; staying (with a person)"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              id="yakkai-burden"
+              HIDDEN="true"
+            />
+            <word
+              w="【単：たん】【純：じゅん】"
+              rom="tanjun"
+              tr_en="simple; plain; uncomplicated; straightforward; simple-minded; naive"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              id="tanjun-plain"
+              HIDDEN="true"
+            />
+            <word
+              w="【主：しゅ】【要：よう】"
+              rom="shuyō"
+              tr_en="chief; main; principal; major"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              id="shuyō-main"
+              HIDDEN="true"
+            />
+            <word
+              w="【余：よ】【分：ぶん】"
+              rom="yobun"
+              tr_en="extra; excess; surplus"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              id="yobun-extra"
+              HIDDEN="true"
+            />
+            <word
+              w="【陽：よう】【気：き】"
+              rom="yōki"
+              tr_en="cheerful; jovial; merry; lively / weather; season / spirit of yang"
+              hint_en="na-adjective (keiyodoshi); noun / noun"
+              lvl="n3"
+              id="yōki-cheerful"
+              HIDDEN="true"
+            />
+            <word
+              w="【順：じゅん】【調：ちょう】"
+              rom="junchō"
+              tr_en="favourable; doing well; OK; all right"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              id="junchō-favourable"
+              HIDDEN="true"
+            />
+            <word
+              w="【豪：ごう】【華：か】"
+              rom="gōka"
+              tr_en="extravagant; lavish; opulent; luxurious; magnificent; splendid; fancy; gorgeous"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              id="gōka-lavish"
+              HIDDEN="true"
+            />
+            <word
+              w="【積：せっ】【極：きょく】【的：てき】"
+              rom="sekkyokuteki"
+              tr_en="positive; assertive; active; proactive; aggressive"
+              hint_en="na-adjective (keiyodoshi)"
+              lvl="n3"
+              id="sekkyokuteki-active"
+              HIDDEN="true"
+            />
+            <word
+              w="【莫：ばく】【大：だい】"
+              rom="bakudai"
+              tr_en="vast; huge; immense; enormous; colossal / malva nut (Sterculia lychnophora) / Sterculia lychnophora"
+              hint_en="na-adjective (keiyodoshi) / noun"
+              lvl="n3"
+              id="bakudai-vast"
+              HIDDEN="true"
+            />
+            <word
+              w="【正：せい】【式：しき】"
+              rom="seishiki"
+              tr_en="due form; official; formality"
+              hint_en="na-adjective (keiyodoshi); noun which may take the genitive case particle 'no'; noun"
+              lvl="n3"
+              id="seishiki-official"
+              HIDDEN="true"
+            />
+            <word
+              w="【深：しん】【刻：こく】"
+              rom="shinkoku"
+              tr_en="serious; severe; grave; acute"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              id="shinkoku-serious"
+              HIDDEN="true"
+            />
+            <word
+              w="【僅：わず】か"
+              rom="wazuka"
+              tr_en="(a) little; (a) few; slight; small (amount); trifling; meagre; meager / only; just; merely"
+              hint_en="na-adjective (keiyodoshi); noun which may take the genitive case particle 'no' / adverb (fukushi)"
+              lvl="n3"
+              id="wazuka-few"
+              HIDDEN="true"
+            />
+            <word
+              w="【愉：ゆ】【快：かい】"
+              rom="yukai"
+              tr_en="pleasant; delightful; enjoyable; joyful; cheerful; amusing; happy"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              category="happiness"
+              id="yukai-pleasant"
+              HIDDEN="true"
+            />
+            <word
+              w="【平：びょう】【等：どう】"
+              rom="byōdō"
+              tr_en="equality; impartiality; evenness"
+              hint_en="noun; na-adjective"
+              lvl="n3"
+              id="byōdō-equality"
+              HIDDEN="true"
+            />
+            <word
+              w="【正：せい】【確：かく】"
+              rom="seikaku"
+              tr_en="accurate; correct; precise; exact"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n3"
+              id="seikaku-accurate"
+              HIDDEN="true"
+            />
+            <word
+              w="【困：こん】【難：なん】"
+              rom="konnan"
+              tr_en="difficulty; hardship; trouble; distress; infeasibility; inability (to carry out)"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="konnan-trouble"
+              HIDDEN="true"
+            />
+            <word
+              w="【罪：つみ】"
+              rom="tsumi"
+              tr_en="crime; sin; wrongdoing; indiscretion; penalty; sentence; punishment; fault; responsibility; culpability; thoughtlessness; lack of consideration"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="not-good"
+              id="tsumi-crime"
+              HIDDEN="true"
+            />
+            <word
+              w="【真：しん】【剣：けん】"
+              rom="shinken"
+              tr_en="serious; earnest; real sword (as opposed to unsharpened or wooden practice weapon)"
+              hint_en="na-adjective; noun"
+              lvl="n3"
+              id="shinken-serious"
+              HIDDEN="true"
+            />
+            <word
+              w="【直：ちょく】【接：せつ】"
+              rom="chokusetsu"
+              tr_en="direct; immediate; personal; firsthand"
+              hint_en="na-adjective"
+              lvl="n3"
+              id="chokusetsu-direct"
+              HIDDEN="true"
+            />
+            <word
+              w="【直：なお】"
+              rom="nao"
+              tr_en="straight; ordinary; common; doing nothing"
+              hint_en="na-adjective (keiyodoshi)"
+              lvl="n3"
+              id="nao-straight"
+              HIDDEN="true"
+            />
+            <word
+              w="【不：ふ】【自：じ】【由：ゆう】"
+              rom="fujiyū"
+              tr_en="discomfort; inconvenience; poverty; want; destitution; inability; disability; impairment (physical, mental, etc.); nonfluency (in a language)"
+              hint_en="noun; na-adjective (keiyodoshi); suru verb"
+              lvl="n3"
+              id="fujiyū-discomfort"
+              HIDDEN="true"
+            />
+            <word
+              w="【不：ふ】【正：せい】"
+              rom="fusei"
+              tr_en="injustice; unfairness; wrongdoing; iniquity; impropriety; irregularity; dishonesty; illegality; fraud"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="not-good"
+              id="fusei-injustice"
+              HIDDEN="true"
+            />
+            <word
+              w="【上：じょう】【等：とう】"
+              rom="jōtō"
+              tr_en="superior; first-class; excellent; top quality; (that's) just fine!; bring it on!"
+              hint_en="noun; na-adjective"
+              lvl="n3"
+              id="jōtō-superior"
+              HIDDEN="true"
+            />
+            <word
+              w="【贅：ぜい】【沢：たく】"
+              rom="zeitaku"
+              tr_en="luxury; extravagance; to live in luxury; to indulge oneself; lavish (use of something); abundant; copious; wasteful; excessive (e.g. demands, expectations)"
+              hint_en="noun; na-adjective; suru verb"
+              lvl="n3"
+              id="zeitaku-luxury"
+              HIDDEN="true"
+            />
+            <word
+              w="【順：じゅん】"
+              rom="jun"
+              tr_en="turn (e.g. one's turn); order (e.g. to be in order); obedient; docile; submissive; meek"
+              hint_en="noun; na-adjective"
+              lvl="n3"
+              id="jun-turn"
+              HIDDEN="true"
+            />
+            <word
+              w="【損：そん】"
+              rom="son"
+              tr_en="loss; damage; harm; unprofitable; disadvantage; handicap; drawback; unfavorable"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="son-loss"
+              HIDDEN="true"
+            />
+        </section>
+    </unit>
+</vocabulary>

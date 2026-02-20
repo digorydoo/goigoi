@@ -1,0 +1,1448 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <!-- subheader cannot be in a file of its own, because it's just a state of the parser -->
+    <subheader
+      name_en="Numbers, counters, dates"
+      name_de="Zahlen, Zählworte, Datum"
+      name_fr="Les numéros, les mots à compter, les dates"
+      name_it="Numeri, data, parole per contare"
+    />
+    <unit
+      name_en="Numbers"
+      name_de="Zahlen"
+      name_fr="Les numéros"
+      name_it="Numeri"
+      studyLang="ja"
+      lvl="n5"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="number"
+      defaultHint_de="Zahl"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="false"
+    >
+        <section>
+            <word
+              w="【一：いち】"
+              rom="ichi"
+              tr_en="1; one"
+              tr_de="1; eins"
+              lvl="n5"
+              id="ichi-one"
+            >
+                <keep_apart_from id="hito-one" />
+                <keep_together id="hito-one" />
+                <phrase
+                  ph="【十：じゅう】【一：いち】"
+                  rom="jū-ichi"
+                  tr_en="11; eleven"
+                  tr_de="11; elf"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【二：に】【十：じゅう】【一：いち】"
+                  rom="ni-jū-ichi"
+                  tr_en="21; twenty-one"
+                  tr_de="21; einundzwanzig"
+                  lvl="n5"
+                />
+                <sentence
+                  s="もう【一：いち】【度：ど】【言：い】って ください。"
+                  rom="Mō ichi-do itte kudasai."
+                  tr_en="Please say it again."
+                  tr_de="Bitte sagen Sie es noch einmal."
+                  lvl="n5"
+                />
+            </word>
+            <word
+              w="【一：ひと】"
+              rom="hito"
+              tr_en="1; one"
+              tr_de="1; eins"
+              lvl="n5"
+              id="hito-one"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="ichi-one" />
+                <keep_together id="ichi-one" />
+            </word>
+            <word
+              w="【二：に】"
+              rom="ni"
+              tr_en="2; two"
+              tr_de="2; zwei"
+              lvl="n5"
+              id="ni-two"
+            >
+                <keep_apart_from id="ni-twoalt" />
+                <keep_apart_from id="futa-two" />
+                <keep_together id="ni-twoalt" />
+                <keep_together id="futa-two" />
+                <phrase
+                  ph="【十：じゅう】【二：に】"
+                  rom="jū-ni"
+                  tr_en="12; twelve"
+                  tr_de="12; zwölf"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【二：に】【十：じゅう】【二：に】"
+                  rom="ni-jū-ni"
+                  tr_en="22; twenty-two"
+                  tr_de="22; zweiundzwanzig"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【結：けっ】【婚：こん】して 【二：に】【年：ねん】に なる。"
+                  rom="Kekkon shite ni-nen ni naru."
+                  tr_en="It's been two years since I got married."
+                  tr_de="Es ist zwei Jahre her, seit ich geheiratet habe."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【２：に】"
+              rom="ni"
+              tr_en="2; two"
+              lvl="n5"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+              id="ni-twoalt"
+            >
+                <keep_apart_from id="ni-two" />
+                <keep_together id="ni-two" />
+            </word>
+            <word
+              w="【二：ふた】"
+              rom="futa"
+              tr_en="2; two"
+              tr_de="2; zwei"
+              lvl="n5"
+              id="futa-two"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="ni-two" />
+                <keep_together id="ni-two" />
+            </word>
+            <word
+              w="【三：さん】"
+              rom="san"
+              tr_en="3; three"
+              tr_de="3; drei"
+              lvl="n5"
+              id="san-three"
+            >
+                <keep_apart_from id="san-threealt" />
+                <keep_apart_from id="mi-three" />
+                <keep_together id="san-threealt" />
+                <keep_together id="mi-three" />
+                <phrase
+                  ph="【十：じゅう】【三：さん】"
+                  rom="jū-san"
+                  tr_en="13; thirteen"
+                  tr_de="13; dreizehn"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【二：に】【十：じゅう】【三：さん】"
+                  rom="ni-jū-san"
+                  tr_en="23; twenty-three"
+                  tr_de="23; dreiundzwanzig"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【男：おとこ】の 【人：ひと】が 【三：さん】【人：にん】います。"
+                  rom="Otoko no hito ga san-nin imasu."
+                  tr_en="There are three men."
+                  tr_de="Es hat da drei Männer."
+                  lvl="n5"
+                  href="https://hinative.com/questions/20325749"
+                />
+            </word>
+            <word
+              w="【３：さん】"
+              rom="san"
+              tr_en="3; three"
+              lvl="n5"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+              id="san-threealt"
+            >
+                <keep_apart_from id="san-three" />
+                <keep_together id="san-three" />
+            </word>
+            <word
+              w="【三：み】"
+              rom="mi"
+              tr_en="3; three"
+              tr_de="3; drei"
+              lvl="n5"
+              id="mi-three"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="san-three" />
+                <keep_together id="san-three" />
+            </word>
+            <word
+              w="【四：よん】"
+              rom="yon"
+              tr_en="4; four"
+              tr_de="4; vier"
+              lvl="n5"
+              id="yon-four"
+              rem="GENKI1 p.380 has yon as 'regular'"
+            >
+                <keep_apart_from id="shi-four" />
+                <keep_apart_from id="yon-fouralt" />
+                <keep_together id="shi-four" />
+                <keep_together id="yon-fouralt" />
+                <!--
+                  ph="【十：じゅう】【四：よん】"
+                  rom="jū-yon"
+                  tr_en="14; fourteen"
+                  tr_de="14; vierzehn"
+                  lvl="n5"
+                -->
+                <phrase
+                  ph="【二：に】【十：じゅう】【四：よん】"
+                  rom="ni-jū-yon"
+                  tr_en="24; twenty-four"
+                  tr_de="24; vierundzwanzig"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【四：よん】【本：ほん】"
+                  rom="yon-hon"
+                  tr_en="four long, thin objects"
+                  tr_de="vier lange, dünne Objekte"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <sentence
+                  s="【鉛：えん】【筆：ぴつ】が【四：よん】【本：ほん】あります。"
+                  rom="Enpitsu ga yon-hon arimasu."
+                  tr_en="There are four pencils."
+                  tr_de="Es hat vier Bleistifte."
+                  lvl="n4"
+                  origin="GENKI2 p.54 modified"
+                />
+                <sentence
+                  s="バスに【傘：かさ】をもう【四：よん】【回：かい】も【忘：わす】れちゃった。"
+                  rom="Basu ni kasa o mō yon-kai mo wasurechatta."
+                  tr_en="I left my umbrella in the bus four times."
+                  tr_de="Ich habe meinen Schirm vier Mal im Bus liegen gelassen."
+                  explanation_en="忘れちゃった is a casual contraction of 忘れてしまった"
+                  explanation_de="忘れちゃった ist eine umgangssprachliche Kurzform von 忘れてしまった"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【四：し】"
+              rom="shi"
+              tr_en="4; four"
+              tr_de="4; vier"
+              lvl="n5"
+              id="shi-four"
+              HIDDEN="true"
+              rem="just to silence find-missing-goigoi.sh"
+            >
+                <keep_apart_from id="yon-four" />
+                <keep_together id="yon-four" />
+            </word>
+            <word
+              w="【４：よん】"
+              rom="yon"
+              tr_en="4; four"
+              lvl="n5"
+              id="yon-fouralt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="yon-four" />
+                <keep_together id="yon-four" />
+            </word>
+            <word
+              w="【五：ご】"
+              rom="go"
+              tr_en="5; five"
+              tr_de="5; fünf"
+              lvl="n5"
+              id="go-five"
+            >
+                <keep_apart_from id="itsu-five" />
+                <keep_together id="itsu-five" />
+                <phrase
+                  ph="【十：じゅう】【五：ご】"
+                  rom="jū-go"
+                  tr_en="15; fifteen"
+                  tr_de="15; fünfzehn"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【三：さん】【十：じゅう】【五：ご】"
+                  rom="san-jū-go"
+                  tr_en="35; thirty-five"
+                  tr_de="35; fünfundreissig"
+                  lvl="n5"
+                />
+                <sentence
+                  s="お【手：て】【洗：あら】いの【前：まえ】で【女：おんな】の【人：ひと】が【五：ご】【人：にん】【待：ま】っていました。"
+                  rom="O-tearai no mae de onna no hito ga go-nin matte imashita."
+                  tr_en="Five women were waiting in front of the lavatory."
+                  tr_de="Vor der Toilette waren fünf Frauen am Warten."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【五：いつ】"
+              rom="itsu"
+              tr_en="5; five"
+              tr_de="5; fünf"
+              lvl="n5"
+              id="itsu-five"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="go-five" />
+                <keep_together id="go-five" />
+            </word>
+            <word
+              w="【六：ろく】"
+              rom="roku"
+              tr_en="6; six"
+              tr_de="6; sechs"
+              lvl="n5"
+              id="roku-six"
+            >
+                <keep_apart_from id="mu-six" />
+                <keep_together id="mu-six" />
+                <!--
+                  ph="【十：じゅう】【六：ろく】"
+                  rom="jū-roku"
+                  tr_en="16; sixteen"
+                  tr_de="16; sechzehn"
+                  lvl="n5"
+                -->
+                <phrase
+                  ph="【十：じゅう】【六：ろく】【歳：さい】"
+                  rom="jū-roku-sai"
+                  tr_en="sixteen years old"
+                  tr_de="sechzehn Jahre alt"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【九：きゅう】【十：じゅう】【六：ろく】"
+                  rom="kyū-jū-roku"
+                  tr_en="96; ninety-six"
+                  tr_de="96; sechsundneunzig"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【六：ろく】【時：じ】に 【着：つ】きました。"
+                  rom="Roku-ji ni tsukimashita."
+                  tr_en="I arrived at six o'clock."
+                  tr_de="Ich kam um sechs Uhr an."
+                  lvl="n5"
+                  origin="Oxford p.140"
+                />
+            </word>
+            <word
+              w="【六：む】"
+              rom="mu"
+              tr_en="6; six"
+              tr_de="6; sechs"
+              lvl="n5"
+              id="mu-six"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="roku-six" />
+                <keep_together id="roku-six" />
+            </word>
+            <word
+              w="【七：しち】"
+              rom="shichi"
+              tr_en="7; seven"
+              tr_de="7; sieben"
+              lvl="n5"
+              id="shichi-seven"
+            >
+                <keep_apart_from id="nana-seven" />
+                <keep_together id="nana-seven" />
+                <phrase
+                  ph="【七：しち】【五：ご】【三：さん】"
+                  rom="shichi-go-san"
+                  tr_en="Japanese festival for children aged 7, 5 and 3"
+                  tr_de="japanisches Festival für Kinder von 7, 5 und 3 Jahren"
+                  explanation_en="November 15th"
+                  explanation_de="15. November"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【朝：あさ】は【七：しち】【時：じ】【半：はん】のバスに【乗：の】っています。"
+                  rom="Asa wa shichi-ji-han no basu ni notte imasu."
+                  tr_en="In the morning, I take the 7:30 bus."
+                  tr_de="Am Morgen nehme ich jeweils den 7:30 Bus."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【七：なな】"
+              rom="nana"
+              tr_en="7; seven"
+              tr_de="7; sieben"
+              lvl="n5"
+              id="nana-seven"
+              rem="GENKI1 p.380 has nana as 'regular'"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="shichi-seven" />
+                <keep_together id="shichi-seven" />
+            </word>
+            <word
+              w="【八：はち】"
+              rom="hachi"
+              tr_en="8; eight"
+              tr_de="8; acht"
+              lvl="n5"
+              id="hachi-eight"
+            >
+                <keep_apart_from id="hachi-eightalt" />
+                <keep_apart_from id="ya-eight" />
+                <keep_together id="hachi-eightalt" />
+                <keep_together id="ya-eight" />
+                <phrase
+                  ph="【十：じゅう】【八：はち】"
+                  rom="jū-hachi"
+                  tr_en="18; eighteen"
+                  tr_de="18; achtzehn"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【六：ろく】【十：じゅう】【八：はち】"
+                  rom="roku-jū-hachi"
+                  tr_en="68; sixty-eight"
+                  tr_de="68; achtundsechzig"
+                  lvl="n5"
+                />
+                <sentence
+                  s="おじいさんは 【八：はち】【十：じゅう】【歳：さい】です。"
+                  rom="O-jīsan wa hachi-jū-sai desu."
+                  tr_en="Grandfather is 80 years old."
+                  tr_de="Grossvater ist 80 Jahre alt."
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【８：はち】"
+              rom="hachi"
+              tr_en="eight"
+              lvl="n5"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+              id="hachi-eightalt"
+            >
+                <keep_apart_from id="hachi-eight" />
+                <keep_together id="hachi-eight" />
+            </word>
+            <word
+              w="【八：や】"
+              rom="ya"
+              tr_en="8; eight"
+              tr_de="8; acht"
+              lvl="n5"
+              id="ya-eight"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="hachi-eight" />
+                <keep_together id="hachi-eight" />
+            </word>
+            <word
+              w="【九：きゅう】"
+              rom="kyū"
+              tr_en="9; nine"
+              tr_de="9; neun"
+              lvl="n5"
+              id="kyū-nine"
+            >
+                <keep_apart_from id="kokono-nine" />
+                <keep_together id="kokono-nine" />
+                <!--
+                  ph="【十：じゅう】【九：きゅう】"
+                  rom="jū-kyū"
+                  tr_en="19; nineteen"
+                  tr_de="19; neunzehn"
+                  lvl="n5"
+                -->
+                <phrase
+                  ph="【十：じゅう】【九：きゅう】【歳：さい】"
+                  rom="jū-kyū-sai"
+                  tr_en="nineteen years old"
+                  tr_de="neunzehn Jahre alt"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【九：きゅう】【十：じゅう】"
+                  rom="kyū-jū"
+                  tr_en="90; ninety"
+                  tr_de="90; neunzig"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【大：だい】【学：がく】を【卒：そつ】【業：ぎょう】して【九：きゅう】【年：ねん】になる。"
+                  rom="Daigaku o sotsugyō shite kyū-nen ni naru."
+                  tr_en="It's nine years ago that I graduated from university."
+                  tr_de="Es sind neun Jahre her, seit ich meinen Uniabschluss gemacht habe."
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【九：ここの】"
+              rom="kokono"
+              tr_en="9; nine"
+              tr_de="9; neun"
+              lvl="n5"
+              id="kokono-nine"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="kyū-nine" />
+                <keep_together id="kyū-nine" />
+            </word>
+            <word
+              w="【十：じゅう】"
+              rom="jū"
+              tr_en="10; ten"
+              tr_de="10; zehn"
+              lvl="n5"
+              id="jū-ten"
+            >
+                <keep_apart_from id="jū-tenalt" />
+                <keep_apart_from id="tō-ten" />
+                <keep_together id="jū-tenalt" />
+                <keep_together id="tō-ten" />
+                <phrase
+                  ph="【十：じゅう】【七：なな】"
+                  rom="jū-nana"
+                  tr_en="17; seventeen"
+                  tr_de="17; siebzehn"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【二：に】【十：じゅう】"
+                  rom="ni-jū"
+                  tr_en="20; twenty"
+                  tr_de="20; zwanzig"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【二：に】【十：じゅう】【七：なな】"
+                  rom="ni-jū-nana"
+                  tr_en="27; twenty-seven"
+                  tr_de="27; siebenundzwanzig"
+                  lvl="n5"
+                />
+                <sentence
+                  s="この【会：かい】【社：しゃ】に【勤：つと】めて 【十：じゅう】【四：よん】【年：ねん】になります。"
+                  rom="Kono kaisha ni tsutomete jū-yon-nen ni narimasu."
+                  tr_en="I've been working at this company for 14 years."
+                  tr_de="Ich bin seit 14 Jahren bei dieser Firma angestellt."
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【10：じゅう】"
+              rom="jū"
+              tr_en="10; ten"
+              lvl="n5"
+              hasCombinedReading="true"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+              id="jū-tenalt"
+            >
+                <keep_apart_from id="jū-ten" />
+                <keep_together id="jū-ten" />
+            </word>
+            <word
+              w="【十：とお】"
+              rom="tō"
+              tr_en="10; ten"
+              tr_de="10; zehn"
+              lvl="n5"
+              id="tō-ten"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="jū-ten" />
+                <keep_together id="jū-ten" />
+            </word>
+            <word
+              w="【11：じゅういち】"
+              rom="jū-ichi"
+              tr_en="11; eleven"
+              lvl="n5"
+              hasCombinedReading="true"
+              id="jūichi-11alt"
+              HIDDEN="true"
+              rem="jū-ichi is a phrase of ichi"
+            />
+            <word
+              w="【15：じゅうご】"
+              rom="jū-go"
+              tr_en="15; fifteen"
+              hasCombinedReading="true"
+              lvl="n5"
+              id="jūgo-15alt"
+              HIDDEN="true"
+              rem="jū-go is a phrase of go"
+            />
+            <word
+              w="【16：じゅうろく】"
+              rom="jū-roku"
+              tr_en="16; sixteen"
+              hasCombinedReading="true"
+              lvl="n5"
+              id="jūroku-16alt"
+              HIDDEN="true"
+              rem="jū-roku is a phrase of roku"
+            />
+            <word
+              w="【17：じゅうなな】"
+              rom="jū-nana"
+              tr_en="17; seventeen"
+              hasCombinedReading="true"
+              lvl="n5"
+              id="jūnana-17alt"
+              HIDDEN="true"
+              rem="jū-nana is a phrase of jū"
+            />
+            <word
+              w="【20：にじゅう】"
+              rom="ni-jū"
+              tr_en="20"
+              lvl="n5"
+              hasCombinedReading="true"
+              id="nijū-20alt"
+              HIDDEN="true"
+              rem="ni-jū is a phrase of jū"
+            />
+            <word
+              w="【22：にじゅうに】"
+              rom="ni-jū-ni"
+              tr_en="22; twenty-two"
+              hasCombinedReading="true"
+              lvl="n5"
+              id="nijūni-22alt"
+              HIDDEN="true"
+              rem="ni-jū-ni is a phrase of ni"
+            />
+            <word
+              w="【三：さん】【十：じゅう】"
+              rom="san-jū"
+              tr_en="30; thirty"
+              tr_de="30; dreissig"
+              lvl="n5"
+              id="sanjū-30"
+              HIDDEN="true"
+            />
+            <word
+              w="【30：さんじゅう】"
+              rom="san-jū"
+              tr_en="30"
+              lvl="n5"
+              hasCombinedReading="true"
+              id="sanjū-30alt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            />
+            <word
+              w="【30：さんじゅっ】"
+              rom="san-ju"
+              tr_en="30"
+              lvl="n5"
+              hasCombinedReading="true"
+              id="sanju-30alt2"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            />
+            <word
+              w="【三：さん】【十：じゅう】【四：よん】"
+              rom="san-jū-yon"
+              tr_en="34; thirty-four"
+              tr_de="34; vierundreissig"
+              lvl="n5"
+              id="sanjūyon-34"
+              HIDDEN="true"
+            />
+            <word
+              w="【三：さん】【十：じゅう】【七：なな】"
+              rom="san-jū-nana"
+              tr_en="37; thirty-seven"
+              tr_de="37; siebenundreissig"
+              lvl="n5"
+              id="sanjūnana-37"
+              HIDDEN="true"
+            />
+            <word
+              w="【四：よん】【十：じゅう】"
+              rom="yon-jū"
+              tr_en="40; fourty"
+              tr_de="40; vierzig"
+              lvl="n5"
+              id="yonjū-40"
+              HIDDEN="true"
+            />
+            <word
+              w="【四：よん】【十：じゅう】【二：に】"
+              rom="yon-jū-ni"
+              tr_en="42; fourty-two"
+              tr_de="42; zweiundvierzig"
+              lvl="n5"
+              id="yonjūni-42"
+              HIDDEN="true"
+            />
+            <word
+              w="【四：よん】【十：じゅう】【四：よん】"
+              rom="yon-jū-yon"
+              tr_en="44; fourty-four"
+              tr_de="44; vierundvierzig"
+              lvl="n5"
+              id="yonjūyon-44"
+              HIDDEN="true"
+            />
+            <word
+              w="【四：よん】【十：じゅう】【七：なな】"
+              rom="yon-jū-nana"
+              tr_en="47; fourty-seven"
+              tr_de="47; siebenundvierzig"
+              lvl="n5"
+              id="yonjūnana-47"
+              HIDDEN="true"
+            />
+            <word
+              w="【五：ご】【十：じゅう】"
+              rom="go-jū"
+              tr_en="50; fifty"
+              tr_de="50; fünfzig"
+              lvl="n5"
+              id="gojū-50"
+              HIDDEN="true"
+            />
+            <word
+              w="【50：ごじゅう】"
+              rom="go-jū"
+              tr_en="50"
+              lvl="n5"
+              hasCombinedReading="true"
+              id="gojū-50alt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            />
+            <word
+              w="【五：ご】【十：じゅう】【四：よん】"
+              rom="go-jū-yon"
+              tr_en="54; fifty-four"
+              tr_de="54; vierundfünfzig"
+              lvl="n5"
+              id="gojūyon-54"
+              HIDDEN="true"
+            />
+            <word
+              w="【54：ごじゅうよん】"
+              rom="go-jū-yon"
+              tr_en="54; fifty-four"
+              hasCombinedReading="true"
+              lvl="n5"
+              id="gojūyon-54alt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            />
+            <word
+              w="【五：ご】【十：じゅう】【七：なな】"
+              rom="go-jū-nana"
+              tr_en="57; fifty-seven"
+              tr_de="57; siebenundfünfzig"
+              lvl="n5"
+              id="gojūnana-57"
+              HIDDEN="true"
+            />
+            <word
+              w="【六：ろく】【十：じゅう】"
+              rom="roku-jū"
+              tr_en="60; sixty"
+              tr_de="60; sechzig"
+              lvl="n5"
+              id="rokujū-60"
+              HIDDEN="true"
+            />
+            <word
+              w="【六：ろく】【十：じゅう】【四：よん】"
+              rom="roku-jū-yon"
+              tr_en="64; sixty-four"
+              tr_de="64; vierundsechzig"
+              lvl="n5"
+              id="rokujūyon-64"
+              HIDDEN="true"
+            />
+            <word
+              w="【六：ろく】【十：じゅう】【七：なな】"
+              rom="roku-jū-nana"
+              tr_en="67; sixty-seven"
+              tr_de="67; siebenundsechzig"
+              lvl="n5"
+              id="rokujūnana-67"
+              HIDDEN="true"
+            />
+            <word
+              w="【七：なな】【十：じゅう】"
+              rom="nana-jū"
+              tr_en="70; seventy"
+              tr_de="70; siebzig"
+              lvl="n5"
+              id="nanajū-70"
+              HIDDEN="true"
+            />
+            <word
+              w="【70：ななじゅう】"
+              rom="nana-jū"
+              tr_en="70; seventy"
+              hasCombinedReading="true"
+              lvl="n5"
+              id="nanajū-70alt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            />
+            <word
+              w="【七：なな】【十：じゅう】【四：よん】"
+              rom="nana-jū-yon"
+              tr_en="74; seventy-four"
+              tr_de="74; vierundsiebzig"
+              lvl="n5"
+              id="nanajūyon-74"
+              HIDDEN="true"
+            />
+            <word
+              w="【七：なな】【十：じゅう】【七：なな】"
+              rom="nana-jū-nana"
+              tr_en="77; seventy-seven"
+              tr_de="77; siebenundsiebzig"
+              lvl="n5"
+              id="nanajūnana-77"
+              HIDDEN="true"
+            />
+            <word
+              w="【八：はち】【十：じゅう】"
+              rom="hachi-jū"
+              tr_en="80; eighty"
+              tr_de="80; achzig"
+              lvl="n5"
+              id="hachijū-80"
+              HIDDEN="true"
+            />
+            <word
+              w="【八：はち】【十：じゅう】【四：よん】"
+              rom="hachi-jū-yon"
+              tr_en="84; eighty-four"
+              tr_de="84; vierundachzig"
+              lvl="n5"
+              id="hachijūyon-84"
+              HIDDEN="true"
+            />
+            <word
+              w="【八：はち】【十：じゅう】【七：なな】"
+              rom="hachi-jū-nana"
+              tr_en="87; eighty-seven"
+              tr_de="87; siebenundachzig"
+              lvl="n5"
+              id="hachijūnana-87"
+              HIDDEN="true"
+            />
+            <word
+              w="【90：きゅうじゅう】"
+              rom="kyū-jū"
+              tr_en="90; ninety"
+              hasCombinedReading="true"
+              lvl="n5"
+              id="kyūjū-90alt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            />
+            <word
+              w="【九：きゅう】【十：じゅう】【四：よん】"
+              rom="kyū-jū-yon"
+              tr_en="94; ninety-four"
+              tr_de="94; vierundneunzig"
+              lvl="n5"
+              id="kyūjūyon-94"
+              HIDDEN="true"
+            />
+            <word
+              w="【九：きゅう】【十：じゅう】【九：きゅう】"
+              rom="kyū-jū-kyū"
+              tr_en="99; ninety-nine"
+              tr_de="99; neunundneunzig"
+              lvl="n5"
+              id="kyūjūkyū-99"
+              HIDDEN="true"
+            />
+            <word
+              w="【零：れい】"
+              rom="rei"
+              tr_en="0; zero"
+              tr_de="0; null"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="ゼロ"
+              rom="zero"
+              tr_en="0; zero"
+              tr_de="0; null"
+              lvl="-"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              HIDDEN="true"
+              rem="not n5/n4"
+            />
+            <word
+              w="【百：ひゃく】"
+              rom="hyaku"
+              tr_en="hundred"
+              tr_de="hundert"
+              id="hyaku-100"
+              lvl="n5"
+            >
+                <keep_apart_from id="hyaku-100alt" />
+                <keep_together id="hyaku-100alt" />
+                <phrase
+                  ph="【百：ひゃく】【二：に】【十：じゅう】【八：はち】"
+                  rom="hyaku ni-jū hachi"
+                  tr_en="128; hundred and twenty-eight"
+                  tr_de="128; hundertachtundzwanzig"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【百：ひゃく】【四：よん】【十：じゅう】【七：なな】"
+                  rom="hyaku yon-jū nana"
+                  tr_en="147; hundred and fourty-seven"
+                  tr_de="147; hundertsiebenundvierzig"
+                  lvl="n5"
+                />
+                <sentence
+                  s="その【皿：さら】は【百：ひゃく】【円：えん】だけですよ。"
+                  rom="Sono sara wa hyaku-en dake desu yo."
+                  tr_en="This plate is only 100 yen."
+                  tr_de="Dieser Teller kostet nur 100 Yen."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【100：ひゃく】"
+              rom="hyaku"
+              tr_en="100"
+              lvl="n5"
+              id="hyaku-100alt"
+              hasCombinedReading="true"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="hyaku-100" />
+                <keep_together id="hyaku-100" />
+            </word>
+            <word
+              w="【百：ひゃく】【一：いち】"
+              rom="hyaku ichi"
+              tr_en="101"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【百：ひゃく】【四：よん】"
+              rom="hyaku yon"
+              tr_en="104"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【百：ひゃく】【十：じゅう】【一：いち】"
+              rom="hyaku jū ichi"
+              tr_en="111"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【百：ひゃく】【二：に】【十：じゅう】【七：なな】"
+              rom="hyaku ni-jū nana"
+              tr_en="127"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【百：ひゃく】【四：よん】【十：じゅう】【四：よん】"
+              rom="hyaku yon-jū yon"
+              tr_en="144"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【150：ひゃくごじゅう】"
+              rom="hyaku go-jū"
+              tr_en="150"
+              lvl="n5"
+              hasCombinedReading="true"
+              id="hyakugojū-150alt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            />
+            <word
+              w="【百：ひゃく】【五：ご】【十：じゅう】【一：いち】"
+              rom="hyaku go-jū ichi"
+              tr_en="151"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【二：に】【百：ひゃく】"
+              rom="ni-hyaku"
+              tr_en="200"
+              lvl="n5"
+              id="nihyaku-200"
+              HIDDEN="true"
+            />
+            <word
+              w="【200：にひゃく】"
+              rom="ni-hyaku"
+              tr_en="200"
+              lvl="n5"
+              hasCombinedReading="true"
+              id="nihyaku-200alt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            />
+            <word
+              w="【二：に】【百：ひゃく】【七：なな】"
+              rom="ni-hyaku nana"
+              tr_en="207"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【二：に】【百：ひゃく】【五：ご】【十：じゅう】【五：ご】"
+              rom="ni-hyaku go-jū go"
+              tr_en="255"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【二：に】【百：ひゃく】【五：ご】【十：じゅう】【六：ろく】"
+              rom="ni-hyaku go-jū roku"
+              tr_en="256"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【三：さん】【百：びゃく】"
+              rom="san-byaku"
+              tr_en="300; three hundred"
+              tr_de="300; dreihundert"
+              id="sanbyaku-300"
+              lvl="n5"
+            >
+                <keep_apart_from id="sanbyaku-300alt" />
+                <keep_together id="sanbyaku-300alt" />
+                <phrase
+                  ph="【三：さん】【百：びゃく】【三：さん】【十：じゅう】【三：さん】"
+                  rom="san-byaku san-jū san"
+                  tr_en="333; three hundred and thirty-three"
+                  tr_de="333; dreihundert dreiunddreissig"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【三：さん】【百：びゃく】【四：よん】【十：じゅう】【七：なな】"
+                  rom="san-byaku yon-jū nana"
+                  tr_en="347; three hundred and fourty-seven"
+                  tr_de="347; dreihundert vierundsiebzig"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【三：さん】【百：びゃく】【年：ねん】【前：まえ】の【世：せ】【界：かい】は、【今：いま】とは【大：おお】きく【違：ちが】っていました。"
+                  rom="San-byaku-nen mae no sekai wa, ima to wa ōkiku chigatte imashita."
+                  tr_en="The world 300 years ago was very different from how it is now."
+                  tr_de="Die Welt war vor 300 Jahren noch ganz anders als heute."
+                  lvl="n4"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
+            <word
+              w="【300：さんびゃく】"
+              rom="san-byaku"
+              tr_en="300"
+              hasCombinedReading="true"
+              lvl="n5"
+              id="sanbyaku-300alt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="sanbyaku-300" />
+                <keep_together id="sanbyaku-300" />
+            </word>
+            <word
+              w="【三：さん】【百：びゃく】【二：に】"
+              rom="san-byaku ni"
+              tr_en="302"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【四：よん】【百：ひゃく】"
+              rom="yon-hyaku"
+              tr_en="400"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【四：よん】【百：ひゃく】【四：よん】"
+              rom="yon-hyaku yon"
+              tr_en="404"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【四：よん】【百：ひゃく】【六：ろく】【十：じゅう】【九：きゅう】"
+              rom="yon-hyaku roku-jū kyū"
+              tr_en="469"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【五：ご】【百：ひゃく】【十：じゅう】【二：に】"
+              rom="go-hyaku jū ni"
+              tr_en="512"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【五：ご】【百：ひゃく】【七：なな】【十：じゅう】【一：いち】"
+              rom="go-hyaku nana-jū ichi"
+              tr_en="571"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【五：ご】【百：ひゃく】【九：きゅう】【十：じゅう】【三：さん】"
+              rom="go-hyaku kyū-jū san"
+              tr_en="593"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【六：ろっ】【百：ぴゃく】"
+              rom="roppyaku"
+              tr_en="600; six hundred"
+              tr_de="600; sechshundert"
+              lvl="n5"
+              id="roppyaku-600"
+            >
+                <phrase
+                  ph="【六：ろっ】【百：ぴゃく】【四：よん】【十：じゅう】【二：に】"
+                  rom="roppyaku yon-jū ni"
+                  tr_en="642; six hundred and fourty-two"
+                  tr_de="642; sechshundert zweiundvierzig"
+                  lvl="n5"
+                  origin="self"
+                />
+                <phrase
+                  ph="【六：ろっ】【百：ぴゃく】【七：なな】【十：じゅう】【一：いち】"
+                  rom="roppyaku nana-jū ichi"
+                  tr_en="671; six hundred and seventy-one"
+                  tr_de="671; sechshundert einundsiebzig"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【入：いり】【口：ぐち】の【前：まえ】に【六：ろっ】【百：ぴゃく】【人：にん】ぐらい【並：なら】んでいました。"
+                  rom="Iriguchi no mae ni roppyaku-nin gurai narande imashita."
+                  tr_en="In front of the entrance, there was a queue of about six hundred people."
+                  tr_de="Vor der Eingangstüre hatte es eine Schlange von etwa sechshundert Leuten."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【七：なな】【百：ひゃく】"
+              rom="nana-hyaku"
+              tr_en="700"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【七：なな】【百：ひゃく】【九：きゅう】【十：じゅう】【三：さん】"
+              rom="nana-hyaku kyū-jū san"
+              tr_en="793"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【八：はっ】【百：ぴゃく】"
+              rom="happyaku"
+              tr_en="800; eight hundred"
+              tr_de="800; achthundert"
+              lvl="n5"
+              id="happyaku-800"
+            >
+                <phrase
+                  ph="【八：はっ】【百：ぴゃく】【八：はち】"
+                  rom="happyaku hachi"
+                  tr_en="808; eight hundred and eight"
+                  tr_de="808; achthundertacht"
+                  lvl="n5"
+                  origin="self"
+                  href="https://hinative.com/questions/20326310"
+                />
+                <phrase
+                  ph="【八：はっ】【百：ぴゃく】【三：さん】【十：じゅう】【七：なな】"
+                  rom="happyaku san-jū nana"
+                  tr_en="837; eight hundred and thirty-seven"
+                  tr_de="837; achthundert siebenunddreissig"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="この【会：かい】【議：ぎ】【室：しつ】には【八：はっ】【百：ぴゃく】【人：にん】【入：はい】れる。"
+                  rom="Kono kaigishitsu ni wa happyaku-nin haireru."
+                  tr_en="This conference room can accommodate 800 people."
+                  tr_de="In diesen Konferenzsaal gehen 800 Leute rein."
+                  explanation_en="When 入れる is pronounced as はいれる, it's the potential form of 入る"
+                  explanation_de="Wenn 入れる als はいれる ausgesprochen wird, ist es die potentielle Form von 入る"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【九：きゅう】【百：ひゃく】【九：きゅう】"
+              rom="kyū-hyaku kyū"
+              tr_en="909"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【千：せん】"
+              rom="sen"
+              tr_en="thousand"
+              tr_de="tausend"
+              lvl="n5"
+              id="sen-1000"
+              rem="even though 一千 (issen) seems to exist, it doesn't seem common, see GENKI1 p.300"
+            >
+                <keep_apart_from id="sen-1000alt" />
+                <keep_together id="sen-1000alt" />
+                <!--
+                    Acc. to ChatGPT, Arabic numerals are more common when referring to a specific year,
+                    e.g. 1500年に, not 千五百年に. But the kanji are common when referring to a number of years,
+                    e.g. 千五百年前.
+                -->
+                <phrase
+                  ph="【千：せん】【五：ご】【百：ひゃく】【年：ねん】【前：まえ】"
+                  rom="sen go-hyaku nen mae"
+                  tr_en="1500 years ago"
+                  tr_de="vor 1500 Jahren"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【三：さん】【千：ぜん】"
+                  rom="sanzen"
+                  tr_en="3000; three thousand"
+                  tr_de="3000; dreitausend"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【八：はっ】【千：せん】"
+                  rom="hassen"
+                  tr_en="8000; eight thousand"
+                  tr_de="8000; achttausend"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【財：さい】【布：ふ】に【千：せん】【円：えん】だけあります。"
+                  rom="Saifu ni sen-en dake arimasu."
+                  tr_en="There is only 1000 yen in my wallet."
+                  tr_de="In meinem Geldbeutel hat es nur 1000 Yen."
+                  lvl="n4"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【1000：せん】"
+              rom="sen"
+              tr_en="thousand"
+              lvl="n5"
+              id="sen-1000alt"
+              hasCombinedReading="true"
+              HIDDEN="true"
+              rem="just to provide the furigana reading for sentences"
+            >
+                <keep_apart_from id="sen-1000" />
+                <keep_together id="sen-1000" />
+            </word>
+            <word
+              w="【1500：せんごひゃく】"
+              rom="sen go-hyaku"
+              tr_en="thousand and five hundred"
+              lvl="n5"
+              id="sengohyaku-1500alt"
+              hasCombinedReading="true"
+              HIDDEN="true"
+              rem="just to provide the furigana reading for sentences"
+            />
+            <word
+              w="【二：に】【千：せん】【二：に】【十：じゅう】【五：ご】"
+              rom="ni-sen ni-jū go"
+              tr_en="2025"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【三：さん】【千：ぜん】"
+              rom="sanzen"
+              tr_en="3000"
+              lvl="n5"
+              HIDDEN="true"
+              rem="is now a phrase of sen-1000"
+            />
+            <word
+              w="【三：さん】【千：ぜん】【四：よん】【百：ひゃく】【二：に】【十：じゅう】【九：きゅう】"
+              rom="sanzen yon-hyaku ni-jū kyū"
+              tr_en="3429"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【四：よん】【千：せん】"
+              rom="yon-sen"
+              tr_en="4000"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【五：ご】【千：せん】"
+              rom="go-sen"
+              tr_en="5000"
+              id="gosen-5000"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【5000：ごせん】"
+              rom="go-sen"
+              tr_en="5000"
+              id="gosen-5000alt"
+              lvl="n5"
+              hasCombinedReading="true"
+              HIDDEN="true"
+              rem="just for the furigana check of sentences"
+            />
+            <word
+              w="【五：ご】【千：せん】【四：よん】【百：ひゃく】【二：に】【十：じゅう】"
+              rom="go-sen yon-hyaku ni-jū"
+              tr_en="5420"
+              lvl="n5"
+              rem="see GENKI1 p.300"
+              HIDDEN="true"
+            />
+            <word
+              w="【六：ろく】【千：せん】"
+              rom="roku-sen"
+              tr_en="6000"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【七：なな】【千：せん】"
+              rom="nana-sen"
+              tr_en="7000"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【八：はっ】【千：せん】"
+              rom="hassen"
+              tr_en="8000"
+              lvl="n5"
+              HIDDEN="true"
+              rem="is now a phrase of sen-1000"
+            />
+            <word
+              w="【八：はっ】【千：せん】【百：ひゃく】【九：きゅう】【十：じゅう】【二：に】"
+              rom="hassen hyaku kyū-jū ni"
+              tr_en="8192"
+              lvl="n5"
+              rem="might also be 一百・いっぴゃく, see GENKI2 p.386; what is more common???"
+              HIDDEN="true"
+            />
+            <word
+              w="【九：きゅう】【千：せん】"
+              rom="kyū-sen"
+              tr_en="9000"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <!-- FIXME man should be visible -->
+            <word
+              w="【万：まん】"
+              rom="man"
+              tr_en="ten thousand; a myriad"
+              lvl="n5"
+              HIDDEN="true"
+              rem="just to silence find-missing-goigoi.sh"
+            />
+            <word
+              w="【一：いち】【万：まん】"
+              rom="ichi-man"
+              tr_en="10000"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【十：じゅう】【万：まん】"
+              rom="jū-man"
+              tr_en="100000"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <word
+              w="【百：ひゃく】【万：まん】"
+              rom="hyaku-man"
+              tr_en="1 million"
+              tr_de="1 Million"
+              lvl="n5"
+              HIDDEN="true"
+            />
+            <!-- FIXME oku should be visible -->
+            <word
+              w="【億：おく】"
+              rom="oku"
+              tr_en="100'000'000; hundred million"
+              lvl="n4"
+              id="oku-100mio"
+              HIDDEN="true"
+            />
+            <!-- numbers above 1000*oku are not N4; see unyt even_more_words -->
+        </section>
+    </unit>
+</vocabulary>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Hidden N4 words"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="n4"
+      HIDDEN="true"
+      translations="en"
+      ignoresCombinedReadings="false"
+    >
+        <section>
+            <!--
+                To check whether there are more N4 words still missing, use:
+                $ node src/jishoToGoigoi.js __jlpt=n4 __goigoi=filter
+            -->
+
+            <!-- verbs -->
+            <word
+              w="【込：こ】む"
+              rom="komu"
+              tr_en="to be crowded; to be packed; to be congested"
+              hint_en="v.i."
+              lvl="n4"
+              rem="komu-crowded is included in N4 with different kanji 混む"
+              id="komu-crowded-alt"
+            />
+
+            <!-- pronouns and particles -->
+            <word
+              w="【僕：ぼく】"
+              rom="boku"
+              tr_en="I; me"
+              hint_en="male term"
+              hint_de="männliche Sprache"
+              lvl="n4"
+            />
+            <word
+              w="【君：きみ】"
+              rom="kimi"
+              tr_en="you; buddy; pal"
+              lvl="n4"
+              id="kimi-you"
+              rem="rarely used except in movies and song lyrics; ChatGPT disagrees, though"
+            />
+
+            <!-- unsorted -->
+            <word
+              w="どうぞ【宜：よろ】しく"
+              rom="dōzo yoroshiku"
+              tr_en="pleased to meet you; how do you do"
+              hint_en="expression"
+              hint_de="Ausdruck"
+              lvl="n4"
+              HIDDEN="true"
+              rem="jisho has n2"
+            />
+            <word
+              w="あっ"
+              rom="a"
+              tr_en="Ah! Oh! Hey!"
+              lvl="n4"
+            />
+            <word
+              w="うん"
+              rom="un"
+              tr_en="yes; yeah; uh huh / hum; hmmm; well; erm / oof"
+              lvl="n4"
+              id="un-yeah"
+            />
+            <word
+              w="そう"
+              rom="sō"
+              tr_en="appearing that; looking like"
+              hint_en="auxiliary"
+              lvl="n4"
+              id="sō-appearing"
+            />
+            <word
+              w="【火：ひ】"
+              rom="hi"
+              tr_en="fire; flame"
+              hint_en="noun; suffix"
+              lvl="n4"
+              category="fire"
+              id="hi-fire"
+            />
+            <word
+              w="【子：こ】"
+              rom="ko"
+              tr_en="child; young"
+              hint_en="noun; suffix"
+              lvl="n4"
+            />
+            <word
+              w="【市：し】"
+              rom="shi"
+              tr_en="city"
+              hint_en="noun; suffix"
+              lvl="n4"
+              id="shi-city-notilde"
+              rem="n4_nouns_6 has 〜 in w"
+            />
+            <word
+              w="【斯：こ】う"
+              rom="kou"
+              tr_en="in this way; thus"
+              hint_en="adverb"
+              lvl="n4"
+              id="kou-thus"
+            />
+            <word
+              w="あんな"
+              rom="anna"
+              tr_en="that sort of; that kind of; like that; such; so"
+              hint_en="pre-noun adjectival (rentaishi)"
+              lvl="n4"
+            />
+            <word
+              w="そんな"
+              rom="sonna"
+              tr_en="such; that sort of; that kind of; like that / no way!; never!"
+              hint_en="pre-noun adjectival (rentaishi)"
+              lvl="n4"
+            />
+            <word
+              w="ああ"
+              rom="aa"
+              tr_en="like that; so"
+              lvl="n4"
+              id="aa-so"
+              HIDDEN="true"
+              rem="not a good word"
+            />
+        </section>
+    </unit>
+</vocabulary>

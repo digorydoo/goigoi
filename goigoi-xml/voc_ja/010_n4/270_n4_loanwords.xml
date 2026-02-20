@@ -1,0 +1,1184 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N4 loanwords"
+      name_de="N4-Lehnwörter"
+      name_fr="Les mots d'emprunt N4"
+      name_it="Parole di prestito N4"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="false"
+      defaultHint_en="loanword"
+      defaultHint_de="Lehnwort"
+      lvl="n4"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- at home -->
+            <word
+              w="ベル"
+              rom="beru"
+              tr_en="bell"
+              tr_de="Glocke"
+              lvl="n4"
+              id="beru-bell"
+            >
+                <phrase
+                  ph="ベルを【叩：たた】く"
+                  rom="beru o tataku"
+                  tr_en="to strike the bell"
+                  tr_de="die Glocke schlagen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ベルが【鳴：な】っている。"
+                  rom="Beru ga natte iru."
+                  tr_en="The bell is ringing."
+                  tr_de="Die Glocke läutet."
+                  lvl="n4"
+                  origin="lib0"
+                  rem="natte iru comes from naru-sound; naite iru comes from naku-sing"
+                />
+            </word>
+            <word
+              w="カーテン"
+              rom="kāten"
+              tr_en="curtain"
+              tr_de="Vorhang"
+              lvl="n4"
+              id="kāten-curtain"
+            >
+                <phrase
+                  ph="【厚：あつ】いカーテン"
+                  rom="atsui kāten"
+                  tr_en="a thick curtain"
+                  tr_de="ein dicker Vorhang"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【窓：まど】にカーテンがかかっていた。"
+                  rom="Mado ni kāten ga kakatte ita."
+                  tr_en="There were curtains hanging over the window."
+                  tr_de="Vor dem Fenster hingen Vorhänge."
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="ガラス"
+              rom="garasu"
+              tr_en="glass"
+              tr_de="Glas"
+              hint_en="the material; not the cup"
+              hint_de="das Material; nicht das Trinkgefäss"
+              lvl="n4"
+              id="garasu-glass"
+            >
+                <see id="gurasu-cup" rem="closely related" />
+                <phrase
+                  ph="【窓：まど】ガラスを【掃：そう】【除：じ】する"
+                  rom="mado garasu o sōji suru"
+                  tr_en="to clean the window glass"
+                  tr_de="die Fensterscheibe putzen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ガラスは【壊：こわ】れやすい。"
+                  rom="Garasu wa koware-yasui."
+                  tr_en="Glass breaks easily."
+                  tr_de="Glas zerbricht leicht."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="エアコン"
+              rom="eakon"
+              tr_en="air conditioner"
+              tr_de="Klimaanlage"
+              lvl="n4"
+              rem="appears in 500mon, jisho has nx"
+              category="home"
+              id="eakon-airconditioner"
+            >
+                <keep_apart_from id="reibō-cooling" />
+                <phrase
+                  ph="エアコンをつける"
+                  rom="eakon o tsukeru"
+                  tr_en="to turn on the air conditioner"
+                  tr_de="die Klimaanlage einschalten"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="エアコンを【消：け】す"
+                  rom="eakon o kesu"
+                  tr_en="to turn off the air conditioner"
+                  tr_de="die Klimaanlage ausschalten"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【暑：あつ】いですね。エアコンをつけましょう。"
+                  rom="Atsui desu ne. Eakon o tsukemashō."
+                  tr_en="It's hot, isn't it? Let's turn the air conditioner on."
+                  tr_de="Es ist heiss. Lass uns die Klimaanlage einschalten."
+                  lvl="n4"
+                  origin="500mon q2"
+                />
+                <sentence
+                  s="いつもエアコンをつけて【寝：ね】てる。"
+                  rom="Itsumo eakon o tsukete neteru."
+                  tr_en="I always sleep with the air conditioner turned on."
+                  tr_de="Ich schlafe immer mit eingeschalteter Klimaanlage."
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/4KT6rRxLDWo"
+                />
+                <sentence
+                  s="エアコンをつけたまま【寝：ね】た。"
+                  rom="Eakon o tsuketa mama neta."
+                  tr_en="I fell asleep while the air conditioner was still on."
+                  tr_de="Ich schlief ein, während die Klimaanlage immer noch eingeschaltet war."
+                  lvl="n4"
+                  rem="jisho has nx for mama"
+                  origin="Miku"
+                  href="https://youtu.be/4KT6rRxLDWo"
+                />
+            </word>
+            <word
+              w="チャンネル"
+              rom="channeru"
+              tr_en="channel"
+              tr_de="Kanal"
+              hint_en="e.g. TV channel"
+              hint_de="z.B. Fernsehkanal"
+              lvl="n4"
+              rem="appears in 500mon, jisho has n1"
+              id="channeru-channel"
+            >
+                <phrase
+                  ph="チャンネルを【変：か】える"
+                  rom="channeru o kaeru"
+                  tr_en="to change the (TV) channel"
+                  tr_de="den Fernsehkanal wechseln"
+                  lvl="n4"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="このチャンネル、【面：おも】【白：しろ】い【番：ばん】【組：ぐみ】はあまりないよね。"
+                  rom="Kono channeru, omoshiroi bangumi wa amari nai yo ne."
+                  tr_en="This channel doesn't have many interesting programmes, does it?"
+                  tr_de="In diesem Kanal läuft fast nie ein interessantes Programm (findest du nicht auch?)"
+                  lvl="n4"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
+            <word
+              w="リモコン"
+              rom="rimokon"
+              tr_en="remote control"
+              tr_de="Fernbedienung"
+              hint_en="e.g. of a TV"
+              hint_de="z.B. eines Fernsehers"
+              lvl="n4"
+              rem="appears in 500mon, jisho has nx"
+              id="rimokon-remote"
+            >
+                <phrase
+                  ph="リモコンを【使：つか】う"
+                  rom="rimokon o tsukau"
+                  tr_en="to use the remote control"
+                  tr_de="die Fernbedienung benutzen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【木：き】【村：むら】さんはリモコンでチャンネルを【変：か】えています。"
+                  rom="Kimura-san wa rimokon de channeru o kaete imasu."
+                  tr_en="Miss Kimura is changing the channel with the remote control."
+                  tr_de="Frau Kimura ist am Kanal wechseln mit der Fernbedienung."
+                  lvl="n4"
+                  origin="jpod101 audio modified"
+                />
+            </word>
+
+            <!-- food, cuisine -->
+            <word
+              w="ステーキ"
+              rom="sutēki"
+              tr_en="steak"
+              tr_de="Steak"
+              lvl="n4"
+              category="food, gastronomy"
+              id="sutēki-steak"
+            >
+                <phrase
+                  ph="【柔：やわ】らかくて【美味：おい】しいステーキ"
+                  rom="yawarakakute oishii sutēki"
+                  tr_en="a tender and delicious steak"
+                  tr_de="ein zartes und köstliches Steak"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="このステーキは【堅：かた】すぎる。"
+                  rom="Kono sutēki wa kata-sugiru."
+                  tr_en="This steak is too tough."
+                  tr_de="Dieses Steak ist zäh."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="サラダ"
+              rom="sarada"
+              tr_en="salad"
+              tr_de="Salat"
+              lvl="n4"
+              category="food"
+              id="sarada-salad"
+            >
+                <phrase
+                  ph="サラダの【人：にん】【気：き】レシピ"
+                  rom="sarada no ninki reshipi"
+                  tr_en="a popular salad recipe"
+                  tr_de="ein beliebtes Salatrezept"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with the web. there is also サラダのおすすめレシピ. jisho has nx for reshipi"
+                />
+                <sentence
+                  s="もう【少：すこ】しサラダはいかがですか。"
+                  rom="Mō sukoshi sarada wa ikaga desu ka?"
+                  tr_en="Would you like some more salad?"
+                  tr_de="Möchtest du noch etwas Salat?"
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="サンドイッチ"
+              rom="sandoicchi"
+              tr_en="sandwich"
+              tr_de="Sandwich"
+              lvl="n4"
+              category="food"
+              id="sandoicchi-sandwich"
+            >
+                <keep_apart_from id="sekai-world" rem="has similar phrase" />
+                <phrase
+                  ph="【長：なが】いサンドイッチ"
+                  rom="nagai sandoicchi"
+                  tr_en="a long sandwich"
+                  tr_de="ein langes Sandwich"
+                  lvl="n4"
+                  origin="self"
+                  rem="sekai-world has similar phrase: sekai de ichi-ban nagai sandoicchi"
+                />
+                <sentence
+                  s="【電：でん】【車：しゃ】に【乗：の】る【前：まえ】にサンドイッチを【買：か】った。"
+                  rom="Densha ni noru mae ni sandoicchi o katta."
+                  tr_en="I bought sandwiches before going on the train."
+                  tr_de="Ich kaufte Sandwiches, bevor ich in den Zug stieg."
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/964fq7NJKms"
+                />
+                <sentence
+                  s="【母：はは】はサンドイッチを【紙：かみ】に【包：つつ】んでくれた。"
+                  rom="Haha wa sandoicchi o kami ni tsutsunde kureta."
+                  tr_en="My mother wrapped the sandwich in paper for me."
+                  tr_de="Meine Mutter hat mir das Sandwich in Papier eingewickelt."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ケーキ"
+              rom="kēki"
+              tr_en="cake"
+              tr_de="Kuchen"
+              lvl="n4"
+              category="food"
+              id="kēki-cake"
+            >
+                <phrase
+                  ph="【甘：あま】いケーキ"
+                  rom="amai kēki"
+                  tr_en="sweet cake"
+                  tr_de="süsser Kuchen"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="このケーキを【食：た】べてもいい？"
+                  rom="Kono kēki o tabete mo ii?"
+                  tr_en="Can I eat this cake?"
+                  tr_de="Darf ich diesen Kuchen essen?"
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/IBzblHryNJE"
+                />
+                <sentence
+                  s="このケーキは【甘：あま】すぎて、【食：た】べられない。"
+                  rom="Kono kēki wa ama sugite, taberarenai."
+                  tr_en="This cake is too sweet, I can't eat it."
+                  tr_de="Dieser Kuchen ist zu süss, ich kann ihn nicht essen."
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/iDFFO3hkxVA"
+                />
+            </word>
+            <word
+              w="ジャム"
+              rom="jamu"
+              tr_en="jam (food term)"
+              tr_de="Marmelade"
+              lvl="n4"
+              category="food"
+              id="jamu-jam"
+            >
+                <phrase
+                  ph="ジャムをパンに【塗：ぬ】る"
+                  rom="jamu o pan ni nuru"
+                  tr_en="to spread jam on bread"
+                  tr_de="Marmelade aufs Brot schmieren"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="パンはいつもジャムを【塗：ぬ】ったほうを【下：した】にして【落：お】ちる。"
+                  rom="Pan wa itsumo jamu o nutta hō o shita ni shite ochiru."
+                  tr_en="Bread always falls on the jam side."
+                  tr_de="Brot fällt immer auf die Seite mit der Marmelade."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+
+            <!-- fashion, clothing -->
+            <word
+              w="サンダル"
+              rom="sandaru"
+              tr_en="sandals"
+              tr_de="Sandalen"
+              lvl="n4"
+              category="holidays, fashion"
+              id="sandaru-sandals"
+            >
+                <keep_apart_from id="zōri-sandals" />
+                <phrase
+                  ph="【青：あお】いサンダル"
+                  rom="aoi sandaru"
+                  tr_en="blue sandals"
+                  tr_de="blaue Sandalen"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="このサンダルは【歩：ある】きにくい。"
+                  rom="Kono sandaru wa aruki-nikui."
+                  tr_en="These sandals are difficult to walk in."
+                  tr_de="Es ist schwer, mit diesen Sandalen zu gehen."
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/qKbysEzHWXw"
+                />
+                <sentence
+                  s="【海：うみ】に【行：い】くときはサンダルが【便：べん】【利：り】です。"
+                  rom="Umi ni iku toki wa sandaru ga benri desu."
+                  tr_en="Sandals come in handy at the beach."
+                  tr_de="Sandalen sind praktisch am Strand."
+                  lvl="n4"
+                  origin="self"
+                  href="https://hinative.com/questions/22668739"
+                />
+            </word>
+            <word
+              w="パジャマ"
+              rom="pajama"
+              tr_en="pyjamas"
+              tr_de="Schlafanzug"
+              lvl="n4"
+              rem="appears in 500mon q197; jisho has n1"
+              category="fashion"
+              id="pajama-pyjamas"
+            >
+                <phrase
+                  ph="パジャマを【着：き】たままでテレビを【見：み】る"
+                  rom="pajama o kita mama de terebi o miru"
+                  tr_en="to watch TV while wearing pyjamas"
+                  tr_de="im Schlafanzug fernsehen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="パジャマを【着：き】なさい。"
+                  rom="Pajama o ki-nasai."
+                  tr_en="Get into your pyjamas."
+                  tr_de="Ziehe deinen Schlafanzug an."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】は【寝：ね】るときパジャマを【着：き】ます。"
+                  rom="Watashi wa neru-toki pajama o kimasu."
+                  tr_en="I wear pyjamas when I go to bed."
+                  tr_de="Ich trage einen Schlafanzug, wenn ich ins Bett gehe."
+                  lvl="n4"
+                  origin="500mon q197"
+                  rem="jisho has n1 for pajama"
+                />
+            </word>
+            <word
+              w="スーツ"
+              rom="sūtsu"
+              tr_en="suit (clothing)"
+              tr_de="Anzug; Kleidung"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="n4"
+              category="fashion"
+              id="n4-sūtsu"
+            >
+                <phrase
+                  ph="【安：やす】いスーツ"
+                  rom="yasui sūtsu"
+                  tr_en="cheap suits"
+                  tr_de="ein billiger Anzug"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="このネクタイはスーツに【合：あ】うと【思：おも】う。"
+                  rom="Kono nekutai wa sūtsu ni au to omou."
+                  tr_en="This tie goes well with the suit, I think."
+                  tr_de="Dieser Schlips passt gut zum Anzug, finde ich."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="アクセサリー"
+              rom="akusesarī"
+              tr_en="accessory"
+              tr_de="Accessoire"
+              hint_en="necklaces, earrings, etc."
+              hint_de="Halsketten, Ohrringe, usw."
+              lvl="n4"
+              category="fashion"
+              id="n4-akusesarī"
+              rem="ChatGPT says that gloves and handbags are not アクセサリー"
+            >
+                <phrase
+                  ph="【高：たか】すぎるアクセサリー"
+                  rom="taka-sugiru akusesarī"
+                  tr_en="way too expensive accessories"
+                  tr_de="viel zu teure Accessoires"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="アクセサリーって、ネックレスやイヤリングなどのことだよ。"
+                  rom="Akusesarī tte, nekkuresu ya iyaringu nado no koto da yo."
+                  tr_en="Accessories are things like necklaces and earrings, you know."
+                  tr_de="Sachen wie Halsketten und Ohrringe nennt man Accessoires."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT; nekkuresu and iyaringu are nx"
+                />
+            </word>
+            <word
+              w="ハンドバッグ"
+              rom="handobaggu"
+              tr_en="handbag"
+              tr_de="Handtasche"
+              lvl="n4"
+              category="fashion"
+              id="n4-handobaggu"
+            >
+                <phrase
+                  ph="【赤：あか】いハンドバッグ"
+                  rom="akai handobaggu"
+                  tr_en="a red handbag"
+                  tr_de="eine rote Handtasche"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="【女：おんな】の【人：ひと】はハンドバッグをよく【持：も】っている。"
+                  rom="Onna no hito wa handobaggu o yoku motte iru."
+                  tr_en="Women often carry handbags."
+                  tr_de="Frauen haben oft eine Handtasche dabei."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+
+            <!-- school, university -->
+            <word
+              w="テキスト"
+              rom="tekisuto"
+              tr_en="text"
+              tr_de="Text"
+              lvl="n4"
+              category="writing, literature"
+              id="tekisuto-text"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="bunshō-sentence" />
+            </word>
+
+            <!-- geography -->
+            <word
+              w="アフリカ"
+              rom="Afurika"
+              tr_en="Africa"
+              tr_de="Afrika"
+              lvl="n4"
+              category="geography"
+              id="afurika-africa"
+              HIDDEN="true"
+            />
+            <word
+              w="アメリカ"
+              rom="Amerika"
+              tr_en="America"
+              tr_de="Amerika"
+              lvl="n4"
+              category="geography"
+              id="amerika-america"
+            >
+                <sentence
+                  s="ナオミさんはアメリカ【人：じん】です。"
+                  rom="Naomi-san wa Amerika-jin desu."
+                  tr_en="Naomi is an American."
+                  tr_de="Naomi ist Amerikanerin."
+                  lvl="n4"
+                  origin="GENKI1 p.43 modified"
+                />
+            </word>
+            <word
+              w="アジア"
+              rom="Ajia"
+              tr_en="Asia"
+              tr_de="Asien"
+              lvl="n4"
+              category="geography"
+              id="ajia-asia"
+            />
+
+            <!-- business -->
+            <word
+              w="パート"
+              rom="pāto"
+              tr_en="part-time (work); part-timer"
+              tr_de="Teilzeit (Arbeit); Teilzeitarbeiter"
+              lvl="n4"
+              category="employment"
+              id="pāto-parttime"
+            >
+                <keep_apart_from id="arubaito-parttime" />
+            </word>
+            <word
+              w="アルバイト"
+              rom="arubaito"
+              tr_en="part-time job"
+              tr_de="Teilzeitstelle"
+              lvl="n4"
+              id="arubaito-parttime"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="pāto-parttime" />
+            </word>
+            <word
+              w="レポート"
+              rom="repōto"
+              tr_en="report; paper; essay"
+              tr_de="Bericht; (wissenschaftliche) Arbeit; Aufsatz"
+              lvl="n4"
+              id="repōto-report"
+            >
+                <keep_apart_from id="hōkoku-report" />
+                <keep_apart_from id="shorui-document" />
+                <keep_apart_from id="shirase-news" />
+                <keep_apart_from id="ronbun-thesis" />
+                <sentence
+                  s="レポートを【書：か】いてしまいましたか。"
+                  rom="Repōto o kaite shimaimashita ka?"
+                  tr_en="Have you finished writing your essay?"
+                  tr_de="Hast du deinen Aufsatz fertig geschrieben?"
+                  lvl="n4"
+                  origin="Oxford p.50"
+                  rem="jisho has n3 for shimau"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】は【時：とき】【々：どき】【妹：いもうと】にレポートを【書：か】かせる。"
+                  rom="Kanojo wa toki-doki imōto ni repōto o kakaseru."
+                  tr_en="She sometimes has her younger sister write her papers."
+                  tr_de="Manchmal lässt sie ihre jüngere Schwester ihre Arbeiten schreiben."
+                  explanation_en="「書かせる」is the causative form of「書く」"
+                  explanation_de="「書かせる」ist die kausative Form von「書く」"
+                  lvl="n4"
+                  origin="Oxford p.74"
+                />
+            </word>
+            <word
+              w="レジ"
+              rom="reji"
+              tr_en="till; cash register"
+              tr_de="Kasse"
+              lvl="n4"
+              category="shopping, finances"
+              id="n4-reji"
+            >
+                <sentence
+                  s="レジで【払：はら】ってください。"
+                  rom="Reji de haratte kudasai."
+                  tr_en="Please pay at the till."
+                  tr_de="Bitte bezahlen Sie an der Kasse."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="チェック"
+              rom="chekku"
+              tr_en="to check sth. (e.g. e-mail)"
+              tr_de="etw. prüfen (z.B. die E-Mails)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n4"
+              category="work"
+              id="chekku-check"
+            >
+                <sentence
+                  s="このごろ、【忙：いそが】しくて メールをチェックしていません。"
+                  rom="Kono goro, isogashikute mēru o chekku shite imasen."
+                  tr_en="Lately, I have been busy and have not checked my e-mail."
+                  tr_de="Ich war in letzter Zeit beschäftigt und habe meine E-Mails nicht geprüft."
+                  allowSpaces="true"
+                  lvl="n4"
+                  origin="500mon q285"
+                />
+                <sentence
+                  s="【田：た】【中：なか】さんに【手：て】【紙：がみ】の【日：に】【本：ほん】【語：ご】をチェックしてもらう。"
+                  rom="Tanaka-san ni tegami no Nihon-go o chekku shite morau."
+                  tr_en="I'll get Ms Tanaka to check the Japanese in my letter."
+                  tr_de="Ich werde das Japanisch in meinem Brief von Frau Tanaka überprüfen lassen."
+                  lvl="n4"
+                  origin="Oxford p.48"
+                />
+            </word>
+            <word
+              w="パソコン"
+              rom="pasokon"
+              tr_en="personal computer"
+              tr_de="Computer; PC"
+              hint_en="abbrev."
+              hint_de="Abkürz."
+              lvl="n4"
+              category="work, technical"
+              id="pasokon-pc"
+            >
+                <keep_apart_from id="konpyūta-computer" />
+                <keep_apart_from id="nōtopasokon-notebook" />
+                <sentence
+                  s="このパソコンは【誰：だれ】のですか。"
+                  rom="Kono pasokon wa dare no desu ka?"
+                  tr_en="Whose computer is this?"
+                  tr_de="Wessen Computer ist das?"
+                  lvl="n4"
+                  origin="duolingo"
+                />
+            </word>
+            <word
+              w="ソフト"
+              rom="sofuto"
+              tr_en="software"
+              tr_de="Software"
+              lvl="n4"
+              category="business, technical"
+              id="sofuto-software"
+              rem="ChatGPT says ソフト is more casual than ソフトウェア"
+            >
+                <sentence
+                  s="コンピューターはソフトがないと【動：うご】かない。"
+                  rom="Konpyūtā wa sofuto ga nai to ugokanai."
+                  tr_en="The computer won't work if there is no software."
+                  tr_de="Der Computer funktioniert nicht ohne Software."
+                  lvl="n4"
+                  origin="500mon q386"
+                />
+            </word>
+
+            <!-- sports -->
+            <word
+              w="ジョギング"
+              rom="jogingu"
+              tr_en="Jogging"
+              tr_de="Jogging"
+              hint_en="running at a leisurely pace"
+              hint_de="Freizeitsport"
+              lvl="n4"
+              id="jogingu-jogging"
+              rem="appears in 500mon; jisho has nx"
+            >
+                <sentence
+                  s="【毎：まい】【朝：あさ】 ジョギングをしています。"
+                  rom="Mai-asa jogingu o shite imasu."
+                  tr_en="I jog every morning."
+                  tr_de="Ich gehe jeden Morgen joggen."
+                  allowSpaces="true"
+                  lvl="n4"
+                  origin="Oxford p.42"
+                />
+            </word>
+
+            <!-- kind of outdated; should be n2 -->
+            <word
+              w="ワープロ"
+              rom="wāpuro"
+              tr_en="word processor"
+              tr_de="Textverarbeitung"
+              lvl="n4"
+              category="technical, old-fashioned"
+              id="wāpuro-wordprocessor"
+              HIDDEN="true"
+            />
+            <word
+              w="ステレオ"
+              rom="sutereo"
+              tr_en="stereo; stereophonic sound"
+              tr_de="Stereo"
+              lvl="n4"
+              category="hearing, old-fashioned"
+              id="sutereo-stereo"
+              HIDDEN="true"
+              rem="kind of outdated"
+            />
+            <word
+              w="ファックス"
+              rom="fakkusu"
+              tr_en="fax; facsimile"
+              tr_de="Fax"
+              lvl="n4"
+              category="technical, old-fashioned"
+              id="fakkusu-fax"
+              HIDDEN="true"
+              rem="kind of outdated"
+            />
+
+            <!-- unsorted -->
+            <word
+              w="アナウンサー"
+              rom="anaunsā"
+              tr_en="newsreader; broadcaster"
+              tr_de="Ansager; Nachrichtensprecher"
+              rem="announcer"
+              lvl="n4"
+              id="anaunsā-announcer"
+            />
+            <word
+              w="フライパン"
+              rom="furaipan"
+              tr_en="frying pan"
+              tr_de="Bratpfanne"
+              lvl="n4"
+              category="cooking"
+              id="furaipan-fryingpan"
+              rem="appears in 500mon q445; jisho has n2"
+            >
+                <sentence
+                  s="フライパンを【火：ひ】にかけて、【肉：にく】をやきます。"
+                  rom="Furaipan o hi ni kakete, niku o yakimasu."
+                  tr_en="Heat a frying pan and fry the meat."
+                  tr_de="Erhitze eine Bratpfanne und brate das Fleisch."
+                  lvl="n4"
+                  origin="500mon q445"
+                  rem="jisho has n2 for furaipan"
+                />
+            </word>
+            <word
+              w="コンビニ"
+              rom="konbini"
+              tr_en="convenience store"
+              tr_de="Gemischtwarenladen"
+              lvl="n4"
+              category="shopping, city"
+              id="konbini-conveniencestore"
+              rem="appears in 500mon q311, q398; jisho has nx"
+            >
+                <sentence
+                  s="コンビニの【近：ちか】くに【住：す】んでいるので【便：べん】【利：り】です。"
+                  rom="Konbini no chikaku ni sunde iru no de benri desu."
+                  tr_en="Living near a convenience store is convenient."
+                  tr_de="Es ist praktisch, wenn man in der Nähe eines Gemischtwarenladens wohnt."
+                  lvl="n4"
+                  origin="500mon q311"
+                />
+            </word>
+            <word
+              w="ゲーム"
+              rom="gēmu"
+              tr_en="game"
+              tr_de="Spiel"
+              lvl="n4"
+              category="games"
+              id="gēmu-game"
+              rem="appears in 500mon q167; jisho has n3"
+            >
+                <sentence
+                  s="このゲームをしたいけれど、やり【方：かた】が【分：わ】からない。"
+                  rom="Kono gēmu o shitai keredo, yari-kata ga wakaranai."
+                  tr_en="I want to play this game, but I don't know how to."
+                  tr_de="Ich will dieses Spiel spielen, aber ich weiss nicht wie."
+                  lvl="n4"
+                  origin="500mon q167"
+                  rem="jisho has n3 for gēmu; nx for yari-kata (but n5 for yaru, kata)"
+                />
+            </word>
+            <word
+              w="ベンチ"
+              rom="benchi"
+              tr_en="bench"
+              tr_de="Sitzbank"
+              lvl="n4"
+              id="benchi-bench"
+              rem="appears in 500mon q130; jisho has n3"
+            >
+                <phrase
+                  ph="【公：こう】【園：えん】のベンチ"
+                  rom="kōen no benchi"
+                  tr_en="park bench"
+                  tr_de="Sitzbank im Park"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="ジーンズ"
+              rom="jīnzu"
+              tr_en="jeans"
+              tr_de="Jeans"
+              lvl="n4"
+              category="fashion"
+              id="jīnzu-jeans"
+              rem="jisho has n3"
+            />
+            <word
+              w="ガソリン"
+              rom="gasorin"
+              tr_en="gasoline; petrol"
+              tr_de="Benzin"
+              lvl="n4"
+              category="transportation"
+              id="gasorin-gasoline"
+            >
+                <sentence
+                  s="ガソリンが【高：たか】くても【車：くるま】に【乗：の】ります。"
+                  rom="Gasorin ga takakute mo kuruma ni norimasu."
+                  tr_en="Even though gas is expensive, I will drive my car."
+                  tr_de="Obwohl Benzin teuer ist, gehe ich mit dem Auto."
+                  lvl="n4"
+                  origin="500mon q43"
+                />
+                <sentence
+                  s="この【車：くるま】はガソリンがほとんど【入：はい】っていないよ。"
+                  rom="Kono kuruma wa gasorin ga hotondo haitte inai yo."
+                  tr_en="This car hardly has any gas left."
+                  tr_de="In diesem Auto hat es kaum mehr Benzin."
+                  lvl="n4"
+                  origin="500mon q56"
+                />
+            </word>
+            <word
+              w="プレゼント"
+              rom="purezento"
+              tr_en="present; gift"
+              tr_de="Geschenk"
+              lvl="n4"
+              id="purezento-present"
+            >
+                <sentence
+                  s="プレゼントは【別：べつ】【々：べつ】に【包：つつ】んでください。"
+                  rom="Purezento wa betsu-betsu ni tsutsunde kudasai."
+                  tr_en="Please wrap the gifts separately."
+                  tr_de="Bitte packen Sie die Geschenke separat ein."
+                  lvl="n4"
+                  origin="ChatGPT"
+                  rem="jisho has n2 for betsu-betsu, n4 for betsu; betsu-betsu ni is now a phrase of betsu"
+                />
+            </word>
+            <word
+              w="スクリーン"
+              rom="sukurīn"
+              tr_en="screen (of a TV, etc.)"
+              tr_de="Bildschirm"
+              lvl="n4"
+              id="sukurīn-screen"
+            >
+                <keep_apart_from id="monitā-monitor" />
+            </word>
+            <word
+              w="タイプ"
+              rom="taipu"
+              tr_en="type"
+              tr_de="Typ; Art"
+              hint_en="esp. type of person"
+              hint_de="insbes. Art von Person"
+              lvl="n4"
+              id="taipu-type"
+            />
+            <word
+              w="ガス"
+              rom="gasu"
+              tr_en="gas (state of matter); gasoline; dense fog"
+              tr_de="Gas; Gasolin; dichter Nebel"
+              lvl="n4"
+              id="gasu-gas"
+            />
+            <word
+              w="ビル"
+              rom="biru"
+              tr_en="building"
+              tr_de="Gebäude"
+              lvl="n4"
+              id="biru-building"
+            >
+                <sentence
+                  s="このビルは【高：たか】いですね。【何：なん】【階：かい】まであるのでしょうか。"
+                  rom="Kono biru wa takai desu ne. Nan-kai made aru no deshō ka?"
+                  tr_en="This building is tall, isn't it? How many floors does it have?"
+                  tr_de="Dieses Gebäude ist hoch, nicht wahr? Wieviele Stockwerke hat es?"
+                  lvl="n4"
+                  origin="500mon q77"
+                  rem="jisho has nx for nan-kai, but ni-kai date is n4; deshō is tentative, see Oxford p.118"
+                  href="https://hinative.com/en-US/questions/21800988"
+                />
+            </word>
+            <word
+              w="マンション"
+              rom="manshon"
+              tr_en="block of flats; apartment building"
+              tr_de="Wohnblock; Wohngebäude"
+              lvl="n4"
+              rem="appears in 500mon q321; jisho has n2"
+              category="home, city"
+              id="manshon-block"
+            >
+                <sentence
+                  s="いいマンションが【見：み】つかったから、【今：こん】【度：ど】【引：ひ】っ【越：こ】しするんです。"
+                  rom="Ii manshon ga mitsukatta kara, kondo hikkoshi suru n desu."
+                  tr_en="I'm going to move, because I found an apartment I like."
+                  tr_de="Ich werde umziehen, da ich eine Wohnung gefunden habe, die mir gefällt."
+                  lvl="n4"
+                  origin="500mon q321"
+                  rem="jisho has n2 for manshon and hikkoshi, n4 for hikkosu"
+                />
+            </word>
+            <word
+              w="エスカレーター"
+              rom="esukarētā"
+              tr_en="moving staircase"
+              tr_de="Rolltreppe"
+              rem="escalator"
+              lvl="n4"
+              category="city, motion"
+              id="esukarētā-escalator"
+            />
+            <word
+              w="アルコール"
+              rom="arukōru"
+              tr_en="alcohol"
+              tr_de="Alkohol"
+              hint_en="rarely used for drinking alcohol"
+              hint_de="selten für Trinkalkohol verwendet"
+              lvl="n4"
+              id="arukōru-alcohol"
+            />
+            <word
+              w="ガソリンスタンド"
+              rom="gasorin-sutando"
+              tr_en="petrol station"
+              tr_de="Tankstelle"
+              lvl="n4"
+              category="city, transportation"
+              id="n4-gasorinsutando"
+            >
+                <sentence
+                  s="【一：いち】【番：ばん】【近：ちか】いガソリンスタンドはどこですか。"
+                  rom="Ichiban chikai gasorin-sutando wa doko desu ka?"
+                  tr_en="Where is the next petrol station?"
+                  tr_de="Wo ist die nächste Tankstelle?"
+                  lvl="n4"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="コンサート"
+              rom="konsāto"
+              tr_en="concert"
+              tr_de="Konzert"
+              lvl="n4"
+              category="entertainment"
+              id="konsāto-concert"
+            >
+                <sentence
+                  s="コンサートは【何：なん】【時：じ】に【始：はじ】まりますか。"
+                  rom="Konsāto wa nanji ni hajimarimasu ka?"
+                  tr_en="When will the concert begin?"
+                  tr_de="Wann beginnt das Konzert?"
+                  lvl="n4"
+                  origin="Langenscheidt p.188"
+                />
+                <sentence
+                  s="【秋：あき】に、【音：おん】【楽：がく】ホールで【市：し】【民：みん】のためのコンサートがある。"
+                  rom="Aki ni, ongaku hōru de shimin no tame no konsāto ga aru."
+                  tr_en="In the autumn, a concert is held for the townspeople at the concert hall."
+                  tr_de="Im Herbst wird ein Konzert für die Stadtleute in der Konzerthalle gehalten."
+                  lvl="n4"
+                  origin="500mon q308"
+                />
+            </word>
+            <word
+              w="スーツケース"
+              rom="sūtsukēsu"
+              tr_en="suitcase"
+              tr_de="Koffer"
+              lvl="n4"
+              category="travelling"
+              id="n4-sūtsukēsu"
+            >
+                <sentence
+                  s="これは【誰：だれ】のスーツケースですか。"
+                  rom="Kore wa dare no sūtsukēsu desu ka?"
+                  tr_en="Whose suitcase is this?"
+                  tr_de="Wem gehört dieser Koffer?"
+                  origin="lib0"
+                  lvl="n4"
+                />
+                <sentence
+                  s="スーツケースを【開：あ】けてください。"
+                  rom="Sūtsukēsu o akete kudasai."
+                  tr_en="Please open your suitcase."
+                  tr_de="Öffnen Sie bitte den Koffer."
+                  lvl="n4"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="オートバイ"
+              rom="ōtobai"
+              tr_en="motorcycle"
+              tr_de="Motorrad"
+              lvl="n4"
+              category="transportation"
+              id="n4-ōtobai"
+            >
+                <phrase
+                  ph="オートバイの【事：じ】【故：こ】"
+                  rom="ōtobai no jiko"
+                  tr_en="motorcycle accident"
+                  tr_de="Motorradunfall"
+                  lvl="n4"
+                />
+            </word>
+            <word
+              w="テニス"
+              rom="tenisu"
+              tr_en="tennis"
+              tr_de="Tennis"
+              lvl="n4"
+              category="sports"
+              id="tenisu-tennis"
+            >
+                <phrase
+                  ph="【毎：まい】【週：しゅう】【日：にち】【曜：よう】【日：び】にテニスをする"
+                  rom="maishū nichi-yōbi ni tenisu o suru"
+                  tr_en="to play tennis on every Sunday"
+                  tr_de="jeden Sonntag Tennis spielen"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】はテニスが【好：す】きですが、【上：じょう】【手：ず】じゃありません。"
+                  rom="Watashi wa tenisu ga suki desu ga, jōzu jārimasen."
+                  tr_en="I like tennis, but I'm not good at it."
+                  tr_de="Ich mag Tennis, aber ich kann es nicht gut."
+                  lvl="n4"
+                  origin="500mon q27"
+                />
+                <sentence
+                  s="【毎：まい】【月：つき】【二：ふつ】【日：か】にテニスをしています。"
+                  rom="Maitsuki futsuka ni tenisu o shite imasu."
+                  tr_en="I play tennis on the second of every month."
+                  tr_de="Ich spiele Tennis am zweiten jedes Monats."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="アドバイス"
+              rom="adobaisu"
+              tr_en="advice"
+              tr_de="Rat; Ratschlag"
+              lvl="n4"
+              id="adobaisu-advice"
+              rem="appears in GENKI2 p.283; jisho has nx"
+            />
+            <word
+              w="ボランティア"
+              rom="borantia"
+              tr_en="volunteer"
+              tr_de="Freiwilliger; ehrenamtlich"
+              lvl="n4"
+              id="borantia-volunteer"
+              rem="appears in GENKI2 p.72 vocab section; jisho has nx"
+            />
+            <word
+              w="プロポーズ"
+              rom="puropōzu"
+              tr_en="marriage proposal; to propose marriage"
+              tr_de="Heiratsantrag; einen Heiratsantrag stellen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n4"
+              category="relationships"
+              id="puropōzu-proposal"
+              rem="appears in GENKI2 p.49 vocab section; jisho has nx"
+            />
+            <word
+              w="ピアノ"
+              rom="piano"
+              tr_en="piano (instrument)"
+              tr_de="Klavier"
+              lvl="n4"
+              category="entertainment, hearing"
+              id="piano-klavier"
+              HIDDEN="true"
+              rem="translation is same as rōmaji"
+            />
+        </section>
+    </unit>
+</vocabulary>

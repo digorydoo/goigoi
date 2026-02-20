@@ -1,0 +1,1327 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N5 verbs ②"
+      name_de="N5-Verben ②"
+      name_fr="Les verbes N5 ②"
+      name_it="Verbi N5 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="verb"
+      defaultHint_de="Verb"
+      lvl="n5"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="true"
+    >
+        <section>
+            <word
+              w="【見：み】る"
+              rom="miru"
+              tr_en="to see sth.; to look at sth.; to watch sth."
+              tr_de="etw. anschauen; etw. beobachten"
+              hint_en="v.t."
+              lvl="n5"
+              category="looking, top-words"
+              id="miru-see"
+            >
+                <see id="mieru-beseen" rem="v.i." />
+                <keep_apart_from id="mitomeru-recognise" />
+                <phrase
+                  ph="【甘：あま】く【見：み】る"
+                  rom="amaku miru"
+                  tr_en="to underestimate; to take lightly"
+                  tr_de="unterschätzen; auf die leichte Schulter nehmen"
+                  explanation_en="lit. 'to see it sweet'"
+                  explanation_de="wörtl. 'es süss sehen'"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【映：えい】【画：が】は あまり 【見：み】ません。"
+                  rom="Eiga wa amari mimasen."
+                  tr_en="I do not watch movies a lot."
+                  tr_de="Ich schaue nicht oft Filme."
+                  lvl="n5"
+                  origin="duolingo"
+                />
+            </word>
+            <word
+              w="【聞：き】く"
+              rom="kiku"
+              tr_en="to hear sth.; to ask"
+              tr_de="etw. hören; fragen"
+              hint_en="v.t."
+              lvl="n5"
+              category="hearing"
+              id="kiku-hear"
+            >
+                <see id="kikoeru-beheard" rem="v.i." />
+                <keep_apart_from id="tazuneru-enquire" />
+                <phrase
+                  ph="【他：ほか】の【誰：だれ】かに【聞：き】く"
+                  rom="hoka no dareka ni kiku"
+                  tr_en="to ask somebody else"
+                  tr_de="jemand anderen fragen"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【分：わ】からないときは 【私：わたし】に 【聞：き】いて ください。"
+                  rom="Wakaranai toki wa watashi ni kiite kudasai."
+                  tr_en="Please ask me when you don't understand (something)."
+                  tr_de="Bitte frage mich, wenn du (etwas) nicht verstehst."
+                  lvl="n5"
+                  origin="Oxford p.57 modified"
+                />
+                <!--
+                  Is n4...
+                  s="【聞：き】いたことがある。"
+                  rom="Kīta koto ga aru."
+                  tr_en="I have heard of it."
+                  tr_de="Ich habe davon gehört."
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/4_XMsDpRgM8"
+                -->
+                <!-- too long...
+                  s="そのニュースを【聞：き】いた【時：とき】、【友達：ともだち】は【嬉：うれ】しそうだった。"
+                  tr_en="(My) friend looked happy when she heard the news."
+                  tr_de="(Meine) Freundin sah froh aus, als sie die Neuigkeiten hörte."
+                  origin="Miku"
+                  href="https://youtu.be/l7xZ1TDZ7MU"
+                -->
+            </word>
+            <word
+              w="【座：すわ】る"
+              rom="suwaru"
+              tr_en="to sit"
+              tr_de="sitzen"
+              studyInContext="preferred"
+              lvl="n5"
+              id="suwaru-sit"
+            >
+                <phrase
+                  ph="【椅：い】【子：す】に【座：すわ】っている"
+                  rom="isu ni suwatte iru"
+                  tr_en="to be sitting on a chair"
+                  tr_de="auf einen Stuhl sitzen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="あのう、ここに 【座：すわ】っても いいですか。"
+                  rom="Anō, koko ni suwatte mo ii desu ka?"
+                  tr_en="Excuse me, may I sit here?"
+                  tr_de="Entschuldigen Sie, darf ich mich hier hinsetzen?"
+                  lvl="n5"
+                  origin="500mon q169"
+                  rem="maybe mo ii is n4?"
+                />
+                <sentence
+                  s="【座：すわ】って【食：た】べる。"
+                  rom="Suwatte taberu."
+                  tr_en="I eat while sitting."
+                  tr_de="Ich esse während ich sitze."
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/4KT6rRxLDWo"
+                />
+            </word>
+            <word
+              w="【言：い】う"
+              rom="iu"
+              tr_en="to say; to utter"
+              tr_de="sagen; äussern"
+              lvl="n5"
+              category="talking, top-words"
+              id="iu-say"
+            >
+                <!-- the noun is 言・げん, nx; or 言・こと, nx; or 言葉・ことば, n5 -->
+                <keep_apart_from id="hanasu-talk" />
+                <keep_apart_from id="mōsu-say" />
+                <keep_apart_from id="mōshiageru-tell" />
+                <keep_apart_from id="hanashiau-discuss" />
+                <keep_apart_from id="hanashikakeru-addresssb" />
+                <keep_apart_from id="ronjiru-discuss" />
+                <keep_apart_from id="kataru-recite" />
+                <phrase
+                  ph="【大：おお】きい【声：こえ】で【言：い】う"
+                  rom="ōkii koe de iu"
+                  tr_en="to say it in a loud voice"
+                  tr_de="es mit lauter Stimme sagen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="これは【日：に】【本：ほん】【語：ご】で どう 【言：い】いますか。"
+                  rom="Kore wa Nihon-go de dō īmasu ka?"
+                  tr_en="How do you say this in Japanese?"
+                  tr_de="Wie sagt man das auf japanisch?"
+                  lvl="n5"
+                  origin="500mon q21"
+                />
+            </word>
+            <word
+              w="【寝：ね】る"
+              rom="neru"
+              tr_en="to lie down; to go to bed; to sleep"
+              tr_de="sich hinlegen; ins Bett gehen; einschlafen"
+              lvl="n5"
+              category="time, health"
+              id="neru-liedown"
+            >
+                <!-- o-yasumi ni naru is honorific (sonkeigo) for neru; but that isn't n5 -->
+                <see id="nemuru-sleep" rem="closely related" />
+                <phrase
+                  ph="【早：はや】く【寝：ね】る"
+                  rom="hayaku neru"
+                  tr_en="to go to bed early"
+                  tr_de="früh ins Bett gehen"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="カオルは もう【寝：ね】て いる。"
+                  rom="Kaoru wa mō nete iru."
+                  tr_en="Kaoru has already gone to bed."
+                  tr_de="Kaoru ist bereits am schlafen."
+                  lvl="n5"
+                  origin="Oxford p.64"
+                />
+                <sentence
+                  s="【寝：ね】られる【薬：くすり】を ください。"
+                  rom="Nerareru kusuri o kudasai."
+                  tr_en="Please give me something to sleep."
+                  tr_de="Geben Sie mir bitte etwas zum Einschlafen."
+                  explanation_en="「寝られる」is the potential form of「寝る」"
+                  explanation_de="「寝られる」ist die potenzielle Form von「寝る」"
+                  lvl="n5"
+                  origin="Langenscheidt p.209"
+                />
+            </word>
+            <word
+              w="【起：お】きる"
+              rom="okiru"
+              tr_en="to wake up; to get up"
+              tr_de="aufwachen; aufstehen"
+              hint_en="v.i."
+              lvl="n5"
+              id="okiru-wakeup"
+            >
+                <see id="okosu-wakeup" rem="v.t." />
+                <see id="sameru-wakeup" rem="closely related" />
+                <keep_apart_from id="sameru-wakeup" />
+                <phrase
+                  ph="【八：はち】【時：じ】に【起：お】きる"
+                  rom="hachi-ji ni okiru"
+                  tr_en="to get up at eight o'clock"
+                  tr_de="um acht Uhr aufstehen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【私：わたし】は 【早：はや】く 【起：お】きない。"
+                  rom="Watashi wa hayaku okinai."
+                  tr_en="I don't get up early."
+                  tr_de="Ich stehe nicht früh auf."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【貸：か】す"
+              rom="kasu"
+              tr_en="to lend"
+              tr_de="leihen; verleihen"
+              lvl="n5"
+              id="kasu-lend"
+            >
+                <see id="kashi-loan" rem="noun" />
+                <phrase
+                  ph="【手：て】を【貸：か】す"
+                  rom="te o kasu"
+                  tr_en="to lend a hand; to assist"
+                  tr_de="eine Hand reichen; helfen"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】は もう【読：よ】んだから、【貸：か】して あげる。"
+                  rom="Watashi wa mō yonda kara, kashite ageru."
+                  tr_en="Since I've already read it, I'll lend it to you."
+                  tr_de="Da ich es bereits gelesen habe, leihe ich es dir."
+                  lvl="n5"
+                  origin="Oxford p.143 modified"
+                  rem="ageru in this sense may be n4"
+                />
+            </word>
+            <word
+              w="【借：か】りる"
+              rom="kariru"
+              tr_en="to borrow"
+              tr_de="borgen; sich ausleihen"
+              lvl="n5"
+              id="kariru-borrow"
+            >
+                <see id="kari-loan" rem="noun" />
+                <phrase
+                  ph="【車：くるま】を【借：か】りる"
+                  rom="kuruma o kariru"
+                  tr_en="to rent a car"
+                  tr_de="ein Auto mieten"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ペンを【借：か】りてもいい？"
+                  rom="Pen o karite mo ii?"
+                  tr_en="Can I borrow your pen?"
+                  tr_de="Kann ich deinen Stift ausleihen?"
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/IBzblHryNJE"
+                  rem="maybe mo ii is n4?"
+                />
+                <sentence
+                  s="【猫：ねこ】の【手：て】も【借：か】りたい。"
+                  rom="Neko no te mo karitai."
+                  tr_en="I could even use the paw of a cat."
+                  tr_de="Ich würde sogar die Pfote einer Katze brauchen können."
+                  explanation_en="idiomatic expression that means 'extremely busy'"
+                  explanation_de="idiomatischer Ausdruck, der 'extrem beschäftigt' bedeutet"
+                  lvl="n5"
+                  origin="ChatGPT"
+                  rem="verified with jisho; karitai is actually n4"
+                />
+            </word>
+            <word
+              w="【分：わ】かる"
+              rom="wakaru"
+              tr_en="to understand"
+              tr_de="verstehen"
+              lvl="n5"
+              category="thinking, top-words"
+              id="wakaru-understand"
+            >
+                <keep_apart_from id="mitomeru-recognise" />
+                <phrase
+                  ph="【意：い】【味：み】が【分：わ】かる"
+                  rom="imi ga wakaru"
+                  tr_en="to understand the meaning"
+                  tr_de="die Bedeutung verstehen"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【分：わ】かりますか。"
+                  rom="Wakarimasu ka?"
+                  tr_en="Do you understand?"
+                  tr_de="Haben Sie es verstanden?"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【分：わ】かりました。"
+                  rom="Wakarimashita."
+                  tr_en="I understood."
+                  tr_de="Ich habe verstanden."
+                  lvl="n5"
+                />
+                <sentence
+                  s="【分：わ】かりません。"
+                  rom="Wakarimasen."
+                  tr_en="I don't understand."
+                  tr_de="Ich verstehe es nicht."
+                  lvl="n5"
+                />
+            </word>
+            <word
+              w="【知：し】る"
+              rom="shiru"
+              tr_en="to know; to experience"
+              tr_de="wissen; erfahren"
+              lvl="n5"
+              category="thinking"
+              id="shiru-know"
+            >
+                <phrase
+                  ph="【知：し】らない【人：ひと】"
+                  rom="shiranai hito"
+                  tr_en="a stranger; a person you don't know"
+                  tr_de="eine fremde Person"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="この【辺：へん】は、よく【知：し】っています。"
+                  rom="Kono hen wa, yoku shitte imasu."
+                  tr_en="I know my way around here."
+                  tr_de="Ich kenne diese Gegend gut."
+                  lvl="n5"
+                  origin="lib0"
+                  rem="note that shirimasu would be wrong here"
+                />
+                <sentence
+                  s="【私：わたし】は あの【人：ひと】を【知：し】りません。"
+                  rom="Watashi wa ano hito o shirimasen."
+                  tr_en="I do not know that person."
+                  tr_de="Ich kenne jene Person nicht."
+                  lvl="n5"
+                  origin="500mon q39"
+                  rem="note that shitteimasen would be wrong here"
+                />
+            </word>
+            <word
+              w="【成：な】る"
+              rom="naru"
+              tr_en="to become; to change into"
+              tr_de="werden"
+              hint_en="v.i."
+              usuallyInKana="true"
+              lvl="n5"
+              id="naru-become"
+            >
+                <!-- する may be considered the v.t. variant of なる, but let's not make a link -->
+                <phrase
+                  ph="【病：びょう】【気：き】になる"
+                  rom="byōki ni naru"
+                  tr_en="to fall ill"
+                  tr_de="krank werden"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【秋：あき】に なりました。"
+                  rom="Aki ni narimashita."
+                  tr_en="Autumn is here."
+                  tr_de="Es ist Herbst geworden."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【買：か】う"
+              rom="kau"
+              tr_en="to buy; to purchase"
+              tr_de="kaufen; einkaufen"
+              lvl="n5"
+              category="shopping, top-words"
+              id="kau-buy"
+            >
+                <phrase
+                  ph="【飲：の】み【物：もの】を【買：か】いに【行：い】く"
+                  rom="nomimono o kai ni iku"
+                  tr_en="to go and buy something to drink"
+                  tr_de="ein Getränk kaufen gehen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="スーパーに パンを 【買：か】いに 【行：い】く。"
+                  rom="Sūpā ni pan o kai ni iku."
+                  tr_en="I'll go to the supermarket to buy some bread."
+                  tr_de="Ich werde im Supermarkt Brot kaufen."
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/TjmlAiqjpmk"
+                />
+                <!--
+                  s="【買：か】わなければよかった。"
+                  rom="Kawanakereba yokatta."
+                  tr_en="If only I hadn't bought it!"
+                  tr_de="Wenn ich es nur nicht gekauft hätte!"
+                  lvl="n4"
+                  origin="Oxford p.59"
+                -->
+            </word>
+            <word
+              w="【洗：あら】う"
+              rom="arau"
+              tr_en="to wash"
+              tr_de="waschen"
+              lvl="n5"
+              category="cleaning"
+              id="arau-wash"
+            >
+                <phrase
+                  ph="【手：て】を【洗：あら】う"
+                  rom="te o arau"
+                  tr_en="to wash one's hands"
+                  tr_de="sich die Hände waschen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【皿：さら】を 【洗：あら】いました。"
+                  rom="Sara o araimashita."
+                  tr_en="I washed the dishes."
+                  tr_de="Ich habe das Geschirr gewaschen."
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【食：た】べる【前：まえ】に、【手：て】を 【洗：あら】って！"
+                  rom="Taberu mae ni, te o aratte!"
+                  tr_en="Before eating, wash (your) hands!"
+                  tr_de="Wasche (deine) Hände vor dem Essen!"
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/964fq7NJKms"
+                />
+            </word>
+            <word
+              w="【歌：うた】う"
+              rom="utau"
+              tr_en="to sing"
+              tr_de="singen"
+              lvl="n5"
+              category="entertainment"
+              id="utau-sing"
+            >
+                <phrase
+                  ph="【楽：たの】しく【歌：うた】う"
+                  rom="tanoshiku utau"
+                  tr_en="to sing merrily"
+                  tr_de="fröhlich singen"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】は 【歌：うた】いたい 【気：き】が する。"
+                  rom="Watashi wa utaitai ki ga suru."
+                  tr_en="I feel like singing."
+                  tr_de="Ich habe Lust zu singen."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【遊：あそ】ぶ"
+              rom="asobu"
+              tr_en="to play; to hang out"
+              tr_de="spielen; sich vergnügen"
+              lvl="n5"
+              category="going-out"
+              id="asobu-play"
+            >
+                <phrase
+                  ph="【遊：あそ】びに【行：い】く"
+                  rom="asobi ni iku"
+                  tr_en="to go out; to go for fun"
+                  tr_de="ausgehen; sich herumtreiben"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <!--
+                  s="【渋：しぶ】【谷：や】に【遊：あそ】びに【行：い】く。"
+                  rom="Shibuya ni asobi ni iku."
+                  tr_en="(I'll) hang out in Shibuya."
+                  tr_de="(Ich) werde (mich) in Shibuya vergnügen."
+                  lvl="-"
+                  origin="Miku"
+                  href="https://youtu.be/TjmlAiqjpmk"
+                  rem="rated nx because of Shibuya; too similar to phrase"
+                -->
+                <sentence
+                  s="また、【遊：あそ】びに 【来：き】て ください。"
+                  rom="Mata, asobi ni kite kudasai."
+                  tr_en="Come and hang out with us again."
+                  tr_de="Komm wieder und verbring die Zeit mit uns."
+                  lvl="n5"
+                  origin="500mon q131"
+                />
+            </word>
+            <word
+              w="【消：け】す"
+              rom="kesu"
+              tr_en="to erase; to delete; to turn off power"
+              tr_de="löschen; (Strom) ausschalten"
+              lvl="n5"
+              id="kesu-erase"
+            >
+                <phrase
+                  ph="ラジオを【消：け】す"
+                  rom="rajio o kesu"
+                  tr_en="to turn off the radio"
+                  tr_de="das Radio ausmachen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="テレビを 【消：け】しても いい？"
+                  rom="Terebi o keshite mo ii?"
+                  tr_en="Can I turn off the television?"
+                  tr_de="Kann ich den Fernseher ausschalten?"
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/IBzblHryNJE"
+                  rem="maybe mo ii is n4?"
+                />
+            </word>
+            <word
+              w="【咲：さ】く"
+              rom="saku"
+              tr_en="to bloom"
+              tr_de="blühen"
+              lvl="n5"
+              category="plant, nature"
+              id="n5-saku"
+            >
+                <phrase
+                  ph="【咲：さ】いた【花：はな】"
+                  rom="saita hana"
+                  tr_en="flower in bloom"
+                  tr_de="Blume in voller Blüte"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【花：はな】が すぐに 【咲：さ】きます。"
+                  rom="Hana ga sugu ni sakimasu."
+                  tr_en="The flowers will bloom soon."
+                  tr_de="Die Blumen werden bald blühen."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【庭：にわ】の 【花：はな】は 【春：はる】に 【咲：さ】く。"
+                  rom="Niwa no hana wa haru ni saku."
+                  tr_en="The flowers in the garden bloom in spring."
+                  tr_de="Die Blumen im Garten blühen im Frühling."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【弾：ひ】く"
+              rom="hiku"
+              tr_en="to play"
+              tr_de="spielen"
+              hint_en="a stringed or keyboard instrument"
+              hint_de="ein Saiten- oder Tasteninstrument"
+              lvl="n5"
+              category="entertainment, hearing"
+              id="hiku-play"
+            >
+                <phrase
+                  ph="ギターを【弾：ひ】く"
+                  rom="gitā o hiku"
+                  tr_en="to play the guitar"
+                  tr_de="Gitarre spielen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【姉：あね】は 【毎：まい】【日：にち】 ピアノを 【弾：ひ】きます。"
+                  rom="Ane wa mainichi piano o hikimasu."
+                  tr_en="My older sister plays the piano every day."
+                  tr_de="Meine ältere Schwester spielt jeden Tag Klavier."
+                  lvl="n4"
+                  allowSpaces="true"
+                  origin="lib0 modified"
+                  rem="rated n4 because of piano"
+                />
+            </word>
+            <word
+              w="【着：き】る"
+              rom="kiru"
+              tr_en="to wear; to put on"
+              tr_de="tragen (Kleider); anziehen"
+              hint_en="from shoulders down"
+              hint_de="ab den Schultern"
+              lvl="n5"
+              category="fashion"
+              id="kiru-wear"
+            >
+                <see id="kaburu-wear" rem="closely related" />
+                <see id="haku-wear" rem="closely related" />
+                <phrase
+                  ph="シャツを【着：き】ている"
+                  rom="shatsu o kite iru"
+                  tr_en="to be wearing a shirt"
+                  tr_de="ein Hemd tragen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="この セーターを 【着：き】ませんか。"
+                  rom="Kono sētā o kimasen ka?"
+                  tr_en="What about wearing that sweater?"
+                  tr_de="Möchtest du nicht diesen Pullover anziehen?"
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【被：かぶ】る"
+              rom="kaburu"
+              tr_en="to wear; to put on"
+              tr_de="tragen (Hut); anziehen"
+              hint_en="on the head"
+              hint_de="auf dem Kopf"
+              usuallyInKana="true"
+              lvl="n5"
+              category="fashion"
+              id="kaburu-wear"
+            >
+                <see id="kiru-wear" rem="closely related" />
+                <see id="haku-wear" rem="closely related" />
+                <phrase
+                  ph="【帽：ぼう】【子：し】をかぶる"
+                  rom="bōshi o kaburu"
+                  tr_en="to put on a hat"
+                  tr_de="eine Mütze anziehen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【学：がっ】【校：こう】に 【行：い】くときは 【帽：ぼう】【子：し】を かぶります。"
+                  rom="Gakkō ni iku toki wa bōshi o kaburimasu."
+                  tr_en="I put on a cap when I go to school."
+                  tr_de="Ich ziehe eine Mütze an, wenn ich zur Schule gehe."
+                  lvl="n5"
+                  origin="lib0 modified"
+                  rem="lib0 uses kanji 被ります"
+                />
+            </word>
+            <word
+              w="【履：は】く"
+              rom="haku"
+              tr_en="to wear; to put on"
+              tr_de="tragen; anziehen"
+              hint_en="lower-body clothing, e.g. trousers"
+              hint_de="am untern Teil des Körpers, z.B. Hosen"
+              lvl="n5"
+              category="fashion"
+              id="haku-wear"
+            >
+                <see id="kiru-wear" rem="closely related" />
+                <see id="kaburu-wear" rem="closely related" />
+                <phrase
+                  ph="【靴：くつ】を【履：は】く"
+                  rom="kutsu o haku"
+                  tr_en="to put on shoes"
+                  tr_de="Schuhe anziehen"
+                  lvl="n5"
+                  origin="Oxford p.107"
+                />
+                <phrase
+                  ph="ズボンを【履：は】いている"
+                  rom="zubon o haite iru"
+                  tr_en="to be wearing trousers"
+                  tr_de="Hosen tragen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【小：こ】【山：やま】さんは 【新：あたら】しい【靴：くつ】を 【履：は】きました。"
+                  rom="Koyama-san wa atarashii kutsu o hakimashita."
+                  tr_en="Mrs Koyama put on her new shoes."
+                  tr_de="Frau Koyama zog ihre neuen Schuhe an."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【脱：ぬ】ぐ"
+              rom="nugu"
+              tr_en="to take off (clothes, shoes, etc.)"
+              tr_de="ausziehen (Kleider, Schuhe, usw.)"
+              lvl="n5"
+              category="fashion"
+              id="nugu-takeoff"
+            >
+                <phrase
+                  ph="ズボンを【脱：ぬ】ぐ"
+                  rom="zubon o nugu"
+                  tr_en="to take off one's trousers"
+                  tr_de="die Hosen ausziehen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】【人：じん】は 【部：へ】【屋：や】に 【入：はい】るとき 【靴：くつ】を 【脱：ぬ】ぎます。"
+                  rom="Nihon-jin wa heya ni hairu toki kutsu o nugimasu."
+                  tr_en="The Japanese take off their shoes when they enter an apartment."
+                  tr_de="Die Japaner ziehen ihre Schuhe aus, wenn sie eine Wohnung betreten."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【上：のぼ】る"
+              rom="noboru"
+              tr_en="to ascend; to go up; to rise"
+              tr_de="aufsteigen; hinaufgehen; heraufkommen"
+              hint_en="v.i."
+              lvl="n5"
+              category="directions"
+              id="noboru-ascend"
+            >
+                <see id="oriru-descend" rem="antonym" />
+                <see id="nobori-upbound" rem="noun" />
+                <phrase
+                  ph="【階：かい】【段：だん】を【上：のぼ】る"
+                  rom="kaidan o noboru"
+                  tr_en="to go up the stairs"
+                  tr_de="die Treppen hochsteigen"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="その 【階：かい】【段：だん】を 【上：のぼ】っては いけません。"
+                  rom="Sono kaidan o nobotte wa ikemasen."
+                  tr_en="You must not go up these stairs."
+                  tr_de="Du darfst diese Treppe nicht hinaufgehen."
+                  lvl="n5"
+                  origin="lib0"
+                  rem="ikemasen may be n4; ikemasen appears in 500mon q209, q301, q402, q452"
+                />
+            </word>
+            <word
+              w="【下：お】りる"
+              rom="oriru"
+              tr_en="to descend; to go down; to come down"
+              tr_de="hinuntersteigen; hinuntergehen; herunterkommen"
+              hint_en="v.i."
+              lvl="n5"
+              category="directions"
+              id="oriru-descend"
+            >
+                <see id="orosu-bringdown" rem="v.t." />
+                <see id="noboru-ascend" rem="antonym" />
+                <keep_apart_from id="oriru-getoff" />
+                <keep_apart_from id="sagaru-drop" />
+                <phrase
+                  ph="【階：かい】【段：だん】を【下：お】りる"
+                  rom="kaidan o oriru"
+                  tr_en="to descend the stairs"
+                  tr_de="die Treppen hinuntersteigen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT and href"
+                  href="https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1426183874"
+                />
+                <sentence
+                  s="ヨシが 【木：き】から 【下：お】りて きた。"
+                  rom="Yoshi ga ki kara orite kita."
+                  tr_en="Yoshi climbed down from the tree."
+                  tr_de="Yoshi kletterte von dem Baum herunter."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【勤：つと】める"
+              rom="tsutomeru"
+              tr_en="to be employed (at)"
+              tr_de="angestellt sein (bei)"
+              lvl="n5"
+              category="employment"
+              id="tsutomeru-beemployed"
+            >
+                <see id="tsutome-task" rem="noun" />
+                <phrase
+                  ph="【小：ちい】さな【会：かい】【社：しゃ】に【勤：つと】めている"
+                  rom="chīsana kaisha ni tsutomete iru"
+                  tr_en="to be employed at a small company"
+                  tr_de="bei einem kleinen Unternehmen angestellt sein"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【高：たか】【木：ぎ】さんは 【銀：ぎん】【行：こう】に 【勤：つと】めて います。"
+                  rom="Takagi-san wa ginkō ni tsutomete imasu."
+                  tr_en="Mr Takagi is employed at a bank."
+                  tr_de="Herr Takagi ist bei einer Bank angestellt."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【泳：およ】ぐ"
+              rom="oyogu"
+              tr_en="to swim"
+              tr_de="schwimmen"
+              lvl="n5"
+              category="holidays, sports"
+              id="oyogu-swim"
+            >
+                <see id="oyogi-swimming" rem="noun" />
+                <phrase
+                  ph="【海：うみ】を【泳：およ】いでいる"
+                  rom="umi o oyoide iru"
+                  tr_en="to be swimming in the ocean"
+                  tr_de="im Meer schwimmen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【川：かわ】に 【行：い】って 【泳：およ】ごう。"
+                  rom="Kawa ni itte oyogō."
+                  tr_en="Let's go and swim in the river."
+                  tr_de="Lass uns zum Fluss gehen und schwimmen."
+                  origin="lib0"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【泳：およ】げますか。"
+                  rom="Oyogemasu ka?"
+                  tr_en="Can you swim?"
+                  tr_de="Kannst du schwimmen?"
+                  explanation_en="「泳げる」is the potential form of「泳ぐ」"
+                  explanation_de="「泳げる」ist die potentielle Form von「泳ぐ」"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【泳：およ】いだら、【耳：みみ】に 【水：みず】が 【入：はい】った。"
+                  rom="Oyoidara, mimi ni mizu ga haitta."
+                  tr_en="When I went swinning, I got water in my ear."
+                  tr_de="Als ich schwimmen ging, habe ich Wasser in die Ohren bekommen."
+                  lvl="n5"
+                  origin="500mon q201"
+                  rem="oyoida is ta-form of oyogu"
+                />
+            </word>
+            <word
+              w="【曇：くも】る"
+              rom="kumoru"
+              tr_en="to become cloudy"
+              tr_de="wolkig werden"
+              lvl="n5"
+              category="weather"
+              id="kumoru-getcloudy"
+            >
+                <phrase
+                  ph="【曇：くも】っていて【暗：くら】い"
+                  rom="kumotte ite kurai"
+                  tr_en="to be cloudy and dark"
+                  tr_de="bewölkt und dunkel sein"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT and Google search"
+                />
+                <sentence
+                  s="【空：そら】が だんだん 【曇：くも】って きた。"
+                  rom="Sora ga dan-dan kumotte kita."
+                  tr_en="The sky became more and more cloudy."
+                  tr_de="Der Himmel wurde allmählich bewölkt."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【降：ふ】る"
+              rom="furu"
+              tr_en="to fall (rain, snow, etc.)"
+              tr_de="fallen (Regen, Schnee, usw.)"
+              hint_en="v.i."
+              lvl="n5"
+              category="weather, top-words"
+              id="furu-fall"
+            >
+                <phrase
+                  ph="【雪：ゆき】が【降：ふ】っている"
+                  rom="yuki ga futte iru"
+                  tr_en="to be snowing"
+                  tr_de="schneien"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【雨：あめ】が 【降：ふ】って います。"
+                  rom="Ame ga futte imasu."
+                  tr_en="It's raining."
+                  tr_de="Es regnet."
+                  lvl="n5"
+                  origin="Langenscheidt p.219"
+                />
+                <sentence
+                  s="【明日：あした】は 【雪：ゆき】が 【降：ふ】るそうですよ。"
+                  rom="Ashita wa yuki ga furusō desu yo."
+                  tr_en="It looks as if it's going to snow tomorrow."
+                  tr_de="Es sieht so aus, dass es morgen schneien wird."
+                  lvl="n5"
+                  origin="500mon q44"
+                />
+            </word>
+            <word
+              w="【走：はし】る"
+              rom="hashiru"
+              tr_en="to run"
+              tr_de="rennen"
+              lvl="n5"
+              category="sports, feet"
+              id="hashiru-run"
+            >
+                <phrase
+                  ph="【速：はや】く【走：はし】る"
+                  rom="hayaku hashiru"
+                  tr_en="to run fast"
+                  tr_de="schnell rennen"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【木：き】【村：むら】さんは 【走：はし】って 【疲：つか】れた。"
+                  rom="Kimura-san wa hashitte tsukareta."
+                  tr_en="Miss Kimura was tired from running."
+                  tr_de="Frau Kimura war müde vom Laufen."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【出：で】る"
+              rom="deru"
+              tr_en="to depart (on a journey); to leave"
+              tr_de="abfahren; losgehen (auf eine Reise)"
+              hint_en="v.i."
+              lvl="n5"
+              id="deru-depart"
+            >
+                <see id="dasu-takeout" rem="v.t." />
+                <phrase
+                  ph="【早：はや】く【出：で】る"
+                  rom="hayaku deru"
+                  tr_en="to leave early"
+                  tr_de="früh aufbrechen"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【鼻：はな】【水：みず】が 【出：で】て いるよ。"
+                  rom="Hanamizu ga dete iru yo."
+                  tr_en="Your nose is running."
+                  tr_de="Deine Nase läuft."
+                  lvl="n5"
+                  origin="lib0"
+                  rem="jpod101 has a similar sentence; jisho has nx for hanamizu, n5 for hana, mizu"
+                />
+            </word>
+            <word
+              w="【出：だ】す"
+              rom="dasu"
+              tr_en="to take sth. out; to bring sth. out"
+              tr_de="etw. herausnehmen; etw. aufdecken"
+              hint_en="v.t."
+              lvl="n5"
+              id="dasu-takeout"
+            >
+                <see id="deru-depart" rem="v.i." />
+                <phrase
+                  ph="【本：ほん】をカバンから【出：だ】す"
+                  rom="hon o kaban kara dasu"
+                  tr_en="to take the book out of the bag"
+                  tr_de="das Buch aus der Tasche herausnehmen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【大：おお】きな【声：こえ】を【出：だ】す"
+                  rom="ōkina koe o dasu"
+                  tr_en="to speak with a loud voice"
+                  tr_de="mit lauter Stimme sprechen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【声：こえ】を 【出：だ】して 【本：ほん】を 【読：よ】みなさい。"
+                  rom="Koe o dashite hon o yomi-nasai."
+                  tr_en="Read the book out loud."
+                  tr_de="Lies das Buch laut vor."
+                  explanation_en="lit. 'Take out your voice and read the book.'"
+                  explanation_de="wörtl. 'Nimm deine Stimme heraus und lies das Buch.'"
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【吹：ふ】く"
+              rom="fuku"
+              tr_en="to blow; (the wind) blows; to emit (smoke, etc.)"
+              tr_de="blasen; (der Wind) weht; (Rauch, etc.) ausstossen"
+              hint_en="v.t. &amp; i."
+              studyInContext="preferred"
+              lvl="n5"
+              id="fuku-blow"
+              rem="appears in GENKI2 L22 vocab section"
+            >
+                <phrase
+                  ph="【強：つよ】く【吹：ふ】いている"
+                  rom="tsuyoku fuite iru"
+                  tr_en="to be blowing hard (wind)"
+                  tr_de="stark wehen (Wind)"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【寒：さむ】い【風：かぜ】が 【吹：ふ】いて いる。"
+                  rom="Samui kaze ga fuite iru."
+                  tr_en="A cold wind is blowing."
+                  tr_de="Ein kalter Wind weht."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【強：つよ】い【風：かぜ】が 【吹：ふ】いて きた。"
+                  rom="Tsuyoi kaze ga fuite kita."
+                  tr_en="A strong wind started to blow."
+                  tr_de="Ein starker Wind fing an zu wehen."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【会：あ】う"
+              rom="au"
+              tr_en="to meet; to encounter"
+              tr_de="sich treffen mit; auf etw. treffen"
+              lvl="n5"
+              category="people, meetings"
+              id="au-meet"
+            >
+                <phrase
+                  ph="【初：はじ】めて【会：あ】う"
+                  rom="hajimete au"
+                  tr_en="to meet for the first time"
+                  tr_de="sich zum ersten Mal treffen"
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【九：く】【時：じ】【半：はん】に 【会：あ】いましょう。"
+                  rom="Ku-ji-han ni aimashō."
+                  tr_en="Let's meet at half past nine."
+                  tr_de="Lass uns um halb zehn treffen."
+                  lvl="n5"
+                  origin="Oxford p.112 modified"
+                />
+                <sentence
+                  s="【友：とも】【達：だち】に 【会：あ】う【前：まえ】に ビールを 【飲：の】んだ。"
+                  rom="Tomodachi ni au mae ni bīru o nonda."
+                  tr_en="I drank beer before meeting my friend."
+                  tr_de="Ich trank Bier, bevor ich mich mit meinem Freund traf."
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/964fq7NJKms"
+                />
+                <sentence
+                  s="【駅：えき】の 【西：にし】【口：ぐち】で 【三：さん】【時：じ】に 【会：あ】おう。"
+                  rom="Eki no nishi-guchi de san-ji ni aō."
+                  tr_en="Let's meet at three o'clock at the west exit of the station."
+                  tr_de="Lass uns um drei Uhr beim Westeingang des Bahnhofs treffen."
+                  lvl="n5"
+                  origin="500mon q260"
+                />
+            </word>
+            <word
+              w="【習：なら】う"
+              rom="narau"
+              tr_en="to take lessons in; to be taught"
+              tr_de="Lektionen nehmen (in); unterrichtet werden"
+              lvl="n5"
+              category="education"
+              id="narau-betaught"
+            >
+                <keep_apart_from id="gakumon-learning" />
+                <keep_apart_from id="manabu-study" />
+                <keep_apart_from id="osowaru-betaught" />
+                <phrase
+                  ph="【車：くるま】の【運：うん】【転：てん】を【習：なら】う"
+                  rom="kuruma no unten o narau"
+                  tr_en="to take driving lessons (car)"
+                  tr_de="Fahrunterricht nehmen (Auto)"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】【語：ご】を 【５：ご】【年：ねん】 【習：なら】いました。"
+                  rom="Nihon-go o go-nen naraimashita."
+                  tr_en="I've studied Japanese for five years."
+                  tr_de="Ich habe fünf Jahre Japanisch studiert."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【待：ま】つ"
+              rom="matsu"
+              tr_en="to wait"
+              tr_de="warten"
+              lvl="n5"
+              id="matsu-wait"
+            >
+                <phrase
+                  ph="【電：でん】【車：しゃ】を【待：ま】つ"
+                  rom="densha o matsu"
+                  tr_en="to wait for the train"
+                  tr_de="auf den Zug warten"
+                  lvl="n5"
+                />
+                <sentence
+                  s="ちょっと【待：ま】って。"
+                  rom="Chotto matte."
+                  tr_en="Hang on!"
+                  tr_de="Warte einen Moment!"
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="お【待：ま】ちして いました。どうぞ、こちらへ。"
+                  rom="O-machi shite imashita. Dōzo, kochira e."
+                  tr_en="I've been expecting you. This way, please."
+                  tr_de="Ich habe Sie schon erwartet. Hier entlang, bitte."
+                  lvl="n5"
+                  origin="500mon q261"
+                  hasDifferentForm="true"
+                />
+            </word>
+            <word
+              w="【持：も】つ"
+              rom="motsu"
+              tr_en="to hold (in one's hand); to carry; to possess"
+              tr_de="(in der Hand) halten; tragen; besitzen"
+              lvl="n5"
+              id="motsu-carry"
+            >
+                <keep_apart_from id="tsukamu-grab" />
+                <keep_apart_from id="tsukamaru-tobecaught" />
+                <keep_apart_from id="nigiru-grasp" />
+                <phrase
+                  ph="【車：くるま】を【持：も】っている"
+                  rom="kuruma o motte iru"
+                  tr_en="to own a car"
+                  tr_de="ein Auto besitzen"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【持：も】っていく"
+                  rom="motteiku"
+                  tr_en="to carry sth. away; to bring with you"
+                  tr_de="etw. davontragen; etw. mitbringen"
+                  lvl="n5"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【中：なか】【川：がわ】さんは 【鉛：えん】【筆：ぴつ】を 【手：て】に 【持：も】っていた。"
+                  rom="Nakagawa-san wa enpitsu o te ni motte ita."
+                  tr_en="Ms Nakagawa held a pencil in his hand."
+                  tr_de="Frau Nakagawa hielt ein Bleistift in der Hand."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【差：さ】す"
+              rom="sasu"
+              tr_en="to hold up (an umbrella)"
+              tr_de="(einen Regenschirm) hochhalten"
+              lvl="n5"
+              id="sasu-raise"
+            >
+                <!-- the noun may be sashi, but it doesn't seem to have much to do with sasu, and is nx anyway -->
+                <keep_apart_from id="ageru-raise" />
+                <keep_apart_from id="kau-raise" />
+                <keep_apart_from id="takameru-raise" />
+                <keep_apart_from id="sodateru-makegrow" />
+                <phrase
+                  ph="【傘：かさ】を【差：さ】す"
+                  rom="kasa o sasu"
+                  tr_en="to hold up an umbrella"
+                  tr_de="einen Regenschirm hochhalten"
+                  lvl="n5"
+                />
+                <sentence
+                  s="ナオミは 【傘：かさ】を 【差：さ】して いました。"
+                  rom="Naomi wa kasa o sashite imashita."
+                  tr_en="Naomi was holding up an umbrella."
+                  tr_de="Naomi hielt einen Regenschirm hoch."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with lib0"
+                />
+            </word>
+            <word
+              w="【生：う】まれる"
+              rom="umareru"
+              tr_en="to be born"
+              tr_de="geboren sein; geboren werden"
+              lvl="n5"
+              category="health, family"
+              id="umareru-tobeborn"
+            >
+                <see id="umare-birth" rem="noun" />
+                <phrase
+                  ph="【東：とう】【京：きょう】で【生：う】まれた"
+                  rom="Tōkyō de umareta"
+                  tr_en="to be born in Tokyo"
+                  tr_de="in Tokio geboren sein."
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【私：わたし】は 【京：きょう】【都：と】で 【生：う】まれた。"
+                  rom="Watashi wa Kyōto de umareta."
+                  tr_en="I was born in Kyōto."
+                  tr_de="Ich bin in Kyōto geboren."
+                  lvl="n5"
+                  origin="duolingo"
+                />
+                <sentence
+                  s="あと【二：に】【ヶ：か】【月：げつ】で、【妻：つま】と 【私：わたし】に 【赤：あか】ちゃんが 【生：う】まれる。"
+                  rom="Ato ni-kagetsu de, tsuma to watashi ni akachan ga umareru."
+                  tr_en="My wife and I are going to have a baby in two months."
+                  tr_de="Meine Frau und ich bekommen in zwei Monaten ein Baby."
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【消：き】える"
+              rom="kieru"
+              tr_en="to vanish; to disappear"
+              tr_de="verschwinden"
+              lvl="n5"
+              category="looking"
+              id="kieru-vanish"
+            >
+                <phrase
+                  ph="だんだん【消：き】えてくる"
+                  rom="dan-dan kiete kuru"
+                  tr_en="to disappear gradually"
+                  tr_de="allmählich verschwinden"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT and Google search"
+                />
+                <sentence
+                  s="もうすぐ 【雪：ゆき】が 【消：き】えると 【思：おも】います。"
+                  rom="Mō sugu yuki ga kieru to omoimasu."
+                  tr_en="I think the snow will disappear soon."
+                  tr_de="Ich denke, der Schnee wird bald verschwinden."
+                  lvl="n5"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

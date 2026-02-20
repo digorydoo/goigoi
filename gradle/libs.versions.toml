@@ -1,0 +1,33 @@
+[versions]
+activityKtx = "1.12.3"
+agp = "9.0.1"
+appcompat = "1.7.1"
+cardview = "1.0.0"
+constraintlayout = "2.2.1"
+coreKtx = "1.17.0"
+coreSplashscreen = "1.2.0"
+fragmentKtx = "1.8.9"
+kotlin = "2.3.0"
+material = "1.13.0"
+recyclerview = "1.4.0"
+xmlparser = "21.14.0.0"
+
+[libraries]
+activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "coreSplashscreen" }
+fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragmentKtx" }
+kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", version.ref = "kotlin" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
+kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.7.1" }
+material = { module = "com.google.android.material:material", version.ref = "material" }
+recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+xmlparserv2 = { module = "com.oracle.database.xml:xmlparserv2", version.ref = "xmlparser" }
+
+kokuban = { module = "io.github.digorydoo:kokuban", version = "0.9.2" }
+
+[plugins]
+agp = { id = "com.android.application", version.ref = "agp" }

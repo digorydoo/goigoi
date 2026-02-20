@@ -1,0 +1,1083 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N5 verbs ③"
+      name_de="N5-Verben ③"
+      name_fr="Les verbes N5 ③"
+      name_it="Verbi N5 ③"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="verb"
+      defaultHint_de="Verb"
+      lvl="n5"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="true"
+    >
+        <section>
+            <!-- traffic + transportation -->
+            <word
+              w="【渡：わた】る"
+              rom="wataru"
+              tr_en="to cross"
+              tr_de="überqueren"
+              hint_en="e.g. to cross the street"
+              hint_de="z.B. die Strasse überqueren"
+              lvl="n5"
+              category="transportation"
+              id="n5-wataru"
+            >
+                <keep_apart_from id="yokogiru-cross" />
+                <phrase
+                  ph="【川：かわ】を【渡：わた】る"
+                  rom="kawa o wataru"
+                  tr_en="to cross the river"
+                  tr_de="den Fluss überqueren"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【猫：ねこ】は 【道：みち】を 【渡：わた】った。"
+                  rom="Neko wa michi o watatta."
+                  tr_en="The cat crossed the street."
+                  tr_de="Die Katze überquerte die Strasse."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with lib0"
+                />
+                <sentence
+                  s="【右：みぎ】と 【左：ひだり】を よく 【見：み】て、【道：みち】を 【渡：わた】ろう。"
+                  rom="Migi to hidari o yoku mite, michi o watarō."
+                  tr_en="Let's look well to the left and right, and cross the street."
+                  tr_de="Lass uns gut nach links und rechts schauen und dann die Strasse überqueren."
+                  lvl="n5"
+                  origin="500mon q210"
+                />
+            </word>
+
+            <!-- ear -->
+            <word
+              w="【聴：き】く"
+              rom="kiku"
+              tr_en="to listen"
+              tr_de="hören"
+              hint_en="to music, etc."
+              hint_de="aktives Hören, z.B. Musik"
+              lvl="n5"
+              category="hearing"
+              id="kiku-listen"
+            >
+                <phrase
+                  ph="【音：おん】【楽：がく】を【聴：き】く"
+                  rom="ongaku o kiku"
+                  tr_en="to listen to music"
+                  tr_de="Musik hören"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【勉：べん】【強：きょう】するときは 【音：おん】【楽：がく】を 【聴：き】きます。"
+                  rom="Benkyō suru toki wa ongaku o kikimasu."
+                  tr_en="I listen to music when I study."
+                  tr_de="Ich höre Musik, wenn ich studiere."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+
+            <!-- lineup -->
+            <word
+              w="【並：なら】ぶ"
+              rom="narabu"
+              tr_en="to stand in a line"
+              tr_de="in einer Reihe stehen"
+              hint_en="v.i."
+              lvl="n5"
+              id="narabu-standinline"
+            >
+                <!-- the noun is 並び, which is nx -->
+                <phrase
+                  ph="【並：なら】んで【歩：ある】く"
+                  rom="narande aruku"
+                  tr_en="to walk side by side"
+                  tr_de="Seite an Seite gehen"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【彼：かれ】らは 【並：なら】んで 【座：すわ】った。"
+                  rom="Karera wa narande suwatta."
+                  tr_en="They sat side by side."
+                  tr_de="Sie sassen Seite an Seite."
+                  lvl="n5"
+                  origin="lib0"
+                  rem="jisho has n3 for karera"
+                />
+            </word>
+            <word
+              w="【並：なら】べる"
+              rom="naraberu"
+              tr_en="to arrange sth. in a line"
+              tr_de="etw. in einer Reihe aufstellen"
+              hint_en="v.t."
+              lvl="n5"
+              id="naraberu-arrangeinline"
+            >
+                <phrase
+                  ph="テーブルに【料：りょう】【理：り】を【並：なら】べる"
+                  rom="tēburu ni ryōri o naraberu"
+                  tr_en="to line up dishes on the table"
+                  tr_de="Esswaren auf dem Tisch aufstellen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【池：いけ】【田：だ】さんは テーブルに ナイフと フォークを 【並：なら】べた。"
+                  rom="Ikeda-san wa tēburu ni naifu to fōku o narabeta."
+                  tr_en="Ms Ikeda arranged the knives and forks on the table."
+                  tr_de="Frau Ikeda reihte Messer und Gabeln auf dem Tisch auf."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+
+            <!-- kakaru/kakeru -->
+            <word
+              w="かかる"
+              rom="kakaru"
+              tr_en="to take (time, money); to be fastened"
+              tr_de="dauern (Zeit); kosten (Geld); befestigt sein"
+              hint_en="v.i."
+              lvl="n5"
+              id="kakaru-taketime"
+            >
+                <see id="kakeru-hangup" rem="v.t." />
+                <phrase
+                  ph="【２：に】【時：じ】【間：かん】かかる"
+                  rom="ni-jikan kakaru"
+                  tr_en="to take two hours"
+                  tr_de="zwei Stunden dauern"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【３：さん】【万：まん】【円：えん】かかる"
+                  rom="san-man-en kakaru"
+                  tr_en="it takes 30'000 yen"
+                  tr_de="30'000 Yen kosten"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="どれくらい かかりますか。"
+                  rom="Dorekurai kakarimasu ka?"
+                  tr_en="How long will it take?"
+                  tr_de="Wie lange wird es dauern?"
+                  lvl="n5"
+                  origin="duolingo"
+                  rem="jisho has nx for dorekurai"
+                />
+            </word>
+            <word
+              w="かける"
+              rom="kakeru"
+              tr_en="to hang up (a coat); to put on (glasses); to put in action"
+              tr_de="(Jacke) aufhängen; (Brille) anziehen; in Aktion setzen"
+              hint_en="v.t."
+              lvl="n5"
+              id="kakeru-hangup"
+            >
+                <see id="kakaru-taketime" rem="v.i." />
+                <phrase
+                  ph="コートをかける"
+                  rom="kōto o kakeru"
+                  tr_en="to hang up (one's) coat"
+                  tr_de="einen Mantel aufhängen"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【絵：え】をかける"
+                  rom="e o kakeru"
+                  tr_en="to hang up a picture"
+                  tr_de="ein Bild aufhängen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【電：でん】【話：わ】を かけたい。"
+                  rom="Denwa o kaketai."
+                  tr_en="I want to make a phone call."
+                  tr_de="Ich will einen Telefonanruf tätigen."
+                  lvl="n5"
+                />
+            </word>
+
+            <!-- unsorted -->
+            <word
+              w="【切：き】る"
+              rom="kiru"
+              tr_en="to cut; to turn off"
+              tr_de="schneiden; ausschalten"
+              hint_en="v.t."
+              lvl="n5"
+              id="kiru-cut"
+            >
+                <see id="kireru-snap" rem="v.i." />
+                <see id="kire-slice" rem="noun" />
+                <phrase
+                  ph="【薄：うす】く【切：き】る"
+                  rom="usuku kiru"
+                  tr_en="to cut thin (into thin slices)"
+                  tr_de="dünn schneiden (in dünne Scheiben)"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【大：おお】きいから 【半：はん】【分：ぶん】に 【切：き】って ください。"
+                  rom="Ōkii kara hanbun ni kitte kudasai."
+                  tr_en="It's big, so please cut it in half."
+                  tr_de="Es ist gross, bitte schneiden Sie es in zwei Hälften."
+                  lvl="n5"
+                  origin="500mon q64"
+                />
+            </word>
+            <word
+              w="【住：す】む"
+              rom="sumu"
+              tr_en="to live; to dwell"
+              tr_de="leben; wohnen"
+              lvl="n5"
+              category="life"
+              id="sumu-live"
+            >
+                <keep_apart_from id="kurasu-live" />
+                <phrase
+                  ph="【両：りょう】【親：しん】と【住：す】んでいる"
+                  rom="ryōshin to sunde iru"
+                  tr_en="to live with (one's) parents"
+                  tr_de="bei den Eltern wohnen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【魚：さかな】は 【水：みず】の【中：なか】に 【住：す】む。"
+                  rom="Sakana wa mizu no naka ni sumu."
+                  tr_en="Fish live in the water."
+                  tr_de="Fische leben im Wasser."
+                  origin="lib0 modified"
+                  lvl="n5"
+                />
+            </word>
+            <word
+              w="【返：かえ】す"
+              rom="kaesu"
+              tr_en="to return sth.; to put back"
+              tr_de="etw. zurückgeben; zurücklegen"
+              lvl="n5"
+              id="kaesu-returnsth"
+            >
+                <see id="okaeshi-returning" rem="noun" />
+                <keep_apart_from id="modosu-putback" />
+                <phrase
+                  ph="【本：ほん】を【返：かえ】す"
+                  rom="hon o kaesu"
+                  tr_en="to put the book back; to return a book"
+                  tr_de="das Buch zurücklegen; ein Buch zurückbringen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="この 【本：ほん】を 【青：あお】【木：き】【先：せん】【生：せい】に 【返：かえ】しなさい。"
+                  rom="Kono hon o Aoki-sensei ni kaeshi-nasai."
+                  tr_en="Take this book back to Professor Aoki."
+                  tr_de="Bringe dieses Buch zurück zu Professor Aoki."
+                  lvl="n5"
+                  origin="lib0 modified"
+                  rem="nasai sounds rather commanding"
+                />
+                <sentence
+                  s="【来：らい】【月：げつ】【七：なの】【日：か】までに【本：ほん】を【返：かえ】してください。"
+                  rom="Raigetsu nanoka made ni hon o kaeshite kudasai."
+                  tr_en="Please return the book by the seventh of next month."
+                  tr_de="Bitte bringen Sie das Buch zurück bis am siebten nächsten Monat."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【忘：わす】れる"
+              rom="wasureru"
+              tr_en="to forget; to leave carelessly"
+              tr_de="vergessen; zurücklassen"
+              lvl="n5"
+              id="wasureru-forget"
+            >
+                <phrase
+                  ph="いつも【人：ひと】の【名：な】【前：まえ】を【忘：わす】れている"
+                  rom="itsumo hito no namae o wasurete iru"
+                  tr_en="to always forget people's names"
+                  tr_de="immer die Namen der Leute vergessen"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【傘：かさ】を 【置：お】き【忘：わす】れた。"
+                  rom="Kasa o oki-wasureta."
+                  tr_en="I left my umbrella behind."
+                  tr_de="Ich habe meinen Schirm vergessen."
+                  lvl="n5"
+                  origin="lib0"
+                  rem="jisho has nx for 置き忘れる, but n5 for 置く、忘れる"
+                />
+            </word>
+            <word
+              w="【置：お】く"
+              rom="oku"
+              tr_en="to put; to place"
+              tr_de="setzen; stellen"
+              lvl="n5"
+              id="oku-put"
+            >
+                <phrase
+                  ph="【花：はな】をテーブルの【上：うえ】に【置：お】く"
+                  rom="hana o tēburu no ue ni oku"
+                  tr_en="to put the flowers on the table"
+                  tr_de="die Blumen auf den Tisch stellen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【荷：に】【物：もつ】を ドアの 【近：ちか】くに 【置：お】いて おいて ください。"
+                  rom="Nimotsu o doa no chikaku ni oite oite kudasai."
+                  tr_en="Please put the luggage by the door."
+                  tr_de="Bitte stelle das Gepäck neben die Tür."
+                  explanation_en="「〜ておく」shows that an action is done to prepare something for future use"
+                  explanation_de="「〜ておく」zeigt auf, dass die Aktion eine Vorbereitung für späteren Gebrauch ist"
+                  lvl="n5"
+                  origin="Oxford p.52"
+                />
+            </word>
+            <word
+              w="【引：ひ】く"
+              rom="hiku"
+              tr_en="to pull"
+              tr_de="ziehen"
+              lvl="n5"
+              category="hands"
+              id="hiku-pull"
+            >
+                <see id="osu-push" rem="antonym" />
+                <phrase
+                  ph="【風邪：かぜ】を【引：ひ】く"
+                  rom="kaze o hiku"
+                  tr_en="to catch a cold"
+                  tr_de="sich erkälten"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【風邪：かぜ】を 【引：ひ】くと 【私：わたし】は いつも 【鼻：はな】【水：みず】が 【出：で】る。"
+                  rom="Kaze o hiku to watashi wa itsumo hanamizu ga deru."
+                  tr_en="My nose runs whenever I have a cold."
+                  tr_de="Immer wenn ich erkältet bin, läuft meine Nase."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【作：つく】る"
+              rom="tsukuru"
+              tr_en="to make; to produce; to manufacture"
+              tr_de="machen; produzieren; erzeugen"
+              lvl="n5"
+              id="tsukuru-make"
+            >
+                <see id="tsukuri-making" rem="noun" />
+                <keep_apart_from id="seisan-production" />
+                <keep_apart_from id="kōgyō-manufacturing" />
+                <keep_apart_from id="sekkei-design" />
+                <phrase
+                  ph="【晩：ばん】ご【飯：はん】を【作：つく】る"
+                  rom="bangohan o tsukuru"
+                  tr_en="to make supper"
+                  tr_de="das Abendessen zubereiten"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="この 【料：りょう】【理：り】は 【私：わたし】が 【作：つく】りました。"
+                  rom="Kono ryōri wa watashi ga tsukurimashita."
+                  tr_en="I made this dish."
+                  tr_de="Ich habe dieses Gericht gemacht."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【頼：たの】む"
+              rom="tanomu"
+              tr_en="to request; to order"
+              tr_de="bitten; bestellen"
+              Langenscheidt="bitten"
+              lvl="n5"
+              id="tanomu-request"
+            >
+                <see id="tanomi-request" rem="noun" />
+                <keep_apart_from id="meijiru-command" />
+                <phrase
+                  ph="レストランでお【茶：ちゃ】を【頼：たの】む"
+                  rom="resutoran de o-cha o tanomu"
+                  tr_en="to order tea at a restaurant"
+                  tr_de="im Restaurant Tee bestellen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】は 【金：かね】【子：こ】さんに 【明日：あした】 そこへ 【行：い】くように 【頼：たの】みました。"
+                  rom="Watashi wa Kaneko-san ni ashita soko e iku yō ni tanomimashita."
+                  tr_en="I requested Mr Kaneko to go there tomorrow."
+                  tr_de="Ich bat Herrn Kaneko, morgen dorthin zu gehen."
+                  lvl="n5"
+                  origin="lib0"
+                  rem="yō ni may be n4"
+                />
+            </word>
+            <word
+              w="【見：み】せる"
+              rom="miseru"
+              tr_en="to show sth.; to display"
+              tr_de="(etw.) zeigen; (etw.) anzeigen"
+              hint_en="v.t."
+              lvl="n5"
+              id="miseru-show"
+            >
+                <phrase
+                  ph="【友：とも】【達：だち】に【新：あたら】しい【車：くるま】を【見：み】せる"
+                  rom="tomodachi ni atarashii kuruma o miseru"
+                  tr_en="to show the new car to a friend"
+                  tr_de="das neue Auto einem Freund zeigen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="その 【写：しゃ】【真：しん】を 【見：み】せて ください。"
+                  rom="Sono shashin o misete kudasai."
+                  tr_en="Please show me those photos."
+                  tr_de="Bitte zeig mir diese Fotos."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【撮：と】る"
+              rom="toru"
+              tr_en="to take (a photo)"
+              tr_de="(ein Foto) schiessen"
+              hint_en="v.t."
+              lvl="n5"
+              category="holidays"
+              id="toru-takephoto"
+            >
+                <phrase
+                  ph="【写：しゃ】【真：しん】を【撮：と】る"
+                  rom="shashin o toru"
+                  tr_en="to take a picture"
+                  tr_de="ein Foto schiessen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【写：しゃ】【真：しん】を 【撮：と】っても いい？"
+                  rom="Shashin o totte mo ii?"
+                  tr_en="Can I take a picture?"
+                  tr_de="Darf ich ein Foto machen?"
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/IBzblHryNJE"
+                  rem="jisho and Google translate have 撮る, Miku has 取る"
+                />
+                <sentence
+                  s="ここで 【写：しゃ】【真：しん】を 【撮：と】らないで ください。"
+                  rom="Koko de shashin o toranaide kudasai."
+                  tr_en="Please do not take photos here."
+                  tr_de="Bitte machen Sie hier keine Fotos."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【困：こま】る"
+              rom="komaru"
+              tr_en="to be in trouble; to be worried"
+              tr_de="ein Problem haben; besorgt sein"
+              lvl="n5"
+              id="komaru-beintrouble"
+            >
+                <phrase
+                  ph="【困：こま】った【顔：かお】をしている"
+                  rom="komatta kao o shite iru"
+                  tr_en="to look troubled (to have a troubled-looking face)"
+                  tr_de="besorgt aussehen (ein besorgtes Gesicht haben)"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <!-- ChatGPT kind of disagrees; should be more like "That's troublesome"
+                  s="それは 【困：こま】ります。"
+                  rom="Sore wa komarimasu."
+                  tr_en="That's annoying."
+                  tr_de="Das nervt."
+                  lvl="n5"
+                  origin="Langenscheidt"
+                -->
+                <sentence
+                  s="【鍵：かぎ】をなくして 【困：こま】っています。"
+                  rom="Kagi o nakushite komatte imasu."
+                  tr_en="I am in trouble, (because) I lost the keys."
+                  tr_de="Ich habe ein Problem, (weil) ich die Schlüssel verloren habe."
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【無：な】くす"
+              rom="nakusu"
+              tr_en="to lose something; to mislay"
+              tr_de="etw. verlieren; etw. verlegen"
+              lvl="n5"
+              id="nakusu-lose"
+              usuallyInKana="true"
+              rem="appears in GENKI1 p.269 vocab section"
+            >
+                <phrase
+                  ph="【傘：かさ】をなくす"
+                  rom="kasa o nakusu"
+                  tr_en="to lose one's umbrella"
+                  tr_de="den Schirm verlieren"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【鍵：かぎ】を なくしました。"
+                  rom="Kagi o nakushimashita."
+                  tr_en="I lost my keys."
+                  tr_de="Ich habe meine Schlüssel verloren."
+                  lvl="n5"
+                  origin="Langenscheidt p.197"
+                />
+            </word>
+            <word
+              w="【吸：す】う"
+              rom="suu"
+              tr_en="to smoke; to breathe in; to suck"
+              tr_de="rauchen; einatmen; saugen"
+              lvl="n5"
+              category="health, fire"
+              id="suu-smoke"
+            >
+                <phrase
+                  ph="タバコを【吸：す】う"
+                  rom="tabako o suu"
+                  tr_en="to smoke cigarettes"
+                  tr_de="Zigaretten rauchen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="タバコを 【吸：す】っても よいですか。"
+                  rom="Tabako o sutte mo yoi desu ka?"
+                  tr_en="Do you mind if I smoke?"
+                  tr_de="Stört es dich, wenn ich rauche?"
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【呼：よ】ぶ"
+              rom="yobu"
+              tr_en="to summon (a doctor, etc.); to send for"
+              tr_de="(einen Arzt) rufen; holen"
+              lvl="n5"
+              id="n5-yobu"
+            >
+                <phrase
+                  ph="タクシーを【呼：よ】ぶ"
+                  rom="takushī o yobu"
+                  tr_en="to call a taxi"
+                  tr_de="ein Taxi rufen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【医：い】【者：しゃ】を 【呼：よ】びましょうか。"
+                  rom="Isha o yobimashō ka?"
+                  tr_en="Shall I send for a doctor?"
+                  tr_de="Soll ich einen Arzt rufen?"
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【終：お】わる"
+              rom="owaru"
+              tr_en="to finish; it ends"
+              tr_de="fertig werden; es endet"
+              hint_en="v.i."
+              lvl="n5"
+              id="owaru-finish"
+            >
+                <see id="oeru-finish" rem="v.t." />
+                <see id="owari-end" rem="noun" />
+                <see id="hajimaru-begin" rem="antonym" />
+                <see id="yamu-cease" rem="closely related" />
+                <keep_apart_from id="kureru-dark" />
+                <phrase
+                  ph="もう【終：お】わっている"
+                  rom="mō owatte iru"
+                  tr_en="already finished"
+                  tr_de="bereits zu Ende"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【夏：なつ】が【終：お】わると 【秋：あき】が【始：はじ】まる。"
+                  rom="Natsu ga owaru to aki ga hajimaru."
+                  tr_en="When summer ends, autumn begins."
+                  tr_de="Wenn der Sommer endet, beginnt der Herbst."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT; 'to' in this context may be n4"
+                />
+                <sentence
+                  s="【宿：しゅく】【題：だい】は もう 【終：お】わりましたか。"
+                  rom="Shukudai wa mō owarimashita ka?"
+                  tr_en="Have you already finished your homework?"
+                  tr_de="Hast du deine Hausaufgaben schon fertig?"
+                  lvl="n5"
+                  origin="500mon q155"
+                  rem="kind of confusing, because the verb is used as v.t. in English and German"
+                />
+            </word>
+            <word
+              w="【押：お】す"
+              rom="osu"
+              tr_en="to push; to press"
+              tr_de="drücken; stossen"
+              lvl="n5"
+              category="hands"
+              id="osu-push"
+            >
+                <see id="hiku-pull" rem="antonym" />
+                <phrase
+                  ph="ボタンを【押：お】す"
+                  rom="botan o osu"
+                  tr_en="to push the button"
+                  tr_de="den Knopf drücken"
+                  lvl="n5"
+                />
+                <sentence
+                  s="ボタンを 【押：お】しましたか。"
+                  rom="Botan o oshimashita ka?"
+                  tr_en="Did you push the button?"
+                  tr_de="Hast du auf den Knopf gedrückt?"
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【止：と】まる"
+              rom="tomaru"
+              tr_en="to stop; to come to a halt"
+              tr_de="(an-) halten"
+              hint_en="v.i."
+              lvl="n5"
+              id="tomaru-stop"
+            >
+                <see id="tomeru-stop" rem="v.t." />
+                <see id="yamu-cease" rem="closely related" />
+                <phrase
+                  ph="まだ【止：と】まらない"
+                  rom="mada tomaranai"
+                  tr_en="still won't stop"
+                  tr_de="hält noch nicht; noch nicht gestoppt"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【車：くるま】が【止：と】まった。"
+                  rom="Kuruma ga tomatta."
+                  tr_en="The car stopped."
+                  tr_de="Das Auto hielt an."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【鳥：とり】は 【木：き】に 【止：と】まった。"
+                  rom="Tori wa ki ni tomatta."
+                  tr_en="The bird alighted on a tree."
+                  tr_de="Der Vogel landete auf einem Baum."
+                  lvl="n5"
+                  origin="lib0 modified"
+                  rem="枝 would be better than 木, but it would be n4"
+                />
+            </word>
+            <word
+              w="【立：た】つ"
+              rom="tatsu"
+              tr_en="to stand"
+              tr_de="stehen"
+              lvl="n5"
+              category="feet"
+              id="tatsu-stand"
+            >
+                <phrase
+                  ph="【椅：い】【子：す】の【上：うえ】に【立：た】つ"
+                  rom="isu no ue ni tatsu"
+                  tr_en="to stand on a chair"
+                  tr_de="auf einen Stuhl stehen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【高：たか】【橋：はし】さんは 【私：わたし】の 【後：うし】ろに 【立：た】って いました。"
+                  rom="Takahashi-san wa watashi no ushiro ni tatte imashita."
+                  tr_en="Miss Takahashi was standing behind me."
+                  tr_de="Frau Takahashi stand hinter mir."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with lib0"
+                />
+                <sentence
+                  s="ドアを 【開：あ】けると 【知：し】らない【男：おとこ】の 【人：ひと】が 【立：た】って いた。"
+                  rom="Doa o akeru to shiranai otoko no hito ga tatte ita."
+                  tr_en="I opened the door and found a stranger standing there."
+                  tr_de="Ich öffnete Tür, und (vor mir) stand ein Fremder."
+                  lvl="n5"
+                  origin="Oxford p.135"
+                />
+            </word>
+            <word
+              w="【上：あ】げる"
+              rom="ageru"
+              tr_en="to lift; to make higher; to raise"
+              tr_de="aufheben; erhöhen; höher machen"
+              hint_en="v.t."
+              lvl="n5"
+              id="ageru-raise"
+              rem="Note that n4 ageru-give is also 上げる"
+            >
+                <see id="agaru-rise" rem="v.i." />
+                <keep_apart_from id="sasu-raise" />
+                <keep_apart_from id="kau-raise" />
+                <keep_apart_from id="takameru-raise" />
+                <keep_apart_from id="sodateru-makegrow" />
+                <phrase
+                  ph="【重：おも】い【箱：はこ】を【上：あ】げる"
+                  rom="omoi hako o ageru"
+                  tr_en="to lift up a heavy box"
+                  tr_de="eine schwere Kiste aufheben"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ミキは 【手：て】を 【上：あ】げた。"
+                  rom="Miki wa te o ageta."
+                  tr_en="Miki raised her hand."
+                  tr_de="Miki hielt ihre Hand hoch."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【磨：みが】く"
+              rom="migaku"
+              tr_en="to brush; to polish; to clean"
+              tr_de="putzen; polieren"
+              lvl="n5"
+              id="migaku-brushteeth"
+            >
+                <phrase
+                  ph="【歯：は】を【磨：みが】く"
+                  rom="ha o migaku"
+                  tr_en="to brush one's teeth"
+                  tr_de="die Zähne putzen"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【靴：くつ】を【磨：みが】く"
+                  rom="kutsu o migaku"
+                  tr_en="to polish one's shoes"
+                  tr_de="die Schuhe polieren"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【窓：まど】を【磨：みが】く"
+                  rom="mado o migaku"
+                  tr_en="to clean a window"
+                  tr_de="ein Fenster putzen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】は 【寝：ね】る【前：まえ】に いつも 【歯：は】を 【磨：みが】きます。"
+                  rom="Watashi wa neru mae ni itsumo ha o migakimasu."
+                  tr_en="I always brush my teeth before I go to bed."
+                  tr_de="Ich putze mir immer die Zähne, bevor ich zu Bett gehe."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【窓：まど】を【磨：みが】くと、【部：へ】【屋：や】が【明：あか】るくなります。"
+                  rom="Mado o migaku to, heya ga akaruku narimasu."
+                  tr_en="When you clean the windows, the room becomes brighter."
+                  tr_de="Der Raum wird heller, wenn man die Fenster putzt."
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【着：つ】く"
+              rom="tsuku"
+              tr_en="to arrive at; to reach"
+              tr_de="(am Zielort) ankommen"
+              lvl="n5"
+              category="travelling, transportation"
+              id="tsuku-arrive"
+            >
+                <phrase
+                  ph="【公：こう】【園：えん】に【着：つ】く"
+                  rom="kōen ni tsuku"
+                  tr_en="to arrive at a park"
+                  tr_de="beim Park ankommen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="もうすぐ 【着：つ】きますよ。"
+                  rom="Mō sugu tsukimasu yo."
+                  tr_en="We will be there soon."
+                  tr_de="Wir werden bald ankommen."
+                  lvl="n5"
+                  origin="500mon q20"
+                />
+                <sentence
+                  s="もう 【電：でん】【車：しゃ】が 【着：つ】いて いる。"
+                  rom="Mō densha ga tsuite iru."
+                  tr_en="The train has already arrived."
+                  tr_de="Der Zug ist bereits angekommen."
+                  lvl="n5"
+                  origin="Oxford p.43"
+                />
+            </word>
+            <word
+              w="【曲：ま】がる"
+              rom="magaru"
+              tr_en="to turn; it bends"
+              tr_de="sich drehen; sich biegen"
+              hint_en="v.i."
+              lvl="n5"
+              category="directions"
+              id="magaru-turn"
+            >
+                <phrase
+                  ph="【左：ひだり】へ【曲：ま】がる"
+                  rom="hidari e magaru"
+                  tr_en="to turn left"
+                  tr_de="nach links abbiegen"
+                  lvl="n5"
+                  origin="self"
+                />
+                <phrase
+                  ph="【右：みぎ】へ【曲：ま】がる"
+                  rom="migi e magaru"
+                  tr_en="to turn right"
+                  tr_de="nach rechts abbiegen"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【道：みち】が【曲：ま】がる。"
+                  rom="Michi ga magaru."
+                  tr_en="The road turns."
+                  tr_de="Die Strasse macht eine Kurve."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【左：ひだり】へ【曲：ま】がってください。"
+                  rom="Hidari e magatte kudasai."
+                  tr_en="Turn to the left."
+                  tr_de="Drehe dich nach links."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【飛：と】ぶ"
+              rom="tobu"
+              tr_en="to fly; to jump"
+              tr_de="fliegen; hüpfen"
+              lvl="n5"
+              category="travelling, top-words"
+              id="tobu-fly"
+              rem="jisho has 跳ぶ for 'jump', but lib0 uses 飛ぶ even for 'jump'; and 跳 is an n1 kanji"
+            >
+                <keep_apart_from id="haneru-leap" />
+                <keep_apart_from id="tobihaneru-hop" />
+                <phrase
+                  ph="【高：たか】く【飛：と】ぶ"
+                  rom="takaku tobu"
+                  tr_en="to jump high"
+                  tr_de="hoch springen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                  rem="ChatGPT says 跳ぶ would be more appropriate for 'jump', but 飛ぶ might be used as well"
+                />
+                <sentence
+                  s="【鳥：とり】は 【空：そら】を 【飛：と】びます。"
+                  rom="Tori wa sora o tobimasu."
+                  tr_en="Birds fly in the sky."
+                  tr_de="Vögel fliegen am Himmel."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【子：こ】【供：ども】たちは ベッドの 【上：うえ】で 【飛：と】んで います。"
+                  rom="Kodomo-tachi wa beddo no ue de tonde imasu."
+                  tr_en="The children are jumping on the bed."
+                  tr_de="Die Kinder hüpfen auf dem Bett."
+                  lvl="n5"
+                  origin="self"
+                />
+            </word>
+            <word
+              w="【登：のぼ】る"
+              rom="noboru"
+              tr_en="to climb"
+              tr_de="klettern"
+              lvl="n5"
+              category="sports, directions"
+              id="noboru-climb"
+            >
+                <phrase
+                  ph="【山：やま】に【登：のぼ】る"
+                  rom="yama ni noboru"
+                  tr_en="to climb a mountain"
+                  tr_de="einen Berg besteigen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT; を could be used, but に is better"
+                />
+                <sentence
+                  s="【富：ふ】【士：じ】【山：さん】に 【登：のぼ】りたいのです。"
+                  rom="Fujisan ni noboritai no desu."
+                  tr_en="I would like to climb Mt Fuji."
+                  tr_de="Ich möchte auf den Berg Fuji steigen."
+                  lvl="n5"
+                  origin="Langenscheidt p.177"
+                  rem="jisho has nx for Fujisan"
+                />
+            </word>
+            <word
+              w="【鳴：な】く"
+              rom="naku"
+              tr_en="to sing (bird); to chirp"
+              tr_de="singen (Vogel); zwitschern"
+              lvl="n5"
+              category="bird"
+              id="naku-sing"
+            >
+                <see id="naru-sound" rem="closely related" />
+                <keep_apart_from id="saezuru-chirp" />
+                <phrase
+                  ph="【小：ちい】さな【声：こえ】で【鳴：な】く"
+                  rom="chīsana koe de naku"
+                  tr_en="to chirp softly"
+                  tr_de="leise zwitschern"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【鳥：とり】が 【鳴：な】いている。"
+                  rom="Tori ga naite iru."
+                  tr_en="The birds are singing."
+                  tr_de="Die Vögel pfeifen."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with lib0"
+                />
+            </word>
+            <word
+              w="【売：う】る"
+              rom="uru"
+              tr_en="to sell sth."
+              tr_de="etw. verkaufen"
+              hint_en="v.t."
+              lvl="n5"
+              category="shopping, trade"
+              id="uru-sell"
+            >
+                <see id="ureru-sellwell" rem="v.i." />
+                <keep_apart_from id="hanbai-sales" />
+                <phrase
+                  ph="【自：じ】【動：どう】【車：しゃ】を【売：う】る"
+                  rom="jidōsha o uru"
+                  tr_en="to sell a car"
+                  tr_de="ein Auto verkaufen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="テレビを【売：う】ろうと【思：おも】っています。"
+                  rom="Terebi o urō to omotte imasu."
+                  tr_en="I'm thinking of selling the TV."
+                  tr_de="Ich überlege mir, den Fernseher zu verkaufen."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【締：し】める"
+              rom="shimeru"
+              tr_en="to tighten sth.; to fasten (a belt)"
+              tr_de="etw. zusammenziehen; (den Gurt) anlegen"
+              hint_en="v.t."
+              lvl="n5"
+              id="shimeru-lace"
+            >
+                <!-- kutsu o shimeru is not the most natural; 靴ひもを締める would be better, but that's not n5 -->
+                <phrase
+                  ph="ベルトを【締：し】める"
+                  rom="beruto o shimeru"
+                  tr_en="to fasten a belt"
+                  tr_de="einen Gurt anlegen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                  rem="jisho has n3 for beruto"
+                />
+                <sentence
+                  s="シートベルトを 【締：し】めて ください。"
+                  rom="Shītoberuto o shimete kudasai."
+                  tr_en="Fasten your seatbelt, please."
+                  tr_de="Bitte legen Sie Ihren Sitzgurt an."
+                  lvl="n5"
+                  origin="lib0"
+                  rem="jisho has nx for shītoberuto; shītoberuto appears in 500mon q298"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

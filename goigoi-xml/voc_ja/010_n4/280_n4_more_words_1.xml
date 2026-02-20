@@ -1,0 +1,1343 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="More N4 words ①"
+      name_de="Weitere N4-Wörter ①"
+      name_fr="Plus de mots N4 ①"
+      name_it="Più parole N4 ①"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="n4"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- noun -->
+            <word
+              w="【父：ちち】【親：おや】"
+              rom="chichioya"
+              tr_en="father"
+              tr_de="Vater"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n4"
+              category="family"
+              id="chichioya-father"
+              rem="jisho has n3"
+            >
+                <keep_apart_from id="otōsan-father" />
+                <keep_apart_from id="chichi-father" />
+                <phrase
+                  ph="【厳：きび】しい【父：ちち】【親：おや】"
+                  rom="kibishii chichioya"
+                  tr_en="a strict father"
+                  tr_de="ein strikter Vater"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="レオくんの【父：ちち】【親：おや】は【医：い】【者：しゃ】です。"
+                  rom="Reo-kun no chichioya wa isha desu."
+                  tr_en="Reo's father is a doctor."
+                  tr_de="Reos Vater ist ein Arzt."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【母：はは】【親：おや】"
+              rom="hahaoya"
+              tr_en="mother"
+              tr_de="Mutter"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n4"
+              category="family"
+              id="hahaoya-mother"
+              rem="jisho has n3"
+            >
+                <keep_apart_from id="okāsan-mother" />
+                <keep_apart_from id="haha-mother" />
+                <phrase
+                  ph="【優：やさ】しい【母：はは】【親：おや】"
+                  rom="yasashii hahaoya"
+                  tr_en="a gentle mother"
+                  tr_de="eine liebe Mutter"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="【木：き】【村：むら】さんの【母：はは】【親：おや】は ずいぶん【厳：きび】しいですね。"
+                  rom="Kimura-san no hahaoya wa zuibun kibishii desu ne."
+                  tr_en="Miss Kimura's mother is quite strict, isn't she?"
+                  tr_de="Frau Kimuras Mutter ist ziemlich strikt, nicht wahr?"
+                  allowSpaces="true"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【昔：むかし】"
+              rom="mukashi"
+              tr_en="olden days; former; once upon a time"
+              tr_de="zu jener Zeit; es war einmal"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n4"
+              id="mukashi-onceuponatime"
+            >
+                <phrase
+                  ph="【遠：とお】い【昔：むかし】"
+                  rom="tōi mukashi"
+                  tr_en="a long, long time ago"
+                  tr_de="vor langer, langer Zeit"
+                  lvl="n4"
+                  origin="Oxford p.108"
+                />
+                <sentence
+                  s="これは、ずいぶん【昔：むかし】の【話：はなし】です。"
+                  rom="Kore wa, zuibun mukashi no hanashi desu."
+                  tr_en="This happened a pretty long time ago."
+                  tr_de="Das ist vor ziemlich langer Zeit passiert."
+                  lvl="n4"
+                  origin="500mon q425"
+                  rem="jisho has n3 for zuibun"
+                />
+            </word>
+
+            <!-- not clearly a noun -->
+            <word
+              w="お【陰：かげ】"
+              rom="o-kage"
+              tr_en="grace; benevolence; thanks to ~"
+              tr_de="Dank; Gunsten; dank ~"
+              hint_en="noun"
+              hint_de="Nomen"
+              studyInContext="required"
+              lvl="n4"
+              id="okage-grace"
+              usuallyInKana="true"
+            >
+                <keep_apart_from id="kansha-thanks" />
+                <keep_apart_from id="arigatou-thanks" />
+                <phrase
+                  ph="【神：かみ】さまのおかげで"
+                  rom="kami-sama no o-kage de"
+                  tr_en="due to the grace of God"
+                  tr_de="Gott sei Dank"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT; jisho has n1 for sama; sama appears in GENKI2 p.313"
+                />
+                <phrase
+                  ph="おかげさまで"
+                  rom="o-kagesama de"
+                  tr_en="fortunately; thanks to you"
+                  tr_de="zum Glück; dank Ihnen"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="jisho has n2 for the phrase, n1 for sama; verified with ChatGPT"
+                />
+                <sentence
+                  s="【全：ぜん】【部：ぶ】【君：きみ】のおかげだ。"
+                  rom="Zenbu kimi no o-kage da."
+                  tr_en="It's all thanks to you."
+                  tr_de="Das verdanke ich alles dir."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="おかげさまで【元：げん】【気：き】です。"
+                  rom="O-kagesama de genki desu."
+                  tr_en="I'm doing well thanks to favourable circumstances."
+                  tr_de="Dank günstiger Umstände geht es mir gut."
+                  explanation_en="This phrase is commonly used in response to 'お元気ですか' and expresses gratitude or humility"
+                  explanation_de="Diese Phrase hört man häufig als Antwort auf 'お元気ですか' und drückt Dankbarkeit oder Bescheidenheit aus"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="お【陰：かげ】【様：さま】で"
+              rom="o-kagesama de"
+              tr_en="fortunately; thanks to ~"
+              tr_de="zum Glück; dank ~"
+              hint_en="expression"
+              hint_de="Ausdruck"
+              lvl="n4"
+              usuallyInKana="true"
+              id="okagesamade-thanksto"
+              HIDDEN="true"
+              rem="now a phrase of o-kage; jisho has n2"
+            />
+            <word
+              w="【久：ひさ】しぶり"
+              rom="hisashiburi"
+              tr_en="first time in a long while"
+              tr_de="eine lange Zeit seit dem letzten Mal"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n4"
+              id="hisashiburi-longtime"
+            >
+                <!-- jisho claims this is a na-adjective, but both ChatGPT and lib0 disagree; it's a noun -->
+                <phrase
+                  ph="【久：ひさ】しぶりに【会：あ】う"
+                  rom="hisashiburi ni au"
+                  tr_en="to meet sb. after a long time"
+                  tr_de="jem. nach einer langen Zeit treffen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="お【久：ひさ】しぶりですね。"
+                  rom="O-hisashiburi desu ne."
+                  tr_en="It's been a long time, isn't it?"
+                  tr_de="Lange ist's her, nicht wahr?"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【山：やま】【下：した】さんは【久：ひさ】しぶりに【家：いえ】に【帰：かえ】った。"
+                  rom="Yamashita-san wa hisashiburi ni ie ni kaetta."
+                  tr_en="Mr Yamashita returned home after a long while."
+                  tr_de="Herr Yamashita ist nach einer langen Zeit endlich nach Hause gekommen."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【彼：かれ】"
+              rom="kare"
+              tr_en="he; him"
+              tr_de="er; ihm"
+              hint_en="can sometimes mean 'boyfriend'"
+              hint_de="kann manchmal 'Freund' bedeuten"
+              lvl="n4"
+              category="relationships"
+              id="kare-he"
+              rem="appears in GENKI1 p.268 vocab section as 'boyfriend'"
+            >
+                <see id="kareshi-boyfriend" rem="closely related" />
+                <keep_apart_from id="kareshi-boyfriend" />
+                <phrase
+                  ph="【彼：かれ】の【話：はなし】を【聞：き】く"
+                  rom="kare no hanashi o kiku"
+                  tr_en="to hear what he has to say"
+                  tr_de="anhören, was er zu sagen hat"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="カオルさんの【彼：かれ】は【誰：だれ】なの？"
+                  rom="Kaoru-san no kare wa dare na no?"
+                  tr_en="Who is Kaoru's boyfriend?"
+                  tr_de="Wer ist Kaorus Freund?"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【彼：かの】【女：じょ】"
+              rom="kanojo"
+              tr_en="she; her"
+              tr_de="sie; ihr"
+              hint_en="can sometimes mean 'girlfriend'"
+              hint_de="kann manchmal 'Freundin' bedeuten"
+              lvl="n4"
+              category="relationships"
+              id="kanojo-she"
+              rem="appears in GENKI1 p.268 vocab section as 'girlfriend'"
+            >
+                <phrase
+                  ph="【彼：かの】【女：じょ】の【靴：くつ】を【見：み】つける"
+                  rom="kanojo no kutsu o mitsukeru"
+                  tr_en="to find her shoes"
+                  tr_de="ihre Schuhe finden"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ハルトさんの【彼：かの】【女：じょ】は【誰：だれ】なの？"
+                  rom="Haruto-san no kanojo wa dare na no?"
+                  tr_en="Who is Haruto's girlfriend?"
+                  tr_de="Wer ist Harutos Freundin?"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+
+            <!-- i-adjectives -->
+            <word
+              w="【酷：ひど】い"
+              rom="hidoi"
+              tr_en="cruel; violent; terrible"
+              tr_de="grausam; brutal; schrecklich"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              usuallyInKana="true"
+              lvl="n4"
+              category="not-good"
+              id="hidoi-cruel"
+            >
+                <keep_apart_from id="kibishii-strict" rem="ambiguity in phrases" />
+                <phrase
+                  ph="ひどい【天：てん】【気：き】"
+                  rom="hidoi tenki"
+                  tr_en="terrible weather"
+                  tr_de="schreckliches Wetter"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ひどい【風邪：かぜ】を【引：ひ】いてしまいました。"
+                  rom="Hidoi kaze o hīte shimaimashita."
+                  tr_en="I have a terrible cold."
+                  tr_de="Ich habe eine schreckliche Erkältung."
+                  lvl="n4"
+                  origin="Langenscheidt p.204"
+                  rem="jisho has n3 for shimau"
+                />
+            </word>
+            <word
+              w="【美：うつく】しい"
+              rom="utsukushii"
+              tr_en="beautiful; lovely"
+              tr_de="schön; reizend"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n4"
+              id="utsukushii-lovely"
+            >
+                <!-- the noun is utsukushisa, which is nx -->
+                <keep_apart_from id="kirei-pretty" />
+                <keep_apart_from id="suteki-lovely" />
+                <phrase
+                  ph="【美：うつく】しい【国：くに】"
+                  rom="utsukushii kuni"
+                  tr_en="a beautiful country"
+                  tr_de="ein schönes Land"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【花：はな】は【美：うつく】しいですね。"
+                  rom="Kono hana wa utsukushii desu ne."
+                  tr_en="This flower is beautiful, isn't it?"
+                  tr_de="Diese Blume ist hübsch, nicht wahr?"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】は【美：うつく】しい【国：くに】です。"
+                  rom="Nihon wa utsukushii kuni desu."
+                  tr_en="Japan is a beautiful country."
+                  tr_de="Japan ist ein schönes Land."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- adverb -->
+            <word
+              w="【全：ぜん】【然：ぜん】"
+              rom="zenzen"
+              tr_en="not at all"
+              tr_de="überhaupt nicht"
+              hint_en="adverb"
+              hint_de="Adverb"
+              studyInContext="preferred"
+              lvl="n4"
+              id="zenzen-notatall"
+              rem="appears in 500mon q161; jisho has n3"
+            >
+                <keep_apart_from id="sukkari-completely" />
+                <phrase
+                  ph="【全：ぜん】【然：ぜん】【違：ちが】う"
+                  rom="zenzen chigau"
+                  tr_en="completely different"
+                  tr_de="komplett verschieden"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【今日：きょう】の【試：し】【験：けん】、【全：ぜん】【然：ぜん】できませんでした。"
+                  rom="Kyō no shiken, zenzen dekimasen deshita."
+                  tr_en="I did poorly on today's test."
+                  tr_de="Bei der heutigen Prüfung habe ich schlecht abgeschnitten."
+                  lvl="n4"
+                  origin="500mon q161"
+                  rem="jisho has n3 for zenzen"
+                />
+                <sentence
+                  s="【全：ぜん】【然：ぜん】【気：き】にしない。"
+                  rom="Zenzen ki ni shinai."
+                  tr_en="I don't mind at all."
+                  tr_de="Es macht mir überhaupt nichts aus."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="やっと"
+              rom="yatto"
+              tr_en="at last"
+              tr_de="endlich"
+              Langenscheidt="endlich"
+              hint_en="expressing relief"
+              hint_de="drückt Erleichterung aus"
+              lvl="n4"
+              id="yatto-atlast"
+            >
+                <keep_apart_from id="tōtō-finally" />
+                <phrase
+                  ph="やっと【休：やす】むことができる"
+                  rom="yatto yasumu koto ga dekiru"
+                  tr_en="to finally be able to take a break"
+                  tr_de="endlich eine Pause machen können"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="やっと【金：きん】【曜：よう】【日：び】だ。"
+                  rom="Yatto kinyōbi da."
+                  tr_en="It's Friday at last!"
+                  tr_de="Endlich ist Freitag!"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="やっと【雨：あめ】がやんだ。"
+                  rom="Yatto ame ga yanda."
+                  tr_en="Finally, the rain has stopped."
+                  tr_de="Endlich, der Regen ist vorbei."
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】はやっと【休：やす】むことができる。"
+                  rom="Watashi wa yatto yasumu koto ga dekiru."
+                  tr_en="I can take a rest at last."
+                  tr_de="Endlich kann ich mich ausruhen."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【矢：や】っ【張：ぱ】り"
+              rom="yappari"
+              tr_en="as expected; after all; nonetheless"
+              tr_de="wie erwartet; doch; nichtsdestotrotz"
+              hint_en="adverb"
+              hint_de="Adverb"
+              Langenscheidt="wie erwartet, doch"
+              usuallyInKana="true"
+              lvl="n4"
+              id="yappari-afterall"
+              rem="appears in 500mon q434; jisho has n2"
+            >
+                <keep_apart_from id="yahari-asexpected" />
+                <keep_apart_from id="hatashite-sureenough" />
+                <phrase
+                  ph="やっぱり【雨：あめ】が【降：ふ】っている"
+                  rom="yappari ame ga futte iru"
+                  tr_en="to be raining as expected"
+                  tr_de="wie erwartet regnen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="やっぱり【上：じょう】【手：ず】になる"
+                  rom="yappari jōzu ni naru"
+                  tr_en="to become good at it after all"
+                  tr_de="doch noch gut darin werden"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【疲：つか】れているが、やっぱり【行：い】くつもりだ。"
+                  rom="Tsukarete iru ga, yappari iku tsumori da."
+                  tr_en="I'm tired, but I'm going anyway."
+                  tr_de="Ich bin müde, aber ich werde trotzdem hingehen."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【他：ほか】の【店：みせ】も【見：み】たけど、やっぱりこれが【一：いち】【番：ばん】いいと【思：おも】います。"
+                  rom="Hoka no mise mo mita kedo, yappari kore ga ichi-ban ii to omoimasu."
+                  tr_en="I looked at other shops, but after all, I think this one's the best."
+                  tr_de="Ich habe mir auch andere Läden angeschaut, aber ich finde diesen trotzdem den besten."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【疲：つか】れているけど、やっぱり【運：うん】【動：どう】したほうがいい。"
+                  rom="Tsukarete iru kedo, yappari undō shita hō ga ii."
+                  tr_en="I'm tired, but I should exercise nonetheless."
+                  tr_de="Ich bin müde, aber nichtsdestotrotz sollte ich trainieren."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="イギリスではやっぱり【電：でん】【車：しゃ】が【来：こ】なくて【困：こま】りました。"
+                  rom="Igirisu de wa yappari densha ga konakute komarimashita."
+                  tr_en="As you'd expect in England, the train didn't come, and so I was in trouble."
+                  tr_de="Wie man es in England erwarten würde, kam der Zug nicht, und ich war besorgt."
+                  lvl="n4"
+                  origin="Oxford p.57"
+                  rem="rated n4 because of yappari; jisho has nx for Igirisu"
+                />
+            </word>
+            <word
+              w="もうすぐ"
+              rom="mō sugu"
+              tr_en="soon; shortly; before long"
+              tr_de="bald; in Kürze"
+              hint_en="expression"
+              hint_de="Ausdruck"
+              studyInContext="preferred"
+              lvl="n4"
+              id="mōsugu-soon"
+            >
+                <keep_apart_from id="sutto-quickly" />
+                <phrase
+                  ph="もうすぐ【始：はじ】まる"
+                  rom="mō sugu hajimaru"
+                  tr_en="to begin soon"
+                  tr_de="bald anfangen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="もうすぐ【終：お】わる"
+                  rom="mō sugu owaru"
+                  tr_en="to end soon; almost over"
+                  tr_de="bald enden; fast vorbei"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="もうすぐ【春：はる】がくる。"
+                  rom="Mō sugu haru ga kuru."
+                  tr_en="Spring will come soon."
+                  tr_de="Der Frühling kommt bald."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="もうすぐ【試：し】【験：けん】が【始：はじ】まる。"
+                  rom="Mō sugu shiken ga hajimaru."
+                  tr_en="The exam is about to start."
+                  tr_de="Die Prüfung fängt gleich an."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="ちっとも"
+              rom="chitto mo"
+              tr_en="not even a little"
+              tr_de="nicht mal ein bisschen"
+              hint_en="with neg. verb"
+              hint_de="mit neg. Verb"
+              studyInContext="preferred"
+              lvl="n4"
+              id="chittomo-notevenalittle"
+            >
+                <phrase
+                  ph="ちっとも【面：おも】【白：しろ】くない"
+                  rom="chitto mo omoshirokunai"
+                  tr_en="not even a little interesting"
+                  tr_de="nicht mal ein bisschen interessant"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="ちっとも【眠：ねむ】くない"
+                  rom="chitto mo nemukunai"
+                  tr_en="not even a little sleepy"
+                  tr_de="überhaupt nicht müde sein"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="ちっとも【怖：こわ】くない"
+                  rom="chitto mo kowakunai"
+                  tr_en="not even a little scary"
+                  tr_de="kein bisschen beängstigend"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="この【映：えい】【画：が】はちっとも【面：おも】【白：しろ】くない。"
+                  rom="Kono eiga wa chitto mo omoshirokunai."
+                  tr_en="This movie is not even a little interesting."
+                  tr_de="Dieser Film ist nicht mal ein bisschen interessant."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【今日：きょう】はちっとも【風：かぜ】がない。"
+                  rom="Kyō wa chitto mo kaze ga nai."
+                  tr_en="There is not the least wind today."
+                  tr_de="Heute windet es kein bisschen."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【大：たい】【抵：てい】"
+              rom="taitei"
+              tr_en="usually; mostly; most"
+              tr_de="gewöhnlicherweise; meistens; die meisten"
+              hint_en="adverb"
+              hint_de="Adverb"
+              Langenscheidt="gewöhnlich; meistens"
+              lvl="n4"
+              usuallyInKana="true"
+              id="taitei-usually"
+            >
+                <keep_apart_from id="daitai-mostly" />
+                <phrase
+                  ph="たいていの【人：ひと】"
+                  rom="taitei no hito"
+                  tr_en="most people"
+                  tr_de="die meisten Leute"
+                  lvl="n4"
+                  origin="ChatGPT"
+                  rem="verified with lib0"
+                />
+                <sentence
+                  s="たいてい【寝：ね】【坊：ぼう】している。"
+                  rom="Taitei nebō shite iru."
+                  tr_en="I usually get up late."
+                  tr_de="Ich stehe gewöhnlicherweise spät auf."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="たいていの【学：がく】【生：せい】はスポーツが【好：す】きだ。"
+                  rom="Taitei no gakusei wa supōtsu ga suki da."
+                  tr_en="Most students like sports."
+                  tr_de="Die meisten Schüler mögen Sport."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="きっと"
+              rom="kitto"
+              tr_en="almost certainly; most likely"
+              tr_de="ziemlich sicher; sehr wahrscheinlich"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n4"
+              id="kitto-mostlikely"
+            >
+                <keep_apart_from id="kanarazu-necessary" />
+                <keep_apart_from id="hotondo-nearly" />
+                <keep_apart_from id="tashika-sure" />
+                <!--
+                    FIXME can I move some of these phrases and sentences?
+                -->
+                <phrase
+                  ph="きっと【忘：わす】れる"
+                  rom="kitto wasureru"
+                  tr_en="to almost certainly forget sth."
+                  tr_de="etw. sehr wahrscheinlich vergessen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ハルトさんはきっと【勝：か】ちます。"
+                  rom="Haruto-san wa kitto kachimasu."
+                  tr_en="Haruto is almost certainly going to win."
+                  tr_de="Sehr wahrscheinlich wird Haruto gewinnen."
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【明日：あした】はきっと【晴：は】れるでしょう。"
+                  rom="Ashita wa kitto hareru deshō."
+                  tr_en="It’ll surely be sunny tomorrow."
+                  tr_de="Morgen wird es bestimmt sonnig sein."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【明日：あした】はきっと【雨：あめ】だろう。"
+                  rom="Ashita wa kitto ame darō."
+                  tr_en="I bet it will rain tomorrow."
+                  tr_de="Morgen wird es ziemlich sich regnen."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【小：お】【川：がわ】さんはきっと【来：く】ると【思：おも】う。"
+                  rom="Ogawa-san wa kitto kuru to omou."
+                  tr_en="I think, Mr Ogawa will most likely come."
+                  tr_de="Herr Ogawa wird bestimmt kommen, denke ich."
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="きっと【働：はたら】きすぎですよ。"
+                  rom="Kitto hataraki-sugi desu yo."
+                  tr_en="You must have been working too hard."
+                  tr_de="Du hast dich wohl überanstrengt beim Arbeiten."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【暫：しばら】く"
+              rom="shibaraku"
+              tr_en="for a moment; for a while"
+              tr_de="für einen Moment; für ein Weilchen"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n4"
+              id="shibaraku-foramoment"
+              usuallyInKana="true"
+            >
+                <keep_apart_from id="sakki-justnow" />
+                <phrase
+                  ph="しばらくして"
+                  rom="shibaraku shite"
+                  tr_en="after a while"
+                  tr_de="nach einem Weilchen"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="しばらくして【暗：くら】くなった。"
+                  rom="Shibaraku shite kuraku natta."
+                  tr_en="After a while, it became dark."
+                  tr_de="Nach einem Weilchen wurde es dunkel."
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ここでしばらく【待：ま】ってください。"
+                  rom="Koko de shibaraku matte kudasai."
+                  tr_en="Please wait here for a while."
+                  tr_de="Bitte warten Sie hier für einen Moment."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【一：いっ】【杯：ぱい】"
+              rom="ippai"
+              tr_en="full; a lot"
+              tr_de="voll; viele"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n4"
+              id="ippai-full"
+              usuallyInKana="true"
+              rem="This is usually in kana, but there is also a counter ippai-1cup"
+            >
+                <phrase
+                  ph="【車：くるま】でいっぱいの【道：みち】"
+                  rom="kuruma de ippai no michi"
+                  tr_en="a road full of cars"
+                  tr_de="eine Strasse voller Autos"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT; also acceptable: 'kuruma ippai no michi' (more casual); 'kuruma ga ippai no michi' (more specific)"
+                />
+                <sentence
+                  s="【公：こう】【園：えん】には【花：はな】がいっぱい。"
+                  rom="Kōen ni wa hana ga ippai."
+                  tr_en="The park is full of flowers."
+                  tr_de="Der Park ist voller Blumen."
+                  lvl="n4"
+                  rem="コグマのコロ"
+                />
+            </word>
+            <word
+              w="【特：とく】に"
+              rom="toku ni"
+              tr_en="especially; in particular"
+              tr_de="besonders; insbesondere"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n4"
+              id="tokuni-especially"
+            >
+                <keep_apart_from id="betsu-exception" />
+                <keep_apart_from id="tokubetsu-special" />
+                <phrase
+                  ph="【特：とく】に【混：こ】んでいる"
+                  rom="toku ni konde iru"
+                  tr_en="especially crowded"
+                  tr_de="besonders überfüllt (mit Leuten)"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【特：とく】に【意：い】【見：けん】はありません。"
+                  rom="Toku ni iken wa arimasen."
+                  tr_en="I don't particularly have any opinion."
+                  tr_de="Ich habe keine besondere Meinung."
+                  lvl="n4"
+                  origin="500mon q379"
+                />
+            </word>
+            <word
+              w="ずいぶん"
+              rom="zuibun"
+              tr_en="very; considerably"
+              tr_de="sehr; beträchtlich"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n4"
+              rem="appears in 500mon q425, q455; jisho has n3"
+              id="zuibun-very"
+            >
+                <keep_apart_from id="daibu-greatly" />
+                <keep_apart_from id="taishita-bigdeal" />
+                <keep_apart_from id="ōini-verymuch" />
+                <keep_apart_from id="nakanaka-fairly" />
+                <keep_apart_from id="kanari-fairly" />
+                <phrase
+                  ph="ずいぶん【高：たか】そうな【車：くるま】"
+                  rom="zuibun takasō na kuruma"
+                  tr_en="a very expensive-looking car"
+                  tr_de="ein sehr teuer aussehender Wagen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ずいぶん【寒：さむ】くなってきましたね。"
+                  rom="Zuibun samukunatte kimashita ne."
+                  tr_en="It has become quite cold."
+                  tr_de="Es ist ziemlich kalt geworden."
+                  lvl="n4"
+                  origin="500mon q455"
+                  rem="jisho has n3 for zuibun"
+                />
+                <sentence
+                  s="【今日：きょう】はずいぶん【忙：いそが】しかった。"
+                  rom="Kyō wa zuibun isogashikatta."
+                  tr_en="I had a very busy day today."
+                  tr_de="Heute war ich sehr beschäftigt (war ein anstrengender Tag)."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【例：たと】えば"
+              rom="tatoeba"
+              tr_en="for example; for instance"
+              tr_de="zum Beispiel; beispielsweise"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n4"
+              id="tatoeba-forexample"
+            >
+                <!-- tatoeba comes from tatoeru-compare, and originally meant "if we compare" -->
+                <see id="tatoe-example" rem="closely related" />
+                <see id="tatoeru-compare" rem="closely related" />
+                <phrase
+                  ph="【例：たと】えば【飛：ひ】【行：こう】【機：き】"
+                  rom="tatoeba hikōki"
+                  tr_en="for instance an airplane"
+                  tr_de="zum Beispiel ein Flugzeug"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with lib0"
+                />
+                <sentence
+                  s="【外：がい】【国：こく】、【例：たと】えばアメリカへ【行：い】ったことがありますか。"
+                  rom="Gaikoku, tatoeba Amerika e itta koto ga arimasu ka?"
+                  tr_en="Have you been to foreign countries, for instance America?"
+                  tr_de="Sind Sie schon einmal in einem fremden Land gewesen, zum Beispiel in Amerika?"
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- adverbial noun -->
+            <word
+              w="【一：いっ】【生：しょう】【懸：けん】【命：めい】"
+              rom="isshōkenmei"
+              tr_en="with all one's might; with utmost effort"
+              tr_de="mit aller Kraft; eifrig"
+              hint_en="adverb"
+              hint_de="Adverb"
+              Langenscheidt="mit aller Kraft; eifrig"
+              lvl="n4"
+              id="isshōkenmei-utmosteffort"
+            >
+                <phrase
+                  ph="【一：いっ】【生：しょう】【懸：けん】【命：めい】に【勉：べん】【強：きょう】する"
+                  rom="isshōkenmei ni benkyō suru"
+                  tr_en="to study hard"
+                  tr_de="intensiv studieren"
+                  lvl="n4"
+                  origin="ChatGPT"
+                  rem="lib0 also has 一生懸命勉強する ohne に"
+                />
+                <sentence
+                  s="【家：いえ】を【買：か】うために、【一：いっ】【生：しょう】【懸：けん】【命：めい】 【働：はたら】いています。"
+                  rom="Ie o kau tame ni, isshōkenmei hataraite imasu."
+                  tr_en="I'm working very hard to buy a house."
+                  tr_de="Ich arbeite hart, um mir ein Haus zu kaufen."
+                  allowSpaces="true"
+                  lvl="n4"
+                  origin="500mon q203"
+                />
+            </word>
+
+            <!-- loanword -->
+            <word
+              w="コンピュータ"
+              rom="konpyūta"
+              tr_en="computer"
+              tr_de="Computer"
+              lvl="n4"
+              category="technical"
+              id="konpyūta-computer"
+            >
+                <keep_apart_from id="pasokon-pc" />
+                <keep_apart_from id="nōtopasokon-notebook" />
+                <sentence
+                  s="【子：こ】【供：ども】にコンピュータを【壊：こわ】された。"
+                  rom="Kodomo ni konpyūta o kowasareta."
+                  tr_en="My computer was wrecked by my children."
+                  tr_de="Mein Computer wurde von meinen Kindern kaputt gemacht."
+                  explanation_en="「壊される」is the passive form of「壊す」"
+                  explanation_de="「壊される」ist die passive Form von「壊す」"
+                  lvl="n4"
+                  origin="Oxford p.73"
+                />
+            </word>
+
+            <!-- temporal adverb -->
+            <word
+              w="【最：さい】【近：きん】"
+              rom="saikin"
+              tr_en="recently; these days; recent"
+              tr_de="kürzlich; neulich; letztes"
+              hint_en="adverb"
+              hint_de="Adverb"
+              Langenscheidt="kürzlich; neulich"
+              lvl="n4"
+              id="saikin-recent"
+            >
+                <keep_apart_from id="sakki-justnow" />
+                <keep_apart_from id="konogoro-nowadays" />
+                <keep_apart_from id="chikagoro-lately" />
+                <phrase
+                  ph="【最：さい】【近：きん】の【映：えい】【画：が】"
+                  rom="saikin no eiga"
+                  tr_en="a recent movie"
+                  tr_de="ein kürzlich erschienener Film"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT; more specific: 最近公開された映画 (n1)"
+                />
+                <sentence
+                  s="【最：さい】【近：きん】あまり【会：あ】わない。"
+                  rom="Saikin amari awanai."
+                  tr_en="We don't meet often recently."
+                  tr_de="In letzter Zeit treffen wir uns nicht viel."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- particle -->
+            <word
+              w="ながら"
+              rom="nagara"
+              tr_en="while; during; in spite of"
+              tr_de="während; trotz"
+              hint_en="particle"
+              hint_de="Partikel"
+              lvl="n4"
+              rem="appears in 500mon q87, jisho has nx"
+              id="nagara-while"
+            >
+                <phrase
+                  ph="【走：はし】りながら"
+                  rom="hashiri-nagara"
+                  tr_en="while running"
+                  tr_de="während ich renne"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【歌：うた】いながら【仕：し】【事：ごと】してる。"
+                  rom="Utai-nagara shigoto shiteru."
+                  tr_en="I'm singing while working."
+                  tr_de="Ich singe, während ich arbeite."
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/4KT6rRxLDWo"
+                />
+                <sentence
+                  s="【食：た】べながらテレビを【見：み】ました。"
+                  rom="Tabe-nagara terebi o mimashita."
+                  tr_en="I watched TV while eating."
+                  tr_de="Ich schaute fern, während ich ass."
+                  lvl="n4"
+                  origin="Oxford p.137"
+                />
+                <sentence
+                  s="レストランで【食：た】べながら【話：はな】しましょう。"
+                  rom="Resutoran de tabe-nagara hanashimashō."
+                  tr_en="Let's talk while we eat at the restaurant."
+                  tr_de="Lass uns reden, während wir im Restaurant essen."
+                  lvl="n4"
+                  origin="500mon q87"
+                />
+                <sentence
+                  s="【傘：かさ】を【差：さ】しながら【自：じ】【転：てん】【車：しゃ】に【乗：の】るのは【危：あぶ】ない。"
+                  rom="Kasa o sashi-nagara jitensha ni noru no wa abunai."
+                  tr_en="It's dangerous to ride a bicycle with an umbrella up."
+                  tr_de="Es ist gefährlich, während dem Fahrradfahren einen Schirm hochzuhalten."
+                  lvl="n4"
+                  origin="Oxford p.137"
+                />
+            </word>
+            <word
+              w="【丈：だけ】"
+              rom="dake"
+              tr_en="only; merely"
+              tr_de="nur; bloss"
+              hint_en="particle"
+              hint_de="Partikel"
+              lvl="n4"
+              usuallyInKana="true"
+              id="dake-only"
+              rem="appears in 500mon q405; jisho has n1"
+            >
+                <see id="bakari-nothingbut" rem="closely related" />
+                <see id="shika-only" rem="closely related" />
+                <keep_apart_from id="bakari-nothingbut" />
+                <keep_apart_from id="shika-only" />
+                <phrase
+                  ph="できるだけ"
+                  rom="dekiru dake"
+                  tr_en="as much as possible"
+                  tr_de="so viel wie möglich"
+                  lvl="n4"
+                  origin="GENKI1 p.269"
+                />
+                <sentence
+                  s="【１：ひと】【人：り】だけで【行：い】ってはダメだよ。"
+                  rom="Hitori dake de itte wa dame da yo."
+                  tr_en="You must not go on your own."
+                  tr_de="Du darfst nicht alleine hingehen."
+                  lvl="n4"
+                  rem="jisho has n3 for dame"
+                />
+                <sentence
+                  s="【書：か】けるところだけ【書：か】きました。"
+                  rom="Kakeru tokoro dake kakimashita."
+                  tr_en="I wrote only where I could."
+                  tr_de="Ich schrieb nur, wo ich schreiben konnte."
+                  explanation_en="「【書：か】ける」is the potential form of「【書：か】く」"
+                  explanation_de="「【書：か】ける」ist die potentielle Form von「【書：か】く」"
+                  lvl="n4"
+                  origin="500mon q405"
+                  rem="jisho has n1 for dake"
+                />
+            </word>
+            <word
+              w="くらい"
+              rom="kurai"
+              tr_en="approximately; to the extent that; as ~ as ~"
+              tr_de="ungefähr; im Ausmass von; so ~ wie ~"
+              hint_en="particle"
+              hint_de="Partikel"
+              studyInContext="required"
+              lvl="n4"
+              rem="jisho has n1"
+              id="kurai-approximately"
+            >
+                <!--
+                    Acc. to ChatGPT, くらい and ぐらい are the same, but ぐらい can be more colloquial.
+                    What's the difference between くらい/ぐらい and ころ/ごろ ?
+                -->
+                <synonym w="ぐらい" />
+                <keep_apart_from id="hodo-extent" />
+                <keep_apart_from id="bakari-nothingbut" />
+                <keep_apart_from id="goro-approxtime" />
+                <keep_apart_from id="hobo-almost" />
+                <keep_apart_from id="yaku-about" />
+                <keep_apart_from id="ōzappa-rough" />
+                <keep_apart_from id="ōyoso-roughly" />
+                <keep_apart_from id="zatto-roughly" />
+                <phrase
+                  ph="このぐらい"
+                  rom="kono gurai"
+                  tr_en="about this much"
+                  tr_de="etwa soviel"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.95"
+                  rem="appears in vocab section"
+                />
+                <phrase
+                  ph="【五：ご】【百：ひゃく】【円：えん】くらい"
+                  rom="go-hyaku-en kurai"
+                  tr_en="about five hundred yen"
+                  tr_de="etwa fünfhundert Yen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【六：ろっ】【百：ぴゃく】【人：にん】くらい"
+                  rom="roppyaku-nin kurai"
+                  tr_en="about six hundred people"
+                  tr_de="etwa sechshundert Leute"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="ロンドンは【東：とう】【京：きょう】ぐらい【高：たか】い。"
+                  rom="Rondon wa Tōkyō gurai takai."
+                  tr_en="London is as expensive as Tokyo."
+                  tr_de="London ist so teuer wie Tokyo."
+                  lvl="n4"
+                  hasDifferentForm="true"
+                  origin="Oxford p.105"
+                  rem="jisho has nx for Rondon, Tōkyō; n1 for kurai"
+                />
+                <sentence
+                  s="【子：こ】【供：ども】でもわかるぐらい【簡：かん】【単：たん】だよ。"
+                  rom="Kodomo de mo wakaru gurai kantan da yo."
+                  tr_en="It's so easy even a child could understand it."
+                  tr_de="Das ist doch so leicht, dass es selbst ein Kind verstehen würde oder so."
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【一：いち】【日：にち】くらい【休：やす】んでもいいでしょう。"
+                  rom="Ichi-nichi kurai yasunde mo ii deshō."
+                  tr_en="It should be fine to take a day off or so."
+                  tr_de="Einen Tag oder so frei nehmen ist schon in Ordnung."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+
+            <!-- expression -->
+            <word
+              w="かもしれない"
+              rom="kamo shirenai"
+              tr_en="may; perhaps; possibly"
+              tr_de="vielleicht; möglicherweise"
+              hint_en="expression"
+              hint_de="Ausdruck"
+              lvl="n4"
+              rem="appears in 500mon q444; jisho has n3"
+              id="kamoshirenai-perhaps"
+            >
+                <keep_apart_from id="moshi-if" /><!-- because of phrase moshikashite -->
+                <!-- comes from 知れない (potential form of shiru), and literally means "cannot be known" -->
+                <phrase
+                  ph="【本：ほん】【当：とう】かもしれない"
+                  rom="hontō kamo shirenai"
+                  tr_en="maybe true"
+                  tr_de="vielleicht wahr"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【来：らい】【年：ねん】、【父：ちち】と【母：はは】が【日：に】【本：ほん】に【来：く】るかもしれない。"
+                  rom="Rainen, chichi to haha ga Nihon ni kuru kamo shirenai."
+                  tr_en="My father and mother may come to Japan next year."
+                  tr_de="Mein Vater und meine Mutter kommen nächstes Jahr vielleicht nach Japan."
+                  lvl="n4"
+                  origin="500mon q444"
+                  rem="jisho has n3 for kamo shirenai"
+                />
+            </word>
+            <word
+              w="いけない"
+              rom="ikenai"
+              tr_en="wrong; hopeless; must not"
+              tr_de="falsch; hoffnungslos; darf nicht"
+              hint_en="expression"
+              hint_de="Ausdruck"
+              studyInContext="preferred"
+              lvl="n4"
+              category="not-good"
+              id="ikenai-wrong"
+              rem="appears in 500mon q191; jisho has n3"
+            >
+                <keep_apart_from id="dame-nogood" />
+                <phrase
+                  ph="【笑：わら】ってはいけない"
+                  rom="waratte wa ikenai"
+                  tr_en="you must not laugh"
+                  tr_de="du darfst nicht lachen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【話：はな】してはいけない"
+                  rom="hanashite wa ikenai"
+                  tr_en="you must not speak"
+                  tr_de="du darfst nicht sprechen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ここでは【泳：およ】いではいけない。"
+                  rom="Koko de wa oyoide wa ikenai."
+                  tr_en="You are not allowed to swim here."
+                  tr_de="Man darf hier nicht schwimmen."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【明日：あした】は【八：はち】【時：じ】までに【会：かい】【社：しゃ】に【行：い】かなくてはいけません。"
+                  rom="Ashita wa hachi-ji made ni kaisha ni ikanakute wa ikemasen."
+                  tr_en="I have to be at work by 8 o'clock tomorrow."
+                  tr_de="Ich muss morgen spätestens um 8 Uhr in der Firma sein."
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="500mon q402 modified"
+                />
+            </word>
+            <word
+              w="ついて"
+              rom="tsuite"
+              tr_en="regarding ~; concerning ~"
+              tr_de="betreffend ~"
+              hint_en="expression"
+              hint_de="Ausdruck"
+              studyInContext="required"
+              lvl="n4"
+              id="tsuite-regarding"
+              rem="appears in 500mon q320; q377; jisho has nx for tsuite as well as nitsuite"
+            >
+                <phrase
+                  ph="その【問：もん】【題：だい】について"
+                  rom="sono mondai ni tsuite"
+                  tr_en="concerning that problem"
+                  tr_de="betreffend diesem Problem"
+                  lvl="n4"
+                  origin="self"
+                />
+                <phrase
+                  ph="【政：せい】【治：じ】について"
+                  rom="seiji ni tsuite"
+                  tr_en="concerning politics"
+                  tr_de="betreffend der Politik"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="これについて、みんなの【意：い】【見：けん】が【聞：き】きたい。"
+                  rom="Kore ni tsuite, minna no iken ga kikitai."
+                  tr_en="I want to hear everybody's opinion about this."
+                  tr_de="Ich will die Meinung von jedermann hierzu hören."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【医：い】【者：しゃ】に【病：びょう】【気：き】について【質：しつ】【問：もん】をした。"
+                  rom="Isha ni byōki ni tsuite shitsumon o shita."
+                  tr_en="I asked the doctor about my illness."
+                  tr_de="Ich habe den Arzt wegen meiner Krankheit gefragt."
+                  lvl="n4"
+                  origin="500mon q320"
+                  rem="jisho has nx for tsuite"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】の【習：しゅう】【慣：かん】についてよく【知：し】っている【外：がい】【国：こく】【人：じん】を【探：さが】しています。"
+                  rom="Nihon no shūkan ni tsuite yoku shitte iru gaikokujin o sagashite imasu."
+                  tr_en="I'm looking for a foreigner who is familiar with Japanese customs."
+                  tr_de="Ich suche einen Ausländer, der sich mit den Bräuchen in Japan gut auskennt."
+                  lvl="n4"
+                  origin="GENKI2 p.86"
+                />
+            </word>
+            <word
+              w="【決：けっ】して"
+              rom="kesshite"
+              tr_en="never; not at all; by no means"
+              tr_de="nie; überhaupt nicht; in keiner Weise"
+              hint_en="with neg. verb"
+              hint_de="mit neg. Verb"
+              lvl="n4"
+              id="kesshite-notatall"
+            >
+                <phrase
+                  ph="【決：けっ】して【忘：わす】れない"
+                  rom="kesshite wasurenai"
+                  tr_en="never forget"
+                  tr_de="vergiss es nie"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【彼：かれ】は【決：けっ】して【死：し】なないそうです。"
+                  rom="Kare wa kesshite shinanai sō desu."
+                  tr_en="People say he will never die."
+                  tr_de="Man sagt, er wird nie sterben."
+                  lvl="n4"
+                  origin="lib0"
+                  rem="shinana-sō desu is something different!"
+                />
+            </word>
+            <word
+              w="そろそろ"
+              rom="soro-soro"
+              tr_en="slowly; gradually; soon"
+              tr_de="langsam; allmählich; bald"
+              lvl="n4"
+              category="onomatopoeia"
+              id="sorosoro-slowly"
+            >
+                <sentence
+                  s="じゃ、そろそろ【帰：かえ】りましょう。"
+                  rom="Ja, soro-soro kaerimashō."
+                  tr_en="Well then, let's go home soon."
+                  tr_de="Lass uns bald mal nach Hause gehen."
+                  lvl="n4"
+                  origin="Oxford p.33"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N2 i-adjectives"
+      name_de="N2 I-Adjektive"
+      name_fr="Les i-adjectifs N2"
+      name_it="I-aggettivi N2"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="i-adjective"
+      defaultHint_de="I-Adjektiv"
+      lvl="n2"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="false"
+    >
+        <section>
+            <word
+              w="【懐：なつ】かしい"
+              rom="natsukashii"
+              tr_en="dear (old); fondly-remembered; nostalgic"
+              tr_de="etw. woran man sich gern erinnert; nostalgisch"
+              Langenscheidt="sich sehnen (nach)"
+              lvl="n2"
+              category="mood"
+              id="natsukashii-dearold"
+            >
+                <!-- 思い出すと懐かしい (Omoidasu to natsukashii) - It's nostalgic when I remember (ChatGPT) -->
+                <phrase
+                  ph="【懐：なつ】かしい【思：おも】い【出：で】"
+                  rom="natsukashii omoide"
+                  tr_en="fond memories"
+                  tr_de="nostalgische Erinnerungen"
+                  lvl="n2"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【騒：さわ】がしい"
+              rom="sawagashii"
+              tr_en="noisy; turbulent; troubled"
+              tr_de="lärmig; turbulent; unruhig"
+              lvl="n2"
+              id="sawagashii-noisy"
+            >
+                <sentence
+                  s="このレストランは【騒：さわ】がしくてうるさい。"
+                  rom="Kono resutoran wa sawagashikute urusai."
+                  tr_en="This restaurant is turbulent and noisy."
+                  tr_de="Dieses Restaurant ist turbulent und lärmig."
+                  lvl="n2"
+                  href="https://hinative.com/en-US/questions/22152786"
+                />
+            </word>
+            <word
+              w="【物：もの】【凄：すご】い"
+              rom="monosugoi"
+              tr_en="tremendous; frightful; horrific"
+              tr_de="enorm; ungeheuer; entsetzlich"
+              lvl="n2"
+              id="monosugoi-tremendous"
+              usuallyInKana="true"
+            >
+                <phrase
+                  ph="ものすごく【反：はん】【対：たい】する"
+                  rom="monosugoku hantai suru"
+                  tr_en="to oppose vehemently"
+                  tr_de="sich vehement wehren"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【塩：しお】【辛：から】い"
+              rom="shiokarai"
+              tr_en="salty taste; too salty"
+              tr_de="salzig; versalzen"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n2"
+              category="food"
+              id="shiokarai-salty"
+            >
+                <sentence
+                  s="この【料：りょう】【理：り】は【塩：しお】【辛：から】いですが。"
+                  rom="Kono ryōri wa shiokarai desu ga."
+                  tr_en="This meal is too salty."
+                  tr_de="Dieses Essen ist versalzen."
+                  explanation_en="が at the end of the sentence softens the tone."
+                  explanation_de="が am Ende des Satzes mildert den Ton."
+                  lvl="n2"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="【蒸：む】し【暑：あつ】い"
+              rom="mushiatsui"
+              tr_en="humid; muggy"
+              tr_de="schwül"
+              lvl="n2"
+              category="weather"
+              id="mushiatsui-humid"
+            >
+                <sentence
+                  s="【今日：きょう】は【蒸：む】し【暑：あつ】くなるそうです。"
+                  rom="Kyō wa mushiatsuku naru sō desu."
+                  tr_en="It's going to be muggy today."
+                  tr_de="Heute wird es schwül."
+                  lvl="n2"
+                  origin="Langenscheidt p.224"
+                  rem="translation should probably have 'they say'"
+                />
+            </word>
+            <word
+              w="【酸：す】っぱい"
+              rom="suppai"
+              tr_en="sour; acid"
+              tr_de="sauer"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n2"
+              category="food"
+              id="suppai-sour"
+            >
+                <phrase
+                  ph="【酸：す】っぱいレモン"
+                  rom="suppai remon"
+                  tr_en="sour lemon"
+                  tr_de="saure Zitrone"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【面：めん】【倒：ど】くさい"
+              rom="mendokusai"
+              tr_en="bothersome; tiresome"
+              tr_de="mühsam; ermüdend"
+              lvl="n2"
+              id="mendokusai-bothersome"
+            >
+                <see id="mendō-bother" rem="closely related" />
+                <keep_apart_from id="mendō-bother" />
+            </word>
+            <word
+              w="【憎：にく】い"
+              rom="nikui"
+              tr_en="hateful; detestable; fantastic"
+              tr_de="verhasst; abscheulich; fantastisch"
+              lvl="n2"
+              id="nikui-hateful"
+            >
+                <!--
+                  Is this the same nikui??? If so, is this really n2?
+                  s="ちょっと【言：い】いにくい。"
+                  rom="Chotto ii nikui."
+                  tr_en="It's a bit difficult to tell (you)."
+                  tr_de="Es ist etwas schwer, (dir) zu sagen."
+                  origin="Miku"
+                  href="https://youtu.be/qKbysEzHWXw"
+                -->
+            </word>
+            <word
+              w="【若：わか】【々：わか】しい"
+              rom="waka-wakashii"
+              tr_en="youthful; young-looking"
+              tr_de="jugendlich; jung aussehend"
+              lvl="n2"
+              id="wakawakashii-young"
+              rem="appears in GENKI2 p.328 kanji section"
+            />
+            <word
+              w="【痒：かゆ】い"
+              rom="kayui"
+              tr_en="itchy; itching"
+              tr_de="juckend; kratzig"
+              usuallyInKana="true"
+              lvl="n2"
+              id="kayui-itchy"
+            />
+            <word
+              w="【悔：くや】しい"
+              rom="kuyashii"
+              tr_en="annoying; vexing; frustrating"
+              tr_de="nervig; ärgerlich; frustrierend"
+              lvl="n2"
+              category="mood, not-good"
+              id="kuyashii-annoying"
+            />
+            <word
+              w="【勿：もっ】【体：たい】ない"
+              rom="mottainai"
+              tr_en="wasteful; more than one deserves"
+              tr_de="verschwenderisch; mehr als jem. verdient hat"
+              usuallyInKana="true"
+              lvl="n2"
+              id="mottainai-wasteful"
+            />
+            <word
+              w="【青：あお】【白：じろ】い"
+              rom="aojiroi"
+              tr_en="pale"
+              tr_de="bleich"
+              hint_en="colour of skin"
+              hint_de="Hautfarbe"
+              lvl="n2"
+              category="colour"
+              id="aojiroi-pale"
+            />
+            <word
+              w="【目：め】【出：で】【度：た】い"
+              rom="medetai"
+              tr_en="happy; joyous; naive"
+              tr_de="fröhlich; naiv"
+              lvl="n2"
+              category="happiness, mood"
+              id="medetai-joyous"
+            />
+            <word
+              w="【馬：ば】【鹿：か】らしい"
+              rom="bakarashii"
+              tr_en="foolish; silly; ridiculous"
+              tr_de="dumm; doof; lächerlich"
+              lvl="n2"
+              id="bakarashii-foolish"
+            />
+            <word
+              w="【薄：うす】【暗：ぐら】い"
+              rom="usugurai"
+              tr_en="dim; gloomy"
+              tr_de="dunkel; düster"
+              lvl="n2"
+              id="usugurai-dim"
+            />
+            <word
+              w="【狡：ずる】い"
+              rom="zurui"
+              tr_en="sly; cunning; unfair"
+              tr_de="listig; gerissen; unfair"
+              lvl="n2"
+              usuallyInKana="true"
+              id="zurui-sly"
+            />
+
+            <!-- HIDDEN -->
+            <word
+              w="【荒：あら】い"
+              rom="arai"
+              tr_en="wild; rude; fierce"
+              lvl="n2"
+              id="arai-wild"
+              HIDDEN="true"
+            />
+            <word
+              w="【惜：お】しい"
+              rom="oshii"
+              tr_en="regrettable; dear; precious"
+              lvl="n2"
+              id="oshii-regrettable"
+              HIDDEN="true"
+            />
+            <word
+              w="【慌：あわ】ただしい"
+              rom="awatadashii"
+              tr_en="hurried; confused"
+              lvl="n2"
+              id="awatadashii-hurried"
+              HIDDEN="true"
+            />
+            <word
+              w="【厚：あつ】かましい"
+              rom="atsukamashii"
+              tr_en="impudent; shameless"
+              lvl="n2"
+              id="atsukamashii-impudent"
+              HIDDEN="true"
+            />
+            <word
+              w="【怪：あや】しい"
+              rom="ayashii"
+              tr_en="suspicious; dubious; doubtful"
+              lvl="n2"
+              id="ayashii-suspicious"
+              HIDDEN="true"
+            />
+            <word
+              w="【有：あり】【難：がた】い"
+              rom="arigatai"
+              tr_en="grateful; thankful; appreciated"
+              lvl="n2"
+              id="arigatai-grateful"
+              HIDDEN="true"
+            />
+            <word
+              w="【危：あや】うい"
+              rom="ayaui"
+              tr_en="facing imminent danger; precarious (situation); perilous (balance)"
+              lvl="n2"
+              id="ayaui-precarious"
+              HIDDEN="true"
+            />
+            <word
+              w="【見：み】っともない"
+              rom="mittomonai"
+              tr_en="shameful; indecent; unseemly"
+              lvl="n2"
+              category="not-good"
+              id="mittomonai-shameful"
+              HIDDEN="true"
+            />
+            <word
+              w="【諄：くど】い"
+              rom="kudoi"
+              tr_en="repetitious; wordy; gaudy"
+              lvl="n2"
+              id="kudoi-wordy"
+              HIDDEN="true"
+            />
+            <word
+              w="【重：おも】たい"
+              rom="omotai"
+              tr_en="heavy (feeling, atmosphere, etc.); gloomy; depressing"
+              lvl="n2"
+              id="omotai-heavy"
+              HIDDEN="true"
+            />
+            <word
+              w="【眩：まぶ】しい"
+              rom="mabushii"
+              tr_en="dazzling; radiant"
+              hint_en="i-adjective"
+              lvl="n2"
+              category="looking"
+              HIDDEN="true"
+            />
+            <word
+              w="【思：おも】いがけない"
+              rom="omoigakenai"
+              tr_en="unexpected; contrary to expectations; by chance; casual"
+              hint_en="i-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【大人：おとな】しい"
+              rom="otonashii"
+              tr_en="obedient; docile; quiet"
+              hint_en="i-adjective"
+              lvl="n2"
+              hasCombinedReading="true"
+              HIDDEN="true"
+            />
+            <word
+              w="【下：くだ】らない"
+              rom="kudaranai"
+              tr_en="trivial; trifling; insignificant; not worth bothering with; worthless; useless; good-for-nothing / stupid; nonsensical; absurd; foolish; silly"
+              hint_en="i-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【甚：はなは】だしい"
+              rom="hanahadashii"
+              tr_en="extreme; excessive; terrible; intense; severe; serious; tremendous; heavy (damage)"
+              hint_en="i-adjective"
+              lvl="n2"
+              category="not-good"
+              id="hanahadashii-severe"
+              HIDDEN="true"
+            />
+            <word
+              w="【恋：こい】しい"
+              rom="koishii"
+              tr_en="yearned for; longed for; missed"
+              hint_en="i-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【執：しつ】【拗：こ】い"
+              rom="shitsukoi"
+              tr_en="insistent; obstinate; persistent; tenacious; too rich (taste, etc.); fatty; heavy; greasy"
+              hint_en="i-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【偉：えら】い"
+              rom="erai"
+              tr_en="great; excellent; admirable; remarkable; distinguished; important; celebrated; famous; eminent; very troublesome; awful; terrible; tiring; tough; very; extremely"
+              hint_en="i-adjective; adverb"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【力：ちから】【強：づよ】い"
+              rom="chikaradzuyoi"
+              tr_en="powerful; strong; forceful; vigorous; reassuring; encouraging"
+              hint_en="i-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【喧：やかま】しい"
+              rom="yakamashii"
+              tr_en="noisy; loud; clamorous; boisterous; much talked of; much-discussed; vexed; strict; severe; stern; particular; fussy; fastidious; fault-finding; carping"
+              hint_en="i-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【図：ずう】【々：ずう】しい"
+              rom="zū-zūshii"
+              tr_en="impudent; shameless; brazen; forward; audacious; cheeky"
+              hint_en="i-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【済：す】まない"
+              rom="sumanai"
+              tr_en="inexcusable; unjustifiable; unpardonable; sorry; remorseful; apologetic; conscience-stricken; contrite; excuse me; (I'm) sorry; thank you"
+              hint_en="i-adjective"
+              lvl="n2"
+              category="not-good"
+              id="sumanai-inexcusable"
+              HIDDEN="true"
+            />
+            <word
+              w="だらしない"
+              rom="darashinai"
+              tr_en="slovenly (appearance, work, etc.); sloppy; untidy; undisciplined; careless; loose; slack / weak; feeble; weak-willed; cowardly; gutless"
+              hint_en="i-adjective"
+              lvl="n2"
+              category="not-good"
+              id="darashinai-sloppy"
+              HIDDEN="true"
+            />
+            <word
+              w="【鈍：にぶ】い"
+              rom="nibui"
+              tr_en="dull (e.g. a knife); blunt / thickheaded; obtuse; stupid / dull (sound, color, etc.); dim (light) / slow; sluggish; inert; lethargic / insensitive; dull (e.g. reflexes); unperceptive; unfeeling"
+              hint_en="i-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【険：けわ】しい"
+              rom="kewashii"
+              tr_en="precipitous; rugged; inaccessible; impregnable; steep / grim; severe; stern"
+              hint_en="i-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【頼：たの】もしい"
+              rom="tanomoshii"
+              tr_en="reliable; dependable; trustworthy; reassuring / hopeful; promising"
+              hint_en="i-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+        </section>
+    </unit>
+</vocabulary>

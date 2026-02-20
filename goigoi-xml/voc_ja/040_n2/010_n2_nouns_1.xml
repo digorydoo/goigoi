@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <!-- subheader cannot be in a file of its own, because it's just a state of the parser -->
+    <subheader
+      name_en="JLPT N2"
+      name_de="JLPT N2"
+      name_fr="JLPT N2"
+      name_it="JLPT N2"
+    />
+    <unit
+      name_en="N2 nouns ①"
+      name_de="N2-Nomen ①"
+      name_fr="Les noms N2 ①"
+      name_it="Nomi N2 ①"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n2"
+      translations="en, de"
+      requiresSentences="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【虹：にじ】"
+              rom="niji"
+              tr_en="rainbow"
+              tr_de="Regenbogen"
+              lvl="n2"
+              category="nature, scenery"
+              id="niji-rainbow"
+            >
+                <phrase
+                  ph="【色：いろ】のきれいな【虹：にじ】"
+                  rom="iro no kirei na niji"
+                  tr_en="colourful rainbow"
+                  tr_de="farbiger Regenbogen"
+                  lvl="n2"
+                />
+                <sentence
+                  s="【窓：まど】の【外：そと】を【見：み】ると、【虹：にじ】が【見：み】えた。"
+                  rom="Mado no soto o miru to, niji ga mieta."
+                  tr_en="Looking out of the window, I saw a rainbow."
+                  tr_de="Als ich durchs Fenster nach draussen schaute, sah ich einen Regenbogen."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【滝：たき】"
+              rom="taki"
+              tr_en="waterfall"
+              tr_de="Wasserfall"
+              lvl="n2"
+              category="nature, scenery"
+              id="taki-waterfall"
+            >
+                <phrase
+                  ph="【素：す】【晴：ば】らしい【滝：たき】"
+                  rom="subarashii taki"
+                  tr_en="magnificent waterfall"
+                  tr_de="prächtiger Wasserfall"
+                  lvl="n2"
+                />
+                <sentence
+                  s="そこで【素：す】【晴：ば】らしい【滝：たき】を【見：み】た。"
+                  rom="Soko de subarashii taki o mita."
+                  tr_en="I saw a wonderful waterfall there."
+                  tr_de="Ich sah dort einen prächtigen Wasserfall."
+                  lvl="n2"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【井：い】【戸：ど】"
+              rom="ido"
+              tr_en="water well"
+              tr_de="Brunnen"
+              lvl="n2"
+              id="ido-well"
+            >
+                <phrase
+                  ph="【深：ふか】い【井：い】【戸：ど】"
+                  rom="fukai ido"
+                  tr_en="deep well"
+                  tr_de="tiefer Brunnen"
+                  lvl="n2"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【井：い】【戸：ど】には【少：すこ】しの【水：みず】もなかった。"
+                  rom="Ido ni wa sukoshi no mizu mo nakatta."
+                  tr_en="There was not even a little water in the well."
+                  tr_de="Es hatte kein bisschen Wasser im Brunnen."
+                  lvl="n2"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【繋：つな】がり"
+              rom="tsunagari"
+              tr_en="connection; link; relationship"
+              tr_de="Verbindung; Beziehung"
+              lvl="n2"
+              id="tsunagari-link"
+              usuallyInKana="true"
+            >
+                <see id="tsunagaru-linked" rem="verb" />
+                <keep_apart_from id="tsunagaru-linked" />
+                <keep_apart_from id="setsuzoku-link" />
+                <phrase
+                  ph="【弱：よわ】いつながり"
+                  rom="yowai tsunagari"
+                  tr_en="weak connection (e.g. over WiFi)"
+                  tr_de="schwache Verbindung (z.B. über WLAN)"
+                  lvl="n2"
+                />
+                <sentence
+                  s="つながりが【弱：よわ】くて、よく【切：き】れる。"
+                  rom="Tsunagari ga yowakute, yoku kireru."
+                  tr_en="The connection is weak, I keep losing it."
+                  tr_de="Die Verbindung ist schwach, ich verliere sie ständig."
+                  lvl="n2"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
+            <word
+              w="【留：る】【守：す】【番：ばん】"
+              rom="rusuban"
+              tr_en="looking after a house during someone's absence"
+              tr_de="das Haus hüten während jems. Abwesenheit"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="home"
+              id="rusuban-caretaker"
+              rem="appears in GENKI2 L23 vocab section"
+            >
+                <sentence
+                  s="やっと【留：る】【守：す】【番：ばん】ができたから、【出：で】かけられる。"
+                  rom="Yatto rusuban ga dekita kara, dekakerareru."
+                  tr_en="I was finally able (to find someone to) look after the house, so I can go out."
+                  tr_de="Ich habe (endlich jemanden gefunden, der) das Haus hütet, also kann ich ausgehen."
+                  lvl="n2"
+                  origin="Doraemon 7, p.55 modified"
+                  rem="ChatGPT doesn't think it quite natural, but I just added やっと and removed わ"
+                />
+            </word>
+            <word
+              w="【食：しょっ】【器：き】"
+              rom="shokki"
+              tr_en="tableware"
+              tr_de="Geschirr"
+              lvl="n2"
+              category="gastronomy, cooking"
+              id="shokki-tableware"
+            >
+                <sentence
+                  s="【食：しょっ】【器：き】を【台：だい】【所：どころ】に【運：はこ】んでね。"
+                  rom="Shokki o daidokoro ni hakonde ne."
+                  tr_en="Carry your dishes to the kitchen."
+                  tr_de="Trage das Geschirr in die Küche."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【花：はな】【火：び】"
+              rom="hanabi"
+              tr_en="fireworks"
+              tr_de="Feuerwerk"
+              lvl="n2"
+              category="fire, top-words"
+              id="hanabi-fireworks"
+              rem="should be n5 or n4 or n3"
+            >
+                <sentence
+                  s="あそこなら【花：はな】【火：び】が【見：み】やすい。"
+                  rom="Asoko nara hanabi ga mi-yasui."
+                  tr_en="It's easy to see the fireworks from over there."
+                  tr_de="Von dort drüben kann man das Feuerwerk gut sehen."
+                  lvl="n2"
+                  origin="lib0"
+                  rem="なら cannot be replaced with から"
+                  href="https://hinative.com/questions/22241662"
+                />
+            </word>
+            <word
+              w="【童：どう】【話：わ】"
+              rom="dōwa"
+              tr_en="fairy tale; children's story"
+              tr_de="Märchen; Kindergeschichte"
+              lvl="n2"
+              category="manga-anime, literature"
+              id="dōwa-fairytale"
+            >
+                <sentence
+                  s="あなたはこの【童：どう】【話：わ】を【一：ひと】【人：り】で【書：か】いたのですか。"
+                  rom="Anata wa kono dōwa o hitori de kaita no desu ka?"
+                  tr_en="Did you write this fairy tale by yourself?"
+                  tr_de="Hast du dieses Märchen selber geschrieben?"
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【酢：す】"
+              rom="su"
+              tr_en="vinegar"
+              tr_de="Essig"
+              lvl="n2"
+              category="cooking"
+              id="su-vinegar"
+            >
+                <phrase
+                  ph="【瓶：びん】に【入：はい】った【酢：す】"
+                  rom="bin ni haitta su"
+                  tr_en="vinegar in a bottle"
+                  tr_de="Essig in einer Flasche"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【包：ほう】【丁：ちょう】"
+              rom="hōchō"
+              tr_en="kitchen knife"
+              tr_de="Küchenmesser"
+              lvl="n2"
+              category="cooking"
+              id="hōchō-kitchenknife"
+            >
+                <phrase
+                  ph="【鋭：するど】い【包：ほう】【丁：ちょう】"
+                  rom="surudoi hōchō"
+                  tr_en="sharp (kitchen) knife"
+                  tr_de="scharfes Küchenmesser"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="お【八：や】つ"
+              rom="o-yatsu"
+              tr_en="between-meal snack; afternoon tea"
+              tr_de="Snack zwischen den Mahlzeiten; Imbiss"
+              lvl="n2"
+              usuallyInKana="true"
+              id="oyatsu-snack"
+            >
+                <sentence
+                  s="【八：や】【百屋：おや】さんの【親：おや】【父：じ】はおやつを【作：つく】っている【時：とき】に【親：おや】【指：ゆび】を【切：き】ってしまった。"
+                  rom="Yaoya-san no oyaji wa o-yatsu o tsukutte iru toki ni oyayubi o kitte shimatta."
+                  tr_en="The greengrocer's father cut his thumb while preparing a snack."
+                  tr_de="Der Vater des Gemüsehändlers schnitt sich in den Daumen beim Zubereiten eines Snacks."
+                  lvl="n2"
+                  origin="self"
+                  rem="jisho has nx for oyaji"
+                  href="https://hinative.com/questions/22541552"
+                />
+            </word>
+            <word
+              w="【広：ひろ】【場：ば】"
+              rom="hiroba"
+              tr_en="town square; plaza"
+              tr_de="Stadtplatz; Plaza"
+              lvl="n2"
+              category="city"
+              id="hiroba-square"
+              rem="appears in GENKI2 p.286 kanji section"
+            >
+                <sentence
+                  s="その【広：ひろ】【場：ば】を【渡：わた】ってください。"
+                  rom="Sono hiroba o watatte kudasai."
+                  tr_en="Please cross that square."
+                  tr_de="Bitte überqueren Sie jenen Platz."
+                  lvl="n2"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="【書：しょ】【店：てん】"
+              rom="shoten"
+              tr_en="bookshop"
+              tr_de="Buchladen"
+              lvl="n2"
+              category="city, shopping"
+              id="shoten-bookshop"
+            >
+                <keep_apart_from id="furuhonya-oldbookshop" />
+                <keep_apart_from id="honya-bookshop" />
+                <sentence
+                  s="それはどこの【書：しょ】【店：てん】でも【買：か】える。"
+                  rom="Sore wa doko no shoten de mo kaeru."
+                  tr_en="You can get it at any bookseller's."
+                  tr_de="Du kannst das in irgend einem Buchladen kaufen."
+                  explanation_en="「買える」is the potential form of「買う」"
+                  explanation_de="「買える」ist die potentielle Form von「買う」"
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【唇：くちびる】"
+              rom="kuchibiru"
+              tr_en="lips"
+              tr_de="Lippen"
+              lvl="n2"
+              category="body"
+              id="kuchibiru-lips"
+            >
+                <sentence
+                  s="【私：わたし】は【唇：くちびる】を【噛：か】んだ。"
+                  rom="Watashi wa kuchibiru o kanda."
+                  tr_en="I bit my lip."
+                  tr_de="Ich habe auf meine Lippen gebissen."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【欠伸：あくび】"
+              rom="akubi"
+              tr_en="yawning"
+              tr_de="Gähnen"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n2"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              id="akubi-yawning"
+            >
+                <sentence
+                  s="【授：じゅ】【業：ぎょう】はあくびが【出：で】る。"
+                  rom="Jugyō wa akubi ga deru."
+                  tr_en="Classes are boring."
+                  tr_de="Der Unterricht ist zum Gähnen."
+                  lvl="n2"
+                  origin="lib0"
+                  href="https://hinative.com/en-US/questions/15093370"
+                />
+            </word>
+            <word
+              w="【編：あ】み【物：もの】"
+              rom="amimono"
+              tr_en="knitting"
+              tr_de="Stricken; Gestricktes"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n2"
+              category="diy, hobby"
+              id="amimono-knitting"
+            >
+                <see id="amu-toknit" rem="closely related" />
+                <see id="ami-net" rem="closely related" />
+                <sentence
+                  s="【古：ふる】【川：かわ】さんは【編：あ】み【物：もの】にたいへん【熱：ねっ】【心：しん】です。"
+                  rom="Furukawa-san wa amimono ni taihen nesshin desu."
+                  tr_en="Mrs Furukawa is very enthusiastic about knitting."
+                  tr_de="Frau Furukawa ist vom Stricken total begeistert."
+                  lvl="n2"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【夕：ゆう】【日：ひ】"
+              rom="yūhi"
+              tr_en="sunset; evening sun"
+              tr_de="Sonnenuntergang; Abendsonne"
+              lvl="n2"
+              category="scenery, light"
+              id="yūhi-sunset"
+            >
+                <phrase
+                  ph="【夕：ゆう】【日：ひ】を【見：み】る"
+                  rom="yūhi o miru"
+                  tr_en="to watch a sunset"
+                  tr_de="einen Sonnenuntergang betrachten"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【飾：かざ】り"
+              rom="kazari"
+              tr_en="decoration; ornament"
+              tr_de="Dekoration; Ornament"
+              lvl="n2"
+              id="kazari-decoration"
+            >
+                <see id="kazaru-decorate" rem="verb" />
+                <phrase
+                  ph="【祝：しゅく】【日：じつ】の【飾：かざ】り【付：つ】け"
+                  rom="shukujitsu no kazari tsuke"
+                  tr_en="decorations for a national holiday"
+                  tr_de="Dekorationen für einen Nationalfeiertag"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【火：か】【山：ざん】"
+              rom="kazan"
+              tr_en="volcano"
+              tr_de="Vulkan"
+              lvl="n2"
+              category="fire, nature"
+              id="kazan-volcano"
+            >
+                <!-- 火山の活動 - volcanic activity (ChatGPT) -->
+            </word>
+            <word
+              w="【噴：ふん】【火：か】"
+              rom="funka"
+              tr_en="volcanic eruption"
+              tr_de="Vulkanausbruch"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="fire, nature"
+              id="funka-eruption"
+            >
+                <sentence
+                  s="その【火：か】【山：ざん】は【今：こ】【年：とし】【２：に】【度：ど】【噴：ふん】【火：か】した。"
+                  rom="Sono kazan wa kotoshi ni-do funka shita."
+                  tr_en="That volcano has erupted twice this year."
+                  tr_de="Dieser Vulkan ist dieses Jahr zweimal ausgebrochen."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【平：へい】【気：き】"
+              rom="heiki"
+              tr_en="calmness; composure; unconcern"
+              tr_de="Gelassenheit; Unbetroffenheit; egal sein"
+              lvl="n2"
+              id="heiki-composure"
+            >
+                <sentence
+                  s="【人：ひと】が【何：なに】を【言：い】おうと【平：へい】【気：き】だ。"
+                  rom="Hito ga nani o iō to heiki da."
+                  tr_en="I don't care what people say."
+                  tr_de="Es ist mir egal, was die Leute sagen."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【瞼：まぶた】"
+              rom="mabuta"
+              tr_en="eyelid"
+              tr_de="Augenlid"
+              lvl="n2"
+              category="body"
+              id="mabuta-eyelid"
+            >
+                <sentence
+                  s="レオくんは【眠：ねむ】くて【瞼：まぶた】が【重：おも】かった。"
+                  rom="Reo-kun wa nemukute mabuta ga omokatta."
+                  tr_en="Reo's eyes were heavy with sleep."
+                  tr_de="Reos Augelider waren schwer vor Schläfrigkeit."
+                  lvl="n2"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【爪：つめ】"
+              rom="tsume"
+              tr_en="fingernail; toenail"
+              tr_de="Fingernagel; Zehnagel"
+              lvl="n2"
+              category="body"
+              id="tsume-nail"
+            >
+                <phrase
+                  ph="【足：あし】の【爪：つめ】"
+                  rom="ashi no tsume"
+                  tr_en="toenail"
+                  tr_de="Zehennagel"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【看：かん】【板：ばん】"
+              rom="kanban"
+              tr_en="signboard; doorplate; highlight"
+              tr_de="Türschild; Tafel; Höhepunkt"
+              lvl="n2"
+              id="kanban-plate"
+            >
+                <phrase
+                  ph="【出：で】【口：ぐち】の【看：かん】【板：ばん】"
+                  rom="deguchi no kanban"
+                  tr_en="exit sign"
+                  tr_de="Ausgangsschild"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【金：きん】【魚：ぎょ】"
+              rom="kingyo"
+              tr_en="goldfish"
+              tr_de="Goldfisch"
+              lvl="n2"
+              category="animal"
+              id="kingyo-goldfish"
+              rem="appears in GENKI2 p.286 kanji section"
+            />
+            <word
+              w="【貝：かい】"
+              rom="kai"
+              tr_en="shellfish"
+              tr_de="Muscheltier"
+              lvl="n2"
+              category="nature, animal"
+              id="kai-shellfish"
+            >
+                <keep_apart_from id="kaigara-seashell" />
+                <keep_together id="kara-shell" />
+            </word>
+            <word
+              w="【殻：から】"
+              rom="kara"
+              tr_en="shell; husk; hull"
+              tr_de="Muschel; Schale; Hülle"
+              lvl="n2"
+              category="nature"
+              id="kara-shell"
+            >
+                <keep_apart_from id="kaigara-seashell" />
+                <keep_together id="kai-shellfish" />
+            </word>
+            <word
+              w="【尻尾：しっぽ】"
+              rom="shippo"
+              tr_en="tail"
+              tr_de="Schwanz"
+              hint_en="of an animal"
+              hint_de="eines Tiers"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              lvl="n2"
+              category="animal"
+              id="shippo-tail"
+            />
+            <word
+              w="【口：くち】【紅：べに】"
+              rom="kuchibeni"
+              tr_en="lipstick"
+              tr_de="Lippenstift"
+              lvl="n2"
+              category="fashion"
+              id="kuchibeni-lipstick"
+            >
+                <phrase
+                  ph="【赤：あか】い【口：くち】【紅：べに】"
+                  rom="akai kuchibeni"
+                  tr_en="red lipstick"
+                  tr_de="roter Lippenstift"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【遊：ゆう】【園：えん】【地：ち】"
+              rom="yūenchi"
+              tr_en="amusement park"
+              tr_de="Vergnügungspark"
+              lvl="n2"
+              category="holidays"
+              id="yūenchi-amusementpark"
+            >
+                <sentence
+                  s="その【遊：ゆう】【園：えん】【地：ち】を【建：けん】【築：ちく】するのに【10：じゅう】【年：ねん】かかった。"
+                  rom="Sono yūenchi o kenchiku suru no ni jū-nen kakatta."
+                  tr_en="It took ten years to build that amusement park."
+                  tr_de="Der Bau dieses Vergnügungsparks dauerte zehn Jahre."
+                  origin="lib0"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【回：かい】【転：てん】"
+              rom="kaiten"
+              tr_en="rotation (usu. around something); turning; to revolve"
+              tr_de="Rotation (um etw. herum); Drehen; sich drehen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="motion"
+              id="kaiten-rotation"
+              rem="appears in GENKI2 p.287 kanji section as kaitenzushi"
+            >
+                <keep_apart_from id="kaitenzushi-conveyerbeltsushi" />
+                <keep_together id="kaitenzushi-conveyerbeltsushi" />
+                <phrase
+                  ph="【回：かい】【転：てん】【寿：ず】【司：し】"
+                  rom="kaitenzushi"
+                  tr_en="conveyer belt sushi"
+                  tr_de="Sushi am Fliessband"
+                  lvl="n2"
+                  origin="GENKI2 p.287"
+                  rem="jisho has nx for sushi, kaitenzushi"
+                />
+            </word>
+            <word
+              w="【回：かい】【転：てん】【寿：ず】【司：し】"
+              rom="kaitenzushi"
+              tr_en="conveyer belt sushi"
+              lvl="n2"
+              id="kaitenzushi-conveyerbeltsushi"
+              HIDDEN="true"
+              rem="is now a phrase of kaiten-rotation; jisho has nx"
+            >
+                <keep_apart_from id="kaiten-rotation" />
+                <keep_together id="kaiten-rotation" />
+            </word>
+            <word
+              w="【紫：むらさき】【色：いろ】"
+              rom="murasakiiro"
+              tr_en="purple; violet"
+              tr_de="purpur; violett"
+              lvl="n2"
+              category="colour"
+              id="murasakiiro-purple"
+            >
+                <keep_apart_from id="murasaki-purple" />
+                <keep_together id="murasaki-purple" />
+                <phrase
+                  ph="【紫：むらさき】【色：いろ】のドレス"
+                  rom="murasakiiro no doresu"
+                  tr_en="a purple dress"
+                  tr_de="ein purpurnes Kleid"
+                  lvl="n2"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【紫：むらさき】"
+              rom="murasaki"
+              tr_en="purple; violet"
+              lvl="n2"
+              category="colour"
+              id="murasaki-purple"
+              HIDDEN="true"
+              rem="see murasakiiro-purple; just to silence find-missing-goigoi"
+            >
+                <keep_apart_from id="murasakiiro-purple" />
+                <keep_together id="murasakiiro-purple" />
+            </word>
+            <word
+              w="【灰：はい】【色：いろ】"
+              rom="haiiro"
+              tr_en="grey"
+              tr_de="grau"
+              lvl="n2"
+              id="haiiro-grey"
+              rem="is this really n2???"
+            >
+                <phrase
+                  ph="【灰：はい】【色：いろ】の【象：ぞう】"
+                  rom="haiiro no zō"
+                  tr_en="grey elephant"
+                  tr_de="grauer Elefant"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【話：はな】し【合：あ】い"
+              rom="hanashiai"
+              tr_en="discussion; tête-à-tête; talk"
+              tr_de="Diskussion; Gespräch; besprechen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="hanashiai-discussion"
+            >
+                <see id="hanashiau-discuss" rem="verb" />
+            </word>
+            <word
+              w="【美：び】【容：よう】"
+              rom="biyō"
+              tr_en="beauty; good figure; beautiful appearance"
+              tr_de="Schönheit; gute Figur; Anmut"
+              lvl="n2"
+              category="fashion"
+              id="biyō-beauty"
+            >
+                <keep_apart_from id="bi-beauty" />
+            </word>
+            <word
+              w="【相撲：すもう】"
+              rom="sumō"
+              tr_en="Japanese wrestling"
+              tr_de="japanischer Ringkampf"
+              hasCombinedReading="true"
+              lvl="n2"
+              category="sports"
+              id="sumō-wrestling"
+            />
+            <word
+              w="【中：なか】【身：み】"
+              rom="nakami"
+              tr_en="contents; interior"
+              tr_de="Inhalt; das Innere"
+              lvl="n2"
+              id="nakami-contents"
+            />
+            <word
+              w="【足：あし】【跡：あと】"
+              rom="ashi-ato"
+              tr_en="footprints"
+              tr_de="Fussspuren"
+              lvl="n2"
+              category="feet"
+              id="ashiato-footprints"
+            />
+            <word
+              w="【物：もの】【差：さ】し"
+              rom="monosashi"
+              tr_en="ruler"
+              tr_de="Lineal"
+              lvl="n2"
+              category="education, arts"
+              id="monosashi-ruler"
+            />
+            <word
+              w="【待：まち】【合：あい】【室：しつ】"
+              rom="machiaishitsu"
+              tr_en="waiting room"
+              tr_de="Wartezimmer"
+              lvl="n2"
+              category="health"
+              id="machiaishitsu-waitingroom"
+            />
+            <word
+              w="【丼：どんぶり】"
+              rom="donburi"
+              tr_en="bowl of meat, fish, etc. served over rice"
+              tr_de="Schale mit Fleisch, Fisch, usw. über Reis"
+              hint_en="may also mean the bowl itself"
+              hint_de="kann auch the Schale selber bedeuten"
+              lvl="n2"
+              category="cooking"
+              id="donburi-bowl"
+            />
+            <word
+              w="【饂：う】【飩：どん】"
+              rom="udon"
+              tr_en="thick Japanese wheat noodles"
+              tr_de="dicke japanische Weizennudeln"
+              lvl="n2"
+              category="food"
+              id="udon-noodles"
+            />
+            <word
+              w="【餅：もち】"
+              rom="mochi"
+              tr_en="Japanese sticky rice cake"
+              tr_de="japanischer Klebreiskuchen"
+              lvl="n2"
+              category="food, top-words"
+              id="mochi-ricecake"
+            />
+            <word
+              w="【広：ひろ】さ"
+              rom="hirosa"
+              tr_en="extent; dimensions; scale"
+              tr_de="Weite; Dimensionen; Grösse"
+              lvl="n2"
+              id="hirosa-extent"
+            >
+                <see id="hiroi-spacious" rem="adjective" />
+            </word>
+            <word
+              w="【新：しん】【幹：かん】【線：せん】"
+              rom="shinkansen"
+              tr_en="Japanese bullet train"
+              tr_de="japanischer Hochgeschwindigkeitszug"
+              lvl="n2"
+              category="travelling, transportation"
+              id="shinkansen-bullettrain"
+            />
+            <word
+              w="【乾：かん】【杯：ぱい】"
+              rom="kanpai"
+              tr_en="cheers; prosit; toast"
+              tr_de="Prost; Anstossen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="gastronomy"
+              id="kanpai-cheers"
+            >
+                <sentence
+                  s="【乾：かん】【杯：ぱい】！"
+                  rom="Kanpai!"
+                  tr_en="Cheers!"
+                  tr_de="Prost!"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="お【代：か】わり"
+              rom="o-kawari"
+              tr_en="another helping; refill"
+              tr_de="zweite Portion; Nachschlag"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="gastronomy"
+              id="okawari-refill"
+              rem="kawari is n4 and means replacement; Langenscheidt also distinguishes between kawari and o-kawari"
+            >
+                <sentence
+                  s="ご【飯：はん】のお【代：か】わりをいただけませんか。"
+                  rom="Gohan no o-kawari o itadakemasen ka?"
+                  tr_en="Could I have another helping of rice?"
+                  tr_de="Kann ich noch eine Portion Reis haben?"
+                  lvl="n2"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="【薬：や】【缶：かん】"
+              rom="yakan"
+              tr_en="kettle"
+              tr_de="Teekanne"
+              lvl="n2"
+              category="gastronomy"
+              id="yakan-kettle"
+            >
+                <phrase
+                  ph="【銀：ぎん】の【薬：や】【缶：かん】"
+                  rom="gin no yakan"
+                  tr_en="silver kettle"
+                  tr_de="silberne Teekanne"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="ジャンケン"
+              rom="janken"
+              tr_en="rock-paper-scissors"
+              tr_de="Schere-Stein-Papier"
+              hint_en="game"
+              hint_de="Spiel"
+              lvl="n2"
+              category="games"
+              id="janken-gūpāchoki"
+            >
+                <!-- phrase
+                  ph="パー"
+                  rom="pā"
+                  tr_en="paper"
+                  tr_de="Papier"
+                  hint_en="in a rock-paper-scissors game"
+                  hint_de="bei Schere-Stein-Papier"
+                  lvl="-"
+                -->
+                <!--
+                  ph="グー"
+                  rom="gū"
+                  tr_en="rock"
+                  tr_de="Stein"
+                  hint_en="in a rock-paper-scissors game"
+                  hint_de="bei Schere-Stein-Papier"
+                  lvl="-"
+                -->
+                <!-- phrase
+                  ph="チョキ"
+                  rom="choki"
+                  tr_en="scissors"
+                  tr_de="Schere"
+                  hint_en="in a rock-paper-scissors game"
+                  hint_de="bei Schere-Stein-Papier"
+                  lvl="-"
+                -->
+            </word>
+            <word
+              w="【襖：ふすま】"
+              rom="fusuma"
+              tr_en="Japanese sliding door"
+              tr_de="japanische Schiebetüre"
+              hint_en="blocks light completely"
+              hint_de="nicht lichtdurchlässig"
+              lvl="n2"
+              category="home"
+              id="fusuma-slidingdoor"
+            >
+                <see id="shōji-door" rem="closely related" />
+                <keep_apart_from id="shōji-door" />
+                <keep_apart_from id="to-door" />
+                <keep_apart_from id="doa-door" />
+                <keep_apart_from id="uraguchi-backdoor" />
+                <keep_apart_from id="amado-stormshutter" />
+                <keep_apart_from id="tobira-door" />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

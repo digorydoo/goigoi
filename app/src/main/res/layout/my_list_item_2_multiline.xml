@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    android:background="?attr/selectableItemBackground" implements the ripple effect
+-->
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/root_view"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  android:paddingStart="16dp"
+  android:paddingEnd="16dp"
+  android:background="?attr/selectableItemBackground"
+  >
+    <TextView
+      android:id="@+id/primary_text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:gravity="center_vertical"
+      android:paddingTop="8dp"
+      style="?attr/myPrimaryTextStyle"
+      tools:text="Primary text"
+      />
+    <TextView
+      android:id="@+id/secondary_text"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/primary_text"
+      android:paddingBottom="12dp"
+      style="?attr/mySecondaryTextStyle"
+      tools:text="This is the secondary text. It may be a little longer and thus span multiple lines."
+      />
+</RelativeLayout>

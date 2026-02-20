@@ -1,0 +1,20 @@
+package io.github.digorydoo.goigoi.stats
+
+enum class StatsKey(private val key: String) {
+    BOTTOM_SHEET("btm-sheet"),
+    FLIPTHRU("flip-thru"),
+    PROGSTUDY_SHOW_KANJI_ASK_KANA("progstudy-01"),
+    PROGSTUDY_SHOW_KANA_ASK_KANJI("progstudy-04"),
+    PROGSTUDY_SHOW_ROMAJI_ASK_KANA("progstudy-06"),
+    PROGSTUDY_SHOW_TRANSLATION_ASK_KANA("progstudy-07"),
+    PROGSTUDY_SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS("progstudy-08"),
+    PROGSTUDY_SHOW_PHRASE_ASK_NOTHING("progstudy-09"),
+    PROGSTUDY_SHOW_SENTENCE_ASK_NOTHING("progstudy-10"),
+    PROGSTUDY_SHOW_WORD_ASK_NOTHING("ps-11"),
+    PROGSTUDY_SHOW_PHRASE_ASK_KANJI("ps-12"),
+    PROGSTUDY_SHOW_SENTENCE_ASK_KANJI("ps-13"),
+    PROGSTUDY_SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR("ps-14"),
+    PROGSTUDY_SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA("ps-15");
+
+    override fun toString() = key
+}

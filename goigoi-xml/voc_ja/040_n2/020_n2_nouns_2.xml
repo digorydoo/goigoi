@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N2 nouns ②"
+      name_de="N2-Nomen ②"
+      name_fr="Les noms N2 ②"
+      name_it="Nomi N2 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n2"
+      translations="en, de"
+      requiresSentences="false"
+      requiresIds="true"
+    >
+        <section>
+            <word
+              w="【接：せつ】【続：ぞく】"
+              rom="setsuzoku"
+              tr_en="connection; link; union"
+              tr_de="Verbindung; verbinden"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="setsuzoku-link"
+            >
+                <keep_apart_from id="tsunagari-link" />
+                <sentence
+                  s="【電：でん】【話：わ】の【接：せつ】【続：ぞく】が【悪：わる】いようです。"
+                  rom="Denwa no setsuzoku ga warui yō desu."
+                  tr_en="The phone connection seems to be bad."
+                  tr_de="Die Telefonverbindung scheint schlecht zu sein."
+                  lvl="n2"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="【碁：ご】"
+              rom="Go"
+              tr_en="a kind of board game of capturing territory"
+              tr_de="Brettspiel, bei dem Territorien erobert werden"
+              lvl="n2"
+              category="games"
+              id="go-game"
+            >
+                <sentence
+                  s="【私：わたし】はよく【碁：ご】を【打：う】ちます。"
+                  rom="Watashi wa yoku Go o uchimasu."
+                  tr_en="I often play a game of Go."
+                  tr_de="Ich spiele oft Go."
+                  lvl="n2"
+                  origin="lib0 modified"
+                  rem="all correct: 碁を打つ, 碁をやる, 碁をする"
+                  href="https://hinative.com/questions/22272536"
+                />
+            </word>
+            <word
+              w="【大：だい】【工：く】"
+              rom="daiku"
+              tr_en="carpenter; so. who builds a house"
+              tr_de="Zimmermann; jem. der ein Haus baut"
+              lvl="n2"
+              category="occupations"
+              id="daiku-carpenter"
+            >
+                <!--
+                    大工, as well as carpenter, may mean outdoor work
+                    Tischler is cabinetmaker, kagushokunin 家具職人
+                    carpenter vs. construction worker, see https://hinative.com/questions/22235767
+                    大工(さん) = wer ein Haus baut
+                    家具職人 = Tischler, kagushokunin, cabinetmaker
+                    建設現場で働く人 = construction worker
+                    Straßenarbeiter = 道路工事の人
+                    Bauarbeiter = 建設現場の人, 建設現場で働く人, usw.
+                    Bauarbeiter = 建設作業員（けんせつさぎょういん）
+                -->
+                <sentence
+                  s="【大：だい】【工：く】は【家：いえ】を【建：た】てるとき、たくさんの【道：どう】【具：ぐ】を【使：つか】う。"
+                  rom="Daiku wa ie o tateru toki, takusan no dōgu o tsukau."
+                  tr_en="A carpenter uses a lot of tools when building a house."
+                  tr_de="Ein Zimmermann verwendet viele Werkzeuge beim Bau eines Hauses."
+                  lvl="n2"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【下：か】【線：せん】"
+              rom="kasen"
+              tr_en="underline; underscore"
+              tr_de="Unterstrich"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n2"
+              id="kasen-underline"
+            >
+                <phrase
+                  ph="【赤：あか】で【下：か】【線：せん】を【引：ひ】く"
+                  rom="aka de kasen o hiku"
+                  tr_en="to underline red"
+                  tr_de="rot unterstreichen"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【水：すい】【筒：とう】"
+              rom="suitō"
+              tr_en="flask; thermos"
+              tr_de="Feldflasche; Thermosflasche"
+              lvl="n2"
+              category="holidays"
+              id="suitō-flask"
+            >
+                <sentence
+                  s="【水：すい】【筒：とう】にはほとんど【水：みず】が【残：のこ】っていない。"
+                  rom="Suitō ni wa hotondo mizu ga nokotte inai."
+                  tr_en="There is almost no water left in the flask."
+                  tr_de="Es hat fast kein Wasser mehr in der Feldflasche."
+                  origin="lib0"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【平：へい】【日：じつ】"
+              rom="heijitsu"
+              tr_en="weekday"
+              tr_de="Werktag"
+              hint_en="not weekend"
+              hint_de="nicht Wochenende"
+              lvl="n2"
+              category="days-of-the-week"
+              id="heijitsu-weekday"
+            >
+                <sentence
+                  s="【平：へい】【日：じつ】は【仕：し】【事：ごと】をします。"
+                  rom="Heijitsu wa shigoto o shimasu."
+                  tr_en="I work on weekdays."
+                  tr_de="Ich arbeite an Werktagen."
+                  lvl="n2"
+                  origin="duolingo"
+                />
+            </word>
+            <word
+              w="【貸：か】し【出：だ】し"
+              rom="kashidashi"
+              tr_en="lending; loaning"
+              tr_de="Ausleihe; Verleihung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="kashidashi-lending"
+            >
+                <!-- the verb is 貸し出す, which is nx -->
+            </word>
+            <word
+              w="【通：つう】【路：ろ】"
+              rom="tsūro"
+              tr_en="passage; pathway; aisle"
+              tr_de="Passage; Gang; Korridor"
+              lvl="n2"
+              id="tsūro-passage"
+            >
+                <phrase
+                  ph="スーパーの【通：つう】【路：ろ】"
+                  rom="sūpā no tsūro"
+                  tr_en="supermarket aisle"
+                  tr_de="Gang im Supermarkt"
+                  lvl="n2"
+                  rem="aisle=corridor with shelves on both sides"
+                />
+            </word>
+            <word
+              w="ため【息：いき】"
+              rom="tameiki"
+              tr_en="sigh"
+              tr_de="Seufzer"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n2"
+              category="mood"
+              id="tameiki-sigh"
+            >
+                <phrase
+                  ph="ため【息：いき】をつく"
+                  rom="tameiki o tsuku"
+                  tr_en="to sigh"
+                  tr_de="seufzen"
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【重：じゅう】【力：りょく】"
+              rom="jūryoku"
+              tr_en="gravity; gravitational pull"
+              tr_de="Gravitation; Schwerkraft"
+              lvl="n2"
+              category="physics"
+              id="jūryoku-gravity"
+            >
+                <sentence
+                  s="【月：つき】の【重：じゅう】【力：りょく】は【地：ち】【球：きゅう】の【６：ろく】【分：ぶん】の【１：いち】である。"
+                  rom="Tsuki no jūryoku wa chikyū no roku-bun no ichi de aru."
+                  tr_en="The gravity of the moon is one-sixth of that of the Earth."
+                  tr_de="Auf dem Mond beträgt die Schwerkraft einen Sechstel von der auf der Erde."
+                  lvl="n2"
+                  origin="lib0"
+                  rem="note that it's roku-bun, not roppun"
+                  href="https://hinative.com/questions/22354863"
+                />
+            </word>
+            <word
+              w="【赤：せき】【道：どう】"
+              rom="sekidō"
+              tr_en="equator"
+              tr_de="Äquator"
+              lvl="n2"
+              category="geography, astronomy"
+              id="sekidō-equator"
+            >
+                <sentence
+                  s="【船：ふね】は【今：こん】【夜：や】【赤：せき】【道：どう】を【越：こ】すだろう。"
+                  rom="Fune wa konya sekidō o kosu darō."
+                  tr_en="The ship will cross the equator tonight, I guess."
+                  tr_de="Das Schiff wird heute Nacht den Äquator überqueren, nehme ich an."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【風：ふう】【船：せん】"
+              rom="fūsen"
+              tr_en="balloon (esp. small)"
+              tr_de="Luftballon"
+              lvl="n2"
+              category="games, diy"
+              id="fūsen-balloon"
+            />
+            <word
+              w="【行：ぎょう】【列：れつ】"
+              rom="gyōretsu"
+              tr_en="procession; parade"
+              tr_de="Umzug; Parade"
+              lvl="n2"
+              category="culture"
+              id="gyōretsu-procession"
+            />
+            <word
+              w="【書：しょ】【道：どう】"
+              rom="shodō"
+              tr_en="calligraphy"
+              tr_de="Kalligraphie"
+              hint_en="lit. the Way of Writing"
+              hint_de="wörtl. der Weg des Schreibens"
+              lvl="n2"
+              category="arts"
+              id="shodō-calligraphy"
+            />
+            <word
+              w="【俳：はい】【句：く】"
+              rom="haiku"
+              tr_en="very short form of Japanese poetry"
+              tr_de="sehr kurze Form der japanischen Poesie"
+              lvl="n2"
+              category="arts, literature"
+              id="haiku-shortpoem"
+            />
+            <word
+              w="【学：がく】【部：ぶ】"
+              rom="gakubu"
+              tr_en="department of a university; faculty"
+              tr_de="Departement der Universität; Fakultät"
+              lvl="n2"
+              category="education"
+              id="gakubu-faculty"
+            />
+            <word
+              w="【税：ぜい】【関：かん】"
+              rom="zeikan"
+              tr_en="customs; customs house"
+              tr_de="Zoll; Zollhaus"
+              lvl="n2"
+              category="travelling"
+              id="zeikan-customs"
+            >
+                <sentence
+                  s="【税：ぜい】【関：かん】の【役：やく】【人：にん】は【箱：はこ】を【検：けん】【査：さ】した。"
+                  rom="Zeikan no yakunin wa hako o kensa shita."
+                  tr_en="The customs officials examined the box."
+                  tr_de="Die Zollbeamten untersuchten die Kiste."
+                  origin="lib0"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【別：べっ】【荘：そう】"
+              rom="bessō"
+              tr_en="holiday house; villa"
+              tr_de="Ferienhaus; Villa"
+              lvl="n2"
+              category="holidays"
+              id="bessō-holidayhouse"
+            >
+                <sentence
+                  s="【別：べっ】【荘：そう】は【丘：おか】の【上：うえ】にあります。"
+                  rom="Bessō wa oka no ue ni arimasu."
+                  tr_en="The villa is on a hill."
+                  tr_de="Die Villa ist auf einem Hügel."
+                  origin="lib0"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【終：しゅう】【了：りょう】"
+              rom="shūryō"
+              tr_en="end; termination"
+              tr_de="Ende; Schluss"
+              lvl="n2"
+              id="shūryō-end"
+            />
+            <word
+              w="【商：しょう】【店：てん】"
+              rom="shōten"
+              tr_en="shop; small store"
+              tr_de="kleiner Laden"
+              lvl="n2"
+              id="shōten-shop"
+            />
+            <word
+              w="【窓：まど】【口：ぐち】"
+              rom="madoguchi"
+              tr_en="teller window; ticket window"
+              tr_de="Kassierfenster; Ticketfenster"
+              lvl="n2"
+              category="business, entertainment"
+              id="madoguchi-tellerwindow"
+            />
+            <word
+              w="【櫛：くし】"
+              rom="kushi"
+              tr_en="comb"
+              tr_de="Kamm"
+              lvl="n2"
+              category="fashion"
+              id="kushi-comb"
+            />
+            <word
+              w="【羽：はね】"
+              rom="hane"
+              tr_en="feather; wing"
+              tr_de="Feder; Flügel"
+              lvl="n2"
+              category="bird"
+              id="hane-wing"
+            />
+            <word
+              w="【肘：ひじ】"
+              rom="hiji"
+              tr_en="elbow"
+              tr_de="Ellbogen"
+              lvl="n2"
+              category="body"
+              id="hiji-elbow"
+            />
+            <word
+              w="【親：おや】【指：ゆび】"
+              rom="oyayubi"
+              tr_en="thumb"
+              tr_de="Daumen"
+              lvl="n2"
+              category="body"
+              id="oyayubi-thumb"
+            />
+            <word
+              w="【人：ひと】【差：さ】し【指：ゆび】"
+              rom="hitosashiyubi"
+              tr_en="index finger"
+              tr_de="Zeigefinger"
+              lvl="n2"
+              category="body"
+              id="hitosashiyubi-indexfinger"
+            />
+            <word
+              w="【中：なか】【指：ゆび】"
+              rom="nakayubi"
+              tr_en="middle finger"
+              tr_de="Mittelfinger"
+              lvl="n2"
+              category="body"
+              id="nakayubi-middlefinger"
+            />
+            <word
+              w="【薬：くすり】【指：ゆび】"
+              rom="kusuriyubi"
+              tr_en="ring finger"
+              tr_de="Ringfinger"
+              lvl="n2"
+              category="body"
+              id="kusuriyubi-ringfinger"
+            />
+            <word
+              w="【小：こ】【指：ゆび】"
+              rom="koyubi"
+              tr_en="pinky; little finger"
+              tr_de="kleiner Finger"
+              lvl="n2"
+              category="body"
+              id="koyubi-pinky"
+            />
+            <word
+              w="【手：て】【首：くび】"
+              rom="tekubi"
+              tr_en="wrist"
+              tr_de="Handgelenk"
+              lvl="n2"
+              category="body, hands"
+              id="tekubi-wrist"
+            />
+            <word
+              w="【兵：へい】【隊：たい】"
+              rom="heitai"
+              tr_en="soldier"
+              tr_de="Soldat"
+              lvl="n2"
+              category="military"
+              id="heitai-soldier"
+            />
+            <word
+              w="【天：てん】【皇：のう】"
+              rom="tennō"
+              tr_en="emperor"
+              tr_de="Kaiser"
+              hint_en="of Japan"
+              hint_de="von Japan"
+              lvl="n2"
+              category="government"
+              id="tennō-emperor"
+            />
+            <word
+              w="【坊：ぼう】さん"
+              rom="bō-san"
+              tr_en="Buddhist priest; monk"
+              tr_de="Buddhistischer Priester; Mönch"
+              hint_en="respectful"
+              hint_de="respektvoll"
+              lvl="n2"
+              category="culture"
+              id="bōsan-monk"
+            />
+            <word
+              w="【神：しん】【話：わ】"
+              rom="shinwa"
+              tr_en="myth; legend"
+              tr_de="Mythos; Legende"
+              lvl="n2"
+              category="culture"
+              id="shinwa-myth"
+            />
+            <word
+              w="【調：ちょう】【味：み】【料：りょう】"
+              rom="chōmiryō"
+              tr_en="seasoning; flavouring"
+              tr_de="Würze; Gewürz"
+              lvl="n2"
+              category="cooking"
+              id="chōmiryō-seasoning"
+            />
+            <word
+              w="【浴衣：ゆかた】"
+              rom="yukata"
+              tr_en="light cotton clothing"
+              tr_de="leichtes Gewand aus Baumwolle"
+              hint_en="worn in the summer or used as a bathrobe"
+              hint_de="für den Sommer oder als Badegewand"
+              lvl="n2"
+              hasCombinedReading="true"
+              category="fashion"
+              id="yukata-bathrobe"
+            />
+            <word
+              w="【電：でん】【球：きゅう】"
+              rom="denkyū"
+              tr_en="light bulb"
+              tr_de="Glühbirne"
+              lvl="n2"
+              category="home, light"
+              id="denkyū-lightbulb"
+            >
+                <see id="dentō-light" rem="closely related" />
+            </word>
+            <word
+              w="【電：でん】【力：りょく】"
+              rom="denryoku"
+              tr_en="electric power"
+              tr_de="elektrische Energie"
+              lvl="n2"
+              category="technical"
+              id="denryoku-electricpower"
+            />
+            <word
+              w="【足：た】【袋：び】"
+              rom="tabi"
+              tr_en="Japanese socks"
+              tr_de="japanische Socken"
+              hint_en="with split toe"
+              hint_de="mit abgetrenntem grossen Zeh"
+              lvl="n2"
+              category="fashion"
+              id="tabi-socks"
+            >
+                <see id="kutsushita-socks" rem="closely related" />
+                <keep_apart_from id="kutsushita-socks" />
+                <keep_apart_from id="sokkusu-socks" />
+            </word>
+            <word
+              w="【売：ばい】【店：てん】"
+              rom="baiten"
+              tr_en="kiosk"
+              tr_de="Kiosk"
+              lvl="n2"
+              category="shopping, city"
+              id="baiten-kiosk"
+            />
+            <word
+              w="【店：みせ】【屋：や】"
+              rom="miseya"
+              tr_en="store; shop"
+              tr_de="Geschäft; Laden"
+              lvl="n2"
+              category="shopping"
+              id="miseya-shop"
+            >
+                <keep_apart_from id="mise-store" />
+                <keep_apart_from id="omise-store" />
+            </word>
+            <word
+              w="【枕：まくら】"
+              rom="makura"
+              tr_en="pillow"
+              tr_de="Kopfkissen"
+              lvl="n2"
+              category="home"
+              id="makura-pillow"
+            >
+                <see id="zabuton-floorcushion" rem="closely related" />
+                <keep_apart_from id="zabuton-floorcushion" />
+            </word>
+            <word
+              w="【扇：せん】【風：ぷう】【機：き】"
+              rom="senpūki"
+              tr_en="electric fan"
+              tr_de="Ventilator"
+              lvl="n2"
+              category="home"
+              id="senpūki-fan"
+            />
+            <word
+              w="【箒：ほうき】"
+              rom="hōki"
+              tr_en="broom"
+              tr_de="Besen"
+              lvl="n2"
+              category="cleaning"
+              id="hōki-broom"
+            />
+            <word
+              w="【絵：え】の【具：ぐ】"
+              rom="enogu"
+              tr_en="paint; colouring materials"
+              tr_de="Malfarbe; Farbstoff"
+              lvl="n2"
+              category="arts"
+              id="enogu-paint"
+            >
+                <keep_apart_from id="penki-paint" />
+            </word>
+            <word
+              w="ノコギリ"
+              rom="nokogiri"
+              tr_en="saw"
+              tr_de="Säge"
+              lvl="n2"
+              category="diy"
+              id="nokogiri-saw"
+            />
+            <word
+              w="【螺子：ネジ】"
+              rom="neji"
+              tr_en="screw"
+              tr_de="Schraube"
+              hasCombinedReading="true"
+              usuallyInKana="true"
+              lvl="n2"
+              category="diy"
+              id="neji-screw"
+            >
+                <!-- ネジを外す – to loosen or remove a screw (ChatGPT) -->
+            </word>
+            <word
+              w="ペンチ"
+              rom="penchi"
+              tr_en="pliers"
+              tr_de="Zange"
+              lvl="n2"
+              category="diy"
+              id="penchi-pliers"
+            />
+            <word
+              w="【梯子：はしご】"
+              rom="hashigo"
+              tr_en="ladder"
+              tr_de="Leiter"
+              hasCombinedReading="true"
+              lvl="n2"
+              category="garden, home"
+              id="hashigo-ladder"
+            />
+            <word
+              w="【雨：あま】【戸：ど】"
+              rom="amado"
+              tr_en="storm shutters (of a window)"
+              tr_de="Sturmfensterläden"
+              lvl="n2"
+              category="home"
+              id="amado-stormshutter"
+              rem="appears in 500mon q454; jisho has n2"
+            >
+                <keep_apart_from id="doa-door" />
+                <keep_apart_from id="to-door" />
+                <keep_apart_from id="uraguchi-backdoor" />
+                <keep_apart_from id="fusuma-slidingdoor" />
+                <keep_apart_from id="shōji-door" />
+                <keep_apart_from id="tobira-door" />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N2 verbs ②"
+      name_de="N2-Verben ②"
+      name_fr="Les verbes N2 ②"
+      name_it="Verbi N2 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="verb"
+      defaultHint_de="Verb"
+      lvl="n2"
+      translations="en"
+      requiresSentences="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【生：は】える"
+              rom="haeru"
+              tr_en="to grow; to spring up; to sprout / to cut (teeth)"
+              hint_en="ichidan verb; intransitive verb"
+              lvl="n2"
+              id="haeru-grow"
+            >
+                <!--
+                  s="うちの【庭：にわ】には【木：き】が【三：さん】【本：ぼん】【生：は】えています。"
+                  rom="Uchi no niwa ni wa ki ga san-bon haete imasu."
+                  tr_en="There are three trees in our yard."
+                  tr_de="In unserem Garten wachsen drei Bäume."
+                  lvl="n2"
+                  href="https://www.tofugu.com/japanese/japanese-counter-hon/"
+                -->
+            </word>
+            <word
+              w="【泊：と】める"
+              rom="tomeru"
+              tr_en="to give shelter to; to lodge; to accommodate"
+              tr_de="jem. Unterschlupf geben; jem. unterbringen"
+              hint_en="v.t."
+              lvl="n2"
+              id="tomeru-lodge"
+            >
+                <see id="tomaru-stay" rem="v.i." />
+            </word>
+            <word
+              w="【零：こぼ】す"
+              rom="kobosu"
+              tr_en="to shed (tears); to spill sth."
+              tr_de="(Tränen) vergiessen; etw. verschütten"
+              hint_en="v.t."
+              usuallyInKana="true"
+              lvl="n2"
+              id="kobosu-shedtears"
+            >
+                <see id="koboreru-overflow" rem="v.i." />
+            </word>
+            <word
+              w="【零：こぼ】れる"
+              rom="koboreru"
+              tr_en="to fall out of; to overflow; to peek through"
+              tr_de="herausfallen; überfliessen; durchsickern"
+              hint_en="v.i."
+              lvl="n2"
+              id="koboreru-overflow"
+            >
+                <see id="kobosu-shedtears" rem="v.t." />
+            </word>
+            <word
+              w="【打：う】ち【消：け】す"
+              rom="uchikesu"
+              tr_en="to deny; to contradict"
+              tr_de="verneinen; widersprechen"
+              hint_en="v.t."
+              lvl="n2"
+              rem="Langenscheidt: uchikeshi: Verneinung"
+              id="uchikesu-deny"
+            >
+                <see id="uchikeshi-denial" rem="noun" />
+            </word>
+            <word
+              w="【繋：つな】がる"
+              rom="tsunagaru"
+              tr_en="to be tied together; to be connected to; to be linked to"
+              hint_en="v.i."
+              lvl="n2"
+              id="tsunagaru-linked"
+            >
+                <see id="tsunagari-link" rem="noun" />
+                <see id="tsunageru-connect" rem="v.t." />
+                <keep_apart_from id="tsunagari-link" />
+            </word>
+            <word
+              w="【繋：つな】げる"
+              rom="tsunageru"
+              tr_en="to connect; to tie; to fasten"
+              hint_en="v.t."
+              lvl="n2"
+              id="tsunageru-connect"
+            >
+                <see id="tsunagaru-linked" rem="v.i." />
+            </word>
+            <word
+              w="【裏：うら】【返：がえ】す"
+              rom="uragaesu"
+              tr_en="to turn inside out; to turn the other way"
+              tr_de="die Innenseite nach aussen kehren; etw. umkehren"
+              hint_en="v.t."
+              lvl="n2"
+              id="uragaesu-insideout"
+            >
+                <see id="uragaeshi-insideout" rem="noun" />
+            </word>
+            <word
+              w="【溜：た】まる"
+              rom="tamaru"
+              tr_en="to collect; to gather; to pile up"
+              tr_de="sich sammeln; sich aufstapeln"
+              hint_en="v.i."
+              lvl="n2"
+              id="tamaru-collect"
+            >
+                <see id="tameru-amass" rem="v.t." />
+            </word>
+            <word
+              w="【溜：た】める"
+              rom="tameru"
+              tr_en="to amass; to accumulate; to store"
+              hint_en="v.t."
+              lvl="n2"
+              id="tameru-amass"
+            >
+                <!-- implicit see-also link to tameru-saveupmoney -->
+                <see id="tamaru-collect" rem="v.i." />
+            </word>
+            <word
+              w="【外：はず】れる"
+              rom="hazureru"
+              tr_en="to be disconnected; to get it wrong; to be contrary to"
+              tr_de="unverbunden sein; falsch liegen; andersrum sein"
+              hint_en="v.i."
+              lvl="n2"
+              category="not-good"
+              id="hazureru-getitwrong"
+            >
+                <see id="hazure-failure" rem="noun" />
+            </word>
+            <word
+              w="【騙：だま】す"
+              rom="damasu"
+              tr_en="to trick; to cheat; to deceive"
+              tr_de="austricksen; schummeln; täuschen"
+              hint_en="v.t."
+              lvl="n2"
+              id="damasu-cheat"
+              usuallyInKana="true"
+              rem="appears in GENKI2 p.225 in hiragana; marked as usuallyInKana, because kanji is nx"
+            />
+            <word
+              w="【重：かさ】ねる"
+              rom="kasaneru"
+              tr_en="to pile up; to put on top of another"
+              tr_de="übereinander stapeln"
+              hint_en="v.t."
+              lvl="n2"
+              id="kasaneru-pileup"
+              rem="appears in GENKI2 p.328 kanji section"
+            />
+            <word
+              w="【計：はか】る"
+              rom="hakaru"
+              tr_en="to measure; to weigh"
+              tr_de="messen; abwägen"
+              hint_en="v.t."
+              lvl="n2"
+              id="hakaru-weigh"
+              rem="appears in GENKI2 p.329 kanji section"
+            />
+            <word
+              w="【配：くば】る"
+              rom="kubaru"
+              tr_en="to distribute; to hand out"
+              tr_de="etw. verteilen; aushändigen"
+              hint_en="v.t."
+              lvl="n2"
+              id="kubaru-distribute"
+              rem="appears in GENKI2 p.329 kanji section"
+            />
+            <word
+              w="【存：ぞん】じる"
+              rom="zonjiru"
+              tr_en="to think; to feel; to consider"
+              lvl="n2"
+              rem="appears in 500mon q393; but as a polite form of shiru..."
+              id="zonjiru-think"
+            />
+            <word
+              w="【例：たと】える"
+              rom="tatoeru"
+              tr_en="to compare sth. with sth.; to liken; to use a metaphor"
+              tr_de="etw. mit etw. anderem vergleichen; eine Metapher benutzen"
+              hint_en="v.t."
+              lvl="n2"
+              id="tatoeru-compare"
+            >
+                <see id="tatoeba-forexample" rem="closely related" />
+                <see id="tatoe-example" rem="noun" />
+            </word>
+            <word
+              w="【跳：は】ねる"
+              rom="haneru"
+              tr_en="to jump; to leap; to hop"
+              tr_de="hüpfen; springen; hopsen"
+              hint_en="v.i."
+              lvl="n2"
+              id="haneru-leap"
+            >
+                <keep_apart_from id="tobu-fly" />
+                <keep_apart_from id="tobihaneru-hop" />
+            </word>
+            <word
+              w="【放：はな】れる"
+              rom="hanareru"
+              tr_en="to get free (from); to be released"
+              hint_en="v.i."
+              lvl="n2"
+              id="hanareru-getfree"
+            >
+                <!-- implicit see-also link to hanareru-goaway -->
+            </word>
+            <word
+              w="【縮：ちぢ】む"
+              rom="chidzimu"
+              tr_en="to shrink; it contracts; it diminishes"
+              tr_de="schrumpfen; sich zusammenziehen; kleiner werden"
+              hint_en="v.i."
+              lvl="n2"
+              id="chidzimu-shrink"
+            >
+                <!-- the noun is chidzimi, nx, common -->
+                <see id="chidzimeru-reduce" rem="v.t." />
+                <keep_together id="chidzimeru-reduce" />
+                <keep_apart_from id="chidzireru-curled" />
+            </word>
+            <word
+              w="【縮：ちぢ】める"
+              rom="chidzimeru"
+              tr_en="to reduce sth.; to condense sth.; to shrink sth."
+              tr_de="etw. reduzieren; etw. eindampfen; etw. verkleinern"
+              hint_en="v.t."
+              lvl="n2"
+              id="chidzimeru-reduce"
+            >
+                <see id="chidzimu-shrink" rem="v.i." />
+                <keep_together id="chidzimu-shrink" />
+                <keep_apart_from id="chidzireru-curled" />
+            </word>
+            <word
+              w="【潰：つぶ】れる"
+              rom="tsubureru"
+              tr_en="to be crushed; to be smashed; to go bankrupt"
+              tr_de="zerquetscht werden; Bankrott gehen"
+              hint_en="v.i."
+              lvl="n2"
+              category="finances"
+              id="tsubureru-collapse"
+              rem="Langenscheidt: zerquetscht werden; Bankrott gehen"
+            />
+            <word
+              w="【腰：こし】【掛：か】ける"
+              rom="koshikakeru"
+              tr_en="to sit; to sit down"
+              tr_de="sitzen; absitzen"
+              hint_en="v.i."
+              lvl="n2"
+              id="koshikakeru-sitdown"
+            />
+            <word
+              w="【診：み】る"
+              rom="miru"
+              tr_en="to examine (medically)"
+              tr_de="(medizinisch) untersuchen"
+              hint_en="v.t."
+              lvl="n2"
+              category="health, looking"
+              id="miru-examine"
+            />
+            <word
+              w="【引：ひ】っ【込：こ】む"
+              rom="hikkomu"
+              tr_en="to draw back; to retire to (somewhere); to stay indoors"
+              tr_de="sich zurückziehen; drinnen bleiben"
+              hint_en="v.i."
+              lvl="n2"
+              id="hikkomu-drawback"
+            />
+            <word
+              w="【受：う】け【持：も】つ"
+              rom="ukemotsu"
+              tr_en="to take charge of; to be in charge of"
+              tr_de="sich um etw. kümmern; für etw. zuständig sein"
+              hint_en="v.t."
+              lvl="n2"
+              id="ukemotsu-takechargeof"
+            />
+            <word
+              w="【憧：あこが】れる"
+              rom="akogareru"
+              tr_en="to long for; to yearn after; to be attracted by"
+              hint_en="v.i."
+              lvl="n2"
+              id="akogareru-longfor"
+            />
+            <word
+              w="【思：おも】いつく"
+              rom="omoitsuku"
+              tr_en="to think of; to come into one's mind; to be struck with an idea"
+              hint_en="v.t. &amp; i."
+              lvl="n2"
+              id="omoitsuku-thinkof"
+            />
+            <word
+              w="【転：ころ】がす"
+              rom="korogasu"
+              tr_en="to roll; to tip over"
+              hint_en="v.t."
+              lvl="n2"
+              id="korogasu-roll"
+            />
+            <word
+              w="【逃：に】がす"
+              rom="nigasu"
+              tr_en="to set free; to let go; to let (a chance) pass by"
+              lvl="n2"
+              id="nigasu-setfree"
+            />
+        </section>
+    </unit>
+</vocabulary>

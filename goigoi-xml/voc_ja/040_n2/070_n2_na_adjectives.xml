@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N2 na-adjectives"
+      name_de="N2 Na-Adjektive"
+      name_fr="Les na-adjectifs N2"
+      name_it="Na-aggettivi N2"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="na-adjective"
+      defaultHint_de="Na-Adjektiv"
+      lvl="n2"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="false"
+    >
+        <section>
+            <word
+              w="【逆：さか】さ"
+              rom="sakasa"
+              tr_en="inverted; upside down; reversed"
+              tr_de="invertiert; kopfüber; umgekehrt"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n2"
+              id="sakasa-inverted"
+            >
+                <keep_apart_from id="sakasama-inverted" />
+            </word>
+            <word
+              w="【逆：さか】さま"
+              rom="sakasama"
+              tr_en="inverted; upside down; reversed"
+              tr_de="invertiert; kopfüber; umgekehrt"
+              hint_en="na-adjective; noun"
+              hint_de="Na-Adjektiv; Nomen"
+              lvl="n2"
+              id="sakasama-inverted"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="sakasa-inverted" />
+            </word>
+            <word
+              w="【爽：さわ】やか"
+              rom="sawayaka"
+              tr_en="refreshing; invigorating"
+              tr_de="erfrischend; belebend"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n2"
+              id="sawayaka-refreshing"
+              usuallyInKana="true"
+            />
+            <word
+              w="【朗：ほが】らか"
+              rom="hogaraka"
+              tr_en="sunny; bright; cheerful"
+              tr_de="sonnig; hell; heiter"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n2"
+              category="weather, light"
+              id="hogaraka-sunny"
+            />
+            <word
+              w="【当：あ】たり【前：まえ】"
+              rom="atarimae"
+              tr_en="obvious; reasonable; commonplace"
+              tr_de="offensichtlich; vernünftig; normal"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n2"
+              id="atarimae-obvious"
+            />
+            <word
+              w="【透：とう】【明：めい】"
+              rom="tōmei"
+              tr_en="transparent; clear"
+              tr_de="transparent; durchsichtig"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n2"
+              id="tōmei-transparent"
+            />
+            <word
+              w="【高：こう】【級：きゅう】"
+              rom="kōkyū"
+              tr_en="high class; high grade; high rank"
+              tr_de="hohe Klasse; hochgradig; hochrangig"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n2"
+              id="kōkyū-highclass"
+            />
+            <word
+              w="【案：あん】【外：がい】"
+              rom="angai"
+              tr_en="unexpected; unanticipated"
+              tr_de="unerwartet; nicht vorhergesehen"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n2"
+              id="angai-unexpected"
+            />
+            <word
+              w="【曖：あい】【昧：まい】"
+              rom="aimai"
+              tr_en="vague; ambiguous; unclear"
+              tr_de="vage; zweideutig; unklar"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n2"
+              id="aimai-vague"
+            />
+
+            <!-- HIDDEN -->
+            <word
+              w="【稀：まれ】"
+              rom="mare"
+              tr_en="rare; seldom"
+              hint_en="na-adjective"
+              lvl="n2"
+              id="mare-rare"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="mettani-rarely" />
+                <keep_apart_from id="tamatama-seldom" />
+            </word>
+            <word
+              w="【大：おお】【雑：ざっ】【把：ぱ】"
+              rom="ōzappa"
+              tr_en="rough (estimate, summary, etc.); broad; general; sweeping; loose; careless"
+              hint_en="na-adjective"
+              lvl="n2"
+              id="ōzappa-rough"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="hobo-almost" />
+                <keep_apart_from id="yaku-about" />
+                <keep_apart_from id="kurai-approximately" />
+                <keep_apart_from id="goro-approxtime" />
+                <keep_apart_from id="ōyoso-roughly" />
+                <keep_apart_from id="zatto-roughly" />
+            </word>
+            <word
+              w="【乱：らん】【暴：ぼう】"
+              rom="ranbō"
+              tr_en="violence; assault; running riot; rough (e.g. handling); reckless; careless; coarse; rude; unreasonable (e.g. demand); wild (e.g. argument); rape; sexual assault"
+              hint_en="noun; suru verb; na-adjective; noun; suru verb"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【手：て】ごろ"
+              rom="tegoro"
+              tr_en="handy; convenient; suitable; reasonable; moderate"
+              hint_en="na-adjective; noun"
+              lvl="n2"
+              category="hands"
+              id="tegoro-handy"
+              HIDDEN="true"
+            />
+            <word
+              w="【幼：よう】【稚：ち】"
+              rom="yōchi"
+              tr_en="infancy; childish; immature"
+              hint_en="noun; na-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="まあまあ"
+              rom="māmā"
+              tr_en="so-so; passable; now, now; my, my"
+              hint_en="na-adjective; adverb"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【四：し】【角：かく】"
+              rom="shikaku"
+              tr_en="quadrilateral; square"
+              hint_en="noun; na-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【大：たい】【層：そう】"
+              rom="taisō"
+              tr_en="very; extremely; exceedingly; greatly; terribly; extreme; excessive; great many; large number of; splendid; impressive; tremendous; immense; exaggerated"
+              hint_en="adverb; na-adjective"
+              lvl="n2"
+              id="taisō-very"
+              HIDDEN="true"
+            />
+            <word
+              w="【水：すい】【平：へい】"
+              rom="suihei"
+              tr_en="horizontal; level; even"
+              hint_en="noun; na-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【無：む】【数：すう】"
+              rom="musū"
+              tr_en="innumerable; countless; numberless"
+              hint_en="noun; na-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【無：む】【限：げん】"
+              rom="mugen"
+              tr_en="infinity; infinitude; eternity; infinite; limitless; Infinity"
+              hint_en="noun; na-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【物：ぶっ】【騒：そう】"
+              rom="bussō"
+              tr_en="dangerous; unsettled; troubled; disturbed; insecure"
+              hint_en="na-adjective; noun"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【皮：ひ】【肉：にく】"
+              rom="hiniku"
+              tr_en="irony; sarcasm; cynicism; satire; unexpected; different from what one expected; not as one had planned; (only) surface; something superficial; skin and bone; body"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【惨：みじ】め"
+              rom="mijime"
+              tr_en="miserable; wretched; unhappy; sad; pitiable"
+              hint_en="na-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【斜：なな】め"
+              rom="naname"
+              tr_en="slanting; tilted; sloping; diagonal; oblique; distorted (feeling); slanted (e.g. view of the world); bad (mood); amiss; awry"
+              hint_en="noun; na-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【呑：のん】【気：き】"
+              rom="nonki"
+              tr_en="carefree; optimistic; careless; reckless; heedless; happy-go-lucky; easygoing; thoughtless"
+              hint_en="na-adjective; noun"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="ピカピカ"
+              rom="pika-pika"
+              tr_en="with a glitter; with a sparkle; brand new; shiny and new"
+              hint_en="suru verb; adverb; na-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【不：ふ】【潔：けつ】"
+              rom="fuketsu"
+              tr_en="unclean; dirty; unsanitary; filthy; indecent; dirty (story, money, etc.); obscene; immoral"
+              hint_en="na-adjective; noun"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【不：ふ】【規：き】【則：そく】"
+              rom="fukisoku"
+              tr_en="irregularity; unsteadiness; disorderly"
+              hint_en="na-adjective; noun"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【不：ふ】【運：うん】"
+              rom="fūn"
+              tr_en="misfortune; bad luck; ill luck; ill fortune"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n2"
+              category="not-good"
+              id="fūn-badluck"
+              HIDDEN="true"
+            />
+            <word
+              w="【厳：げん】【重：じゅう】"
+              rom="genjū"
+              tr_en="strict; severe; stringent; rigorous; rigid; firm; strong; secure"
+              hint_en="na-adjective; noun"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【公：こう】【正：せい】"
+              rom="kōsei"
+              tr_en="justice; fairness; impartiality"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n2"
+              id="kōsei-fairness"
+              HIDDEN="true"
+            />
+            <word
+              w="【凸：でこ】【凹：ぼこ】"
+              rom="dekoboko"
+              tr_en="unevenness; roughness; ruggedness; bumpiness; inequality; imbalance; unevenness; difference"
+              hint_en="noun; na-adjective; suru verb"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【同：どう】【格：かく】"
+              rom="dōkaku"
+              tr_en="the same rank; equality; apposition"
+              hint_en="noun; na-adjective"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【妥：だ】【当：とう】"
+              rom="datō"
+              tr_en="valid; proper; right; appropriate; reasonable"
+              hint_en="na-adjective; noun"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【欲：よく】【張：ば】り"
+              rom="yokubari"
+              tr_en="greed; avarice; covetousness; greedy person"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【特：とく】【殊：しゅ】"
+              rom="tokushu"
+              tr_en="special; particular; peculiar; unique"
+              hint_en="na-adjective; noun which may take the genitive case particle 'no'; noun"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【的：てき】【確：かく】"
+              rom="tekikaku"
+              tr_en="precise; accurate; appropriate; exactly the right"
+              hint_en="na-adjective; noun"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【乾：かん】【燥：そう】"
+              rom="kansō"
+              tr_en="dryness; aridity; drying (e.g. clothes); dehydration; desiccation / insipidity / Desiccation"
+              hint_en="noun; suru verb; transitive verb; intransitive verb / noun; na-adjective"
+              lvl="n2"
+              id="kansō-dryness"
+              HIDDEN="true"
+            />
+            <word
+              w="【卑：ひ】【怯：きょう】"
+              rom="hikyō"
+              tr_en="cowardly; craven / unfair; mean; sneaky; dirty; dastardly"
+              hint_en="na-adjective; noun"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【膨：ぼう】【大：だい】"
+              rom="bōdai"
+              tr_en="huge; vast; enormous; colossal; extensive; large / swelling; expansion"
+              hint_en="na-adjective / noun; suru verb; only applies to 膨大"
+              lvl="n2"
+              HIDDEN="true"
+            />
+            <word
+              w="【真：しん】【空：くう】"
+              rom="shinkū"
+              tr_en="vacuum; hollow; empty"
+              hint_en="noun; na-adjective"
+              lvl="n2"
+              category="physics"
+              id="shinkū-vacuum"
+              HIDDEN="true"
+            />
+            <word
+              w="【地：じ】【味：み】"
+              rom="jimi"
+              tr_en="plain; simple; subdued; sober; modest; quiet; unobtrusive"
+              hint_en="na-adjective; noun; adverb"
+              lvl="n2"
+              id="jimi-quiet"
+              HIDDEN="true"
+            />
+            <word
+              w="【謙：けん】【虚：きょ】"
+              rom="kenkyo"
+              tr_en="modest; humble"
+              hint_en="na-adjective; noun"
+              lvl="n2"
+              id="kenkyo-humble"
+              HIDDEN="true"
+            />
+            <word
+              w="【謙：けん】【遜：そん】"
+              rom="kenson"
+              tr_en="modesty; humility; being humble"
+              hint_en="noun; suru verb; na-adjective"
+              lvl="n2"
+              id="kenson-modesty"
+              HIDDEN="true"
+            />
+        </section>
+    </unit>
+</vocabulary>

@@ -1,0 +1,1695 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N4 nouns ②"
+      name_de="N4-Nomen ②"
+      name_fr="Les noms N4 ②"
+      name_it="Nomi N4 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n4"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- family -->
+            <word
+              w="【夫：おっと】"
+              rom="otto"
+              tr_en="(one's) husband"
+              tr_de="(der eigene) Ehemann"
+              lvl="n4"
+              category="relationships"
+              id="otto-husband"
+            >
+                <see id="goshujin-husband" rem="closely related" />
+                <keep_apart_from id="goshujin-husband" rem="it would create ambiguity in phrases and sentences" />
+                <phrase
+                  ph="いい【夫：おっと】になる"
+                  rom="ii otto ni naru"
+                  tr_en="to become a good husband"
+                  tr_de="einen guten Ehemann werden"
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="replaced yoi with ii"
+                />
+                <sentence
+                  s="【夫：おっと】は【出：しゅっ】【張：ちょう】に【行：い】っています。"
+                  rom="Otto wa shucchō ni itte imasu."
+                  tr_en="My husband is on a business trip."
+                  tr_de="Mein Ehemann ist auf einer Geschäftsreise."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT; itteimasu for 'being away' also verified with lib0"
+                />
+                <sentence
+                  s="【夫：おっと】は【私：わたし】より【上：じょう】【手：ず】に【料：りょう】【理：り】する。"
+                  rom="Otto wa watashi yori jōzu ni ryōri suru."
+                  tr_en="My husband is a better cook than I."
+                  tr_de="Mein Ehemann kann besser kochen als ich."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【妻：つま】"
+              rom="tsuma"
+              tr_en="(one's) wife"
+              tr_de="(die eigene) Ehefrau"
+              lvl="n4"
+              category="family, relationships"
+              id="tsuma-wife"
+            >
+                <see id="okusan-wife" rem="closely related" />
+                <see id="kanai-wife" rem="closely related" />
+                <phrase
+                  ph="【妻：つま】と【一：いっ】【緒：しょ】に【出：で】かける"
+                  rom="tsuma to issho ni dekakeru"
+                  tr_en="to go out with one's wife"
+                  tr_de="mit der Ehefrau ausgehen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【妻：つま】の【家：か】【族：ぞく】が【来：き】ていて 【大：たい】【変：へん】【忙：いそが】しいです。"
+                  rom="Tsuma no kazoku ga kite ite taihen isogashii desu."
+                  tr_en="My wife's family are here, so we are very busy."
+                  tr_de="Die Familie meiner Frau ist bei uns, deshalb sind wir sehr beschäftigt."
+                  allowSpaces="true"
+                  lvl="n4"
+                  origin="Oxford p.47"
+                />
+            </word>
+
+            <!-- relationship -->
+            <word
+              w="【関：かん】【係：けい】"
+              rom="kankei"
+              tr_en="relationship; involvement; being connected to"
+              tr_de="Beziehung; Verhältnis; im Verhältnis stehen"
+              Langenscheidt="Beziehung; Verhältnis"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n4"
+              category="relationships"
+              id="kankei-relationship"
+            >
+                <keep_apart_from id="naka-relation" />
+                <phrase
+                  ph="いい【関：かん】【係：けい】"
+                  rom="ii kankei"
+                  tr_en="a good relationship"
+                  tr_de="ein gutes Verhältnis"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【悪：わる】い【関：かん】【係：けい】"
+                  rom="warui kankei"
+                  tr_en="a bad relationship"
+                  tr_de="ein schlechtes Verhältnis"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【西：にし】【村：むら】さんと【中：なか】【川：がわ】さんは【長：なが】い【関：かん】【係：けい】を【持：も】っています。"
+                  rom="Nishimura-san to Nakagawa-san wa nagai kankei o motte imasu."
+                  tr_en="Mr Nishimura and Ms Nakagawa have a long relationship."
+                  tr_de="Herr Nishimura und Frau Nakagawa haben eine langjährige Beziehung."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="この【問：もん】【題：だい】は【私：わたし】たちのプロジェクトに【関：かん】【係：けい】しています。"
+                  rom="Kono mondai wa watashi-tachi no purojekuto ni kankei shite imasu."
+                  tr_en="This problem is related to our project."
+                  tr_de="Dieses Problem steht mit unserem Projekt in Zusammenhang."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【約：やく】【束：そく】"
+              rom="yakusoku"
+              tr_en="promise; appointment"
+              tr_de="Versprechen; Verabredung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n4"
+              category="relationships"
+              id="yakusoku-promise"
+            >
+                <phrase
+                  ph="【約：やく】【束：そく】の【時：じ】【間：かん】"
+                  rom="yakusoku no jikan"
+                  tr_en="the appointed time"
+                  tr_de="die abgemachte Zeit"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【山：やま】【田：だ】さんは【売：う】ると【約：やく】【束：そく】した。"
+                  rom="Yamada-san wa uru to yakusoku shita."
+                  tr_en="Mr Yamada promised to sell."
+                  tr_de="Herr Yamada hat versprochen zu verkaufen."
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【約：やく】【束：そく】を【忘：わす】れてはいけない。"
+                  rom="Yakusoku o wasurete wa ikenai."
+                  tr_en="We must not forget our promise."
+                  tr_de="Wir dürfen unser Versprechen nicht vergessen."
+                  explanation_en="いけない literally means 'you cannot go'"
+                  explanation_de="いけない bedeutet wörtlich 'du kannst nicht gehen'"
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【喧：けん】【嘩：か】"
+              rom="kenka"
+              tr_en="quarrel; argument"
+              tr_de="Streit; Ärger"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n4"
+              category="quarrel, relationships"
+              id="kenka-quarrel"
+            >
+                <phrase
+                  ph="【喧：けん】【嘩：か】をやめる"
+                  rom="kenka o yameru"
+                  tr_en="to stop fighting"
+                  tr_de="aufhören zu streiten"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【誰：だれ】も【喧：けん】【嘩：か】の【理：り】【由：ゆう】をわからない。"
+                  rom="Dare mo kenka no riyū o wakaranai."
+                  tr_en="Nobody knows the reason for the quarrel."
+                  tr_de="Niemand versteht den Grund des Streits."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+
+            <!-- body -->
+            <word
+              w="【髭：ひげ】"
+              rom="hige"
+              tr_en="moustache; beard"
+              tr_de="Schnauz; Bart"
+              usuallyInKana="true"
+              lvl="n4"
+              category="body"
+              id="hige-beard"
+            >
+                <phrase
+                  ph="【薄：うす】いひげ"
+                  rom="usui hige"
+                  tr_en="a thin beard"
+                  tr_de="ein dünner Bart"
+                  lvl="n4"
+                  origin="ChatGPT"
+                  rem="ChatGPT is confused whether あの薄いひげの男性 or あのひげの薄い男性 is more natural"
+                />
+                <sentence
+                  s="あの【赤：あか】いひげの【男：だん】【性：せい】は【山：やま】【田：だ】さんです。"
+                  rom="Ano akai hige no dansei wa Yamada-san desu."
+                  tr_en="That man with the red beard is Mr Yamada."
+                  tr_de="Der Mann dort mit dem roten Bart ist Herr Yamada."
+                  lvl="n4"
+                  origin="self"
+                  href="https://hinative.com/questions/22367091"
+                />
+            </word>
+            <word
+              w="【腕：うで】"
+              rom="ude"
+              tr_en="arm"
+              tr_de="Arm"
+              hint_en="part of body"
+              hint_de="Körperteil"
+              lvl="n4"
+              category="body"
+              id="ude-arm"
+            >
+                <phrase
+                  ph="【腕：うで】【時：ど】【計：けい】"
+                  rom="udedokei"
+                  tr_en="wristwatch"
+                  tr_de="Armbanduhr"
+                  lvl="n4"
+                  origin="self"
+                  rem="jisho has nx for udedokei, but n4 for ude and n5 for tokei"
+                />
+                <sentence
+                  s="【彼：かれ】は、【腕：うで】は【長：なが】いが、【足：あし】は【短：みじか】い。"
+                  rom="Kare wa, ude wa nagai ga, ashi wa mijikai."
+                  tr_en="He has long arms, but short legs."
+                  tr_de="Er hat lange Arme, aber kurze Beine."
+                  lvl="n4"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【指：ゆび】"
+              rom="yubi"
+              tr_en="finger"
+              tr_de="Finger"
+              lvl="n4"
+              category="body"
+              id="yubi-finger"
+            >
+                <phrase
+                  ph="【親：おや】【指：ゆび】"
+                  rom="oyayubi"
+                  tr_en="thumb"
+                  tr_de="Daumen"
+                  lvl="n4"
+                  origin="self"
+                  rem="jisho has n2 for oyayubi, but n4 for oya, yubi"
+                />
+                <phrase
+                  ph="【人：ひと】【差：さ】し【指：ゆび】"
+                  rom="hitosashiyubi"
+                  tr_en="index finger"
+                  tr_de="Zeigefinger"
+                  lvl="n4"
+                  origin="self"
+                  rem="jisho has n2"
+                />
+                <phrase
+                  ph="【中：なか】【指：ゆび】"
+                  rom="nakayubi"
+                  tr_en="middle finger"
+                  tr_de="Mittelfinger"
+                  lvl="n4"
+                  origin="self"
+                  rem="jisho has n2"
+                />
+                <phrase
+                  ph="【薬：くすり】【指：ゆび】"
+                  rom="kusuriyubi"
+                  tr_en="ring finger"
+                  tr_de="Ringfinger"
+                  lvl="n4"
+                  origin="self"
+                  rem="jisho has n2"
+                />
+                <phrase
+                  ph="【小：こ】【指：ゆび】"
+                  rom="koyubi"
+                  tr_en="pinky; little finger"
+                  tr_de="kleiner Finger"
+                  lvl="n4"
+                  origin="self"
+                  rem="jisho has n2"
+                />
+                <sentence
+                  s="【私：わたし】はナイフで【指：ゆび】を【切：き】った。"
+                  rom="Watashi wa naifu de yubi o kitta."
+                  tr_en="I cut my finger with a knife."
+                  tr_de="Ich habe mich mit einem Messer in den Finger geschnitten."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【首：くび】"
+              rom="kubi"
+              tr_en="neck"
+              tr_de="Nacken; Hals"
+              lvl="n4"
+              category="body"
+              id="kubi-neck"
+            >
+                <phrase
+                  ph="【首：くび】の【長：なが】い【動：どう】【物：ぶつ】"
+                  rom="kubi no nagai dōbutsu"
+                  tr_en="an animal with a long neck"
+                  tr_de="ein Tier mit einem langen Hals"
+                  lvl="n4"
+                  origin="500mon q290"
+                />
+                <sentence
+                  s="【首：くび】が【痛：いた】い。"
+                  rom="Kubi ga itai."
+                  tr_en="My neck hurts."
+                  tr_de="Mein Nacken tut weh."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【首：くび】の【長：なが】い【動：どう】【物：ぶつ】は【何：なん】ですか。"
+                  rom="Kubi no nagai dōbutsu wa nan desu ka?"
+                  tr_en="What animal has a long neck?"
+                  tr_de="Welches Tier hat einen langen Hals?"
+                  lvl="n4"
+                  origin="500mon q290"
+                />
+            </word>
+            <word
+              w="【背：せ】【中：なか】"
+              rom="senaka"
+              tr_en="back (of body)"
+              tr_de="Rücken"
+              lvl="n4"
+              category="body"
+              id="senaka-back"
+            >
+                <phrase
+                  ph="【背：せ】【中：なか】を【洗：あら】う"
+                  rom="senaka o arau"
+                  tr_en="to wash one's back"
+                  tr_de="den Rücken waschen"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】は【背：せ】【中：なか】が【少：すこ】し【痛：いた】い。"
+                  rom="Watashi wa senaka ga sukoshi itai."
+                  tr_en="I've got a bit of a backache."
+                  tr_de="Ich habe ein bisschen Rückenschmerzen."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- cooking, cuisine -->
+            <word
+              w="【米：こめ】"
+              rom="kome"
+              tr_en="rice; grains of rice"
+              tr_de="Reis; Reiskorn"
+              lvl="n4"
+              category="food, top-words"
+              id="kome-rice"
+            >
+                <phrase
+                  ph="【米：こめ】の【味：あじ】"
+                  rom="kome no aji"
+                  tr_en="the taste of rice"
+                  tr_de="der Geschmack von Reis"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【酒：さけ】は【米：こめ】で【作：つく】ります。"
+                  rom="Sake wa kome de tsukurimasu."
+                  tr_en="Sake is made from rice."
+                  tr_de="Sake wird aus Reis gemacht."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【昼：ひる】【休：やす】み"
+              rom="hiruyasumi"
+              tr_en="lunch break; noon rest"
+              tr_de="Mittagspause"
+              lvl="n4"
+              category="time"
+              id="hiruyasumi-lunchbrk"
+            >
+                <phrase
+                  ph="【昼：ひる】【休：やす】みに【散：さん】【歩：ぽ】する"
+                  rom="hiruyasumi ni sanpo suru"
+                  tr_en="to take a walk during lunch break"
+                  tr_de="in der Mittagspause spazieren gehen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【昼：ひる】【休：やす】みの【後：あと】はいつも【眠：ねむ】い。"
+                  rom="Hiruyasumi no ato wa itsumo nemui."
+                  tr_en="I'm always sleepy after lunch break."
+                  tr_de="Ich bin immer schläfrig nach der Mittagspause."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【葡：ぶ】【萄：どう】"
+              rom="budō"
+              tr_en="grape"
+              tr_de="Traube"
+              usuallyInKana="true"
+              lvl="n4"
+              category="food, plant"
+              id="budō-grape"
+            >
+                <phrase
+                  ph="【甘：あま】いぶどう"
+                  rom="amai budō"
+                  tr_en="sweet grapes"
+                  tr_de="süsse Trauben"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="ワインはぶどうから【作：つく】られる。"
+                  rom="Wain wa budō kara tsukurareru."
+                  tr_en="Wine is made from grapes."
+                  tr_de="Wein wird aus Trauben gemacht."
+                  explanation_en="「作られる」is the passive form of「作る」"
+                  explanation_de="「作られる」ist die passive Form von「作る」"
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+            </word>
+
+            <!-- nature -->
+            <word
+              w="【湖：みずうみ】"
+              rom="mizūmi"
+              tr_en="lake"
+              tr_de="See"
+              lvl="n4"
+              category="nature, scenery"
+              id="mizūmi-lake"
+            >
+                <phrase
+                  ph="【山：やま】の【湖：みずうみ】"
+                  rom="yama no mizūmi"
+                  tr_en="mountain lake"
+                  tr_de="Bergsee"
+                  lvl="n4"
+                />
+                <phrase
+                  ph="【浅：あさ】い【湖：みずうみ】"
+                  rom="asai mizūmi"
+                  tr_en="a shallow lake"
+                  tr_de="ein untiefer See"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【静：しず】かな【湖：みずうみ】の【周：まわ】りを【歩：ある】くのが【好：す】きです。"
+                  rom="Shizuka na mizūmi no mawari o aruku no ga suki desu."
+                  tr_en="I like walking around the quiet lake."
+                  tr_de="Ich mag es, um den stillen See zu gehen."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【林：はやし】"
+              rom="hayashi"
+              tr_en="small forest; grove"
+              tr_de="kleiner Wald; Wäldchen"
+              lvl="n4"
+              category="nature, plant"
+              id="hayashi-woods"
+            >
+                <phrase
+                  ph="【近：ちか】くの【林：はやし】"
+                  rom="chikaku no hayashi"
+                  tr_en="the nearby grove"
+                  tr_de="das Wäldchen in der Nähe"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="あの【林：はやし】の【中：なか】を【歩：ある】いて【行：い】きませんか。"
+                  rom="Ano hayashi no naka o aruite ikimasen ka?"
+                  tr_en="Would (you like to) go for a walk in those woods?"
+                  tr_de="Möchtest (du) in dem Wäldchen dort spazieren gehen?"
+                  lvl="n4"
+                  origin="500mon q73"
+                />
+                <sentence
+                  s="この【道：みち】を【進：すす】むと、【林：はやし】を【通：とお】ります。"
+                  rom="Kono michi o susumu to, hayashi o tōrimasu."
+                  tr_en="Follow this path, and you'll pass through the grove."
+                  tr_de="Folgen Sie diesem Pfad, und Sie werden durch das Wäldchen kommen."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【森：もり】"
+              rom="mori"
+              tr_en="forest"
+              tr_de="Wald"
+              lvl="n4"
+              category="nature, scenery"
+              id="mori-forest"
+            >
+                <phrase
+                  ph="【暗：くら】い【森：もり】"
+                  rom="kurai mori"
+                  tr_en="a dark forest"
+                  tr_de="ein dunkler Wald"
+                  lvl="n4"
+                />
+                <phrase
+                  ph="【広：ひろ】い【森：もり】"
+                  rom="hiroi mori"
+                  tr_en="a vast forest"
+                  tr_de="ein weiter Wald"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【秋：あき】の【森：もり】を【歩：ある】く"
+                  rom="aki no mori o aruku"
+                  tr_en="to walk in the autumn forest"
+                  tr_de="im Herbstwald spazieren"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="その【森：もり】の【真：ま】ん【中：なか】に【美：うつく】しい【湖：みずうみ】があります。"
+                  rom="Sono mori no mannaka ni utsukushii mizūmi ga arimasu."
+                  tr_en="In the middle of that forest, there is a beautiful lake."
+                  tr_de="Im Zentrum jenes Waldes ist ein hübscher See."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【枝：えだ】"
+              rom="eda"
+              tr_en="branch; twig"
+              tr_de="Zweig; Ast"
+              lvl="n4"
+              category="plant, nature"
+              id="eda-twig"
+            >
+                <phrase
+                  ph="【細：ほそ】い【枝：えだ】"
+                  rom="hosoi eda"
+                  tr_en="a thin branch"
+                  tr_de="ein dünner Ast"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【枝：えだ】の【間：あいだ】"
+                  rom="eda no aida"
+                  tr_en="among the branches"
+                  tr_de="zwischen den Zweigen"
+                  lvl="n4"
+                />
+                <sentence
+                  s="【枝：えだ】の【間：あいだ】に【古：ふる】い【傘：かさ】を【見：み】つけた。"
+                  rom="Eda no aida ni furui kasa o mitsuketa."
+                  tr_en="I found an old umbrella among the branches."
+                  tr_de="Ich habe einen alten Schirm unter den Ästen gefunden."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【台：たい】【風：ふう】"
+              rom="taifū"
+              tr_en="hurricane; typhoon"
+              tr_de="Hurrikan; Taifun"
+              lvl="n4"
+              category="weather"
+              id="taifū-typhoon"
+            >
+                <keep_apart_from id="tatsumaki-tornado" />
+                <phrase
+                  ph="【強：つよ】い【台：たい】【風：ふう】"
+                  rom="tsuyoi taifū"
+                  tr_en="a strong typhoon"
+                  tr_de="ein starker Taifun"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【台：たい】【風：ふう】で【庭：にわ】の【木：き】が【折：お】れてしまった。"
+                  rom="Taifū de niwa no ki ga orete shimatta."
+                  tr_en="The tree of the yard was felled by the typhoon."
+                  tr_de="Der Baum im Garten ist durch den Taifun umgetan worden."
+                  explanation_en="「しまった」 adds feelings of regret"
+                  explanation_de="「しまった」 drückt Bedauern aus"
+                  lvl="n4"
+                  origin="500mon q205"
+                  href="https://hinative.com/en-US/questions/21828012"
+                />
+                <sentence
+                  s="【台：たい】【風：ふう】で【飛：ひ】【行：こう】【機：き】が【飛：と】ばないかもしれない。"
+                  rom="Taifū de hikōki ga tobanai ka mo shirenai."
+                  tr_en="They might have to cancel the flight because of the typhoon."
+                  tr_de="Vielleicht wird das Flugzeug nicht fliegen wegen des Taifuns."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【石：いし】"
+              rom="ishi"
+              tr_en="stone; gem"
+              tr_de="Stein; Edelstein"
+              lvl="n4"
+              category="nature"
+              id="ishi-gem"
+            >
+                <!-- 丸い石 - marui ishi - A round stone (ChatGPT) -->
+                <phrase
+                  ph="【硬：かた】い【石：いし】"
+                  rom="katai ishi"
+                  tr_en="a hard stone"
+                  tr_de="ein harter Stein"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【小：こ】【石：いし】"
+                  rom="koishi"
+                  tr_en="pebble"
+                  tr_de="Steinchen; Kieselstein"
+                  lvl="n4"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【靴：くつ】の【中：なか】に【小：ちい】さな【石：いし】があると【思：おも】う。"
+                  rom="Kutsu no naka ni chīsana ishi ga aru to omou."
+                  tr_en="I think there is a small stone inside my shoe."
+                  tr_de="Ich glaube, ich habe ein Steinchen im Schuh."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【砂：すな】"
+              rom="suna"
+              tr_en="sand"
+              tr_de="Sand"
+              lvl="n4"
+              category="nature"
+              id="suna-sand"
+            >
+                <phrase
+                  ph="【熱：あつ】い【砂：すな】"
+                  rom="atsui suna"
+                  tr_en="hot sand"
+                  tr_de="heisser Sand"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【熱：あつ】い【砂：すな】の【上：うえ】を【歩：ある】くのは【大：たい】【変：へん】です。"
+                  rom="Atsui suna no ue o aruku no wa taihen desu."
+                  tr_en="Walking on hot sand is difficult."
+                  tr_de="Es ist schwierig, auf dem heissen Sand zu gehen."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【葉：は】"
+              rom="ha"
+              tr_en="leaf (of a plant)"
+              tr_de="Blatt (einer Pflanze)"
+              lvl="n4"
+              category="plant, nature"
+              id="ha-leaf"
+            >
+                <phrase
+                  ph="【木：こ】の【葉：は】"
+                  rom="ko no ha"
+                  tr_en="leaves of a tree"
+                  tr_de="Blätter eines Baumes"
+                  lvl="n4"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【葉：は】が【時：とき】【々：どき】【落：お】ちてきた。"
+                  rom="Ha ga toki-doki ochite kita."
+                  tr_en="Every now and then leaves would fall down."
+                  tr_de="Hin und wieder kamen Blätter heruntergefallen."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【草：くさ】"
+              rom="kusa"
+              tr_en="grass; herb"
+              tr_de="Gras; Kraut"
+              lvl="n4"
+              category="garden, plant"
+              id="kusa-grass"
+            >
+                <phrase
+                  ph="【長：なが】い【草：くさ】"
+                  rom="nagai kusa"
+                  tr_en="long grass"
+                  tr_de="langes (hohes) Grass"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】は【草：くさ】の【上：うえ】に【寝：ね】た。"
+                  rom="Watashi wa kusa no ue ni neta."
+                  tr_en="I lay down on the grass."
+                  tr_de="Ich legte mich ins Gras."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- weather -->
+            <word
+              w="【雲：くも】"
+              rom="kumo"
+              tr_en="cloud"
+              tr_de="Wolke"
+              lvl="n4"
+              category="weather, top-words"
+              id="kumo-cloud"
+            >
+                <phrase
+                  ph="【白：しろ】い【雲：くも】"
+                  rom="shiroi kumo"
+                  tr_en="white clouds"
+                  tr_de="weisse Wolken"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【空：そら】には【雲：くも】がない。"
+                  rom="Sora ni wa kumo ga nai."
+                  tr_en="There are no clouds in the sky."
+                  tr_de="Es hat keine Wolken am Himmel."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【天：てん】【気：き】【予：よ】【報：ほう】"
+              rom="tenkiyohō"
+              tr_en="weather forecast"
+              tr_de="Wettervorhersage"
+              lvl="n4"
+              category="weather"
+              id="tenkiyohō-forecast"
+            >
+                <keep_apart_from id="yohō-forecast" />
+                <phrase
+                  ph="【今日：きょう】の【天：てん】【気：き】【予：よ】【報：ほう】"
+                  rom="kyō no tenkiyohō"
+                  tr_en="today's weather forecast"
+                  tr_de="die Wettervorsage von heute"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【天：てん】【気：き】【予：よ】【報：ほう】はどうですか。"
+                  rom="Tenkiyohō wa dō desu ka?"
+                  tr_en="What does the weather report say?"
+                  tr_de="Was sagt der Wetterbericht?"
+                  lvl="n4"
+                  origin="Langenscheidt p.219"
+                />
+                <sentence
+                  s="【天：てん】【気：き】【予：よ】【報：ほう】では【今：こん】【夜：や】は【雪：ゆき】だ。"
+                  rom="Tenkiyohō de wa konya wa yuki da."
+                  tr_en="According to the weather forecast, it will snow tonight."
+                  tr_de="Die Wettervorhersage hat Schnee für heute Nacht."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- scenery -->
+            <word
+              w="【島：しま】"
+              rom="shima"
+              tr_en="island"
+              tr_de="Insel"
+              lvl="n4"
+              category="scenery, top-words"
+              id="shima-island"
+            >
+                <phrase
+                  ph="【大：おお】きな【島：しま】"
+                  rom="ōkina shima"
+                  tr_en="a large island"
+                  tr_de="eine grosse Insel"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【遠：とお】くに【島：しま】が【見：み】えた。"
+                  rom="Tōku ni shima ga mieta."
+                  tr_en="We saw an island in the distance."
+                  tr_de="Wir sahen eine Insel in der Ferne."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【飛：ひ】【行：こう】【機：き】は【島：しま】の【上：うえ】を【飛：と】んだ。"
+                  rom="Hikōki wa shima no ue o tonda."
+                  tr_en="The plane flew over the island."
+                  tr_de="Das Flugzeug flog über die Insel."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【景：け】【色：しき】"
+              rom="keshiki"
+              tr_en="scenery; landscape"
+              tr_de="Landschaft"
+              lvl="n4"
+              category="scenery, looking"
+              id="keshiki-scenery"
+            >
+                <phrase
+                  ph="【美：うつく】しい【景：け】【色：しき】"
+                  rom="utsukushii keshiki"
+                  tr_en="a beautiful scenery"
+                  tr_de="eine schöne Landschaft"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【何：なん】と【素：す】【晴：ば】らしい【景：け】【色：しき】だろう。"
+                  rom="Nanto subarashii keshiki darō."
+                  tr_en="What a marvellous landscape!"
+                  tr_de="Was für eine prächtige Landschaft!"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="jisho has nx for darō"
+                />
+                <sentence
+                  s="【景：け】【色：しき】のよい【部：へ】【屋：や】をお【願：ねが】いします。"
+                  rom="Keshiki no yoi heya o o-negai shimasu."
+                  tr_en="I'd like a room view a good view, please."
+                  tr_de="Ich hätte gerne ein Zimmer mit einer guten Aussicht, bitte."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【海：かい】【岸：がん】"
+              rom="kaigan"
+              tr_en="coast; beach"
+              tr_de="Küste; Strand"
+              lvl="n4"
+              category="beach"
+              id="kaigan-coast"
+            >
+                <!--
+                    difference between kaigan, engan, hama, umibe: https://hinative.com/questions/22657437
+                -->
+                <keep_apart_from id="engan-coast" />
+                <keep_apart_from id="hama-beach" />
+                <keep_apart_from id="hamabe-foreshore" />
+                <keep_apart_from id="umibe-beach" />
+                <keep_apart_from id="kishi-shore" />
+                <phrase
+                  ph="【広：ひろ】い【海：かい】【岸：がん】"
+                  rom="hiroi kaigan"
+                  tr_en="a wide coast"
+                  tr_de="eine weite Küste"
+                  lvl="n4"
+                  origin="ChatGPT"
+                  rem="verified with the web"
+                />
+                <sentence
+                  s="【車：くるま】で【海：かい】【岸：がん】まで【行：い】ってきた。"
+                  rom="Kuruma de kaigan made itte kita."
+                  tr_en="I drove to the coast (and back)."
+                  tr_de="Ich bin bis zur Küste gefahren (und zurück)."
+                  lvl="n4"
+                  origin="lib0"
+                  href="https://hinative.com/questions/22273856 (concerning 'and back')"
+                />
+            </word>
+            <word
+              w="【坂：さか】"
+              rom="saka"
+              tr_en="slope (of a hill)"
+              tr_de="Abhang; Gefälle"
+              lvl="n4"
+              category="scenery"
+              id="saka-slope"
+            >
+                <phrase
+                  ph="【急：きゅう】な【坂：さか】"
+                  rom="kyū na saka"
+                  tr_en="a steep slope"
+                  tr_de="ein steiler Abhang"
+                  lvl="n4"
+                  origin="ChatGPT"
+                  rem="verified with lib0"
+                />
+                <sentence
+                  s="ハルトさんはその【坂：さか】を【登：のぼ】っていた。"
+                  rom="Haruto-san wa sono saka o nobotte ita."
+                  tr_en="Haruto ascended the slope."
+                  tr_de="Haruto stieg den Hang hinauf."
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【車：くるま】が【坂：さか】を【下：くだ】って【行：い】った。"
+                  rom="Kuruma ga saka o kudatte itta."
+                  tr_en="The car went down the slope (of the hill)."
+                  tr_de="Das Auto fuhr den Abhang hinunter."
+                  lvl="n4"
+                  origin="self"
+                  href="https://hinative.com/questions/22231873"
+                />
+            </word>
+
+            <!-- health -->
+            <word
+              w="【熱：ねつ】"
+              rom="netsu"
+              tr_en="fever"
+              tr_de="Fieber"
+              lvl="n4"
+              category="health"
+              id="netsu-fever"
+            >
+                <!-- 高い熱 takai netsu is uncommon; 高熱 kōnetsu is the word, but it's nx -->
+                <phrase
+                  ph="【軽：かる】い【熱：ねつ】"
+                  rom="karui netsu"
+                  tr_en="a mild fever"
+                  tr_de="leichtes Fieber"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT; while karui netsu is common and correct, 微熱 binetsu may be more common, but it's nx"
+                />
+                <sentence
+                  s="【熱：ねつ】が【下：さ】がりましたか。"
+                  rom="Netsu ga sagarimashita ka?"
+                  tr_en="Has your fever gone down?"
+                  tr_de="Ist dein Fieber zurückgegangen?"
+                  lvl="n4"
+                  origin="500mon q71"
+                />
+                <sentence
+                  s="すみません。【熱：ねつ】があるので【今日：きょう】は【休：やす】みます。"
+                  rom="Sumimasen. Netsu ga aru no de kyō wa yasumimasu."
+                  tr_en="I'm sorry. I'm going to stay home today, because I have a fever."
+                  tr_de="Tut mir leid. Ich werde heute zu Hause bleiben, weil ich Fieber habe."
+                  lvl="n4"
+                  origin="500mon q282"
+                />
+            </word>
+            <word
+              w="【血：ち】"
+              rom="chi"
+              tr_en="blood"
+              tr_de="Blut"
+              lvl="n4"
+              category="health"
+              id="chi-blood"
+            >
+                <keep_apart_from id="ketsueki-blood" />
+                <phrase
+                  ph="【血：ち】の【色：いろ】"
+                  rom="chi no iro"
+                  tr_en="the colour of blood"
+                  tr_de="die Farbe von Blut"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【指：ゆび】から【血：ち】が【出：で】ています。"
+                  rom="Yubi kara chi ga dete imasu."
+                  tr_en="My finger is bleeding."
+                  tr_de="Mein Finger blutet."
+                  lvl="n4"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【血：ち】を【見：み】ると【具：ぐ】【合：あい】が【悪：わる】くなる。"
+                  rom="Chi o miru to guai ga waruku naru."
+                  tr_en="I feel sick when I see blood."
+                  tr_de="Mir wird schlecht, wenn ich Blut sehe."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【医：い】【学：がく】"
+              rom="igaku"
+              tr_en="medical science"
+              tr_de="Medizin (Fachrichtung)"
+              lvl="n4"
+              category="health, education"
+              id="igaku-medicalscience"
+            >
+                <phrase
+                  ph="【医：い】【学：がく】【研：けん】【究：きゅう】"
+                  rom="igaku kenkyū"
+                  tr_en="medical research"
+                  tr_de="medizinische Forschung"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【彼：かれ】は【医：い】【学：がく】の【学：がく】【生：せい】だ。"
+                  rom="Kare wa igaku no gakusei da."
+                  tr_en="He is a medical student."
+                  tr_de="Er ist ein Medizinstudent."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【入：にゅう】【院：いん】"
+              rom="nyūin"
+              tr_en="hospitalisation"
+              tr_de="Krankenhauseinweisung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n4"
+              category="health"
+              id="nyūin-hospitalisation"
+            >
+                <phrase
+                  ph="【入：にゅう】【院：いん】【中：ちゅう】"
+                  rom="nyūin-chū"
+                  tr_en="in hospital; while hospitalized"
+                  tr_de="im Spital; während des Spitalaufenthalts"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【母：はは】に【入：にゅう】【院：いん】されて【困：こま】った。"
+                  rom="Haha ni nyūin sarete komatta."
+                  tr_en="My mother was hospitalized, and I was worried."
+                  tr_de="Meine Mutter wurde hospitalisiert, und ich war besorgt."
+                  explanation_en="「される」is the passive form of「する」"
+                  explanation_de="「される」ist die passive Form von「する」"
+                  lvl="n4"
+                  origin="Oxford p.73"
+                  rem="Is passive form really n4?"
+                />
+                <sentence
+                  s="【石：いし】【川：かわ】さんは 【昨日：きのう】 【入：にゅう】【院：いん】した。"
+                  rom="Ishikawa-san wa kinō nyūin shita."
+                  tr_en="Mr Ishikawa was hospitalized yesterday."
+                  tr_de="Herr Ishikawa wurde gestern ins Spital eingewiesen."
+                  allowSpaces="true"
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【退：たい】【院：いん】"
+              rom="taiin"
+              tr_en="leaving hospital; discharge from hospital"
+              tr_de="Krankenhausaustritt"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n4"
+              category="health"
+              id="taiin-leavinghosp"
+            >
+                <phrase
+                  ph="【退：たい】【院：いん】【予：よ】【定：てい】"
+                  rom="taiin yotei"
+                  tr_en="expected discharge date (from hospital)"
+                  tr_de="geplanter Spitalaustritt (Datum)"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【山：やま】【下：した】さんは もうすぐ 【退：たい】【院：いん】するでしょう。"
+                  rom="Yamashita-san wa mō sugu taiin suru deshō."
+                  tr_en="Mr Yamashita will probably leave hospital soon."
+                  tr_de="Herr Yamashita wird wahrscheinlich bald aus dem Spital entlassen."
+                  allowSpaces="true"
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+            </word>
+
+            <!-- shopping -->
+            <word
+              w="【売：う】り【場：ば】"
+              rom="uriba"
+              tr_en="selling area; place where things are sold"
+              tr_de="Verkaufsstelle; Ort, wo Sachen verkauft werden"
+              lvl="n4"
+              category="shopping"
+              id="uriba-sellarea"
+            >
+                <phrase
+                  ph="【賑：にぎ】やかな【売：う】り【場：ば】"
+                  rom="nigiyaka na uriba"
+                  tr_en="a busy sales floor"
+                  tr_de="ein gut besuchtes Verkaufsareal"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【切：きっ】【符：ぷ】【売：う】り【場：ば】はどこですか。"
+                  rom="Kippu uriba wa doko desu ka?"
+                  tr_en="Where's the ticket counter?"
+                  tr_de="Wo ist der Fahrkartenschalter?"
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="おもちゃ【売：う】り【場：ば】は【５：ご】【階：かい】です。"
+                  rom="Omocha-uriba wa go-kai desu."
+                  tr_en="The toy department is on the fifth floor."
+                  tr_de="Die Spielzeug-Abteilung ist im fünften Stock."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="お【釣：つ】り"
+              rom="o-tsuri"
+              tr_en="change (for a purchase)"
+              tr_de="Rückgeld"
+              lvl="n4"
+              category="shopping, finances"
+              id="otsuri-change"
+            >
+                <phrase
+                  ph="お【釣：つ】りを【出：だ】す"
+                  rom="o-tsuri o dasu"
+                  tr_en="to give the change (for a purchase)"
+                  tr_de="Rückgeld geben"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="お【釣：つ】りが【違：ちが】いますよ。"
+                  rom="O-tsuri ga chigaimasu yo."
+                  tr_en="You gave me the wrong change."
+                  tr_de="Sie haben mir nicht das richtige Rückgeld gegeben."
+                  lvl="n4"
+                  origin="lib0"
+                  href="https://hinative.com/questions/22596650 (whether it's impolite)"
+                />
+            </word>
+            <word
+              w="【品：しな】【物：もの】"
+              rom="shinamono"
+              tr_en="article; items"
+              tr_de="Artikel"
+              lvl="n4"
+              category="shopping"
+              id="shinamono-article"
+            >
+                <keep_apart_from id="shōhin-commodity" />
+                <keep_apart_from id="seihin-product" />
+                <keep_apart_from id="shina-item" />
+                <keep_apart_from id="sakuhin-work" />
+                <phrase
+                  ph="【品：しな】【物：もの】を【返：かえ】す"
+                  rom="shinamono o kaesu"
+                  tr_en="to return the items"
+                  tr_de="die Artikel retournieren"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="あのスーパーは【近：ちか】いし、【安：やす】いし、【品：しな】【物：もの】がいい。"
+                  rom="Ano sūpā wa chikai shi, yasui shi, shinamono ga ii."
+                  tr_en="That supermarket is close, cheap and selling good items."
+                  tr_de="Der Supermarkt dort ist nahe, billig und verkauft gute Sachen."
+                  lvl="n4"
+                  origin="500mon q284"
+                />
+                <sentence
+                  s="この【品：しな】【物：もの】を【箱：はこ】に【入：い】れてもらえますか。"
+                  rom="Kono shinamono o hako ni irete moraemasu ka?"
+                  tr_en="Could you put these articles into a box?"
+                  tr_de="Könnten Sie diese Artikel in eine Schachtel tun?"
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+            </word>
+
+            <!-- fashion, beauty -->
+            <word
+              w="【下：した】【着：ぎ】"
+              rom="shitagi"
+              tr_en="underwear"
+              tr_de="Unterwäsche"
+              lvl="n4"
+              category="fashion"
+              id="shitagi-underwear"
+            >
+                <phrase
+                  ph="【汚：きたな】い【下：した】【着：ぎ】"
+                  rom="kitanai shitagi"
+                  tr_en="dirty underwear"
+                  tr_de="dreckige Unterwäsche"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT; ChatGPT thinks asking this may violate their terms of usage"
+                />
+                <sentence
+                  s="【下：した】【着：ぎ】のまま、【家：いえ】の【中：なか】を【歩：ある】き【回：まわ】る【人：ひと】もいる。"
+                  rom="Shitagi no mama, ie no naka o arukimawaru hito mo iru."
+                  tr_en="Some people walk around in their homes in their underwear."
+                  tr_de="Manche Leute gehen zu Hause in ihrer Unterwäsche herum."
+                  lvl="n4"
+                  origin="jpod101 audio"
+                  rem="jisho has nx for arukimawaru, but n5 for aruku, n4 for mawaru"
+                />
+            </word>
+            <word
+              w="【手：て】【袋：ぶくろ】"
+              rom="tebukuro"
+              tr_en="glove"
+              tr_de="Handschuh"
+              lvl="n4"
+              category="fashion, hands"
+              id="tebukuro-glove"
+            >
+                <phrase
+                  ph="【手：て】【袋：ぶくろ】をする"
+                  rom="tebukuro o suru"
+                  tr_en="to wear gloves"
+                  tr_de="Handschuhe tragen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                  rem="verified with lib0"
+                />
+                <sentence
+                  s="【素：す】【敵：てき】な【手：て】【袋：ぶくろ】をしていますね。"
+                  rom="Suteki na tebukuro o shite imasu ne."
+                  tr_en="Those are nice gloves you have on."
+                  tr_de="Das sind hübsche Handschuhe, die du an hast."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【手：て】【袋：ぶくろ】は【手：て】を【温：あたた】めてくれるものです。"
+                  rom="Tebukuro wa te o atatamete kureru mono desu."
+                  tr_en="Gloves are things that warm your hands."
+                  tr_de="Handschuhe sind ein Ding, das deine Hände wärmt."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【指：ゆび】【輪：わ】"
+              rom="yubiwa"
+              tr_en="finger ring"
+              tr_de="Fingerring"
+              lvl="n4"
+              category="fashion"
+              id="yubiwa-ring"
+            >
+                <phrase
+                  ph="【結：けっ】【婚：こん】【指：ゆび】【輪：わ】"
+                  rom="kekkon yubiwa"
+                  tr_en="wedding ring"
+                  tr_de="Ehering"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【指：ゆび】【輪：わ】をしている"
+                  rom="yubiwa o shite iru"
+                  tr_en="to wear a finger ring"
+                  tr_de="einen Fingerring tragen"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="【高：たか】【橋：はし】さんはいつも【指：ゆび】【輪：わ】をしています。"
+                  rom="Takahashi-san wa itsumo yubiwa o shite imasu."
+                  tr_en="Miss Takahashi always wears a finger ring."
+                  tr_de="Frau Takahashi trägt immer einen Fingerring."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【鏡：かがみ】"
+              rom="kagami"
+              tr_en="mirror; looking-glass"
+              tr_de="Spiegel"
+              lvl="n4"
+              category="fashion"
+              id="kagami-mirror"
+            >
+                <phrase
+                  ph="【鏡：かがみ】の【中：なか】"
+                  rom="kagami no naka"
+                  tr_en="in the mirror"
+                  tr_de="im Spiegel"
+                  lvl="n4"
+                />
+                <phrase
+                  ph="【曇：くも】った【鏡：かがみ】"
+                  rom="kumotta kagami"
+                  tr_en="fogged-over mirror"
+                  tr_de="beschlagener Spiegel"
+                  lvl="n4"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【鏡：かがみ】が【壊：こわ】れてしまいました。"
+                  rom="Kagami ga kowarete shimaimashita."
+                  tr_en="The mirror is broken (I'm afraid)."
+                  tr_de="Der Spiegel ist leider zerbrochen."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+
+            <!-- school, university -->
+            <word
+              w="【小：しょう】【学：がっ】【校：こう】"
+              rom="shōgakkō"
+              tr_en="primary school; elementary school"
+              tr_de="Primarschule; Grundschule"
+              lvl="n4"
+              category="education"
+              id="shōgakkō-primaryschool"
+            >
+                <phrase
+                  ph="まだ【小：しょう】【学：がっ】【校：こう】に【通：かよ】っている"
+                  rom="mada shōgakkō ni kayotte iru"
+                  tr_en="to still go to elementary school"
+                  tr_de="immer noch in die Grundschule gehen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【弟：おとうと】は【小：しょう】【学：がっ】【校：こう】へ【通：かよ】っています。"
+                  rom="Otōto wa shōgakkō e kayotte imasu."
+                  tr_en="My little brother goes to the elementary school."
+                  tr_de="Mein kleiner Bruder geht in die Grundschule."
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="カオルさんはもう【小：しょう】【学：がっ】【校：こう】に【通：かよ】っていません。"
+                  rom="Kaoru-san wa mō shōgakkō ni kayotte imasen."
+                  tr_en="Kaoru does not go to elementary school any more."
+                  tr_de="Kaoru geht nicht mehr in die Grundschule."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【中：ちゅう】【学：がっ】【校：こう】"
+              rom="chūgakkō"
+              tr_en="junior high school; middle school"
+              tr_de="Mittelstufe (Schule)"
+              lvl="n4"
+              category="education"
+              id="chūgakkō-middleschool"
+            >
+                <see id="chūgaku-middleschool" rem="closely related" />
+                <keep_apart_from id="chūgaku-middleschool" />
+                <phrase
+                  ph="【中：ちゅう】【学：がっ】【校：こう】の【時：とき】"
+                  rom="chūgakkō no toki"
+                  tr_en="when I was in middle school"
+                  tr_de="als ich in die Mittelstufe ging"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【中：ちゅう】【学：がっ】【校：こう】の【時：とき】、あまりいい【生：せい】【徒：と】じゃなかった。"
+                  rom="Chūgakkō no toki, amari ii seito janakatta."
+                  tr_en="I wasn't a very good student in middle school."
+                  tr_de="Ich war nicht so ein guter Schüler in der Mittelstufe."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="この【歌：うた】を【聞：き】くと【私：わたし】の【中：ちゅう】【学：がっ】【校：こう】【時：じ】【代：だい】を【思：おも】い【出：だ】します。"
+                  rom="Kono uta o kiku to watashi no chūgakkō-jidai o omoidashimasu."
+                  tr_en="This song reminds me of my junior high school days."
+                  tr_de="Dieses Lied erinnert mich an meine Mittelschulzeit."
+                  lvl="n4"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【高：こう】【校：こう】"
+              rom="kōkō"
+              tr_en="senior high school"
+              tr_de="Oberstufe; Sekundarschule"
+              hint_en="abbrev."
+              hint_de="Abkürz."
+              lvl="n4"
+              category="education"
+              id="kōkō-highschool"
+            >
+                <see id="kōtōgakkō-highschool" rem="closely related" />
+                <phrase
+                  ph="【高：こう】【校：こう】【生：せい】【活：かつ】"
+                  rom="kōkō seikatsu"
+                  tr_en="high school life"
+                  tr_de="das Leben in der Oberstufe"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】の【妹：いもうと】は【来：らい】【年：ねん】【高：こう】【校：こう】に【入：にゅう】【学：がく】します。"
+                  rom="Watashi no imōto wa rai-nen kōkō ni nyūgaku shimasu."
+                  tr_en="My younger sister will enter high school next year."
+                  tr_de="Meine jüngere Schwester wird nächstes Jahr in die Sekundarschule kommen."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【中：ちゅう】【学：がく】【生：せい】"
+              rom="chūgakusei"
+              tr_en="middle school student"
+              tr_de="Schüler der Mittelstufe"
+              lvl="n4"
+              category="education, people"
+              id="chūgakusei-midschoolst"
+              rem="jisho has nx"
+            >
+                <keep_apart_from id="seito-pupil" />
+                <keep_apart_from id="gakusei-student" />
+                <keep_apart_from id="shōgakusei-elemschoolst" />
+                <keep_apart_from id="kōkōsei-hischoolst" />
+                <keep_apart_from id="daigakusei-unistudent" />
+                <phrase
+                  ph="【中：ちゅう】【学：がく】【生：せい】の【時：とき】"
+                  rom="chūgakusei no toki"
+                  tr_en="when I was a middle school student"
+                  tr_de="als ich noch ein Schüler der Mittelstufe war"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="【中：ちゅう】【学：がく】【生：せい】が【小：しょう】【学：がく】【生：せい】をいじめるのはぜったいダメだよ。"
+                  rom="Chūgakusei ga shōgakusei o ijimeru no wa zettai dame da yo."
+                  tr_en="It's absolutely unacceptable for middle school students to bully elementary school students."
+                  tr_de="Es ist absolut inakzeptabel, dass Schüler der Mittelstufe Schüler der Unterstufe hänseln."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT; jisho has n3 for ぜったい"
+                />
+            </word>
+            <word
+              w="【試：し】【験：けん】"
+              rom="shiken"
+              tr_en="examination; test"
+              tr_de="Prüfung; Examen"
+              lvl="n4"
+              category="education, top-words"
+              id="shiken-exam"
+            >
+                <keep_apart_from id="tesuto-test" />
+                <phrase
+                  ph="【簡：かん】【単：たん】な【試：し】【験：けん】"
+                  rom="kantan na shiken"
+                  tr_en="an easy exam"
+                  tr_de="eine leichte Prüfung"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT; やさしい試験 is also possible"
+                />
+                <sentence
+                  s="【試：し】【験：けん】【中：ちゅう】は【話：はなし】をしてはいけません。"
+                  rom="Shiken-chū wa hanashi o shite wa ikemasen."
+                  tr_en="You must not talk during a test."
+                  tr_de="Während einer Prüfung darf man nicht sprechen."
+                  lvl="n4"
+                  origin="500mon q301 modified"
+                  href="https://hinative.com/en-US/questions/21842042"
+                />
+                <sentence
+                  s="【習：なら】った【後：あと】で【試：し】【験：けん】を【受：う】けました。"
+                  rom="Naratta ato de shiken o ukemashita."
+                  tr_en="I took a test after learning it."
+                  tr_de="Nachdem ich es gelernt hatte, legte ich die Prüfung ab."
+                  lvl="n4"
+                  origin="500mon q424"
+                />
+            </word>
+
+            <!-- unsorted -->
+            <word
+              w="【先：せん】【輩：ぱい】"
+              rom="senpai"
+              tr_en="classmate in a higher grade; senior at work"
+              tr_de="Mitschüler in höherer Klasse; Vorgesetzter an der Arbeit"
+              Langenscheidt="Mitschüler in höherer Klasse; Komilitone in höherem Semester"
+              lvl="n4"
+              category="people"
+              id="senpai-superior"
+              rem="appears in GENKI2 L22 vocab section"
+            >
+                <see id="kōhai-junior" rem="antonym" />
+                <keep_apart_from id="shachō-director" />
+                <keep_apart_from id="buchō-headofdep" />
+                <keep_apart_from id="kachō-sectionmgr" />
+                <phrase
+                  ph="【先：せん】【輩：ぱい】に【相：そう】【談：だん】する"
+                  rom="senpai ni sōdan suru"
+                  tr_en="to consult the mentor"
+                  tr_de="den Mentor um Rat schlagen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【先：せん】【輩：ぱい】に【手：て】【伝：つだ】ってもらいました。"
+                  rom="Senpai ni tetsudatte moraimashita."
+                  tr_en="I received help from a senior."
+                  tr_de="Ein Vorgesetzter hat mir geholfen."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【特：とっ】【急：きゅう】"
+              rom="tokkyū"
+              tr_en="limited express train"
+              tr_de="limitierter Expresszug"
+              hint_en="faster than an express"
+              hint_de="schneller als ein Express"
+              lvl="n4"
+              category="transportation"
+              id="tokkyū-express"
+            >
+                <keep_apart_from id="kyūkō-express" />
+                <phrase
+                  ph="【特：とっ】【急：きゅう】に【乗：の】る"
+                  rom="tokkyū ni noru"
+                  tr_en="to ride the limited express train"
+                  tr_de="den limitierten Expresszug nehmen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【急：きゅう】【行：こう】より【特：とっ】【急：きゅう】の【方：ほう】が【速：はや】いです。"
+                  rom="Kyūkō yori tokkyū no hō ga hayai desu."
+                  tr_en="The limited express is faster than the express train."
+                  tr_de="Der limitierte Expresszug ist schneller als der Express."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【夜：よ】【中：なか】"
+              rom="yonaka"
+              tr_en="middle of the night; dead of night"
+              tr_de="mitten in der Nacht"
+              lvl="n4"
+              category="time"
+              id="yonaka-middleofnight"
+              rem="appears in 500mon q157; jisho has n3"
+            >
+                <phrase
+                  ph="【夜：よ】【中：なか】に【働：はたら】く"
+                  rom="yonaka ni hataraku"
+                  tr_en="to work in the middle of the night"
+                  tr_de="mitten in der Nacht arbeiten"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【夜：よ】【中：なか】に【大：おお】きな【音：おと】で【起：お】きた。"
+                  rom="Yonaka ni ōki na oto de okita."
+                  tr_en="I woke up to a loud noise in the middle of the night."
+                  tr_de="Mitten in der Nacht bin ich wegen einem lauten Geräusch aufgewacht."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【思：おも】い"
+              rom="omoi"
+              tr_en="thought; imagination"
+              tr_de="Gedanke; Vorstellung"
+              lvl="n4"
+              category="thinking"
+              id="omoi-thought"
+              rem="jisho has nx"
+            >
+                <see id="omou-think" rem="verb" />
+                <keep_apart_from id="kangae-thought" />
+            </word>
+            <word
+              w="【夢：ゆめ】"
+              rom="yume"
+              tr_en="dream"
+              tr_de="Traum"
+              lvl="n4"
+              category="thinking"
+              id="yume-dream"
+            >
+                <phrase
+                  ph="【夢：ゆめ】を【見：み】る"
+                  rom="yume o miru"
+                  tr_en="to dream"
+                  tr_de="träumen"
+                  lvl="n4"
+                />
+                <!-- translation too long
+                  ph="【夢：ゆめ】のまた【夢：ゆめ】"
+                  rom="yume no mata yume"
+                  tr_en="a dream within a dream; sth. that is highly idealistic and perhaps unattainable"
+                  tr_de="ein Traum im Traum; etw., das hochgradig idealistisch und vielleicht unerreichbar ist"
+                  origin="ChatGPT"
+                -->
+                <sentence
+                  s="それは【夢：ゆめ】のように【美：うつく】しかった。"
+                  rom="Sore wa yume no yō ni utsukushikatta."
+                  tr_en="It was beautiful like a dream."
+                  tr_de="Es war schön wie ein Traum."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

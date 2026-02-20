@@ -1,0 +1,774 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 loanwords ②"
+      name_de="N3-Lehnwörter ②"
+      name_fr="Les mots d'emprunt N3 ②"
+      name_it="Parole di prestito N3 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="false"
+      defaultHint_en="loanword"
+      defaultHint_de="Lehnwort"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresIds="true"
+    >
+        <section>
+            <word
+              w="ビデオ"
+              rom="bideo"
+              tr_en="video (on tape)"
+              tr_de="Video (auf Band)"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="n3"
+              category="entertainment, old-fashioned"
+              id="bideo-video"
+              rem="outdated, should be n2"
+            >
+                <keep_apart_from id="dōga-video" />
+                <!-- this is kind of outdated...
+                  s="ビデオで【映：えい】【画：が】を【見：み】ました。"
+                  rom="Bideo de eiga o mimashita."
+                  tr_en="I watched the movie on video."
+                  tr_de="Ich habe den Film auf Video geschaut."
+                  lvl="n3"
+                  origin="lib0"
+                -->
+                <sentence
+                  s="【昨日：きのう】ビデオを【見：み】たり、テニスをしたりしました。"
+                  rom="Kinō bideo o mitari, tenisu o shitari shimashita."
+                  tr_en="Yesterday, I watched videos, played tennis, and so on."
+                  tr_de="Gestern habe ich Videos geschaut, Tennis gespielt und solche Sachen."
+                  lvl="n3"
+                  origin="Oxford p.65"
+                />
+            </word>
+            <word
+              w="カード"
+              rom="kādo"
+              tr_en="card"
+              tr_de="Karte"
+              lvl="n3"
+              id="kādo-card"
+            >
+                <sentence
+                  s="カードを【入：い】れてください。"
+                  rom="Kādo o irete kudasai."
+                  tr_en="Please insert your card."
+                  tr_de="Bitte schieben Sie die Karte ein."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="マイク"
+              rom="maiku"
+              tr_en="microphone"
+              tr_de="Mikrofon"
+              lvl="n3"
+              id="maiku-microphone"
+            >
+                <sentence
+                  s="マイクが【入：はい】らなかった。"
+                  rom="Maiku ga hairanakatta."
+                  tr_en="The microphone did not work."
+                  tr_de="Das Mikrophon funktionierte nicht."
+                  lvl="n3"
+                  origin="lib0"
+                  href="https://hinative.com/questions/22361892"
+                />
+            </word>
+            <word
+              w="メモ"
+              rom="memo"
+              tr_en="memorandum; note"
+              tr_de="Memorandum; Notiz"
+              lvl="n3"
+              id="memo-note"
+            >
+                <!-- メモを写す - めもをうつす - "To transcribe a memo" (ChatGPT) -->
+                <sentence
+                  s="メモを【取：と】りなさい。"
+                  rom="Memo o tori-nasai."
+                  tr_en="Please take notes."
+                  tr_de="Bitte machen Sie sich Notizen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="デート"
+              rom="dēto"
+              tr_en="date (with someone); dating"
+              tr_de="Dating; jem. daten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="relationships"
+              id="dēto-dating"
+            >
+                <sentence
+                  s="ゆうべ、カオルとデートした。"
+                  rom="Yūbe, Kaoru to dēto shita."
+                  tr_en="Last night I had a date with Kaoru."
+                  tr_de="Gestern Abend hatte ich ein Date mit Kaoru."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="昨夜 changed to ゆうべ"
+                  href="https://hinative.com/questions/22578379"
+                />
+            </word>
+            <word
+              w="タイプライター"
+              rom="taipuraitā"
+              tr_en="typewriter"
+              tr_de="Schreibmaschine"
+              lvl="n3"
+              category="technical, old-fashioned"
+              id="taipuraitā-typewriter"
+              rem="kind of outdated; should be n2"
+            >
+                <sentence
+                  s="【電：でん】【子：し】タイプライターはありますか。"
+                  rom="Denshi taipuraitā wa arimasu ka?"
+                  tr_en="Do you have an electronic typewriter?"
+                  tr_de="Haben Sie elektronische Schreibmaschinen?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="インク"
+              rom="inku"
+              tr_en="ink"
+              tr_de="Tinte; Tusche"
+              lvl="n3"
+              category="arts"
+              id="inku-ink"
+            >
+                <phrase
+                  ph="インクで【書：か】く"
+                  rom="inku de kaku"
+                  tr_en="to write with ink"
+                  tr_de="mit Tusche schreiben"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="アイロン"
+              rom="airon"
+              tr_en="electric iron"
+              tr_de="Bügeleisen; Glätteisen"
+              hint_en="for clothing or hair"
+              hint_de="für Kleid oder Haar"
+              lvl="n3"
+              category="fashion, cleaning"
+              id="airon-iron"
+              rem="appears in GENKI2 p.95 vocab section as airon o kakeru"
+            >
+                <phrase
+                  ph="アイロンをかける"
+                  rom="airon o kakeru"
+                  tr_en="to iron (clothes)"
+                  tr_de="(Kleider) bügeln"
+                  lvl="n3"
+                  origin="GENKI2 p.95"
+                />
+            </word>
+            <word
+              w="パイプ"
+              rom="paipu"
+              tr_en="pipe; tube"
+              tr_de="Rohr; Röhre"
+              lvl="n3"
+              id="paipu-pipe"
+            >
+                <!--
+                  s="パイプに【何：なに】か【詰：つ】まった。"
+                  rom="Paipu ni nanika tsumatta."
+                  tr_en="Something has stuck in the pipe."
+                  tr_de="Irgend etwas steckt in der Röhre fest."
+                  lvl="n2"
+                  origin="lib0"
+                  rem="詰まる・つまる is n2"
+                -->
+            </word>
+            <word
+              w="パイロット"
+              rom="pairotto"
+              tr_en="pilot"
+              tr_de="Pilot"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="n3"
+              category="occupations, travelling"
+              id="pairotto-pilot"
+            >
+                <keep_apart_from id="kichō-pilot" />
+                <keep_apart_from id="kyaputen-captain" />
+            </word>
+            <word
+              w="ハンサム"
+              rom="hansamu"
+              tr_en="handsome"
+              tr_de="gut aussehend"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="n3"
+              category="fashion"
+              id="hansamu-handsome"
+            >
+                <keep_apart_from id="rippa-splendid" />
+            </word>
+            <word
+              w="スタイル"
+              rom="sutairu"
+              tr_en="clothing style; figure"
+              tr_de="Kleidungsstil; Figur"
+              lvl="n3"
+              category="fashion"
+              id="sutairu-style"
+            />
+            <word
+              w="プラン"
+              rom="puran"
+              tr_en="plan; payment plan"
+              tr_de="Plan; Zahlungsmethode"
+              lvl="n3"
+              category="finances"
+              id="puran-plan"
+            />
+            <word
+              w="マスター"
+              rom="masutā"
+              tr_en="proprietor; manager; chief"
+              tr_de="Eigentümer; Manager; Chef"
+              lvl="n3"
+              id="masutā-manager"
+            />
+            <word
+              w="バッグ"
+              rom="baggu"
+              tr_en="bag"
+              tr_de="Tasche"
+              lvl="n3"
+              id="baggu-bag"
+            />
+            <word
+              w="ユーモア"
+              rom="yūmoa"
+              tr_en="humour"
+              tr_de="Humor"
+              lvl="n3"
+              id="yūmoa-humour"
+            />
+            <word
+              w="スイッチ"
+              rom="suicchi"
+              tr_en="switch"
+              tr_de="(elektr.) Schalter"
+              lvl="n3"
+              id="suicchi-switch"
+            />
+            <word
+              w="ノック"
+              rom="nokku"
+              tr_en="knocking; knock"
+              tr_de="Anklopfen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="nokku-knock"
+            />
+            <word
+              w="ヨット"
+              rom="yotto"
+              tr_en="yacht; sailing boat"
+              tr_de="Yacht; Segelboot"
+              lvl="n3"
+              id="yotto-yacht"
+            />
+            <word
+              w="メンバー"
+              rom="menbā"
+              tr_en="member; participant"
+              tr_de="Mitglied; Teilnehmer"
+              lvl="n3"
+              id="menbā-member"
+            />
+            <word
+              w="トップ"
+              rom="toppu"
+              tr_en="top; top sales; top rank"
+              tr_de="zuoberst; Spitzenumsatz; erster Rank"
+              lvl="n3"
+              id="toppu-top"
+            />
+            <word
+              w="キロ"
+              rom="kiro"
+              tr_en="kilo; kilogramme; kilometre"
+              tr_de="Kilo; Kilogramm; Kilometer"
+              lvl="n3"
+              id="kiro-kilo"
+            />
+            <word
+              w="プラス"
+              rom="purasu"
+              tr_en="plus; addition; plus sign"
+              tr_de="Plus; Addition; Plus-Zeichen"
+              lvl="n3"
+              category="maths"
+              id="purasu-plus"
+            />
+            <word
+              w="オーバー"
+              rom="ōbā"
+              tr_en="overcoat; over; going beyond"
+              tr_de="Mantel; über; darüber hinaus gehen"
+              lvl="n3"
+              id="ōbā-over"
+            />
+            <word
+              w="サービス"
+              rom="sābisu"
+              tr_en="service (support); free gift"
+              tr_de="Service; Support; Gratisartikel"
+              lvl="n3"
+              id="sābisu-service"
+            />
+            <word
+              w="ブレーキ"
+              rom="burēki"
+              tr_en="brake"
+              tr_de="Bremse"
+              hint_en="of a bike, etc."
+              hint_de="von einem Fahrrad, etc."
+              lvl="n3"
+              id="burēki-brake"
+            />
+            <word
+              w="デモ"
+              rom="demo"
+              tr_en="demonstration; protest; presentation"
+              tr_de="Demonstration; Protest; Präsentation"
+              lvl="n3"
+              id="demo-protest"
+            />
+            <word
+              w="ダイヤ"
+              rom="daiya"
+              tr_en="diamond; diagram; railway schedule"
+              tr_de="Diamant; Diagramm; Zugfahrplan"
+              lvl="n3"
+              id="daiya-diamond"
+            />
+            <word
+              w="ホーム"
+              rom="hōmu"
+              tr_en="platform (of a train station); home"
+              tr_de="Bahnsteig; Zuhause"
+              lvl="n3"
+              category="transportation, home"
+              id="hōmu-home"
+            />
+            <word
+              w="スター"
+              rom="sutā"
+              tr_en="star (celebrity); star symbol (asterisk)"
+              tr_de="Star (Berühmtheit); Stern (Schriftzeichen)"
+              lvl="n3"
+              id="sutā-star"
+            />
+            <word
+              w="コード"
+              rom="kōdo"
+              tr_en="code (of a computer program); cord; chord"
+              tr_de="Code (eines Computerprogramms); Schnur; Akkord"
+              lvl="n3"
+              id="kōdo-code"
+            />
+            <word
+              w="ケース"
+              rom="kēsu"
+              tr_en="case"
+              tr_de="Fall; Koffer"
+              hint_en="e.g. suitcase, legal case, etc."
+              hint_de="von engl. suitcase, legal case, etc."
+              lvl="n3"
+              id="kēsu-case"
+            />
+            <word
+              w="パス"
+              rom="pasu"
+              tr_en="passing (a test); pass (of a ball); skipping one's turn"
+              tr_de="erfolgreiche Prüfung; (Ball) zuspielen; (Runde) aussetzen"
+              lvl="n3"
+              id="pasu-pass"
+            />
+
+            <!-- HIDDEN -->
+            <word
+              w="ボーイ"
+              rom="bōi"
+              tr_en="bellboy; porter; waiter"
+              tr_de="Hoteljunge; Portier"
+              lvl="n3"
+              category="occupations"
+              id="bōi-porter"
+              HIDDEN="true"
+            >
+                <sentence
+                  s="【私：わたし】は【鞄：かばん】をボーイに【運：はこ】んでもらった。"
+                  rom="Watashi wa kaban o bōi ni hakonde moratta."
+                  tr_en="I had the porter carry my bags."
+                  tr_de="Ich liess den Portier meine Taschen tragen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ゴール"
+              rom="gōru"
+              tr_en="goal; basket; finishing line"
+              tr_de="Tor; Korb; Ziellinie"
+              lvl="n3"
+              category="sports"
+              id="gōru-goal"
+              HIDDEN="true"
+            >
+                <sentence
+                  s="【最：さい】【後：ご】にゴールに【入：はい】ったのは【誰：だれ】ですか。"
+                  rom="Saigo ni gōru ni haitta no wa dare desu ka?"
+                  tr_en="Who was the last to reach the finishing line?"
+                  tr_de="Wer hat die Ziellinie als letztes erreicht?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ボール"
+              rom="bōru"
+              tr_en="ball"
+              tr_de="Ball"
+              lvl="n3"
+              category="sports"
+              id="bōru-ball"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="tama-ball" />
+                <keep_apart_from id="mari-ball" />
+            </word>
+            <word
+              w="マーケット"
+              rom="māketto"
+              tr_en="market"
+              tr_de="Markt"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="n3"
+              category="shopping"
+              id="māketto-market"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="sūpāmāketto-supermarket" />
+                <keep_apart_from id="ichiba-market" />
+                <keep_apart_from id="shijō-market" />
+                <keep_apart_from id="ichi-fair" />
+            </word>
+            <word
+              w="グループ"
+              rom="gurūpu"
+              tr_en="group"
+              tr_de="Gruppe"
+              hint_en="of people"
+              hint_de="von Leuten"
+              lvl="n3"
+              category="people"
+              id="gurūpu-group"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="gun-throng" />
+                <keep_apart_from id="ōzei-crowd" />
+                <keep_apart_from id="gunshū-crowd" />
+            </word>
+            <word
+              w="キャプテン"
+              rom="kyaputen"
+              tr_en="captain"
+              tr_de="Kapitän"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="n3"
+              category="occupations, travelling"
+              id="kyaputen-captain"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="pairotto-pilot" />
+                <keep_apart_from id="kichō-pilot" />
+                <keep_apart_from id="senchō-shipscaptain" />
+            </word>
+            <word
+              w="カー"
+              rom="kā"
+              tr_en="car"
+              tr_de="Auto"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="n3"
+              category="transportation"
+              id="kā-car"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="kuruma-car" />
+                <keep_apart_from id="jidōsha-auto" />
+            </word>
+            <word
+              w="クリーム"
+              rom="kurīmu"
+              tr_en="cream"
+              tr_de="Crème"
+              lvl="n3"
+              id="kuriimu-cream"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="aisukuriimu-icecream" />
+            </word>
+            <word
+              w="ミルク"
+              rom="miruku"
+              tr_en="milk"
+              tr_de="Milch"
+              hint_en="loanword"
+              hint_de="Lehnwort"
+              lvl="n3"
+              category="cooking, food"
+              id="miruku-milk"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="gyūnyū-milk" />
+            </word>
+            <word
+              w="セット"
+              rom="setto"
+              tr_en="set meal; combo meal"
+              tr_de="Kombi-Mahlzeit"
+              hint_en="esp. fast food menus"
+              hint_de="insbes. Fast-Food-Menüs"
+              lvl="n3"
+              category="gastronomy"
+              id="setto-setmeal"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="teishoku-setmeal" />
+            </word>
+            <word
+              w="ヨーロッパ"
+              rom="Yōroppa"
+              tr_en="Europe"
+              tr_de="Europa"
+              lvl="n3"
+              category="geography"
+              id="yōroppa-europe"
+              HIDDEN="true"
+              rem="appears in GENKI2 L22 vocab section"
+            />
+            <word
+              w="ピクニック"
+              rom="pikunikku"
+              tr_en="picnic"
+              tr_de="Picknick"
+              lvl="n3"
+              id="pikunikku-picnic"
+              HIDDEN="true"
+            />
+            <word
+              w="チーズ"
+              rom="chīzu"
+              tr_en="cheese"
+              tr_de="Käse"
+              lvl="n3"
+              category="food, cooking"
+              id="chiizu-cheese"
+              HIDDEN="true"
+            />
+            <word
+              w="スケート"
+              rom="sukēto"
+              tr_en="ice skating; skates"
+              tr_de="Schlittschuhlaufen; Schlittschuhe"
+              lvl="n3"
+              category="sports"
+              id="sukēto-skates"
+              HIDDEN="true"
+            />
+            <word
+              w="ママ"
+              rom="mama"
+              tr_en="mom; mother"
+              tr_de="Mutti; Mutter"
+              lvl="n3"
+              id="mama-mom"
+              HIDDEN="true"
+            />
+            <word
+              w="グランド"
+              rom="gurando"
+              tr_en="large; grand"
+              tr_de="gross; grossartig"
+              lvl="n3"
+              id="gurando-grand"
+              HIDDEN="true"
+            />
+            <word
+              w="プロ"
+              rom="puro"
+              tr_en="professional"
+              tr_de="professionell; Profi"
+              lvl="n3"
+              category="business, work"
+              id="puro-professional"
+              HIDDEN="true"
+            />
+            <word
+              w="ピン"
+              rom="pin"
+              tr_en="pin"
+              tr_de="Pin"
+              hint_en="e.g. hairpin"
+              hint_de="z.B. ein Haarpin"
+              lvl="n3"
+              id="pin-pin"
+              HIDDEN="true"
+              rem="rom same as tr_en"
+            />
+            <word
+              w="センター"
+              rom="sentā"
+              tr_en="centre"
+              tr_de="Center"
+              hint_en="e.g. business centre, car centre"
+              hint_de="Geschäftszentrum"
+              lvl="n3"
+              id="sentā-centre"
+              HIDDEN="true"
+            />
+            <word
+              w="ロケット"
+              rom="roketto"
+              tr_en="rocket"
+              tr_de="Rakete"
+              lvl="n3"
+              category="astronomy"
+              id="roketto-rocket"
+              HIDDEN="true"
+            />
+            <word
+              w="エネルギー"
+              rom="enerugī"
+              tr_en="energy"
+              tr_de="Energie"
+              lvl="n3"
+              category="physics"
+              id="enerugī-energy"
+              HIDDEN="true"
+            />
+            <word
+              w="ベルト"
+              rom="beruto"
+              tr_en="belt"
+              tr_de="Gürtel"
+              lvl="n3"
+              category="fashion"
+              id="beruto-belt"
+              HIDDEN="true"
+            />
+            <word
+              w="クラシック"
+              rom="kurashikku"
+              tr_en="classical (music)"
+              tr_de="Klassik; klassische Musik"
+              lvl="n3"
+              category="entertainment"
+              id="kurashikku-classical"
+              HIDDEN="true"
+            />
+            <word
+              w="アウト"
+              rom="auto"
+              tr_en="out"
+              tr_de="Out"
+              hint_en="of a ball, in tennis, etc."
+              hint_de="eines Balles, im Tennis, usw."
+              lvl="n3"
+              category="sports"
+              id="auto-out"
+              HIDDEN="true"
+            />
+            <word
+              w="スキー"
+              rom="sukī"
+              tr_en="skiing"
+              tr_de="Skifahren"
+              lvl="n3"
+              category="sports"
+              id="sukī-skiing"
+              HIDDEN="true"
+            />
+            <word
+              w="ラケット"
+              rom="raketto"
+              tr_en="racket (tennis); paddle (table-tennis)"
+              tr_de="Schläger"
+              lvl="n3"
+              category="sports"
+              id="raketto-racket"
+              HIDDEN="true"
+            />
+            <word
+              w="ソファ"
+              rom="sofa"
+              tr_en="sofa; couch"
+              tr_de="Sofa; Couch"
+              lvl="n3"
+              category="home"
+              id="sofa-couch"
+              HIDDEN="true"
+            />
+            <word
+              w="ジュース"
+              rom="jūsu"
+              tr_en="juice"
+              tr_de="Saft"
+              lvl="n3"
+              category="cooking, gastronomy"
+              id="jūsu-juice"
+            />
+            <word
+              w="バン"
+              rom="ban"
+              tr_en="van (vehicle)"
+              tr_de="Lieferwagen; Lastwagen"
+              lvl="n3"
+              category="transportation"
+              id="ban-van"
+              HIDDEN="true"
+            />
+            <word
+              w="ウイスキー"
+              rom="uisukī"
+              tr_en="whiskey"
+              tr_de="Whiskey"
+              lvl="n3"
+              category="beverage"
+              id="uisukii-whiskey"
+              HIDDEN="true"
+            />
+        </section>
+    </unit>
+</vocabulary>

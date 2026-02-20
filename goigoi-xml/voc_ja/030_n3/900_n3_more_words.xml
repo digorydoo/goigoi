@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="More N3 words"
+      name_de="Weitere N3-Wörter"
+      name_fr="Plus de mots N3"
+      name_it="Più parole N3"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- noun -->
+            <word
+              w="【背：せい】"
+              rom="sei"
+              tr_en="height; stature"
+              tr_de="Körpergrösse; Statur"
+              lvl="n3"
+              id="sei-stature"
+              HIDDEN="true"
+              rem="not a good word; is this a suffix? is this really n3?"
+            />
+
+            <!-- adverbial noun -->
+            <word
+              w="【以：い】【前：ぜん】"
+              rom="izen"
+              tr_en="before; in the past; prior to"
+              tr_de="früher; vorher"
+              studyInContext="required"
+              lvl="n3"
+              id="izen-ago"
+            >
+                <keep_apart_from id="irai-since" />
+                <phrase
+                  ph="【以：い】【前：ぜん】と【比：くら】べて"
+                  rom="izen to kurabete"
+                  tr_en="compared with how it was before"
+                  tr_de="verglichen mit vorher"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【出：しゅっ】【発：ぱつ】【以：い】【前：ぜん】に"
+                  rom="shuppatsu izen ni"
+                  tr_en="before departure"
+                  tr_de="vor der Abfahrt"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【彼：かれ】は【以：い】【前：ぜん】ほど【太：ふと】ってない。"
+                  rom="Kare wa izen hodo futotte nai."
+                  tr_en="He is not as fat as he was."
+                  tr_de="Er ist nicht mehr so fett wie früher."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【以：い】【前：ぜん】と【同：おな】じ【間：ま】【違：ちが】いをしちゃった。"
+                  rom="Izen to onaji machigai o shichatta."
+                  tr_en="I made the same mistake as before."
+                  tr_de="Ich habe den gleiche Fehler wie früher gemacht."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【以：い】【前：ぜん】は【毎：まい】【朝：あさ】 【散：さん】【歩：ぽ】していました。"
+                  rom="Izen wa mai-asa sanpo shite imashita."
+                  tr_en="I used to take a walk every morning."
+                  tr_de="Früher habe ich jeden Morgen einen Spaziergang gemacht."
+                  allowSpaces="true"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【一：ひと】【人：り】【一：ひと】【人：り】"
+              rom="hitori-hitori"
+              tr_en="each (person); individually; one by one; one at a time; in turn"
+              hint_en="adverbial noun"
+              lvl="n3"
+              HIDDEN="true"
+              id="hitorihitori-each"
+            />
+            <word
+              w="【当：とう】【時：じ】"
+              rom="tōji"
+              tr_en="at that time; in those days"
+              hint_en="adverbial noun; temporal noun"
+              lvl="n3"
+              id="tōji-atthattime"
+              HIDDEN="true"
+            />
+            <word
+              w="【全：ぜん】【体：たい】"
+              rom="zentai"
+              tr_en="whole; entirety; whatever (is the matter)"
+              hint_en="adverbial noun; temporal noun"
+              lvl="n3"
+              id="zentai-whole"
+              HIDDEN="true"
+            />
+            <word
+              w="【今：こん】【後：ご】"
+              rom="kongo"
+              tr_en="from now on; hereafter"
+              hint_en="adverbial noun; temporal noun"
+              lvl="n3"
+              id="kongo-hereafter"
+              HIDDEN="true"
+            />
+            <word
+              w="【瞬：しゅん】【間：かん】"
+              rom="shunkan"
+              tr_en="moment; second; instant; jiffy"
+              hint_en="adverbial noun; temporal noun"
+              lvl="n3"
+              id="shunkan-moment"
+              HIDDEN="true"
+            />
+            <word
+              w="【事：じ】【実：じつ】"
+              rom="jijitsu"
+              tr_en="fact; truth; reality"
+              hint_en="adverbial noun"
+              lvl="n3"
+              id="jijitsu-fact"
+              HIDDEN="true"
+            />
+
+            <!-- not clearly a noun -->
+            <word
+              w="【以：い】【来：らい】"
+              rom="irai"
+              tr_en="since; henceforth"
+              tr_de="seit; künftig"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              id="irai-since"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="izen-ago" />
+            </word>
+            <word
+              w="【一：いち】【時：じ】"
+              rom="ichi-ji"
+              tr_en="at one time; formerly; one o'clock"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              id="ichiji-atonetime"
+              HIDDEN="true"
+              rem="why is this n3? formerly?? needs example"
+            />
+            <word
+              w="【海：かい】【外：がい】"
+              rom="kaigai"
+              tr_en="foreign; abroad; overseas"
+              tr_de="ausländisch; aus dem Ausland; überseeisch"
+              lvl="n3"
+              id="kaigai-foreign"
+            >
+                <phrase
+                  ph="【海：かい】【外：がい】【旅：りょ】【行：こう】"
+                  rom="kaigai ryokō"
+                  tr_en="overseas travel"
+                  tr_de="Übersee-Reise"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【空：くう】【港：こう】で【海：かい】【外：がい】からの【観：かん】【光：こう】【客：きゃく】を【出：で】【迎：むか】える。"
+                  rom="Kūkō de kaigai kara no kankō-kyaku o demukaeru."
+                  tr_en="(I'll) meet the overseas tourists at the airport."
+                  tr_de="(Ich werde) die Überseetouristen am Flughafen treffen."
+                  lvl="n3"
+                  rem="wiktionary"
+                />
+            </word>
+            <word
+              w="【最：さい】【高：こう】"
+              rom="saikō"
+              tr_en="highest; supreme; best"
+              tr_de="höchstes; maximales; bestes"
+              lvl="n3"
+              id="saikō-best"
+            >
+                <sentence
+                  s="【寒：さむ】い【日：ひ】には、【温：あたた】かいお【風：ふ】【呂：ろ】が【最：さい】【高：こう】です。"
+                  rom="Samui hi ni wa, atatakai o-furo ga saikō desu."
+                  tr_en="On cold days, a warm bath is the best."
+                  tr_de="An einem kalten Tag ist ein warmes Bad das beste."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【生：なま】"
+              rom="nama"
+              tr_en="raw; fresh; uncooked"
+              tr_de="roh; frisch; ungekockt"
+              lvl="n3"
+              category="gastronomy, cooking"
+              id="nama-raw"
+            />
+            <word
+              w="【都：と】【市：し】"
+              rom="toshi"
+              tr_en="city; municipal; urban"
+              tr_de="Stadt; städtisch; kommunal"
+              lvl="n3"
+              category="city"
+              id="toshi-urban"
+            />
+            <word
+              w="【様：さま】"
+              rom="sama"
+              tr_en="Mr ~; Mrs ~; Ms ~"
+              tr_de="Herr ~; Frau ~"
+              hint_en="suffix; polite"
+              hint_de="Suffix; höflich"
+              studyInContext="preferred"
+              lvl="n3"
+              category="people, top-words"
+              id="sama-mr"
+              rem="jisho has n1 for the word, but n3 for the kanji; appears in GENKI2 p.313"
+            >
+                <keep_apart_from id="kamisama-god" />
+                <phrase
+                  ph="お【嬢：じょう】【様：さま】"
+                  rom="o-jō-sama"
+                  tr_en="young lady; someone else's daughter"
+                  tr_de="junge Dame; Tochter von jem. anderem"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx; jisho has 'young lady of pampered upbringing', but ChatGPT disagrees"
+                />
+                <sentence
+                  s="【神：かみ】【様：さま】を【信：しん】じますか。"
+                  rom="Kami-sama o shinjimasu ka?"
+                  tr_en="Do you believe in God?"
+                  tr_de="Glauben Sie an Gott?"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="お【客：きゃく】【様：さま】がお【着：つ】きになりました。"
+                  rom="O-kyaku-sama ga o-tsuki ni narimashita."
+                  tr_en="The guest has arrived."
+                  tr_de="Der Gast ist angekommen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+
+            <!-- suffix, prefix -->
+            <word
+              w="【的：てき】"
+              rom="teki"
+              tr_en="suffix used to form adjectives from nouns"
+              tr_de="Suffix, um Adjektive aus Nomen zu bilden"
+              studyInContext="required"
+              lvl="n3"
+              id="teki-suffix"
+              rem="appears quite often; jisho has n1"
+            >
+                <phrase
+                  ph="【世：せ】【界：かい】【的：てき】"
+                  rom="sekai-teki"
+                  tr_en="world-wide; global"
+                  tr_de="weltweit; global"
+                  lvl="n3"
+                  rem="sekai is n4"
+                />
+                <phrase
+                  ph="【魅：み】【力：りょく】【的：てき】"
+                  rom="miryoku-teki"
+                  tr_en="charming; attractive; fascinating"
+                  tr_de="charmant; attraktiv; faszinierend"
+                  lvl="n3"
+                  rem="miryoku is n3"
+                />
+                <sentence
+                  s="【私：わたし】【的：てき】には【問：もん】【題：だい】ないよ。"
+                  rom="Watashi-teki ni wa mondai nai yo."
+                  tr_en="It's not a problem for me personally."
+                  tr_de="Das ist kein Problem für mich persönlich."
+                  explanation_en="私的に emphasises that it’s just your take."
+                  explanation_de="私的に betont, dass es nur die eigene Meinung ist."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【世：せ】【界：かい】【的：てき】に【日：に】【本：ほん】【語：ご】が【話：はな】せる【人：ひと】が【増：ふ】えているようだ。"
+                  rom="Sekai-teki ni Nihon-go ga hanaseru hito ga fuete iru yō da."
+                  tr_en="It seems that the number of people worldwide who can speak Japanese is increasing."
+                  tr_de="Es scheint, dass weltweit die Anzahl Leute, die Japanisch können, zunimmt."
+                  lvl="n3"
+                  origin="Oxford p.128"
+                />
+            </word>
+            <word
+              w="【暮：く】らし"
+              rom="kurashi"
+              tr_en="living; livelihood; circumstances"
+              tr_de="Lebensbedingungen; Umstände"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              lvl="n3"
+              id="kurashi-livelihood"
+              studyInContext="preferred"
+            >
+                <see id="kurasu-live" rem="verb" />
+                <phrase
+                  ph="【一：ひと】【人：り】【暮：ぐ】らし"
+                  rom="hitori-gurashi"
+                  tr_en="living alone"
+                  tr_de="alleine leben; alleine wohnen"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="GENKI2 p.230"
+                />
+                <sentence
+                  s="【自：じ】【由：ゆう】な【暮：く】らしを【楽：たの】しんでいます。"
+                  rom="Jiyū na kurashi o tanoshinde imasu."
+                  tr_en="I'm enjoying a free lifestyle."
+                  tr_de="Ich geniesse das Leben in Freiheit."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【一：ひと】【人：り】【暮：ぐ】らしを【始：はじ】めてから、【料：りょう】【理：り】をすることが【増：ふ】えました。"
+                  rom="Hitori-gurashi o hajimete kara, ryōri o suru koto ga fuemashita."
+                  tr_en="Since I started living alone, I’ve been cooking more."
+                  tr_de="Seit ich alleine wohne, koche ich öfter."
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【法：ほう】"
+              rom="hō"
+              tr_en="law; principle; method"
+              tr_de="Gesetz; Prinzip; Methode"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              lvl="n3"
+              id="hō-law"
+              HIDDEN="true"
+              rem="not a good word"
+            >
+                <keep_apart_from id="hōritsu-law" />
+                <keep_apart_from id="hōgaku-law" />
+            </word>
+            <word
+              w="【学：がく】"
+              rom="gaku"
+              tr_en="learning; education"
+              tr_de="Lernen; Bildung"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              lvl="n3"
+              category="education"
+              id="gaku-learning"
+              HIDDEN="true"
+              rem="not a good word without context"
+            />
+            <word
+              w="【無：な】し"
+              rom="nashi"
+              tr_en="without; unacceptable"
+              tr_de="ohne; nicht akzeptabel"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              usuallyInKana="true"
+              lvl="n3"
+              id="nashi-unacceptable"
+              HIDDEN="true"
+            >
+                <sentence
+                  s="【私：わたし】はコンピューターなしでは【仕：し】【事：ごと】ができない。"
+                  rom="Watashi wa konpyūtā nashi de wa shigoto ga dekinai."
+                  tr_en="I can't do my job without a computer."
+                  tr_de="Ich kann meine Arbeit nicht ohne Computer erledigen."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="rated n3 because of nashi de; jisho has nx for nashi de"
+                />
+            </word>
+            <word
+              w="【中：ちゅう】"
+              rom="chū"
+              tr_en="medium; average; middle; China"
+              hint_en="noun; prefix; suffix; noun; suffix"
+              lvl="n3"
+              id="chū-middle"
+              HIDDEN="true"
+            >
+                <phrase
+                  ph="【授：じゅ】【業：ぎょう】【中：ちゅう】に"
+                  rom="jugyōchū ni"
+                  tr_en="while in class; during class"
+                  tr_de="während der Lektion; im Unterricht"
+                  lvl="n3"
+                  origin="GENKI2 p.95"
+                  rem="appears in vocab section; jisho has nx"
+                />
+            </word>
+            <word
+              w="【面：めん】"
+              rom="men"
+              tr_en="face guard; mask; aspect"
+              tr_de="Gesichtsschutz; Maske; Aspekt"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              lvl="n3"
+              id="men-mask"
+              HIDDEN="true"
+            />
+            <word
+              w="【党：とう】"
+              rom="tō"
+              tr_en="political party; fan (enthusiast)"
+              tr_de="politische Partei; Fan (Enthusiast)"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              lvl="n3"
+              category="politics"
+              id="tō-politicalparty"
+              HIDDEN="true"
+            />
+            <word
+              w="【元：もと】"
+              rom="moto"
+              tr_en="former; ex-; past; one-time; earlier times; the past; previous state; formerly; previously; originally; before"
+              hint_en="noun; prefix; adverb"
+              lvl="n3"
+              id="moto-former"
+              HIDDEN="true"
+            />
+            <word
+              w="【分：ぶん】"
+              rom="bun"
+              tr_en="part; portion; share / amount; worth (as in 'two days' worth'); enough (for) / one's means; one's place; one's lot; one's social position / one's duty; one's part / condition; state (of affairs); extent; rate (as in 'at this rate') / in proportion to; just as much as; to the same degree / content (e.g. alcohol); percentage / equivalent to (e.g. an old brother)"
+              hint_en="noun; noun, used as a suffix / noun, used as a suffix / noun; adverb (fukushi) / noun, used as a suffix"
+              lvl="n3"
+              id="bun-part"
+              HIDDEN="true"
+            />
+
+            <!-- adverbial expressions -->
+            <word
+              w="【今：いま】にも"
+              rom="ima ni mo"
+              tr_en="at any moment now; on the verge of"
+              tr_de="jetzt gleich; bald; kurz davor"
+              lvl="n3"
+              id="imanimo-verge"
+            >
+                <keep_apart_from id="imani-beforelong" />
+            </word>
+            <word
+              w="【今：いま】に"
+              rom="ima ni"
+              tr_en="before long"
+              tr_de="nächstens; demnächst"
+              lvl="n3"
+              id="imani-beforelong"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="imanimo-verge" />
+            </word>
+            <word
+              w="【大：おお】いに"
+              rom="ōi ni"
+              tr_en="very much; greatly"
+              tr_de="sehr; stark"
+              lvl="n3"
+              id="ōini-verymuch"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="daibu-greatly" />
+                <keep_apart_from id="taishita-bigdeal" />
+                <keep_apart_from id="nakanaka-fairly" />
+                <keep_apart_from id="kanari-fairly" />
+                <keep_apart_from id="zuibun-very" />
+            </word>
+            <word
+              w="【兎：と】に【角：かく】"
+              rom="to ni kaku"
+              tr_en="anyway; somehow or other; in any case"
+              tr_de="sowieso; irgendwie; wenigstens"
+              lvl="n3"
+              id="tonikaku-anyway"
+              rem="appears in GENKI2 L21 vocab section"
+              usuallyInKana="true"
+            />
+            <word
+              w="【言：い】わば"
+              rom="iwaba"
+              tr_en="so to speak"
+              tr_de="sozusagen"
+              lvl="n3"
+              id="iwaba-sotospeak"
+              rem="could be a phrase of iu"
+            />
+            <word
+              w="もっとも"
+              rom="motto mo"
+              tr_en="most; extremely"
+              tr_de="am meisten; extrem"
+              lvl="n3"
+              id="mottomo-most"
+            />
+            <word
+              w="できるだけ"
+              rom="dekiru dake"
+              tr_en="as much as possible"
+              tr_de="so viel wie möglich"
+              lvl="n3"
+              id="dekirudake-asmuchaspossible"
+            />
+            <word
+              w="【主：おも】に"
+              rom="omo ni"
+              tr_en="mainly; primarily"
+              tr_de="hauptsächlich; in erster Linie"
+              lvl="n3"
+              id="omoni-mainly"
+            />
+
+            <!-- pre-noun adjectival -->
+            <word
+              w="【大：たい】した"
+              rom="taishita"
+              tr_en="considerable; significant; a big deal"
+              tr_de="beträchtlich; signifikant; etwas Ernstes"
+              lvl="n3"
+              id="taishita-bigdeal"
+            >
+                <keep_apart_from id="daibu-greatly" />
+                <keep_apart_from id="ōini-verymuch" />
+                <keep_apart_from id="nakanaka-fairly" />
+                <keep_apart_from id="kanari-fairly" />
+                <keep_apart_from id="zuibun-very" />
+                <sentence
+                  s="【大：たい】した【病：びょう】【気：き】ではありません。"
+                  rom="Taishita byōki de wa arimasen."
+                  tr_en="The illness is nothing serious."
+                  tr_de="Die Krankheit ist nichts Ernstes."
+                  lvl="n3"
+                  origin="Langenscheidt p.207"
+                />
+            </word>
+            <word
+              w="いわゆる"
+              rom="iwayuru"
+              tr_en="as it is called; the so-called"
+              tr_de="wie man es nennt; sogenannt"
+              lvl="n3"
+              id="iwayuru-socalled"
+            />
+            <word
+              w="あらゆる"
+              rom="arayuru"
+              tr_en="all; every"
+              lvl="n3"
+              id="arayuru-every"
+              HIDDEN="true"
+              rem="needs an example"
+            />
+
+            <!-- suru verbs -->
+            <word
+              w="【影：えい】【響：きょう】する"
+              rom="eikyō suru"
+              tr_en="to influence; to have an effect on"
+              lvl="n3"
+              id="eikyōsuru-influence"
+              HIDDEN="true"
+              rem="suru verb kept in only to silence find-missing"
+            />
+            <word
+              w="【適：てき】する"
+              rom="teki suru"
+              tr_en="to fit; to suit"
+              hint_en="v.i."
+              lvl="n3"
+              id="tekisuru-fit"
+              HIDDEN="true"
+              rem="suru verb kept in only to silence find-missing"
+            />
+            <word
+              w="【恋：こい】する"
+              rom="koi suru"
+              tr_en="to fall in love (with)"
+              lvl="n3"
+              id="koisuru-fallinlove"
+              HIDDEN="true"
+              rem="is now a phrase of koi-love; jisho has n1"
+            />
+
+            <!-- pronoun -->
+            <!-- not a good word, because goigoi sometimes asks for the kanji, which is ambiguous
+              w="【私：あたし】"
+              rom="atashi"
+              tr_en="I; me"
+              tr_de="ich; mich; mir"
+              hint_en="female term"
+              hint_de="weibliche Sprache"
+              usuallyInKana="true"
+              lvl="n3"
+              id="atashi-i"
+              rem="jisho has n1"
+            -->
+            <word
+              w="【俺：おれ】"
+              rom="ore"
+              tr_en="I; me"
+              tr_de="ich"
+              hint_en="male term; sounds rough"
+              hint_de="männliche Sprache; tönt rauh"
+              lvl="n3"
+              category="top-words"
+              id="ore-me"
+              rem="jisho has n1"
+            />
+
+            <!-- particle -->
+            <word
+              w="しか"
+              rom="shika"
+              tr_en="only; nothing but"
+              tr_de="nur; nichts als"
+              hint_en="used with neg. verb"
+              hint_de="mit negativem Verb"
+              lvl="n3"
+              rem="appears in 500mon q128, q436; jisho has nx; must not be together with dake"
+              id="shika-only"
+            >
+                <see id="dake-only" rem="closely related" />
+                <see id="bakari-nothingbut" rem="closely related" />
+                <keep_apart_from id="dake-only" />
+                <keep_apart_from id="bakari-nothingbut" />
+                <sentence
+                  s="【主：しゅ】【人：じん】は【野：や】【菜：さい】しか【食：た】べません。"
+                  rom="Shujin wa yasai shika tabemasen."
+                  tr_en="My husband eats nothing but vegetables."
+                  tr_de="Mein Ehemann isst nichts als Gemüse."
+                  lvl="n3"
+                  origin="500mon q436"
+                  rem="jisho has nx for shika"
+                />
+                <sentence
+                  s="【私：わたし】は【日：に】【本：ほん】【語：ご】が【少：すこ】ししか【話：はな】せません。"
+                  rom="Watashi wa Nihon-go ga sukoshi shika hanasemasen."
+                  tr_en="I can only speak a little bit of Japanese."
+                  tr_de="Ich kann nur wenig japanisch sprechen."
+                  lvl="n3"
+                  origin="500mon q128"
+                  rem="jisho has nx for shika"
+                />
+            </word>
+
+            <!-- conjunction -->
+            <word
+              w="それとも"
+              rom="soretomo"
+              tr_en="or; or else"
+              tr_de="oder; oder sonst"
+              hint_en="conjunction"
+              hint_de="Konjunktion"
+              lvl="n3"
+              id="soretomo-orelse"
+            >
+                <sentence
+                  s="【歩：ある】いて【行：い】こうか、それとも【車：くるま】で【行：い】こうか。"
+                  rom="Aruite ikō ka, soretomo kuruma de ikō ka?"
+                  tr_en="Shall we walk or go by car?"
+                  tr_de="Gehen wir zu Fuss oder mit dem Auto?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【一：いっ】【方：ぽう】"
+              rom="ippō"
+              tr_en="on the other hand"
+              tr_de="andererseits"
+              lvl="n3"
+              id="ippō-ontheotherhand"
+            />
+            <word
+              w="【或：ある】いは"
+              rom="arui wa"
+              tr_en="or; either ... or; maybe; perhaps; possibly; some ... and others ...; sometimes ... and at other times ..."
+              hint_en="conjunction; adverb"
+              lvl="n3"
+              HIDDEN="true"
+              id="aruiwa-or"
+              rem="unclear if it's ha or wa"
+            />
+
+            <!-- expression -->
+            <word
+              w="お【目：め】【出：で】【度：と】う"
+              rom="o-medetou"
+              tr_en="congratulations; best wishes; well done"
+              tr_de="Gratulation; Glückwünsche; gut gemacht"
+              lvl="n3"
+              usuallyInKana="true"
+              category="top-words"
+              id="omedetou-congrats"
+            >
+                <keep_apart_from id="omedetou-alt" />
+                <keep_together id="omedetou-alt" />
+                <phrase
+                  ph="あけおめ"
+                  rom="ake-ome"
+                  tr_en="happy new year (casual)"
+                  tr_de="frohes neues Jahr (umgangssprachlich)"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【明：あ】けましておめでとうございます。"
+                  rom="Akemashite omedetō gozaimasu."
+                  tr_en="Happy new year! (polite)"
+                  tr_de="Frohes neues Jahr! (höflich)"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【必：かなら】ずしも"
+              rom="kanarazu shi mo"
+              tr_en="not always; not necessarily; not entirely"
+              tr_de="nicht immer; nicht unbedingt; nicht ganz"
+              hint_en="with neg. verb"
+              hint_de="mit neg. Verb"
+              lvl="n3"
+              id="kanarazushimo-notnecess"
+            >
+                <keep_apart_from id="kanarazu-necessary" />
+                <sentence
+                  s="【外：がい】【国：こく】【人：じん】が【必：かなら】ずしも【英：えい】【語：ご】ができるとは【限：かぎ】らない。"
+                  rom="Gaikokujin ga kanarazu shi mo eigo ga dekiru to wa kagiranai."
+                  tr_en="It doesn't necessarily follow that all foreigners speak English."
+                  tr_de="Man kann nicht unbedingt folgern, dass alle Ausländer Englisch können."
+                  lvl="n3"
+                  origin="Oxford p.114"
+                />
+            </word>
+            <word
+              w="とんでもない"
+              rom="tondemonai"
+              tr_en="unthinkable; outrageous; preposterous"
+              tr_de="undenkbar; empörend; grotesk"
+              lvl="n3"
+              category="not-good"
+              id="tondemonai-absurd"
+            />
+            <word
+              w="【御：お】【目：め】【出：で】【度：と】う"
+              rom="o-medetou"
+              tr_en="congratulations"
+              lvl="n3"
+              id="omedetou-alt"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="omedetou-congrats" />
+                <keep_together id="omedetou-congrats" />
+            </word>
+            <word
+              w="【畏：かしこ】まりました"
+              rom="kashikomarimashita"
+              tr_en="certainly"
+              tr_de="gewiss"
+              lvl="n3"
+              id="kashikomarimashita-certainly"
+              rem="appears in GENKI2 L20 vocab section; jisho has n2"
+            >
+                <!-- the verb should be 畏まる; jisho has nx -->
+                <keep_apart_from id="zehi-certainly" />
+            </word>
+            <word
+              w="かしら"
+              rom="kashira"
+              tr_en="I wonder; I might; somehow"
+              tr_de="ich frage mich, ob; ich könnte; irgendwie"
+              lvl="n3"
+              id="kashira-iwonder"
+              rem="jisho has nx; appears frequently (high in jisho-top-words)"
+            >
+                <phrase
+                  ph="【誰：だれ】かしら"
+                  rom="dare kashira"
+                  tr_en="I wonder who"
+                  tr_de="Ich frage mich, wer"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【誰：だれ】が【一：いち】【番：ばん】【速：はや】く【泳：およ】げるかしら。"
+                  rom="Dare ga ichi-ban hayaku oyogeru kashira."
+                  tr_en="I wonder who can swim fastest."
+                  tr_de="Ich frage mich, wer wohl am schnellsten schwimmen kann."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="そう【言：い】えば"
+              rom="sō ieba"
+              tr_en="speaking of which; now that you mention it"
+              tr_de="wenn wir gerade davon reden; jetzt, wo du es sagst"
+              lvl="n3"
+              id="sōieba-speakingofwhich"
+              HIDDEN="true"
+              rem="jisho has n2; should be inside a sentence of some other word"
+            />
+            <word
+              w="【左：さ】【様：よう】なら"
+              rom="sayōnara"
+              tr_en="farewell; goodbye; so long"
+              tr_de="auf Wiedersehen"
+              hint_en="expression"
+              hint_de="Ausdruck"
+              usuallyInKana="true"
+              lvl="n3"
+              id="sayōnara-farewell"
+              rem="jisho has n2"
+            />
+            <word
+              w="【話：はな】しかける"
+              rom="hanashi kakeru"
+              tr_en="to address so.; to start a conversation"
+              tr_de="jem. ansprechen; ein Gespräch anfangen"
+              hint_en="expression"
+              hint_de="Ausdruck"
+              lvl="n3"
+              category="talking"
+              id="hanashikakeru-addresssb"
+              rem="jisho has n2"
+            >
+                <keep_apart_from id="ronjiru-discuss" />
+                <keep_apart_from id="hanasu-talk" />
+                <keep_apart_from id="iu-say" />
+                <keep_apart_from id="mōsu-say" />
+                <keep_apart_from id="mōshiageru-tell" />
+                <keep_apart_from id="hanashiau-discuss" />
+                <keep_apart_from id="kataru-recite" />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

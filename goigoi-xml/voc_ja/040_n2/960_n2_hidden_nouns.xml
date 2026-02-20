@@ -1,0 +1,1365 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Hidden N2 nouns"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n2"
+      translations="en"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="false"
+      HIDDEN="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【障：しょう】【子：じ】"
+              rom="shōji"
+              tr_en="paper sliding door"
+              tr_de="papierene Schiebetür"
+              hint_en="lets in natural light"
+              hint_de="lichtdurchlässig"
+              lvl="n2"
+              id="shōji-door"
+            >
+                <see id="fusuma-slidingdoor" rem="closely related" />
+                <keep_apart_from id="fusuma-slidingdoor" />
+                <keep_apart_from id="to-door" />
+                <keep_apart_from id="doa-door" />
+                <keep_apart_from id="uraguchi-backdoor" />
+                <keep_apart_from id="amado-stormshutter" />
+                <keep_apart_from id="tobira-door" />
+            </word>
+            <word
+              w="【点：てん】【数：すう】"
+              rom="tensū"
+              tr_en="runs (baseball); score; points"
+              tr_de="Läufe (Baseball); Spielstand; Punkte"
+              lvl="n2"
+              category="sports"
+              id="tensū-score"
+            >
+                <keep_apart_from id="ten-mark" />
+                <keep_apart_from id="seiseki-results" />
+                <keep_apart_from id="tokuten-score" />
+            </word>
+            <word
+              w="【短：たん】【期：き】"
+              rom="tanki"
+              tr_en="short-term"
+              tr_de="Kurzfristigkeit"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n2"
+              id="tanki-shortterm"
+            >
+                <see id="chōki-longterm" rem="antonym" />
+            </word>
+            <word
+              w="【書：か】き【取：と】り"
+              rom="kakitori"
+              tr_en="dictation; transcription (of spoken material)"
+              tr_de="Diktat; Transskription (von Gesprochenem)"
+              Langenscheidt="Diktat"
+              lvl="n2"
+              id="kakitori-dictation"
+            >
+                <see id="kakitoru-writedown" rem="verb" />
+            </word>
+            <word
+              w="【便：びん】【箋：せん】"
+              rom="binsen"
+              tr_en="writing paper; stationery"
+              tr_de="Schreibpapier"
+              lvl="n2"
+              category="writing"
+              id="binsen-writingpaper"
+            >
+                <keep_apart_from id="kami-paper" />
+            </word>
+            <word
+              w="【競：けい】【馬：ば】"
+              rom="keiba"
+              tr_en="horse racing"
+              tr_de="Pferderennen"
+              lvl="n2"
+              category="sports"
+              id="keiba-horseracing"
+            >
+                <keep_apart_from id="bajutsu-horseriding" />
+            </word>
+            <word
+              w="【祭：さい】【日：じつ】"
+              rom="saijitsu"
+              tr_en="festival day"
+              tr_de="Festtag"
+              lvl="n2"
+              id="saijitsu-festivalday"
+              category="culture, holidays"
+            >
+                <keep_apart_from id="shukujitsu-holiday" />
+            </word>
+            <word
+              w="【行：ぎょう】【事：じ】"
+              rom="gyōji"
+              tr_en="event; function"
+              tr_de="Ereignis; Funktion"
+              lvl="n2"
+              id="gyōji-event"
+            >
+                <!-- 毎年の行事として花見をしています。 (ChatGPT) -->
+            </word>
+            <word
+              w="【銅：どう】"
+              rom="dō"
+              tr_en="copper (Cu)"
+              tr_de="Kupfer (Cu)"
+              lvl="n2"
+              category="science"
+              id="dō-copper"
+            >
+                <!-- implicit see-also link to dō-how -->
+            </word>
+            <word
+              w="【境：きょう】【界：かい】"
+              rom="kyōkai"
+              tr_en="boundary; border; frontier"
+              tr_de="Grenze; Landesgrenze; Begrenzung"
+              lvl="n2"
+              id="kyōkai-border"
+            >
+                <!-- implicit see-also link to kyōkai-church -->
+            </word>
+            <word
+              w="【蒸：じょう】【気：き】"
+              rom="jōki"
+              tr_en="steam; steamboat; steam locomotive"
+              tr_de="Dampf; Dampfschiff; Dampflok"
+              lvl="n2"
+              id="jōki-steam"
+              rem="must not be together with yuge"
+            >
+                <!-- when meaning is steamboat, jōki is abbrev. of 蒸気船・じょうきせん, which is nx -->
+                <!-- when meaning is steam locomotive, jōki is abbrev. of 蒸気機関車・じょうききかんしゃ, which is nx -->
+            </word>
+            <word
+              w="【缶：かん】【詰：づめ】"
+              rom="kandzume"
+              tr_en="canned food; being stuck in a confined space"
+              lvl="n2"
+              id="kandzume-cannedfood"
+            />
+            <word
+              w="【青：せい】【少：しょう】【年：ねん】"
+              rom="seishōnen"
+              tr_en="youth; young person"
+              tr_de="junge Person"
+              lvl="n2"
+              id="seishōnen-youth"
+            />
+            <word
+              w="【追：つい】【加：か】"
+              rom="tsuika"
+              tr_en="supplement; appendix; addition"
+              tr_de="Zusatz; Ergänzung; dazu tun"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="tsuika-addition"
+            />
+            <word
+              w="【圧：あっ】【縮：しゅく】"
+              rom="asshuku"
+              tr_en="compression (of gas, data, etc.)"
+              tr_de="Kompression; Komprimierung"
+              Langenscheidt="-"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="asshuku-compression"
+            />
+            <word
+              w="【通：つう】【訳：やく】"
+              rom="tsūyaku"
+              tr_en="interpretation; simultaneous interpreter (job)"
+              tr_de="Interpretation; Simultanübersetzer (Job)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="linguistics"
+              id="tsūyaku-interpreter"
+            />
+            <word
+              w="【体：たい】【操：そう】"
+              rom="taisō"
+              tr_en="physical exercises; gymnastics"
+              tr_de="Gymnastik; Übungen"
+              lvl="n2"
+              category="sports"
+              id="taisō-gymnastics"
+            >
+                <keep_apart_from id="undō-workout" />
+                <keep_apart_from id="torēningu-training" />
+            </word>
+            <word
+              w="【判：はん】【事：じ】"
+              rom="hanji"
+              tr_en="judge"
+              tr_de="Richter"
+              lvl="n2"
+              category="government, people"
+              id="hanji-judge"
+            />
+            <word
+              w="【火：か】【口：こう】"
+              rom="kakō"
+              tr_en="volcanic crater"
+              tr_de="Vulkankrater"
+              lvl="n2"
+              category="nature, fire"
+              id="kakō-crater"
+            />
+            <word
+              w="【溶：よう】【岩：がん】"
+              rom="yōgan"
+              tr_en="lava"
+              tr_de="Lava"
+              lvl="n2"
+              id="yōgan-lava"
+            />
+            <word
+              w="【望：ぼう】【遠：えん】【鏡：きょう】"
+              rom="bōenkyō"
+              tr_en="telescope"
+              tr_de="Teleskop"
+              lvl="n2"
+              category="astronomy"
+              id="bōenkyō-telescope"
+            />
+            <word
+              w="【北：ほっ】【極：きょく】"
+              rom="hokkyoku"
+              tr_en="North Pole; Arctic"
+              tr_de="Nordpol; Arktis"
+              lvl="n2"
+              category="geography"
+              id="hokkyoku-northpole"
+            />
+            <word
+              w="【南：なん】【極：きょく】"
+              rom="nankyoku"
+              tr_en="South Pole; Antarctic"
+              tr_de="Südpol; Antarktis"
+              lvl="n2"
+              category="geography"
+              id="nankyoku-southpole"
+            />
+            <word
+              w="【高：こう】【度：ど】"
+              rom="kōdo"
+              tr_en="altitude; height; elevation"
+              tr_de="Höhe (über Meer); Erhöhung"
+              lvl="n2"
+              category="geography"
+              id="kōdo-altitude"
+            />
+            <word
+              w="【地：ち】【点：てん】"
+              rom="chiten"
+              tr_en="site; point on a map"
+              tr_de="Standort; Standpunkt"
+              lvl="n2"
+              id="chiten-site"
+            />
+            <word
+              w="【粗：あら】【筋：すじ】"
+              rom="arasuji"
+              tr_en="outline; summary"
+              tr_de="Zusammenfassung"
+              usuallyInKana="true"
+              lvl="n2"
+              id="arasuji-outline"
+            />
+            <word
+              w="【講：こう】【師：し】"
+              rom="kōshi"
+              tr_en="lecturer"
+              tr_de="Dozent"
+              lvl="n2"
+              category="education, people"
+              id="kōshi-lecturer"
+            >
+                <keep_apart_from id="sensei-teacher" />
+                <keep_apart_from id="kyōshi-teacher" />
+                <keep_apart_from id="kyōju-professor" />
+            </word>
+            <word
+              w="【校：こう】【庭：てい】"
+              rom="kōtei"
+              tr_en="schoolyard"
+              tr_de="Schulhof; Pausenplatz"
+              lvl="n2"
+              category="education"
+              id="kōtei-schoolyard"
+            />
+            <word
+              w="【吹：ふ】【雪：ぶき】"
+              rom="fubuki"
+              tr_en="snow storm; blizzard"
+              tr_de="Schneesturm"
+              lvl="n2"
+              category="weather"
+              id="fubuki-blizzard"
+            />
+            <word
+              w="【受：じゅ】【話：わ】【器：き】"
+              rom="juwaki"
+              tr_en="(telephone) receiver"
+              tr_de="Telefonhörer"
+              lvl="n2"
+              id="juwaki-telephonerecvr"
+            />
+            <word
+              w="【宛：あて】【名：な】"
+              rom="atena"
+              tr_en="name and address; adressee's name"
+              tr_de="Name und Adresse; Adressat"
+              lvl="n2"
+              id="atena-nameaddress"
+            />
+            <word
+              w="【郡：ぐん】"
+              rom="gun"
+              tr_en="district; county"
+              tr_de="Bezirk"
+              lvl="n2"
+              category="city"
+              id="gun-county"
+            />
+            <word
+              w="【農：のう】【産：さん】【物：ぶつ】"
+              rom="nōsanbutsu"
+              tr_en="crop; agricultural produce"
+              tr_de="Ernte; landwirtschaftliches Produkt"
+              lvl="n2"
+              category="countryside"
+              id="nōsanbutsu-crop"
+            />
+            <word
+              w="【農：のう】【薬：やく】"
+              rom="nōyaku"
+              tr_en="agricultural chemical"
+              tr_de="Agrarchemikalie"
+              hint_en="pesticide, etc."
+              hint_de="Pestizid, usw."
+              lvl="n2"
+              category="countryside"
+              id="nōyaku-chemical"
+            />
+            <word
+              w="【襤：ぼ】【褸：ろ】"
+              rom="boro"
+              tr_en="rag; tattered clothes; shabby"
+              tr_de="Lappen; zerrissene Kleider; schäbig"
+              hint_en="noun or na-adjective"
+              hint_de="Nomen oder Na-Adjektiv"
+              lvl="n2"
+              id="boro-rags"
+              usuallyInKana="true"
+            />
+            <word
+              w="【風：ふ】【呂：ろ】【敷：しき】"
+              rom="furoshiki"
+              tr_en="decorative wrapping cloth"
+              tr_de="dekoratives Tuch"
+              lvl="n2"
+              id="furoshiki-wrap"
+            >
+                <!-- what is this used for? defines category... -->
+            </word>
+            <word
+              w="【裁：さい】【縫：ほう】"
+              rom="saihō"
+              tr_en="sewing; needlework"
+              tr_de="Nähen; Handarbeit"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="hobby, diy"
+              id="saihō-sewing"
+            />
+            <word
+              w="【屑：くず】"
+              rom="kuzu"
+              tr_en="waste; scrap; garbage"
+              tr_de="Abfall; Schrott; Müll"
+              lvl="n2"
+              id="kuzu-scrap"
+            />
+            <word
+              w="【鉢：はち】"
+              rom="hachi"
+              tr_en="flowerpot; bowl"
+              tr_de="Blumentopf; Schüssel"
+              lvl="n2"
+              category="garden"
+              id="hachi-flowerpot"
+            />
+            <word
+              w="【釘：くぎ】"
+              rom="kugi"
+              tr_en="nail; spike"
+              tr_de="Nagel"
+              lvl="n2"
+              category="diy"
+              id="kugi-nail"
+            />
+            <word
+              w="【為替：かわせ】"
+              rom="kawase"
+              tr_en="money order; foreign exchange"
+              tr_de="Zahlungsanweisung; Devisenmarkt"
+              lvl="n2"
+              hasCombinedReading="true"
+              category="finances"
+              id="kawase-foreignexchange"
+            />
+            <word
+              w="【運：うん】【河：が】"
+              rom="unga"
+              tr_en="canal; waterway"
+              tr_de="Kanal; Wasserweg"
+              lvl="n2"
+              category="city"
+              id="unga-canal"
+            />
+            <word
+              w="【道：みち】【順：じゅん】"
+              rom="michijun"
+              tr_en="route; way; course"
+              tr_de="Route; Weg; Kurs"
+              lvl="n2"
+              category="transportation"
+              id="michijun-route"
+            />
+            <word
+              w="【家：か】【屋：おく】"
+              rom="kaoku"
+              tr_en="building"
+              tr_de="Gebäude"
+              lvl="n2"
+              category="city"
+              id="kaoku-building"
+            >
+                <keep_apart_from id="n5-tatemono" />
+            </word>
+            <word
+              w="【素：そ】【質：しつ】"
+              rom="soshitsu"
+              tr_en="makings (of); talent; qualities"
+              lvl="n2"
+              id="soshitsu-talent"
+            />
+            <word
+              w="【関：かん】【西：さい】"
+              rom="kansai"
+              tr_en="region consisting of Osaka, Kobe, Kyoto and surrounding prefectures"
+              lvl="n2"
+              id="kansai-region"
+            />
+            <word
+              w="【素人：しろうと】"
+              rom="shirōto"
+              tr_en="amateur; layman"
+              lvl="n2"
+              hasCombinedReading="true"
+              id="shirōto-amateur"
+            />
+            <word
+              w="【副：ふく】【詞：し】"
+              rom="fukushi"
+              tr_en="adverb"
+              hint_en="noun; noun which may take the genitive case particle 'no'"
+              lvl="n2"
+              id="fukushi-adverb"
+            />
+            <word
+              w="【中：ちゅう】【世：せい】"
+              rom="chūsei"
+              tr_en="Middle Ages (in Japan esp. the Kamakura and Muromachi periods); medieval times; mediaeval times"
+              hint_en="noun; adverb (fukushi)"
+              lvl="n2"
+              id="chūsei-medieval"
+            />
+            <word
+              w="【空：くう】【想：そう】"
+              rom="kūsō"
+              tr_en="daydream; vision; fancy"
+              tr_de="Tagtraum; Vision; fantasieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="kūsō-daydream"
+            />
+            <word
+              w="【過：か】【失：しつ】"
+              rom="kashitsu"
+              tr_en="accident (caused by negligence); blunder; defect"
+              tr_de="Unfall (durch Fahrlässigkeit); Schnitzer; Defekt"
+              lvl="n2"
+              id="kashitsu-defect"
+            />
+            <word
+              w="【過：か】【剰：じょう】"
+              rom="kajō"
+              tr_en="excess; surplus; overabundance"
+              tr_de="Exzess; Überschuss; Überfülle"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n2"
+              id="kajō-excess"
+            />
+            <word
+              w="【過：か】【程：てい】"
+              rom="katei"
+              tr_en="process; mechanism"
+              tr_de="Prozess; Mechanismus"
+              lvl="n2"
+              id="katei-process"
+            />
+            <word
+              w="【粒：つぶ】"
+              rom="tsubu"
+              tr_en="grain; bead; drop"
+              hint_en="noun; counter"
+              lvl="n2"
+              id="tsubu-grain"
+            />
+            <word
+              w="【住：す】まい"
+              rom="sumai"
+              tr_en="dwelling; house; living"
+              lvl="n2"
+              id="sumai-dwelling"
+            />
+            <word
+              w="【作：さく】【者：しゃ】"
+              rom="sakusha"
+              tr_en="creator (of a work); author; composer"
+              lvl="n2"
+              id="sakusha-creator"
+            />
+            <word
+              w="【構：こう】【造：ぞう】"
+              rom="kōzō"
+              tr_en="structure; construction; framework"
+              tr_de="Struktur; Konstruktion; Gerüst"
+              lvl="n2"
+              id="kōzō-structure"
+            />
+            <word
+              w="【順：じゅん】【序：じょ】"
+              rom="junjo"
+              tr_en="order; sequence; procedure"
+              tr_de="Reihenfolge; Sequenz; Prozedur"
+              lvl="n2"
+              id="junjo-sequence"
+            />
+            <word
+              w="【保：ほ】【健：けん】"
+              rom="hoken"
+              tr_en="hygiene; sanitation"
+              tr_de="Hygiene"
+              lvl="n2"
+              category="health, cleaning"
+              id="hoken-hygiene"
+            />
+            <word
+              w="【過：か】【半：はん】【数：すう】"
+              rom="kahansū"
+              tr_en="majority"
+              tr_de="Mehrheit"
+              lvl="n2"
+              id="kahansū-majority"
+            />
+            <word
+              w="【群：む】れ"
+              rom="mure"
+              tr_en="flock; herd; swarm"
+              tr_de="Herde; Schwarm; Rudel"
+              lvl="n2"
+              category="animal"
+              id="mure-herd"
+            />
+            <word
+              w="【羊：よう】【毛：もう】"
+              rom="yōmō"
+              tr_en="wool"
+              tr_de="Wolle"
+              lvl="n2"
+              id="yōmō-wool"
+            />
+            <word
+              w="【線：せん】【路：ろ】"
+              rom="senro"
+              tr_en="railway track; railroad"
+              tr_de="Gleis; Eisenbahnschienen"
+              lvl="n2"
+              category="transportation"
+              id="senro-railwaytrack"
+            />
+            <word
+              w="【私：し】【鉄：てつ】"
+              rom="shitetsu"
+              tr_en="railroad run by a private corporation"
+              tr_de="private Eisenbahn"
+              lvl="n2"
+              category="transportation"
+              id="shitetsu-privaterailway"
+            />
+            <word
+              w="【体：たい】【系：けい】"
+              rom="taikei"
+              tr_en="system; organisation"
+              tr_de="System; Organisation"
+              lvl="n2"
+              id="taikei-system"
+            />
+            <word
+              w="【体：たい】【積：せき】"
+              rom="taiseki"
+              tr_en="capacity; volume"
+              tr_de="Kapazität; Volumen"
+              lvl="n2"
+              id="taiseki-capacity"
+            />
+            <word
+              w="【診：しん】【断：だん】"
+              rom="shindan"
+              tr_en="diagnosis"
+              tr_de="Diagnose"
+              lvl="n2"
+              category="health"
+              id="shindan-diagnosis"
+            />
+            <word
+              w="【綱：つな】"
+              rom="tsuna"
+              tr_en="rope; cord"
+              tr_de="Seil; Schnur"
+              lvl="n2"
+              category="diy"
+              id="tsuna-rope"
+            />
+            <word
+              w="【失：しつ】【恋：れん】"
+              rom="shitsuren"
+              tr_en="broken heart; disappointed love"
+              tr_de="gebrochenes Herz; enttäuschte Liebe"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="relationships, quarrel"
+              id="shitsuren-brokenheart"
+            />
+            <word
+              w="【紺：こん】"
+              rom="kon"
+              tr_en="navy blue; deep blue"
+              tr_de="Marineblau; tiefblau"
+              lvl="n2"
+              category="colour"
+              id="kon-navyblue"
+            />
+            <word
+              w="【体：たい】【制：せい】"
+              rom="taisei"
+              tr_en="structure; set-up; organisation"
+              tr_de="Struktur; Aufstellung; Organisation"
+              lvl="n2"
+              id="taisei-structure"
+            />
+            <word
+              w="【登：とう】【場：じょう】"
+              rom="tōjō"
+              tr_en="entry (on stage); appearance (on screen); (market) introduction"
+              tr_de="(Theater, Fernsehen) Auftritt; (Markt) Einführung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="tōjō-entry"
+            />
+            <word
+              w="【蛍：けい】【光：こう】【灯：とう】"
+              rom="keikōtō"
+              tr_en="fluorescent lamp; person who is slow to react"
+              tr_de="Leuchtstofflampe; jem. der langsam reagiert"
+              lvl="n2"
+              id="keikōtō-fluorescentlamp"
+            />
+            <word
+              w="【職：しょく】【人：にん】"
+              rom="shokunin"
+              tr_en="craftsman; artisan; workman"
+              tr_de="Handwerker; Arbeiter"
+              lvl="n2"
+              category="occupations"
+              id="shokunin-craftsman"
+            />
+            <word
+              w="【解：かい】【散：さん】"
+              rom="kaisan"
+              tr_en="dissolution (of parliament, etc.); breaking up (a meeting)"
+              tr_de="Auflösung (des Parlaments, etc.); Abbruch (einer Sitzung)"
+              Langenscheidt="Auflösung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="government"
+              id="kaisan-dissolution"
+            />
+            <word
+              w="【吐：は】き【気：け】"
+              rom="hakike"
+              tr_en="nausea; sickness in the stomach"
+              tr_de="Übelkeit; Brechreiz"
+              lvl="n2"
+              category="health"
+              id="hakike-nausea"
+              rem="also a phrase of haku-vomit"
+            >
+                <keep_apart_from id="haku-vomit" />
+            </word>
+            <word
+              w="【稽：けい】【古：こ】"
+              rom="keiko"
+              tr_en="practice; training; study"
+              tr_de="Übung; Studieren; trainieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="keiko-practice"
+            />
+            <word
+              w="【頭：ず】【脳：のう】"
+              rom="zunō"
+              tr_en="brains; intellect; understanding"
+              tr_de="Denken; Intellekt; Verstand"
+              lvl="n2"
+              id="zunō-brains"
+            />
+            <word
+              w="【絨：じゅう】【毯：たん】"
+              rom="jūtan"
+              tr_en="carpet; rug"
+              tr_de="Teppich"
+              lvl="n2"
+              category="home"
+              id="jūtan-rug"
+            >
+                <keep_apart_from id="tatami-floor" />
+                <keep_apart_from id="kāpetto-carpet" />
+            </word>
+            <word
+              w="【研：けん】【修：しゅう】"
+              rom="kenshū"
+              tr_en="training (esp. in-service); induction course"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="kenshū-training"
+            />
+            <word
+              w="【箪：たん】【笥：す】"
+              rom="tansu"
+              tr_en="chest of drawers; cabinet; dresser"
+              tr_de="Kommode; kleiner Schrank"
+              lvl="n2"
+              category="home"
+              id="tansu-kommode"
+            >
+                <keep_apart_from id="oshiire-closet" />
+            </word>
+            <word
+              w="【終：しゅう】【点：てん】"
+              rom="shūten"
+              tr_en="terminus; last stop (e.g. train)"
+              tr_de="Endstation (eines Zuges, etc.)"
+              lvl="n2"
+              category="transportation"
+              id="shūten-terminus"
+            />
+            <word
+              w="【総：そう】【理：り】【大：だい】【臣：じん】"
+              rom="sōridaijin"
+              tr_en="prime minister"
+              tr_de="Premierminister"
+              hint_en="head of a cabinet government"
+              hint_de="Chef einer Kabinettsregierung"
+              lvl="n2"
+              category="politics, people"
+              id="sōridaijin-primeminister"
+            >
+                <!-- keep apart from daitōryō -->
+            </word>
+            <word
+              w="【箇：か】【所：しょ】"
+              rom="kasho"
+              tr_en="place (e.g. a good place to start); passage (of a text)"
+              tr_de="Ort (z.B. ein guter Ort, um zu beginnen); Passage (eines Textes)"
+              Langenscheidt="-"
+              lvl="n2"
+              id="kasho-part"
+            />
+            <word
+              w="【算：さん】【数：すう】"
+              rom="sansū"
+              tr_en="arithmetic; elementary mathematics"
+              tr_de="Arithmetik; elementare Mathematik"
+              lvl="n2"
+              category="education"
+              id="sansū-arithmetic"
+            />
+            <word
+              w="【糊：のり】"
+              rom="nori"
+              tr_en="glue; paste"
+              tr_de="Kleber; Klebstoff"
+              lvl="n2"
+              category="diy"
+              id="nori-glue"
+            />
+            <word
+              w="【鉄：てっ】【橋：きょう】"
+              rom="tekkyō"
+              tr_en="railway bridge; iron bridge"
+              tr_de="Eisenbahnbrücke; Brücke aus Eisen"
+              lvl="n2"
+              category="city"
+              id="tekkyō-railwaybridge"
+            />
+            <word
+              w="【長：ちょう】【男：なん】"
+              rom="chōnan"
+              tr_en="eldest son; first-born son"
+              tr_de="ältester Sohn; erstgeborener Sohn"
+              hint_en="may be the only son"
+              hint_de="kann auch der einzige Sohn sein"
+              lvl="n2"
+              category="family, people"
+              id="chōnan-eldestson"
+            />
+            <word
+              w="【雑：ぞう】【巾：きん】"
+              rom="zōkin"
+              tr_en="washcloth; dust cloth"
+              tr_de="Lappen; Waschlappen"
+              lvl="n2"
+              category="cleaning"
+              id="zōkin-washcloth"
+            />
+            <word
+              w="【特：とく】【売：ばい】"
+              rom="tokubai"
+              tr_en="special sale"
+              tr_de="Sonderverkauf"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="shopping, business"
+              id="tokubai-specialsale"
+            >
+                <keep_apart_from id="waribiki-discount" />
+            </word>
+            <word
+              w="【盆：ぼん】【地：ち】"
+              rom="bonchi"
+              tr_en="basin (e.g. river basin)"
+              tr_de="(Fluss-) Becken"
+              lvl="n2"
+              category="nature, scenery"
+              id="bonchi-basin"
+            />
+            <word
+              w="【課：か】【税：ぜい】"
+              rom="kazei"
+              tr_en="taxation"
+              tr_de="Steuern; Besteuerung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="government"
+              id="kazei-taxation"
+            />
+            <word
+              w="【海：かい】【水：すい】【浴：よく】"
+              rom="kaisuiyoku"
+              tr_en="swimming in the ocean; sea bathing"
+              tr_de="Schwimmen im Ozean; Baden im Meer"
+              lvl="n2"
+              category="holidays"
+              id="kaisuiyoku-seabathing"
+            />
+            <word
+              w="【消：しょう】【防：ぼう】【署：しょ】"
+              rom="shōbōsho"
+              tr_en="fire station; fire department"
+              tr_de="Feuerwehr"
+              lvl="n2"
+              category="government"
+              id="shōbōsho-firestation"
+            >
+                <keep_apart_from id="shōbō-firebrigade" />
+            </word>
+            <word
+              w="【海：かい】【洋：よう】"
+              rom="kaiyō"
+              tr_en="ocean"
+              tr_de="Ozean"
+              lvl="n2"
+              category="beach, nature"
+              id="kaiyō-ocean"
+            >
+                <keep_apart_from id="umi-sea" />
+            </word>
+            <word
+              w="【液：えき】【体：たい】"
+              rom="ekitai"
+              tr_en="liquid"
+              tr_de="Flüssigkeit"
+              lvl="n2"
+              category="science"
+              id="ekitai-liquid"
+            />
+            <word
+              w="【通：つう】【貨：か】"
+              rom="tsūka"
+              tr_en="currency"
+              tr_de="Währung; Devisen"
+              lvl="n2"
+              category="finances"
+              id="tsūka-currency"
+            />
+            <word
+              w="【重：じゅう】【役：やく】"
+              rom="jūyaku"
+              tr_en="executive; top management"
+              tr_de="Führungskraft; Top-Management"
+              lvl="n2"
+              category="business, people"
+              id="jūyaku-topmgmt"
+            />
+            <word
+              w="【資：し】【料：りょう】"
+              rom="shiryō"
+              tr_en="data; document"
+              tr_de="Daten; Dokument"
+              lvl="n2"
+              category="technical"
+              id="shiryō-data"
+            />
+            <word
+              w="【紙：し】【幣：へい】"
+              rom="shihei"
+              tr_en="paper money; banknote"
+              tr_de="Papiergeld; Banknote"
+              lvl="n2"
+              category="finances"
+              id="shihei-banknote"
+            />
+            <word
+              w="【明：あ】け【方：がた】"
+              rom="akegata"
+              tr_en="dawn"
+              tr_de="Dämmerung"
+              lvl="n2"
+              category="time, nature"
+              id="akegata-dawn"
+            />
+            <word
+              w="【本：ほん】【部：ぶ】"
+              rom="honbu"
+              tr_en="headquarters; main office"
+              tr_de="Hauptquartier; Hauptsitz"
+              lvl="n2"
+              category="business, work"
+              id="honbu-headquarters"
+            />
+            <word
+              w="【電：でん】【波：ぱ】"
+              rom="denpa"
+              tr_en="radio wave; reception"
+              tr_de="Radiowellen; Empfang"
+              lvl="n2"
+              category="technical"
+              id="denpa-radiowave"
+            />
+            <word
+              w="【電：でん】【流：りゅう】"
+              rom="denryū"
+              tr_en="electric current"
+              tr_de="elektrischer Strom"
+              lvl="n2"
+              category="technical"
+              id="denryū-current"
+            />
+            <word
+              w="【貸：かし】【家：や】"
+              rom="kashiya"
+              tr_en="house for rent"
+              tr_de="Vermietshaus"
+              lvl="n2"
+              category="home"
+              id="kashiya-houseforrent"
+            />
+            <word
+              w="【貸：かし】【間：ま】"
+              rom="kashima"
+              tr_en="room to let"
+              tr_de="Raum zu vermieten"
+              lvl="n2"
+              category="home"
+              id="kashima-roomtolet"
+            />
+            <word
+              w="【面：めん】【積：せき】"
+              rom="menseki"
+              tr_en="area; surface; size (of land)"
+              tr_de="Fläche; Grundfläche"
+              Langenscheidt="(Grund-) Fläche"
+              lvl="n2"
+              id="menseki-area"
+            />
+            <word
+              w="【花：はな】【嫁：よめ】"
+              rom="hanayome"
+              tr_en="bride"
+              tr_de="Braut"
+              lvl="n2"
+              category="people, culture"
+              id="hanayome-bride"
+            />
+            <word
+              w="【親：しん】【類：るい】"
+              rom="shinrui"
+              tr_en="relative; relation; kin"
+              tr_de="Verwandter; Verwandtschaft"
+              lvl="n2"
+              category="relationships"
+              id="shinrui-relative"
+            />
+            <word
+              w="【漁：りょう】【師：し】"
+              rom="ryōshi"
+              tr_en="fisherman"
+              tr_de="Fischer"
+              lvl="n2"
+              category="occupations"
+              id="ryōshi-fisherman"
+            />
+            <word
+              w="【薬：やく】【品：ひん】"
+              rom="yakuhin"
+              tr_en="medicine; chemicals"
+              tr_de="Medizin; Chemikalien"
+              lvl="n2"
+              category="health"
+              id="yakuhin-medicine"
+            />
+            <word
+              w="【警：けい】【備：び】"
+              rom="keibi"
+              tr_en="defense; guard; security"
+              tr_de="Verteidigung; Wächter; bewachen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="keibi-defense"
+            />
+            <word
+              w="【脱：だっ】【線：せん】"
+              rom="dassen"
+              tr_en="derailment; deviation"
+              tr_de="Entgleisung; Abweichung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="dassen-deviation"
+            />
+            <word
+              w="【表：ひょう】【紙：し】"
+              rom="hyōshi"
+              tr_en="book cover; appearing on the cover of a magazine"
+              tr_de="Buchumschlag; auf der Frontseite erscheinen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="literature"
+              id="hyōshi-bookcover"
+            />
+            <word
+              w="【見：けん】【学：がく】"
+              rom="kengaku"
+              tr_en="inspection; study by observation; to visit (a factory, etc.)"
+              tr_de="Inspektion; Einsichtnahme; (eine Fabrik, usw.) besichtigen"
+              Langenscheidt="(Firma) Besichtigung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="kengaku-inspection"
+            />
+            <word
+              w="【言：こと】【葉：ば】【遣：づか】い"
+              rom="kotobadzukai"
+              tr_en="wording; expression"
+              tr_de="Wortlaut; Formulierung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="kotobadzukai-speech"
+            />
+            <word
+              w="【超：ちょう】【過：か】"
+              rom="chōka"
+              tr_en="excess; being more than"
+              tr_de="Überschuss; Exzess; zuviel sein"
+              Langenscheidt="Überschuss"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="chōka-excess"
+            />
+            <word
+              w="【湯：ゆ】【気：げ】"
+              rom="yuge"
+              tr_en="steam; vapour"
+              tr_de="Dampf; Wasserdampf"
+              lvl="n2"
+              category="science"
+              id="yuge-steam"
+            >
+                <keep_apart_from id="suchīmu-steam" />
+            </word>
+            <word
+              w="【原：げん】【稿：こう】"
+              rom="genkō"
+              tr_en="manuscript; notes; contribution"
+              tr_de="Manuskript; Notizen; Beitrag"
+              lvl="n2"
+              id="genkō-manuscript"
+            >
+                <!-- 原稿を写す - げんこうをうつす - "To transcribe a manuscript" (ChatGPT) -->
+            </word>
+            <word
+              w="【先：せん】【祖：ぞ】"
+              rom="senzo"
+              tr_en="ancestor"
+              tr_de="Vorfahr; Ahne"
+              lvl="n2"
+              id="senzo-ancestor"
+            />
+            <word
+              w="【光：こう】【線：せん】"
+              rom="kōsen"
+              tr_en="beam; light ray"
+              tr_de="Lichtstrahl; Lichtschein"
+              lvl="n2"
+              category="light"
+              id="kōsen-beam"
+            />
+            <word
+              w="【全：ぜん】【身：しん】"
+              rom="zenshin"
+              tr_en="whole body"
+              tr_de="Ganzkörper; ganzer Körper"
+              lvl="n2"
+              id="zenshin-whole"
+            />
+            <word
+              w="【公：こう】【務：む】"
+              rom="kōmu"
+              tr_en="official business; public business"
+              tr_de="Amtsbetrieb; öffentliche Angelegenheit"
+              lvl="n2"
+              id="kōmu-officialbusiness"
+            />
+            <word
+              w="【腰：こし】【掛：か】け"
+              rom="koshikake"
+              tr_en="seat; bench"
+              tr_de="Sitz; Sitzbank"
+              lvl="n2"
+              id="koshikake-seat"
+            />
+            <word
+              w="【自：じ】【治：ち】"
+              rom="jichi"
+              tr_en="self-government; autonomy"
+              tr_de="Selbstverwaltung; Autonomie"
+              lvl="n2"
+              id="jichi-autonomy"
+              href="https://hinative.com/en-US/questions/21944891 (pronounciation)"
+            />
+            <word
+              w="【船：ふな】【便：びん】"
+              rom="funabin"
+              tr_en="sea mail; ferry service"
+              tr_de="Seepost; Fährbetrieb"
+              lvl="n2"
+              id="funabin-seamail"
+            />
+            <word
+              w="【芯：しん】"
+              rom="shin"
+              tr_en="(pencil) lead; wick"
+              tr_de="Bleistiftmine; Docht"
+              lvl="n2"
+              id="shin-wick"
+            />
+            <word
+              w="【蝋：ろう】【燭：そく】"
+              rom="rōsoku"
+              tr_en="candle"
+              tr_de="Kerze"
+              lvl="n2"
+              id="rōsoku-candle"
+            />
+            <word
+              w="【蓋：ふた】"
+              rom="futa"
+              tr_en="cover; lid"
+              tr_de="Deckel; Verschluss"
+              lvl="n2"
+              id="futa-lid"
+            />
+            <word
+              w="【蛇：じゃ】【口：ぐち】"
+              rom="jaguchi"
+              tr_en="faucet; tap"
+              tr_de="Wasserhahn"
+              lvl="n2"
+              id="jaguchi-tap"
+            />
+            <word
+              w="【生：せい】【存：ぞん】"
+              rom="seizon"
+              tr_en="existence; survival; to survive"
+              tr_de="Existenz; Überleben; überleben"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="life"
+              id="seizon-survival"
+            />
+            <word
+              w="【西：せい】【暦：れき】"
+              rom="seireki"
+              tr_en="western calendar; Anno Domini"
+              tr_de="westlicher Kalender; anno domini"
+              lvl="n2"
+              id="seireki-annodomini"
+            />
+            <word
+              w="【要：よう】【旨：し】"
+              rom="yōshi"
+              tr_en="essentials; summary; fundamentals"
+              tr_de="das Wesentliche; Fazit; Zusammenfassung"
+              lvl="n2"
+              id="yōshi-essentials"
+            />
+            <word
+              w="【角：かく】【度：ど】"
+              rom="kakudo"
+              tr_en="angle"
+              tr_de="Winkel"
+              lvl="n2"
+              id="kakudo-angle"
+            />
+            <word
+              w="【記：き】【号：ごう】"
+              rom="kigō"
+              tr_en="symbol; code; sign"
+              tr_de="Symbol; Code; Zeichen"
+              lvl="n2"
+              id="kigō-symbol"
+            />
+            <word
+              w="【酸：さん】【性：せい】"
+              rom="sansei"
+              tr_en="acidity; acidic"
+              tr_de="Säuregehalt; sauer; säurehaltig"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n2"
+              id="sansei-acidic"
+            />
+            <word
+              w="【針：しん】【路：ろ】"
+              rom="shinro"
+              tr_en="course; direction"
+              tr_de="Kurs; Route"
+              Langenscheidt="Kurs; Route"
+              lvl="n2"
+              id="shinro-course"
+            />
+            <word
+              w="【間：かん】【隔：かく】"
+              rom="kankaku"
+              tr_en="space; interval; whitespace"
+              tr_de="Abstand; Intervall; Leerschlag"
+              lvl="n2"
+              id="kankaku-space"
+            />
+            <word
+              w="【食：しょく】【塩：えん】"
+              rom="shokuen"
+              tr_en="table salt"
+              tr_de="Speisesalz"
+              lvl="n2"
+              category="cooking"
+              id="shokuen-tablesalt"
+            />
+            <word
+              w="【重：じゅう】【体：たい】"
+              rom="jūtai"
+              tr_en="serious condition; critical condition"
+              tr_de="ernster Zustand; kritischer Zustand"
+              lvl="n2"
+              id="jūtai-seriouscondition"
+            >
+                <!-- can this have category 'health', or is it more general? -->
+            </word>
+            <word
+              w="【包：ほう】【帯：たい】"
+              rom="hōtai"
+              tr_en="bandage"
+              tr_de="Verband; Binde"
+              lvl="n2"
+              category="health"
+              id="hōtai-bandage"
+            />
+            <word
+              w="【空：くう】【中：ちゅう】"
+              rom="kūchū"
+              tr_en="mid-air; sky"
+              tr_de="in der Luft; Himmel"
+              lvl="n2"
+              id="kūchū-midair"
+            />
+            <word
+              w="【包：ほう】【装：そう】"
+              rom="hōsō"
+              tr_en="packing; packaging; wrapping"
+              tr_de="Verpackung; Verpacken; einpacken"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="hōsō-packing"
+            />
+        </section>
+    </unit>
+</vocabulary>

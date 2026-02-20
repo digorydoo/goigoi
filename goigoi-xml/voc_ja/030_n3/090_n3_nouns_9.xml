@@ -1,0 +1,1369 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 nouns ⑨"
+      name_de="N3-Nomen ⑨"
+      name_fr="Les noms N3 ⑨"
+      name_it="Nomi N3 ⑨"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【確：かく】【認：にん】"
+              rom="kakunin"
+              tr_en="affirmation; confirmation; verification"
+              tr_de="Zusagen; Bestätigung; Überprüfung"
+              lvl="n3"
+              id="kakunin-check"
+            >
+                <keep_apart_from id="kanri-control" />
+                <keep_apart_from id="tashikameru-check" />
+                <keep_apart_from id="kensa-examination" />
+                <phrase
+                  ph="【安：あん】【全：ぜん】【確：かく】【認：にん】"
+                  rom="anzen-kakunin"
+                  tr_en="safety check"
+                  tr_de="Sicherheitschecks"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="ホテルの【予：よ】【約：やく】【確：かく】【認：にん】"
+                  rom="hoteru no yoyaku-kakunin"
+                  tr_en="confirmation of the hotel booking"
+                  tr_de="Bestätigung der Hotelbuchung"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="ご【確：かく】【認：にん】ください。"
+                  rom="Go-kakunin kudasai."
+                  tr_en="Please confirm."
+                  tr_de="Bitte bestätigen Sie."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【会：かい】【議：ぎ】の【時：じ】【間：かん】を【確：かく】【認：にん】しました。"
+                  rom="Kaigi no jikan o kakunin shimashita."
+                  tr_en="I've checked the time of the meeting."
+                  tr_de="Ich habe die Zeit der Sitzung überprüft."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【現：げん】【場：ば】"
+              rom="genba"
+              tr_en="site of an event; scene"
+              tr_de="Ort eines Ereignisses; Stelle"
+              hint_en="used in a professional context, e.g. police, reporters"
+              hint_de="verwendet in professionellem Umfeld, z.B. Polizei, Journalisten"
+              lvl="n3"
+              category="crime"
+              id="genba-site"
+            >
+                <!--
+                    所・ところ: place (general)
+                    場所・ばしょ: where something is
+                    現場・げんば: where something happens
+                -->
+                <keep_apart_from id="ba-spot" />
+                <keep_apart_from id="tokoro-place" />
+                <keep_apart_from id="basho-place" />
+                <phrase
+                  ph="【犯：はん】【罪：ざい】【現：げん】【場：ば】"
+                  rom="hanzai-genba"
+                  tr_en="scene of the crime"
+                  tr_de="Tatort"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【現：げん】【場：ば】には【多：おお】くの【見：けん】【物：ぶつ】【人：にん】が【集：あつ】まっています。"
+                  rom="Genba ni wa ōku no kenbutsunin ga atsumatte imasu."
+                  tr_en="A lot of spectators have gathered at the scene."
+                  tr_de="Viele Schaulustige haben sich an dem Ort versammelt."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has nx for kenbutsunin, but n4 for kenbutsu, n5 for san-nin"
+                />
+            </word>
+            <word
+              w="【政：せい】【府：ふ】"
+              rom="seifu"
+              tr_en="government; administration"
+              tr_de="Regierung; Administration"
+              lvl="n3"
+              category="government"
+              id="seifu-administration"
+              rem="appears in GENKI2 L21 vocab section"
+            >
+                <phrase
+                  ph="【政：せい】【府：ふ】【機：き】【関：かん】"
+                  rom="seifu-kikan"
+                  tr_en="government agency"
+                  tr_de="Regierungsbehörde"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="verified with jisho"
+                />
+                <sentence
+                  s="【政：せい】【府：ふ】は【倒：たお】された。"
+                  rom="Seifu wa taosareta."
+                  tr_en="The government was overthrown."
+                  tr_de="Die Regierung wurde umgestürzt."
+                  explanation_en="「倒された」is the passive form of「倒す」"
+                  explanation_de="「倒された」ist die passive Form von「倒す」"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【協：きょう】【力：りょく】"
+              rom="kyōryoku"
+              tr_en="cooperation; to collaborate"
+              tr_de="Zusammenarbeit; kooperieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="work"
+              id="kyōryoku-coop"
+            >
+                <!-- implicit see-also link to kyōryoku-powerful -->
+                <phrase
+                  ph="【協：きょう】【力：りょく】【的：てき】"
+                  rom="kyōryoku-teki"
+                  tr_en="cooperative; supportive"
+                  tr_de="kooperativ; unterstützend"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with jisho; jisho has nx"
+                />
+                <sentence
+                  s="ご【協：きょう】【力：りょく】ありがとうございます。"
+                  rom="Go-kyōryoku arigatō gozaimasu."
+                  tr_en="Thank you for your cooperation."
+                  tr_de="Besten Dank für Ihre Zusammenarbeit."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【協：きょう】【力：りょく】したほうがいいよ。"
+                  rom="Kyōryoku shita hō ga ii yo."
+                  tr_en="You’d better cooperate."
+                  tr_de="Es wäre besser, wenn du kooperieren würdest."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【衛：えい】【星：せい】"
+              rom="eisei"
+              tr_en="satellite"
+              tr_de="Satellit"
+              hint_en="natural or artificial"
+              hint_de="natürlich oder künstlich"
+              lvl="n3"
+              category="astronomy"
+              id="eisei-satellite"
+            >
+                <sentence
+                  s="【月：つき】は【地：ち】【球：きゅう】の【衛：えい】【星：せい】だ。"
+                  rom="Tsuki wa chikyū no eisei da."
+                  tr_en="The moon is the Earth's satellite."
+                  tr_de="Der Mond ist der Satellit der Erde."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【観：かん】【察：さつ】"
+              rom="kansatsu"
+              tr_en="observation; watching"
+              tr_de="Beobachtung; Beobachten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="science"
+              id="kansatsu-observation"
+            >
+                <sentence
+                  s="ゆうべ、【屋：おく】【上：じょう】から【星：ほし】を【観：かん】【察：さつ】した。"
+                  rom="Yūbe, okujō kara hoshi o kansatsu shita."
+                  tr_en="Last night, we watched the stars from the rooftop."
+                  tr_de="Letzte Nacht beobachteten wir die Sterne vom Dach aus."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="昨夜 changed to ゆうべ"
+                  href="https://hinative.com/questions/22578379"
+                />
+                <sentence
+                  s="【西：にし】【村：むら】さんの【観：かん】【察：さつ】は【正：せい】【確：かく】だ。"
+                  rom="Nishimura-san no kansatsu wa seikaku da."
+                  tr_en="Mr Nishimura's observations are accurate."
+                  tr_de="Die Beobachtungen von Herrn Nishimura sind zutreffend."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【大：たい】【気：き】"
+              rom="taiki"
+              tr_en="atmosphere; air"
+              tr_de="Atmosphäre; Luft"
+              lvl="n3"
+              category="science, astronomy"
+              id="taiki-atmosphere"
+            >
+                <see id="kūki-air" rem="closely related" />
+                <keep_apart_from id="kūki-air" />
+                <sentence
+                  s="【大：たい】【気：き】が【地：ち】【球：きゅう】を【包：つつ】んでいる。"
+                  rom="Taiki ga chikyū o tsutsunde iru."
+                  tr_en="The atmosphere surrounds the Earth."
+                  tr_de="Die Atmosphäre umgibt die Erde."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【周：しゅう】【囲：い】"
+              rom="shūi"
+              tr_en="surroundings; circumference"
+              tr_de="Umgebung; Umfeld"
+              hint_en="formal"
+              hint_de="formell"
+              lvl="n3"
+              id="shūi-circumference"
+            >
+                <!--
+                    周り・まわり: casual, everyday conversation
+                    周囲・しゅうい: formal or neutral; can be used for the mathematical sense
+                    円周・えんしゅう: n2; circumference in the mathematical sense
+                    周辺・しゅうへん: n2; surroundings; more formal than shūi
+                -->
+                <keep_apart_from id="mawari-circumference" />
+                <keep_apart_from id="atari-vicinity" />
+                <keep_apart_from id="chikaku-neighbourhood" />
+                <keep_apart_from id="kinjo-neighbourhood" />
+                <keep_apart_from id="hen-area" />
+                <keep_apart_from id="enshū-circumference" />
+                <keep_apart_from id="shūhen-circumference" />
+                <phrase
+                  ph="【工：こう】【場：じょう】の【周：しゅう】【囲：い】"
+                  rom="kōjō no shūi"
+                  tr_en="the surroundings of the factory"
+                  tr_de="die Umgebung um die Fabrik"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="その【湖：みずうみ】の【周：しゅう】【囲：い】は【５：ご】キロメートルです。"
+                  rom="Sono mizūmi no shūi wa go-kiromētoru desu."
+                  tr_en="That lake is five kilometres round."
+                  tr_de="Um diesen See sind es fünf Kilometer."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【販：はん】【売：ばい】"
+              rom="hanbai"
+              tr_en="retail; sales; selling goods"
+              tr_de="Einzelhandel; Verkauf; Güter verkaufen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="business, trade"
+              id="hanbai-sales"
+            >
+                <!--
+                    営業・えいぎょう・sales, business operations, marketing activity, sales promotion
+                    販売・はんばい・selling goods, retail
+                    商売・しょうばい・business, trade, or occupation; slightly colloquial
+                -->
+                <keep_apart_from id="eigyō-trade" />
+                <keep_apart_from id="shōbai-trade" />
+                <keep_apart_from id="uru-sell" />
+                <!--
+                    販売部門・はんばいぶもん・sales department (n1)
+                    販売員・はんばいいん・sales person (nx)
+                -->
+                <phrase
+                  ph="【商：しょう】【品：ひん】を【販：はん】【売：ばい】する"
+                  rom="shōhin o hanbai suru"
+                  tr_en="to sell commodities (products)"
+                  tr_de="Handelsgüter verkaufen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="あの【店：みせ】では【果：くだ】【物：もの】と【野：や】【菜：さい】を【販：はん】【売：ばい】している。"
+                  rom="Ano mise de wa kudamono to yasai o hanbai shite iru."
+                  tr_en="They deal in fruit and vegetables at that store."
+                  tr_de="In dem Laden dort werden Früchte und Gemüse verkauft."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【株：かぶ】"
+              rom="kabu"
+              tr_en="stock; share"
+              tr_de="Aktien; Aktienanteil"
+              lvl="n3"
+              category="finances, business"
+              id="kabu-stock"
+            >
+                <!--
+                    急落・きゅうらく・sudden fall (nx)・株価が急落した (lib0)
+                    急騰・きゅうとう・sudden rise (nx)・株価が急騰した (self)
+                -->
+                <keep_apart_from id="kabushiki-share" />
+                <phrase
+                  ph="【会：かい】【社：しゃ】の【株：かぶ】"
+                  rom="kaisha no kabu"
+                  tr_en="company shares"
+                  tr_de="Firmenaktien"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【最：さい】【近：きん】【株：かぶ】の【値：ね】【段：だん】が【落：お】ちている。"
+                  rom="Saikin kabu no nedan ga ochite iru."
+                  tr_en="The prices of shares have been falling recently."
+                  tr_de="Die Aktienpreise sind in letzter Zeit gefallen."
+                  lvl="n3"
+                  origin="Oxford p.44"
+                  rem="a more specific word for stock prices is 株価・かぶか, which is nx"
+                />
+            </word>
+            <word
+              w="【塀：へい】"
+              rom="hei"
+              tr_en="fence; wall"
+              tr_de="Zaun; Mauer"
+              lvl="n3"
+              id="hei-fence"
+            >
+                <keep_apart_from id="saku-fence" />
+                <sentence
+                  s="【庭：にわ】の【回：まわ】りに【高：たか】い【塀：へい】があった。"
+                  rom="Niwa no mawari ni takai hei ga atta."
+                  tr_en="There was a high fence around the garden."
+                  tr_de="Der Garten war von einem hohen Zaun umgeben."
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【技：ぎ】【師：し】"
+              rom="gishi"
+              tr_en="engineer; technician"
+              tr_de="Ingenieur; Techniker"
+              lvl="n3"
+              category="occupations, technical"
+              id="gishi-engineer"
+            >
+                <phrase
+                  ph="【有：ゆう】【能：のう】な【技：ぎ】【師：し】"
+                  rom="yūnō na gishi"
+                  tr_en="a competent engineer"
+                  tr_de="ein kompetenter Ingenieur"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【山：やま】【田：だ】さんは【有：ゆう】【能：のう】な【技：ぎ】【師：し】です。"
+                  rom="Yamada-san wa yūnō na gishi desu."
+                  tr_en="Mr Yamada is a competent engineer."
+                  tr_de="Herr Yamada ist ein kompetenter Ingenieur."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【議：ぎ】【会：かい】"
+              rom="gikai"
+              tr_en="parliament; congress"
+              tr_de="Parlament; Kongress"
+              lvl="n3"
+              category="government"
+              id="gikai-parliament"
+            >
+                <sentence
+                  s="【議：ぎ】【会：かい】は【解：かい】【散：さん】した。"
+                  rom="Gikai wa kaisan shita."
+                  tr_en="Parliament has been dissolved."
+                  tr_de="Das Parlament ist aufgelöst worden."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【議：ぎ】【長：ちょう】"
+              rom="gichō"
+              tr_en="speaker of an assembly; chairman"
+              tr_de="Sprecher einer Versammlung; Vorsitzende"
+              lvl="n3"
+              category="politics, people"
+              id="gichō-chairman"
+            >
+                <keep_apart_from id="gīn-memberofparlia" />
+                <keep_apart_from id="iin-committeemember" />
+                <phrase
+                  ph="【議：ぎ】【長：ちょう】に【選：えら】ばれる"
+                  rom="gichō ni erabareru"
+                  tr_en="to be elected chairman"
+                  tr_de="zum Vorsitzenden gewählt werden"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【彼：かれ】は【議：ぎ】【長：ちょう】に【選：えら】ばれた。"
+                  rom="Kare wa gichō ni erabareta."
+                  tr_en="He was elected chairman."
+                  tr_de="Er wurde zum Vorsitzenden gewählt."
+                  explanation_en="「選ばれる」is the passive form of「選ぶ」"
+                  explanation_de="「選ばれる」ist die passive Form von「選ぶ」"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【引：いん】【退：たい】"
+              rom="intai"
+              tr_en="retirement; stepping back from a career"
+              tr_de="Ruhestand; von einer Karriere zurücktreten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="employment"
+              id="intai-retirement"
+            >
+                <keep_apart_from id="taishoku-retirement" />
+                <!--
+                   引退: carries a sense of leaving a career behind (athletes, entertainers, politicians)
+                   退職: simply means leaving a job or resigning from a position
+                -->
+                <phrase
+                  ph="【若：わか】くして【引：いん】【退：たい】する"
+                  rom="wakaku shite intai suru"
+                  tr_en="to retire at a young age"
+                  tr_de="in jungem Alter in den Ruhestand gehen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="ChatGPT confirms that 若い is OK here and does not necessarily mean 'young' in absolute terms"
+                />
+                <sentence
+                  s="【石：いし】【川：かわ】さんは【年：とし】を【取：と】ってから【引：いん】【退：たい】しました。"
+                  rom="Ishikawa-san wa toshi o totte kara intai shimashita."
+                  tr_en="Mr Ishikawa retired because of old age."
+                  tr_de="Herr Ishikawa ist wegen hohem Alter vom Job zurückgetreten."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【祖：そ】【父：ふ】は、さ【来：らい】【年：ねん】【引：いん】【退：たい】する【予：よ】【定：てい】です。"
+                  rom="Sofu wa, sarainen intai suru yotei desu."
+                  tr_en="My grandfather is planning to retire the year after next."
+                  tr_de="Mein Grossvater plant, übernächstes Jahr in den Ruhestand zu gehen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="テニス【選：せん】【手：しゅ】は【30：さんじゅっ】【歳：さい】ぐらいで【引：いん】【退：たい】する【人：ひと】が【多：おお】いと【聞：き】きました。"
+                  rom="Tenisu-senshu wa san-jussai gurai de intai suru hito ga ōi to kikimashita."
+                  tr_en="I have heard that many tennis players step back from their career when around 30 years old."
+                  tr_de="Ich habe gehört, viele Tennisspieler treten von ihrer Karriere zurück, wenn sie etwa 30 Jahre alt sind."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【責：せき】【任：にん】"
+              rom="sekinin"
+              tr_en="responsibility; duty"
+              tr_de="Verantwortung; Pflicht"
+              lvl="n3"
+              id="sekinin-duty"
+            >
+                <!-- 責任から逃げる (せきにんからにげる) To avoid responsibility (ChatGPT) -->
+                <keep_apart_from id="kinmu-duty" />
+                <keep_apart_from id="yaku-role" />
+                <keep_apart_from id="gimu-duty" />
+                <keep_apart_from id="yakume-role" />
+                <keep_apart_from id="ninmu-mission" />
+                <keep_apart_from id="kakari-incharge" />
+                <sentence
+                  s="【私：わたし】には【責：せき】【任：にん】がありません。"
+                  rom="Watashi ni wa sekinin ga arimasen."
+                  tr_en="I'm not responsible."
+                  tr_de="Ich bin nicht dafür verantwortlich."
+                  lvl="n3"
+                  origin="Langenscheidt"
+                  rem="Langenscheidt hat 'Es ist nicht meine Schuld.'"
+                />
+            </word>
+            <word
+              w="【印：いん】【刷：さつ】"
+              rom="insatsu"
+              tr_en="printing"
+              tr_de="Druck"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="literature"
+              id="insatsu-printing"
+            >
+                <sentence
+                  s="【印：いん】【刷：さつ】したいのです。"
+                  rom="Insatsu shitai no desu."
+                  tr_en="I would like to print something."
+                  tr_de="Ich möchte etwas ausdrucken."
+                  lvl="n3"
+                  origin="Langenscheidt p.132"
+                />
+            </word>
+            <word
+              w="【違：い】【反：はん】"
+              rom="ihan"
+              tr_en="violation; breach"
+              tr_de="Übertretung; Verstoss"
+              lvl="n3"
+              category="crime"
+              id="ihan-violation"
+            >
+                <sentence
+                  s="【規：き】【則：そく】に【違：い】【反：はん】してはいけない。"
+                  rom="Kisoku ni ihan shite wa ikenai."
+                  tr_en="You must not violate the regulations."
+                  tr_de="Du darfst nicht gegen die Vorschriften verstossen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【金：きん】【額：がく】"
+              rom="kingaku"
+              tr_en="amount of money"
+              tr_de="Geldbetrag"
+              lvl="n3"
+              category="finances"
+              id="kingaku-moneyamount"
+            >
+                <keep_apart_from id="gōkei-sum" />
+                <sentence
+                  s="【私：わたし】はその【金：きん】【額：がく】の【２：に】【倍：ばい】【払：はら】った。"
+                  rom="Watashi wa sono kingaku no ni-bai haratta."
+                  tr_en="I paid double the sum."
+                  tr_de="Ich bezahlte den doppelten Betrag."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="ni-bai is n4"
+                />
+            </word>
+            <word
+              w="【記：き】【事：じ】"
+              rom="kiji"
+              tr_en="newspaper article"
+              tr_de="Zeitungsartikel"
+              lvl="n3"
+              category="news"
+              id="kiji-article"
+            >
+                <sentence
+                  s="【私：わたし】たちの【学：がっ】【校：こう】の【記：き】【事：じ】が【新：しん】【聞：ぶん】に【出：で】た。"
+                  rom="Watashi-tachi no gakkō no kiji ga shinbun ni deta."
+                  tr_en="An article about our school appeared in the newspaper."
+                  tr_de="In der Zeitung erschien ein Artikel über unsere Schule."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【詐：さ】【欺：ぎ】"
+              rom="sagi"
+              tr_en="fraud; swindle; cheating"
+              tr_de="Betrug; Schwindel; Trick"
+              lvl="n3"
+              id="sagi-fraud"
+              rem="appears in GENKI2 p.225; jisho has n1"
+            >
+                <phrase
+                  ph="【詐：さ】【欺：ぎ】【師：し】"
+                  rom="sagishi"
+                  tr_en="cheater; swindler"
+                  tr_de="Betrüger; Schwindler"
+                  lvl="n3"
+                  origin="GENKI2 p.225"
+                />
+            </word>
+            <word
+              w="【神：しん】【経：けい】"
+              rom="shinkei"
+              tr_en="nerves; sensitivity"
+              tr_de="Nerven; Sensitivität"
+              lvl="n3"
+              id="shinkei-nerves"
+              rem="appears in GENKI2 p.328 kanji section"
+            >
+                <phrase
+                  ph="【神：しん】【経：けい】【質：しつ】"
+                  rom="shinkeishitsu"
+                  tr_en="nervous; oversensitive; fussy"
+                  tr_de="nervös; überempfindlich; hypersensibel"
+                  lvl="n3"
+                  origin="GENKI2 p.328"
+                />
+            </word>
+            <word
+              w="【経：けい】【営：えい】"
+              rom="keiei"
+              tr_en="management; administration; running a business"
+              tr_de="Unternehmensführung; Geschäftsleitung; ein Geschäft führen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="keiei-management"
+              rem="appears in GENKI2 p.328 kanji section"
+            >
+                <phrase
+                  ph="【経：けい】【営：えい】【学：がく】"
+                  rom="keieigaku"
+                  tr_en="management studies; field of business administration"
+                  tr_de="Management-Studien; Studium der Unternehmensführung"
+                  lvl="n3"
+                  origin="GENKI2 p.328"
+                />
+            </word>
+            <word
+              w="【経：けい】【由：ゆ】"
+              rom="keiyu"
+              tr_en="going via; going by way of"
+              tr_de="via einen Ort gehen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="keiyu-via"
+              rem="appears in GENKI2 p.328 kanji section"
+            >
+                <phrase
+                  ph="【大：おお】【阪：さか】【経：けい】【由：ゆ】"
+                  rom="Ōsaka-keiyu"
+                  tr_en="going via Osaka"
+                  tr_de="via Osaka"
+                  lvl="n3"
+                  origin="GENKI2 p.328"
+                  rem="GENKI2 has パリ経由; verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【契：けい】【約：やく】"
+              rom="keiyaku"
+              tr_en="contract; agreement; to sign a contract"
+              tr_de="Vertrag; Vereinbarung; einen Vertrag abschliessen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="employment, business"
+              id="keiyaku-contract"
+            >
+                <phrase
+                  ph="【保：ほ】【険：けん】【契：けい】【約：やく】"
+                  rom="hoken keiyaku"
+                  tr_en="insurance contract"
+                  tr_de="Versicherungsvertrag"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="それなら【契：けい】【約：やく】と【違：ちが】います。"
+                  rom="Sore nara keiyaku to chigaimasu."
+                  tr_en="If it comes to that, that would be against the contract."
+                  tr_de="Wenn es so weit kommt, das wäre gegen den Vertrag."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【虫：むし】【歯：ば】"
+              rom="mushiba"
+              tr_en="tooth decay; decayed tooth"
+              tr_de="Karies; verfaulter Zahn"
+              lvl="n3"
+              category="health"
+              id="mushiba-toothdecay"
+            >
+                <phrase
+                  ph="【虫：むし】【歯：ば】を【抜：ぬ】く"
+                  rom="mushiba o nuku"
+                  tr_en="to pull out a bad tooth"
+                  tr_de="einen schlechten Zahn ziehen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】には【虫：むし】【歯：ば】が【二：に】【本：ほん】ある。"
+                  rom="Watashi ni wa mushiba ga ni-hon aru."
+                  tr_en="I have two bad teeth."
+                  tr_de="Ich habe zwei schlechte Zähne."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【質：しつ】"
+              rom="shitsu"
+              tr_en="quality; value"
+              tr_de="Qualität; Wert"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              lvl="n3"
+              id="shitsu-quality"
+              studyInContext="required"
+            >
+                <phrase
+                  ph="【品：ひん】【質：しつ】"
+                  rom="hin-shitsu"
+                  tr_en="quality of a product"
+                  tr_de="Qualität eines Produktes"
+                  lvl="n3"
+                  rem="jisho has n1"
+                />
+                <phrase
+                  ph="【性：せい】【質：しつ】"
+                  rom="sei-shitsu"
+                  tr_en="nature (of a person); characteristics; disposition"
+                  tr_de="Natur (einer Person); Merkmale; Disposition"
+                  lvl="n3"
+                  rem="jisho has n2; ChatGPT: sometimes close to 'trait', can apply to people or things"
+                />
+                <phrase
+                  ph="【質：しつ】の【低：ひく】い【教：きょう】【育：いく】"
+                  rom="shitsu no hikui kyōiku"
+                  tr_en="a poor education"
+                  tr_de="eine schlechte Ausbildung"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【水：すい】【質：しつ】"
+                  rom="sui-shitsu"
+                  tr_en="water quality"
+                  tr_de="Wasserqualität"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="この【犬：いぬ】は【性：せい】【質：しつ】が【穏：おだ】やかですね。"
+                  rom="Kono inu wa sei-shitsu ga odayaka desu ne."
+                  tr_en="This dog has a calm nature, don't you think?"
+                  tr_de="Dieser Hund ist von einer gelassenen Natur, findest du nicht?"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="このパソコンの【品：ひん】【質：しつ】はあまり【良：よ】くないと【思：おも】います。"
+                  rom="Kono pasokon no hin-shitsu wa amari yokunai to omoimasu."
+                  tr_en="I don't think the quality of this computer is very good."
+                  tr_de="Ich finde nicht, dass die Qualität dieses Computers besonders gut ist."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【調：ちょう】【子：し】"
+              rom="chōshi"
+              tr_en="(body) condition; (machine) state; (instrument) tuning"
+              tr_de="(Körper) Befinden; (Maschine) Zustand; (Instrument) Stimmung"
+              studyInContext="preferred"
+              lvl="n3"
+              category="technical, health"
+              id="chōshi-pitch"
+            >
+                <phrase
+                  ph="【体：からだ】の【調：ちょう】【子：し】"
+                  rom="karada no chōshi"
+                  tr_en="physical condition"
+                  tr_de="körperliches Befinden"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【調：ちょう】【子：し】に【乗：の】る"
+                  rom="chōshi ni noru"
+                  tr_en="to get carried away; to become overconfident"
+                  tr_de="sich mitreissen lassen; übermütig werden"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【機：き】【械：かい】の【調：ちょう】【子：し】が【悪：わる】い。"
+                  rom="Kikai no chōshi ga warui."
+                  tr_en="The machine is not working properly."
+                  tr_de="Die Maschine funktioniert nicht richtig."
+                  lvl="n3"
+                  origin="Oxford p.64"
+                />
+                <sentence
+                  s="ピアノの【調：ちょう】【子：し】が【狂：くる】っている。"
+                  rom="Piano no chōshi ga kurutte iru."
+                  tr_en="The tuning of the piano is off."
+                  tr_de="Das Klavier ist verstimmt."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【昨日：きのう】 ビールを【３：さん】パイント【飲：の】んで、ちょっと【調：ちょう】【子：し】に【乗：の】りすぎた。"
+                  rom="Kinō bīru o san-painto nonde, chotto chōshi ni nori-sugita."
+                  tr_en="Yesterday, I drank three pints of beer and got a little carried away."
+                  tr_de="Gestern habe ich drei Pints Bier getrunken und habe mich etwas mitreissen lassen."
+                  allowSpaces="true"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; painto is nx"
+                />
+            </word>
+            <word
+              w="【誠：まこと】"
+              rom="makoto"
+              tr_en="truth; sincerity; fidelity"
+              tr_de="Wahrheit; Wirklichkeit; Echtheit"
+              lvl="n3"
+              id="makoto-truth"
+              rem="jisho has n1 for makoto, but n3 for makoto ni; appears in GENKI2 L20 vocab section as makoto ni"
+            >
+                <keep_apart_from id="makotoni-indeed" />
+                <keep_together id="makotoni-indeed" />
+                <phrase
+                  ph="【誠：まこと】に"
+                  rom="makoto ni"
+                  tr_en="indeed; really; absolutely"
+                  tr_de="in der Tat; wirklich; absolut"
+                  lvl="n3"
+                  origin="GENKI2 p.183"
+                />
+            </word>
+            <word
+              w="【誠：まこと】に"
+              rom="makoto ni"
+              tr_en="indeed; really; absolutely; truly; actually; very; quite"
+              lvl="n3"
+              HIDDEN="true"
+              id="makotoni-indeed"
+              rem="now a phrase of makoto-truth"
+            >
+                <keep_apart_from id="makoto-truth" />
+                <keep_together id="makoto-truth" />
+            </word>
+            <word
+              w="【才：さい】【能：のう】"
+              rom="sainō"
+              tr_en="talent; ability"
+              tr_de="Talent; Fähigkeit"
+              lvl="n3"
+              id="sainō-talent"
+            >
+                <phrase
+                  ph="【音：おん】【楽：がく】の【才：さい】【能：のう】"
+                  rom="ongaku no sainō"
+                  tr_en="a talent for music"
+                  tr_de="ein Talent für Musik"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【絵：え】の【才：さい】【能：のう】"
+                  rom="e no sainō"
+                  tr_en="a talent for painting"
+                  tr_de="ein Talent für Malerei"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【中：なか】【川：がわ】さんには【文：ぶん】【学：がく】の【才：さい】【能：のう】がある。"
+                  rom="Nakagawa-san ni wa bungaku no sainō ga aru."
+                  tr_en="Ms Nakagawa has a talent in literature."
+                  tr_de="Frau Nakagawa hat ein Talent in Literatur."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【調：ちょう】【査：さ】"
+              rom="chōsa"
+              tr_en="survey; enquiry; to investigate"
+              tr_de="Umfrage; Untersuchung; untersuchen"
+              Langenscheidt="Untersuchung; Umfrage"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="chōsa-survey"
+              rem="appears in GENKI2 L23 vocab section"
+            >
+                <see id="sōsa-enquiry" rem="closely related" />
+                <keep_apart_from id="sōsa-enquiry" />
+                <keep_apart_from id="kensa-examination" />
+                <keep_apart_from id="mensetsu-interview" />
+                <keep_apart_from id="ankēto-enquête" />
+                <phrase
+                  ph="【事：じ】【故：こ】の【原：げん】【因：いん】を【調：ちょう】【査：さ】する"
+                  rom="jiko no gen'in o chōsa suru"
+                  tr_en="to investigate the cause of the accident"
+                  tr_de="den Grund des Unfalls untersuchen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【警：けい】【察：さつ】は【調：ちょう】【査：さ】を【続：つづ】けた。"
+                  rom="Keisatsu wa chōsa o tsudzuketa."
+                  tr_en="The police continued their investigation."
+                  tr_de="Die Polizei hat ihre Untersuchungen fortgesetzt."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="for a criminal investigation, 捜査 (そうさ) would be even more specific, but it's n1"
+                />
+            </word>
+            <word
+              w="【永：えい】【久：きゅう】"
+              rom="eikyū"
+              tr_en="eternity; permanence"
+              tr_de="Ewigkeit; Konstanz"
+              Langenscheidt="Ewigkeit"
+              hint_en="formal or technical"
+              hint_de="formell oder technisch"
+              lvl="n3"
+              category="time"
+              id="eikyū-eternity"
+            >
+                <keep_apart_from id="eien-eternity" />
+                <phrase
+                  ph="【永：えい】【久：きゅう】【歯：し】"
+                  rom="eikyūshi"
+                  tr_en="permanent teeth"
+                  tr_de="bleibende Zähne"
+                  explanation_en="adult teeth that replace the baby teeth"
+                  explanation_de="Zähne eines Erwachsenen, welche die Babyzähne ersetzen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="the phrase is quite specific; jisho has nx"
+                />
+                <sentence
+                  s="【彼：かれ】の【名：な】【前：まえ】は【永：えい】【久：きゅう】に【残：のこ】るでしょう。"
+                  rom="Kare no namae wa eikyū ni nokoru deshō."
+                  tr_en="His name will remain permanently."
+                  tr_de="Sein Name wird permanent bleiben."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【仲：なか】"
+              rom="naka"
+              tr_en="relation; relationship"
+              tr_de="Verhältnis; Relation"
+              studyInContext="preferred"
+              lvl="n3"
+              id="naka-relation"
+            >
+                <!-- implicit see-also link to naka-centre -->
+                <keep_apart_from id="kankei-relationship" />
+                <keep_apart_from id="nakama-companion" />
+                <keep_together id="nakama-companion" />
+                <keep_apart_from id="otsure-companion" />
+                <keep_apart_from id="aite-companion" />
+                <keep_apart_from id="dōryō-coworker" />
+                <phrase
+                  ph="【仲：なか】が【悪：わる】い"
+                  rom="naka ga warui"
+                  tr_en="not getting along; not being on good terms"
+                  tr_de="nicht miteinander auskommen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【仲：なか】がいい"
+                  rom="naka ga ii"
+                  tr_en="getting along; being on good terms"
+                  tr_de="gut miteinander auskommen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT and lib0"
+                />
+                <phrase
+                  ph="【仲：なか】【間：ま】"
+                  rom="nakama"
+                  tr_en="companion; fellow; fellowship"
+                  tr_de="Kamerad; Kumpel; Kameradschaft"
+                  lvl="n3"
+                />
+                <sentence
+                  s="【二：ふた】【人：り】の【仲：なか】が【悪：わる】くなった。"
+                  rom="Futari no naka ga waruku natta."
+                  tr_en="The relationship between the two got worse."
+                  tr_de="Das Verhältnis zwischen den beiden ist schlechter geworden."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】たちの【仲：なか】【間：ま】に【入：はい】りなさい。"
+                  rom="Watashi-tachi no nakama ni hairi-nasai."
+                  tr_en="Become one of us."
+                  tr_de="Werde Mitglied unserer Gruppe."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【首：しゅ】【都：と】"
+              rom="shuto"
+              tr_en="capital city; metropolis"
+              tr_de="Hauptstadt; Metropole"
+              lvl="n3"
+              category="city"
+              id="shuto-capital"
+            >
+                <phrase
+                  ph="【中：ちゅう】【国：ごく】の【首：しゅ】【都：と】"
+                  rom="Chūgoku no shuto"
+                  tr_en="the capital of China"
+                  tr_de="die Hauptstadt von China"
+                  lvl="n3"
+                  origin="self"
+                />
+                <sentence
+                  s="【東：とう】【京：きょう】は【日：に】【本：ほん】の【首：しゅ】【都：と】です。"
+                  rom="Tōkyō wa Nihon no shuto desu."
+                  tr_en="Tokyo is the capital of Japan."
+                  tr_de="Tokyo ist die Hauptstadt von Japan."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【我：が】【慢：まん】"
+              rom="gaman"
+              tr_en="patience; endurance; self-control"
+              tr_de="Geduld; Ausdauer; Selbstkontrolle"
+              lvl="n3"
+              category="culture"
+              id="gaman-patience"
+            >
+                <keep_together id="chie-wisdom" />
+                <sentence
+                  s="とりあえずこれで【我：が】【慢：まん】して。"
+                  rom="Toriaezu kore de gaman shite."
+                  tr_en="Just put up with this for now."
+                  tr_de="Du musst für den Moment mal damit auskommen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has n1 for toriaezu, but we have it in n3_more_words_1"
+                />
+            </word>
+            <word
+              w="【安：あん】【定：てい】"
+              rom="antei"
+              tr_en="stability; steadiness; equilibrium"
+              tr_de="Stabilität; Beständigkeit; Gleichgewicht"
+              lvl="n3"
+              id="antei-stability"
+            >
+                <phrase
+                  ph="【不：ふ】【安：あん】【定：てい】"
+                  rom="fuantei"
+                  tr_en="instability; unsteadiness"
+                  tr_de="Instabilität; Unbeständigkeit"
+                  lvl="n3"
+                  rem="from jisho; jisho has nx"
+                />
+                <!-- 日本経済は安定している - Nihon keizai wa antei shite iru - The Japanese economy is stable (ChatGPT) -->
+            </word>
+            <word
+              w="【銀：ぎん】"
+              rom="gin"
+              tr_en="silver (metal); silver (colour)"
+              tr_de="Silber (Metall); silbrig"
+              lvl="n3"
+              category="science"
+              id="gin-silver"
+            >
+                <keep_together id="kin-gold" />
+                <phrase
+                  ph="【銀：ぎん】のスプーン"
+                  rom="gin no supūn"
+                  tr_en="a silver spoon"
+                  tr_de="ein silberner Löffel"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【知：ち】【恵：え】"
+              rom="chie"
+              tr_en="wisdom; insight"
+              tr_de="Weisheit; Einsicht"
+              lvl="n3"
+              category="culture"
+              id="chie-wisdom"
+            >
+                <keep_together id="gaman-patience" />
+                <sentence
+                  s="ことわざは【知：ち】【恵：え】に【満：み】ちている。"
+                  rom="Kotowaza wa chie ni michite iru."
+                  tr_en="Proverbs are full of wisdom."
+                  tr_de="Sprichwörter sind voll von Weisheit."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【迷：めい】【惑：わく】"
+              rom="meiwaku"
+              tr_en="trouble; nuisance; to annoy"
+              tr_de="Schwierigkeit; Lästigkeit; nerven"
+              hint_en="noun; na-adjective; suru verb"
+              hint_de="Nomen; Na-Adjektiv; Suru-Verb"
+              studyInContext="preferred"
+              lvl="n3"
+              category="not-good, top-words"
+              id="meiwaku-nuisance"
+            >
+                <keep_apart_from id="mendō-bother" />
+                <keep_apart_from id="sewa-trouble" />
+                <phrase
+                  ph="【迷：めい】【惑：わく】をかける"
+                  rom="meiwaku o kakeru"
+                  tr_en="to cause trouble to others"
+                  tr_de="den anderen Leuten Schwierigkeiten bereiten"
+                  lvl="n3"
+                  origin="Kaname Naito"
+                  href="https://youtu.be/PNHR9lnGS3A?si=EBFMTJLjH0LVBLBE&amp;t=72"
+                />
+                <phrase
+                  ph="【迷：めい】【惑：わく】をする"
+                  rom="meiwaku o suru"
+                  tr_en="to be annoyed"
+                  tr_de="genervt sein"
+                  lvl="n3"
+                  origin="Kaname Naito"
+                  href="https://youtu.be/PNHR9lnGS3A?si=SIZZeZsH1e5SeWw8&amp;t=107"
+                />
+                <sentence
+                  s="【人：ひと】に【迷：めい】【惑：わく】をかけてはいけない。"
+                  rom="Hito ni meiwaku o kakete wa ikenai."
+                  tr_en="You must not cause trouble to others."
+                  tr_de="Du darfst die Leute nicht nerven."
+                  lvl="n3"
+                  origin="Kaname Naito"
+                  href="https://youtu.be/PNHR9lnGS3A?si=Hs6LAPMlpEu25PI5"
+                />
+                <sentence
+                  s="ごめん、【俺：おれ】のせいでみんなに【迷：めい】【惑：わく】をかけた。"
+                  rom="Gomen, ore no sei de minna ni meiwaku o kaketa."
+                  tr_en="I'm sorry, I caused everybody trouble."
+                  tr_de="Tut mir leid, ich habe euch allen Mühe gemacht."
+                  lvl="n3"
+                  origin="Kaname Naito"
+                  href="https://youtu.be/PNHR9lnGS3A?si=lPICEeJHBCqdoHPr&amp;t=88"
+                />
+                <sentence
+                  s="こうなってしまったからにはもう【正：しょう】【直：じき】に【言：い】うけど、みんなあなたに【迷：めい】【惑：わく】してるの！"
+                  rom="Kō natte shimatta kara ni wa mō shōjiki ni iu kedo, minna anata ni meiwaku shiteru no!"
+                  tr_en="Now that things have turned out like this, I'll just be honest. Everyone is bothered by you!"
+                  tr_de="Nachdem es so rausgekommen ist, ehrlich gesagt, alle nerven sich über dich!"
+                  lvl="n3"
+                  origin="Kaname Naito"
+                  href="https://youtu.be/PNHR9lnGS3A?si=9zKee5fuTvO_3qiv&amp;t=127"
+                />
+            </word>
+            <word
+              w="【金：きん】【融：ゆう】"
+              rom="kinyū"
+              tr_en="financial matters; monetary"
+              tr_de="Finanzen; monetär"
+              lvl="n3"
+              category="finances"
+              id="kinyū-finances"
+            >
+                <!-- implicit see-also link to kinyū-fillin -->
+                <phrase
+                  ph="【金：きん】【融：ゆう】【引：ひ】き【締：し】め"
+                  rom="kinyū-hikishime"
+                  tr_en="monetary tightening"
+                  tr_de="monetäre Straffung"
+                  explanation_en="e.g. raising interest rates"
+                  explanation_de="z.B. Erhöhung der Zinssätze"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for hikishime, but n5 for hiku, shimeru; antonym is 金融緩和・きんゆうかんわ, kanwa is n1"
+                />
+                <phrase
+                  ph="【金：きん】【融：ゆう】【機：き】【関：かん】"
+                  rom="kinyū-kikan"
+                  tr_en="financial institution"
+                  tr_de="Finanzinstitut"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="verified with lib0 and DeepL"
+                />
+                <sentence
+                  s="【金：きん】【融：ゆう】【市：し】【場：じょう】は【不：ふ】【安：あん】【定：てい】みたいです。"
+                  rom="Kinyū-shijō wa fuantei mitai desu."
+                  tr_en="It seems that the financial markets are unstable."
+                  tr_de="Es scheint, dass die Finanzmärkte instabil sind."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; verified that it's しじょう and not いちば here; jisho has nx for fuantei, n3 for antei"
+                />
+            </word>
+            <word
+              w="【金：きん】"
+              rom="kin"
+              tr_en="gold (metal); golden (colour)"
+              tr_de="Gold (Metall); goldig"
+              lvl="n3"
+              category="science"
+              id="kin-gold"
+            >
+                <keep_together id="gin-silver" />
+            </word>
+            <word
+              w="【宇：う】【宙：ちゅう】"
+              rom="uchū"
+              tr_en="universe; cosmos; space"
+              tr_de="Universum; Kosmos; Weltraum"
+              lvl="n3"
+              category="astronomy"
+              id="uchū-space"
+              rem="appears in GENKI2 L20 as uchūjin, space alien"
+            >
+                <keep_apart_from id="supēsu-space" />
+            </word>
+            <word
+              w="【仲：なか】【間：ま】"
+              rom="nakama"
+              tr_en="companion; fellow; co-worker"
+              tr_de="Kamerad; Kumpel; Mitarbeiter"
+              lvl="n3"
+              category="business, people"
+              id="nakama-companion"
+              HIDDEN="true"
+              rem="now a phrase of naka-relation"
+            >
+                <keep_apart_from id="naka-relation" />
+                <keep_together id="naka-relation" />
+            </word>
+            <word
+              w="【収：しゅう】【入：にゅう】"
+              rom="shūnyū"
+              tr_en="income; revenue"
+              tr_de="Einkommen; Einnahmen"
+              lvl="n3"
+              category="business, finances"
+              id="shūnyū-income"
+            >
+                <keep_apart_from id="kyūryō-salary" />
+                <keep_apart_from id="chingin-wages" />
+            </word>
+            <word
+              w="【作：さく】【品：ひん】"
+              rom="sakuhin"
+              tr_en="works of art; composition; product"
+              tr_de="Kunstwerk; Komposition; Produkt"
+              lvl="n3"
+              category="arts"
+              id="sakuhin-work"
+            >
+                <!-- 作品をご覧に入れます - I will show you the piece (of work). (ChatGPT) -->
+                <keep_apart_from id="shōhin-commodity" />
+                <keep_apart_from id="seihin-product" />
+                <keep_apart_from id="shina-item" />
+                <keep_apart_from id="shinamono-article" />
+                <keep_apart_from id="sakumotsu-crops" />
+            </word>
+            <word
+              w="【好：この】み"
+              rom="konomi"
+              tr_en="liking; choice; one's taste"
+              tr_de="Präferenz; Vorzug; Geschmack"
+              lvl="n3"
+              category="mood"
+              id="konomi-liking"
+            >
+                <see id="konomu-prefer" rem="verb" />
+                <keep_apart_from id="nozomi-wish" />
+            </word>
+            <word
+              w="【酸：さん】【素：そ】"
+              rom="sanso"
+              tr_en="oxygen"
+              tr_de="Sauerstoff"
+              lvl="n3"
+              category="science"
+              id="sanso-oxygen"
+            />
+            <word
+              w="【鉄：てつ】"
+              rom="tetsu"
+              tr_en="iron (Fe)"
+              tr_de="Eisen (Fe)"
+              lvl="n3"
+              category="science"
+              id="tetsu-iron"
+            />
+            <word
+              w="【金：きん】【属：ぞく】"
+              rom="kinzoku"
+              tr_en="metal"
+              tr_de="Metall"
+              lvl="n3"
+              category="science"
+              id="kinzoku-metal"
+            />
+            <word
+              w="【目：もく】【標：ひょう】"
+              rom="mokuhyō"
+              tr_en="goal; objective; target"
+              tr_de="Ziel"
+              lvl="n3"
+              id="mokuhyō-goal"
+            >
+                <!-- 目標を決める (もくひょうをきめる) - to set a goal (ChatGPT) -->
+                <!-- 毎年の目標をノートに書いています。 - ChatGPT -->
+            </word>
+            <word
+              w="【時：じ】【刻：こく】"
+              rom="jikoku"
+              tr_en="time; favourable time; opportunity"
+              tr_de="Zeitpunkt; günstiger Zeitpunkt; Gelegenheit"
+              lvl="n3"
+              category="time"
+              id="jikoku-time"
+            />
+        </section>
+    </unit>
+</vocabulary>

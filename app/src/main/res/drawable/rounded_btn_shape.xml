@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:insetLeft="4dp"
+  android:insetTop="6dp"
+  android:insetRight="4dp"
+  android:insetBottom="6dp"
+  >
+    <ripple android:color="@color/green_700">
+        <item android:id="@android:id/mask">
+            <shape android:shape="rectangle">
+                <corners android:radius="18dp" />
+            </shape>
+        </item>
+        <item android:id="@android:id/background">
+            <shape android:shape="rectangle">
+                <!-- this colour will be overwritten by backgroundTint -->
+                <solid android:color="@color/green_800" />
+                <corners android:radius="18dp" />
+                <padding
+                  android:left="16dp"
+                  android:top="8dp"
+                  android:right="16dp"
+                  android:bottom="8dp"
+                  />
+            </shape>
+        </item>
+    </ripple>
+</inset>

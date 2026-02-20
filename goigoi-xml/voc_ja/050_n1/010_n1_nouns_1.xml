@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <!-- subheader cannot be in a file of its own, because it's just a state of the parser -->
+    <subheader
+      name_en="JLPT N1"
+      name_de="JLPT N1"
+      name_fr="JLPT N1"
+      name_it="JLPT N1"
+    />
+    <unit
+      name_en="N1 nouns ①"
+      name_de="N1-Nomen ①"
+      name_fr="Les noms N1 ①"
+      name_it="Nomi N1 ①"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n1"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【伝：でん】【説：せつ】"
+              rom="densetsu"
+              tr_en="tradition; legend; folklore"
+              tr_de="Tradition; Legende; Volkstum"
+              lvl="n1"
+              category="culture"
+              id="densetsu-tradition"
+            >
+                <keep_apart_from id="shikitari-custom" />
+                <phrase
+                  ph="ゼルダの【伝：でん】【説：せつ】"
+                  rom="Zeruda no densetsu"
+                  tr_en="The legend of Zelda (game)"
+                  tr_de="Die Legende von Zelda (Videospiel)"
+                  lvl="n1"
+                  origin="self"
+                  rem="verified with Wikipedia"
+                />
+                <sentence
+                  s="その【山：やま】は【神：しん】【話：わ】や【伝：でん】【説：せつ】でよく【知：し】られている。"
+                  rom="Sono yama wa shinwa ya densetsu de yoku shirarete iru."
+                  tr_en="That mountain is well known for its myths and legends."
+                  tr_de="Der Berg ist gut bekannt für seine Mythen und Legenden."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【陳：ちん】【列：れつ】"
+              rom="chinretsu"
+              tr_en="exhibition; putting on show"
+              tr_de="Ausstellung; ausstellen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="arts"
+              id="chinretsu-exhibition"
+            >
+                <keep_apart_from id="tenrankai-exhibition" />
+                <phrase
+                  ph="【本：ほん】の【陳：ちん】【列：れつ】"
+                  rom="hon no chinretsu"
+                  tr_en="book display (e.g. in an exhibition)"
+                  tr_de="ausgestelltes Buch (z.B. in einer Ausstellung)"
+                  lvl="n1"
+                />
+                <sentence
+                  s="【陳：ちん】【列：れつ】【物：もの】に【手：て】を【触：ふ】れるな。"
+                  rom="Chinretsumono ni te o fureru na."
+                  tr_en="Do not touch the exhibits!"
+                  tr_de="Die Ausstellungsobjekte nicht berühren!"
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【職：しょく】【員：いん】"
+              rom="shokuin"
+              tr_en="personnel; staff member"
+              tr_de="Personal; Angestellter"
+              lvl="n1"
+              category="people, employment"
+              id="shokuin-personnel"
+            >
+                <keep_apart_from id="kaishain-employee" />
+                <keep_apart_from id="dōryō-coworker" />
+                <phrase
+                  ph="【工：こう】【場：じょう】の【職：しょく】【員：いん】"
+                  rom="kōjō no shokuin"
+                  tr_en="factory personnel"
+                  tr_de="Fabrikangestellter"
+                  lvl="n1"
+                />
+                <sentence
+                  s="【山：やま】【田：だ】さんは【銀：ぎん】【行：こう】の【職：しょく】【員：いん】です。"
+                  rom="Yamada-san wa ginkō no shokuin desu."
+                  tr_en="Mr Yamada is a clerk at the bank."
+                  tr_de="Herr Yamada ist ein Bankangestellter."
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【封：ふう】【鎖：さ】"
+              rom="fūsa"
+              tr_en="blockade; lockdown; sealing off (an area)"
+              tr_de="Blockade; Sperre; Abriegelung (eines Geländes)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="government, military"
+              id="fūsa-blockade"
+            >
+                <sentence
+                  s="【兵：へい】【隊：たい】が【町：まち】への【道：みち】を【封：ふう】【鎖：さ】した。"
+                  rom="Heitai ga machi e no michi o fūsa shita."
+                  tr_en="Soldiers barred the way to the city."
+                  tr_de="Die Soldaten blockierten den Weg zur Stadt."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【自：じ】【転：てん】"
+              rom="jiten"
+              tr_en="rotation (around an axis); turning; spin"
+              tr_de="Rotation (um eine Achse); Drehen; spinnen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="jiten-rotation"
+              common="false"
+            >
+                <!-- implicit see-also link to jiten-dictionary -->
+                <sentence
+                  s="【地：ち】【球：きゅう】は【自：じ】【転：てん】している。"
+                  rom="Chikyū wa jiten shite iru."
+                  tr_en="The Earth is rotating."
+                  tr_de="Die Erde dreht sich."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【日：ひ】【焼：や】け"
+              rom="hiyake"
+              tr_en="sunburn; suntan"
+              tr_de="Sonnenbrand; Sonnenbräune"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="holidays, light"
+              id="hiyake-suntan"
+            >
+                <sentence
+                  s="【日：ひ】【焼：や】けして【痛：いた】い。"
+                  rom="Hiyake shite itai."
+                  tr_en="I got sunburnt, and it hurts."
+                  tr_de="Ich habe mich in der Sonne verbrannt, und es schmerzt."
+                  origin="lib0"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【蝶：ちょう】"
+              rom="chō"
+              tr_en="butterfly"
+              tr_de="Schmetterling"
+              lvl="n1"
+              category="insect"
+              id="chō-butterfly"
+            >
+                <phrase
+                  ph="【蝶：ちょう】になる"
+                  rom="chō ni naru"
+                  tr_en="to become a butterfly"
+                  tr_de="ein Schmetterling werden"
+                  lvl="n1"
+                  origin="jpod101"
+                />
+            </word>
+            <word
+              w="【英：えい】【雄：ゆう】"
+              rom="eiyū"
+              tr_en="hero"
+              tr_de="Held"
+              lvl="n1"
+              category="manga-anime, entertainment"
+              id="eiyū-hero"
+            >
+                <sentence
+                  s="【私：わたし】は【英：えい】【雄：ゆう】のいない【小：しょう】【説：せつ】は【嫌：きら】いだ。"
+                  rom="Watashi wa eiyū no inai shōsetsu wa kirai da."
+                  tr_en="I dislike stories without a hero."
+                  tr_de="Ich mag keine Romane ohne Held."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【幽：ゆう】【霊：れい】"
+              rom="yūrei"
+              tr_en="ghost; spectre; apparition"
+              tr_de="Gespenst; Geist; Erscheinung"
+              lvl="n1"
+              category="manga-anime, games"
+              id="yūrei-ghost"
+            >
+                <keep_apart_from id="obake-ghost" />
+                <keep_apart_from id="akuma-devil" />
+                <keep_apart_from id="oni-demon" />
+                <keep_apart_from id="mononoke-vengefulspirit" />
+                <!--
+                    yūrei is typically a dead person, while obake may be a nature spirit,
+                    demon, and may take the form of an animal.
+                    see https://hinative.com/questions/22256519
+                -->
+                <sentence
+                  s="あの【家：いえ】には【幽：ゆう】【霊：れい】が【出：で】る。"
+                  rom="Ano ie ni wa yūrei ga deru."
+                  tr_en="That house is haunted."
+                  tr_de="In dem Haus dort hat es Gespenster."
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【限：き】り"
+              rom="kiri"
+              tr_en="stop; limits"
+              tr_de="Ende; Grenzen"
+              lvl="n1"
+              id="kiri-limits"
+            >
+                <sentence
+                  s="【宇：う】【宙：ちゅう】には【限：き】りがない。"
+                  rom="Uchū ni wa kiri ga nai."
+                  tr_en="There is no limit to the universe."
+                  tr_de="Das Universum ist grenzenlos."
+                  lvl="n1"
+                  origin="lib0 modified"
+                  href="https://hinative.com/questions/22253622"
+                />
+            </word>
+            <word
+              w="【上：じょう】【演：えん】"
+              rom="jōen"
+              tr_en="performance (of a play, etc.); presentation"
+              tr_de="Vorstellung (Theater, Kino)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="entertainment"
+              id="jōen-performance"
+            >
+                <keep_apart_from id="engi-acting" />
+                <keep_apart_from id="ensō-musicperf" />
+                <sentence
+                  s="【上：じょう】【演：えん】は【何：なん】【時：じ】に【始：はじ】まりますか。"
+                  rom="Jōen wa nanji ni hajimarimasu ka?"
+                  tr_en="When does the performance begin?"
+                  tr_de="Wann beginnt die Vorstellung?"
+                  lvl="n1"
+                  origin="Langenscheidt p.167"
+                />
+            </word>
+            <word
+              w="【調：ちょう】【理：り】"
+              rom="chōri"
+              tr_en="cooking; food preparation"
+              tr_de="Zubereitung; Kochen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="cooking"
+              id="chōri-cooking"
+            >
+                <keep_apart_from id="ryōri-cooking" />
+                <phrase
+                  ph="【野：や】【菜：さい】の【調：ちょう】【理：り】"
+                  rom="yasai no chōri"
+                  tr_en="vegetable preparation"
+                  tr_de="Gemüsezubereitung"
+                  lvl="n1"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【上：じょう】【司：し】"
+              rom="jōshi"
+              tr_en="boss; one's superior"
+              tr_de="Chef; Vorgesetzter"
+              lvl="n1"
+              category="business, people"
+              id="jōshi-boss"
+            >
+                <keep_apart_from id="shachō-director" />
+                <keep_apart_from id="buchō-headofdep" />
+                <keep_apart_from id="kachō-sectionmgr" />
+                <phrase
+                  ph="【厳：きび】しい【上：じょう】【司：し】"
+                  rom="kibishii jōshi"
+                  tr_en="strict boss"
+                  tr_de="strenger Chef"
+                  lvl="n1"
+                />
+                <phrase
+                  ph="【会：かい】【社：しゃ】の【上：じょう】【司：し】"
+                  rom="kaisha no jōshi"
+                  tr_en="head of the company"
+                  tr_de="Firmenchef"
+                  lvl="n1"
+                />
+                <sentence
+                  s="【上：じょう】【司：し】は【一：いっ】【緒：しょ】に【働：はたら】きにくい。"
+                  rom="Jōshi wa issho ni hataraki-nikui."
+                  tr_en="My boss is difficult to work with."
+                  tr_de="Es ist schwer, mit meinem Chef zusammen zu arbeiten."
+                  lvl="n1"
+                  origin="Miku"
+                  href="https://youtu.be/qKbysEzHWXw"
+                />
+                <sentence
+                  s="【上：じょう】【司：し】が【部：ぶ】【下：か】を【叱：しか】っている。"
+                  rom="Jōshi ga buka o shikatte iru."
+                  tr_en="The boss is scolding the worker."
+                  tr_de="Der Chef schimpft mit dem Arbeiter."
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【回：かい】【送：そう】"
+              rom="kaisō"
+              tr_en="forwarding; sending on; redirecting"
+              tr_de="Weiterleitung; woanders hinschicken"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="kaisō-forwarding"
+            >
+                <phrase
+                  ph="【回：かい】【送：そう】【電：でん】【車：しゃ】"
+                  rom="kaisō densha"
+                  tr_en="a train not currently in service"
+                  tr_de="ein Zug, der keine Passagiere nimmt (Dienstfahrt)"
+                  lvl="n1"
+                  origin="GENKI2 p.329"
+                />
+                <phrase
+                  ph="【手：て】【紙：がみ】を【回：かい】【送：そう】する"
+                  rom="tegami o kaisō suru"
+                  tr_en="to forward a letter"
+                  tr_de="einen Brief weiterleiten"
+                  lvl="n1"
+                  origin="ChatGPT"
+                  rem="acc. to ChatGPT, this expression is not used for e-mails, though"
+                />
+            </word>
+            <word
+              w="【加：か】【入：にゅう】"
+              rom="kanyū"
+              tr_en="admission; becoming a member; to join (a club, etc.)"
+              tr_de="Beitritt; ein Mitglied werden; beitreten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="kanyū-admission"
+            >
+                <phrase
+                  ph="【健：けん】【康：こう】【保：ほ】【険：けん】に【加：か】【入：にゅう】している"
+                  rom="kenkō hoken ni kanyū shite iru"
+                  tr_en="to be enrolled in health insurance"
+                  tr_de="krankenversichert sein"
+                  lvl="n1"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【歓：かん】【声：せい】"
+              rom="kansei"
+              tr_en="cheer; shout of joy"
+              tr_de="Jubeln; Freudenschrei"
+              lvl="n1"
+              category="entertainment, happiness"
+              id="kansei-cheer"
+            >
+                <sentence
+                  s="【観：かん】【客：きゃく】は【歓：かん】【声：せい】を【上：あ】げていました。"
+                  rom="Kankyaku wa kansei o agete imashita."
+                  tr_en="The audience was cheering."
+                  tr_de="Die Zuschauer jubelten."
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【証：しょう】【言：げん】"
+              rom="shōgen"
+              tr_en="testimony; (verbal) evidence"
+              tr_de="Zeugenaussage; bezeugen"
+              Langenscheidt="(Zeugen-) Aussage, bezeugen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="crime"
+              id="shōgen-testimony"
+            >
+                <sentence
+                  s="【刑：けい】【事：じ】は【彼：かれ】の【証：しょう】【言：げん】をその【場：ば】で【書：か】き【取：と】った。"
+                  rom="Keiji wa kare no shōgen o sono ba de kakitotta."
+                  tr_en="The detective took down his testimony on the spot."
+                  tr_de="Der Detektiv nahm seine Zeugnisaussage an Ort und Stelle auf."
+                  lvl="n1"
+                  origin="lib0"
+                  rem="kakitoru is n1"
+                />
+            </word>
+            <word
+              w="【用：よう】【紙：し】"
+              rom="yōshi"
+              tr_en="blank form; sheet of paper"
+              tr_de="Formular; Blatt Papier"
+              lvl="n1"
+              category="business"
+              id="yōshi-sheet"
+            >
+                <sentence
+                  s="この【用：よう】【紙：し】に【記：き】【入：にゅう】してください。"
+                  rom="Kono yōshi ni kinyū shite kudasai."
+                  tr_en="Please fill in this form."
+                  tr_de="Bitte füllen Sie dieses Formular aus."
+                  lvl="n1"
+                  origin="Langenscheidt p.198"
+                />
+            </word>
+            <word
+              w="【妊：にん】【娠：しん】"
+              rom="ninshin"
+              tr_en="pregnancy; conception"
+              tr_de="Schwangerschaft; Empfängnis"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="family, relationships"
+              id="ninshin-pregnancy"
+            >
+                <!-- 妊娠検査を受けました。	I got a pregnancy test.	lib0 -->
+                <sentence
+                  s="【妊：にん】【娠：しん】しています。"
+                  rom="Ninshin shite imasu."
+                  tr_en="I am pregnant."
+                  tr_de="Ich bin schwanger."
+                  lvl="n1"
+                  origin="Langenscheidt p.195"
+                />
+            </word>
+            <word
+              w="【在：ざい】【庫：こ】"
+              rom="zaiko"
+              tr_en="stock; inventory"
+              tr_de="Lager; Inventar"
+              lvl="n1"
+              category="business, trade"
+              id="zaiko-stock"
+              rem="there is another word"
+            >
+                <sentence
+                  s="それの【在：ざい】【庫：こ】がありません。"
+                  rom="Sore no zaiko ga arimasen."
+                  tr_en="It's out of stock."
+                  tr_de="Wir haben das nicht an Lager."
+                  lvl="n1"
+                  origin="Langenscheidt p.200"
+                />
+            </word>
+            <word
+              w="【真：しん】【珠：じゅ】"
+              rom="shinju"
+              tr_en="pearl"
+              tr_de="Perle"
+              lvl="n1"
+              category="fashion"
+              id="shinju-pearl"
+            >
+                <sentence
+                  s="この【真：しん】【珠：じゅ】は【本：ほん】【物：もの】そっくりだ。"
+                  rom="Kono shinju wa honmono sokkuri da."
+                  tr_en="These pearls look just like real."
+                  tr_de="Diese Perlen schauen wie echt aus."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【徒：と】【歩：ほ】"
+              rom="toho"
+              tr_en="walking; going on foot"
+              tr_de="Gehen; zu Fuss gehen"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n1"
+              id="toho-walking"
+            >
+                <sentence
+                  s="【徒：と】【歩：ほ】【五：ご】【分：ふん】【以：い】【内：ない】に【着：つ】くはずです。"
+                  rom="Toho go-fun inai ni tsuku hazu desu."
+                  tr_en="(You) should get there within five minutes walking."
+                  tr_de="(Du) solltest (den Ort) innerhalb fünf Minuten zu Fuss erreichen."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【尿：にょう】"
+              rom="nyō"
+              tr_en="urine"
+              tr_de="Urin"
+              lvl="n1"
+              id="nyō-urine"
+            >
+                <sentence
+                  s="【尿：にょう】【検：けん】【査：さ】をしなければなりません。"
+                  rom="Nyō-kensa o shinakereba narimasen."
+                  tr_en="We need to examine your urine."
+                  tr_de="Ihr Urin muss untersucht werden."
+                  lvl="n1"
+                  origin="Langenscheidt p.207"
+                />
+            </word>
+            <word
+              w="【革：かく】【命：めい】"
+              rom="kakumei"
+              tr_en="revolution (political)"
+              tr_de="Revolution"
+              lvl="n1"
+              category="politics"
+              id="kakumei-revolution"
+            >
+                <sentence
+                  s="その【国：くに】に【革：かく】【命：めい】が【起：お】こった。"
+                  rom="Sono kuni ni kakumei ga okotta."
+                  tr_en="A revolution broke out in that country."
+                  tr_de="In dem Land brach eine Revolution aus."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【捜：そう】【査：さ】"
+              rom="sōsa"
+              tr_en="criminal investigations; enquiry"
+              tr_de="strafrechtliche Ermittlungen; Untersuchung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="crime"
+              id="sōsa-enquiry"
+            >
+                <see id="chōsa-survey" rem="closely related" />
+                <keep_apart_from id="chōsa-survey" />
+                <sentence
+                  s="【警：けい】【察：さつ】から【捜：そう】【査：さ】の【協：きょう】【力：りょく】を【頼：たの】まれた。"
+                  rom="Keisatsu kara sōsa no kyōryoku o tanomareta."
+                  tr_en="My cooperation in the investigation was requested by the police."
+                  tr_de="Meine Kooperation in den Ermittlungen wurde von der Polizei gefordert."
+                  explanation_en="「頼まれる」is the passive form of「頼む」"
+                  explanation_de="「頼まれる」ist die passive Form von「頼む」"
+                  lvl="n1"
+                  origin="Oxford p.72"
+                />
+            </word>
+            <word
+              w="【追：つい】【跡：せき】"
+              rom="tsuiseki"
+              tr_en="chase; pursuit; tracing"
+              tr_de="Verfolgung; Nachverfolgung"
+              Langenscheidt="-"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="crime, transportation"
+              id="tsuiseki-chase"
+            >
+                <sentence
+                  s="【刑：けい】【事：じ】は【彼：かれ】を【追：つい】【跡：せき】した。"
+                  rom="Keiji wa kare o tsuiseki shita."
+                  tr_en="The detective pursued him."
+                  tr_de="Der Detektiv verfolgte ihn."
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【鉛：なまり】"
+              rom="namari"
+              tr_en="lead (Pb)"
+              tr_de="Blei (Pb)"
+              lvl="n1"
+              category="science"
+              id="namari-lead"
+            >
+                <sentence
+                  s="【鉛：なまり】と【金：きん】とでは、どちらが【重：おも】いですか。"
+                  rom="Namari to kin to de wa, dochira ga omoi desu ka?"
+                  tr_en="Which one is heavier, lead or gold?"
+                  tr_de="Was ist schwerer, Blei oder Gold?"
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【雛：ひよこ】"
+              rom="hiyoko"
+              tr_en="chick; young bird"
+              tr_de="Küken; junger Vogel"
+              lvl="n1"
+              id="hiyoko-chick"
+              usuallyInKana="true"
+            >
+                <phrase
+                  ph="【小：ちい】さいひよこ"
+                  rom="chīsai hiyoko"
+                  tr_en="small chick"
+                  tr_de="kleines Küken"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【花：か】【粉：ふん】"
+              rom="kafun"
+              tr_en="pollen"
+              tr_de="Pollen; Blütenstaub"
+              lvl="n1"
+              id="kafun-pollen"
+            >
+                <phrase
+                  ph="【花：か】【粉：ふん】アレルギー"
+                  rom="kafun arerugī"
+                  tr_en="pollen allergy"
+                  tr_de="Pollenallergie"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【収：しゅう】【集：しゅう】"
+              rom="shūshū"
+              tr_en="collection (of art, stamps, etc.); to collect"
+              tr_de="Sammlung (von Kunstwerken, Briefmarken, usw.); sammeln"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="shūshū-collect"
+            >
+                <phrase
+                  ph="【切：きっ】【手：て】【収：しゅう】【集：しゅう】"
+                  rom="kitte shūshū"
+                  tr_en="stamps collection"
+                  tr_de="Briefmarkensammlung"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【同：どう】【意：い】"
+              rom="dōi"
+              tr_en="agreement; consent; to approve"
+              tr_de="Vereinbarung; Zustimmung; zustimmen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="dōi-agree"
+            >
+                <phrase
+                  ph="【全：まった】く【同：どう】【意：い】する"
+                  rom="mattaku dōi suru"
+                  tr_en="to agree completely"
+                  tr_de="voll und ganz zustimmen"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【真：しん】【実：じつ】"
+              rom="shinjitsu"
+              tr_en="truth; reality"
+              tr_de="Wahrheit; Wirklichkeit"
+              lvl="n1"
+              id="shinjitsu-truth"
+            >
+                <!-- 真実を出す - shinjitsu o dasu - to reveal the truth (ChatGPT) -->
+                <sentence
+                  s="【真：しん】【実：じつ】を【話：はな】した。"
+                  rom="Shinjitsu o hanashita."
+                  tr_en="I told the truth."
+                  tr_de="Ich habe die Wahrheit gesagt."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【電：でん】【源：げん】"
+              rom="dengen"
+              tr_en="electrical power; power button"
+              tr_de="elektrischer Strom; Stromschalter"
+              lvl="n1"
+              id="dengen-power"
+            >
+                <phrase
+                  ph="【電：でん】【源：げん】を【消：け】す"
+                  rom="dengen o kesu"
+                  tr_en="to turn off power"
+                  tr_de="Strom ausschalten"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【脈：みゃく】"
+              rom="myaku"
+              tr_en="pulse; vein"
+              tr_de="Puls; Vene"
+              lvl="n1"
+              category="health"
+              id="myaku-pulse"
+            >
+                <phrase
+                  ph="【脈：みゃく】を【取：と】る"
+                  rom="myaku o toru"
+                  tr_en="to take (one's) pulse"
+                  tr_de="den Puls nehmen"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【改：かい】【訂：てい】"
+              rom="kaitei"
+              tr_en="revision (of text); alteration; to change"
+              tr_de="Überarbeitung (eines Textes); Revision; ändern"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="kaitei-revision"
+            >
+                <phrase
+                  ph="【原：げん】【稿：こう】を【改：かい】【訂：てい】する"
+                  rom="genkō o kaitei suru"
+                  tr_en="to revise a manuscript"
+                  tr_de="ein Manuskript überarbeiten"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【興：こう】【奮：ふん】"
+              rom="kōfun"
+              tr_en="agitation; stimulation; to get excited"
+              tr_de="Erregung; Stimulation; erregt werden"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="kōfun-agitation"
+            >
+                <phrase
+                  ph="【興：こう】【奮：ふん】した"
+                  rom="kōfun shita"
+                  tr_en="excited; agitated"
+                  tr_de="aufgeregt; aufgewühlt"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【宮：きゅう】【殿：でん】"
+              rom="kyūden"
+              tr_en="palace"
+              tr_de="Palast"
+              lvl="n1"
+              id="kyūden-palace"
+            >
+                <phrase
+                  ph="【宮：きゅう】【殿：でん】へ【案：あん】【内：ない】する"
+                  rom="kyūden e annai suru"
+                  tr_en="to guide (one) to the palace"
+                  tr_de="jem. zum Palast hinführen"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【襟：えり】"
+              rom="eri"
+              tr_en="collar; neckband"
+              tr_de="Kragen; Halsband"
+              lvl="n1"
+              category="fashion"
+              id="eri-collar"
+            >
+                <phrase
+                  ph="【襟：えり】【付：つ】きシャツ"
+                  rom="eritsuki shatsu"
+                  tr_en="shirt with a collar"
+                  tr_de="Hemd mit Kragen"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【農：のう】【場：じょう】"
+              rom="nōjō"
+              tr_en="farm; ranch"
+              tr_de="Bauernhof"
+              lvl="n1"
+              category="countryside"
+              id="nōjō-farm"
+            >
+                <sentence
+                  s="【農：のう】【場：じょう】で【働：はたら】いた。"
+                  rom="Nōjō de hataraita."
+                  tr_en="I worked on a farm."
+                  tr_de="Ich arbeitete auf einem Bauernhof."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="お【使：つか】い"
+              rom="o-tsukai"
+              tr_en="errand; mission; errand boy"
+              tr_de="Auftrag; Mission; Laufbursche"
+              lvl="n1"
+              id="otsukai-errand"
+            >
+                <see id="otsukai-use" rem="closely related" />
+                <sentence
+                  s="【子：こ】【供：ども】をお【使：つか】いに【行：い】かせました。"
+                  rom="Kodomo o o-tsukai ni ikasemashita."
+                  tr_en="I made the kids go on an errand."
+                  tr_de="Ich habe die Kinder veranlasst, eine Besorgung zu machen."
+                  explanation_en="「行かせる」is the causative form of「行く」"
+                  explanation_de="「行かせる」ist die kausative Form von「行く」"
+                  lvl="n1"
+                  origin="Oxford p.75"
+                />
+            </word>
+            <word
+              w="【遅：おく】れ"
+              rom="okure"
+              tr_en="delay; postponement; falling behind"
+              tr_de="Verzögerung; Aufschub; Zurückbleiben"
+              lvl="n1"
+              category="time"
+              id="okure-delay"
+            >
+                <see id="okureru-delayed" rem="verb" />
+                <sentence
+                  s="【古：ふる】【川：かわ】さんの【服：ふく】は【時：じ】【代：だい】【遅：おく】れだ。"
+                  rom="Furukawa-san no fuku wa jidai-okure da."
+                  tr_en="Mrs Furukawa's clothes are from another epoch."
+                  tr_de="Frau Furukawas Kleider sind aus einem anderen Zeitalter."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【花：か】【壇：だん】"
+              rom="kadan"
+              tr_en="flower bed"
+              tr_de="Blumenbeet"
+              lvl="n1"
+              category="garden"
+              id="kadan-flowerbed"
+            >
+                <sentence
+                  s="【花：か】【壇：だん】の【花：はな】は【良：よ】い【香：かお】りがする。"
+                  rom="Kadan no hana wa yoi kaori ga suru."
+                  tr_en="The flowers in the flower bed have a nice scent."
+                  tr_de="Die Blumen im Blumenbeet duften gut."
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【過：す】ぎ"
+              rom="sugi"
+              tr_en="past; after; too (much)"
+              tr_de="später; nach; zu (viel)"
+              lvl="n1"
+              id="sugi-over"
+              rem="why is this n1? sugiru is n4"
+            >
+                <sentence
+                  s="【６：ろく】【時：じ】【過：す】ぎは【急：きゅう】に【寒：さむ】くなる。"
+                  rom="Roku-ji-sugi wa kyū ni samuku naru."
+                  tr_en="After 6 o'clock it suddenly gets cold."
+                  tr_de="Nach 6 Uhr wird es plötzlich kalt."
+                  lvl="n1"
+                  origin="Oxford p.107"
+                />
+            </word>
+            <word
+              w="【茎：くき】"
+              rom="kuki"
+              tr_en="stalk; stem"
+              tr_de="Stiel; Stengel"
+              hint_en="of a plant"
+              hint_de="einer Pflanze"
+              lvl="n1"
+              category="plant, nature"
+              id="kuki-stem"
+            >
+                <phrase
+                  ph="【茎：くき】が【長：なが】い【花：はな】"
+                  rom="kuki ga nagai hana"
+                  tr_en="a long-stemmed flower"
+                  tr_de="eine Blume mit langem Stiel"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【制：せい】【服：ふく】"
+              rom="seifuku"
+              tr_en="uniform"
+              tr_de="Uniform"
+              lvl="n1"
+              category="business, fashion"
+              id="seifuku-uniform"
+            >
+                <phrase
+                  ph="【制：せい】【服：ふく】を【着：き】た【兵：へい】【隊：たい】さん"
+                  rom="seifuku o kita heitai-san"
+                  tr_en="a soldier in uniform"
+                  tr_de="Söldner in Uniform"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【網：あみ】"
+              rom="ami"
+              tr_en="net; web; mesh"
+              tr_de="Netz; Gitter"
+              lvl="n1"
+              id="ami-net"
+            >
+                <see id="amimono-knitting" rem="closely related" />
+                <sentence
+                  s="【漁：りょう】【師：し】は【網：あみ】を【海：うみ】に【投：な】げた。"
+                  rom="Ryōshi wa ami o umi ni nageta."
+                  tr_en="The fisherman cast the net into the sea."
+                  tr_de="Der Fischer warf das Netz ins Meer."
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【惑：わく】【星：せい】"
+              rom="wakusei"
+              tr_en="planet"
+              tr_de="Planet"
+              lvl="n1"
+              category="astronomy"
+              id="wakusei-planet"
+            >
+                <sentence
+                  s="【地：ち】【球：きゅう】は【美：うつく】しい【惑：わく】【星：せい】だ。"
+                  rom="Chikyū wa utsukushii wakusei da."
+                  tr_en="The Earth is a beautiful planet."
+                  tr_de="Die Erde ist ein wunderschöner Planet."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【火：か】【星：せい】"
+              rom="kasei"
+              tr_en="Mars"
+              tr_de="Mars"
+              hint_en="planet"
+              hint_de="Planet"
+              lvl="n1"
+              category="astronomy, fire"
+              id="kasei-mars"
+            >
+                <sentence
+                  s="【人：にん】【間：げん】は【火：か】【星：せい】では【生：せい】【存：ぞん】できない。"
+                  rom="Ningen wa kasei de wa seizon dekinai."
+                  tr_en="Humans can't survive on Mars."
+                  tr_de="Menschen können auf dem Mars nicht überleben."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【運：うん】【命：めい】"
+              rom="unmei"
+              tr_en="fate; destiny; one's lot"
+              tr_de="Schicksal; Bestimmung"
+              lvl="n1"
+              id="unmei-fate"
+            >
+                <sentence
+                  s="きっと【運：うん】【命：めい】だったんだ。"
+                  rom="Kitto unmei datta n da."
+                  tr_en="It must have been fate."
+                  tr_de="Es muss wohl Bestimmung gewesen sein."
+                  lvl="n1"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【乗：じょう】【客：きゃく】"
+              rom="jōkyaku"
+              tr_en="passenger"
+              tr_de="Passagier"
+              lvl="n1"
+              id="jōkyaku-passenger"
+            >
+                <sentence
+                  s="【大：おお】【勢：ぜい】の【乗：じょう】【客：きゃく】がケガをした。"
+                  rom="Ōzei no jōkyaku ga kega o shita."
+                  tr_en="A lot of passengers got injured."
+                  tr_de="Viele Passagiere wurden verletzt."
+                  lvl="n1"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

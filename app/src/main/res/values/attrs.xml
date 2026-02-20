@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <!-- dynamic styles, use them with style="?attr/someStyle" -->
+    <attr name="myAppBarTheme" format="reference" />
+    <attr name="myBadgeStyle" format="reference" />
+    <attr name="myCardViewStyle" format="reference" />
+    <attr name="myDialogStyle" format="reference" />
+    <attr name="myPrimaryTextStyle" format="reference" />
+    <attr name="mySecondaryTextStyle" format="reference" />
+    <attr name="mySubheaderStyle" format="reference" />
+    <attr name="myTabLayoutStyle" format="reference" />
+    <attr name="serifSecondaryTextStyle" format="reference" />
+    <attr name="seamlessAppBarTheme" format="reference" />
+
+    <!-- dynamic drawables -->
+    <attr name="addIcon" format="reference" />
+
+    <!-- dynamic dimensions -->
+    <attr name="mainActivityLRMargin" format="dimension" />
+    <attr name="topicActivityLRMargin" format="dimension" />
+    <attr name="progStudyElementSpacing" format="dimension" />
+    <attr name="progStudyKeyboardLRPadding" format="dimension" />
+    <attr name="progStudyKeyboardTBPadding" format="dimension" />
+    <attr name="progStudyAnswerTextSize" format="dimension" />
+    <attr name="progStudyRevealedKanjiOrKanaTextSize" format="dimension" />
+    <attr name="progStudyWhatToDoTextSize" format="dimension" />
+    <attr name="dayLabelTextSize" format="dimension" />
+    <attr name="bigRingSize" format="dimension" />
+
+    <!-- dynamic colours -->
+    <attr name="activeIconTintColour" format="color" />
+    <attr name="appBarColour" format="color" />
+    <attr name="appBarPrimaryTextColour" format="color" />
+    <attr name="appBarSecondaryTextColour" format="color" />
+    <attr name="behindCardsColour" format="color" />
+    <attr name="bigRingTextColour" format="color" />
+    <attr name="bigRingTrackColour" format="color" />
+    <attr name="bigRingTrailColour" format="color" />
+    <attr name="bubbleBgColour" format="color" />
+    <attr name="bubbleFgColour" format="color" />
+    <attr name="bubbleOutlineColour" format="color" />
+    <attr name="decorativeIconTintColour" format="color" />
+    <attr name="dividerColour" format="color" />
+    <attr name="fabGlowColour" format="color" />
+    <attr name="fabShimColour" format="color" />
+    <attr name="flashBgColour" format="color" />
+    <attr name="flashFgColour" format="color" />
+    <attr name="hintBalloonBgColour" format="color" />
+    <attr name="hintBalloonOutlineColour" format="color" />
+    <attr name="iconBrightColour" format="color" />
+    <attr name="iconOutlineColour" format="color" />
+    <attr name="keyLensBgColour" format="color" />
+    <attr name="keyLensFgColour" format="color" />
+    <attr name="myBadgeBgColour" format="color" />
+    <attr name="myBadgeFgColour" format="color" />
+    <attr name="myFaintTextColour" format="color" />
+    <attr name="myPrimaryTextColour" format="color" />
+    <attr name="mySecondaryTextColour" format="color" />
+    <attr name="ringTrackColour" format="color" />
+    <attr name="ringTrailColour" format="color" />
+    <attr name="sheetBgColour" format="color" />
+    <attr name="sheetPrimaryTextColour" format="color" />
+    <attr name="sheetSecondaryTextColour" format="color" />
+    <attr name="topicSheetHeadColour" format="color" />
+    <attr name="zzzBgColour" format="color" />
+    <attr name="zzzFgColour" format="color" />
+
+    <declare-styleable name="AspectRatioLayout">
+        <attr name="aspectRatioWidth" format="integer" />
+        <attr name="aspectRatioHeight" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="FloatingActionBtn">
+        <attr name="initiallyShown" format="boolean" />
+        <attr name="iconName" format="string" />
+        <attr name="animDuration" format="integer" />
+        <attr name="glowing" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="TategakiView">
+        <attr name="android:fontFamily" format="integer" />
+        <attr name="android:textColor" format="color" />
+    </declare-styleable>
+</resources>

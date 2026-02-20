@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 adverbs ②"
+      name_de="N3 Adverbien ②"
+      name_fr="Les adverbes N3 ②"
+      name_it="N3 avverbi ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="adverb"
+      defaultHint_de="Adverb"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="false"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【可：か】【也：なり】"
+              rom="kanari"
+              tr_en="fairly; quite; considerably"
+              tr_de="ziemlich; beträchtlich"
+              lvl="n3"
+              usuallyInKana="true"
+              id="kanari-fairly"
+            >
+                <keep_apart_from id="daibu-greatly" />
+                <keep_apart_from id="taishita-bigdeal" />
+                <keep_apart_from id="ōini-verymuch" />
+                <keep_apart_from id="nakanaka-fairly" />
+                <keep_apart_from id="zuibun-very" />
+                <phrase
+                  ph="かなり【寒：さむ】い"
+                  rom="kanari samui"
+                  tr_en="quite cold"
+                  tr_de="ziemlich kalt"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【今日：きょう】はかなり【暖：あたた】かい。"
+                  rom="Kyō wa kanari atatakai."
+                  tr_en="It is rather warm today."
+                  tr_de="Es ist ziemlich warm heute."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="その【村：むら】はかなり【遠：とお】い。"
+                  rom="Sono mura wa kanari tōi."
+                  tr_en="That village is a great distance off."
+                  tr_de="Das Dorf ist ziemlich weit entfernt (von hier)."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="マリさんはテニスがかなり【下手：へた】だ。"
+                  rom="Mari-san wa tenisu ga kanari heta da."
+                  tr_en="Mari is rather poor at tennis."
+                  tr_de="Mari ist ziemlich schlecht im Tennis."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【風：かぜ】がかなり【吹：ふ】いています。"
+                  rom="Kaze ga kanari fuite imasu."
+                  tr_en="It's quite windy."
+                  tr_de="Es ist ziemlich windig."
+                  lvl="n3"
+                  origin="Langenscheidt p.219"
+                />
+            </word>
+            <word
+              w="【取：と】りあえず"
+              rom="toriaezu"
+              tr_en="first of all; for the time being; provisional"
+              tr_de="als Erstes; für den Moment; provisorisch"
+              lvl="n3"
+              id="toriaezu-firstofall"
+              usuallyInKana="true"
+              rem="appears frequently (high in jisho-top-words); jisho has n1"
+            >
+                <keep_apart_from id="mazu-firstly" />
+                <!--
+                    used in casual speech to suggest doing something practical or provisional
+                    without worrying about the long-term
+                -->
+                <phrase
+                  ph="とりあえずの【予：よ】【定：てい】を【立：た】てる"
+                  rom="toriaezu no yotei o tateru"
+                  tr_en="to make a provisional plan"
+                  tr_de="einen provisorischen Plan aufstellen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="とりあえずこれをやってしまおう。"
+                  rom="Toriaezu kore o yatte shimaō."
+                  tr_en="Let's do this first of all."
+                  tr_de="Lass uns dies als erstes machen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="とりあえずこれで【大：だい】【丈：じょう】【夫：ぶ】です。"
+                  rom="Toriaezu kore de daijōbu desu."
+                  tr_en="This is fine for the time being."
+                  tr_de="Das ist für den Moment mal gut so."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【丸：まる】で"
+              rom="maru de"
+              tr_en="quite; entirely; almost as if"
+              tr_de="ziemlich; völlig; fast als ob"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n3"
+              usuallyInKana="true"
+              id="marude-quite"
+            >
+                <phrase
+                  ph="まるで【違：ちが】う"
+                  rom="maru de chigau"
+                  tr_en="to be completely different"
+                  tr_de="völlig anders sein"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="リサちゃんはお【母：かあ】さんとまるで【違：ちが】うね。"
+                  rom="Risa-chan wa o-kāsan to maru de chigau ne."
+                  tr_en="Risa is not anything like her mother, isn't she?"
+                  tr_de="Risa ist ganz anders als ihre Mutter, nicht wahr?"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="その【犬：いぬ】は まるで【人：にん】【間：げん】みたいだね。"
+                  rom="Sono inu wa maru de ningen-mitai da ne."
+                  tr_en="That dog is almost human."
+                  tr_de="Dieser Hund ist fast menschlich."
+                  allowSpaces="true"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="まるで【夢：ゆめ】を【見：み】ているようだった。"
+                  rom="Maru de yume o mite iru yō datta."
+                  tr_en="It was almost as if I was dreaming."
+                  tr_de="Es war fast, als ob ich träumen würde."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【一：いっ】【体：たい】"
+              rom="ittai"
+              tr_en="what the heck; why in the world; who on earth"
+              tr_de="was zum Teufel; warum in aller Welt; wer um alles in der Welt"
+              lvl="n3"
+              id="ittai-whattheheck"
+            >
+                <sentence
+                  s="【一：いっ】【体：たい】どうしたんだ？"
+                  rom="Ittai dō shita n da?"
+                  tr_en="What on earth is the matter?"
+                  tr_de="Was um alles in der Welt ist los?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【君：きみ】は【一：いっ】【体：たい】それを【読：よ】んだのか。"
+                  rom="Kimi wa ittai sore o yonda no ka?"
+                  tr_en="Did you read it at all?"
+                  tr_de="Hast du es überhaupt gelesen?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【恐：おそ】らく"
+              rom="osoraku"
+              tr_en="perhaps; likely; I daresay"
+              tr_de="vielleicht; wahrscheinlich; ich würde behaupten"
+              lvl="n3"
+              id="osoraku-perhaps"
+              usuallyInKana="true"
+            >
+                <sentence
+                  s="おそらく【明日：あした】は【雨：あめ】が【降：ふ】るでしょう。"
+                  rom="Osoraku ashita wa ame ga furu deshō."
+                  tr_en="Probably it will rain tomorrow."
+                  tr_de="Wahrscheinlich wird es morgen regnen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【古：ふる】【川：かわ】さんはおそらくもう【家：いえ】に【着：つ】いているはずです。"
+                  rom="Furukawa-san wa osoraku mō ie ni tsuite iru hazu desu."
+                  tr_en="Mrs Furukawa has probably already arrived home."
+                  tr_de="Frau Furukawa ist wahrscheinlich bereits zu Hause angekommen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【突：とつ】【然：ぜん】"
+              rom="totsuzen"
+              tr_en="abrupt; sudden; unexpected"
+              tr_de="abrupt; plötzlich; unerwartet"
+              hint_en="noun; adverb"
+              hint_de="Nomen; Adverb"
+              lvl="n3"
+              id="totsuzen-sudden"
+            >
+                <sentence
+                  s="【突：とつ】【然：ぜん】ベルが【鳴：な】った。"
+                  rom="Totsuzen beru ga natta."
+                  tr_en="Suddenly the bell rang."
+                  tr_de="Plötzlich läutete die Glocke."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="つまり"
+              rom="tsumari"
+              tr_en="that is to say; in other words; to sum up"
+              tr_de="das heisst; mit anderen Worten; zusammenfassend"
+              lvl="n3"
+              id="tsumari-thatistosay"
+            >
+                <sentence
+                  s="【高：たか】【木：ぎ】さんはいつも【忙：いそが】しい。つまり、あまり【会：あ】う【時：じ】【間：かん】がない。"
+                  rom="Takagi-san wa itsumo isogashii. Tsumari, amari au jikan ga nai."
+                  tr_en="Mr Takagi is always busy. In other words, he doesn't have much time to meet."
+                  tr_de="Herr Takagi ist immer beschäftigt. Mit anderen Worten, er hat wenig Zeit für ein Treffen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="ぼんやり"
+              rom="bonyari"
+              tr_en="dimly; vaguely; absentmindedly"
+              tr_de="undeutlich; vage; geistesabwesend"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n3"
+              category="onomatopoeia"
+              id="bonyari-vaguely"
+            >
+                <!--
+                  s="【霧：きり】の【向：む】こうに、ぼんやりと【三：さん】【本：ぼん】の【塔：とう】が【見：み】えた。"
+                  rom="Kiri no mukō ni bonyari to san-bon no tō ga mieta."
+                  tr_en="I could vaguely see three towers through the fog."
+                  tr_de="Ich konnte vage drei Türme durch den Nebel sehen."
+                  lvl="n3"
+                  href="https://www.tofugu.com/japanese/japanese-counter-hon/"
+                -->
+            </word>
+            <word
+              w="ひょっと"
+              rom="hyotto"
+              tr_en="perhaps; unintentionally; accidentally"
+              tr_de="vielleicht; unbeabsichtigt; dummerweise"
+              Langenscheidt="-"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n3"
+              rem="appears frequently (high in jisho-top-words); jisho has n1"
+              id="hyotto-perhaps"
+            >
+                <keep_apart_from id="omowazu-unintentionally" />
+                <keep_apart_from id="futo-incidentally" />
+            </word>
+            <word
+              w="にっこり"
+              rom="nikkori"
+              tr_en="sweetly smiling; broadly grinning"
+              tr_de="süss lächelnd; breit grinsend"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n3"
+              category="onomatopoeia"
+              id="nikkori-broadgrin"
+            >
+                <keep_apart_from id="nikoniko-grin" />
+            </word>
+            <word
+              w="たった"
+              rom="tatta"
+              tr_en="only; merely"
+              tr_de="nur; bloss"
+              Langenscheidt="nur"
+              lvl="n3"
+              id="tatta-only"
+            >
+                <keep_apart_from id="tada-just" />
+            </word>
+            <word
+              w="すべて"
+              rom="subete"
+              tr_en="everything; all; entirely"
+              tr_de="alles; völlig; vollständig"
+              lvl="n3"
+              id="subete-entirely"
+            />
+            <word
+              w="【次：つぎ】【々：つぎ】"
+              rom="tsugi-tsugi"
+              tr_en="one by one"
+              tr_de="einer nach dem anderen"
+              lvl="n3"
+              id="tsugitsugi-onebyone"
+            />
+            <word
+              w="【少：しょう】【々：しょう】"
+              rom="shō-shō"
+              tr_en="a few seconds; small quantity"
+              tr_de="einen Augenblick; kurzer Moment"
+              lvl="n3"
+              id="shōshō-smallqty"
+              rem="appears in GENKI2 L19 vocab section"
+            />
+            <word
+              w="やがて"
+              rom="yagate"
+              tr_en="soon; almost"
+              tr_de="bald; beinahe"
+              Langenscheidt="bald"
+              lvl="n3"
+              id="yagate-soon"
+            />
+            <word
+              w="【何：なに】【分：ぶん】"
+              rom="nanibun"
+              tr_en="anyhow; of some sort"
+              tr_de="irgendwie; auf eine Art"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n3"
+              id="nanibun-anyhow"
+              rem="jisho has n2"
+            />
+            <word
+              w="【一：いっ】【層：そう】"
+              rom="issō"
+              tr_en="much more; more than ever"
+              tr_de="viel mehr; mehr denn je"
+              lvl="n3"
+              id="issō-muchmore"
+            />
+            <word
+              w="じっと"
+              rom="jitto"
+              tr_en="intently; motionlessly"
+              tr_de="konzentriert; bewegungslos"
+              lvl="n3"
+              category="onomatopoeia"
+              id="jitto-intently"
+            />
+            <word
+              w="それぞれ"
+              rom="sorezore"
+              tr_en="each; respectively"
+              tr_de="ein jeder; respektive"
+              lvl="n3"
+              id="sorezore-each"
+            />
+            <word
+              w="きちんと"
+              rom="kichinto"
+              tr_en="precisely; accurately"
+              tr_de="präzise; genau"
+              lvl="n3"
+              category="onomatopoeia"
+              id="kichinto-precisely"
+            />
+        </section>
+    </unit>
+</vocabulary>

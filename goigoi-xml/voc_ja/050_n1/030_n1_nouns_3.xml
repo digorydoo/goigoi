@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N1 nouns ③"
+      name_de="N1-Nomen ③"
+      name_fr="Les noms N1 ③"
+      name_it="Nomi N1 ③"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n1"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【軌：き】【道：どう】"
+              rom="kidō"
+              tr_en="orbit; trajectory"
+              tr_de="Orbit; Umlaufbahn"
+              lvl="n1"
+              category="astronomy"
+              id="kidō-orbit"
+            >
+                <sentence
+                  s="【衛：えい】【星：せい】は【今：いま】【軌：き】【道：どう】に【乗：の】っている。"
+                  rom="Eisei wa ima kidō ni notte iru."
+                  tr_en="The satellite is now in orbit."
+                  tr_de="Der Satellit ist jetzt in der Umlaufbahn."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【診：しん】【療：りょう】"
+              rom="shinryō"
+              tr_en="treatment; medical care"
+              tr_de="Behandlung; ärztliche Versorgung"
+              lvl="n1"
+              category="health"
+              id="shinryō-treatment"
+            >
+                <!-- phrase 診療を受ける しんりょうをうける to receive medical examination/treatment (ChatGPT) -->
+                <keep_apart_from id="shochi-dealwith" rem="can mean medical treatment" />
+                <sentence
+                  s="【診：しん】【療：りょう】【時：じ】【間：かん】はいつですか。"
+                  rom="Shinryō-jikan wa itsu desu ka?"
+                  tr_en="When is the consultation hour?"
+                  tr_de="Wann ist Sprechstunde?"
+                  lvl="n1"
+                  origin="Langenscheidt p.203"
+                />
+            </word>
+            <word
+              w="【皺：シワ】"
+              rom="shiwa"
+              tr_en="wrinkle"
+              tr_de="Gesichtsfalten"
+              usuallyInKana="true"
+              lvl="n1"
+              category="body"
+              id="shiwa-wrinkle"
+            >
+                <phrase
+                  ph="【額：ひたい】のシワ"
+                  rom="hitai no shiwa"
+                  tr_en="wrinkles on the forehead"
+                  tr_de="Stirnfalten; Runzeln"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【下：げ】【痢：り】"
+              rom="geri"
+              tr_en="diarrhoea"
+              tr_de="Durchfall"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="health"
+              id="geri-diarrhoea"
+            >
+                <sentence
+                  s="【下：げ】【痢：り】しています。"
+                  rom="Geri shite imasu."
+                  tr_en="I have diarrhea."
+                  tr_de="Ich habe Durchfall."
+                  lvl="n1"
+                  origin="Langenscheidt p.204"
+                />
+            </word>
+            <word
+              w="【荷：に】【造：づく】り"
+              rom="nidzukuri"
+              tr_en="packing; crating; to pack"
+              tr_de="Verpacken; Einpacken; packen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="nidzukuri-packing"
+            >
+                <phrase
+                  ph="【荷：に】【物：もつ】を【荷：に】【造：づく】りをする"
+                  rom="nimotsu o nidzukuri o suru"
+                  tr_en="to pack one's luggage"
+                  tr_de="die Koffer packen"
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【理：り】【性：せい】"
+              rom="risei"
+              tr_en="reason; reasoning power; (one's) sense"
+              tr_de="Vernunft; Denken; Sinn"
+              lvl="n1"
+              id="risei-reason"
+            >
+                <phrase
+                  ph="【理：り】【性：せい】【的：てき】"
+                  rom="risei-teki"
+                  tr_en="rational; reasonable"
+                  tr_de="rational; vernünftig"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【了：りょう】【解：かい】"
+              rom="ryōkai"
+              tr_en="comprehension; consent; agreement"
+              tr_de="Verständnis; Zustimmung; Vereinbarung"
+              lvl="n1"
+              id="ryōkai-consent"
+              rem="must not be together with dōi"
+            >
+                <sentence
+                  s="【了：りょう】【解：かい】です。"
+                  rom="Ryōkai desu."
+                  tr_en="It's an agreement. Roger!"
+                  tr_de="Abgemacht!"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【入：にゅう】【浴：よく】"
+              rom="nyūyoku"
+              tr_en="taking a bath; bathing"
+              tr_de="ein Bad nehmen; baden"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="holidays"
+              id="nyūyoku-bathe"
+            >
+                <sentence
+                  s="【毎：まい】【朝：あさ】【入：にゅう】【浴：よく】します。"
+                  rom="Mai-asa nyūyoku shimasu."
+                  tr_en="I have a bath every morning."
+                  tr_de="Ich bade jeden Morgen."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【中：ちゅう】【立：りつ】"
+              rom="chūritsu"
+              tr_en="neutrality"
+              tr_de="Neutralität"
+              lvl="n1"
+              id="chūritsu-neutrality"
+            >
+                <sentence
+                  s="【技：ぎ】【術：じゅつ】は【中：ちゅう】【立：りつ】ではありません。"
+                  rom="Gijutsu wa chūritsu de wa arimasen."
+                  tr_en="Technology is not neutral."
+                  tr_de="Technik ist nicht neutral."
+                  lvl="n1"
+                  origin="ChatGPT"
+                  rem="There is a book with this title (in English)."
+                />
+            </word>
+            <word
+              w="【支：し】【持：じ】"
+              rom="shiji"
+              tr_en="support; backing; approval"
+              tr_de="Unterstützung; Rückendeckung; Zustimmung"
+              Langenscheidt="Unterstützung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="shiji-support"
+            >
+                <sentence
+                  s="【首：しゅ】【相：しょう】は【国：こく】【民：みん】の【支：し】【持：じ】を【失：うしな】った。"
+                  rom="Shushō wa kokumin no shiji o ushinatta."
+                  tr_en="The Prime minister fell from favour with the people."
+                  tr_de="Der Premier hat die Gunst des Volks verloren."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【秘：ひ】【書：しょ】"
+              rom="hisho"
+              tr_en="(private) secretary; secret book"
+              tr_de="Privatsekretärin; Privatsekretär; geheimes Buch"
+              lvl="n1"
+              category="business, people"
+              id="hisho-secretary"
+            >
+                <keep_apart_from id="shoki-secretary" />
+                <phrase
+                  ph="【忙：いそが】しそうな【秘：ひ】【書：しょ】"
+                  rom="isogashisō na hisho"
+                  tr_en="busy-looking secretary"
+                  tr_de="beschäftigt ausschauende Sekretärin"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【原：げん】【則：そく】"
+              rom="gensoku"
+              tr_en="principle; general rule"
+              tr_de="Prinzip; allgemeine Regel"
+              lvl="n1"
+              id="gensoku-principle"
+            >
+                <phrase
+                  ph="【自：じ】【由：ゆう】の【原：げん】【則：そく】"
+                  rom="jiyū no gensoku"
+                  tr_en="the principles of freedom"
+                  tr_de="das Prinzip der Freiheit"
+                  lvl="n1"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【説：せっ】【得：とく】"
+              rom="settoku"
+              tr_en="persuasion; to persuade sb."
+              tr_de="Überreden; jem. überzeugen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="settoku-persuasion"
+            >
+                <sentence
+                  s="【私：わたし】は【彼：かれ】を【説：せっ】【得：とく】しようとしたがダメだった。"
+                  rom="Watashi wa kare o settoku shiyō to shita ga dame datta."
+                  tr_en="I tried to persuade him, but it was in vain."
+                  tr_de="Ich habe versucht, ihn zu überzeugen, aber es war vergebens."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【細：さい】【胞：ぼう】"
+              rom="saibō"
+              tr_en="cell"
+              tr_de="Zelle"
+              hint_en="biology"
+              hint_de="Biologie"
+              lvl="n1"
+              category="science"
+              id="saibō-cell"
+            >
+                <sentence
+                  s="【心：しん】【臓：ぞう】は【止：と】まっているが、【細：さい】【胞：ぼう】はまだ【生：い】きている。"
+                  rom="Shinzō wa tomatte iru ga, saibō wa mada ikite iru."
+                  tr_en="The heart has stopped, but the cells are still alive."
+                  tr_de="Das Herz hat gestoppt, aber die Zellen leben immer noch."
+                  lvl="n1"
+                  origin="Oxford p.88"
+                />
+            </word>
+            <word
+              w="【反：はん】【響：きょう】"
+              rom="hankyō"
+              tr_en="echo; reverberation; reaction"
+              tr_de="Echo; Widerhall; Reaktion"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="hankyō-echo"
+            >
+                <sentence
+                  s="【谷：たに】は【滝：たき】の【音：おと】を【反：はん】【響：きょう】する。"
+                  rom="Tani wa taki no oto o hankyō suru."
+                  tr_en="The valley echoes the sound of the waterfall."
+                  tr_de="Das Geräusch des Wasserfalls hallt im Tal wider."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【受：う】け【取：と】り"
+              rom="uketori"
+              tr_en="receiving; receipt"
+              tr_de="Empfang"
+              lvl="n1"
+              id="uketori-receipt"
+              rem="why is this n1?"
+            >
+                <see id="uketoru-receive" rem="verb" />
+                <keep_apart_from id="uketori-alt" />
+                <keep_together id="uketori-alt" />
+            </word>
+            <word
+              w="【受：うけ】【取：と】り"
+              rom="uketori"
+              tr_en="receiving; receipt"
+              lvl="n1"
+              id="uketori-alt"
+              rem="alternative spelling of uketori-receipt"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="uketori-receipt" />
+                <keep_together id="uketori-receipt" />
+            </word>
+            <word
+              w="【待：ま】ち【合：あ】わせ"
+              rom="machiawase"
+              tr_en="appointment; to meet up"
+              tr_de="Termin; sich treffen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="machiawase-appointment"
+              rem="appears in GENKI2 p.289"
+            />
+            <word
+              w="【和：わ】【風：ふう】"
+              rom="wafū"
+              tr_en="Japanese style; light wind"
+              tr_de="im japanischen Stil; leichter Wind"
+              lvl="n1"
+              id="wafū-Japanesestyle"
+              rem="appears in GENKI2 p.328 kanji section"
+            />
+            <word
+              w="【送：そう】【金：きん】"
+              rom="sōkin"
+              tr_en="remittance; sending money"
+              tr_de="Überweisung; Geldsendung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="sōkin-sendmoney"
+              rem="appears in GENKI2 p.329 kanji section"
+            />
+            <word
+              w="【扉：とびら】"
+              rom="tobira"
+              tr_en="door; gate; title page"
+              tr_de="Türe; Tor; Titelseite"
+              lvl="n1"
+              id="tobira-door"
+            >
+                <keep_apart_from id="to-door" />
+                <keep_apart_from id="doa-door" />
+                <keep_apart_from id="uraguchi-backdoor" />
+                <keep_apart_from id="fusuma-slidingdoor" />
+                <keep_apart_from id="shōji-door" />
+                <keep_apart_from id="amado-stormshutter" />
+            </word>
+            <word
+              w="【満：まん】【月：げつ】"
+              rom="mangetsu"
+              tr_en="full moon"
+              tr_de="Vollmond"
+              lvl="n1"
+              category="astronomy"
+              id="mangetsu-fullmoon"
+            >
+                <keep_apart_from id="tsuki-moon" />
+            </word>
+            <word
+              w="【刃：は】"
+              rom="ha"
+              tr_en="blade; edge (of a knife or sword)"
+              tr_de="Klinge; Messerkante"
+              lvl="n1"
+              id="ha-blade"
+            >
+                <!-- implicit see-also link to ha-leaf -->
+            </word>
+            <word
+              w="【霰：あられ】"
+              rom="arare"
+              tr_en="graupel; soft hail"
+              tr_de="Hagel (kleine Körner)"
+              lvl="n1"
+              category="weather"
+              id="arare-graupel"
+            >
+                <keep_apart_from id="hyō-hail" />
+            </word>
+            <word
+              w="【稲：いな】【光：びかり】"
+              rom="inabikari"
+              tr_en="(flash of) lightning"
+              tr_de="Blitz"
+              lvl="n1"
+              category="nature, weather"
+              id="inabikari-lightning"
+            >
+                <see id="kaminari-thunder" rem="closely related" />
+            </word>
+            <word
+              w="【三：しゃ】【味：み】【線：せん】"
+              rom="shamisen"
+              tr_en="Japanese 3-string lute"
+              tr_de="japanische Laute mit drei Saiten"
+              hint_en="instrument"
+              hint_de="Instrument"
+              lvl="n1"
+              category="culture, top-words"
+              id="shamisen-lute"
+            >
+                <keep_apart_from id="biwa-lute" />
+            </word>
+            <word
+              w="【梅：うめ】【干：ぼ】し"
+              rom="umeboshi"
+              tr_en="pickled dried plum"
+              tr_de="eingelegte Pflaume"
+              lvl="n1"
+              category="food, cooking"
+              id="umeboshi-driedplum"
+            >
+                <keep_apart_from id="ume-plum" />
+            </word>
+            <word
+              w="【定：てい】【食：しょく】"
+              rom="teishoku"
+              tr_en="set meal; special (of the day)"
+              tr_de="Tages-Menü"
+              hint_en="often multi-course"
+              hint_de="oft mehrgängig"
+              lvl="n1"
+              category="gastronomy"
+              id="teishoku-setmeal"
+            >
+                <keep_apart_from id="setto-setmeal" />
+            </word>
+            <word
+              w="【裏：うら】【返：がえ】し"
+              rom="uragaeshi"
+              tr_en="inside out; flip side; opposite"
+              tr_de="Umstülpung; Kehrseite; Gegenüber"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n1"
+              id="uragaeshi-insideout"
+            >
+                <see id="uragaesu-insideout" rem="verb" />
+            </word>
+            <word
+              w="【打：う】ち【消：け】し"
+              rom="uchikeshi"
+              tr_en="negation; denial"
+              tr_de="Negation; Verneinung"
+              lvl="n1"
+              id="uchikeshi-denial"
+              rem="Langenscheidt: Verneinung"
+            >
+                <see id="uchikesu-deny" rem="verb" />
+            </word>
+            <word
+              w="【晴：せい】【天：てん】"
+              rom="seiten"
+              tr_en="fine weather; clear sky"
+              tr_de="schönes Wetter; klarer Himmel"
+              lvl="n1"
+              category="weather"
+              id="seiten-fineweather"
+            >
+                <see id="hare-clearweather" rem="closely related" />
+            </word>
+            <word
+              w="【銃：じゅう】"
+              rom="jū"
+              tr_en="gun; rifle"
+              tr_de="Pistole; Gewehr"
+              lvl="n1"
+              id="jū-rifle"
+            >
+                <!-- 銃を撃つ (じゅうをうつ, jū o utsu) - To fire a gun. (ChatGPT) -->
+            </word>
+            <word
+              w="【片：かた】【付：づ】け"
+              rom="katadzuke"
+              tr_en="tidying up; finishing"
+              tr_de="Aufräumen; Abschluss"
+              lvl="n1"
+              id="katadzuke-tidyingup"
+            >
+                <see id="katadzukeru-putinorder" rem="verb" />
+            </word>
+            <word
+              w="【仕：し】【舞：ま】い"
+              rom="shimai"
+              tr_en="end; finish; termination"
+              tr_de="Ende; Schluss; Beendung"
+              lvl="n1"
+              id="shimai-end"
+            >
+                <see id="shimau-finish" rem="verb" />
+            </word>
+            <word
+              w="【作：つく】り"
+              rom="tsukuri"
+              tr_en="making; producing; manufacturing"
+              tr_de="Herstellung; Produktion"
+              lvl="n1"
+              id="tsukuri-making"
+            >
+                <see id="tsukuru-make" rem="verb" />
+            </word>
+            <word
+              w="【申：もう】し【込：こ】み"
+              rom="mōshikomi"
+              tr_en="application; subscription; proposal"
+              tr_de="Anmeldung; Anfrage; Angebot"
+              lvl="n1"
+              id="mōshikomi-application"
+            >
+                <see id="mōshikomu-applyfor" rem="verb" />
+            </word>
+            <word
+              w="【蕾：つぼみ】"
+              rom="tsubomi"
+              tr_en="flower bud"
+              tr_de="Blütenknopse"
+              lvl="n1"
+              category="plant, nature"
+              id="tsubomi-bud"
+            />
+            <word
+              w="【潮：しお】"
+              rom="shio"
+              tr_en="tide; sea water"
+              tr_de="Gezeiten; Meereswasser"
+              lvl="n1"
+              category="geography, astronomy"
+              id="shio-tide"
+            />
+            <word
+              w="【勝：しょう】【利：り】"
+              rom="shōri"
+              tr_en="victory; triumph"
+              tr_de="Sieg; Triumph"
+              lvl="n1"
+              category="sports"
+              id="shōri-victory"
+            />
+            <word
+              w="【無：む】【能：のう】"
+              rom="munō"
+              tr_en="incompetence; inability"
+              tr_de="Inkompetenz; Unfähigkeit"
+              lvl="n1"
+              id="munō-incompetence"
+            />
+            <word
+              w="【過：あやま】ち"
+              rom="ayamachi"
+              tr_en="fault; error; indiscretion"
+              tr_de="Fehler; Lapsus; Fauxpas"
+              lvl="n1"
+              id="ayamachi-fault"
+            />
+            <word
+              w="【福：ふく】【祉：し】"
+              rom="fukushi"
+              tr_en="welfare; social security; social service"
+              tr_de="Wohlfahrt; soziale Sicherheit; Sozialdienst"
+              lvl="n1"
+              category="government"
+              id="fukushi-welfare"
+            />
+            <word
+              w="【街：がい】【頭：とう】"
+              rom="gaitō"
+              tr_en="(on the) street"
+              tr_de="Strassen-; auf der Strasse"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n1"
+              category="city"
+              id="gaitō-onthestreet"
+            />
+        </section>
+    </unit>
+</vocabulary>

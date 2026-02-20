@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="More N1 words"
+      name_de="Weitere N1-Wörter"
+      name_fr="Plus de mots N1"
+      name_it="Più parole N1"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="n1"
+      translations="en, de"
+      requiresSentences="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- noun -->
+            <word
+              w="【全：ぜん】【快：かい】"
+              rom="zenkai"
+              tr_en="complete recovery of health"
+              tr_de="Genesung; genesen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="health"
+              id="zenkai-recovery"
+            >
+                <sentence
+                  s="【中：なか】【村：むら】さんは【全：ぜん】【快：かい】したのでもう【働：はたら】ける。"
+                  rom="Nakamura-san wa zenkai shita no de mō hatarakeru."
+                  tr_en="Mrs Nakamura has completely recovered and can work again."
+                  tr_de="Frau Nakamura ist genesen und kann wieder arbeiten."
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【企：き】【画：かく】"
+              rom="kikaku"
+              tr_en="planning; project; plan"
+              tr_de="Planung; Projekt; planen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="kikaku-planning"
+            >
+                <sentence
+                  s="【私：わたし】はあなたの【企：き】【画：かく】に【参：さん】【加：か】する。"
+                  rom="Watashi wa anata no kikaku ni sanka suru."
+                  tr_en="I will take part in your project."
+                  tr_de="Ich werde bei deinem Projekt mitmachen."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【怠：たい】【慢：まん】"
+              rom="taiman"
+              tr_en="negligence; neglect; carelessness"
+              tr_de="Nachlässigkeit; Vernachlässigung; Fahrlässigkeit"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n1"
+              id="taiman-neglect"
+            >
+                <sentence
+                  s="その【事：じ】【故：こ】の【責：せき】【任：にん】は【管：かん】【理：り】【人：にん】の【怠：たい】【慢：まん】にある。"
+                  rom="Sono jiko no sekinin wa kanrinin no taiman ni aru."
+                  tr_en="This accident was due to the negligence of the caretaker."
+                  tr_de="Die Verantwortung für diesen Unfall liegt beim fahrlässigen Hausmeister."
+                  lvl="n1"
+                  origin="lib0"
+                  rem="kanrinin is nx"
+                />
+            </word>
+
+            <!-- not clearly a noun -->
+            <word
+              w="【初：はつ】"
+              rom="hatsu"
+              tr_en="first; new"
+              tr_de="erste(r); neue(r)"
+              lvl="n1"
+              id="hatsu-first"
+            >
+                <phrase
+                  ph="【初：はつ】【恋：こい】"
+                  rom="hatsu-koi"
+                  tr_en="first love"
+                  tr_de="erste Liebe"
+                  lvl="n1"
+                  origin="GENKI2 p.328"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【初：はつ】【雪：ゆき】"
+                  rom="hatsu-yuki"
+                  tr_en="first snow"
+                  tr_de="erster Schnee"
+                  lvl="n1"
+                  origin="GENKI2 p.328"
+                  rem="jisho has nx"
+                />
+            </word>
+            <word
+              w="【他：た】【方：ほう】"
+              rom="tahō"
+              tr_en="one way; the other way; on the other hand"
+              tr_de="einerseits; andererseits"
+              lvl="n1"
+              id="tahō-otoh"
+              HIDDEN="true"
+            />
+            <word
+              w="【伝：でん】【来：らい】"
+              rom="denrai"
+              tr_en="ancestral; hereditary; handed down"
+              tr_de="erblich; Ahnen-; Geburt-"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n1"
+              id="denrai-ancestral"
+              HIDDEN="true"
+            />
+
+            <!-- adverbial noun -->
+            <word
+              w="【終：しゅう】【日：じつ】"
+              rom="shūjitsu"
+              tr_en="all day; for a whole day"
+              tr_de="den ganzen Tag lang"
+              lvl="n1"
+              id="shūjitsu-allday"
+            />
+
+            <!-- prefix/suffix -->
+            <word
+              w="【付：つ】き"
+              rom="tsuki"
+              tr_en="including; with ~ attached; furnished (with)"
+              tr_de="inklusive; mit ~ dazu; möbiliert (mit)"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              studyInContext="preferred"
+              lvl="n1"
+              id="tsuki-including"
+            >
+                <phrase
+                  ph="【地：ち】【図：ず】【付：つ】きのガイドブック"
+                  rom="chizu-tsuki no gaidobukku"
+                  tr_en="travel guide (book) with a map included"
+                  tr_de="Reiseführer (Buch) mit einer Karte"
+                  lvl="n1"
+                  origin="jpod101"
+                />
+                <sentence
+                  s="【車：しゃ】【庫：こ】【付：つ】きの【家：いえ】を【探：さが】しています。"
+                  rom="Shako-tsuki no ie o sagashite imasu."
+                  tr_en="I'm looking for a house with a garage."
+                  tr_de="Ich suche ein Haus mit einer Garage."
+                  lvl="n1"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ベッド【付：つ】きのところならどこでもいい。"
+                  rom="Beddo-tsuki no tokoro nara doko de mo ii."
+                  tr_en="Anywhere with a bed will do."
+                  tr_de="Solange der Ort ein Bett hat, passt's für mich."
+                  lvl="n1"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【扱：あつか】い"
+              rom="atsukai"
+              tr_en="treatment; service; handling"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="atsukai-handling"
+              HIDDEN="true"
+            >
+                <sentence
+                  s="この【旅：りょ】【館：かん】は【客：きゃく】の【扱：あつか】いがよい。"
+                  rom="Kono ryokan wa kyaku no atsukai ga yoi."
+                  tr_en="This inn treats its guests well."
+                  tr_de="In diesem Gasthaus wird man gut bedient."
+                  origin="lib0"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【第：だい】"
+              rom="dai"
+              tr_en="prefix for forming ordinal numbers"
+              tr_de="Präfix vor Ordnungszahlen"
+              lvl="n1"
+              id="dai-prefix"
+            >
+                <sentence
+                  s="【第：だい】【２：に】【土：ど】【曜：よう】【日：び】【行：い】きません。"
+                  rom="Dai-ni do-yōbi ikimasen."
+                  tr_en="I don't go on the second Saturday."
+                  tr_de="Ich gehe nicht am zweiten Samstag."
+                  lvl="n1"
+                  origin="Oxford p.112"
+                />
+            </word>
+            <word
+              w="【美：び】"
+              rom="bi"
+              tr_en="beauty"
+              tr_de="Schönheit"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              lvl="n1"
+              category="fashion"
+              id="bi-beauty"
+              studyInContext="required"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="biyō-beauty" />
+            </word>
+            <word
+              w="【種：しゅ】"
+              rom="shu"
+              tr_en="(biological) species; variety"
+              tr_de="(biologische) Spezies; Art"
+              hint_en="suffix"
+              hint_de="Suffix"
+              studyInContext="required"
+              lvl="n1"
+              category="science, life"
+              id="shu-species"
+              rem="is this always biological or more general?"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="shurui-type" />
+                <keep_apart_from id="isshu-kind" />
+            </word>
+            <word
+              w="【群：ぐん】"
+              rom="gun"
+              tr_en="group; throng; swarm"
+              tr_de="Gruppe; Menschenmenge; Schwarm"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              studyInContext="required"
+              lvl="n1"
+              id="gun-throng"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="ōzei-crowd" />
+                <keep_apart_from id="gurūpu-group" />
+                <keep_apart_from id="gunshū-crowd" />
+            </word>
+            <word
+              w="【製：せい】"
+              rom="sei"
+              tr_en="-made; make"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="sei-made"
+              HIDDEN="true"
+            >
+                <!--
+                    子ども用の食器は割れにくいプラスチック製が多いです。
+                    Children's tableware is often made of break-resistant plastic.
+                    (ChatGPT)
+                -->
+                <!-- 木製の床 もくせいのゆか wooden floor (jpod101 audio) -->
+            </word>
+            <word
+              w="【上：あ】がり"
+              rom="agari"
+              tr_en="rise; increase; ascent / income; takings; earnings; proceeds; (crop) yield; return; profit / completion; end; finish / end result (e.g. of crafts); how something comes out; finish / finishing (in a board or card game, etc.) / green tea (esp. in a sushi restaurant) / after (rain, illness, etc.) / ex- (e.g. ex-bureaucrat); former"
+              hint_en="noun; noun, used as a suffix / suffix"
+              lvl="n1"
+              category="technical, maths"
+              id="agari-rise"
+              rem="why is this n1???"
+              HIDDEN="true"
+            />
+            <word
+              w="【号：ごう】"
+              rom="gō"
+              tr_en="number; edition; make; model; issue; part of that group; sobriquet; pen-name; size; suffix attached to names of ships, trains, airplanes, etc."
+              hint_en="noun; suffix; suffix"
+              lvl="n1"
+              id="gō-number"
+              HIDDEN="true"
+            />
+            <word
+              w="【像：ぞう】"
+              rom="zō"
+              tr_en="image; figure; statue; picture; portrait; figure; form; shape; appearance; image"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="zō-image"
+              HIDDEN="true"
+            />
+            <word
+              w="【角：かく】"
+              rom="kaku"
+              tr_en="angle; square; cube; bishop; third degree (of the Japanese and Chinese pentatonic scale); Chinese 'horn' constellation (one of the 28 mansions); jiao (monetary unit of China; one-tenth of a yuan); Horn (anatomy)"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="kaku-angle"
+              HIDDEN="true"
+            />
+            <word
+              w="だらけ"
+              rom="darake"
+              tr_en="full of (e.g. mistakes); riddled with; covered all over with (blood, mud, etc.)"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="darake-fullof"
+              HIDDEN="true"
+            />
+            <word
+              w="【科：か】"
+              rom="ka"
+              tr_en="department; section; faculty; school; arm; course (of study); branch of study; specialization; (taxonomical) family"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="ka-faculty"
+              HIDDEN="true"
+            />
+            <word
+              w="【群：ぐん】"
+              rom="gun"
+              tr_en="group; bunch; crowd; throng; swarm; band; group"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="gun-group"
+              HIDDEN="true"
+            />
+            <word
+              w="【不：ふ】【在：ざい】"
+              rom="fuzai"
+              tr_en="absence; disregard; indifference"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="fuzai-absence"
+              HIDDEN="true"
+            />
+            <word
+              w="【人：じん】"
+              rom="jin"
+              tr_en="-ian (e.g. Italian); -ite (e.g. Tokyoite); -er (e.g. performer, etc.); person working with ...; man; person; people"
+              hint_en="suffix"
+              lvl="n1"
+              id="jin-ian"
+              HIDDEN="true"
+            />
+            <word
+              w="【字：あざ】"
+              rom="aza"
+              tr_en="section of village; Aza; Chinese style name"
+              hint_en="noun; suffix; place"
+              lvl="n1"
+              id="aza-section"
+              HIDDEN="true"
+            />
+            <word
+              w="【状：じょう】"
+              rom="jō"
+              tr_en="form; shape; appearance; state; condition; circumstances; letter; correspondence"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="jō-shape"
+              HIDDEN="true"
+            />
+            <word
+              w="【心：ここ】【地：ち】"
+              rom="kokochi"
+              tr_en="feeling; sensation; mood; sensation of doing"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="kokochi-feeling"
+              HIDDEN="true"
+            />
+            <word
+              w="【心：こころ】【得：え】"
+              rom="kokoroe"
+              tr_en="knowledge; understanding; rules; regulations; guideline; directions; acting"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="kokoroe-knowledge"
+              HIDDEN="true"
+            />
+            <word
+              w="【掛：か】け"
+              rom="kake"
+              tr_en="credit; money owed on an account; bill; hot noodles in broth; proportion (of wholesale price, as tenths of list price); in the midst of; rest; rack; hanger"
+              hint_en="noun; suffix; suffix"
+              lvl="n1"
+              id="kake-credit"
+              HIDDEN="true"
+            />
+            <word
+              w="【枠：わく】"
+              rom="waku"
+              tr_en="frame; framework; border; box; limit; restriction; quota; category; bracket; class; time slot (in a broadcasting schedule); live stream; live (online) broadcast; spool (of thread); reel; Structural system"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="waku-frame"
+              HIDDEN="true"
+            />
+            <word
+              w="【死：し】"
+              rom="shi"
+              tr_en="death; decease; death penalty (by strangulation or decapitation); (an) out"
+              hint_en="noun; suffix"
+              lvl="n1"
+              category="not-good"
+              id="shi-death"
+              HIDDEN="true"
+            />
+            <word
+              w="【氏：うじ】"
+              rom="uji"
+              tr_en="family name; lineage; birth; clan"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="uji-lineage"
+              HIDDEN="true"
+            />
+            <word
+              w="【気：き】【質：しつ】"
+              rom="kishitsu"
+              tr_en="disposition; temperament; nature; mentality; spirit; character; trait; turn of mind"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="kishitsu-nature"
+              HIDDEN="true"
+            />
+            <word
+              w="【派：は】"
+              rom="ha"
+              tr_en="clique; group; coterie; (political) faction; wing; party; camp; school; sect; denomination"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="ha-clique"
+              HIDDEN="true"
+            />
+            <word
+              w="【超：ちょう】"
+              rom="chō"
+              tr_en="super-; ultra-; hyper-; extreme; extremely; really; totally; absolutely; over; more than"
+              hint_en="prefix; only applies to ちょう; noun; suffix; only applies to ちょう"
+              lvl="n1"
+              id="chō-super"
+              HIDDEN="true"
+            />
+            <word
+              w="【街：がい】"
+              rom="gai"
+              tr_en="... street; ... quarter; ... district"
+              hint_en="noun; suffix; prefix"
+              lvl="n1"
+              id="gai-street"
+              HIDDEN="true"
+            />
+            <word
+              w="【班：はん】"
+              rom="han"
+              tr_en="group; party; team / squad; section"
+              hint_en="noun; noun, used as a suffix"
+              lvl="n1"
+              id="han-group"
+              HIDDEN="true"
+            />
+            <word
+              w="【症：しょう】"
+              rom="shō"
+              tr_en="illness"
+              hint_en="noun; suffix"
+              lvl="n1"
+              id="shō-illness"
+              HIDDEN="true"
+            />
+            <word
+              w="【作：さく】"
+              rom="saku"
+              tr_en="work (e.g. of art); production / harvest; cultivation; farming; crop; yield / technique"
+              hint_en="noun; noun, used as a suffix"
+              lvl="n1"
+              id="saku-crop"
+              HIDDEN="true"
+            />
+            <word
+              w="【商：しょう】"
+              rom="shō"
+              tr_en="quotient / dealing; dealer; store / second degree (of the Japanese and Chinese pentatonic scale) / Shang dynasty (China, approx. 1600-1046 BCE); Yin dynasty"
+              hint_en="noun; noun - used as a suffix"
+              lvl="n1"
+              id="shō-quotient"
+              HIDDEN="true"
+            />
+            <word
+              w="【嬢：じょう】"
+              rom="jō"
+              tr_en="unmarried woman / Miss / -ess; -ette"
+              hint_en="noun / noun, used as a suffix"
+              lvl="n1"
+              id="jō-unmarriedwoman"
+              HIDDEN="true"
+            />
+            <word
+              w="【庁：ちょう】"
+              rom="chō"
+              tr_en="government office; agency; board"
+              hint_en="noun; noun - used as a suffix / place"
+              lvl="n1"
+              id="chō-agency"
+              HIDDEN="true"
+            />
+            <word
+              w="【料：りょう】"
+              rom="ryō"
+              tr_en="fee; charge; rate / material"
+              hint_en="noun, used as a suffix; noun"
+              lvl="n1"
+              id="ryō-fee"
+              HIDDEN="true"
+            />
+            <word
+              w="【期：き】"
+              rom="ki"
+              tr_en="period; time / opportunity; chance; occasion / age / term (e.g. in office) / session (e.g. of parliament) / stage (e.g. of a disease) / season (e.g. of a TV series)"
+              hint_en="noun; noun - used as a suffix / noun - used as a suffix"
+              lvl="n1"
+              id="ki-period"
+              HIDDEN="true"
+            />
+            <word
+              w="【印：いん】"
+              rom="in"
+              tr_en="stamp; seal; chop / seal impression; seal; sealing; stamp; mark; print / mudra (symbolic hand gesture) / ninja hand sign / India"
+              hint_en="noun / noun; noun, used as a suffix; noun, used as a prefix"
+              lvl="n1"
+              id="in-stamp"
+              HIDDEN="true"
+            />
+            <word
+              w="【区：く】【間：かん】"
+              rom="kukan"
+              tr_en="section (of track, etc.); segment; dimension / interval"
+              hint_en="noun; noun, used as a suffix"
+              lvl="n1"
+              id="kukan-section"
+              HIDDEN="true"
+            />
+            <word
+              w="【沿：ぞ】い"
+              rom="zoi"
+              tr_en="along"
+              hint_en="suffix"
+              lvl="n1"
+              id="zoi-along"
+              HIDDEN="true"
+            />
+            <word
+              w="【届：とどけ】"
+              rom="todoke"
+              tr_en="report; notification; registration"
+              hint_en="noun; noun, used as a suffix"
+              lvl="n1"
+              id="todoke-report"
+              HIDDEN="true"
+            />
+            <word
+              w="【向：む】け"
+              rom="muke"
+              tr_en="intended for ...; oriented towards ...; aimed at ..."
+              hint_en="noun, used as a suffix"
+              lvl="n1"
+              id="muke-intended"
+              HIDDEN="true"
+            />
+            <word
+              w="【前：ぜん】"
+              rom="zen"
+              tr_en="previous; former; pre-"
+              hint_en="noun; prefix"
+              hint_de="Nomen; Präfix"
+              lvl="n1"
+              id="zen-former"
+              HIDDEN="true"
+              rem="not a good word"
+            />
+            <word
+              w="【総：そう】"
+              rom="sō"
+              tr_en="whole; all; general"
+              hint_en="noun; prefix"
+              hint_de="Nomen; Präfix"
+              lvl="n1"
+              id="sō-whole"
+              HIDDEN="true"
+            />
+            <word
+              w="【館：かん】"
+              rom="kan"
+              tr_en="~hall; ~house; ~building"
+              tr_de="-Saal; -Haus; -Gebäude"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              lvl="n1"
+              id="kan-hall"
+              HIDDEN="true"
+            />
+
+            <!-- pronoun -->
+            <word
+              w="【何：ど】れ【何：ど】れ"
+              rom="dore-dore"
+              tr_en="which; c'mon; well"
+              lvl="n1"
+              usuallyInKana="true"
+              id="doredore-which"
+              HIDDEN="true"
+            />
+
+            <!-- counters -->
+
+            <!-- verbs -->
+
+            <!-- expression -->
+            <word
+              w="【手：て】のひら"
+              rom="te no hira"
+              tr_en="palm (of one's hand)"
+              tr_de="Handfläche"
+              lvl="n1"
+              category="body, hands"
+              id="tenohira-palm"
+            />
+            <word
+              w="【独：ひと】りでに"
+              rom="hitori de ni"
+              tr_en="by itself; automatically; naturally"
+              hint_en="expression"
+              lvl="n1"
+              id="hitorideni-byitself"
+              HIDDEN="true"
+            />
+
+            <!-- unsorted -->
+        </section>
+    </unit>
+</vocabulary>

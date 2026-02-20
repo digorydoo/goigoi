@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 adverbs ①"
+      name_de="N3 Adverbien ①"
+      name_fr="Les adverbes N3 ①"
+      name_it="N3 avverbi ①"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="adverb"
+      defaultHint_de="Adverb"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="false"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【滅：めっ】【多：た】に"
+              rom="metta ni"
+              tr_en="rarely; seldom"
+              tr_de="selten; kaum"
+              lvl="n3"
+              id="mettani-rarely"
+              usuallyInKana="true"
+            >
+                <keep_apart_from id="mare-rare" />
+                <keep_apart_from id="tamatama-seldom" />
+                <phrase
+                  ph="めったに【歌：うた】わない【鳥：とり】"
+                  rom="metta ni utawanai tori"
+                  tr_en="a bird that rarely sings"
+                  tr_de="ein Vogel, der selten singt"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="めったに【本：ほん】を【読：よ】まない。"
+                  rom="Metta ni hon o yomanai."
+                  tr_en="I rarely read books."
+                  tr_de="Ich lese kaum Bücher."
+                  lvl="n3"
+                  origin="Oxford p.115"
+                />
+                <sentence
+                  s="この【地：ち】【域：いき】では【雪：ゆき】はめったに【降：ふ】らない。"
+                  rom="Kono chiiki de wa yuki wa metta ni furanai."
+                  tr_en="It rarely snows in this region."
+                  tr_de="Es schneit selten in dieser Gegend."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="ChatGPT insists on the second は because of the contrast"
+                />
+            </word>
+            <word
+              w="ちゃんと"
+              rom="chanto"
+              tr_en="seriously; properly; sufficiently"
+              tr_de="seriös; richtig; genügend"
+              lvl="n3"
+              category="onomatopoeia"
+              id="chanto-properly"
+              rem="appears in 500mon q214"
+            >
+                <sentence
+                  s="お【箸：はし】をちゃんと【並：なら】べてください。"
+                  rom="O-hashi o chanto narabete kudasai."
+                  tr_en="Please arrange the chopsticks properly."
+                  tr_de="Bitte arrangiere die Essstäbchen richtig (auf dem Tisch)."
+                  lvl="n3"
+                  origin="500mon q214 modified"
+                />
+                <sentence
+                  s="【毎：まい】【日：にち】ピアノをちゃんと【練：れん】【習：しゅう】しない【人：ひと】は【上：じょう】【手：ず】にならない。"
+                  rom="Mainichi piano o chanto renshū shinai hito wa jōzu ni naranai."
+                  tr_en="People who don't practise the piano properly every day will not improve."
+                  tr_de="Leute, die nicht jeden Tag seriös Klavier üben, werden nicht besser."
+                  lvl="n3"
+                  origin="Oxford p.56"
+                />
+            </word>
+            <word
+              w="およそ"
+              rom="oyoso"
+              tr_en="roughly; approximately; as a rule"
+              tr_de="grob; ungefähr; in der Regel"
+              lvl="n3"
+              id="oyoso-roughly"
+            >
+                <sentence
+                  s="この【箱：はこ】の【重：おも】さは およそ 【２：に】キログラムです。"
+                  rom="Kono hako no omosa wa oyoso ni kiroguramu desu."
+                  tr_en="The weight of this box is roughly two kilogrammes."
+                  tr_de="Das Gewicht dieser Schachtel ist ungefähr zwei Kilogramm."
+                  allowSpaces="true"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【会：かい】【議：ぎ】は およそ 【１：いち】【時：じ】【間：かん】【続：つづ】きました。"
+                  rom="Kaigi wa oyoso ichi-jikan tsudzukimashita."
+                  tr_en="The meeting lasted about one hour."
+                  tr_de="Die Sitzung dauerte ungefähr eine Stunde."
+                  allowSpaces="true"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="ばったり"
+              rom="battari"
+              tr_en="with a thud; unexpectedly; suddenly"
+              tr_de="auf einen Schlag; unerwarteterweise; plötzlich"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n3"
+              category="onomatopoeia"
+              id="battari-suddenly"
+            >
+                <sentence
+                  s="【彼：かれ】は【横：よこ】にばったり【倒：たお】れた。"
+                  rom="Kare wa yoko ni battari taoreta."
+                  tr_en="He fell flat on the floor with a thud."
+                  tr_de="Mit einem Rumms fiel er flach auf den Boden hin."
+                  lvl="n3"
+                  origin="lib0"
+                  href="https://hinative.com/questions/22318372"
+                />
+                <sentence
+                  s="ばったり【昔：むかし】の【友：とも】【達：だち】に【会：あ】った。"
+                  rom="Battari mukashi no tomodachi ni atta."
+                  tr_en="I unexpectedly ran into an old friend."
+                  tr_de="Ich traf unerwarteterweise auf einen alten Freund."
+                  lvl="n3"
+                  origin="lib0"
+                  href="https://hinative.com/questions/22318372"
+                />
+            </word>
+            <word
+              w="しばしば"
+              rom="shiba-shiba"
+              tr_en="again and again; repeatedly; often"
+              tr_de="immer und immer wieder; wiederholt; oft"
+              hint_en="adverb"
+              hint_de="Adverb"
+              lvl="n3"
+              category="onomatopoeia"
+              id="shibashiba-repeatedly"
+            >
+                <keep_apart_from id="tabitabi-often" />
+                <sentence
+                  s="この【問：もん】【題：だい】はしばしば【起：お】こった。"
+                  rom="Kono mondai wa shiba-shiba okotta."
+                  tr_en="This problem has occurred again and again."
+                  tr_de="Dieses Problem ist immer wieder aufgetreten."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="まず"
+              rom="mazu"
+              tr_en="firstly; most likely; more or less"
+              tr_de="zuerst; höchstwahrscheinlich; mehr oder weniger"
+              lvl="n3"
+              id="mazu-firstly"
+            >
+                <keep_apart_from id="toriaezu-firstofall" />
+                <sentence
+                  s="じゃあ、まず、みんなに【質：しつ】【問：もん】がある。"
+                  rom="Jā, mazu, minna ni shitsumon ga aru."
+                  tr_en="So, first, I have a question to everyone."
+                  tr_de="Also, zuerst habe ich eine Frage an alle."
+                  lvl="n3"
+                  origin="Miku"
+                  href="https://youtu.be/4KT6rRxLDWo"
+                />
+                <sentence
+                  s="【金：かね】【子：こ】さんはまず【誕：たん】【生：じょう】【日：び】のお【祝：いわ】いをすることはない。"
+                  rom="Kaneko-san wa mazu tanjōbi no o-iwai o suru koto wa nai."
+                  tr_en="Mr Kaneko hardly ever celebrates his birthday."
+                  tr_de="Herr Kaneko feiert kaum je seinen Geburtstag."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【約：やく】"
+              rom="yaku"
+              tr_en="approximately; about"
+              tr_de="ungefähr; etwa"
+              lvl="n3"
+              rem="appears in 500mon q196; jisho has n3"
+              id="yaku-about"
+            >
+                <keep_apart_from id="hobo-almost" />
+                <keep_apart_from id="kurai-approximately" />
+                <keep_apart_from id="goro-approxtime" />
+                <keep_apart_from id="ōzappa-rough" />
+                <keep_apart_from id="ōyoso-roughly" />
+                <keep_apart_from id="zatto-roughly" />
+                <sentence
+                  s="【家：いえ】から【駅：えき】まで【約：やく】【300：さんびゃく】メートルです。"
+                  rom="Ie kara eki made yaku san-byaku mētoru desu."
+                  tr_en="From my house to the station it's about 300 metres."
+                  tr_de="Von meinem Haus bis zum Bahnhof sind es etwa 300 Meter."
+                  lvl="n3"
+                  origin="500mon q196"
+                  rem="jisho has n3 for yaku"
+                />
+            </word>
+            <word
+              w="さっぱり"
+              rom="sappari"
+              tr_en="to refresh oneself up; not in the least; completely useless"
+              tr_de="sich frisch machen; nicht im geringsten; komplett unbrauchbar"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n3"
+              category="onomatopoeia"
+              id="sappari-notintheleast"
+            >
+                <sentence
+                  s="【中：なか】【村：むら】さんは【夕：ゆう】【食：しょく】の【前：まえ】にさっぱりした。"
+                  rom="Nakamura-san wa yūshoku no mae ni sappari shita."
+                  tr_en="Mrs Nakamura refreshed herself up before supper."
+                  tr_de="Frau Nakamura machte sich frisch vor dem Abendessen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="jisho has nx for yūshoku"
+                />
+                <sentence
+                  s="さっぱり【分：わ】かりません。"
+                  rom="Sappari wakarimasen."
+                  tr_en="I don't understand at all."
+                  tr_de="Ich versteh's überhaupt nicht."
+                  lvl="n3"
+                  origin="Oxford p.114"
+                />
+            </word>
+            <word
+              w="【折：せっ】【角：かく】"
+              rom="sekkaku"
+              tr_en="at great pains; especially; valuable"
+              tr_de="mit grosser Mühe; speziell; wertvoll"
+              lvl="n3"
+              id="sekkaku-atgreatpains"
+              usuallyInKana="true"
+              rem="appears frequently (high in jisho-top-words); jisho has n2"
+            >
+                <sentence
+                  s="せっかくの【苦：く】【労：ろう】が【水：みず】の【泡：あわ】になった。"
+                  rom="Sekkaku no kurō ga mizu no awa ni natta."
+                  tr_en="All the trouble came to nothing."
+                  tr_de="Die ganze Mühe war umsonst."
+                  explanation_en="lit. 'it became foam of water'"
+                  explanation_de="wörtl. 'es wurde zu Wasserschaum'"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="せっかく【夕：ゆう】【飯：はん】を【作：つく】ったのに。"
+                  rom="Sekkaku yūhan o tsukutta no ni."
+                  tr_en="Even though I made supper especially (you didn't come!)"
+                  tr_de="Obwohl ich mir speziell Mühe gemacht habe, das Abendessen zu machen (kamst du nicht!)"
+                  explanation_en="のに expresses an unstated complaint here"
+                  explanation_de="のに drückt hier eine unausgesprochene Beanstandung aus"
+                  lvl="n3"
+                  origin="Oxford p.142"
+                />
+                <sentence
+                  s="せっかく【雨：あめ】の【中：なか】を【会：あ】いに【行：い】ったのに【彼：かの】【女：じょ】は【留：る】【守：す】だった。"
+                  rom="Sekkaku ame no naka o ai ni itta no ni kanojo wa rusu datta."
+                  tr_en="Even though I took the pains and went through the rain to see her, she wasn't at home."
+                  tr_de="Obwohl ich extra durch den Regen ging, um sie zu treffen, war sie dann nicht zu Hause."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ぴったり"
+              rom="pittari"
+              tr_en="exactly; ideally; perfectly (suited)"
+              tr_de="exakt; ideal; genau (passend)"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n3"
+              category="onomatopoeia"
+              id="pittari-ideally"
+            >
+                <sentence
+                  s="【寒：さむ】い【日：ひ】には、【温：あたた】かいお【茶：ちゃ】がぴったりですね。"
+                  rom="Samui hi ni wa, atatakai o-cha ga pittari desu ne."
+                  tr_en="On a cold day, warm tea is just right."
+                  tr_de="An einem kalten Tag ist warmer Tee genau das richtige."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【山：やま】【田：だ】さんは【真：ま】【面：じ】【目：め】だし、【経：けい】【験：けん】があるし、この【仕：し】【事：ごと】にぴったりだ。"
+                  rom="Yamada-san wa majime da shi, keiken ga aru shi, kono shigoto ni pittari da."
+                  tr_en="Mr Yamada is diligent, he's got experience (and so on), so he's perfect for this job."
+                  tr_de="Herr Yamada ist fleissig, hat Erfahrung (und so weiter), er ist der richtige für diesen Job."
+                  lvl="n3"
+                  origin="Oxford p.138 modified"
+                />
+            </word>
+            <word
+              w="もちろん"
+              rom="mochiron"
+              tr_en="of course; naturally"
+              tr_de="selbstverständlich; natürlich"
+              Langenscheidt="selbstverständlich, natürlich"
+              lvl="n3"
+              category="top-words"
+              id="mochiron-ofcourse"
+            >
+                <sentence
+                  s="もちろん【彼：かれ】は【彼：かの】【女：じょ】が【本：ほん】【当：とう】のことを【言：い】ったと【思：おも】わなかった。"
+                  rom="Mochiron kare wa kanojo ga hontō no koto o itta to omowanakatta."
+                  tr_en="Of course, he didn't think that she had told the truth."
+                  tr_de="Natürlich dachte er nicht, dass sie die Wahrheit gesagt hatte."
+                  lvl="n3"
+                  origin="Oxford p.114"
+                />
+            </word>
+            <word
+              w="【是：ぜ】【非：ひ】"
+              rom="zehi"
+              tr_en="without fail; certainly"
+              tr_de="unbedingt; gewiss"
+              Langenscheidt="unbedingt"
+              lvl="n3"
+              id="zehi-certainly"
+            >
+                <keep_apart_from id="kashikomarimashita-certainly" />
+                <sentence
+                  s="【是：ぜ】【非：ひ】【遊：あそ】びに【来：き】てください。"
+                  rom="Zehi asobi ni kite kudasai."
+                  tr_en="You really must come and visit."
+                  tr_de="Sie müssen uns unbedingt besuchen kommen."
+                  lvl="n3"
+                  origin="Oxford p.114"
+                />
+            </word>
+            <word
+              w="【絶：ぜっ】【対：たい】"
+              rom="zettai"
+              tr_en="definitely; for sure"
+              tr_de="definitiv; mit Sicherheit"
+              lvl="n3"
+              id="zettai-forsure"
+              rem="appears in GENKI2 L22 vocab section as zettai ni"
+            />
+            <word
+              w="ずっと"
+              rom="zutto"
+              tr_en="continuously; by far; for a long time"
+              tr_de="fortwährend; weitaus; eine lange Zeit"
+              lvl="n3"
+              id="zutto-byfar"
+              rem="appears in GENKI2 L22 vocab section and 500mon q404; should be n4"
+            >
+                <!-- 四年間ずっと同じバイトしてたよ。 (ChatGPT) -->
+                <sentence
+                  s="あの【映：えい】【画：が】がずっと【見：み】たかった。"
+                  rom="Ano eiga ga zutto mitakatta."
+                  tr_en="I have wanted to see that film for ages."
+                  tr_de="Ich wollte diesen Film schon lange sehen."
+                  lvl="n3"
+                  origin="Oxford p.34"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】【語：ご】は、【前：まえ】より ずっと 【分：わ】かるようになりました。"
+                  rom="Nihon-go wa, mae yori zutto wakaru yō ni narimashita."
+                  tr_en="I understand Japanese a lot better than before."
+                  tr_de="Ich verstehe Japanisch viel besser als früher."
+                  allowSpaces="true"
+                  lvl="n3"
+                  origin="500mon q404"
+                />
+            </word>
+            <word
+              w="【全：まった】く"
+              rom="mattaku"
+              tr_en="indeed; truly; completely"
+              tr_de="tatsächlich; wahrhaftig; völlig"
+              lvl="n3"
+              id="mattaku-indeed"
+            >
+                <sentence
+                  s="【漢：かん】【字：じ】が【全：まった】く【書：か】けない。"
+                  rom="Kanji ga mattaku kakenai."
+                  tr_en="I cannot write kanji at all."
+                  tr_de="Ich kann überhaupt keine Kanjis schreiben."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【結：けっ】【局：きょく】"
+              rom="kekkyoku"
+              tr_en="in the end; after all"
+              tr_de="schlussendlich; schliesslich"
+              lvl="n3"
+              id="kekkyoku-intheend"
+            >
+                <sentence
+                  s="フランスへ【行：い】こうと【思：おも】っていたけど【結：けっ】【局：きょく】どこへも【行：い】かなかった。"
+                  rom="Furansu e ikō to omotte ita kedo kekkyoku doko e mo ikanakatta."
+                  tr_en="I intended to go to France, but in the end I didn't go anywhere."
+                  tr_de="Ich beabsichtigte, nach Frankreich zu gehen, aber schlussendlich ging ich nirgendwo hin."
+                  lvl="n3"
+                  origin="Oxford p.82"
+                />
+            </word>
+            <word
+              w="びっくり"
+              rom="bikkuri"
+              tr_en="surprised; to get startled"
+              tr_de="überrascht; erschrecken"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n3"
+              category="onomatopoeia"
+              id="bikkuri-surprised"
+            >
+                <sentence
+                  s="【本：ほん】【当：とう】にびっくりした。"
+                  rom="Hontō ni bikkuri shita."
+                  tr_en="I really got startled."
+                  tr_de="Ich war wirklich erschrocken."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="ミキさんは【突：とつ】【然：ぜん】の【雷：かみなり】にびっくりした。"
+                  rom="Miki-san wa totsuzen no kaminari ni bikkuri shita."
+                  tr_en="Miki got startled by the sudden thunder."
+                  tr_de="Miki erschrak wegen des plötzlichen Donners."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="ただ"
+              rom="tada"
+              tr_en="just; simply; free of charge"
+              tr_de="bloss; gewöhnlich; kostenlos"
+              Langenscheidt="nur, bloss; ただの gewöhnlich, kostenlos"
+              lvl="n3"
+              id="tada-just"
+              rem="appears as kana only in GENKI2 L23 as 'free of charge'"
+            >
+                <keep_apart_from id="tatta-only" />
+                <keep_apart_from id="muryō-free" />
+                <phrase
+                  ph="ただの【紙：かみ】"
+                  rom="tada no kami"
+                  tr_en="just paper; simply paper"
+                  tr_de="bloss Papier; gewöhnliches Papier"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【入：にゅう】【場：じょう】はただです。"
+                  rom="Nyūjō wa tada desu."
+                  tr_en="Admission is free."
+                  tr_de="Der Eintritt ist kostenlos."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【一：いっ】【杯：ぱい】【目：め】がただになりますよ。"
+                  rom="Ippai-me ga tada ni narimasu yo."
+                  tr_en="Your first drink is free."
+                  tr_de="Das erste Getränk ist gratis."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ただの【冗：じょう】【談：だん】だよ。"
+                  rom="Tada no jōdan da yo."
+                  tr_en="It's just a joke."
+                  tr_de="Es ist bloss ein Scherz."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【思：おも】わず"
+              rom="omowazu"
+              tr_en="unintentionally; involuntarily; spontaneously"
+              tr_de="unbeabsichtigt; ungewolt; von sich aus"
+              lvl="n3"
+              id="omowazu-unintentionally"
+            >
+                <keep_apart_from id="hyotto-perhaps" />
+                <keep_apart_from id="futo-incidentally" />
+            </word>
+            <word
+              w="あちこち"
+              rom="achi-kochi"
+              tr_en="here and there; back and forth"
+              tr_de="hier und dort; vor und zurück"
+              lvl="n3"
+              id="achikochi-hereandthere"
+            >
+                <keep_apart_from id="hōbō-hereandthere" />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

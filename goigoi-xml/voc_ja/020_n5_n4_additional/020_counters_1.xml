@@ -1,0 +1,1218 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Counters ①"
+      name_de="Zählwörter ①"
+      name_fr="Les mots de compter ①"
+      name_it="Parole da contare ①"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="counter"
+      defaultHint_de="Zählwort"
+      lvl="n5, n4"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="true"
+    >
+        <section
+          name_en="つ: Generic counter for things"
+          name_de="つ: Generisches Zählwort für Sachen"
+        >
+            <word
+              w="【一：ひと】つ"
+              rom="hito-tsu"
+              tr_en="one (thing)"
+              tr_de="ein (Ding)"
+              studyInContext="preferred"
+              lvl="n5"
+              id="hitotsu-one"
+            >
+                <phrase
+                  ph="【一：ひと】つやってみる"
+                  rom="hito-tsu yatte miru"
+                  tr_en="to give it a try"
+                  tr_de="mal ausprobieren"
+                  lvl="n5"
+                  origin="tofugu"
+                />
+                <sentence
+                  s="【星：ほし】は【一：ひと】つも【見：み】えなかった。"
+                  rom="Hoshi wa hito-tsu mo mienakatta."
+                  tr_en="Not a single star could be seen."
+                  tr_de="Kein einziger Stern war sichtbar."
+                  lvl="n4"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="みんなの【心：こころ】が【一：ひと】つになる。"
+                  rom="Minna no kokoro ga hito-tsu ni naru."
+                  tr_en="Everybody's heart becomes one."
+                  tr_de="Die Herzen aller vereinen sich."
+                  explanation_en="Let's work together!"
+                  explanation_de="Lasst uns zusammen arbeiten!"
+                  lvl="n4"
+                  origin="tofugu"
+                />
+            </word>
+            <word
+              w="【二：ふた】つ"
+              rom="futa-tsu"
+              tr_en="two (things)"
+              tr_de="zwei (Dinge)"
+              studyInContext="preferred"
+              lvl="n5"
+              id="futatsu-two"
+            >
+                <phrase
+                  ph="【二：ふた】つの【椅：い】【子：す】"
+                  rom="futa-tsu no isu"
+                  tr_en="two chairs"
+                  tr_de="zwei Stühle"
+                  lvl="n4"
+                  origin="jpod101 audio modified"
+                />
+                <sentence
+                  s="【椅：い】【子：す】が【二：ふた】つ【空：あ】いています。"
+                  rom="Isu ga futa-tsu aite imasu."
+                  tr_en="Two chairs are unoccupied."
+                  tr_de="Zwei Stühle sind frei."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="この【二：ふた】つの【中：なか】から【選：えら】んでください。"
+                  rom="Kono futa-tsu no naka kara erande kudasai."
+                  tr_en="Please choose between these two."
+                  tr_de="Bitte wählen Sie einen von den beiden aus."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【三：みっ】つ"
+              rom="mittsu"
+              tr_en="three (things)"
+              tr_de="drei (Dinge)"
+              studyInContext="preferred"
+              lvl="n5"
+              id="mittsu-three"
+            >
+                <phrase
+                  ph="【三：みっ】つのアイデア"
+                  rom="mittsu no aidea"
+                  tr_en="three ideas"
+                  tr_de="drei Ideen"
+                  lvl="n5"
+                  origin="jpod101 audio modified"
+                  rem="jisho has n2 for aidea"
+                />
+                <sentence
+                  s="これを 【三：みっ】つ ください。"
+                  rom="Kore o mittsu kudasai."
+                  tr_en="Please give me three of these."
+                  tr_de="Bitte geben Sie mir drei von diesen."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【理：り】【由：ゆう】が【三：みっ】つあります。"
+                  rom="Riyū ga mittsu arimasu."
+                  tr_en="There are three reasons."
+                  tr_de="Es gibt drei Gründe."
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【四：よっ】つ"
+              rom="yottsu"
+              tr_en="four (things)"
+              tr_de="vier (Dinge)"
+              studyInContext="preferred"
+              lvl="n5"
+              id="yottsu-four"
+            >
+                <!--
+                    ChatGPT says that 四つの季節 is grammatically correct, but 四季・しき (n2) is stylistically better.
+                -->
+                <phrase
+                  ph="【四：よっ】つの【質：しつ】【問：もん】"
+                  rom="yottsu no shitsumon"
+                  tr_en="four questions"
+                  tr_de="vier Fragen"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【質：しつ】【問：もん】が【四：よっ】つあります。"
+                  rom="Shitsumon ga yottsu arimasu."
+                  tr_en="I have four questions."
+                  tr_de="Ich habe vier Fragen."
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】には【季：き】【節：せつ】が【四：よっ】つあります。"
+                  rom="Nihon ni wa kisetsu ga yottsu arimasu."
+                  tr_en="There are four seasons in Japan."
+                  tr_de="In Japan gibt es vier Jahreszeiten."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="'Nihon ni wa' from a similar question on tofugu.com"
+                />
+            </word>
+            <word
+              w="【五：いつ】つ"
+              rom="itsu-tsu"
+              tr_en="five (things)"
+              tr_de="fünf (Dinge)"
+              studyInContext="preferred"
+              lvl="n5"
+              id="itsutsu-five"
+            >
+                <phrase
+                  ph="【五：いつ】つの【問：もん】【題：だい】"
+                  rom="itsu-tsu no mondai"
+                  tr_en="five problems"
+                  tr_de="fünf Probleme"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【部：へ】【屋：や】には 【窓：まど】が 【五：いつ】つ ある。"
+                  rom="Heya ni wa mado ga itsu-tsu aru."
+                  tr_en="The room has five windows."
+                  tr_de="Der Raum hat fünf Fenster."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="チョコレートを【五：いつ】つもらった。"
+                  rom="Chokorēto o itsu-tsu moratta."
+                  tr_en="I got five chocolates."
+                  tr_de="Ich habe fünf Schokoladen bekommen."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【六：むっ】つ"
+              rom="muttsu"
+              tr_en="six (things)"
+              tr_de="sechs (Dinge)"
+              studyInContext="preferred"
+              lvl="n5"
+              id="muttsu-six"
+            >
+                <phrase
+                  ph="【六：むっ】つのペン"
+                  rom="muttsu no pen"
+                  tr_en="six pens"
+                  tr_de="sechs Schreibstifte"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="ペンを【六：むっ】つ【買：か】った。"
+                  rom="Pen o muttsu katta."
+                  tr_en="I bought six pens."
+                  tr_de="Ich habe sechs Schreibstifte gekauft."
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【人：にん】【形：ぎょう】を【六：むっ】つ【作：つく】った。"
+                  rom="Ningyō o muttsu tsukutta."
+                  tr_en="I made six dolls."
+                  tr_de="Ich habe sechs Puppen gemacht."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【七：なな】つ"
+              rom="nana-tsu"
+              tr_en="seven (things)"
+              tr_de="sieben (Dinge)"
+              studyInContext="preferred"
+              lvl="n5"
+              id="nanatsu-seven"
+            >
+                <phrase
+                  ph="【七：なな】つの【人：にん】【形：ぎょう】"
+                  rom="nana-tsu no ningyō"
+                  tr_en="seven dolls"
+                  tr_de="sieben Puppen"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="プレゼントが【七：なな】つもあります。"
+                  rom="Purezento ga nana-tsu mo arimasu."
+                  tr_en="There are as many as seven presents."
+                  tr_de="Es hat (sogar) sieben Geschenke."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【宿：しゅく】【題：だい】が【七：なな】つも【出：で】た。"
+                  rom="Shukudai ga nana-tsu mo deta."
+                  tr_en="We got as many as seven assignments."
+                  tr_de="Wir haben ganze sieben Hausaufgaben bekommen."
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【八：やっ】つ"
+              rom="yattsu"
+              tr_en="eight (things)"
+              tr_de="acht (Dinge)"
+              studyInContext="preferred"
+              lvl="n5"
+              id="yattsu-eight"
+            >
+                <phrase
+                  ph="【八：やっ】つの【宿：しゅく】【題：だい】"
+                  rom="yattsu no shukudai"
+                  tr_en="eight assignments"
+                  tr_de="acht Hausaufgaben"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="この【八：やっ】つの【中：なか】から【選：えら】んでください。"
+                  rom="Kono yattsu no naka kara erande kudasai."
+                  tr_en="Please choose from these eight (things)."
+                  tr_de="Bitte wählen Sie einen von diesen acht aus."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="これを【八：やっ】つください。"
+                  rom="Kore o yattsu kudasai."
+                  tr_en="Please give me eight of these."
+                  tr_de="Bitte geben Sie mir acht von diesen."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【九：ここの】つ"
+              rom="kokono-tsu"
+              tr_en="nine (things)"
+              tr_de="neun (Dinge)"
+              studyInContext="preferred"
+              lvl="n5"
+              id="kokonotsu-nine"
+            >
+                <phrase
+                  ph="【九：ここの】つの【理：り】【由：ゆう】"
+                  rom="kokono-tsu no riyū"
+                  tr_en="nine reasons"
+                  tr_de="neun Gründe"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="そのテストには【問：もん】【題：だい】が【九：ここの】つありました。"
+                  rom="Sono tesuto ni wa mondai ga kokono-tsu arimashita."
+                  tr_en="That test had nine questions."
+                  tr_de="Die Prüfung hatte neun Fragen."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【駅：えき】の【近：ちか】くには【食：しょく】【堂：どう】が【九：ここの】つもありますよ。"
+                  rom="Eki no chikaku ni wa shokudō ga kokono-tsu mo arimasu yo."
+                  tr_en="Near the station, there are as many as nine diners."
+                  tr_de="In der Nähe des Bahnhofs gibt es ganze neun Gaststätten."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT; the counter 軒 (n3) would be better here, but つ seems OK, too"
+                />
+            </word>
+        </section>
+        <section
+          name_en="人: Persons, people"
+          name_de="人: Menschen, Leute"
+        >
+            <word
+              w="【人：ひと】"
+              rom="hito"
+              tr_en="man; person; people"
+              tr_de="Person; Leute"
+              lvl="n5"
+              category="people"
+              id="hito-man"
+            >
+                <keep_apart_from id="hitori-onepersonalt" />
+                <keep_apart_from id="futari-twopersonsalt" />
+                <keep_together id="hitori-onepersonalt" />
+                <keep_together id="futari-twopersonsalt" />
+                <keep_apart_from id="jinbutsu-person" />
+                <phrase
+                  ph="【一：ひと】【人：り】"
+                  rom="hitori"
+                  tr_en="one person; alone"
+                  tr_de="eine Person; alleine"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【二：ふた】【人：り】"
+                  rom="futari"
+                  tr_en="two persons; pair"
+                  tr_de="zwei Personen; Paar"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                />
+                <phrase
+                  ph="【三：さん】【人：にん】"
+                  rom="san-nin"
+                  tr_en="three people"
+                  tr_de="drei Personen"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  rem="see GENKI1 p.174"
+                />
+                <phrase
+                  ph="【四：よ】【人：にん】"
+                  rom="yonin"
+                  tr_en="four people"
+                  tr_de="vier Personen"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  rem="see GENKI1 p.174"
+                />
+                <!--
+                  ph="【五：ご】【人：にん】"
+                  rom="go-nin"
+                  tr_en="five people"
+                  tr_de="fünf Personen"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  rem="see GENKI1 p.174"
+                -->
+                <!--
+                  ph="【六：ろく】【人：にん】"
+                  rom="roku-nin"
+                  tr_en="six people"
+                  tr_de="sechs Personen"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  rem="see GENKI1 p.174"
+                -->
+                <!--
+                  ph="【七：なな】【人：にん】"
+                  rom="nana-nin"
+                  tr_en="seven people"
+                  tr_de="sieben Personen"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  rem="see GENKI1 p.174; しちにん is also possible"
+                -->
+                <!--
+                  ph="【八：はち】【人：にん】"
+                  rom="hachi-nin"
+                  tr_en="eight people"
+                  tr_de="acht Personen"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  rem="see GENKI1 p.174"
+                -->
+                <!--
+                  ph="【九：きゅう】【人：にん】"
+                  rom="kyū-nin"
+                  tr_en="nine people"
+                  tr_de="neun Personen"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  rem="see GENKI1 p.174"
+                -->
+                <!--
+                  ph="【十：じゅう】【人：にん】"
+                  rom="jū-nin"
+                  tr_en="ten people"
+                  tr_de="zehn Personen"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  rem="see GENKI1 p.174"
+                -->
+                <!--
+                  ph="【二：に】【十：じゅう】【人：にん】"
+                  rom="ni-jū-nin"
+                  tr_en="twenty people"
+                  tr_de="zwanzig Personen"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                -->
+                <!--
+                  ph="【何：なん】【人：にん】"
+                  rom="nan-nin"
+                  tr_en="how many people"
+                  tr_de="wieviele Leute"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  rem="GENKI2 p.286"
+                -->
+                <sentence
+                  s="きのうの パーティーには 【学：がく】【生：せい】が 【二：に】【十：じゅう】【人：にん】も 【来：き】ました。"
+                  rom="Kinō no pātī ni wa gakusei ga ni-jū-nin mo kimashita."
+                  tr_en="As many as twenty students showed up at the party yesterday."
+                  tr_de="Nicht weniger als zwanzig Studenten sind an die Party gestern gekommen."
+                  hasDifferentForm="true"
+                  explanation_en="も after the number word has the meaning of 'as many as'."
+                  explanation_de="も nach dem Zählwort hat die Bedeutung von 'nicht weniger als', 'ganze'."
+                  lvl="n5"
+                  origin="GENKI2 p.55"
+                />
+                <sentence
+                  s="【一：ひと】【人：り】も 【来：こ】ないと 【思：おも】って いましたが、【５：ご】【人：にん】も 【来：き】ました。"
+                  rom="Hitori mo konai to omotte imashita ga, go-nin mo kimashita."
+                  tr_en="I didn't think even one person would come, but five people came."
+                  tr_de="Ich dachte, nicht einmal eine Person würde kommen, aber es kamen fünf."
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  origin="500mon q277"
+                />
+            </word>
+            <word
+              w="【１：ひと】【人：り】"
+              rom="hitori"
+              tr_en="one person"
+              lvl="n5"
+              id="hitori-onepersonalt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="hito-man" />
+                <keep_together id="hito-man" />
+            </word>
+            <word
+              w="【２：ふた】【人：り】"
+              rom="futari"
+              tr_en="two persons; pair"
+              lvl="n5"
+              id="futari-twopersonsalt"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="hito-man" />
+                <keep_together id="hito-man" />
+            </word>
+
+            <!-- 歳 may be N5; jisho has nx, but it appears in GENKI1 p.57 (kana) and GENKI1 p.380 (with 歳) -->
+            <!-- what's the difference between 歳 and 才 ?? -->
+            <word
+              w="【歳：さい】"
+              rom="sai"
+              tr_en="~ years old"
+              tr_de="~ Jahre alt"
+              studyInContext="required"
+              lvl="n5"
+              id="sai-yearold"
+              rem="see GENKI1 p.380"
+            >
+                <phrase
+                  ph="【一：いっ】【歳：さい】"
+                  rom="issai"
+                  tr_en="one year old"
+                  tr_de="ein Jahr alt"
+                  lvl="n5"
+                  rem="see GENKI1 p.57"
+                />
+                <!--
+                  w="【二：に】【歳：さい】"
+                  rom="ni-sai"
+                  tr_en="two years old"
+                  tr_de="zwei Jahre alt"
+                  lvl="n5"
+                  rem="see GENKI1 p.57"
+                -->
+                <!--
+                  w="【三：さん】【歳：さい】"
+                  rom="san-sai"
+                  tr_en="three years old"
+                  tr_de="drei Jahre alt"
+                  lvl="n5"
+                  rem="see GENKI1 p.57"
+                -->
+                <phrase
+                  ph="【四：よん】【歳：さい】"
+                  rom="yon-sai"
+                  tr_en="four years old"
+                  tr_de="vier Jahre alt"
+                  lvl="n5"
+                  rem="see GENKI1 p.57"
+                />
+                <!--
+                  w="【五：ご】【歳：さい】"
+                  rom="go-sai"
+                  tr_en="five years old"
+                  tr_de="fünf Jahre alt"
+                  lvl="n5"
+                  rem="see GENKI1 p.57"
+                -->
+                <!--
+                  w="【六：ろく】【歳：さい】"
+                  rom="roku-sai"
+                  tr_en="six years old"
+                  tr_de="sechs Jahre alt"
+                  lvl="n5"
+                  rem="see GENKI1 p.57"
+                -->
+                <phrase
+                  ph="【七：なな】【歳：さい】"
+                  rom="nana-sai"
+                  tr_en="seven years old"
+                  tr_de="sieben Jahre alt"
+                  lvl="n5"
+                  rem="see GENKI1 p.57"
+                />
+                <!-- got jū-hassai instead
+                  ph="【八：はっ】【歳：さい】"
+                  rom="hassai"
+                  tr_en="eight years old"
+                  tr_de="acht Jahre alt"
+                  lvl="n5"
+                  rem="see GENKI1 p.57"
+                -->
+                <!--
+                  w="【九：きゅう】【歳：さい】"
+                  rom="kyū-sai"
+                  tr_en="nine years old"
+                  tr_de="neun Jahre alt"
+                  lvl="n5"
+                  rem="see GENKI1 p.57"
+                -->
+                <phrase
+                  ph="【十：じゅっ】【歳：さい】"
+                  rom="jussai"
+                  tr_en="ten years old"
+                  tr_de="zehn Jahre alt"
+                  lvl="n5"
+                  rem="see GENKI1 p.57; may also be pronounced じっさい"
+                />
+                <phrase
+                  ph="【十：じゅう】【一：いっ】【歳：さい】"
+                  rom="jū-issai"
+                  tr_en="eleven years old"
+                  tr_de="elf Jahre alt"
+                  lvl="n5"
+                  rem="see GENKI1 p.57"
+                />
+                <!--
+                  w="【十：じゅう】【二：に】【歳：さい】"
+                  rom="jū-ni-sai"
+                  tr_en="twelve years old"
+                  tr_de="zwölf Jahre alt"
+                  lvl="n5"
+                -->
+                <!--
+                  w="【十：じゅう】【三：さん】【歳：さい】"
+                  rom="jū-san-sai"
+                  tr_en="thirteen years old"
+                  tr_de="dreizehn Jahre alt"
+                  lvl="n5"
+                -->
+                <!-- is now a phrase of roku-six
+                  w="【十：じゅう】【六：ろく】【歳：さい】"
+                  rom="jū-roku-sai"
+                  tr_en="sixteen years old"
+                  tr_de="sechzehn Jahre alt"
+                  lvl="n5"
+                -->
+                <!--
+                  ph="【十：じゅう】【七：なな】【歳：さい】"
+                  rom="jū-nana-sai"
+                  tr_en="seventeen years old"
+                  tr_de="siebzehn Jahre alt"
+                  lvl="n5"
+                -->
+                <phrase
+                  ph="【十：じゅう】【八：はっ】【歳：さい】"
+                  rom="jū-hassai"
+                  tr_en="eighteen years old"
+                  tr_de="achtzehn Jahre alt"
+                  lvl="n5"
+                />
+                <!-- got a sentence; is also a phrase of kyū-nine
+                  w="【十：じゅう】【九：きゅう】【歳：さい】"
+                  rom="jū-kyū-sai"
+                  tr_en="nineteen years old"
+                  tr_de="neunzehn Jahre alt"
+                  lvl="n5"
+                -->
+                <!-- got a sentence
+                  w="【何：なん】【歳：さい】"
+                  rom="nan-sai"
+                  tr_en="how many years old"
+                  tr_de="wieviele Jahre alt"
+                  lvl="n5"
+                -->
+                <sentence
+                  s="【山：やま】【下：した】さんは 【十：じゅう】【九：きゅう】【歳：さい】です。"
+                  rom="Yamashita-san wa jū-kyū-sai desu."
+                  tr_en="Mr Yamashita is nineteen years old."
+                  tr_de="Herr Yamashita ist neunzehn Jahre alt."
+                  lvl="n5"
+                  origin="GENKI1 p.44 modified"
+                />
+                <sentence
+                  s="【何：なん】【歳：さい】ですか。"
+                  rom="Nan-sai desu ka?"
+                  tr_en="How old are you?"
+                  tr_de="Wie alt bist du?"
+                  lvl="n5"
+                  hasDifferentForm="true"
+                  origin="lib0"
+                  rem="jisho has nx for sai, but it appears in GENKI1 p.44"
+                />
+            </word>
+            <word
+              w="【二十歳：はたち】"
+              rom="hatachi"
+              tr_en="twenty years old"
+              tr_de="zwanzig Jahre alt"
+              hasCombinedReading="true"
+              lvl="n5"
+              id="hatachi-twentyyearsold"
+            >
+                <phrase
+                  ph="【二十歳：はたち】になる"
+                  rom="hatachi ni naru"
+                  tr_en="to turn twenty years old"
+                  tr_de="zwanzig Jahre alt werden"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【中：なか】【川：がわ】さんは【二十歳：はたち】の【時：とき】にこの【本：ほん】を【書：か】きました。"
+                  rom="Nakagawa-san wa hatachi no toki ni kono hon o kakimashita."
+                  tr_en="Ms Nakagawa wrote this book when she was twenty."
+                  tr_de="Frau Nakagawa schrieb dieses Buch, als sie zwanzig war."
+                  lvl="n5"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+        </section>
+        <section
+          name_en="円: Yen (Japanese currency)"
+          name_de="円: Yen (japanische Währung)"
+        >
+            <word
+              w="【円：えん】"
+              rom="en"
+              tr_en="yen"
+              tr_de="Yen"
+              hint_en="Japanese currency"
+              hint_de="japanische Währung"
+              lvl="n5"
+              category="finances"
+              id="en-yen"
+              rem="appears in 500mon q135 and GENKI2 p.386; jisho has n3"
+            >
+                <!--
+                  w="【一：いち】【円：えん】"
+                  rom="ichi-en"
+                  tr_en="one yen"
+                  tr_de="ein Yen"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                -->
+                <!--
+                  w="【二：に】【円：えん】"
+                  rom="ni-en"
+                  tr_en="two yen"
+                  tr_de="zwei Yen"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                -->
+                <!--
+                  w="【三：さん】【円：えん】"
+                  rom="san-en"
+                  tr_en="three yen"
+                  tr_de="drei Yen"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【四：よ】【円：えん】"
+                  rom="yoen"
+                  tr_en="four yen"
+                  tr_de="vier Yen"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  w="【五：ご】【円：えん】"
+                  rom="go-en"
+                  tr_en="five yen"
+                  tr_de="fünf Yen"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                -->
+                <!--
+                  w="【六：ろく】【円：えん】"
+                  rom="roku-en"
+                  tr_en="six yen"
+                  tr_de="sechs Yen"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                -->
+                <!--
+                  w="【七：なな】【円：えん】"
+                  rom="nana-en"
+                  tr_en="seven yen"
+                  tr_de="sieben Yen"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                -->
+                <!--
+                  w="【八：はち】【円：えん】"
+                  rom="hachi-en"
+                  tr_en="eight yen"
+                  tr_de="acht Yen"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                -->
+                <!--
+                  w="【九：きゅう】【円：えん】"
+                  rom="kyū-en"
+                  tr_en="nine yen"
+                  tr_de="neun Yen"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                -->
+                <!--
+                  w="【十：じゅう】【円：えん】"
+                  rom="jū-en"
+                  tr_en="ten yen"
+                  tr_de="zehn Yen"
+                  lvl="n5"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【百：ひゃく】【円：えん】"
+                  rom="hyaku-en"
+                  tr_en="hundred yen"
+                  tr_de="hundert Yen"
+                  lvl="n5"
+                  rem="has a sentence in hyaku-100"
+                />
+                <phrase
+                  ph="【千：せん】【円：えん】"
+                  rom="sen-en"
+                  tr_en="thousand yen"
+                  tr_de="tausend Yen"
+                  lvl="n5"
+                  origin="self"
+                />
+                <!-- maybe seldom used, prefer いくら
+                  w="【何：なん】【円：えん】"
+                  rom="nan-en"
+                  tr_en="how many yen"
+                  lvl="n5"
+                -->
+                <sentence
+                  s="【百：ひゃく】【万：まん】【円：えん】あったら、【何：なに】に 【使：つか】いますか。"
+                  rom="Hyaku-man en attara, nani ni tsukaimasu ka?"
+                  tr_en="If you had a million yen, what would you use it for?"
+                  tr_de="Wenn du eine Million Yen hättest, wozu würdest du es verwenden?"
+                  lvl="n5"
+                  origin="500mon q135"
+                />
+            </word>
+        </section>
+        <section
+          name_en="本: Long, thin objects, e.g. pencil, umbrella, movie"
+          name_de="本: Lange, dünne Objekte, z.B. Bleistift, Regenschirm, Film"
+        >
+            <!--
+                GENKI2 p.69. Jisho has n5, but this may be the noun, not the counter, so I made it n4.
+            -->
+            <word
+              w="【本：ほん】"
+              rom="hon"
+              tr_en="counter for long, thin objects"
+              tr_de="Zählwort für lange, dünne Objekte"
+              studyInContext="required"
+              lvl="n4"
+              id="hon-longthin"
+              rem="see GENKI2 p.69 and p.386"
+            >
+                <keep_apart_from id="hon-book" />
+                <keep_apart_from id="sanbon-3longthin" />
+                <keep_apart_from id="happon-8longthin" />
+                <keep_together id="sanbon-3longthin" />
+                <keep_together id="happon-8longthin" />
+                <phrase
+                  ph="【一：いっ】【本：ぽん】"
+                  rom="ippon"
+                  tr_en="one long, thin object"
+                  tr_de="ein langes, dünnes Objekt"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  ph="【一本：いっぽん】のはさみ"
+                  rom="ippon no hasami"
+                  tr_en="one (pair of) scissors"
+                  tr_de="eine Schere"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                -->
+                <!--
+                  ph="【一本：いっぽん】の【赤：あか】いバラ"
+                  rom="ippon no akai bara"
+                  tr_en="one red rose"
+                  tr_de="eine rote Rose"
+                  lvl="-"
+                  origin="jpod101 audio"
+                -->
+                <phrase
+                  ph="【二：に】【本：ほん】"
+                  rom="ni-hon"
+                  tr_en="two long, thin objects"
+                  tr_de="zwei lange, dünne Objekte"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <phrase
+                  ph="【三：さん】【本：ぼん】"
+                  rom="sanbon"
+                  tr_en="three long, thin objects"
+                  tr_de="drei lange, dünne Objekte"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <!-- is a phrase of yon-four
+                  ph="【四：よん】【本：ほん】"
+                  rom="yon-hon"
+                  tr_en="four long, thin objects"
+                  tr_de="vier lange, dünne Objekte"
+                  lvl="n4"
+                  rem="see GENKI2 p.386"
+                -->
+                <!--
+                  w="【五：ご】【本：ほん】"
+                  rom="go-hon"
+                  tr_en="five long, thin objects"
+                  tr_de="fünf lange, dünne Objekte"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【六：ろっ】【本：ぽん】"
+                  rom="roppon"
+                  tr_en="six long, thin objects"
+                  tr_de="sechs lange, dünne Objekte"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <phrase
+                  ph="【七：なな】【本：ほん】"
+                  rom="nana-hon"
+                  tr_en="seven long, thin objects"
+                  tr_de="sieben lange, dünne Objekte"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <phrase
+                  ph="【八：はっ】【本：ぽん】"
+                  rom="happon"
+                  tr_en="eight long, thin objects"
+                  tr_de="acht lange, dünne Objekte"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                />
+                <!--
+                  ph="【九：きゅう】【本：ほん】"
+                  rom="kyū-hon"
+                  tr_en="nine long, thin objects"
+                  tr_de="neun lange, dünne Objekte"
+                  lvl="n4"
+                  rem="see GENKI2 p.386"
+                -->
+                <phrase
+                  ph="【十：じゅっ】【本：ぽん】"
+                  rom="juppon"
+                  tr_en="ten long, thin objects"
+                  tr_de="zehn lange, dünne Objekte"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.386"
+                  rem="also pronounced jippon"
+                />
+                <phrase
+                  ph="【百：ひゃっ】【本：ぽん】"
+                  rom="hyappon"
+                  tr_en="hundred long, thin objects"
+                  tr_de="hundert lange, dünne Objekte"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  href="https://hinative.com/questions/24830034"
+                />
+                <!--
+                  w="【百：ひゃく】【一：いっ】【本：ぽん】"
+                  rom="hyaku-ippon"
+                  tr_en="101 long, thin objects"
+                  tr_de="101 lange, dünne Objekte"
+                  lvl="n4"
+                  id="hyakuippon-101longthin"
+                -->
+                <phrase
+                  ph="【千：せん】【本：ぼん】"
+                  rom="senbon"
+                  tr_en="thousand long, thin objects"
+                  tr_de="tausend lange, düne Objekte"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  href="https://hinative.com/questions/24830034"
+                />
+                <!--
+                  ph="【何：なん】【本：ぼん】"
+                  rom="nanbon"
+                  tr_en="how many long, thin objects"
+                  tr_de="wieviele lange, dünne Objekte"
+                  lvl="n4"
+                -->
+                <sentence
+                  s="【赤：あか】い【傘：かさ】は【一：いっ】【本：ぽん】しか【持：も】っていません。"
+                  rom="Akai kasa wa ippon shika motte imasen."
+                  tr_en="I only have one red umbrella."
+                  tr_de="Ich habe nur einen roten Regenschirm."
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  href="https://www.tofugu.com/japanese/japanese-counter-hon/"
+                  origin="tofugu"
+                  rem="shika + negative form see GENKI grammar L14"
+                />
+                <sentence
+                  s="【傘：かさ】を【二：に】【本：ほん】【買：か】いました。"
+                  rom="Kasa o ni-hon kaimashita."
+                  tr_en="We bought two umbrellas."
+                  tr_de="Wir haben zwei Regenschirme gekauft."
+                  lvl="n4"
+                  origin="GENKI2 p.54"
+                />
+                <sentence
+                  s="ネクタイが【三：さん】【本：ぼん】あります。"
+                  rom="Nekutai ga sanbon arimasu."
+                  tr_en="There are three neckties."
+                  tr_de="Es hat drei Krawatten."
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="GENKI2 p.54 modified"
+                />
+                <sentence
+                  s="【鉛：えん】【筆：ぴつ】を【六：ろっ】【本：ぽん】ください。"
+                  rom="Enpitsu o roppon kudasai."
+                  tr_en="Please give me six pencils."
+                  tr_de="Bitte geben Sie mir sechs Bleistifte."
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  href="https://hinative.com/questions/20378232"
+                />
+                <sentence
+                  s="【花：はな】が【七：なな】【本：ほん】あります。"
+                  rom="Hana ga nana-hon arimasu."
+                  tr_en="There are seven flowers."
+                  tr_de="Es hat sieben Blumen."
+                  lvl="n4"
+                  origin="GENKI2 p.54"
+                />
+            </word>
+            <word
+              w="【３：さん】【本：ぼん】"
+              rom="sanbon"
+              tr_en="three long, thin objects"
+              lvl="n4"
+              id="sanbon-3longthin"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="hon-longthin" />
+                <keep_together id="hon-longthin" />
+            </word>
+            <word
+              w="【８：はっ】【本：ぽん】"
+              rom="happon"
+              tr_en="eight long, thin objects"
+              lvl="n4"
+              id="happon-8longthin"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            >
+                <keep_apart_from id="hon-longthin" />
+                <keep_together id="hon-longthin" />
+            </word>
+        </section>
+        <section
+          name_en="回: Times, round (game), revolution"
+          name_de="回: n Mal, Runde (Spiel), Umdrehung"
+        >
+            <!-- appears in GENKI2 p.387, jisho has n3 -->
+            <word
+              w="【回：かい】"
+              rom="kai"
+              tr_en="counter for occurrences, rounds"
+              tr_de="Zählwort für n Mal, Runden"
+              studyInContext="required"
+              lvl="n4"
+              id="kai-counter"
+            >
+                <keep_apart_from id="do-counter" />
+                <keep_apart_from id="kondo-thistime" />
+                <phrase
+                  ph="【毎：まい】【月：つき】【一：いっ】【回：かい】"
+                  rom="maitsuki ikkai"
+                  tr_en="once a month"
+                  tr_de="einmal im Monat"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="see also GENKI2 p.387"
+                />
+                <!--
+                  w="【二：に】【回：かい】"
+                  rom="ni-kai"
+                  tr_en="twice; round two"
+                  tr_de="zweimal; zweite Runde"
+                  lvl="n4"
+                  rem="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【三：さん】【回：かい】"
+                  rom="san-kai"
+                  tr_en="three times; round three"
+                  tr_de="dreimal; dritte Runde"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                  rem="note that it's not sangai"
+                />
+                <!--
+                  w="【四：よん】【回：かい】"
+                  rom="yon-kai"
+                  tr_en="four times; round four"
+                  tr_de="viermal; vierte Runde"
+                  lvl="n4"
+                  rem="GENKI2 p.387"
+                -->
+                <!--
+                  w="【五：ご】【回：かい】"
+                  rom="go-kai"
+                  tr_en="five times; round five"
+                  tr_de="fünfmal; fünfte Runde"
+                  lvl="n4"
+                  rem="GENKI2 p.387"
+                  HIDDEN="true"
+                -->
+                <phrase
+                  ph="【六：ろっ】【回：かい】"
+                  rom="rokkai"
+                  tr_en="six times; round six"
+                  tr_de="sechsmal; sechste Runde"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  w="【七：なな】【回：かい】"
+                  rom="nana-kai"
+                  tr_en="seven times; round seven"
+                  tr_de="siebenmal; siebte Runde"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【八：はっ】【回：かい】"
+                  rom="hakkai"
+                  tr_en="eight times; round eight"
+                  tr_de="achtmal; achte Runde"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                />
+                <!--
+                  w="【九：きゅう】【回：かい】"
+                  rom="kyū-kai"
+                  tr_en="nine times; round nine"
+                  tr_de="neunmal; neunte Runde"
+                  lvl="n4"
+                  rem="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【十：じゅっ】【回：かい】"
+                  rom="jukkai"
+                  tr_en="ten times; round ten"
+                  tr_de="zehnmal; zehnte Runde"
+                  lvl="n4"
+                  origin="GENKI2 p.387"
+                  rem="also pronounced jikkai"
+                />
+                <!--
+                  w="【四：よん】【十：じゅう】【六：ろっ】【回：かい】"
+                  rom="yon-jū-rokkai"
+                  tr_en="46 times; round 46"
+                  tr_de="46 Mal; sechsundvierzigste Runde"
+                  lvl="n4"
+                  href="https://hinative.com/questions/24830034"
+                -->
+                <!--
+                  w="【六：ろく】【十：じゅう】【八：はっ】【回：かい】"
+                  rom="roku-jū-hakkai"
+                  tr_en="68 times; round 68"
+                  tr_de="68 Mal; achtundsechzigste Runde"
+                  lvl="n4"
+                  href="https://hinative.com/questions/24830034"
+                -->
+                <!--
+                  w="【何：なん】【回：かい】"
+                  rom="nan-kai"
+                  tr_en="how many times; how many rounds"
+                  tr_de="wieviele Male; wieviele Runden"
+                  lvl="n4"
+                  rem="GENKI2 p.387"
+                -->
+                <phrase
+                  ph="【今：こん】【回：かい】"
+                  rom="kon-kai"
+                  tr_en="this time; now"
+                  tr_de="dieses Mal; jetzt"
+                  lvl="n4"
+                  rem="jisho has n3; keep apart from kondo-thistime"
+                />
+                <sentence
+                  s="【今：こん】【回：かい】が【最：さい】【後：ご】の【試：し】【合：あい】だ。"
+                  rom="Kon-kai ga saigo no shiai da."
+                  tr_en="This time is the last match."
+                  tr_de="Dieses Mal ist der letzte Match."
+                  lvl="n4"
+                  origin="lib0"
+                  rem="verified with ChatGPT; が expresses emphasis on this time in particular"
+                />
+            </word>
+            <word
+              w="【今：こん】【回：かい】"
+              rom="kon-kai"
+              tr_en="this time; now"
+              lvl="n4"
+              id="konkai-thistime"
+              rem="jisho has n3"
+              HIDDEN="true"
+            />
+        </section>
+    </unit>
+</vocabulary>

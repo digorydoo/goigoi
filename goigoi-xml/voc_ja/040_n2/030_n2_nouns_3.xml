@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N2 nouns ③"
+      name_de="N2-Nomen ③"
+      name_fr="Les noms N2 ③"
+      name_it="Nomi N2 ③"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n2"
+      translations="en, de"
+      requiresSentences="false"
+      requiresIds="true"
+    >
+        <section>
+            <word
+              w="【解：かい】【放：ほう】"
+              rom="kaihō"
+              tr_en="liberation; release"
+              tr_de="Befreiung"
+              Langenscheidt="Befreiung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="kaihō-release"
+            >
+                <sentence
+                  s="ブライアンを【解：かい】【放：ほう】しなさい。"
+                  rom="Buraian o kaihō shi-nasai."
+                  tr_en="Release Brian!"
+                  tr_de="Lass Brian frei!"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【複：ふく】【数：すう】"
+              rom="fukusū"
+              tr_en="plural; multiple; several"
+              tr_de="Plural; Vielfaches; Mehreres"
+              lvl="n2"
+              id="fukusū-plural"
+            >
+                <sentence
+                  s="【日：に】【本：ほん】【語：ご】は【複：ふく】【数：すう】【形：けい】がないし、【文：ぶん】【法：ぽう】が【難：むずか】しくないですよ。"
+                  rom="Nihon-go wa fukusū-kei ga nai shi, bunpō ga muzukashikunai desu yo."
+                  tr_en="Japanese grammar is not difficult, (for instance) it has no plural forms."
+                  tr_de="Im Japanischen ist die Grammatik nicht schwer, (zum Beispiel) hat es keine Pluralform."
+                  lvl="n2"
+                  origin="Oxford p.137"
+                />
+            </word>
+            <word
+              w="【反：はん】【映：えい】"
+              rom="han'ei"
+              tr_en="reflection (of light, etc.); taking effect"
+              tr_de="Reflektion (von Licht, usw.); widerspiegeln; wirksam werden"
+              Langenscheidt="-"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="light, general"
+              id="hanei-reflect"
+            >
+                <sentence
+                  s="【価：か】【格：かく】は【需：じゅ】【要：よう】を【反：はん】【映：えい】する。"
+                  rom="Kakaku wa juyō o han'ei suru."
+                  tr_en="The price reflects the demand."
+                  tr_de="Der Preis spiegelt die Nachfrage wider."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【園：えん】【芸：げい】"
+              rom="engei"
+              tr_en="horticulture; gardening"
+              tr_de="Gartenbau; Gartenkunst"
+              lvl="n2"
+              category="garden"
+              id="engei-gardening"
+            >
+                <sentence
+                  s="【父：ちち】は【園：えん】【芸：げい】の【基：き】【本：ほん】を【教：おし】えてくれた。"
+                  rom="Chichi wa engei no kihon o oshiete kureta."
+                  tr_en="My father taught me the basics of gardening."
+                  tr_de="Mein Vater hat mir die Grundlagen des Gartenbaus beigebracht."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【停：てい】【止：し】"
+              rom="teishi"
+              tr_en="halt; standstill; to come to a stop"
+              tr_de="Stopp; Stillstand; aufhören"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="teishi-halt"
+            >
+                <phrase
+                  ph="【機：き】【能：のう】【停：てい】【止：し】"
+                  rom="kinō teishi"
+                  tr_en="shutdown of a function; being out of service"
+                  tr_de="Abstellen einer Funktion; nicht in Betrieb"
+                  lvl="n2"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【祝：しゅく】【日：じつ】"
+              rom="shukujitsu"
+              tr_en="national holiday"
+              tr_de="Nationalfeiertag"
+              lvl="n2"
+              category="holidays, culture"
+              id="shukujitsu-holiday"
+            >
+                <keep_apart_from id="saijitsu-festivalday" />
+                <sentence
+                  s="【冷：れい】【蔵：ぞう】【庫：こ】の【中：なか】は【祝：しゅく】【日：じつ】のための【食：た】べ【物：もの】でいっぱいだ。"
+                  rom="Reizōko no naka wa shukujitsu no tame no tabemono de ippai da."
+                  tr_en="The fridge is full for the national holiday."
+                  tr_de="Der Kühlschrank ist voll für den Nationalfeiertag."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【血：けつ】【液：えき】"
+              rom="ketsueki"
+              tr_en="blood"
+              tr_de="Blut"
+              lvl="n2"
+              category="health"
+              id="ketsueki-blood"
+            >
+                <keep_apart_from id="chi-blood" />
+                <!-- 血液検査用の小ビン vial of blood for a blood test, jpod101 -->
+                <sentence
+                  s="【血：けつ】【液：えき】【検：けん】【査：さ】をしなければなりません。"
+                  rom="Ketsueki-kensa o shinakereba narimasen."
+                  tr_en="We have to examine your blood."
+                  tr_de="Ihr Blut muss untersucht werden."
+                  lvl="n2"
+                  origin="Langenscheidt p.207"
+                />
+            </word>
+            <word
+              w="【血：けつ】【圧：あつ】"
+              rom="ketsuatsu"
+              tr_en="blood pressure"
+              tr_de="Blutdruck"
+              lvl="n2"
+              category="health"
+              id="ketsuatsu-bloodpressure"
+            >
+                <sentence
+                  s="【血：けつ】【圧：あつ】が【高：たか】いです。"
+                  rom="Ketsuatsu ga takai desu."
+                  tr_en="I have high blood pressure."
+                  tr_de="Ich habe einen hohen Blutdruck."
+                  lvl="n2"
+                  origin="Langenscheidt p.205"
+                />
+                <sentence
+                  s="【血：けつ】【圧：あつ】が【低：ひく】いです。"
+                  rom="Ketsuatsu ga hikui desu."
+                  tr_en="I have low blood pressure."
+                  tr_de="Ich habe einen niedrigen Blutdruck."
+                  lvl="n2"
+                  origin="Langenscheidt p.205"
+                />
+            </word>
+            <word
+              w="【正：しょう】【面：めん】"
+              rom="shōmen"
+              tr_en="front; facade; main"
+              tr_de="Fassade; Vorder-; Haupt-"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n2"
+              id="shōmen-front"
+            >
+                <phrase
+                  ph="【正：しょう】【面：めん】ドア"
+                  rom="shōmen doa"
+                  tr_en="front door"
+                  tr_de="Fronttüre"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【国：こく】【立：りつ】"
+              rom="kokuritsu"
+              tr_en="national"
+              tr_de="national; National-"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n2"
+              id="kokuritsu-national"
+            >
+                <phrase
+                  ph="【国：こく】【立：りつ】【公：こう】【園：えん】"
+                  rom="kokuritsu kōen"
+                  tr_en="national park"
+                  tr_de="Nationalpark"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【応：おう】【援：えん】"
+              rom="ōen"
+              tr_en="aid; support; to cheer"
+              tr_de="Hilfe; Unterstützung; jubeln"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="ōen-cheer"
+            >
+                <phrase
+                  ph="【大：おお】きな【声：こえ】で【応：おう】【援：えん】する"
+                  rom="ōki na koe de ōen suru"
+                  tr_en="to cheer loudly"
+                  tr_de="laut jubeln"
+                  lvl="n2"
+                />
+            </word>
+            <word
+              w="【湿：しつ】【度：ど】"
+              rom="shitsudo"
+              tr_en="(level of) humidity"
+              tr_de="Luftfeuchtigkeit"
+              Langenscheidt="Luftfeuchtigkeit"
+              lvl="n2"
+              category="weather"
+              id="shitsudo-humidity"
+            >
+                <sentence
+                  s="【湿：しつ】【度：ど】が【高：たか】かった。"
+                  rom="Shitsudo ga takakatta."
+                  tr_en="The level of humidity was high."
+                  tr_de="Die Luftfeuchtigkeit war hoch."
+                  lvl="n2"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【名：めい】【物：ぶつ】"
+              rom="meibutsu"
+              tr_en="famous product; specialty"
+              tr_de="berühmtes Produkt; Spezialität"
+              lvl="n2"
+              category="holidays"
+              id="meibutsu-specialty"
+            >
+                <sentence
+                  s="この【地：ち】【方：ほう】の【名：めい】【物：ぶつ】は【何：なん】ですか。"
+                  rom="Kono chihō no meibutsu wa nan desu ka?"
+                  tr_en="What are the specialties of this region?"
+                  tr_de="Was sind die Spezialitäten dieser Region?"
+                  lvl="n2"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="【目：め】【眩：まい】"
+              rom="memai"
+              tr_en="dizziness; giddiness; vertigo"
+              tr_de="Schwindelgefühl; Taumel"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              usuallyInKana="true"
+              lvl="n2"
+              category="health"
+              id="memai-dizziness"
+            >
+                <sentence
+                  s="めまいがします。"
+                  rom="Memai ga shimasu."
+                  tr_en="I am dizzy."
+                  tr_de="Mir ist schwindelig."
+                  lvl="n2"
+                  origin="Langenscheidt p.204"
+                />
+            </word>
+            <word
+              w="【彫：ちょう】【刻：こく】"
+              rom="chōkoku"
+              tr_en="carving; sculpture"
+              tr_de="Schnitzerei; Skulptur"
+              lvl="n2"
+              category="arts"
+              id="chōkoku-carving"
+            >
+                <phrase
+                  ph="【美：び】【術：じゅつ】【館：かん】で【彫：ちょう】【刻：こく】を【見：み】に【行：い】く"
+                  rom="bijutsukan de chōkoku o mi ni iku"
+                  tr_en="to go and see sculptures in an art gallery"
+                  tr_de="in einer Kunstgallerie Skulpturen anschauen gehen"
+                  lvl="n2"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【随：ずい】【筆：ひつ】"
+              rom="zuihitsu"
+              tr_en="essay; miscellaneous writings; literary jottings"
+              tr_de="Aufsatz; literarische Notizen"
+              lvl="n2"
+              category="writing, literature"
+              id="zuihitsu-essays"
+            >
+                <keep_apart_from id="sakubun-essay" />
+                <sentence
+                  s="【中：なか】【川：がわ】さんは【随：ずい】【筆：ひつ】を【書：か】き【始：はじ】めた。"
+                  rom="Nakagawa-san wa zuihitsu o kaki-hajimeta."
+                  tr_en="Ms Nakagawa started writing the essay."
+                  tr_de="Frau Nakagawa begann, den Aufsatz zu schreiben."
+                  lvl="n2"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【垣：かき】【根：ね】"
+              rom="kakine"
+              tr_en="hedge"
+              tr_de="Hecke"
+              hint_en="closely spaced shrubs"
+              hint_de="Zaun aus Pflanzen"
+              lvl="n2"
+              category="garden"
+              id="kakine-hedge"
+            >
+                <!--
+                    垣根 kakine is usually made of plants, but can also be a bamboo fence.
+                    生垣 ikegaki is more specific a hedge (living fence).
+                    Kakine can also be used figuratively.
+                    See https://hinative.com/questions/22251140
+                -->
+                <sentence
+                  s="【父：ちち】は【庭：にわ】の【周：まわ】りに【垣：かき】【根：ね】を【作：つく】った。"
+                  rom="Chichi wa niwa no mawari ni kakine o tsukutta."
+                  tr_en="My father put a hedge around the garden."
+                  tr_de="Mein Vater hat eine Hecke um den Garten herum gemacht."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【送：そう】【料：りょう】"
+              rom="sōryō"
+              tr_en="carriage; shipping charge"
+              tr_de="Porto; Versandkosten; Transportkosten"
+              lvl="n2"
+              id="sōryō-carriage"
+              rem="appears in GENKI2 p.328 kanji section"
+            />
+            <word
+              w="【迷：めい】【信：しん】"
+              rom="meishin"
+              tr_en="superstition"
+              tr_de="Aberglaube"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="meishin-superstition"
+              rem="appears in GENKI2 p.328 kanji section"
+            />
+            <word
+              w="【便：べん】【所：じょ】"
+              rom="benjo"
+              tr_en="toilet; restroom"
+              tr_de="Toilette"
+              lvl="n2"
+              id="benjo-toilet"
+            />
+            <word
+              w="【塾：じゅく】"
+              rom="juku"
+              tr_en="private tutoring school; cram school"
+              tr_de="Privatschule; Förderschule"
+              lvl="n2"
+              id="juku-cramschool"
+              rem="appears in GENKI2 L22 vocab section; jisho has n1"
+            />
+            <word
+              w="【寺：じ】【院：いん】"
+              rom="jīn"
+              tr_en="Buddhist temple; cathedral; mosque"
+              tr_de="Buddhistischer Tempel; Kathedrale; Moschee"
+              lvl="n2"
+              id="jīn-temple"
+              rem="appears in GENKI2 p.286 kanji section"
+            />
+            <word
+              w="【紅：こう】【葉：よう】"
+              rom="kōyō"
+              tr_en="autumn colours; leaves changing colour"
+              tr_de="Herbstfarben; Herbstblätter"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="kōyō-autumncolours"
+              rem="appears in GENKI2 p.288"
+            />
+            <word
+              w="【休：きゅう】【講：こう】"
+              rom="kyūkō"
+              tr_en="cancellation (of a lecture, class)"
+              tr_de="Ausfall (einer Lektion)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="education"
+              id="kyūkō-cancellation"
+              rem="appears in GENKI2 L23 vocab section"
+            />
+            <word
+              w="【通：つう】【勤：きん】"
+              rom="tsūkin"
+              tr_en="commuting (e.g. to work)"
+              tr_de="pendeln (z.B. zur Arbeit)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="transportation"
+              id="tsūkin-commuting"
+              rem="appears in GENKI2 p.287 kanji section"
+            >
+                <keep_apart_from id="kayou-commute" />
+            </word>
+            <word
+              w="【片：かた】【道：みち】"
+              rom="katamichi"
+              tr_en="one-way"
+              tr_de="Einweg"
+              hint_en="ticket"
+              hint_de="Fahrkarte"
+              lvl="n2"
+              category="transportation"
+              id="katamichi-oneway"
+            >
+                <see id="ōfuku-roundtrip" rem="closely related" />
+            </word>
+            <word
+              w="【植：うえ】【木：き】"
+              rom="ueki"
+              tr_en="potted plant"
+              tr_de="Topfpflanze"
+              hint_en="small tree or shrub"
+              hint_de="kleiner Baum oder Busch"
+              lvl="n2"
+              category="garden, plant"
+              id="ueki-potplant"
+            />
+            <word
+              w="【倉：そう】【庫：こ】"
+              rom="sōko"
+              tr_en="warehouse"
+              tr_de="Lagerhaus"
+              lvl="n2"
+              id="sōko-warehouse"
+            >
+                <!-- should this have category shopping, or is it more the house? -->
+            </word>
+            <word
+              w="【草：ぞう】【履：り】"
+              rom="zōri"
+              tr_en="traditional Japanese sandals"
+              tr_de="traditionelle japanische Sandalen"
+              hint_en="thonged"
+              hint_de="geschnürt"
+              lvl="n2"
+              category="fashion"
+              id="zōri-sandals"
+            >
+                <keep_apart_from id="sandaru-sandals" />
+            </word>
+            <word
+              w="【街：まち】【角：かど】"
+              rom="machikado"
+              tr_en="small spot in a town; street corner"
+              tr_de="kleiner Ort in einer Stadt; Strassenecke"
+              lvl="n2"
+              category="city"
+              id="machikado-streetcorner"
+              href="https://hinative.com/en-US/questions/22317680"
+            />
+            <word
+              w="【車：しゃ】【輪：りん】"
+              rom="sharin"
+              tr_en="wheel"
+              tr_de="Rad"
+              hint_en="of a vehicle"
+              hint_de="eines Fahrzeuges"
+              lvl="n2"
+              category="transportation"
+              id="sharin-wheel"
+            >
+                <!-- 車輪の回りが速くなる - sharin no mawari ga hayaku naru - the rotation of the wheel becomes faster (ChatGPT) -->
+            </word>
+            <word
+              w="【大：おお】【通：どお】り"
+              rom="ōdōri"
+              tr_en="main street"
+              tr_de="Hauptstrasse"
+              lvl="n2"
+              category="city"
+              id="ōdōri-mainstreet"
+            />
+            <word
+              w="【車：しゃ】【庫：こ】"
+              rom="shako"
+              tr_en="garage"
+              tr_de="Garage"
+              lvl="n2"
+              category="home"
+              id="shako-garage"
+            />
+            <word
+              w="【電：でん】【柱：ちゅう】"
+              rom="denchū"
+              tr_en="telephone pole; power pole"
+              tr_de="Telefonmast; Strommast"
+              lvl="n2"
+              category="city"
+              id="denchū-pole"
+            />
+            <word
+              w="【煙：えん】【突：とつ】"
+              rom="entotsu"
+              tr_en="chimney"
+              tr_de="Kamin; Schornstein"
+              lvl="n2"
+              category="home"
+              id="entotsu-chimney"
+            />
+            <word
+              w="【都：と】【心：しん】"
+              rom="toshin"
+              tr_en="city centre"
+              tr_de="Stadtzentrum"
+              lvl="n2"
+              category="city"
+              id="toshin-citycentre"
+            />
+            <word
+              w="【酒：さか】【場：ば】"
+              rom="sakaba"
+              tr_en="bar; pub; tavern"
+              tr_de="Bar; Pub; Wirtshaus"
+              lvl="n2"
+              category="gastronomy"
+              id="sakaba-tavern"
+            >
+                <keep_apart_from id="izakaya-japanesebar" />
+            </word>
+            <word
+              w="【牧：ぼく】【場：じょう】"
+              rom="bokujō"
+              tr_en="farm; ranch; pasture land"
+              tr_de="Bauernhof; Weideland"
+              lvl="n2"
+              category="countryside"
+              id="bokujō-farm"
+            />
+            <word
+              w="お【洒：しゃ】【落：れ】"
+              rom="o-share"
+              tr_en="smartly dressed; fashion-conscious"
+              tr_de="elegant gekleidet; modebewusst"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n2"
+              category="fashion"
+              id="oshare-smartlydressed"
+              rem="appears in GENKI2 p.84"
+            />
+            <word
+              w="【香：こう】【水：すい】"
+              rom="kōsui"
+              tr_en="perfume"
+              tr_de="Parfüm; Duft"
+              lvl="n2"
+              category="fashion"
+              id="kōsui-perfume"
+            />
+            <word
+              w="【往：おう】【復：ふく】"
+              rom="ōfuku"
+              tr_en="round-trip"
+              tr_de="Hin- und Rückfahrt"
+              hint_en="ticket"
+              hint_de="Fahrkarte"
+              lvl="n2"
+              category="transportation"
+              id="ōfuku-roundtrip"
+            >
+                <see id="katamichi-oneway" rem="closely related" />
+            </word>
+            <word
+              w="【姪：めい】"
+              rom="mei"
+              tr_en="niece"
+              tr_de="Nichte"
+              hint_en="daughter of one's sibling, brother-in-law or sister-in-law"
+              hint_de="Tochter des Geschwisters"
+              lvl="n2"
+              category="family"
+              id="mei-niece"
+            />
+            <word
+              w="【歌：か】【留：る】【多：た】"
+              rom="karuta"
+              tr_en="playing-cards"
+              tr_de="Spielkarten"
+              hint_en="Japanese-style"
+              hint_de="im japanischen Stil"
+              lvl="n2"
+              category="games"
+              id="karuta-cards"
+            />
+            <word
+              w="【将：しょう】【棋：ぎ】"
+              rom="shōgi"
+              tr_en="Game of Generals"
+              tr_de="Spiel der Generäle"
+              hint_en="Japanese chess"
+              hint_de="japanisches Schach"
+              lvl="n2"
+              category="games"
+              id="shōgi-chess"
+            />
+            <word
+              w="【生：い】け【花：ばな】"
+              rom="ikebana"
+              tr_en="Japanese art of flower arrangement"
+              tr_de="japanische Kunst des Blumenarrangements"
+              lvl="n2"
+              category="culture, arts"
+              id="ikebana-flowerarr"
+            />
+            <word
+              w="【社：しゃ】【会：かい】【科：か】【学：がく】"
+              rom="shakai kagaku"
+              tr_en="social science"
+              tr_de="Sozialwissenschaften"
+              lvl="n2"
+              category="science, education"
+              id="shakaikagaku-socialscience"
+            />
+            <word
+              w="【人：ひと】【通：どお】り"
+              rom="hitodōri"
+              tr_en="pedestrian traffic"
+              tr_de="Personenverkehr; Fussgängerverkehr"
+              lvl="n2"
+              category="transportation"
+              id="hitodōri-pedestriantraffic"
+            />
+            <word
+              w="【車：しゃ】【掌：しょう】"
+              rom="shashō"
+              tr_en="(train) conductor"
+              tr_de="Schaffner (Zug)"
+              lvl="n2"
+              category="occupations, travelling"
+              id="shashō-conductor"
+            />
+            <word
+              w="【太：たい】【鼓：こ】"
+              rom="taiko"
+              tr_en="Japanese timpani (drum)"
+              tr_de="japanische Pauke"
+              lvl="n2"
+              category="entertainment, top-words"
+              id="taiko-drum"
+            />
+            <word
+              w="【琴：こと】"
+              rom="koto"
+              tr_en="Japanese 13-string zither"
+              tr_de="japanische Zither mit 13 Saiten"
+              hint_en="instrument"
+              hint_de="Instrument"
+              lvl="n2"
+              category="entertainment, top-words"
+              id="koto-zither"
+            />
+            <word
+              w="【乗：の】り【換：か】え"
+              rom="norikae"
+              tr_en="transfer; connection; changing"
+              tr_de="Transfer; Verbindung; wechseln"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="norikae-transfer"
+            >
+                <see id="norikaeru-transfer" rem="verb" />
+            </word>
+            <word
+              w="【蕎麦：そば】"
+              rom="soba"
+              tr_en="buckwheat noodles"
+              tr_de="Buchweizennudeln"
+              hasCombinedReading="true"
+              lvl="n2"
+              category="food"
+              id="soba-noodles"
+            />
+            <word
+              w="【胡：こ】【椒：しょう】"
+              rom="koshō"
+              tr_en="pepper"
+              tr_de="Pfeffer"
+              lvl="n2"
+              category="cooking"
+              id="koshō-pepper"
+            />
+            <word
+              w="【脂：あぶら】"
+              rom="abura"
+              tr_en="fat; grease"
+              tr_de="Fett; Schmalz"
+              lvl="n2"
+              category="cooking"
+              id="abura-fat"
+            />
+            <word
+              w="【匙：さじ】"
+              rom="saji"
+              tr_en="spoon"
+              tr_de="Löffel"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n2"
+              category="cooking"
+              id="saji-spoon"
+            >
+                <keep_apart_from id="supūn-spoon" />
+            </word>
+            <word
+              w="【貧：びん】【乏：ぼう】"
+              rom="binbō"
+              tr_en="poverty"
+              tr_de="Armut"
+              lvl="n2"
+              category="government, finances"
+              id="binbō-poverty"
+              rem="appears in GENKI2 L22 vocab section; jisho has n1"
+            />
+            <word
+              w="【部：ぶ】【下：か】"
+              rom="buka"
+              tr_en="subordinate person"
+              tr_de="unterstellte Person(en); Untergebener"
+              lvl="n2"
+              category="relationships, business"
+              id="buka-subordinate"
+              rem="appears in GENKI2 L22 vocab section; jisho has n1"
+            >
+                <!-- 課長は部長の部下です - Kachō wa buchō no buka desu - A kachō is subordinate to the buchō (ChatGPT) -->
+            </word>
+            <word
+              w="【独：ひと】り【言：ごと】"
+              rom="hitorigoto"
+              tr_en="monologue; speaking to oneself"
+              tr_de="Monolog; mit sich selber sprechen"
+              lvl="n2"
+              id="hitorigoto-monologue"
+            />
+            <word
+              w="【針：はり】【金：がね】"
+              rom="harigane"
+              tr_en="wire"
+              tr_de="Kabel"
+              lvl="n2"
+              id="harigane-wire"
+              rem="also a phrase of hari-pin"
+            />
+            <word
+              w="【墨：すみ】"
+              rom="sumi"
+              tr_en="ink; inkstick"
+              tr_de="Tinte; Tintenstift"
+              lvl="n2"
+              id="sumi-ink"
+            />
+            <word
+              w="【名：めい】【刺：し】"
+              rom="meishi"
+              tr_en="business card"
+              tr_de="Visitenkarte"
+              lvl="n2"
+              category="business"
+              id="meishi-businesscard"
+            />
+            <word
+              w="【自：し】【然：ぜん】【科：か】【学：がく】"
+              rom="shizen kagaku"
+              tr_en="natural science"
+              tr_de="Naturwissenschaften"
+              lvl="n2"
+              category="science, education"
+              id="shizenkagaku-naturalscience"
+            />
+            <word
+              w="【日：にち】【用：よう】【品：ひん】"
+              rom="nichiyōhin"
+              tr_en="daily necessities"
+              tr_de="Artikel des alltäglichen Bedarfs"
+              lvl="n2"
+              rem="Langenscheidt: Güter des alltäglichen Bedarfs"
+              id="nichiyōhin-dailynecessities"
+            />
+        </section>
+    </unit>
+</vocabulary>

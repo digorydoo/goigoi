@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Even more nouns ⑤"
+      name_de="Noch mehr Nomen ⑤"
+      name_fr="Encore plus de noms ⑤"
+      name_it="Ancora più sostantivi ⑤"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="-"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【茶：ちゃ】【筅：せん】"
+              rom="chasen"
+              tr_en="bamboo whisk for making Japanese tea"
+              tr_de="Bambusbesen zum Zubereiten von Tee"
+              lvl="-"
+              category="gastronomy, cooking"
+              id="chasen-bamboowhisk"
+            />
+            <word
+              w="【空：から】【手：て】"
+              rom="karate"
+              tr_en="Japanese martial art"
+              tr_de="japanische Kampfkunst"
+              hint_en="lit. 'empty hand'"
+              hint_de="wörtl. 'leere Hand'"
+              lvl="-"
+              category="sports, hands"
+              id="karate-martialart"
+              rem="must not be together with jūdō and jūjutsu"
+            >
+                <keep_apart_from id="jūdō-martialart" />
+                <keep_apart_from id="jūjutsu-martialart" />
+            </word>
+            <word
+              w="【柔：じゅう】【術：じゅつ】"
+              rom="jūjutsu"
+              tr_en="Japanese martial art"
+              tr_de="japanische Kampfkunst"
+              hint_en="ref. to fighting without a weapon"
+              lvl="-"
+              category="sports"
+              id="jūjutsu-martialart"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="jūdō-martialart" />
+                <keep_apart_from id="karate-martialart" />
+            </word>
+            <word
+              w="【弓：きゅう】【道：どう】"
+              rom="kyūdō"
+              tr_en="Japanese archery"
+              tr_de="japanisches Bogenschiessen"
+              lvl="-"
+              category="sports"
+              id="kyūdō-archery"
+            />
+            <word
+              w="【射：しゃ】【撃：げき】"
+              rom="shageki"
+              tr_en="sports shooting"
+              tr_de="Sportschiessen"
+              lvl="-"
+              category="sports"
+              id="shageki-shooting"
+            />
+            <word
+              w="【剣：けん】【道：どう】"
+              rom="kendō"
+              tr_en="Japanese fencing"
+              tr_de="japanisches Fechten"
+              lvl="-"
+              category="sports"
+              id="kendō-fencing"
+            />
+            <word
+              w="【野：や】【球：きゅう】"
+              rom="yakyū"
+              tr_en="baseball"
+              tr_de="Baseball"
+              lvl="-"
+              category="sports"
+              id="yakyū-baseball"
+            />
+            <word
+              w="【水：すい】【球：きゅう】"
+              rom="suikyū"
+              tr_en="water-polo"
+              tr_de="Wasserball"
+              hint_en="team water sport"
+              hint_de="Teamsport im Wasser"
+              lvl="-"
+              id="suikyū-waterpolo"
+              category="sports"
+              HIDDEN="true"
+            />
+            <word
+              w="【卓：たっ】【球：きゅう】"
+              rom="takkyū"
+              tr_en="ping-pong; table tennis"
+              tr_de="Pingpong; Tischtennis"
+              lvl="-"
+              category="sports"
+              id="takkyū-pingpong"
+            >
+                <sentence
+                  s="【卓：たっ】【球：きゅう】はどこでできるのですか。"
+                  rom="Takkyū wa doko de dekiru no desu ka?"
+                  tr_en="Where can you play ping-pong?"
+                  tr_de="Wo kann man Tischtennis spielen?"
+                  lvl="-"
+                  origin="Langenscheidt p.175"
+                />
+            </word>
+            <word
+              w="【馬：ば】【術：じゅつ】"
+              rom="bajutsu"
+              tr_en="equestrian art; horse-riding"
+              tr_de="(Pferd) Reiten"
+              lvl="-"
+              id="bajutsu-horseriding"
+              category="sports"
+            >
+                <keep_apart_from id="keiba-horseracing" />
+            </word>
+            <word
+              w="【自：じ】【転：てん】【車：しゃ】【競：きょう】【技：ぎ】"
+              rom="jitensha-kyōgi"
+              tr_en="cycling race"
+              tr_de="Fahrradrennen"
+              lvl="-"
+              category="sports"
+              id="jitenshakyōgi-cyclingrace"
+            />
+            <word
+              w="【陸：りく】【上：じょう】【競：きょう】【技：ぎ】"
+              rom="rikujō-kyōgi"
+              tr_en="athletics; track-and-field"
+              tr_de="Leichtathletik"
+              hint_en="usu. running, jumping, throwing"
+              hint_de="typ. Laufen, Springen, Werfen"
+              lvl="-"
+              category="sports"
+              id="rikujōkyōgi-athletics"
+            />
+            <word
+              w="【幅：はば】【跳：と】び"
+              rom="habatobi"
+              tr_en="long jump"
+              hint_en="leap as far as possible"
+              lvl="-"
+              category="sports"
+              id="habatobi-longjump"
+              HIDDEN="true"
+            />
+            <word
+              w="ハードル【競：きょう】【走：そう】"
+              rom="hādoru-kyōsō"
+              tr_en="hurdle race"
+              lvl="-"
+              category="sports"
+              id="hādorukyōsō-hurdlerace"
+              HIDDEN="true"
+            />
+            <word
+              w="【棒：ぼう】【高：たか】【跳：と】び"
+              rom="bōtakatobi"
+              tr_en="pole vault"
+              tr_de="Stabhochsprung"
+              lvl="-"
+              category="sports"
+              id="bōtakatobi-polevault"
+              HIDDEN="true"
+            />
+            <word
+              w="【槍：やり】【投：な】げ"
+              rom="yarinage"
+              tr_en="javelin"
+              tr_de="Speerwerfen"
+              lvl="-"
+              category="sports"
+              id="yarinage-javelin"
+              HIDDEN="true"
+            />
+            <word
+              w="【長：ちょう】【距：きょ】【離：り】【走：そう】"
+              rom="chōkyorisō"
+              tr_en="long-distance running"
+              lvl="-"
+              category="sports"
+              id="chōkyorisō-running"
+              HIDDEN="true"
+            />
+            <word
+              w="【体：たい】【操：そう】【競：きょう】【技：ぎ】"
+              rom="taisō-kyōgi"
+              tr_en="artistic gymnastics"
+              lvl="-"
+              category="sports"
+              id="taisōkyōgi-gymnastics"
+              HIDDEN="true"
+            />
+            <word
+              w="【新：しん】【体：たい】【操：そう】"
+              rom="shintaisō"
+              tr_en="rhythmic gymnastics"
+              lvl="-"
+              category="sports"
+              id="shintaisō-gymnastics"
+              HIDDEN="true"
+            />
+            <word
+              w="【競：きょう】【泳：えい】"
+              rom="kyōei"
+              tr_en="swimming race"
+              lvl="-"
+              id="kyōei-swimmingrace"
+              category="sports"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="suiei-swimming" />
+            </word>
+            <word
+              w="【勝：しょう】【者：しゃ】"
+              rom="shōsha"
+              tr_en="winner; victor"
+              tr_de="Gewinner; Sieger"
+              lvl="-"
+              category="sports"
+              id="shōsha-winner"
+            >
+                <keep_together id="haisha-defeated" />
+                <!-- 勝者が決まる (しょうしゃがきまる) - The winner is decided (ChatGPT) -->
+            </word>
+            <word
+              w="【敗：はい】【者：しゃ】"
+              rom="haisha"
+              tr_en="the defeated; loser"
+              tr_de="der Besiegte; Verlierer"
+              lvl="-"
+              category="sports"
+              id="haisha-defeated"
+            >
+                <keep_together id="shōsha-winner" />
+            </word>
+            <word
+              w="【大：おお】【負：ま】け"
+              rom="ōmake"
+              tr_en="crushing defeat; major loss"
+              tr_de="zerschmetternde Niederlage"
+              lvl="-"
+              category="sports"
+              id="ōmake-defeat"
+            />
+            <word
+              w="【競：きょう】【技：ぎ】【場：じょう】"
+              rom="kyōgijō"
+              tr_en="sports stadium; arena"
+              tr_de="Sportstadium; Arena"
+              lvl="-"
+              id="kyōgijō-arena"
+              category="sports"
+            >
+                <keep_apart_from id="undōjō-sportsground" />
+                <keep_apart_from id="taiikukan-gym" />
+            </word>
+            <word
+              w="【一：いち】【輪：りん】【車：しゃ】"
+              rom="ichirinsha"
+              tr_en="unicycle; monocycle"
+              tr_de="Einrad"
+              lvl="-"
+              category="sports"
+              id="ichirinsha-unicycle"
+            >
+                <sentence
+                  s="【一：いち】【輪：りん】【車：しゃ】は【車：しゃ】【輪：りん】がひとつしかありません。"
+                  rom="Ichirinsha wa sharin ga hito-tsu shika arimasen."
+                  tr_en="A unicycle has only one wheel."
+                  tr_de="Ein Einrad hat nur ein Rad."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【本：ほん】【塁：るい】【打：だ】"
+              rom="honruida"
+              tr_en="home run"
+              hint_en="baseball term"
+              lvl="-"
+              category="sports"
+              id="honruida-homerun"
+              HIDDEN="true"
+            />
+            <word
+              w="【片：かた】【隅：すみ】"
+              rom="katasumi"
+              tr_en="corner"
+              tr_de="Ecke"
+              hint_en="of a room"
+              hint_de="eines Raumes"
+              lvl="-"
+              category="home"
+              id="katasumi-corner"
+            >
+                <keep_apart_from id="kado-corner" />
+                <keep_apart_from id="sumi-corner" />
+                <sentence
+                  s="ベッドは【片：かた】【隅：すみ】にあります。"
+                  rom="Beddo wa katasumi ni arimasu."
+                  tr_en="The bed is in the corner."
+                  tr_de="Das Bett ist in der Ecke."
+                  lvl="-"
+                  origin="duolingo"
+                />
+            </word>
+            <word
+              w="【和：わ】【室：しつ】"
+              rom="washitsu"
+              tr_en="Japanese-style room"
+              tr_de="Raum im japanischen Stil"
+              lvl="-"
+              category="home"
+              id="washitsu-japanesestyleroom"
+              rem="appears in 500mon q454"
+            >
+                <keep_apart_from id="ima-livingroom" />
+                <sentence
+                  s="この【和：わ】【室：しつ】の【雨：あま】【戸：ど】は【古：ふる】くて【重：おも】いので【閉：し】めるのに【力：ちから】がいります。"
+                  rom="Kono washitsu no amado wa furukute omoi no de shimeru no ni chikara ga irimasu."
+                  tr_en="Since the shutters of this Japanese-style room are old and heavy, it takes some strength to close them."
+                  tr_de="Da die Fensterläden dieses japanischen Raumes so alt und schwer sind, braucht es Kraft, um sie zu schliessen."
+                  explanation_en="「【要：い】る」= to need, to want"
+                  explanation_de="「【要：い】る」= brauchen, wollen"
+                  lvl="-"
+                  origin="500mon q454"
+                  rem="jisho has nx for washitsu, n2 for amado"
+                />
+            </word>
+            <word
+              w="【寝：しん】【室：しつ】"
+              rom="shinshitsu"
+              tr_en="bedroom"
+              tr_de="Schlafzimmer"
+              lvl="-"
+              common="true"
+              category="home"
+              id="shinshitsu-bedroom"
+            />
+            <word
+              w="【掃：そう】【除：じ】【機：き】"
+              rom="sōjiki"
+              tr_en="vacuum cleaner"
+              tr_de="Staubsauger"
+              lvl="-"
+              category="cleaning, home"
+              id="sōjiki-vacuumcleaner"
+            />
+            <word
+              w="【洗：せん】【濯：たく】【機：き】"
+              rom="sentakuki"
+              tr_en="washing machine"
+              tr_de="Waschmaschine"
+              hint_en="laundry"
+              hint_de="für Wäsche"
+              lvl="-"
+              category="cleaning, home"
+              id="sentakuki-washingmachine"
+            />
+            <word
+              w="【食：しょっ】【器：き】【洗：あら】い【機：き】"
+              rom="shokkiaraiki"
+              tr_en="dishwasher"
+              tr_de="Geschirrspüler"
+              lvl="-"
+              category="home, cleaning"
+              id="shokkiaraiki-dishwasher"
+            />
+            <word
+              w="【屋：や】【根：ね】【裏：うら】"
+              rom="yaneura"
+              tr_en="attic"
+              tr_de="Estrich; Dachboden"
+              lvl="-"
+              category="home"
+              id="yaneura-attic"
+            />
+            <word
+              w="【在：ざい】【宅：たく】"
+              rom="zaitaku"
+              tr_en="at home; being in"
+              tr_de="zu Hause (sein)"
+              lvl="-"
+              category="home"
+              id="zaitaku-athome"
+            >
+                <sentence
+                  s="【高：たか】【橋：はし】さんはご【在：ざい】【宅：たく】ですか。"
+                  rom="Takahashi-san wa go-zaitaku desu ka?"
+                  tr_en="Is Miss Takahashi at home?"
+                  tr_de="Ist Frau Takahashi zu Hause?"
+                  lvl="-"
+                  origin="duolingo modified"
+                />
+            </word>
+            <word
+              w="【睫：まつ】【毛：げ】"
+              rom="matsuge"
+              tr_en="eyelash"
+              tr_de="Augenwimper"
+              lvl="-"
+              category="body"
+              id="matsuge-eyelash"
+            />
+            <word
+              w="【眉：まゆ】【毛：げ】"
+              rom="mayuge"
+              tr_en="eyebrow"
+              tr_de="Augenbraue"
+              lvl="-"
+              category="body"
+              id="mayuge-eyebrow"
+            >
+                <sentence
+                  s="【眉：まゆ】【毛：げ】を【染：そ】めてください。"
+                  rom="Mayuge o somete kudasai."
+                  tr_en="Please dye my eyebrows."
+                  tr_de="Bitte färben Sie mir die Augenbrauen."
+                  lvl="-"
+                  origin="Langenscheidt p.173"
+                />
+            </word>
+            <word
+              w="【赤：あか】【毛：げ】"
+              rom="akage"
+              tr_en="red hair"
+              tr_de="rotes Haar"
+              lvl="-"
+              category="body"
+              id="akage-redhair"
+            />
+            <word
+              w="【指：ゆび】【先：さき】"
+              rom="yubisaki"
+              tr_en="fingertip"
+              tr_de="Fingerspitze"
+              lvl="-"
+              category="body"
+              id="yubisaki-fingertip"
+            />
+            <word
+              w="【脚：あし】"
+              rom="ashi"
+              tr_en="leg"
+              lvl="-"
+              category="body, feet"
+              id="ashi-leg"
+              HIDDEN="true"
+              rem="just to provide the reading for the furigana check of sentences"
+            />
+            <word
+              w="【足：あし】の【指：ゆび】"
+              rom="ashi no yubi"
+              tr_en="toe"
+              tr_de="Zehe"
+              lvl="-"
+              category="body, feet"
+              id="ashinoyubi-toe"
+            />
+            <word
+              w="【股：もも】"
+              rom="momo"
+              tr_en="thigh"
+              tr_de="Oberschenkel"
+              lvl="-"
+              category="body"
+              id="momo-thigh"
+            />
+            <word
+              w="【脛：すね】"
+              rom="sune"
+              tr_en="shin; lower leg"
+              tr_de="Schienbein"
+              lvl="-"
+              category="body"
+              id="sune-shin"
+            />
+            <word
+              w="【病：びょう】【棟：とう】"
+              rom="byōtō"
+              tr_en="ward"
+              tr_de="Station"
+              hint_en="of a hospital"
+              hint_de="eines Spitals"
+              lvl="-"
+              category="health"
+              id="byōtō-ward"
+              HIDDEN="true"
+            />
+            <word
+              w="【腹：ふく】【痛：つう】"
+              rom="fukutsū"
+              tr_en="stomachache"
+              tr_de="Bauchschmerzen"
+              lvl="-"
+              category="health"
+              id="fukutsū-stomachache"
+              HIDDEN="true"
+            />
+            <word
+              w="【背：はい】【痛：つう】"
+              rom="haitsū"
+              tr_en="backache"
+              tr_de="Rückenschmerzen"
+              lvl="-"
+              category="health"
+              id="haitsū-backache"
+              HIDDEN="true"
+            />
+            <word
+              w="【歯：し】【痛：つう】"
+              rom="shitsū"
+              tr_en="toothache"
+              tr_de="Zahnschmerzen"
+              lvl="-"
+              category="health"
+              id="shitsū-toothache"
+              HIDDEN="true"
+            />
+            <word
+              w="【耳：じ】【痛：つう】"
+              rom="jitsū"
+              tr_en="earache"
+              tr_de="Ohrenschmerzen"
+              lvl="-"
+              category="health"
+              id="jitsū-earache"
+              HIDDEN="true"
+            />
+            <word
+              w="【寝：ね】【違：ちが】い"
+              rom="nechigai"
+              tr_en="sprained neck"
+              Langenscheidt="-"
+              common="false"
+              lvl="-"
+              category="health"
+              id="nechigai-sprainedneck"
+              HIDDEN="true"
+            />
+            <word
+              w="【検：けん】【診：しん】"
+              rom="kenshin"
+              tr_en="physical examination; health checkup"
+              tr_de="ärztliche Untersuchung; Gesundheits-Check"
+              lvl="-"
+              category="health"
+              id="kenshin-healthcheckup"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="kensa-examination" />
+                <keep_apart_from id="shinsatsu-medexamination" />
+            </word>
+            <word
+              w="【鎮：ちん】【痛：つう】【剤：ざい】"
+              rom="chintsūzai"
+              tr_en="painkiller; sedative; tranquiliser"
+              tr_de="Schmerzmittel; Beruhigungsmittel; Sedativ"
+              lvl="-"
+              common="false"
+              category="health"
+              id="chintsūzai-painkiller"
+              HIDDEN="true"
+            />
+            <word
+              w="【風邪：かざ】【声：ごえ】"
+              rom="kazagoe"
+              tr_en="hoarse voice"
+              tr_de="heisere Stimme"
+              hint_en="caused by a cold"
+              hint_de="aufgrund einer Erkältung"
+              hasCombinedReading="true"
+              lvl="-"
+              category="health"
+              id="kazagoe-hoarsevoice"
+            />
+            <word
+              w="【温：おん】【度：ど】【計：けい】"
+              rom="ondokei"
+              tr_en="thermometer"
+              tr_de="Thermometer; Fiebermesser"
+              lvl="-"
+              category="health, temperature"
+              id="ondokei-thermometer"
+            />
+            <word
+              w="【車：くるま】【椅：い】【子：す】"
+              rom="kuruma-isu"
+              tr_en="wheelchair"
+              tr_de="Rollstuhl"
+              lvl="-"
+              category="health"
+              id="kurumaisu-wheelchair"
+            />
+            <word
+              w="【注：ちゅう】【射：しゃ】【器：き】"
+              rom="chūshaki"
+              tr_en="syringe"
+              tr_de="Spritze"
+              lvl="-"
+              common="false"
+              category="health"
+              id="chūshaki-syringe"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="shirinji-syringe" />
+            </word>
+            <word
+              w="【処：しょ】【方：ほう】【箋：せん】"
+              rom="shohōsen"
+              tr_en="prescription"
+              lvl="-"
+              category="health"
+              id="shohōsen-prescription"
+              HIDDEN="true"
+            />
+            <word
+              w="【体：たい】【重：じゅう】"
+              rom="taijū"
+              tr_en="body weight"
+              tr_de="Körpergewicht"
+              lvl="-"
+              category="health"
+              id="taijū-bodyweight"
+              rem="appears in GENKI2 p.328 kanji section"
+            />
+            <word
+              w="【長：なが】【靴：ぐつ】"
+              rom="nagagutsu"
+              tr_en="boots"
+              tr_de="Stiefel"
+              lvl="-"
+              category="fashion"
+              id="nagagutsu-boots"
+            />
+            <word
+              w="【登：と】【山：ざん】【靴：ぐつ】"
+              rom="tozangutsu"
+              tr_en="mountain shoes; hiking boots"
+              tr_de="Bergschuhe; Wanderstiefel"
+              lvl="-"
+              category="fashion"
+              id="tozangutsu-mountainshoes"
+            />
+            <word
+              w="【腕：うで】【時：ど】【計：けい】"
+              rom="udedokei"
+              tr_en="wristwatch"
+              tr_de="Armbanduhr"
+              lvl="-"
+              category="fashion"
+              id="udedokei-wristwatch"
+            >
+                <sentence
+                  s="【腕：うで】【時：ど】【計：けい】はしません。"
+                  rom="Udedokei wa shimasen."
+                  tr_en="I don't wear a watch."
+                  tr_de="Ich trage keine Armbanduhr."
+                  lvl="-"
+                  origin="Oxford p.93"
+                />
+            </word>
+            <word
+              w="イケメン"
+              rom="ikemen"
+              tr_en="good-looking guy"
+              tr_de="gut aussehender Typ"
+              lvl="-"
+              category="fashion"
+              id="ikemen-goodlooking"
+            />
+            <word
+              w="おさげ"
+              rom="osage"
+              tr_en="braids"
+              tr_de="Zopf"
+              lvl="-"
+              category="fashion"
+              id="osage-braids"
+            />
+            <word
+              w="【髪：かみ】【形：がた】"
+              rom="kamigata"
+              tr_en="hairdo; hair style"
+              lvl="-"
+              category="fashion"
+              id="kamigata-hairdo"
+              HIDDEN="true"
+            />
+            <word
+              w="【美：び】【容：よう】【院：いん】"
+              rom="biyōin"
+              tr_en="beauty salon; hairdresser"
+              tr_de="Schönheitssalon; Coiffeur"
+              lvl="-"
+              category="fashion"
+              id="biyōin-beautysalon"
+            >
+                <see id="tokoya-barber" rem="closely related" />
+                <keep_apart_from id="tokoya-barber" />
+            </word>
+            <word
+              w="【仕：し】【事：ごと】【場：ば】"
+              rom="shigotoba"
+              tr_en="working area; place where one works"
+              tr_de="Arbeitsort; Ort, wo man arbeitet"
+              lvl="-"
+              category="employment"
+              id="shigotoba-workingarea"
+            />
+            <word
+              w="【履：り】【歴：れき】【書：しょ】"
+              rom="rirekisho"
+              tr_en="resumé; curriculum vitæ"
+              tr_de="Lebenslauf; Curriculum Vitae"
+              hint_en="job application"
+              hint_de="Stellenbewerbung"
+              lvl="-"
+              category="employment"
+              id="rirekisho-cv"
+              rem="appears in GENKI2 p.48 vocab section"
+            />
+            <word
+              w="お【守：まも】り"
+              rom="o-mamori"
+              tr_en="charm; talisman; amulet"
+              tr_de="Talisman; Amulett; Zauber"
+              lvl="-"
+              category="culture"
+              id="omamori-talisman"
+              HIDDEN="true"
+            />
+            <word
+              w="【提：ちょう】【灯：ちん】"
+              rom="chōchin"
+              tr_en="paper lantern"
+              tr_de="Laterne aus Papier"
+              lvl="-"
+              category="culture"
+              id="chōchin-paperlantern"
+              HIDDEN="true"
+            />
+            <word
+              w="【凧：たこ】"
+              rom="tako"
+              tr_en="kite"
+              tr_de="Winddrachen; Kite"
+              hint_en="tethered aircraft made from bamboo, paper, etc."
+              hint_de="angebundenes Flugobjekt aus Bambus, Papier, usw."
+              lvl="-"
+              category="culture"
+              id="tako-kite"
+            >
+                <phrase
+                  ph="【凧：たこ】【上：あ】げする"
+                  rom="takoage suru"
+                  tr_en="to let a kite fly; to play kiteflying"
+                  tr_de="einen Drachen steigen lassen"
+                  lvl="-"
+                />
+                <sentence
+                  s="ナオミは【凧：たこ】に【糸：いと】をつけた。"
+                  rom="Naomi wa tako ni ito o tsuketa."
+                  tr_en="Naomi attached the string to the kite."
+                  tr_de="Naomi bindete die Schnur an den Winddrachen."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【参：さん】【拝：ぱい】"
+              rom="sanpai"
+              tr_en="visit to a shrine or temple; worshipping"
+              tr_de="Besichtigung eines Schreins oder Tempels; Verehrung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="-"
+              category="culture"
+              id="sanpai-worship"
+              HIDDEN="true"
+            />
+            <word
+              w="【桜：さくら】んぼ"
+              rom="sakuranbo"
+              tr_en="cherry fruit"
+              tr_de="Kirsche"
+              lvl="-"
+              category="plant, culture"
+              id="sakuranbo-cherryfruit"
+            />
+            <word
+              w="【夜：よ】【桜：ざくら】"
+              rom="yozakura"
+              tr_en="cherry blossoms at night"
+              tr_de="Kirschblüten nachts"
+              lvl="-"
+              category="culture, nature"
+              id="yozakura-cherryblmatnight"
+            />
+            <word
+              w="【桜：さくら】【前：ぜん】【線：せん】"
+              rom="sakurazensen"
+              tr_en="cherry-blossom front"
+              hint_en="advance of the cherry blossoms across Japan"
+              lvl="-"
+              category="culture, nature"
+              id="sakurazensen-cherryblmfront"
+              HIDDEN="true"
+            />
+            <word
+              w="【節：せつ】【分：ぶん】"
+              rom="setsubun"
+              tr_en="bean-scattering ceremony marking the end of winter"
+              tr_de="Bohnenstreu-Zeremonie, die das Ende des Winters markiert"
+              hint_en="February 3rd"
+              hint_de="3. Februar"
+              lvl="-"
+              category="culture, top-words"
+              id="setsubun-beanscattering"
+            />
+            <word
+              w="【雛：ひな】【祭：まつ】り"
+              rom="hinamatsuri"
+              tr_en="Dolls festival"
+              tr_de="Puppenfestival"
+              hint_en="March 3rd"
+              hint_de="3. März"
+              lvl="-"
+              category="culture, holidays"
+              id="hinamatsuri-dollsfestival"
+            />
+            <word
+              w="【花：はな】【祭：まつ】り"
+              rom="hanamatsuri"
+              tr_en="Buddha's birthday festival; Vesak"
+              tr_de="Buddhas Geburtstags-Festival; Vesak"
+              hint_en="April 8th"
+              hint_de="8. April"
+              lvl="-"
+              category="culture, holidays"
+              id="hanamatsuri-vesak"
+            />
+            <word
+              w="【七夕：たなばた】"
+              rom="tanabata"
+              tr_en="Japanese festival celebrating star deities"
+              hint_en="July 7th"
+              hint_de="7. Juli"
+              hasCombinedReading="true"
+              lvl="-"
+              category="culture, holidays"
+              id="tanabata-festival"
+              HIDDEN="true"
+            />
+            <word
+              w="【文：ぶん】【化：か】【祭：さい】"
+              rom="bunkasai"
+              tr_en="Cultural Festival held by Japanese schools"
+              tr_de="Kulturfest, das von japanischen Schulen organisiert wird"
+              hint_en="November 3rd"
+              hint_de="3. November"
+              lvl="-"
+              id="bunkasai-festival"
+              category="culture, top-words"
+            >
+                <sentence
+                  s="【学：がっ】【校：こう】の【文：ぶん】【化：か】【祭：さい】に【参：さん】【加：か】するのは【楽：たの】しみです。"
+                  rom="Gakkō no bunkasai ni sanka suru no wa tanoshimi desu."
+                  tr_en="I'm looking forward to participating in our school's Cultural Festival."
+                  tr_de="Ich freue mich, am Kulturfest unserer Schule teilzunehmen."
+                  lvl="-"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="お【盆：ぼん】"
+              rom="o-bon"
+              tr_en="Japanese lantern festival"
+              tr_de="japanisches Laternen-Festival"
+              hint_en="Buddhist festival of the dead"
+              hint_de="Buddhistisches Fest der Toten"
+              lvl="-"
+              category="culture, holidays"
+              id="obon-lanternfestival"
+            />
+            <word
+              w="【灯：とう】【籠：ろう】【流：なが】し"
+              rom="tōrōnagashi"
+              tr_en="ceremony in which paper lanterns are floated down a river"
+              hint_en="marks the end of the o-bon festival"
+              lvl="-"
+              id="tōrōnagashi-ceremony"
+              category="culture, holidays"
+              HIDDEN="true"
+            />
+            <word
+              w="【子：こ】【供：ども】の【日：ひ】"
+              rom="kodomo no hi"
+              tr_en="Children's Day"
+              hint_en="Japanese holiday"
+              lvl="-"
+              id="kodomonohi-childrensday"
+              category="culture, holidays"
+              HIDDEN="true"
+            />
+        </section>
+    </unit>
+</vocabulary>

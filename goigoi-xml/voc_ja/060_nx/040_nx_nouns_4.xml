@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Even more nouns ④"
+      name_de="Noch mehr Nomen ④"
+      name_fr="Encore plus de noms ④"
+      name_it="Ancora più sostantivi ④"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="-"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【烏賊：イカ】"
+              rom="ika"
+              tr_en="squid"
+              tr_de="Tintenfisch"
+              hasCombinedReading="true"
+              usuallyInKana="true"
+              lvl="-"
+              category="aquatic"
+              id="ika-squid"
+            />
+            <word
+              w="【海月：クラゲ】"
+              rom="kurage"
+              tr_en="jellyfish"
+              tr_de="Qualle"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              lvl="-"
+              category="aquatic"
+              id="kurage-jellyfish"
+            >
+                <!--
+                    Cf. ここには クラゲが いますか。
+                    -> I already know there are jellyfish in other places.
+                -->
+                <sentence
+                  s="ここにクラゲはいますか。"
+                  rom="Koko ni kurage wa imasu ka?"
+                  tr_en="Are there any jellyfish here?"
+                  tr_de="Gibt es hier Quallen?"
+                  lvl="-"
+                  origin="Langenscheidt p.168"
+                  href="https://hinative.com/questions/22290208"
+                />
+            </word>
+            <word
+              w="【鮫：サメ】"
+              rom="same"
+              tr_en="shark"
+              tr_de="Haifisch"
+              usuallyInKana="true"
+              lvl="-"
+              category="aquatic"
+              id="same-shark"
+            />
+            <word
+              w="【蟹：カニ】"
+              rom="kani"
+              tr_en="crab"
+              tr_de="Krabbe"
+              usuallyInKana="true"
+              lvl="-"
+              category="aquatic, beach"
+              id="kani-crab"
+            />
+            <word
+              w="【海豚：イルカ】"
+              rom="iruka"
+              tr_en="dolphin"
+              tr_de="Delfin"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              lvl="-"
+              category="aquatic"
+              id="iruka-dolphin"
+            >
+                <sentence
+                  s="イルカは【頭：あたま】のよい【遊：あそ】び【好：す】きな【生：い】き【物：もの】だ。"
+                  rom="Iruka wa atama no yoi asobi suki na ikimono da."
+                  tr_en="Dolphins are intelligent and playful creatures."
+                  tr_de="Delfine sind intelligente und verspielte Lebewesen."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【鯨：クジラ】"
+              rom="kujira"
+              tr_en="whale"
+              tr_de="Walfisch"
+              usuallyInKana="true"
+              lvl="-"
+              category="aquatic"
+              id="kujira-whale"
+              rem="appears in GENKI2 p.288 as くじら"
+            >
+                <sentence
+                  s="クジラは【長：なが】い【間：あいだ】【水：みず】に【潜：もぐ】っていられる。"
+                  rom="Kujira wa nagai aida mizu ni mogutte irareru."
+                  tr_en="Whales can remain submerged for a long time."
+                  tr_de="Walfische können lange unter Wasser bleiben."
+                  explanation_en="「いられる」is the potential form of「いる」"
+                  explanation_de="「いられる」ist die potentielle Form von「いる」"
+                  lvl="-"
+                  href="https://hinative.com/en-US/questions/20058656"
+                />
+            </word>
+            <word
+              w="【白：シロ】【熊：クマ】"
+              rom="shirokuma"
+              tr_en="polar bear"
+              tr_de="Eisbär"
+              usuallyInKana="true"
+              lvl="-"
+              category="animal"
+              id="shirokuma-polarbear"
+            >
+                <sentence
+                  s="シロクマは【北：ほっ】【極：きょく】【地：ち】【方：ほう】に【住：す】んでいる。"
+                  rom="Shirokuma wa hokkyoku chihō ni sunde iru."
+                  tr_en="Polar bears live in the Arctic."
+                  tr_de="Eisbären leben in der Arktis."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="カワウソ"
+              rom="kawauso"
+              tr_en="otter"
+              tr_de="Otter"
+              lvl="-"
+              category="animal, aquatic"
+              id="kawauso-otter"
+            />
+            <word
+              w="アシカ"
+              rom="ashika"
+              tr_en="sea lion"
+              tr_de="Seelöwe"
+              lvl="-"
+              category="animal, aquatic"
+              id="ashika-sealion"
+            />
+            <word
+              w="ビーバー"
+              rom="bībā"
+              tr_en="beaver"
+              tr_de="Bieber"
+              lvl="-"
+              category="animal"
+              id="bībā-beaver"
+            />
+            <word
+              w="【狼：おおかみ】"
+              rom="ōkami"
+              tr_en="wolf"
+              tr_de="Wolf"
+              lvl="-"
+              category="animal"
+              id="ōkami-wolf"
+            />
+            <word
+              w="【狐：キツネ】"
+              rom="kitsune"
+              tr_en="fox"
+              tr_de="Fuchs"
+              usuallyInKana="true"
+              lvl="-"
+              category="animal"
+              id="kitsune-fox"
+            >
+                <sentence
+                  s="キツネは【裏：うら】【庭：にわ】を【静：しず】かに【歩：ある】いていました。"
+                  rom="Kitsune wa uraniwa o shizuka ni aruite imashita."
+                  tr_en="A fox was sneaking around in the backyard."
+                  tr_de="Ein Fuchs schlich im Hinterhof herum."
+                  lvl="-"
+                  href="https://hinative.com/en-US/questions/22302913"
+                />
+            </word>
+            <word
+              w="【熊：クマ】"
+              rom="kuma"
+              tr_en="bear"
+              tr_de="Bär"
+              usuallyInKana="true"
+              lvl="-"
+              category="animal"
+              id="kuma-bear"
+            >
+                <sentence
+                  s="あの【雲：くも】はクマの【形：かたち】をしている。"
+                  rom="Ano kumo wa kuma no katachi o shite iru."
+                  tr_en="That cloud is in the shape of a bear."
+                  tr_de="Die Wolke dort hat die Form eines Bären."
+                  lvl="-"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【羊：ひつじ】"
+              rom="hitsuji"
+              tr_en="sheep"
+              tr_de="Schaf"
+              lvl="-"
+              category="animal"
+              id="hitsuji-sheep"
+            >
+                <see id="hitsuji-zodiac" rem="closely related" />
+                <sentence
+                  s="【羊：ひつじ】は【草：くさ】を【食：た】べる。"
+                  rom="Hitsuji wa kusa o taberu."
+                  tr_en="Sheep feed on grass."
+                  tr_de="Schafe essen Gras."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【山羊：ヤギ】"
+              rom="yagi"
+              tr_en="goat"
+              tr_de="Ziege"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              lvl="-"
+              category="animal"
+              id="yagi-goat"
+            />
+            <word
+              w="【蝙蝠：コウモリ】"
+              rom="kōmori"
+              tr_en="bat"
+              tr_de="Fledermaus"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              lvl="-"
+              category="animal"
+              id="kōmori-bat"
+            />
+            <word
+              w="【猪：イノシシ】"
+              rom="inoshishi"
+              tr_en="wild boar"
+              tr_de="Wildschwein"
+              usuallyInKana="true"
+              lvl="-"
+              category="animal"
+              id="inoshishi-wildboar"
+            />
+            <word
+              w="【麒：キ】【麟：リン】"
+              rom="kirin"
+              tr_en="giraffe"
+              tr_de="Giraffe"
+              usuallyInKana="true"
+              lvl="-"
+              category="animal"
+              id="kirin-giraffe"
+            />
+            <word
+              w="ライオン"
+              rom="raion"
+              tr_en="lion"
+              tr_de="Löwe"
+              lvl="-"
+              category="animal"
+              id="raion-lion"
+            />
+            <word
+              w="チーター"
+              rom="chītā"
+              tr_en="cheetah"
+              tr_de="Gepard"
+              lvl="-"
+              category="animal"
+              id="chītā-cheetah"
+            />
+            <word
+              w="【駱：ラク】【駝：ダ】"
+              rom="rakuda"
+              tr_en="camel"
+              tr_de="Kamel"
+              usuallyInKana="true"
+              lvl="-"
+              category="animal"
+              id="rakuda-camel"
+            />
+            <word
+              w="アライグマ"
+              rom="araiguma"
+              tr_en="raccoon"
+              tr_de="Waschbär"
+              lvl="-"
+              category="animal"
+              id="araiguma-raccoon"
+            >
+                <phrase
+                  ph="【毛：け】で【覆：おお】われたアライグマ"
+                  rom="ke de ōwareta araiguma"
+                  tr_en="a furry raccoon"
+                  tr_de="ein pelziger Waschbär"
+                  lvl="-"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【針：ハリ】【鼠：ネズミ】"
+              rom="harinezumi"
+              tr_en="hedgehog"
+              tr_de="Igel"
+              usuallyInKana="true"
+              lvl="-"
+              category="animal"
+              id="harinezumi-hedgehog"
+            >
+                <!-- is also a phrase of hari-pin -->
+                <keep_apart_from id="hari-pin" />
+            </word>
+            <word
+              w="【豚：ぶた】"
+              rom="buta"
+              tr_en="pig"
+              tr_de="Schwein"
+              lvl="-"
+              category="animal"
+              id="buta-pig"
+            >
+                <see id="i-boar" rem="closely related" />
+            </word>
+            <word
+              w="【鹿：しか】"
+              rom="shika"
+              tr_en="deer; stag"
+              tr_de="Wild; Hirsch; Reh"
+              lvl="-"
+              category="animal"
+              id="shika-deer"
+              rem="appears in GENKI2 p.288"
+            >
+                <!-- a male deer (stag, buck, roebuck, Hirsch) is a 雄鹿・おじか, nx -->
+                <!-- a female deer (hind, doe, roe deer, Reh) is a 牝鹿・めじか, nx -->
+            </word>
+            <word
+              w="【鶏：にわとり】"
+              rom="niwatori"
+              tr_en="chicken"
+              tr_de="Huhn"
+              lvl="-"
+              category="bird"
+              id="niwatori-chicken"
+            />
+            <word
+              w="【鷲：ワシ】"
+              rom="washi"
+              tr_en="eagle"
+              tr_de="Adler"
+              usuallyInKana="true"
+              lvl="-"
+              category="bird"
+              id="washi-eagle"
+            />
+            <word
+              w="【烏：カラス】"
+              rom="karasu"
+              tr_en="raven; crow"
+              tr_de="Rabe; Krähe"
+              usuallyInKana="true"
+              lvl="-"
+              category="bird"
+              id="karasu-crow"
+            />
+            <word
+              w="【鳩：ハト】"
+              rom="hato"
+              tr_en="dove; pigeon"
+              tr_de="Taube"
+              usuallyInKana="true"
+              lvl="-"
+              category="bird"
+              id="hato-dove"
+            />
+            <word
+              w="【雀：スズメ】"
+              rom="suzume"
+              tr_en="sparrow"
+              tr_de="Spatz"
+              usuallyInKana="true"
+              lvl="-"
+              category="bird"
+              id="suzume-sparrow"
+            />
+            <word
+              w="【鵲：カササギ】"
+              rom="kasasagi"
+              tr_en="European magpie"
+              tr_de="Elster"
+              usuallyInKana="true"
+              lvl="-"
+              category="bird"
+              id="kasasagi-elster"
+            />
+            <word
+              w="【鴨：カモ】"
+              rom="kamo"
+              tr_en="duck"
+              tr_de="Ente"
+              usuallyInKana="true"
+              lvl="-"
+              category="bird, aquatic"
+              id="kamo-duck"
+            >
+                <!--
+                    ここにイルカもカモもいるか？かもしれない。
+                    https://hinative.com/questions/22542919
+                -->
+            </word>
+            <word
+              w="【鶉：ウズラ】"
+              rom="uzura"
+              tr_en="quail"
+              tr_de="Wachtel"
+              usuallyInKana="true"
+              lvl="-"
+              category="bird"
+              id="uzura-quail"
+            />
+            <word
+              w="【蛇：へび】"
+              rom="hebi"
+              tr_en="snake"
+              tr_de="Schlange"
+              lvl="-"
+              category="animal"
+              id="hebi-snake"
+            >
+                <see id="mi-zodiac" rem="closely related" />
+            </word>
+            <word
+              w="【亀：かめ】"
+              rom="kame"
+              tr_en="tortoise; turtle"
+              tr_de="Schildkröte"
+              lvl="-"
+              category="animal, beach"
+              id="kame-turtle"
+            />
+            <word
+              w="【鰐：ワニ】"
+              rom="wani"
+              tr_en="crocodile"
+              tr_de="Krokodil"
+              usuallyInKana="true"
+              lvl="-"
+              category="animal"
+              id="wani-crocodile"
+            />
+            <word
+              w="【蜥蜴：トカゲ】"
+              rom="tokage"
+              tr_en="lizard"
+              tr_de="Eidechse"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              lvl="-"
+              category="animal"
+              id="tokage-lizard"
+            />
+            <word
+              w="【蜂：はち】"
+              rom="hachi"
+              tr_en="bee; wasp; hornet"
+              tr_de="Biene; Wespe; Hornisse"
+              lvl="-"
+              category="insect"
+              id="hachi-bee"
+            />
+            <word
+              w="【蝉：せみ】"
+              rom="semi"
+              tr_en="cicada; locust"
+              tr_de="Zikade; Heuschrecke"
+              lvl="-"
+              category="insect"
+              id="semi-cicada"
+            >
+                <sentence
+                  s="【蝉：せみ】が【鳴：な】いている。"
+                  rom="Semi ga naite iru."
+                  tr_en="The cicadas are chirping."
+                  tr_de="Die Zikaden zirpen."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【蟻：アリ】"
+              rom="ari"
+              tr_en="ant"
+              tr_de="Ameise"
+              usuallyInKana="true"
+              lvl="-"
+              category="insect"
+              id="ari-ant"
+            />
+            <word
+              w="【蜘蛛：クモ】"
+              rom="kumo"
+              tr_en="spider"
+              tr_de="Spinne"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              lvl="-"
+              category="insect"
+              id="kumo-spider"
+            >
+                <sentence
+                  s="クモは【網：あみ】を【張：は】る。"
+                  rom="Kumo wa ami o haru."
+                  tr_en="Spiders spin webs."
+                  tr_de="Spinnen spinnen Spinnennetze."
+                  lvl="-"
+                />
+                <sentence
+                  s="クモには【８：はっ】【本：ぽん】の【脚：あし】がある。"
+                  rom="Kumo ni wa happon no ashi ga aru."
+                  tr_en="Spiders have eight legs."
+                  tr_de="Spinnen haben acht Beine."
+                  lvl="-"
+                  href="https://hinative.com/questions/20378375 (脚 vs. 足)"
+                />
+            </word>
+            <word
+              w="てんとう【虫：むし】"
+              rom="tentō mushi"
+              tr_en="ladybug"
+              tr_de="Marienkäfer"
+              lvl="-"
+              category="insect"
+              id="tentōmushi-ladybug"
+              rem="also spelled 天道虫"
+            />
+            <word
+              w="【蜚蠊：ゴキブリ】"
+              rom="gokiburi"
+              tr_en="cockroach"
+              tr_de="Kakerlake; Küchenschabe"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              lvl="-"
+              category="insect"
+              id="gokiburi-cockroach"
+            />
+            <word
+              w="【大：おお】【店：だな】"
+              rom="ōdana"
+              tr_en="large store; large shop"
+              tr_de="grosses Geschäft; grosser Laden"
+              lvl="-"
+              category="shopping"
+              id="ōdana-largestore"
+            >
+                <keep_apart_from id="depāto-department" />
+            </word>
+            <word
+              w="【古：ふる】【本：ほん】【屋：や】"
+              rom="furuhonya"
+              tr_en="secondhand bookshop"
+              tr_de="Secondhand-Bücherladen"
+              lvl="-"
+              category="shopping, city"
+              id="furuhonya-oldbookshop"
+            >
+                <keep_apart_from id="honya-bookshop" />
+                <keep_apart_from id="shoten-bookshop" />
+            </word>
+            <word
+              w="【古：ふる】【道：どう】【具：ぐ】【屋：や】"
+              rom="furudōguya"
+              tr_en="secondhand store"
+              hint_en="sells old furniture, dishware, etc."
+              lvl="-"
+              category="shopping"
+              id="furudōguya-2ndhandstore"
+              HIDDEN="true"
+            />
+            <word
+              w="【靴：くつ】【屋：や】"
+              rom="kutsuya"
+              tr_en="shoeshop"
+              tr_de="Schuhladen"
+              lvl="-"
+              category="shopping, fashion"
+              id="kutsuya-shoeshop"
+            />
+            <word
+              w="【花：はな】【屋：や】"
+              rom="hanaya"
+              tr_en="florist; flower shop"
+              tr_de="Florist; Blumenladen"
+              lvl="-"
+              category="shopping, city"
+              id="hanaya-florist"
+            />
+            <word
+              w="【眼：がん】【鏡：きょう】【店：てん】"
+              rom="gankyōten"
+              tr_en="optician's store"
+              tr_de="Optiker; Brillenladen"
+              lvl="-"
+              id="gankyōten-optician"
+              HIDDEN="true"
+            />
+            <word
+              w="【１００：ひゃっ】【均：きん】"
+              rom="hyakkin"
+              tr_en="hundred-yen shop"
+              tr_de="Hundert-Yen-Laden"
+              lvl="-"
+              hasCombinedReading="true"
+              category="shopping"
+              id="hyakkin-100yenshop"
+            />
+            <word
+              w="【宝：ほう】【石：せき】【店：てん】"
+              rom="hōsekiten"
+              tr_en="jewellery store"
+              lvl="-"
+              category="shopping, fashion"
+              id="hōsekiten-jewellerystore"
+              HIDDEN="true"
+            />
+            <word
+              w="【土産：みやげ】【物：もの】【屋：や】"
+              rom="miyagemonoya"
+              tr_en="souvenir shop; gift shop"
+              hasCombinedReading="true"
+              lvl="-"
+              category="shopping, holidays"
+              id="miyagemonoya-souvenirshop"
+              HIDDEN="true"
+            />
+            <word
+              w="【文：ぶん】【房：ぼう】【具：ぐ】【屋：や】"
+              rom="bunbōguya"
+              tr_en="stationery shop"
+              tr_de="Schreibwarenladen"
+              lvl="-"
+              category="shopping, city"
+              id="bunbōguya-stationeryshop"
+              HIDDEN="true"
+            />
+            <word
+              w="【付：つ】け"
+              rom="tsuke"
+              tr_en="bill; credit (for later payment)"
+              lvl="-"
+              category="finances"
+              id="tsuke-bill"
+              HIDDEN="true"
+            />
+            <word
+              w="【送：おく】り【状：じょう】"
+              rom="okurijō"
+              tr_en="invoice; receipt of shipment"
+              lvl="-"
+              id="okurijō-invoice"
+              category="finances"
+              HIDDEN="true"
+            />
+            <word
+              w="【自：じ】【販：はん】【機：き】"
+              rom="jihanki"
+              tr_en="vending machine"
+              tr_de="Verkaufsautomat"
+              lvl="-"
+              category="city, shopping"
+              id="jihanki-vendingmachine"
+              rem="自販機 is an abbrev. of 自動販売機 jidōhanbaiki"
+            >
+                <sentence
+                  s="【外：そと】の【自：じ】【販：はん】【機：き】が【壊：こわ】れている。"
+                  rom="Soto no jihanki ga kowarete iru."
+                  tr_en="The vending machine outside is broken."
+                  tr_de="Der Verkaufsautomat draussen ist kaputt."
+                  lvl="-"
+                  origin="Oxford p.43"
+                />
+            </word>
+            <word
+              w="【同：どう】【級：きゅう】【生：せい】"
+              rom="dōkyūsei"
+              tr_en="classmate"
+              tr_de="Schulkamerad; Mitschüler"
+              lvl="-"
+              category="education, people"
+              id="dōkyūsei-classmate"
+              HIDDEN="true"
+            />
+            <word
+              w="【運：うん】【動：どう】【場：じょう】"
+              rom="undōjō"
+              tr_en="sports ground"
+              tr_de="Sportplatz"
+              lvl="-"
+              category="sports"
+              id="undōjō-sportsground"
+            >
+                <keep_apart_from id="taiikukan-gym" />
+                <keep_apart_from id="kyōgijō-arena" />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

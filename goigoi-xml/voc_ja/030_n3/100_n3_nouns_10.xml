@@ -1,0 +1,950 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 nouns (10)"
+      name_de="N3-Nomen (10)"
+      name_fr="Les noms N3 (10)"
+      name_it="Nomi N3 (10)"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <word
+              w="【単：たん】【位：い】"
+              rom="tan'i"
+              tr_en="unit; (academic) credits; in amounts of"
+              tr_de="Einheit; (akademische) Kreditpunkte; in Mengen von"
+              lvl="n3"
+              category="science"
+              id="tani-unit"
+            >
+                <phrase
+                  ph="【単：たん】【位：い】を【取：と】る"
+                  rom="tan'i o toru"
+                  tr_en="to earn (academic) credits"
+                  tr_de="(akademische) Kreditpunkte erhalten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【単：たん】【位：い】を【落：お】とす"
+                  rom="tan'i o otosu"
+                  tr_en="to fail to earn (academic) credits; to fail a course"
+                  tr_de="(akademische) Kreditpunkte nicht erhalten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【長：なが】さの【単：たん】【位：い】はメートルです。"
+                  rom="Nagasa no tan'i wa mētoru desu."
+                  tr_en="The unit of length is the metre."
+                  tr_de="Die Einheit einer Länge ist der Meter."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ボートを【時：じ】【間：かん】【単：たん】【位：い】で【借：か】りられる。"
+                  rom="Bōto o jikan-tan'i de karirareru."
+                  tr_en="You can hire a boat by the hour."
+                  tr_de="Du kannst ein Boot auf Stundenbasis mieten."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【理：り】【想：そう】"
+              rom="risō"
+              tr_en="ideal; ideals"
+              tr_de="Ideale; ideal"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              id="risō-ideal"
+              rem="appears in GENKI2 L23 vocab section"
+            >
+                <keep_apart_from id="suijun-level" />
+                <phrase
+                  ph="【理：り】【想：そう】の【夫：おっと】"
+                  rom="risō no otto"
+                  tr_en="the ideal husband"
+                  tr_de="der ideale Ehemann"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【理：り】【想：そう】が【高：たか】い"
+                  rom="risō ga takai"
+                  tr_en="to have high standards"
+                  tr_de="hohe Ideale haben"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【理：り】【想：そう】と【現：げん】【実：じつ】のギャップに【悩：なや】んでいる。"
+                  rom="Risō to genjitsu no gyappu ni nayande iru."
+                  tr_en="I'm troubled by the gap between ideals and reality."
+                  tr_de="Die Lücke zwischen Ideal und Realität macht mir Sorgen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【渋：じゅう】【滞：たい】"
+              rom="jūtai"
+              tr_en="traffic jam; congestion; stagnation"
+              tr_de="Verkehrsstau; Stockung; Stagnation"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="transportation"
+              id="jūtai-congestion"
+            >
+                <phrase
+                  ph="ひどい【渋：じゅう】【滞：たい】"
+                  rom="hidoi jūtai"
+                  tr_en="heavy traffic jam"
+                  tr_de="starker Verkehrsstau"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【渋：じゅう】【滞：たい】で【遅：おく】れてしまいました。"
+                  rom="Jūtai de okurete shimaimashita."
+                  tr_en="I ended up being late because of a traffic jam."
+                  tr_de="Ich war leider zu spät wegen einem Verkehrsstau."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【性：せい】【格：かく】"
+              rom="seikaku"
+              tr_en="character of a person; personality"
+              tr_de="Charakter einer Person; Persönlichkeit"
+              lvl="n3"
+              category="people, mood"
+              id="seikaku-character"
+            >
+                <keep_apart_from id="jinbutsu-person" />
+                <keep_apart_from id="jinkaku-personality" />
+                <keep_apart_from id="kifū-traits" />
+                <phrase
+                  ph="【真：ま】【面：じ】【目：め】な【性：せい】【格：かく】"
+                  rom="majime na seikaku"
+                  tr_en="an earnest disposition (person)"
+                  tr_de="eine ernsthafte Persönlichkeit"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【古：ふる】【川：かわ】さんは【性：せい】【格：かく】が【明：あか】るい。"
+                  rom="Furukawa-san wa seikaku ga akarui."
+                  tr_en="Mrs Furukawa is a cheerful personality."
+                  tr_de="Frau Furukawa ist eine fröhliche Persönlichkeit."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="その【兄：きょう】【弟：だい】は【性：せい】【格：かく】が【全：まった】く【別：べつ】【々：べつ】だ。"
+                  rom="Sono kyōdai wa seikaku ga mattaku betsu-betsu da."
+                  tr_en="The brothers have completely different personalities."
+                  tr_de="Die Brüder haben zwei komplett verschiedene Persönlichkeiten."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【営：えい】【業：ぎょう】"
+              rom="eigyō"
+              tr_en="business operations; sales promotion"
+              tr_de="Geschäftbetrieb; Verkaufsförderung"
+              hint_en="activity of generating business"
+              hint_de="geschäftsfördernde Tätigkeit"
+              lvl="n3"
+              category="business, trade"
+              id="eigyō-trade"
+            >
+                <keep_apart_from id="shōbai-trade" />
+                <keep_apart_from id="hanbai-sales" />
+                <phrase
+                  ph="【営：えい】【業：ぎょう】【会：かい】【議：ぎ】"
+                  rom="eigyō-kaigi"
+                  tr_en="sales meeting"
+                  tr_de="Verkaufstagung"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="verified with the web"
+                />
+                <phrase
+                  ph="【自：じ】【営：えい】【業：ぎょう】"
+                  rom="ji-eigyō"
+                  tr_en="self-employment; independent business"
+                  tr_de="Selbstanstellung; unabhängiges Geschäft"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; jisho has nx"
+                />
+                <sentence
+                  s="この【店：みせ】は【日：にち】【曜：よう】【日：び】も【営：えい】【業：ぎょう】しています。"
+                  rom="Kono mise wa nichi-yōbi mo eigyō shite imasu."
+                  tr_en="This shop does business (is open) even on Sundays."
+                  tr_de="Dieser Laden macht selbst an Sonntagen Geschäft (hat offen)."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jpod101 audio has a similar but longer sentence"
+                />
+            </word>
+            <word
+              w="【証：しょう】【明：めい】"
+              rom="shōmei"
+              tr_en="proof (of guilt, innocence, etc.); verification"
+              tr_de="Beweis (der Schuld, Unschuld, usw.); Nachweis"
+              Langenscheidt="Nachweis, nachweisen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="crime"
+              id="shōmei-proof"
+            >
+                <keep_apart_from id="akashi-proof" />
+                <phrase
+                  ph="【身：み】【分：ぶん】【証：しょう】【明：めい】【書：しょ】"
+                  rom="mibun shōmeisho"
+                  tr_en="identification papers; ID"
+                  tr_de="Identitätsausweis; ID"
+                  lvl="n3"
+                  origin="self"
+                  rem="jsho has nx"
+                />
+                <sentence
+                  s="【小：こ】【林：ばやし】さんが【正：しょう】【直：じき】だと【証：しょう】【明：めい】します。"
+                  rom="Kobayashi-san ga shōjiki da to shōmei shimasu."
+                  tr_en="I will prove that Mr Kobayashi is honest."
+                  tr_de="Ich werde nachweisen, dass Kobayashi ehrlich ist."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【交：こう】【換：かん】"
+              rom="kōkan"
+              tr_en="exchange; substitution; replacement"
+              tr_de="Austausch; Ersatz; umtauschen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="kōkan-exchange"
+              rem="appears in GENKI2 L20 vocab section"
+            >
+                <sentence
+                  s="これを【交：こう】【換：かん】したいのです。"
+                  rom="Kore o kōkan shitai no desu."
+                  tr_en="I want to exchange this."
+                  tr_de="Ich möchte das umtauschen."
+                  lvl="n3"
+                  origin="Langenscheidt p.138"
+                />
+            </word>
+            <word
+              w="【賞：しょう】"
+              rom="shō"
+              tr_en="prize; award"
+              tr_de="Preis; Auszeichnung"
+              lvl="n3"
+              category="sports, finances"
+              id="shō-prize"
+            >
+                <sentence
+                  s="【賞：しょう】が【取：と】れるといいですね。"
+                  rom="Shō ga toreru to ii desu ne."
+                  tr_en="I hope you will succeed in winning the prize!"
+                  tr_de="Ich hoffe, dass du den Preis gewinnen wirst!"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【偶：ぐう】【然：ぜん】"
+              rom="gūzen"
+              tr_en="coincidence; by chance"
+              tr_de="Zufall; zufällig"
+              lvl="n3"
+              id="gūzen-coincidence"
+            >
+                <sentence
+                  s="【散：さん】【歩：ぽ】の【途：と】【中：ちゅう】で【友：とも】【達：だち】に【偶：ぐう】【然：ぜん】【会：あ】いました。"
+                  rom="Sanpo no tochū de tomodachi ni gūzen aimashita."
+                  tr_en="I ran into a friend by chance while taking a walk."
+                  tr_de="Unterwegs beim Spazieren habe ich zufällig einen Freund getroffen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【幸：こう】【福：ふく】"
+              rom="kōfuku"
+              tr_en="happiness; well-being; welfare"
+              tr_de="Glück; Wohlbefinden; Wohlfahrt"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="happiness"
+              id="kōfuku-happiness"
+              rem="appears in GENKI2 p.329 kanji section"
+            >
+                <sentence
+                  s="【私：わたし】は【幸：こう】【福：ふく】な【子：こ】【供：ども】【時：じ】【代：だい】を【送：おく】った。"
+                  rom="Watashi wa kōfuku na kodomo-jidai o okutta."
+                  tr_en="I had a happy childhood."
+                  tr_de="Ich hatte eine glückliche Kindheit."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【意：い】【識：しき】"
+              rom="ishiki"
+              tr_en="consciousness; awareness"
+              tr_de="Bewusstsein; sich etw. bewusst sein"
+              lvl="n3"
+              category="thinking"
+              id="ishiki-awareness"
+            >
+                <!-- 意識が覚める (ishiki ga sameru) – "To regain consciousness" or "To become aware" (ChatGPT) -->
+                <sentence
+                  s="【人：にん】【間：げん】は【意：い】【識：しき】のある【生：い】き【物：もの】だ。"
+                  rom="Ningen wa ishiki no aru ikimono da."
+                  tr_en="Humans are beings that have consciousness."
+                  tr_de="Menschen sind Wesen mit einem Bewusstsein."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【供：きょう】【給：きゅう】"
+              rom="kyōkyū"
+              tr_en="supply; provision"
+              tr_de="Versorgung"
+              Langenscheidt="Versorgung"
+              lvl="n3"
+              id="kyōkyū-supply"
+            >
+                <phrase
+                  ph="【水：みず】の【供：きょう】【給：きゅう】"
+                  rom="mizu no kyōkyū"
+                  tr_en="water supply"
+                  tr_de="Wasserversorgung"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【建：けん】【築：ちく】"
+              rom="kenchiku"
+              tr_en="architecture (of buildings); to construct (a building)"
+              tr_de="Architektur (eines Gebäudes); (ein Haus) bauen"
+              Langenscheidt="Architektur; する Haus bauen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="home"
+              id="kenchiku-architecture"
+            >
+                <phrase
+                  ph="【建：けん】【築：ちく】【工：こう】【事：じ】"
+                  rom="kenchiku kōji"
+                  tr_en="house construction; architectural work"
+                  tr_de="Hausbau; Bauarbeiten von Häusern"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【面：めん】【接：せつ】"
+              rom="mensetsu"
+              tr_en="interview (for a job, etc.)"
+              tr_de="Interview (für eine Stelle, etc.)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="employment"
+              id="mensetsu-interview"
+              rem="appears in GENKI2 L23 vocab section; jisho has n2"
+            >
+                <!--
+                    mensetsu can also be a university entrance interview, visa interview, etc.
+                    but not for a street interview, that would be インタビュー
+                    also not for a poll, that would be 調査 or アンケート
+                -->
+                <keep_apart_from id="chōsa-survey" />
+                <keep_apart_from id="ankēto-enquête" />
+                <phrase
+                  ph="【面：めん】【接：せつ】を【受：う】ける"
+                  rom="mensetsu o ukeru"
+                  tr_en="to attend an interview"
+                  tr_de="interviewt werden; an einem Interview teilnehmen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【放：ほう】【送：そう】"
+              rom="hōsō"
+              tr_en="broadcast; broadcasting"
+              tr_de="Sendung; Übertragung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="hōsō-broadcast"
+              rem="appears in GENKI2 p.329 kanji section"
+            >
+                <!-- implicit see-also link to hōsō-packing -->
+                <keep_apart_from id="kyoku-bureau" />
+                <phrase
+                  ph="【放：ほう】【送：そう】【局：きょく】"
+                  rom="hōsō-kyoku"
+                  tr_en="a broadcaster; broadcasting station"
+                  tr_de="ein Sender; Sendestation"
+                  lvl="n3"
+                  rem="jisho has nx for hōsō-kyoku, but n3 for hōsō, kyoku"
+                />
+            </word>
+            <word
+              w="【変：へん】【更：こう】"
+              rom="henkō"
+              tr_en="change; revision; amendment"
+              tr_de="Änderung; Revision; Korrektur"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="henkō-change"
+            >
+                <phrase
+                  ph="【予：よ】【定：てい】を【変：へん】【更：こう】する"
+                  rom="yotei o henkō suru"
+                  tr_en="to change plans"
+                  tr_de="die Pläne ändern"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【気：き】【候：こう】"
+              rom="kikō"
+              tr_en="climate"
+              tr_de="Klima"
+              lvl="n3"
+              category="weather"
+              id="kikō-climate"
+            >
+                <phrase
+                  ph="ひどい【気：き】【候：こう】"
+                  rom="hidoi kikō"
+                  tr_en="a harsh climate"
+                  tr_de="ein rauhes Klima"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】は【穏：おだ】やかな【気：き】【候：こう】だ。"
+                  rom="Nihon wa odayaka na kikō da."
+                  tr_en="Japan has a mild climate."
+                  tr_de="Japan hat ein mildes Klima."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【表：ひょう】【情：じょう】"
+              rom="hyōjō"
+              tr_en="facial expression; appearance; look"
+              tr_de="Gesichtsausdruck; Erscheinungsbild; Ausschauen"
+              lvl="n3"
+              category="mood"
+              id="hyōjō-look"
+            >
+                <keep_apart_from id="kao-face" rem="ambiguity in phrases" />
+                <phrase
+                  ph="【驚：おどろ】く【表：ひょう】【情：じょう】を【見：み】せる"
+                  rom="odoroku hyōjō o miseru"
+                  tr_en="to show a surprised expression"
+                  tr_de="einen erstaunten Gesichtsausdruck haben"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【表：ひょう】【情：じょう】が【明：あか】るくなった。"
+                  rom="Hyōjō ga akaruku natta."
+                  tr_en="His face brightened."
+                  tr_de="Sein Gesicht hellte sich auf."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【機：き】【能：のう】"
+              rom="kinō"
+              tr_en="function; mechanism; feature"
+              tr_de="Funktion; Mechanismus"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="technical"
+              id="kinō-facility"
+            >
+                <!-- implicit see-also link to kinō-yesterday -->
+                <phrase
+                  ph="【機：き】【能：のう】【不：ふ】【全：ぜん】"
+                  rom="kinō fuzen"
+                  tr_en="malfunction; dysfunction"
+                  tr_de="Fehlfunktion; Funktionsstörung"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has nx for kinō fuzen, nx for fuzen"
+                />
+                <sentence
+                  s="その【機：き】【能：のう】は【働：はたら】かなくなるだろう。"
+                  rom="Sono kinō wa hatarakanaku naru darō."
+                  tr_en="I guess that mechanism will cease to work."
+                  tr_de="Ich glaube, dieser Mechanismus wird nicht mehr funktionieren."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【検：けん】【査：さ】"
+              rom="kensa"
+              tr_en="examination; scan; checking"
+              tr_de="Untersuchung; Scan; kontrollieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="general, health"
+              id="kensa-examination"
+            >
+                <keep_apart_from id="shinsatsu-medexamination" />
+                <keep_apart_from id="kenshin-healthcheckup" />
+                <keep_apart_from id="chōsa-survey" />
+                <keep_apart_from id="kakunin-check" />
+                <keep_apart_from id="kanri-control" />
+                <keep_apart_from id="tashikameru-check" />
+                <phrase
+                  ph="【荷：に】【物：もつ】【検：けん】【査：さ】の【機：き】【械：かい】"
+                  rom="nimotsu-kensa no kikai"
+                  tr_en="baggage screening machine"
+                  tr_de="Kofferkontrollgerät"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <phrase
+                  ph="【水：すい】【質：しつ】【検：けん】【査：さ】"
+                  rom="sui-shitsu kensa"
+                  tr_en="water quality test"
+                  tr_de="Wasserqualitätskontrolle"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【目：め】の【検：けん】【査：さ】をしてもらうつもりです。"
+                  rom="Me no kensa o shite morau tsumori desu."
+                  tr_en="I'm going to have my eyes examined."
+                  tr_de="Ich werde meine Augen untersuchen lassen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【影：えい】【響：きょう】"
+              rom="eikyō"
+              tr_en="influence; having an effect on"
+              tr_de="Auswirklung; Beeinflussung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="eikyō-influence"
+            >
+                <!-- phrase 影響を受ける (えいきょうをうける) - Be influenced (ChatGPT); compare to する -->
+            </word>
+            <word
+              w="【承：しょう】【認：にん】"
+              rom="shōnin"
+              tr_en="consent; agreement; to approve"
+              tr_de="Zustimmung; Bestätigung; bestätigen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="relationships"
+              id="shōnin-recognition"
+            >
+                <!-- implicit see-also link to shōnin-merchant -->
+                <!-- phrase 承認を受ける (しょうにんをうける) - Receive approval (ChatGPT) -->
+            </word>
+            <word
+              w="【状：じょう】【態：たい】"
+              rom="jōtai"
+              tr_en="state; situation; circumstances"
+              tr_de="Zustand; Situation; Umstände"
+              lvl="n3"
+              id="jōtai-state"
+            >
+                <!-- 緊張状態 - きんちょうじょうたい - under tension (ChatGPT) -->
+            </word>
+            <word
+              w="【役：やく】"
+              rom="yaku"
+              tr_en="role; duty; post"
+              tr_de="Rolle; Verantwortlichkeit; Posten"
+              lvl="n3"
+              id="yaku-role"
+              rem="is this the correct word for a role in a film? category entertainment?"
+            >
+                <keep_apart_from id="kinmu-duty" />
+                <keep_apart_from id="sekinin-duty" />
+                <keep_apart_from id="kakari-incharge" />
+                <keep_apart_from id="gimu-duty" />
+                <keep_apart_from id="yakume-role" />
+                <keep_apart_from id="ninmu-mission" />
+                <!-- implicit see-also link to yaku-grill -->
+                <phrase
+                  ph="【役：やく】に【立：た】つ"
+                  rom="yaku ni tatsu"
+                  tr_en="to be helpful; to be useful"
+                  tr_de="hilfreich sein; nützlich sein"
+                  explanation_en="Literally translates as 'to stand for a role', 'to serve a purpose'"
+                  explanation_de="Wörtlich 'für eine Rolle stehen', 'einem Zweck dienen'"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【誕：たん】【生：じょう】"
+              rom="tanjō"
+              tr_en="birth; creation; formation"
+              tr_de="Geburt; entstehen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="tanjō-birth"
+            >
+                <keep_apart_from id="soshiki-struct" rem="ambiguity with 'formation'" />
+                <keep_apart_from id="kōsei-composition" rem="ambiguity with 'formation'" />
+            </word>
+            <word
+              w="【合：ごう】【計：けい】"
+              rom="gōkei"
+              tr_en="sum; total amount"
+              tr_de="Summe; Gesamtbetrag"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="finances"
+              id="gōkei-sum"
+              rem="appears in GENKI2 p.329 kanji section"
+            >
+                <keep_apart_from id="kingaku-moneyamount" />
+            </word>
+            <word
+              w="【損：そん】【害：がい】"
+              rom="songai"
+              tr_en="damage; injury; loss"
+              tr_de="Schaden; Verletzung; Verlust"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="not-good"
+              id="songai-damage"
+            >
+                <keep_apart_from id="kega-injury" />
+                <keep_apart_from id="gai-harm" />
+            </word>
+            <word
+              w="【感：かん】【覚：かく】"
+              rom="kankaku"
+              tr_en="sense; feeling; intuition"
+              tr_de="Sinn; Gefühl; Intuition"
+              lvl="n3"
+              id="kankaku-sense"
+            >
+                <keep_apart_from id="ki-mood" />
+                <keep_apart_from id="kibun-feeling" />
+                <keep_apart_from id="kanjō-emotion" />
+                <keep_apart_from id="kanji-feeling" />
+                <keep_apart_from id="kimochi-sensation" />
+                <keep_apart_from id="kigen-temper" />
+                <keep_apart_from id="kimi-feeling" />
+            </word>
+            <word
+              w="【委：い】【員：いん】"
+              rom="iin"
+              tr_en="committee member"
+              tr_de="Ausschussmitglied"
+              lvl="n3"
+              category="politics, people"
+              id="iin-committeemember"
+            >
+                <keep_apart_from id="gīn-memberofparlia" />
+                <keep_apart_from id="gichō-chairman" />
+            </word>
+            <word
+              w="【裏：うら】【口：ぐち】"
+              rom="uraguchi"
+              tr_en="backdoor"
+              tr_de="Hintertür"
+              lvl="n3"
+              category="home"
+              id="uraguchi-backdoor"
+              rem="jisho has n2, ura is n4, kuchi is n5"
+            >
+                <keep_apart_from id="to-door" />
+                <keep_apart_from id="doa-door" />
+                <keep_apart_from id="fusuma-slidingdoor" />
+                <keep_apart_from id="shōji-door" />
+                <keep_apart_from id="amado-stormshutter" />
+                <keep_apart_from id="tobira-door" />
+            </word>
+            <word
+              w="【教：きょう】【授：じゅ】"
+              rom="kyōju"
+              tr_en="professor; teaching"
+              tr_de="Professor; Lehren"
+              lvl="n3"
+              category="education, occupations"
+              id="kyōju-professor"
+            >
+                <keep_apart_from id="sensei-teacher" />
+                <keep_apart_from id="kyōshi-teacher" />
+                <keep_apart_from id="kōshi-lecturer" />
+            </word>
+            <word
+              w="【製：せい】【品：ひん】"
+              rom="seihin"
+              tr_en="manufactured goods; finished goods; product"
+              tr_de="hergestellte Ware; fertiges Produkt"
+              lvl="n3"
+              category="business, factory"
+              id="seihin-product"
+            >
+                <!-- 会社が新しい製品の発表を行った。 The company made an announcement about a new product. (ChatGPT) -->
+                <keep_apart_from id="shōhin-commodity" />
+                <keep_apart_from id="shina-item" />
+                <keep_apart_from id="shinamono-article" />
+                <keep_apart_from id="sakuhin-work" />
+            </word>
+            <word
+              w="【作：さく】【物：もつ】"
+              rom="sakumotsu"
+              tr_en="crops; farm products; agricultural produce"
+              tr_de="Erzeugnis; landwirtschaftliche Produkte"
+              lvl="n3"
+              id="sakumotsu-crops"
+            >
+                <!-- similar: shūkaku-harvest -->
+                <keep_apart_from id="sakuhin-work" />
+                <keep_apart_from id="shūkaku-harvest" />
+            </word>
+            <word
+              w="【出：で】【会：あ】い"
+              rom="deai"
+              tr_en="encounter; rendezvous; coming across"
+              tr_de="Zusammentreffen; Treffen"
+              lvl="n3"
+              id="deai-encounter"
+            >
+                <see id="deau-encounter" rem="verb" />
+            </word>
+            <word
+              w="【居：い】【間：ま】"
+              rom="ima"
+              tr_en="living room"
+              tr_de="Wohnzimmer"
+              hint_en="Western style"
+              hint_de="im westlichen Stil"
+              lvl="n3"
+              category="home"
+              id="ima-livingroom"
+            >
+                <!-- implicit see-also link to ima-now -->
+                <keep_apart_from id="washitsu-japanesestyleroom" />
+            </word>
+            <word
+              w="【消：しょう】【防：ぼう】"
+              rom="shōbō"
+              tr_en="fire fighting; fire department; fire brigade"
+              tr_de="Feuerwehr; Feuerlöschen; Feuerbekämpfung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="fire, government"
+              id="shōbō-firebrigade"
+            >
+                <keep_apart_from id="shōbōsho-firestation" />
+            </word>
+            <word
+              w="【服：ふく】【装：そう】"
+              rom="fukusō"
+              tr_en="costume; garments; attire"
+              tr_de="Kostüm; Kleidung; Tracht"
+              lvl="n3"
+              category="fashion"
+              id="fukusō-costume"
+            >
+                <keep_apart_from id="fuku-clothes" />
+                <keep_apart_from id="ifuku-clothes" />
+            </word>
+            <word
+              w="【苦：く】【痛：つう】"
+              rom="kutsū"
+              tr_en="pain; agony; bitterness"
+              tr_de="Schmerzen; Qual; Bitterkeit"
+              lvl="n3"
+              category="health"
+              id="kutsū-pain"
+            >
+                <keep_apart_from id="itami-pain" />
+            </word>
+            <word
+              w="【成：せい】【長：ちょう】"
+              rom="seichō"
+              tr_en="growth; development"
+              tr_de="Wachstum; Entwicklung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="seichō-growing"
+              rem="Note that there is also seichō-growth, which is n2 and uses different kanji"
+            >
+                <!-- 日本経済は成長している - Nihon keizai wa seichō shite iru - The Japanese economy is growing (ChatGPT) -->
+                <see id="teitai-stagnation" rem="antonym" />
+            </word>
+            <word
+              w="【招：まね】き"
+              rom="maneki"
+              tr_en="invitation"
+              tr_de="Einladung"
+              lvl="n3"
+              category="relationships"
+              id="maneki-invitation"
+              rem="jisho has n1"
+            >
+                <see id="maneku-invite" rem="verb" />
+            </word>
+            <word
+              w="【額：がく】"
+              rom="gaku"
+              tr_en="picture frame; amount of money; sum"
+              tr_de="Bilderrahmen; (Geld) Betrag; Summe"
+              lvl="n3"
+              id="gaku-frame"
+            >
+                <!-- お釣りの額 (おつりのがく, otsuri no gaku) - The amount of change (ChatGPT) -->
+            </word>
+            <word
+              w="【期：き】【待：たい】"
+              rom="kitai"
+              tr_en="expectation; anticipation; hope"
+              tr_de="Erwartung; Hoffnung"
+              lvl="n3"
+              id="kitai-expectation"
+            >
+                <!-- 無理な期待 - むりなきたい - Unrealistic expectations (ChatGPT) -->
+            </word>
+            <word
+              w="【位：くらい】"
+              rom="kurai"
+              tr_en="throne; government position; social standing"
+              tr_de="Thron; Regierungsstelle; soziale Stellung"
+              lvl="n3"
+              category="government"
+              id="kurai-throne"
+            >
+                <!-- implicit see-also link to kurai-dark -->
+            </word>
+            <word
+              w="【記：き】【入：にゅう】"
+              rom="kinyū"
+              tr_en="entry (in a form); filling in"
+              tr_de="Eintrag; (Formular) ausfüllen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="business"
+              id="kinyū-fillin"
+            >
+                <!-- implicit see-also link to kinyū-finances -->
+            </word>
+            <word
+              w="【限：げん】【界：かい】"
+              rom="genkai"
+              tr_en="limit; bound"
+              tr_de="Limite; Grenze"
+              lvl="n3"
+              id="genkai-limit"
+            >
+                <!--
+                    緊張で限界が来た
+                    きんちょうでげんかいがきた
+                    Reached the limit (lost composure) due to tension
+                    (ChatGPT)
+                -->
+            </word>
+            <word
+              w="【支：し】【店：てん】"
+              rom="shiten"
+              tr_en="branch office; branch store"
+              tr_de="Niederlassung; Filiale"
+              lvl="n3"
+              category="shopping, business"
+              id="shiten-branchstore"
+              rem="appears in GENKI2 L20 vocab section"
+            />
+            <word
+              w="【入：にゅう】【場：じょう】"
+              rom="nyūjō"
+              tr_en="admission; admittance; entering"
+              tr_de="Zulassung; Eintritt; Eintreten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="nyūjō-admission"
+            />
+            <word
+              w="【犯：はん】【罪：ざい】"
+              rom="hanzai"
+              tr_en="crime; offence"
+              tr_de="Verbrechen; Delikt"
+              lvl="n3"
+              category="crime"
+              id="hanzai-crime"
+            />
+            <word
+              w="【栄：えい】【養：よう】"
+              rom="eiyō"
+              tr_en="nutrition; nourishment"
+              tr_de="Ernährung; Nahrung"
+              lvl="n3"
+              category="cooking"
+              id="eiyō-nutrition"
+            />
+            <word
+              w="【回：かい】【復：ふく】"
+              rom="kaifuku"
+              tr_en="recovery"
+              tr_de="Genesung"
+              hint_en="from illness"
+              hint_de="nach einer Krankheit"
+              lvl="n3"
+              category="health"
+              id="kaifuku-recovery"
+            />
+        </section>
+    </unit>
+</vocabulary>

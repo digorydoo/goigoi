@@ -1,0 +1,1796 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <!-- subheader cannot be in a file of its own, because it's just a state of the parser -->
+    <subheader
+      name_en="JLPT N5"
+      name_de="JLPT N5"
+      name_fr="JLPT N5"
+      name_it="JLPT N5"
+    />
+    <unit
+      name_en="N5 nouns ①"
+      name_de="N5-Nomen ①"
+      name_fr="Les noms N5 ①"
+      name_it="Nomi N5 ①"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n5"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="true"
+    >
+        <section>
+            <!-- school, university -->
+            <word
+              w="【学：がっ】【校：こう】"
+              rom="gakkō"
+              tr_en="school"
+              tr_de="Schule"
+              lvl="n5"
+              category="education, top-words"
+              id="gakkō-school"
+            >
+                <phrase
+                  ph="【学：がっ】【校：こう】に【行：い】く"
+                  rom="gakkō ni iku"
+                  tr_en="to go to school"
+                  tr_de="an die Schule gehen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【五：ご】【時：じ】に 【学：がっ】【校：こう】から 【帰：かえ】りました。"
+                  rom="Go-ji ni gakkō kara kaerimashita."
+                  tr_en="I went home from school at 5 o'clock."
+                  tr_de="Ich ging um 5 Uhr von der Schule nach Hause."
+                  lvl="n5"
+                  origin="500mon q55"
+                />
+            </word>
+            <word
+              w="【学：がく】【生：せい】"
+              rom="gakusei"
+              tr_en="pupil; student"
+              tr_de="Schüler; Student"
+              hint_en="general term for all school years"
+              hint_de="allgemein, für alle Schuljahre"
+              lvl="n5"
+              category="education, people"
+              id="gakusei-student"
+            >
+                <keep_apart_from id="seito-pupil" />
+                <keep_apart_from id="shōgakusei-elemschoolst" />
+                <keep_apart_from id="chūgakusei-midschoolst" />
+                <keep_apart_from id="kōkōsei-hischoolst" />
+                <keep_apart_from id="daigakusei-unistudent" />
+                <phrase
+                  ph="【頭：あたま】のいい【学：がく】【生：せい】"
+                  rom="atama no ii gakusei"
+                  tr_en="a clever student"
+                  tr_de="ein intelligenter Schüler"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【私：わたし】は 【学：がく】【生：せい】の 【誰：だれ】にも 【本：ほん】は 【貸：か】さない。"
+                  rom="Watashi wa gakusei no dare ni mo hon wa kasanai."
+                  tr_en="I don't lend my books to any of the students."
+                  tr_de="Ich leihe meine Bücher keinem Schüler."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【青：あお】【木：き】【先：せん】【生：せい】は 【学：がく】【生：せい】に 【英：えい】【語：ご】を 【教：おし】える。"
+                  rom="Aoki-sensei wa gakusei ni eigo o oshieru."
+                  tr_en="Professor Aoki teaches English to her students."
+                  tr_de="Professor Aoki lehrt ihre Schüler Englisch."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【先：せん】【生：せい】"
+              rom="sensei"
+              tr_en="teacher"
+              tr_de="Lehrer/in"
+              hint_en="honorific noun to address a teacher"
+              hint_de="ehrende Anrede"
+              lvl="n5"
+              category="education, people"
+              id="sensei-teacher"
+            >
+                <keep_apart_from id="kyōshi-teacher" />
+                <keep_apart_from id="kyōju-professor" />
+                <keep_apart_from id="kōshi-lecturer" />
+                <phrase
+                  ph="【先：せん】【生：せい】に【質：しつ】【問：もん】をする"
+                  rom="sensei ni shitsumon o suru"
+                  tr_en="to ask the teacher a question"
+                  tr_de="dem Lehrer eine Frage stellen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【先：せん】【生：せい】は 【椅：い】【子：す】に 【座：すわ】った。"
+                  rom="Sensei wa isu ni suwatta."
+                  tr_en="The teacher sat on the chair."
+                  tr_de="Der Lehrer sass auf dem Stuhl."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【勉：べん】【強：きょう】"
+              rom="benkyō"
+              tr_en="study"
+              tr_de="studieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n5"
+              category="education, top-words"
+              id="benkyō-study"
+            >
+                <keep_apart_from id="gakumon-learning" />
+                <keep_apart_from id="manabu-study" />
+                <phrase
+                  ph="【勉：べん】【強：きょう】を【始：はじ】める"
+                  rom="benkyō o hajimeru"
+                  tr_en="to start studying"
+                  tr_de="mit Studieren beginnen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="どうして 【日：に】【本：ほん】【語：ご】を 【勉：べん】【強：きょう】しますか。"
+                  rom="Dōshite Nihon-go o benkyō shimasu ka?"
+                  tr_en="Why do you study Japanese?"
+                  tr_de="Warum studierst du Japanisch?"
+                  lvl="n5"
+                  origin="BondLingo"
+                  href="https://youtu.be/GYwsaml2ONE?t=59"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】に 【旅：りょ】【行：こう】する【前：まえ】に 【日：に】【本：ほん】【語：ご】を 【勉：べん】【強：きょう】する。"
+                  rom="Nihon ni ryokō suru mae ni Nihon-go o benkyō suru."
+                  tr_en="I will study Japanese before travelling to Japan."
+                  tr_de="Ich werde Japanisch studieren, bevor ich nach Japan reise."
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/964fq7NJKms"
+                />
+            </word>
+            <word
+              w="【本：ほん】"
+              rom="hon"
+              tr_en="book"
+              tr_de="Buch"
+              lvl="n5"
+              category="literature, top-words"
+              id="hon-book"
+            >
+                <keep_apart_from id="hon-longthin" />
+                <phrase
+                  ph="【本：ほん】を【読：よ】む"
+                  rom="hon o yomu"
+                  tr_en="to read a book"
+                  tr_de="ein Buch lesen"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="どの 【本：ほん】が 【好：す】きですか。"
+                  rom="Dono hon ga suki desu ka?"
+                  tr_en="What kind of book do you like?"
+                  tr_de="Welche Art Buch magst du?"
+                  lvl="n5"
+                />
+                <sentence
+                  s="この 【本：ほん】には、【使：つか】い【方：かた】が 【書：か】いて あります。"
+                  rom="Kono hon ni wa, tsukai-kata ga kaite arimasu."
+                  tr_en="Directions on how to use it are written in this book."
+                  tr_de="Eine Anleitung, wie man es verwendet, ist in diesem Buch geschrieben."
+                  lvl="n5"
+                  origin="500mon q310"
+                />
+            </word>
+            <word
+              w="【宿：しゅく】【題：だい】"
+              rom="shukudai"
+              tr_en="homework; assignment"
+              tr_de="Hausaufgaben"
+              lvl="n5"
+              category="education"
+              id="shukudai-homework"
+            >
+                <phrase
+                  ph="【難：むずか】しい【宿：しゅく】【題：だい】"
+                  rom="muzukashii shukudai"
+                  tr_en="difficult homework"
+                  tr_de="schwierige Hausaufgaben"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="たくさん 【宿：しゅく】【題：だい】が ある。"
+                  rom="Takusan shukudai ga aru."
+                  tr_en="I have a lot of homework."
+                  tr_de="Ich habe eine Menge Hausaufgaben."
+                  lvl="n5"
+                  origin="500mon q209"
+                />
+                <sentence
+                  s="【宿：しゅく】【題：だい】を しないで 【学：がっ】【校：こう】へ 【来：き】ました。"
+                  rom="Shukudai o shinai de gakkō e kimashita."
+                  tr_en="I came to school without doing my homework."
+                  tr_de="Ich bin zur Schule gekommen, ohne die Hausaufgaben gemacht zu haben."
+                  lvl="n5"
+                  origin="500mon q84"
+                />
+            </word>
+            <word
+              w="【問：もん】【題：だい】"
+              rom="mondai"
+              tr_en="question (on a test); problem"
+              tr_de="Frage (an einer Prüfung); Problem"
+              lvl="n5"
+              category="education, science"
+              id="mondai-problem"
+            >
+                <phrase
+                  ph="【小：ちい】さな【問：もん】【題：だい】"
+                  rom="chīsana mondai"
+                  tr_en="a minor problem"
+                  tr_de="ein kleines Problem"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="この【問：もん】【題：だい】は 【難：むずか】しくないです。"
+                  rom="Kono mondai wa muzukashikunai desu."
+                  tr_en="This problem is not difficult."
+                  tr_de="Dieses Problem ist nicht schwer."
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="この 【問：もん】【題：だい】は 【難：むずか】しすぎて、だれも 【答：こた】える ことが できない。"
+                  rom="Kono mondai wa muzukashi-sugite, daremo kotaeru koto ga dekinai."
+                  tr_en="This question is too difficult for anyone to answer."
+                  tr_de="Diese Frage ist zu schwer, niemand kann sie beantworten."
+                  lvl="n5"
+                  origin="500mon q262"
+                />
+            </word>
+
+            <!-- travelling, holidays -->
+            <word
+              w="【旅：りょ】【行：こう】"
+              rom="ryokō"
+              tr_en="travel; trip"
+              tr_de="Reise; Ausflug"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n5"
+              category="travelling, top-words"
+              id="ryokō-travel"
+            >
+                <phrase
+                  ph="【楽：たの】しい【旅：りょ】【行：こう】"
+                  rom="tanoshii ryokō"
+                  tr_en="an enjoyable trip"
+                  tr_de="eine angenehme Reise"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【旅：りょ】【行：こう】は 【金：かね】が かかる。"
+                  rom="Ryokō wa kane ga kakaru."
+                  tr_en="Travelling takes money."
+                  tr_de="Reisen braucht Geld."
+                  lvl="n5"
+                />
+                <sentence
+                  s="【旅：りょ】【行：こう】に【行：い】く。"
+                  rom="Ryokō ni iku."
+                  tr_en="I'll go on a trip."
+                  tr_de="Ich werde auf eine Reise gehen."
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/TjmlAiqjpmk"
+                />
+            </word>
+            <word
+              w="ホテル"
+              rom="hoteru"
+              tr_en="hotel"
+              tr_de="Hotel"
+              lvl="n5"
+              category="holidays"
+              id="hoteru-hotel"
+            >
+                <phrase
+                  ph="ホテルの【部：へ】【屋：や】"
+                  rom="hoteru no heya"
+                  tr_en="hotel room"
+                  tr_de="Hotelzimmer"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ホテルは どこですか。"
+                  rom="Hoteru wa doko desu ka?"
+                  tr_en="Where is the hotel?"
+                  tr_de="Wo ist das Hotel?"
+                  lvl="n5"
+                />
+                <!--
+                  s="このホテルは【高：たか】すぎる。"
+                  rom="Kono hoteru wa taka-sugiru."
+                  tr_en="This hotel is too expensive."
+                  tr_de="Dieses Hotel ist zu teuer."
+                  lvl="n4"
+                  origin="Miku"
+                  href="https://youtu.be/iDFFO3hkxVA"
+                -->
+            </word>
+            <word
+              w="【切：きっ】【符：ぷ】"
+              rom="kippu"
+              tr_en="ticket"
+              tr_de="Ticket; Fahrkarte"
+              lvl="n5"
+              category="travelling"
+              id="kippu-ticket"
+            >
+                <keep_apart_from id="jōshaken-ticket" />
+                <keep_apart_from id="kōkūken-flugticket" />
+                <phrase
+                  ph="【切：きっ】【符：ぷ】を【持：も】つ"
+                  rom="kippu o motsu"
+                  tr_en="to have a ticket"
+                  tr_de="ein Ticket haben"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【切：きっ】【符：ぷ】を 【見：み】せて ください。"
+                  rom="Kippu o misete kudasai."
+                  tr_en="Please show your ticket."
+                  tr_de="Bitte zeigen Sie Ihre Fahrkarte."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【東：とう】【京：きょう】への 【切：きっ】【符：ぷ】を ください。"
+                  rom="Tōkyō e no kippu o kudasai."
+                  tr_en="A ticket to Tokyo, please."
+                  tr_de="Einen Fahrschein nach Tokyo, bitte."
+                  lvl="n5"
+                  origin="Langenscheidt"
+                  rem="jisho has nx for Tokyo"
+                />
+            </word>
+            <word
+              w="【写：しゃ】【真：しん】"
+              rom="shashin"
+              tr_en="picture; photo"
+              tr_de="Bild; Foto"
+              lvl="n5"
+              category="top-words"
+              id="shashin-picture"
+            >
+                <phrase
+                  ph="【友：とも】【達：だち】に【写：しゃ】【真：しん】を【見：み】せる"
+                  rom="tomodachi ni shashin o miseru"
+                  tr_en="to show the pictures to a friend"
+                  tr_de="die Fotos einem Freund zeigen"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ここで 【写：しゃ】【真：しん】を 【撮：と】りましょう。"
+                  rom="Koko de shashin o torimashō."
+                  tr_en="Let's take a picture here."
+                  tr_de="Lass uns hier ein Foto machen."
+                  origin="lib0"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【姉：あね】は 【京：きょう】【都：と】に 【写：しゃ】【真：しん】を 【撮：と】りに 【行：い】った。"
+                  rom="Ane wa Kyōto ni shashin o tori ni itta."
+                  tr_en="My older sister went to Kyōto to take pictures."
+                  tr_de="Meine ältere Schwester ging nach Kyōto, um Photos zu schiessen."
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/TjmlAiqjpmk"
+                />
+            </word>
+
+            <!-- shopping -->
+            <word
+              w="【買：か】い【物：もの】"
+              rom="kaimono"
+              tr_en="shopping; shopping goods; to shop"
+              tr_de="Einkaufen; gekaufter Artikel; einkaufen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n5"
+              category="shopping"
+              id="kaimono-shopping"
+            >
+                <phrase
+                  ph="【買：か】い【物：もの】に【行：い】く"
+                  rom="kaimono ni iku"
+                  tr_en="to go shopping"
+                  tr_de="einkaufen gehen"
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/TjmlAiqjpmk"
+                />
+                <sentence
+                  s="【少：すこ】し 【買：か】い【物：もの】が ある。"
+                  rom="Sukoshi kaimono ga aru."
+                  tr_en="I have some shopping to do."
+                  tr_de="Ich muss ein paar Sachen einkaufen."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【小：こ】【山：やま】さんは よく 【服：ふく】の 【買：か】い【物：もの】を します。"
+                  rom="Koyama-san wa yoku fuku no kaimono o shimasu."
+                  tr_en="Mrs Koyama often shops for clothes."
+                  tr_de="Frau Koyama kauft oft Kleider ein."
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="お【金：かね】"
+              rom="o-kane"
+              tr_en="money"
+              tr_de="Geld"
+              lvl="n5"
+              category="finances, top-words"
+              id="okane-money"
+            >
+                <keep_apart_from id="genkin-cash" />
+                <keep_apart_from id="kinsen-money" />
+                <phrase
+                  ph="【金：かね】をかける"
+                  rom="kane o kakeru"
+                  tr_en="to spend money"
+                  tr_de="Geld ausgeben"
+                  lvl="n5"
+                  hasDifferentForm="true"
+                />
+                <sentence
+                  s="【金：かね】【子：こ】さんは いつも お【金：かね】が ない。"
+                  rom="Kaneko-san wa itsumo o-kane ga nai."
+                  tr_en="Mr Kaneko is always without money."
+                  tr_de="Herr Kaneko ist immer ohne Geld."
+                  lvl="n5"
+                  origin="self"
+                />
+            </word>
+            <word
+              w="【金：かね】"
+              rom="kane"
+              tr_en="money"
+              tr_de="Geld"
+              lvl="n5"
+              id="kane-money"
+              HIDDEN="true"
+              rem="must not be together with o-kane; jisho has n3 for kane and n5 for o-kane"
+            />
+            <word
+              w="【財：さい】【布：ふ】"
+              rom="saifu"
+              tr_en="purse; wallet"
+              tr_de="Geldbeutel; Portemonnaie"
+              lvl="n5"
+              category="finances"
+              id="saifu-purse"
+            >
+                <phrase
+                  ph="【大：おお】きな【財：さい】【布：ふ】"
+                  rom="ōkina saifu"
+                  tr_en="a big wallet"
+                  tr_de="ein grosses Portemonnaie"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【財：さい】【布：ふ】に お【金：かね】が ありません。"
+                  rom="Saifu ni o-kane ga arimasen."
+                  tr_en="There is no money in the wallet."
+                  tr_de="Im Geldbeutel hat es kein Geld."
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+            </word>
+
+            <!-- traffic, transportation -->
+            <word
+              w="【自：じ】【動：どう】【車：しゃ】"
+              rom="jidōsha"
+              tr_en="automobile; car"
+              tr_de="Auto"
+              lvl="n5"
+              category="transportation, technical"
+              id="jidōsha-auto"
+            >
+                <!--
+                    Acc. to ChatGPT, jidōsha is more technical than kuruma
+                -->
+                <keep_apart_from id="kuruma-car" />
+                <keep_apart_from id="kā-car" />
+                <phrase
+                  ph="【自：じ】【動：どう】【車：しゃ】に【乗：の】る"
+                  rom="jidōsha ni noru"
+                  tr_en="to ride in a car; to go by car"
+                  tr_de="Auto fahren"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="これは 【誰：だれ】の 【自：じ】【動：どう】【車：しゃ】ですか。"
+                  rom="Kore wa dare no jidōsha desu ka?"
+                  tr_en="Whose car is this?"
+                  tr_de="Wessen Auto ist das?"
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【自：じ】【転：てん】【車：しゃ】"
+              rom="jitensha"
+              tr_en="bicycle"
+              tr_de="Fahrrad"
+              lvl="n5"
+              category="transportation"
+              id="jitensha-bike"
+            >
+                <phrase
+                  ph="【自：じ】【転：てん】【車：しゃ】に【乗：の】る"
+                  rom="jitensha ni noru"
+                  tr_en="to ride a bicycle"
+                  tr_de="Fahrrad fahren"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【自：じ】【転：てん】【車：しゃ】を 【借：か】りたいのです。"
+                  rom="Jitensha o karitai no desu."
+                  tr_en="I would like to rent a bicycle."
+                  tr_de="Ich möchte ein Fahrrad mieten."
+                  lvl="n5"
+                  origin="Langenscheidt p.167"
+                />
+                <sentence
+                  s="そんな 【自：じ】【転：てん】【車：しゃ】は どこで 【売：う】って いますか。"
+                  rom="Sonna jitensha wa doko de utte imasu ka?"
+                  tr_en="Where do they sell bikes like that?"
+                  tr_de="Wo werden solche Fahrräder verkauft?"
+                  lvl="n5"
+                  origin="500mon q415"
+                />
+            </word>
+            <word
+              w="【電：でん】【車：しゃ】"
+              rom="densha"
+              tr_en="train"
+              tr_de="Zug; Eisenbahn"
+              hint_en="electric"
+              hint_de="elektrisch"
+              lvl="n5"
+              category="transportation, travelling"
+              id="densha-train"
+            >
+                <phrase
+                  ph="【電：でん】【車：しゃ】の【切：きっ】【符：ぷ】"
+                  rom="densha no kippu"
+                  tr_en="train ticket"
+                  tr_de="Zugfahrkarte"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【電：でん】【車：しゃ】に 【傘：かさ】を 【忘：わす】れた。"
+                  rom="Densha ni kasa o wasureta."
+                  tr_en="I left my umbrella on the train."
+                  tr_de="Ich habe meinen Schirm im Zug vergessen."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【駅：えき】"
+              rom="eki"
+              tr_en="train station"
+              tr_de="Bahnhof"
+              lvl="n5"
+              category="travelling, top-words"
+              id="eki-station"
+            >
+                <phrase
+                  ph="【駅：えき】で【待：ま】つ"
+                  rom="eki de matsu"
+                  tr_en="to wait at the station"
+                  tr_de="am Bahnhof warten"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <!--
+                  ph="【駅：えき】【員：いん】"
+                  rom="ekiin"
+                  tr_en="station attendant"
+                  tr_de="Bahnhofangestellte(r)"
+                  lvl="n4"
+                  origin="GENKI2 p.94"
+                  rem="appears in vocab section; jisho has nx, but n4 for ten'in"
+                -->
+                <sentence
+                  s="【駅：えき】は どこですか。"
+                  rom="Eki wa doko desu ka?"
+                  tr_en="Where's the station?"
+                  tr_de="Wo ist der Bahnhof?"
+                  lvl="n5"
+                />
+                <sentence
+                  s="ここから 【駅：えき】まで どのくらい 【時：じ】【間：かん】が かかりますか。"
+                  rom="Koko kara eki made donokurai jikan ga kakarimasu ka?"
+                  tr_en="How long does it take to get to the station from here?"
+                  tr_de="Wie lange hat man bis zum Bahnhof von hier?"
+                  lvl="n5"
+                  origin="500mon q50"
+                />
+            </word>
+            <word
+              w="バス"
+              rom="basu"
+              tr_en="bus"
+              tr_de="Bus"
+              lvl="n5"
+              category="travelling, transportation"
+              id="basu-bus"
+            >
+                <phrase
+                  ph="バスに【乗：の】る"
+                  rom="basu ni noru"
+                  tr_en="to take the bus"
+                  tr_de="den Bus nehmen"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【次：つぎ】の バスは 【何：なん】【時：じ】ですか。"
+                  rom="Tsugi no basu wa nanji desu ka?"
+                  tr_en="When's the next bus?"
+                  tr_de="Wann fährt der nächste Bus?"
+                  lvl="n5"
+                />
+            </word>
+            <word
+              w="タクシー"
+              rom="takushī"
+              tr_en="taxi"
+              tr_de="Taxi"
+              lvl="n5"
+              category="transportation"
+              id="takushii-taxi"
+            >
+                <phrase
+                  ph="タクシーに【乗：の】る"
+                  rom="takushī ni noru"
+                  tr_en="to take a taxi"
+                  tr_de="das Taxi nehmen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="タクシーを 【呼：よ】んで ください。"
+                  rom="Takushī o yonde kudasai."
+                  tr_en="Please call a taxi."
+                  tr_de="Rufen Sie bitte ein Taxi."
+                  lvl="n5"
+                  origin="Langenscheidt"
+                />
+                <sentence
+                  s="【駅：えき】まで、タクシーで 【十：じゅっ】【分：ぷん】です。"
+                  rom="Eki made, takushī de juppun desu."
+                  tr_en="It's ten minutes to the station by taxi."
+                  tr_de="Mit dem Taxi ist man in zehn Minuten am Bahnhof."
+                  lvl="n5"
+                  origin="500mon q22"
+                />
+            </word>
+
+            <!-- town, city -->
+            <word
+              w="【家：いえ】"
+              rom="ie"
+              tr_en="house; residence"
+              tr_de="Haus; Wohnsitz"
+              lvl="n5"
+              category="home, top-words"
+              id="ie-house"
+            >
+                <keep_apart_from id="uchi-house" />
+                <phrase
+                  ph="【大：おお】きい【家：いえ】に【住：す】んでいる"
+                  rom="ōkii ie ni sunde iru"
+                  tr_en="to live in a big house"
+                  tr_de="in einem grossen Haus wohnen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【家：いえ】に 【帰：かえ】って いいですか。"
+                  rom="Ie ni kaette ii desu ka?"
+                  tr_en="Can I go home?"
+                  tr_de="Darf ich nach Hause gehen?"
+                  origin="duolingo"
+                  lvl="n5"
+                />
+            </word>
+
+            <!-- food -->
+            <word
+              w="【食：た】べ【物：もの】"
+              rom="tabemono"
+              tr_en="food"
+              tr_de="Esswaren"
+              lvl="n5"
+              category="food, cooking"
+              id="tabemono-food"
+            >
+                <see id="taberu-eat" rem="closely related" />
+                <keep_apart_from id="shokuhin-foodproducts" />
+                <keep_apart_from id="shokumotsu-food" />
+                <keep_apart_from id="shokuryō-food" />
+                <keep_apart_from id="shokuryō-rations" />
+                <keep_apart_from id="shokuryōhin-groceries" />
+                <phrase
+                  ph="【嫌：きら】いな【食：た】べ【物：もの】"
+                  rom="kirai na tabemono"
+                  tr_en="food which I don't like"
+                  tr_de="Esswaren, die ich nicht gern habe"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【食：た】べ【物：もの】が なくて、【大：たい】【変：へん】だった。"
+                  rom="Tabemono ga nakute, taihen datta."
+                  tr_en="It was dreadful, because there was no food."
+                  tr_de="Es war schrecklich, weil es nicht zu essen gab."
+                  explanation_en="なくて is the て-form of ない"
+                  explanation_de="なくて ist die て-Form von ない"
+                  lvl="n5"
+                  origin="Oxford p.57"
+                />
+            </word>
+            <word
+              w="【肉：にく】"
+              rom="niku"
+              tr_en="meat; flesh"
+              tr_de="Fleisch"
+              lvl="n5"
+              category="food"
+              id="niku-meat"
+            >
+                <phrase
+                  ph="【肉：にく】【料：りょう】【理：り】"
+                  rom="niku ryōri"
+                  tr_en="meat dish"
+                  tr_de="Fleischgericht"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【今：こん】【晩：ばん】は 【夕：ゆう】【飯：はん】に 【肉：にく】が 【食：た】べたい。"
+                  rom="Konban wa yūhan ni niku ga tabetai."
+                  tr_en="I'd like to have meat for supper this evening."
+                  tr_de="Ich möchte Fleisch zum Abendessen heute Abend."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+
+            <!-- beverage -->
+            <word
+              w="【飲：の】み【物：もの】"
+              rom="nomimono"
+              tr_en="beverage"
+              tr_de="Getränk"
+              lvl="n5"
+              category="beverage, gastronomy"
+              id="nomimono-beverage"
+            >
+                <see id="nomu-drink" rem="closely related" />
+                <phrase
+                  ph="【冷：つめ】たい【飲：の】み【物：もの】"
+                  rom="tsumetai nomimono"
+                  tr_en="cold beverage"
+                  tr_de="kaltes Getränk"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【何：なに】か 【飲：の】み【物：もの】が 【欲：ほ】しい。"
+                  rom="Nani ka nomimono ga hoshii."
+                  tr_en="I want something to drink."
+                  tr_de="Ich möchte etwas zu trinken."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="あの 【店：みせ】で 【飲：の】み【物：もの】を 【買：か】いましょう。"
+                  rom="Ano mise de nomimono o kaimashō."
+                  tr_en="Let's buy something to drink at that store."
+                  tr_de="Lass uns Getränk in dem Laden dort kaufen."
+                  lvl="n5"
+                  origin="500mon q180"
+                />
+            </word>
+            <word
+              w="【水：みず】"
+              rom="mizu"
+              tr_en="water"
+              tr_de="Wasser"
+              lvl="n5"
+              category="beverage"
+              id="mizu-water"
+            >
+                <!--
+                    冷水・れいすい cold water nx
+                    温水・おんすい warm water nx
+                -->
+                <phrase
+                  ph="【冷：つめ】たい【水：みず】で【洗：あら】う"
+                  rom="tsumetai mizu de arau"
+                  tr_en="to wash with cold water"
+                  tr_de="mit kaltem Wasser waschen"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【寝：ね】る【前：まえ】に 【水：みず】を 【飲：の】む。"
+                  rom="Neru mae ni mizu o nomu."
+                  tr_en="I will drink water before going to bed."
+                  tr_de="Ich werde Wasser trinken, bevor ich schlafen gehe."
+                  lvl="n5"
+                  origin="Miku"
+                  href="https://youtu.be/964fq7NJKms"
+                />
+            </word>
+            <word
+              w="お【茶：ちゃ】"
+              rom="o-cha"
+              tr_en="tea"
+              tr_de="Tee"
+              hint_en="usu. green tea"
+              hint_de="typ. Grüntee"
+              lvl="n5"
+              category="beverage, top-words"
+              id="ocha-tea"
+            >
+                <keep_apart_from id="n5-kōcha" />
+                <keep_apart_from id="cha-tea" />
+                <keep_together id="cha-tea" />
+                <phrase
+                  ph="お【茶：ちゃ】を【飲：の】む"
+                  rom="o-cha o nomu"
+                  tr_en="to drink tea"
+                  tr_de="Tee trinken"
+                  lvl="n5"
+                  origin="self"
+                />
+                <phrase
+                  ph="お【茶：ちゃ】をいれる"
+                  rom="o-cha o ireru"
+                  tr_en="to make tea"
+                  tr_de="Tee zubereiten"
+                  lvl="n5"
+                  rem="appears in GENKI somewhere with ireru in kana; kanji is 淹れる, nx"
+                />
+                <sentence
+                  s="お【茶：ちゃ】が 【体：からだ】に いいです。"
+                  rom="O-cha ga karada ni ii desu."
+                  tr_en="Tea is good for your body."
+                  tr_de="Tee tut dem Körper gut."
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="コーヒーと 【茶：ちゃ】と どちらが 【好：す】きですか。"
+                  rom="Kōhī to cha to dochira ga suki desu ka?"
+                  tr_en="Which do you like better, coffee or tea?"
+                  tr_de="Was magst du lieber, Kaffee oder Tee?"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                />
+            </word>
+            <word
+              w="【茶：ちゃ】"
+              rom="cha"
+              tr_en="green tea"
+              tr_de="Grüntee"
+              lvl="n5"
+              id="cha-tea"
+              HIDDEN="true"
+              rem="jisho has n3 for cha and n5 for o-cha"
+            >
+                <keep_apart_from id="ocha-tea" />
+                <keep_together id="ocha-tea" />
+            </word>
+
+            <!-- cooking, cuisine -->
+            <word
+              w="【料：りょう】【理：り】"
+              rom="ryōri"
+              tr_en="cooking; cuisine"
+              tr_de="Kochen; Gericht"
+              Langenscheidt="Gericht; Küche (e. Landes); Kochen"
+              lvl="n5"
+              category="cooking"
+              id="ryōri-cooking"
+            >
+                <keep_apart_from id="chōri-cooking" />
+                <phrase
+                  ph="【外：がい】【国：こく】の【料：りょう】【理：り】"
+                  rom="gaikoku no ryōri"
+                  tr_en="foreign cuisine"
+                  tr_de="fremdländische Küche"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【中：なか】【村：むら】さんの 【料：りょう】【理：り】は とてもおいしいです。"
+                  rom="Nakamura-san no ryōri wa totemo oishii desu."
+                  tr_en="Mrs Nakamura's cooking is very delicious."
+                  tr_de="Frau Nakamuras Gerichte sind sehr köstlich."
+                  lvl="n5"
+                  origin="GENKI1 p.316 modified"
+                />
+                <sentence
+                  s="ときどき 【母：はは】の 【作：つく】った 【料：りょう】【理：り】が 【食：た】べたくなります。"
+                  rom="Toki-doki haha no tsukutta ryōri ga tabetaku narimasu."
+                  tr_en="Every now and then, I want to have some of my mother's cooking."
+                  tr_de="Hin und wieder möchte ich etwas aus der Küche meiner Mutter."
+                  lvl="n5"
+                  origin="500mon q194"
+                />
+            </word>
+            <word
+              w="ご【飯：はん】"
+              rom="gohan"
+              tr_en="cooked rice; meal"
+              tr_de="gekochter Reis; Mahlzeit"
+              lvl="n5"
+              category="food, top-words"
+              id="gohan-meal"
+            >
+                <keep_apart_from id="meshi-meal" />
+                <keep_apart_from id="shokuji-meal" />
+                <keep_apart_from id="chūshoku-lunch" />
+                <phrase
+                  ph="ご【飯：はん】を【作：つく】る"
+                  rom="gohan o tsukuru"
+                  tr_en="to prepare a meal"
+                  tr_de="eine Mahlzeit zubereiten"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="ご【飯：はん】が できた。"
+                  rom="Gohan ga dekita."
+                  tr_en="Dinner is ready."
+                  tr_de="Das Essen ist fertig zubereitet."
+                  lvl="n5"
+                  origin="500mon q464.1"
+                  rem="Oxford p.46 has gohan ga dekite iru"
+                />
+                <sentence
+                  s="ケンタは 【今：いま】 ご【飯：はん】を 【食：た】べて いる。"
+                  rom="Kenta wa ima gohan o tabete iru."
+                  tr_en="Kenta is eating right now."
+                  tr_de="Kenta isst gerade."
+                  lvl="n5"
+                  origin="Oxford p.64"
+                />
+            </word>
+            <word
+              w="お【弁：べん】【当：とう】"
+              rom="o-bentō"
+              tr_en="boxed lunch; lunchbox"
+              tr_de="Lunchbox"
+              lvl="n5"
+              category="cooking"
+              id="obentō-boxedlunch"
+            >
+                <phrase
+                  ph="お【弁：べん】【当：とう】を【持：も】っている"
+                  rom="o-bentō o motte iru"
+                  tr_en="to have a lunchbox with you"
+                  tr_de="eine Lunchbox dabei haben"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="お【弁：べん】【当：とう】を 【二：ふた】つ ください。"
+                  rom="O-bentō o futa-tsu kudasai."
+                  tr_en="Two lunch boxes, please."
+                  tr_de="Zwei Lunchboxen, bitte."
+                  lvl="n5"
+                  origin="GENKI1 p.208"
+                />
+                <sentence
+                  s="お【弁：べん】【当：とう】を【持：も】ってきた。"
+                  rom="O-bentō o motte kita."
+                  tr_en="I brought a lunchbox."
+                  tr_de="Ich habe eine Lunchbox dabei."
+                  lvl="n5"
+                  origin="500mon q127"
+                />
+            </word>
+            <word
+              w="【弁：べん】【当：とう】"
+              rom="bentō"
+              tr_en="lunch box"
+              lvl="n5"
+              id="bentō-lunchbox"
+              HIDDEN="true"
+              rem="must not be together with o-bentō; jisho has n3 for bentō, n5 for o-bentō"
+            />
+
+            <!-- eating utensils -->
+            <word
+              w="お【箸：はし】"
+              rom="o-hashi"
+              tr_en="chopsticks"
+              tr_de="Essstäbchen"
+              lvl="n5"
+              category="gastronomy, top-words"
+              id="ohashi-chopsticks"
+              dict="箸"
+              rem="jisho only has hashi"
+            >
+                <see id="hashi-bridge" rem="not auto-generated due to honorific prefix" />
+                <keep_apart_from id="hashi-chopsticks" />
+                <keep_together id="hashi-chopsticks" />
+                <phrase
+                  ph="お【箸：はし】の【使：つか】い【方：かた】"
+                  rom="o-hashi no tsukaikata"
+                  tr_en="how to use chopsticks"
+                  tr_de="wie man Essstäbchen benutzt"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="お【箸：はし】を 【使：つか】って ご【飯：はん】を 【食：た】べました。"
+                  rom="O-hashi o tsukatte gohan o tabemashita."
+                  tr_en="I ate the meal using chopsticks."
+                  tr_de="Ich ass die Mahlzeit mit Stäbchen."
+                  lvl="n5"
+                  origin="Oxford p.41"
+                />
+            </word>
+            <word
+              w="【箸：はし】"
+              rom="hashi"
+              tr_en="chopsticks"
+              tr_de="Essstäbchen"
+              hint_en="usu. accent on first syllable"
+              hint_de="typ. Akzent auf der ersten Silbe"
+              lvl="n5"
+              id="hashi-chopsticks"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="ohashi-chopsticks" />
+                <keep_together id="ohashi-chopsticks" />
+            </word>
+
+            <!-- animals -->
+            <word
+              w="【魚：さかな】"
+              rom="sakana"
+              tr_en="fish"
+              tr_de="Fisch"
+              lvl="n5"
+              category="animal, top-words"
+              id="sakana-fish"
+            >
+                <phrase
+                  ph="【魚：さかな】【料：りょう】【理：り】"
+                  rom="sakana ryōri"
+                  tr_en="fish dish"
+                  tr_de="Fischgericht"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【飛：と】ぶ【魚：さかな】も いる。"
+                  rom="Tobu sakana mo iru."
+                  tr_en="There are even flying fish."
+                  tr_de="Es gibt sogar fliegende Fische."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【猫：ねこ】"
+              rom="neko"
+              tr_en="cat"
+              tr_de="Katze"
+              lvl="n5"
+              category="animal, top-words"
+              id="neko-cat"
+            >
+                <phrase
+                  ph="【寝：ね】ている【猫：ねこ】"
+                  rom="neteiru neko"
+                  tr_en="a sleeping cat"
+                  tr_de="eine schlafende Katze"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】は 【猫：ねこ】を 【家：いえ】の 【外：そと】に 【出：だ】した。"
+                  rom="Watashi wa neko o ie no soto ni dashita."
+                  tr_en="I let the cat out of the house."
+                  tr_de="Ich liess die Katze nach draussen."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- nature -->
+            <word
+              w="【山：やま】"
+              rom="yama"
+              tr_en="mountain"
+              tr_de="Berg"
+              lvl="n5"
+              category="scenery, top-words"
+              id="yama-mountain"
+            >
+                <keep_apart_from id="sangaku-mtchain" />
+                <phrase
+                  ph="【山：やま】【道：みち】"
+                  rom="yamamichi"
+                  tr_en="mountain path"
+                  tr_de="Bergweg"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="その 【山：やま】には 【木：き】が ない。"
+                  rom="Sono yama ni wa ki ga nai."
+                  tr_en="That mountain is bare of trees."
+                  tr_de="Auf diesem Berg hat es keine Bäume."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【富：ふ】【士：じ】【山：さん】よりきれいな【山：やま】がない。"
+                  rom="Fujisan yori kirei na yama ga nai."
+                  tr_en="There's no mountain more beautiful than Mt Fuji."
+                  tr_de="Es gibt keinen schöneren Berg als der Berg Fuji."
+                  lvl="n5"
+                  origin="Oxford p.105"
+                  rem="jisho has nx for Fujisan"
+                />
+            </word>
+            <word
+              w="【海：うみ】"
+              rom="umi"
+              tr_en="sea; ocean"
+              tr_de="Meer; Ozean"
+              lvl="n5"
+              category="beach, top-words"
+              id="umi-sea"
+            >
+                <keep_apart_from id="kaiyō-ocean" />
+                <phrase
+                  ph="【海：うみ】【風：かぜ】"
+                  rom="umikaze"
+                  tr_en="sea breeze"
+                  tr_de="Meeresbrise"
+                  lvl="n5"
+                  origin="ChatGPT"
+                  rem="jisho has both うみかぜ and かいふう; ChatGPT says かいふう = strong wind, うみかぜ = gentle breeze"
+                />
+                <sentence
+                  s="【海：うみ】で 【泳：およ】ぎたい。"
+                  rom="Umi de oyogitai."
+                  tr_en="I want to swim in the ocean."
+                  tr_de="Ich will im Meer schwimmen."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【海：うみ】は 【静：しず】かだった。"
+                  rom="Umi wa shizuka datta."
+                  tr_en="The ocean was calm."
+                  tr_de="Das Meer war ruhig."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【川：かわ】"
+              rom="kawa"
+              tr_en="river; stream"
+              tr_de="Fluss"
+              lvl="n5"
+              category="nature, scenery"
+              id="kawa-river"
+            >
+                <phrase
+                  ph="【魚：さかな】のいる【川：かわ】"
+                  rom="sakana no iru kawa"
+                  tr_en="a river with fish"
+                  tr_de="ein Fluss mit Fisch"
+                  lvl="n5"
+                  origin="ChatGPT"
+                  rem="ChatGPT says 'sakana ga iru kawa' is not grammatically correct"
+                />
+                <sentence
+                  s="【川：かわ】は この 【辺：へん】が 【深：ふか】い。"
+                  rom="Kawa wa kono hen ga fukai."
+                  tr_en="The river is deep in this area."
+                  tr_de="Der Fluss ist tief in dieser Gegend."
+                  allowSpaces="true"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="rated n4 because of fukai"
+                />
+            </word>
+            <word
+              w="【花：はな】"
+              rom="hana"
+              tr_en="flower"
+              tr_de="Blume"
+              lvl="n5"
+              category="plant"
+              id="hana-flower"
+            >
+                <phrase
+                  ph="【白：しろ】い【花：はな】"
+                  rom="shiroi hana"
+                  tr_en="white flowers"
+                  tr_de="weisse Blumen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【庭：にわ】の 【花：はな】は 【全：ぜん】【部：ぶ】 【黄：き】【色：いろ】いです。"
+                  rom="Niwa no hana wa zenbu kiiroi desu."
+                  tr_en="The flowers in the garden are all yellow."
+                  tr_de="Die Blumen im Garten sind alle gelb."
+                  lvl="n5"
+                  origin="lib0 modified"
+                  rem="changed すべて to 全部 to make it n5; changed kiiro to kiiroi, which is equivalent acc. to ChatGPT"
+                  href="https://hinative.com/questions/22828943"
+                />
+            </word>
+            <word
+              w="【雨：あめ】"
+              rom="ame"
+              tr_en="rain"
+              tr_de="Regen"
+              lvl="n5"
+              category="weather, top-words"
+              id="ame-rain"
+            >
+                <phrase
+                  ph="【雨：あめ】の【日：ひ】"
+                  rom="ame no hi"
+                  tr_en="rainy day"
+                  tr_de="Regentag"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【明日：あした】の 【午：ご】【後：ご】は 【雨：あめ】でしょう。"
+                  rom="Ashita no gogo wa ame deshō."
+                  tr_en="It's going to rain tomorrow afternoon (don't you agree?)"
+                  tr_de="Es wird morgen Nachmittag bestimmt regnen."
+                  lvl="n5"
+                  origin="500mon q40"
+                  rem="deshō is tentative (bestimmt); see Oxford p.118"
+                  href="https://hinative.com/en-US/questions/21788336"
+                />
+                <sentence
+                  s="【今日：きょう】は、【一：いち】【日：にち】【中：じゅう】、【雨：あめ】が 【降：ふ】って いました。"
+                  rom="Kyō wa, ichi-nichi-jū, ame ga futte imashita."
+                  tr_en="It rained all day today."
+                  tr_de="Heute hat es den ganzen Tag lang geregnet."
+                  lvl="n5"
+                  origin="500mon q458"
+                  rem="q458 also explains ちゅう vs. じゅう"
+                />
+                <sentence
+                  s="【雨：あめ】が 【降：ふ】っても 【行：い】きます。"
+                  rom="Ame ga futte mo ikimasu."
+                  tr_en="I'll go even if it rains."
+                  tr_de="Ich werde gehen, selbst wenn es regnet."
+                  lvl="n5"
+                  origin="Oxford p.142"
+                />
+            </word>
+            <word
+              w="【雪：ゆき】"
+              rom="yuki"
+              tr_en="snow"
+              tr_de="Schnee"
+              lvl="n5"
+              category="weather"
+              id="yuki-snow"
+            >
+                <phrase
+                  ph="【雪：ゆき】【山：やま】"
+                  rom="yukiyama"
+                  tr_en="snow-covered mountain"
+                  tr_de="Schnee-bedeckter Berg"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【雪：ゆき】が 【降：ふ】っている。"
+                  rom="Yuki ga futte iru."
+                  tr_en="Snow is falling."
+                  tr_de="Es schneit."
+                  lvl="n5"
+                />
+            </word>
+
+            <!-- of a person -->
+            <word
+              w="【名：な】【前：まえ】"
+              rom="namae"
+              tr_en="name; firstname"
+              tr_de="Name; Vorname"
+              lvl="n5"
+              category="top-words"
+              id="namae-name"
+            >
+                <phrase
+                  ph="お【名：な】【前：まえ】を【書：か】く"
+                  rom="o-namae o kaku"
+                  tr_en="to write one's name"
+                  tr_de="den eigenen Namen schreiben"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="お【名：な】【前：まえ】は 【何：なん】ですか。"
+                  rom="O-namae wa nan desu ka?"
+                  tr_en="What's your name?"
+                  tr_de="Wie heisst du?"
+                  lvl="n5"
+                />
+                <!-- strange without context
+                  s="【名：な】【前：まえ】は まだない。"
+                  rom="Namae wa mada nai."
+                  tr_en="I don't have a name yet."
+                  tr_de="Einen Namen habe ich noch nicht."
+                  lvl="n5"
+                  href="https://www.aozora.gr.jp/cards/000148/files/789_14547.html"
+                -->
+            </word>
+            <word
+              w="【手：て】"
+              rom="te"
+              tr_en="hand"
+              tr_de="Hand"
+              lvl="n5"
+              category="body, hands"
+              id="te-hand"
+            >
+                <phrase
+                  ph="【手：て】を【上：あ】げる"
+                  rom="te o ageru"
+                  tr_en="to raise one's hand"
+                  tr_de="die Hand heben"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【手：て】を 【洗：あら】いなさい。"
+                  rom="Te o arai-nasai."
+                  tr_en="Wash your hands."
+                  tr_de="Wasche deine Hände."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【中：なか】【村：むら】さんは【私：わたし】の【手：て】を【取：と】った。"
+                  rom="Nakamura-san wa watashi no te o totta."
+                  tr_en="Mrs Nakamura took my hand."
+                  tr_de="Frau Nakamura nahm meine Hand."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+
+            <!-- family -->
+            <word
+              w="お【父：とう】さん"
+              rom="o-tōsan"
+              tr_en="father"
+              tr_de="Vater"
+              hint_en="honorific"
+              hint_de="ehrend"
+              lvl="n5"
+              category="family, top-words"
+              id="otōsan-father"
+            >
+                <keep_apart_from id="chichi-father" />
+                <keep_apart_from id="chichioya-father" />
+                <phrase
+                  ph="お【父：とう】さんに【電：でん】【話：わ】する"
+                  rom="o-tōsan ni denwa suru"
+                  tr_en="to call one's father on phone"
+                  tr_de="mit dem Vater telefonieren"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="お【父：とう】さんは どこですか。"
+                  rom="O-tōsan wa doko desu ka?"
+                  tr_en="Where is father?"
+                  tr_de="Wo ist Vater?"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="お【父：とう】さんは お【幾：いく】つですか。"
+                  rom="O-tōsan wa o-ikutsu desu ka?"
+                  tr_en="How old is your father?"
+                  tr_de="Wie alt ist dein Vater?"
+                  lvl="n5"
+                  origin="duolingo"
+                />
+            </word>
+            <word
+              w="お【母：かあ】さん"
+              rom="o-kāsan"
+              tr_en="mother"
+              tr_de="Mutter"
+              hint_en="honorific"
+              hint_de="ehrend"
+              lvl="n5"
+              category="family, top-words"
+              id="okāsan-mother"
+            >
+                <keep_apart_from id="haha-mother" />
+                <keep_apart_from id="hahaoya-mother" />
+                <phrase
+                  ph="お【母：かあ】さんと【一：いっ】【緒：しょ】に【買：か】い【物：もの】に【行：い】く"
+                  rom="o-kāsan to issho ni kaimono ni iku"
+                  tr_en="to go shopping together with mother"
+                  tr_de="mit der Mutter zusammen einkaufen gehen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ハルトは お【母：かあ】さんより 【背：せ】が 【高：たか】い。"
+                  rom="Haruto wa o-kāsan yori se ga takai."
+                  tr_en="Haruto is taller than his mother."
+                  tr_de="Haruto ist grösser als seine Mutter."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="お【兄：にい】さん"
+              rom="o-nīsan"
+              tr_en="older brother"
+              tr_de="älterer Bruder"
+              hint_en="honorific"
+              hint_de="ehrend"
+              lvl="n5"
+              category="family"
+              id="onīsan-olderbrother"
+            >
+                <phrase
+                  ph="お【兄：にい】さんと【一：いっ】【緒：しょ】に【映：えい】【画：が】を【見：み】る"
+                  rom="o-nīsan to issho ni eiga o miru"
+                  tr_en="to watch a movie together with one's older brother"
+                  tr_de="mit dem älteren Bruder zusammen einen Film schauen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="あなたの お【兄：にい】さんは 【料：りょう】【理：り】が 【上：じょう】【手：ず】だ。"
+                  rom="Anata no o-nīsan wa ryōri ga jōzu da."
+                  tr_en="Your older brother is good at cooking."
+                  tr_de="Dein älterer Bruder kann gut kochen."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="お【姉：ねえ】さん"
+              rom="o-nēsan"
+              tr_en="older sister"
+              tr_de="ältere Schwester"
+              hint_en="honorific"
+              hint_de="ehrend"
+              lvl="n5"
+              category="family"
+              id="onēsan-oldersister"
+            >
+                <phrase
+                  ph="お【姉：ねえ】さんに【手：て】【紙：がみ】を【書：か】く"
+                  rom="o-nēsan ni tegami o kaku"
+                  tr_en="to write a letter to one's older sister"
+                  tr_de="der älteren Schwester einen Brief schreiben"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="お【姉：ねえ】さんは お【元：げん】【気：き】ですか。"
+                  rom="O-nēsan wa o-genki desu ka?"
+                  tr_en="How is your older sister?"
+                  tr_de="Wie geht's deiner älteren Schwester?"
+                  lvl="n5"
+                  origin="500mon q138"
+                />
+                <sentence
+                  s="あなたの お【姉：ねえ】さんは 【上：じょう】【手：ず】に 【泳：およ】げないのですか。"
+                  rom="Anata no o-nēsan wa jōzu ni oyogenai no desu ka?"
+                  tr_en="Your older sister can't swim well, can she?"
+                  tr_de="Deine ältere Schwester kann nicht gut schwimmen, oder?"
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【弟：おとうと】"
+              rom="otōto"
+              tr_en="younger brother"
+              tr_de="jüngerer Bruder"
+              hint_en="humble"
+              hint_de="bescheiden"
+              lvl="n5"
+              category="family"
+              id="otōto-youngerbro"
+            >
+                <phrase
+                  ph="【弟：おとうと】と【一：いっ】【緒：しょ】に【遊：あそ】ぶ"
+                  rom="otōto to issho ni asobu"
+                  tr_en="to play together with the younger brother"
+                  tr_de="mit dem jüngeren Bruder zusammen spielen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【弟：おとうと】は まだ 【寝：ね】て いる。"
+                  rom="Otōto wa mada nete iru."
+                  tr_en="My younger brother is still sleeping."
+                  tr_de="Mein jüngerer Bruder schläft noch."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【妹：いもうと】"
+              rom="imōto"
+              tr_en="younger sister"
+              tr_de="jüngere Schwester"
+              hint_en="humble"
+              hint_de="bescheiden"
+              lvl="n5"
+              category="family"
+              id="imōto-youngersister"
+            >
+                <phrase
+                  ph="【妹：いもうと】にピアノを【教：おし】える"
+                  rom="imōto ni piano o oshieru"
+                  tr_en="to teach one's younger sister (to play) the piano"
+                  tr_de="der jüngeren Schwester Klavier beibringen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="カオルさんは 【妹：いもうと】が いません。"
+                  rom="Kaoru-san wa imōto ga imasen."
+                  tr_en="Kaoru does not have a younger sister."
+                  tr_de="Kaoru hat keine jüngere Schwester."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="あの 【子：こ】は 【私：わたし】の 【妹：いもうと】です。"
+                  rom="Ano ko wa watashi no imōto desu."
+                  tr_en="That child is my little sister."
+                  tr_de="Das Kind dort drüben ist meine kleine Schwester."
+                  lvl="n5"
+                  origin="500mon q58"
+                />
+            </word>
+            <word
+              w="お【祖父：じい】さん"
+              rom="o-jīsan"
+              tr_en="grandfather"
+              tr_de="Grossvater"
+              hint_en="honorific; may also be used for 'old man'"
+              hint_de="ehrend; kann auch einfach 'alter Mann' bedeuten"
+              hasCombinedReading="true"
+              usuallyInKana="true"
+              lvl="n5"
+              category="family, people"
+              id="ojīsan-grandfather"
+              rem="jisho has n1, but n5 for o-bāsan"
+            >
+                <phrase
+                  ph="【元：げん】【気：き】なおじいさん"
+                  rom="genki na o-jīsan"
+                  tr_en="a lively grandfather"
+                  tr_de="ein rüstiger Grossvater"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="おじいさんは 【少：すこ】し 【耳：みみ】が 【遠：とお】い。"
+                  rom="O-jīsan wa sukoshi mimi ga tōi."
+                  tr_en="My grandfather is a little hard of hearing."
+                  tr_de="Mein Grossvater ist etwas schwerhörig."
+                  explanation_en="「遠い」actually means 'far, distant'"
+                  explanation_de="「遠い」bedeutet eigentlich 'weit, distant'"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <!--
+                  Isn't there a particle missing? o-jīchan ni... to...?
+                  s="おじいちゃん【遊：あそ】んだのを 【覚：おぼ】えてる。"
+                  rom="O-jīchan asonda no o oboeteru."
+                  tr_en="I remember playing with my grandpa."
+                  tr_de="Ich erinnere mich an die Zeit, als Opa mit mir spielte."
+                  lvl="n1"
+                  rem="rated n1 because of o-jīchan"
+                  origin="Miku"
+                  href="https://youtu.be/-B4W64brkcc"
+                -->
+            </word>
+            <word
+              w="お【祖母：ばあ】さん"
+              rom="o-bāsan"
+              tr_en="grandmother"
+              tr_de="Grossmutter"
+              hint_en="honorific; may also be used for 'old lady'"
+              hint_de="ehrend; kann auch einfach 'ältere Dame' bedeuten"
+              hasCombinedReading="true"
+              usuallyInKana="true"
+              lvl="n5"
+              category="family, people"
+              id="obāsan-grandmother"
+            >
+                <phrase
+                  ph="おばあさんの【話：はなし】を【聞：き】く"
+                  rom="o-bāsan no hanashi o kiku"
+                  tr_en="to listen to grandmother's stories"
+                  tr_de="den Geschichten von Grossmutter zuhören"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="おばあさんは バスから 【降：お】りた。"
+                  rom="O-bāsan wa basu kara orita."
+                  tr_en="The old lady got off the bus."
+                  tr_de="Die ältere Dame stieg aus dem Bus aus."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <!--
+                  s="おばあさんは【病：びょう】【気：き】で【来：こ】られない。"
+                  rom="O-bāsan wa byōki de korarenai."
+                  tr_en="Grandma can't come, because she's ill."
+                  tr_de="Grossmutter kann nicht kommen, weil sie krank ist."
+                  lvl="n4"
+                  origin="Oxford p.68"
+                -->
+            </word>
+            <word
+              w="【伯父：おじ】さん"
+              rom="oji-san"
+              tr_en="uncle"
+              tr_de="Onkel"
+              hint_en="honorific"
+              hint_de="ehrend"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              lvl="n5"
+              category="family, people"
+              id="ojisan-uncle"
+              rem="jisho has n5 for oba-san, n2 for oji-san"
+            >
+                <!-- 伯父さん is older than one's parent, and 叔父さん is younger -->
+                <phrase
+                  ph="おじさんの【古：ふる】い【車：くるま】"
+                  rom="oji-san no furui kuruma"
+                  tr_en="uncle's old car"
+                  tr_de="das alte Auto meines Onkels"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="おじさんの 【家：か】【族：ぞく】は 【多：おお】い。"
+                  rom="Oji-san no kazoku wa ōi."
+                  tr_en="My uncle has a large family."
+                  tr_de="Mein Onkel hat eine grosse Familie."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【伯父：おじ】"
+              rom="oji"
+              tr_en="uncle"
+              hint_en="one's uncle"
+              lvl="n5"
+              id="oji-uncle"
+              category="family, people"
+              hasCombinedReading="true"
+              HIDDEN="true"
+              rem="must not be together with oji-san; jisho has n5 for oba-san, n2 for oji-san, nx for oji"
+            >
+                <!-- 伯父 is older than one's parent, and 叔父 is younger -->
+            </word>
+            <word
+              w="【伯母：おば】さん"
+              rom="oba-san"
+              tr_en="aunt"
+              tr_de="Tante"
+              hint_en="honorific"
+              hint_de="ehrend"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              lvl="n5"
+              category="family, people"
+              id="obasan-aunt"
+            >
+                <!-- 伯母さん is older than one's parent, and 叔母さん is younger -->
+                <phrase
+                  ph="おばさんと【一：いっ】【緒：しょ】に【散：さん】【歩：ぽ】する"
+                  rom="oba-san to issho ni sanpo suru"
+                  tr_en="to go for a walk together with aunt"
+                  tr_de="mit der Tante zusammen einen Spaziergang machen"
+                  lvl="n5"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ハルトの おばさんは 【若：わか】く 【見：み】える。"
+                  rom="Haruto no oba-san wa wakaku mieru."
+                  tr_en="Haruto's aunt looks young."
+                  tr_de="Harutos Tante sieht jung aus."
+                  lvl="n4"
+                  allowSpaces="true"
+                  origin="lib0 modified"
+                  rem="rated n4 because of mieru"
+                  href="https://hinative.com/questions/22572169"
+                />
+            </word>
+            <word
+              w="【伯母：おば】"
+              rom="oba"
+              tr_en="aunt"
+              hint_en="one's aunt"
+              lvl="n5"
+              category="family, people"
+              id="oba-aunt"
+              hasCombinedReading="true"
+              HIDDEN="true"
+              rem="must not be together with oba-san; jisho has n5 for oba-san, nx for oba"
+            >
+                <!-- 伯母 is older than one's parent, and 叔母 is younger -->
+            </word>
+        </section>
+    </unit>
+</vocabulary>

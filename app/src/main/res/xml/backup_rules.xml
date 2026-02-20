@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+    backup_rules.xml
+    See AndroidManifest.xml android:fullBackupContent
+    This is only used for Android api level 30 and below.
+    See https://developer.android.com/guide/topics/data/autobackup.html
+-->
+<full-backup-content>
+    <include
+      domain="sharedpref"
+      path="."
+      />
+    <include
+      domain="file"
+      path="."
+      />
+</full-backup-content>

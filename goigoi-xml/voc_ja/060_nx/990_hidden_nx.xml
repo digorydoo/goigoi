@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Hidden Non-JLPT words"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="-"
+      HIDDEN="true"
+      translations="en"
+      ignoresCombinedReadings="false"
+    >
+        <section>
+            <!-- TODO make this visible somehwere -->
+            <word
+              w="【年：ねん】【々：ねん】"
+              rom="nen-nen"
+              tr_en="annually; year by year"
+              tr_de="jährlich; Jahr für Jahr"
+              lvl="-"
+              id="nennen-annually"
+            >
+                <sentence
+                  s="あの【大：だい】【学：がく】は【年：ねん】【々：ねん】と【大：おお】きくなっていく。"
+                  rom="Ano daigaku wa nen-nen to ōkiku natte iku."
+                  tr_en="That university gets bigger year by year."
+                  tr_de="Diese Univsität dort wird Jahr für Jahr grösser."
+                  lvl="-"
+                  origin="Oxford p.49"
+                />
+            </word>
+
+            <!-- just to provide the reading for the furigana check of sentences and phrases -->
+            <word
+              w="【渋：しぶ】【谷：や】"
+              rom="Shibuya"
+              tr_en="ward of Tokyo"
+              lvl="-"
+            />
+            <word
+              w="【富：ふ】【士：じ】【山：さん】"
+              rom="Fujisan"
+              tr_en="Mt Fuji"
+              lvl="-"
+            />
+            <word
+              w="【再：さい】【開：かい】"
+              rom="saikai"
+              tr_en="reopening"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="-"
+              id="saikai-reopening"
+            >
+                <sentence
+                  s="【学：がっ】【校：こう】は【九：く】【月：がつ】に【再：さい】【開：かい】される。"
+                  rom="Gakkō wa ku-gatsu ni saikai sareru."
+                  tr_en="School reopens in September."
+                  tr_de="Die Schule öffnet im September wieder."
+                  lvl="-"
+                  origin="lib0"
+                  rem="される is passive form of する; jisho has nx for 再開 (reopening)"
+                />
+            </word>
+            <word
+              w="【束：たば】ねる"
+              rom="tabaneru"
+              tr_en="to tie up in a bundle (hair, straw, etc.); to fold (one's arms)"
+              lvl="-"
+              id="tabaneru-tie"
+            />
+            <word
+              w="【新：しん】【型：がた】"
+              rom="shingata"
+              tr_en="new type; new model"
+              lvl="-"
+              id="shingata-newtype"
+            />
+            <word
+              w="【犬：いぬ】【小：ご】【屋：や】"
+              rom="inugoya"
+              tr_en="dog kennel"
+              tr_de="Hundehütte"
+              lvl="-"
+              rem="phrase of koya-shed"
+            />
+            <word
+              w="【水：みず】【不：ぶ】【足：そく】"
+              rom="mizubusoku"
+              tr_en="water shortage; insufficient water supply"
+              lvl="-"
+              rem="phrase of fusoku-shortage"
+            />
+            <word
+              w="【本：もと】【生：な】り"
+              rom="motonari"
+              tr_en="fruit grown near the root"
+              lvl="-"
+              rem="to provide the reading of 本・もと"
+            />
+            <word
+              w="【釣：つ】り【船：ぶね】"
+              rom="tsuribune"
+              tr_en="fishing boat"
+              lvl="-"
+              rem="phrase of tsuri-fishing"
+            />
+        </section>
+    </unit>
+</vocabulary>

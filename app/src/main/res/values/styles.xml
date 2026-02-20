@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--
+        Note: If you use the dot notation to extend a style, and you also include the parent
+        attribute, then the parent styles override any styles inherited through the dot notation.
+    -->
+    <!-- ======================================================================================= -->
+
+    <!-- These are the styles of my custom SplashActivity -->
+    <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/grey_900</item>
+        <item name="android:statusBarColor">@color/grey_900</item>
+        <item name="android:navigationBarColor">@color/grey_900</item>
+        <item name="android:colorPrimary">@color/green_800</item>
+        <item name="android:colorPrimaryDark">@color/green_900</item>
+    </style>
+
+    <!-- These styles are applied to the official splash screen -->
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/grey_900</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/no_splash_icon</item>
+        <item name="windowSplashScreenAnimationDuration">10</item>
+        <item name="postSplashScreenTheme">@style/SplashTheme</item>
+    </style>
+
+    <!-- ======================================================================================= -->
+
+    <style name="MyBaseTheme.ButtonStyle" parent="Widget.AppCompat.Button.Colored">
+        <item name="android:background">@drawable/rounded_btn_shape</item>
+        <item name="android:backgroundTint">@color/green_800</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MyBaseTheme.SpinnerStyle" parent="Base.Widget.AppCompat.Spinner.Underlined">
+        <item name="android:dropDownVerticalOffset">-1dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="MyBaseTheme.SpinnerItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <!-- This is the style of the drop-down's text when collapsed -->
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="MyBaseTheme.SpinnerDropDownItemStyle" parent="Widget.AppCompat.DropDownItem.Spinner">
+        <!-- This is the style of the drop-down's menu items -->
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:layout_marginRight">64dp</item>
+    </style>
+
+    <style name="MyBaseTheme.PrimaryTextStyle" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textSize">17sp</item>
+    </style>
+
+    <style name="MyBaseTheme.SecondaryTextStyle" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="MyBaseTheme.SerifSecondaryTextStyle" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:typeface">serif</item>
+    </style>
+
+    <style name="MyBaseTheme.BadgeStyle" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textSize">10sp</item>
+        <item name="android:background">@drawable/badge</item>
+        <item name="android:textColor">?attr/myBadgeFgColour</item>
+        <item name="android:paddingStart">6dp</item>
+        <item name="android:paddingEnd">6dp</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:paddingBottom">1dp</item>
+    </style>
+
+    <style name="MyBaseTheme.CheckBoxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Widget.PopupMenu.Large</item>
+        <item name="android:buttonTint">@color/green_800</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="MyBaseTheme.RadioButtonStyle" parent="Widget.AppCompat.CompoundButton.RadioButton">
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Widget.PopupMenu.Large</item>
+        <item name="android:buttonTint">@color/green_800</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+    </style>
+
+    <style name="MyBaseTheme.ChipGroupStyle" parent="Theme.MaterialComponents">
+        <item name="chipSpacingHorizontal">0dp</item><!-- overwritten in Keyboard.kt -->
+        <item name="chipSpacingVertical">0dp</item><!-- overwritten in Keyboard.kt -->
+        <item name="selectionRequired">false</item>
+    </style>
+
+    <style name="MyBaseTheme.ChipStyle" parent="Theme.MaterialComponents">
+        <item name="chipCornerRadius">16dp</item>
+        <item name="chipStartPadding">8dp</item><!-- overwritten for icons in ProgStudyActivity.kt -->
+        <item name="chipEndPadding">8dp</item><!-- rarely relevant since ProgStudyActivity.kt adds a minWidth -->
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+        <item name="chipMinHeight">8dp</item><!-- overwritten in ProgStudyActivity.kt -->
+        <item name="android:minWidth">24dp</item><!-- overwritten in ProgStudyActivity.kt -->
+        <item name="android:textSize">24sp</item><!-- overwritten in Keyboard.kt -->
+        <item name="android:textAlignment">center</item>
+        <item name="android:checkable">false</item>
+    </style>
+
+    <style name="MyBaseTheme.SnackbarStyle" parent="Theme.AppCompat.Light.Dialog">
+        <item name="android:background">@color/green_800</item>
+    </style>
+
+    <style name="MyBaseTheme.SnackbarTextViewStyle" parent="TextAppearance.AppCompat.Widget.DropDownItem">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+    </style>
+
+    <style name="MyBaseTheme.SnackbarButtonStyle" parent="Widget.AppCompat.Button">
+        <!-- This style must be defined for SnackbarTextViewStyle to work! -->
+    </style>
+
+    <!-- ======================================================================================= -->
+
+    <!--
+        NOTE: Since we use material components, we should derive our theme from
+        Theme.MaterialComponents. However, doing so messes up some styles (e.g.
+        the label of checkboxes will be too small, secondaryText on AppBar will
+        be too large, and other issues). This proved to be hard to fix. For
+        now, we derive from AppCompat theme, and use Theme.MaterialComponents
+        as a separate theme for the material components.
+    -->
+    <style name="MyBaseLightTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- flags -->
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- colours -->
+        <item name="android:colorAccent">@color/green_800</item>
+        <item name="android:colorPrimary">@color/green_800</item>
+        <item name="android:colorPrimaryDark">@color/green_900</item>
+        <item name="android:navigationBarColor">@color/grey_200</item>
+        <item name="android:statusBarColor">@color/green_800</item>
+        <item name="android:textColor">@color/opacity_black_dd</item>
+        <item name="android:textColorPrimary">@color/opacity_black_dd</item>
+        <item name="android:windowBackground">@color/grey_50</item>
+        <item name="activeIconTintColour">@color/opacity_black_dd</item>
+        <item name="appBarColour">@color/green_800</item>
+        <item name="appBarPrimaryTextColour">@color/white</item>
+        <item name="appBarSecondaryTextColour">@color/opacity_white_77</item>
+        <item name="behindCardsColour">@color/grey_300</item>
+        <item name="bigRingTextColour">@color/opacity_black_dd</item>
+        <item name="bigRingTrackColour">@color/grey_200</item>
+        <item name="bigRingTrailColour">@color/grey_400</item>
+        <item name="bubbleBgColour">@color/grey_250</item>
+        <item name="bubbleFgColour">@color/grey_550</item>
+        <item name="bubbleOutlineColour">@color/grey_300</item>
+        <item name="colorAccent">@color/green_800</item>
+        <item name="colorPrimary">@color/green_800</item>
+        <item name="colorPrimaryDark">@color/green_900</item>
+        <item name="decorativeIconTintColour">@color/opacity_black_89</item>
+        <item name="dividerColour">@color/grey_200</item>
+        <item name="fabGlowColour">@color/grey_900</item>
+        <item name="fabShimColour">@color/grey_50</item>
+        <item name="flashBgColour">@color/opacity_black_89</item>
+        <item name="flashFgColour">@color/grey_50</item>
+        <item name="hintBalloonBgColour">@color/white</item>
+        <item name="hintBalloonOutlineColour">@color/grey_200</item>
+        <item name="iconBrightColour">@color/white</item>
+        <item name="iconOutlineColour">@color/opacity_black_09</item>
+        <item name="keyLensBgColour">@color/green_800</item>
+        <item name="keyLensFgColour">@color/white</item>
+        <item name="myBadgeBgColour">@color/grey_300</item>
+        <item name="myBadgeFgColour">@color/opacity_black_dd</item>
+        <item name="myFaintTextColour">@color/opacity_black_1f</item>
+        <item name="myPrimaryTextColour">@color/opacity_black_dd</item>
+        <item name="mySecondaryTextColour">@color/opacity_black_89</item>
+        <item name="ringTrackColour">@color/grey_200</item>
+        <item name="ringTrailColour">@color/grey_400</item>
+        <item name="sheetBgColour">@color/white</item>
+        <item name="sheetPrimaryTextColour">@color/opacity_black_dd</item>
+        <item name="sheetSecondaryTextColour">@color/opacity_black_89</item>
+        <item name="topicSheetHeadColour">@color/grey_50</item>
+        <item name="zzzBgColour">@color/grey_300</item>
+        <item name="zzzFgColour">@color/grey_500</item>
+
+        <!-- dimensions -->
+        <item name="mainActivityLRMargin">0dp</item>
+        <item name="topicActivityLRMargin">0dp</item>
+        <item name="progStudyElementSpacing">2dp</item>
+        <item name="progStudyKeyboardLRPadding">8dp</item>
+        <item name="progStudyKeyboardTBPadding">4dp</item>
+        <item name="progStudyAnswerTextSize">24sp</item>
+        <item name="progStudyWhatToDoTextSize">14sp</item>
+        <item name="progStudyRevealedKanjiOrKanaTextSize">20sp</item>
+        <item name="dayLabelTextSize">14sp</item>
+        <item name="bigRingSize">192dp</item>
+
+        <!-- styles -->
+        <item name="android:buttonStyle">@style/MyBaseTheme.ButtonStyle</item>
+        <item name="android:checkboxStyle">@style/MyLightTheme.CheckBoxStyle</item>
+        <item name="android:radioButtonStyle">@style/MyLightTheme.RadioButtonStyle</item>
+        <item name="android:spinnerDropDownItemStyle">@style/MyLightTheme.SpinnerDropDownItemStyle</item>
+        <item name="android:spinnerItemStyle">@style/MyLightTheme.SpinnerItemStyle</item>
+        <item name="bottomSheetDialogTheme">@style/MyLightTheme.BottomSheetDialog</item>
+        <item name="editTextStyle">@style/MyLightTheme.EditTextStyle</item>
+        <item name="myAppBarTheme">@style/MyLightTheme.AppBarTheme</item>
+        <item name="myBadgeStyle">@style/MyBaseTheme.BadgeStyle</item>
+        <item name="myCardViewStyle">@style/MyLightTheme.CardViewStyle</item>
+        <item name="myDialogStyle">@style/MyLightTheme.DialogStyle</item>
+        <item name="myPrimaryTextStyle">@style/MyLightTheme.PrimaryTextStyle</item>
+        <item name="mySecondaryTextStyle">@style/MyLightTheme.SecondaryTextStyle</item>
+        <item name="mySubheaderStyle">@style/MyLightTheme.SubheaderStyle</item>
+        <item name="myTabLayoutStyle">@style/MyLightTheme.TabLayoutStyle</item>
+        <item name="seamlessAppBarTheme">@style/MyLightTheme.SeamlessAppBarTheme</item>
+        <item name="serifSecondaryTextStyle">@style/MyLightTheme.SerifSecondaryTextStyle</item>
+        <item name="snackbarStyle">@style/MyBaseTheme.SnackbarStyle</item>
+        <item name="snackbarTextViewStyle">@style/MyBaseTheme.SnackbarTextViewStyle</item>
+        <item name="snackbarButtonStyle">@style/MyBaseTheme.SnackbarButtonStyle</item>
+        <item name="spinnerStyle">@style/MyLightTheme.SpinnerStyle</item>
+        <item name="chipGroupStyle">@style/MyBaseTheme.ChipGroupStyle</item>
+        <item name="chipStyle">@style/MyLightTheme.ChipStyle</item>
+
+        <!-- drawables -->
+        <item name="addIcon">@drawable/ic_add_black_24dp</item>
+    </style>
+
+    <style name="MyLightTheme" parent="MyBaseLightTheme">
+        <!-- Leave this blank, platform-specific styles will be added here -->
+    </style>
+
+    <style name="MyLightTheme.AppBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <style name="MyLightTheme.SeamlessAppBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/opacity_black_dd</item>
+        <item name="android:textColorSecondary">@color/opacity_black_89</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <style name="MyLightTheme.PrimaryTextStyle" parent="MyBaseTheme.PrimaryTextStyle">
+        <item name="android:textColor">@color/opacity_black_dd</item>
+    </style>
+
+    <style name="MyLightTheme.SecondaryTextStyle" parent="MyBaseTheme.SecondaryTextStyle">
+        <item name="android:textColor">@color/opacity_black_89</item>
+    </style>
+
+    <style name="MyLightTheme.SerifSecondaryTextStyle" parent="MyBaseTheme.SerifSecondaryTextStyle">
+        <item name="android:textColor">@color/opacity_black_89</item>
+    </style>
+
+    <style name="MyLightTheme.SubheaderStyle" parent="MyBaseTheme.SecondaryTextStyle">
+        <item name="android:textColor">@color/opacity_black_89</item>
+    </style>
+
+    <style name="MyLightTheme.CardViewStyle" parent="CardView">
+        <item name="cardBackgroundColor">@color/grey_50</item>
+    </style>
+
+    <style name="MyLightTheme.CheckBoxStyle" parent="MyBaseTheme.CheckBoxStyle">
+        <item name="android:textColor">@color/stateful_text_light</item>
+    </style>
+
+    <style name="MyLightTheme.RadioButtonStyle" parent="MyBaseTheme.RadioButtonStyle">
+        <item name="android:textColor">@color/stateful_text_light</item>
+    </style>
+
+    <style name="MyLightTheme.ChipStyle" parent="MyBaseTheme.ChipStyle">
+        <item name="android:textColor">@color/opacity_black_dd</item>
+        <item name="chipBackgroundColor">@color/white</item>
+        <item name="rippleColor">@color/grey_500</item>
+    </style>
+
+    <style name="MyLightTheme.EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/opacity_black_dd</item>
+    </style>
+
+    <style name="MyLightTheme.TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="android:background">@color/grey_200</item>
+        <item name="tabSelectedTextColor">@color/opacity_black_dd</item>
+        <item name="tabIndicatorColor">@color/green_800</item>
+        <item name="tabTextAppearance">@style/MyLightTheme.TabTextAppearance</item>
+    </style>
+
+    <style name="MyLightTheme.TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/opacity_black_89</item>
+    </style>
+
+    <style name="MyLightTheme.FlatButtonStyle" parent="Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/green_800</item>
+    </style>
+
+    <style name="MyLightTheme.SpinnerStyle" parent="MyBaseTheme.SpinnerStyle">
+        <item name="android:background">@drawable/spinner_bgnd_light</item>
+    </style>
+
+    <style name="MyLightTheme.SpinnerItemStyle" parent="MyBaseTheme.SpinnerItemStyle">
+        <item name="android:textColor">@color/stateful_text_light</item>
+    </style>
+
+    <style name="MyLightTheme.SpinnerDropDownItemStyle" parent="MyBaseTheme.SpinnerDropDownItemStyle">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/opacity_black_dd</item>
+    </style>
+
+    <style name="MyLightTheme.PopupMenuStyle" parent="Widget.AppCompat.Light.PopupMenu" tools:keep="@style/MyLightTheme_PopupMenuStyle">
+        <item name="android:popupBackground">@color/white</item>
+    </style>
+
+    <style name="MyLightTheme.DialogStyle" parent="Widget.AppCompat.Light.PopupMenu">
+        <item name="colorBackgroundFloating">@color/white</item>
+        <item name="android:textColor">@color/opacity_black_dd</item>
+        <item name="android:buttonStyle">@style/MyLightTheme.FlatButtonStyle</item>
+    </style>
+
+    <style name="MyLightTheme.BottomSheetDialog" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <!-- this is a theme, i.e. styles are propagated to children -->
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/MyLightTheme.SheetStyle</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/grey_200</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="MyLightTheme.SheetStyle">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- ======================================================================================= -->
+
+    <style name="MyBaseDarkTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- flags -->
+        <item name="android:windowLightStatusBar">false</item>
+
+        <!-- colours -->
+        <item name="android:colorAccent">@color/green_800</item>
+        <item name="android:colorPrimary">@color/green_800</item>
+        <item name="android:colorPrimaryDark">@color/green_900</item>
+        <item name="android:navigationBarColor">@color/grey_950</item>
+        <item name="android:statusBarColor">@color/grey_925</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:windowBackground">@color/grey_900</item>
+        <item name="activeIconTintColour">@color/white</item>
+        <item name="appBarColour">@color/grey_925</item>
+        <item name="appBarPrimaryTextColour">@color/grey_500</item>
+        <item name="appBarSecondaryTextColour">@color/grey_600</item>
+        <item name="behindCardsColour">@color/grey_950</item>
+        <item name="bigRingTextColour">@color/grey_500</item>
+        <item name="bigRingTrackColour">@color/grey_950</item>
+        <item name="bigRingTrailColour">@color/grey_700</item>
+        <item name="bubbleBgColour">@color/grey_950</item>
+        <item name="bubbleFgColour">@color/grey_700</item>
+        <item name="bubbleOutlineColour">@color/black</item>
+        <item name="colorAccent">@color/green_800</item>
+        <item name="colorPrimary">@color/green_800</item>
+        <item name="colorPrimaryDark">@color/green_900</item>
+        <item name="decorativeIconTintColour">@color/white</item>
+        <item name="dividerColour">@color/opacity_black_42</item>
+        <item name="fabGlowColour">@color/grey_400</item>
+        <item name="fabShimColour">@color/grey_900</item>
+        <item name="flashBgColour">@color/grey_700</item>
+        <item name="flashFgColour">@color/grey_200</item>
+        <item name="hintBalloonBgColour">@color/green_800</item>
+        <item name="hintBalloonOutlineColour">@color/opacity_black_1f</item>
+        <item name="iconBrightColour">@color/grey_200</item>
+        <item name="iconOutlineColour">@color/black</item>
+        <item name="keyLensBgColour">@color/grey_925</item>
+        <item name="keyLensFgColour">@color/white</item>
+        <item name="myBadgeBgColour">@color/green_800</item>
+        <item name="myBadgeFgColour">@color/white</item>
+        <item name="myFaintTextColour">@color/opacity_white_22</item>
+        <item name="myPrimaryTextColour">@color/white</item>
+        <item name="mySecondaryTextColour">@color/opacity_white_77</item>
+        <item name="ringTrackColour">@color/grey_950</item>
+        <item name="ringTrailColour">@color/grey_600</item>
+        <item name="sheetBgColour">@color/grey_800</item>
+        <item name="sheetPrimaryTextColour">@color/white</item>
+        <item name="sheetSecondaryTextColour">@color/opacity_white_77</item>
+        <item name="topicSheetHeadColour">@color/grey_900</item>
+        <item name="zzzBgColour">@color/grey_800</item>
+        <item name="zzzFgColour">@color/grey_500</item>
+
+        <!-- dimensions -->
+        <item name="mainActivityLRMargin">0dp</item>
+        <item name="topicActivityLRMargin">0dp</item>
+        <item name="progStudyElementSpacing">2dp</item>
+        <item name="progStudyKeyboardLRPadding">8dp</item>
+        <item name="progStudyKeyboardTBPadding">4dp</item>
+        <item name="progStudyAnswerTextSize">24sp</item>
+        <item name="progStudyWhatToDoTextSize">14sp</item>
+        <item name="progStudyRevealedKanjiOrKanaTextSize">20sp</item>
+        <item name="dayLabelTextSize">14sp</item>
+        <item name="bigRingSize">192dp</item>
+
+        <!-- styles -->
+        <item name="android:buttonStyle">@style/MyBaseTheme.ButtonStyle</item>
+        <item name="android:checkboxStyle">@style/MyDarkTheme.CheckBoxStyle</item>
+        <item name="android:popupMenuStyle">@style/MyDarkTheme.PopupMenuStyle</item>
+        <item name="android:radioButtonStyle">@style/MyDarkTheme.RadioButtonStyle</item>
+        <item name="android:spinnerDropDownItemStyle">@style/MyDarkTheme.SpinnerDropDownItemStyle</item>
+        <item name="android:spinnerItemStyle">@style/MyDarkTheme.SpinnerItemStyle</item>
+        <item name="bottomSheetDialogTheme">@style/MyDarkTheme.BottomSheetDialog</item>
+        <item name="editTextStyle">@style/MyDarkTheme.EditTextStyle</item>
+        <item name="myAppBarTheme">@style/MyDarkTheme.AppBarTheme</item>
+        <item name="myBadgeStyle">@style/MyBaseTheme.BadgeStyle</item>
+        <item name="myCardViewStyle">@style/MyDarkTheme.CardViewStyle</item>
+        <item name="myDialogStyle">@style/MyDarkTheme.DialogStyle</item>
+        <item name="myPrimaryTextStyle">@style/MyDarkTheme.PrimaryTextStyle</item>
+        <item name="mySecondaryTextStyle">@style/MyDarkTheme.SecondaryTextStyle</item>
+        <item name="mySubheaderStyle">@style/MyDarkTheme.SubheaderStyle</item>
+        <item name="myTabLayoutStyle">@style/MyDarkTheme.TabLayoutStyle</item>
+        <item name="popupMenuStyle">@style/MyDarkTheme.PopupMenuStyle</item>
+        <item name="seamlessAppBarTheme">@style/MyDarkTheme.SeamlessAppBarTheme</item>
+        <item name="serifSecondaryTextStyle">@style/MyDarkTheme.SerifSecondaryTextStyle</item>
+        <item name="snackbarStyle">@style/MyBaseTheme.SnackbarStyle</item>
+        <item name="snackbarTextViewStyle">@style/MyBaseTheme.SnackbarTextViewStyle</item>
+        <item name="snackbarButtonStyle">@style/MyBaseTheme.SnackbarButtonStyle</item>
+        <item name="spinnerStyle">@style/MyDarkTheme.SpinnerStyle</item>
+        <item name="chipGroupStyle">@style/MyBaseTheme.ChipGroupStyle</item>
+        <item name="chipStyle">@style/MyDarkTheme.ChipStyle</item>
+
+        <!-- drawables -->
+        <item name="addIcon">@drawable/ic_add_white_24dp</item>
+    </style>
+
+    <style name="MyDarkTheme" parent="MyBaseDarkTheme">
+        <!-- Leave this blank, platform-specific styles will be added here -->
+    </style>
+
+    <style name="MyDarkTheme.AppBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/grey_500</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <style name="MyDarkTheme.SeamlessAppBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/grey_400</item>
+        <item name="android:textColorSecondary">@color/grey_600</item>
+        <item name="android:paddingRight">8dp</item>
+    </style>
+
+    <style name="MyDarkTheme.PrimaryTextStyle" parent="MyBaseTheme.PrimaryTextStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MyDarkTheme.SecondaryTextStyle" parent="MyBaseTheme.SecondaryTextStyle">
+        <item name="android:textColor">@color/opacity_white_77</item>
+    </style>
+
+    <style name="MyDarkTheme.SerifSecondaryTextStyle" parent="MyBaseTheme.SerifSecondaryTextStyle">
+        <item name="android:textColor">@color/opacity_white_77</item>
+    </style>
+
+    <style name="MyDarkTheme.SubheaderStyle" parent="MyBaseTheme.SecondaryTextStyle">
+        <item name="android:textColor">@color/opacity_white_77</item>
+    </style>
+
+    <style name="MyDarkTheme.CardViewStyle" parent="CardView">
+        <item name="cardBackgroundColor">@color/grey_875</item>
+    </style>
+
+    <style name="MyDarkTheme.CheckBoxStyle" parent="MyBaseTheme.CheckBoxStyle">
+        <item name="android:textColor">@color/stateful_text_dark</item>
+    </style>
+
+    <style name="MyDarkTheme.RadioButtonStyle" parent="MyBaseTheme.RadioButtonStyle">
+        <item name="android:textColor">@color/stateful_text_dark</item>
+    </style>
+
+    <style name="MyDarkTheme.ChipStyle" parent="MyBaseTheme.ChipStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="chipBackgroundColor">@color/grey_800</item>
+        <item name="rippleColor">@color/grey_500</item>
+    </style>
+
+    <style name="MyDarkTheme.EditTextStyle" parent="Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MyDarkTheme.TabLayoutStyle" parent="Widget.Design.TabLayout">
+        <item name="android:background">@color/grey_950</item>
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabIndicatorColor">@color/green_800</item>
+        <item name="tabTextAppearance">@style/MyDarkTheme.TabTextAppearance</item>
+    </style>
+
+    <style name="MyDarkTheme.TabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">@color/opacity_white_77</item>
+    </style>
+
+    <style name="MyDarkTheme.SpinnerStyle" parent="MyBaseTheme.SpinnerStyle">
+        <item name="android:background">@drawable/spinner_bgnd_dark</item>
+    </style>
+
+    <style name="MyDarkTheme.SpinnerItemStyle" parent="MyBaseTheme.SpinnerItemStyle">
+        <item name="android:textColor">@color/stateful_text_dark</item>
+    </style>
+
+    <style name="MyDarkTheme.SpinnerDropDownItemStyle" parent="MyBaseTheme.SpinnerDropDownItemStyle">
+        <item name="android:background">@color/grey_800</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="MyDarkTheme.PopupMenuStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">@color/grey_800</item>
+    </style>
+
+    <style name="MyDarkTheme.DialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="colorBackgroundFloating">@color/grey_800</item>
+    </style>
+
+    <style name="MyDarkTheme.BottomSheetDialog" parent="Theme.MaterialComponents.BottomSheetDialog">
+        <!-- this is a theme, i.e. styles are propagated to children -->
+        <item name="android:windowIsFloating">false</item>
+        <item name="bottomSheetStyle">@style/MyDarkTheme.SheetStyle</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@color/grey_900</item>
+    </style>
+
+    <style name="MyDarkTheme.SheetStyle">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+</resources>

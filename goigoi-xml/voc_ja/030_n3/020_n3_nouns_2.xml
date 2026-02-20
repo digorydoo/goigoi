@@ -1,0 +1,1405 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 nouns ②"
+      name_de="N3-Nomen ②"
+      name_fr="Les noms N3 ②"
+      name_it="Nomi N3 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【生：せい】【物：ぶつ】"
+              rom="seibutsu"
+              tr_en="organism; living thing"
+              tr_de="Organismus; lebendes Ding"
+              lvl="n3"
+              category="nature, life"
+              id="seibutsu-organism"
+            >
+                <keep_apart_from id="ikimono-livingcreature" />
+                <keep_apart_from id="seibutsugaku-biology" />
+                <phrase
+                  ph="【生：せい】【物：ぶつ】【学：がく】"
+                  rom="seibutsugaku"
+                  tr_en="biology"
+                  tr_de="Biologie"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【今日：きょう】の【生：せい】【物：ぶつ】【学：がく】の【授：じゅ】【業：ぎょう】、【面：おも】【白：しろ】かったね。"
+                  rom="Kyō no seibutsugaku no jugyō, omoshirokatta ne."
+                  tr_en="Today's biology class was interesting, wasn't it?"
+                  tr_de="Der heutige Biologieunterricht war spannend, nicht wahr?"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【牛：うし】"
+              rom="ushi"
+              tr_en="cow; ox; cattle"
+              tr_de="Kuh; Ochse; Vieh"
+              lvl="n3"
+              category="animal"
+              id="ushi-cow"
+            >
+                <see id="ushi-zodiac" rem="closely related" />
+                <phrase
+                  ph="【水：すい】【牛：ぎゅう】"
+                  rom="suigyū"
+                  tr_en="water buffalo"
+                  tr_de="Wasserbüffel"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【牛：うし】は【決：けっ】して【賢：かしこ】くはない。"
+                  rom="Ushi wa kesshite kashikoku wa nai."
+                  tr_en="Cows aren't exactly clever."
+                  tr_de="Kühe sind nicht besonders schlau."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【馬：うま】"
+              rom="uma"
+              tr_en="horse"
+              tr_de="Pferd"
+              lvl="n3"
+              category="animal"
+              id="uma-horse"
+            >
+                <see id="uma-zodiac" rem="closely related" />
+                <phrase
+                  ph="【黒：くろ】【馬：うま】"
+                  rom="kurouma"
+                  tr_en="a black horse"
+                  tr_de="ein Rappe (schwarzes Pferd)"
+                  explanation_en="Can also be read as こくば"
+                  explanation_de="Kann auch als こくば gelesen werden"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【白：しろ】【馬：うま】"
+                  rom="shirouma"
+                  tr_en="a white horse"
+                  tr_de="ein Schimmel (weisses Pferd)"
+                  explanation_en="Can also be read as はくば"
+                  explanation_de="Kann auch als はくば gelesen werden"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【馬：うま】に【乗：の】ったことがありますか。"
+                  rom="Uma ni notta koto ga arimasu ka?"
+                  tr_en="Have you ever ridden a horse?"
+                  tr_de="Bist du schon einmal auf einem Pferd geritten?"
+                  lvl="n3"
+                  origin="Oxford p.126"
+                />
+            </word>
+            <word
+              w="【鼠：ネズミ】"
+              rom="nezumi"
+              tr_en="mouse; rat"
+              tr_de="Maus; Ratte"
+              studyInContext="preferred"
+              lvl="n3"
+              category="animal"
+              id="nezumi-mouse"
+              usuallyInKana="true"
+            >
+                <see id="ne-rat" rem="closely related" />
+                <phrase
+                  ph="【小：ちい】さなネズミ"
+                  rom="chīsana nezumi"
+                  tr_en="a small mouse"
+                  tr_de="eine kleine Maus"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【大：おお】きなネズミ"
+                  rom="ōkina nezumi"
+                  tr_de="a big rat"
+                  tr_en="eine grosse Ratte"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】はネズミが【好：す】きじゃない。"
+                  rom="Watashi wa nezumi ga suki janai."
+                  tr_en="I don't like rats."
+                  tr_de="Ich mag Ratten nicht."
+                  lvl="n3"
+                />
+                <sentence
+                  s="この【船：ふね】にはネズミがいっぱいいる。"
+                  rom="Kono fune ni wa nezumi ga ippai iru."
+                  tr_en="There are a lot of rats on this ship."
+                  tr_de="Auf diesem Schiff hat es viele Ratten."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【象：ぞう】"
+              rom="zō"
+              tr_en="elephant"
+              tr_de="Elefant"
+              lvl="n3"
+              category="animal"
+              id="zō-elephant"
+            >
+                <phrase
+                  ph="【巨：きょ】【大：だい】な【象：ぞう】"
+                  rom="kyodai na zō"
+                  tr_en="a huge elephant"
+                  tr_de="ein riesiger Elefant"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【象：ぞう】は【鼻：はな】が【長：なが】い。"
+                  rom="Zō wa hana ga nagai."
+                  tr_en="An elephant has a long trunk."
+                  tr_de="Ein Elefant hat einen langen Rüssel."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【象：ぞう】はネズミが【怖：こわ】い。"
+                  rom="Zō wa nezumi ga kowai."
+                  tr_en="Elephants are afraid of mice."
+                  tr_de="Elefanten haben Angst vor Mäusen."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <!--
+                  Also possible: 象はネズミを怖がっている
+                  But kowagaru is nx, and the sentence describes more how the elephant is reacting right now rather
+                  than a general characteristic.
+                -->
+            </word>
+            <word
+              w="【虎：とら】"
+              rom="tora"
+              tr_en="tiger"
+              tr_de="Tiger"
+              lvl="n3"
+              category="animal"
+              id="tora-tiger"
+            >
+                <see id="tora-zodiac" rem="closely related" />
+                <phrase
+                  ph="【虎：とら】の【唸：うな】り【声：ごえ】"
+                  rom="tora no unarigoe"
+                  tr_en="the snarl of a tiger"
+                  tr_de="das Knurren eines Tigers"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has nx for unarigoe, but n3 for unaru"
+                />
+                <sentence
+                  s="その【虎：とら】は【三：さん】【人：にん】も【殺：ころ】してから、やっと【撃：う】たれた。"
+                  rom="Sono tora wa san-nin mo koroshite kara, yatto utareta."
+                  tr_en="That tiger killed three people, then it was finally shot."
+                  tr_de="Der Tiger tötete drei Menschen, bevor er schliesslich erschossen wurde."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【猿：さる】"
+              rom="saru"
+              tr_en="monkey"
+              tr_de="Affe"
+              lvl="n3"
+              category="animal"
+              id="saru-monkey"
+              rem="appears in GENKI2 L22 vocab section"
+            >
+                <see id="saru-zodiac" rem="closely related" />
+                <phrase
+                  ph="【猿：さる】みたいに【騒：さわ】ぐ"
+                  rom="saru-mitai ni sawagu"
+                  tr_en="to make a fuss like a monkey"
+                  tr_de="wie ein Affe viel Aufhebens machen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【猿：さる】は【木：き】に【登：のぼ】る。"
+                  rom="Saru wa ki ni noboru."
+                  tr_en="Monkeys climb trees."
+                  tr_de="Affen klettern auf Bäume."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【猿：さる】も【木：き】から【落：お】ちる。"
+                  rom="Saru mo ki kara ochiru."
+                  tr_en="Even monkeys fall from trees."
+                  tr_de="Sogar Affen fallen manchmal vom Baum."
+                  explanation_en="Nobody is perfect."
+                  explanation_de="Niemand ist perfekt."
+                  lvl="n3"
+                  origin="GENKI2 p.272"
+                />
+            </word>
+            <word
+              w="【岸：きし】"
+              rom="kishi"
+              tr_en="bank; coast; shore"
+              tr_de="Küste; Ufer"
+              lvl="n3"
+              category="scenery, nature"
+              id="kishi-shore"
+            >
+                <keep_apart_from id="engan-coast" />
+                <keep_apart_from id="hama-beach" />
+                <keep_apart_from id="hamabe-foreshore" />
+                <keep_apart_from id="umibe-beach" />
+                <keep_apart_from id="kaigan-coast" />
+                <!-- there is also kishibe, which is nx -->
+                <phrase
+                  ph="【船：ふね】を【岸：きし】に【引：ひ】き【上：あ】げる"
+                  rom="fune o kishi ni hiki-ageru"
+                  tr_en="to pull the boat on land"
+                  tr_de="das Booat an Land ziehen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【川：かわ】の【向：む】こう【岸：ぎし】"
+                  rom="kawa no mukōgishi"
+                  tr_en="the opposite bank of the river"
+                  tr_de="das andere Ufer des Flusses"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【川：かわ】の【向：む】こう【岸：ぎし】まで【泳：およ】いで【渡：わた】りましょう。"
+                  rom="Kawa no mukōgishi made oyoide watarimashō."
+                  tr_en="Let's swim across to the opposite bank of the river."
+                  tr_de="Lasst uns über den Fluss bis zum anderen Ufer schwimmen."
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【向：む】こう【岸：ぎし】"
+              rom="mukōgishi"
+              tr_en="the opposite bank"
+              lvl="-"
+              id="mukōgishi-oppositebank"
+              rem="furigana for the phrase of kishi"
+              HIDDEN="true"
+            />
+            <word
+              w="【丘：おか】"
+              rom="oka"
+              tr_en="hill"
+              tr_de="Hügel"
+              lvl="n3"
+              category="scenery"
+              id="oka-hill"
+            >
+                <phrase
+                  ph="【丘：おか】を【下：お】りて【行：い】く"
+                  rom="oka o orite iku"
+                  tr_en="to go down the hill"
+                  tr_de="den Hügel hinuntergehen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【丘：おか】の【上：うえ】から【子：こ】【供：ども】【達：たち】を【見：み】ていた。"
+                  rom="Oka no ue kara kodomo-tachi o mite ita."
+                  tr_en="I was watching the children from the top of the hill."
+                  tr_de="Ich beobachtete die Kinder vom Hügel aus."
+                  lvl="n3"
+                  origin="Oxford p.44"
+                />
+            </word>
+            <word
+              w="【谷：たに】"
+              rom="tani"
+              tr_en="valley"
+              tr_de="Tal"
+              lvl="n3"
+              category="scenery"
+              id="tani-valley"
+            >
+                <phrase
+                  ph="【谷：たに】を【見：み】【下：お】ろす【窓：まど】"
+                  rom="tani o miorosu mado"
+                  tr_en="a window that overlooks the valley"
+                  tr_de="ein Fenster mit Sicht auf das Tal"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; jisho has n2 for miorosu"
+                />
+                <sentence
+                  s="【霧：きり】で【谷：たに】が【見：み】えなかった。"
+                  rom="Kiri de tani ga mienakatta."
+                  tr_en="You couldn't see the valley because of the mist."
+                  tr_de="Man konnte das Tal im Nebel nicht sehen."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【谷：たに】の【間：あいだ】を【川：かわ】が【流：なが】れている。"
+                  rom="Tani no aida o kawa ga nagarete iru."
+                  tr_en="There is a river flowing through the valley."
+                  tr_de="Ein Fluss fliesst durch das Tal."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【食：しょく】【事：じ】"
+              rom="shokuji"
+              tr_en="meal"
+              tr_de="Mahlzeit"
+              lvl="n3"
+              category="cooking"
+              id="shokuji-meal"
+            >
+                <keep_apart_from id="gohan-meal" />
+                <keep_apart_from id="meshi-meal" />
+                <keep_apart_from id="chūshoku-lunch" />
+                <phrase
+                  ph="【食：しょく】【事：じ】を【用：よう】【意：い】する"
+                  rom="shokuji o yōi suru"
+                  tr_en="to prepare a meal"
+                  tr_de="ein Essen zubereiten"
+                  lvl="n3"
+                />
+                <sentence
+                  s="【食：しょく】【事：じ】が【終：お】わってから【話：はな】しましょう。"
+                  rom="Shokuji ga owatte kara hanashimashō."
+                  tr_en="Let's talk after we finish the meal."
+                  tr_de="Lass uns nach dem Essen reden."
+                  lvl="n3"
+                  origin="Oxford p.53"
+                />
+                <sentence
+                  s="【昨日：きのう】、【田：た】【中：なか】さんのお【父：とう】さんに【食：しょく】【事：じ】に【連：つ】れて【行：い】っていただきました。"
+                  rom="Kinō, Tanaka-san no o-tōsan ni shokuji ni tsurete itte itadakimashita."
+                  tr_en="Ms Tanaka's father took me out for a meal yesterday."
+                  tr_de="Frau Tanakas Vater hat mich gestern zu einem Essen ausgeführt."
+                  lvl="n3"
+                  origin="500mon q185"
+                  rem="jisho has nx for tsureru, n3 for shokuji and itadaku; itadaku is polite for kureru"
+                  href="https://hinative.com/questions/21821235"
+                />
+            </word>
+            <word
+              w="【間：ま】【違：ちが】い"
+              rom="machigai"
+              tr_en="mistake; blunder"
+              tr_de="Fehler; Irrtum; Versehen"
+              lvl="n3"
+              category="not-good"
+              id="machigai-mistake"
+            >
+                <!--
+                    ayamari is formal or literary and typically used in official contexts;
+                    machigai is more neutral
+                -->
+                <see id="ayamari-error" rem="closely related" />
+                <see id="machigaeru-mistakesth" rem="verb" />
+                <see id="machigau-mistake" rem="verb" />
+                <keep_apart_from id="ayamari-error" />
+                <keep_apart_from id="shippai-mistake" />
+                <phrase
+                  ph="【間：ま】【違：ちが】いを【見：み】つける"
+                  rom="machigai o mitsukeru"
+                  tr_en="to find a mistake"
+                  tr_de="einen Fehler finden"
+                  lvl="n3"
+                />
+                <sentence
+                  s="【間：ま】【違：ちが】いをしてはいけない。"
+                  rom="Machigai o shite wa ikenai."
+                  tr_en="You must not make any mistakes."
+                  tr_de="Du darfst keinen Fehler machen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="これは【学：がく】【生：せい】のよくする【間：ま】【違：ちが】いだ。"
+                  rom="Kore wa gakusei no yoku suru machigai da."
+                  tr_en="This is a mistake that students often make."
+                  tr_de="Dies ist ein Fehler, den Schüler oft machen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【案：あん】【内：ない】"
+              rom="annai"
+              tr_en="guidance; showing around"
+              tr_de="Führung; Herumführen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="holidays, top-words"
+              id="annai-guidance"
+              rem="appears in GENKI2 p.95 vocab section"
+            >
+                <keep_apart_from id="shidō-guidance" />
+                <phrase
+                  ph="【案：あん】【内：ない】する"
+                  rom="annai suru"
+                  tr_en="to show so. around"
+                  tr_de="jem. herumführen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【会：かい】【場：じょう】までご【案：あん】【内：ない】しましょう。"
+                  rom="Kaijō made go-annai shimashō."
+                  tr_en="Let me guide you to the event hall."
+                  tr_de="Lassen Sie mich Sie zum Veranstaltungsort führen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="go-annai suru appears in GENKI2 p.186"
+                />
+            </word>
+            <word
+              w="【列：れっ】【車：しゃ】"
+              rom="ressha"
+              tr_en="train"
+              tr_de="Zug"
+              hint_en="lit. cars in a line"
+              hint_de="wörtl. Fahrzeuge in einer Linie"
+              lvl="n3"
+              category="transportation"
+              id="ressha-train"
+            >
+                <phrase
+                  ph="トロッコ【列：れっ】【車：しゃ】"
+                  rom="torokko ressha"
+                  tr_en="small sightseeing train"
+                  tr_de="Touristentram; kleiner Zug für Touristen"
+                  lvl="n3"
+                  origin="GENKI2 p.289"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="その【町：まち】には【列：れっ】【車：しゃ】で【行：い】ける。"
+                  rom="Sono machi ni wa ressha de ikeru."
+                  tr_en="The town is accessible by train."
+                  tr_de="Die Stadt ist mit dem Zug erreichbar."
+                  explanation_en="「行ける」is the potential form of「行く」"
+                  explanation_de="「行ける」ist die potentielle Form von「行く」"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="これは【普：ふ】【通：つう】【列：れっ】【車：しゃ】ですか。"
+                  rom="Kore wa futsū ressha desu ka?"
+                  tr_en="Is this a local train?"
+                  tr_de="Ist dies ein Bummler (Zug, der überall hält)?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【黒：こく】【板：ばん】"
+              rom="kokuban"
+              tr_en="blackboard"
+              tr_de="Wandtafel"
+              lvl="n3"
+              category="education"
+              id="kokuban-blackboard"
+            >
+                <phrase
+                  ph="【黒：こく】【板：ばん】を【消：け】す"
+                  rom="kokuban o kesu"
+                  tr_en="to erase the blackboard"
+                  tr_de="die Wandtafel wischen"
+                  lvl="n3"
+                />
+                <sentence
+                  s="【宿：しゅく】【題：だい】が【黒：こく】【板：ばん】に【書：か】いてある。"
+                  rom="Shukudai ga kokuban ni kaite aru."
+                  tr_en="The homework is written on the blackboard."
+                  tr_de="Die Hausaufgaben stehen auf der Wandtafel."
+                  lvl="n3"
+                  origin="Oxford p.52"
+                />
+                <sentence
+                  s="【皆：みな】さん、【黒：こく】【板：ばん】の【字：じ】が【見：み】えますか。"
+                  rom="Minasan, kokuban no ji ga miemasu ka?"
+                  tr_en="Can everyone see the writing on the blackboard?"
+                  tr_de="Könnt ihr alle die Zeichen auf der Wandtafel sehen?"
+                  lvl="n3"
+                  origin="Oxford p.70"
+                />
+            </word>
+            <word
+              w="【観：かん】【客：きゃく】"
+              rom="kankyaku"
+              tr_en="audience; spectators"
+              tr_de="Zuschauer"
+              lvl="n3"
+              category="entertainment"
+              id="kankyaku-audience"
+            >
+                <phrase
+                  ph="【大：おお】【勢：ぜい】の【観：かん】【客：きゃく】"
+                  rom="ōzei no kankyaku"
+                  tr_en="a large audience"
+                  tr_de="eine grosse Zuschauermenge"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【観：かん】【客：きゃく】はその【女：じょ】【優：ゆう】に【拍：はく】【手：しゅ】した。"
+                  rom="Kankyaku wa sono joyū ni hakushu shita."
+                  tr_en="The audience applauded the actress."
+                  tr_de="Die Zuschauer applaudierten der Schauspielerin."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【涙：なみだ】"
+              rom="namida"
+              tr_en="tears; sympathy"
+              tr_de="Tränen; Mitleid"
+              lvl="n3"
+              category="mood, not-good"
+              id="namida-tears"
+            >
+                <!-- 涙を誘う - namida o sasou - to evoke tears (lib0, ChatGPT) -->
+                <phrase
+                  ph="【思：おも】い【出：だ】すと【涙：なみだ】が【出：で】る"
+                  rom="omoidasu to namida ga deru"
+                  tr_en="to remember and cry"
+                  tr_de="sich erinnern, und die Tränen kommen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【面：おも】【白：しろ】すぎて、【涙：なみだ】が【出：で】た。"
+                  rom="Omoshiro sugite, namida ga deta."
+                  tr_en="It was so funny that I cried."
+                  tr_de="Es war so lustig, dass mir die Tränen kamen."
+                  lvl="n3"
+                  origin="Miku"
+                  href="https://youtu.be/iDFFO3hkxVA"
+                />
+                <sentence
+                  s="この【小：しょう】【説：せつ】を【読：よ】めば【必：かなら】ず【涙：なみだ】が【出：で】てくる。"
+                  rom="Kono shōsetsu o yomeba kanarazu namida ga dete kuru."
+                  tr_en="If you read this novel, you will certainly cry."
+                  tr_de="Wenn du diesen Roman liest, werden dir garantiert die Tränen kommen."
+                  explanation_en="「読めば」is the ば-form of「読む」"
+                  explanation_de="「読めば」ist die ば-Form von「読む」"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【現：げん】【金：きん】"
+              rom="genkin"
+              tr_en="cash; money on hand"
+              tr_de="Münz; Bargeld"
+              lvl="n3"
+              category="finances, shopping"
+              id="genkin-cash"
+            >
+                <keep_apart_from id="kinsen-money" />
+                <keep_apart_from id="okane-money" />
+                <phrase
+                  ph="【現：げん】【金：きん】で【払：はら】う"
+                  rom="genkin de harau"
+                  tr_en="to pay with cash"
+                  tr_de="mit Bargeld bezahlen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【現：げん】【金：きん】で【時：と】【計：けい】を【買：か】った。"
+                  rom="Genkin de tokei o katta."
+                  tr_en="I bought a watch with cash."
+                  tr_de="Ich habe mit Bargeld eine Uhr gekauft."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【別：わか】れ"
+              rom="wakare"
+              tr_en="parting; separation; farewell"
+              tr_de="Abschied; Lebewohl"
+              lvl="n3"
+              category="relationships"
+              id="wakare-parting"
+            >
+                <see id="wakareru-breakup" rem="verb" />
+                <phrase
+                  ph="【悲：かな】しい【別：わか】れ"
+                  rom="kanashii wakare"
+                  tr_en="sad goodbyes"
+                  tr_de="trauriger Abschied"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="みんなからお【別：わか】れのプレゼントをもらった。"
+                  rom="Minna kara o-wakare no purezento o moratta."
+                  tr_en="I got a farewell present from everyone."
+                  tr_de="Ich habe ein Abschiedsgeschenk von allen bekommen."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【借：か】り"
+              rom="kari"
+              tr_en="borrowing; loan; debt"
+              tr_de="Anleihe; Darlehen; Schuld"
+              lvl="n3"
+              category="finances"
+              id="kari-loan"
+              rem="jisho has n1; appears in GENKI2 p.185"
+            >
+                <see id="kariru-borrow" rem="verb" />
+                <keep_apart_from id="kashi-loan" />
+                <keep_apart_from id="shakkin-debt" />
+                <keep_apart_from id="shōgakukin-scholarship" />
+                <phrase
+                  ph="お【借：か】りする"
+                  rom="o-kari suru"
+                  tr_en="to borrow (extra-modest)"
+                  tr_de="borgen; sich ausleihen (bescheiden)"
+                  lvl="n3"
+                  origin="GENKI2 p.193"
+                />
+                <sentence
+                  s="【私：わたし】は【先：せん】【生：せい】に【辞：じ】【書：しょ】をお【借：か】りしました。"
+                  rom="Watashi wa sensei ni jisho o o-kari shimashita."
+                  tr_en="I borrowed a dictionary from my professor."
+                  tr_de="Ich habe mir ein Wörterbuch von meinem Professor ausgeliehen."
+                  explanation_en="Using お借りする instead of just 借りる makes the expression humble."
+                  explanation_de="Mit お借りする statt einfach 借りる tönt der Ausdruck bescheiden."
+                  lvl="n3"
+                  origin="GENKI2 p.185"
+                />
+            </word>
+            <word
+              w="【雷：かみなり】"
+              rom="kaminari"
+              tr_en="thunder"
+              tr_de="Donner"
+              lvl="n3"
+              category="nature, weather"
+              id="kaminari-thunder"
+            >
+                <see id="inabikari-lightning" rem="closely related" />
+                <phrase
+                  ph="【雷：かみなり】に【驚：おどろ】く"
+                  rom="kaminari ni odoroku"
+                  tr_en="to be startled by thunder"
+                  tr_de="vom Donner erschreckt werden"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; also possible: 雷の音に驚かされる"
+                />
+                <sentence
+                  s="【雷：かみなり】はかなり【遠：とお】そうだね。"
+                  rom="Kaminari wa kanari tō-sō da ne."
+                  tr_en="The thunder seems quite far away, huh?"
+                  tr_de="Der Donner scheint ziemlich weit weg zu sein, nicht wahr?"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【国：こく】【民：みん】"
+              rom="kokumin"
+              tr_en="people (of a country); citizen"
+              tr_de="Landesleute; Volk"
+              lvl="n3"
+              category="people, politics"
+              id="kokumin-citizen"
+            >
+                <phrase
+                  ph="【全：ぜん】【国：こく】【民：みん】"
+                  rom="zenkokumin"
+                  tr_en="the entire nation"
+                  tr_de="die ganze Nation"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="furigana verified with jisho and ChatGPT"
+                />
+                <sentence
+                  s="【彼：かれ】らは【日：に】【本：ほん】の【国：こく】【民：みん】となった。"
+                  rom="Karera wa Nihon no kokumin to natta."
+                  tr_en="They became citizens of Japan."
+                  tr_de="Sie wurden zu Bürger von Japan."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【食：しょく】【品：ひん】"
+              rom="shokuhin"
+              tr_en="food; food products"
+              tr_de="Lebensmittel; Nahrungsmittelprodukte"
+              lvl="n3"
+              category="food"
+              id="shokuhin-foodproducts"
+            >
+                <keep_apart_from id="tabemono-food" />
+                <keep_apart_from id="shokumotsu-food" />
+                <keep_apart_from id="shokuryō-food" />
+                <keep_apart_from id="shokuryō-rations" />
+                <keep_apart_from id="shokuryōhin-groceries" />
+                <phrase
+                  ph="【自：し】【然：ぜん】【食：しょく】【品：ひん】"
+                  rom="shizen shokuhin"
+                  tr_en="natural food"
+                  tr_de="natürliche Lebensmittel"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【自：し】【然：ぜん】【食：しょく】【品：ひん】は【体：からだ】によい。"
+                  rom="Shizen shokuhin wa karada ni yoi."
+                  tr_en="Natural food will do you good."
+                  tr_de="Natürliche Nahrungsmittelprodukte tun dem Körper wohl."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="この【工：こう】【場：じょう】は【色：いろ】【々：いろ】な【食：しょく】【品：ひん】を【生：せい】【産：さん】しています。"
+                  rom="Kono kōjō wa iro-iro na shokuhin o seisan shite imasu."
+                  tr_en="This factory produces various types of food."
+                  tr_de="Diese Fabrik produziert diverse Esswaren."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【迎：むか】え"
+              rom="mukae"
+              tr_en="meeting; greeting; welcome"
+              tr_de="Treffen; Gruss; Willkommen"
+              lvl="n3"
+              id="mukae-meeting"
+              rem="appears in GENKI2 p.95"
+            >
+                <see id="mukaeru-approach" rem="verb" />
+                <phrase
+                  ph="【迎：むか】えに【来：く】る"
+                  rom="mukae ni kuru"
+                  tr_en="to come to pick sb. up"
+                  tr_de="jem. abholen kommen"
+                  lvl="n3"
+                  origin="GENKI2 p.95"
+                />
+                <sentence
+                  s="【駅：えき】に【迎：むか】えに【来：き】てください。"
+                  rom="Eki ni mukae ni kite kudasai."
+                  tr_en="Please pick me up at the station."
+                  tr_de="Bitte hole mich am Bahnhof ab."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【家：か】【具：ぐ】"
+              rom="kagu"
+              tr_en="furniture"
+              tr_de="Möbel"
+              lvl="n3"
+              category="home"
+              id="kagu-furniture"
+            >
+                <phrase
+                  ph="【家：か】【具：ぐ】【屋：や】"
+                  rom="kaguya"
+                  tr_en="furniture store"
+                  tr_de="Möbelgeschäft"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【家：か】【具：ぐ】を【３：さん】【点：てん】【買：か】った。"
+                  rom="Kagu o san-ten katta."
+                  tr_en="I bought three pieces of furniture."
+                  tr_de="Ich habe drei Möbel gekauft."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【砂：さ】【漠：ばく】"
+              rom="sabaku"
+              tr_en="desert"
+              tr_de="Wüste"
+              lvl="n3"
+              category="nature, scenery"
+              id="sabaku-desert"
+            >
+                <phrase
+                  ph="【砂：さ】【漠：ばく】の【砂：すな】"
+                  rom="sabaku no suna"
+                  tr_en="desert sand"
+                  tr_de="Wüstensand"
+                  lvl="n3"
+                />
+                <sentence
+                  s="【砂：さ】【漠：ばく】にはさまざまな【動：どう】【物：ぶつ】が【住：す】んでいます。"
+                  rom="Sabaku ni wa sama-zama na dōbutsu ga sunde imasu."
+                  tr_en="Various animals live in the desert."
+                  tr_de="In der Wüste leben vielerlei Lebewesen."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; it changed iro-iro to sama-zama to give it a more literary tone"
+                />
+            </word>
+            <word
+              w="【笑：え】【顔：がお】"
+              rom="egao"
+              tr_en="smiling face; smile"
+              tr_de="Lachgesicht; Lächeln"
+              lvl="n3"
+              category="happiness, mood"
+              id="egao-smiling"
+            >
+                <phrase
+                  ph="おじいさんの【笑：え】【顔：がお】"
+                  rom="o-jīsan no egao"
+                  tr_en="grandfather's smile"
+                  tr_de="Grossvaters Lachgesicht"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【暖：あたた】かい【笑：え】【顔：がお】で"
+                  rom="atatakai egao de"
+                  tr_en="with a warm smile"
+                  tr_de="mit einem warmen Lächeln"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="お【客：きゃく】と【話：はな】す【時：とき】は、いつでも【笑：え】【顔：がお】でいなさい。"
+                  rom="O-kyaku to hanasu toki wa, itsudemo egao de inasai."
+                  tr_en="Always smile when talking with a customer."
+                  tr_de="Lächle stets, wenn du mit einem Kunde sprichst."
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【電：でん】【線：せん】"
+              rom="densen"
+              tr_en="electric line; power cable"
+              tr_de="elektrisches Kabel; Stromkabel"
+              lvl="n3"
+              category="technical"
+              id="densen-powercable"
+              rem="jisho has n1, but n5 for denwa, n4 for sen"
+            >
+                <phrase
+                  ph="【切：き】れた【電：でん】【線：せん】を【取：と】り【替：か】える"
+                  rom="kireta densen o tori-kaeru"
+                  tr_en="to replace the torn cable"
+                  tr_de="das gerissene Kabel ersetzen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; a cable with a loose connection would be 接触不良の電線, n1"
+                />
+                <sentence
+                  s="【電：でん】【線：せん】に【触：さわ】らないで。"
+                  rom="Densen ni sawaranaide."
+                  tr_en="Don't touch the power lines."
+                  tr_de="Berühre das Stromkabel nicht."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; also possible: 電線に【触：ふ】れないで"
+                />
+            </word>
+            <word
+              w="【松：まつ】"
+              rom="matsu"
+              tr_en="pine tree"
+              tr_de="Pinie"
+              hint_en="highest rank of a three-tier ranking system"
+              hint_de="höchster Rang eines dreistufigen Wertesystems"
+              lvl="n3"
+              category="plant, nature"
+              id="matsu-pine"
+            >
+                <keep_together id="take-bamboo" />
+                <keep_together id="ume-plum" />
+                <!--
+                    松は長寿を表す
+                    Pine represents longevity.
+                    ChatGPT
+                    長寿・ちょうじゅ is nx
+                -->
+                <phrase
+                  ph="【大：おお】きな【松：まつ】"
+                  rom="ōkina matsu"
+                  tr_en="a large pine tree"
+                  tr_de="ein grosser Pinienbaum"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; lib0 has 松の木, but ChatGPT says の木 is not strictly necessary"
+                />
+                <sentence
+                  s="【松：まつ】は【50：ごじゅう】メートル【以：い】【上：じょう】も【伸：の】びる。"
+                  rom="Matsu wa go-jū mētoru ijō mo nobiru."
+                  tr_en="Pine trees can grow up to 50 metres or more."
+                  tr_de="Pinien können über 50 Meter gross werden."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【竹：たけ】"
+              rom="take"
+              tr_en="bamboo"
+              tr_de="Bambus"
+              hint_en="middle rank of a three-tier ranking system"
+              hint_de="mittlerer Rang eines dreistufigen Wertesystems"
+              lvl="n3"
+              category="plant, nature"
+              id="take-bamboo"
+              rem="appears in GENKI2 p.289; jisho has n2"
+            >
+                <keep_together id="matsu-pine" />
+                <keep_together id="ume-plum" />
+                <!--
+                    竹は忍耐や柔軟性を表す
+                    Bamboo represents endurance and flexibility.
+                    ChatGPT
+                    忍耐・にんたい is nx
+                    柔軟性・じゅうなんせい is nx
+                -->
+                <phrase
+                  ph="【竹：たけ】かご"
+                  rom="take-kago"
+                  tr_en="a bamboo basket"
+                  tr_de="ein Bambuskorb"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx, but n3 for take, kago"
+                />
+                <sentence
+                  s="【竹：たけ】で【皿：さら】やスプーン、【家：か】【具：ぐ】などが【作：つく】られる。"
+                  rom="Take de sara ya supūn, kagu nado ga tsukurareru."
+                  tr_en="You can make plates, spoons, furniture etc. from bamboo."
+                  tr_de="Aus Bambus kann man Teller, Löffel, Möbel, usw. machen."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
+            <word
+              w="【梅：うめ】"
+              rom="ume"
+              tr_en="Japanese plum"
+              tr_de="japanische Pflaume"
+              hint_en="lowest rank of a three-tier ranking system"
+              hint_de="tiefster Rang eines dreistufigen Wertesystems"
+              lvl="n3"
+              category="plant, food"
+              id="ume-plum"
+            >
+                <keep_together id="matsu-pine" />
+                <keep_together id="take-bamboo" />
+                <keep_apart_from id="umeboshi-driedplum" />
+                <!--
+                    梅は希望や再生を表す
+                    Plum represents hope and renewal.
+                    ChatGPT
+                    希望・きぼう is n3
+                    再生・さいせい is n1
+                -->
+                <phrase
+                  ph="【梅：うめ】の【花：はな】"
+                  rom="ume no hana"
+                  tr_en="plum blossoms"
+                  tr_de="Pflaumenblüten"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【梅：うめ】で【作：つく】った【漬：つけ】【物：もの】は「【梅：うめ】【干：ぼ】し」と【言：い】います。"
+                  rom="Ume de tsukutta tsukemono wa ‘umeboshi’ to īmasu."
+                  tr_en="Pickled plum are called 'umeboshi'."
+                  tr_de="Eingelegte Pflaumen nennt man 'Umeboshi'."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; jisho has n1 for umeboshi"
+                />
+            </word>
+            <word
+              w="【動：うご】き"
+              rom="ugoki"
+              tr_en="motion; trend; fluctuation"
+              tr_de="Bewegung; Trend; Fluktuation"
+              lvl="n3"
+              category="motion, technical"
+              id="ugoki-motion"
+              rem="jisho has n1"
+            >
+                <see id="ugoku-move" rem="verb" />
+                <phrase
+                  ph="【動：うご】き【続：つづ】ける"
+                  rom="ugoki-tsudzukeru"
+                  tr_en="to keep moving"
+                  tr_de="in Bewegung bleiben"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT that it is read as うごきつづける, not うごきづづける"
+                />
+                <sentence
+                  s="【人：ひと】【々：びと】は【忙：いそが】しく【動：うご】き【回：まわ】っている。"
+                  rom="Hito-bito wa isogashiku ugoki-mawatte iru."
+                  tr_en="People are bustling around."
+                  tr_de="Die Leute gehen geschäftig umher."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【女：じょ】【子：し】"
+              rom="joshi"
+              tr_en="girl; young woman"
+              tr_de="Mädchen; junge Frau"
+              lvl="n3"
+              category="people"
+              id="joshi-girl"
+              rem="must not be together with shōjo"
+            >
+                <keep_apart_from id="onnanoko-girl" />
+                <keep_apart_from id="shōjo-maiden" />
+                <see id="onnanoko-girl" rem="closely related" />
+                <see id="shōjo-maiden" rem="closely related" />
+                <phrase
+                  ph="【女：じょ】【子：し】【生：せい】【徒：と】"
+                  rom="joshi seito"
+                  tr_en="a schoolgirl"
+                  tr_de="ein Schulmädchen"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <phrase
+                  ph="【女：じょ】【子：し】【高：こう】【校：こう】"
+                  rom="joshi kōkō"
+                  tr_en="girls' highschool"
+                  tr_de="Mädchengymnasium"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="このクラスは【女：じょ】【子：し】が【男：だん】【子：し】より【多：おお】い。"
+                  rom="Kono kurasu wa joshi ga danshi yori ōi."
+                  tr_en="There are more girls than boys in this class."
+                  tr_de="In dieser Klasse hat es mehr Mädchen als Knaben."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【男：だん】【子：し】"
+              rom="danshi"
+              tr_en="boy; young man"
+              tr_de="Knabe; junger Mann"
+              lvl="n3"
+              category="people"
+              id="danshi-youngman"
+            >
+                <keep_apart_from id="otokonoko-boy" />
+                <keep_apart_from id="shōnen-lad" />
+                <keep_apart_from id="seinen-youth" />
+                <phrase
+                  ph="【男：だん】【子：し】【生：せい】【徒：と】"
+                  rom="danshi seito"
+                  tr_en="a schoolboy"
+                  tr_de="ein Schulbub"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【一：いっ】【般：ぱん】に【男：だん】【子：し】の【方：ほう】が【女：じょ】【子：し】より【背：せ】が【高：たか】い。"
+                  rom="Ippan ni danshi no hō ga joshi yori se ga takai."
+                  tr_en="In general, boys are taller than girls."
+                  tr_de="Im allgemeinen sind Knaben grösser als Mädchen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【臭：にお】い"
+              rom="nioi"
+              tr_en="stench; bad smell"
+              tr_de="Gestank; schlechter Geruch"
+              lvl="n3"
+              category="not-good"
+              id="nioi-stench"
+            >
+                <!--
+                    Automatic see-also link to nioi-fragrance (same reading);
+                    no explicit link to niou, because kanjis differ
+                -->
+                <keep_apart_from id="kusai-smelly" />
+                <see id="kusai-smelly" rem="closely related" />
+                <phrase
+                  ph="ひどい【臭：にお】い"
+                  rom="hidoi nioi"
+                  tr_en="a terrible odour"
+                  tr_de="ein Gestank"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="この【肉：にく】は【腐：くさ】った【臭：にお】いがする。"
+                  rom="Kono niku wa kusatta nioi ga suru."
+                  tr_en="This meat smells bad."
+                  tr_de="Dieses Fleisch riecht verdorben."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【大：おお】【家：や】さん"
+              rom="ōya-san"
+              tr_en="landlord; landlady"
+              tr_de="Vermieter; Grundeigentümer"
+              lvl="n3"
+              category="people, occupations"
+              id="ōyasan-landlord"
+            >
+                <!--
+                    Note that 大家 can also be read as たいか, which means master, expert, authority (nx).
+                -->
+                <keep_apart_from id="ōya-landlord" />
+                <keep_together id="ōya-landlord" />
+                <phrase
+                  ph="【下：げ】【宿：しゅく】の【大：おお】【家：や】さん"
+                  rom="geshuku no ōya-san"
+                  tr_en="the landlord of the boarding house"
+                  tr_de="der Vermieter der Unterkunft"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【大：おお】【家：や】さんは【家：や】【賃：ちん】をあげたいそうだ。"
+                  rom="Ōya-san wa yachin o agetai-sō da."
+                  tr_en="I hear the landlord wants to raise the rent."
+                  tr_de="Ich habe gehört, dass der Vermieter die Miete erhöhen will."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT that 〜たがっている is not required here"
+                />
+            </word>
+            <word
+              w="【大：おお】【家：や】"
+              rom="ōya"
+              tr_en="landlord; landlady"
+              lvl="n3"
+              id="ōya-landlord"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="ōyasan-landlord" />
+                <keep_together id="ōyasan-landlord" />
+            </word>
+            <word
+              w="【泉：いずみ】"
+              rom="izumi"
+              tr_en="fountain; spring"
+              tr_de="Quelle; Fontäne"
+              lvl="n3"
+              category="scenery, nature"
+              id="izumi-fountain"
+            >
+                <phrase
+                  ph="【泉：いずみ】の【水：みず】を【飲：の】む"
+                  rom="izumi no mizu o nomu"
+                  tr_en="to drink from the spring"
+                  tr_de="vom Quellwasser trinken"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【波：なみ】"
+              rom="nami"
+              tr_en="wave"
+              tr_de="Welle"
+              lvl="n3"
+              category="nature, beach"
+              id="nami-wave"
+            />
+            <word
+              w="【稲：いね】"
+              rom="ine"
+              tr_en="rice plant"
+              tr_de="Reispflanze"
+              lvl="n3"
+              category="plant"
+              id="ine-riceplant"
+            />
+            <word
+              w="【種：たね】"
+              rom="tane"
+              tr_en="seed"
+              tr_de="Saat; Samen"
+              hint_en="of a plant"
+              hint_de="einer Pflanze"
+              lvl="n3"
+              category="nature"
+              id="tane-seed"
+            />
+            <word
+              w="【岩：いわ】"
+              rom="iwa"
+              tr_en="rock; boulder; cliff"
+              tr_de="Fels; Felsblock; Klippe"
+              lvl="n3"
+              category="nature"
+              id="iwa-rock"
+            />
+            <word
+              w="【霧：きり】"
+              rom="kiri"
+              tr_en="fog; mist"
+              tr_de="Nebel"
+              lvl="n3"
+              category="nature, weather"
+              id="kiri-fog"
+            />
+            <word
+              w="【泥：どろ】"
+              rom="doro"
+              tr_en="mud; wet dirt"
+              tr_de="Schlamm; Dreck"
+              lvl="n3"
+              category="nature"
+              id="doro-mud"
+            />
+            <word
+              w="【夜：よ】【明：あ】け"
+              rom="yoake"
+              tr_en="dawn; end of the night"
+              tr_de="Dämmerung; Ende der Nacht"
+              lvl="n3"
+              category="time, light"
+              id="yoake-dawn"
+            />
+            <word
+              w="【袋：ふくろ】"
+              rom="fukuro"
+              tr_en="bag; sack"
+              tr_de="Sack"
+              lvl="n3"
+              category="shopping"
+              id="fukuro-bag"
+            />
+            <word
+              w="【鍋：なべ】"
+              rom="nabe"
+              tr_en="hot pot; stew"
+              tr_de="japanischer Eintopf"
+              hint_en="also used for the pot itself"
+              hint_de="kann auch den Topf selber bedeuten"
+              lvl="n3"
+              category="cooking"
+              id="nabe-pot"
+            />
+            <word
+              w="お【城：しろ】"
+              rom="o-shiro"
+              tr_en="castle"
+              tr_de="Schloss; Burg"
+              dict="城"
+              lvl="n3"
+              category="city, travelling"
+              id="oshiro-castle"
+            />
+            <word
+              w="【籠：カゴ】"
+              rom="kago"
+              tr_en="basket"
+              tr_de="Korb"
+              hint_en="for shopping, etc."
+              hint_de="z.B. Einkaufskorb"
+              usuallyInKana="true"
+              lvl="n3"
+              category="shopping"
+              id="kago-basket"
+            />
+            <word
+              w="【未：み】【来：らい】"
+              rom="mirai"
+              tr_en="the (distant) future"
+              tr_de="die (ferne) Zukunft"
+              lvl="n3"
+              category="time"
+              id="mirai-distantfuture"
+            />
+            <word
+              w="【暗：あん】【記：き】"
+              rom="anki"
+              tr_en="memorisation; learning by heart"
+              tr_de="Auswendiglernen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="education, thinking"
+              id="anki-memorisation"
+            />
+        </section>
+    </unit>
+</vocabulary>

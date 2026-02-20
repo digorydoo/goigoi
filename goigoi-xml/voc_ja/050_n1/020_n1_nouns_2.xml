@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N1 nouns ②"
+      name_de="N1-Nomen ②"
+      name_fr="Les noms N1 ②"
+      name_it="Nomi N1 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n1"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【悪：わる】【者：もの】"
+              rom="warumono"
+              tr_en="bad guy; villain; scoundrel"
+              tr_de="Bösewicht; Schurke; Schuft"
+              lvl="n1"
+              category="manga-anime, games"
+              id="warumono-villain"
+            >
+                <keep_apart_from id="akunin-villain" />
+            </word>
+            <word
+              w="【侍：さむらい】"
+              rom="samurai"
+              tr_en="warrior"
+              tr_de="Krieger"
+              hint_en="esp. of the Edo period"
+              hint_de="speziell im Edo-Zeitalter"
+              lvl="n1"
+              category="entertainment"
+              id="samurai-warrior"
+            />
+            <word
+              w="【当：あ】たり"
+              rom="atari"
+              tr_en="hit; succes"
+              tr_de="Erfolg; Hit"
+              lvl="n1"
+              id="atari-hit"
+            />
+            <word
+              w="【人：じん】【民：みん】"
+              rom="jinmin"
+              tr_en="the people; citizens"
+              tr_de="Bürger; das Volk"
+              lvl="n1"
+              id="jinmin-citizens"
+            />
+            <word
+              w="【着：ちゃく】【陸：りく】"
+              rom="chakuriku"
+              tr_en="landing; touch down"
+              tr_de="Landung"
+              lvl="n1"
+              category="transportation"
+              id="chakuriku-touchdown"
+            />
+            <word
+              w="【正：せい】【解：かい】"
+              rom="seikai"
+              tr_en="correct (answer, solution)"
+              tr_de="korrekt (Antwort, Lösung)"
+              lvl="n1"
+              category="education"
+              id="seikai-correct"
+            >
+                <keep_apart_from id="tadashii-right" />
+            </word>
+            <word
+              w="【鳥：とり】【居：い】"
+              rom="torii"
+              tr_en="Shintō shrine archway"
+              tr_de="Torbogen"
+              hint_en=""
+              hint_de="vor shintōistischem Schrein"
+              lvl="n1"
+              category="culture, top-words"
+              id="torii-archway"
+              rem="Unicode sign: ⛩"
+            />
+            <word
+              w="【風：ふう】【車：しゃ】"
+              rom="fūsha"
+              tr_en="windmill"
+              tr_de="Windmühle"
+              lvl="n1"
+              category="city, scenery"
+              id="fūsha-windmill"
+            />
+            <word
+              w="【貝：かい】【殻：がら】"
+              rom="kaigara"
+              tr_en="seashell"
+              tr_de="Muschel"
+              lvl="n1"
+              category="beach, animal"
+              id="kaigara-seashell"
+            >
+                <keep_apart_from id="kai-shellfish" />
+                <keep_apart_from id="kara-shell" />
+            </word>
+            <word
+              w="【犀：サイ】"
+              rom="sai"
+              tr_en="rhinoceros"
+              tr_de="Nashorn"
+              usuallyInKana="true"
+              lvl="n1"
+              category="animal"
+              id="sai-rhino"
+            />
+            <word
+              w="【雨：あま】【具：ぐ】"
+              rom="amagu"
+              tr_en="rain gear"
+              tr_de="Regenkleidung"
+              lvl="n1"
+              id="amagu-raingear"
+            />
+            <word
+              w="【洪：こう】【水：ずい】"
+              rom="kōzui"
+              tr_en="flood"
+              tr_de="Flut"
+              lvl="n1"
+              category="weather, nature"
+              id="kōzui-flood"
+            />
+            <word
+              w="【雨：う】【天：てん】"
+              rom="uten"
+              tr_en="rainy weather"
+              tr_de="regnerisches Wetter"
+              lvl="n1"
+              category="weather"
+              id="uten-rainyweather"
+            />
+            <word
+              w="【矢：や】"
+              rom="ya"
+              tr_en="arrow; wedge; chock"
+              tr_de="Pfeil; Keil"
+              lvl="n1"
+              id="ya-arrow"
+            />
+            <word
+              w="【金：かな】【槌：づち】"
+              rom="kanadzuchi"
+              tr_en="hammer"
+              tr_de="Hammer"
+              lvl="n1"
+              category="diy"
+              id="kanadzuchi-hammer"
+            />
+            <word
+              w="【取：と】っ【手：て】"
+              rom="totte"
+              tr_en="handle; grip; knob"
+              tr_de="Griff"
+              lvl="n1"
+              category="diy, hands"
+              id="totte-knob"
+            />
+            <word
+              w="【一：いっ】【変：ぺん】"
+              rom="ippen"
+              tr_en="complete change"
+              tr_de="komplette Veränderung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="ippen-completechange"
+            />
+            <word
+              w="【原：げん】【爆：ばく】"
+              rom="genbaku"
+              tr_en="atomic bomb"
+              tr_de="Atombombe"
+              hint_en="abbrev."
+              hint_de="Abkürz."
+              lvl="n1"
+              category="military"
+              id="genbaku-atomicbomb"
+              rem="appears in GENKI2 p.288"
+            />
+            <word
+              w="【炬：こ】【燵：たつ】"
+              rom="kotatsu"
+              tr_en="table with a heat source underneath"
+              tr_de="Tisch mit einer Wärmequelle darunter"
+              hint_en="with a hanging quilt that retains heat"
+              hint_de="mit einer Decke am Rand"
+              lvl="n1"
+              category="home, temperature"
+              id="kotatsu-heatingtbl"
+            />
+            <word
+              w="【顎：あご】"
+              rom="ago"
+              tr_en="jaw; chin"
+              tr_de="Kinn; Kiefer"
+              lvl="n1"
+              category="body"
+              id="ago-jaw"
+            />
+            <word
+              w="【美：び】【術：じゅつ】"
+              rom="bijutsu"
+              tr_en="art; fine arts"
+              tr_de="Kunst; bildende Kunst"
+              lvl="n1"
+              category="arts"
+              id="bijutsu-arts"
+            />
+            <word
+              w="【禅：ぜん】"
+              rom="zen"
+              tr_en="school of Buddhism"
+              tr_de="Schule des Buddhismus"
+              hint_en="with a strong emphasis on reality as-it-is"
+              hint_de="mit einer starken Betonung der Realität, wie sie ist"
+              lvl="n1"
+              category="culture, top-words"
+              id="zen-buddhism"
+            />
+            <word
+              w="【沼：ぬま】"
+              rom="numa"
+              tr_en="marsh; swamp"
+              tr_de="Sumpf"
+              lvl="n1"
+              category="nature, scenery"
+              id="numa-swamp"
+            />
+            <word
+              w="【幹：みき】"
+              rom="miki"
+              tr_en="tree trunk"
+              tr_de="Baumstamm"
+              lvl="n1"
+              category="plant, nature"
+              id="miki-treetrunk"
+            />
+            <word
+              w="【前：まえ】【売：う】り"
+              rom="maeuri"
+              tr_en="booking; to sell sth. in advance"
+              tr_de="Vorverkauf; buchen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="maeuri-booking"
+            />
+            <word
+              w="ぶらぶら"
+              rom="bura-bura"
+              tr_en="swaying to and fro; roaming; (idly) wandering"
+              tr_de="hin und her (schwingen); herumziehen; (durch die Strassen) streifen"
+              hint_en="adverb; suru verb"
+              hint_de="Adverb; Suru-Verb"
+              lvl="n1"
+              category="onomatopoeia"
+              id="burabura-toandfro"
+            />
+            <word
+              w="【動：どう】【力：りょく】"
+              rom="dōryoku"
+              tr_en="power; motive power; three-phase electricity"
+              tr_de="Energie; Antriebskraft; Drehstrom"
+              lvl="n1"
+              category="technical"
+              id="dōryoku-power"
+            />
+            <word
+              w="【高：たか】"
+              rom="taka"
+              tr_en="quantity; amount; volume"
+              tr_de="Quantität; Anzahl; Volumen"
+              lvl="n1"
+              id="taka-amount"
+            />
+            <word
+              w="【理：り】【論：ろん】"
+              rom="riron"
+              tr_en="theory"
+              tr_de="Theorie"
+              lvl="n1"
+              category="science"
+              id="riron-theory"
+            />
+            <word
+              w="【初：はつ】【耳：みみ】"
+              rom="hatsumimi"
+              tr_en="something heard for the first time"
+              tr_de="etw. zum ersten Mal hören"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n1"
+              category="hearing"
+              id="hatsumimi-hearfirsttime"
+              rem="why is this n1?"
+            />
+            <word
+              w="【音：ね】【色：いろ】"
+              rom="neiro"
+              tr_en="tone colour; timbre"
+              tr_de="Klangfarbe; Timbre"
+              lvl="n1"
+              id="neiro-timbre"
+            >
+                <keep_apart_from id="shikisai-hue" />
+            </word>
+            <word
+              w="【劇：げき】【団：だん】"
+              rom="gekidan"
+              tr_en="theatrical company; troupe"
+              tr_de="Theaterkompanie; Truppe"
+              lvl="n1"
+              category="entertainment"
+              id="gekidan-troupe"
+            />
+            <word
+              w="【浜：はま】"
+              rom="hama"
+              tr_en="beach; seashore"
+              tr_de="Strand; Meeresufer"
+              lvl="n1"
+              category="beach"
+              id="hama-beach"
+            >
+                <keep_apart_from id="engan-coast" />
+                <keep_apart_from id="hamabe-foreshore" />
+                <keep_apart_from id="umibe-beach" />
+                <keep_apart_from id="kaigan-coast" />
+                <keep_apart_from id="kishi-shore" />
+            </word>
+            <word
+              w="【墓：ぼ】【地：ち】"
+              rom="bochi"
+              tr_en="graveyard; cemetery"
+              tr_de="Friedhof"
+              lvl="n1"
+              category="city"
+              id="bochi-cemetery"
+            />
+            <word
+              w="【警：けい】【部：ぶ】"
+              rom="keibu"
+              tr_en="inspector (police)"
+              tr_de="Inspektor (Polizei)"
+              lvl="n1"
+              category="crime, people"
+              id="keibu-inspector"
+            >
+                <keep_apart_from id="keiji-detective" />
+                <keep_apart_from id="keikan-constable" />
+                <keep_apart_from id="hori-constable" />
+            </word>
+            <word
+              w="【自：じ】【信：しん】"
+              rom="jishin"
+              tr_en="confidence in oneself"
+              tr_de="Selbstvertrauen; an sich selbst glauben"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="mood"
+              id="jishin-confidence"
+            >
+                <keep_apart_from id="jikaku-selfaware" />
+            </word>
+            <word
+              w="【黒：くろ】【字：じ】"
+              rom="kuroji"
+              tr_en="(being in) the black; surplus; black letter"
+              tr_de="im Schwarzen sein; schwarze Zahlen; Überschuss"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n1"
+              id="kuroji-surplus"
+            />
+            <word
+              w="【時：じ】【刻：こく】【表：ひょう】"
+              rom="jikokuhyō"
+              tr_en="timetable"
+              tr_de="Fahrplan"
+              hint_en="public transport"
+              hint_de="ÖV"
+              lvl="n1"
+              category="transportation"
+              id="jikokuhyō-timetbl"
+            />
+            <word
+              w="【蜂：はち】【蜜：みつ】"
+              rom="hachimitsu"
+              tr_en="honey"
+              tr_de="Honig"
+              lvl="n1"
+              category="food, cooking"
+              id="hachimitsu-honey"
+            />
+            <word
+              w="【面：おもて】"
+              rom="omote"
+              tr_en="face; surface; mask"
+              tr_de="Fläche; Oberfläche; Maske"
+              lvl="n1"
+              id="omote-mask"
+            >
+                <!-- implicit see-also link to omote-frontside -->
+            </word>
+            <word
+              w="【天：てん】【体：たい】"
+              rom="tentai"
+              tr_en="celestial body; astronomical object"
+              tr_de="Himmelskörper; astronomisches Objekt"
+              lvl="n1"
+              category="astronomy"
+              id="tentai-astroobj"
+            />
+            <word
+              w="【油：あぶら】【絵：え】"
+              rom="aburae"
+              tr_en="oil painting"
+              tr_de="Ölgemälde"
+              lvl="n1"
+              category="arts"
+              id="aburae-oilpainting"
+              rem="should be n3"
+            />
+            <word
+              w="【縁：えん】【側：がわ】"
+              rom="engawa"
+              tr_en="porch; open corridor"
+              tr_de="Vorbau; offener Korridor"
+              hint_en="wooden strip of flooring before windows"
+              hint_de="Bodenstreifen aus Holz vor dem Fenster"
+              lvl="n1"
+              category="home"
+              id="engawa-porch"
+            />
+            <word
+              w="【顔：かお】つき"
+              rom="kaotsuki"
+              tr_en="looks; features; expression"
+              tr_de="Aussehen; Gesichtszüge; Gesichtsausdruck"
+              lvl="n1"
+              id="kaotsuki-looks"
+            />
+            <word
+              w="【角：つの】"
+              rom="tsuno"
+              tr_en="horns; antlers; antennae"
+              tr_de="Hörner; Geweih; Fühler"
+              lvl="n1"
+              category="animal, insect"
+              id="tsuno-horns"
+            />
+            <word
+              w="【甥：おい】"
+              rom="oi"
+              tr_en="nephew"
+              tr_de="Neffe"
+              hint_en="son of one's sibling, brother-in-law or sister-in-law"
+              hint_de="Sohn eines Geschwisters"
+              lvl="n1"
+              category="family"
+              id="oi-nephew"
+            />
+            <word
+              w="【暴：ぼう】【風：ふう】"
+              rom="bōfū"
+              tr_en="storm; violent wind"
+              tr_de="Sturm; starker Wind"
+              lvl="n1"
+              category="weather"
+              id="bōfū-storm"
+            />
+            <word
+              w="【雪崩：なだれ】"
+              rom="nadare"
+              tr_en="avalanche; snowslide"
+              tr_de="Lawine"
+              lvl="n1"
+              category="nature"
+              id="nadare-avalanche"
+              hasCombinedReading="true"
+            />
+            <word
+              w="【街：かい】【道：どう】"
+              rom="kaidō"
+              tr_en="main road; highway (esp. one existing from the Edo period)"
+              tr_de="Hauptstrasse"
+              Langenscheidt="-"
+              lvl="n1"
+              id="kaidō-mainroad"
+            />
+            <word
+              w="お【負：ま】け"
+              rom="o-make"
+              tr_en="freebie; bonus; extra"
+              tr_de="Bonus; Extra"
+              lvl="n1"
+              usuallyInKana="true"
+              id="omake-freebie"
+            />
+        </section>
+    </unit>
+</vocabulary>

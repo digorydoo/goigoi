@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<io.github.digorydoo.goigoi.view.BottomSheetScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:scrollbars="vertical"
+  android:scrollbarStyle="outsideOverlay"
+  >
+    <LinearLayout
+      android:id="@+id/content"
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@drawable/bottom_sheet_shape"
+      android:paddingTop="24dp"
+      android:paddingBottom="8dp"
+      >
+        <TextView
+          android:id="@+id/primary_form"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+          android:textColor="?attr/sheetPrimaryTextColour"
+          tools:text="This is the word's primary form. It may also be a sentence."
+          />
+        <TextView
+          android:id="@+id/secondary_form"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="?attr/sheetPrimaryTextColour"
+          android:textStyle="italic"
+          android:typeface="serif"
+          tools:text="Secondary form"
+          />
+        <TextView
+          android:id="@+id/sometimes_written_as"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:layout_marginTop="4dp"
+          android:layout_marginBottom="4dp"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="?attr/sheetSecondaryTextColour"
+          tools:text="Sometimes written as: kanji"
+          />
+        <TextView
+          android:id="@+id/translation"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+          android:textColor="?attr/sheetPrimaryTextColour"
+          tools:text="Translation"
+          />
+        <TextView
+          android:id="@+id/hint"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="?attr/sheetSecondaryTextColour"
+          android:textStyle="italic"
+          android:typeface="serif"
+          tools:text="Hint"
+          />
+
+        <!--
+            NOTE: If some time I want to flex-wrap multiple tags, I could use FlexboxLayout:
+            https://github.com/google/flexbox-layout
+        -->
+        <TextView
+          android:id="@+id/jlpt_level"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:layout_marginTop="8dp"
+          style="?attr/myBadgeStyle"
+          tools:text="JLPT N5"
+          />
+        <TextView
+          android:id="@+id/word_categories"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:layout_marginTop="4dp"
+          android:layout_marginBottom="4dp"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="?attr/sheetSecondaryTextColour"
+          tools:text="#home #literature"
+          />
+        <TextView
+          android:id="@+id/kanji_more_difficult"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:layout_marginTop="4dp"
+          android:layout_marginBottom="4dp"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="?attr/sheetSecondaryTextColour"
+          tools:text="For JLPT xy, you only need to know kana"
+          />
+        <TextView
+          android:id="@+id/word_stats"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="16dp"
+          android:layout_marginRight="16dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginBottom="8dp"
+          android:textAppearance="@style/TextAppearance.AppCompat.Small"
+          android:textColor="?attr/sheetSecondaryTextColour"
+          tools:text="Rating...\nStatistics..."
+          />
+    </LinearLayout>
+</io.github.digorydoo.goigoi.view.BottomSheetScrollView>

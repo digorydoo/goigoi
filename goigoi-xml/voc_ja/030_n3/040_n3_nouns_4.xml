@@ -1,0 +1,1104 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 nouns ④"
+      name_de="N3-Nomen ④"
+      name_fr="Les noms N3 ④"
+      name_it="Nomi N3 ④"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【物：もの】【語：がたり】"
+              rom="monogatari"
+              tr_en="story; tale; fable"
+              tr_de="Geschichte; Märchen; Fabel"
+              lvl="n3"
+              category="literature, entertainment"
+              id="monogatari-tale"
+            >
+                <keep_apart_from id="hanashi-talk" />
+                <phrase
+                  ph="【怖：こわ】い【物：もの】【語：がたり】"
+                  rom="kowai monogatari"
+                  tr_en="a frightening tale"
+                  tr_de="Gruselgeschichte"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【物：もの】【語：がたり】の【始：はじ】まり"
+                  rom="monogatari no hajimari"
+                  tr_en="the beginning of the story"
+                  tr_de="der Anfang der Geschichte"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】は【物：もの】【語：がたり】をたくさん【書：か】いた。"
+                  rom="Watashi wa monogatari o takusan kaita."
+                  tr_en="I've written a lot of stories."
+                  tr_de="Ich habe viele Geschichten geschrieben."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【王：おう】【様：さま】"
+              rom="Ō-sama"
+              tr_en="king"
+              tr_de="König"
+              lvl="n3"
+              category="people"
+              id="ōsama-king"
+            >
+                <keep_apart_from id="ō-king" />
+                <keep_together id="ō-king" />
+                <keep_together id="joō-queen" />
+                <keep_together id="ōji-prince" />
+                <keep_together id="ōjo-princess" />
+                <sentence
+                  s="【昔：むかし】【々：むかし】、ある【国：くに】に【優：やさ】しい【王：おう】【様：さま】が【住：す】んでいました。"
+                  rom="Mukashi-mukashi, aru kuni ni yasashii Ō-sama ga sunde imashita."
+                  tr_en="Once upon a time, there lived a kind king in a certain land."
+                  tr_de="Es war einmal ein sanfter König, der in einem bestimmten Land lebte."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【王：おう】"
+              rom="ō"
+              tr_en="king; ruler; sovereign; monarch"
+              lvl="n3"
+              id="ō-king"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="ōsama-king" />
+                <keep_together id="ōsama-king" />
+            </word>
+            <word
+              w="【女：じょ】【王：おう】"
+              rom="joō"
+              tr_en="queen"
+              tr_de="Königin"
+              lvl="n3"
+              category="people"
+              id="joō-queen"
+            >
+                <keep_together id="ōsama-king" />
+                <keep_together id="ōji-prince" />
+                <keep_together id="ōjo-princess" />
+                <sentence
+                  s="【女：じょ】【王：おう】の【夫：おっと】は「【王：おう】」と【呼：よ】ばれます。"
+                  rom="Joō no otto wa ‘Ō’ to yobaremasu."
+                  tr_en="The husband of a queen is called a king."
+                  tr_de="Der Ehemann einer Königin wird König genannt."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【王：おう】【子：じ】"
+              rom="ōji"
+              tr_en="prince"
+              tr_de="Prinz"
+              lvl="n3"
+              category="people"
+              id="ōji-prince"
+            >
+                <keep_together id="ōsama-king" />
+                <keep_together id="joō-queen" />
+                <keep_together id="ōjo-princess" />
+                <sentence
+                  s="【王：おう】【子：じ】は【冒：ぼう】【険：けん】に【出：で】かけた。"
+                  rom="Ōji wa bōken ni dekaketa."
+                  tr_en="The prince set off on an adventure."
+                  tr_de="Der Prinz begab sich auf ein Abenteuer."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【舌：した】"
+              rom="shita"
+              tr_en="tongue"
+              tr_de="Zunge"
+              lvl="n3"
+              category="body"
+              id="shita-tongue"
+            >
+                <sentence
+                  s="【舌：した】を【見：み】せてください。"
+                  rom="Shita o misete kudasai."
+                  tr_en="Let me see your tongue."
+                  tr_de="Lass mich deine Zunge anschauen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【頬：ほお】"
+              rom="hō"
+              tr_en="cheek"
+              tr_de="Wange; Backe"
+              lvl="n3"
+              category="body"
+              id="hō-cheek"
+            >
+                <sentence
+                  s="【涙：なみだ】がリサちゃんの【頬：ほお】に【流：なが】れた。"
+                  rom="Namida ga Risa-chan no hō ni nagareta."
+                  tr_en="Tears were rolling down Risa's cheek."
+                  tr_de="Risa liefen die Tränen herunter."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【肩：かた】"
+              rom="kata"
+              tr_en="shoulder"
+              tr_de="Schulter"
+              lvl="n3"
+              category="body"
+              id="kata-shoulder"
+            >
+                <sentence
+                  s="【右：みぎ】【肩：かた】が【痛：いた】い。"
+                  rom="Migi kata ga itai."
+                  tr_en="My right shoulder hurts."
+                  tr_de="Meine rechte Schulter tut weh."
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【骨：ほね】"
+              rom="hone"
+              tr_en="bone"
+              tr_de="Knochen"
+              lvl="n3"
+              category="body"
+              id="hone-bone"
+            >
+                <sentence
+                  s="【骨：ほね】が【多：おお】いので、【魚：さかな】は【食：た】べにくいです。"
+                  rom="Hone ga ōi no de, sakana wa tabe-nikui desu."
+                  tr_en="Fish are hard to eat, because they have many bones."
+                  tr_de="Fisch ist schwierig zu essen, weil sie viele Gräte haben."
+                  lvl="n3"
+                  origin="GENKI2 p.190"
+                />
+            </word>
+            <word
+              w="【王：おう】【女：じょ】"
+              rom="ōjo"
+              tr_en="princess"
+              tr_de="Prinzessin"
+              lvl="n3"
+              category="people"
+              id="ōjo-princess"
+              rem="jisho has n2"
+            >
+                <keep_together id="ōsama-king" />
+                <keep_together id="joō-queen" />
+                <keep_together id="ōji-prince" />
+                <phrase
+                  ph="【王：おう】【女：じょ】になっている【夢：ゆめ】を【見：み】る"
+                  rom="ōjo ni natte iru yume o miru"
+                  tr_en="to dream of having become a princess"
+                  tr_de="davon träumen, eine Prinzessin geworden zu sein"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【物：もの】【語：がたり】では、【王：おう】【女：じょ】をよく「【姫：ひめ】【様：さま】」と【呼：よ】びます。"
+                  rom="Monogatari de wa, ōjo o yoku ‘hime-sama’ to yobimasu."
+                  tr_en="In stories, a princess is often called 'Hime-sama'."
+                  tr_de="In Geschichten wird eine Prinzessin oft 'Hime-Sama' genannt."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrases by ChatGPT; jisho has nx for hime"
+                />
+            </word>
+            <word
+              w="【格：かっ】【好：こう】"
+              rom="kakkō"
+              tr_en="shape (of body); appearance; posture"
+              tr_de="Körperfigur; Erscheinung; Körperhaltung"
+              lvl="n3"
+              category="body"
+              id="kakkō-shape"
+            >
+                <phrase
+                  ph="かっこいい"
+                  rom="kakkoii"
+                  tr_en="attractive; good-looking"
+                  tr_de="attraktiv; gut aussehend"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  rem="jisho has nx"
+                />
+            </word>
+            <word
+              w="【患：かん】【者：じゃ】"
+              rom="kanja"
+              tr_en="patient"
+              tr_de="Patient"
+              lvl="n3"
+              category="health"
+              id="kanja-patient"
+            >
+                <sentence
+                  s="【患：かん】【者：じゃ】は【退：たい】【院：いん】した。"
+                  rom="Kanja wa taiin shita."
+                  tr_en="The patient was discharged from hospital."
+                  tr_de="Der Patient wurde aus dem Spital entlassen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【頭：ず】【痛：つう】"
+              rom="zutsū"
+              tr_en="headache"
+              tr_de="Kopfschmerzen"
+              lvl="n3"
+              category="health"
+              id="zutsū-headache"
+            >
+                <sentence
+                  s="【頭：ず】【痛：つう】が【無：な】くなった。"
+                  rom="Zutsū ga nakunatta."
+                  tr_en="My headache is gone."
+                  tr_de="Meine Kopfschmerzen sind verschwunden."
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【手：しゅ】【術：じゅつ】"
+              rom="shujutsu"
+              tr_en="surgery; operation"
+              tr_de="chirurgische Operation"
+              lvl="n3"
+              category="health"
+              id="shujutsu-surgery"
+            >
+                <keep_apart_from id="geka-surgery" />
+                <sentence
+                  s="【手：しゅ】【術：じゅつ】が【必：ひつ】【要：よう】なんです。"
+                  rom="Shujutsu ga hitsuyō na n desu."
+                  tr_en="An operation is necessary."
+                  tr_de="Eine Operation ist notwendig."
+                  lvl="n3"
+                  origin="Langenscheidt p.207"
+                />
+            </word>
+            <word
+              w="【健：けん】【康：こう】"
+              rom="kenkō"
+              tr_en="health"
+              tr_de="Gesundheit"
+              lvl="n3"
+              category="health"
+              id="kenkō-health"
+            >
+                <phrase
+                  ph="【健：けん】【康：こう】【保：ほ】【険：けん】"
+                  rom="kenkō hoken"
+                  tr_en="health insurance"
+                  tr_de="Krankenversicherung"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【健：けん】【康：こう】のために【毎：まい】【日：にち】 【運：うん】【動：どう】しています。"
+                  rom="Kenkō no tame ni mai-nichi undō shite imasu."
+                  tr_en="I work out every day for my health."
+                  tr_de="Ich trainiere jeden Tag für meine Gesundheit."
+                  allowSpaces="true"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【怪：ケ】【我：ガ】"
+              rom="kega"
+              tr_en="injury; wound"
+              tr_de="Verletzung; Wunde"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              usuallyInKana="true"
+              lvl="n3"
+              category="health"
+              id="kega-injury"
+              rem="appears in 500mon q394"
+            >
+                <!-- 怪我を治す (けがをなおす) - To heal an injury. (ChatGPT) -->
+                <keep_apart_from id="songai-damage" />
+                <keep_apart_from id="gai-harm" />
+                <sentence
+                  s="ケガ【人：にん】が【２：ふた】【人：り】います。"
+                  rom="Kega-nin ga futari imasu."
+                  tr_en="There are two injured persons."
+                  tr_de="Es hat zwei verletzte Personen."
+                  lvl="n3"
+                  origin="Langenscheidt"
+                />
+                <sentence
+                  s="ケガが【軽：かる】くて、【安：あん】【心：しん】しました。"
+                  rom="Kega ga karukute, anshin shimashita."
+                  tr_en="I'm relieved that you're not badly injured."
+                  tr_de="Ich bin erleichtert, dass deine Verletzung nicht schlimm ist."
+                  lvl="n3"
+                  origin="500mon q394"
+                />
+                <sentence
+                  s="【中：なか】【村：むら】さんは【交：こう】【通：つう】【事：じ】【故：こ】にあって、【足：あし】にケガをした。"
+                  rom="Nakamura-san wa kōtsū-jiko ni atte, ashi ni kega o shita."
+                  tr_en="Mrs Nakamura had a traffic accident and injured her leg."
+                  tr_de="Frau Nakamura hatte einen Verkehrsunfall und wurde am Bein verletzt."
+                  lvl="n3"
+                  origin="Oxford p.41 modified"
+                />
+            </word>
+            <word
+              w="【傷：きず】"
+              rom="kizu"
+              tr_en="cut; scratch; wound"
+              tr_de="Schnittwunde; Kratzer; Wunde"
+              Langenscheidt="Wunde; Kratzer"
+              lvl="n3"
+              category="health"
+              id="kizu-scar"
+            >
+                <see id="kizutsuku-gethurt" rem="verb" />
+                <phrase
+                  ph="【傷：きず】【跡：あと】"
+                  rom="kizuato"
+                  tr_en="a scar"
+                  tr_de="eine Narbe"
+                  lvl="n3"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【傷：きず】はまだ【痛：いた】む。"
+                  rom="Kizu wa mada itamu."
+                  tr_en="The wound still hurts."
+                  tr_de="Die Wunde tut immer noch weh."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="jisho has n1 for itamu"
+                />
+                <sentence
+                  s="ハリーは【額：ひたい】に【傷：きず】【跡：あと】がある。"
+                  rom="Harī wa hitai ni kizuato ga aru."
+                  tr_en="Harry has a scar on the forehead."
+                  tr_de="Harry hat eine Narbe auf der Stirn."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【痛：いた】み"
+              rom="itami"
+              tr_en="pain"
+              tr_de="Schmerzen"
+              lvl="n3"
+              category="health"
+              id="itami-pain"
+            >
+                <see id="itai-painful" rem="adjective" />
+                <see id="itamu-hurt" rem="verb" />
+                <keep_apart_from id="kutsū-pain" />
+                <phrase
+                  ph="のどの【痛：いた】み"
+                  rom="nodo no itami"
+                  tr_en="sore throat"
+                  tr_de="Halsschmerzen"
+                  lvl="n3"
+                />
+                <phrase
+                  ph="【背：せ】【中：なか】の【痛：いた】み"
+                  rom="senaka no itami"
+                  tr_en="backache"
+                  tr_de="Rückenschmerzen"
+                  lvl="n3"
+                />
+                <sentence
+                  s="その【痛：いた】みはいつから【始：はじ】まりましたか。"
+                  rom="Sono itami wa itsu kara hajimarimashita ka?"
+                  tr_en="How long have you had this pain?"
+                  tr_de="Wie lange haben Sie diese Schmerzen schon?"
+                  lvl="n3"
+                  origin="Langenscheidt p.207"
+                />
+            </word>
+            <word
+              w="【息：いき】"
+              rom="iki"
+              tr_en="breath; breathing"
+              tr_de="Atem; Atmen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="health"
+              id="iki-breath"
+            >
+                <phrase
+                  ph="【息：いき】をする"
+                  rom="iki o suru"
+                  tr_en="to breathe"
+                  tr_de="atmen"
+                  lvl="n3"
+                />
+                <sentence
+                  s="【息：いき】を【止：と】めてください。"
+                  rom="Iki o tomete kudasai."
+                  tr_en="Please hold your breath."
+                  tr_de="Bitte halten Sie den Atem an."
+                  lvl="n3"
+                  origin="Langenscheidt p.206"
+                />
+            </word>
+            <word
+              w="【咳：せき】"
+              rom="seki"
+              tr_en="cough; coughing"
+              tr_de="Husten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="health"
+              id="seki-cough"
+              rem="appears in GENKI1 p.269 vocab section as kana; jisho and ChatGPT say it isn't usually in kana"
+            >
+                <phrase
+                  ph="【咳：せき】が【出：で】る"
+                  rom="seki ga deru"
+                  tr_en="to cough"
+                  tr_de="husten"
+                  lvl="n3"
+                  origin="GENKI1 p.269"
+                />
+                <phrase
+                  ph="【咳：せ】き【込：こ】む"
+                  rom="sekikomu"
+                  tr_en="to have a coughing fit"
+                  tr_de="einen Hustenanfall bekommen"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="おじいさんはひどく【咳：せ】き【込：こ】んだ。"
+                  rom="O-jīsan wa hidoku sekikonda."
+                  tr_en="Grandfather had a violent coughing fit."
+                  tr_de="Grossvater hatte einen starken Hustenanfall."
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
+            <word
+              w="【筆：ふで】"
+              rom="fude"
+              tr_en="brush; something drawn with a brush"
+              tr_de="Pinsel; etwas mit dem Pinsel gemaltes"
+              lvl="n3"
+              category="writing, arts"
+              id="fude-brush"
+            >
+                <keep_apart_from id="burashi-brush" />
+                <phrase
+                  ph="【筆：ふで】の【跡：あと】"
+                  rom="fude no ato"
+                  tr_en="brush strokes"
+                  tr_de="Pinselstriche"
+                  explanation_en="Without の it becomes【筆：ひっ】【跡：せき】, which means 'handwriting'"
+                  explanation_de="Ohne の wird es zu【筆：ひっ】【跡：せき】, was 'Handschrift' bedeutet"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【筆：ふで】を【折：お】る"
+                  rom="fude o oru"
+                  tr_en="to abandon one's work"
+                  tr_de="das Geschriebene verwerfen; das Handtuch werfen"
+                  explanation_en="Literally 'to break the brush'"
+                  explanation_de="Wörtlich 'den Pinsel zerbrechen'"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【今日：きょう】は【筆：ふで】が【乗：の】っている。"
+                  rom="Kyō wa fude ga notte iru."
+                  tr_en="I'm feeling inspired today."
+                  tr_de="Ich fühle mich heute inspiriert."
+                  explanation_en="Literally 'the brush is riding (well)'"
+                  explanation_de="Wörtlich 'der Pinsel fährt (gut)'"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="あの【作：さっ】【家：か】は【本：ほん】【当：とう】に【筆：ふで】が【立：た】ちますね。"
+                  rom="Ano sakka wa hontō ni fude ga tachimasu ne."
+                  tr_en="That author is really good at writing."
+                  tr_de="Jener Autor ist wirklich gut im Schreiben."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="ChatGPT is unclear whether it likes the sentence; it may be old-fashioned"
+                />
+            </word>
+            <word
+              w="【借：しゃっ】【金：きん】"
+              rom="shakkin"
+              tr_en="debt; loan; borrowing money"
+              tr_de="Schuld; Darlehen; Geld leihen"
+              studyInContext="preferred"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="finances"
+              id="shakkin-debt"
+              rem="appears in GENKI2 p.287 kanji section"
+            >
+                <keep_apart_from id="kashi-loan" />
+                <keep_apart_from id="kari-loan" />
+                <keep_apart_from id="shōgakukin-scholarship" />
+                <phrase
+                  ph="【借：しゃっ】【金：きん】する"
+                  rom="shakkin suru"
+                  tr_en="to get into debt"
+                  tr_de="Schulden machen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【借：しゃっ】【金：きん】を【返：かえ】す"
+                  rom="shakkin o kaesu"
+                  tr_en="to pay back a loan"
+                  tr_de="ein Darlehen zurückzahlen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="also possible: 借金を払う (しゃっきんをはらう)"
+                />
+                <sentence
+                  s="ギャンブルで【借：しゃっ】【金：きん】を【作：つく】るなんて、【本：ほん】【当：とう】にバカだ。"
+                  rom="Gyanburu de shakkin o tsukuru nante, hontō ni baka da."
+                  tr_en="Getting into debt from gambling, how stupid!"
+                  tr_de="Sich mit Glückspiel Schulden machen, wie dumm ist das denn!"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has nx for ギャンブル"
+                />
+            </word>
+            <word
+              w="【注：ちゅう】【文：もん】"
+              rom="chūmon"
+              tr_en="order (for an item); request; demand"
+              tr_de="Bestellung (eines Artikels); Anfrage; Nachfrage"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="gastronomy, business"
+              id="chūmon-order"
+              rem="appears in GENKI2 p.286 kanji section"
+            >
+                <phrase
+                  ph="【料：りょう】【理：り】を【注：ちゅう】【文：もん】する"
+                  rom="ryōri o chūmon suru"
+                  tr_en="to order food"
+                  tr_de="Essen bestellen"
+                  lvl="n3"
+                />
+                <sentence
+                  s="【注：ちゅう】【文：もん】しなければなりません。"
+                  rom="Chūmon shinakereba narimasen."
+                  tr_en="We have to order it."
+                  tr_de="Wir müssen es bestellen."
+                  lvl="n3"
+                  origin="Langenscheidt p.200"
+                />
+            </word>
+            <word
+              w="【昼：ちゅう】【食：しょく】"
+              rom="chūshoku"
+              tr_en="lunch; midday meal"
+              tr_de="Mittagessen"
+              lvl="n3"
+              category="gastronomy, cooking"
+              id="chūshoku-lunch"
+            >
+                <keep_apart_from id="gohan-meal" />
+                <keep_apart_from id="meshi-meal" />
+                <keep_apart_from id="shokuji-meal" />
+                <phrase
+                  ph="【軽：かる】い【昼：ちゅう】【食：しょく】"
+                  rom="karui chūshoku"
+                  tr_en="a light lunch"
+                  tr_de="ein leichtes Mittagessen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【昼：ちゅう】【食：しょく】を【食：た】べよう。"
+                  rom="Chūshoku o tabeyō."
+                  tr_en="Let's eat lunch."
+                  tr_de="Lass uns mittagessen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【煙：けむり】"
+              rom="kemuri"
+              tr_en="smoke; fumes"
+              tr_de="Rauch; Abgase"
+              lvl="n3"
+              category="fire"
+              id="kemuri-smoke"
+            >
+                <see id="kemuru-smoulder" rem="verb" />
+                <keep_together id="kinen-nosmoking" rem="uses same kanji" />
+                <keep_apart_from id="kemuru-smoulder" rem="too similar" />
+                <phrase
+                  ph="タバコの【煙：けむり】"
+                  rom="tabako no kemuri"
+                  tr_en="cigarette smoke"
+                  tr_de="Zigarettenrauch"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【工：こう】【場：じょう】から【黒：くろ】い【煙：けむり】が【立：た】ち【上：のぼ】っている。"
+                  rom="Kōjō kara kuroi kemuri ga tachi-nobotte iru."
+                  tr_en="Black smoke is rising from the factory."
+                  tr_de="Schwarzer Rauch steigt von der Fabrik auf."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has nx for tachi-noboru, but n5 for tatsu, noboru"
+                />
+            </word>
+            <word
+              w="【禁：きん】【煙：えん】"
+              rom="kin'en"
+              tr_en="prohibition of smoking; quitting smoking"
+              tr_de="Rauchverbot; mit Rauchen aufhören"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="fire, health"
+              id="kinen-nosmoking"
+            >
+                <keep_together id="kemuri-smoke" rem="uses same kanji" />
+                <keep_apart_from id="kinshi-ban" />
+                <phrase
+                  ph="【禁：きん】【煙：えん】【席：せき】"
+                  rom="kin'en seki"
+                  tr_en="non-smoking seat (in a café, etc.)"
+                  tr_de="Nichtraucherplatz (in einem Café, usw.)"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="ここでは【禁：きん】【煙：えん】です。"
+                  rom="Koko de wa kin'en desu."
+                  tr_en="You are not supposed so smoke here."
+                  tr_de="Man darf hier nicht rauchen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【禁：きん】【煙：えん】は【難：むずか】しい。"
+                  rom="Kin'en wa muzukashii."
+                  tr_en="It is difficult to give up smoking."
+                  tr_de="Es ist schwierig, mit Rauchen aufzuhören."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【小：こ】【屋：や】"
+              rom="koya"
+              tr_en="hut; cabin; shed"
+              tr_de="Hütte; Baracke; Schuppen"
+              Langenscheidt="Hütte"
+              lvl="n3"
+              category="home"
+              id="koya-shed"
+            >
+                <phrase
+                  ph="【犬：いぬ】【小：ご】【屋：や】"
+                  rom="inugoya"
+                  tr_en="a dog kennel"
+                  tr_de="eine Hundehütte"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  rem="if this is considered a word in itself, its nx; see inugoya-kennel"
+                />
+            </word>
+            <word
+              w="【梅雨：つゆ】"
+              rom="tsuyu"
+              tr_en="rainy season"
+              tr_de="Regenzeit"
+              lvl="n3"
+              category="weather, seasons"
+              id="tsuyu-rainyseason"
+              hasCombinedReading="true"
+            >
+                <sentence
+                  s="【梅雨：つゆ】は【六：ろく】【月：がつ】から【始：はじ】まる。"
+                  rom="Tsuyu wa roku-gatsu kara hajimaru."
+                  tr_en="The rainy season begins in June."
+                  tr_de="Die Regensaison beginnt im Juni."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【市：し】【場：じょう】"
+              rom="shijō"
+              tr_en="market"
+              tr_de="Markt"
+              hint_en="stock, domestic, commodity, etc."
+              hint_de="Börse, Inland-, Rockstoff-, usw."
+              lvl="n3"
+              category="shopping"
+              id="shijō-market"
+            >
+                <see id="ichiba-market" rem="closely related" />
+                <keep_apart_from id="māketto-market" />
+                <keep_apart_from id="ichiba-market" />
+                <keep_apart_from id="ichi-fair" />
+                <phrase
+                  ph="【金：きん】【融：ゆう】【市：し】【場：じょう】"
+                  rom="kinyū shijō"
+                  tr_en="financial market"
+                  tr_de="Finanzmarkt"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【市：し】【場：じょう】【経：けい】【済：ざい】"
+                  rom="shijō keizai"
+                  tr_en="market economy"
+                  tr_de="Marktwirtschaft"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【市：し】【場：じょう】【分：ぶん】【析：せき】"
+                  rom="shijō bunseki"
+                  tr_en="market analysis"
+                  tr_de="Marktanalyse"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【文：も】【字：じ】"
+              rom="moji"
+              tr_en="letter (of alphabet); character"
+              tr_de="Buchstabe; Schriftzeichen"
+              lvl="n3"
+              category="education, top-words"
+              id="moji-character"
+            >
+                <sentence
+                  s="その【文：も】【字：じ】は【小：ちい】さすぎて、【読：よ】めない。"
+                  rom="Sono moji wa chīsa-sugite, yomenai."
+                  tr_en="Those letters are too small, I can't read them."
+                  tr_de="Diese Buchstaben sind zu klein, ich kann sie nicht lesen."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【空：あ】き"
+              rom="aki"
+              tr_en="space; room; gap"
+              tr_de="Raum; Lücke"
+              Langenscheidt="-"
+              lvl="n3"
+              id="aki-space"
+            >
+                <see id="aku-empty" rem="verb" />
+                <keep_apart_from id="ana-hole" />
+                <keep_apart_from id="sukima-gap" />
+                <phrase
+                  ph="【空：あ】きがない"
+                  rom="aki ga nai"
+                  tr_en="there's no space"
+                  tr_de="es hat keinen Platz"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【空：あ】き【家：や】"
+                  rom="akiya"
+                  tr_en="an unoccupied house"
+                  tr_de="ein leerstehendes Haus"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; jisho has nx; jisho also has 空き屋, but ChatGPT says 空き家 is far more common"
+                />
+                <sentence
+                  s="【車：くるま】にまだ【空：あ】きはありますか。"
+                  rom="Kuruma ni mada aki wa arimasu ka?"
+                  tr_en="Is there still room in your car?"
+                  tr_de="Hat es in deinem Auto noch Platz?"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【体：たい】【温：おん】"
+              rom="taion"
+              tr_en="body temperature"
+              tr_de="Körpertemperatur"
+              lvl="n3"
+              category="health, temperature"
+              id="taion-bodytemp"
+            >
+                <keep_apart_from id="kion-airtemperature" />
+                <keep_apart_from id="ondo-temperature" />
+            </word>
+            <word
+              w="【言：い】い【訳：わけ】"
+              rom="iiwake"
+              tr_en="excuse; explanation"
+              tr_de="Entschuldigung; Ausrede"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="quarrel, relationships"
+              id="iiwake-excuse"
+              rem="jisho has n1"
+            >
+                <see id="mōshiwake-apology" rem="closely related" />
+                <keep_apart_from id="mōshiwake-apology" />
+            </word>
+            <word
+              w="【教：きょう】【師：し】"
+              rom="kyōshi"
+              tr_en="teacher"
+              tr_de="Lehrer/in"
+              hint_en="profession"
+              hint_de="der Beruf"
+              lvl="n3"
+              category="education"
+              id="kyōshi-teacher"
+            >
+                <keep_apart_from id="sensei-teacher" />
+                <keep_apart_from id="kyōju-professor" />
+                <keep_apart_from id="kōshi-lecturer" />
+            </word>
+            <word
+              w="【食：しょく】【料：りょう】"
+              rom="shokuryō"
+              tr_en="food"
+              tr_de="Esswaren"
+              lvl="n3"
+              category="food"
+              id="shokuryō-food"
+            >
+                <keep_apart_from id="tabemono-food" />
+                <keep_apart_from id="shokuhin-foodproducts" />
+                <keep_apart_from id="shokumotsu-food" />
+                <keep_apart_from id="shokuryō-rations" />
+                <keep_apart_from id="shokuryōhin-groceries" />
+            </word>
+            <word
+              w="お【連：つ】れ"
+              rom="o-tsure"
+              tr_en="companion"
+              tr_de="Begleiter; Kamerad"
+              lvl="n3"
+              category="relationships"
+              id="otsure-companion"
+            >
+                <keep_apart_from id="naka-relation" rem="ambiguity in phrases" />
+                <keep_apart_from id="aite-companion" />
+                <keep_apart_from id="dōryō-coworker" />
+            </word>
+            <word
+              w="【土：つち】"
+              rom="tsuchi"
+              tr_en="earth; soil; ground"
+              tr_de="Erde; Grund; Boden"
+              lvl="n3"
+              category="nature"
+              id="tsuchi-soil"
+            >
+                <!-- 土を踏む - To tread on the soil (ChatGPT) -->
+            </word>
+            <word
+              w="【平：へい】【和：わ】"
+              rom="heiwa"
+              tr_en="peace; harmony"
+              tr_de="Frieden; Harmonie"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="government"
+              id="heiwa-peace"
+              rem="appears in GENKI2 p.288"
+            >
+                <!-- 平和を祈る (へいわをいのる) - Pray for peace (ChatGPT) -->
+            </word>
+            <word
+              w="【旗：はた】"
+              rom="hata"
+              tr_en="flag"
+              tr_de="Flagge"
+              hint_en="esp. national flag"
+              hint_de="insbes. Nationalflagge"
+              lvl="n3"
+              category="government"
+              id="hata-flag"
+            >
+                <!-- 旗を立てる to raise a flag (ChatGPT) -->
+            </word>
+            <word
+              w="【楽：がっ】【器：き】"
+              rom="gakki"
+              tr_en="musical instrument"
+              tr_de="Musikinstrument"
+              lvl="n3"
+              category="entertainment, hearing"
+              id="gakki-musicalinstrument"
+              rem="appears in GENKI2 Workbook p.21; jisho has n2"
+            />
+            <word
+              w="【家：か】【事：じ】"
+              rom="kaji"
+              tr_en="housework; domestic chores"
+              tr_de="Häusliche Arbeit; Haushaltstätigkeiten"
+              lvl="n3"
+              category="home"
+              id="kaji-housework"
+              rem="appears in GENKI2 L22 vocab section"
+            />
+            <word
+              w="【化：け】【粧：しょう】"
+              rom="keshō"
+              tr_en="cosmetics; makeup"
+              tr_de="Kosmetik; Makeup"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="fashion"
+              id="keshō-makeup"
+              rem="appears in GENKI2 p.117 vocab section"
+            />
+            <word
+              w="【額：ひたい】"
+              rom="hitai"
+              tr_en="forehead"
+              tr_de="Stirn"
+              lvl="n3"
+              category="body"
+              id="hitai-forehead"
+            />
+            <word
+              w="【膝：ひざ】"
+              rom="hiza"
+              tr_en="knee"
+              tr_de="Knie"
+              lvl="n3"
+              category="body"
+              id="hiza-knee"
+            />
+            <word
+              w="【腰：こし】"
+              rom="koshi"
+              tr_en="waist; hips"
+              tr_de="Taille; Hüften"
+              lvl="n3"
+              category="body"
+              id="koshi-hips"
+            />
+            <word
+              w="【胸：むね】"
+              rom="mune"
+              tr_en="chest; breast"
+              tr_de="Brust"
+              lvl="n3"
+              category="body"
+              id="mune-chest"
+            />
+            <word
+              w="【筋：きん】【肉：にく】"
+              rom="kinniku"
+              tr_en="muscle"
+              tr_de="Muskel"
+              lvl="n3"
+              category="body"
+              id="kinniku-muscle"
+            />
+            <word
+              w="【骨：こっ】【折：せつ】"
+              rom="kossetsu"
+              tr_en="bone fracture"
+              tr_de="Knochenbruch"
+              lvl="n3"
+              category="health"
+              id="kossetsu-bonefracture"
+            />
+            <word
+              w="【記：き】【録：ろく】"
+              rom="kiroku"
+              tr_en="record; score"
+              tr_de="Rekord; Punktzahl; punkten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="sports"
+              id="kiroku-score"
+            />
+            <word
+              w="【落：お】ち【葉：ば】"
+              rom="ochiba"
+              tr_en="fallen leaves; defoliation"
+              tr_de="Laub; gefallene Blätter"
+              lvl="n3"
+              category="plant, nature"
+              id="ochiba-fallenleaves"
+              rem="jisho has n1, but n4 for ochiru, ha"
+            />
+            <word
+              w="【死：し】【亡：ぼう】"
+              rom="shibō"
+              tr_en="death; mortality; to die; to pass away"
+              tr_de="Tod; Mortalität; sterben"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="health, not-good"
+              id="shibō-death"
+            />
+        </section>
+    </unit>
+</vocabulary>

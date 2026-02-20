@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 Honorific and modest"
+      name_de="N3 Ehrend und bescheiden"
+      name_fr="Expr. honorifiques et modestes N3"
+      name_it="Espr. onorifiche e modeste N3"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <!--
+            There are three forms of 敬語・けいご:
+            丁寧語 teineigo: just using ます・です
+            尊敬語 sonkeigo: honorific and respectful
+            謙譲語 kenjōgo: extra-modest
+        -->
+        <section
+          name_en="尊敬語・そんけいご: Honorific, respectful"
+          name_de="尊敬語・そんけいご: Ehrend"
+          name_fr="尊敬語・そんけいご: Honorifique"
+          name_it="尊敬語・そんけいご: Onorifiche"
+        >
+            <word
+              w="お【出：い】でになる"
+              rom="oide ni naru"
+              tr_en="to come; to go; to be (somewhere)"
+              hint_en="honorific form of いる, 行く, 来る"
+              lvl="n3"
+              usuallyInKana="true"
+              id="oideninaru-comego"
+              HIDDEN="true"
+              rem="should be a phrase of oide; jisho has nx for oide, n4 for oide ni naru"
+            >
+                <keep_apart_from id="irassharu-comego" />
+            </word>
+            <word
+              w="【下：くだ】さる"
+              rom="kudasaru"
+              tr_en="to give; to bestow; to kindly do for one"
+              tr_de="geben; für jem. etw. tun"
+              hint_en="honorific form of くれる"
+              hint_de="respektvolle Form von くれる"
+              usuallyInKana="true"
+              lvl="n3"
+              id="kudasaru-oblige"
+              rem="appears in GENKI2 p.164 grammar section"
+            >
+                <!--
+                    kudasaru is the honorific form (sonkeigo) of kureru
+                    irregular conjugation: kudasaimasu (NOT kudasarimasu)
+                -->
+                <sentence
+                  s="【推：すい】【薦：せん】【状：じょう】を【書：か】いてくださってありがとうございました。"
+                  rom="Suisenjō o kaite kudasatte arigatō gozaimashita."
+                  tr_en="Thank you for writing a letter of recommendation for me. (honorific)"
+                  tr_de="Danke, dass Sie für mich ein Empfehlungsschreiben geschrieben haben. (respektvoll)"
+                  lvl="n3"
+                  origin="GENKI2 p.167"
+                  rem="The casual form of this is 推薦状を書いてくれてありがとう。"
+                />
+            </word>
+        </section>
+        <section
+          name_en="謙譲語・けんじょうご: Extra-modest, humble"
+          name_de="謙譲語・けんじょうご: Bescheiden"
+          name_fr="謙譲語・けんじょうご: Modeste"
+          name_it="謙譲語・けんじょうご: Modeste"
+        >
+            <word
+              w="【居：お】る"
+              rom="oru"
+              tr_en="to be; to exist"
+              tr_de="sein; existieren"
+              hint_en="extra-modest form of いる"
+              hint_de="bescheidene Form von いる"
+              lvl="n3"
+              id="oru-exist"
+              usuallyInKana="true"
+              rem="appears in GENKI2 L20 vocab section"
+            >
+                <!-- oru is the extra-modest form of iru; usually as orimasu -->
+                <sentence
+                  s="【東：とう】【京：きょう】に【住：す】んでおります。"
+                  rom="Tōkyō ni sunde orimasu."
+                  tr_en="I live in Tokyo. (extra-modest)"
+                  tr_de="Ich wohne in Tokyo. (bescheiden)"
+                  lvl="n3"
+                  origin="GENKI2 p.192 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【兄：あに】が【一：ひと】【人：り】おります。"
+                  rom="Ani ga hitori orimasu."
+                  tr_en="I have one older brother. (extra-modest)"
+                  tr_de="Ich habe einen älteren Bruder. (bescheiden)"
+                  lvl="n3"
+                  origin="GENKI2 p.192"
+                  rem="from audio; verified with ChatGPT"
+                />
+                <sentence
+                  s="【私：わたくし】は【一：いち】【年：ねん】【間：かん】【日：に】【本：ほん】【語：ご】を【勉：べん】【強：きょう】しております。"
+                  rom="Watakushi wa ichi-nen-kan Nihon-go o benkyō shite orimasu."
+                  tr_en="I have been studying Japanese for a year. (extra-modest)"
+                  tr_de="Ich bin seit einem Jahr am Japanisch studieren. (bescheiden)"
+                  lvl="n3"
+                  origin="GENKI2 p.184"
+                />
+            </word>
+            <word
+              w="ご【座：ざ】る"
+              rom="gozaru"
+              tr_en="to be; there is; there are"
+              tr_de="sein; es gibt; es hat"
+              hint_en="extra-modest form of ある"
+              hint_de="bescheidene Form von ある"
+              lvl="n3"
+              id="gozaru-thereis"
+              usuallyInKana="true"
+              rem="appears in GENKI2 L20 grammar section; jisho has nx"
+            >
+                <!--
+                    Gozaru is the extra-modest form of aru; usually as gozaimasu.
+                    Degozaimasu is the extra-modest form of desu.
+                    There is also dearu/dearimasu, which is polite/formal/literary style for desu.
+                -->
+                <sentence
+                  s="お【手：て】【洗：あら】いは【二：に】【階：かい】でございます。"
+                  rom="O-tearai wa ni-kai de gozaimasu."
+                  tr_en="The lavatory is on the second floor. (extra-modest)"
+                  tr_de="Die Toilette ist in der zweiten Etage. (bescheiden)"
+                  explanation_en="でございます is the extra-modest form of です"
+                  explanation_de="でございます ist die bescheidene Form von です"
+                  lvl="n3"
+                  origin="GENKI2 p.185"
+                />
+            </word>
+            <word
+              w="【私：わたくし】"
+              rom="watakushi"
+              tr_en="I; me"
+              tr_de="ich; mich; mir"
+              hint_en="formal and extra-modest"
+              hint_de="formell und bescheiden"
+              lvl="n3"
+              id="watakushi-i"
+              rem="appears in GENKI2 L20 grammar section; jisho has nx"
+              HIDDEN="true"
+            >
+                <sentence
+                  s="【私：わたくし】は【来：らい】【年：ねん】も【日：に】【本：ほん】におります。"
+                  rom="Watakushi wa rainen mo Nihon ni orimasu."
+                  tr_en="I will be in Japan next year, too. (extra-modest)"
+                  tr_de="Ich werde auch nächstes Jahr in Japan sein. (bescheiden)"
+                  lvl="n3"
+                  origin="GENKI2 p.184"
+                />
+            </word>
+            <!-- word nx 存じ上げる (zonjiageru) – 謙譲語 for 知る (shiru) (to know) (ChatGPT) -->
+            <!-- phrase お目にかかる (o-me ni kakaru) – the 謙譲語 form of 会う (au) (to meet) (ChatGPT) -->
+        </section>
+        <section
+          name_en="Nouns with honorific prefix"
+          name_de="Nomen mit höflicher Vorsilbe"
+          name_fr="Noms avec préfixe honorifique"
+          name_it="Nomi con il prefisso onorifico"
+        >
+            <!--
+                Nouns with honorific prefixes are typically used in teineigo (masu/desu) and sonkeigo (honorific),
+                but NOT typically with kenjōgo (modest), except when referring to the other person's items
+            -->
+            <word
+              w="お【読：よ】み"
+              rom="o-yomi"
+              tr_en="reading"
+              tr_de="Lesen"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              id="oyomi-reading"
+              rem="jisho has n3 for yomi, but doesn't have o-yomi"
+            >
+                <sentence
+                  s="この【雑：ざっ】【誌：し】をお【読：よ】みになったことがありますか。"
+                  rom="Kono zasshi o o-yomi ni natta koto ga arimasu ka?"
+                  tr_en="Have you ever read this magazine? (honorific)"
+                  tr_de="Haben Sie diese Zeitschrift schon einmal gelesen? (respektvoll)"
+                  explanation_en="お読みになる is a honorific expression for 読む"
+                  explanation_de="お読みになる ist ein ehrerbietiger Ausdruck für 読む"
+                  lvl="n3"
+                  origin="GENKI2 p.166"
+                />
+                <sentence
+                  s="【説：せつ】【明：めい】をお【読：よ】みください。"
+                  rom="Setsumei o o-yomi kudasai."
+                  tr_en="Please read the instructions. (honorific)"
+                  tr_de="Bitte lesen Sie die Anleitung. (respektvoll)"
+                  explanation_en="This form is a courteously phrased command rather than a request."
+                  explanation_de="Diese Form ist ein höflich formulierter Befehl, keine Bitte im eigentlichen Sinn."
+                  lvl="n3"
+                  origin="GENKI2 p.166"
+                />
+            </word>
+            <word
+              w="お【取：と】り"
+              rom="o-tori"
+              tr_en="taking"
+              tr_de="Nehmen"
+              hint_en="noun"
+              hint_de="Nomen"
+              id="otori-taking"
+              lvl="n3"
+              rem="appears in GENKI2 p.166; jisho has nx for tori; doesn't have o-tori"
+            >
+                <see id="toru-take" rem="verb" />
+                <sentence
+                  s="【切：きっ】【符：ぷ】をお【取：と】りください。"
+                  rom="Kippu o o-tori kudasai."
+                  tr_en="Please take the ticket. (honorific)"
+                  tr_de="Bitte nehmen Sie das Ticket. (respektvoll)"
+                  explanation_en="This form is a courteously phrased command rather than a request."
+                  explanation_de="Diese Form ist ein höflich formulierter Befehl, keine Bitte im eigentlichen Sinn."
+                  lvl="n3"
+                  origin="GENKI2 p.166"
+                />
+            </word>
+            <word
+              w="お【使：つか】い"
+              rom="o-tsukai"
+              tr_en="use; usage"
+              tr_de="Gebrauch; Verwendung"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              id="otsukai-use"
+              rem="appears in GENKI2 p.166; jisho has n1"
+            >
+                <see id="tsukai-use" rem="closely related" />
+                <see id="otsukai-errand" rem="closely related" />
+                <sentence
+                  s="どうぞお【使：つか】いになってください。"
+                  rom="Dōzo o-tsukai ni natte kudasai."
+                  tr_en="Please use it. (honorific)"
+                  tr_de="Bitte verwenden Sie es. (respektvoll)"
+                  explanation_en="「お使いになる」is the honorific form of「使う」"
+                  explanation_de="「お使いになる」ist die respektvolle Form von「使う」"
+                  lvl="n3"
+                  origin="GENKI2 p.166"
+                />
+            </word>
+            <word
+              w="お【返：かえ】し"
+              rom="o-kaeshi"
+              tr_en="return gift; return favour; returning"
+              tr_de="ein Geschenk zurück; Gegenleistung; Zurückgeben"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="okaeshi-returning"
+              rem="jisho has nx for o-kaeshi, n5 for kaesu"
+            >
+                <see id="kaesu-returnsth" rem="verb" />
+                <phrase
+                  ph="お【返：かえ】しする"
+                  rom="o-kaeshi suru"
+                  tr_en="to return something (extra-modest)"
+                  tr_de="etw. zurückgeben (bescheiden)"
+                  lvl="n3"
+                  origin="GENKI2 p.193"
+                />
+                <sentence
+                  s="【明日：あした】、【先：せん】【生：せい】に【本：ほん】をお【返：かえ】しします。"
+                  rom="Ashita, sensei ni hon o o-kaeshi shimasu."
+                  tr_en="I will return the book to the teacher tomorrow. (extra-modest)"
+                  tr_de="Ich werde morgen das Buch dem Lehrer zurückgeben. (bescheiden)"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="お【送：おく】り"
+              rom="o-okuri"
+              tr_en="seeing off; sending off"
+              tr_de="Versendung; Verschicken"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="ookuri-seeingoff"
+              rem="jisho has nx for okuri, doesn't have o-okuri, n4 for okuru"
+            >
+                <see id="okuru-escort" rem="verb" />
+                <phrase
+                  ph="お【送：おく】りする"
+                  rom="o-okuri suru"
+                  tr_en="to send sth.; to drive sb. somewhere (extra-modest)"
+                  tr_de="etw. verschicken; jem. hinfahren (bescheiden)"
+                  lvl="n3"
+                  origin="GENKI2 p.193"
+                />
+                <sentence
+                  s="【葉：は】【書：がき】をお【送：おく】りします。"
+                  rom="Hagaki o o-okuri shimasu."
+                  tr_en="I will send you a postcard. (extra-modest)"
+                  tr_de="Ich werde Ihnen eine Postkarte schicken. (bescheiden)"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="お【持：も】ち"
+              rom="o-mochi"
+              tr_en="having; holding; owning"
+              tr_de="Besitz; Halten; Haben"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="omochi-having"
+              rem="jisho doesn't have it, but it has mochi-having, which is n1"
+            >
+                <keep_apart_from id="mochi-having" />
+                <keep_together id="mochi-having" />
+                <phrase
+                  ph="お【持：も】ちする"
+                  rom="o-mochi suru"
+                  tr_en="to hold; to carry; to possess (extra-modest)"
+                  tr_de="halten; tragen; besitzen (bescheiden)"
+                  lvl="n3"
+                  origin="GENKI2 p.193"
+                />
+                <sentence
+                  s="【小：ちい】さな【車：くるま】をお【持：も】ちしております。"
+                  rom="Chīsana kuruma o o-mochi shite orimasu."
+                  tr_en="I own a small car. (extra-modest)"
+                  tr_de="Ich habe ein kleines Auto. (bescheiden)"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【持：も】ち"
+              rom="mochi"
+              tr_en="having; holding; owning"
+              hint_en="noun; suffix"
+              lvl="n3"
+              id="mochi-having"
+              HIDDEN="true"
+              rem="jisho has n1"
+            >
+                <keep_apart_from id="omochi-having" />
+                <keep_together id="omochi-having" />
+            </word>
+            <word
+              w="お【有：あ】り"
+              rom="o-ari"
+              tr_en="existing; being"
+              tr_de="Existieren; Sein"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              usuallyInKana="true"
+              id="oari-existing"
+              rem="jisho has nx for ari, hasn't o-ari at all; appears in GENKI2 p.192 audio"
+            >
+                <see id="aru-thereis" rem="verb" />
+                <sentence
+                  s="【日：に】【本：ほん】【文：ぶん】【学：がく】に【興：きょう】【味：み】がおありになりますか。"
+                  rom="Nihon bungaku ni kyōmi ga o-ari ni narimasu ka?"
+                  tr_en="Are you interested in Japanese literature? (honorific)"
+                  tr_de="Sind Sie interessiert an japanischer Literatur? (respektvoll)"
+                  lvl="n3"
+                  origin="GENKI2 p.192"
+                  rem="from audio; verified with ChatGPT"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

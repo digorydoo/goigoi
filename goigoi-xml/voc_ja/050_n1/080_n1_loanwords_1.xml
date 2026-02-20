@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N1 loanwords ①"
+      name_de="N1-Lehnwörter ①"
+      name_fr="Les mots d'emprunt N1 ①"
+      name_it="Parole di prestito N1 ①"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="false"
+      defaultHint_en="loanword"
+      defaultHint_de="Lehnwort"
+      lvl="n1"
+      translations="en, de"
+      requiresSentences="false"
+      requiresIds="true"
+    >
+        <section>
+            <word
+              w="レントゲン"
+              rom="rentogen"
+              tr_en="x-ray; roentgen"
+              tr_de="Röntgen"
+              lvl="n1"
+              category="health"
+              id="rentogen-roentgen"
+            >
+                <phrase
+                  ph="【胸：むね】のレントゲン"
+                  rom="mune no rentogen"
+                  tr_en="X-ray of a chest"
+                  tr_de="Röntgenbild eines Brustkorbs"
+                  lvl="n1"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【歯：は】のレントゲンを【撮：と】ります。"
+                  rom="Ha no rentogen o torimasu."
+                  tr_en="I'll take an X-ray of your teeth."
+                  tr_de="Ich werde Ihre Zähne röntgen."
+                  lvl="n1"
+                  origin="lib0"
+                />
+                <sentence
+                  s="レントゲンを【撮：と】らなければなりません。"
+                  rom="Rentogen o toranakereba narimasen."
+                  tr_en="We have to x-ray you."
+                  tr_de="Wir müssen Sie röntgen."
+                  lvl="n1"
+                  origin="Langenscheidt p.206"
+                />
+            </word>
+            <word
+              w="レース"
+              rom="rēsu"
+              tr_en="race; lace (cord)"
+              tr_de="Rennen; Schuhbendel"
+              lvl="n1"
+              id="rēsu-race"
+            >
+                <phrase
+                  ph="レースに【勝：か】つ"
+                  rom="rēsu ni katsu"
+                  tr_en="to win a race"
+                  tr_de="ein Rennen gewinnen"
+                  lvl="n1"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【西：にし】【村：むら】さんはレースに【参：さん】【加：か】した。"
+                  rom="Nishimura-san wa rēsu ni sanka shita."
+                  tr_en="Mr Nishimura participated in the race."
+                  tr_de="Herr Nishimura nahm am Rennen teil."
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="ジャンプ"
+              rom="janpu"
+              tr_en="jump; jumping; sudden rise (e.g. price)"
+              tr_de="Sprung; springen; plötzlich ansteigen (z.B. Preis)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="janpu-jump"
+            >
+                <phrase
+                  ph="ジャンプしているイルカ"
+                  rom="janpu shite iru iruka"
+                  tr_en="a jumping dolphin"
+                  tr_de="ein springender Delfin"
+                  lvl="n1"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【私：わたし】はウサギがジャンプするのを【見：み】た。"
+                  rom="Watashi wa usagi ga janpu suru no o mita."
+                  tr_en="I saw the rabbit jump."
+                  tr_de="Ich sah den Hasen springen."
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="タイル"
+              rom="tairu"
+              tr_en="tile"
+              tr_de="Fliese; Kachel; Ziegel"
+              lvl="n1"
+              id="tairu-tile"
+            >
+                <phrase
+                  ph="タイルの【床：ゆか】"
+                  rom="tairu no yuka"
+                  tr_en="tiled floor"
+                  tr_de="Fliesenboden"
+                  lvl="n1"
+                />
+                <sentence
+                  s="【屋：や】【根：ね】から【落：お】ちてきたタイルは【粉：こな】【々：ごな】に【砕：くだ】けた。"
+                  rom="Yane kara ochite kita tairu wa kona-gona ni kudaketa."
+                  tr_en="The tile which fell from the roof broke into pieces."
+                  tr_de="Der Ziegel, der vom Dach herunterfiel, zerbrach in Stücke."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ドライバー"
+              rom="doraibā"
+              tr_en="driver; screwdriver"
+              tr_de="Lenker; Autofahrer; Schraubenzieher"
+              lvl="n1"
+              category="diy"
+              id="doraibā-driver"
+            >
+                <sentence
+                  s="このドライバーは【小：ちい】さすぎて【役：やく】に【立：た】たない。"
+                  rom="Kono doraibā wa chīsa-sugite yaku ni tatanai."
+                  tr_en="This screwdriver is too small to be useful."
+                  tr_de="Dieser Schraubenzieher ist zu klein und (deshalb) nicht nützlich."
+                  lvl="n1"
+                  origin="lib0"
+                />
+                <sentence
+                  s="ドライバーは【交：こう】【通：つう】【規：き】【則：そく】を【知：し】っているべきだ。"
+                  rom="Doraibā wa kōtsū-kisoku o shitte iru beki da."
+                  tr_en="Drivers should be aware of the traffic rules."
+                  tr_de="Autofahrer sollten die Verkehrsregeln kennen."
+                  lvl="n1"
+                  origin="lib0"
+                  rem="jisho has nx for kōtsū-kisoku, n4 for kōtsū, n4 for kisoku; jisho has nx for beki"
+                />
+            </word>
+            <word
+              w="パトカー"
+              rom="patokā"
+              tr_en="patrol car"
+              tr_de="Streifenwagen"
+              lvl="n1"
+              category="government, transportation"
+              id="patokā-patrolcar"
+            >
+                <sentence
+                  s="パトカーを【見：み】て【泥：どろ】【棒：ぼう】は【逃：に】げた。"
+                  rom="Patokā o mite dorobō wa nigeta."
+                  tr_en="Seeing the patrol car, the burglar ran away."
+                  tr_de="Als er den Steifenwagen sah, rannte der Einbrecher davon."
+                  lvl="n1"
+                  origin="lib0 modified"
+                  href="https://hinative.com/questions/22361963"
+                />
+                <sentence
+                  s="すぐにパトカーが【現：げん】【場：ば】に【急：きゅう】【行：こう】した。"
+                  rom="Sugu ni patokā ga genba ni kyūkō shita."
+                  tr_en="Immediately, a police car hurried to the scene."
+                  tr_de="Sofort eilte ein Streifenwagen zur Stelle."
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="デザート"
+              rom="dezāto"
+              tr_en="dessert"
+              tr_de="Nachtisch"
+              lvl="n1"
+              category="gastronomy"
+              id="dezāto-dessert"
+            >
+                <sentence
+                  s="デザートは【何：なに】になさいますか。"
+                  rom="Dezāto wa nani ni nasaimasu ka?"
+                  tr_en="What would you like for dessert?"
+                  tr_de="Was nehmen Sie als Nachtisch?"
+                  lvl="n1"
+                  origin="lib0"
+                  rem="Langenscheidt has the exact same sentence; the verb is nasaru (polite form of suru)"
+                />
+                <sentence
+                  s="デザートは【結：けっ】【構：こう】です。"
+                  rom="Dezāto wa kekkō desu."
+                  tr_en="Thanks, I won't take anything for dessert."
+                  tr_de="Danke, ich nehme keinen Nachtisch."
+                  lvl="n1"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="キャッチ"
+              rom="kyacchi"
+              tr_en="catch (e.g. in baseball); catcher"
+              tr_de="Fang (z.B. im Baseball); Fänger"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="sports"
+              id="kyacchi-catch"
+            >
+                <sentence
+                  s="【西：にし】【村：むら】さんは【左：ひだり】【手：て】でボールをキャッチした。"
+                  rom="Nishimura-san wa hidari te de bōru o kyacchi shita."
+                  tr_en="Mr Nishimura caught the ball with his left hand."
+                  tr_de="Herr Nishimura fing den Ball mit der linken Hand."
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="オレンジ"
+              rom="orenji"
+              tr_en="orange"
+              tr_de="Orange"
+              hint_en="fruit or colour"
+              hint_de="Frucht oder Farbe"
+              lvl="n1"
+              category="food, colour"
+              id="orenji-orange"
+            >
+                <sentence
+                  s="オレンジをむいてあげよう。"
+                  rom="Orenji o muite ageyō."
+                  tr_en="I'll peel an orange for you."
+                  tr_de="Ich schäle dir eine Orange."
+                  lvl="n1"
+                  origin="lib0"
+                  rem="剥く・むく is n2"
+                />
+            </word>
+            <word
+              w="ドライブイン"
+              rom="doraibuin"
+              tr_en="roadside restaurant; rest stop"
+              tr_de="Raststätte; Restaurant an der Strasse"
+              lvl="n1"
+              category="travelling"
+              id="doraibuin-reststop"
+            >
+                <sentence
+                  s="【次：つぎ】のドライブインで【休：きゅう】【憩：けい】していこう。"
+                  rom="Tsugi no doraibuin de kyūkei shite ikō."
+                  tr_en="Let's take a rest at the next rest stop."
+                  tr_de="Lass uns an der nächsten Raststätte eine Pause einlegen."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ソックス"
+              rom="sokkusu"
+              tr_en="socks"
+              tr_de="Socken"
+              lvl="n1"
+              category="fashion"
+              id="sokkusu-socks"
+            >
+                <keep_apart_from id="kutsushita-socks" />
+                <keep_apart_from id="tabi-socks" />
+                <sentence
+                  s="ソックスを【脱：ぬ】ぎなさい。"
+                  rom="Sokkusu o nugi-nasai."
+                  tr_en="Take off your socks."
+                  tr_de="Ziehe deine Socken aus."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ルール"
+              rom="rūru"
+              tr_en="rule"
+              tr_de="Regeln"
+              lvl="n1"
+              id="rūru-rule"
+            >
+                <keep_apart_from id="kimari-rules" />
+                <sentence
+                  s="それはルール【違：い】【反：はん】です。"
+                  rom="Sore wa rūru ihan desu."
+                  tr_en="This is against the rules."
+                  tr_de="Das ist gegen die Regeln."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="スピード"
+              rom="supīdo"
+              tr_en="speed"
+              tr_de="Geschwindigkeit"
+              lvl="n1"
+              id="supīdo-speed"
+            >
+                <sentence
+                  s="あなたはスピードを【出：だ】し【過：す】ぎていました。"
+                  rom="Anata wa supīdo o dashisugite imashita."
+                  tr_en="You were driving too fast."
+                  tr_de="Sie sind zu schnell gefahren."
+                  lvl="n1"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="サイズ"
+              rom="saizu"
+              tr_en="size"
+              tr_de="Grösse"
+              lvl="n1"
+              id="saizu-size"
+            >
+                <sentence
+                  s="サイズが【合：あ】いません。"
+                  rom="Saizu ga aimasen."
+                  tr_en="The size doesn't fit."
+                  tr_de="Die Grösse passt nicht."
+                  lvl="n1"
+                  origin="Langenscheidt p.146"
+                />
+            </word>
+            <word
+              w="ジャズ"
+              rom="jazu"
+              tr_en="jazz"
+              tr_de="Jazz"
+              lvl="n1"
+              category="entertainment"
+              id="jazu-jazz"
+            >
+                <sentence
+                  s="【山：やま】【田：だ】さんはジャズに【興：きょう】【味：み】がある。"
+                  rom="Yamada-san wa jazu ni kyōmi ga aru."
+                  tr_en="Mr Yamada is interested in jazz."
+                  tr_de="Herr Yamada interessiert sich für Jazz."
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="セール"
+              rom="sēru"
+              tr_en="sale"
+              tr_de="Verkauf; Ausverkauf"
+              lvl="n1"
+              id="sēru-sale"
+            >
+                <sentence
+                  s="セール【前：まえ】だから【値：ね】【段：だん】はまだ【下：さ】がらないよ。"
+                  rom="Sēru mae da kara nedan wa mada sagaranai yo."
+                  tr_en="It's before the sales, so the prices won't drop yet."
+                  tr_de="Es ist vor dem Ausverkauf, deshalb fallen die Preise noch nicht."
+                  lvl="n1"
+                  origin="Oxford p.88"
+                />
+            </word>
+            <word
+              w="レッスン"
+              rom="ressun"
+              tr_en="lesson"
+              tr_de="Lektion; Unterricht"
+              lvl="n1"
+              id="ressun-lesson"
+            >
+                <sentence
+                  s="【今：こ】【年：とし】もテニスのレッスンを【続：つづ】けます。"
+                  rom="Kotoshi mo tenisu no ressun o tsudzukemasu."
+                  tr_en="I will continue tennis lessons this year."
+                  tr_de="Ich werde auch dieses Jahr die Tennis-Lektionen weiterführen."
+                  lvl="n1"
+                  origin="Oxford p.91"
+                />
+            </word>
+            <word
+              w="タワー"
+              rom="tawā"
+              tr_en="tower"
+              tr_de="Turm"
+              lvl="n1"
+              id="tawā-tower"
+            >
+                <sentence
+                  s="あちらが【東：とう】【京：きょう】タワーでございます。"
+                  rom="Achira ga Tōkyō Tawā degozaimasu."
+                  tr_en="That over there is Tokyo Tower."
+                  tr_de="Das dort ist der Tokyo Tower."
+                  explanation_en="でございます is an extra-modest variant of です"
+                  explanation_de="でございます ist die bescheidene Version von です"
+                  lvl="n1"
+                  origin="self"
+                  rem="similar sentence in GENKI2 p.191"
+                />
+            </word>
+            <word
+              w="ホース"
+              rom="hōsu"
+              tr_en="hosepipe"
+              tr_de="Gartenschlauch"
+              lvl="n1"
+              category="garden"
+              id="hōsu-hosepipe"
+            >
+                <sentence
+                  s="【石：いし】【川：かわ】さんはホースを【使：つか】って【庭：にわ】に【水：みず】を【撒：ま】いていました。"
+                  rom="Ishikawa-san wa hōsu o tsukatte niwa ni mizu o maite imashita."
+                  tr_en="Mr Ishikawa was watering his garden with a hose."
+                  tr_de="Herr Ishikawa wässerte den Garten mit einem Schlauch."
+                  lvl="n1"
+                  origin="lib0 modified"
+                  rem="撒く・まく is n2"
+                />
+            </word>
+            <word
+              w="オープン"
+              rom="ōpun"
+              tr_en="opening (a new store); open"
+              tr_de="(Geschäft) eröffnen; offen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="ōpun-open"
+            >
+                <sentence
+                  s="その【店：みせ】は【来：らい】【月：げつ】【九：ここの】【日：か】にオープンするそうです。"
+                  rom="Sono mise wa raigetsu kokonoka ni ōpun suru sō desu."
+                  tr_en="(I heard) the shop will open on the 9th of next month."
+                  tr_de="(Ich habe gehört, dass) der Laden nächsten Monat am neunten eröffnet wird."
+                  lvl="n1"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="メロディー"
+              rom="merodī"
+              tr_en="melody"
+              tr_de="Melodie"
+              lvl="n1"
+              category="entertainment"
+              id="merodī-melody"
+            >
+                <keep_apart_from id="kakyoku-melody" />
+                <sentence
+                  s="あの【歌：うた】のメロディーが【思：おも】い【出：だ】せない。"
+                  rom="Ano uta no merodī ga omoidasenai."
+                  tr_en="I can't remember the melody of that song."
+                  tr_de="Ich kann mich nicht an die Melodie dieses Lieds erinnern."
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="クラブ"
+              rom="kurabu"
+              tr_en="club; clubhouse"
+              tr_de="Club; Disco"
+              lvl="n1"
+              category="going-out"
+              id="kurabu-club"
+            >
+                <!-- isn't sākuru better?
+                  s="【水：すい】【泳：えい】クラブに【属：ぞく】する。"
+                  rom="Suiei kurabu ni zoku suru."
+                  tr_en="I belong to a swimming club."
+                  tr_de="Ich bin in einem Schwimmverein."
+                  lvl="n1"
+                  origin="lib0"
+                -->
+            </word>
+            <word
+              w="カーペット"
+              rom="kāpetto"
+              tr_en="carpet"
+              tr_de="Teppich"
+              lvl="n1"
+              category="home"
+              id="kāpetto-carpet"
+            >
+                <keep_apart_from id="tatami-floor" />
+                <keep_apart_from id="jūtan-rug" />
+            </word>
+            <word
+              w="アンケート"
+              rom="ankēto"
+              tr_en="questionnaire; survey; enquête"
+              tr_de="Umfrage; Fragebogen"
+              lvl="n1"
+              id="ankēto-enquête"
+            >
+                <keep_apart_from id="chōsa-survey" />
+                <keep_apart_from id="mensetsu-interview" />
+            </word>
+            <word
+              w="ジャンパー"
+              rom="janpā"
+              tr_en="short jacket; jumper"
+              tr_de="kurze Jacke; Pullover"
+              lvl="n1"
+              category="fashion"
+              id="janpā-jumper"
+            >
+                <keep_apart_from id="sētā-pullover" />
+            </word>
+            <word
+              w="スペース"
+              rom="supēsu"
+              tr_en="space (room, area, outer space)"
+              tr_de="Raum; Weltraum"
+              lvl="n1"
+              id="supēsu-space"
+            >
+                <keep_apart_from id="uchū-space" />
+            </word>
+            <word
+              w="ジャンボ"
+              rom="janbo"
+              tr_en="jumbo; huge"
+              tr_de="Jumbo; riesig"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n1"
+              id="janbo-jumbo"
+            />
+            <word
+              w="タレント"
+              rom="tarento"
+              tr_en="talent; skill; (TV) entertainer"
+              tr_de="Talent; Fähigkeit; (Fernseh-) Entertainer"
+              lvl="n1"
+              id="tarento-talent"
+            />
+            <word
+              w="ストロー"
+              rom="sutorō"
+              tr_en="straw; drinking straw"
+              tr_de="Stroh; Strohhalm"
+              lvl="n1"
+              id="sutorō-straw"
+            />
+            <word
+              w="ストロボ"
+              rom="sutorobo"
+              tr_en="stroboscope; strobe lamp; (camera) flash"
+              tr_de="Stroboskop; Blitzlampe; Blitzlicht"
+              lvl="n1"
+              id="sutorobo-strobe"
+            />
+            <word
+              w="スポーツカー"
+              rom="supōtsukā"
+              tr_en="sports car"
+              tr_de="Sportwagen"
+              lvl="n1"
+              id="supōtsukā-sportscar"
+            />
+            <word
+              w="アクセル"
+              rom="akuseru"
+              tr_en="accelerator; gas pedal"
+              tr_de="Beschleuniger; Gaspedal"
+              lvl="n1"
+              id="akuseru-gaspedal"
+            />
+            <word
+              w="オリエンテーション"
+              rom="orientēshon"
+              tr_en="orientation"
+              tr_de="Orientierung"
+              lvl="n1"
+              id="orientēshon-orientation"
+            />
+        </section>
+    </unit>
+</vocabulary>

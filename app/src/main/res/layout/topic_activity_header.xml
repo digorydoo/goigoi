@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="wrap_content"
+  >
+    <!-- height will be overwritten at runtime -->
+    <!-- background will be set to instance of SheetHead -->
+    <ImageView
+      android:id="@+id/sheet_head"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentEnd="true"
+      tools:ignore="ContentDescription"
+      />
+    <TextView
+      android:id="@+id/heading"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentEnd="true"
+      android:layout_below="@id/sheet_head"
+      android:layout_marginStart="16dp"
+      android:layout_marginEnd="16dp"
+      android:textSize="24sp"
+      style="?attr/myPrimaryTextStyle"
+      />
+</RelativeLayout>

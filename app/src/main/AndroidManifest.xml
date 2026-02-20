@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  >
+    <!-- Min/target SDK versions (<uses-sdk>) managed by build.gradle -->
+    <!-- uses-permission android:name="android.permission.XYZ" -->
+
+    <supports-screens
+      android:smallScreens="true"
+      android:normalScreens="true"
+      android:largeScreens="true"
+      android:xlargeScreens="true"
+      android:requiresSmallestWidthDp="320"
+      />
+
+    <application
+      android:allowBackup="true"
+      android:fullBackupContent="@xml/backup_rules"
+      android:dataExtractionRules="@xml/data_extraction_rules"
+      android:supportsRtl="true"
+      android:icon="@mipmap/ic_launcher"
+      android:label="@string/app_name"
+      android:theme="@style/Theme.App.Starting"
+      >
+        <activity
+          android:name="io.github.digorydoo.goigoi.activity.splash.SplashActivity"
+          android:launchMode="singleTop"
+          android:noHistory="true"
+          android:theme="@style/Theme.App.Starting"
+          android:exported="true"
+          android:screenOrientation="locked"
+          >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+          android:name="io.github.digorydoo.goigoi.activity.welcome.WelcomeActivity"
+          android:launchMode="singleTop"
+          />
+        <activity
+          android:name="io.github.digorydoo.goigoi.activity.prefs.PrefsActivity"
+          android:launchMode="singleTop"
+          >
+            <meta-data
+              android:name="android.support.PARENT_ACTIVITY"
+              android:value="io.github.digorydoo.goigoi.activity.welcome.WelcomeActivity"
+              />
+        </activity>
+        <activity
+          android:name="io.github.digorydoo.goigoi.activity.about.AboutActivity"
+          android:launchMode="singleTop"
+          >
+            <meta-data
+              android:name="android.support.PARENT_ACTIVITY"
+              android:value="io.github.digorydoo.goigoi.activity.prefs.PrefsActivity"
+              />
+        </activity>
+        <activity
+          android:name="io.github.digorydoo.goigoi.activity.topic.TopicActivity"
+          android:launchMode="singleTop"
+          >
+            <meta-data
+              android:name="android.support.PARENT_ACTIVITY"
+              android:value="io.github.digorydoo.goigoi.activity.welcome.WelcomeActivity"
+              />
+        </activity>
+        <activity
+          android:name="io.github.digorydoo.goigoi.activity.unyt.UnytActivity"
+          android:launchMode="singleTop"
+          >
+            <meta-data
+              android:name="android.support.PARENT_ACTIVITY"
+              android:value="io.github.digorydoo.goigoi.activity.topic.TopicActivity"
+              />
+        </activity>
+        <activity
+          android:name="io.github.digorydoo.goigoi.activity.flipthru.FlipThruActivity"
+          android:launchMode="singleTop"
+          >
+            <meta-data
+              android:name="android.support.PARENT_ACTIVITY"
+              android:value="io.github.digorydoo.goigoi.activity.unyt.UnytActivity"
+              />
+        </activity>
+        <activity
+          android:name="io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivity"
+          android:launchMode="singleTop"
+          >
+            <meta-data
+              android:name="android.support.PARENT_ACTIVITY"
+              android:value="io.github.digorydoo.goigoi.activity.unyt.UnytActivity"
+              />
+        </activity>
+    </application>
+</manifest>

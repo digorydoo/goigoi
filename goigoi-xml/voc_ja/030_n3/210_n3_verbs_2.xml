@@ -1,0 +1,841 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 verbs ②"
+      name_de="N3-Verben ②"
+      name_fr="Les verbes N3 ②"
+      name_it="Verbi N3 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="verb"
+      defaultHint_de="Verb"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【現：あらわ】れる"
+              rom="arawareru"
+              tr_en="to come into sight; to become visible; to become apparent"
+              tr_de="sichtbar werden; ins Blickfeld rücken; erscheinen"
+              hint_en="v.i."
+              lvl="n3"
+              category="looking"
+              id="arawareru-becomevisible"
+            >
+                <see id="arawasu-reveal" rem="v.t." />
+                <keep_apart_from id="mirareru-cansee" />
+                <keep_apart_from id="mieru-beseen" />
+                <phrase
+                  ph="【急：きゅう】に【現：あらわ】れる"
+                  rom="kyū ni arawareru"
+                  tr_en="to suddenly appear"
+                  tr_de="plötzlich erscheinen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【空：そら】に【雲：くも】が【現：あらわ】れた。"
+                  rom="Sora ni kumo ga arawareta."
+                  tr_en="Clouds become visible in the sky."
+                  tr_de="Wolken wurden am Himmel sichtbar."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="オバケが【庭：にわ】に【現：あらわ】れた。"
+                  rom="Obake ga niwa ni arawareta."
+                  tr_en="A spirit appeared in the garden."
+                  tr_de="Ein Gespenst erschien im Garten."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; jisho has nx for obake"
+                />
+            </word>
+            <word
+              w="【現：あらわ】す"
+              rom="arawasu"
+              tr_en="to reveal sth.; to show sth.; to represent sth."
+              tr_de="etw. aufdecken; etw. zeigen; etw. repräsentieren"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="arawasu-reveal"
+            >
+                <!-- automatic see-also link to arawasu-represent -->
+                <see id="arawareru-becomevisible" rem="v.i." />
+            </word>
+            <word
+              w="【奢：おご】る"
+              rom="ogoru"
+              tr_en="to give sb. a treat; to pay for sb."
+              tr_de="jem. eine Freude machen; für jem. bezahlen"
+              usuallyInKana="true"
+              lvl="n3"
+              category="going-out"
+              id="ogoru-givetreat"
+              rem="appears in GENKI2 p.94 vocab section; jisho has n1"
+            >
+                <sentence
+                  s="おごりたいのですが。"
+                  rom="Ogoritai no desu ga."
+                  tr_en="I would like to pay for us."
+                  tr_de="Ich möchte Sie einladen."
+                  lvl="n3"
+                  origin="Langenscheidt"
+                />
+                <sentence
+                  s="【一：いっ】【杯：ぱい】【奢：おご】りましょうか。"
+                  rom="Ippai ogorimashō ka?"
+                  tr_en="May I invite you to a drink?"
+                  tr_de="Darf ich Sie zu einem Drink einladen?"
+                  lvl="n3"
+                  origin="Langenscheidt p.192"
+                />
+            </word>
+            <word
+              w="【構：かま】う"
+              rom="kamau"
+              tr_en="to mind; to care about"
+              tr_de="daran denken; sich um etw. kümmern"
+              lvl="n3"
+              category="thinking"
+              id="kamau-mind"
+            >
+                <keep_apart_from id="omou-think" />
+                <keep_apart_from id="kangaeru-thinkabout" />
+                <sentence
+                  s="【構：かま】わない。"
+                  rom="Kamawanai."
+                  tr_en="That's no problem."
+                  tr_de="Kein Problem!"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【梳：と】かす"
+              rom="tokasu"
+              tr_en="to comb; to brush"
+              tr_de="kämmen"
+              usuallyInKana="true"
+              lvl="n3"
+              category="fashion"
+              id="tokasu-comb"
+              rem="appears in GENKI2 p.117 vocab section; jisho has nx"
+            >
+                <phrase
+                  ph="【髪：かみ】をとかす"
+                  rom="kami o tokasu"
+                  tr_en="to comb one's hair"
+                  tr_de="sich das Haar kämmen"
+                  lvl="n3"
+                  origin="GENKI2 p.117"
+                />
+            </word>
+            <word
+              w="【気：き】づく"
+              rom="kidzuku"
+              tr_en="to notice; to become aware of"
+              tr_de="etw. bemerken; sich etw. bewusst werden"
+              lvl="n3"
+              category="looking, thinking"
+              id="kidzuku-notice"
+            >
+                <keep_apart_from id="samasu-awaken" />
+                <sentence
+                  s="【空：くう】【港：こう】に【着：つ】いたらパスポートがないとすぐ【気：き】づいた。"
+                  rom="Kūkō ni tsuitara pasupōto ga nai to sugu kidzuita."
+                  tr_en="When I arrived at the airport, I realized straight away that I didn't have my passport."
+                  tr_de="Gerade als ich am Flughafen ankam, wurde mir bewusst, dass ich den Pass nicht dabei hatte."
+                  lvl="n3"
+                  origin="Oxford p.134"
+                />
+            </word>
+            <word
+              w="【言：い】わせる"
+              rom="iwaseru"
+              tr_en="to let so. say sth.; to make so. say sth."
+              tr_de="jem. etw. sagen lassen; jem. zwingen, etw. zu sagen"
+              lvl="n3"
+              category="talking"
+              id="iwaseru-letsay"
+            >
+                <keep_apart_from id="hanasaseru-letspeak" />
+                <phrase
+                  ph="【自：じ】【由：ゆう】に【意：い】【見：けん】を【言：い】わせてくれる"
+                  rom="jiyū ni iken o iwasete kureru"
+                  tr_en="to be allowed to express one's opinion freely"
+                  tr_de="mich die eigene Meinung frei sagen lassen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【触：ふ】れる"
+              rom="fureru"
+              tr_en="to touch; to feel"
+              tr_de="fühlen; berühren"
+              lvl="n3"
+              category="hands"
+              id="fureru-touch"
+            >
+                <!--
+                    触れる・ふれる: to come in contact with; to feel; often formal or figurative
+                    触る・さわる: to physically touch
+                -->
+                <see id="sawaru-touch" rem="closely related" />
+                <keep_apart_from id="sawaru-touch" />
+                <keep_apart_from id="kanjiru-feel" />
+                <sentence
+                  s="【何：なに】かが【足：あし】に【触：ふ】れるのを【感：かん】じた。"
+                  rom="Nanika ga ashi ni fureru no o kanjita."
+                  tr_en="I felt something touch my feet."
+                  tr_de="Ich fühlte, wie mich etwas am Fuss berührte."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【責：せ】める"
+              rom="semeru"
+              tr_en="to blame; to urge; to torment"
+              tr_de="jem. beschuldigen; drängen; quälen"
+              hint_en="v.t."
+              lvl="n3"
+              category="quarrel"
+              id="semeru-blame"
+            >
+                <sentence
+                  s="その【問：もん】【題：だい】について【責：せ】められることはない。"
+                  rom="Sono mondai ni tsuite semerareru koto wa nai."
+                  tr_en="One cannot be blamed for that issue."
+                  tr_de="Man kann niemanden wegen dieses Problems beschuldigen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【打：ぶ】つ"
+              rom="butsu"
+              tr_en="to hit (a person); to strike; to beat"
+              tr_de="(eine Person) schlagen; hauen; prügeln"
+              hint_en="v.t."
+              lvl="n3"
+              category="mood, not-good"
+              id="butsu-hit"
+              usuallyInKana="true"
+            >
+                <sentence
+                  s="【石：いし】【川：かわ】さんは【山：やま】【田：だ】さんをぶちました。"
+                  rom="Ishikawa-san wa Yamada-san o buchimashita."
+                  tr_en="Mr Ishikawa hit Mr Yamada."
+                  tr_de="Herr Ishikawa hat Herrn Yamada geschlagen."
+                  lvl="n3"
+                  origin="Oxford p.71"
+                />
+                <sentence
+                  s="【山：やま】【田：だ】さんは【石：いし】【川：かわ】さんにぶたれました。"
+                  rom="Yamada-san wa Ishikawa-san ni butaremashita."
+                  tr_en="Mr Yamada was hit by Mr Ishikawa."
+                  tr_de="Herr Yamada wurde von Herrn Ishikawa geschlagen."
+                  explanation_en="「ぶたれる」is the passive form of「ぶつ」"
+                  explanation_de="「ぶたれる」ist die passive Form von「ぶつ」"
+                  lvl="n3"
+                  origin="Oxford p.71"
+                />
+            </word>
+            <word
+              w="【当：あ】たる"
+              rom="ataru"
+              tr_en="to be hit; to be successful"
+              tr_de="getroffen werden; erfolgreich sein"
+              hint_en="v.i."
+              lvl="n3"
+              category="sports, business"
+              id="ataru-hit"
+            >
+                <!-- the sentence may be confusing, because it's v.t. in English -->
+                <sentence
+                  s="ボールが【木：き】【村：むら】さんの【目：め】に【当：あ】たった。"
+                  rom="Bōru ga Kimura-san no me ni atatta."
+                  tr_en="The ball hit Miss Kimura in the eye."
+                  tr_de="Der Ball traf Frau Kimura ins Auge."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【届：とど】く"
+              rom="todoku"
+              tr_en="to be delivered; (a letter) arrives"
+              tr_de="geliefert werden; (ein Brief) kommt an"
+              Langenscheidt="(Brief) ankommen"
+              hint_en="v.i."
+              lvl="n3"
+              category="work, motion"
+              id="todoku-reach"
+            >
+                <see id="todokeru-deliver" rem="v.t." />
+                <keep_apart_from id="haitatsu-delivery" />
+                <sentence
+                  s="【十：とお】【日：か】【以：い】【内：ない】に【届：とど】けるって【書：か】いてあったのに、まだ【届：とど】いてない。"
+                  rom="Tōka inai ni todokeru tte kaite atta no ni, mada todoite nai."
+                  tr_en="They wrote they would deliver it within ten days, but it hasn't been delivered yet."
+                  tr_de="Es stand, dass sie innert zehn Tagen liefern würde, aber sie haben es immer noch nicht geliefert."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
+            <word
+              w="【合：あ】わせる"
+              rom="awaseru"
+              tr_en="to make sth. match to sth.; to join together"
+              tr_de="etw. aufeinander abstimmen; vereinen"
+              Langenscheidt="vereinen; aufeinander abstimmen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="awaseru-join"
+              rem="appears in 500mon q187"
+            >
+                <see id="au-match" rem="v.i." />
+                <sentence
+                  s="ピアノに【合：あ】わせて【大：おお】きな【声：こえ】で【歌：うた】いましょう。"
+                  rom="Piano ni awasete ōki na koe de utaimashō."
+                  tr_en="Let's sing along with the piano in a big voice."
+                  tr_de="Lass uns mit lauter Stimme zum Klavier singen."
+                  lvl="n3"
+                  origin="500mon q187"
+                />
+            </word>
+            <word
+              w="【注：そそ】ぐ"
+              rom="sosogu"
+              tr_en="to water (e.g. plants); to sprinkle on"
+              tr_de="wässern (z.B. Pflanzen); besprinkeln"
+              hint_en="v.t. &amp; i."
+              lvl="n3"
+              category="garden"
+              id="sosogu-water"
+              rem="appears in GENKI2 p.286 kanji section"
+            >
+                <phrase
+                  ph="【水：みず】を【注：そそ】ぐ"
+                  rom="mizu o sosogu"
+                  tr_en="to pour water"
+                  tr_de="Wasser giessen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【囲：かこ】む"
+              rom="kakomu"
+              tr_en="to surround; to encircle"
+              tr_de="umgeben sein; umkreisen"
+              lvl="n3"
+              category="general"
+              id="kakomu-surround"
+            >
+                <phrase
+                  ph="【水：みず】に【囲：かこ】まれている"
+                  rom="mizu ni kakomarete iru"
+                  tr_en="to be surrounded by water (e.g. an island)"
+                  tr_de="von Wasser umgeben sein (z.B. eine Insel)"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【腐：くさ】る"
+              rom="kusaru"
+              tr_en="to rot; to go bad; to decay"
+              tr_de="verfaulen; schlecht werden; verwesen"
+              lvl="n3"
+              category="food, not-good"
+              id="kusaru-rot"
+            >
+                <sentence
+                  s="その【果：くだ】【物：もの】は【腐：くさ】った。"
+                  rom="Sono kudamono wa kusatta."
+                  tr_en="That fruit has gone bad."
+                  tr_de="Diese Frucht ist verfault."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【限：かぎ】る"
+              rom="kagiru"
+              tr_en="to be restricted to; to limit; to confine"
+              tr_de="auf etw. beschränkt sein; beschränken; eingrenzen"
+              Langenscheidt="beschränken, eingrenzen"
+              hint_en="v.t. &amp; i."
+              lvl="n3"
+              category="general"
+              id="kagiru-restrict"
+            >
+                <sentence
+                  s="ベッドに【寝：ね】ても【眠：ねむ】るとは【限：かぎ】らない。"
+                  rom="Beddo ni nete mo nemuru to wa kagiranai."
+                  tr_en="To lie down on the bed does not necessarily mean you'll actually sleep."
+                  tr_de="Sich aufs Bett hinlegen bedeutet nicht unbedingt, dass man schläft."
+                  lvl="n3"
+                  href="https://hinative.com/en-US/questions/22229768"
+                />
+            </word>
+            <word
+              w="【輝：かがや】く"
+              rom="kagayaku"
+              tr_en="to shine; to glitter; to sparkle"
+              tr_de="scheinen; glitzern; glänzen"
+              lvl="n3"
+              category="light, looking"
+              id="kagayaku-shine"
+            >
+                <!-- 太陽が海に輝いている Taiyō ga umi ni kagayaite iru - the sun is glistening on the sea (ChatGPT) -->
+                <sentence
+                  s="【月：つき】は【夜：よる】に【輝：かがや】く。"
+                  rom="Tsuki wa yoru ni kagayaku."
+                  tr_en="The moon shines at night."
+                  tr_de="Der Mond scheint bei Nacht."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【狂：くる】う"
+              rom="kuruu"
+              tr_en="to go mad; to lose one's mind; to malfunction"
+              tr_de="den Verstand verlieren; nicht richtig funktionieren"
+              lvl="n3"
+              category="thinking, technical"
+              id="kuruu-gomad"
+            >
+                <sentence
+                  s="この【機：き】【械：かい】 【狂：くる】ってる。"
+                  rom="Kono kikai kurutteru."
+                  tr_en="This machine is malfunctioning."
+                  tr_de="Diese Maschine funktioniert nicht richtig."
+                  allowSpaces="true"
+                  lvl="n3"
+                  origin="Doraemon 7, p.60"
+                />
+                <sentence
+                  s="ギターの【調：ちょう】【子：し】が【狂：くる】っている。"
+                  rom="Gitā no chōshi ga kurutte iru."
+                  tr_en="The tuning of the guitar is off."
+                  tr_de="Die Gitarre ist verstimmt."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【降：お】ろす"
+              rom="orosu"
+              tr_en="to drop off (a passenger); to unload (goods)"
+              tr_de="(einen Passagier) aussteigen lassen; (Güter) ausladen"
+              hint_en="v.t."
+              lvl="n3"
+              category="transportation, work"
+              id="orosu-dropoff"
+            >
+                <see id="oriru-getoff" rem="v.i." />
+                <sentence
+                  s="【美：び】【術：じゅつ】【館：かん】【前：まえ】で【降：お】ろしてください。"
+                  rom="Bijutsukan mae de oroshite kudasai."
+                  tr_en="Please let me off in front of the museum."
+                  tr_de="Bitte lassen Sie mich vor dem Museum aussteigen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【微笑：ほほえ】む"
+              rom="hohoemu"
+              tr_en="to smile"
+              tr_de="lächeln"
+              lvl="n3"
+              category="mood, happiness"
+              id="hohoemu-smile"
+              hasCombinedReading="true"
+            >
+                <sentence
+                  s="【中：なか】【村：むら】さんはうれしそうに【微笑：ほほえ】んだ。"
+                  rom="Nakamura-san wa ureshisō ni hohoenda."
+                  tr_en="Mrs Nakamura smiled happily."
+                  tr_de="Frau Nakamura lächelte glücklich."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【中：なか】【村：むら】さんが【私：わたし】に【微笑：ほほえ】んだ。"
+                  rom="Nakamura-san ga watashi ni hohoenda."
+                  tr_en="Mrs Nakamura smiled at me."
+                  tr_de="Frau Nakamura lächelte mich an."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【戻：もど】す"
+              rom="modosu"
+              tr_en="to put sth. back; to return sth.; to restore sth."
+              tr_de="etw. zurücklegen; etw. zurückbringen; etw. wiederherstellen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, hands"
+              id="modosu-putback"
+            >
+                <see id="modoru-turnback" rem="v.i." />
+                <keep_apart_from id="kaesu-returnsth" />
+                <keep_apart_from id="torimodosu-regain" />
+                <phrase
+                  ph="【本：ほん】を【棚：たな】に【戻：もど】す"
+                  rom="hon o tana ni modosu"
+                  tr_en="to put the book back onto the shelf"
+                  tr_de="das Buch zurück ins Regal stellen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【通：とお】す"
+              rom="tōsu"
+              tr_en="to stick through; to carry sth. through; to let sb. pass"
+              tr_de="etw. durchstechen; etw. durchbringen; jem. durchlassen"
+              Langenscheidt="jem. durchlassen; を durchstechen, durchbringen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="tōsu-stickthru"
+            >
+                <see id="tōru-gopast" rem="v.i." />
+                <sentence
+                  s="【電：でん】【線：せん】は【電：でん】【気：き】を【通：とお】す。"
+                  rom="Densen wa denki o tōsu."
+                  tr_en="A wire conducts electricity."
+                  tr_de="Ein Kabel leitet Elektrizität."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has n1 for densen; lib0 has 電線は電気を流す; but ChatGPT says it's not natural"
+                />
+            </word>
+            <word
+              w="【話：はな】し【合：あ】う"
+              rom="hanashiau"
+              tr_en="to discuss; to talk together"
+              tr_de="diskutieren; miteinander reden"
+              hint_en="v.t."
+              lvl="n3"
+              category="talking"
+              id="hanashiau-discuss"
+            >
+                <see id="hanashiai-discussion" rem="noun" />
+                <keep_apart_from id="hanasu-talk" />
+                <keep_apart_from id="iu-say" />
+                <keep_apart_from id="mōsu-say" />
+                <keep_apart_from id="mōshiageru-tell" />
+                <keep_apart_from id="hanashikakeru-addresssb" />
+                <keep_apart_from id="ronjiru-discuss" />
+                <keep_apart_from id="kataru-recite" />
+            </word>
+            <word
+              w="【乗：の】せる"
+              rom="noseru"
+              tr_en="to give sb. a ride; to take sth. on board"
+              tr_de="jemanden (im Auto, etc.) mitnehmen; etw. mit an Bord nehmen"
+              hint_en="v.t."
+              lvl="n3"
+              category="transportation"
+              id="noseru-givesbride"
+            >
+                <see id="noru-geton" rem="v.i." />
+            </word>
+            <word
+              w="【売：う】れる"
+              rom="ureru"
+              tr_en="to be sold; to sell well; to be famous"
+              tr_de="verkauft werden; es verkauft sich gut; berühmt sein"
+              hint_en="v.i."
+              lvl="n3"
+              category="business, trade"
+              id="ureru-sellwell"
+            >
+                <see id="uru-sell" rem="v.t." />
+            </word>
+            <word
+              w="【進：すす】める"
+              rom="susumeru"
+              tr_en="to advance; to put (a clock) forward; to make progress in"
+              tr_de="etw. fortführen; (Uhr) vorstellen; etw. vorwärts bringen"
+              hint_en="v.t."
+              lvl="n3"
+              category="work, motion"
+              id="susumeru-advance"
+            >
+                <see id="susumu-advance" rem="v.i." />
+            </word>
+            <word
+              w="【編：あ】む"
+              rom="amu"
+              tr_en="to knit"
+              tr_de="stricken"
+              lvl="n3"
+              category="hobby, diy"
+              id="amu-toknit"
+              rem="appears in GENKI2 p.25 vocab section; jisho has n2"
+            >
+                <see id="amimono-knitting" rem="closely related" />
+            </word>
+            <word
+              w="【間：ま】【違：ちが】う"
+              rom="machigau"
+              tr_en="to be mistaken; to be wrong"
+              tr_de="falsch liegen; sich irren"
+              hint_en="v.t. &amp; i"
+              lvl="n3"
+              category="not-good"
+              id="machigau-mistake"
+              rem="jisho has n1"
+            >
+                <see id="machigai-mistake" rem="noun" />
+                <see id="machigaeru-mistakesth" rem="closely related" />
+                <see id="ayamaru-err" rem="closely related" />
+                <keep_apart_from id="ayamaru-err" />
+            </word>
+            <word
+              w="【凍：こお】る"
+              rom="kōru"
+              tr_en="to freeze; to be frozen over; to congeal"
+              tr_de="gefrieren; gefroren sein"
+              hint_en="v.i."
+              lvl="n3"
+              category="temperature"
+              id="kōru-freeze"
+            >
+                <see id="kōri-ice" rem="closely related" />
+            </word>
+            <word
+              w="【繰：く】り【返：かえ】す"
+              rom="kurikaesu"
+              tr_en="to repeat"
+              tr_de="repetieren"
+              lvl="n3"
+              category="general"
+              id="kurikaesu-repeat"
+            >
+                <keep_apart_from id="tabitabi-often" />
+            </word>
+            <word
+              w="【殺：ころ】す"
+              rom="korosu"
+              tr_en="to kill; to murder; to destroy"
+              tr_de="jem. umbringen; ermorden; zerstören"
+              hint_en="v.t."
+              lvl="n3"
+              category="crime, not-good"
+              id="korosu-kill"
+              rem="appears in GENKI2 p.225"
+            />
+            <word
+              w="【下：くだ】る"
+              rom="kudaru"
+              tr_en="to go down; to descend; to be inferior to"
+              tr_de="absteigen; untergehen; untergeordnet sein"
+              hint_en="v.i."
+              lvl="n3"
+              category="general, directions"
+              id="kudaru-godown"
+              rem="jisho has n2"
+            >
+                <see id="kudari-downbound" rem="noun" />
+                <!-- 月は東から上って西に下る - つきはひがしからのぼってにしにくだる - The moon rises from the east and sets in the west (self) -->
+            </word>
+            <word
+              w="【悩：なや】む"
+              rom="nayamu"
+              tr_en="to be worried; to be troubled"
+              tr_de="leiden; besorgt sein"
+              hint_en="v.i."
+              lvl="n3"
+              category="mood"
+              id="nayamu-worried"
+              rem="Langenscheidt: leiden"
+            >
+                <see id="nayami-worry" rem="noun" />
+            </word>
+            <word
+              w="【動：うご】かす"
+              rom="ugokasu"
+              tr_en="to move sth.; to shift; to set sth. in motion"
+              tr_de="etw. bewegen; etw. verschieben; etw. in Bewegung setzen"
+              hint_en="v.t."
+              lvl="n3"
+              category="motion"
+              id="ugokasu-move"
+            >
+                <see id="ugoku-move" rem="v.i." />
+            </word>
+            <word
+              w="【向：む】ける"
+              rom="mukeru"
+              tr_en="to turn towards; to aim sth.; to pursue sth."
+              tr_de="such nach etw. wenden; auf etw. abzielen; etw. verfolgen"
+              hint_en="v.t."
+              lvl="n3"
+              category="directions"
+              id="mukeru-turn"
+            >
+                <!-- 背中を向ける (senaka o mukeru) - To turn one's back on someone (ChatGPT, lib0) -->
+            </word>
+            <word
+              w="【待：ま】たせる"
+              rom="mataseru"
+              tr_en="to keep sb. waiting"
+              tr_de="jem. warten lassen"
+              lvl="n3"
+              category="work, relationships"
+              id="mataseru-keepwaiting"
+              rem="appears in GENKI2 L20 vocab section; jisho has nx"
+            />
+            <word
+              w="【離：はな】す"
+              rom="hanasu"
+              tr_en="to separate; to keep apart from"
+              tr_de="separieren; auseinander halten"
+              hint_en="v.t."
+              lvl="n3"
+              category="quarrel, relationships"
+              id="hanasu-separate"
+            >
+                <keep_apart_from id="hanareru-drift" />
+            </word>
+            <word
+              w="【嫌：きら】う"
+              rom="kirau"
+              tr_en="to hate; to dislike; to loathe"
+              tr_de="etw. hassen; etw. nicht mögen"
+              hint_en="v.t."
+              lvl="n3"
+              category="not-good, quarrel"
+              id="kirau-hate"
+            />
+            <word
+              w="【当：あ】てる"
+              rom="ateru"
+              tr_en="to hit sth; to expose sth. to sunlight"
+              tr_de="etw. treffen; etw. dem Sonnenlicht aussetzen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, light"
+              id="ateru-hit"
+            />
+            <word
+              w="【分：わ】ける"
+              rom="wakeru"
+              tr_en="to divide sth.; to split sth.; to separate sth."
+              tr_de="etw. zerteilen; aufteilen; separieren"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="wakeru-divide"
+            />
+            <word
+              w="【明：あ】ける"
+              rom="akeru"
+              tr_en="to dawn; to grow light"
+              tr_de="dämmern; hell werden"
+              lvl="n3"
+              category="light"
+              id="akeru-dawn"
+            />
+            <word
+              w="【回：まわ】す"
+              rom="mawasu"
+              tr_en="to turn sth.; to rotate sth."
+              tr_de="etw. drehen; etw. rotieren"
+              hint_en="v.t."
+              lvl="n3"
+              category="motion"
+              id="mawasu-turn"
+            />
+            <word
+              w="【震：ふる】える"
+              rom="furueru"
+              tr_en="to shiver (from cold); to tremble (with fear)"
+              tr_de="zittern (vor Kälte); schaudern (vor Angst)"
+              lvl="n3"
+              category="temperature, mood"
+              id="furueru-shiver"
+            />
+            <word
+              w="【通：とお】り【過：す】ぎる"
+              rom="tōrisugiru"
+              tr_en="to go past; to pass; to pass by"
+              tr_de="vorbei gehen"
+              hint_en="v.i."
+              lvl="n3"
+              category="motion"
+              id="tōrisugiru-gopast"
+            />
+            <word
+              w="【注：つ】ぐ"
+              rom="tsugu"
+              tr_en="to pour (into a vessel); to fill (a cup); to dish out (food)"
+              tr_de="etw. ausschenken; etw. schöpfen; etw. auftischen"
+              hint_en="v.t."
+              lvl="n3"
+              category="gastronomy"
+              id="tsugu-pour"
+            />
+            <word
+              w="【願：ねが】う"
+              rom="negau"
+              tr_en="to desire; to request; to implore"
+              tr_de="etw. wünschen; etw. fordern; erflehen"
+              hint_en="v.t."
+              lvl="n3"
+              category="top-words"
+              id="negau-desire"
+            />
+            <word
+              w="【悲：かな】しむ"
+              rom="kanashimu"
+              tr_en="to be sad; to mourn for; to regret"
+              tr_de="traurig sein; etw. beklagen; etw. bedauern"
+              lvl="n3"
+              category="mood, not-good"
+              id="kanashimu-mourn"
+            />
+            <word
+              w="【換：か】える"
+              rom="kaeru"
+              tr_en="to replace (a battery); to exchange (money)"
+              tr_de="(Batterie) austauschen; (Geld) umtauschen"
+              Langenscheidt="(Batterie) austauschen; (Geld) umtauschen"
+              hint_en="v.t."
+              lvl="n3"
+              category="technical, finances"
+              id="kaeru-exchange"
+              rem="see also 替える kaeru-replace, 代える kaeru-substitute"
+            />
+            <word
+              w="【広：ひろ】がる"
+              rom="hirogaru"
+              tr_en="to spread out; to extend to; to fill (a space)"
+              tr_de="(weit) reichen; sich ausbreiten; (einen Raum) einnehmen"
+              hint_en="v.i."
+              lvl="n3"
+              category="general"
+              id="hirogaru-spreadout"
+            />
+        </section>
+    </unit>
+</vocabulary>

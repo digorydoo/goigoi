@@ -1,0 +1,792 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Date and time ③"
+      name_de="Datum und Uhrzeit ③"
+      name_fr="La date et l'heure ③"
+      name_it="Data e ora ③"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      lvl="n5, n4"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="true"
+    >
+        <section
+          name_en="年: Years"
+          name_de="年: Jahre"
+          name_fr="年: Ans; année"
+        >
+            <word
+              w="【今：こ】【年：とし】"
+              rom="kotoshi"
+              tr_en="this year"
+              tr_de="dieses Jahr"
+              lvl="n5"
+              category="time"
+              id="kotoshi-thisyear"
+            >
+                <phrase
+                  ph="【今：こ】【年：とし】の【秋：あき】"
+                  rom="kotoshi no aki"
+                  tr_en="this autumn (the autumn of this year)"
+                  tr_de="diesen Herbst (der Herbst dieses Jahres)"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【今：こ】【年：とし】 【日：に】【本：ほん】へ 【来：き】ました。"
+                  rom="Kotoshi Nihon e kimashita."
+                  tr_en="I came to Japan this year."
+                  tr_de="Ich bin in diesem Jahr nach Japan gekommen."
+                  lvl="n5"
+                  origin="500mon q10"
+                />
+            </word>
+            <word
+              w="【毎：まい】【年：とし】"
+              rom="maitoshi"
+              tr_en="every year"
+              tr_de="jedes Jahr"
+              lvl="n5"
+              category="time"
+              id="maitoshi-everyyear"
+            >
+                <phrase
+                  ph="【毎：まい】【年：とし】の【祭：まつ】り"
+                  rom="maitoshi no matsuri"
+                  tr_en="the annual festival"
+                  tr_de="das jährliche Festival"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【毎：まい】【年：とし】の【祭：まつ】りの【時：とき】には、【町：まち】が【賑：にぎ】やかになります。"
+                  rom="Maitoshi no matsuri no toki ni wa, machi ga nigiyaka ni narimasu."
+                  tr_en="The annual festival makes the town lively."
+                  tr_de="Am jährlichen Festival wird die Stadt lebendig."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【毎：まい】【年：とし】どこかに【旅：りょ】【行：こう】に【行：い】っています。"
+                  rom="Maitoshi dokoka ni ryokō ni itte imasu."
+                  tr_en="I travel somewhere every year."
+                  tr_de="Jedes Jahr gehe ich irgendwo hin auf die Reise."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【去：きょ】【年：ねん】"
+              rom="kyonen"
+              tr_en="last year"
+              tr_de="letztes Jahr"
+              lvl="n5"
+              category="time"
+              id="kyonen-lastyear"
+            >
+                <phrase
+                  ph="【去：きょ】【年：ねん】の【冬：ふゆ】"
+                  rom="kyonen no fuyu"
+                  tr_en="last winter"
+                  tr_de="letzten Winter"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【去：きょ】【年：ねん】の 【夏：なつ】、【日：に】【本：ほん】に 【旅：りょ】【行：こう】に 【行：い】った。"
+                  rom="Kyonen no natsu, Nihon ni ryokō ni itta."
+                  tr_en="Last summer, I went travelling to Japan."
+                  tr_de="Letzten Sommer ging ich auf eine Reise nach Japan."
+                  lvl="n5"
+                  origin="Miku modified"
+                  href="https://youtu.be/TjmlAiqjpmk"
+                />
+            </word>
+            <word
+              w="【一昨年：おととし】"
+              rom="ototoshi"
+              tr_en="year before last"
+              tr_de="vorletztes Jahr"
+              lvl="n5"
+              category="time"
+              id="ototoshi-yearbeforelast"
+              hasCombinedReading="true"
+            >
+                <phrase
+                  ph="【一昨年：おととし】の【秋：あき】"
+                  rom="ototoshi no aki"
+                  tr_en="the autumn before last"
+                  tr_de="der vorletzte Herbst"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【一昨年：おととし】の【冬：ふゆ】は【雪：ゆき】が【多：おお】かった。"
+                  rom="Ototoshi no fuyu wa yuki ga ōkatta."
+                  tr_en="We had a lot of snow in the winter before last."
+                  tr_de="Wir hatten viel Schnee im vorletzten Winter."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【来：らい】【年：ねん】"
+              rom="rainen"
+              tr_en="next year"
+              tr_de="nächstes Jahr"
+              lvl="n5"
+              category="time"
+              id="rainen-nextyear"
+            >
+                <phrase
+                  ph="【来：らい】【年：ねん】の【夏：なつ】"
+                  rom="rainen no natsu"
+                  tr_en="the summer next year"
+                  tr_de="der Sommer im nächsten Jahr"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【来：らい】【年：ねん】は 【17：じゅうなな】【歳：さい】に なる。"
+                  rom="Rainen wa jū-nana-sai ni naru."
+                  tr_en="I will be seventeen next year."
+                  tr_de="Ich werde siebzehn nächstes Jahr."
+                  origin="lib0"
+                  lvl="n5"
+                />
+            </word>
+            <word
+              w="さ【来：らい】【年：ねん】"
+              rom="sarainen"
+              tr_en="year after next"
+              tr_de="übernächstes Jahr"
+              lvl="n5"
+              category="time"
+              id="sarainen-yearafternext"
+            >
+                <phrase
+                  ph="さ【来：らい】【年：ねん】の【春：はる】"
+                  rom="sarainen no haru"
+                  tr_en="the spring after next"
+                  tr_de="übernächsten Frühling"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="さ【来：らい】【年：ねん】の【夏：なつ】に【大：だい】【学：がく】を【卒：そつ】【業：ぎょう】する【予：よ】【定：てい】です。"
+                  rom="Sarainen no natsu ni daigaku o sotsugyō suru yotei desu."
+                  tr_en="I plan to graduate from university in the summer after next."
+                  tr_de="Ich habe vor, im übernächsten Sommer den Uniabschluss zu machen."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【一：いち】【年：ねん】"
+              rom="ichi-nen"
+              tr_en="one year"
+              tr_de="ein Jahr"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n5"
+              rem="GENKI2 p.386"
+              category="time"
+              id="ichinen-1year"
+            >
+                <phrase
+                  ph="【一：いち】【年：ねん】【中：じゅう】"
+                  rom="ichinen-jū"
+                  tr_en="all year long"
+                  tr_de="das ganze Jahr lang"
+                  explanation_en="Note that it's pronounced いちねんじゅう, not いちねんちゅう."
+                  explanation_de="Es wird いちねんじゅう ausgesprochen, nicht いちねんちゅう."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【一：いち】【年：ねん】【中：じゅう】いつも【同：おな】じでした。"
+                  rom="Ichinen-jū itsumo onaji deshita."
+                  tr_en="It was the same all year long."
+                  tr_de="Es war dasselbe das ganze Jahr lang."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【二：に】【年：ねん】"
+              rom="ni-nen"
+              tr_en="two years"
+              tr_de="zwei Jahre"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n5"
+              rem="GENKI2 p.386"
+              category="time"
+              id="ninen-2years"
+              HIDDEN="true"
+            />
+            <word
+              w="【三：さん】【年：ねん】"
+              rom="san-nen"
+              tr_en="three years"
+              tr_de="drei Jahre"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n5"
+              rem="GENKI2 p.386"
+              category="time"
+              id="sannen-3years"
+            >
+                <phrase
+                  ph="【三：さん】【年：ねん】かかる"
+                  rom="san-nen kakaru"
+                  tr_en="it takes three year"
+                  tr_de="es dauert drei Jahre"
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT and lib0; ChatGPT says 三年間かかる would not be natural"
+                />
+                <sentence
+                  s="その【仕：し】【事：ごと】には【三：さん】【年：ねん】もかかると【思：おも】います。"
+                  rom="Sono shigoto ni wa san-nen mo kakaru to omoimasu."
+                  tr_en="I think this piece of work might take as long as three years."
+                  tr_de="Ich denke, diese Arbeit dürfte drei Jahre lang brauchen."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【四：よ】【年：ねん】"
+              rom="yonen"
+              tr_en="four years"
+              tr_de="vier Jahre"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n5"
+              rem="GENKI2 p.386"
+              category="time"
+              id="yonen-4years"
+            >
+                <phrase
+                  ph="【四：よ】【年：ねん】【間：かん】"
+                  rom="yonen-kan"
+                  tr_en="for (the duration of) four years"
+                  tr_de="drei Jahre lang (Dauer)"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="【四：よ】【年：ねん】【間：かん】 【日：に】【本：ほん】に【住：す】んでたんだ。"
+                  rom="Yonen-kan Nihon ni sundeta n da."
+                  tr_en="I lived in Japan for four years."
+                  tr_de="Ich habe vier Jahre lang in Japan gewohnt."
+                  lvl="n5"
+                  origin="ChatGPT"
+                  rem="grammatically, ん may be n4"
+                />
+            </word>
+            <word
+              w="【五：ご】【年：ねん】"
+              rom="go-nen"
+              tr_en="five years"
+              tr_de="fünf Jahre"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n5"
+              rem="GENKI2 p.386"
+              category="time"
+              id="gonen-5years"
+              HIDDEN="true"
+            />
+            <word
+              w="【六：ろく】【年：ねん】"
+              rom="roku-nen"
+              tr_en="six years"
+              tr_de="sechs Jahre"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n5"
+              rem="GENKI2 p.386"
+              category="time"
+              id="rokunen-6years"
+              HIDDEN="true"
+            />
+            <word
+              w="【七：なな】【年：ねん】"
+              rom="nana-nen"
+              tr_en="seven years"
+              tr_de="sieben Jahre"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n5"
+              rem="GENKI2 p.386"
+              category="time"
+              id="nananen-7years"
+              HIDDEN="true"
+            />
+            <word
+              w="【八：はち】【年：ねん】"
+              rom="hachi-nen"
+              tr_en="eight years"
+              tr_de="acht Jahre"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n5"
+              rem="GENKI2 p.386"
+              category="time"
+              id="hachinen-8years"
+              HIDDEN="true"
+            />
+            <word
+              w="【九：きゅう】【年：ねん】"
+              rom="kyū-nen"
+              tr_en="nine years"
+              tr_de="neun Jahre"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n5"
+              rem="GENKI2 p.386"
+              category="time"
+              id="kyūnen-9years"
+              HIDDEN="true"
+            />
+            <word
+              w="【十：じゅう】【年：ねん】"
+              rom="jū-nen"
+              tr_en="ten years"
+              tr_de="zehn Jahre"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n5"
+              rem="GENKI2 p.386"
+              category="time"
+              id="jūnen-10years"
+              HIDDEN="true"
+            />
+            <word
+              w="【何：なん】【年：ねん】"
+              rom="nannen"
+              tr_en="what year; how many years"
+              tr_de="welches Jahr; wieviele Jahre"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n5"
+              category="time"
+              id="nannen-whatyear"
+              rem="jisho has nx"
+              HIDDEN="true"
+            />
+        </section>
+        <section
+          name_en="か月: Number of months"
+          name_de="か月: Anzahl Monate"
+          name_fr="か月: Le nombre de mois"
+        >
+            <!-- appears in GENKI2 p.386; jisho has nx -->
+            <word
+              w="【一：いっ】か【月：げつ】"
+              rom="ikkagetsu"
+              tr_en="one month"
+              tr_de="ein Monat"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n4"
+              rem="GENKI2 p.386"
+              category="time"
+              id="ikkagetsu-1month"
+            >
+                <keep_apart_from id="kagetsu-months" />
+                <phrase
+                  ph="【一：いっ】か【月：げつ】に【三：さん】【回：かい】"
+                  rom="ikkagetsu ni san-kai"
+                  tr_en="three times a month"
+                  tr_de="dreimal im Monat"
+                  lvl="n4"
+                  origin="self"
+                  rem="similar to 500mon q49"
+                />
+                <sentence
+                  s="【一：いっ】か【月：げつ】【以：い】【内：ない】に【帰：かえ】ってきなさい。"
+                  rom="Ikkagetsu inai ni kaette kinasai."
+                  tr_en="Please come back within one month."
+                  tr_de="Bitte komme innerhalb eines Monats zurück."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="lib0 uses １ヶ月"
+                />
+                <sentence
+                  s="【一：いっ】【ヶ：か】【月：げつ】に【一：いっ】【回：かい】、【友：とも】【達：だち】と【会：あ】います。"
+                  rom="Ikkagetsu ni ikkai, tomodachi to aimasu."
+                  tr_en="I meet up with friends once a month."
+                  tr_de="Ich treffe mich mit Freunden einmal pro Monat."
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="500mon q49"
+                />
+            </word>
+            <word
+              w="【二：に】か【月：げつ】"
+              rom="ni-kagetsu"
+              tr_en="two months"
+              tr_de="zwei Monate"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n4"
+              rem="GENKI2 p.386"
+              category="time"
+              id="nikagetsu-2months"
+              HIDDEN="true"
+            />
+            <word
+              w="【三：さん】か【月：げつ】"
+              rom="san-kagetsu"
+              tr_en="three months"
+              tr_de="drei Monate"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n4"
+              rem="GENKI2 p.386"
+              category="time"
+              id="sankagetsu-3months"
+              HIDDEN="true"
+            />
+            <word
+              w="【四：よん】か【月：げつ】"
+              rom="yon-kagetsu"
+              tr_en="four months"
+              tr_de="vier Monate"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n4"
+              rem="GENKI2 p.386"
+              category="time"
+              id="yonkagetsu-4months"
+              HIDDEN="true"
+            />
+            <word
+              w="【五：ご】か【月：げつ】"
+              rom="go-kagetsu"
+              tr_en="five months"
+              tr_de="fünf Monate"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n4"
+              rem="GENKI2 p.386"
+              category="time"
+              id="gokagetsu-5months"
+              HIDDEN="true"
+            />
+            <word
+              w="【六：ろっ】か【月：げつ】"
+              rom="rokkagetsu"
+              tr_en="six months"
+              tr_de="sechs Monate"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n4"
+              rem="GENKI2 p.386"
+              category="time"
+              id="rokkagetsu-6months"
+            >
+                <keep_apart_from id="kagetsu-months" />
+                <phrase
+                  ph="【六：ろっ】か【月：げつ】に【四：よん】【回：かい】"
+                  rom="rokkagetsu ni yon-kai"
+                  tr_en="four times in six months"
+                  tr_de="vier Mal in sechs Monaten"
+                  lvl="n4"
+                  origin="self"
+                  rem="similar to 500mon q49"
+                />
+                <sentence
+                  s="【今：こ】【年：とし】は【六：ろっ】か【月：げつ】に【四：よん】【回：かい】も【病：びょう】【気：き】になってしまいました。"
+                  rom="Kotoshi wa rokkagetsu ni yon-kai mo byōki ni natte shimaimashita."
+                  tr_en="I ended up getting sick four times in just six months this year."
+                  tr_de="Dieses Jahr bin ich vier Mal in sechs Monaten krank geworden."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【七：なな】か【月：げつ】"
+              rom="nana-kagetsu"
+              tr_en="seven months"
+              tr_de="sieben Monate"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n4"
+              rem="GENKI2 p.386"
+              category="time"
+              id="nanakagetsu-7months"
+              HIDDEN="true"
+            />
+            <word
+              w="【八：はっ】か【月：げつ】"
+              rom="hakkagetsu"
+              tr_en="eight months"
+              tr_de="acht Monate"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n4"
+              rem="GENKI2 p.386"
+              category="time"
+              id="hakkagetsu-8months"
+            >
+                <phrase
+                  ph="【八：はっ】か【月：げつ】に【二：に】【回：かい】"
+                  rom="hakkagetsu ni ni-kai"
+                  tr_en="twice in eight months"
+                  tr_de="zweimal in acht Monaten"
+                  lvl="n4"
+                  origin="self"
+                  rem="similar to 500mon q49"
+                />
+                <sentence
+                  s="【金：かね】【子：こ】さんは【八：はっ】か【月：げつ】に【九：きゅう】【回：かい】も【授：じゅ】【業：ぎょう】に【遅：おく】れました。"
+                  rom="Kaneko-san wa hakkagetsu ni kyū-kai mo jugyō ni okuremashita."
+                  tr_en="Mr Kaneko has been late nine times in eight months."
+                  tr_de="Herr Kaneko ist neun Mal innert acht Monaten zu spät gekommen."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【九：きゅう】か【月：げつ】"
+              rom="kyū-kagetsu"
+              tr_en="nine months"
+              tr_de="neun Monate"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n4"
+              rem="GENKI2 p.386"
+              category="time"
+              id="kyūkagetsu-9months"
+              HIDDEN="true"
+            />
+            <word
+              w="【十：じゅっ】か【月：げつ】"
+              rom="jukkagetsu"
+              tr_en="ten months"
+              tr_de="zehn Monate"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n4"
+              rem="may also be pronounced jikkagetsu; see GENKI2 p.386"
+              category="time"
+              id="jukkagetsu-10months"
+            >
+                <phrase
+                  ph="【十：じゅっ】か【月：げつ】【以：い】【内：ない】に"
+                  rom="jukkagetsu inai ni"
+                  tr_en="within ten months"
+                  tr_de="innerhalb von zehn Monaten"
+                  lvl="n4"
+                  origin="self"
+                />
+                <sentence
+                  s="【新：あたら】しい【自：じ】【転：てん】【車：しゃ】を【買：か】ったのに、【十：じゅっ】か【月：げつ】【以：い】【内：ない】に【盗：ぬす】まれてしまいました。"
+                  rom="Atarashii jitensha o katta no ni, jukkagetsu inai ni nusumarete shimaimashita."
+                  tr_en="I bought a new bicycle, but it was stolen within ten months."
+                  tr_de="Ich habe mir ein neues Fahrrad gekauft, aber es wurde mir innert zehn Monaten gestohlen."
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【何：なん】か【月：げつ】"
+              rom="nan-kagetsu"
+              tr_en="how many months"
+              tr_de="wieviele Monate"
+              hint_en="counter"
+              hint_de="Zählwort"
+              lvl="n4"
+              rem="GENKI2 p.386"
+              category="time"
+              id="nankagetsu-howmanymonths"
+              HIDDEN="true"
+            />
+        </section>
+        <section
+          name_en="Related terms"
+          name_de="Verwandte Wörter"
+          name_fr="Les termes connexes"
+        >
+            <word
+              w="【夜：よる】"
+              rom="yoru"
+              tr_en="night"
+              tr_de="Nacht"
+              lvl="n5"
+              category="time"
+              id="yoru-night"
+            >
+                <keep_apart_from id="ban-evening" />
+                <phrase
+                  ph="【夜：よる】の【間：あいだ】に"
+                  rom="yoru no aida ni"
+                  tr_en="during the night"
+                  tr_de="während der Nacht"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【夜：よる】に 【出：で】かけるところって どこが ありますか。"
+                  rom="Yoru ni dekakeru tokoro tte doko ga arimasu ka?"
+                  tr_en="Where are the places to go out at night?"
+                  tr_de="Wo sind die Orte, um abends auszugehen?"
+                  lvl="n5"
+                  origin="Langenscheidt p.191"
+                />
+            </word>
+            <word
+              w="【午：ご】【前：ぜん】"
+              rom="gozen"
+              tr_en="morning; A.M."
+              tr_de="vormittags"
+              lvl="n5"
+              category="time"
+              id="gozen-am"
+            >
+                <keep_apart_from id="asa-morning" />
+                <phrase
+                  ph="【午：ご】【前：ぜん】【中：ちゅう】"
+                  rom="gozen-chū"
+                  tr_en="throughout the morning"
+                  tr_de="den ganzen Morgen lang"
+                  lvl="n4"
+                  origin="GENKI2 p.209"
+                  rem="It can also mean just 'in the morning' depending on context"
+                />
+                <sentence
+                  s="【森：もり】【田：た】さんは 【午：ご】【前：ぜん】 【７：しち】【時：じ】に 【起：お】きた。"
+                  rom="Morita-san wa gozen shichi-ji ni okita."
+                  tr_en="Mr Morita got up at seven in the morning."
+                  tr_de="Herr Morita stand am Morgen um sieben auf."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【午：ご】【後：ご】"
+              rom="gogo"
+              tr_en="afternoon; P.M."
+              tr_de="nachmittags"
+              lvl="n5"
+              category="time"
+              id="gogo-pm"
+            >
+                <phrase
+                  ph="【午：ご】【後：ご】【中：ちゅう】"
+                  rom="gogo-chū"
+                  tr_en="throughout the afternoon"
+                  tr_de="den ganzen Nachmittag lang"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with lib0"
+                />
+                <sentence
+                  s="【午：ご】【後：ご】【五：ご】【時：じ】に 【夕：ゆう】【飯：はん】を 【食：た】べます。"
+                  rom="Gogo go-ji ni yūhan o tabemasu."
+                  tr_en="I will eat supper at 5 PM."
+                  tr_de="Ich werde um 5 Uhr nachmittags zu Abend essen."
+                  lvl="n5"
+                  origin="duolingo"
+                />
+            </word>
+            <word
+              w="【頃：ころ】"
+              rom="koro"
+              tr_en="approximate time; around ~"
+              tr_de="ungefähre Zeit; um ~ herum"
+              hint_en="noun; adverb; suffix"
+              hint_de="Nomen; Adverb; Suffix"
+              usuallyInKana="true"
+              studyInContext="required"
+              lvl="n4"
+              category="time"
+              id="koro-about"
+              rem="appears in 500mon q192, q328; appears in GENKI2 L21 vocab section; jisho has n3"
+            >
+                <synonym w="ごろ" />
+                <phrase
+                  ph="このごろ"
+                  rom="kono goro"
+                  tr_en="nowadays; at present; recently"
+                  tr_de="heutzutage; derzeit; jüngst"
+                  hasDifferentForm="true"
+                  lvl="n4"
+                />
+                <phrase
+                  ph="【子：こ】【供：ども】のころ"
+                  rom="kodomo no koro"
+                  tr_en="the time of my childhood"
+                  tr_de="die Zeit meiner Kindheit"
+                  lvl="n4"
+                  origin="self"
+                />
+                <phrase
+                  ph="【学：がく】【生：せい】のころ"
+                  rom="gakusei no koro"
+                  tr_en="the time when I was a student"
+                  tr_de="als ich noch in die Schule ging"
+                  lvl="n4"
+                  origin="500mon q192"
+                />
+                <sentence
+                  s="【学：がく】【生：せい】のころ、【東：とう】【京：きょう】に【住：す】んでいました。"
+                  rom="Gakusei no koro, Tōkyō ni sunde imashita."
+                  tr_en="When I was a student, I lived in Tokyo."
+                  tr_de="Als ich noch ein Schüler war, wohnten wir in Tokyo."
+                  lvl="n4"
+                  origin="500mon q192"
+                />
+                <sentence
+                  s="【田：た】【中：なか】さん、このごろとてもきれいになりましたね。"
+                  rom="Tanaka-san, kono goro totemo kirei ni narimashita ne."
+                  tr_en="Ms Tanaka, you have recently become very beautiful."
+                  tr_de="Frau Tanaka, Sie sind in letzter Zeit so hübsch geworden."
+                  hasDifferentForm="true"
+                  lvl="n4"
+                  origin="500mon q173"
+                />
+            </word>
+            <word
+              w="この【頃：ごろ】"
+              rom="kono goro"
+              tr_en="nowadays; at present; recently"
+              lvl="n4"
+              category="time"
+              id="konogoro-nowadays"
+              usuallyInKana="true"
+              HIDDEN="true"
+              rem="is now a phrase of koro-about"
+            >
+                <keep_apart_from id="saikin-recent" />
+                <keep_apart_from id="chikagoro-lately" />
+            </word>
+            <word
+              w="【半：はん】"
+              rom="han"
+              tr_en="half ~; half-past ~"
+              tr_de="halb ~; eine halbe Stunde nach ~"
+              hint_en="prefix or suffix"
+              hint_de="Präfix oder Suffix"
+              lvl="n5"
+              category="time"
+              id="han-half"
+              HIDDEN="true"
+              rem="better to practice with sentences"
+            />
+        </section>
+    </unit>
+</vocabulary>

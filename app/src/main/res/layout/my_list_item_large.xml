@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<io.github.digorydoo.goigoi.view.AspectRatioLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/root_view"
+  android:layout_width="match_parent"
+  android:layout_height="0dp"
+  android:layout_marginTop="4dp"
+  android:layout_marginBottom="4dp"
+  app:aspectRatioWidth="16"
+  app:aspectRatioHeight="7"
+  >
+    <ImageView
+      android:id="@+id/image_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:importantForAccessibility="no"
+      />
+    <ImageView
+      android:id="@+id/ripple"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="?attr/selectableItemBackground"
+      android:importantForAccessibility="no"
+      />
+</io.github.digorydoo.goigoi.view.AspectRatioLayout>

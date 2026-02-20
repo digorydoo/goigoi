@@ -1,0 +1,1326 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N5 adjectives ①"
+      name_de="N5-Adjektive ①"
+      name_fr="Les adjectifs N5 ①"
+      name_it="Aggettivi N5 ①"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="adjective"
+      defaultHint_de="Adjektiv"
+      lvl="n5"
+      translations="en, de"
+      requiresSentences="true"
+      requiresPhrases="true"
+      requiresIds="true"
+    >
+        <section>
+            <!-- colours -->
+            <word
+              w="【赤：あか】い"
+              rom="akai"
+              tr_en="red"
+              tr_de="rot"
+              lvl="n5"
+              category="colour"
+              id="akai-red"
+            >
+                <!-- the noun is 赤, n5, see below; or 赤み, nx, not marked as common -->
+                <see id="akaramu-getred" rem="verb" />
+                <phrase
+                  ph="【赤：あか】い【封：ふう】【筒：とう】"
+                  rom="akai fūtō"
+                  tr_en="a red envelope"
+                  tr_de="ein roter Briefumschlag"
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="その 【車：くるま】の 【色：いろ】は 【赤：あか】い。"
+                  rom="Sono kuruma no iro wa akai."
+                  tr_en="The colour of that car is red."
+                  tr_de="Die Farbe des Autos ist rot."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【木：き】【村：むら】さんは 【赤：あか】くなった。"
+                  rom="Kimura-san wa akaku natta."
+                  tr_en="Miss Kimura blushed red."
+                  tr_de="Frau Kimura errötete."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【赤：あか】"
+              rom="aka"
+              tr_en="red"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n5"
+              category="colour"
+              id="aka-red"
+              HIDDEN="true"
+              rem="see akai-red; just to silence find-missing-goigoi"
+            />
+            <word
+              w="【青：あお】い"
+              rom="aoi"
+              tr_en="blue"
+              tr_de="blau"
+              hint_en="sometimes also used for green"
+              hint_de="kann manchmal auch grün bedeuten"
+              lvl="n5"
+              category="colour"
+              id="aoi-blue"
+            >
+                <!-- the noun is 青, n5, see below; or 青み, nx, not marked as common -->
+                <phrase
+                  ph="【青：あお】い【海：うみ】"
+                  rom="aoi umi"
+                  tr_en="blue sea"
+                  tr_de="blaues Meer"
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【空：そら】は 【青：あお】い。"
+                  rom="Sora wa aoi."
+                  tr_en="The sky is blue."
+                  tr_de="Der Himmel ist blau."
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【田：た】【中：なか】さんの 【顔：かお】は 【青：あお】くなった。"
+                  rom="Tanaka-san no kao wa aoku natta."
+                  tr_en="Mr Tanaka's face turned pale."
+                  tr_de="Herr Tanakas Gesicht wurde blass."
+                  lvl="n5"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【青：あお】"
+              rom="ao"
+              tr_en="blue"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n5"
+              category="colour"
+              id="ao-bluenoun"
+              HIDDEN="true"
+              rem="see aoi-blue; just to silence find-missing-goigoi"
+            />
+            <word
+              w="【緑：みどり】【色：いろ】"
+              rom="midoriiro"
+              tr_en="green"
+              tr_de="grün"
+              lvl="n5"
+              category="colour"
+              id="midoriiro-green"
+            >
+                <!-- midori is actually a noun, not an adjective. it usu. used as midoriiro -->
+                <phrase
+                  ph="【緑：みどり】【色：いろ】のセーター"
+                  rom="midoriiro no sētā"
+                  tr_en="a green sweater"
+                  tr_de="ein grüner Pullover"
+                  lvl="n5"
+                  origin="Oxford p.125"
+                />
+                <sentence
+                  s="【緑：みどり】【色：いろ】のは ありますか。"
+                  rom="Midoriiro no wa arimasu ka?"
+                  tr_en="Do you have any in green?"
+                  tr_de="Haben Sie welche in grün?"
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【緑：みどり】"
+              rom="midori"
+              tr_en="green"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n5"
+              category="colour"
+              id="midori-green"
+              HIDDEN="true"
+              rem="see midoriiro-green; just to silence find-missing-goigoi"
+            />
+            <word
+              w="【黄：き】【色：いろ】い"
+              rom="kiiroi"
+              tr_en="yellow"
+              tr_de="gelb"
+              lvl="n5"
+              category="colour"
+              id="kiiroi-yellow"
+            >
+                <!-- kiiroi is an adjective formed from the noun kiiro -->
+                <phrase
+                  ph="【黄：き】【色：いろ】いタクシー"
+                  rom="kiiroi takushī"
+                  tr_en="a yellow taxi"
+                  tr_de="ein gelbes Taxi"
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+                <!--
+                  ph="【黄：き】【色：いろ】の【花：はな】"
+                  rom="kiiro no hana"
+                  tr_en="a yellow flower"
+                  tr_de="eine gelbe Blume"
+                  explanation_en="When 黄色 is used as a noun, you need to add の."
+                  explanation_de="Wenn 黄色 als Nomen verwendet wird, muss の folgen."
+                  lvl="n5"
+                  origin="lib0"
+                  rem="this can have the meaning of 'the yellow of the flower'"
+                  href="https://hinative.com/en-US/questions/22198921"
+                -->
+                <sentence
+                  s="この 【黄：き】【色：いろ】い 【薬：くすり】は 【寝：ね】る【前：まえ】に 【飲：の】んでください。"
+                  rom="Kono kiiroi kusuri wa neru mae ni nonde kudasai."
+                  tr_en="Please take this yellow medicine before you go to bed."
+                  tr_de="Bitte nimm dieses gelbe Medikament ein, bevor du zu Bett gehst."
+                  lvl="n5"
+                  origin="500mon q412"
+                />
+                <!--
+                  s="【黄：き】【色：いろ】い【雪：ゆき】を【食：た】べてはいけない。"
+                  rom="Kiiroi yuki o tabete wa ikenai."
+                  tr_en="Don't eat the yellow snow."
+                  tr_de="Iss nicht den gelben Schnee."
+                  origin="self"
+                  lvl="n4"
+                -->
+            </word>
+            <word
+              w="【黄：き】【色：いろ】"
+              rom="kiiro"
+              tr_en="yellow"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n5"
+              category="colour"
+              id="kiiro-yellow"
+              HIDDEN="true"
+              rem="see kiiroi-yellow; jisho has n1 for kiiro, but n5 for kiiroi"
+            />
+            <word
+              w="【茶：ちゃ】【色：いろ】い"
+              rom="chairoi"
+              tr_en="brown"
+              tr_de="braun"
+              lvl="n5"
+              category="colour"
+              id="chairoi-brown"
+            >
+                <!-- chairoi is an adjective formed from the noun chairo -->
+                <phrase
+                  ph="【茶：ちゃ】【色：いろ】い【犬：いぬ】"
+                  rom="chairoi inu"
+                  tr_en="a brown dog"
+                  tr_de="ein brauner Hund"
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+                <!--
+                  ph="【茶：ちゃ】【色：いろ】の【靴：くつ】"
+                  rom="chairo no kutsu"
+                  tr_en="brown shoes"
+                  tr_de="braune Schuhe"
+                  explanation_en="When 茶色 is used as a noun, you need to add の."
+                  explanation_de="Wenn 茶色 als Nomen verwendet wird, muss の folgen."
+                  lvl="n5"
+                  origin="lib0"
+                  rem="this can have the meaning of 'the brown of the shoe'"
+                  href="https://hinative.com/en-US/questions/22198921"
+                -->
+                <sentence
+                  s="この 【辺：へん】で 【茶：ちゃ】【色：いろ】い【財：さい】【布：ふ】を 【見：み】ませんでしたか。"
+                  rom="Kono hen de chairoi saifu o mimasen deshita ka?"
+                  tr_en="Have you seen a brown purse around here?"
+                  tr_de="Hast du hier irgendwo einen braunen Geldbeutel gesehen?"
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【茶：ちゃ】【色：いろ】"
+              rom="chairo"
+              tr_en="brown"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n5"
+              category="colour"
+              id="chairo-brown"
+              HIDDEN="true"
+              rem="see chairoi-brown; jisho has n2 for chairoi, but n5 for chairo"
+            />
+
+            <!-- shades -->
+            <word
+              w="【白：しろ】い"
+              rom="shiroi"
+              tr_en="white"
+              tr_de="weiss"
+              lvl="n5"
+              category="colour"
+              id="shiroi-white"
+            >
+                <!-- the noun is 白, see below; or 白み, nx, not marked as common -->
+                <phrase
+                  ph="【白：しろ】い【猫：ねこ】"
+                  rom="shiroi neko"
+                  tr_en="a white cat"
+                  tr_de="eine weisse Katze"
+                  lvl="n5"
+                  origin="self"
+                />
+                <!--
+                  ph="【白：しろ】の【猫：ねこ】"
+                  rom="shiro no neko"
+                  tr_en="a white cat"
+                  tr_de="eine weisse Katze"
+                  explanation_en="When 白 is used as a noun, you need to add の."
+                  explanation_de="Wenn 白 als Nomen verwendet wird, muss の folgen."
+                  lvl="n5"
+                  origin="jpod101 audio"
+                  rem="this can have the meaning of 'the white of the cat'"
+                  href="https://hinative.com/en-US/questions/22198921"
+                -->
+                <sentence
+                  s="あの 【白：しろ】い【建：たて】【物：もの】は 【病：びょう】【院：いん】だ。"
+                  rom="Ano shiroi tatemono wa byōin da."
+                  tr_en="That white building is a hospital."
+                  tr_de="Das weisse Gebäude dort ist ein Spital."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【白：しろ】"
+              rom="shiro"
+              tr_en="white"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n5"
+              category="colour"
+              id="shiro-white"
+              HIDDEN="true"
+              rem="see shiroi-white; just to silence find-missing-goigoi"
+            />
+            <word
+              w="【黒：くろ】い"
+              rom="kuroi"
+              tr_en="black"
+              tr_de="schwarz"
+              lvl="n5"
+              category="colour"
+              id="kuroi-black"
+            >
+                <!-- the noun is 黒, n5, see below; or 黒み, nx, not marked as common -->
+                <phrase
+                  ph="【黒：くろ】い【帽：ぼう】【子：し】"
+                  rom="kuroi bōshi"
+                  tr_en="a black hat"
+                  tr_de="ein schwarzer Hut"
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+                <!--
+                  ph="【黒：くろ】の【上：うわ】【着：ぎ】"
+                  rom="kuro no uwagi"
+                  tr_en="a black jacket"
+                  tr_de="ein schwarzer Mantel"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="this can have the meaning of 'the black of the jacket'"
+                  href="https://hinative.com/en-US/questions/22198921"
+                -->
+                <sentence
+                  s="【黒：くろ】いペンで 【書：か】いて ください。"
+                  rom="Kuroi pen de kaite kudasai."
+                  tr_en="Please write with a black pen."
+                  tr_de="Bitte schreiben Sie mit einem schwarzen Stift."
+                  lvl="n5"
+                  origin="500mon q3"
+                />
+            </word>
+            <word
+              w="【黒：くろ】"
+              rom="kuro"
+              tr_en="black"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n5"
+              category="colour"
+              id="kuro-black"
+              HIDDEN="true"
+              rem="see kuroi-black; just to silence find-missing-goigoi"
+            />
+            <word
+              w="【明：あか】るい"
+              rom="akarui"
+              tr_en="bright; colourful; cheerful"
+              tr_de="hell; farbig; fröhlich"
+              lvl="n5"
+              category="colour, light"
+              id="akarui-bright"
+            >
+                <!-- there is also a noun 明るさ, nx, not marked as common -->
+                <see id="akari-illum" rem="noun" />
+                <phrase
+                  ph="【明：あか】るい【黄：き】【色：いろ】"
+                  rom="akarui kiiro"
+                  tr_en="bright yellow"
+                  tr_de="hellgelb; leuchtendes Gelb"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【田：た】【中：なか】さんは 【明：あか】るい【人：ひと】です。"
+                  rom="Tanaka-san wa akarui hito desu."
+                  tr_en="Mr Tanaka is a cheerful person."
+                  tr_de="Herr Tanaka ist eine fröhliche Person."
+                  lvl="n5"
+                  origin="500mon q37"
+                />
+            </word>
+            <word
+              w="【暗：くら】い"
+              rom="kurai"
+              tr_en="dark; gloomy"
+              tr_de="dunkel; düster"
+              lvl="n5"
+              category="colour, light"
+              id="kurai-dark"
+            >
+                <!-- the noun is 暗さ, nx, not marked as common -->
+                <phrase
+                  ph="【暗：くら】い【雲：くも】"
+                  rom="kurai kumo"
+                  tr_en="dark clouds"
+                  tr_de="dunkle Wolken"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【外：そと】は 【暗：くら】いです。"
+                  rom="Soto wa kurai desu."
+                  tr_en="It's dark outside."
+                  tr_de="Draussen ist es dunkel."
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【空：そら】が【暗：くら】くなったね。"
+                  rom="Sora ga kuraku natta ne."
+                  tr_en="The sky has become dark, hasn’t it?"
+                  tr_de="Der Himmel ist dunkel geworden, nicht wahr?"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+
+            <!-- thin, fat -->
+            <word
+              w="【薄：うす】い"
+              rom="usui"
+              tr_en="thin"
+              tr_de="dünn"
+              hint_en="in thickness; e.g. book, ice, clothes"
+              hint_de="in Dicke, z.B. Buch, Eisschicht, Stoff"
+              lvl="n5"
+              id="usui-thin"
+            >
+                <see id="atsui-thick" rem="antonym" />
+                <phrase
+                  ph="【薄：うす】い【本：ほん】"
+                  rom="usui hon"
+                  tr_en="thin book"
+                  tr_de="dünnes Buch"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【肉：にく】を 【薄：うす】く【切：き】りなさい。"
+                  rom="Niku o usuku kiri-nasai."
+                  tr_en="Cut the meat thin (into thin slices)."
+                  tr_de="Schneide das Fleisch dünn (in dünne Scheiben)."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【細：ほそ】い"
+              rom="hosoi"
+              tr_en="thin; slender"
+              tr_de="dünn; schmal"
+              hint_en="thin in width; e.g. pencil"
+              hint_de="in Breite, z.B. Bleistift"
+              lvl="n5"
+              id="hosoi-thin"
+            >
+                <see id="futoi-fat" rem="antonym" />
+                <phrase
+                  ph="【細：ほそ】いペン"
+                  rom="hosoi pen"
+                  tr_en="thin pen"
+                  tr_de="dünner Stift"
+                  lvl="n5"
+                  origin="self"
+                />
+                <phrase
+                  ph="【長：なが】くて【細：ほそ】い"
+                  rom="nagakute hosoi"
+                  tr_en="long and thin"
+                  tr_de="lang und dünn"
+                  lvl="n5"
+                />
+                <sentence
+                  s="レオは 【先：さき】の 【細：ほそ】い【鉛：えん】【筆：ぴつ】を 【使：つか】う。"
+                  rom="Reo wa saki no hosoi enpitsu o tsukau."
+                  tr_en="Reo uses a fine pencil (a pencil with a fine point)."
+                  tr_de="Reo verwendet einen feinen Bleistift (einen Bleistift mit einer feinen Spitze)."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【太：ふと】い"
+              rom="futoi"
+              tr_en="fat; thick"
+              tr_de="fett; dick"
+              lvl="n5"
+              id="futoi-fat"
+            >
+                <!-- futoi means thick with a large diameter; atsui is used instead for a thick curtain, book, etc. -->
+                <see id="hosoi-thin" rem="antonym" />
+                <phrase
+                  ph="【太：ふと】い【足：あし】"
+                  rom="futoi ashi"
+                  tr_en="thick legs"
+                  tr_de="dicke Beine"
+                  origin="self"
+                  lvl="n5"
+                  rem="lib0 has 足が太い, 太い首"
+                />
+                <sentence
+                  s="【茶：ちゃ】【色：いろ】の 【太：ふと】った 【猫：ねこ】が います。"
+                  rom="Chairo no futotta neko ga imasu."
+                  tr_en="There is a fat brown cat."
+                  tr_de="Da hat's eine dicke braune Katze."
+                  lvl="n5"
+                  origin="500mon q317"
+                />
+            </word>
+
+            <!-- light, heavy -->
+            <word
+              w="【軽：かる】い"
+              rom="karui"
+              tr_en="light (weight); non-serious (condition)"
+              tr_de="leicht (Gewicht); nicht schlimm (Zustand)"
+              lvl="n5"
+              id="karui-light"
+              rem="appears in 500mon q394 as non-serious, GENKI2 L20 vocab section as light"
+            >
+                <!-- the noun is 軽さ, but is nx and not marked as common in jisho -->
+                <phrase
+                  ph="【軽：かる】い【靴：くつ】"
+                  rom="karui kutsu"
+                  tr_en="light shoes"
+                  tr_de="leichte Schuhe"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【軽：かる】い【風邪：かぜ】"
+                  rom="karui kaze"
+                  tr_en="a slight cold"
+                  tr_de="eine leichte Erkältung"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【軽：かる】いものだけを 【食：た】べたいのですが。"
+                  rom="Karui mono dake o tabetai no desu ga."
+                  tr_en="I just want a little something to eat."
+                  tr_de="Ich möchte nur eine Kleinigkeit essen."
+                  explanation_en="が at the end of the sentence softens the tone."
+                  explanation_de="が am Ende des Satzes mildert den Ton."
+                  lvl="n5"
+                  origin="Langenscheidt"
+                  rem="jisho has n4 for dake"
+                />
+            </word>
+            <word
+              w="【重：おも】い"
+              rom="omoi"
+              tr_en="heavy"
+              tr_de="schwer"
+              hint_en="weight"
+              hint_de="Gewicht"
+              lvl="n5"
+              id="omoi-heavy"
+            >
+                <see id="omosa-weight" rem="noun" />
+                <phrase
+                  ph="【重：おも】い【箱：はこ】"
+                  rom="omoi hako"
+                  tr_en="a heavy box"
+                  tr_de="eine schwere Schachtel"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【一：ひと】【人：り】じゃ 【重：おも】いので、ちょっと 【手：て】を 【貸：か】して ください。"
+                  rom="Hitori ja omoi no de, chotto te o kashite kudasai."
+                  tr_en="It's too heavy to carry alone, so lend me a hand, please."
+                  tr_de="Es ist zu schwer, um alleine zu tragen, also helfen Sie mir bitte."
+                  explanation_en="「じゃ」is a casual form of「では」"
+                  explanation_de="「じゃ」ist umgangssprachlich für「では」"
+                  lvl="n5"
+                  origin="500mon q463"
+                  href="https://hinative.com/en-US/questions/21927429 (じゃ)"
+                />
+            </word>
+
+            <!-- warm, hot, cold -->
+            <word
+              w="【寒：さむ】い"
+              rom="samui"
+              tr_en="cold"
+              tr_de="kalt"
+              hint_en="weather"
+              hint_de="Wetter"
+              lvl="n5"
+              category="weather, temperature"
+              id="samui-cold"
+            >
+                <!-- the noun is 寒さ, nx -->
+                <phrase
+                  ph="【寒：さむ】い【外：そと】"
+                  rom="samui soto"
+                  tr_en="cold outside"
+                  tr_de="kalt draussen"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【昨日：きのう】は、そんなに 【寒：さむ】くなかったですね。"
+                  rom="Kinō wa, sonna ni samukunakatta desu ne."
+                  tr_en="Yesterday wasn't that cold (don't you think)."
+                  tr_de="Gestern war nicht so kalt (oder was meinst du)."
+                  lvl="n5"
+                  origin="500mon q24"
+                />
+                <sentence
+                  s="【昨日：きのう】より 【今日：きょう】の ほうが 【寒：さむ】いですね。"
+                  rom="Kinō yori kyō no hō ga samui desu ne."
+                  tr_en="It's colder today than it was yesterday (don't you think)."
+                  tr_de="Heute ist es kälter als gestern (oder was meinst du)."
+                  lvl="n5"
+                  origin="500mon q146"
+                  rem="jisho has n3 for hō"
+                />
+                <!--
+                  rated nx because of jaketto
+                  s="【夜：よる】は【寒：さむ】くなるから、ジャケットを【忘：わす】れないでください。"
+                  rom="Yoru wa samuku naru kara, jaketto o wasurenaide kudasai."
+                  tr_en="It gets cold at night, so don't forget your jacket!"
+                  tr_de="Es wird kalt in der Nacht, also vergiss deine Jacke nicht!"
+                  lvl="-"
+                  origin="Oxford p.143"
+                -->
+            </word>
+            <word
+              w="【冷：つめ】たい"
+              rom="tsumetai"
+              tr_en="cold to the touch; cold-hearted"
+              tr_de="kalt (zum anfassen); kalt (nicht gefühlsvoll)"
+              lvl="n5"
+              category="temperature"
+              id="tsumetai-cold"
+            >
+                <phrase
+                  ph="【冷：つめ】たい【水：みず】"
+                  rom="tsumetai mizu"
+                  tr_en="cold water"
+                  tr_de="kaltes Wasser"
+                  origin="lib0"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【今日：きょう】は 【風：かぜ】が 【冷：つめ】たい。"
+                  rom="Kyō wa kaze ga tsumetai."
+                  tr_en="The wind is cold today."
+                  tr_de="Der Wind ist kalt heute."
+                  origin="lib0"
+                  lvl="n5"
+                />
+            </word>
+            <word
+              w="【涼：すず】しい"
+              rom="suzushii"
+              tr_en="cool (temperature)"
+              tr_de="kühl"
+              lvl="n5"
+              category="temperature"
+              id="suzushii-cool"
+            >
+                <!-- the noun is 涼しさ, nx, not marked as common -->
+                <phrase
+                  ph="【秋：あき】の【涼：すず】しい【風：かぜ】"
+                  rom="aki no suzushii kaze"
+                  tr_en="cool autumn breeze"
+                  tr_de="kühler Herbstwind"
+                  origin="jpod101 audio"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【今朝：けさ】は 【涼：すず】しいですね。"
+                  rom="Kesa wa suzushii desu ne."
+                  tr_en="It's cool this morning, isn't it?"
+                  tr_de="Es ist kühl heute Morgen, nicht wahr?"
+                  origin="lib0"
+                  lvl="n5"
+                />
+                <!-- it's wrong to say suzushii mizu ⚡; it's tsumetai mizu -->
+            </word>
+            <word
+              w="【暑：あつ】い"
+              rom="atsui"
+              tr_en="hot"
+              tr_de="heiss"
+              hint_en="weather"
+              hint_de="Wetter"
+              lvl="n5"
+              category="weather, temperature"
+              id="atsui-hotweather"
+            >
+                <!-- the noun is 暑さ, nx -->
+                <phrase
+                  ph="【暑：あつ】い【日：ひ】"
+                  rom="atsui hi"
+                  tr_en="a hot day"
+                  tr_de="ein heisser Tag"
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【外：そと】は 【暑：あつ】いですよ。"
+                  rom="Soto wa atsui desu yo."
+                  tr_en="It's hot outside, you know."
+                  tr_de="Draussen ist es heiss."
+                  lvl="n5"
+                  origin="500mon q145"
+                />
+                <sentence
+                  s="スイスの 【夏：なつ】は そんなに 【暑：あつ】くない。"
+                  rom="Suisu no natsu wa sonna ni atsukunai."
+                  tr_en="Summers in Switzerland are not so hot."
+                  tr_de="In der Schweiz ist der Sommer nicht so heiss."
+                  lvl="n5"
+                  origin="Oxford p.97 modified"
+                  rem="jisho has nx for Suisu"
+                />
+            </word>
+            <word
+              w="【暖：あたた】かい"
+              rom="atatakai"
+              tr_en="warm; mild"
+              tr_de="warm; mild"
+              hint_en="air temperature"
+              hint_de="Lufttemperatur"
+              lvl="n5"
+              category="temperature"
+              id="atatakai-warm"
+            >
+                <!-- the noun is 暖かさ, nx, not marked as common -->
+                <!-- see id="atatameru-warmup" rem="verb" NO, different kanji! -->
+                <phrase
+                  ph="【暖：あたた】かい【服：ふく】"
+                  rom="atatakai fuku"
+                  tr_en="warm clothes"
+                  tr_de="warme Kleider"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【部：へ】【屋：や】を 【暖：あたた】かくした。"
+                  rom="Heya o atatakaku shita."
+                  tr_en="I made the room warmer (turned the heating up)."
+                  tr_de="Ich habe den Raum wärmer gemacht (die Heizung aufgedreht)."
+                  lvl="n5"
+                  origin="Oxford p.92"
+                />
+            </word>
+            <word
+              w="【温：ぬる】い"
+              rom="nurui"
+              tr_en="lukewarm; tepid"
+              tr_de="lauwarm"
+              lvl="n5"
+              id="nurui-tepid"
+              usuallyInKana="true"
+            >
+                <!--
+                    There are two nouns:
+                    ぬるさ, not even in jisho; ChatGPT: how lukewarm sth. is; can mean too warm or too cold
+                    ぬくみ, nx; ChatGPT: a gentle or cozy kind of warmth
+                -->
+                <phrase
+                  ph="ぬるい【水：みず】"
+                  rom="nurui mizu"
+                  tr_en="lukewarm water"
+                  tr_de="lauwarmes Wasser"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="この コーヒーは ぬるいです。"
+                  rom="Kono kōhī wa nurui desu."
+                  tr_en="This coffee is lukewarm."
+                  tr_de="Dieser Kaffee ist lauwarm."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- new, old -->
+            <word
+              w="【新：あたら】しい"
+              rom="atarashii"
+              tr_en="new"
+              tr_de="neu"
+              lvl="n5"
+              id="atarashii-new"
+            >
+                <!-- the noun is 新しさ, nx, not marked as common -->
+                <phrase
+                  ph="【新：あたら】しい【時：と】【計：けい】"
+                  rom="atarashii tokei"
+                  tr_en="a new watch"
+                  tr_de="eine neue Uhr"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【新：あたら】しい【自：じ】【転：てん】【車：しゃ】を 【買：か】いました。"
+                  rom="Atarashii jitensha o kaimashita."
+                  tr_en="I bought a new bicycle."
+                  tr_de="Ich habe mir ein neues Fahrrad gekauft."
+                  lvl="n5"
+                  origin="duolingo"
+                />
+            </word>
+            <word
+              w="【古：ふる】い"
+              rom="furui"
+              tr_en="old; ancient; aged"
+              tr_de="alt; antik"
+              hint_en="not persons"
+              hint_de="nicht Personen"
+              lvl="n5"
+              id="furui-old"
+            >
+                <phrase
+                  ph="【古：ふる】い【写：しゃ】【真：しん】"
+                  rom="furui shashin"
+                  tr_en="an old photograph"
+                  tr_de="ein altes Foto"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】の 【家：いえ】は、【狭：せま】いし、【古：ふる】いです。"
+                  rom="Watashi no ie wa, semai shi, furui desu."
+                  tr_en="My house is not only small, but also old."
+                  tr_de="Mein Haus ist nicht nur klein, sondern auch alt."
+                  lvl="n5"
+                  origin="500mon q411"
+                />
+            </word>
+
+            <!-- enjoyable, boring, hateful -->
+            <word
+              w="【楽：たの】しい"
+              rom="tanoshii"
+              tr_en="enjoyable; fun; pleasant"
+              tr_de="unterhaltsam; amüsant; angenehm"
+              Langenscheidt="amüsant, lustig, Spass machen"
+              lvl="n5"
+              category="happiness"
+              id="tanoshii-fun"
+            >
+                <see id="tanoshimi-enjoyment" rem="noun" />
+                <phrase
+                  ph="【楽：たの】しい【夢：ゆめ】"
+                  rom="tanoshii yume"
+                  tr_en="a pleasant dream"
+                  tr_de="ein angenehmer Traum"
+                  lvl="n5"
+                  origin="lib0"
+                  rem="jisho has n4 for yume"
+                />
+                <sentence
+                  s="【週：しゅう】【末：まつ】はとても【楽：たの】しかった。"
+                  rom="Shūmatsu wa totemo tanoshikatta."
+                  tr_en="The weekend was a lot of fun."
+                  tr_de="Das Wochenende hat total Spass gemacht."
+                  lvl="n5"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】【語：ご】の 【勉：べん】【強：きょう】は 【大：たい】【変：へん】だが、【楽：たの】しい。"
+                  rom="Nihon-go no benkyō wa taihen da ga, tanoshii."
+                  tr_en="Studying Japanese is hard but fun."
+                  tr_de="Japanisch studieren ist hart, aber macht Spass."
+                  lvl="n5"
+                  origin="500mon q408"
+                />
+            </word>
+            <word
+              w="【面：おも】【白：しろ】い"
+              rom="omoshiroi"
+              tr_en="interesting; intriguing; amusing"
+              tr_de="interessant; lustig; amüsant"
+              hint_en="e.g. a book, etc."
+              hint_de="z.B. ein Buch, etc."
+              lvl="n5"
+              category="happiness, top-words"
+              id="omoshiroi-interesting"
+            >
+                <!-- the noun is 面白さ, nx, not marked as common -->
+                <phrase
+                  ph="【面：おも】【白：しろ】い【話：はなし】"
+                  rom="omoshiroi hanashi"
+                  tr_en="an interesting story"
+                  tr_de="eine interessante Geschichte"
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="その【本：ほん】は、【何：なに】が【面：おも】【白：しろ】い？"
+                  rom="Sono hon wa, nani ga omoshiroi?"
+                  tr_en="What's interesting about that book?"
+                  tr_de="Was ist interessant an dem Buch?"
+                  lvl="n5"
+                />
+            </word>
+            <word
+              w="【詰：つま】らない"
+              rom="tsumaranai"
+              tr_en="boring; insignicant"
+              tr_de="langweilig; unbedeutend"
+              lvl="n5"
+              category="mood, not-good"
+              id="tsumaranai-boring"
+              usuallyInKana="true"
+            >
+                <phrase
+                  ph="つまらない【本：ほん】"
+                  rom="tsumaranai hon"
+                  tr_en="a boring book"
+                  tr_de="ein langweiliges Buch"
+                  lvl="n5"
+                  origin="self"
+                />
+                <sentence
+                  s="あの 【先：せん】【生：せい】の 【授：じゅ】【業：ぎょう】は つまらない。"
+                  rom="Ano sensei no jugyō wa tsumaranai."
+                  tr_en="That teacher's classes are boring."
+                  tr_de="Die Lektionen von diesem Lehrer (dort drüben) sind langweilig."
+                  lvl="n5"
+                  origin="500mon q11"
+                />
+            </word>
+            <word
+              w="【嫌：きら】い"
+              rom="kirai"
+              tr_en="hateful; to dislike"
+              tr_de="verhasst; nicht gern haben"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n5"
+              category="mood, not-good"
+              id="kirai-hateful"
+            >
+                <!-- the noun is 嫌・いや or 嫌み・いやみ, see iya-disagreeable -->
+                <see id="iya-disagreeable" rem="closely related" />
+                <phrase
+                  ph="【果：くだ】【物：もの】を【嫌：きら】いな【人：ひと】"
+                  rom="kudamono o kirai na hito"
+                  tr_en="people who do not like fruits"
+                  tr_de="Leute, die keine Früchte mögen"
+                  origin="self"
+                  lvl="n5"
+                  rem="lib0 has ほうれん草を嫌いな人もいる"
+                />
+                <sentence
+                  s="【私：わたし】は 【宿：しゅく】【題：だい】が 【嫌：きら】いです。"
+                  rom="Watashi wa shukudai ga kirai desu."
+                  tr_en="I don't like homework."
+                  tr_de="Ich hasse Hausaufgaben."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- good, bad -->
+            <word
+              w="いい"
+              rom="ii"
+              tr_en="good; nice"
+              tr_de="gut; schön"
+              lvl="n5"
+              category="top-words"
+              id="ii-good"
+            >
+                <!-- actually, いい is just a variant of 良い -->
+                <!-- the noun is 良さ, nx, common -->
+                <phrase
+                  ph="いい【天：てん】【気：き】"
+                  rom="ii tenki"
+                  tr_en="nice weather"
+                  tr_de="schönes Wetter"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="いいですね！"
+                  rom="Ii desu ne!"
+                  tr_en="That's great!"
+                  tr_de="Das ist toll!"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【雨：あめ】が 【降：ふ】らなくて よかった。"
+                  rom="Ame ga furanakute yokatta."
+                  tr_en="I was glad it didn't rain."
+                  tr_de="Ich war froh, dass es nicht regnete."
+                  explanation_en="よかった is the past tense of いい"
+                  explanation_de="よかった ist die Vergangenheitsform von いい"
+                  hasDifferentForm="true"
+                  lvl="n5"
+                  origin="Oxford p.58"
+                />
+            </word>
+            <word
+              w="【良：よ】い"
+              rom="yoi"
+              tr_en="good; nice"
+              lvl="n5"
+              id="yoi-good"
+              HIDDEN="true"
+              rem="must not be together with ii"
+            />
+            <word
+              w="【悪：わる】い"
+              rom="warui"
+              tr_en="bad; not good; evil"
+              tr_de="schlecht; ungut; böse"
+              lvl="n5"
+              category="not-good"
+              id="warui-bad"
+            >
+                <!-- the noun is 悪さ, nx -->
+                <phrase
+                  ph="【悪：わる】い【天：てん】【気：き】"
+                  rom="warui tenki"
+                  tr_en="bad weather"
+                  tr_de="schlechtes Wetter"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【今日：きょう】は 【天：てん】【気：き】が 【悪：わる】いですね。"
+                  rom="Kyō wa tenki ga warui desu ne."
+                  tr_en="It's bad weather today, isn't it?"
+                  tr_de="Was für ein schlechtes Wetter heute!"
+                  lvl="n5"
+                  origin="Langenscheidt p.224"
+                />
+                <sentence
+                  s="【悪：わる】くないね。"
+                  rom="Warukunai ne."
+                  tr_en="Not bad!"
+                  tr_de="Nicht schlecht!"
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+
+            <!-- easy/difficult -->
+            <word
+              w="【易：やさ】しい"
+              rom="yasashii"
+              tr_en="easy (problem); plain (speech)"
+              tr_de="leicht (Problem); klar (Rede)"
+              lvl="n5"
+              category="happiness"
+              id="yasashii-easy"
+            >
+                <phrase
+                  ph="【易：やさ】しい【問：もん】【題：だい】"
+                  rom="yasashii mondai"
+                  tr_en="an easy problem"
+                  tr_de="ein leichtes Problem"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【易：やさ】しい【英：えい】【語：ご】で 【言：い】って ください。"
+                  rom="Yasashii eigo de itte kudasai."
+                  tr_en="Please speak in plain English."
+                  tr_de="Bitte sagen Sie es in klarem Englisch."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【難：むずか】しい"
+              rom="muzukashii"
+              tr_en="difficult"
+              tr_de="schwierig"
+              lvl="n5"
+              id="muzukashii-difficult"
+            >
+                <!-- the noun is 難しさ, nx, not marked as common -->
+                <phrase
+                  ph="【難：むずか】しい【問：もん】【題：だい】"
+                  rom="muzukashii mondai"
+                  tr_en="a difficult problem"
+                  tr_de="ein schwieriges Problem"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="そんなに 【難：むずか】しかったんですか。"
+                  rom="Sonna ni muzukashikatta n desu ka?"
+                  tr_en="Was it that hard?"
+                  tr_de="War es so schwer?"
+                  lvl="n5"
+                  origin="500mon q161"
+                  rem="ん: 'Ich erkenne jetzt, dass es 難しい war'"
+                  href="https://hinative.com/en-US/questions/21815394"
+                />
+            </word>
+
+            <!-- big, small -->
+            <word
+              w="【大：おお】きい"
+              rom="ōkii"
+              tr_en="big"
+              tr_de="gross"
+              lvl="n5"
+              category="top-words"
+              id="ōkii-big"
+            >
+                <see id="ōkisa-size" rem="noun" />
+                <phrase
+                  ph="【大：おお】きな【声：こえ】で"
+                  rom="ōki na koe de"
+                  tr_en="with a loud voice"
+                  tr_de="mit lauter Stimme"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【大：おお】きくて【古：ふる】い【家：いえ】"
+                  rom="ōkikute furui ie"
+                  tr_en="a big, old house"
+                  tr_de="ein grosses, altes Haus"
+                  lvl="n5"
+                  origin="Oxford p.101"
+                />
+                <sentence
+                  s="もうちょっと【大：おお】きく【書：か】いて ください。"
+                  rom="Mō chotto ōkiku kaite kudasai."
+                  tr_en="Please write a little larger."
+                  tr_de="Bitte schreiben Sie etwas grösser."
+                  lvl="n5"
+                  origin="Oxford p.107"
+                />
+            </word>
+            <word
+              w="【小：ちい】さい"
+              rom="chiisai"
+              tr_en="small; tiny"
+              tr_de="klein; winzig"
+              lvl="n5"
+              category="top-words"
+              id="chiisai-small"
+            >
+                <phrase
+                  ph="【小：ちい】さな【部：へ】【屋：や】"
+                  rom="chiisa na heya"
+                  tr_en="a small room"
+                  tr_de="ein kleiner Raum"
+                  lvl="n5"
+                  href="https://hinative.com/questions/22152543 (小さな vs. 小さい)"
+                />
+                <sentence
+                  s="これは とても 【小：ちい】さい【本：ほん】です。"
+                  rom="Kore wa totemo chīsai hon desu."
+                  tr_en="This is a very small book."
+                  tr_de="Dies ist ein sehr kleines Buch."
+                  lvl="n5"
+                />
+            </word>
+
+            <!-- short, long -->
+            <word
+              w="【短：みじか】い"
+              rom="mijikai"
+              tr_en="short"
+              tr_de="kurz"
+              lvl="n5"
+              id="mijikai-short"
+            >
+                <!-- the noun is 短さ, nx, not marked as common -->
+                <phrase
+                  ph="【短：みじか】い【手：て】【紙：がみ】"
+                  rom="mijikai tegami"
+                  tr_en="a short letter"
+                  tr_de="ein kurzer Brief"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【楽：たの】しい 【時：じ】【間：かん】は 【短：みじか】いです。"
+                  rom="Tanoshii jikan wa mijikai desu."
+                  tr_en="Time flies when you're having fun."
+                  tr_de="Die Zeit vergeht schnell, wenn man Spass hat."
+                  lvl="n5"
+                  origin="500mon q213"
+                />
+            </word>
+            <word
+              w="【長：なが】い"
+              rom="nagai"
+              tr_en="long; lengthy"
+              tr_de="lang; länglich"
+              lvl="n5"
+              id="nagai-long"
+            >
+                <!-- the noun is 長さ, nx, common -->
+                <phrase
+                  ph="【長：なが】い【道：みち】"
+                  rom="nagai michi"
+                  tr_en="a long way"
+                  tr_de="ein weiter Weg"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="あの【髪：かみ】の【長：なが】い【人：ひと】は だれですか。"
+                  rom="Ano kami no nagai hito wa dare desu ka?"
+                  tr_en="Who is that person with the long hair?"
+                  tr_de="Wer ist jene Person mit den langen Haaren?"
+                  lvl="n5"
+                  origin="500mon q36"
+                />
+            </word>
+
+            <!-- unsorted -->
+            <word
+              w="【可愛：かわい】い"
+              rom="kawaii"
+              tr_en="cute; adorable"
+              tr_de="niedlich; süss; putzig"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              hasCombinedReading="true"
+              usuallyInKana="true"
+              lvl="n5"
+              category="culture, top-words"
+              id="kawaii-cute"
+            >
+                <see id="kawaigaru-cherish" rem="verb" />
+                <phrase
+                  ph="かわいい【女：おんな】の【子：こ】"
+                  rom="kawaii onna no ko"
+                  tr_en="a cute girl"
+                  tr_de="ein süsses Mädchen"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <!--
+                  s="どちらも とても かわいいです。"
+                  rom="Dochira mo totemo kawaii desu."
+                  tr_en="Both of them are very cute."
+                  tr_de="Beide sind sehr niedlich."
+                  lvl="n5"
+                -->
+                <sentence
+                  s="【高：たか】【橋：はし】さんは 【何：なに】を 【着：き】ても かわいい。"
+                  rom="Takahashi-san wa nani o kite mo kawaii."
+                  tr_en="Miss Takahashi looks cute no matter what she wears."
+                  tr_de="Frau Takahashi sieht süss aus, egal was sie trägt."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【美味：おい】しい"
+              rom="oishii"
+              tr_en="delicious"
+              tr_de="köstlich; fein"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              hasCombinedReading="true"
+              usuallyInKana="true"
+              lvl="n5"
+              category="food, top-words"
+              id="oishii-delicious"
+            >
+                <phrase
+                  ph="おいしい【牛：ぎゅう】【肉：にく】"
+                  rom="oishii gyūniku"
+                  tr_en="delicious beef"
+                  tr_de="leckeres Rindfleisch"
+                  lvl="n5"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="おいしそう！"
+                  rom="Oishisō!"
+                  tr_en="It looks delicious!"
+                  tr_de="Es schaut köstlich aus!"
+                  origin="Miku"
+                  href="https://youtu.be/l7xZ1TDZ7MU"
+                  lvl="n5"
+                  rem="grammar may be n4"
+                />
+                <sentence
+                  s="おいしくなさそう！"
+                  rom="Oishiku nasasō!"
+                  tr_en="It doesn't look delicious!"
+                  tr_de="Es schaut nicht (besonders) köstlich aus!"
+                  origin="Miku"
+                  href="https://youtu.be/l7xZ1TDZ7MU"
+                  lvl="n5"
+                  rem="grammar may be n4"
+                />
+                <sentence
+                  s="【塩：しお】を 【入：い】れると もっとおいしくなりますよ。"
+                  rom="Shio o ireru to motto oishiku narimasu yo."
+                  tr_en="It will taste even better if you put some salt in."
+                  tr_de="Es schmeckt noch besser, wenn du etwas Salz hinein tust."
+                  lvl="n5"
+                  origin="Oxford p.107"
+                />
+            </word>
+        </section>
+    </unit>
+</vocabulary>

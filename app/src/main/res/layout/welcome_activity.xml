@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:id="@+id/root_view"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  >
+    <!-- We wrap this in a RelativeLayout, because we're going to add HintBalloons at runtime. -->
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/topics_list"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentTop="true"
+      android:paddingTop="0dp"
+      android:paddingBottom="16dp"
+      android:clipToPadding="false"
+      android:choiceMode="singleChoice"
+      android:divider="@null"
+      android:scrollbars="vertical"
+      app:layoutManager="LinearLayoutManager"
+      />
+</RelativeLayout>

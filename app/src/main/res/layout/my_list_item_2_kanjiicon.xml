@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/root_view"
+  android:layout_width="match_parent"
+  android:layout_height="64dp"
+  android:paddingStart="8dp"
+  android:paddingEnd="8dp"
+  android:background="?attr/selectableItemBackground"
+  >
+    <TextView
+      android:id="@+id/kanji_icon"
+      android:layout_width="48dp"
+      android:layout_height="wrap_content"
+      android:layout_alignParentStart="true"
+      android:layout_centerVertical="true"
+      android:layout_marginStart="8dp"
+      android:layout_marginEnd="16dp"
+      android:maxLines="1"
+      android:textAlignment="center"
+      android:textSize="28sp"
+      style="?attr/myPrimaryTextStyle"
+      tools:ignore="TextSizeCheck,TextContrastCheck"
+      tools:text="何"
+      />
+    <TextView
+      android:id="@+id/primary_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentEnd="true"
+      android:paddingTop="8dp"
+      android:layout_toEndOf="@id/kanji_icon"
+      android:ellipsize="end"
+      android:maxLines="1"
+      style="?attr/myPrimaryTextStyle"
+      tools:ignore="TextContrastCheck"
+      tools:text="Primary text"
+      />
+    <TextView
+      android:id="@+id/secondary_text"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentEnd="true"
+      android:layout_toEndOf="@id/kanji_icon"
+      android:paddingBottom="12dp"
+      android:ellipsize="end"
+      android:maxLines="1"
+      style="?attr/mySecondaryTextStyle"
+      tools:ignore="TextContrastCheck"
+      tools:text="Secondary text"
+      />
+</RelativeLayout>

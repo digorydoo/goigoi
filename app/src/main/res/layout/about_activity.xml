@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:id="@+id/root_view"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:orientation="vertical"
+  >
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/my_toolbar"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      android:elevation="4dp"
+      android:theme="?attr/myAppBarTheme"
+      android:background="?attr/appBarColour"
+      />
+    <ScrollView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:scrollbars="vertical"
+      android:fillViewport="true"
+      >
+        <TextView
+          android:id="@+id/copyright_and_license"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingTop="16dp"
+          android:paddingBottom="16dp"
+          android:paddingStart="24dp"
+          android:paddingEnd="24dp"
+          android:textSize="16sp"
+          style="?attr/myPrimaryTextStyle"
+          />
+    </ScrollView>
+</LinearLayout>

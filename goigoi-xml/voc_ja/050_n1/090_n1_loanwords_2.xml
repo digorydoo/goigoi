@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N1 loanwords ②"
+      name_de="N1-Lehnwörter ②"
+      name_fr="Les mots d'emprunt N1 ②"
+      name_it="Parole di prestito N1 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="false"
+      defaultHint_en="loanword"
+      defaultHint_de="Lehnwort"
+      lvl="n1"
+      translations="en, de"
+      requiresSentences="false"
+      requiresIds="true"
+    >
+        <section>
+            <word
+              w="ロープ"
+              rom="rōpu"
+              tr_en="rope"
+              tr_de="Seil"
+              lvl="n1"
+              id="rōpu-rope"
+            >
+                <phrase
+                  ph="ロープを【下：お】ろす"
+                  rom="rōpu o orosu"
+                  tr_en="to let down the rope"
+                  tr_de="das Seil herunterlassen"
+                  lvl="n1"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="ロープにしっかり【捕：つか】まってください。"
+                  rom="Rōpu ni shikkari tsukamatte kudasai."
+                  tr_en="Hold on tight to the rope."
+                  tr_de="Halte dich gut am Seil fest."
+                  lvl="n1"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="フェリー"
+              rom="ferī"
+              tr_en="ferry (boat)"
+              tr_de="Fähre (Boot)"
+              lvl="n1"
+              id="ferī-ferry"
+            >
+                <sentence
+                  s="フェリー【代：だい】を【払：はら】ってもフランスでワインを【買：か】うほうが【安：やす】い。"
+                  rom="Ferī-dai o haratte mo Furansu de wain o kau hō ga yasui."
+                  tr_en="Even after paying for the ferry, wine is cheaper in France."
+                  tr_de="Sogar wenn man die Fähre mitbezahlt, ist es billiger, Wein in Frankreich zu kaufen."
+                  lvl="n1"
+                  origin="Oxford p.54"
+                  rem="jisho has nx for 代; not a good sentence, because it implies one lives in England"
+                />
+            </word>
+            <word
+              w="パンク"
+              rom="panku"
+              tr_en="puncture; flat tyre; collapse"
+              tr_de="Punktur; platter Reifen; Kollaps"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="transportation"
+              id="panku-puncture"
+            >
+                <sentence
+                  s="【車：くるま】がパンクしてしまいました。"
+                  rom="Kuruma ga panku shite shimaimashita."
+                  tr_en="The car has a flat tyre."
+                  tr_de="Der Wagen hat einen platten Reifen."
+                  lvl="n1"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="モニター"
+              rom="monitā"
+              tr_en="(computer) monitor; to monitor something"
+              tr_de="Computermonitor; etw. überwachen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="monitā-monitor"
+            >
+                <keep_apart_from id="sukurīn-screen" />
+            </word>
+            <word
+              w="ランプ"
+              rom="ranpu"
+              tr_en="(desk) lamp"
+              tr_de="(Tisch-) Lampe"
+              lvl="n1"
+              id="ranpu-lamp"
+            >
+                <see id="dentō-light" rem="closely related" />
+            </word>
+            <word
+              w="ファン"
+              rom="fan"
+              tr_en="fan (enthusiast); fan (electric)"
+              tr_de="Fan (Enthusiast); Ventilator"
+              lvl="n1"
+              id="fan-fan"
+            />
+            <word
+              w="フロント"
+              rom="furonto"
+              tr_en="front (weather, etc.); front desk"
+              tr_de="Front (Wetter-, usw.); Rezeption"
+              lvl="n1"
+              id="furonto-front"
+            />
+            <word
+              w="ブーム"
+              rom="būmu"
+              tr_en="boom; fad"
+              tr_de="Boom; Trend; Modeerscheinung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="būmu-boom"
+            />
+            <word
+              w="ポイント"
+              rom="pointo"
+              tr_en="point"
+              tr_de="Punkt"
+              lvl="n1"
+              id="pointo-point"
+            />
+            <word
+              w="ミスプリント"
+              rom="misupurinto"
+              tr_en="misprint"
+              tr_de="Druckfehler"
+              lvl="n1"
+              id="misupurinto-misprint"
+            />
+            <word
+              w="ミュージック"
+              rom="myūjikku"
+              tr_en="music"
+              tr_de="Musik"
+              lvl="n1"
+              id="myūjikku-music"
+            />
+            <word
+              w="メーカー"
+              rom="mēkā"
+              tr_en="maker; manufacturer (esp. a major company)"
+              tr_de="Hersteller"
+              lvl="n1"
+              id="mēkā-maker"
+            />
+            <word
+              w="ユニフォーム"
+              rom="yunifōmu"
+              tr_en="uniform"
+              tr_de="Uniform"
+              lvl="n1"
+              id="yunifōmu-uniform"
+            />
+            <word
+              w="オンライン"
+              rom="onrain"
+              tr_en="online"
+              tr_de="Online"
+              lvl="n1"
+              id="onrain-online"
+            />
+            <word
+              w="カムバック"
+              rom="kamubakku"
+              tr_en="comeback"
+              tr_de="Comeback"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="kamubakku-comeback"
+            />
+            <word
+              w="カメラマン"
+              rom="kameraman"
+              tr_en="photographer; cameraman; cinematographer"
+              tr_de="Fotograf; Kameramann"
+              lvl="n1"
+              id="kameraman-cameraman"
+            />
+            <word
+              w="ガイドブック"
+              rom="gaidobukku"
+              tr_en="guidebook"
+              tr_de="Handbuch; Führer (Buch)"
+              lvl="n1"
+              id="gaidobukku-guidebook"
+            />
+            <word
+              w="ガイド"
+              rom="gaido"
+              tr_en="guide; tour guide; leading"
+              tr_de="Reiseführer; führen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="gaido-guide"
+            />
+            <word
+              w="クレーン"
+              rom="kurēn"
+              tr_en="crane (machine)"
+              tr_de="Kran"
+              lvl="n1"
+              category="technical"
+              id="kurēn-crane"
+            />
+            <word
+              w="グラフ"
+              rom="gurafu"
+              tr_en="graph; diagram"
+              tr_de="Graph; Grafik"
+              lvl="n1"
+              id="gurafu-graph"
+            />
+            <word
+              w="ゲスト"
+              rom="gesuto"
+              tr_en="guest"
+              tr_de="Gast"
+              lvl="n1"
+              id="gesuto-guest"
+            />
+            <word
+              w="コンパス"
+              rom="konpasu"
+              tr_en="compass (for drawing circles); mariner's compass"
+              tr_de="Zirkel; Kompass"
+              lvl="n1"
+              id="konpasu-compass"
+            />
+            <word
+              w="チームワーク"
+              rom="chīmuwāku"
+              tr_en="teamwork"
+              tr_de="Zusammenarbeit"
+              lvl="n1"
+              id="chīmuwāku-teamwork"
+            />
+            <word
+              w="チャネル"
+              rom="chaneru"
+              tr_en="channel"
+              tr_de="Fernsehkanal"
+              lvl="n1"
+              id="chaneru-channel"
+            />
+            <word
+              w="ティッシュペーパー"
+              rom="tisshupēpā"
+              tr_en="tissue paper; tissue"
+              tr_de="Taschentuch"
+              lvl="n1"
+              id="tisshupēpā-tissue"
+            />
+            <word
+              w="バッジ"
+              rom="batji"
+              tr_en="badge"
+              tr_de="Abzeichen; Plakette"
+              lvl="n1"
+              id="batji-badge"
+            />
+            <word
+              w="ジャンル"
+              rom="janru"
+              tr_en="genre"
+              tr_de="Genre"
+              hint_en="of a film, book, etc."
+              hint_de="eines Filmes, eines Buches, usw."
+              lvl="n1"
+              category="entertainment"
+              id="janru-genre"
+            />
+            <word
+              w="カルテ"
+              rom="karute"
+              tr_en="patient's chart; clinical records"
+              tr_de="Krankengeschichte; klinische Akten"
+              lvl="n1"
+              category="health"
+              id="karute-clinicalrecords"
+            />
+            <word
+              w="センス"
+              rom="sensu"
+              tr_en="taste; sense"
+              tr_de="Geschmack; Sinn"
+              hint_en="e.g. taste in fashion; sense of humour; etc."
+              hint_de="z.B. Geschmack in Sachen Mode; Humorsinn; usw."
+              lvl="n1"
+              id="sensu-sense"
+            />
+            <word
+              w="サンタクロース"
+              rom="santakurōsu"
+              tr_en="Santa Claus"
+              tr_de="Weihnachtsmann"
+              lvl="n1"
+              id="santakurōsu-stclaus"
+            />
+
+            <!-- HIDDEN -->
+            <word
+              w="スチーム"
+              rom="suchīmu"
+              tr_en="steam"
+              tr_de="Dampf"
+              lvl="n1"
+              id="suchīmu-steam"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="yuge-steam" />
+            </word>
+            <word
+              w="ショー"
+              rom="shō"
+              tr_en="show"
+              tr_de="Show; Schauspiel"
+              lvl="n1"
+              id="shō-show"
+              HIDDEN="true"
+            />
+            <word
+              w="サンキュー"
+              rom="sankyū"
+              tr_en="thank you"
+              tr_de="Danke"
+              lvl="n1"
+              id="sankyū-thankyou"
+              HIDDEN="true"
+            />
+            <word
+              w="サボる"
+              rom="saboru"
+              tr_en="to be truant; to slack off; to play hooky; to skip school; to cut class; to skip out"
+              hint_en="godan verb with ru ending; intransitive verb"
+              lvl="n1"
+              HIDDEN="true"
+              id="saboru-skip"
+            />
+            <word
+              w="シック"
+              rom="shikku"
+              tr_en="chic; stylish; smart / Sick"
+              hint_en="na-adjective (keiyodoshi)"
+              lvl="n1"
+              HIDDEN="true"
+              id="shikku-chic"
+            />
+            <word
+              w="タイマー"
+              rom="taimā"
+              tr_en="timer; clock register"
+              hint_en="noun / place"
+              lvl="n1"
+              HIDDEN="true"
+              id="taimā-timer"
+            />
+            <word
+              w="ドライ"
+              rom="dorai"
+              tr_en="dry (not wet); dry (of alcohol); unemotional"
+              hint_en="na-adjective; noun"
+              lvl="n1"
+              HIDDEN="true"
+              id="dorai-dry"
+            />
+            <word
+              w="ベース"
+              rom="bēsu"
+              tr_en="bass; base; basis; theme"
+              hint_en="noun"
+              lvl="n1"
+              HIDDEN="true"
+              id="bēsu-base"
+            />
+            <word
+              w="サイクル"
+              rom="saikuru"
+              tr_en="cycle"
+              tr_de="Kreis; Kreislauf"
+              lvl="n1"
+              id="saikuru-cycle"
+              HIDDEN="true"
+            />
+            <word
+              w="ウイルス"
+              rom="uirusu"
+              tr_en="virus"
+              tr_de="Virus"
+              lvl="n1"
+              category="health"
+              id="uirusu-virus"
+              HIDDEN="true"
+            />
+            <word
+              w="カット"
+              rom="katto"
+              tr_en="cut; cutting; haircut"
+              tr_de="Schnitt; Haarschnitt; schneiden"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="katto-cut"
+              HIDDEN="true"
+            />
+            <word
+              w="デコレーション"
+              rom="dekorēshon"
+              tr_en="decoration"
+              tr_de="Dekorierung"
+              lvl="n1"
+              id="dekorēshon-decoration"
+              HIDDEN="true"
+            />
+            <word
+              w="デザイン"
+              rom="dezain"
+              tr_en="design"
+              tr_de="Design; Entwurf; entwerfen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="dezain-design"
+              HIDDEN="true"
+            />
+            <word
+              w="デモンストレーション"
+              rom="demonsutorēshon"
+              tr_en="demonstration; protest; presentation"
+              tr_de="Demonstration; Protest; Präsentation"
+              lvl="n1"
+              id="demonsutorēshon-demo"
+              HIDDEN="true"
+              rem="must not be together with demo"
+            />
+        </section>
+    </unit>
+</vocabulary>

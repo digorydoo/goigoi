@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="Hidden N3 nouns"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="noun"
+      defaultHint_de="Nomen"
+      lvl="n3"
+      translations="en"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="false"
+      HIDDEN="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【方：ほう】【々：ぼう】"
+              rom="hō-bō"
+              tr_en="here and there; this way and that way; all over"
+              tr_de="hier und dort; hierher und dorthin; überall"
+              lvl="n3"
+              category="directions"
+              id="hōbō-hereandthere"
+            >
+                <keep_apart_from id="katagata-people" rem="same kanji" />
+                <keep_apart_from id="achikochi-hereandthere" />
+                <!--
+                    FIXME ambiguity with katagata!
+                    Adding a hint is useless, because hint is not shown when asking kana or kanji...
+                    compileGoigoi should detect this and require a hint + flag showHint="always-unless-trivial"
+                -->
+                <!-- 日本方々を旅行しました。 -->
+            </word>
+            <word
+              w="【沖：おき】"
+              rom="oki"
+              tr_en="open sea"
+              tr_de="offenes Meer"
+              lvl="n3"
+              category="beach, nature"
+              id="oki-opensea"
+            />
+            <word
+              w="【計：けい】【算：さん】"
+              rom="keisan"
+              tr_en="calculation; computation; counting"
+              tr_de="Rechnen; Kalkül; zählen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="technical"
+              id="keisan-calculation"
+            />
+            <word
+              w="【普：ふ】【段：だん】"
+              rom="fudan"
+              tr_en="usual; habitual; ordinary"
+              tr_de="gewöhnlich; normal; typisch"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              id="fudan-usual"
+            />
+            <word
+              w="【克：そく】【服：ふく】"
+              rom="sokufuku"
+              tr_en="overcoming; surmounting; bringing under control"
+              tr_de="Überwindung; Bewältigung; etw. unter Kontrolle bringen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="sokufuku-overcoming"
+            />
+            <word
+              w="【流：りゅう】【行：こう】"
+              rom="ryūkō"
+              tr_en="fashion; trend; vogue; craze"
+              tr_de="Mode; Trend; Wahn"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="fashion"
+              id="ryūkō-fashion"
+            />
+            <word
+              w="【衝：しょう】【突：とつ】"
+              rom="shōtotsu"
+              tr_en="collision; crash; clashing"
+              tr_de="Kollision; Crash; zusammenprallen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="not-good"
+              id="shōtotsu-crash"
+            />
+            <word
+              w="【批：ひ】【評：ひょう】"
+              rom="hihyō"
+              tr_en="criticism; critique; review"
+              tr_de="Kritik; Rezension; kritisieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="technical, quarrel"
+              id="hihyō-criticism"
+            />
+            <word
+              w="【平：ひら】【仮：が】【名：な】"
+              rom="hiragana"
+              tr_en="cursive Japanese syllabary"
+              tr_de="geschwungene japanische Silbenschrift"
+              hint_en="used primarily for native words"
+              hint_de="hauptsächlich für einheimische Wörter verwendet"
+              usuallyInKana="true"
+              lvl="n3"
+              rem="jisho has n2"
+              id="hiragana-cursivesyl"
+            />
+            <word
+              w="【片：カタ】【仮：カ】【名：ナ】"
+              rom="katakana"
+              tr_en="angular Japanese syllabary"
+              tr_de="eckige japanische Silbenschrift"
+              hint_en="used primarily for loanwords"
+              hint_de="hauptsächlich für Lehnworte verwendet"
+              usuallyInKana="true"
+              lvl="n3"
+              id="katakana-angularsyl"
+              rem="jisho has n2"
+            />
+        </section>
+    </unit>
+</vocabulary>

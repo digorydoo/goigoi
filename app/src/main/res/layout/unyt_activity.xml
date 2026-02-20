@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  >
+    <androidx.appcompat.widget.Toolbar
+      android:id="@+id/my_toolbar"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentEnd="true"
+      android:layout_width="0dp"
+      android:layout_height="?attr/actionBarSize"
+      android:elevation="0dp"
+      android:translationZ="0dp"
+      android:theme="?attr/myAppBarTheme"
+      android:background="?attr/appBarColour"
+      />
+    <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/recycler_view"
+      android:layout_below="@id/my_toolbar"
+      android:layout_alignParentStart="true"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:layout_width="0dp"
+      android:layout_height="0dp"
+      android:paddingTop="0dp"
+      android:paddingBottom="8dp"
+      android:clipToPadding="false"
+      android:choiceMode="singleChoice"
+      android:scrollbars="vertical"
+      android:divider="@null"
+      app:layoutManager="LinearLayoutManager"
+      />
+    <!-- Note that bottom and right margin of the FAB are overwritten by UnytActivity's Values -->
+    <io.github.digorydoo.goigoi.view.FloatingActionBtn
+      android:id="@+id/start_btn"
+      android:layout_alignParentEnd="true"
+      android:layout_alignParentBottom="true"
+      android:layout_marginEnd="8dp"
+      android:layout_marginBottom="8dp"
+      android:layout_width="80dp"
+      android:layout_height="80dp"
+      android:contentDescription="@string/start_btn"
+      app:iconName="play"
+      app:initiallyShown="false"
+      app:glowing="true"
+      />
+</RelativeLayout>

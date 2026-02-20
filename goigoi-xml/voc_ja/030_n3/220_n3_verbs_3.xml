@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 verbs ③"
+      name_de="N3-Verben ③"
+      name_fr="Les verbes N3 ③"
+      name_it="Verbi N3 ③"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="verb"
+      defaultHint_de="Verb"
+      lvl="n3"
+      translations="en, de"
+      requiresSentences="false"
+      requiresPhrases="false"
+      requiresIds="true"
+    >
+        <section>
+            <!-- unsorted -->
+            <word
+              w="【覆：おお】う"
+              rom="ōu"
+              tr_en="to cover; to conceal; to disguise"
+              tr_de="etw. verdecken; etw. verschleiern; überdeckt sein"
+              hint_en="v.t."
+              lvl="n3"
+              category="looking"
+              id="ōu-cover"
+            >
+                <keep_apart_from id="kakusu-hide" />
+                <phrase
+                  ph="【雪：ゆき】で【覆：おお】われた【山：やま】"
+                  rom="yuki de ōwareta yama"
+                  tr_en="a mountain covered in snow"
+                  tr_de="ein von Schnee bedeckter Berg"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【歩：ほ】【道：どう】は【落：お】ち【葉：ば】で【覆：おお】われていた。"
+                  rom="Hodō wa ochiba de ōwarete ita."
+                  tr_en="The sidewalk was covered with fallen leaves."
+                  tr_de="Der Bürgersteig war von heruntergefallenen Blättern überdeckt"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【外：はず】す"
+              rom="hazusu"
+              tr_en="to take off sth.; to detach sth.; to unfasten"
+              tr_de="etw. wegnehmen; etw. entfernen; etw. aufbinden"
+              hint_en="v.t."
+              lvl="n3"
+              category="hands"
+              id="hazusu-takeoff"
+            >
+                <!-- 的外れ・まとはずれ: off the mark; misdirected (nx; mato is n1) -->
+                <!-- 口外・こうがい: revealing secrets (nx) -->
+                <phrase
+                  ph="ネクタイを【外：はず】す"
+                  rom="nekutai o hazusu"
+                  tr_en="to take off a necktie"
+                  tr_de="eine Krawatte ausziehen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="メガネを【外：はず】す"
+                  rom="megane o hazusu"
+                  tr_en="to take off one's glasses"
+                  tr_de="die Brille abnehmen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="このネジは【簡：かん】【単：たん】に【外：はず】せます。"
+                  rom="Kono neji wa kantan ni hazusemasu."
+                  tr_en="These screws can be easily unfastened."
+                  tr_de="Diese Schrauben kann man leicht wegnehmen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has n2 for neji"
+                />
+            </word>
+            <word
+              w="【奪：うば】う"
+              rom="ubau"
+              tr_en="to snatch sth. away; to deprive sb. of sth."
+              tr_de="etw. wegschnappen; wegnehmen; entziehen"
+              hint_en="often used figuratively"
+              hint_de="oft im Übertragenen verwendet"
+              lvl="n3"
+              category="hands, not-good"
+              id="ubau-snatchaway"
+            >
+                <keep_apart_from id="nusumu-steal" />
+                <phrase
+                  ph="【心：こころ】を【奪：うば】う"
+                  rom="kokoro o ubau"
+                  tr_en="to be fascinated"
+                  tr_de="fasziniert sein von etw."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【自：じ】【由：ゆう】を【奪：うば】う"
+                  rom="jiyū o ubau"
+                  tr_en="to deprive so. of their freedom"
+                  tr_de="jem. die Freiheit wegnehmen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【時：じ】【間：かん】を【奪：うば】う"
+                  rom="jikan o ubau"
+                  tr_en="to steal someone's time; to take time"
+                  tr_de="jemandes Zeit stehlen; Zeit beanspruchen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【財：さい】【布：ふ】を【奪：うば】われた。"
+                  rom="Saifu o ubawareta."
+                  tr_en="My purse was taken from me."
+                  tr_de="Mein Geldbeutel wurde mir weggeschnappt."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【仕：し】【事：ごと】が【私：わたし】の【時：じ】【間：かん】を【奪：うば】っている。"
+                  rom="Shigoto ga watashi no jikan o ubatte iru."
+                  tr_en="Work is stealing my time."
+                  tr_de="Die Arbeit klaut mir die ganze Zeit weg."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="その【新：あたら】しい【法：ほう】【律：りつ】が【市：し】【民：みん】から【自：じ】【由：ゆう】を【奪：うば】った。"
+                  rom="Sono atarashii hōritsu ga shimin kara jiyū o ubatta."
+                  tr_en="The new law has deprived the citizens of their liberty."
+                  tr_de="Das neue Gesetz hat den Bürgern ihre Freiheit entzogen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【稼：かせ】ぐ"
+              rom="kasegu"
+              tr_en="to make (money); to score (points); to work hard"
+              tr_de="(Geld) verdienen; (Punkte) sammeln; hart arbeiten"
+              lvl="n3"
+              category="finances, business"
+              id="kasegu-makemoney"
+            >
+                <keep_apart_from id="ganbaru-doonesbest" />
+                <phrase
+                  ph="たくさん【稼：かせ】ぐ"
+                  rom="takusan kasegu"
+                  tr_en="to make a lot of money"
+                  tr_de="viel Geld machen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="lib0 has おおいに稼ぐ, but ChatGPT says 大いに稼ぐ is stiff and old-fashioned"
+                />
+                <sentence
+                  s="【彼：かれ】は【私：わたし】の【三：さん】【倍：ばい】も【稼：かせ】ぐ。"
+                  rom="Kare wa watashi no san-bai mo kasegu."
+                  tr_en="He earns three times as much as I."
+                  tr_de="Er verdient dreimal soviel wie ich."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【命：めい】じる"
+              rom="meijiru"
+              tr_en="to order sth.; to command; to appoint"
+              tr_de="etw. befehlen; etw. anordnen; etw. festlegen"
+              hint_en="v.t."
+              lvl="n3"
+              category="talking, work"
+              id="meijiru-command"
+            >
+                <keep_apart_from id="tanomu-request" />
+                <phrase
+                  ph="そうするように【命：めい】じる"
+                  rom="sō suru yō ni meijiru"
+                  tr_en="to command so. to do it"
+                  tr_de="jem. befehlen, es so zu machen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【兵：へい】【隊：たい】たちは【撃：う】つように【命：めい】じられました。"
+                  rom="Heitai-tachi wa utsu yō ni meijiraremashita."
+                  tr_en="The soldiers were commanded to shoot."
+                  tr_de="Den Söldnern wurde befohlen zu schiessen."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT; 兵士 would be slightly better (more formal), but is n1"
+                />
+            </word>
+            <word
+              w="【従：したが】う"
+              rom="shitagau"
+              tr_en="to obey; to follow (a rule); to conform to"
+              tr_de="gehorchen; folgen; konform sein"
+              hint_en="v.i."
+              lvl="n3"
+              category="general, people"
+              id="shitagau-obey"
+            >
+                <phrase
+                  ph="【両：りょう】【親：しん】に【従：したが】う"
+                  rom="ryōshin ni shitagau"
+                  tr_en="to obey the parents"
+                  tr_de="den Eltern gehorchen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【従：したが】うより【仕：し】【方：かた】はない。"
+                  rom="Shitagau yori shikata wa nai."
+                  tr_en="There is nothing for it but to comply."
+                  tr_de="Es gibt keine andere Wahl, als sich zu fügen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【法：ほう】【律：りつ】には【従：したが】うべきですよ。"
+                  rom="Hōritsu ni wa shitagau-beki desu yo."
+                  tr_en="One ought to obey the law, you know."
+                  tr_de="Man muss dem Gesetz gehorchen."
+                  explanation_en="The suffix べき after a verb has the meaning of 'one have to'."
+                  explanation_de="Die Endung べき nach einem Verb hat die Bedeutung von 'man muss'."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【逆：さか】らう"
+              rom="sakarau"
+              tr_en="to oppose; to disobey"
+              tr_de="trotzen; sich widersetzen"
+              Langenscheidt="trotzen, sich widersetzen"
+              hint_en="v.i."
+              lvl="n3"
+              category="talking, relationships"
+              id="sakarau-oppose"
+            >
+                <keep_apart_from id="hantai-resistance" />
+                <phrase
+                  ph="【流：なが】れに【逆：さか】らって【泳：およ】ぐ"
+                  rom="nagare ni sakaratte oyogu"
+                  tr_en="to swim against the current"
+                  tr_de="gegen den Strom schwimmen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【決：けっ】して【両：りょう】【親：しん】に【逆：さか】らうな。"
+                  rom="Kesshite ryōshin ni sakarau na."
+                  tr_en="Never disobey your parents."
+                  tr_de="Widersetze dich niemals deinen Eltern."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【述：の】べる"
+              rom="noberu"
+              tr_en="to state sth.; to express sth.; to mention"
+              tr_de="etw. ausdrücken; etw. erwähnen"
+              Langenscheidt="erwähnen"
+              hint_en="v.t.; formal"
+              hint_de="v.t.; formell"
+              lvl="n3"
+              category="science, talking"
+              id="noberu-mention"
+            >
+                <!--
+                    伝える・つたえる: convey, inform, pass on information
+                    述べる・のべる: describe in a formal way
+                -->
+                <keep_apart_from id="mōshiageru-tell" />
+                <keep_apart_from id="tsutaeru-convey" />
+                <keep_apart_from id="arawasu-represent" />
+                <phrase
+                  ph="【自：じ】【分：ぶん】の【経：けい】【験：けん】を【述：の】べる"
+                  rom="jibun no keiken o noberu"
+                  tr_en="to describe one's own experience"
+                  tr_de="die eigenen Erfahrungen beschreiben"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【自：じ】【由：ゆう】に【意：い】【見：けん】を【述：の】べてください。"
+                  rom="Jiyū ni iken o nobete kudasai."
+                  tr_en="Please state your opinion freely."
+                  tr_de="Bitte drücken Sie offen Ihre Meinung aus."
+                  explanation_en="For a less formal tone, you could use the verb 【伝：つた】える."
+                  explanation_de="Für einen weniger formellen Ton könnte man auch das Verb 【伝：つた】える verwenden."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; also natural, less formal: 自由に意見を伝えてください"
+                />
+            </word>
+            <word
+              w="【応：おう】じる"
+              rom="ōjiru"
+              tr_en="to accept (an offer); to satisfy (a request)"
+              tr_de="(Angebot) annehmen; (Anfrage) erfüllen"
+              hint_en="formal"
+              hint_de="formell"
+              studyInContext="preferred"
+              lvl="n3"
+              category="general"
+              id="ōjiru-accept"
+            >
+                <keep_apart_from id="sansei-approval" />
+                <phrase
+                  ph="【招：しょう】【待：たい】に【応：おう】じる"
+                  rom="shōtai ni ōjiru"
+                  tr_en="to accept an invitation"
+                  tr_de="eine Einladung annehmen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【頼：たの】みに【応：おう】じる"
+                  rom="tanomi ni ōjiru"
+                  tr_en="to comply with a request"
+                  tr_de="einer Anfrage nachkommen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【提：てい】【案：あん】に【応：おう】じる"
+                  rom="teian ni ōjiru"
+                  tr_en="to go along with a proposal"
+                  tr_de="einem Vorschlag zustimmen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【高：たか】【橋：はし】さんは【私：わたし】たちの【求：もと】めに【応：おう】じて、【歌：うた】ってくださいました。"
+                  rom="Takahashi-san wa watashi-tachi no motome ni ōjite, utatte kudasaimashita."
+                  tr_en="Miss Takahashi satisfied our request and sang for us."
+                  tr_de="Frau Takahashi erfüllte unseren Wunsch und sang für uns."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
+            <word
+              w="【訴：うった】える"
+              rom="uttaeru"
+              tr_en="to bring to sb.'s attention; to complain; to sue so."
+              tr_de="auf etw. aufmerksam machen; sich beklagen; jem. verklagen"
+              studyInContext="preferred"
+              lvl="n3"
+              category="talking, not-good"
+              id="uttaeru-complain"
+            >
+                <see id="uttae-complaint" rem="noun" />
+                <phrase
+                  ph="【頭：ず】【痛：つう】を【訴：うった】える"
+                  rom="zutsū o uttaeru"
+                  tr_en="to complain of a headache"
+                  tr_de="sich wegen Kopfschmerzen beklagen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【工：こう】【事：じ】【現：げん】【場：ば】の【騒：そう】【音：おん】を【訴：うった】える"
+                  rom="kōjigenba no sōon o uttaeru"
+                  tr_en="to complain about the construction site's noise"
+                  tr_de="sich über den Lärm der Bauarbeiten beklagen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ヨシは【宝：ほう】【石：せき】を【盗：ぬす】んだとして【訴：うった】えられました。"
+                  rom="Yoshi wa hōseki o nusunda to shite uttaeraremashita."
+                  tr_en="Yoshi was accused of having stolen the jewels."
+                  tr_de="Yoshi wurde angeklagt, die Juwelen gestohlen zu haben."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【基：もと】づく"
+              rom="motodzuku"
+              tr_en="to be grounded on; to be based on; to originate from"
+              tr_de="in etw. gegründet sein; auf etw. basieren; von etw. abstammen"
+              hint_en="v.i."
+              lvl="n3"
+              category="general, thinking"
+              id="motodzuku-basedon"
+            >
+                <phrase
+                  ph="【経：けい】【験：けん】に【基：もと】づいている"
+                  rom="keiken ni motodzuite iru"
+                  tr_en="to be based on experience"
+                  tr_de="auf Erfahrung basieren"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【話：はなし】は【事：じ】【実：じつ】に【基：もと】づいています。"
+                  rom="Kono hanashi wa jijitsu ni motodzuite imasu."
+                  tr_en="This story is based on facts."
+                  tr_de="Diese Geschichte basiert auf wahren Fakten."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【満：み】ちる"
+              rom="michiru"
+              tr_en="to become full (of); to be filled (with)"
+              tr_de="voll werden; gefüllt sein"
+              hint_en="v.i."
+              lvl="n3"
+              category="general, directions"
+              id="michiru-becomefull"
+            >
+                <!--
+                    michiru can also be used to say the tide is rising, but tide is n1: 潮・しお
+                -->
+                <phrase
+                  ph="【喜：よろこ】びに【満：み】ちている"
+                  rom="yorokobi ni michite iru"
+                  tr_en="to be full of joy"
+                  tr_de="voll von Freude sein"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【幸：しあわ】せに【満：み】ちた【家：か】【庭：てい】"
+                  rom="shiawase ni michita katei"
+                  tr_en="a home full of happiness"
+                  tr_de="ein Zuhause voller Glück"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="その【本：ほん】は【冒：ぼう】【険：けん】に【満：み】ちている。"
+                  rom="Sono hon wa bōken ni michite iru."
+                  tr_en="That book is full of adventure."
+                  tr_de="Das Buch ist voll von Abenteuer."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【花：はな】の【香：かお】りが【部：へ】【屋：や】に【満：み】ちている。"
+                  rom="Hana no kaori ga heya ni michite iru."
+                  tr_en="The scent of flowers fills the room."
+                  tr_de="Der Duft von Blumen füllt den Raum."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; also possible: 部屋は花の香りに満ちている"
+                />
+            </word>
+            <word
+              w="【許：ゆる】す"
+              rom="yurusu"
+              tr_en="to approve sth.; to tolerate sth.; to forgive sth."
+              tr_de="etw. gutheissen; etw. tolerieren; etw. vergeben"
+              hint_en="v.t."
+              lvl="n3"
+              category="relationships"
+              id="yurusu-permit"
+            >
+                <phrase
+                  ph="【失：しっ】【敗：ぱい】を【許：ゆる】す"
+                  rom="shippai o yurusu"
+                  tr_en="forgive so. for a failure"
+                  tr_de="jem. ein Versehen vergeben"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="そのことは【許：ゆる】せない。"
+                  rom="Sono koto wa yurusenai."
+                  tr_en="I can't tolerate this kind of thing."
+                  tr_de="Ich kann diese Sache nicht gutheissen."
+                  lvl="n3"
+                  origin="self"
+                  rem="ChatGPT insists that yurusu means 'forgive', which disagrees with jisho, lib0, Doraemon"
+                />
+            </word>
+            <word
+              w="【譲：ゆず】る"
+              rom="yuzuru"
+              tr_en="to hand over; to give up"
+              tr_de="etw. jem. übergeben; etw. aufgeben"
+              lvl="n3"
+              category="relationships, hands"
+              id="yuzuru-handover"
+            >
+                <phrase
+                  ph="おじいさんに【席：せき】を【譲：ゆず】る"
+                  rom="o-jīsan ni seki o yuzuru"
+                  tr_en="to give up one's seat to an elderly man"
+                  tr_de="den Sitzplatz einem älteren Herrn überlassen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【妹：いもうと】がバスでおばあちゃんに【席：せき】を【譲：ゆず】ってあげました。"
+                  rom="Imōto ga basu de o-bāchan ni seki o yuzutte agemashita."
+                  tr_en="My younger sister gave her seat to an old lady on the bus."
+                  tr_de="Meine jüngere Schwester hat ihren Sitzplatz einer älteren Dame gegeben."
+                  lvl="n3"
+                  origin="Oxford p.49"
+                />
+                <sentence
+                  s="【彼：かれ】は【一：いっ】【歩：ぽ】も【譲：ゆず】らない。"
+                  rom="Kare wa ippo mo yuzuranai."
+                  tr_en="He won't budge an inch."
+                  tr_de="Er gibt keinen Millimeter nach."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【任：まか】せる"
+              rom="makaseru"
+              tr_en="to entrust (a task) to another; to leave sth. to so."
+              tr_de="(eine Aufgabe) jem. anvertrauen; jem. etw. überlassen"
+              hint_en="v.t."
+              lvl="n3"
+              category="work, relationships"
+              id="makaseru-entrust"
+            >
+                <phrase
+                  ph="【任：まか】せて"
+                  rom="makasete"
+                  tr_en="count on me"
+                  tr_de="zähle auf mich"
+                  lvl="n3"
+                />
+                <sentence
+                  s="そのことなら【僕：ぼく】に【任：まか】せてください。"
+                  rom="Sono koto nara boku ni makasete kudasai."
+                  tr_en="If it's about that (ah! that matter), leave it to me."
+                  tr_de="Wenn's darum geht (ah! diese Sache), überlass es mir."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【吐：は】く"
+              rom="haku"
+              tr_en="to vomit; to throw up; to confess"
+              tr_de="sich übergeben; kotzen; etw. gestehen"
+              hint_en="v.t."
+              lvl="n3"
+              category="health"
+              id="haku-vomit"
+            >
+                <keep_apart_from id="hakike-nausea" />
+                <phrase
+                  ph="【吐：は】き【気：け】"
+                  rom="hakike"
+                  tr_en="nausea; sickness in the stomach"
+                  tr_de="Übelkeit; Brechreiz"
+                  lvl="n3"
+                  rem="jisho has n2"
+                />
+                <sentence
+                  s="【何：なん】【度：ど】も【吐：は】いてしまいました。"
+                  rom="Nando mo haite shimaimashita."
+                  tr_en="I have vomited several times."
+                  tr_de="Ich habe mich mehrmals übergeben."
+                  lvl="n3"
+                  origin="Langenscheidt p.204"
+                />
+            </word>
+            <word
+              w="【暮：く】らす"
+              rom="kurasu"
+              tr_en="to live; to get along"
+              tr_de="ein Leben führen; über die Runden kommen"
+              lvl="n3"
+              category="life, relationships"
+              id="kurasu-live"
+            >
+                <see id="kurashi-livelihood" rem="noun" />
+                <keep_apart_from id="sumu-live" />
+                <phrase
+                  ph="【幸：しあわ】せに【暮：く】らす"
+                  rom="shiawase ni kurasu"
+                  tr_en="to live happily"
+                  tr_de="glücklich leben"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】と【彼：かれ】は【別：べつ】【々：べつ】に【暮：く】らしている。"
+                  rom="Kanojo to kare wa betsu-betsu ni kurashite iru."
+                  tr_en="She and he live separately."
+                  tr_de="Sie und er leben getrennt."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【誤：あやま】る"
+              rom="ayamaru"
+              tr_en="to make a mistake; to err; to mislead"
+              tr_de="einen Fehler machen; sich irren; irreführen"
+              hint_en="v.t. &amp; i."
+              lvl="n3"
+              category="not-good"
+              id="ayamaru-err"
+              rem="jisho has n1"
+            >
+                <see id="ayamari-error" rem="noun" />
+                <see id="machigau-mistake" rem="closely related" />
+                <keep_apart_from id="machigau-mistake" />
+                <phrase
+                  ph="【判：はん】【断：だん】を【誤：あやま】る"
+                  rom="handan o ayamaru"
+                  tr_en="to err in judgement"
+                  tr_de="etw. falsch beurteilen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="その【薬：くすり】は【誤：あやま】って【使：つか】うと【毒：どく】になる。"
+                  rom="Sono kusuri wa ayamatte tsukau to doku ni naru."
+                  tr_en="That medicine becomes a poison if it is wrongly used."
+                  tr_de="Dieses Arzneimittel wird zum Gift, wenn man es falsch anwendet."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【示：しめ】す"
+              rom="shimesu"
+              tr_en="to indicate; to signify; to represent"
+              tr_de="etw. anzeigen; etw. bedeuten; etw. repräsentieren"
+              lvl="n3"
+              category="general"
+              id="shimesu-indicate"
+            >
+                <phrase
+                  ph="【以：い】【下：か】に【示：しめ】す"
+                  rom="ika ni shimesu"
+                  tr_en="as shown below; see below"
+                  tr_de="wie unten gezeigt; siehe unten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="ホテルの【場：ば】【所：しょ】を【地：ち】【図：ず】で【示：しめ】す"
+                  rom="hoteru no basho o chizu de shimesu"
+                  tr_en="to point at the location of the hotel on the map"
+                  tr_de="den Ort des Hotels auf der Karte (mit dem Finger) zeigen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【地：ち】【図：ず】の【赤：あか】【丸：まる】は【学：がっ】【校：こう】を【示：しめ】す。"
+                  rom="Chizu no akamaru wa gakkō o shimesu."
+                  tr_en="Red circles on the map mark schools."
+                  tr_de="Die roten Kreise auf der Karte markieren Schulen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【沈：しず】む"
+              rom="shizumu"
+              tr_en="to sink; to go under; to submerge"
+              tr_de="sinken; untergehen; untertauchen"
+              hint_en="v.i."
+              lvl="n3"
+              category="directions"
+              id="shizumu-sink"
+            >
+                <phrase
+                  ph="【海：うみ】に【沈：しず】む"
+                  rom="umi ni shizumu"
+                  tr_en="to sink in the sea"
+                  tr_de="im Meer untergehen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【船：ふね】が【沈：しず】むと、ネズミは【逃：に】げ【出：だ】す。"
+                  rom="Fune ga shizumu to, nezumi wa nigedasu."
+                  tr_en="When the ship sinks, the rats flee."
+                  tr_de="Wenn das Schiff sinkt, fliehen die Ratten."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【預：あず】かる"
+              rom="azukaru"
+              tr_en="to keep in custody; to be put in charge of"
+              tr_de="etw. aufbewahren; auf etw. aufpassen"
+              Langenscheidt="aufbewahren, für eine Sache verantwortlich sein"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, work"
+              id="azukaru-keepincustody"
+              rem="appears in GENKI2 p.91; jisho has n2"
+            >
+                <see id="azukeru-putincare" rem="closely related" />
+                <sentence
+                  s="【二：に】【時：じ】まで【荷：に】【物：もつ】を【預：あず】かってもらえますか。"
+                  rom="Ni-ji made nimotsu o azukatte moraemasu ka?"
+                  tr_en="Could you keep my luggage until 2 o'clock?"
+                  tr_de="Könnten Sie mein Gepäck bis zwei Uhr aufbewahren?"
+                  lvl="n3"
+                  origin="GENKI2 p.91"
+                />
+            </word>
+            <word
+              w="【申：もう】し【込：こ】む"
+              rom="mōshikomu"
+              tr_en="to apply for; to ask for; to subscribe for"
+              tr_de="beantragen; sich bewerben; sich für etw. einschreiben"
+              hint_en="v.t."
+              lvl="n3"
+              category="work, relationships"
+              id="mōshikomu-applyfor"
+            >
+                <see id="mōshikomi-application" rem="noun" />
+                <phrase
+                  ph="【結：けっ】【婚：こん】を【申：もう】し【込：こ】む"
+                  rom="kekkon o mōshikomu"
+                  tr_en="to propose marriage"
+                  tr_de="einen Heiratsantrag stellen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【得：え】る"
+              rom="eru"
+              tr_en="to earn sth.; to obtain; to gain"
+              tr_de="etw. gewinnen; erwirken; erlangen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, work"
+              id="eru-earn"
+            >
+                <sentence
+                  s="【私：わたし】はそれを【得：え】ようとしたがダメだった。"
+                  rom="Watashi wa sore o eyō to shita ga dame datta."
+                  tr_en="I tried to get it, but it was in vain."
+                  tr_de="Ich habe es zu erlangen versucht, aber es war vergeblich."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【終：お】える"
+              rom="oeru"
+              tr_en="to finish sth."
+              tr_de="etw. beenden; abschliessen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="oeru-finish"
+            >
+                <see id="owaru-finish" rem="v.i." />
+                <keep_apart_from id="sumaseru-finish" />
+                <sentence
+                  s="その【本：ほん】は【読：よ】み【終：お】えましたか。"
+                  rom="Sono hon wa yomi-oemashita ka?"
+                  tr_en="Are you through with this book?"
+                  tr_de="Hast du dieses Buch fertig gelesen?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【収：おさ】める"
+              rom="osameru"
+              tr_en="to pay (fees); to bring to a close; to achieve (a result)"
+              tr_de="(Gebühren) zahlen; beenden; (ein Resultat) erreichen"
+              lvl="n3"
+              category="work, finances"
+              id="osameru-pay"
+            >
+                <phrase
+                  ph="【成：せい】【功：こう】を【収：おさ】める"
+                  rom="seikō o osameru"
+                  tr_en="to come out successful; to achieve success"
+                  tr_de="erfolgreich sein; Erfolg haben"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【破：やぶ】る"
+              rom="yaburu"
+              tr_en="to tear sth.; to break through sth.; to disturb sth."
+              tr_de="etw. zerreissen; durchbrechen; etw. stören"
+              hint_en="v.t."
+              lvl="n3"
+              category="not-good"
+              id="yaburu-tear"
+            >
+                <!-- 約束を破る (yakusoku o yaburu) - To break a promise (ChatGPT) -->
+                <sentence
+                  s="【小：こ】【林：ばやし】さんは【約：やく】【束：そく】を【破：やぶ】った。"
+                  rom="Kobayashi-san wa yakusoku o yabutta."
+                  tr_en="Mr Kobayashi broke his word."
+                  tr_de="Herr Kobayashi hat sein Versprechen nicht gehalten."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【唸：うな】る"
+              rom="unaru"
+              tr_en="to groan; to moan; to snarl"
+              tr_de="stöhnen; ächzen; knurren"
+              lvl="n3"
+              category="mood, talking"
+              id="unaru-groan"
+            >
+                <sentence
+                  s="【虎：とら】の【唸：うな】り【声：ごえ】が【聞：き】こえる。"
+                  rom="Tora no unarigoe ga kikoeru."
+                  tr_en="The growling of a tiger can be heard."
+                  tr_de="Man kann das Knurren eines Tigers hören."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【支：し】【払：はら】う"
+              rom="shiharau"
+              tr_en="to pay"
+              tr_de="bezahlen"
+              lvl="n3"
+              category="business, trade"
+              id="shiharau-topay"
+            >
+                <see id="shiharai-payment" rem="noun" />
+                <keep_apart_from id="harau-topay" />
+            </word>
+            <word
+              w="【招：まね】く"
+              rom="maneku"
+              tr_en="to invite sb.; to bring sth. about"
+              tr_de="jem. einladen; etw. herbeiführen"
+              hint_en="v.t."
+              lvl="n3"
+              category="relationships, talking"
+              id="maneku-invite"
+            >
+                <see id="maneki-invitation" rem="noun" />
+            </word>
+            <word
+              w="【好：この】む"
+              rom="konomu"
+              tr_en="to like sth.; to prefer sth."
+              tr_de="etw. mögen; etw. vorziehen"
+              hint_en="v.t."
+              lvl="n3"
+              category="mood, thinking"
+              id="konomu-prefer"
+            >
+                <see id="konomi-liking" rem="noun" />
+                <see id="suki-likeable" rem="closely related" />
+            </word>
+            <word
+              w="【減：へ】らす"
+              rom="herasu"
+              tr_en="to decrease sth.; to diminish sth.; to shorten sth."
+              tr_de="etw. verringern; etw. vermindern; etw. kürzen"
+              hint_en="v.t."
+              lvl="n3"
+              category="technical, maths"
+              id="herasu-decrease"
+            >
+                <see id="heru-decrease" rem="v.i." />
+            </word>
+            <word
+              w="【確：たし】かめる"
+              rom="tashikameru"
+              tr_en="to make sure; to check"
+              tr_de="sicherstellen; prüfen"
+              lvl="n3"
+              category="general, work"
+              id="tashikameru-check"
+            >
+                <see id="tashika-sure" rem="adjective" />
+                <keep_apart_from id="kakunin-check" />
+                <keep_apart_from id="kensa-examination" />
+            </word>
+            <word
+              w="【失：うしな】う"
+              rom="ushinau"
+              tr_en="to lose (hope, money, one's job, etc.)"
+              tr_de="(Hoffnung, Geld, Job) verlieren"
+              lvl="n3"
+              category="not-good"
+              id="ushinau-lose"
+            >
+                <!-- 驚いて言葉を失う - odoroite kotoba o ushinau - Be so surprised that one is lost for words (ChatGPT) -->
+            </word>
+            <word
+              w="【振：ふ】る"
+              rom="furu"
+              tr_en="to wave sth.; to throw (dice); to turn down sb."
+              tr_de="etw. schütteln; (Würfel) werfen; jem. abweisen"
+              hint_en="v.t."
+              lvl="n3"
+              category="motion"
+              id="furu-sprinkle"
+              rem="appears in GENKI2 L21 vocab section as kana only meaning to turn down sb."
+            >
+                <!-- 首を振る (kubi o furu) - To shake one's head (ChatGPT) -->
+            </word>
+            <word
+              w="【代：か】える"
+              rom="kaeru"
+              tr_en="to substitute"
+              tr_de="wechseln; auswechseln"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="kaeru-substitute"
+            >
+                <!-- implicit see-also links to 替える kaeru-replace, 換える kaeru-exchange -->
+            </word>
+            <word
+              w="【諦：あきら】める"
+              rom="akirameru"
+              tr_en="to give up sth.; to abandon (hopes, plans)"
+              tr_de="etw. aufgeben (Hoffnung, Pläne)"
+              hint_en="v.t."
+              lvl="n3"
+              category="mood, not-good"
+              id="akirameru-giveup"
+            >
+                <!-- 決してあきらめないでください。- Please never give up. (ChatGPT) -->
+            </word>
+            <word
+              w="【貯：た】める"
+              rom="tameru"
+              tr_en="to save up money"
+              tr_de="Geld sparen"
+              lvl="n3"
+              category="finances"
+              id="tameru-saveupmoney"
+              rem="appears in GENKI2 L21 vocab section; jisho has nx"
+            />
+            <word
+              w="【着：き】【替：が】える"
+              rom="kigaeru"
+              tr_en="to change clothes"
+              tr_de="die Kleider wechseln"
+              lvl="n3"
+              category="fashion"
+              id="kigaeru-changeclothes"
+              rem="appears in GENKI2 L21 vocab section; jisho has nx"
+            />
+            <word
+              w="【訳：やく】す"
+              rom="yakusu"
+              tr_en="to translate; to interpret"
+              tr_de="übersetzen; interpretieren"
+              hint_en="v.t."
+              lvl="n3"
+              category="linguistics, education"
+              id="yakusu-translate"
+              rem="appears in GENKI2 p.94 vocab section and GENKI workbook p.35; jisho has n2"
+            />
+            <word
+              w="【落：お】ち【込：こ】む"
+              rom="ochikomu"
+              tr_en="to feel sad; to be depressed; to fall into (e.g. a hole)"
+              tr_de="traurig sein; deprimiert sein; hinunterfallen"
+              hint_en="v.i."
+              lvl="n3"
+              category="mood, not-good"
+              id="ochikomu-feelsad"
+              rem="appears in GENKI2 p.94 vocab section; jisho has n1"
+            />
+            <word
+              w="【酔：よ】う"
+              rom="you"
+              tr_en="to get drunk; to feel sick; to be spellbound"
+              tr_de="sich betrinken; sich nicht wohl fühlen; gebannt sein"
+              hint_en="v.i."
+              lvl="n3"
+              category="gastronomy, beverage"
+              id="you-getdrunk"
+            />
+            <word
+              w="【吠：ほ】える"
+              rom="hoeru"
+              tr_en="to bark; to bellow"
+              tr_de="bellen; brüllen"
+              lvl="n3"
+              category="animal"
+              id="hoeru-bark"
+            />
+            <word
+              w="【裏：うら】【切：ぎ】る"
+              rom="uragiru"
+              tr_en="to betray; to turn traitor"
+              tr_de="preisgeben; zum Verräter werden"
+              lvl="n3"
+              category="not-good, relationships"
+              id="uragiru-betray"
+            />
+            <word
+              w="【叱：しか】る"
+              rom="shikaru"
+              tr_en="to scold sb.; to rebuke"
+              tr_de="schimpfen mit jem."
+              lvl="n3"
+              category="talking, quarrel"
+              id="shikaru-scold"
+            />
+            <word
+              w="【祝：いわ】う"
+              rom="iwau"
+              tr_en="to celebrate; to congratulate; to wish for (good fortune)"
+              tr_de="etw. feiern; zelebrieren; (Glück) wünschen"
+              hint_en="v.t."
+              lvl="n3"
+              category="happiness, talking"
+              id="iwau-celebrate"
+            />
+            <word
+              w="【撃：う】つ"
+              rom="utsu"
+              tr_en="to shoot at; to attack; to destroy"
+              tr_de="schiessen; attackieren; zerstören"
+              lvl="n3"
+              category="crime, military"
+              id="utsu-shoot"
+            />
+            <word
+              w="【追：お】う"
+              rom="ou"
+              tr_en="to chase; to pursue; to follow"
+              tr_de="folgen; verfolgen"
+              lvl="n3"
+              category="motion"
+              id="ou-chase"
+            />
+            <word
+              w="【組：く】む"
+              rom="kumu"
+              tr_en="to put together; to construct; to cross (legs or arms)"
+              tr_de="zusammentun; konstruieren; (Arme) verschränken"
+              lvl="n3"
+              category="general, work"
+              id="kumu-puttogether"
+            />
+            <word
+              w="【追：お】い【付：つ】く"
+              rom="oitsuku"
+              tr_en="to catch up (with); to be compensated"
+              tr_de="aufholen; kompensiert werden"
+              hint_en="v.i."
+              lvl="n3"
+              category="general, motion"
+              id="oitsuku-catchup"
+            />
+            <word
+              w="【効：き】く"
+              rom="kiku"
+              tr_en="to be effective; to be good (for); to function well"
+              tr_de="wirksam sein; gut sein (für); gut funktionieren"
+              lvl="n3"
+              category="work, technical"
+              id="kiku-effective"
+            />
+        </section>
+    </unit>
+</vocabulary>
