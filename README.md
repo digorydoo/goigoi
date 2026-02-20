@@ -4,13 +4,15 @@
 
 Codename: goigoi
 
-Project start: 16/Jan/2017
-
 This project consist of these parts:
 
 * Android app Go Go Japanese
 * Extensive Japanese vocabulary DB in XML (words, sentences, phrases, cross-links)
-* compileGoigoi, a command line tool to check the vocabulary XML and store it as a bunch of compact binary files
+* goigoi-compiler, a command line tool to check the vocabulary XML and store it as a bunch of compact binary files
+
+The app is not currently available on Google Play.
+
+An iOS version of the app has not been implemented.
 
 ## How to build
 
@@ -44,7 +46,23 @@ you should now be able to run the app in Android Studio (simulator or real devic
 Vocabulary files were handwritten by looking up the words in real dictionaries (Langenscheidt German-Japanese) as well
 as online dictionaries (mostly jisho.org). The descriptions are *not* meant to be exhaustive. Rather, they focus on a
 word's main meaning, typically giving two or three English synonyms. Finer granulated subtleties are provided with
-phrases and sentences.
+phrases and sentences. Origin of phrases and sentences are usually indicated in the XML:
+
+* 500mon: Learning books にほんご500門
+* GENKI1/2: Learning books GENKI I/II
+* Langenscheidt: Refers to two books, one of them is a Japanese-German dictionary, another is a learning guide
+  aimed at travellers
+* Oxford: Book "Oxford Japanese Grammar & Words"
+* Doraemon: Manga books
+* Kaname Naito: [Youtube channel](https://www.youtube.com/@kanamenaito/videos)
+* Miku: [Youtube channel](https://www.youtube.com/channel/UCsQCbl3a9FtYvA55BxdzYiQ/videos)
+* jpod101: [Youtube channel](https://www.youtube.com/c/japanesepod101/videos)
+* Yuko Sensei: [Youtube channel](https://www.youtube.com/c/YukoSensei/videos)
+* BondLingo: [Youtube channel](https://www.youtube.com/@bondlive-en/videos)
+* lib0: There was a site called liberty-zero that provided free sample sentences. I can no longer find that site,
+  but the sentences seem to stem from [Tatoeba](https://tatoeba.org), which is licensed under CC-BY 2.0 FR.
+* tofugu: [Tofugu website](https://www.tofugu.com/japanese-grammar)
+* self: I wrote these sentences myself.
 
 ## Legal status of included fonts
 
@@ -130,8 +148,7 @@ figure out), it's unclear whether the result would be good. For now, I keep the 
 
 ## Names appearing in example sentences
 
-Sentences sometimes use fictional names to give them some context. GoigoiChecker contains checks concerning these
-names, e.g. to enforce さん or 先生.
+Sentences sometimes use fictional names to give them some context. They do not refer to real-life persons.
 
 * (11) 石川さん - Mr Ishikawa (elderly person (70), talks little, has a garden, listens to music)
 * ( 7) 古川さん - Mrs Furukawa (elderly person, likes knitting, cheerful)
