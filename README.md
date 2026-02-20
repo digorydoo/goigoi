@@ -25,7 +25,15 @@ been pushed to mavenCentral yet. Make a symbolic link from this project's kutils
 If you're using Windows, symbolic links *could* be created (e.g. with Cygwin or PowerShell), but Gradle does not
 support them, so you'll have to copy kutils sources into the target directory.
 
-Now you can build the sources with:
+Next, download and install Android Studio. In the project's root directory, create a local.properties file with
+the contents:
+
+    sdk.dir=/Users/username/Library/Android/sdk
+
+Replace username with the name of your system user. The path refers to the usual location under macOS; if you're
+using Windows or Linux, change it as appropriate.
+
+Now you should be able to build the sources with:
 
     $ ./gradlew build
 
