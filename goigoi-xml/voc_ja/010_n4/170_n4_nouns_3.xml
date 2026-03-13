@@ -1357,48 +1357,6 @@
                 />
             </word>
             <word
-              w="【終：お】わり"
-              rom="owari"
-              tr_en="the end; ending"
-              tr_de="Ende"
-              lvl="n4"
-              category="general"
-              id="owari-end"
-            >
-                <see id="owaru-finish" rem="verb" />
-                <keep_apart_from id="saigo-end" />
-                <keep_apart_from id="saishū-final" />
-                <phrase
-                  ph="【小：しょう】【説：せつ】の【終：お】わり"
-                  rom="shōsetsu no owari"
-                  tr_en="the novel's ending"
-                  tr_de="das Ende des Romans"
-                  lvl="n4"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【急：いそ】いで【終：お】わりにしよう。"
-                  rom="Isoide owari ni shiyō."
-                  tr_en="Let's finish it quickly!"
-                  tr_de="Bringen wir es schnell zu Ende!"
-                  explanation_en="「急いで」is the て-form of「急ぐ」"
-                  explanation_de="「急いで」ist die て-Form von「急ぐ」"
-                  lvl="n4"
-                  origin="lib0"
-                  rem="jisho has nx for isoide, but n4 for isogu"
-                />
-                <sentence
-                  s="これで【私：わたし】の【話：はなし】は【終：お】わりです。"
-                  rom="Kore de watashi no hanashi wa owari desu."
-                  tr_en="This is the end of my story."
-                  tr_de="Das ist das Ende meiner Geschichte."
-                  lvl="n4"
-                  origin="lib0"
-                  href="https://hinative.com/questions/22330609"
-                />
-            </word>
-            <word
               w="【新：しん】【聞：ぶん】【社：しゃ】"
               rom="shinbunsha"
               tr_en="newspaper company"
@@ -1436,6 +1394,7 @@
               category="body"
               id="kami-hair"
             >
+                <keep_apart_from id="ke-hair" />
                 <phrase
                   ph="【短：みじか】い【髪：かみ】"
                   rom="mijikai kami"
@@ -1774,6 +1733,35 @@
                   tr_de="Es tat mir im Herzen weh, als ich diese traurige Geschichte hörte."
                   lvl="n4"
                   origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【忘：わす】れ【物：もの】"
+              rom="wasuremono"
+              tr_en="lost article; something forgotten"
+              tr_de="verlorener Artikel; etwas vergessenes"
+              lvl="n4"
+              category="objects"
+              id="wasuremono-lostarticle"
+            >
+                <phrase
+                  ph="【忘：わす】れ【物：もの】を【取：と】りに【戻：もど】る"
+                  rom="wasuremono o tori ni modoru"
+                  tr_en="to go back getting what one has forgotten"
+                  tr_de="zurückgehen, um etwas vergessenes zu holen"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【部：へ】【屋：や】に【忘：わす】れ【物：もの】をしてしまいました。"
+                  rom="Heya ni wasuremono o shite shimaimashita."
+                  tr_en="I left something in the room, I'm afraid."
+                  tr_de="Ich habe leider etwas im Raum vergessen."
+                  explanation_en="「しまう」gives the sentence a regretful feel."
+                  explanation_de="「しまう」gibt dem Satz das Gefühl von Bedauern."
+                  lvl="n4"
+                  origin="lib0"
+                  rem="jisho has n3 for shimau; shimau appears in 500mon q330"
                 />
             </word>
         </section>

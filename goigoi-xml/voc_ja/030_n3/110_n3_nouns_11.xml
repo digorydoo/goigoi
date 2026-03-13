@@ -18,6 +18,48 @@
     >
         <section>
             <word
+              w="【単：たん】【位：い】"
+              rom="tan'i"
+              tr_en="unit; (academic) credits; in amounts of"
+              tr_de="Einheit; (akademische) Kreditpunkte; in Mengen von"
+              lvl="n3"
+              category="science"
+              id="tani-unit"
+            >
+                <phrase
+                  ph="【単：たん】【位：い】を【取：と】る"
+                  rom="tan'i o toru"
+                  tr_en="to earn (academic) credits"
+                  tr_de="(akademische) Kreditpunkte erhalten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【単：たん】【位：い】を【落：お】とす"
+                  rom="tan'i o otosu"
+                  tr_en="to fail to earn (academic) credits; to fail a course"
+                  tr_de="(akademische) Kreditpunkte nicht erhalten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【長：なが】さの【単：たん】【位：い】はメートルです。"
+                  rom="Nagasa no tan'i wa mētoru desu."
+                  tr_en="The unit of length is the metre."
+                  tr_de="Die Einheit einer Länge ist der Meter."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ボートを【時：じ】【間：かん】【単：たん】【位：い】で【借：か】りられる。"
+                  rom="Bōto o jikan-tan'i de karirareru."
+                  tr_en="You can hire a boat by the hour."
+                  tr_de="Du kannst ein Boot auf Stundenbasis mieten."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【訓：くん】【練：れん】"
               rom="kunren"
               tr_en="drill; training; practice"
@@ -181,6 +223,7 @@
               id="kaishaku-explanation"
             >
                 <keep_apart_from id="setsumei-explanation" />
+                <keep_apart_from id="tsūyaku-interpretation" />
                 <phrase
                   ph="【拡：かく】【大：だい】【解：かい】【釈：しゃく】"
                   rom="kakudai kaishaku"
@@ -295,6 +338,7 @@
               category="sports"
               id="yūshō-victory"
             >
+                <keep_apart_from id="kachi-win" />
                 <phrase
                   ph="【優：ゆう】【勝：しょう】【者：しゃ】"
                   rom="yūshōsha"
@@ -386,26 +430,6 @@
                 />
             </word>
             <word
-              w="【進：すす】み"
-              rom="susumi"
-              tr_en="progress; advancing"
-              tr_de="Fortschreiten; Vorwärtsgehen"
-              lvl="n3"
-              category="motion"
-              id="susumi-progress"
-              rem="jisho has n1, but n4 for susumu"
-            >
-                <see id="susumu-advance" rem="verb" />
-                <keep_apart_from id="shinpo-progress" />
-                <keep_apart_from id="kōjō-elevation" />
-                <keep_apart_from id="shinten-progress" />
-                <keep_apart_from id="shinka-evolution" />
-                <keep_apart_from id="shindo-progress" />
-                <keep_apart_from id="hatten-growth" />
-                <keep_apart_from id="zenshin-advance" />
-                <keep_apart_from id="jōtatsu-improve" />
-            </word>
-            <word
               w="【作：さ】【業：ぎょう】"
               rom="sagyō"
               tr_en="(physical, repetitive) work"
@@ -479,17 +503,6 @@
             >
                 <keep_apart_from id="jōhō-info" />
                 <keep_apart_from id="gakumon-learning" />
-            </word>
-            <word
-              w="【玉：たま】"
-              rom="tama"
-              tr_en="ball; sphere; bulb"
-              tr_de="Ball; Kugel"
-              lvl="n3"
-              id="tama-ball"
-            >
-                <keep_apart_from id="bōru-ball" />
-                <keep_apart_from id="mari-ball" />
             </word>
             <word
               w="【使：し】【用：よう】"
@@ -853,6 +866,17 @@
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
               id="chūmoku-notice"
+            />
+            <word
+              w="【計：けい】【算：さん】"
+              rom="keisan"
+              tr_en="calculation; computation; counting"
+              tr_de="Rechnen; Kalkül; zählen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="technical"
+              id="keisan-calculation"
             />
         </section>
     </unit>

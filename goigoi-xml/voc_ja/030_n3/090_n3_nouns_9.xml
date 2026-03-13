@@ -64,44 +64,6 @@
                 />
             </word>
             <word
-              w="【現：げん】【場：ば】"
-              rom="genba"
-              tr_en="site of an event; scene"
-              tr_de="Ort eines Ereignisses; Stelle"
-              hint_en="used in a professional context, e.g. police, reporters"
-              hint_de="verwendet in professionellem Umfeld, z.B. Polizei, Journalisten"
-              lvl="n3"
-              category="crime"
-              id="genba-site"
-            >
-                <!--
-                    所・ところ: place (general)
-                    場所・ばしょ: where something is
-                    現場・げんば: where something happens
-                -->
-                <keep_apart_from id="ba-spot" />
-                <keep_apart_from id="tokoro-place" />
-                <keep_apart_from id="basho-place" />
-                <phrase
-                  ph="【犯：はん】【罪：ざい】【現：げん】【場：ば】"
-                  rom="hanzai-genba"
-                  tr_en="scene of the crime"
-                  tr_de="Tatort"
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【現：げん】【場：ば】には【多：おお】くの【見：けん】【物：ぶつ】【人：にん】が【集：あつ】まっています。"
-                  rom="Genba ni wa ōku no kenbutsunin ga atsumatte imasu."
-                  tr_en="A lot of spectators have gathered at the scene."
-                  tr_de="Viele Schaulustige haben sich an dem Ort versammelt."
-                  lvl="n3"
-                  origin="ChatGPT"
-                  rem="jisho has nx for kenbutsunin, but n4 for kenbutsu, n5 for san-nin"
-                />
-            </word>
-            <word
               w="【政：せい】【府：ふ】"
               rom="seifu"
               tr_en="government; administration"
@@ -171,26 +133,6 @@
                 />
             </word>
             <word
-              w="【衛：えい】【星：せい】"
-              rom="eisei"
-              tr_en="satellite"
-              tr_de="Satellit"
-              hint_en="natural or artificial"
-              hint_de="natürlich oder künstlich"
-              lvl="n3"
-              category="astronomy"
-              id="eisei-satellite"
-            >
-                <sentence
-                  s="【月：つき】は【地：ち】【球：きゅう】の【衛：えい】【星：せい】だ。"
-                  rom="Tsuki wa chikyū no eisei da."
-                  tr_en="The moon is the Earth's satellite."
-                  tr_de="Der Mond ist der Satellit der Erde."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
               w="【観：かん】【察：さつ】"
               rom="kansatsu"
               tr_en="observation; watching"
@@ -218,6 +160,57 @@
                   tr_de="Die Beobachtungen von Herrn Nishimura sind zutreffend."
                   lvl="n3"
                   origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【証：しょう】【明：めい】"
+              rom="shōmei"
+              tr_en="proof (of guilt, innocence, etc.); verification"
+              tr_de="Beweis (der Schuld, Unschuld, usw.); Nachweis"
+              Langenscheidt="Nachweis, nachweisen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="crime"
+              id="shōmei-proof"
+            >
+                <keep_apart_from id="akashi-proof" />
+                <phrase
+                  ph="【身：み】【分：ぶん】【証：しょう】【明：めい】【書：しょ】"
+                  rom="mibun shōmeisho"
+                  tr_en="identification papers; ID"
+                  tr_de="Identitätsausweis; ID"
+                  lvl="n3"
+                  origin="self"
+                  rem="jsho has nx"
+                />
+                <sentence
+                  s="【小：こ】【林：ばやし】さんが【正：しょう】【直：じき】だと【証：しょう】【明：めい】します。"
+                  rom="Kobayashi-san ga shōjiki da to shōmei shimasu."
+                  tr_en="I will prove that Mr Kobayashi is honest."
+                  tr_de="Ich werde nachweisen, dass Kobayashi ehrlich ist."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【衛：えい】【星：せい】"
+              rom="eisei"
+              tr_en="satellite"
+              tr_de="Satellit"
+              hint_en="natural or artificial"
+              hint_de="natürlich oder künstlich"
+              lvl="n3"
+              category="astronomy"
+              id="eisei-satellite"
+            >
+                <sentence
+                  s="【月：つき】は【地：ち】【球：きゅう】の【衛：えい】【星：せい】だ。"
+                  rom="Tsuki wa chikyū no eisei da."
+                  tr_en="The moon is the Earth's satellite."
+                  tr_de="Der Mond ist der Satellit der Erde."
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -635,26 +628,6 @@
                 />
             </word>
             <word
-              w="【経：けい】【営：えい】"
-              rom="keiei"
-              tr_en="management; administration; running a business"
-              tr_de="Unternehmensführung; Geschäftsleitung; ein Geschäft führen"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="keiei-management"
-              rem="appears in GENKI2 p.328 kanji section"
-            >
-                <phrase
-                  ph="【経：けい】【営：えい】【学：がく】"
-                  rom="keieigaku"
-                  tr_en="management studies; field of business administration"
-                  tr_de="Management-Studien; Studium der Unternehmensführung"
-                  lvl="n3"
-                  origin="GENKI2 p.328"
-                />
-            </word>
-            <word
               w="【経：けい】【由：ゆ】"
               rom="keiyu"
               tr_en="going via; going by way of"
@@ -702,32 +675,6 @@
                   lvl="n3"
                   origin="lib0 modified"
                   rem="verified with ChatGPT"
-                />
-            </word>
-            <word
-              w="【虫：むし】【歯：ば】"
-              rom="mushiba"
-              tr_en="tooth decay; decayed tooth"
-              tr_de="Karies; verfaulter Zahn"
-              lvl="n3"
-              category="health"
-              id="mushiba-toothdecay"
-            >
-                <phrase
-                  ph="【虫：むし】【歯：ば】を【抜：ぬ】く"
-                  rom="mushiba o nuku"
-                  tr_en="to pull out a bad tooth"
-                  tr_de="einen schlechten Zahn ziehen"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【私：わたし】には【虫：むし】【歯：ば】が【二：に】【本：ほん】ある。"
-                  rom="Watashi ni wa mushiba ga ni-hon aru."
-                  tr_en="I have two bad teeth."
-                  tr_de="Ich habe zwei schlechte Zähne."
-                  lvl="n3"
-                  origin="lib0"
                 />
             </word>
             <word
@@ -844,6 +791,68 @@
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT; painto is nx"
+                />
+            </word>
+            <word
+              w="【気：き】【候：こう】"
+              rom="kikō"
+              tr_en="climate"
+              tr_de="Klima"
+              lvl="n3"
+              category="weather"
+              id="kikō-climate"
+            >
+                <phrase
+                  ph="ひどい【気：き】【候：こう】"
+                  rom="hidoi kikō"
+                  tr_en="a harsh climate"
+                  tr_de="ein rauhes Klima"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】は【穏：おだ】やかな【気：き】【候：こう】だ。"
+                  rom="Nihon wa odayaka na kikō da."
+                  tr_en="Japan has a mild climate."
+                  tr_de="Japan hat ein mildes Klima."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【状：じょう】【況：きょう】"
+              rom="jōkyō"
+              tr_en="situation; circumstances; status"
+              tr_de="Situation; Umstände; Status"
+              lvl="n3"
+              id="jōkyō-situation"
+            >
+                <keep_apart_from id="bāi-case" />
+                <phrase
+                  ph="【厳：きび】しい【状：じょう】【況：きょう】"
+                  rom="kibishii jōkyō"
+                  tr_en="tough conditions; difficult circumstances"
+                  tr_de="harte Bedingungen; schwierige Umstände"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【恥：は】ずかしい【状：じょう】【況：きょう】"
+                  rom="hazukashii jōkyō"
+                  tr_en="an embarrassing situation"
+                  tr_de="eine peinliche Situation"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【状：じょう】【況：きょう】をお【知：し】らせください。"
+                  rom="Jōkyō o o-shirase kudasai."
+                  tr_en="Please inform me of the status."
+                  tr_de="Bitte informieren Sie mich über den Status."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -1037,6 +1046,20 @@
                   origin="lib0"
                   rem="verified with ChatGPT"
                 />
+            </word>
+            <word
+              w="【仲：なか】【間：ま】"
+              rom="nakama"
+              tr_en="companion; fellow; co-worker"
+              tr_de="Kamerad; Kumpel; Mitarbeiter"
+              lvl="n3"
+              category="business, people"
+              id="nakama-companion"
+              HIDDEN="true"
+              rem="now a phrase of naka-relation"
+            >
+                <keep_apart_from id="naka-relation" />
+                <keep_together id="naka-relation" />
             </word>
             <word
               w="【首：しゅ】【都：と】"
@@ -1262,20 +1285,6 @@
               rem="appears in GENKI2 L20 as uchūjin, space alien"
             >
                 <keep_apart_from id="supēsu-space" />
-            </word>
-            <word
-              w="【仲：なか】【間：ま】"
-              rom="nakama"
-              tr_en="companion; fellow; co-worker"
-              tr_de="Kamerad; Kumpel; Mitarbeiter"
-              lvl="n3"
-              category="business, people"
-              id="nakama-companion"
-              HIDDEN="true"
-              rem="now a phrase of naka-relation"
-            >
-                <keep_apart_from id="naka-relation" />
-                <keep_together id="naka-relation" />
             </word>
             <word
               w="【収：しゅう】【入：にゅう】"

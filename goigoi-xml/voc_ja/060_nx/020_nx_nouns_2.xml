@@ -244,15 +244,6 @@
               id="awayuki-lightsnowfall"
             />
             <word
-              w="【粉：こな】【雪：ゆき】"
-              rom="konayuki"
-              tr_en="powder snow"
-              tr_de="Pulverschnee"
-              lvl="-"
-              category="weather"
-              id="konayuki-powdersnow"
-            />
-            <word
               w="【砂：さ】【塵：じん】【嵐：あらし】"
               rom="sajin'arashi"
               tr_en="sand storm; dust storm"
@@ -260,7 +251,9 @@
               lvl="-"
               category="weather"
               id="sajinarashi-duststorm"
-            />
+            >
+                <keep_apart_from id="arashi-storm" />
+            </word>
             <word
               w="【荒：あら】【波：なみ】"
               rom="aranami"
@@ -269,15 +262,6 @@
               lvl="-"
               category="weather, beach"
               id="aranami-stormysea"
-            />
-            <word
-              w="【津：つ】【波：なみ】"
-              rom="tsunami"
-              tr_en="big tidal wave"
-              tr_de="grosse Flutwelle"
-              lvl="-"
-              category="nature"
-              id="tsunami-bigtidalwave"
             />
             <word
               w="【竜：たつ】【巻：まき】"
@@ -584,6 +568,38 @@
                   origin="Miku"
                   href="https://youtu.be/TjmlAiqjpmk"
                 />
+            </word>
+            <word
+              w="【動：どう】【画：が】"
+              rom="dōga"
+              tr_en="video; animation"
+              tr_de="Video; Animation"
+              lvl="-"
+              id="dōga-video"
+              category="entertainment"
+            >
+                <keep_apart_from id="bideo-video" />
+            </word>
+            <word
+              w="【小：こ】【道：どう】【具：ぐ】"
+              rom="kodōgu"
+              tr_en="stage prop; small gadget"
+              tr_de="Requisite"
+              lvl="-"
+              category="entertainment"
+              id="kodōgu-stageprop"
+            />
+            <word
+              w="【歌：か】【曲：きょく】"
+              rom="kakyoku"
+              tr_en="melody; tune"
+              tr_de="Melodie; Lied"
+              lvl="-"
+              id="kakyoku-melody"
+              category="entertainment"
+            >
+                <keep_apart_from id="merodī-melody" />
+                <keep_apart_from id="senritsu-tune" />
             </word>
         </section>
     </unit>

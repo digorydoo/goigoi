@@ -9,16 +9,16 @@ import android.os.Looper
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.core.graphics.withTranslation
+import ch.digorydoo.kutils.math.clamp
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.utils.DimUtils
 import io.github.digorydoo.goigoi.utils.ResUtils
-import ch.digorydoo.kutils.math.clamp
 
 class TextWithCaret: AppCompatTextView {
     private var caretColour = 0
     private var caretWidth = 0.0f
     private var caretEnabled = false
-    private var caretPos = 0
+    var caretPos = 0; private set
     private var blinkState = true
     private var blinker: Runnable? = null
 

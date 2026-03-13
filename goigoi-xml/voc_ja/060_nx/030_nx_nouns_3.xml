@@ -399,15 +399,6 @@
               id="seinyū-rawmilk"
             />
             <word
-              w="【物：ぶつ】【理：り】【学：がく】"
-              rom="butsurigaku"
-              tr_en="science of physics"
-              tr_de="Physik (Wissenschaft)"
-              lvl="-"
-              category="physics, science"
-              id="butsurigaku-physics"
-            />
-            <word
               w="【卒：そつ】【業：ぎょう】【生：せい】"
               rom="sotsugyōsei"
               tr_en="graduate; alumnus"
@@ -576,74 +567,34 @@
               category="cooking"
               id="mirin-ricewine"
             />
-
-            <!-- HIDDEN -->
             <word
-              w="【大：おお】さじ"
-              rom="ōsaji"
-              tr_en="tablespoon"
-              tr_de="grosser Löffel; Esslöffel"
+              w="【二：ふつ】【日：か】【酔：よ】い"
+              rom="futsukayoi"
+              tr_en="hangover"
+              tr_de="Kater; Hangover"
               lvl="-"
-              category="cooking"
-              id="ōsaji-tablespoon"
-              HIDDEN="true"
-              rem="is this only a counter?"
+              category="going-out"
+              id="futsukayoi-hangover"
+              rem="appears in GENKI1 p.268 vocab section; jisho has nx"
             />
             <word
-              w="【小：こ】さじ"
-              rom="kosaji"
-              tr_en="teaspoon"
-              tr_de="kleiner Löffel; Kaffeelöffel"
+              w="【料：りょう】【理：り】【人：にん】"
+              rom="ryōrinin"
+              tr_en="cook; chef"
+              tr_de="Koch; Küchenchef"
               lvl="-"
-              category="cooking"
-              id="kosaji-teaspoon"
-              HIDDEN="true"
-              rem="is this only a counter?"
+              category="occupations"
+              id="ryōrinin-cook"
             />
             <word
-              w="すり【身：み】"
-              rom="surimi"
-              tr_en="minced fish mashed into a paste"
-              tr_de="pürierter Fisch"
+              w="【船：せん】【員：いん】"
+              rom="sen'in"
+              tr_en="sailor"
+              tr_de="Matrose"
               lvl="-"
-              category="food"
-              id="surimi-mincedfish"
-              HIDDEN="true"
+              id="senin-sailor"
+              category="occupations, travelling"
             />
-            <word
-              w="お【好：この】み【焼：や】き"
-              rom="o-konomiyaki"
-              tr_en="pancake containing meat or seafood and vegetables"
-              tr_de="Pfannkuchen mit Fleisch oder Meeresfrüchten und Gemüse"
-              lvl="-"
-              category="food, gastronomy"
-              id="okonomiyaki-pancake"
-              HIDDEN="true"
-            />
-            <word
-              w="【生：せい】【物：ぶつ】【学：がく】"
-              rom="seibutsugaku"
-              tr_en="biology"
-              tr_de="Biologie"
-              lvl="-"
-              category="science, life"
-              id="seibutsugaku-biology"
-              HIDDEN="true"
-              rem="now a phrase of seibutsu"
-            >
-                <keep_apart_from id="seibutsu-organism" />
-            </word>
-            <word
-              w="【漬：つけ】【物：もの】"
-              rom="tsukemono"
-              tr_en="Japanese pickled vegetables"
-              lvl="-"
-              id="tsukemono-pickled"
-              HIDDEN="true"
-              rem="now a phrase of tsukeru"
-            >
-                <keep_apart_from id="tsukeru-soak" />
-            </word>
         </section>
     </unit>
 </vocabulary>

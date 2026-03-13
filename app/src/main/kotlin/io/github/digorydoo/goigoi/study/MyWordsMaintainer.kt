@@ -110,7 +110,7 @@ class MyWordsMaintainer(private val delegate: Delegate, private val myWordsUnyt:
 
         private const val TAG = "MyWordsMaintainer"
         private const val IDEAL_UNYT_SIZE = 50
-        private const val MIN_UNYT_SIZE_FOR_REMOVE = 25 // not too high, because no new words can be added when full
+        private const val MIN_UNYT_SIZE_FOR_REMOVE = 20 // not too high, because no new words can be added when full
         private const val PROBABILITY_FOR_REPLACE = 0.2f
     }
 }

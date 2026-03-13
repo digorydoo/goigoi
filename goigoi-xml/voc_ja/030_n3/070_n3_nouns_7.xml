@@ -105,6 +105,8 @@
               lvl="n3"
               id="kesseki-absence"
             >
+                <see id="shusseki-attend" rem="closely related" />
+                <keep_apart_from id="rusu-absence" />
                 <phrase
                   ph="【会：かい】【議：ぎ】に【欠：けっ】【席：せき】する"
                   rom="kaigi ni kesseki suru"
@@ -418,73 +420,62 @@
                 />
             </word>
             <word
-              w="【速：そく】【度：ど】"
-              rom="sokudo"
-              tr_en="speed; velocity"
-              tr_de="Geschwindigkeit"
+              w="【不：ふ】【幸：こう】"
+              rom="fukō"
+              tr_en="misfortune; tragedy; unhappy"
+              tr_de="Pech; Tragödie; unglücklich"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
               lvl="n3"
-              category="physics, feet"
-              id="sokudo-speed"
+              category="not-good"
+              id="fukō-misfortune"
+              rem="appears in GENKI2 p.329 kanji section"
             >
-                <phrase
-                  ph="【速：そく】【度：ど】が【速：はや】い"
-                  rom="sokudo ga hayai"
-                  tr_en="fast velocity"
-                  tr_de="schnelle Geschwindigkeit"
-                  lvl="n3"
-                  origin="self"
-                />
                 <sentence
-                  s="この【車：くるま】は【速：そく】【度：ど】が【遅：おそ】いね。"
-                  rom="Kono kuruma wa sokudo ga osoi ne."
-                  tr_en="This car is slow, isn't it?"
-                  tr_de="Dieses Auto ist aber langsam."
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【飛：ひ】【行：こう】【機：き】は【速：そく】【度：ど】を【増：ま】した。"
-                  rom="Hikōki wa sokudo o mashita."
-                  tr_en="The plane increased speed."
-                  tr_de="Das Flugzeug erhöhte die Geschwindigkeit."
+                  s="【私：わたし】は【友：とも】【達：だち】がいないことは【不：ふ】【幸：こう】だと【思：おも】う。"
+                  rom="Watashi wa tomodachi ga inai koto wa fukō da to omou."
+                  tr_en="I think that having no friends is a tragedy."
+                  tr_de="Ich finde, keine Freunde haben ist eine Tragödie."
                   lvl="n3"
                   origin="lib0"
                 />
             </word>
             <word
-              w="【発：はつ】【明：めい】"
-              rom="hatsumei"
-              tr_en="invention; to invent"
-              tr_de="Erfindung; erfinden"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【現：げん】【場：ば】"
+              rom="genba"
+              tr_en="site of an event; scene"
+              tr_de="Ort eines Ereignisses; Stelle"
+              hint_en="used in a professional context, e.g. police, reporters"
+              hint_de="verwendet in professionellem Umfeld, z.B. Polizei, Journalisten"
               lvl="n3"
-              category="science"
-              id="hatsumei-invention"
+              category="crime"
+              id="genba-site"
             >
+                <!--
+                    所・ところ: place (general)
+                    場所・ばしょ: where something is
+                    現場・げんば: where something happens
+                -->
+                <keep_apart_from id="ba-spot" />
+                <keep_apart_from id="tokoro-place" />
+                <keep_apart_from id="basho-place" />
                 <phrase
-                  ph="【偉：い】【大：だい】な【発：はつ】【明：めい】"
-                  rom="idai na hatsumei"
-                  tr_en="a great invention"
-                  tr_de="eine grossartige Erfindung"
+                  ph="【犯：はん】【罪：ざい】【現：げん】【場：ば】"
+                  rom="hanzai-genba"
+                  tr_en="scene of the crime"
+                  tr_de="Tatort"
                   lvl="n3"
-                  origin="lib0"
-                />
-                <phrase
-                  ph="【発：はつ】【明：めい】【家：か】"
-                  rom="hatsumeika"
-                  tr_en="an inventor"
-                  tr_de="ein Erfinder"
-                  lvl="n3"
-                  rem="jisho has nx"
+                  origin="self"
+                  rem="verified with ChatGPT"
                 />
                 <sentence
-                  s="【研：けん】【究：きゅう】【者：しゃ】は【新：あたら】しい【技：ぎ】【術：じゅつ】を【発：はつ】【明：めい】しました。"
-                  rom="Kenkyūsha wa atarashii gijutsu o hatsumei shimashita."
-                  tr_en="The researcher invented a new technique."
-                  tr_de="Der Forscher erfand eine neue Technik."
+                  s="【現：げん】【場：ば】には【多：おお】くの【見：けん】【物：ぶつ】【人：にん】が【集：あつ】まっています。"
+                  rom="Genba ni wa ōku no kenbutsunin ga atsumatte imasu."
+                  tr_en="A lot of spectators have gathered at the scene."
+                  tr_de="Viele Schaulustige haben sich an dem Ort versammelt."
                   lvl="n3"
                   origin="ChatGPT"
+                  rem="jisho has nx for kenbutsunin, but n4 for kenbutsu, n5 for san-nin"
                 />
             </word>
             <word
@@ -700,27 +691,6 @@
                   lvl="n3"
                   origin="Oxford p.114"
                   rem="どうも in the sense of 'somehow' may not be n5, but n3 should be fine"
-                />
-            </word>
-            <word
-              w="【不：ふ】【幸：こう】"
-              rom="fukō"
-              tr_en="misfortune; tragedy; unhappy"
-              tr_de="Pech; Tragödie; unglücklich"
-              hint_en="noun; na-adjective"
-              hint_de="Nomen; Na-Adjektiv"
-              lvl="n3"
-              category="not-good"
-              id="fukō-misfortune"
-              rem="appears in GENKI2 p.329 kanji section"
-            >
-                <sentence
-                  s="【私：わたし】は【友：とも】【達：だち】がいないことは【不：ふ】【幸：こう】だと【思：おも】う。"
-                  rom="Watashi wa tomodachi ga inai koto wa fukō da to omou."
-                  tr_en="I think that having no friends is a tragedy."
-                  tr_de="Ich finde, keine Freunde haben ist eine Tragödie."
-                  lvl="n3"
-                  origin="lib0"
                 />
             </word>
             <word
@@ -949,12 +919,13 @@
             <word
               w="【地：ち】【方：ほう】"
               rom="chihō"
-              tr_en="region; locality; countryside"
-              tr_de="Region; Lokalität; auf dem Land"
+              tr_en="regional; locality; countryside"
+              tr_de="regional; Lokalität; auf dem Land"
               lvl="n3"
               category="countryside, geography"
               id="chihō-locality"
             >
+                <keep_apart_from id="chiiki-region" />
                 <phrase
                   ph="【地：ち】【方：ほう】【新：しん】【聞：ぶん】"
                   rom="chihō shinbun"
@@ -1162,8 +1133,8 @@
               rom="gakumon"
               tr_en="learning; knowledge; branch of learning"
               tr_de="Lernen; Wissen; Fachgebiet"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              hint_en="scholarly learning"
+              hint_de="akademisches Lernen"
               lvl="n3"
               category="education"
               id="gakumon-learning"
@@ -1176,6 +1147,7 @@
                 <keep_apart_from id="narau-betaught" />
                 <keep_apart_from id="benkyō-study" />
                 <keep_apart_from id="chishiki-knowledge" />
+                <keep_apart_from id="gakushū-study" />
                 <phrase
                   ph="【学：がく】【問：もん】の【自：じ】【由：ゆう】"
                   rom="gakumon no jiyū"
@@ -1363,6 +1335,17 @@
               lvl="n3"
               category="health"
               id="shōjō-symptoms"
+            />
+            <word
+              w="【高：こう】【速：そく】"
+              rom="kōsoku"
+              tr_en="high-speed; rapid; express"
+              tr_de="Hochgeschwindigkeit; Express"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="transportation"
+              id="kōsoku-hispeed"
             />
         </section>
     </unit>

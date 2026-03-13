@@ -597,6 +597,7 @@
               HIDDEN="true"
             >
                 <keep_apart_from id="hō-way" />
+                <keep_apart_from id="muki-direction" />
                 <!-- 回り方向 mawari hōkō - rotational direction (direction of rotation) (ChatGPT) -->
             </word>
             <word
@@ -1981,12 +1982,6 @@
               lvl="n3"
             />
             <word
-              w="【石：せき】【油：ゆ】"
-              rom="sekiyu"
-              tr_en="oil; petroleum; kerosene"
-              lvl="n3"
-            />
-            <word
               w="【睡：すい】【眠：みん】"
               rom="suimin"
               tr_en="sleep"
@@ -2226,14 +2221,6 @@
               id="ishi-will"
               HIDDEN="true"
               rem="rōmaji not unique"
-            />
-            <word
-              w="【城：しろ】"
-              rom="shiro"
-              tr_en="castle; Castle"
-              hint_en="noun"
-              lvl="n3"
-              id="shiro-castle"
             />
             <word
               w="【名：な】"
@@ -2487,7 +2474,10 @@
               hint_en="noun; suffix"
               lvl="n3"
               id="yaku-translation"
-            />
+            >
+                <keep_apart_from id="honyaku-translation" />
+                <keep_apart_from id="tsūyaku-interpretation" />
+            </word>
             <word
               w="【彼：かれ】ら"
               rom="karera"
@@ -3677,6 +3667,7 @@
               tr_en="rate; ratio; proportion; percentage"
               hint_en="noun; noun, used as a suffix"
               lvl="n3"
+              id="ritsu-rate"
             />
             <word
               w="【無：む】【視：し】"

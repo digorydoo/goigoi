@@ -12,8 +12,8 @@
       defaultHint_de="Nomen"
       lvl="n4"
       translations="en, de"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
       requiresIds="true"
     >
         <section>
@@ -661,9 +661,11 @@
               tr_de="Stein; Edelstein"
               lvl="n4"
               category="nature"
-              id="ishi-gem"
+              id="ishi-stone"
             >
                 <!-- 丸い石 - marui ishi - A round stone (ChatGPT) -->
+                <keep_apart_from id="iwa-rock" />
+                <keep_apart_from id="ganseki-rock" />
                 <phrase
                   ph="【硬：かた】い【石：いし】"
                   rom="katai ishi"
@@ -1646,19 +1648,6 @@
                 />
             </word>
             <word
-              w="【思：おも】い"
-              rom="omoi"
-              tr_en="thought; imagination"
-              tr_de="Gedanke; Vorstellung"
-              lvl="n4"
-              category="thinking"
-              id="omoi-thought"
-              rem="jisho has nx"
-            >
-                <see id="omou-think" rem="verb" />
-                <keep_apart_from id="kangae-thought" />
-            </word>
-            <word
               w="【夢：ゆめ】"
               rom="yume"
               tr_en="dream"
@@ -1688,6 +1677,48 @@
                   tr_de="Es war schön wie ein Traum."
                   lvl="n4"
                   origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【終：お】わり"
+              rom="owari"
+              tr_en="the end; ending"
+              tr_de="Ende"
+              lvl="n4"
+              category="general"
+              id="owari-end"
+            >
+                <see id="owaru-finish" rem="verb" />
+                <keep_apart_from id="saigo-end" />
+                <keep_apart_from id="saishū-final" />
+                <phrase
+                  ph="【小：しょう】【説：せつ】の【終：お】わり"
+                  rom="shōsetsu no owari"
+                  tr_en="the novel's ending"
+                  tr_de="das Ende des Romans"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【急：いそ】いで【終：お】わりにしよう。"
+                  rom="Isoide owari ni shiyō."
+                  tr_en="Let's finish it quickly!"
+                  tr_de="Bringen wir es schnell zu Ende!"
+                  explanation_en="「急いで」is the て-form of「急ぐ」"
+                  explanation_de="「急いで」ist die て-Form von「急ぐ」"
+                  lvl="n4"
+                  origin="lib0"
+                  rem="jisho has nx for isoide, but n4 for isogu"
+                />
+                <sentence
+                  s="これで【私：わたし】の【話：はなし】は【終：お】わりです。"
+                  rom="Kore de watashi no hanashi wa owari desu."
+                  tr_en="This is the end of my story."
+                  tr_de="Das ist das Ende meiner Geschichte."
+                  lvl="n4"
+                  origin="lib0"
+                  href="https://hinative.com/questions/22330609"
                 />
             </word>
         </section>

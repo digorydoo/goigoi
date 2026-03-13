@@ -31,7 +31,6 @@ class StudyItemIterator private constructor(
     private var answer = Answer.NONE
     private var numCorrect = 0
     private var numWrong = 0
-    private var streak = 0
     private var currentChanged = false
     private val updateMyWordsUnyt = unyt != vocab.myWordsUnyt
 
@@ -58,18 +57,16 @@ class StudyItemIterator private constructor(
         when (ans) {
             Answer.CORRECT -> {
                 numCorrect++
-                streak++
                 curItem.localNumCorrect++
 
                 if (updateMyWordsUnyt) {
                     myWordsMaintainer.onAnswerCorrect(curWord)
                 }
 
-                currentChanged = listMaintainer.onAnswerCorrect(curWord, streak)
+                currentChanged = listMaintainer.onAnswerCorrect(curWord)
             }
             Answer.WRONG -> {
                 numWrong++
-                streak = 0
                 curItem.localNumWrong++
 
                 if (updateMyWordsUnyt) {
@@ -106,7 +103,6 @@ class StudyItemIterator private constructor(
         }
 
         answer = Answer.NONE
-        Log.d(TAG, "Streak: $streak")
 
         if (updateMyWordsUnyt) {
             myWordsMaintainer.onNextWord(curWord)

@@ -12,12 +12,50 @@
       defaultHint_de="Nomen"
       lvl="n3"
       translations="en, de"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
       requiresIds="true"
     >
         <section>
             <!-- unsorted -->
+            <word
+              w="【袋：ふくろ】"
+              rom="fukuro"
+              tr_en="bag; sack"
+              tr_de="Sack; Tüte"
+              lvl="n3"
+              category="shopping"
+              id="fukuro-bag"
+            >
+                <keep_apart_from id="kago-basket" />
+                <phrase
+                  ph="【紙：かみ】【袋：ぶくろ】"
+                  rom="kami bukuro"
+                  tr_en="paper bag"
+                  tr_de="Papiertüte"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【小：こ】【麦：むぎ】【粉：こ】の【袋：ふくろ】"
+                  rom="komugiko no fukuro"
+                  tr_en="a bag of wheat flour"
+                  tr_de="ein Sack Weizenmehl"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="jisho has nx for komugiko"
+                />
+                <sentence
+                  s="それらの【袋：ふくろ】を【運：はこ】ぶのを【手：て】【伝：つだ】った。"
+                  rom="Sorera no fukuro o hakobu no o tetsudatta."
+                  tr_en="I helped carry those bags."
+                  tr_de="Ich habe geholfen, diese Säcke zu transportieren."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
             <word
               w="【奨：しょう】【学：がく】【金：きん】"
               rom="shōgakukin"
@@ -318,6 +356,7 @@
                 <see id="iiwake-excuse" rem="closely related" />
                 <keep_apart_from id="iiwake-excuse" />
                 <keep_apart_from id="mōsu-say" />
+                <keep_apart_from id="wake-conclusion" />
                 <keep_apart_from id="mōshiwakenai-inexcusable" />
                 <keep_together id="mōshiwakenai-inexcusable" />
                 <!--
@@ -367,12 +406,39 @@
               rom="gakushū"
               tr_en="study; learning; tutorial"
               tr_de="Studieren; Lernen; Lehrgang"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              hint_en="acquisition of knowledge or skills"
+              hint_de="Wissen oder Fähigkeiten erwerben"
               lvl="n3"
               category="education"
               id="gakushū-study"
             >
+                <!--
+                    学習・がくしゅう：process of learning, acquisition of knowledge or skills
+                    学問・がくもん：scholarship, academic discipline, scholarly learning
+                    勉強・べんきょう：study; doing schoolwork; studying for exams
+                -->
+                <keep_apart_from id="gakumon-learning" />
+                <keep_apart_from id="benkyō-study" />
+                <keep_apart_from id="kyōiku-education" />
+                <keep_apart_from id="manabu-study" />
+                <keep_apart_from id="narau-betaught" />
+                <phrase
+                  ph="【学：がく】【習：しゅう】【法：ほう】"
+                  rom="gakushū-hō"
+                  tr_en="study method; learning method"
+                  tr_de="Lernmethode; Lerntechnik"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【外：がい】【国：こく】【語：ご】の【学：がく】【習：しゅう】"
+                  rom="gaikoku-go no gakushū"
+                  tr_en="learning foreign languages"
+                  tr_de="das Studieren von fremden Sprachen"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【日：に】【本：ほん】【語：ご】をもっと【早：はや】く【学：がく】【習：しゅう】するにはどうしたらいいですか。"
                   rom="Nihon-go o motto hayaku gakushū suru ni wa dō shitara ii desu ka?"
@@ -383,39 +449,30 @@
                 />
             </word>
             <word
-              w="【訳：わけ】"
-              rom="wake"
-              tr_en="conclusion; judgement; meaning"
-              tr_de="Schlussfolgerung; Beurteilung; Bedeutung"
+              w="【寮：りょう】"
+              rom="ryō"
+              tr_en="hostel; dormitory; tea-ceremony room"
+              tr_de="Herberge; Wohnheim; Teezeremonie-Raum"
               lvl="n3"
-              id="wake-conclusion"
-              usuallyInKana="true"
-              rem="not in GENKI index; jisho has n4"
+              category="travelling, home"
+              id="ryō-hostel"
+              rem="appears in GENKI2 p.116 vocab section; jisho has n2"
             >
-                <!-- verified with ChatGPT, jisho and lib0 that 訳 is indeed the わけ appearing in 500mon N3 q322 -->
-                <sentence
-                  s="【山：やま】【下：した】さんの【行：こう】【動：どう】のわけが【分：わ】かりません。"
-                  rom="Yamashita-san no kōdō no wake ga wakarimasen."
-                  tr_en="I don't understand the meaning behind Mr Yamashita's behaviour."
-                  tr_de="Ich verstehe die Bedeutung von Herr Yamashitas Verhalten nicht."
+                <phrase
+                  ph="【寮：りょう】の【部：へ】【屋：や】"
+                  rom="ryō no heya"
+                  tr_en="a room in a hostel or dormitory"
+                  tr_de="Raum in einer Herberge oder einem Wohnheim"
                   lvl="n3"
-                  origin="ChatGPT"
                 />
                 <sentence
-                  s="【税：ぜい】【金：きん】は【払：はら】わないわけにはいけない。"
-                  rom="Zeikin wa harawanai wake ni wa ikenai."
-                  tr_en="Not paying one's taxes is not an option."
-                  tr_de="Die Steuern nicht zahlen ist keine Option."
+                  s="その【寮：りょう】の【部：へ】【屋：や】はかなり【狭：せま】い。"
+                  rom="Sono ryō no heya wa kanari semai."
+                  tr_en="The dorm room is quite small."
+                  tr_de="Das Zimmer in der Herberge ist ziemlich klein."
                   lvl="n3"
-                  origin="500mon N3 q322"
-                />
-                <sentence
-                  s="【勉：べん】【強：きょう】しないのだから、【試：し】【験：けん】ができるわけはない。"
-                  rom="Benkyō shinai no da kara, shiken ga dekiru wake wa nai."
-                  tr_en="Since you don't study, there is no way you can pass the exam."
-                  tr_de="Da du nicht studierst, wirst du die Prüfung garantiert nicht bestehen."
-                  lvl="n3"
-                  origin="500mon N3 q322"
+                  origin="self"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -458,6 +515,23 @@
               category="transportation"
               id="shuppatsu-departure"
             >
+                <keep_together id="tōchaku-arrival" />
+                <phrase
+                  ph="【出：しゅっ】【発：ぱつ】【時：じ】【間：かん】"
+                  rom="shuppatsu jikan"
+                  tr_en="departure time"
+                  tr_de="Abfahrtszeit"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【出：しゅっ】【発：ぱつ】の【合：あい】【図：ず】"
+                  rom="shuppatsu no aizu"
+                  tr_en="starting signal"
+                  tr_de="Startsignal"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【明日：あした】【出：しゅっ】【発：ぱつ】する【予：よ】【定：てい】です。"
                   rom="Ashita shuppatsu suru yotei desu."
@@ -474,6 +548,41 @@
                   tr_de="Wir fahren gleich ab, also bitte steige schnell ein."
                   lvl="n3"
                   origin="500mon q329"
+                />
+            </word>
+            <word
+              w="【到：とう】【着：ちゃく】"
+              rom="tōchaku"
+              tr_en="arrival"
+              tr_de="Ankunft"
+              lvl="n3"
+              category="transportation"
+              id="tōchaku-arrival"
+            >
+                <keep_together id="shuppatsu-departure" />
+                <phrase
+                  ph="【到：とう】【着：ちゃく】【時：じ】【刻：こく】"
+                  rom="tōchaku jikoku"
+                  tr_en="arrival time"
+                  tr_de="Ankunftszeit"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【空：くう】【港：こう】に【到：とう】【着：ちゃく】する"
+                  rom="kūkō ni tōchaku suru"
+                  tr_en="to arrive at the airport"
+                  tr_de="am Flughafen ankommen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【到：とう】【着：ちゃく】は【何：なん】【時：じ】ですか。"
+                  rom="Tōchaku wa nan-ji desu ka?"
+                  tr_en="At what time will we arrive?"
+                  tr_de="Um welche Zeit werden wir ankommen?"
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -520,6 +629,15 @@
               category="education"
               id="gakki-semester"
             >
+                <phrase
+                  ph="【新：しん】【学：がっ】【期：き】"
+                  rom="shingakki"
+                  tr_en="the new school term"
+                  tr_de="das neue Semester"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
                 <sentence
                   s="【四：し】【月：がつ】から【新：しん】【学：がっ】【期：き】が【始：はじ】まる。"
                   rom="Shi-gatsu kara shingakki ga hajimaru."
@@ -577,24 +695,6 @@
                 />
             </word>
             <word
-              w="【到：とう】【着：ちゃく】"
-              rom="tōchaku"
-              tr_en="arrival"
-              tr_de="Ankunft"
-              lvl="n3"
-              category="transportation"
-              id="tōchaku-arrival"
-            >
-                <phrase
-                  ph="【空：くう】【港：こう】に【到：とう】【着：ちゃく】する"
-                  rom="kūkō ni tōchaku suru"
-                  tr_en="to arrive at the airport"
-                  tr_de="am Flughafen ankommen"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-            </word>
-            <word
               w="【床：ゆか】"
               rom="yuka"
               tr_en="floor"
@@ -639,6 +739,15 @@
                   tr_de="in der Mittagspause einen Mittagsschlaf machen"
                   lvl="n3"
                   origin="ChatGPT"
+                />
+                <sentence
+                  s="【毎：まい】【日：にち】 【何：なん】【時：じ】【間：かん】【昼：ひる】【寝：ね】しますか。"
+                  rom="Mai-nichi nan-jikan hirune shimasu ka?"
+                  tr_en="How many hours do you take a siesta every day?"
+                  tr_de="Wieviele Stunden nimmst du eine Siesta jeden Tag?"
+                  allowSpaces="true"
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -691,6 +800,23 @@
               rem="appears in GENKI2 p.94 vocab section"
             >
                 <keep_apart_from id="nikushin-bloodrelative" />
+                <phrase
+                  ph="【結：けっ】【婚：こん】して【親：しん】【戚：せき】になる"
+                  rom="kekkon shite shinseki ni naru"
+                  tr_en="to become related by marriage"
+                  tr_de="über Heirat miteinander verwandt werden"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【遠：とお】い【親：しん】【戚：せき】【関：かん】【係：けい】"
+                  rom="tōi shinseki kankei"
+                  tr_en="a distant familial relationship"
+                  tr_de="ein distantes Verwandtschaftsverhältnis"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
                 <sentence
                   s="ヨシとミキは【親：しん】【戚：せき】です。"
                   rom="Yoshi to Miki wa shinseki desu."
@@ -746,6 +872,23 @@
               id="shingō-signal"
             >
                 <keep_apart_from id="shomei-signature" />
+                <keep_apart_from id="aizu-sign" />
+                <phrase
+                  ph="【青：あお】【信：しん】【号：ごう】"
+                  rom="ao-shingō"
+                  tr_en="(traffic) green light"
+                  tr_de="(Verkehr) grünes Licht"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【赤：あか】【信：しん】【号：ごう】"
+                  rom="aka-shingō"
+                  tr_en="(traffic) red light"
+                  tr_de="(Verkehr) rotes Licht"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【信：しん】【号：ごう】は【全：ぜん】【部：ぶ】【赤：あか】だった。"
                   rom="Shingō wa zenbu aka datta."
@@ -764,6 +907,14 @@
               category="entertainment"
               id="haiyū-actor"
             >
+                <phrase
+                  ph="【好：す】きな【俳：はい】【優：ゆう】"
+                  rom="suki na haiyū"
+                  tr_en="(my, your) favourite actor"
+                  tr_de="(mein, dein) Lieblingsschauspieler"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="この【俳：はい】【優：ゆう】はかっこよすぎる。"
                   rom="Kono haiyū wa kakkoyo-sugiru."
@@ -855,6 +1006,29 @@
               id="kage-background"
             >
                 <see id="kage-shadow" rem="closely related" />
+                <keep_apart_from id="kage-shadow" />
+                <keep_apart_from id="hikage-shade" />
+                <phrase
+                  ph="【大：おお】きな【木：き】の【陰：かげ】で"
+                  rom="ōki na ki no kage de"
+                  tr_en="in the shade of a big tree"
+                  tr_de="im Schatten eines grossen Baumes"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; there is also 木陰・こかげ（nx）, but it cannot be combined with ōkina"
+                />
+                <phrase
+                  ph="【陰：かげ】【口：ぐち】"
+                  rom="kage-guchi"
+                  tr_en="malicious gossip; backbiting"
+                  tr_de="böswilliges Gerede; Verleumdung"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <!-- 陰気・いんき・gloomy (n1) -->
+                <!-- 陰謀・いんぼう・plot; intrigue (nx) -->
+                <!-- 夜陰・やいん・cover of the night (nx) -->
                 <sentence
                   s="マリは【陰：かげ】で【泣：な】いていた。"
                   rom="Mari wa kage de naite ita."
@@ -922,6 +1096,14 @@
               category="finances"
               id="kinko-safe"
             >
+                <phrase
+                  ph="【重：おも】い【金：きん】【庫：こ】"
+                  rom="omoi kinko"
+                  tr_en="a heavy cashbox"
+                  tr_de="eine schwere Geldkassette"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【彼：かれ】は【金：きん】【庫：こ】から【私：わたし】の【金：かね】を【盗：ぬす】んだ。"
                   rom="Kare wa kinko kara watashi no kane o nusunda."
@@ -942,6 +1124,15 @@
             >
                 <!-- the verb is kōru-freeze, but uses a different kanji -->
                 <see id="kōru-freeze" rem="closely related" />
+                <phrase
+                  ph="【厚：あつ】い【氷：こおり】"
+                  rom="atsui kōri"
+                  tr_en="thick (layer of) ice"
+                  tr_de="dicke (Schicht) Eis"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
                 <sentence
                   s="【湖：みずうみ】には【薄：うす】い【氷：こおり】が【貼：は】っていた。"
                   rom="Mizūmi ni wa usui kōri ga hatte ita."
@@ -954,33 +1145,83 @@
             <word
               w="【出：しゅっ】【席：せき】"
               rom="shusseki"
-              tr_en="being present at (a meeting); attending (school, etc.)"
-              tr_de="Teilnahme (an einem Meeting); (zur Schule, usw.) gehen"
+              tr_en="being present at; attending"
+              tr_de="Teilnahme; anwesend sein"
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
               id="shusseki-attend"
             >
-                <!--
-                    彼は今日出席できないので、私が代わりに行きます。
-                    (Kare wa kyou shusseki dekinai node, watashi ga kawari ni ikimasu.)
-                    "Since he can't attend today, I will go in his place.
-                    ChatGPT
-                -->
+                <see id="kesseki-absence" rem="closely related" />
+                <keep_apart_from id="sanka-participation" />
+                <phrase
+                  ph="【会：かい】【議：ぎ】に【出：しゅっ】【席：せき】する"
+                  rom="kaigi ni shusseki suru"
+                  tr_en="to be present at the meeting"
+                  tr_de="an der Konferenz teilnehmen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【全：ぜん】【員：いん】が【出：しゅっ】【席：せき】していた。"
+                  rom="Zen'in ga shusseki shite ita."
+                  tr_en="Everybody was present."
+                  tr_de="Alle waren anwesend."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
-              w="お【祈：いの】り"
-              rom="o-inori"
+              w="【祈：いの】り"
+              rom="inori"
               tr_en="prayer; to pray"
               tr_de="Gebet; beten"
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
               category="culture"
-              id="oinori-prayer"
-              rem="appears in GENKI2 p.117 vocab section; jisho has nx for o-inori, n1 for inori"
+              id="inori-prayer"
+              rem="appears in GENKI2 p.117 vocab section as o-inori; jisho has nx for o-inori, n1 for inori"
             >
                 <see id="inoru-wish" rem="verb" />
+                <keep_apart_from id="oinori-prayer" />
+                <keep_together id="oinori-prayer" />
+                <phrase
+                  ph="【長：なが】い【祈：いの】り"
+                  rom="nagai inori"
+                  tr_en="a long prayer"
+                  tr_de="ein langes Gebet"
+                  lvl="n3"
+                  origin="self"
+                />
+                <sentence
+                  s="ご【成：せい】【功：こう】をお【祈：いの】りします。"
+                  rom="Go-seikō o o-inori shimasu."
+                  tr_en="I pray for your success."
+                  tr_de="Ich bete für deinen Erfolg."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="'your' is probably correct, because the sentence is in honorific form"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】の【祈：いの】りから【何：なに】も【起：お】こらなかった。"
+                  rom="Kanojo no inori kara nani mo okoranakatta."
+                  tr_en="Nothing has resulted from her prayer."
+                  tr_de="Ihre Gebete blieben ohne Ergebnis."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="お【祈：いの】り"
+              rom="o-inori"
+              tr_en="prayer; to pray"
+              lvl="n3"
+              id="oinori-prayer"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="inori-prayer" />
+                <keep_together id="inori-prayer" />
             </word>
             <word
               w="【給：きゅう】【料：りょう】"
@@ -995,6 +1236,23 @@
                 <!-- 給与 kyūyo (n2) is more formal than kyūryō -->
                 <keep_apart_from id="shūnyū-income" />
                 <keep_apart_from id="chingin-wages" />
+                <phrase
+                  ph="【給：きゅう】【料：りょう】をもらう"
+                  rom="kyūryō o morau"
+                  tr_en="to get one's wages"
+                  tr_de="den Lohn bekommen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【四：し】【月：がつ】から【給：きゅう】【料：りょう】が【少：すこ】し【上：あ】がります。"
+                  rom="Shi-gatsu kara kyūryō ga sukoshi agarimasu."
+                  tr_en="My salary will increase slightly from April."
+                  tr_de="Mein Gehalt wird ab April ein bisschen höher sein."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
             </word>
             <word
               w="【会：かい】"
@@ -1004,12 +1262,62 @@
               lvl="n3"
               category="meetings, people"
               id="kai-club"
+              HIDDEN="true"
+              rem="hidden, because compounds are much more common"
             >
+                <!--
+                    会社・かいしゃ・n5・company
+                    会議・かいぎ・n4・meeting
+                    教会・きょうかい・n4・church
+                    大会・たいかい・n3・tournament
+                    学会・がっかい・n2・academic society
+                    会見・かいけん・n1・interview
+                    会談・かいだん・n1・talks
+                    歓迎会・かんげいかい・nx・welcome party
+                    送別会・そうべつかい・nx・farewell party
+                    etc.
+                -->
                 <keep_apart_from id="kaigi-meeting" />
                 <keep_apart_from id="atsumari-meeting" />
                 <keep_apart_from id="kaigō-meeting" />
                 <keep_apart_from id="mītingu-meeting" />
                 <keep_apart_from id="kumiai-union" />
+            </word>
+            <word
+              w="【物：もの】【語：がたり】"
+              rom="monogatari"
+              tr_en="story; tale; fable"
+              tr_de="Geschichte; Märchen; Fabel"
+              lvl="n3"
+              category="literature, entertainment"
+              id="monogatari-tale"
+            >
+                <keep_apart_from id="hanashi-talk" />
+                <phrase
+                  ph="【怖：こわ】い【物：もの】【語：がたり】"
+                  rom="kowai monogatari"
+                  tr_en="a frightening tale"
+                  tr_de="Gruselgeschichte"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【物：もの】【語：がたり】の【始：はじ】まり"
+                  rom="monogatari no hajimari"
+                  tr_en="the beginning of the story"
+                  tr_de="der Anfang der Geschichte"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】は【物：もの】【語：がたり】をたくさん【書：か】いた。"
+                  rom="Watashi wa monogatari o takusan kaita."
+                  tr_en="I've written a lot of stories."
+                  tr_de="Ich habe viele Geschichten geschrieben."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【向：む】き"
@@ -1023,6 +1331,50 @@
             >
                 <see id="muku-turntoward" rem="verb" />
                 <see id="mukō-opposite" rem="closely related" />
+                <keep_apart_from id="hō-way" />
+                <keep_apart_from id="hōkō-orientation" />
+                <phrase
+                  ph="【前：まえ】【向：む】き"
+                  rom="mae-muki"
+                  tr_en="front-facing; forwards"
+                  tr_de="nach vorne gerichtet; frontseitig"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【後：うし】ろ【向：む】き"
+                  rom="ushiro-muki"
+                  tr_en="back-facing; backwards"
+                  tr_de="nach hinten gerichtet; rückwärts"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【横：よこ】【向：む】き"
+                  rom="yoko-muki"
+                  tr_en="sideways (orientation)"
+                  tr_de="seitlich; seitwärts"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <!-- 上向き・うわむき・nx: pointing up; upwards -->
+                <!-- 下向き・したむき・nx; pointing down; downwards -->
+                <!-- 暮し向き・くらしむき・nx; lifestyle; life circumstances -->
+                <!-- 北向き・きたむき・nx; facing north -->
+                <!-- 東向き・ひがしむき・nx; facing east -->
+                <!-- 南向き・みなみむき・nx; facing south -->
+                <!-- 西向き・にしむき・nx; facing west -->
+                <sentence
+                  s="この【窓：まど】は【南：みなみ】【向：む】きだ。"
+                  rom="Kono mado wa minami-muki da."
+                  tr_en="This window looks to the south."
+                  tr_de="Dieses Fenster schaut nach Süden."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【嵐：あらし】"
@@ -1034,6 +1386,15 @@
               id="arashi-storm"
             >
                 <keep_apart_from id="raiu-thunderstorm" />
+                <keep_apart_from id="sajinarashi-duststorm" />
+                <phrase
+                  ph="【砂：すな】【嵐：あらし】"
+                  rom="suna-arashi"
+                  tr_en="a sandstorm"
+                  tr_de="ein Sandsturm"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
                 <sentence
                   s="【嵐：あらし】になるだろう。"
                   rom="Arashi ni naru darō."
@@ -1046,15 +1407,49 @@
             <word
               w="【飛：ひ】【行：こう】"
               rom="hikō"
-              tr_en="aviation; flight; to fly"
-              tr_de="Luftfahrt; Flug; fliegen"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              tr_en="aviation; flight"
+              tr_de="Luftfahrt; Flug"
+              studyInContext="preferred"
+              hint_en="noun"
+              hint_de="Nomen"
               lvl="n3"
               category="transportation"
               id="hikō-aviation"
             >
+                <!--
+                    飛行する is possible, but is technical and means to fly in (a plane, helicopter, etc.), not to steer
+                    it. In everyday speech, 乗る may be a better choice. For the meaning of steering a plane, the word
+                    is 操縦・そうじゅう (n1)
+                -->
                 <keep_apart_from id="bin-flight" />
+                <keep_apart_from id="sōjū-piloting" />
+                <see id="sōjū-piloting" rem="closely related" />
+                <phrase
+                  ph="【飛：ひ】【行：こう】【船：せん】"
+                  rom="hikōsen"
+                  tr_en="airship; blimp"
+                  tr_de="Luftschiff"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【飛：ひ】【行：こう】【時：じ】【間：かん】"
+                  rom="hikō-jikan"
+                  tr_en="duration of the flight"
+                  tr_de="Dauer des Fluges"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【飛：ひ】【行：こう】【中：ちゅう】はシートベルトをお【締：し】めになったままでお【過：す】ごしください。"
+                  rom="Hikō-chū wa shītoberuto o o-shime ni natta mama de o-sugoshi kudasai."
+                  tr_en="Please keep your seatbelt fastened while the aircraft is in flight."
+                  tr_de="Bitte lassen Sie Ihren Sitzgurt während der Zeit des Fluges angeschnallt."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has nx for shītoberuto, but it appears in 500mon q298"
+                />
             </word>
             <word
               w="【香：かお】り"
@@ -1065,7 +1460,26 @@
               category="fashion"
               id="kaori-fragrance"
             >
+                <see id="kōsui-perfume" rem="closely related" />
+                <keep_apart_from id="kōsui-perfume" />
                 <keep_apart_from id="nioi-fragrance" />
+                <phrase
+                  ph="【花：はな】の【香：かお】り"
+                  rom="hana no kaori"
+                  tr_en="the fragrance of flowers"
+                  tr_de="der Duft von Blumen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="there is also 花香・かこう (nx), but it's literary or poetic and uncommon in casual speech"
+                />
+                <sentence
+                  s="【甘：あま】い【香：かお】りがする。"
+                  rom="Amai kaori ga suru."
+                  tr_en="There is a sweet scent."
+                  tr_de="Es duftet süss."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
             </word>
             <word
               w="【大：だい】【学：がく】【院：いん】"
@@ -1083,29 +1497,95 @@
                 <!--
                     The hint was based on the answers here: https://hinative.com/questions/1760257
                 -->
+                <phrase
+                  ph="【大：だい】【学：がく】【院：いん】【生：せい】"
+                  rom="daigakuin-sei"
+                  tr_en="a post-graduate student"
+                  tr_de="ein Graduiertenstudent"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【彼：かれ】は【大：だい】【学：がく】【院：いん】で【勉：べん】【強：きょう】を【続：つづ】けた。"
+                  rom="Kare wa daigakuin de benkyō o tsudzuketa."
+                  tr_en="He continued his studies at graduate school."
+                  tr_de="Er führte seine Studien an der Graduiertenschule fort."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【最：さい】【悪：あく】"
               rom="saiaku"
               tr_en="the worst; terrible"
-              tr_de="das Schlimmste; schrecklich"
+              tr_de="das Schlimmste; das Schlechteste"
               hint_en="noun; na-adjective"
               hint_de="Nomen; Na-Adjektiv"
               lvl="n3"
               category="not-good, mood"
               id="saiaku-worst"
               rem="appears in GENKI2 p.117 vocab section; jisho has nx"
-            />
+            >
+                <phrase
+                  ph="【最：さい】【悪：あく】の【事：じ】【態：たい】に【備：そな】える"
+                  rom="saiaku no jitai ni sonaeru"
+                  tr_en="to prepare for the worst (situation)"
+                  tr_de="sich auf das Schlimmste (die schlimmste Situation) vorbereiten"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="lib0 also has saiaku no bāi"
+                />
+                <sentence
+                  s="これは【私：わたし】が【今：いま】までに【見：み】た【中：なか】で【最：さい】【悪：あく】の【映：えい】【画：が】です。"
+                  rom="Kore wa watashi ga ima made ni mita naka de saiaku no eiga desu."
+                  tr_en="Among all the films I have seen so far, this is the worst."
+                  tr_de="Unter allen Filmen, die ich je gesehen habe, ist dies der schlechteste."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT that 中 is prounounced なか here, and that の中で would be wrong here;
+                     but this would be possible: 私が今までに見た映画の中では、これは最悪です"
+                />
+            </word>
             <word
               w="【実：じつ】"
               rom="jitsu"
-              tr_en="truth; sincerity"
-              tr_de="Wahrheit; Ehrlichkeit"
+              tr_en="truth; sincerity; substance"
+              tr_de="Wahrheit; Ehrlichkeit; Substanz"
               lvl="n3"
               category="relationships"
               id="jitsu-truth"
               rem="appears in GENKI2 p.95 vocab section as jitsu wa; jisho has n1"
-            />
+            >
+                <keep_apart_from id="hontō-truth" />
+                <keep_apart_from id="jijitsu-fact" />
+                <keep_apart_from id="shinjitsu-truth" />
+                <!--
+                    実験・じっけん・n3: experiment
+                    実現・じつげん・n3: materialization; implementation
+                    実行・じっこう・n3: execution (of a plan); carrying out
+                    無実・むじつ・nx: innocence; guiltlessness; lacking substance
+                    忠実・ちゅうじつ・n1: loyal; faithful; devoted
+                    実 can also be read as み, which means fruit
+                -->
+                <phrase
+                  ph="【名：な】を【捨：す】てて【実：じつ】を【取：と】る"
+                  rom="na o sutete jitsu o toru"
+                  tr_en="sacrifice prestige for substance/benefit (proverb)"
+                  tr_de="das Prestige aufgeben für Substanz/Nutzen (Sprichwort)"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT that it's indeed じつ, not み"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】は【彼：かれ】の【実：じつ】の【母：はは】です。"
+                  rom="Kanojo wa kare no jitsu no haha desu."
+                  tr_en="She is his real mother."
+                  tr_de="Sie ist seine echte Mutter."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【離：り】【婚：こん】"
               rom="rikon"
@@ -1117,7 +1597,26 @@
               category="quarrel, relationships"
               id="rikon-divorce"
               rem="appears in GENKI2 p.117 vocab section"
-            />
+            >
+                <see id="kekkon-marriage" rem="closely related" />
+                <phrase
+                  ph="【離：り】【婚：こん】【率：りつ】"
+                  rom="rikon ritsu"
+                  tr_en="divorce rate; percentage of divorces"
+                  tr_de="Scheidungsquote; Prozentanteil von Scheidungen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx, but n3 for ritsu"
+                />
+                <sentence
+                  s="【中：なか】【村：むら】さんは【夫：おっと】と【離：り】【婚：こん】したね。"
+                  rom="Nakamura-san wa otto to rikon shita ne."
+                  tr_en="Mrs Nakamura divorced her husband, right?"
+                  tr_de="Frau Kanamura ist von ihrem Ehemann geschieden, richtig?"
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
             <word
               w="【通：つう】【学：がく】"
               rom="tsūgaku"
@@ -1127,45 +1626,200 @@
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
               category="transportation, education"
-              id="tsūgaku-commutingtoschool"
+              id="tsūgaku-commuting"
               rem="appears in GENKI2 p.287 kanji section"
-            />
+            >
+                <keep_apart_from id="tsūkin-commuting" />
+                <keep_apart_from id="kayou-commute" />
+                <phrase
+                  ph="【自：じ】【転：てん】【車：しゃ】で【通：つう】【学：がく】する"
+                  rom="jitensha de tsūgaku suru"
+                  tr_en="to commute to school by bike"
+                  tr_de="mit dem Fahrrad an die Schule pendeln"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="たいてい【歩：ある】いて【通：つう】【学：がく】します。"
+                  rom="Taitei aruite tsūgaku shimasu."
+                  tr_en="I generally walk to school."
+                  tr_de="Gewöhnlich gehe ich zu Fuss zur Schule."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
             <word
-              w="【不：ふ】【満：まん】"
-              rom="fuman"
-              tr_en="dissatisfaction; displeasure; discontent"
-              tr_de="Unzufriedenheit; Unmut; Unbehagen"
+              w="【冗：じょう】【談：だん】"
+              rom="jōdan"
+              tr_en="joke; jest; funny story"
+              tr_de="Scherz; Witz; lustige Geschichte"
               lvl="n3"
-              category="mood"
-              id="fuman-dissatisfaction"
-            />
+              category="entertainment, mood"
+              id="jōdan-joke"
+            >
+                <phrase
+                  ph="【冗：じょう】【談：だん】に【笑：わら】う"
+                  rom="jōdan ni warau"
+                  tr_en="to laugh about a joke"
+                  tr_de="über einen Witz lachen"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【小：こ】【林：ばやし】さんの【冗：じょう】【談：だん】で【場：ば】の【空：くう】【気：き】が【壊：こわ】れた。"
+                  rom="Kobayashi-san no jōdan de ba no kūki ga kowareta."
+                  tr_en="Because of Mr Kobayashi’s joke, the atmosphere was broken."
+                  tr_de="Wegen Herr Kobayashis Scherz war die ganze Stimmung dahin."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
             <word
               w="【物：ぶつ】【理：り】"
               rom="butsuri"
               tr_en="physics; law of nature"
               tr_de="Physik; Gesetz der Natur"
+              studyInContext="preferred"
               lvl="n3"
               category="physics, science"
               id="butsuri-physics"
-            />
+            >
+                <phrase
+                  ph="【物：ぶつ】【理：り】【学：がく】"
+                  rom="butsurigaku"
+                  tr_en="science of physics"
+                  tr_de="Physik (Wissenschaft)"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【物：ぶつ】【理：り】【学：がく】【者：しゃ】"
+                  rom="butsuri gakusha"
+                  tr_en="a physicist"
+                  tr_de="ein Physiker"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【物：ぶつ】【理：り】は【私：わたし】の【好：す】きな【科：か】【目：もく】だ。"
+                  rom="Butsuri wa watashi no suki na kamoku da."
+                  tr_en="Physics is my favourite subject."
+                  tr_de="Physik ist mein Lieblingsfach."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】は【物：ぶつ】【理：り】に【少：すこ】しも【興：きょう】【味：み】がない。"
+                  rom="Watashi wa butsuri ni sukoshi mo kyōmi ga nai."
+                  tr_en="I'm not in the least interested in physics."
+                  tr_de="Ich bin kein bisschen an Physik interessiert."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【本：ほん】【人：にん】"
               rom="honnin"
-              tr_en="the person in question; said person"
-              tr_de="die genannte Person"
+              tr_en="real person; in person"
+              tr_de="echte Person; persönlich"
+              studyInContext="preferred"
               lvl="n3"
               category="people"
               id="honnin-saidperson"
-            />
+            >
+                <phrase
+                  ph="【本：ほん】【人：にん】【確：かく】【認：にん】"
+                  rom="honnin kakunin"
+                  tr_en="identity verification (of a person)"
+                  tr_de="Identitätsprüfung (einer Person)"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【彼：かれ】【本：ほん】【人：にん】がやってきた。"
+                  rom="Kare honnin ga yatte kita."
+                  tr_en="He came in person."
+                  tr_de="Er selbst kam persönlich."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】はその【女：じょ】【優：ゆう】【本：ほん】【人：にん】に【話：はな】しかけた。"
+                  rom="Watashi wa sono joyū honnin ni hanashi-kaketa."
+                  tr_en="I spoke to that actress herself."
+                  tr_de="Ich habe mit dieser Schauspielerin persönlich geredet."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【君：きみ】【本：ほん】【人：にん】が【行：い】かなければならないだろう。"
+                  rom="Kimi honnin ga ikanakereba naranai darō."
+                  tr_en="I suppose you'll have to go in person."
+                  tr_de="Du wirst wohl persönlich hingehen müssen, würde ich sagen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【油：あぶら】"
               rom="abura"
               tr_en="oil"
-              tr_de="Speiseöl"
+              tr_de="Öl"
               lvl="n3"
-              category="cooking"
+              category="cooking, technical"
               id="abura-oil"
-            />
+            >
+                <keep_apart_from id="sekiyu-crudeoil" />
+                <keep_together id="sekiyu-crudeoil" />
+                <phrase
+                  ph="サラダ【油：あぶら】"
+                  rom="sarada abura"
+                  tr_en="salad oil; vegetable oil"
+                  tr_de="Salatöl; Pflanzenöl"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【食：しょく】【用：よう】【油：ゆ】"
+                  rom="shoku-yō yu"
+                  tr_en="edible oil"
+                  tr_de="Speiseöl"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx; ChatGPT and macOS TextToSpeech say しょくようゆ, but jisho has しょくようあぶら"
+                />
+                <phrase
+                  ph="【石：せき】【油：ゆ】"
+                  rom="sekiyu"
+                  tr_en="crude oil; petroleum"
+                  tr_de="Rohöl; Erdöl"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【服：ふく】は【油：あぶら】で【汚：よご】れていた。"
+                  rom="Fuku wa abura de yogorete ita."
+                  tr_en="My clothes were dirty with oil."
+                  tr_de="Meine Kleider waren mit Öl verschmutzt."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【石：せき】【油：ゆ】"
+              rom="sekiyu"
+              tr_en="crude oil; petroleum"
+              lvl="n3"
+              id="sekiyu-crudeoil"
+              rem="now a phrase of abura"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="abura-oil" />
+                <keep_together id="abura-oil" />
+            </word>
             <word
               w="【粉：こな】"
               rom="kona"
@@ -1174,16 +1828,57 @@
               lvl="n3"
               category="cooking"
               id="kona-flour"
-            />
+            >
+                <keep_apart_from id="konagona-smallpieces" />
+                <keep_together id="konagona-smallpieces" />
+                <keep_apart_from id="funmatsu-powder" />
+                <phrase
+                  ph="【粉：こな】【雪：ゆき】"
+                  rom="kona-yuki"
+                  tr_en="powder snow"
+                  tr_de="Pulverschnee"
+                  lvl="n3"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【粉：こな】【々：ごな】"
+                  rom="kona-gona"
+                  tr_en="in very small pieces"
+                  tr_de="in kleinen Stückchen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has n1"
+                />
+                <sentence
+                  s="【粉：こな】と【卵：たまご】【２：に】【個：こ】を【混：ま】ぜなさい。"
+                  rom="Kona to tamago ni-ko o mazenasai."
+                  tr_en="Mix the flour and the two eggs together."
+                  tr_de="Mische das Mehl und die zwei Eier zusammen."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; also possible: 卵を２個、粉と混ぜなさい"
+                />
+                <sentence
+                  s="【瓶：びん】は【粉：こな】【々：ごな】に【割：わ】れた。"
+                  rom="Bin wa kona-gona ni wareta."
+                  tr_en="The bottle broke to pieces."
+                  tr_de="Die Flasche zerbrach in Stücke."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
-              w="【鋏：はさみ】"
-              rom="hasami"
-              tr_en="scissors"
-              tr_de="Schere"
+              w="【粉：こな】【々：ごな】"
+              rom="kona-gona"
+              tr_en="in very small pieces"
               lvl="n3"
-              category="diy"
-              id="hasami-scissors"
-            />
+              id="konagona-smallpieces"
+              rem="jisho has n1; is now a phrase of kona"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="kona-flour" />
+                <keep_together id="kona-flour" />
+            </word>
             <word
               w="【勇：ゆう】【気：き】"
               rom="yūki"
@@ -1192,7 +1887,32 @@
               lvl="n3"
               category="mood"
               id="yūki-courage"
-            />
+            >
+                <phrase
+                  ph="【川：かわ】を【泳：およ】いで【渡：わた】る【勇：ゆう】【気：き】"
+                  rom="kawa o oyoide wataru yūki"
+                  tr_en="the courage to swim across the river"
+                  tr_de="der Mut, den Fluss schwimmend zu überqueren"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【電：でん】【話：わ】する【勇：ゆう】【気：き】"
+                  rom="denwa suru yūki"
+                  tr_en="the courage to make a phone call"
+                  tr_de="der Mut per Telefon anzurufen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【君：きみ】は【勇：ゆう】【気：き】があるね。"
+                  rom="Kimi wa yūki ga aru ne."
+                  tr_en="You're very brave, aren't you?"
+                  tr_de="Du bist aber mutig!"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【人：にん】【間：げん】"
               rom="ningen"
@@ -1201,7 +1921,34 @@
               lvl="n3"
               category="people"
               id="ningen-human"
-            />
+            >
+                <phrase
+                  ph="【普：ふ】【通：つう】の【人：にん】【間：げん】"
+                  rom="futsū no ningen"
+                  tr_en="an ordinary man"
+                  tr_de="ein ganz gewöhnlicher Mensch"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【人：にん】【間：げん】【性：せい】"
+                  rom="ningensei"
+                  tr_en="humanity; human nature"
+                  tr_de="Menschheit; die menschliche Natur"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【犬：いぬ】は【人：にん】【間：げん】にとって【最：さい】【高：こう】の【友：とも】です。"
+                  rom="Inu wa ningen ni totte saikō no tomo desu."
+                  tr_en="A dog is a human's best friend."
+                  tr_de="Der Hund ist des Menschen bester Freund."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; jisho has nx for ni totte"
+                />
+            </word>
         </section>
     </unit>
 </vocabulary>

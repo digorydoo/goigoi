@@ -638,6 +638,7 @@
               tr_en="pollen"
               tr_de="Pollen; Blütenstaub"
               lvl="n1"
+              category="nature"
               id="kafun-pollen"
             >
                 <phrase
@@ -692,6 +693,8 @@
               lvl="n1"
               id="shinjitsu-truth"
             >
+                <keep_apart_from id="jitsu-truth" />
+                <keep_apart_from id="jijitsu-fact" />
                 <!-- 真実を出す - shinjitsu o dasu - to reveal the truth (ChatGPT) -->
                 <sentence
                   s="【真：しん】【実：じつ】を【話：はな】した。"

@@ -507,6 +507,8 @@
               id="honyaku-translation"
               rem="appears in GENKI2 L22 vocab section"
             >
+                <keep_apart_from id="tsūyaku-interpretation" />
+                <keep_apart_from id="yaku-translation" />
                 <phrase
                   ph="【英：えい】【語：ご】から【日：に】【本：ほん】【語：ご】へ【翻：ほん】【訳：やく】する"
                   rom="eigo kara Nihon-go e honyaku suru"
@@ -1220,35 +1222,6 @@
                 />
             </word>
             <word
-              w="【忘：わす】れ【物：もの】"
-              rom="wasuremono"
-              tr_en="lost article; something forgotten"
-              tr_de="verlorener Artikel; etwas vergessenes"
-              lvl="n4"
-              category="objects"
-              id="wasuremono-lostarticle"
-            >
-                <phrase
-                  ph="【忘：わす】れ【物：もの】を【取：と】りに【戻：もど】る"
-                  rom="wasuremono o tori ni modoru"
-                  tr_en="to go back getting what one has forgotten"
-                  tr_de="zurückgehen, um etwas vergessenes zu holen"
-                  lvl="n4"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【部：へ】【屋：や】に【忘：わす】れ【物：もの】をしてしまいました。"
-                  rom="Heya ni wasuremono o shite shimaimashita."
-                  tr_en="I left something in the room, I'm afraid."
-                  tr_de="Ich habe leider etwas im Raum vergessen."
-                  explanation_en="「しまう」gives the sentence a regretful feel."
-                  explanation_de="「しまう」gibt dem Satz das Gefühl von Bedauern."
-                  lvl="n4"
-                  origin="lib0"
-                  rem="jisho has n3 for shimau; shimau appears in 500mon q330"
-                />
-            </word>
-            <word
               w="【寝：ね】【坊：ぼう】"
               rom="nebō"
               tr_en="sleepyhead; sleeping in; get up late"
@@ -1286,6 +1259,7 @@
               category="body"
               id="ke-hair"
             >
+                <keep_apart_from id="kami-hair" />
                 <phrase
                   ph="【髪：かみ】の【毛：け】"
                   rom="kami no ke"
@@ -1740,6 +1714,7 @@
               rem="jisho has n3"
             >
                 <keep_apart_from id="hōkō-orientation" />
+                <keep_apart_from id="muki-direction" />
                 <phrase
                   ph="【東：ひがし】の【方：ほう】に【向：む】かう"
                   rom="higashi no hō ni mukau"
@@ -1847,6 +1822,47 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【周：まわ】り"
+              rom="mawari"
+              tr_en="circumference; surroundings; neighbourhood"
+              tr_de="Umfang; Umfeld; Umgebung"
+              lvl="n4"
+              category="general, city"
+              id="mawari-circumference"
+            >
+                <keep_apart_from id="atari-vicinity" />
+                <keep_apart_from id="chikaku-neighbourhood" />
+                <keep_apart_from id="kinjo-neighbourhood" />
+                <keep_apart_from id="hen-area" />
+                <keep_apart_from id="shūi-circumference" />
+                <keep_apart_from id="enshū-circumference" />
+                <keep_apart_from id="shūhen-circumference" />
+                <phrase
+                  ph="【池：いけ】の【周：まわ】りを【歩：ある】く"
+                  rom="ike no mawari o aruku"
+                  tr_en="to walk around the pond"
+                  tr_de="um den Teich spazieren"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【家：いえ】の【周：まわ】りを【散：さん】【歩：ぽ】します。"
+                  rom="Ie no mawari o sanpo shimasu."
+                  tr_en="I take a walk around the house."
+                  tr_de="Ich spaziere im Umkreis des Hauses."
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【学：がっ】【校：こう】の【周：まわ】りには【店：みせ】がたくさんあります。"
+                  rom="Gakkō no mawari ni wa mise ga takusan arimasu."
+                  tr_en="There are many shops around school."
+                  tr_de="Es gibt viele Läden in der Umgebung der Schule."
+                  lvl="n4"
+                  origin="ChatGPT"
                 />
             </word>
         </section>

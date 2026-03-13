@@ -3,7 +3,7 @@ package io.github.digorydoo.goigoi.db
 import ch.digorydoo.kutils.cjk.FuriganaString
 import ch.digorydoo.kutils.cjk.IntlString
 import ch.digorydoo.kutils.cjk.JLPTLevel
-import ch.digorydoo.kutils.cjk.isHiragana
+import ch.digorydoo.kutils.cjk.isKana
 import io.github.digorydoo.goigoi.core.StudyInContextKind
 import io.github.digorydoo.goigoi.core.WordCategory
 import io.github.digorydoo.goigoi.core.WordHint
@@ -47,21 +47,34 @@ class Word {
             .filterNotNull()
             .joinToString("; ")
 
-    val honorificPrefix: String
+    val kanaPrefix: String
         get() {
             val kanji = kanji
             val kana = kana
-            if (kanji == kana) return "" // we can't tell if pure kana has an honorific prefix
-
             var prefix = ""
 
             for (i in 0 ..< min(kanji.length, kana.length)) {
                 val c = kanji[i]
-                if (c != kana[i] || !c.isHiragana()) break
+                if (c != kana[i] || !c.isKana()) break
                 prefix += c
             }
 
             return prefix
+        }
+
+    val kanaSuffix: String
+        get() {
+            val kanji = kanji
+            val kana = kana
+            var suffix = ""
+
+            for (i in 0 ..< min(kanji.length, kana.length)) {
+                val c = kanji[kanji.length - i - 1]
+                if (c != kana[kana.length - i - 1] || !c.isKana()) break
+                suffix = c + suffix
+            }
+
+            return suffix
         }
 
     override fun toString() =

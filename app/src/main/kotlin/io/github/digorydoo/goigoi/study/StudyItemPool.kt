@@ -1,13 +1,11 @@
 package io.github.digorydoo.goigoi.study
 
 import android.util.Log
+import ch.digorydoo.kutils.math.randomIntBiasedTowardsEnd
 import io.github.digorydoo.goigoi.db.Word
 import io.github.digorydoo.goigoi.stats.Stats
 import io.github.digorydoo.goigoi.study.MyWordsMaintainer.Companion.MIN_RATING_FOR_REMOVAL_FROM_MY_WORDS
 import io.github.digorydoo.goigoi.study.StudyListMaintainer.Companion.POS_FOR_NEW_WORD
-import ch.digorydoo.kutils.math.clamp
-import ch.digorydoo.kutils.math.randomIntBiasedTowardsEnd
-import kotlin.random.Random
 
 class StudyItemPool(
     private val delegate: Delegate,
@@ -72,29 +70,6 @@ class StudyItemPool(
         return word
     }
 
-    fun addOneToListFromHeadOrPast(list: MutableList<StudyItem>, maxListSize: Int) {
-        val idx = superProgressiveIdx
-        val recentIdx = idx - NUM_WORDS_CONSIDERED_RECENT
-
-        if (recentIdx <= MAX_SEEK_AHEAD) {
-            // Too few words to pick from past
-            addOneToListFromHead(list, maxListSize)
-            return
-        }
-
-        // The probability of picking a word from past increases with the index until some maximum is reached.
-        val probability = MAX_PROBABILITY_TO_PICK_WORD_FROM_PAST *
-            clamp(idx.toFloat() / INDEX_OF_MAX_PROBABILITY_TO_PICK_WORD_FROM_PAST)
-
-        if (Random.nextFloat() > probability) {
-            Log.d(TAG, "Rolled the dice at probability $probability and got: fetching from words ahead")
-            addOneToListFromHead(list, maxListSize)
-        } else {
-            Log.d(TAG, "Rolled the dice at probability $probability and got: adding one from far past")
-            addOneToListFromFarPast(list, maxListSize)
-        }
-    }
-
     fun fillListFromHead(list: MutableList<StudyItem>, maxListSize: Int, maxRatingAllowed: Float) {
         addWords(
             list,
@@ -125,7 +100,7 @@ class StudyItemPool(
         )
     }
 
-    private fun addOneToListFromHead(list: MutableList<StudyItem>, maxListSize: Int) {
+    fun addOneToListFromHead(list: MutableList<StudyItem>, maxListSize: Int) {
         addWords(
             list,
             maxListSize = maxListSize,
@@ -288,8 +263,6 @@ class StudyItemPool(
         private const val TAG = "StudyItemPool"
         private const val MAX_SEEK_AHEAD = 100
         private const val NUM_WORDS_CONSIDERED_RECENT = 100
-        private const val INDEX_OF_MAX_PROBABILITY_TO_PICK_WORD_FROM_PAST = 2300 // end of N3, close to start of N2
-        private const val MAX_PROBABILITY_TO_PICK_WORD_FROM_PAST = 0.21f
         private const val MAX_MILLIS_FOR_SEEK_AHEAD = 150L // milliseconds
     }
 }

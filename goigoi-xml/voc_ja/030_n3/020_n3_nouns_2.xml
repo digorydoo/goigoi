@@ -12,8 +12,8 @@
       defaultHint_de="Nomen"
       lvl="n3"
       translations="en, de"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
       requiresIds="true"
     >
         <section>
@@ -1264,6 +1264,15 @@
               category="scenery, nature"
               id="izumi-fountain"
             >
+                <keep_apart_from id="suigen-riversource" />
+                <phrase
+                  ph="【山：やま】の【泉：いずみ】"
+                  rom="yama no izumi"
+                  tr_en="a mountain spring"
+                  tr_de="eine Bergquelle"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
                 <phrase
                   ph="【泉：いずみ】の【水：みず】を【飲：の】む"
                   rom="izumi no mizu o nomu"
@@ -1271,6 +1280,14 @@
                   tr_de="vom Quellwasser trinken"
                   lvl="n3"
                   origin="lib0"
+                />
+                <sentence
+                  s="【泉：いずみ】の【水：みず】で【顔：かお】を【洗：あら】った。"
+                  rom="Izumi no mizu de kao o aratta."
+                  tr_en="I washed my face with water from the spring."
+                  tr_de="Ich wusch mein Gesicht mit Wasser aus der Quelle."
+                  lvl="n3"
+                  origin="ChatGPT"
                 />
             </word>
             <word
@@ -1281,7 +1298,48 @@
               lvl="n3"
               category="nature, beach"
               id="nami-wave"
-            />
+            >
+                <keep_apart_from id="tsunami-bigtidalwave" />
+                <keep_together id="tsunami-bigtidalwave" />
+                <phrase
+                  ph="【高：たか】い【波：なみ】"
+                  rom="takai nami"
+                  tr_en="a high wave"
+                  tr_de="eine hohe Welle"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【津：つ】【波：なみ】"
+                  rom="tsunami"
+                  tr_en="a big tidal wave (natural disaster)"
+                  tr_de="eine grosse Flutwelle (Naturkatastrophe)"
+                  lvl="n3"
+                  rem="jisho has n1"
+                />
+                <sentence
+                  s="【光：ひかり】や【音：おと】は【波：なみ】の【形：かたち】で【伝：つた】わる。"
+                  rom="Hikari ya oto wa nami no katachi de tsutawaru."
+                  tr_en="Light and sound travel in the form of waves."
+                  tr_de="Licht und Ton werden in der Form von Wellen übertragen."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has n2 for tsutawaru, n4 for tsutaeru"
+                />
+            </word>
+            <word
+              w="【津：つ】【波：なみ】"
+              rom="tsunami"
+              tr_en="big tidal wave"
+              lvl="n3"
+              category="nature"
+              id="tsunami-bigtidalwave"
+              HIDDEN="true"
+              rem="jisho has n1; now a phrase of nami"
+            >
+                <keep_apart_from id="nami-wave" />
+                <keep_together id="nami-wave" />
+            </word>
             <word
               w="【稲：いね】"
               rom="ine"
@@ -1290,7 +1348,34 @@
               lvl="n3"
               category="plant"
               id="ine-riceplant"
-            />
+            >
+                <phrase
+                  ph="【稲：いね】を【植：う】える"
+                  rom="ine o ueru"
+                  tr_en="to plant rice"
+                  tr_de="Reis anpflanzen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【稲：いね】の【取：と】り【入：い】れ"
+                  rom="ine no tori-ire"
+                  tr_en="rice crop"
+                  tr_de="Reisernte"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has n2 for tori-ireru, nx for tori-ire, but n5 for toru, ireru"
+                />
+                <sentence
+                  s="【稲：いね】は【雨：あめ】の【多：おお】い【地：ち】【域：いき】で【植：う】えられる。"
+                  rom="Ine wa ame no ōi chiiki de uerareru."
+                  tr_en="Rice is grown in rainy regions."
+                  tr_de="Reis wird in regnerischen Regionen angepflanzt."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
             <word
               w="【種：たね】"
               rom="tane"
@@ -1301,7 +1386,25 @@
               lvl="n3"
               category="nature"
               id="tane-seed"
-            />
+            >
+                <!-- 物種・ものだね: fundamental element, origin (nx) -->
+                <phrase
+                  ph="【小：こ】【麦：むぎ】の【種：たね】"
+                  rom="komugi no tane"
+                  tr_en="wheat seeds"
+                  tr_de="Weizensaat"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【風：かぜ】は【種：たね】を【遠：とお】くへ【運：はこ】ぶ。"
+                  rom="Kaze wa tane o tōku e hakobu."
+                  tr_en="The wind carries seeds for great distances."
+                  tr_de="Der Wind trägt Samen über grosse Distanzen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【岩：いわ】"
               rom="iwa"
@@ -1310,7 +1413,36 @@
               lvl="n3"
               category="nature"
               id="iwa-rock"
-            />
+            >
+                <!-- 岩石・がんせき: rock (n1): more technical or scientific -->
+                <keep_apart_from id="ganseki-rock" />
+                <keep_apart_from id="ishi-stone" />
+                <phrase
+                  ph="【岩：いわ】の【上：うえ】で"
+                  rom="iwa no ue de"
+                  tr_en="on top of the rock"
+                  tr_de="auf dem Fels"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【岩：いわ】のように【堅：かた】い"
+                  rom="iwa no yō ni katai"
+                  tr_en="as hard as rock"
+                  tr_de="so hart wie ein Fels"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【山：やま】から【岩：いわ】が【落：お】ちてきた。"
+                  rom="Yama kara iwa ga ochite kita."
+                  tr_en="A boulder came falling down from the mountain."
+                  tr_de="Ein Fels kam den Berg heruntergefallen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
             <word
               w="【霧：きり】"
               rom="kiri"
@@ -1319,7 +1451,25 @@
               lvl="n3"
               category="nature, weather"
               id="kiri-fog"
-            />
+            >
+                <phrase
+                  ph="【朝：あさ】の【霧：きり】"
+                  rom="asa no kiri"
+                  tr_en="morning fog"
+                  tr_de="morgentlicher Nebel"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【町：まち】は【霧：きり】に【包：つつ】まれた。"
+                  rom="Machi wa kiri ni tsutsumareta."
+                  tr_en="The town was wrapped in fog."
+                  tr_de="Die Stadt war in Nebel getaucht."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT that it's passive of つつむ here, not くるまれた"
+                />
+            </word>
             <word
               w="【泥：どろ】"
               rom="doro"
@@ -1328,25 +1478,111 @@
               lvl="n3"
               category="nature"
               id="doro-mud"
-            />
+            >
+                <phrase
+                  ph="【泥：どろ】【水：みず】"
+                  rom="doro mizu"
+                  tr_en="muddy water"
+                  tr_de="dreckiges Wasser"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT that this is indeed the primary sense of the word"
+                />
+                <sentence
+                  s="【彼：かれ】は【泥：どろ】だらけだった。"
+                  rom="Kare wa doro darake datta."
+                  tr_en="He was covered in mud."
+                  tr_de="Er war mit Schlamm bedeckt."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has n1 for だらけ"
+                />
+            </word>
             <word
               w="【夜：よ】【明：あ】け"
               rom="yoake"
               tr_en="dawn; end of the night"
-              tr_de="Dämmerung; Ende der Nacht"
+              tr_de="Tagesanbruch; Ende der Nacht"
+              Langenscheidt="Tagesanbruch"
               lvl="n3"
               category="time, light"
               id="yoake-dawn"
-            />
+            >
+                <keep_apart_from id="asa-morning" />
+                <phrase
+                  ph="【夜：よ】【明：あ】けに【起：お】きる"
+                  rom="yoake ni okiru"
+                  tr_en="to get up at dawn"
+                  tr_de="bei Tagesanbruch aufstehen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【夜：よ】【明：あ】け【前：まえ】に【着：つ】く"
+                  rom="yoake mae ni tsuku"
+                  tr_en="to arrive before dawn"
+                  tr_de="vor Tagesanbruch ankommen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【夜：よ】【明：あ】けになって【初：はじ】めて【寝：ね】られました。"
+                  rom="Yoake ni natte hajimete neraremashita."
+                  tr_en="I was only able to sleep once it became dawn."
+                  tr_de="Erst bei Tagesanbruch konnte ich einschlafen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
             <word
-              w="【袋：ふくろ】"
-              rom="fukuro"
-              tr_en="bag; sack"
-              tr_de="Sack"
+              w="【籠：かご】"
+              rom="kago"
+              tr_en="basket"
+              tr_de="Korb"
+              hint_en="for shopping, etc."
+              hint_de="z.B. Einkaufskorb"
+              usuallyInKana="true"
               lvl="n3"
               category="shopping"
-              id="fukuro-bag"
-            />
+              id="kago-basket"
+            >
+                <keep_apart_from id="fukuro-bag" />
+                <phrase
+                  ph="【鳥：とり】かご"
+                  rom="torikago"
+                  tr_en="a birdcage"
+                  tr_de="ein Vogelkäfig"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="りんごのいっぱい【入：はい】った【籠：かご】"
+                  rom="ringo no ippai haitta kago"
+                  tr_en="a basket full of apples"
+                  tr_de="ein Korb voll mit Äpfel"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【猫：ねこ】は【籠：かご】から【出：で】てきた。"
+                  rom="Neko wa kago kara dete kita."
+                  tr_en="The cat came out of the basket."
+                  tr_de="Die Katze kam aus dem Korb heraus."
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="かごの【中：なか】にはほとんどリンゴがない。"
+                  rom="Kago no naka ni wa hotondo ringo ga nai."
+                  tr_en="There is almost no apple in the basket."
+                  tr_de="Im Korb hat es kaum einen Apfel."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【鍋：なべ】"
               rom="nabe"
@@ -1357,29 +1593,66 @@
               lvl="n3"
               category="cooking"
               id="nabe-pot"
-            />
+            >
+                <phrase
+                  ph="【小：こ】【鍋：なべ】"
+                  rom="konabe"
+                  tr_en="saucepan; small pot"
+                  tr_de="kleiner Kochtopf"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【小：こ】【鍋：なべ】はすぐ【熱：あつ】くなる。"
+                  rom="Konabe wa sugu atsuku naru."
+                  tr_en="A small pot is soon hot."
+                  tr_de="Ein kleiner Kochtopf wird schnell heiss."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for konabe"
+                />
+            </word>
+            <word
+              w="【城：しろ】"
+              rom="shiro"
+              tr_en="castle"
+              tr_de="Schloss; Burg"
+              lvl="n3"
+              category="city, travelling"
+              id="shiro-castle"
+            >
+                <see id="jōka-castletown" rem="closely related" />
+                <keep_apart_from id="oshiro-castle" />
+                <keep_together id="oshiro-castle" />
+                <phrase
+                  ph="【古：ふる】いお【城：しろ】"
+                  rom="furui o-shiro"
+                  tr_en="an old castle"
+                  tr_de="eine alte Burg"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【城：しろ】は【川：かわ】の【向：む】こうにある。"
+                  rom="Shiro wa kawa no mukō ni aru."
+                  tr_en="The castle is across the river."
+                  tr_de="Das Schloss ist auf der anderen Seite des Flusses."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="お【城：しろ】"
               rom="o-shiro"
               tr_en="castle"
-              tr_de="Schloss; Burg"
-              dict="城"
               lvl="n3"
-              category="city, travelling"
+              HIDDEN="true"
               id="oshiro-castle"
-            />
-            <word
-              w="【籠：カゴ】"
-              rom="kago"
-              tr_en="basket"
-              tr_de="Korb"
-              hint_en="for shopping, etc."
-              hint_de="z.B. Einkaufskorb"
-              usuallyInKana="true"
-              lvl="n3"
-              category="shopping"
-              id="kago-basket"
-            />
+            >
+                <keep_apart_from id="shiro-castle" />
+                <keep_together id="shiro-castle" />
+            </word>
             <word
               w="【未：み】【来：らい】"
               rom="mirai"
@@ -1388,7 +1661,24 @@
               lvl="n3"
               category="time"
               id="mirai-distantfuture"
-            />
+            >
+                <phrase
+                  ph="【未：み】【来：らい】【計：けい】【画：かく】"
+                  rom="mirai keikaku"
+                  tr_en="future project; future plans"
+                  tr_de="Zukunftsprojekt; Pläne für die Zukunft"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【世：せ】【界：かい】の【未：み】【来：らい】を【考：かんが】えることは【大：たい】【切：せつ】だ。"
+                  rom="Sekai no mirai o kangaeru koto wa taisetsu da."
+                  tr_en="It's important to think about the future of the world."
+                  tr_de="Es ist wichtig, über die Zukunft der Welt nachzudenken."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
             <word
               w="【暗：あん】【記：き】"
               rom="anki"
@@ -1399,7 +1689,62 @@
               lvl="n3"
               category="education, thinking"
               id="anki-memorisation"
-            />
+            >
+                <phrase
+                  ph="【単：たん】【語：ご】を【暗：あん】【記：き】する"
+                  rom="tango o anki suru"
+                  tr_en="to memorize words"
+                  tr_de="Vokabeln auswendig lernen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【文：ぶん】を【暗：あん】【記：き】しましょう。"
+                  rom="Kono bun o anki shimashō."
+                  tr_en="Let's learn this sentence by heart."
+                  tr_de="Lasst uns diesen Satz auswendig lernen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="その【会：かい】【話：わ】を【暗：あん】【記：き】しようとした。"
+                  rom="Sono kaiwa o anki shiyō to shita."
+                  tr_en="I tried to memorize that conversation."
+                  tr_de="Ich habe versucht, mir dieses Gespräch (Wort für Wort) zu merken."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【鋏：はさみ】"
+              rom="hasami"
+              tr_en="scissors"
+              tr_de="Schere"
+              usuallyInKana="true"
+              lvl="n3"
+              category="diy"
+              id="hasami-scissors"
+            >
+                <!-- 鋭利なはさみ sharp scissors (jpod101 audio) nx; but 鋭利 is more technical than kiri-yasui -->
+                <phrase
+                  ph="【切：き】りやすいはさみ"
+                  rom="kiri-yasui hasami"
+                  tr_en="scissors that cut well"
+                  tr_de="eine Schere, die gut schneidet"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="そのハサミは【切：き】れない。"
+                  rom="Sono hasami wa kirenai."
+                  tr_en="Those scissors aren't sharp (don't cut well)."
+                  tr_de="Diese Schere schneidet nicht gut (ist nicht scharf)."
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
         </section>
     </unit>
 </vocabulary>

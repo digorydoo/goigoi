@@ -1,20 +1,11 @@
 package io.github.digorydoo.goigoi.activity.prog_study.choreo
 
+import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
 import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import androidx.core.view.isVisible
-import io.github.digorydoo.goigoi.activity.prog_study.Bindings
-import io.github.digorydoo.goigoi.activity.prog_study.QAKind
-import io.github.digorydoo.goigoi.activity.prog_study.QuestionAndAnswer
-import io.github.digorydoo.goigoi.activity.prog_study.QuestionAndAnswer.FontType
-import io.github.digorydoo.goigoi.activity.prog_study.Values
-import io.github.digorydoo.goigoi.furigana.FuriganaSpan
-import io.github.digorydoo.goigoi.furigana.buildSpan
-import io.github.digorydoo.goigoi.study.Answer
-import io.github.digorydoo.goigoi.utils.Orientation
-import io.github.digorydoo.goigoi.utils.ScreenSize
 import ch.digorydoo.kutils.cjk.hasCJK
 import ch.digorydoo.kutils.cjk.hasCJKOrKana
 import ch.digorydoo.kutils.cjk.isHiragana
@@ -23,6 +14,17 @@ import ch.digorydoo.kutils.cjk.isKatakana
 import ch.digorydoo.kutils.math.clamp
 import ch.digorydoo.kutils.math.lerp
 import ch.digorydoo.kutils.utils.OneOf
+import io.github.digorydoo.goigoi.activity.prog_study.Bindings
+import io.github.digorydoo.goigoi.activity.prog_study.QAKind
+import io.github.digorydoo.goigoi.activity.prog_study.QuestionAndAnswer
+import io.github.digorydoo.goigoi.activity.prog_study.QuestionAndAnswer.FontType
+import io.github.digorydoo.goigoi.activity.prog_study.Values
+import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard
+import io.github.digorydoo.goigoi.furigana.FuriganaSpan
+import io.github.digorydoo.goigoi.furigana.buildSpan
+import io.github.digorydoo.goigoi.study.Answer
+import io.github.digorydoo.goigoi.utils.Orientation
+import io.github.digorydoo.goigoi.utils.ScreenSize
 import kotlin.math.max
 import kotlin.math.min
 
@@ -52,6 +54,19 @@ class Choreographer(
     private var prevLayout = Layout()
     private val elements = ElementList(bindings, values)
 
+    private val textAndCaret = object: Keyboard.TextAndCaret {
+        override var text: CharSequence
+            get() = bindings.inputTextView.text
+            set(value) {
+                bindings.inputTextView.text = value
+            }
+        override var caretPos: Int
+            get() = bindings.inputTextView.caretPos
+            set(value) {
+                bindings.inputTextView.setCaretPos(value)
+            }
+    }
+
     fun canAcceptInput() =
         state == State.QUESTION
 
@@ -74,11 +89,11 @@ class Choreographer(
 
         when (state) {
             State.QUESTION -> {
-                val prefill = getPrefill()
-
+                val (prefix, suffix) = qa?.getPrefill() ?: Pair("", "")
                 bindings.inputTextView.apply {
-                    text = prefill
-                    setCaretPos(prefill.length)
+                    @SuppressLint("SetTextI18n")
+                    text = prefix + suffix
+                    setCaretPos(prefix.length)
                     setCaretEnabled(qa?.answers?.isNotEmpty() ?: false)
                 }
             }
@@ -88,25 +103,6 @@ class Choreographer(
                 updateLayoutIfNecessary()
             }
             else -> Unit
-        }
-    }
-
-    private fun getPrefill(): String {
-        // If the word has a honorific prefix, and that prefix appears in the expected answer as well, we pre-fill it.
-        // This is especially important if the translation is shown as the question, because then the user will not
-        // know whether a honorific prefix is expected or not.
-        val qa = qa ?: return ""
-        val prefix = qa.word.honorificPrefix
-        return when (qa.kind) {
-            QAKind.SHOW_ROMAJI_ASK_KANA -> "" // non-ambiguous, because rōmaji shows the prefix
-            QAKind.SHOW_KANA_ASK_KANJI -> "" // non-ambiguous, because kana shows the prefix
-            QAKind.SHOW_KANJI_ASK_KANA -> "" // non-ambiguous, because "kanji" shows the prefix as kana
-            else -> when {
-                qa.presentWholeWords -> "" // the honorific prefix is part of the word
-                prefix.isEmpty() -> "" // word doesn't have a honorific prefix
-                qa.answers.none { it.startsWith(prefix) } -> "" // prefix is not expected in the answer
-                else -> prefix
-            }
         }
     }
 
@@ -141,7 +137,6 @@ class Choreographer(
             }
 
             if (expanded) {
-                @Suppress("AssignedValueIsNeverRead") // linter bug
                 curY += e.view.measuredHeight + e.spacing
             }
         }
@@ -260,7 +255,7 @@ class Choreographer(
             // TategakiView. For now, let's do it the simple way by using a fixed ratio.
             val reservedHeight = availHeight * 0.45f // px
 
-            // In order that text sizes can be optimised, aspect ratio should not vary too much. We therefore limit
+            // In order that text sizes can be optimized, aspect ratio should not vary too much. We therefore limit
             // the maximum height for long devices such as my Samsung.
             val allowedHeight = min(reservedHeight, values.tategakiMaxHeight).toInt()
 
@@ -505,12 +500,9 @@ class Choreographer(
     }
 
     // Called when a key is pressed, backspace, dakuten change, etc.
-    fun applyInputTextTransform(trf: (text: String) -> String) {
+    fun applyInputTextTransform(trf: (Keyboard.TextAndCaret) -> Unit) {
         if (canAcceptInput()) {
-            bindings.inputTextView.apply {
-                text = trf(text.toString())
-                setCaretPos(text.length)
-            }
+            trf(textAndCaret)
         }
     }
 

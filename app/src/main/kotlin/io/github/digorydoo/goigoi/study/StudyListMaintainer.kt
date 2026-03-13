@@ -21,10 +21,12 @@ class StudyListMaintainer(
         fun wouldCauseAmbiguityWithMyWordsUnyt(word: Word): Boolean
     }
 
-    private var roundsSinceAddMoreWords = MIN_ROUNDS_FOR_ADD_MORE_WORDS
+    private var roundsSinceAddMoreWords = 0
+    private var streak = 0
 
     // @return true if the word was removed from the list, false otherwise
-    fun onAnswerCorrect(word: Word, streak: Int): Boolean {
+    fun onAnswerCorrect(word: Word): Boolean {
+        streak++
         roundsSinceAddMoreWords++
 
         if (!superProgressive) {
@@ -59,13 +61,13 @@ class StudyListMaintainer(
                 true, // add new word, because otherwise list would not change any more
                 "list size is only ${list.size} < $MIN_LIST_SIZE_FOR_REMOVE"
             )
-            roundsSinceAddMoreWords < MIN_ROUNDS_FOR_ADD_MORE_WORDS -> Pair(
-                false, // don't add new words, too early
-                "roundsSinceAddMoreWords is only $roundsSinceAddMoreWords < $MIN_ROUNDS_FOR_ADD_MORE_WORDS"
-            )
             streak < MIN_STREAK_FOR_ADD_MORE_WORDS -> Pair(
                 false, // don't add new word, streak not reached yet
                 "streak is $streak < $MIN_STREAK_FOR_ADD_MORE_WORDS"
+            )
+            roundsSinceAddMoreWords < MIN_ROUNDS_FOR_ADD_MORE_WORDS -> Pair(
+                false, // don't add new words, too early
+                "roundsSinceAddMoreWords is only $roundsSinceAddMoreWords < $MIN_ROUNDS_FOR_ADD_MORE_WORDS"
             )
             else -> Pair(
                 true, // add new word, streak allows it
@@ -74,17 +76,34 @@ class StudyListMaintainer(
         }
 
         if (add) {
-            Log.d(TAG, "Adding more words, because $reason")
-            val numNewInList = list.count { stats.getWordStudyProgress(it.word) < 1.0f }
+            Log.d(TAG, "We could add more words, because $reason")
 
-            if (numNewInList > MAX_NEW_IN_LIST_IDEALLY) {
-                Log.d(TAG, "Forcing pick from past, because there are already $numNewInList new words in list")
-                pool.addOneToListFromFarPast(list, IDEAL_LIST_SIZE)
-            } else {
-                pool.addOneToListFromHeadOrPast(list, IDEAL_LIST_SIZE)
+            val roomForNew = list.fold(MAX_NEW_IN_LIST_IDEALLY) { room, item ->
+                when {
+                    room <= 0 -> 0 // early out to avoid calling getWordStudyProgress unnecessarily
+                    stats.getWordStudyProgress(item.word) < 1.0f -> room - 1
+                    stats.getWordTotalRating(item.word) < 0.7f -> room - 1
+                    else -> room
+                }
             }
 
-            roundsSinceAddMoreWords = 0
+            if (roomForNew > 0) {
+                Log.d(TAG, "Adding one from head as there is room for $roomForNew new word(s)")
+                pool.addOneToListFromHead(list, IDEAL_LIST_SIZE)
+                roundsSinceAddMoreWords = 0
+            } else {
+                Log.d(TAG, "There are too many new or poorly rated words already")
+                val rnd = Random.nextFloat()
+
+                if (rnd <= PROBABILITY_FOR_ADD_WORD_FROM_FAR_PAST) {
+                    Log.d(TAG, "rnd <= $PROBABILITY_FOR_ADD_WORD_FROM_FAR_PAST: Adding one from the far past")
+                    pool.addOneToListFromFarPast(list, IDEAL_LIST_SIZE)
+                    roundsSinceAddMoreWords = 0
+                } else {
+                    Log.d(TAG, "rnd > $PROBABILITY_FOR_ADD_WORD_FROM_FAR_PAST: Not adding any more words")
+                }
+            }
+
             ensureSuperProgressiveHeadIsInListAndEarly() // in order not to keep pushing it back
         } else {
             Log.d(TAG, "Not adding more words, because $reason")
@@ -94,36 +113,8 @@ class StudyListMaintainer(
     }
 
     fun onAnswerWrong() {
+        streak = 0
         roundsSinceAddMoreWords++
-
-        if (!superProgressive) {
-            return
-        }
-
-        // The answer was wrong, so we don't want to burden the user with yet another new word. However, we can add
-        // one from the past if there is room.
-
-        val (add, reason) = when {
-            list.size >= IDEAL_LIST_SIZE -> Pair(
-                false, // don't add new word, list is too large
-                "list size is ${list.size} >= $IDEAL_LIST_SIZE"
-            )
-            roundsSinceAddMoreWords < MIN_ROUNDS_FOR_ADD_MORE_WORDS -> Pair(
-                false, // don't add new words, too early
-                "roundsSinceAddMoreWords is only $roundsSinceAddMoreWords < $MIN_ROUNDS_FOR_ADD_MORE_WORDS"
-            )
-            else -> Pair(
-                true, // add new word
-                "roundsSinceAddMoreWords is $roundsSinceAddMoreWords"
-            )
-        }
-
-        if (add) {
-            pool.addOneToListFromFarPast(list, IDEAL_LIST_SIZE)
-            roundsSinceAddMoreWords = 0
-        } else {
-            Log.d(TAG, "Not adding more words, because $reason")
-        }
     }
 
     fun pushBack(item: StudyItem, answer: Answer) {
@@ -300,7 +291,7 @@ class StudyListMaintainer(
             }
 
             if (list.size < MIN_INITIAL_LIST_SIZE) {
-                Log.d(TAG, "List size is only ${list.size}. Trying to add words from the past.")
+                Log.d(TAG, "List size is only ${list.size}. Trying to add words from the recent past.")
                 pool.fillListFromRecentPast(list, MIN_INITIAL_LIST_SIZE)
 
                 if (list.size < MIN_INITIAL_LIST_SIZE) {
@@ -338,8 +329,9 @@ class StudyListMaintainer(
         private const val MIN_LIST_SIZE_FOR_REMOVE = 10
         const val POS_FOR_NEW_WORD = 5
         private const val MAX_STEP_FOR_WORD_AT_HEAD = 11
-        private const val MIN_ROUNDS_FOR_ADD_MORE_WORDS = 15
-        private const val MIN_STREAK_FOR_ADD_MORE_WORDS = POS_FOR_NEW_WORD + 4
-        private const val MAX_NEW_IN_LIST_IDEALLY = 5
+        private const val MIN_STREAK_FOR_ADD_MORE_WORDS = POS_FOR_NEW_WORD + 1
+        private const val MIN_ROUNDS_FOR_ADD_MORE_WORDS = POS_FOR_NEW_WORD
+        private const val MAX_NEW_IN_LIST_IDEALLY = 3
+        private const val PROBABILITY_FOR_ADD_WORD_FROM_FAR_PAST = 0.6f
     }
 }

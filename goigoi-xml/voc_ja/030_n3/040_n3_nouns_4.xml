@@ -19,42 +19,6 @@
         <section>
             <!-- unsorted -->
             <word
-              w="【物：もの】【語：がたり】"
-              rom="monogatari"
-              tr_en="story; tale; fable"
-              tr_de="Geschichte; Märchen; Fabel"
-              lvl="n3"
-              category="literature, entertainment"
-              id="monogatari-tale"
-            >
-                <keep_apart_from id="hanashi-talk" />
-                <phrase
-                  ph="【怖：こわ】い【物：もの】【語：がたり】"
-                  rom="kowai monogatari"
-                  tr_en="a frightening tale"
-                  tr_de="Gruselgeschichte"
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-                <phrase
-                  ph="【物：もの】【語：がたり】の【始：はじ】まり"
-                  rom="monogatari no hajimari"
-                  tr_en="the beginning of the story"
-                  tr_de="der Anfang der Geschichte"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【私：わたし】は【物：もの】【語：がたり】をたくさん【書：か】いた。"
-                  rom="Watashi wa monogatari o takusan kaita."
-                  tr_en="I've written a lot of stories."
-                  tr_de="Ich habe viele Geschichten geschrieben."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
               w="【王：おう】【様：さま】"
               rom="Ō-sama"
               tr_en="king"
@@ -132,6 +96,85 @@
                 />
             </word>
             <word
+              w="【王：おう】【女：じょ】"
+              rom="ōjo"
+              tr_en="princess"
+              tr_de="Prinzessin"
+              lvl="n3"
+              category="people"
+              id="ōjo-princess"
+              rem="jisho has n2"
+            >
+                <keep_together id="ōsama-king" />
+                <keep_together id="joō-queen" />
+                <keep_together id="ōji-prince" />
+                <phrase
+                  ph="【王：おう】【女：じょ】になっている【夢：ゆめ】を【見：み】る"
+                  rom="ōjo ni natte iru yume o miru"
+                  tr_en="to dream of having become a princess"
+                  tr_de="davon träumen, eine Prinzessin geworden zu sein"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【物：もの】【語：がたり】では、【王：おう】【女：じょ】をよく「【姫：ひめ】【様：さま】」と【呼：よ】びます。"
+                  rom="Monogatari de wa, ōjo o yoku ‘hime-sama’ to yobimasu."
+                  tr_en="In stories, a princess is often called 'Hime-sama'."
+                  tr_de="In Geschichten wird eine Prinzessin oft 'Hime-Sama' genannt."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrases by ChatGPT; jisho has nx for hime"
+                />
+            </word>
+            <word
+              w="【思：おも】い"
+              rom="omoi"
+              tr_en="thought; imagination"
+              tr_de="Gedanke; Vorstellung"
+              studyInContext="preferred"
+              lvl="n3"
+              category="thinking"
+              id="omoi-thought"
+              rem="jisho has nx"
+            >
+                <see id="omou-think" rem="verb" />
+                <keep_apart_from id="kangae-thought" />
+                <keep_apart_from id="omoide-memories" />
+                <keep_apart_from id="omoidasu-remember" />
+                <keep_apart_from id="omoitsuku-thinkof" />
+                <keep_apart_from id="omoitsuki-idea" />
+                <!--
+                    物思い - mono-omoi - nx - reverie; meditation
+                    彼は物思いにふけっている - He is buried in thought - lib0 - nx for ふける・耽る
+                -->
+                <phrase
+                  ph="【思：おも】いがけない"
+                  rom="omoigakenai"
+                  tr_en="unexpected; by chance"
+                  tr_de="unerwartet; zufällig"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has n2"
+                />
+                <phrase
+                  ph="【思：おも】いやり"
+                  rom="omoiyari"
+                  tr_en="sympathy; compassion; understanding"
+                  tr_de="Mitleid; Mitgefühl; Verständnis"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【風：かぜ】はその【思：おも】いのままに【吹：ふ】きます。"
+                  rom="Kaze wa sono omoi no mama ni fukimasu."
+                  tr_en="The wind blows as it pleases."
+                  tr_de="Der Wind weht, wie es ihm gefällt."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【舌：した】"
               rom="shita"
               tr_en="tongue"
@@ -203,38 +246,6 @@
                 />
             </word>
             <word
-              w="【王：おう】【女：じょ】"
-              rom="ōjo"
-              tr_en="princess"
-              tr_de="Prinzessin"
-              lvl="n3"
-              category="people"
-              id="ōjo-princess"
-              rem="jisho has n2"
-            >
-                <keep_together id="ōsama-king" />
-                <keep_together id="joō-queen" />
-                <keep_together id="ōji-prince" />
-                <phrase
-                  ph="【王：おう】【女：じょ】になっている【夢：ゆめ】を【見：み】る"
-                  rom="ōjo ni natte iru yume o miru"
-                  tr_en="to dream of having become a princess"
-                  tr_de="davon träumen, eine Prinzessin geworden zu sein"
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【物：もの】【語：がたり】では、【王：おう】【女：じょ】をよく「【姫：ひめ】【様：さま】」と【呼：よ】びます。"
-                  rom="Monogatari de wa, ōjo o yoku ‘hime-sama’ to yobimasu."
-                  tr_en="In stories, a princess is often called 'Hime-sama'."
-                  tr_de="In Geschichten wird eine Prinzessin oft 'Hime-Sama' genannt."
-                  lvl="n3"
-                  origin="self"
-                  rem="rephrases by ChatGPT; jisho has nx for hime"
-                />
-            </word>
-            <word
               w="【格：かっ】【好：こう】"
               rom="kakkō"
               tr_en="shape (of body); appearance; posture"
@@ -251,6 +262,25 @@
                   hasDifferentForm="true"
                   lvl="n3"
                   rem="jisho has nx"
+                />
+            </word>
+            <word
+              w="【流：なが】れ"
+              rom="nagare"
+              tr_en="stream; flow (of a fluid); passage (of time)"
+              tr_de="Strömung; Fliessen; (Zeit-) Ablauf"
+              lvl="n3"
+              category="nature, physics"
+              id="nagare-flow"
+            >
+                <see id="nagareru-flow" rem="verb" />
+                <phrase
+                  ph="【時：じ】【代：だい】の【流：なが】れ"
+                  rom="jidai no nagare"
+                  tr_en="flow of the times; spirit of the times"
+                  tr_de="Verlauf der Zeit; Zeitgeist"
+                  lvl="n3"
+                  origin="ChatGPT"
                 />
             </word>
             <word
@@ -899,6 +929,7 @@
             >
                 <see id="mōshiwake-apology" rem="closely related" />
                 <keep_apart_from id="mōshiwake-apology" />
+                <keep_apart_from id="wake-conclusion" />
             </word>
             <word
               w="【教：きょう】【師：し】"
@@ -1000,18 +1031,6 @@
               category="home"
               id="kaji-housework"
               rem="appears in GENKI2 L22 vocab section"
-            />
-            <word
-              w="【化：け】【粧：しょう】"
-              rom="keshō"
-              tr_en="cosmetics; makeup"
-              tr_de="Kosmetik; Makeup"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="fashion"
-              id="keshō-makeup"
-              rem="appears in GENKI2 p.117 vocab section"
             />
             <word
               w="【額：ひたい】"

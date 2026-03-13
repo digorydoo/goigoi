@@ -23,6 +23,8 @@
               category="travelling"
               id="sōjū-piloting"
             >
+                <see id="hikō-aviation" rem="closely related" />
+                <keep_apart_from id="hikō-aviation" />
                 <sentence
                   s="パイロットは【飛：ひ】【行：こう】【機：き】を【操：そう】【縦：じゅう】した。"
                   rom="Pairotto wa hikōki o sōjū shita."
@@ -201,6 +203,16 @@
                 <keep_apart_from id="shiyōnin-employee" />
                 <keep_apart_from id="kaishain-employee" />
                 <keep_apart_from id="dōryō-coworker" />
+            </word>
+            <word
+              w="【行：おこな】い"
+              rom="okonai"
+              tr_en="deed; act; behaviour"
+              hint_en="noun"
+              lvl="n1"
+              id="okonai-act"
+            >
+                <see id="okonau-carryout" rem="verb" />
             </word>
             <word
               w="【訴：うった】え"
@@ -1424,7 +1436,10 @@
               tr_en="land near a castle; castle town"
               hint_en="noun"
               lvl="n1"
-            />
+              id="jōka-castletown"
+            >
+                <see id="shiro-castle" rem="closely related" />
+            </word>
             <word
               w="【合：ごう】【議：ぎ】"
               rom="gōgi"
@@ -1895,6 +1910,7 @@
               hint_en="noun; suru verb"
               lvl="n1"
               category="motion"
+              id="kōtai-retreat"
             />
             <word
               w="【尾：お】"
@@ -1955,7 +1971,11 @@
               tr_en="rock"
               hint_en="noun"
               lvl="n1"
-            />
+              id="ganseki-rock"
+            >
+                <keep_apart_from id="iwa-rock" />
+                <keep_apart_from id="ishi-stone" />
+            </word>
             <word
               w="【崇：すう】【拝：はい】"
               rom="sūhai"
@@ -2093,7 +2113,11 @@
               tr_en="plan; idea; suggestion"
               hint_en="noun"
               lvl="n1"
-            />
+              id="omoitsuki-idea"
+            >
+                <see id="omoitsuku-thinkof" rem="verb" />
+                <keep_apart_from id="omoi-thought" />
+            </word>
             <word
               w="【恥：はじ】"
               rom="haji"
@@ -4152,6 +4176,59 @@
               rom="magireru"
               tr_en="to disappear into; to be lost in; to slip into; to get mixed in among / to do som"
               hint_en="v.i."
+              lvl="n1"
+            />
+            <word
+              w="【行：こう】【為：い】"
+              rom="kōi"
+              tr_en="act; deed; conduct"
+              hint_en="noun"
+              lvl="n1"
+              HIDDEN="true"
+              id="kōi-act"
+            />
+            <word
+              w="【行：こう】【員：いん】"
+              rom="kōin"
+              tr_en="bank clerk"
+              hint_en="noun"
+              lvl="n1"
+              id="kōin-bankclerk"
+            />
+            <word
+              w="【行：ぎょう】【政：せい】"
+              rom="gyōsei"
+              tr_en="executive; government; administration; governance; the authorities"
+              lvl="n1"
+              id="gyōsei-executive"
+            />
+            <word
+              w="【行：ぎょう】"
+              rom="gyō"
+              tr_en="line (of text); row; verse / carya (austerities) / samskara (formations)"
+              hint_en="noun"
+              lvl="n1"
+              id="gyō-verse"
+            />
+            <word
+              w="【衝：しょう】【撃：げき】"
+              rom="shōgeki"
+              tr_en="impact; shock; impulse / (psychological) shock"
+              hint_en="noun / noun; noun which may take the genitive case particle 'no'"
+              lvl="n1"
+            />
+            <word
+              w="【衰：おとろ】える"
+              rom="otoroeru"
+              tr_en="to become weak; to decline; to wear; to abate; to decay; to wither; to waste away"
+              hint_en="v.i."
+              lvl="n1"
+            />
+            <word
+              w="【裾：すそ】"
+              rom="suso"
+              tr_en="hem; (trouser) cuff; shirttail; bottom (of a kimono); train (of a dress) / bottom"
+              hint_en="noun"
               lvl="n1"
             />
         </section>

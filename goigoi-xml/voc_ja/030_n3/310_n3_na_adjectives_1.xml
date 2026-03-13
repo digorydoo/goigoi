@@ -17,11 +17,161 @@
       requiresIds="true"
     >
         <section>
+            <!-- na-adjective -->
+            <word
+              w="【満：まん】【足：ぞく】"
+              rom="manzoku"
+              tr_en="adequate; satisfaction; sufficient"
+              tr_de="adäquat sein; Zufriedenheit; genügen"
+              hint_en="na-adjective; noun; suru verb"
+              hint_de="Na-Adjektiv; Nomen; Suru-Verb"
+              lvl="n3"
+              id="manzoku-adequate"
+            >
+                <keep_apart_from id="tariru-beenough" />
+                <keep_apart_from id="taru-beenough" />
+                <keep_apart_from id="tekitō-suitable" />
+            </word>
+            <word
+              w="【優：ゆう】【秀：しゅう】"
+              rom="yūshū"
+              tr_en="superior; excellent; brilliant"
+              tr_de="überragend; exzellent; brilliant"
+              hint_en="na-adjective; noun"
+              hint_de="Na-Adjektiv; Nomen"
+              lvl="n3"
+              id="yūshū-superior"
+            />
+            <word
+              w="【不：ふ】【満：まん】"
+              rom="fuman"
+              tr_en="dissatisfaction; displeasure; discontent"
+              tr_de="Unzufriedenheit; Unmut; Unbehagen"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="mood"
+              id="fuman-dissatisfaction"
+            >
+                <phrase
+                  ph="【不：ふ】【満：まん】な【気：き】【持：も】ち"
+                  rom="fuman na kimochi"
+                  tr_en="a feeling of dissatisfaction"
+                  tr_de="ein Gefühl der Unzufriedenheit"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【強：きょう】【力：りょく】"
+              rom="kyōryoku"
+              tr_en="powerful; strong"
+              tr_de="mächtig; stark"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="kyōryoku-powerful"
+            />
+            <word
+              w="【急：きゅう】【速：そく】"
+              rom="kyūsoku"
+              tr_en="rapid (progress, etc.)"
+              tr_de="schnell (Fortschritt, usw.)"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="motion"
+              id="kyūsoku-rapid"
+            />
+            <word
+              w="【空：から】っぽ"
+              rom="karappo"
+              tr_en="empty; vacant; hollow"
+              tr_de="leer; leerstehend; hohl"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="karappo-empty"
+              rem="jisho has n2"
+            />
+            <word
+              w="【我：わが】【儘：まま】"
+              rom="wagamama"
+              tr_en="egoist; selfish"
+              tr_de="Egoist; eigennützig"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              usuallyInKana="true"
+              id="wagamama-selfish"
+            />
+            <word
+              w="【不：ふ】【正：せい】"
+              rom="fusei"
+              tr_en="injustice; dishonesty; illegal"
+              tr_de="Ungerechtigkeit; Unehrlichkeit; widerrechtlich"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="not-good"
+              id="fusei-injustice"
+            />
+            <word
+              w="【正：しょう】【直：じき】"
+              rom="shōjiki"
+              tr_en="honest; frank; straightforward"
+              tr_de="ehrlich; offen; aufrichtig"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="shōjiki-honest"
+            />
+            <word
+              w="【逆：ぎゃく】"
+              rom="gyaku"
+              tr_en="reverse; opposite"
+              tr_de="umgekehrt; gegenteilig"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="gyaku-reverse"
+            />
+            <word
+              w="【気：き】の【毒：どく】"
+              rom="ki no doku"
+              tr_en="unfortunate; miserable; wretched"
+              tr_de="bedauerlich; unglücklich; kümmerlich"
+              hint_en="expression; na-adjective"
+              hint_de="Ausdruck; Na-Adjektiv"
+              lvl="n3"
+              id="kinodoku-unfortunate"
+            />
+            <word
+              w="【完：かん】【全：ぜん】"
+              rom="kanzen"
+              tr_en="perfect; complete"
+              tr_de="perfekt; komplett"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="kanzen-perfect"
+            />
+            <word
+              w="【明：あき】らか"
+              rom="akiraka"
+              tr_en="obvious; evident; bright"
+              tr_de="offensichtlich; augenscheinlich; hell"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n3"
+              category="general, light"
+              id="akiraka-obvious"
+            />
+
             <!--
                 FIXME: verify that all of these words are na-adjectives!
             -->
-
-            <!-- na-adjective -->
+            <!-- unsorted -->
             <word
               w="【重：じゅう】【要：よう】"
               rom="jūyō"

@@ -147,29 +147,80 @@
                 />
             </word>
             <word
-              w="【冗：じょう】【談：だん】"
-              rom="jōdan"
-              tr_en="joke; jest; funny story"
-              tr_de="Scherz; Witz; lustige Geschichte"
+              w="【外：がい】【出：しゅつ】"
+              rom="gaishutsu"
+              tr_en="going out; to go outside"
+              tr_de="ausgehen; nach draussen gehen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
-              category="entertainment, mood"
-              id="jōdan-joke"
+              category="going-out"
+              id="gaishutsu-goingout"
             >
+                <keep_apart_from id="rusu-absence" />
                 <phrase
-                  ph="【冗：じょう】【談：だん】に【笑：わら】う"
-                  rom="jōdan ni warau"
-                  tr_en="to laugh about a joke"
-                  tr_de="über einen Witz lachen"
+                  ph="【外：がい】【出：しゅつ】【中：ちゅう】"
+                  rom="gaishutsu-chū"
+                  tr_en="while being out; while being away"
+                  tr_de="währenddem man draussen ist; während der Abwesenheit"
                   lvl="n3"
-                  origin="jpod101 audio"
+                  origin="lib0"
+                  rem="verified with jisho; jisho has nx"
                 />
                 <sentence
-                  s="【小：こ】【林：ばやし】さんの【冗：じょう】【談：だん】で【場：ば】の【空：くう】【気：き】が【壊：こわ】れた。"
-                  rom="Kobayashi-san no jōdan de ba no kūki ga kowareta."
-                  tr_en="Because of Mr Kobayashi’s joke, the atmosphere was broken."
-                  tr_de="Wegen Herr Kobayashis Scherz war die ganze Stimmung dahin."
+                  s="【彼：かれ】は【病：びょう】【気：き】だった、それで【外：がい】【出：しゅつ】しなかった。"
+                  rom="Kare wa byōki datta, sore de gaishutsu shinakatta."
+                  tr_en="He was sick, that's why he didn't go outside."
+                  tr_de="Er war krank, deshalb ging er nicht nach draussen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【日：にち】【曜：よう】【日：び】はめったに【外：がい】【出：しゅつ】しないよ。"
+                  rom="Nichi-yōbi wa metta ni gaishutsu shinai yo."
+                  tr_en="I rarely go out on Sunday."
+                  tr_de="Am Sonntag gehe ich selten aus."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【訳：わけ】"
+              rom="wake"
+              tr_en="conclusion; judgement; meaning"
+              tr_de="Schlussfolgerung; Beurteilung; Bedeutung"
+              lvl="n3"
+              id="wake-conclusion"
+              usuallyInKana="true"
+              rem="not in GENKI index; jisho has n4"
+            >
+                <!-- verified with ChatGPT, jisho and lib0 that 訳 is indeed the わけ appearing in 500mon N3 q322 -->
+                <keep_apart_from id="mōshiwake-apology" />
+                <keep_apart_from id="iiwake-excuse" />
+                <sentence
+                  s="【山：やま】【下：した】さんの【行：こう】【動：どう】のわけが【分：わ】かりません。"
+                  rom="Yamashita-san no kōdō no wake ga wakarimasen."
+                  tr_en="I don't understand the meaning behind Mr Yamashita's behaviour."
+                  tr_de="Ich verstehe die Bedeutung von Herr Yamashitas Verhalten nicht."
                   lvl="n3"
                   origin="ChatGPT"
+                />
+                <sentence
+                  s="【税：ぜい】【金：きん】は【払：はら】わないわけにはいけない。"
+                  rom="Zeikin wa harawanai wake ni wa ikenai."
+                  tr_en="Not paying one's taxes is not an option."
+                  tr_de="Die Steuern nicht zahlen ist keine Option."
+                  lvl="n3"
+                  origin="500mon N3 q322"
+                />
+                <sentence
+                  s="【勉：べん】【強：きょう】しないのだから、【試：し】【験：けん】ができるわけはない。"
+                  rom="Benkyō shinai no da kara, shiken ga dekiru wake wa nai."
+                  tr_en="Since you don't study, there is no way you can pass the exam."
+                  tr_de="Da du nicht studierst, wirst du die Prüfung garantiert nicht bestehen."
+                  lvl="n3"
+                  origin="500mon N3 q322"
                 />
             </word>
             <word
@@ -205,33 +256,6 @@
                   tr_de="Für diese Güter wurden am Fernsehen Werbung gemacht."
                   lvl="n3"
                   origin="lib0"
-                />
-            </word>
-            <word
-              w="【寮：りょう】"
-              rom="ryō"
-              tr_en="hostel; dormitory; tea-ceremony room"
-              tr_de="Herberge; Wohnheim; Teezeremonie-Raum"
-              lvl="n3"
-              category="travelling, home"
-              id="ryō-hostel"
-              rem="appears in GENKI2 p.116 vocab section; jisho has n2"
-            >
-                <phrase
-                  ph="【寮：りょう】の【部：へ】【屋：や】"
-                  rom="ryō no heya"
-                  tr_en="a room in a hostel or dormitory"
-                  tr_de="Raum in einer Herberge oder einem Wohnheim"
-                  lvl="n3"
-                />
-                <sentence
-                  s="その【寮：りょう】の【部：へ】【屋：や】はかなり【狭：せま】い。"
-                  rom="Sono ryō no heya wa kanari semai."
-                  tr_en="The dorm room is quite small."
-                  tr_de="Das Zimmer in der Herberge ist ziemlich klein."
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -524,22 +548,33 @@
                 />
             </word>
             <word
-              w="【流：なが】れ"
-              rom="nagare"
-              tr_en="stream; flow (of a fluid); passage (of time)"
-              tr_de="Strömung; Fliessen; (Zeit-) Ablauf"
+              w="【本：ほん】【物：もの】"
+              rom="honmono"
+              tr_en="genuine article"
+              tr_de="echter Artikel"
+              hint_en="diamond, pearl, leather, etc."
+              hint_de="Diamant, Perle, Leder, usw."
               lvl="n3"
-              category="nature, physics"
-              id="nagare-flow"
+              category="arts, trade"
+              id="honmono-genuine"
             >
-                <see id="nagareru-flow" rem="verb" />
                 <phrase
-                  ph="【時：じ】【代：だい】の【流：なが】れ"
-                  rom="jidai no nagare"
-                  tr_en="flow of the times; spirit of the times"
-                  tr_de="Verlauf der Zeit; Zeitgeist"
+                  ph="【本：ほん】【物：もの】そっくりのダイヤ"
+                  rom="honmono-sokkuri no daiya"
+                  tr_en="a diamond that looks like it was genuine (but isn't)"
+                  tr_de="ein Diamant, der wie echt ausschaut (aber es nicht ist)"
                   lvl="n3"
-                  origin="ChatGPT"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="そのダイヤは【本：ほん】【物：もの】ですか。"
+                  rom="Sono daiya wa honmono desu ka?"
+                  tr_en="Is that diamond genuine?"
+                  tr_de="Ist dieser Diamant echt?"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -956,17 +991,17 @@
               rem="appears in GENKI2 p.193"
             />
             <word
-              w="【医：い】【療：りょう】"
-              rom="iryō"
-              tr_en="medical treatment"
-              tr_de="medizinische Behandlung"
-              Langenscheidt="med. Behandlung"
+              w="【化：け】【粧：しょう】"
+              rom="keshō"
+              tr_en="cosmetics; makeup"
+              tr_de="Kosmetik; Makeup"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
-              category="health"
-              id="iryō-healthcare"
-            >
-                <!-- implicit see-also link to iryō-clothing -->
-            </word>
+              category="fashion"
+              id="keshō-makeup"
+              rem="appears in GENKI2 p.117 vocab section"
+            />
             <word
               w="【数：すう】【字：じ】"
               rom="sūji"

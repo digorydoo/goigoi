@@ -18,48 +18,6 @@
     >
         <section>
             <word
-              w="【単：たん】【位：い】"
-              rom="tan'i"
-              tr_en="unit; (academic) credits; in amounts of"
-              tr_de="Einheit; (akademische) Kreditpunkte; in Mengen von"
-              lvl="n3"
-              category="science"
-              id="tani-unit"
-            >
-                <phrase
-                  ph="【単：たん】【位：い】を【取：と】る"
-                  rom="tan'i o toru"
-                  tr_en="to earn (academic) credits"
-                  tr_de="(akademische) Kreditpunkte erhalten"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <phrase
-                  ph="【単：たん】【位：い】を【落：お】とす"
-                  rom="tan'i o otosu"
-                  tr_en="to fail to earn (academic) credits; to fail a course"
-                  tr_de="(akademische) Kreditpunkte nicht erhalten"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【長：なが】さの【単：たん】【位：い】はメートルです。"
-                  rom="Nagasa no tan'i wa mētoru desu."
-                  tr_en="The unit of length is the metre."
-                  tr_de="Die Einheit einer Länge ist der Meter."
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="ボートを【時：じ】【間：かん】【単：たん】【位：い】で【借：か】りられる。"
-                  rom="Bōto o jikan-tan'i de karirareru."
-                  tr_en="You can hire a boat by the hour."
-                  tr_de="Du kannst ein Boot auf Stundenbasis mieten."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
               w="【理：り】【想：そう】"
               rom="risō"
               tr_en="ideal; ideals"
@@ -201,37 +159,6 @@
                   lvl="n3"
                   origin="ChatGPT"
                   rem="jpod101 audio has a similar but longer sentence"
-                />
-            </word>
-            <word
-              w="【証：しょう】【明：めい】"
-              rom="shōmei"
-              tr_en="proof (of guilt, innocence, etc.); verification"
-              tr_de="Beweis (der Schuld, Unschuld, usw.); Nachweis"
-              Langenscheidt="Nachweis, nachweisen"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="crime"
-              id="shōmei-proof"
-            >
-                <keep_apart_from id="akashi-proof" />
-                <phrase
-                  ph="【身：み】【分：ぶん】【証：しょう】【明：めい】【書：しょ】"
-                  rom="mibun shōmeisho"
-                  tr_en="identification papers; ID"
-                  tr_de="Identitätsausweis; ID"
-                  lvl="n3"
-                  origin="self"
-                  rem="jsho has nx"
-                />
-                <sentence
-                  s="【小：こ】【林：ばやし】さんが【正：しょう】【直：じき】だと【証：しょう】【明：めい】します。"
-                  rom="Kobayashi-san ga shōjiki da to shōmei shimasu."
-                  tr_en="I will prove that Mr Kobayashi is honest."
-                  tr_de="Ich werde nachweisen, dass Kobayashi ehrlich ist."
-                  lvl="n3"
-                  origin="lib0 modified"
                 />
             </word>
             <word
@@ -388,6 +315,7 @@
                 -->
                 <keep_apart_from id="chōsa-survey" />
                 <keep_apart_from id="ankēto-enquête" />
+                <keep_apart_from id="kaiken-interview" />
                 <phrase
                   ph="【面：めん】【接：せつ】を【受：う】ける"
                   rom="mensetsu o ukeru"
@@ -435,32 +363,6 @@
                   tr_en="to change plans"
                   tr_de="die Pläne ändern"
                   lvl="n3"
-                />
-            </word>
-            <word
-              w="【気：き】【候：こう】"
-              rom="kikō"
-              tr_en="climate"
-              tr_de="Klima"
-              lvl="n3"
-              category="weather"
-              id="kikō-climate"
-            >
-                <phrase
-                  ph="ひどい【気：き】【候：こう】"
-                  rom="hidoi kikō"
-                  tr_en="a harsh climate"
-                  tr_de="ein rauhes Klima"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【日：に】【本：ほん】は【穏：おだ】やかな【気：き】【候：こう】だ。"
-                  rom="Nihon wa odayaka na kikō da."
-                  tr_en="Japan has a mild climate."
-                  tr_de="Japan hat ein mildes Klima."
-                  lvl="n3"
-                  origin="lib0"
                 />
             </word>
             <word
@@ -624,6 +526,46 @@
                   explanation_de="Wörtlich 'für eine Rolle stehen', 'einem Zweck dienen'"
                   lvl="n3"
                 />
+            </word>
+            <word
+              w="【経：けい】【営：えい】"
+              rom="keiei"
+              tr_en="management; administration; running a business"
+              tr_de="Unternehmensführung; Geschäftsleitung; ein Geschäft führen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="keiei-management"
+              rem="appears in GENKI2 p.328 kanji section"
+            >
+                <phrase
+                  ph="【経：けい】【営：えい】【学：がく】"
+                  rom="keieigaku"
+                  tr_en="management studies; field of business administration"
+                  tr_de="Management-Studien; Studium der Unternehmensführung"
+                  lvl="n3"
+                  origin="GENKI2 p.328"
+                />
+            </word>
+            <word
+              w="【進：すす】み"
+              rom="susumi"
+              tr_en="progress; advancing"
+              tr_de="Fortschreiten; Vorwärtsgehen"
+              lvl="n3"
+              category="motion"
+              id="susumi-progress"
+              rem="jisho has n1, but n4 for susumu"
+            >
+                <see id="susumu-advance" rem="verb" />
+                <keep_apart_from id="shinpo-progress" />
+                <keep_apart_from id="kōjō-elevation" />
+                <keep_apart_from id="shinten-progress" />
+                <keep_apart_from id="shinka-evolution" />
+                <keep_apart_from id="shindo-progress" />
+                <keep_apart_from id="hatten-growth" />
+                <keep_apart_from id="zenshin-advance" />
+                <keep_apart_from id="jōtatsu-improve" />
             </word>
             <word
               w="【誕：たん】【生：じょう】"
@@ -810,6 +752,17 @@
               id="kutsū-pain"
             >
                 <keep_apart_from id="itami-pain" />
+            </word>
+            <word
+              w="【玉：たま】"
+              rom="tama"
+              tr_en="ball; sphere; bulb"
+              tr_de="Ball; Kugel"
+              lvl="n3"
+              id="tama-ball"
+            >
+                <keep_apart_from id="bōru-ball" />
+                <keep_apart_from id="mari-ball" />
             </word>
             <word
               w="【成：せい】【長：ちょう】"

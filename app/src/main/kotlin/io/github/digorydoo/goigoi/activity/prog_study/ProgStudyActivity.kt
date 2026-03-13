@@ -317,7 +317,7 @@ class ProgStudyActivity: AppCompatActivity() {
         override fun createNewKeyLensDrawable(keyDef: KeyDef) =
             KeyLensDrawable(applicationContext, keyDef)
 
-        override fun applyInputTextTransform(trf: (text: String) -> String) {
+        override fun applyInputTextTransform(trf: (Keyboard.TextAndCaret) -> Unit) {
             choreo.applyInputTextTransform(trf)
         }
 

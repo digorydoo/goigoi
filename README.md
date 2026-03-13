@@ -161,7 +161,7 @@ Sentences sometimes use fictional names to give them some context. They do not r
 * (11) 石川さん - Mr Ishikawa (elderly person (70), talks little, has a garden, listens to music)
 * ( 7) 古川さん - Mrs Furukawa (elderly person, likes knitting, cheerful)
 * (15) 山田さん - Mr Yamada (businessman, has a red beard, likes jazz, does research on new tech)
-* (14) 中村さん - Mrs Nakamura (businesswoman, likes to cook, has an expensive car)
+* (15) 中村さん - Mrs Nakamura (businesswoman, likes to cook, has an expensive car, divorced)
 * (10) 高木さん - Mr Takagi (businessman, works at a bank, likes fishing)
 * ( 5) 谷口さん - Mrs Taniguchi (lawyer, not a good cook, has a husband)
 * ( 8) 小山さん - Mrs Koyama (likes clothes, has a big nose, work for foreign trade)

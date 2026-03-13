@@ -1,8 +1,8 @@
 package io.github.digorydoo.goigoi.activity.prog_study
 
-import io.github.digorydoo.goigoi.db.Word
 import ch.digorydoo.kutils.cjk.FuriganaString
 import ch.digorydoo.kutils.utils.OneOf
+import io.github.digorydoo.goigoi.db.Word
 
 // This class is immutable
 class QuestionAndAnswer(val word: Word, val kind: QAKind, val index: Int, val questionHasFurigana: Boolean) {
@@ -212,5 +212,32 @@ class QuestionAndAnswer(val word: Word, val kind: QAKind, val index: Int, val qu
         QAKind.SHOW_PHRASE_ASK_KANJI -> true
         QAKind.SHOW_SENTENCE_ASK_KANJI -> true
         QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> false
+    }
+
+    /**
+     * If the word has a kana prefix, it may be an honorific prefix. Since the word without honorific prefix would also
+     * be correct, we pre-fill the prefix to make it non-ambigous. On the other hand, if we're showing kana or kanji
+     * and are asking kanji or kana, and there is a kana prefix and/or postfix, we also pre-fill the prefix or postfix,
+     * because the user would simply have to copy the same kana in the answer.
+     */
+    fun getPrefill(): Pair<String, String>? {
+        return when {
+            presentWholeWords -> null
+            kind.doesNotAskAnything -> null
+            kind == QAKind.SHOW_ROMAJI_ASK_KANA -> null
+            word.kanji == word.kana -> null
+            else -> {
+                val prefix = word.kanaPrefix
+                val suffix = word.kanaSuffix
+                val answer = answers.firstOrNull() // the other answers are synonyms
+                val answerHasPrefix = answer?.startsWith(prefix) ?: false
+                val answerHasSuffix = answer?.endsWith(suffix) ?: false
+                val questionHasSuffix = questionWithoutFurigana.endsWith(suffix)
+                Pair(
+                    if (answerHasPrefix) prefix else "",
+                    if (answerHasSuffix && questionHasSuffix) suffix else "",
+                )
+            }
+        }
     }
 }

@@ -12,8 +12,8 @@
       defaultHint_de="Nomen"
       lvl="n4"
       translations="en, de"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
       requiresIds="true"
     >
         <section>
@@ -641,47 +641,6 @@
                   lvl="n4"
                   origin="lib0"
                   href="https://hinative.com/questions/22482840"
-                />
-            </word>
-            <word
-              w="【周：まわ】り"
-              rom="mawari"
-              tr_en="circumference; surroundings; neighbourhood"
-              tr_de="Umfang; Umfeld; Umgebung"
-              lvl="n4"
-              category="general, city"
-              id="mawari-circumference"
-            >
-                <keep_apart_from id="atari-vicinity" />
-                <keep_apart_from id="chikaku-neighbourhood" />
-                <keep_apart_from id="kinjo-neighbourhood" />
-                <keep_apart_from id="hen-area" />
-                <keep_apart_from id="shūi-circumference" />
-                <keep_apart_from id="enshū-circumference" />
-                <keep_apart_from id="shūhen-circumference" />
-                <phrase
-                  ph="【池：いけ】の【周：まわ】りを【歩：ある】く"
-                  rom="ike no mawari o aruku"
-                  tr_en="to walk around the pond"
-                  tr_de="um den Teich spazieren"
-                  lvl="n4"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【家：いえ】の【周：まわ】りを【散：さん】【歩：ぽ】します。"
-                  rom="Ie no mawari o sanpo shimasu."
-                  tr_en="I take a walk around the house."
-                  tr_de="Ich spaziere im Umkreis des Hauses."
-                  lvl="n4"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【学：がっ】【校：こう】の【周：まわ】りには【店：みせ】がたくさんあります。"
-                  rom="Gakkō no mawari ni wa mise ga takusan arimasu."
-                  tr_en="There are many shops around school."
-                  tr_de="Es gibt viele Läden in der Umgebung der Schule."
-                  lvl="n4"
-                  origin="ChatGPT"
                 />
             </word>
             <word
@@ -1599,12 +1558,14 @@
               rom="yomi"
               tr_en="reading"
               tr_de="Lesen"
+              studyInContext="required"
               lvl="n4"
               category="education, literature"
               id="yomi-reading"
               rem="jisho has n3"
             >
                 <see id="yomu-read" rem="verb" />
+                <keep_apart_from id="oyomi-reading" />
                 <phrase
                   ph="【読：よ】みやすい【本：ほん】"
                   rom="yomi-yasui hon"
@@ -1620,6 +1581,23 @@
                   tr_de="wie man etw. liest; Lesart (z.B. eines Kanjis)"
                   lvl="n4"
                   rem="jisho has nx"
+                />
+                <phrase
+                  ph="【読：よ】み【続：つづ】ける"
+                  rom="yomi-tsudzukeru"
+                  tr_en="to continue reading"
+                  tr_de="weiterlesen"
+                  lvl="n4"
+                  origin="lib0"
+                />
+                <sentence
+                  s="リサちゃんはもう【読：よ】み【書：か】きができる。"
+                  rom="Risa-chan wa mō yomi-kaki ga dekiru."
+                  tr_en="Risa can already read and write."
+                  tr_de="Risa kann bereits lesen und schreiben."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word

@@ -20,8 +20,9 @@
             <word
               w="【生：は】える"
               rom="haeru"
-              tr_en="to grow; to spring up; to sprout / to cut (teeth)"
-              hint_en="ichidan verb; intransitive verb"
+              tr_en="to grow; to spring up; to sprout"
+              tr_de="wachsen; spriessen"
+              hint_en="v.i."
               lvl="n2"
               id="haeru-grow"
             >
@@ -33,6 +34,29 @@
                   lvl="n2"
                   href="https://www.tofugu.com/japanese/japanese-counter-hon/"
                 -->
+            </word>
+            <word
+              w="【伝：つた】わる"
+              rom="tsutawaru"
+              tr_en="to be introduced; to be transmitted; to be circulated"
+              tr_de="eingeführt werden; übertragen werden; zirkulieren"
+              hint_en="v.i."
+              lvl="n2"
+              id="tsutawaru-beintroduced"
+            >
+                <see id="tsutaeru-convey" rem="v.t." />
+            </word>
+            <word
+              w="【逃：に】がす"
+              rom="nigasu"
+              tr_en="to set free; to let go; to let (a chance) pass by"
+              tr_de="freisetzen; freilassen; (Chance) vorüberziehen lassen"
+              hint_en="v.t."
+              lvl="n2"
+              id="nigasu-setfree"
+            >
+                <see id="nigeru-escape" rem="v.i." />
+                <keep_apart_from id="hanareru-getfree" />
             </word>
             <word
               w="【泊：と】める"
@@ -221,16 +245,6 @@
                 <keep_apart_from id="tobihaneru-hop" />
             </word>
             <word
-              w="【放：はな】れる"
-              rom="hanareru"
-              tr_en="to get free (from); to be released"
-              hint_en="v.i."
-              lvl="n2"
-              id="hanareru-getfree"
-            >
-                <!-- implicit see-also link to hanareru-goaway -->
-            </word>
-            <word
               w="【縮：ちぢ】む"
               rom="chidzimu"
               tr_en="to shrink; it contracts; it diminishes"
@@ -320,7 +334,10 @@
               hint_en="v.t. &amp; i."
               lvl="n2"
               id="omoitsuku-thinkof"
-            />
+            >
+                <see id="omoitsuki-idea" rem="noun" />
+                <keep_apart_from id="omoi-thought" />
+            </word>
             <word
               w="【転：ころ】がす"
               rom="korogasu"
@@ -330,12 +347,17 @@
               id="korogasu-roll"
             />
             <word
-              w="【逃：に】がす"
-              rom="nigasu"
-              tr_en="to set free; to let go; to let (a chance) pass by"
+              w="【放：はな】れる"
+              rom="hanareru"
+              tr_en="to get free (from); to be released"
+              hint_en="v.i."
               lvl="n2"
-              id="nigasu-setfree"
-            />
+              id="hanareru-getfree"
+              HIDDEN="true"
+            >
+                <!-- implicit see-also link to hanareru-goaway -->
+                <keep_apart_from id="nigasu-setfree" />
+            </word>
         </section>
     </unit>
 </vocabulary>

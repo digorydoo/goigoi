@@ -3,21 +3,45 @@ package io.github.digorydoo.goigoi.activity.prog_study.keyboard
 import ch.digorydoo.kutils.cjk.*
 
 class TextTransformer {
-    fun transform(text: String, action: KeyDef.Action, key: String) =
+    fun transform(textAndCaret: Keyboard.TextAndCaret, action: KeyDef.Action, key: String) {
         when (action) {
-            KeyDef.Action.NONE -> text
-            KeyDef.Action.LITERAL -> text + key
-            KeyDef.Action.AUTO_TRANSFORM -> transformLastChar(text, ::autoTransform)
-            KeyDef.Action.DAKUTEN -> transformLastChar(text, ::toggleDakuten)
-            KeyDef.Action.HANDAKUTEN -> transformLastChar(text, ::toggleHandakuten)
-            KeyDef.Action.NORMAL_SIZE -> transformLastChar(text) { it.toNormalSizedKana() }
-            KeyDef.Action.SMALL_SIZE -> transformLastChar(text, ::makeSmallKana)
+            KeyDef.Action.NONE -> Unit
+            KeyDef.Action.LITERAL -> insert(key, textAndCaret)
+            KeyDef.Action.AUTO_TRANSFORM -> transformPrevChar(textAndCaret, ::autoTransform)
+            KeyDef.Action.DAKUTEN -> transformPrevChar(textAndCaret, ::toggleDakuten)
+            KeyDef.Action.HANDAKUTEN -> transformPrevChar(textAndCaret, ::toggleHandakuten)
+            KeyDef.Action.NORMAL_SIZE -> transformPrevChar(textAndCaret) { it.toNormalSizedKana() }
+            KeyDef.Action.SMALL_SIZE -> transformPrevChar(textAndCaret, ::makeSmallKana)
         }
+    }
 
-    private fun transformLastChar(text: String, trf: (c: Char) -> Char): String {
-        if (text.isEmpty()) return text
-        val lpart = text.slice(0 ..< text.length - 1)
-        return lpart + trf(text.last())
+    private fun insert(key: String, textAndCaret: Keyboard.TextAndCaret) {
+        val text = textAndCaret.text
+        val caretPos = textAndCaret.caretPos
+        val lpart = text.slice(0 ..< caretPos)
+        val rpart = text.substring(caretPos)
+        textAndCaret.text = "$lpart$key$rpart"
+        textAndCaret.caretPos += key.length // key can be an entire word
+    }
+
+    fun transformPrevChar(textAndCaret: Keyboard.TextAndCaret, trf: (c: Char) -> Char) {
+        val text = textAndCaret.text
+        val caretPos = textAndCaret.caretPos
+
+        if (text.isEmpty() || caretPos <= 0) {
+            textAndCaret.caretPos = 0
+        } else {
+            val lpart = text.slice(0 ..< caretPos - 1)
+            val rpart = text.substring(caretPos)
+            val transformed = trf(text[caretPos - 1])
+
+            if (transformed == Char(0)) {
+                textAndCaret.text = "$lpart$rpart"
+                textAndCaret.caretPos--
+            } else {
+                textAndCaret.text = "$lpart$transformed$rpart"
+            }
+        }
     }
 
     private fun autoTransform(c: Char) = when {

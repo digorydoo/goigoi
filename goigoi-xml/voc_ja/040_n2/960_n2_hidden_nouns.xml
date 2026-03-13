@@ -185,14 +185,19 @@
             <word
               w="【通：つう】【訳：やく】"
               rom="tsūyaku"
-              tr_en="interpretation; simultaneous interpreter (job)"
-              tr_de="Interpretation; Simultanübersetzer (Job)"
+              tr_en="interpretation; simultaneous interpretion"
+              tr_de="Interpretation; simultane Übersetzung"
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n2"
               category="linguistics"
-              id="tsūyaku-interpreter"
-            />
+              id="tsūyaku-interpretation"
+            >
+                <keep_apart_from id="honyaku-translation" />
+                <keep_apart_from id="yaku-translation" />
+                <keep_apart_from id="kaishaku-explanation" />
+                <!-- tsūyakusha : interpreter (job) -->
+            </word>
             <word
               w="【体：たい】【操：そう】"
               rom="taisō"

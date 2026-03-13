@@ -5,6 +5,8 @@
 * Bug: Asynchronous reset stats/set fake stats can garble stats data since stats are not thread-safe! The dialogue
   window should stay open until the task is done.
 
+* Show streak in app bar
+
 * Tategaki view should treat numbers specially (unless their furigana is broken in parts)
     - single digit numbers should use wide chars
     - two-digit numbers should use normal-width chars and occupy one space
@@ -18,9 +20,6 @@
 * Text size is too large for Krankenhauseinweisung (breaks word)
 
 * Store date of study per word; use that when deciding which word to pick from the past
-
-* When asking kana from kanji, prefill kana prefix and kana postfix, because the user would simply have to copy
-  that, which does not make sense. Example: Asking kana of 恥ずかしい should prefill 〜ずかしい
 
 * Do not show extended keyboard if word is usuallyInKana, but question contains kanji. (Since the word is not
   usually written in kanji, the kanji variant is likely to be rare, and there may be another reading that is

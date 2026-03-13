@@ -17,55 +17,6 @@
         <section>
             <!-- unsorted -->
             <word
-              w="【動：どう】【画：が】"
-              rom="dōga"
-              tr_en="video; animation"
-              tr_de="Video; Animation"
-              lvl="-"
-              id="dōga-video"
-              category="entertainment"
-            >
-                <keep_apart_from id="bideo-video" />
-            </word>
-            <word
-              w="【小：こ】【道：どう】【具：ぐ】"
-              rom="kodōgu"
-              tr_en="stage prop; small gadget"
-              tr_de="Requisite"
-              lvl="-"
-              category="entertainment"
-              id="kodōgu-stageprop"
-            />
-            <word
-              w="【歌：か】【舞：ぶ】【伎：き】"
-              rom="kabuki"
-              tr_en="Japanese classical dance-drama"
-              tr_de="klassisches japanisches Tanzdrama"
-              lvl="-"
-              id="kabuki-drama"
-              category="entertainment, top-words"
-              rem="appears in GENKI1 p.210 vocab section"
-            />
-            <word
-              w="【二：ふつ】【日：か】【酔：よ】い"
-              rom="futsukayoi"
-              tr_en="hangover"
-              tr_de="Kater; Hangover"
-              lvl="-"
-              category="going-out"
-              id="futsukayoi-hangover"
-              rem="appears in GENKI1 p.268 vocab section; jisho has nx"
-            />
-            <word
-              w="【料：りょう】【理：り】【人：にん】"
-              rom="ryōrinin"
-              tr_en="cook; chef"
-              tr_de="Koch; Küchenchef"
-              lvl="-"
-              category="occupations"
-              id="ryōrinin-cook"
-            />
-            <word
               w="【機：き】【長：ちょう】"
               rom="kichō"
               tr_en="pilot; captain"
@@ -80,15 +31,6 @@
                 <keep_apart_from id="kyaputen-captain" />
                 <keep_apart_from id="senchō-shipscaptain" />
             </word>
-            <word
-              w="【船：せん】【員：いん】"
-              rom="sen'in"
-              tr_en="sailor"
-              tr_de="Matrose"
-              lvl="-"
-              id="senin-sailor"
-              category="occupations, travelling"
-            />
             <word
               w="【科：か】【学：がく】【者：しゃ】"
               rom="kagakusha"
@@ -425,8 +367,6 @@
               category="people"
               id="hime-princess"
             />
-
-            <!-- hidden -->
             <word
               w="【隕：いん】【石：せき】"
               rom="inseki"
@@ -435,8 +375,55 @@
               lvl="-"
               category="astronomy"
               id="inseki-meteorite"
-              HIDDEN="true"
             />
+
+            <!-- hidden -->
+            <word
+              w="【生：せい】【物：ぶつ】【学：がく】"
+              rom="seibutsugaku"
+              tr_en="biology"
+              tr_de="Biologie"
+              lvl="-"
+              category="science, life"
+              id="seibutsugaku-biology"
+              HIDDEN="true"
+              rem="now a phrase of seibutsu"
+            >
+                <keep_apart_from id="seibutsu-organism" />
+            </word>
+            <word
+              w="【漬：つけ】【物：もの】"
+              rom="tsukemono"
+              tr_en="Japanese pickled vegetables"
+              lvl="-"
+              id="tsukemono-pickled"
+              HIDDEN="true"
+              rem="now a phrase of tsukeru"
+            >
+                <keep_apart_from id="tsukeru-soak" />
+            </word>
+            <word
+              w="【旋：せん】【律：りつ】"
+              rom="senritsu"
+              tr_en="melody; tune"
+              lvl="-"
+              id="senritsu-tune"
+              category="entertainment"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="kakyoku-melody" />
+            </word>
+            <word
+              w="【琵：び】【琶：わ】"
+              rom="biwa"
+              tr_en="Japanese lute"
+              lvl="-"
+              category="entertainment"
+              id="biwa-lute"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="shamisen-lute" />
+            </word>
             <word
               w="【客：きゃく】【室：しつ】【乗：じょう】【務：む】【員：いん】"
               rom="kyakushitsu-jōmuin"
@@ -515,40 +502,6 @@
               category="entertainment"
               HIDDEN="true"
             />
-            <word
-              w="【歌：か】【曲：きょく】"
-              rom="kakyoku"
-              tr_en="melody; tune"
-              lvl="-"
-              id="kakyoku-melody"
-              category="entertainment"
-              HIDDEN="true"
-            >
-                <keep_apart_from id="merodī-melody" />
-                <keep_apart_from id="senritsu-tune" />
-            </word>
-            <word
-              w="【旋：せん】【律：りつ】"
-              rom="senritsu"
-              tr_en="melody; tune"
-              lvl="-"
-              id="senritsu-tune"
-              category="entertainment"
-              HIDDEN="true"
-            >
-                <keep_apart_from id="kakyoku-melody" />
-            </word>
-            <word
-              w="【琵：び】【琶：わ】"
-              rom="biwa"
-              tr_en="Japanese lute"
-              lvl="-"
-              category="entertainment"
-              id="biwa-lute"
-              HIDDEN="true"
-            >
-                <keep_apart_from id="shamisen-lute" />
-            </word>
             <word
               w="【浄：じょう】【瑠：る】【璃：り】"
               rom="jōruri"
@@ -785,6 +738,48 @@
               lvl="-"
               category="astronomy"
               id="meiōsei-pluto"
+              HIDDEN="true"
+            />
+            <word
+              w="【大：おお】さじ"
+              rom="ōsaji"
+              tr_en="tablespoon"
+              tr_de="grosser Löffel; Esslöffel"
+              lvl="-"
+              category="cooking"
+              id="ōsaji-tablespoon"
+              HIDDEN="true"
+              rem="is this only a counter?"
+            />
+            <word
+              w="【小：こ】さじ"
+              rom="kosaji"
+              tr_en="teaspoon"
+              tr_de="kleiner Löffel; Kaffeelöffel"
+              lvl="-"
+              category="cooking"
+              id="kosaji-teaspoon"
+              HIDDEN="true"
+              rem="is this only a counter?"
+            />
+            <word
+              w="すり【身：み】"
+              rom="surimi"
+              tr_en="minced fish mashed into a paste"
+              tr_de="pürierter Fisch"
+              lvl="-"
+              category="food"
+              id="surimi-mincedfish"
+              HIDDEN="true"
+            />
+            <word
+              w="お【好：この】み【焼：や】き"
+              rom="o-konomiyaki"
+              tr_en="pancake containing meat or seafood and vegetables"
+              tr_de="Pfannkuchen mit Fleisch oder Meeresfrüchten und Gemüse"
+              lvl="-"
+              category="food, gastronomy"
+              id="okonomiyaki-pancake"
               HIDDEN="true"
             />
         </section>

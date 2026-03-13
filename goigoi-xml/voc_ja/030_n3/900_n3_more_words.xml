@@ -136,7 +136,10 @@
               lvl="n3"
               id="jijitsu-fact"
               HIDDEN="true"
-            />
+            >
+                <keep_apart_from id="jitsu-truth" />
+                <keep_apart_from id="shinjitsu-truth" />
+            </word>
 
             <!-- not clearly a noun -->
             <word
@@ -265,6 +268,30 @@
                   rem="verified with ChatGPT"
                 />
             </word>
+            <word
+              w="【一：いっ】【般：ぱん】"
+              rom="ippan"
+              tr_en="general; universal; common"
+              tr_de="allgemein; universell"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              category="general"
+              id="ippan-general"
+              rem="ippanteki is a na-adjective"
+              HIDDEN="true"
+            />
+            <word
+              w="【普：ふ】【段：だん】"
+              rom="fudan"
+              tr_en="usual; habitual; ordinary"
+              tr_de="gewöhnlich; normal; typisch"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              id="fudan-usual"
+              HIDDEN="true"
+            />
 
             <!-- suffix, prefix -->
             <word
@@ -849,7 +876,7 @@
             />
             <word
               w="【話：はな】しかける"
-              rom="hanashi kakeru"
+              rom="hanashi-kakeru"
               tr_en="to address so.; to start a conversation"
               tr_de="jem. ansprechen; ein Gespräch anfangen"
               hint_en="expression"

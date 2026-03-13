@@ -3,6 +3,9 @@ package io.github.digorydoo.goigoi.activity.prog_study.keyboard
 import android.content.res.ColorStateList
 import android.util.TypedValue
 import android.view.View
+import ch.digorydoo.kutils.cjk.isSmallKana
+import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.activity.prog_study.Bindings
 import io.github.digorydoo.goigoi.activity.prog_study.Values
@@ -11,9 +14,6 @@ import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard.Mode.HIR
 import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard.Mode.JUST_REVEAL
 import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard.Mode.KATAKANA
 import io.github.digorydoo.goigoi.utils.addHapticFeedback
-import ch.digorydoo.kutils.cjk.isSmallKana
-import com.google.android.material.chip.Chip
-import com.google.android.material.chip.ChipGroup
 
 class Keyboard(
     private val delegate: Delegate,
@@ -23,6 +23,11 @@ class Keyboard(
     enum class Mode { JUST_REVEAL, FIXED_KEYS, HIRAGANA, KATAKANA }
     enum class KeyLensPart { CENTRE, LEFT, ABOVE, RIGHT, BELOW }
 
+    interface TextAndCaret {
+        var text: CharSequence
+        var caretPos: Int
+    }
+
     abstract class Delegate {
         abstract val chipFontSize: Float
         abstract val chipFontSizeForSmallKana: Float
@@ -30,13 +35,14 @@ class Keyboard(
         abstract fun createNewChipGroup(): ChipGroup
         abstract fun createNewButton(strResId: Int): View
         abstract fun createNewKeyLensDrawable(keyDef: KeyDef): KeyLensDrawable
-        abstract fun applyInputTextTransform(trf: (text: String) -> String)
+        abstract fun applyInputTextTransform(trf: (TextAndCaret) -> Unit)
         abstract fun okBtnClicked()
     }
 
     var mode = JUST_REVEAL; private set
     private var backspaceClearsAllText = false
     private var keyLens: KeyLensDrawable? = null
+    private val textTransformer = TextTransformer()
 
     fun supportsCharsInMode(chars: String, mode: Mode) = when (mode) {
         JUST_REVEAL -> false
@@ -217,14 +223,18 @@ class Keyboard(
     }
 
     private fun onKeyLensPartSelected(action: KeyDef.Action, key: String) {
-        delegate.applyInputTextTransform { TextTransformer().transform(it, action, key) }
+        delegate.applyInputTextTransform { textAndCaret ->
+            textTransformer.transform(textAndCaret, action, key)
+        }
     }
 
     private fun backspaceBtnClicked() {
-        delegate.applyInputTextTransform {
-            when {
-                it.isEmpty() || backspaceClearsAllText -> ""
-                else -> it.slice(0 ..< it.length - 1)
+        delegate.applyInputTextTransform { textAndCaret ->
+            if (backspaceClearsAllText) {
+                textAndCaret.text = ""
+                textAndCaret.caretPos = 0
+            } else {
+                textTransformer.transformPrevChar(textAndCaret) { Char(0) }
             }
         }
     }

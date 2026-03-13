@@ -441,6 +441,7 @@
               id="osusume-recommend"
               rem="appears in GENKI2 p.91; jisho has n1"
             >
+                <see id="susumeru-recommend" rem="verb" />
                 <keep_apart_from id="suisen-recommendation" />
                 <phrase
                   ph="おすすめ【料：りょう】【理：り】"
@@ -710,7 +711,13 @@
               lvl="n3"
               id="kage-shadow"
             >
+                <!--
+                    影 is the shape of the shadow
+                    陰 is the shade, the blocking of the sun
+                -->
                 <see id="kage-background" rem="closely related" />
+                <keep_apart_from id="kage-background" />
+                <keep_apart_from id="hikage-shade" />
                 <phrase
                   ph="【自：じ】【分：ぶん】の【影：かげ】"
                   rom="jibun no kage"
@@ -1175,6 +1182,7 @@
               id="omoide-memories"
             >
                 <see id="omoidasu-remember" rem="verb" />
+                <keep_apart_from id="omoi-thought" />
                 <phrase
                   ph="つらい【思：おも】い【出：で】"
                   rom="tsurai omoide"
@@ -1542,6 +1550,7 @@
               id="kachi-win"
             >
                 <see id="katsu-win" rem="verb" />
+                <keep_apart_from id="yūshō-victory" />
                 <phrase
                   ph="【逃：に】げるが【勝：か】ち"
                   rom="nigeru ga kachi"
