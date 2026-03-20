@@ -125,6 +125,7 @@
               id="hyōgen-expression"
             >
                 <keep_apart_from id="dairi-agency" />
+                <keep_apart_from id="arawasu-reveal" />
             </word>
             <word
               w="【期：き】【間：かん】"
@@ -255,7 +256,11 @@
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
               id="seigen-restrict"
-            />
+            >
+                <keep_apart_from id="kagiru-restrict" />
+                <keep_apart_from id="kagiri-limits" />
+                <keep_apart_from id="genkai-limit" />
+            </word>
             <word
               w="【予：よ】【防：ぼう】"
               rom="yobō"
@@ -823,6 +828,7 @@
             >
                 <keep_apart_from id="fueru-increase" />
                 <keep_apart_from id="hatten-growth" />
+                <keep_apart_from id="masu-grow" />
             </word>
             <word
               w="【代：だい】【理：り】"
@@ -2311,14 +2317,6 @@
               id="chi-ground"
             />
             <word
-              w="【対：たい】【象：しょう】"
-              rom="taishō"
-              tr_en="target; object (of worship, study, etc.); subject (of taxation, etc.)"
-              hint_en="noun"
-              lvl="n3"
-              id="taishō-target"
-            />
-            <word
               w="【家：や】【賃：ちん】"
               rom="yachin"
               tr_en="rent"
@@ -2477,6 +2475,7 @@
             >
                 <keep_apart_from id="honyaku-translation" />
                 <keep_apart_from id="tsūyaku-interpretation" />
+                <keep_apart_from id="yakusu-translate" />
             </word>
             <word
               w="【彼：かれ】ら"
@@ -2736,12 +2735,6 @@
               lvl="n3"
             />
             <word
-              w="【拡：かく】【大：だい】"
-              rom="kakudai"
-              tr_en="magnification; enlargement"
-              lvl="n3"
-            />
-            <word
               w="【区：く】【別：べつ】"
               rom="kubetsu"
               tr_en="distinction; differentiation; classification"
@@ -2972,20 +2965,12 @@
               lvl="n3"
             />
             <word
-              w="【関：かん】【心：しん】"
-              rom="kanshin"
-              tr_en="concern; interest"
-              lvl="n3"
-              id="kanshin-concern"
-            />
-            <word
               w="【感：かん】【心：しん】"
               rom="kanshin"
               tr_en="admiration; being impressed; astonishment"
               lvl="n3"
               id="kanshin-admiration"
               HIDDEN="true"
-              rem="rōmaji not unique"
             />
             <word
               w="【一：いっ】【生：しょう】"

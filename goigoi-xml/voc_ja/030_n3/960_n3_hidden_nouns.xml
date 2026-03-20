@@ -17,6 +17,38 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【関：かん】【心：しん】"
+              rom="kanshin"
+              tr_en="concern; interest"
+              tr_de="Betreff; Interesse"
+              lvl="n3"
+              id="kanshin-concern"
+            >
+                <keep_apart_from id="kansuru-concern" />
+                <keep_together id="kansuru-concern" />
+                <phrase
+                  ph="【関：かん】する"
+                  rom="kan suru"
+                  tr_en="to concern sth.; to be related to sth."
+                  tr_de="etw. betreffen; auf etw. bezogen sein"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【関：かん】する"
+              rom="kan suru"
+              tr_en="to concern; to be related"
+              Langenscheidt="betreffen"
+              lvl="n3"
+              id="kansuru-concern"
+              HIDDEN="true"
+              rem="now a phrase of kanshin-concern"
+            >
+                <keep_apart_from id="kanshin-concern" />
+                <keep_together id="kanshin-concern" />
+            </word>
+            <word
               w="【方：ほう】【々：ぼう】"
               rom="hō-bō"
               tr_en="here and there; this way and that way; all over"
@@ -34,6 +66,27 @@
                 -->
                 <!-- 日本方々を旅行しました。 -->
             </word>
+            <word
+              w="【刺：し】【激：げき】"
+              rom="shigeki"
+              tr_en="stimulus; impulse; provocation"
+              tr_de="Anstoss; Impuls; Provokation"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="shigeki-stimulus"
+            />
+            <word
+              w="【計：けい】【算：さん】"
+              rom="keisan"
+              tr_en="calculation; computation; counting"
+              tr_de="Rechnen; Kalkül; zählen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="technical"
+              id="keisan-calculation"
+            />
             <word
               w="【流：りゅう】【行：こう】"
               rom="ryūkō"
@@ -109,6 +162,17 @@
               lvl="n3"
               id="katakana-angularsyl"
               rem="jisho has n2"
+            />
+            <word
+              w="【平：へい】【均：きん】"
+              rom="heikin"
+              tr_en="average; mean; equilibrium"
+              tr_de="Durchschnitt; Balance; Gleichgewicht"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="science"
+              id="heikin-average"
             />
         </section>
     </unit>

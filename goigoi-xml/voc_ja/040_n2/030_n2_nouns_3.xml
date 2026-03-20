@@ -13,6 +13,7 @@
       lvl="n2"
       translations="en, de"
       requiresSentences="false"
+      requiresPhrases="false"
       requiresIds="true"
     >
         <section>
@@ -372,14 +373,6 @@
               rem="appears in GENKI2 p.328 kanji section"
             />
             <word
-              w="【便：べん】【所：じょ】"
-              rom="benjo"
-              tr_en="toilet; restroom"
-              tr_de="Toilette"
-              lvl="n2"
-              id="benjo-toilet"
-            />
-            <word
               w="【塾：じゅく】"
               rom="juku"
               tr_en="private tutoring school; cram school"
@@ -419,6 +412,52 @@
               category="education"
               id="kyūkō-cancellation"
               rem="appears in GENKI2 L23 vocab section"
+            />
+            <word
+              w="【貧：びん】【乏：ぼう】"
+              rom="binbō"
+              tr_en="poverty"
+              tr_de="Armut"
+              lvl="n2"
+              category="government, finances"
+              id="binbō-poverty"
+              rem="appears in GENKI2 L22 vocab section; jisho has n1"
+            />
+            <word
+              w="【部：ぶ】【下：か】"
+              rom="buka"
+              tr_en="subordinate person"
+              tr_de="unterstellte Person(en); Untergebener"
+              lvl="n2"
+              category="relationships, business"
+              id="buka-subordinate"
+              rem="appears in GENKI2 L22 vocab section; jisho has n1"
+            >
+                <!-- 課長は部長の部下です - Kachō wa buchō no buka desu - A kachō is subordinate to the buchō (ChatGPT) -->
+            </word>
+            <word
+              w="【食：しょく】【糧：りょう】"
+              rom="shokuryō"
+              tr_en="food (esp. rice, wheat); rations; food supply"
+              tr_de="Essen (insb. Reis, Weizen); Rationen; Erährungsversorgung"
+              lvl="n2"
+              category="food"
+              id="shokuryō-rations"
+              rem="jisho has n3; moved to n2, because n3 already has shokuryō-food, and the distinction is unclear"
+            >
+                <keep_apart_from id="tabemono-food" />
+                <keep_apart_from id="shokuhin-foodproducts" />
+                <keep_apart_from id="shokumotsu-food" />
+                <keep_apart_from id="shokuryō-food" />
+                <keep_apart_from id="shokuryōhin-groceries" />
+            </word>
+            <word
+              w="【便：べん】【所：じょ】"
+              rom="benjo"
+              tr_en="toilet; restroom"
+              tr_de="Toilette"
+              lvl="n2"
+              id="benjo-toilet"
             />
             <word
               w="【通：つう】【勤：きん】"
@@ -650,53 +689,6 @@
               id="ikebana-flowerarr"
             />
             <word
-              w="【社：しゃ】【会：かい】【科：か】【学：がく】"
-              rom="shakai kagaku"
-              tr_en="social science"
-              tr_de="Sozialwissenschaften"
-              lvl="n2"
-              category="science, education"
-              id="shakaikagaku-socialscience"
-            />
-            <word
-              w="【人：ひと】【通：どお】り"
-              rom="hitodōri"
-              tr_en="pedestrian traffic"
-              tr_de="Personenverkehr; Fussgängerverkehr"
-              lvl="n2"
-              category="transportation"
-              id="hitodōri-pedestriantraffic"
-            />
-            <word
-              w="【車：しゃ】【掌：しょう】"
-              rom="shashō"
-              tr_en="(train) conductor"
-              tr_de="Schaffner (Zug)"
-              lvl="n2"
-              category="occupations, travelling"
-              id="shashō-conductor"
-            />
-            <word
-              w="【太：たい】【鼓：こ】"
-              rom="taiko"
-              tr_en="Japanese timpani (drum)"
-              tr_de="japanische Pauke"
-              lvl="n2"
-              category="entertainment, top-words"
-              id="taiko-drum"
-            />
-            <word
-              w="【琴：こと】"
-              rom="koto"
-              tr_en="Japanese 13-string zither"
-              tr_de="japanische Zither mit 13 Saiten"
-              hint_en="instrument"
-              hint_de="Instrument"
-              lvl="n2"
-              category="entertainment, top-words"
-              id="koto-zither"
-            />
-            <word
               w="【乗：の】り【換：か】え"
               rom="norikae"
               tr_en="transfer; connection; changing"
@@ -708,34 +700,6 @@
             >
                 <see id="norikaeru-transfer" rem="verb" />
             </word>
-            <word
-              w="【蕎麦：そば】"
-              rom="soba"
-              tr_en="buckwheat noodles"
-              tr_de="Buchweizennudeln"
-              hasCombinedReading="true"
-              lvl="n2"
-              category="food"
-              id="soba-noodles"
-            />
-            <word
-              w="【胡：こ】【椒：しょう】"
-              rom="koshō"
-              tr_en="pepper"
-              tr_de="Pfeffer"
-              lvl="n2"
-              category="cooking"
-              id="koshō-pepper"
-            />
-            <word
-              w="【脂：あぶら】"
-              rom="abura"
-              tr_en="fat; grease"
-              tr_de="Fett; Schmalz"
-              lvl="n2"
-              category="cooking"
-              id="abura-fat"
-            />
             <word
               w="【匙：さじ】"
               rom="saji"
@@ -749,80 +713,6 @@
             >
                 <keep_apart_from id="supūn-spoon" />
             </word>
-            <word
-              w="【貧：びん】【乏：ぼう】"
-              rom="binbō"
-              tr_en="poverty"
-              tr_de="Armut"
-              lvl="n2"
-              category="government, finances"
-              id="binbō-poverty"
-              rem="appears in GENKI2 L22 vocab section; jisho has n1"
-            />
-            <word
-              w="【部：ぶ】【下：か】"
-              rom="buka"
-              tr_en="subordinate person"
-              tr_de="unterstellte Person(en); Untergebener"
-              lvl="n2"
-              category="relationships, business"
-              id="buka-subordinate"
-              rem="appears in GENKI2 L22 vocab section; jisho has n1"
-            >
-                <!-- 課長は部長の部下です - Kachō wa buchō no buka desu - A kachō is subordinate to the buchō (ChatGPT) -->
-            </word>
-            <word
-              w="【独：ひと】り【言：ごと】"
-              rom="hitorigoto"
-              tr_en="monologue; speaking to oneself"
-              tr_de="Monolog; mit sich selber sprechen"
-              lvl="n2"
-              id="hitorigoto-monologue"
-            />
-            <word
-              w="【針：はり】【金：がね】"
-              rom="harigane"
-              tr_en="wire"
-              tr_de="Kabel"
-              lvl="n2"
-              id="harigane-wire"
-              rem="also a phrase of hari-pin"
-            />
-            <word
-              w="【墨：すみ】"
-              rom="sumi"
-              tr_en="ink; inkstick"
-              tr_de="Tinte; Tintenstift"
-              lvl="n2"
-              id="sumi-ink"
-            />
-            <word
-              w="【名：めい】【刺：し】"
-              rom="meishi"
-              tr_en="business card"
-              tr_de="Visitenkarte"
-              lvl="n2"
-              category="business"
-              id="meishi-businesscard"
-            />
-            <word
-              w="【自：し】【然：ぜん】【科：か】【学：がく】"
-              rom="shizen kagaku"
-              tr_en="natural science"
-              tr_de="Naturwissenschaften"
-              lvl="n2"
-              category="science, education"
-              id="shizenkagaku-naturalscience"
-            />
-            <word
-              w="【日：にち】【用：よう】【品：ひん】"
-              rom="nichiyōhin"
-              tr_en="daily necessities"
-              tr_de="Artikel des alltäglichen Bedarfs"
-              lvl="n2"
-              rem="Langenscheidt: Güter des alltäglichen Bedarfs"
-              id="nichiyōhin-dailynecessities"
-            />
         </section>
     </unit>
 </vocabulary>

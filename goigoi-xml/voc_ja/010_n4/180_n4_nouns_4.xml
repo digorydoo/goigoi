@@ -17,6 +17,35 @@
       requiresIds="true"
     >
         <section>
+            <!-- unsorted -->
+            <word
+              w="【会：かい】【議：ぎ】【室：しつ】"
+              rom="kaigishitsu"
+              tr_en="conference room"
+              tr_de="Konferenzraum"
+              lvl="n4"
+              category="meetings, business"
+              id="kaigishitsu-confroom"
+            >
+                <keep_apart_from id="kaijō-meetingplace" />
+                <phrase
+                  ph="【明：あか】るい【会：かい】【議：ぎ】【室：しつ】"
+                  rom="akarui kaigishitsu"
+                  tr_en="a well-lit conference room"
+                  tr_de="ein heller Konferenzraum"
+                  lvl="n4"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【会：かい】【議：ぎ】【室：しつ】は【階：かい】【段：だん】を【下：お】りたところにあります。"
+                  rom="Kaigishitsu wa kaidan o orita tokoro ni arimasu."
+                  tr_en="The conference room is downstairs."
+                  tr_de="Der Konferenzraum ist im unteren Stock."
+                  lvl="n4"
+                  origin="lib0"
+                  href="https://hinative.com/questions/22615038 (下りる vs. 降りる)"
+                />
+            </word>
             <word
               w="【課：か】【長：ちょう】"
               rom="kachō"
@@ -509,6 +538,7 @@
             >
                 <keep_apart_from id="tsūyaku-interpretation" />
                 <keep_apart_from id="yaku-translation" />
+                <keep_apart_from id="yakusu-translate" />
                 <phrase
                   ph="【英：えい】【語：ご】から【日：に】【本：ほん】【語：ご】へ【翻：ほん】【訳：やく】する"
                   rom="eigo kara Nihon-go e honyaku suru"
@@ -817,51 +847,6 @@
             >
                 <keep_apart_from id="momen-cotton" />
                 <keep_together id="momen-cotton" />
-            </word>
-            <word
-              w="【温：おん】【泉：せん】"
-              rom="onsen"
-              tr_en="hot spring resort"
-              tr_de="Erholungsort mit heisser Quelle"
-              lvl="n4"
-              category="holidays, top-words"
-              id="onsen-hotspring"
-              rem="appears in GENKI2 p.87; jisho has n2"
-            >
-                <phrase
-                  ph="【旅：りょ】【館：かん】の【温：おん】【泉：せん】に【入：はい】る"
-                  rom="ryokan no onsen ni hairu"
-                  tr_en="to take a bath in the Japanese inn's onsen"
-                  tr_de="ein Bad nehmen im Onsen des japanischen Gasthauses"
-                  lvl="n4"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【温：おん】【泉：せん】に【入：はい】る【前：まえ】にシャワーを【浴：あ】びた【方：ほう】がいい。"
-                  rom="Onsen ni hairu mae ni shawā o abita hō ga ii."
-                  tr_en="It is better to take a shower before getting in a hotspring."
-                  tr_de="Es ist besser, zuerst zu duschen, bevor man in das Onsen steigt."
-                  lvl="n4"
-                  origin="Miku"
-                  href="https://youtu.be/964fq7NJKms"
-                />
-                <sentence
-                  s="その【町：まち】は【温：おん】【泉：せん】で【有：ゆう】【名：めい】です。"
-                  rom="Sono machi wa onsen de yūmei desu."
-                  tr_en="That town is famous for its hotspring."
-                  tr_de="Diese Stadt ist berühmt für seine Heissquellen."
-                  lvl="n4"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【冬：ふゆ】【休：やす】みに【温：おん】【泉：せん】がある【旅：りょ】【館：かん】に【泊：と】まろうと【思：おも】っています。"
-                  rom="Fuyu-yasumi ni onsen ga aru ryokan ni tomarō to omotte imasu."
-                  tr_en="I am thinking of staying at a ryokan with hot springs during the winter break."
-                  tr_de="Ich hab mir gedacht, in den Winterferien in einem Ryokan, das eine Heissquelle hat, zu logieren."
-                  lvl="n4"
-                  origin="GENKI2 p.87"
-                />
             </word>
             <word
               w="お【湯：ゆ】"

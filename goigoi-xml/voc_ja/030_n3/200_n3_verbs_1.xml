@@ -12,8 +12,8 @@
       defaultHint_de="Verb"
       lvl="n3"
       translations="en, de"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
       requiresIds="true"
     >
         <section>
@@ -1148,43 +1148,6 @@
                 />
             </word>
             <word
-              w="【加：くわ】わる"
-              rom="kuwawaru"
-              tr_en="to be added to; to be appended; to join sth."
-              tr_de="hinzukommen; dazugefügt werden; sich etw. anfügen"
-              hint_en="v.i."
-              lvl="n3"
-              category="general, maths"
-              id="kuwawaru-beadded"
-            >
-                <see id="kuwaeru-add" rem="v.t." />
-                <phrase
-                  ph="【会：かい】【話：わ】に【加：くわ】わる"
-                  rom="kaiwa ni kuwawaru"
-                  tr_en="to join the conversation"
-                  tr_de="sich zu der Konversation dazu gesellen"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【雨：あめ】に【風：かぜ】が【加：くわ】わった。"
-                  rom="Ame ni kaze ga kuwawatta."
-                  tr_en="Wind accompanied the rain."
-                  tr_de="Zum Regen kam noch der Wind dazu."
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【青：あお】【木：き】【先：せん】【生：せい】は【子：こ】【供：ども】たちの【遊：あそ】びに【加：くわ】わりました。"
-                  rom="Aoki-sensei wa kodomo-tachi no asobi ni kuwawarimashita."
-                  tr_en="Professor Aoki joined (added herself to) the children's play."
-                  tr_de="Professor Aoki fügte sich zu dem Spiel der Kinder dazu."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
               w="【隠：かく】す"
               rom="kakusu"
               tr_en="to hide sth."
@@ -1497,13 +1460,22 @@
               id="shinjiru-tobelieve"
               rem="appears in GENKI2 L21 vocab section"
             >
-                <sentence
-                  s="それは【信：しん】じられない。"
-                  rom="Sore wa shinjirarenai."
-                  tr_en="That's unbelievable!"
-                  tr_de="Das ist unglaublich!"
+                <phrase
+                  ph="【信：しん】じられない"
+                  rom="shinjirarenai"
+                  tr_en="unbelievable"
+                  tr_de="unglaublich"
                   lvl="n3"
                   origin="Oxford p.69"
+                />
+                <sentence
+                  s="その【噂：うわさ】は【多：おお】くの【人：ひと】に【本：ほん】【当：とう】だと【信：しん】じられています。"
+                  rom="Sono uwasa wa ōku no hito ni hontō da to shinjirarete imasu."
+                  tr_en="That rumour is believed to be true by many people."
+                  tr_de="Dieses Gerücht wird von vielen Leuten als richtig geglaubt."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -1516,6 +1488,15 @@
               category="animal, technical"
               id="tobasu-letfly"
             >
+                <phrase
+                  ph="【悩：なや】みを【笑：わら】い【飛：と】ばす"
+                  rom="nayami o warai-tobasu"
+                  tr_en="to laugh one's worries off"
+                  tr_de="die Sorgen mit Lachen verscheuchen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
                 <sentence
                   s="【私：わたし】たちはその【鳥：とり】を【飛：と】ばした。"
                   rom="Watashi-tachi wa sono tori o tobashita."
@@ -1534,6 +1515,15 @@
               category="talking"
               id="sakebu-shout"
             >
+                <phrase
+                  ph="【大：おお】きな【声：こえ】で【叫：さけ】ぶ"
+                  rom="ōki na koe de sakebu"
+                  tr_en="to shout in a loud voice"
+                  tr_de="mit lauter Stimme rufen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
                 <sentence
                   s="【誰：だれ】かが【叫：さけ】ぶのが【聞：き】こえた。"
                   rom="Dareka ga sakebu no ga kikoeta."
@@ -1554,12 +1544,93 @@
               id="korobu-falldown"
               rem="appears in GENKI2 p.287 kanji section"
             >
+                <phrase
+                  ph="【転：ころ】びそうになる"
+                  rom="korobi-sō ni naru"
+                  tr_en="to almost fall"
+                  tr_de="beinahe umfallen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
                 <sentence
                   s="【氷：こおり】の【上：うえ】で【転：ころ】んだ。"
                   rom="Kōri no ue de koronda."
                   tr_en="I fell down on the ice."
                   tr_de="Ich fiel hin auf dem Glatteis."
                   lvl="n3"
+                />
+            </word>
+            <word
+              w="【加：くわ】える"
+              rom="kuwaeru"
+              tr_en="to add sth.; to append sth."
+              tr_de="hinzufügen"
+              hint_en="v.t."
+              Langenscheidt="hinzufügen"
+              lvl="n3"
+              category="general, maths"
+              id="kuwaeru-add"
+            >
+                <see id="kuwawaru-beadded" rem="v.i." />
+                <keep_apart_from id="tasu-add" />
+                <keep_apart_from id="tsukekuwaeru-add" />
+                <phrase
+                  ph="【紅：こう】【茶：ちゃ】に【砂：さ】【糖：とう】を【加：くわ】える"
+                  rom="kōcha ni satō o kuwaeru"
+                  tr_en="to add sugar to the black tea"
+                  tr_de="Zucker zum Schwarztee dazufügen"
+                  explanation_en="足す is also possible; 加える is more technical and instruction-like"
+                  explanation_de="足す wäre auch möglich; 加える tönt technischer oder wie eine Anweisung"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【雨：あめ】に【加：くわ】えて【激：はげ】しい【風：かぜ】も【吹：ふ】いていた。"
+                  rom="Ame ni kuwaete hageshii kaze mo fuite ita."
+                  tr_en="In addition to the rain, a strong wind was also blowing."
+                  tr_de="Zu dem starken Regen wehte noch ein starker Wind."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
+            <word
+              w="【加：くわ】わる"
+              rom="kuwawaru"
+              tr_en="to be added to; to be appended; to join sth."
+              tr_de="hinzukommen; dazugefügt werden; sich etw. anfügen"
+              hint_en="v.i."
+              lvl="n3"
+              category="general, maths"
+              id="kuwawaru-beadded"
+            >
+                <see id="kuwaeru-add" rem="v.t." />
+                <phrase
+                  ph="【会：かい】【話：わ】に【加：くわ】わる"
+                  rom="kaiwa ni kuwawaru"
+                  tr_en="to join the conversation"
+                  tr_de="sich zu der Konversation dazu gesellen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【雨：あめ】に【風：かぜ】が【加：くわ】わった。"
+                  rom="Ame ni kaze ga kuwawatta."
+                  tr_en="Wind accompanied the rain."
+                  tr_de="Zum Regen kam noch der Wind dazu."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【青：あお】【木：き】【先：せん】【生：せい】は【子：こ】【供：ども】たちの【遊：あそ】びに【加：くわ】わりました。"
+                  rom="Aoki-sensei wa kodomo-tachi no asobi ni kuwawarimashita."
+                  tr_en="Professor Aoki joined (added herself to) the children's play."
+                  tr_de="Professor Aoki fügte sich zu dem Spiel der Kinder dazu."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -1575,6 +1646,24 @@
                 <!-- ヒゲが伸びる (hige ga nobiru) - The beard grows (ChatGPT) -->
                 <!-- 髪の毛が伸びた。 (My hair has grown.) ChatGPT -->
                 <see id="nobasu-grow" rem="v.t." />
+                <phrase
+                  ph="【伸：の】びをする"
+                  rom="nobi o suru"
+                  tr_en="to stretch oneself (e.g. after waking up)"
+                  tr_de="sich strecken (z.B. nach dem Aufwachen)"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【背：せ】【伸：の】びをする"
+                  rom="senobi o suru"
+                  tr_en="to stand tiptoe; to overreach"
+                  tr_de="auf Zehenspitzen stehen; sich übernehmen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; jisho has nx"
+                />
                 <sentence
                   s="【私：わたし】のひげは【伸：の】びるのが【速：はや】い。"
                   rom="Watashi no hige wa nobiru no ga hayai."
@@ -1583,32 +1672,60 @@
                   lvl="n3"
                   origin="lib0"
                 />
-            </word>
-            <word
-              w="【加：くわ】える"
-              rom="kuwaeru"
-              tr_en="to add sth.; to append sth."
-              tr_de="hinzufügen"
-              hint_en="v.t."
-              Langenscheidt="hinzufügen"
-              lvl="n3"
-              category="general, maths"
-              id="kuwaeru-add"
-            >
-                <see id="kuwawaru-beadded" rem="v.i." />
+                <sentence
+                  s="【今：こ】【年：とし】 【３：さん】センチ【背：せ】が【伸：の】びた。"
+                  rom="Kotoshi san senchi se ga nobita."
+                  tr_en="I have grown three centimetres this year."
+                  tr_de="Ich bin dieses Jahr drei Zentimeter gewachsen."
+                  allowSpaces="true"
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【伸：の】ばす"
               rom="nobasu"
-              tr_en="to grow long; to let grow (e.g. hair, nails)"
-              tr_de="wachsen lassen (z.B. Haar, Fingernägel)"
+              tr_en="to make sth. long; to let grow"
+              tr_de="etw. lang werden lassen; wachsen lassen"
               hint_en="v.t."
               lvl="n3"
               category="general, fashion"
               id="nobasu-grow"
             >
-                <!-- 締め切りを延ばす (shimekiri o nobasu) - "Extend the deadline" (ChatGPT) -->
                 <see id="nobiru-grow" rem="v.i." />
+                <phrase
+                  ph="【腕：うで】を【伸：の】ばす"
+                  rom="ude o nobasu"
+                  tr_en="to stretch one's arm"
+                  tr_de="den Arm ausstrecken"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【締：し】め【切：き】りを【伸：の】ばす"
+                  rom="shimekiri o nobasu"
+                  tr_en="to extend the deadline"
+                  tr_de="die Deadline verlängern"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【背：せ】【中：なか】を【伸：の】ばして【座：すわ】ってください。"
+                  rom="Senaka o nobashite suwatte kudasai."
+                  tr_en="Please sit up straight (straighten your back)."
+                  tr_de="Setz dich mit geradem Rücken hin."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【小：こ】【林：ばやし】さんは【髪：かみ】を【伸：の】ばしてるみたいだね。"
+                  rom="Kobayashi-san wa kami o nobashiteru mitai da ne."
+                  tr_en="It looks as if Mr Kobayashi is growing his hair out, don't you think?"
+                  tr_de="Es scheint, dass Herr Kobayashi sein Haar lang wachsen lässt, findest du auch?"
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
             </word>
             <word
               w="【感：かん】じる"
@@ -1621,6 +1738,22 @@
             >
                 <see id="kanji-feeling" rem="noun" />
                 <keep_apart_from id="fureru-touch" />
+                <phrase
+                  ph="【将：しょう】【来：らい】に【不：ふ】【安：あん】を【感：かん】じる"
+                  rom="shōrai ni fuan o kanjiru"
+                  tr_en="to be uneasy about the near future"
+                  tr_de="sich um die nahe Zukunft nicht wohl fühlen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】はときどき【悲：かな】しく【感：かん】じる。"
+                  rom="Watashi wa toki-doki kanashiku kanjiru."
+                  tr_en="I feel sad every now and then."
+                  tr_de="Ich fühle mich hin und wieder traurig."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【飛：と】び【出：だ】す"
@@ -1631,7 +1764,24 @@
               lvl="n3"
               category="top-words"
               id="tobidasu-jumpout"
-            />
+            >
+                <phrase
+                  ph="【部：へ】【屋：や】から【飛：と】び【出：だ】す"
+                  rom="heya kara tobidasu"
+                  tr_en="to dash out of the room"
+                  tr_de="aus dem Raum hinausrennen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【事：じ】【務：む】【所：しょ】から【飛：と】び【出：だ】した。"
+                  rom="Jimusho kara tobidashita."
+                  tr_en="I rushed out of the office."
+                  tr_de="Ich rante aus dem Büro hinaus."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
         </section>
     </unit>
 </vocabulary>

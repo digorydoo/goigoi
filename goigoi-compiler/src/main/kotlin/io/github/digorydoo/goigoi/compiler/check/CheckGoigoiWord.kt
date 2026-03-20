@@ -340,7 +340,7 @@ fun GoigoiWord.check(crossDict: Boolean, hasCombinedReading: Boolean, unyt: Goig
 
     // Check against miscategorised nouns and verbs
 
-    if (unyt.studyLang == "ja") {
+    if (!hidden && unyt.studyLang == "ja") {
         unyt.name.en.lowercase().let { uname ->
             if (uname.contains("verb") && !uname.contains("adverb")) {
                 val exceptions = arrayOf("いる", "ある", "【居：い】る", "【有：あ】る")

@@ -121,6 +121,7 @@
               lvl="n1"
               id="risei-reason"
             >
+                <keep_apart_from id="riyū-reason" />
                 <phrase
                   ph="【理：り】【性：せい】【的：てき】"
                   rom="risei-teki"
@@ -144,26 +145,6 @@
                   tr_en="It's an agreement. Roger!"
                   tr_de="Abgemacht!"
                   lvl="n1"
-                />
-            </word>
-            <word
-              w="【入：にゅう】【浴：よく】"
-              rom="nyūyoku"
-              tr_en="taking a bath; bathing"
-              tr_de="ein Bad nehmen; baden"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n1"
-              category="holidays"
-              id="nyūyoku-bathe"
-            >
-                <sentence
-                  s="【毎：まい】【朝：あさ】【入：にゅう】【浴：よく】します。"
-                  rom="Mai-asa nyūyoku shimasu."
-                  tr_en="I have a bath every morning."
-                  tr_de="Ich bade jeden Morgen."
-                  lvl="n1"
-                  origin="lib0"
                 />
             </word>
             <word
@@ -481,6 +462,17 @@
               id="seiten-fineweather"
             >
                 <see id="hare-clearweather" rem="closely related" />
+            </word>
+            <word
+              w="【資：し】【金：きん】"
+              rom="shikin"
+              tr_en="funds; capital"
+              tr_de="Vermögen; Kapital"
+              lvl="n1"
+              category="finances"
+              id="shikin-funds"
+            >
+                <!-- このプロジェクトには多くの資金が要ります。This project requires a lot of funding. (ChatGPT) -->
             </word>
             <word
               w="【銃：じゅう】"

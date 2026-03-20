@@ -217,24 +217,32 @@
                 />
             </word>
             <word
-              w="【幸：こう】【福：ふく】"
-              rom="kōfuku"
-              tr_en="happiness; well-being; welfare"
-              tr_de="Glück; Wohlbefinden; Wohlfahrt"
-              hint_en="noun; na-adjective"
-              hint_de="Nomen; Na-Adjektiv"
+              w="【禁：きん】【止：し】"
+              rom="kinshi"
+              tr_en="prohibition; inhibition; ban"
+              tr_de="Verbot; Sperre; Bann"
               lvl="n3"
-              category="happiness"
-              id="kōfuku-happiness"
-              rem="appears in GENKI2 p.329 kanji section"
+              category="politics"
+              id="kinshi-ban"
             >
-                <sentence
-                  s="【私：わたし】は【幸：こう】【福：ふく】な【子：こ】【供：ども】【時：じ】【代：だい】を【送：おく】った。"
-                  rom="Watashi wa kōfuku na kodomo-jidai o okutta."
-                  tr_en="I had a happy childhood."
-                  tr_de="Ich hatte eine glückliche Kindheit."
+                <keep_apart_from id="kinen-nosmoking" />
+                <phrase
+                  ph="【立：た】ち【入：い】り【禁：きん】【止：し】"
+                  rom="tachiiri-kinshi"
+                  tr_en="keep out; no entry"
+                  tr_de="Zutritt verboten"
                   lvl="n3"
                   origin="lib0"
+                  rem="verified with ChatGPT; furigana verified with jisho; jisho has nx, but n5 for tatsu, hairu, ireru"
+                />
+                <sentence
+                  s="その【橋：はし】は【通：つう】【行：こう】【禁：きん】【止：し】です。"
+                  rom="Sono hashi wa tsūkō-kinshi desu."
+                  tr_en="That bridge is closed to traffic."
+                  tr_de="Die Brücke ist geschlossen für den Verkehr."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; tsūkō is n3"
                 />
             </word>
             <word
@@ -363,6 +371,14 @@
                   tr_en="to change plans"
                   tr_de="die Pläne ändern"
                   lvl="n3"
+                />
+                <phrase
+                  ph="【必：ひつ】【要：よう】な【変：へん】【更：こう】を【加：くわ】える"
+                  rom="hitsuyō na henkō o kuwaeru"
+                  tr_en="to make the necessary changes"
+                  tr_de="die notwendigen Korrekturen anbringen"
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -548,6 +564,24 @@
                 />
             </word>
             <word
+              w="【乗：じょう】【客：きゃく】"
+              rom="jōkyaku"
+              tr_en="passenger"
+              tr_de="Passagier"
+              lvl="n3"
+              category="transportation"
+              id="jōkyaku-passenger"
+              rem="used to be n1 in jisho; they changed it to n3, which makes more sense"
+            >
+                <sentence
+                  s="【大：おお】【勢：ぜい】の【乗：じょう】【客：きゃく】がケガをした。"
+                  rom="Ōzei no jōkyaku ga kega o shita."
+                  tr_en="A lot of passengers got injured."
+                  tr_de="Viele Passagiere wurden verletzt."
+                  lvl="n3"
+                />
+            </word>
+            <word
               w="【進：すす】み"
               rom="susumi"
               tr_en="progress; advancing"
@@ -652,19 +686,6 @@
                 <keep_apart_from id="shōji-door" />
                 <keep_apart_from id="amado-stormshutter" />
                 <keep_apart_from id="tobira-door" />
-            </word>
-            <word
-              w="【教：きょう】【授：じゅ】"
-              rom="kyōju"
-              tr_en="professor; teaching"
-              tr_de="Professor; Lehren"
-              lvl="n3"
-              category="education, occupations"
-              id="kyōju-professor"
-            >
-                <keep_apart_from id="sensei-teacher" />
-                <keep_apart_from id="kyōshi-teacher" />
-                <keep_apart_from id="kōshi-lecturer" />
             </word>
             <word
               w="【製：せい】【品：ひん】"
@@ -789,6 +810,7 @@
               rem="jisho has n1"
             >
                 <see id="maneku-invite" rem="verb" />
+                <keep_apart_from id="shōtai-invitation" />
             </word>
             <word
               w="【額：がく】"
@@ -842,6 +864,9 @@
               lvl="n3"
               id="genkai-limit"
             >
+                <keep_apart_from id="kagiri-limits" />
+                <keep_apart_from id="seigen-restrict" />
+                <keep_apart_from id="kagiru-restrict" />
                 <!--
                     緊張で限界が来た
                     きんちょうでげんかいがきた

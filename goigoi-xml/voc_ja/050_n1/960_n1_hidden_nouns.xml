@@ -158,6 +158,8 @@
               lvl="n1"
               id="shōko-proof"
             >
+                <keep_apart_from id="shōmei-proof" />
+                <keep_apart_from id="akashi-proof" />
                 <!-- 確かな証拠 - tashika na shōko - solid evidence (ChatGPT) -->
             </word>
             <word
@@ -172,16 +174,6 @@
             >
                 <!-- 日本経済は停滞している - Nihon keizai wa teitai shite iru - The Japanese economy is stagnating (ChatGPT) -->
                 <see id="seichō-growing" rem="antonym" />
-            </word>
-            <word
-              w="【資：し】【金：きん】"
-              rom="shikin"
-              tr_en="funds; capital"
-              tr_de="Vermögen; Kapital"
-              lvl="n1"
-              id="shikin-funds"
-            >
-                <!-- このプロジェクトには多くの資金が要ります。This project requires a lot of funding. (ChatGPT) -->
             </word>
             <word
               w="【地：じ】【元：もと】"
@@ -333,8 +325,10 @@
               tr_de="Beweis; Evidenz; Zeugnis"
               lvl="n1"
               id="akashi-proof"
+              HIDDEN="true"
             >
                 <keep_apart_from id="shōmei-proof" />
+                <keep_apart_from id="shōko-proof" />
             </word>
             <word
               w="【衣：い】【料：りょう】"
@@ -600,13 +594,28 @@
               id="shushoku-staplefood"
             />
             <word
-              w="【切：き】り"
+              w="【限：き】り"
               rom="kiri"
-              tr_en="stop; limits"
+              tr_en="only; since then; to a point"
+              usuallyInKana="true"
               lvl="n1"
-              id="kiri-limitsalt"
-              rem="must not be together with kiri-limits; alternative kanji"
-            />
+              id="kiri-limits"
+              rem="kanji/kana is ambigous, see kagiri-limits; translation is from ChatGPT"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="kagiri-limits" />
+                <keep_apart_from id="kiri-stop" />
+                <!--
+                ChatGPT says 限り is rarely read as きり; instead, it's usually written in kana.
+                Indeed, macOS IME doesn't want to write 限り when input is kiri.
+                jisho disagrees, and has translation "stop; limits"; but acc. to ChatGPT this is wrong.
+                ChatGPT says it means "only; since then; to a point":
+                   これっきりにしよう
+                   一度会ったきりだ
+                   二人きり
+                See comments in kiri-stop.
+                -->
+            </word>
             <word
               w="【丈：じょう】【夫：ふ】"
               rom="jōfu"

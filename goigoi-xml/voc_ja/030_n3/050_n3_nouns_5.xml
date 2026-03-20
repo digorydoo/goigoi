@@ -823,6 +823,14 @@
             >
                 <keep_apart_from id="shiri-bottom" />
                 <keep_together id="shiri-bottom" />
+                <sentence
+                  s="やめなさい、お【尻：しり】をぶちますよ。"
+                  rom="Yamenasai, o-shiri o buchimasu yo."
+                  tr_en="Stop it, or I'll give you a smack on the bottom."
+                  tr_de="Hör auf, sonst bekommst du eine auf den Hintern."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【尻：しり】"
@@ -859,19 +867,24 @@
                 <keep_apart_from id="katagata-people" />
             </word>
             <word
-              w="【食：しょく】【糧：りょう】"
-              rom="shokuryō"
-              tr_en="food (esp. rice, wheat); rations; food supply"
-              tr_de="Essen (insb. Reis, Weizen); Rationen; Erährungsversorgung"
+              w="【人：にん】【気：き】"
+              rom="ninki"
+              tr_en="popular"
+              tr_de="beliebt; populär"
+              hint_en="noun"
+              hint_de="Nomen"
               lvl="n3"
-              category="food"
-              id="shokuryō-rations"
+              category="top-words"
+              id="ninki-popular"
             >
-                <keep_apart_from id="tabemono-food" />
-                <keep_apart_from id="shokuhin-foodproducts" />
-                <keep_apart_from id="shokumotsu-food" />
-                <keep_apart_from id="shokuryō-food" />
-                <keep_apart_from id="shokuryōhin-groceries" />
+                <phrase
+                  ph="【人：にん】【気：き】のあるスポーツ"
+                  rom="ninki no aru supōtsu"
+                  tr_en="popular sports"
+                  tr_de="beliebte Sportart"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
             </word>
             <word
               w="【診：しん】【察：さつ】"
@@ -961,6 +974,8 @@
               id="shōtai-invitation"
               rem="appears in GENKI2 L19 vocab section"
             >
+                <keep_apart_from id="maneku-invite" />
+                <keep_apart_from id="maneki-invitation" />
                 <!-- 招待してくれてありがとう。でも、遠慮します。 Thank you for the invitation, but I’ll pass. (ChatGPT) -->
                 <!--
                     招待する invite so. to an event or place GENKI2 L19 vocab section

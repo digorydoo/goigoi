@@ -141,35 +141,6 @@
                 />
             </word>
             <word
-              w="【禁：きん】【止：し】"
-              rom="kinshi"
-              tr_en="prohibition; inhibition; ban"
-              tr_de="Verbot; Sperre; Bann"
-              lvl="n3"
-              category="politics"
-              id="kinshi-ban"
-            >
-                <keep_apart_from id="kinen-nosmoking" />
-                <phrase
-                  ph="【立：た】ち【入：い】り【禁：きん】【止：し】"
-                  rom="tachiiri-kinshi"
-                  tr_en="keep out; no entry"
-                  tr_de="Zutritt verboten"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT; furigana verified with jisho; jisho has nx, but n5 for tatsu, hairu, ireru"
-                />
-                <sentence
-                  s="その【橋：はし】は【通：つう】【行：こう】【禁：きん】【止：し】です。"
-                  rom="Sono hashi wa tsūkō-kinshi desu."
-                  tr_en="That bridge is closed to traffic."
-                  tr_de="Die Brücke ist geschlossen für den Verkehr."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT; tsūkō is n3"
-                />
-            </word>
-            <word
               w="【会：かい】【計：けい】"
               rom="kaikei"
               tr_en="accounting"
@@ -225,15 +196,6 @@
                 <keep_apart_from id="setsumei-explanation" />
                 <keep_apart_from id="tsūyaku-interpretation" />
                 <phrase
-                  ph="【拡：かく】【大：だい】【解：かい】【釈：しゃく】"
-                  rom="kakudai kaishaku"
-                  tr_en="broad interpretation; stretching the meaning"
-                  tr_de="weite Auslegung; die Bedeutung ausdehnen"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT"
-                />
-                <phrase
                   ph="【奇：き】【妙：みょう】な【現：げん】【象：しょう】を【解：かい】【釈：しゃく】する"
                   rom="kimyō na genshō o kaishaku suru"
                   tr_en="to interprete an odd phenomenon"
@@ -249,6 +211,81 @@
                   tr_de="Wie erklären Sie sich das?"
                   lvl="n3"
                   origin="lib0"
+                />
+            </word>
+            <word
+              w="【拡：かく】【大：だい】"
+              rom="kakudai"
+              tr_en="magnification; enlargement; magnifying"
+              tr_de="Vergrösserung; Ausweitung; vergrössern"
+              Langenscheidt="Vergrösserung, Ausweitung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="kakudai-magnification"
+            >
+                <phrase
+                  ph="【拡：かく】【大：だい】【解：かい】【釈：しゃく】"
+                  rom="kakudai kaishaku"
+                  tr_en="broad interpretation; stretching the meaning"
+                  tr_de="weite Auslegung; die Bedeutung ausdehnen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【拡：かく】【大：だい】【鏡：きょう】"
+                  rom="kakudaikyō"
+                  tr_en="magnifier; magnification glass"
+                  tr_de="Lupe; Vergrösserungsglass"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【彼：かれ】は【研：けん】【究：きゅう】の【対：たい】【象：しょう】を【拡：かく】【大：だい】した。"
+                  rom="Kare wa kenkyū no taishō o kakudai shita."
+                  tr_en="He expanded the scope of his research."
+                  tr_de="Er hat den Rahmen seiner Studie ausgeweitet."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【対：たい】【象：しょう】"
+              rom="taishō"
+              tr_en="target; object; subject"
+              tr_de="Rahmen; Umfang; Fokus"
+              studyInContext="preferred"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              id="taishō-target"
+            >
+                <phrase
+                  ph="【研：けん】【究：きゅう】の【対：たい】【象：しょう】"
+                  rom="kenkyū no taishō"
+                  tr_en="the scope of the research"
+                  tr_de="der Umfang der Studie"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【若：わか】【者：もの】を【対：たい】【象：しょう】にした【本：ほん】"
+                  rom="wakamono o taishō ni shita hon"
+                  tr_en="a book aimed at young people"
+                  tr_de="ein Buch für junge Leute"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="それは【子：こ】【供：ども】を【対：たい】【象：しょう】にした【本：ほん】です。"
+                  rom="Sore wa kodomo o taishō ni shita hon desu."
+                  tr_en="That is a book aimed at children."
+                  tr_de="Dies ist ein Buch für Kinder."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; ~taishō to shita hon~ would also be correct"
                 />
             </word>
             <word
@@ -428,6 +465,52 @@
                   origin="ChatGPT"
                   rem="jisho has nx for purojekuto"
                 />
+            </word>
+            <word
+              w="【切：き】り"
+              rom="kiri"
+              tr_en="stop; limits"
+              tr_de="Stopp; Grenze"
+              lvl="n3"
+              id="kiri-stop"
+              rem="jisho has n1"
+            >
+                <see id="kiru-cut" rem="closely related" />
+                <keep_apart_from id="kiri-limits" />
+                <!--
+                ChatGPT says 切りがない and 限りがない both exist:
+                   切りがない - very common
+                   限りがない - much less common
+                Examples by ChatGPT:
+                    文句を言い出したら切りがない
+                    心配し始めたら切りがない
+                lib0 has 宇宙には限りはない.
+                Some hinative user corrected 宇宙には切りがない to 宇宙には限りがない
+                (https://hinative.com/questions/22253622)
+                Compare with kiri-limits.
+                -->
+                <phrase
+                  ph="【切：き】りがない"
+                  rom="kiri ga nai"
+                  tr_en="endless; without limits"
+                  tr_de="endlos; grenzenlos"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; jisho has n1 for kiri, but n5 for kiru"
+                />
+            </word>
+            <word
+              w="【教：きょう】【授：じゅ】"
+              rom="kyōju"
+              tr_en="professor; teaching"
+              tr_de="Professor; Lehren"
+              lvl="n3"
+              category="education, occupations"
+              id="kyōju-professor"
+            >
+                <keep_apart_from id="sensei-teacher" />
+                <keep_apart_from id="kyōshi-teacher" />
+                <keep_apart_from id="kōshi-lecturer" />
             </word>
             <word
               w="【作：さ】【業：ぎょう】"
@@ -817,16 +900,6 @@
               id="hyōban-reputation"
             />
             <word
-              w="【刺：し】【激：げき】"
-              rom="shigeki"
-              tr_en="stimulus; impulse; provocation"
-              tr_de="Anstoss; Impuls; Provokation"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="shigeki-stimulus"
-            />
-            <word
               w="【決：けっ】【心：しん】"
               rom="kesshin"
               tr_en="determination; resolution"
@@ -836,26 +909,6 @@
               lvl="n3"
               category="mood"
               id="kesshin-determination"
-            />
-            <word
-              w="【現：げん】【象：しょう】"
-              rom="genshō"
-              tr_en="phenomenon"
-              tr_de="Phänomen"
-              lvl="n3"
-              category="science"
-              id="genshō-phenomenon"
-            />
-            <word
-              w="【平：へい】【均：きん】"
-              rom="heikin"
-              tr_en="average; mean; equilibrium"
-              tr_de="Durchschnitt; Balance; Gleichgewicht"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="science"
-              id="heikin-average"
             />
             <word
               w="【注：ちゅう】【目：もく】"
@@ -868,15 +921,13 @@
               id="chūmoku-notice"
             />
             <word
-              w="【計：けい】【算：さん】"
-              rom="keisan"
-              tr_en="calculation; computation; counting"
-              tr_de="Rechnen; Kalkül; zählen"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【現：げん】【象：しょう】"
+              rom="genshō"
+              tr_en="phenomenon"
+              tr_de="Phänomen"
               lvl="n3"
-              category="technical"
-              id="keisan-calculation"
+              category="science"
+              id="genshō-phenomenon"
             />
         </section>
     </unit>

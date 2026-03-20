@@ -400,8 +400,10 @@
               lvl="n4"
               category="general"
               id="chūi-caution"
+              rem="appears in GENKI2 p.166 as go-chūi"
             >
                 <keep_apart_from id="gochūi-caution" />
+                <keep_together id="gochūi-caution" />
                 <keep_apart_from id="keikoku-advice" />
                 <phrase
                   ph="【特：とく】【別：べつ】に【注：ちゅう】【意：い】を【払：はら】う"
@@ -412,6 +414,14 @@
                   origin="self"
                   rem="verified with ChatGPT, lib0 and Google search"
                 />
+                <phrase
+                  ph="ご【注：ちゅう】【意：い】ください"
+                  rom="go-chūi kudasai"
+                  tr_en="please watch out (honorific)"
+                  tr_de="bitte geben Sie acht (respektvoll)"
+                  lvl="n4"
+                  origin="GENKI2 p.166"
+                />
                 <sentence
                   s="【車：くるま】に【注：ちゅう】【意：い】しなさい。"
                   rom="Kuruma ni chūi shi-nasai."
@@ -421,6 +431,27 @@
                   origin="lib0"
                   rem="nasai sounds rather commanding"
                 />
+                <sentence
+                  s="【犬：いぬ】にご【注：ちゅう】【意：い】ください。"
+                  rom="Inu ni go-chūi kudasai."
+                  tr_en="Please beware of the dog."
+                  tr_de="Bitte nehmen Sie sich vor dem Hund in acht."
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="ご【注：ちゅう】【意：い】"
+              rom="go-chūi"
+              tr_en="caution; attention; warning"
+              lvl="n4"
+              id="gochūi-caution"
+              HIDDEN="true"
+              rem="appears in GENKI2 p.166; jisho has n4 for chūi, nx for go-chūi"
+            >
+                <keep_apart_from id="chūi-caution" />
+                <keep_together id="chūi-caution" />
             </word>
             <word
               w="【会：かい】【議：ぎ】"

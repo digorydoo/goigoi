@@ -1,4 +1,4 @@
-package io.github.digorydoo.goigoi.view.tategaki
+package io.github.digorydoo.goigoi.core.tategaki
 
 class CharacterPlacement private constructor(val relXOffset: Float, val relYOffset: Float, val rotateCW: Boolean) {
     companion object {
@@ -55,4 +55,3 @@ class CharacterPlacement private constructor(val relXOffset: Float, val relYOffs
         )
     }
 }
-

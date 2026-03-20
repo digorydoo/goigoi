@@ -10,6 +10,10 @@ import android.view.animation.LinearInterpolator
 import android.widget.TextView
 import androidx.core.view.marginTop
 import androidx.fragment.app.Fragment
+import ch.digorydoo.kutils.cjk.*
+import ch.digorydoo.kutils.math.accel
+import ch.digorydoo.kutils.math.decel
+import ch.digorydoo.kutils.math.lerp
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.db.Unyt
 import io.github.digorydoo.goigoi.db.Vocabulary
@@ -19,10 +23,6 @@ import io.github.digorydoo.goigoi.furigana.buildSpan
 import io.github.digorydoo.goigoi.stats.Stats
 import io.github.digorydoo.goigoi.utils.DeviceUtils
 import io.github.digorydoo.goigoi.utils.ScreenSize
-import ch.digorydoo.kutils.cjk.*
-import ch.digorydoo.kutils.math.accel
-import ch.digorydoo.kutils.math.decel
-import ch.digorydoo.kutils.math.lerp
 import kotlin.math.min
 
 class FlipThruFragment: Fragment() {
@@ -351,7 +351,7 @@ class FlipThruFragment: Fragment() {
                 c.isKatakana() -> 0.6f
                 c.isOneStrokeKanji() -> 0.6f
                 c.isTwoStrokeKanji() -> 0.6f
-                c.isCJK() -> 0.55f
+                c.isCJKNotKana() -> 0.55f
                 else -> 1.0f
             }
             result + weight

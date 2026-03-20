@@ -7,8 +7,8 @@ import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.view.FloatingActionBtn
+import io.github.digorydoo.goigoi.view.TategakiView
 import io.github.digorydoo.goigoi.view.TextWithCaret
-import io.github.digorydoo.goigoi.view.tategaki.TategakiView
 
 class Bindings(a: Activity) {
     val rootView = a.findViewById<ViewGroup>(R.id.root_view)!!

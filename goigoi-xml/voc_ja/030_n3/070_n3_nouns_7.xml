@@ -420,22 +420,27 @@
                 />
             </word>
             <word
-              w="【不：ふ】【幸：こう】"
-              rom="fukō"
-              tr_en="misfortune; tragedy; unhappy"
-              tr_de="Pech; Tragödie; unglücklich"
-              hint_en="noun; na-adjective"
-              hint_de="Nomen; Na-Adjektiv"
+              w="【虫：むし】【歯：ば】"
+              rom="mushiba"
+              tr_en="tooth decay; decayed tooth"
+              tr_de="Karies; verfaulter Zahn"
               lvl="n3"
-              category="not-good"
-              id="fukō-misfortune"
-              rem="appears in GENKI2 p.329 kanji section"
+              category="health"
+              id="mushiba-toothdecay"
             >
+                <phrase
+                  ph="【虫：むし】【歯：ば】を【抜：ぬ】く"
+                  rom="mushiba o nuku"
+                  tr_en="to pull out a bad tooth"
+                  tr_de="einen schlechten Zahn ziehen"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
-                  s="【私：わたし】は【友：とも】【達：だち】がいないことは【不：ふ】【幸：こう】だと【思：おも】う。"
-                  rom="Watashi wa tomodachi ga inai koto wa fukō da to omou."
-                  tr_en="I think that having no friends is a tragedy."
-                  tr_de="Ich finde, keine Freunde haben ist eine Tragödie."
+                  s="【私：わたし】には【虫：むし】【歯：ば】が【二：に】【本：ほん】ある。"
+                  rom="Watashi ni wa mushiba ga ni-hon aru."
+                  tr_en="I have two bad teeth."
+                  tr_de="Ich habe zwei schlechte Zähne."
                   lvl="n3"
                   origin="lib0"
                 />
@@ -1027,6 +1032,7 @@
               id="monku-complaint"
               rem="appears in GENKI2 L21 vocab section"
             >
+                <keep_apart_from id="uttaeru-complain" />
                 <phrase
                   ph="【文：もん】【句：く】を【言：い】う"
                   rom="monku o iu"

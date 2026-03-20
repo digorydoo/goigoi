@@ -13,6 +13,7 @@
       lvl="n2"
       translations="en, de"
       requiresSentences="false"
+      requiresPhrases="false"
       requiresIds="true"
     >
         <section>
@@ -344,7 +345,9 @@
               lvl="n2"
               category="fashion"
               id="kushi-comb"
-            />
+            >
+                <see id="tokasu-comb" rem="closely related" />
+            </word>
             <word
               w="【羽：はね】"
               rom="hane"

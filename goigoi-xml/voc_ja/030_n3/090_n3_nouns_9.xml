@@ -175,6 +175,7 @@
               id="shōmei-proof"
             >
                 <keep_apart_from id="akashi-proof" />
+                <keep_apart_from id="shōko-proof" />
                 <phrase
                   ph="【身：み】【分：ぶん】【証：しょう】【明：めい】【書：しょ】"
                   rom="mibun shōmeisho"
@@ -888,34 +889,22 @@
                 <keep_together id="makoto-truth" />
             </word>
             <word
-              w="【才：さい】【能：のう】"
-              rom="sainō"
-              tr_en="talent; ability"
-              tr_de="Talent; Fähigkeit"
+              w="【幸：こう】【福：ふく】"
+              rom="kōfuku"
+              tr_en="happiness; well-being; welfare"
+              tr_de="Glück; Wohlbefinden; Wohlfahrt"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
               lvl="n3"
-              id="sainō-talent"
+              category="happiness"
+              id="kōfuku-happiness"
+              rem="appears in GENKI2 p.329 kanji section"
             >
-                <phrase
-                  ph="【音：おん】【楽：がく】の【才：さい】【能：のう】"
-                  rom="ongaku no sainō"
-                  tr_en="a talent for music"
-                  tr_de="ein Talent für Musik"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <phrase
-                  ph="【絵：え】の【才：さい】【能：のう】"
-                  rom="e no sainō"
-                  tr_en="a talent for painting"
-                  tr_de="ein Talent für Malerei"
-                  lvl="n3"
-                  origin="lib0"
-                />
                 <sentence
-                  s="【中：なか】【川：がわ】さんには【文：ぶん】【学：がく】の【才：さい】【能：のう】がある。"
-                  rom="Nakagawa-san ni wa bungaku no sainō ga aru."
-                  tr_en="Ms Nakagawa has a talent in literature."
-                  tr_de="Frau Nakagawa hat ein Talent in Literatur."
+                  s="【私：わたし】は【幸：こう】【福：ふく】な【子：こ】【供：ども】【時：じ】【代：だい】を【送：おく】った。"
+                  rom="Watashi wa kōfuku na kodomo-jidai o okutta."
+                  tr_en="I had a happy childhood."
+                  tr_de="Ich hatte eine glückliche Kindheit."
                   lvl="n3"
                   origin="lib0"
                 />
@@ -1285,6 +1274,15 @@
               rem="appears in GENKI2 L20 as uchūjin, space alien"
             >
                 <keep_apart_from id="supēsu-space" />
+                <sentence
+                  s="【宇：う】【宙：ちゅう】には【切：き】りがない。"
+                  rom="Uchū ni wa kiri ga nai."
+                  tr_en="There is no limit to the universe."
+                  tr_de="Das Universum ist grenzenlos."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="限り changed to 切り, as 限り is usually かぎり; see comments kiri-stop"
+                />
             </word>
             <word
               w="【収：しゅう】【入：にゅう】"

@@ -886,6 +886,17 @@
               rem="jisho has n3"
             />
             <word
+              w="ガス"
+              rom="gasu"
+              tr_en="gas (state of matter); gasoline; dense fog"
+              tr_de="Gas; Gasolin; dichter Nebel"
+              lvl="n4"
+              id="gasu-gas"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="gasorin-gasoline" />
+            </word>
+            <word
               w="ガソリン"
               rom="gasorin"
               tr_en="gasoline; petrol"
@@ -894,6 +905,16 @@
               category="transportation"
               id="gasorin-gasoline"
             >
+                <keep_apart_from id="gasu-gas" />
+                <keep_apart_from id="gasorinsutando-petrolstation" />
+                <keep_together id="gasorinsutando-petrolstation" />
+                <phrase
+                  ph="ガソリンスタンド"
+                  rom="gasorin sutando"
+                  tr_en="petrol station"
+                  tr_de="Tankstelle"
+                  lvl="n4"
+                />
                 <sentence
                   s="ガソリンが【高：たか】くても【車：くるま】に【乗：の】ります。"
                   rom="Gasorin ga takakute mo kuruma ni norimasu."
@@ -910,6 +931,26 @@
                   lvl="n4"
                   origin="500mon q56"
                 />
+                <sentence
+                  s="【一：いち】【番：ばん】【近：ちか】いガソリンスタンドはどこですか。"
+                  rom="Ichiban chikai gasorin-sutando wa doko desu ka?"
+                  tr_en="Where is the next petrol station?"
+                  tr_de="Wo ist die nächste Tankstelle?"
+                  lvl="n4"
+                  origin="Langenscheidt"
+                />
+            </word>
+            <word
+              w="ガソリンスタンド"
+              rom="gasorin sutando"
+              tr_en="petrol station"
+              lvl="n4"
+              category="city, transportation"
+              id="gasorinsutando-petrolstation"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="gasorin-gasoline" />
+                <keep_together id="gasorin-gasoline" />
             </word>
             <word
               w="プレゼント"
@@ -948,14 +989,6 @@
               hint_de="insbes. Art von Person"
               lvl="n4"
               id="taipu-type"
-            />
-            <word
-              w="ガス"
-              rom="gasu"
-              tr_en="gas (state of matter); gasoline; dense fog"
-              tr_de="Gas; Gasolin; dichter Nebel"
-              lvl="n4"
-              id="gasu-gas"
             />
             <word
               w="ビル"
@@ -1016,24 +1049,6 @@
               lvl="n4"
               id="arukōru-alcohol"
             />
-            <word
-              w="ガソリンスタンド"
-              rom="gasorin-sutando"
-              tr_en="petrol station"
-              tr_de="Tankstelle"
-              lvl="n4"
-              category="city, transportation"
-              id="n4-gasorinsutando"
-            >
-                <sentence
-                  s="【一：いち】【番：ばん】【近：ちか】いガソリンスタンドはどこですか。"
-                  rom="Ichiban chikai gasorin-sutando wa doko desu ka?"
-                  tr_en="Where is the next petrol station?"
-                  tr_de="Wo ist die nächste Tankstelle?"
-                  lvl="n4"
-                  origin="Langenscheidt"
-                />
-            </word>
             <word
               w="コンサート"
               rom="konsāto"

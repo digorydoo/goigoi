@@ -172,7 +172,7 @@ Sentences sometimes use fictional names to give them some context. They do not r
 * (11) 西村さん - Mr Nishimura (25, likes sports, graduated from university, friends with Nakagawa)
 * (13) 中川さん - Ms Nakagawa (25, likes books, quit her job for writing, friends with Nishimura)
 * ( 7) 小川さん - Mr Ogawa Ken (24, studies law, can speak a little Chinese, has a calm attitude)
-* ( 9) 小林さん - Mr Kobayashi (23, university student, unreliable)
+* (10) 小林さん - Mr Kobayashi (23, university student, unreliable)
 * (12) 木村さん - Miss Kimura (23, likes sports, has a strict mother)
 * (10) 山下さん - Mr Yamashita (19, likes going abroad, doesn't read books)
 * (13) 高橋さん - Miss Takahashi (18, stylish, singer)

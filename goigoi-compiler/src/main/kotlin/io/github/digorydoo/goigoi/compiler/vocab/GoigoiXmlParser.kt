@@ -78,7 +78,7 @@ class GoigoiXmlParser {
             ?.takeIf { it.isNotEmpty() }
             ?: throw ParsingFailed("Empty value in kanji index tag!", root)
 
-        val badChars = kanjis.filter { !it.isCJK() }
+        val badChars = kanjis.filter { !it.isCJKNotKana() }
 
         if (badChars.isNotEmpty()) {
             throw ParsingFailed("Tag contains content that aren't kanji: $badChars", root)
@@ -111,7 +111,7 @@ class GoigoiXmlParser {
             ?.takeIf { it.isNotEmpty() }
             ?: throw ParsingFailed("Empty value in kanji freq tag!", root)
 
-        val badChars = kanjis.filter { !it.isCJK() }
+        val badChars = kanjis.filter { !it.isCJKNotKana() }
 
         if (badChars.isNotEmpty()) {
             throw ParsingFailed("Tag contains content that aren't kanji: $badChars", root)
@@ -135,7 +135,7 @@ class GoigoiXmlParser {
             throw ParsingFailed("dont_confuse entry should be split into two: $kanjis", root)
         }
 
-        val badChars = kanjis.filter { !it.isCJK() && !it.isKatakana() && !it.isHiragana() }
+        val badChars = kanjis.filter { !it.isCJKNotKana() && !it.isKatakana() && !it.isHiragana() }
 
         if (badChars.isNotEmpty()) {
             throw ParsingFailed("Tag contains content that aren't kanji: $badChars", root)
@@ -619,7 +619,7 @@ class GoigoiXmlParser {
             romaji = theRomaji
             translation = IntlString().apply { getMandatoryAttr(root, "tr", this) }
             explanation = IntlString().apply { getOptionalAttr(root, "explanation", this) }
-            level = JLPTLevel.fromString(getOptionalAttr(root, "lvl") ?: "")
+            level = JLPTLevel.fromString(getMandatoryAttr(root, "lvl"))
             hasDifferentForm = getBooleanAttr(root, "hasDifferentForm")
             allowSpaces = getBooleanAttrOrNull(root, "allowSpaces")
             origin = getOptionalAttr(root, "origin") ?: ""
@@ -681,7 +681,7 @@ class GoigoiXmlParser {
             romaji = theRomaji
             translation = IntlString().apply { getMandatoryAttr(root, "tr", this) }
             explanation = IntlString().apply { getOptionalAttr(root, "explanation", this) }
-            level = JLPTLevel.fromString(getOptionalAttr(root, "lvl") ?: "")
+            level = JLPTLevel.fromString(getMandatoryAttr(root, "lvl"))
             hasDifferentForm = getBooleanAttr(root, "hasDifferentForm")
             allowSpaces = getBooleanAttrOrNull(root, "allowSpaces")
             origin = getOptionalAttr(root, "origin") ?: ""

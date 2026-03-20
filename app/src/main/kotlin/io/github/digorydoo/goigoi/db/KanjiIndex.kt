@@ -2,16 +2,16 @@ package io.github.digorydoo.goigoi.db
 
 import android.content.Context
 import android.util.Log
+import ch.digorydoo.kutils.cjk.JLPTLevel
+import ch.digorydoo.kutils.cjk.Unicode.HIRAGANA
+import ch.digorydoo.kutils.cjk.Unicode.KATAKANA
+import ch.digorydoo.kutils.cjk.isCJKNotKana
+import ch.digorydoo.kutils.cjk.toHiragana
 import io.github.digorydoo.goigoi.BuildConfig
 import io.github.digorydoo.goigoi.file.DontConfuseFileReader
 import io.github.digorydoo.goigoi.file.KanjiIndexReader
 import io.github.digorydoo.goigoi.file.KanjiReadingsReader
 import io.github.digorydoo.goigoi.utils.StringUtils
-import ch.digorydoo.kutils.cjk.JLPTLevel
-import ch.digorydoo.kutils.cjk.Unicode.HIRAGANA
-import ch.digorydoo.kutils.cjk.Unicode.KATAKANA
-import ch.digorydoo.kutils.cjk.isCJK
-import ch.digorydoo.kutils.cjk.toHiragana
 import java.io.InputStream
 
 class KanjiIndex private constructor() {
@@ -78,7 +78,7 @@ class KanjiIndex private constructor() {
     }
 
     fun levelOfMostDifficultKanji(kanjiStr: String) =
-        kanjiStr.filter { it.isCJK() }
+        kanjiStr.filter { it.isCJKNotKana() }
             .mapNotNull { levelOfKanji(it) }
             .minOfOrNull { it.toInt() } // will be null if kanjiStr doesn't contain any kanji at all
             ?.let { JLPTLevel.fromInt(it) }

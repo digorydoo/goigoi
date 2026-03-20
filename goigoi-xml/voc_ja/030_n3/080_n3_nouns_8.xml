@@ -141,6 +141,7 @@
                 <keep_apart_from id="yakume-role" />
                 <keep_apart_from id="ninmu-mission" />
                 <keep_apart_from id="tantō-incharge" />
+                <keep_apart_from id="azukaru-keepincustody" />
                 <phrase
                   ph="【係：かかり】の【者：もの】"
                   rom="kakari no mono"
@@ -306,6 +307,7 @@
               category="education"
               id="gōkaku-passexam"
             >
+                <keep_apart_from id="ukaru-pass" />
                 <phrase
                   ph="【合：ごう】【格：かく】【発：はっ】【表：ぴょう】"
                   rom="gōkaku happyō"
@@ -321,32 +323,6 @@
                   tr_de="Er wird die Prüfung nächstes Jahr bestimmt bestehen (findest du nicht?)"
                   lvl="n3"
                   origin="Oxford p.118 modified"
-                />
-            </word>
-            <word
-              w="【虫：むし】【歯：ば】"
-              rom="mushiba"
-              tr_en="tooth decay; decayed tooth"
-              tr_de="Karies; verfaulter Zahn"
-              lvl="n3"
-              category="health"
-              id="mushiba-toothdecay"
-            >
-                <phrase
-                  ph="【虫：むし】【歯：ば】を【抜：ぬ】く"
-                  rom="mushiba o nuku"
-                  tr_en="to pull out a bad tooth"
-                  tr_de="einen schlechten Zahn ziehen"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【私：わたし】には【虫：むし】【歯：ば】が【二：に】【本：ほん】ある。"
-                  rom="Watashi ni wa mushiba ga ni-hon aru."
-                  tr_en="I have two bad teeth."
-                  tr_de="Ich habe zwei schlechte Zähne."
-                  lvl="n3"
-                  origin="lib0"
                 />
             </word>
             <word
@@ -794,6 +770,39 @@
                   tr_de="Jener Techniker ist verantwortlich für die Überwachung der Servers."
                   lvl="n3"
                   origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【才：さい】【能：のう】"
+              rom="sainō"
+              tr_en="talent; ability"
+              tr_de="Talent; Fähigkeit"
+              lvl="n3"
+              id="sainō-talent"
+            >
+                <phrase
+                  ph="【音：おん】【楽：がく】の【才：さい】【能：のう】"
+                  rom="ongaku no sainō"
+                  tr_en="a talent for music"
+                  tr_de="ein Talent für Musik"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【絵：え】の【才：さい】【能：のう】"
+                  rom="e no sainō"
+                  tr_en="a talent for painting"
+                  tr_de="ein Talent für Malerei"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【中：なか】【川：がわ】さんには【文：ぶん】【学：がく】の【才：さい】【能：のう】がある。"
+                  rom="Nakagawa-san ni wa bungaku no sainō ga aru."
+                  tr_en="Ms Nakagawa has a talent in literature."
+                  tr_de="Frau Nakagawa hat ein Talent in Literatur."
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word

@@ -1,12 +1,14 @@
 package io.github.digorydoo.goigoi.compiler.check
 
+import ch.digorydoo.kutils.cjk.JLPTLevel
 import io.github.digorydoo.goigoi.compiler.CheckFailed
 import io.github.digorydoo.goigoi.compiler.supportedLanguages
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiTopic
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
+import io.github.digorydoo.goigoi.core.StudyInContextKind
 
 fun GoigoiUnyt.check(topic: GoigoiTopic) {
-    // Check levels
+    // Check that the unyt's levels match those required by the topic.
 
     if (topic.levels.isNotEmpty()) {
         if (levels.isEmpty()) {
@@ -25,8 +27,10 @@ fun GoigoiUnyt.check(topic: GoigoiTopic) {
         }
     }
 
+    // Check that the unyt's levels match those of its nested words, phrases and sentences.
+
     if (levels.isNotEmpty()) {
-        val toGo = levels.toMutableList()
+        val declaredLevelsNotUsedByAnyWord = levels.toMutableList()
 
         for (section in sections) {
             for (word in section.words) {
@@ -47,15 +51,105 @@ fun GoigoiUnyt.check(topic: GoigoiTopic) {
                         )
                     }
 
-                    if (toGo.contains(word.level)) {
-                        toGo.remove(word.level)
+                    if (declaredLevelsNotUsedByAnyWord.contains(word.level)) {
+                        declaredLevelsNotUsedByAnyWord.remove(word.level)
+                    }
+
+
+                    if (word.studyInContext == StudyInContextKind.NOT_REQUIRED) {
+                        if (requiresPhrases) {
+                            // Phrase levels may differ, but at least one of them must match the unyt's.
+                            // Relaxed for n5 words, which are allowed to contain only n4 phrases.
+                            if (word.phrases.isNotEmpty()) {
+                                var anyMatchingUnyt = false
+
+                                for (phrase in word.phrases) {
+                                    if (levels.contains(phrase.level)) {
+                                        anyMatchingUnyt = true
+                                    } else if (word.level == JLPTLevel.N5 && phrase.level == JLPTLevel.N4) {
+                                        anyMatchingUnyt = true
+                                    }
+                                }
+
+                                if (!anyMatchingUnyt) {
+                                    throw CheckFailed(
+                                        "At least one of the ${word.phrases.size} phrase(s) must match what's " +
+                                            "declared by the unyt (${levels.joinToString(", ")})",
+                                        this,
+                                        word
+                                    )
+                                }
+                            }
+                        }
+
+                        if (requiresSentences) {
+                            // Sentences levels may differ, but at least one of them must match the unyt's.
+                            // Relaxed for n5 words, which are allowed to contain only n4 sentences.
+                            if (word.sentences.isNotEmpty()) {
+                                var anyMatchingUnyt = false
+
+                                for (sentence in word.sentences) {
+                                    if (levels.contains(sentence.level)) {
+                                        anyMatchingUnyt = true
+                                    } else if (word.level == JLPTLevel.N5 && sentence.level == JLPTLevel.N4) {
+                                        anyMatchingUnyt = true
+                                    }
+                                }
+
+                                if (!anyMatchingUnyt) {
+                                    throw CheckFailed(
+                                        "At least one of the ${word.sentences.size} sentences(s) must match what's " +
+                                            "declared by the unyt (${levels.joinToString(", ")})",
+                                        this,
+                                        word
+                                    )
+                                }
+                            }
+                        }
+                    } else {
+                        // All phrases must have the same level as their containing word.
+                        // Relaxed for n5 words, which are allowed to contain only n4 phrases.
+                        for (phrase in word.phrases) {
+                            if (
+                                word.level != phrase.level &&
+                                !(word.level == JLPTLevel.N5 && phrase.level == JLPTLevel.N4)
+                            ) {
+                                throw CheckFailed(
+                                    "Word is marked with studyInContext, which requires that phrase levels match " +
+                                        "their containing word.",
+                                    this,
+                                    word,
+                                    phrase
+                                )
+                            }
+                        }
+
+                        // All sentences must have the same level as their containing word.
+                        // Relaxed for n5 words, which are allowed to contain only n4 sentences.
+                        for (sentence in word.sentences) {
+                            if (
+                                word.level != sentence.level &&
+                                !(word.level == JLPTLevel.N5 && sentence.level == JLPTLevel.N4)
+                            ) {
+                                throw CheckFailed(
+                                    "Word is marked with studyInContext, which requires that sentences levels match " +
+                                        "their containing word.",
+                                    this,
+                                    word,
+                                    sentence
+                                )
+                            }
+                        }
                     }
                 }
             }
         }
 
-        if (toGo.isNotEmpty()) {
-            throw CheckFailed("Unyt specifies levels that aren't used by any word: $toGo", this)
+        if (declaredLevelsNotUsedByAnyWord.isNotEmpty()) {
+            throw CheckFailed(
+                "Unyt specifies levels that aren't used by any word: $declaredLevelsNotUsedByAnyWord",
+                this
+            )
         }
     }
 

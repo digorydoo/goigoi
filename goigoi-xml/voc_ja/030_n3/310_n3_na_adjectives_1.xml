@@ -228,6 +228,15 @@
                   origin="Miku"
                   href="https://youtu.be/l7xZ1TDZ7MU"
                 />
+                <sentence
+                  s="【金：かね】【持：も】ちが【幸：しあわ】せとは【限：かぎ】らない。"
+                  rom="Kane-mochi ga shiawase to wa kagiranai."
+                  tr_en="Being rich doesn’t necessarily mean being happy."
+                  tr_de="Reich sein bedeutet nicht unbedingt glücklich sein."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
             </word>
             <word
               w="【楽：らく】"
@@ -515,18 +524,6 @@
               rem="appears in GENKI2 p.286 kanji section"
             />
             <word
-              w="【真：ま】っ【白：しろ】"
-              rom="masshiro"
-              tr_en="pure white; (mind, paper) blank"
-              tr_de="pures Weiss; schneeweiss; (Gedanken, Papier) leer"
-              hint_en="noun; na-adjective"
-              hint_de="Nomen; Na-Adjektiv"
-              lvl="n3"
-              category="colour"
-              id="masshiro-blank"
-              rem="jisho has n2, but n3 for makka"
-            />
-            <word
               w="【真：ま】っ【青：さお】"
               rom="massao"
               tr_en="deep blue; (face) pale"
@@ -537,7 +534,9 @@
               category="colour"
               id="massao-deepblue"
               rem="jissho has n2, but n5 for aoi, n4 for mannaka, n3 for makka, majime, mane"
-            />
+            >
+                <keep_apart_from id="masshiro-blank" />
+            </word>
             <word
               w="【真：ま】っ【赤：か】"
               rom="makka"
@@ -548,7 +547,9 @@
               lvl="n3"
               category="colour"
               id="makka-deepred"
-            />
+            >
+                <keep_apart_from id="masshiro-blank" />
+            </word>
             <word
               w="【目：め】【茶：ちゃ】【苦：く】【茶：ちゃ】"
               rom="mecha-kucha"

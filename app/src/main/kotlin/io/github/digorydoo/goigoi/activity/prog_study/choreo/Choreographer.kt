@@ -6,7 +6,7 @@ import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import androidx.core.view.isVisible
-import ch.digorydoo.kutils.cjk.hasCJK
+import ch.digorydoo.kutils.cjk.hasCJKIgnoringKana
 import ch.digorydoo.kutils.cjk.hasCJKOrKana
 import ch.digorydoo.kutils.cjk.isHiragana
 import ch.digorydoo.kutils.cjk.isKana
@@ -367,7 +367,7 @@ class Choreographer(
             FontType.PENCIL -> values.len4QuestionTextSize
             FontType.DEFAULT -> when {
                 text.isKana() -> values.len4QuestionTextSize
-                text.hasCJK() -> values.len3QuestionTextSize
+                text.hasCJKIgnoringKana() -> values.len3QuestionTextSize
                 else -> values.len6QuestionTextSize
             }
         }

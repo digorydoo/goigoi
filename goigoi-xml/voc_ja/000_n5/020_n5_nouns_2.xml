@@ -679,8 +679,10 @@
               lvl="n5"
               category="family"
               id="kyōdai-siblings"
+              rem="appears in GENKI2 p.192 as go-kyōdai"
             >
                 <keep_apart_from id="gokyōdai-siblings" />
+                <keep_together id="gokyōdai-siblings" />
                 <phrase
                   ph="【兄：きょう】【弟：だい】と【一：いっ】【緒：しょ】に【遊：あそ】ぶ"
                   rom="kyōdai to issho ni asobu"
@@ -688,6 +690,15 @@
                   tr_de="mit den Geschwistern zusammen spielen"
                   lvl="n5"
                   origin="ChatGPT"
+                />
+                <phrase
+                  ph="ご【兄：きょう】【弟：だい】に【連：れん】【絡：らく】を【入：い】れる"
+                  rom="go-kyōdai ni renraku o ireru"
+                  tr_en="to get in contact with your siblings"
+                  tr_de="mit Ihren Geschwistern Kontakt aufnehmen"
+                  lvl="n4"
+                  origin="self"
+                  rem="verified with ChatGPT; n4 because of honorific prefix"
                 />
                 <sentence
                   s="【兄：きょう】【弟：だい】が いますか。"
@@ -714,6 +725,27 @@
                   lvl="n4"
                   origin="500mon q74"
                 />
+                <sentence
+                  s="ご【兄：きょう】【弟：だい】がいらっしゃいますか。"
+                  rom="Go-kyōdai ga irasshaimasu ka?"
+                  tr_en="Do you have any siblings? (honorific)"
+                  tr_de="Haben Sie Geschwister? (respektvoll)"
+                  lvl="n4"
+                  origin="GENKI2 p.192"
+                  rem="from audio; verified with ChatGPT; n4 because of honorific prefix"
+                />
+            </word>
+            <word
+              w="ご【兄：きょう】【弟：だい】"
+              rom="go-kyōdai"
+              tr_en="brothers and sisters; siblings"
+              lvl="n4"
+              id="gokyōdai-siblings"
+              HIDDEN="true"
+              rem="appears in GENKI2 p.192; jisho has nx for go-kyōdai, n5 for kyōdai"
+            >
+                <keep_apart_from id="kyōdai-siblings" />
+                <keep_together id="kyōdai-siblings" />
             </word>
             <word
               w="ご【両：りょう】【親：しん】"

@@ -1,21 +1,35 @@
 # TODO
 
+* Bug: When study starts, new words are added even if there are new ones already in My Words list
+
 * Bug: Explanations have furigana, but it isn't shown properly
 
 * Bug: Asynchronous reset stats/set fake stats can garble stats data since stats are not thread-safe! The dialogue
   window should stay open until the task is done.
 
-* Show streak in app bar
+* TategakiView: Full stop and comma should not be put on next line; should try a smaller height. Same goes for small
+  kana except small tsu.
 
 * Tategaki view should treat numbers specially (unless their furigana is broken in parts)
     - single digit numbers should use wide chars
     - two-digit numbers should use normal-width chars and occupy one space
     - three- and four-digit numbers should use condensed width chars and occupy one space
 
-* Wavy dash 〰 (nami) should also be rotated in tategaki view
+* Tategaki view: Wavy dash 〰 (nami) should also be rotated
 
-* TategakiView: Full stop and comma should not be put on next line; should try a smaller height. Same goes for small
-  kana except small tsu.
+* Should not pick sentences and phrases whose level more difficult than the most difficult word in the study list,
+  except when it's the only one (which can happen if requireSentences/Phrases isn't true)
+
+* Allow hints in phrases and sentences (e.g. to mark ガソリンスタンド as a noun), but restrict them to known hints
+
+* If presented characters and answer are 1:1, then characters should be disabled once they're typed, and enter
+  key should be disabled until all characters have been typed (= if length of answer equals length of input)
+
+* Show streak in app bar
+
+* Can we avoid calling :app:lintReportJapanese_freeDebug on every build?
+
+* Dakuten of Katakana get clipped at right end with fat font, e.g. キャンプ
 
 * Text size is too large for Krankenhauseinweisung (breaks word)
 
@@ -26,6 +40,10 @@
   common, which will be rejected by the question.)
 
 * Empty answer should be prevented.
+
+* Also accept synonyms when asking, but use exclamation icon with a warning
+
+* Add <avoid suggestion="kanaOrKanji" rem="otherwise user could type synonym blah" />
 
 * Buttons of keyboard should be larger if there are <= 4 buttons and all of them have <= 3
   characters (e.g. 新聞社)
@@ -38,8 +56,6 @@
 * After a correct answer, occasionally show word links such as "same reading", "antonym", "noun/verb", but only for
   words whose level is less or equal the current word's + 1; when there are more than one such link, show them one by
   one
-
-* Also accept synonyms when asking, but use exclamation icon with a warning
 
 * When SHOW_WORD_ASK_NOTHING was shown once for word, we could now show a MATCH_WORDS_WITH_TRANSLATIONS along with
   three other words. This new kind is shown only once for the word. Criteria: translations must not exceed a certain
@@ -62,8 +78,6 @@
 * The first three times the extended keyboard is shown, key buttons containing answer char should
   glow one by one. On error, the backspace should glow. The buttons should glow at any time when
   it's the first time the user has to pick one of: ん, dakuten, handakuten, ー
-
-* Add <avoid suggestion="kanaOrKanji" rem="otherwise user could type synonym blah" />
 
 * Get rid of generic hints "verb", "adjective"; use "v.t." or "na-adjective" instead
 

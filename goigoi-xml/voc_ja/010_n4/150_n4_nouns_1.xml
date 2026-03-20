@@ -1450,9 +1450,11 @@
               lvl="n4"
               category="general, home"
               id="kaeri-return"
+              rem="appears in GENKI2 p.165 as o-kaeri"
             >
                 <see id="kaeru-return" rem="verb" />
                 <keep_apart_from id="okaeri-return" />
+                <keep_together id="okaeri-return" />
                 <phrase
                   ph="【帰：かえ】り【道：みち】"
                   rom="kaeri-michi"
@@ -1462,6 +1464,14 @@
                   origin="ChatGPT"
                   rem="jisho has nx"
                 />
+                <phrase
+                  ph="お【帰：かえ】りになる"
+                  rom="o-kaeri ni naru"
+                  tr_en="to go home (honorific)"
+                  tr_de="nach Hause gehen (respektvoll)"
+                  lvl="n4"
+                  origin="GENKI2 p.165"
+                />
                 <sentence
                   s="お【帰：かえ】りなさい。"
                   rom="O-kaeri nasai."
@@ -1470,6 +1480,28 @@
                   lvl="n4"
                   origin="duolingo"
                 />
+                <sentence
+                  s="【青：あお】【木：き】【先：せん】【生：せい】はもうお【帰：かえ】りになりました。"
+                  rom="Aoki-sensei wa mō o-kaeri ni narimashita."
+                  tr_en="Professor Aoki has already gone home. (honorific)"
+                  tr_de="Professor Aoki ist bereits nach Hause gegangen. (respektvoll)"
+                  explanation_en="お帰りになる is a honorific expression for 帰る"
+                  explanation_de="お帰りになる ist ein ehrerbietiger Ausdruck für 帰る"
+                  lvl="n4"
+                  origin="GENKI2 p.165 modified"
+                />
+            </word>
+            <word
+              w="お【帰：かえ】り"
+              rom="o-kaeri"
+              tr_en="return (home); coming back"
+              lvl="n4"
+              id="okaeri-return"
+              rem="jisho has n4 for kaeri, n2 for o-kaeri"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="kaeri-return" />
+                <keep_together id="kaeri-return" />
             </word>
             <word
               w="【味：み】【噌：そ】"

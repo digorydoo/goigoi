@@ -1,10 +1,10 @@
 package io.github.digorydoo.goigoi.compiler.check
 
+import ch.digorydoo.kutils.cjk.JLPTLevel
 import io.github.digorydoo.goigoi.compiler.*
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhrase
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
-import ch.digorydoo.kutils.cjk.JLPTLevel
 
 fun GoigoiPhrase.checkPhrase(requiredTranslations: List<String>, word: GoigoiWord, unyt: GoigoiUnyt) {
     checkSentenceOrPhrase(this, true, requiredTranslations, word, unyt)
@@ -153,7 +153,12 @@ private fun checkSentenceOrPhrase(
                 // The word was found in the sentence. However, if we were looking for the kana,
                 // we want to make sure that we didn't find the kana within the furigana bracket.
                 if (word.usuallyInKana && s.primaryForm.contains(word.primaryForm.raw)) {
-                    throw CheckFailed("$kind should use the word in kana as stated by usuallyInKana", unyt, word, s)
+                    throw CheckFailed(
+                        "$kind should use the word in kana as stated by usuallyInKana, or declare hasDifferentForm",
+                        unyt,
+                        word,
+                        s
+                    )
                 }
             } else if (word.usuallyInKana) {
                 throw CheckFailed(
@@ -209,35 +214,16 @@ private fun checkSentenceOrPhrase(
         }
     }
 
-    // The level of sentences must not be easier than the level of the word it is contained in.
+    // The level of sentences and phrases must not be easier than the level of the word it is contained in. We allow
+    // sentences and phrases to be harder than the word, though.
 
-    if (!isPhrase && word.level != null && word.level != s.level) {
-        if (s.level == null) {
-            throw CheckFailed("Level attribute is missing from $kind", unyt, word, s)
-        } else {
-            val wl = word.level?.toInt() ?: 0
-            val sl = s.level?.toInt() ?: 0
+    if (word.level != null && word.level != s.level) {
+        val wl = word.level?.toInt() ?: 0
+        val sl = s.level?.toInt() ?: 0
 
-            if (wl < sl) {
-                throw CheckFailed(
-                    "Level of $kind cannot be easier than the word it is associated to",
-                    unyt,
-                    word,
-                    s
-                )
-            }
-        }
-    }
-
-    // The level of the sentence must match the unyt level when the unyt is dedicated to a single level.
-    // Exception: n5 unyts may contain n4 sentences (because it's hard to make pure n5 sentences).
-
-    if (unyt.levels.size == 1) {
-        val unytLevel = unyt.levels[0]
-
-        if (s.level != unytLevel && !(s.level == JLPTLevel.N4 && unytLevel == JLPTLevel.N5)) {
+        if (wl < sl) {
             throw CheckFailed(
-                "Unyt is dedicated to level ${unytLevel}, but sentence wants level ${s.level}",
+                "Level of $kind cannot be easier than the word it is associated to",
                 unyt,
                 word,
                 s

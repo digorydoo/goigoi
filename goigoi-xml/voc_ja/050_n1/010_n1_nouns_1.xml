@@ -233,24 +233,6 @@
                 />
             </word>
             <word
-              w="【限：き】り"
-              rom="kiri"
-              tr_en="stop; limits"
-              tr_de="Ende; Grenzen"
-              lvl="n1"
-              id="kiri-limits"
-            >
-                <sentence
-                  s="【宇：う】【宙：ちゅう】には【限：き】りがない。"
-                  rom="Uchū ni wa kiri ga nai."
-                  tr_en="There is no limit to the universe."
-                  tr_de="Das Universum ist grenzenlos."
-                  lvl="n1"
-                  origin="lib0 modified"
-                  href="https://hinative.com/questions/22253622"
-                />
-            </word>
-            <word
               w="【上：じょう】【演：えん】"
               rom="jōen"
               tr_en="performance (of a play, etc.); presentation"
@@ -1010,20 +992,38 @@
                 />
             </word>
             <word
-              w="【乗：じょう】【客：きゃく】"
-              rom="jōkyaku"
-              tr_en="passenger"
-              tr_de="Passagier"
+              w="【限：かぎ】り"
+              rom="kagiri"
+              tr_en="limits; bounds; extent"
+              tr_de="Limit; Grenzen; Ausmass"
               lvl="n1"
-              id="jōkyaku-passenger"
+              id="kagiri-limits"
+              rem="jisho has nx"
             >
-                <sentence
-                  s="【大：おお】【勢：ぜい】の【乗：じょう】【客：きゃく】がケガをした。"
-                  rom="Ōzei no jōkyaku ga kega o shita."
-                  tr_en="A lot of passengers got injured."
-                  tr_de="Viele Passagiere wurden verletzt."
-                  lvl="n1"
-                />
+                <!--
+                ChatGPT says 限り is usually かぎり and only rarely きり; see kiri-limits
+                -->
+                <see id="kagiru-restrict" rem="verb" />
+                <keep_apart_from id="kiri-limits" />
+                <keep_apart_from id="seigen-restrict" />
+                <keep_apart_from id="genkai-limit" />
+                <!--
+                目の届く限り (ChatGPT)
+                私の知る限り (ChatGPT)
+                可能な限り (ChatGPT)
+                目の届く限り水ばかりだ (lib0)
+                -->
+            </word>
+            <word
+              w="【悪：わる】【者：もの】"
+              rom="warumono"
+              tr_en="bad guy; villain; scoundrel"
+              tr_de="Bösewicht; Schurke; Schuft"
+              lvl="n1"
+              category="manga-anime, games"
+              id="warumono-villain"
+            >
+                <keep_apart_from id="akunin-villain" />
             </word>
         </section>
     </unit>

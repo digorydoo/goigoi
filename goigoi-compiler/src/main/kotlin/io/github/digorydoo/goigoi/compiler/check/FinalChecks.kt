@@ -1,13 +1,13 @@
 package io.github.digorydoo.goigoi.compiler.check
 
+import ch.digorydoo.kutils.cjk.*
+import ch.digorydoo.kutils.cjk.JLPTLevel.Companion.toJLPTLevelOrNull
 import io.github.digorydoo.goigoi.compiler.CheckFailed
 import io.github.digorydoo.goigoi.compiler.KanjiLevels
 import io.github.digorydoo.goigoi.compiler.Options
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhrase
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
-import ch.digorydoo.kutils.cjk.*
-import ch.digorydoo.kutils.cjk.JLPTLevel.Companion.toJLPTLevelOrNull
 import kotlin.math.min
 
 /**
@@ -44,7 +44,7 @@ class FinalChecks(
             if (word.level == JLPTLevel.N5 || word.level == JLPTLevel.N4) {
                 val withoutManualLevel = word.kanji
                     .filter { c ->
-                        if (!c.isCJK()) {
+                        if (!c.isCJKNotKana()) {
                             false
                         } else {
                             !vocab.manualKanjiLevels.any { (_, kanjis) ->
@@ -127,7 +127,7 @@ class FinalChecks(
         vocab.forEachVisibleWord { word ->
             if (!word.usuallyInKana && word.isAtLeastN1()) {
                 val difficultKanjis = word.primaryForm.kanji
-                    .filter { it.isCJK() && it != '〜' && !it.isAtLeastN1() }
+                    .filter { it.isCJKNotKana() && it != '〜' && !it.isAtLeastN1() }
                     .toSet()
 
                 if (difficultKanjis.isNotEmpty()) {
@@ -149,7 +149,7 @@ class FinalChecks(
     private fun checkConsistentKanjiLevels() {
         class WordAndKanjiLevel(val word: GoigoiWord) {
             val kanjiLevel = word.primaryForm.kanji
-                .filter { it.isCJK() && it != '〜' }
+                .filter { it.isCJKNotKana() && it != '〜' }
                 .map { (kanjiLevels.findLevelOf(it) ?: JLPTLevel.Nx).toInt() }
                 .maxOrNull()
                 ?.toJLPTLevelOrNull()

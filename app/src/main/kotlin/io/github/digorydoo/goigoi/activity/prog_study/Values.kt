@@ -16,7 +16,7 @@ class Values(a: Activity) {
     private val smallMinTop = DimUtils.dpToPx(16.0f, a)
     private val largeMinTop = DimUtils.dpToPx(56.0f, a)
 
-    val tategakiMaxHeight = DimUtils.dpToPx(260.0f, a)
+    val tategakiMaxHeight = DimUtils.dpToPx(300.0f, a)
 
     // Note that these sizes must not be too large, because we may need additional vertical space when
     // hasCombinedReading furigana elements cause early breaks!

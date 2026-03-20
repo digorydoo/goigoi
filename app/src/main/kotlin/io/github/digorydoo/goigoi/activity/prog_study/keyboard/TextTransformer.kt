@@ -20,8 +20,14 @@ class TextTransformer {
         val caretPos = textAndCaret.caretPos
         val lpart = text.slice(0 ..< caretPos)
         val rpart = text.substring(caretPos)
-        textAndCaret.text = "$lpart$key$rpart"
-        textAndCaret.caretPos += key.length // key can be an entire word
+
+        if (rpart.startsWith(key)) {
+            // Overwrite the characters to the right, i.e. simply move the caret.
+            textAndCaret.caretPos += key.length
+        } else {
+            textAndCaret.text = "$lpart$key$rpart"
+            textAndCaret.caretPos += key.length // key can be an entire word
+        }
     }
 
     fun transformPrevChar(textAndCaret: Keyboard.TextAndCaret, trf: (c: Char) -> Char) {

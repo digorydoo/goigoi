@@ -1,4 +1,4 @@
-package io.github.digorydoo.goigoi.view.tategaki
+package io.github.digorydoo.goigoi.view
 
 import android.content.Context
 import android.graphics.Canvas
@@ -12,14 +12,15 @@ import androidx.core.content.res.ResourcesCompat
 import androidx.core.content.withStyledAttributes
 import androidx.core.graphics.withRotation
 import androidx.core.graphics.withScale
-import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.furigana.FuriganaSpan
-import io.github.digorydoo.goigoi.utils.DimUtils
-import ch.digorydoo.kutils.cjk.Unicode.CJK_NUMBER_ONE
-import ch.digorydoo.kutils.cjk.Unicode.KATAKANA_LONG_VOWEL_MARK
+import ch.digorydoo.kutils.cjk.Unicode
 import ch.digorydoo.kutils.cjk.isKatakana
 import ch.digorydoo.kutils.colour.Colour
 import ch.digorydoo.kutils.math.clamp
+import io.github.digorydoo.goigoi.R
+import io.github.digorydoo.goigoi.core.tategaki.CharacterPlacement
+import io.github.digorydoo.goigoi.core.tategaki.TategakiLayout
+import io.github.digorydoo.goigoi.furigana.FuriganaSpan
+import io.github.digorydoo.goigoi.utils.DimUtils
 import kotlin.math.max
 import kotlin.math.min
 
@@ -177,7 +178,7 @@ class TategakiView: View {
         charWidth = textPaint.measureText("あ").toInt()
         val fm = textPaint.fontMetrics
 
-        val desiredSize = layout.arrangeElements(
+        val desiredSize = layout.arrange(
             charWidth = charWidth,
             charHeight = (fm.bottom - fm.top).toInt(), // fm.top is negative!
             maxHeight = maxHeight,
@@ -239,7 +240,8 @@ class TategakiView: View {
                 // that consistently; it's probably all mixed up. So, we rely on the fact that katakana prolonged sound
                 // mark must have a katakana character preceding it. The ambiguous situation that the number ichi
                 // immediately follows a katakana character is probably rare (hopefully).
-                val treatAsLongVowel = (c == KATAKANA_LONG_VOWEL_MARK || c == CJK_NUMBER_ONE) && prevC.isKatakana()
+                val treatAsLongVowel =
+                    (c == Unicode.KATAKANA_LONG_VOWEL_MARK || c == Unicode.CJK_NUMBER_ONE) && prevC.isKatakana()
                 prevC = c
 
                 val placement = when {

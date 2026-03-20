@@ -19,97 +19,56 @@
         <section>
             <!-- unsorted -->
             <word
-              w="【表：あらわ】す"
-              rom="arawasu"
-              tr_en="to represent; to stand for; to express"
-              tr_de="etw. repräsentieren; für etw. stehen; etw. ausdrücken"
-              lvl="n3"
-              category="talking"
-              id="arawasu-represent"
-              rem="must not be together with shimesu"
-            >
-                <keep_apart_from id="mōshiageru-tell" />
-                <keep_apart_from id="tsutaeru-convey" />
-                <keep_apart_from id="noberu-mention" />
-                <phrase
-                  ph="【迷：めい】【惑：わく】している【気：き】【持：も】ちを【表：あらわ】す"
-                  rom="meiwaku shite iru kimochi o arawasu"
-                  tr_en="to express the feeling of being annoyed"
-                  tr_de="das Gefühl ausdrücken, genervt zu sein"
-                  lvl="n3"
-                  origin="self"
-                  rem="rephrased by ChatGPT"
-                />
-                <sentence
-                  s="これは【何：なに】を【表：あらわ】しますか。"
-                  rom="Kore wa nani o arawashimasu ka?"
-                  tr_en="What does this stand for?"
-                  tr_de="Für was steht dies?"
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
-              w="【離：はな】れる"
-              rom="hanareru"
-              tr_en="to be separated; to drift away"
-              tr_de="auseinander gehen; abdriften"
-              hint_en="v.i."
-              lvl="n3"
-              category="motion, mood"
-              id="hanareru-drift"
-            >
-                <keep_apart_from id="hanasu-separate" />
-                <phrase
-                  ph="【船：ふね】を【離：はな】れる"
-                  rom="fune o hanareru"
-                  tr_en="to abandon (leave) the ship"
-                  tr_de="das Schiff aufgeben (verlassen)"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【彼：かれ】と【彼：かの】【女：じょ】は【離：はな】れてしまった。"
-                  rom="Kare to kanojo wa hanarete shimatta."
-                  tr_en="He and she ended up growing apart."
-                  tr_de="Er und sie haben sich leider getrennt."
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【駅：えき】は【少：すこ】し【離：はな】れている。"
-                  rom="Eki wa sukoshi hanarete iru."
-                  tr_en="The station is a little way off."
-                  tr_de="Der Bahnhof ist ein Stück weit entfernt."
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="なぜ【頭：あたま】から【離：はな】れない？"
-                  rom="Naze atama kara hanarenai?"
-                  tr_en="Why can't I get it out of my head?"
-                  tr_de="Warum kann ich es nicht aus meinem Kopf bekommen?"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
-              w="【握：にぎ】る"
-              rom="nigiru"
-              tr_en="to grasp; to grip; to hold"
-              tr_de="etw. fassen; etw. halten"
+              w="【覆：おお】う"
+              rom="ōu"
+              tr_en="to cover; to conceal; to disguise"
+              tr_de="etw. verdecken; etw. verschleiern; überdeckt sein"
               hint_en="v.t."
               lvl="n3"
-              id="nigiru-grasp"
+              category="looking"
+              id="ōu-cover"
             >
-                <see id="onigiri-riceball" rem="noun" />
-                <keep_apart_from id="motsu-carry" />
-                <keep_apart_from id="tsukamu-grab" />
-                <keep_apart_from id="tsukamaru-tobecaught" />
+                <keep_apart_from id="kakusu-hide" />
+                <phrase
+                  ph="【雪：ゆき】で【覆：おお】われた【山：やま】"
+                  rom="yuki de ōwareta yama"
+                  tr_en="a mountain covered in snow"
+                  tr_de="ein von Schnee bedeckter Berg"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【歩：ほ】【道：どう】は【落：お】ち【葉：ば】で【覆：おお】われていた。"
+                  rom="Hodō wa ochiba de ōwarete ita."
+                  tr_en="The sidewalk was covered with fallen leaves."
+                  tr_de="Der Bürgersteig war von heruntergefallenen Blättern überdeckt"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【抱：いだ】く"
+              rom="idaku"
+              tr_en="to embrace; to hug; to hold in one's arms"
+              tr_de="umarmen; in Armen halten"
+              lvl="n3"
+              category="relationships"
+              id="idaku-embrace"
+            >
+                <keep_apart_from id="kakaeru-hold" />
+            </word>
+            <word
+              w="【増：ま】す"
+              rom="masu"
+              tr_en="to increase; to grow"
+              tr_de="mehr werden; etw. vermehren"
+              hint_en="v.t. &amp; i."
+              lvl="n3"
+              category="general, maths"
+              id="masu-grow"
+            >
+                <keep_apart_from id="fueru-increase" />
+                <keep_apart_from id="zōka-increase" />
             </word>
             <word
               w="【横：よこ】【切：ぎ】る"
@@ -124,28 +83,6 @@
                 <keep_apart_from id="n5-wataru" />
             </word>
             <word
-              w="【抱：いだ】く"
-              rom="idaku"
-              tr_en="to embrace; to hug; to hold in one's arms"
-              tr_de="umarmen; in Armen halten"
-              lvl="n3"
-              category="relationships"
-              id="idaku-embrace"
-            >
-                <keep_apart_from id="kakaeru-hold" />
-            </word>
-            <word
-              w="【苦：くる】しむ"
-              rom="kurushimu"
-              tr_en="to suffer; to groan; to be worried"
-              tr_de="leiden; stöhnen; besorgt sein"
-              lvl="n3"
-              category="mood, not-good"
-              id="kurushimu-suffer"
-            >
-                <!-- the noun is kurushimi, which is nx -->
-            </word>
-            <word
               w="【求：もと】める"
               rom="motomeru"
               tr_en="to wish for sth.; to demand; to pursue (a pleasure)"
@@ -158,40 +95,15 @@
                 <!-- the noun is motome, nx -->
             </word>
             <word
-              w="【黙：だま】る"
-              rom="damaru"
-              tr_en="to be silent; to say nothing"
-              tr_de="schweigen; nichts sagen"
-              hint_en="v.i."
+              w="【用：もち】いる"
+              rom="mochiiru"
+              tr_en="to use; to make use of; to utilise"
+              tr_de="etw. verwenden; von etw. Gebrauch machen"
+              hint_en="v.t."
               lvl="n3"
-              category="talking"
-              id="damaru-besilent"
-            >
-                <phrase
-                  ph="【黙：だま】り【込：こ】む"
-                  rom="damarikomu"
-                  tr_en="to fall silent; to say no more"
-                  tr_de="still werden; nichts mehr sagen"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【私：わたし】たちはみんな【黙：だま】っていた。"
-                  rom="Watashi-tachi wa minna damatte ita."
-                  tr_en="All of us were silent."
-                  tr_de="Wir waren alle still."
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【黙：だま】って【聞：き】きなさい。"
-                  rom="Damatte kikinasai."
-                  tr_en="Shut up and listen."
-                  tr_de="Halt den Mund und höre zu."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
+              category="general, technical"
+              id="mochiiru-use"
+            />
             <word
               w="【疑：うたが】う"
               rom="utagau"
@@ -203,34 +115,45 @@
               id="utagau-doubt"
             />
             <word
-              w="【優：すぐ】れる"
-              rom="sugureru"
-              tr_en="to surpass; to outstrip; to excel"
-              tr_de="übertreffend sein; hervorragen; brillieren"
+              w="【除：のぞ】く"
+              rom="nozoku"
+              tr_en="to remove sth.; to eliminate; to exclude"
+              tr_de="etw. entfernen; eliminieren; ausschliessen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="nozoku-eliminate"
+            />
+            <word
+              w="【防：ふせ】ぐ"
+              rom="fusegu"
+              tr_en="to defend against; to protect against; to avert"
+              tr_de="sich gegen etw. verteidigen; sich gegen etw. schützen; etw. abwenden"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, politics"
+              id="fusegu-avert"
+            />
+            <word
+              w="【解：と】ける"
+              rom="tokeru"
+              tr_en="to be solved; to come undone; (spell) to be broken"
+              tr_de="gelöst sein; lose werden; (Bann) aufgehoben sein"
               hint_en="v.i."
               lvl="n3"
               category="general"
-              id="sugureru-excel"
+              id="tokeru-besolved"
             />
             <word
-              w="【論：ろん】じる"
-              rom="ronjiru"
-              tr_en="to discuss sth.; to talk about sth."
-              tr_de="etw. diskutieren; (ein Thema) behandeln"
-              Langenscheidt="diskutieren, (Thema) behandeln"
+              w="【支：ささ】える"
+              rom="sasaeru"
+              tr_en="to support; to defend; to hold at bay"
+              tr_de="etw. unterstützen; etw. verteidigen; etw. in Schach halten"
               hint_en="v.t."
               lvl="n3"
-              category="talking"
-              id="ronjiru-discuss"
-            >
-                <keep_apart_from id="hanasu-talk" />
-                <keep_apart_from id="iu-say" />
-                <keep_apart_from id="mōsu-say" />
-                <keep_apart_from id="mōshiageru-tell" />
-                <keep_apart_from id="hanashiau-discuss" />
-                <keep_apart_from id="hanashikakeru-addresssb" />
-                <keep_apart_from id="kataru-recite" />
-            </word>
+              category="general, politics"
+              id="sasaeru-support"
+            />
             <word
               w="【欠：か】ける"
               rom="kakeru"

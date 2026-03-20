@@ -2,7 +2,7 @@ package io.github.digorydoo.goigoi.compiler
 
 import ch.digorydoo.kutils.cjk.JLPTLevel
 import ch.digorydoo.kutils.cjk.hasDigitOfAnyForm
-import ch.digorydoo.kutils.cjk.isCJK
+import ch.digorydoo.kutils.cjk.isCJKNotKana
 import ch.digorydoo.kutils.cjk.isHiragana
 import ch.digorydoo.kutils.cjk.isKatakana
 import ch.digorydoo.kutils.collections.ValueAndWeight
@@ -311,7 +311,7 @@ class GoigoiVocabBuilder(private val vocab: GoigoiVocab, private val options: Op
             w.primaryForm.raw.isHiragana() -> 0.12
             else -> w.kanji.maxOf { c ->
                 when {
-                    !c.isCJK() || c.isHiragana() || c.isKatakana() -> 0.0
+                    !c.isCJKNotKana() || c.isHiragana() || c.isKatakana() -> 0.0
                     else -> {
                         val idx = kanjiByFreq.indexOf(c)
                         when {

@@ -1,7 +1,7 @@
 package io.github.digorydoo.goigoi.compiler
 
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import ch.digorydoo.kutils.cjk.*
+import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 
 class KanjiIndexBuilder(
     private val vocab: GoigoiVocab,
@@ -20,7 +20,7 @@ class KanjiIndexBuilder(
                     section.words.forEach { word ->
                         word.primaryForm.raw.forEach { c ->
                             if (
-                                c.isCJK() &&
+                                c.isCJKNotKana() &&
                                 !c.isHiragana() &&
                                 !c.isKatakana() &&
                                 !c.isPunctuation() &&
