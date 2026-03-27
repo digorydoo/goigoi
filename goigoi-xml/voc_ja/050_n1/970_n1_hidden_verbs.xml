@@ -35,6 +35,24 @@
                 />
             </word>
             <word
+              w="【高：たか】まる"
+              rom="takamaru"
+              tr_en="to swell; it rises; to be promoted"
+              hint_en="v.i."
+              lvl="n1"
+              id="takamaru-rise"
+              rem="why is this n1???"
+            >
+                <see id="takameru-raise" rem="v.t." />
+            </word>
+            <word
+              w="【齎：もたら】す"
+              rom="motarasu"
+              tr_en="to bring (news, knowledge, etc.); to introduce / to bring about; to cause; to produce (e.g. results)"
+              hint_en="v.t."
+              lvl="n1"
+            />
+            <word
               w="【綴：と】じる"
               rom="tojiru"
               tr_en="to top with egg (e.g. donburi)"
@@ -1068,11 +1086,15 @@
             />
             <word
               w="かき【回：まわ】す"
-              rom="kakimawasu"
+              rom="kaki-mawasu"
               tr_en="to stir; to churn; to poke (a fire); to disturb (water) / to rummage around / to throw into confusion; to throw into chaos; to disturb"
               hint_en="godan verb with su ending; v.t."
               lvl="n1"
-            />
+              id="kakimawasu-stir"
+            >
+                <see id="mawasu-turn" rem="closely related" />
+                <keep_apart_from id="mawasu-turn" />
+            </word>
             <word
               w="【演：えん】じる"
               rom="enjiru"

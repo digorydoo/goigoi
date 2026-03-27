@@ -18,6 +18,66 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【下：くだ】る"
+              rom="kudaru"
+              tr_en="to go down; to descend; to be inferior to"
+              tr_de="absteigen; untergehen; untergeordnet sein"
+              hint_en="v.i."
+              lvl="n2"
+              category="general, directions"
+              id="kudaru-godown"
+            >
+                <see id="kudari-downbound" rem="noun" />
+                <keep_apart_from id="kudaranai-absurd" />
+                <keep_together id="kudaranai-absurd" />
+                <keep_apart_from id="sagaru-drop" />
+                <keep_apart_from id="oriru-descend" />
+                <!--
+                    月は東から上って西に下る
+                    つきはひがしからのぼってにしにくだる
+                    The moon rises from the east and sets in the west
+                    (self)
+                -->
+                <phrase
+                  ph="くだらない"
+                  rom="kudaranai"
+                  tr_en="not worth bothering with; useless; absurd"
+                  tr_de="nicht der Mühe wert; nutzlos; absurd"
+                  hasDifferentForm="true"
+                  lvl="n2"
+                />
+                <sentence
+                  s="その【坂：さか】【道：みち】を【下：くだ】ろう。"
+                  rom="Sono saka-michi o kudarō."
+                  tr_en="Let's descend that hill road."
+                  tr_de="Gehen wir diese Hügelstrasse hinunter."
+                  lvl="n2"
+                  origin="lib0"
+                  rem="jisho has nx for saka-michi, but n4 for saka, n5 for michi"
+                />
+                <sentence
+                  s="ボートは【川：かわ】を【流：なが】れ【下：くだ】った。"
+                  rom="Bōto wa kawa o nagare-kudatta."
+                  tr_en="The boat drifted down the stream."
+                  tr_de="Das Boot trieb den Fluss hinunter."
+                  lvl="n2"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【下：くだ】らない"
+              rom="kudaranai"
+              tr_en="not worth bothering with; useless; absurd"
+              hint_en="i-adjective"
+              lvl="n2"
+              id="kudaranai-absurd"
+              HIDDEN="true"
+              rem="now a phrase of kudaru"
+            >
+                <keep_apart_from id="kudaru-godown" />
+                <keep_together id="kudaru-godown" />
+            </word>
+            <word
               w="【承：うけたまわ】る"
               rom="uketamawaru"
               tr_en="to receive (a request); to hear"
@@ -667,6 +727,7 @@
             >
                 <keep_apart_from id="tsugu-comeafter" />
                 <keep_together id="tsugu-comeafter" />
+                <keep_apart_from id="mawasu-turn" rem="mawasu can have the meaning of 'pass around'" />
             </word>
             <word
               w="【替：か】える"
@@ -800,14 +861,6 @@
               lvl="n2"
               category="cleaning, home"
               id="hosu-toair"
-            />
-            <word
-              w="【溢：あふ】れる"
-              rom="afureru"
-              tr_en="to overflow; to brim over; to flood"
-              hint_en="v.i."
-              lvl="n2"
-              id="afureru-overflow"
             />
             <word
               w="【物：もの】【語：がた】る"

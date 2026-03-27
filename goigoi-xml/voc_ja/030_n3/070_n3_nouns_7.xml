@@ -344,45 +344,6 @@
                 />
             </word>
             <word
-              w="【集：しゅう】【中：ちゅう】"
-              rom="shūchū"
-              tr_en="concentration; focusing; paying attention"
-              tr_de="sich konzentrieren; fokussieren; aufmerksam sein"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="thinking"
-              id="shūchū-focusing"
-            >
-                <phrase
-                  ph="【集：しゅう】【中：ちゅう】しやすい【書：しょ】【斎：さい】"
-                  rom="shūchū shi-yasui shosai"
-                  tr_en="a study room that is easy to concentrate in"
-                  tr_de="ein Studierzimmer, in welchem man sich gut konzentrieren kann"
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【眠：ねむ】くて、【集：しゅう】【中：ちゅう】できない。"
-                  rom="Nemukute, shūchū dekinai."
-                  tr_en="I'm sleepy and can't concentrate."
-                  tr_de="Ich bin schläfrig und kann mich nicht konzentrieren."
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="この【部：へ】【屋：や】は【煩：うるさ】くて、【集：しゅう】【中：ちゅう】しにくい。"
-                  rom="Kono heya wa urusakute, shūchū shi-nikui."
-                  tr_en="This room is noisy, and it's difficult to concentrate."
-                  tr_de="Dieser Raum ist laut, es ist schwer, sich zu konzentrieren."
-                  lvl="n3"
-                  origin="Miku"
-                  href="https://youtu.be/qKbysEzHWXw"
-                />
-            </word>
-            <word
               w="【維：い】【持：じ】"
               rom="iji"
               tr_en="maintenance; keeping in shape"
@@ -417,32 +378,6 @@
                   tr_de="Der Unterhalt eines Autos kostet Geld."
                   lvl="n3"
                   origin="ChatGPT"
-                />
-            </word>
-            <word
-              w="【虫：むし】【歯：ば】"
-              rom="mushiba"
-              tr_en="tooth decay; decayed tooth"
-              tr_de="Karies; verfaulter Zahn"
-              lvl="n3"
-              category="health"
-              id="mushiba-toothdecay"
-            >
-                <phrase
-                  ph="【虫：むし】【歯：ば】を【抜：ぬ】く"
-                  rom="mushiba o nuku"
-                  tr_en="to pull out a bad tooth"
-                  tr_de="einen schlechten Zahn ziehen"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【私：わたし】には【虫：むし】【歯：ば】が【二：に】【本：ほん】ある。"
-                  rom="Watashi ni wa mushiba ga ni-hon aru."
-                  tr_en="I have two bad teeth."
-                  tr_de="Ich habe zwei schlechte Zähne."
-                  lvl="n3"
-                  origin="lib0"
                 />
             </word>
             <word
@@ -851,6 +786,8 @@
               category="people"
               id="zenin-allofus"
             >
+                <keep_apart_from id="minna-everyone" />
+                <keep_apart_from id="minasan-allofyou" />
                 <phrase
                   ph="【全：ぜん】【員：いん】【出：しゅっ】【席：せき】"
                   rom="zen'in shusseki"
@@ -1065,28 +1002,6 @@
                 />
             </word>
             <word
-              w="【得：とく】【意：い】"
-              rom="tokui"
-              tr_en="pride; triumph"
-              tr_de="Stolz; Triumph"
-              hint_en="noun; na-adjective"
-              hint_de="Nomen; Na-Adjektiv"
-              lvl="n3"
-              category="mood"
-              id="tokui-pride"
-            >
-                <keep_apart_from id="jiman-boast" />
-                <sentence
-                  s="【誰：だれ】にも【得：とく】【意：い】な【時：じ】【代：だい】はある。"
-                  rom="Dare ni mo tokui na jidai wa aru."
-                  tr_en="Everybody has his time of triumph."
-                  tr_de="Jeder hat seine Zeit des Triumphs."
-                  lvl="n3"
-                  origin="lib0"
-                  rem="wouldn't がある be better???"
-                />
-            </word>
-            <word
               w="【時：じ】【期：き】"
               rom="jiki"
               tr_en="period; phase; stage"
@@ -1204,6 +1119,58 @@
                 />
             </word>
             <word
+              w="【火：か】【災：さい】"
+              rom="kasai"
+              tr_en="fire; blaze"
+              tr_de="Feuer; Brand"
+              lvl="n3"
+              category="fire"
+              id="kasai-fire"
+            >
+                <keep_apart_from id="kaji-fire" />
+                <phrase
+                  ph="【火：か】【災：さい】【保：ほ】【険：けん】"
+                  rom="kasai hoken"
+                  tr_en="fire insurance"
+                  tr_de="Feuerversicherung"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【得：とく】【意：い】"
+              rom="tokui"
+              tr_en="pride; triumph"
+              tr_de="Stolz; Triumph"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="mood"
+              id="tokui-pride"
+            >
+                <keep_apart_from id="jiman-boast" />
+                <sentence
+                  s="【誰：だれ】にも【得：とく】【意：い】な【時：じ】【代：だい】はある。"
+                  rom="Dare ni mo tokui na jidai wa aru."
+                  tr_en="Everybody has his time of triumph."
+                  tr_de="Jeder hat seine Zeit des Triumphs."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="wouldn't がある be better???"
+                />
+            </word>
+            <word
+              w="【論：ろん】【文：ぶん】"
+              rom="ronbun"
+              tr_en="thesis; dissertation"
+              tr_de="Dissertation; Diplomarbeit"
+              lvl="n3"
+              category="education, science"
+              id="ronbun-thesis"
+            >
+                <keep_apart_from id="repōto-report" />
+            </word>
+            <word
               w="【鬼：おに】"
               rom="oni"
               tr_en="ogre; demon"
@@ -1301,6 +1268,15 @@
                 <!-- 実験を行う - (じっけんをおこなう) - "To conduct an experiment" (ChatGPT) -->
             </word>
             <word
+              w="【心：しん】【臓：ぞう】"
+              rom="shinzō"
+              tr_en="heart (anatomy); central part"
+              tr_de="Herz (Anatomie); Kernstück"
+              lvl="n3"
+              category="body"
+              id="shinzō-heart"
+            />
+            <word
               w="【終：しゅう】【電：でん】"
               rom="shūden"
               tr_en="last train"
@@ -1332,15 +1308,6 @@
               lvl="n3"
               category="animal"
               id="kawa-fur"
-            />
-            <word
-              w="【症：しょう】【状：じょう】"
-              rom="shōjō"
-              tr_en="symptoms"
-              tr_de="Symptome"
-              lvl="n3"
-              category="health"
-              id="shōjō-symptoms"
             />
             <word
               w="【高：こう】【速：そく】"

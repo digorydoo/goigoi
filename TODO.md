@@ -1,14 +1,14 @@
 # TODO
 
-* Bug: When study starts, new words are added even if there are new ones already in My Words list
-
 * Bug: Explanations have furigana, but it isn't shown properly
 
 * Bug: Asynchronous reset stats/set fake stats can garble stats data since stats are not thread-safe! The dialogue
   window should stay open until the task is done.
 
-* TategakiView: Full stop and comma should not be put on next line; should try a smaller height. Same goes for small
-  kana except small tsu.
+* When dropping a word, it should always drop the one with the best score, not necessarily the one being presented
+  (but never the super progressive head).
+
+* When hint has "noun", tr_en should have -ing rather than "to ~"
 
 * Tategaki view should treat numbers specially (unless their furigana is broken in parts)
     - single digit numbers should use wide chars
@@ -21,6 +21,8 @@
   except when it's the only one (which can happen if requireSentences/Phrases isn't true)
 
 * Allow hints in phrases and sentences (e.g. to mark ガソリンスタンド as a noun), but restrict them to known hints
+
+* When studyInContext="preferred", should still check how many phrases actually can be used
 
 * If presented characters and answer are 1:1, then characters should be disabled once they're typed, and enter
   key should be disabled until all characters have been typed (= if length of answer equals length of input)

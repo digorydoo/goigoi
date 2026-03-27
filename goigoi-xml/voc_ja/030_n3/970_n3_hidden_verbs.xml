@@ -40,15 +40,27 @@
                 <keep_apart_from id="shiraberu-lookup" />
             </word>
             <word
-              w="【望：のぞ】む"
-              rom="nozomu"
-              tr_en="to desire; to wish for; to expect"
+              w="【預：あず】ける"
+              rom="azukeru"
+              tr_en="to put sth. in so.'s care; to leave sth. in so.'s keeping"
+              tr_de="etw. jemandem anvertrauen"
               hint_en="v.t."
               lvl="n3"
-              id="nozomu-desire"
+              category="general, relationships"
+              id="azukeru-putincare"
             >
-                <see id="nozomi-wish" rem="noun" />
+                <see id="azukaru-keepincustody" rem="closely related" />
+                <keep_apart_from id="sewa-trouble" />
             </word>
+            <word
+              w="【及：およ】ぼす"
+              rom="oyobosu"
+              tr_en="to exert (influence); to cause (damage); to bring about (benefits)"
+              tr_de="(Einfluss) ausüben; (Schaden) anrichten; (Nutzen) bringen"
+              lvl="n3"
+              category="general"
+              id="oyobosu-cause"
+            />
             <word
               w="【解：と】く"
               rom="toku"
@@ -56,14 +68,6 @@
               hint_en="v.t."
               lvl="n3"
               id="toku-untie"
-            />
-            <word
-              w="【通：つう】じる"
-              rom="tsūjiru"
-              tr_en="to lead to; to flow; to get through to"
-              hint_en="v.i."
-              lvl="n3"
-              id="tsūjiru-getthru"
             />
             <word
               w="【燃：も】える"
@@ -119,6 +123,46 @@
               id="tassuru-reach"
               tr_en="to reach; to get to; to arrive at"
               hint_en="suru verb (special class)"
+              lvl="n3"
+            />
+            <word
+              w="【断：ことわ】る"
+              rom="kotowaru"
+              tr_en="to refuse; to reject; to dismiss; to turn down; to decline / to inform; to give notice; to tell in advance / to ask leave; to excuse oneself (from)"
+              hint_en="v.t."
+              lvl="n3"
+            >
+                <!--
+                お願いを断る - to turn down, reject a wish (ChatGPT)
+                -->
+            </word>
+            <word
+              w="【含：ふく】む"
+              rom="fukumu"
+              tr_en="to contain; to comprise; to have; to hold; to include; to embrace / to hold in the mouth / to bear in mind; to understand; to harbor (grudge, etc.); to harbour / to express (emotion, etc.); to imply"
+              hint_en="v.t."
+              lvl="n3"
+            />
+            <word
+              w="【就：つ】く"
+              rom="tsuku"
+              tr_en="to take (seat, position, course, office, etc.); to assume; to be hired; to be employed / to ascend (the throne); to accede / to start (on a journey); to commence; to depart / to study (under teacher); to be an apprentice"
+              hint_en="v.i."
+              lvl="n3"
+              id="tsuku-assume"
+            />
+            <word
+              w="【積：つ】もる"
+              rom="tsumoru"
+              tr_en="to pile up; to accumulate / to estimate"
+              hint_en="v.t. &amp; i."
+              lvl="n3"
+            />
+            <word
+              w="【雇：やと】う"
+              rom="yatou"
+              tr_en="to employ; to hire; to take on / to charter (a car, boat, etc.); to hire"
+              hint_en="v.t."
               lvl="n3"
             />
         </section>

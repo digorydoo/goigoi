@@ -249,23 +249,14 @@ class Choreographer(
             }
         } else {
             // We update our TategakiView
-            val availHeight = bindings.rootView.measuredHeight - delegate.minTop // px
-
-            // We should probably use a ConstraintLayout in the XML to ensure a proper max height for the
-            // TategakiView. For now, let's do it the simple way by using a fixed ratio.
-            val reservedHeight = availHeight * 0.45f // px
-
-            // In order that text sizes can be optimized, aspect ratio should not vary too much. We therefore limit
-            // the maximum height for long devices such as my Samsung.
-            val allowedHeight = min(reservedHeight, values.tategakiMaxHeight).toInt()
+            val availHeight = bindings.rootView.measuredHeight - delegate.minTop - values.topBottomMargin
+            val allowedHeight = min(availHeight, values.tategakiMaxHeight).toInt()
 
             bindings.questionInCalligraphyFontTategakiView.apply {
-                setText(theText)
                 textSizePx = theSize
-                visibility = View.VISIBLE
-                // We should probably use a ConstraintLayout in the XML to ensure a proper max height for the
-                // TategakiView. For now, let's do it the simple way by using a fixed ratio.
                 viewMaxHeightPx = allowedHeight
+                setText(theText)
+                visibility = View.VISIBLE
             }
         }
     }

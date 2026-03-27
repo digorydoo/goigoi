@@ -188,35 +188,6 @@
                 />
             </word>
             <word
-              w="【命：めい】じる"
-              rom="meijiru"
-              tr_en="to order sth.; to command; to appoint"
-              tr_de="etw. befehlen; etw. anordnen; etw. festlegen"
-              hint_en="v.t."
-              lvl="n3"
-              category="talking, work"
-              id="meijiru-command"
-            >
-                <keep_apart_from id="tanomu-request" />
-                <phrase
-                  ph="そうするように【命：めい】じる"
-                  rom="sō suru yō ni meijiru"
-                  tr_en="to command so. to do it"
-                  tr_de="jem. befehlen, es so zu machen"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【兵：へい】【隊：たい】たちは【撃：う】つように【命：めい】じられました。"
-                  rom="Heitai-tachi wa utsu yō ni meijiraremashita."
-                  tr_en="The soldiers were commanded to shoot."
-                  tr_de="Den Söldnern wurde befohlen zu schiessen."
-                  lvl="n3"
-                  origin="self"
-                  rem="rephrased by ChatGPT; 兵士 would be slightly better (more formal), but is n1"
-                />
-            </word>
-            <word
               w="【従：したが】う"
               rom="shitagau"
               tr_en="to obey; to follow (a rule); to conform to"
@@ -535,8 +506,8 @@
                 <keep_apart_from id="arawasu-represent" />
                 <keep_apart_from id="arawasu-reveal" />
                 <phrase
-                  ph="【以：い】【下：か】に【示：しめ】す"
-                  rom="ika ni shimesu"
+                  ph="【以：い】【下：か】に【示：しめ】す【通：とお】り"
+                  rom="ika ni shimesu tōri"
                   tr_en="as shown below; see below"
                   tr_de="wie unten gezeigt; siehe unten"
                   lvl="n3"
@@ -662,6 +633,7 @@
               rom="okuru"
               tr_en="to give sth. as a present; to award so."
               tr_de="etw. schenken; jem. belohnen"
+              studyInContext="preferred"
               Langenscheidt="schenken"
               lvl="n3"
               category="hands, relationships"
@@ -671,34 +643,68 @@
                 <keep_apart_from id="ageru-give" />
                 <keep_apart_from id="sashiageru-give" />
                 <keep_apart_from id="ataeru-grant" />
+                <keep_apart_from id="kubaru-distribute" />
                 <phrase
-                  ph="【誕：たん】【生：じょう】【日：び】に【自：じ】【転：てん】【車：しゃ】を【贈：おく】る"
-                  rom="tanjōbi ni jitensha o okuru"
-                  tr_en="to give a bike as a birthday present"
-                  tr_de="zum Geburtstag ein Fahrrad schenken"
+                  ph="【誕：たん】【生：じょう】【日：び】に【贈：おく】る"
+                  rom="tanjōbi ni okuru"
+                  tr_en="to give as a birthday present"
+                  tr_de="zum Geburtstag schenken"
                   lvl="n3"
                   origin="lib0"
                 />
+                <phrase
+                  ph="【自：じ】【転：てん】【車：しゃ】を【贈：おく】る"
+                  rom="jitensha o okuru"
+                  tr_en="to give a bicycle (as a present)"
+                  tr_de="ein Fahrrad schenken"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【先：せん】【生：せい】に【本：ほん】を【贈：おく】る"
+                  rom="sensei ni hon o okuru"
+                  tr_en="to give a book to the teacher (as a present)"
+                  tr_de="dem Lehrer/der Lehrerin ein Buch schenken"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="リサちゃんに【人：にん】【形：ぎょう】を【贈：おく】った。"
+                  rom="Risa-chan ni ningyō o okutta."
+                  tr_en="I gave Risa a doll (as a present)."
+                  tr_de="Ich habe Risa eine Puppe geschenkt."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【珍：めずら】しい【花：か】【瓶：びん】を【贈：おく】ってくれた。"
+                  rom="Mezurashii kabin o okutte kureta."
+                  tr_en="I got a rare flower vase as a present."
+                  tr_de="Ich habe eine seltene Blumenvase als Geschenk bekommen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
             </word>
             <word
-              w="【遣：や】る"
-              rom="yaru"
-              tr_en="to give sth."
-              tr_de="etw. geben"
-              hint_en="to pets, plants, younger siblings, etc."
-              hint_de="einem Tier, einer Pflanze, einem jüngeren Geschwister, usw."
+              w="【望：のぞ】む"
+              rom="nozomu"
+              tr_en="to desire; to wish for; to expect"
+              tr_de="sich wünschen; erwarten"
+              hint_en="v.t."
               lvl="n3"
-              category="animal, hands"
-              id="yaru-give"
-              usuallyInKana="true"
+              id="nozomu-desire"
             >
-                <!-- implicit see-also link to yaru-undertake -->
+                <see id="nozomi-wish" rem="noun" />
+                <keep_apart_from id="onegai-wish" />
+                <keep_apart_from id="inoru-wish" />
+                <keep_apart_from id="motomeru-wishfor" />
+                <keep_apart_from id="tanomu-request" />
             </word>
             <word
               w="【済：す】ませる"
               rom="sumaseru"
-              tr_en="to finish; to get through with; to let end"
-              tr_de="etw. fertigstellen; etw. zu Ende bringen; etw. enden lassen"
+              tr_en="to let end; to get through with; to finish"
+              tr_de="etw. enden lassen; etw. zu Ende bringen; etw. fertigstellen"
               hint_en="v.t."
               lvl="n3"
               category="general"
@@ -706,20 +712,18 @@
             >
                 <see id="sumu-end" rem="v.i." />
                 <keep_apart_from id="oeru-finish" />
+                <keep_apart_from id="tomaru-stop" />
             </word>
             <word
-              w="【預：あず】ける"
-              rom="azukeru"
-              tr_en="to put sth. in so.'s care; to leave sth. in so.'s keeping"
-              tr_de="etw. jemandem anvertrauen"
+              w="【恐：おそ】れる"
+              rom="osoreru"
+              tr_en="to fear; to be afraid of"
+              tr_de="etw. fürchten; etw. befürchten"
               hint_en="v.t."
               lvl="n3"
-              category="general, relationships"
-              id="azukeru-putincare"
-            >
-                <see id="azukaru-keepincustody" rem="closely related" />
-                <keep_apart_from id="sewa-trouble" />
-            </word>
+              category="mood, not-good"
+              id="osoreru-fear"
+            />
             <word
               w="【救：すく】う"
               rom="sukuu"
@@ -733,27 +737,39 @@
                 <keep_apart_from id="tasukeru-help" />
             </word>
             <word
-              w="【抱：かか】える"
-              rom="kakaeru"
-              tr_en="to hold; to carry in one's arms"
-              tr_de="(in Armen) halten; tragen"
+              w="【通：つう】じる"
+              rom="tsūjiru"
+              tr_en="to lead to; to get through to"
+              tr_de="zu etw. führen; zu etw. durchkommen"
+              hint_en="v.i."
               lvl="n3"
-              category="relationships"
-              id="kakaeru-hold"
+              id="tsūjiru-getthru"
             >
-                <keep_apart_from id="idaku-embrace" />
+                <keep_apart_from id="tōru-gopast" />
+                <keep_apart_from id="tōsu-stickthru" />
             </word>
             <word
-              w="【倒：たお】す"
-              rom="taosu"
-              tr_en="to throw down; to bring down; to fell"
-              tr_de="herunterzerren; hinunterbringen; fällen"
+              w="【抱：いだ】く"
+              rom="idaku"
+              tr_en="to embrace; to hug; to hold in one's arms"
+              tr_de="umarmen; in Armen halten"
+              lvl="n3"
+              category="relationships"
+              id="idaku-embrace"
+            >
+                <keep_apart_from id="kakaeru-hold" />
+            </word>
+            <word
+              w="【横：よこ】【切：ぎ】る"
+              rom="yokogiru"
+              tr_en="to cross (e.g. road); to traverse"
+              tr_de="überqueren (z.B. die Strasse); traversieren"
               hint_en="v.t."
               lvl="n3"
-              category="hands"
-              id="taosu-throwdown"
+              category="transportation"
+              id="yokogiru-cross"
             >
-                <see id="taoreru-crumble" rem="v.i." />
+                <keep_apart_from id="n5-wataru" />
             </word>
             <word
               w="【数：かぞ】える"
@@ -772,15 +788,6 @@
               lvl="n3"
               category="general"
               id="otoru-fallbehind"
-            />
-            <word
-              w="【及：およ】ぼす"
-              rom="oyobosu"
-              tr_en="to exert (influence); to cause (damage); to bring about (benefits)"
-              tr_de="(Einfluss) ausüben; (Schaden) anrichten; (Nutzen) bringen"
-              lvl="n3"
-              category="general"
-              id="oyobosu-cause"
             />
             <word
               w="【溺：おぼ】れる"
@@ -846,13 +853,57 @@
             <word
               w="【詰：つ】める"
               rom="tsumeru"
-              tr_en="to stuff into; to pack; to move closer together"
-              tr_de="etw. hineinstopfen; etw. hineinpacken; zusammenrücken"
+              tr_en="to stuff into; to pack"
+              tr_de="etw. hineinstopfen; etw. hineinpacken"
               hint_en="v.t. &amp; i."
               lvl="n3"
               category="hands, motion"
               id="tsumeru-pack"
-            />
+            >
+                <see id="bindzume-bottling" rem="closely related" />
+                <see id="kandzume-cannedfood" rem="closely related" />
+                <!-- the noun is 詰め物 (nx): filling; filler -->
+                <!-- 切り詰める・きりつめる (nx): to cut short; to trim; to economize -->
+                <!-- 追い詰める・おいつめる (nx): to corner; to drive to the wall; to chase after -->
+                <!-- 箱詰め(する)・はこづめ(する) (nx): packing; boxing; thing packed in a box -->
+                <phrase
+                  ph="【服：ふく】をスーツケースに【詰：つ】める"
+                  rom="fuku o sūtsukēsu ni tsumeru"
+                  tr_en="to pack clothes into a suitcase"
+                  tr_de="Kleider in einen Koffer packen"
+                  lvl="n3"
+                  origin="jpod101 modified"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【席：せき】を【詰：つ】める"
+                  rom="seki o tsumeru"
+                  tr_en="to move closer together"
+                  tr_de="zusammenrücken; Platz machen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【小：ちい】さな【車：くるま】に【詰：つ】め【込：こ】まれている"
+                  rom="chīsana kuruma ni tsume-komarete iru"
+                  tr_en="to be crammed into a small car"
+                  tr_de="in ein kleines Auto gepackt sein"
+                  explanation_en="詰め込む is stronger than just 詰める, meaning to stuff sth. into it."
+                  explanation_de="詰め込む ist stärker als bloss 詰める und bedeutet, etw. hineinstopfen."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+                <sentence
+                  s="【席：せき】を【詰：つ】めてくれませんか。"
+                  rom="Seki o tsumete kuremasen ka?"
+                  tr_en="Could you make room for me?"
+                  tr_de="Könnten Sie für mich Platz machen?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【避：さ】ける"
               rom="sakeru"
@@ -917,15 +968,6 @@
                 <!-- the noun is kurushimi, which is nx -->
             </word>
             <word
-              w="【追：お】う"
-              rom="ou"
-              tr_en="to chase; to pursue; to follow"
-              tr_de="folgen; verfolgen"
-              lvl="n3"
-              category="motion"
-              id="ou-chase"
-            />
-            <word
               w="【優：すぐ】れる"
               rom="sugureru"
               tr_en="to surpass; to outstrip; to excel"
@@ -936,75 +978,13 @@
               id="sugureru-excel"
             />
             <word
-              w="【生：しょう】じる"
-              rom="shōjiru"
-              tr_en="to produce; to yield; to arise"
-              tr_de="etw. produzieren; etw. abgeben; aufkommen"
-              hint_en="v.t. &amp; i."
-              lvl="n3"
-              category="general, work"
-              id="shōjiru-yield"
-            />
-            <word
-              w="【換：か】える"
-              rom="kaeru"
-              tr_en="to replace (a battery); to exchange (money)"
-              tr_de="(Batterie) austauschen; (Geld) umtauschen"
-              Langenscheidt="(Batterie) austauschen; (Geld) umtauschen"
-              hint_en="v.t."
-              lvl="n3"
-              category="technical, finances"
-              id="kaeru-exchange"
-              rem="see also 替える kaeru-replace, 代える kaeru-substitute"
-            />
-            <word
-              w="【備：そな】える"
-              rom="sonaeru"
-              tr_en="to furnish with; to equip with; to prepare for"
-              tr_de="mit etw. ausrüsten; ausstatten; für etw. vorbereiten"
-              hint_en="v.t."
-              lvl="n3"
-              category="general, technical"
-              id="sonaeru-furnish"
-            />
-            <word
-              w="【扱：あつか】う"
-              rom="atsukau"
-              tr_en="to deal with (a person, problem); to operate (a machine)"
-              tr_de="sich (einem Problem, einer Person) annehmen; (Maschine) bedienen"
+              w="【効：き】く"
+              rom="kiku"
+              tr_en="to be effective; to be good (for); to function well"
+              tr_de="wirksam sein; gut sein (für); gut funktionieren"
               lvl="n3"
               category="work, technical"
-              id="atsukau-dealwith"
-            />
-            <word
-              w="【得：う】る"
-              rom="uru"
-              tr_en="to be able to; to acquire sth.; to gain"
-              tr_de="etw. können; sich etw. aneignen; etw. gewinnen"
-              hint_en="v.t."
-              lvl="n3"
-              category="work"
-              id="uru-obtain"
-            />
-            <word
-              w="【頼：たよ】る"
-              rom="tayoru"
-              tr_en="to rely on; to count on; to turn to (for help)"
-              tr_de="sich auf etw. stützen; auf etw. zählen; sich an jem. wenden"
-              hint_en="v.i."
-              lvl="n3"
-              category="relationships, technical"
-              id="tayoru-relyon"
-            />
-            <word
-              w="【恐：おそ】れる"
-              rom="osoreru"
-              tr_en="to fear; to be afraid of"
-              tr_de="etw. fürchten; etw. befürchten"
-              hint_en="v.t."
-              lvl="n3"
-              category="mood, not-good"
-              id="osoreru-fear"
+              id="kiku-effective"
             />
         </section>
     </unit>

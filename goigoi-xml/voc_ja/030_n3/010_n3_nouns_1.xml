@@ -94,8 +94,8 @@
             <word
               w="【少：しょう】【年：ねん】"
               rom="shōnen"
-              tr_en="youth; lad"
-              tr_de="Junge; Bursche"
+              tr_en="lad; youth"
+              tr_de="Bursche; Junge"
               lvl="n3"
               id="shōnen-lad"
               category="people"
@@ -764,22 +764,36 @@
               id="kami-spirit"
             >
                 <keep_apart_from id="kamisama-god" />
+                <keep_together id="kamisama-god" />
                 <phrase
-                  ph="【神：かみ】を【信：しん】じる"
-                  rom="kami o shinjiru"
+                  ph="【神：かみ】【様：さま】を【信：しん】じる"
+                  rom="kami-sama o shinjiru"
                   tr_en="to believe in God"
                   tr_de="an Gott glauben"
                   lvl="n3"
                   origin="lib0"
                 />
                 <sentence
-                  s="【神：かみ】に【感：かん】【謝：しゃ】した。"
-                  rom="Kami ni kansha shita."
+                  s="【神：かみ】【様：さま】に【感：かん】【謝：しゃ】した。"
+                  rom="Kami-sama ni kansha shita."
                   tr_en="I thanked God."
                   tr_de="Ich dankte Gott."
                   lvl="n3"
                   origin="lib0"
                 />
+            </word>
+            <word
+              w="【神：かみ】【様：さま】"
+              rom="kami-sama"
+              tr_en="God"
+              lvl="n3"
+              id="kamisama-god"
+              rem="jisho has n2, but n3 for kami, sama"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="sama-mr" />
+                <keep_apart_from id="kami-spirit" />
+                <keep_together id="kami-spirit" />
             </word>
             <word
               w="【自：じ】【動：どう】"
@@ -1063,7 +1077,7 @@
               rem="appears in 500mon q314"
             >
                 <phrase
-                  ph="【目：め】【茶：ちゃ】【苦：く】【茶：ちゃ】な【学：がく】【者：しゃ】"
+                  ph="めちゃくちゃな【学：がく】【者：しゃ】"
                   rom="mecha-kucha na gakusha"
                   tr_en="a disorganised scholar"
                   tr_de="ein Chaot von einem Gelehrten"
@@ -1279,6 +1293,7 @@
               id="akari-illum"
             >
                 <see id="akarui-bright" rem="adjective" />
+                <see id="akeru-dawn" rem="noun" />
                 <phrase
                   ph="【明：あ】かりをつける"
                   rom="akari o tsukeru"

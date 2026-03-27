@@ -84,43 +84,6 @@
                 />
             </word>
             <word
-              w="【性：せい】【格：かく】"
-              rom="seikaku"
-              tr_en="character of a person; personality"
-              tr_de="Charakter einer Person; Persönlichkeit"
-              lvl="n3"
-              category="people, mood"
-              id="seikaku-character"
-            >
-                <keep_apart_from id="jinbutsu-person" />
-                <keep_apart_from id="jinkaku-personality" />
-                <keep_apart_from id="kifū-traits" />
-                <phrase
-                  ph="【真：ま】【面：じ】【目：め】な【性：せい】【格：かく】"
-                  rom="majime na seikaku"
-                  tr_en="an earnest disposition (person)"
-                  tr_de="eine ernsthafte Persönlichkeit"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【古：ふる】【川：かわ】さんは【性：せい】【格：かく】が【明：あか】るい。"
-                  rom="Furukawa-san wa seikaku ga akarui."
-                  tr_en="Mrs Furukawa is a cheerful personality."
-                  tr_de="Frau Furukawa ist eine fröhliche Persönlichkeit."
-                  lvl="n3"
-                  origin="lib0 modified"
-                />
-                <sentence
-                  s="その【兄：きょう】【弟：だい】は【性：せい】【格：かく】が【全：まった】く【別：べつ】【々：べつ】だ。"
-                  rom="Sono kyōdai wa seikaku ga mattaku betsu-betsu da."
-                  tr_en="The brothers have completely different personalities."
-                  tr_de="Die Brüder haben zwei komplett verschiedene Persönlichkeiten."
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-            </word>
-            <word
               w="【営：えい】【業：ぎょう】"
               rom="eigyō"
               tr_en="business operations; sales promotion"
@@ -159,6 +122,34 @@
                   lvl="n3"
                   origin="ChatGPT"
                   rem="jpod101 audio has a similar but longer sentence"
+                />
+            </word>
+            <word
+              w="【哲：てつ】【学：がく】"
+              rom="tetsugaku"
+              tr_en="philosophy"
+              tr_de="Philosophie"
+              lvl="n3"
+              category="education"
+              id="tetsugaku-philosophy"
+            >
+                <phrase
+                  ph="【哲：てつ】【学：がく】【者：しゃ】"
+                  rom="tetsugakusha"
+                  tr_en="a philosopher"
+                  tr_de="ein Philosoph"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with jisho"
+                />
+                <sentence
+                  s="【大：だい】【学：がく】で【哲：てつ】【学：がく】を【専：せん】【攻：こう】しています。"
+                  rom="Daigaku de tetsugaku o senkō shite imasu."
+                  tr_en="I'm majoring in philosophy."
+                  tr_de="Ich studiere im Hauptfach Philosophie."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -254,6 +245,7 @@
               category="thinking"
               id="ishiki-awareness"
             >
+                <keep_apart_from id="kanshin-concern" />
                 <!-- 意識が覚める (ishiki ga sameru) – "To regain consciousness" or "To become aware" (ChatGPT) -->
                 <sentence
                   s="【人：にん】【間：げん】は【意：い】【識：しき】のある【生：い】き【物：もの】だ。"
@@ -582,6 +574,47 @@
                 />
             </word>
             <word
+              w="【混：こん】【乱：らん】"
+              rom="konran"
+              tr_en="disorder; chaos; confusion"
+              tr_de="Unordnung; Chaos; Verwirrung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="not-good"
+              id="konran-chaos"
+            >
+                <phrase
+                  ph="【混：こん】【乱：らん】を【招：まね】く"
+                  rom="konran o maneku"
+                  tr_en="to cause confusion"
+                  tr_de="Verwirrung stiften"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【経：けい】【由：ゆ】"
+              rom="keiyu"
+              tr_en="going via; going by way of"
+              tr_de="via einen Ort gehen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="keiyu-via"
+              rem="appears in GENKI2 p.328 kanji section"
+            >
+                <phrase
+                  ph="【大：おお】【阪：さか】【経：けい】【由：ゆ】"
+                  rom="Ōsaka-keiyu"
+                  tr_en="going via Osaka"
+                  tr_de="via Osaka"
+                  lvl="n3"
+                  origin="GENKI2 p.328"
+                  rem="GENKI2 has パリ経由; verified with ChatGPT"
+                />
+            </word>
+            <word
               w="【進：すす】み"
               rom="susumi"
               tr_en="progress; advancing"
@@ -615,20 +648,6 @@
                 <keep_apart_from id="kōsei-composition" rem="ambiguity with 'formation'" />
             </word>
             <word
-              w="【合：ごう】【計：けい】"
-              rom="gōkei"
-              tr_en="sum; total amount"
-              tr_de="Summe; Gesamtbetrag"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="finances"
-              id="gōkei-sum"
-              rem="appears in GENKI2 p.329 kanji section"
-            >
-                <keep_apart_from id="kingaku-moneyamount" />
-            </word>
-            <word
               w="【損：そん】【害：がい】"
               rom="songai"
               tr_en="damage; injury; loss"
@@ -657,18 +676,6 @@
                 <keep_apart_from id="kimochi-sensation" />
                 <keep_apart_from id="kigen-temper" />
                 <keep_apart_from id="kimi-feeling" />
-            </word>
-            <word
-              w="【委：い】【員：いん】"
-              rom="iin"
-              tr_en="committee member"
-              tr_de="Ausschussmitglied"
-              lvl="n3"
-              category="politics, people"
-              id="iin-committeemember"
-            >
-                <keep_apart_from id="gīn-memberofparlia" />
-                <keep_apart_from id="gichō-chairman" />
             </word>
             <word
               w="【裏：うら】【口：ぐち】"
@@ -844,6 +851,20 @@
                 <!-- implicit see-also link to kurai-dark -->
             </word>
             <word
+              w="【金：きん】【属：ぞく】"
+              rom="kinzoku"
+              tr_en="metal"
+              tr_de="Metall"
+              lvl="n3"
+              category="science"
+              id="kinzoku-metal"
+            >
+                <keep_apart_from id="kin-gold" />
+                <keep_apart_from id="gin-silver" />
+                <keep_apart_from id="tetsu-iron" />
+                <keep_apart_from id="dō-copper" />
+            </word>
+            <word
               w="【記：き】【入：にゅう】"
               rom="kinyū"
               tr_en="entry (in a form); filling in"
@@ -885,16 +906,6 @@
               rem="appears in GENKI2 L20 vocab section"
             />
             <word
-              w="【入：にゅう】【場：じょう】"
-              rom="nyūjō"
-              tr_en="admission; admittance; entering"
-              tr_de="Zulassung; Eintritt; Eintreten"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="nyūjō-admission"
-            />
-            <word
               w="【犯：はん】【罪：ざい】"
               rom="hanzai"
               tr_en="crime; offence"
@@ -904,6 +915,18 @@
               id="hanzai-crime"
             />
             <word
+              w="【医：い】【療：りょう】"
+              rom="iryō"
+              tr_en="medical treatment"
+              tr_de="medizinische Behandlung"
+              Langenscheidt="med. Behandlung"
+              lvl="n3"
+              category="health"
+              id="iryō-healthcare"
+            >
+                <!-- implicit see-also link to iryō-clothing -->
+            </word>
+            <word
               w="【栄：えい】【養：よう】"
               rom="eiyō"
               tr_en="nutrition; nourishment"
@@ -911,17 +934,6 @@
               lvl="n3"
               category="cooking"
               id="eiyō-nutrition"
-            />
-            <word
-              w="【回：かい】【復：ふく】"
-              rom="kaifuku"
-              tr_en="recovery"
-              tr_de="Genesung"
-              hint_en="from illness"
-              hint_de="nach einer Krankheit"
-              lvl="n3"
-              category="health"
-              id="kaifuku-recovery"
             />
         </section>
     </unit>

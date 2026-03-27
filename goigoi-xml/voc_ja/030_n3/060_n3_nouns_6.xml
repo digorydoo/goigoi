@@ -148,42 +148,42 @@
                 />
             </word>
             <word
-              w="【中：ちゅう】【止：し】"
-              rom="chūshi"
-              tr_en="abandoning; suspension; discontinuance"
-              tr_de="Aufgeben; Abbruch"
+              w="【集：しゅう】【中：ちゅう】"
+              rom="shūchū"
+              tr_en="concentration; focusing; paying attention"
+              tr_de="sich konzentrieren; fokussieren; aufmerksam sein"
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
-              category="mood, not-good"
-              id="chūshi-abandon"
-              rem="appears in 500mon q406"
-            >
-                <sentence
-                  s="【工：こう】【場：じょう】を【建：た】てる【計：けい】【画：かく】が【中：ちゅう】【止：し】になった。"
-                  rom="Kōjō o tateru keikaku ga chūshi ni natta."
-                  tr_en="The plan to build a factory has been abandoned."
-                  tr_de="Der Plan, eine Fabrik zu bauen, wurde aufgegeben."
-                  lvl="n3"
-                  origin="500mon q406"
-                  rem="jisho has n3 for keikaku, chūshi"
-                />
-            </word>
-            <word
-              w="【書：しょ】【斎：さい】"
-              rom="shosai"
-              tr_en="study (room); library; reading room"
-              tr_de="Studierzimmer; Bibliothek; Leseraum"
-              lvl="n3"
-              category="literature"
-              id="shosai-library"
+              category="thinking"
+              id="shūchū-focusing"
             >
                 <phrase
-                  ph="【静：しず】かな【書：しょ】【斎：さい】"
-                  rom="shizuka na shosai"
-                  tr_en="quiet study (room)"
-                  tr_de="ruhiges Studierzimmer"
+                  ph="【集：しゅう】【中：ちゅう】しやすい【書：しょ】【斎：さい】"
+                  rom="shūchū shi-yasui shosai"
+                  tr_en="a study room that is easy to concentrate in"
+                  tr_de="ein Studierzimmer, in welchem man sich gut konzentrieren kann"
                   lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【眠：ねむ】くて、【集：しゅう】【中：ちゅう】できない。"
+                  rom="Nemukute, shūchū dekinai."
+                  tr_en="I'm sleepy and can't concentrate."
+                  tr_de="Ich bin schläfrig und kann mich nicht konzentrieren."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="この【部：へ】【屋：や】は【煩：うるさ】くて、【集：しゅう】【中：ちゅう】しにくい。"
+                  rom="Kono heya wa urusakute, shūchū shi-nikui."
+                  tr_en="This room is noisy, and it's difficult to concentrate."
+                  tr_de="Dieser Raum ist laut, es ist schwer, sich zu konzentrieren."
+                  lvl="n3"
+                  origin="Miku"
+                  href="https://youtu.be/qKbysEzHWXw"
                 />
             </word>
             <word
@@ -209,26 +209,6 @@
                   tr_de="Ich sah eine berühmte Schauspielerin in einem Kaufhaus."
                   lvl="n3"
                   origin="Oxford p.101"
-                />
-            </word>
-            <word
-              w="【首：しゅ】【相：しょう】"
-              rom="shushō"
-              tr_en="Prime Minister; chancellor; premier"
-              tr_de="Premierminister; Kanzler"
-              lvl="n3"
-              category="politics, people"
-              id="shushō-premier"
-              rem="appears in GENKI2 p.116 vocab section"
-            >
-                <keep_apart_from id="daitōryō-president" />
-                <sentence
-                  s="【国：こく】【民：みん】はだれでも【首：しゅ】【相：しょう】を【尊：そん】【敬：けい】している。"
-                  rom="Kokumin wa daredemo shushō o sonkei shite iru."
-                  tr_en="The people of the country respect the Prime Minister."
-                  tr_de="Das Volk respektiert den Premierminister."
-                  lvl="n3"
-                  origin="lib0"
                 />
             </word>
             <word
@@ -381,6 +361,32 @@
                 <keep_together id="kikan-engine" />
             </word>
             <word
+              w="【虫：むし】【歯：ば】"
+              rom="mushiba"
+              tr_en="tooth decay; decayed tooth"
+              tr_de="Karies; verfaulter Zahn"
+              lvl="n3"
+              category="health"
+              id="mushiba-toothdecay"
+            >
+                <phrase
+                  ph="【虫：むし】【歯：ば】を【抜：ぬ】く"
+                  rom="mushiba o nuku"
+                  tr_en="to pull out a bad tooth"
+                  tr_de="einen schlechten Zahn ziehen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】には【虫：むし】【歯：ば】が【二：に】【本：ほん】ある。"
+                  rom="Watashi ni wa mushiba ga ni-hon aru."
+                  tr_en="I have two bad teeth."
+                  tr_de="Ich habe zwei schlechte Zähne."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【頂：ちょう】【戴：だい】"
               rom="chōdai"
               tr_en="please do for me"
@@ -414,40 +420,6 @@
                   tr_de="Könntest du mir bitte das rote Buch reichen?"
                   lvl="n3"
                   origin="Oxford p.123"
-                />
-            </word>
-            <word
-              w="【速：そく】【度：ど】"
-              rom="sokudo"
-              tr_en="speed; velocity"
-              tr_de="Geschwindigkeit"
-              lvl="n3"
-              category="physics, feet"
-              id="sokudo-speed"
-            >
-                <phrase
-                  ph="【速：そく】【度：ど】が【速：はや】い"
-                  rom="sokudo ga hayai"
-                  tr_en="fast velocity"
-                  tr_de="schnelle Geschwindigkeit"
-                  lvl="n3"
-                  origin="self"
-                />
-                <sentence
-                  s="この【車：くるま】は【速：そく】【度：ど】が【遅：おそ】いね。"
-                  rom="Kono kuruma wa sokudo ga osoi ne."
-                  tr_en="This car is slow, isn't it?"
-                  tr_de="Dieses Auto ist aber langsam."
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【飛：ひ】【行：こう】【機：き】は【速：そく】【度：ど】を【増：ま】した。"
-                  rom="Hikōki wa sokudo o mashita."
-                  tr_en="The plane increased speed."
-                  tr_de="Das Flugzeug erhöhte die Geschwindigkeit."
-                  lvl="n3"
-                  origin="lib0"
                 />
             </word>
             <word
@@ -606,6 +578,65 @@
                   lvl="n3"
                   origin="500mon q292"
                   rem="jisho has nx for jugyōryō"
+                />
+            </word>
+            <word
+              w="【中：ちゅう】【止：し】"
+              rom="chūshi"
+              tr_en="abandoning; suspension; discontinuance"
+              tr_de="Aufgeben; Abbruch"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="mood, not-good"
+              id="chūshi-abandon"
+              rem="appears in 500mon q406"
+            >
+                <sentence
+                  s="【工：こう】【場：じょう】を【建：た】てる【計：けい】【画：かく】が【中：ちゅう】【止：し】になった。"
+                  rom="Kōjō o tateru keikaku ga chūshi ni natta."
+                  tr_en="The plan to build a factory has been abandoned."
+                  tr_de="Der Plan, eine Fabrik zu bauen, wurde aufgegeben."
+                  lvl="n3"
+                  origin="500mon q406"
+                  rem="jisho has n3 for keikaku, chūshi"
+                />
+            </word>
+            <word
+              w="【書：しょ】【斎：さい】"
+              rom="shosai"
+              tr_en="study (room); library; reading room"
+              tr_de="Studierzimmer; Bibliothek; Leseraum"
+              lvl="n3"
+              category="literature"
+              id="shosai-library"
+            >
+                <phrase
+                  ph="【静：しず】かな【書：しょ】【斎：さい】"
+                  rom="shizuka na shosai"
+                  tr_en="quiet study (room)"
+                  tr_de="ruhiges Studierzimmer"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【首：しゅ】【相：しょう】"
+              rom="shushō"
+              tr_en="Prime Minister; chancellor; premier"
+              tr_de="Premierminister; Kanzler"
+              lvl="n3"
+              category="politics, people"
+              id="shushō-premier"
+              rem="appears in GENKI2 p.116 vocab section"
+            >
+                <keep_apart_from id="daitōryō-president" />
+                <sentence
+                  s="【国：こく】【民：みん】はだれでも【首：しゅ】【相：しょう】を【尊：そん】【敬：けい】している。"
+                  rom="Kokumin wa daredemo shushō o sonkei shite iru."
+                  tr_en="The people of the country respect the Prime Minister."
+                  tr_de="Das Volk respektiert den Premierminister."
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -1238,17 +1269,6 @@
                 <keep_apart_from id="koi-love" />
             </word>
             <word
-              w="【論：ろん】【文：ぶん】"
-              rom="ronbun"
-              tr_en="thesis; dissertation"
-              tr_de="Dissertation; Diplomarbeit"
-              lvl="n3"
-              category="education, science"
-              id="ronbun-thesis"
-            >
-                <keep_apart_from id="repōto-report" />
-            </word>
-            <word
               w="【医：い】【師：し】"
               rom="ishi"
               tr_en="doctor; physician"
@@ -1259,19 +1279,6 @@
             >
                 <!-- See https://hinative.com/questions/22019349 (diff between isha and ishi) -->
                 <keep_apart_from id="isha-physician" />
-            </word>
-            <word
-              w="【退：たい】【屈：くつ】"
-              rom="taikutsu"
-              tr_en="boredom; to feel bored; to get tired of"
-              tr_de="Langeweile; gelangweilt sein; von etwas die Nase voll haben"
-              hint_en="noun; na-adjective; suru verb"
-              hint_de="Nomen; Na-Adjektiv; Suru-Verb"
-              lvl="n3"
-              category="mood, not-good"
-              id="taikutsu-boredom"
-            >
-                <!-- 退屈な小説 - Boring novel (ChatGPT) -->
             </word>
             <word
               w="【方：ほう】【法：ほう】"
@@ -1287,26 +1294,39 @@
                 <keep_apart_from id="shikata-method" />
             </word>
             <word
-              w="【心：しん】【臓：ぞう】"
-              rom="shinzō"
-              tr_en="heart (anatomy); central part"
-              tr_de="Herz (Anatomie); Kernstück"
+              w="【一：ひと】【言：こと】"
+              rom="hitokoto"
+              tr_en="a few words; brief comment"
+              tr_de="ein paar Worte; kurzer Kommentar"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
-              category="body"
-              id="shinzō-heart"
+              category="talking"
+              id="hitokoto-fewwords"
             />
             <word
-              w="【医：い】【療：りょう】"
-              rom="iryō"
-              tr_en="medical treatment"
-              tr_de="medizinische Behandlung"
-              Langenscheidt="med. Behandlung"
+              w="【悪：わる】【口：ぐち】"
+              rom="waruguchi"
+              tr_en="insult; slander; bad-mouthing"
+              tr_de="Beleidigung; Verleumdung; schlecht reden"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
-              category="health"
-              id="iryō-healthcare"
-            >
-                <!-- implicit see-also link to iryō-clothing -->
-            </word>
+              category="quarrel, talking"
+              id="waruguchi-insult"
+            />
+            <word
+              w="【手：て】【洗：あら】い"
+              rom="te-arai"
+              tr_en="washing one's hands; restroom; lavatory"
+              tr_de="Händewaschen; Toilette"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              category="hands"
+              id="tearai-restroom"
+              rem="jisho has n2, but n5 for te, arau"
+            />
         </section>
     </unit>
 </vocabulary>

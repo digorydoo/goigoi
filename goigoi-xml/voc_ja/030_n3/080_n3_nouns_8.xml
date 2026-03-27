@@ -408,25 +408,6 @@
                 />
             </word>
             <word
-              w="【火：か】【災：さい】"
-              rom="kasai"
-              tr_en="fire; blaze"
-              tr_de="Feuer; Brand"
-              lvl="n3"
-              category="fire"
-              id="kasai-fire"
-            >
-                <keep_apart_from id="kaji-fire" />
-                <phrase
-                  ph="【火：か】【災：さい】【保：ほ】【険：けん】"
-                  rom="kasai hoken"
-                  tr_en="fire insurance"
-                  tr_de="Feuerversicherung"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-            </word>
-            <word
               w="【地：ち】【域：いき】"
               rom="chiiki"
               tr_en="area; region; local"
@@ -828,6 +809,26 @@
                 />
             </word>
             <word
+              w="【大：たい】【気：き】"
+              rom="taiki"
+              tr_en="atmosphere; air"
+              tr_de="Atmosphäre; Luft"
+              lvl="n3"
+              category="science, astronomy"
+              id="taiki-atmosphere"
+            >
+                <see id="kūki-air" rem="closely related" />
+                <keep_apart_from id="kūki-air" />
+                <sentence
+                  s="【大：たい】【気：き】が【地：ち】【球：きゅう】を【包：つつ】んでいる。"
+                  rom="Taiki ga chikyū o tsutsunde iru."
+                  tr_en="The atmosphere surrounds the Earth."
+                  tr_de="Die Atmosphäre umgibt die Erde."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【現：げん】【代：だい】"
               rom="gendai"
               tr_en="present age; present day; modern times"
@@ -907,6 +908,7 @@
                 <keep_apart_from id="kibō-hope" />
                 <keep_apart_from id="onegai-wish" />
                 <keep_apart_from id="konomi-liking" />
+                <keep_apart_from id="chūmon-order" />
             </word>
             <word
               w="【代：だい】【金：きん】"
@@ -993,7 +995,24 @@
               rem="appears in GENKI2 L21 vocab section"
             >
                 <!-- phrase 環境に慣れる (かんきょうになれる) - Get used to the environment. (ChatGPT) -->
+                <phrase
+                  ph="【環：かん】【境：きょう】【問：もん】【題：だい】への【関：かん】【心：しん】を【高：たか】める"
+                  rom="kankyō mondai e no kanshin o takameru"
+                  tr_en="to raise the awareness about environmental issues"
+                  tr_de="das Bewusstsein für Umweltsprobleme fördern"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
             </word>
+            <word
+              w="【症：しょう】【状：じょう】"
+              rom="shōjō"
+              tr_en="symptoms"
+              tr_de="Symptome"
+              lvl="n3"
+              category="health"
+              id="shōjō-symptoms"
+            />
             <word
               w="【蚊：か】"
               rom="ka"
@@ -1024,16 +1043,6 @@
               category="fashion, culture"
               id="sensu-fan"
               rem="appears in GENKI2 L20 vocab section; jisho has n2"
-            />
-            <word
-              w="【痴：ち】【漢：かん】"
-              rom="chikan"
-              tr_en="groper; pervert"
-              tr_de="Grapscher; Perversling"
-              lvl="n3"
-              category="people, not-good"
-              id="chikan-groper"
-              rem="appears in GENKI2 L21 vocab section; jisho has nx"
             />
             <word
               w="【返：へん】【品：ぴん】"

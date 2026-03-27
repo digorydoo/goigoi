@@ -17,37 +17,15 @@
         <section>
             <!-- unsorted -->
             <word
-              w="【関：かん】【心：しん】"
-              rom="kanshin"
-              tr_en="concern; interest"
-              tr_de="Betreff; Interesse"
+              w="【入：にゅう】【場：じょう】"
+              rom="nyūjō"
+              tr_en="admission; admittance; entering"
+              tr_de="Zulassung; Eintritt; Eintreten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
-              id="kanshin-concern"
-            >
-                <keep_apart_from id="kansuru-concern" />
-                <keep_together id="kansuru-concern" />
-                <phrase
-                  ph="【関：かん】する"
-                  rom="kan suru"
-                  tr_en="to concern sth.; to be related to sth."
-                  tr_de="etw. betreffen; auf etw. bezogen sein"
-                  hasDifferentForm="true"
-                  lvl="n3"
-                />
-            </word>
-            <word
-              w="【関：かん】する"
-              rom="kan suru"
-              tr_en="to concern; to be related"
-              Langenscheidt="betreffen"
-              lvl="n3"
-              id="kansuru-concern"
-              HIDDEN="true"
-              rem="now a phrase of kanshin-concern"
-            >
-                <keep_apart_from id="kanshin-concern" />
-                <keep_together id="kanshin-concern" />
-            </word>
+              id="nyūjō-admission"
+            />
             <word
               w="【方：ほう】【々：ぼう】"
               rom="hō-bō"
@@ -173,6 +151,1545 @@
               lvl="n3"
               category="science"
               id="heikin-average"
+            />
+            <word
+              w="【重：じゅう】【視：し】"
+              rom="jūshi"
+              tr_en="regarding as important; putting emphasis on"
+              tr_de="als wichtig erachten; Betonung auf etw. legen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="jūshi-emphasis"
+            />
+            <word
+              w="【真：ま】【似：ね】"
+              rom="mane"
+              tr_en="imitating; copying; mimicry"
+              tr_de="Imitation; Kopie; nachahmen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="mane-imitate"
+            />
+            <word
+              w="【延：えん】【期：き】"
+              rom="enki"
+              tr_en="postponement; deferment; adjournment"
+              tr_de="Aufschub; Vertagung; aufschieben"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="enki-postpone"
+            />
+            <word
+              w="【制：せい】【限：げん】"
+              rom="seigen"
+              tr_en="restriction; restraint; limitation"
+              tr_de="Einschränkung; Zurückhaltung; Begrenzung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="seigen-restrict"
+            >
+                <keep_apart_from id="kagiru-restrict" />
+                <keep_apart_from id="kagiri-limits" />
+                <keep_apart_from id="genkai-limit" />
+            </word>
+            <word
+              w="【予：よ】【防：ぼう】"
+              rom="yobō"
+              tr_en="prevention; protection; precaution"
+              tr_de="Prävention; Schutz; Vorsorge"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="yobō-prevention"
+            >
+                <keep_apart_from id="yōjin-care" />
+            </word>
+            <word
+              w="【提：てい】【案：あん】"
+              rom="teian"
+              tr_en="proposal; proposition; suggestion"
+              tr_de="Vorschlag; Anregung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="teian-proposal"
+            />
+            <word
+              w="【処：しょ】【理：り】"
+              rom="shori"
+              tr_en="processing; treatment; disposition"
+              tr_de="Verarbeitung; Behandlung; Disposition"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="shori-processing"
+            />
+            <word
+              w="【訪：ほう】【問：もん】"
+              rom="hōmon"
+              tr_en="call; visit"
+              tr_de="Besuch"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="hōmon-visit"
+            />
+            <word
+              w="【保：ほ】【存：ぞん】"
+              rom="hozon"
+              tr_en="preservation; conservation; storing"
+              tr_de="Lagern; Konvervierung; speichern"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="hozon-storage"
+            />
+            <word
+              w="【消：しょう】【費：ひ】"
+              rom="shōhi"
+              tr_en="consumption; expenditure; spending"
+              tr_de="Konsum; Verbrauch"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="shōhi-consumption"
+            />
+            <word
+              w="【滞：たい】【在：ざい】"
+              rom="taizai"
+              tr_en="stay; sojourn"
+              tr_de="Aufenthalt"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="taizai-stay"
+            />
+            <word
+              w="【差：さ】【別：べつ】"
+              rom="sabetsu"
+              tr_en="discrimination; distinction; differentiation"
+              tr_de="Diskriminierung; Unterscheidung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="sabetsu-distinct"
+            />
+            <word
+              w="【注：ちゅう】"
+              rom="chū"
+              tr_en="annotation; comment; explanatory note"
+              tr_de="Vermerk; Kommentar; Fussnote"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="chū-annotation"
+            />
+            <word
+              w="【建：けん】【設：せつ】"
+              rom="kensetsu"
+              tr_en="establishment; construction"
+              tr_de="Bauwerk; Bau"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="kensetsu-construction"
+            />
+            <word
+              w="【命：めい】【令：れい】"
+              rom="meirei"
+              tr_en="order; command; instruction"
+              tr_de="Anordnung; Kommando; Instruktion"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="meirei-order"
+            />
+            <word
+              w="【判：はん】【断：だん】"
+              rom="handan"
+              tr_en="judgement; decision; conclusion"
+              tr_de="Urteil; Entscheid; Beschluss"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="handan-decision"
+            />
+            <word
+              w="【選：せん】【択：たく】"
+              rom="sentaku"
+              tr_en="selection; choice; option"
+              tr_de="Selektion; Auswahl; Option"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="sentaku-choice"
+            >
+                <!-- よろしい選択 (yoroshii sentaku) – "acceptable choice" (ChatGPT) -->
+            </word>
+            <word
+              w="【発：はっ】【展：てん】"
+              rom="hatten"
+              tr_en="development; expansion; growth"
+              tr_de="Entwicklung; Erweiterung; Wachstum"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="hatten-growth"
+            >
+                <keep_apart_from id="susumi-progress" />
+                <keep_apart_from id="kōjō-elevation" />
+                <keep_apart_from id="shinten-progress" />
+                <keep_apart_from id="shinka-evolution" />
+                <keep_apart_from id="shindo-progress" />
+                <keep_apart_from id="shinpo-progress" />
+                <keep_apart_from id="zenshin-advance" />
+                <keep_apart_from id="jōtatsu-improve" />
+
+                <keep_apart_from id="zōka-increase" />
+            </word>
+            <word
+              w="【実：じっ】【行：こう】"
+              rom="jikkō"
+              tr_en="execution; carrying out; action"
+              tr_de="Ausführung; Durchführung; Aktion"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="jikkō-exec"
+            >
+                <keep_apart_from id="jitsugen-impl" />
+                <keep_apart_from id="jisshi-enforce" />
+            </word>
+            <word
+              w="【代：だい】【表：ひょう】"
+              rom="daihyō"
+              tr_en="representative; delegation; model"
+              tr_de="Vertreter; Delegation; Modell"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="daihyō-model"
+            >
+                <keep_apart_from id="dairi-agency" />
+            </word>
+            <word
+              w="【設：せつ】【備：び】"
+              rom="setsubi"
+              tr_en="facilities; accommodations"
+              tr_de="Einrichtungen"
+              Langenscheidt="Einrichtung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="setsubi-equipment"
+            >
+                <keep_apart_from id="sōchi-device" />
+            </word>
+            <word
+              w="【指：し】【導：どう】"
+              rom="shidō"
+              tr_en="guidance; instruction; coaching"
+              tr_de="Führung; instruieren; coachen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="education, business"
+              id="shidō-guidance"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="kōchi-coach" />
+                <keep_apart_from id="annai-guidance" />
+            </word>
+            <word
+              w="【報：ほう】【告：こく】"
+              rom="hōkoku"
+              tr_en="report; information"
+              tr_de="Bericht; Information"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="news"
+              id="hōkoku-report"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="repōto-report" />
+                <keep_apart_from id="jōhō-info" />
+                <keep_apart_from id="shirase-news" />
+            </word>
+            <word
+              w="【組：そ】【織：しき】"
+              rom="soshiki"
+              tr_en="structure; setup; formation"
+              tr_de="Struktur; Aufbau; formieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="soshiki-struct"
+            >
+                <keep_apart_from id="tanjō-birth" rem="ambiguity with 'formation'" />
+                <keep_apart_from id="kōsei-composition" rem="ambiguity with 'formation'" />
+            </word>
+            <word
+              w="【主：しゅ】【張：ちょう】"
+              rom="shuchō"
+              tr_en="claim; assertion; insistence"
+              tr_de="Anspruch; Behauptung; Beharren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="quarrel"
+              id="shuchō-claim"
+            >
+                <keep_apart_from id="seikyū-claim" />
+            </word>
+            <word
+              w="【進：しん】【歩：ぽ】"
+              rom="shinpo"
+              tr_en="progress; improvement; development"
+              tr_de="Fortschritt; Verbesserung; Entwicklung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="motion"
+              id="shinpo-progress"
+            >
+                <keep_apart_from id="susumi-progress" />
+                <keep_apart_from id="zenshin-advance" />
+                <keep_apart_from id="kōjō-elevation" />
+                <keep_apart_from id="shinten-progress" />
+                <keep_apart_from id="shinka-evolution" />
+                <keep_apart_from id="shindo-progress" />
+                <keep_apart_from id="hatten-growth" />
+                <keep_apart_from id="jōtatsu-improve" />
+            </word>
+            <word
+              w="【上：じょう】【達：たつ】"
+              rom="jōtatsu"
+              tr_en="improvement; advance; progress"
+              tr_de="Verbesserung; Fortschritt"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="work, motion"
+              id="jōtatsu-improve"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="susumi-progress" />
+                <keep_apart_from id="zenshin-advance" />
+                <keep_apart_from id="kōjō-elevation" />
+                <keep_apart_from id="shinten-progress" />
+                <keep_apart_from id="shinka-evolution" />
+                <keep_apart_from id="shindo-progress" />
+                <keep_apart_from id="hatten-growth" />
+                <keep_apart_from id="shinpo-progress" />
+            </word>
+            <word
+              w="【実：じつ】【現：げん】"
+              rom="jitsugen"
+              tr_en="implementation; materialisation; realisation"
+              tr_de="Implementation; Materialisation; Durchführung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="technical"
+              id="jitsugen-impl"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="jikkō-exec" />
+                <keep_apart_from id="jisshi-enforce" />
+            </word>
+            <word
+              w="【前：ぜん】【進：しん】"
+              rom="zenshin"
+              tr_en="advance; moving forward; progress"
+              tr_de="Fortschritt; Vorangehen; vorwärts gehen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="motion"
+              id="zenshin-advance"
+            >
+                <keep_apart_from id="shinpo-progress" />
+                <keep_apart_from id="susumi-progress" />
+                <keep_apart_from id="kōjō-elevation" />
+                <keep_apart_from id="shinten-progress" />
+                <keep_apart_from id="shinka-evolution" />
+                <keep_apart_from id="shindo-progress" />
+                <keep_apart_from id="hatten-growth" />
+                <keep_apart_from id="jōtatsu-improve" />
+            </word>
+            <word
+              w="【労：ろう】【働：どう】"
+              rom="rōdō"
+              tr_en="manual labour; toil; work"
+              tr_de="Handarbeit; Schufterei; Plackerei"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="work, employment"
+              id="rōdō-labour"
+            >
+                <keep_apart_from id="shigoto-work" />
+                <keep_apart_from id="sagyō-work" />
+            </word>
+            <word
+              w="【実：じっ】【施：し】"
+              rom="jisshi"
+              tr_en="enforcement; putting into practice; enactment"
+              tr_de="Umsetzung; Durchführung; Inkrafttreten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="jisshi-enforce"
+            >
+                <keep_apart_from id="jikkō-exec" />
+                <keep_apart_from id="jitsugen-impl" />
+            </word>
+            <word
+              w="【感：かん】【謝：しゃ】"
+              rom="kansha"
+              tr_en="thanks; gratitude"
+              tr_de="Dank; Dankbarkeit"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="relationships"
+              id="kansha-thanks"
+            >
+                <keep_apart_from id="okage-grace" />
+                <keep_apart_from id="arigatou-thanks" />
+            </word>
+            <word
+              w="【増：ぞう】【加：か】"
+              rom="zōka"
+              tr_en="increase; growth; rise"
+              tr_de="Zunahme; Wachstum; ansteigen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="technical, maths"
+              id="zōka-increase"
+            >
+                <keep_apart_from id="fueru-increase" />
+                <keep_apart_from id="hatten-growth" />
+                <keep_apart_from id="masu-grow" />
+            </word>
+            <word
+              w="【代：だい】【理：り】"
+              rom="dairi"
+              tr_en="representation; agency; proxy"
+              tr_de="Vertratung; Agentur; Stellvertretung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="dairi-agency"
+            >
+                <keep_apart_from id="daihyō-model" />
+                <keep_apart_from id="hyōgen-expression" />
+            </word>
+            <word
+              w="【警：けい】【告：こく】"
+              rom="keikoku"
+              tr_en="warning; advice"
+              tr_de="Warnung; Ratschlag"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="keikoku-advice"
+            >
+                <keep_apart_from id="chūi-caution" />
+                <keep_apart_from id="susumeru-recommend" />
+            </word>
+            <word
+              w="【構：こう】【成：せい】"
+              rom="kōsei"
+              tr_en="composition; structure; formation"
+              tr_de="Komposition; Struktur; formieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="kōsei-composition"
+            >
+                <keep_apart_from id="tanjō-birth" rem="ambiguity with 'formation'" />
+                <keep_apart_from id="soshiki-struct" rem="ambiguity with 'formation'" />
+            </word>
+            <word
+              w="【装：そう】【置：ち】"
+              rom="sōchi"
+              tr_en="equipment; device; apparatus"
+              tr_de="Einrichtung; Gerät; Apparat"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="technical"
+              id="sōchi-device"
+            >
+                <keep_apart_from id="setsubi-equipment" />
+            </word>
+            <word
+              w="【予：よ】【期：き】"
+              rom="yoki"
+              tr_en="expectation; forecast; assume will happen"
+              tr_de="Erwartung; Vorhersage; vermuten, dass es passiert"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="yoki-expectation"
+            >
+                <keep_apart_from id="yohō-forecast" />
+            </word>
+            <word
+              w="【適：てき】【用：よう】"
+              rom="tekiyō"
+              tr_en="adoption; applying"
+              tr_de="Übernahme; Anwenden"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="technical"
+              id="tekiyō-apply"
+            >
+                <keep_apart_from id="shiyō-use" />
+            </word>
+            <word
+              w="【用：よう】【心：じん】"
+              rom="yōjin"
+              tr_en="precaution; guarding; care"
+              tr_de="Vorsorge"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="yōjin-care"
+            >
+                <keep_apart_from id="yobō-prevention" />
+            </word>
+            <word
+              w="【支：し】【配：はい】"
+              rom="shihai"
+              tr_en="domination; governing; control"
+              tr_de="Dominanz; Herrschaft; Kontrolle"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="government"
+              id="shihai-control"
+            />
+            <word
+              w="【整：せい】【理：り】"
+              rom="seiri"
+              tr_en="organisation; regulation; arrangement"
+              tr_de="Organisation; Regulation; organisieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="business, work"
+              id="seiri-sorting"
+            />
+            <word
+              w="【読：どく】【書：しょ】"
+              rom="dokusho"
+              tr_en="reading (a book)"
+              tr_de="Lesen (eines Buches)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="literature"
+              id="dokusho-reading"
+            />
+            <word
+              w="【貯：ちょ】【金：きん】"
+              rom="chokin"
+              tr_en="putting money aside; savings"
+              tr_de="Ersparnis; (Geld) sparen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="finances"
+              id="chokin-savings"
+            />
+            <word
+              w="【予：よ】【算：さん】"
+              rom="yosan"
+              tr_en="estimate (of costs); budget"
+              tr_de="Kosteneinschätzung; Budget"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="finances"
+              id="yosan-estimate"
+            />
+            <word
+              w="【節：せつ】【約：やく】"
+              rom="setsuyaku"
+              tr_en="economising; saving"
+              tr_de="Sparsamkeit"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="finances"
+              id="setsuyaku-saving"
+            />
+            <word
+              w="【上：じょう】【京：きょう】"
+              rom="jōkyō"
+              tr_en="proceeding to the capital (Tokyo)"
+              tr_de="Weiterfahrt zur Hauptstadt (Tokio)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="transportation"
+              id="jōkyō-tothecapital"
+            />
+            <word
+              w="【存：そん】【在：ざい】"
+              rom="sonzai"
+              tr_en="existence; being"
+              tr_de="Existenz; Sein"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="culture, life"
+              id="sonzai-being"
+            />
+            <word
+              w="【逮：たい】【捕：ほ】"
+              rom="taiho"
+              tr_en="arresting (of a criminal); capture"
+              tr_de="Verhaftung (eines Verbrechers); Gefangennahme"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="crime"
+              id="taiho-arrest"
+            >
+                <!-- keep apart from tsukamaru -->
+            </word>
+            <word
+              w="【分：ぶん】【析：せき】"
+              rom="bunseki"
+              tr_en="analysis"
+              tr_de="Analyse"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="science"
+              id="bunseki-analysis"
+            >
+                <!-- 市場分析 Marktanalyse (ChatGPT, DeepL) -->
+            </word>
+            <word
+              w="【交：こう】【際：さい】"
+              rom="kōsai"
+              tr_en="association; acquaintance; dating"
+              tr_de="Kennenlernen; Bekanntschaft; daten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="relationships"
+              id="kōsai-company"
+            />
+            <word
+              w="【自：じ】【殺：さつ】"
+              rom="jisatsu"
+              tr_en="suicide"
+              tr_de="Selbstmord"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="health, not-good"
+              id="jisatsu-suicide"
+            />
+            <word
+              w="【婚：こん】【約：やく】"
+              rom="konyaku"
+              tr_en="engagement; betrothal"
+              tr_de="Verlobung; sich verloben"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="relationships"
+              id="konyaku-engagement"
+            />
+            <word
+              w="【味：み】【方：かた】"
+              rom="mikata"
+              tr_en="ally; supporter; backing up"
+              tr_de="Verbündete(r); unterstützen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="relationships"
+              id="mikata-ally"
+            />
+            <word
+              w="【尊：そん】【重：ちょう】"
+              rom="sonchō"
+              tr_en="respect; esteem; regard"
+              tr_de="Respekt; Achtung; Wertschätzung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="relationships"
+              id="sonchō-respect"
+            />
+            <word
+              w="【評：ひょう】【価：か】"
+              rom="hyōka"
+              tr_en="evaluation; assessment; estimation"
+              tr_de="Evaluation; Einschätzung; einschätzen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="science, business"
+              id="hyōka-evaluation"
+            />
+            <word
+              w="【理：り】【解：かい】"
+              rom="rikai"
+              tr_en="understanding; comprehension; appreciation"
+              tr_de="Verständnis; Verstehen; gutheissen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="science, relationships"
+              id="rikai-understand"
+            >
+                <!-- ご理解を願います。I ask for / earnestly request your understanding. (ChatGPT) -->
+            </word>
+            <word
+              w="【解：かい】【決：けつ】"
+              rom="kaiketsu"
+              tr_en="solution; resolution; being settled"
+              tr_de="Lösung; Auflösung; gelöst werden"
+              lvl="n3"
+              category="quarrel, science"
+              id="kaiketsu-solution"
+            >
+                <!-- 問題を解決する - mondai o kaiketsu suru - to solve a problem (ChatGPT) -->
+            </word>
+            <word
+              w="【破：は】【産：さん】"
+              rom="hasan"
+              tr_en="bankruptcy; insolvency"
+              tr_de="Insolvenz; bankrott"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="finances"
+              id="hasan-bankrupt"
+            />
+            <word
+              w="【失：しつ】【望：ぼう】"
+              rom="shitsubō"
+              tr_en="disappointment; despair"
+              tr_de="Enttäuschung; Verzweiflung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="mood, not-good"
+              id="shitsubō-despair"
+            />
+            <word
+              w="【納：なっ】【得：とく】"
+              rom="nattoku"
+              tr_en="consent; agreement; being convinced"
+              tr_de="Zustimmung; Einverständnis; überzeugt sein"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="relationships"
+              id="nattoku-consent"
+            />
+            <word
+              w="【宿：しゅく】【泊：はく】"
+              rom="shukuhaku"
+              tr_en="accommodation; lodging"
+              tr_de="Unterkunft; Beherbergung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="travelling"
+              id="shukuhaku-lodging"
+            />
+            <word
+              w="【誤：ご】【解：かい】"
+              rom="gokai"
+              tr_en="misunderstanding"
+              tr_de="Missverständnis"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="quarrel"
+              id="gokai-misunderstand"
+            />
+            <word
+              w="【反：はん】【抗：こう】"
+              rom="hankō"
+              tr_en="opposition; resistance; rebellion"
+              tr_de="Opposition; Widerstand; Rebellion"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="quarrel"
+              id="hankō-oppose"
+            />
+            <word
+              w="【作：さっ】【曲：きょく】"
+              rom="sakkyoku"
+              tr_en="(music) composition"
+              tr_de="(Musik) Komposition"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="entertainment"
+              id="sakkyoku-composition"
+            />
+            <word
+              w="【障：しょう】【害：がい】"
+              rom="shōgai"
+              tr_en="obstacle; hindrance; impairment"
+              tr_de="Hindernis; Behinderung; Beeinträchtigung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="not-good"
+              id="shōgai-obstacle"
+            />
+            <word
+              w="【攻：こう】【撃：げき】"
+              rom="kōgeki"
+              tr_en="attack; assault; raid"
+              tr_de="Attacke; Angriff; Überfall"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="government, crime"
+              id="kōgeki-attack"
+            />
+            <word
+              w="【想：そう】【像：ぞう】"
+              rom="sōzō"
+              tr_en="imagination; supposition; guess"
+              tr_de="Vorstellungskraft; Vermutung; vermuten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="thinking"
+              id="sōzō-guess"
+            />
+            <word
+              w="【検：けん】【討：とう】"
+              rom="kentō"
+              tr_en="analysis; review; scrutiny"
+              tr_de="Analyse; Überprüfung; analysieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="science, looking"
+              id="kentō-review"
+            />
+            <word
+              w="【成：せい】【功：こう】"
+              rom="seikō"
+              tr_en="success; hit"
+              tr_de="Erfolg; erfolgreich sein"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="seikō-hit"
+            />
+            <word
+              w="【嗽：うがい】"
+              rom="ugai"
+              usuallyInKana="true"
+              tr_en="gargling; rinsing one's mouth"
+              tr_de="gurgeln; den Mund spülen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="health"
+              id="ugai-gargling"
+            />
+            <word
+              w="【例：たと】え"
+              rom="tatoe"
+              tr_en="example / simile; metaphor; allegory; fable; parable"
+              lvl="n3"
+              id="tatoe-example"
+            >
+                <see id="tatoeba-forexample" rem="closely related" />
+                <see id="tatoeru-compare" rem="verb" />
+            </word>
+            <word
+              w="【支：し】【払：はら】い"
+              rom="shiharai"
+              tr_en="payment"
+              hint_en="noun"
+              lvl="n3"
+              category="business, trade"
+              id="shiharai-payment"
+            >
+                <see id="shiharau-topay" rem="verb" />
+            </word>
+            <word
+              w="【通：つう】【過：か】"
+              rom="tsūka"
+              tr_en="passing through (a tunnel, station, town, etc.); passing by (e.g. of a typhoon); transit; passage (of a bill, e.g. through parliament); carriage; passing (an examination, inspection, etc.); clearing"
+              hint_en="noun; suru verb"
+              lvl="n3"
+              id="tsūka-passthru"
+            />
+            <word
+              w="【道：どう】【徳：とく】"
+              rom="dōtoku"
+              tr_en="morals; morality"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【便：たよ】り"
+              rom="tayori"
+              tr_en="news; tidings; information; correspondence; letter"
+              hint_en="noun; suffix; suru verb"
+              lvl="n3"
+            />
+            <word
+              w="【丸：まる】"
+              rom="maru"
+              tr_en="circle; entirety; whole; full; complete; money; dough; moola; enclosure inside a castle's walls; soft-shelled turtle; suffix for ship names; suffix for names of people (esp. infants); suffix for names of swords, armour, musical instruments, etc.; suffix for names of dogs, horses, etc."
+              hint_en="noun; prefix; suffix"
+              lvl="n3"
+              id="maru-circle"
+            />
+            <word
+              w="【発：はっ】【達：たつ】"
+              rom="hattatsu"
+              tr_en="development; growth"
+              hint_en="noun; suru verb"
+              lvl="n3"
+            />
+            <word
+              w="【内：ない】【容：よう】"
+              rom="naiyō"
+              tr_en="contents; content; substance; matter; detail; import"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【利：り】【益：えき】"
+              rom="rieki"
+              tr_en="profit; gains; benefit; advantage; interest (of the public, etc.); grace (of God, Buddha, etc.) (esp. as attained through rightful actions, prayer, adherence to one's faith, etc.); blessing; miracle; Profit (economics)"
+              hint_en="noun; suru verb"
+              lvl="n3"
+            />
+            <word
+              w="【前：ぜん】【者：しゃ】"
+              rom="zensha"
+              tr_en="the former"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【効：こう】【果：か】"
+              rom="kōka"
+              tr_en="effect; effectiveness; efficacy; result; effects (e.g. sound effects, visual effects, special effects)"
+              hint_en="noun"
+              lvl="n3"
+              id="kōka-efficacy"
+              HIDDEN="true"
+              rem="rōmaji not unique"
+            />
+            <word
+              w="【助：じょ】【手：しゅ】"
+              rom="joshu"
+              tr_en="assistant; helper; assistant (to a professor)"
+              hint_en="noun; only applies to じょしゅ"
+              lvl="n3"
+            />
+            <word
+              w="【問：と】い"
+              rom="toi"
+              tr_en="question; query"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【地：ち】【平：へい】【線：せん】"
+              rom="chiheisen"
+              tr_en="horizon (related to land)"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【夫：ふ】【人：じん】"
+              rom="fujin"
+              tr_en="wife; Mrs; madam; wife of a nobleman (aristocrat, etc.); consort of the emperor"
+              hint_en="noun; only applies to ふじん; only applies to はしかし; noun; only applies to ふじん; only applies to ぶにん"
+              lvl="n3"
+              id="fujin-wife"
+            />
+            <word
+              w="【婦：ふ】【人：じん】"
+              rom="fujin"
+              tr_en="woman; lady; adult female"
+              hint_en="noun"
+              lvl="n3"
+              id="fujin-woman"
+              HIDDEN="true"
+            />
+            <word
+              w="【棒：ぼう】"
+              rom="bō"
+              tr_en="pole; rod; stick; baton / line; dash / spoken monotonously"
+              hint_en="noun / expressions (phrases, clauses, etc.)"
+              lvl="n3"
+            />
+            <word
+              w="【湾：わん】"
+              rom="wan"
+              tr_en="bay; gulf; inlet"
+              hint_en="noun; noun, used as a suffix"
+              lvl="n3"
+            />
+            <word
+              w="【諺：ことわざ】"
+              rom="kotowaza"
+              tr_en="proverb; saying; aphorism; maxim"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【迷：まい】【子：ご】"
+              rom="maigo"
+              tr_en="lost child; lost person; stray child; missing child"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【豆：まめ】"
+              rom="mame"
+              tr_en="legume; bean; pea"
+              hint_en="noun / prefix"
+              lvl="n3"
+            />
+            <word
+              w="【費：ひ】【用：よう】"
+              rom="hiyō"
+              tr_en="cost; expense"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【頂：ちょう】【上：じょう】"
+              rom="chōjō"
+              tr_en="top; summit; peak"
+              hint_en="noun; noun"
+              lvl="n3"
+            />
+            <word
+              w="【無：む】【視：し】"
+              rom="mushi"
+              tr_en="disregarding; ignoring"
+              hint_en="noun; suru verb"
+              lvl="n3"
+              id="mushi-ignore"
+              HIDDEN="true"
+            />
+            <word
+              w="【独：どく】【特：とく】"
+              rom="dokutoku"
+              tr_en="peculiarity; uniqueness; characteristic / understood only by oneself"
+              hint_en="noun; noun; na-adjective (keiyodoshi) / noun; noun; na-adjective (keiyodoshi); only applies to 独得"
+              lvl="n3"
+            />
+            <word
+              w="【独：どく】【立：りつ】"
+              rom="dokuritsu"
+              tr_en="independence; self-reliance; supporting oneself; being on one's own / independence (e.g. of a nation); freedom / separation; isolation / Independence"
+              hint_en="noun; suru verb; v.i."
+              lvl="n3"
+            />
+            <word
+              w="【独：どく】【身：しん】"
+              rom="dokushin"
+              tr_en="unmarried; single person"
+              hint_en="noun; noun"
+              lvl="n3"
+              id="dokushin-single"
+            >
+                <!-- 彼は一生独身で通した。	He remained single all his life. (lib0) -->
+            </word>
+            <word
+              w="【登：と】【山：ざん】"
+              rom="tozan"
+              tr_en="mountain climbing; mountaineering; ascent of a mountain"
+              hint_en="noun; suru verb; v.i."
+              lvl="n3"
+            />
+            <word
+              w="【相：そう】【続：ぞく】"
+              rom="sōzoku"
+              tr_en="succession / inheritance"
+              hint_en="noun; suru verb"
+              lvl="n3"
+            />
+            <word
+              w="【眺：なが】め"
+              rom="nagame"
+              tr_en="scene; view; prospect; outlook"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【範：はん】【囲：い】"
+              rom="han'i"
+              tr_en="extent; scope; sphere; range; span"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【例：れい】"
+              rom="rei"
+              tr_en="custom; practice; habit; usual / said; aforementioned / instance; example; case; illustration; usage / precedent"
+              hint_en="noun; noun, used as a prefix; noun"
+              lvl="n3"
+              id="rei-habit"
+            />
+            <word
+              w="【礼：れい】"
+              rom="rei"
+              tr_en="gratitude; manners; etiquette; bowing; reward; gift; ceremony; ritual"
+              hint_en="noun; counter"
+              lvl="n3"
+              id="rei-manners"
+              HIDDEN="true"
+            />
+            <word
+              w="【礼：れい】【儀：ぎ】"
+              rom="reigi"
+              tr_en="manners; courtesy; etiquette"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【税：ぜい】"
+              rom="zei"
+              tr_en="tax"
+              hint_en="noun; suffix"
+              lvl="n3"
+            />
+            <word
+              w="【穀：こく】【物：もつ】"
+              rom="kokumotsu"
+              tr_en="grain; cereal; corn"
+              hint_en="noun; noun"
+              lvl="n3"
+            />
+            <word
+              w="【結：けつ】【論：ろん】"
+              rom="ketsuron"
+              tr_en="conclusion (of an argument, discussion, study, etc.)"
+              hint_en="noun; suru verb"
+              lvl="n3"
+            />
+            <word
+              w="【保：ほ】【証：しょう】"
+              rom="hoshō"
+              tr_en="guarantee; security; assurance; pledge / warranty / co-signing"
+              hint_en="noun; suru verb; v.t. / noun; suru verb; v.t.; only applies to 保証"
+              lvl="n3"
+            />
+            <word
+              w="【修：しゅう】【正：せい】"
+              rom="shūsei"
+              tr_en="amendment; correction; revision; modification; alteration; retouching; update; fix"
+              hint_en="noun; suru verb; v.t."
+              lvl="n3"
+            />
+            <word
+              w="【主：しゅ】【義：ぎ】"
+              rom="shugi"
+              tr_en="doctrine; rule; principle; -ism"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【掲：けい】【示：じ】"
+              rom="keiji"
+              tr_en="notice; bulletin; post; posting; placard"
+              hint_en="noun; suru verb; v.t."
+              lvl="n3"
+              id="keiji-post"
+            />
+            <word
+              w="【思：し】【想：そう】"
+              rom="shisō"
+              tr_en="thought; idea; ideology"
+              hint_en="noun"
+              lvl="n3"
+              category="thinking"
+            />
+            <word
+              w="【憲：けん】【法：ぽう】"
+              rom="kenpō"
+              tr_en="constitution / rules; regulation"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【戦：たたか】い"
+              rom="tatakai"
+              tr_en="battle; war; fight; conflict / fight (against time, poverty, etc.); struggle (for freedom, survival, etc.); war (e.g. on drugs); battle (e.g. against nature) / contest; competition; match; game"
+              hint_en="noun"
+              lvl="n3"
+              category="government, quarrel"
+            />
+            <word
+              w="【批：ひ】【判：はん】"
+              rom="hihan"
+              tr_en="criticism; judgement; judgment; comment"
+              hint_en="noun; suru verb; v.t."
+              lvl="n3"
+            />
+            <word
+              w="【抵：てい】【抗：こう】"
+              rom="teikō"
+              tr_en="resistance; opposition; standing up to / reluctance; repulsion; repugnance / resistance; drag; friction / electrical resistance / resistor"
+              hint_en="noun; suru verb; v.i."
+              lvl="n3"
+            />
+            <word
+              w="【投：とう】【票：ひょう】"
+              rom="tōhyō"
+              tr_en="voting; ballot; poll; vote"
+              hint_en="noun; suru verb; v.i."
+              lvl="n3"
+            />
+            <word
+              w="【束：たば】"
+              rom="taba"
+              tr_en="bundle; bunch; sheaf"
+              hint_en="noun; noun, used as a suffix; counter"
+              lvl="n3"
+            />
+            <word
+              w="【操：そう】【作：さ】"
+              rom="sōsa"
+              tr_en="operation; management; handling / manipulating (to one's benefit); manipulation; influencing"
+              hint_en="noun; suru verb; v.t."
+              lvl="n3"
+            />
+            <word
+              w="【支：し】【給：きゅう】"
+              rom="shikyū"
+              tr_en="provision; supply; payment; allowance; grant"
+              hint_en="noun; suru verb; v.t."
+              lvl="n3"
+            />
+            <word
+              w="【支：し】【出：しゅつ】"
+              rom="shishutsu"
+              tr_en="expenditure; disbursement; expenses"
+              hint_en="noun; suru verb; v.t."
+              lvl="n3"
+            />
+            <word
+              w="【敬：けい】【意：い】"
+              rom="keii"
+              tr_en="respect; honour; honor"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【書：しょ】【物：もつ】"
+              rom="shomotsu"
+              tr_en="book; volume"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【比：ひ】【較：かく】"
+              rom="hikaku"
+              tr_en="comparison"
+              hint_en="noun; suru verb; v.t."
+              lvl="n3"
+            />
+            <word
+              w="【極：きょく】"
+              rom="kyoku"
+              tr_en="pole / climax; extreme; extremity; culmination; height; zenith"
+              hint_en="noun"
+              lvl="n3"
+              id="kyoku-pole"
+            />
+            <word
+              w="【欠：けっ】【点：てん】"
+              rom="ketten"
+              tr_en="fault; defect; flaw; weak point; weakness; shortcoming; drawback / failure (in an examination); failing grade"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【決：けっ】【定：てい】"
+              rom="kettei"
+              tr_en="decision; determination"
+              hint_en="noun; suru verb; v.t.; v.i."
+              lvl="n3"
+            />
+            <word
+              w="【考：こう】【慮：りょ】"
+              rom="kōryo"
+              tr_en="consideration; taking into account"
+              hint_en="noun; suru verb; v.t."
+              lvl="n3"
+            />
+            <word
+              w="【職：しょく】"
+              rom="shoku"
+              tr_en="job; work; employment; occupation; position / duties / trade; skill"
+              hint_en="noun; noun, used as a suffix"
+              lvl="n3"
+            />
+            <word
+              w="【肌：はだ】"
+              rom="hada"
+              tr_en="skin / body (in the context of intimate bodily contact) / surface; grain (e.g. of wood); texture / disposition; temperament; character; type"
+              hint_en="noun / noun; noun, used as a suffix"
+              lvl="n3"
+            />
+            <word
+              w="【能：のう】【力：りょく】"
+              rom="nōryoku"
+              tr_en="ability; faculty"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【脇：わき】"
+              rom="waki"
+              tr_en="armpit; under one's arm; side; flank / beside; close to; near; by / aside; to the side; away; out of the way / off-track; off-topic / deuteragonist; supporting role / second verse (in a linked series of poems)"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【航：こう】【空：くう】"
+              rom="kōkū"
+              tr_en="aviation; flying"
+              hint_en="noun"
+              lvl="n3"
+              category="transportation"
+            />
+            <word
+              w="【著：ちょ】【者：しゃ】"
+              rom="chosha"
+              tr_en="author (usu. of a particular book); writer"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【被：ひ】【害：がい】"
+              rom="higai"
+              tr_en="(suffering) damage; injury; harm"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【製：せい】【造：ぞう】"
+              rom="seizō"
+              tr_en="manufacture; production"
+              hint_en="noun; suru verb; v.t.; noun"
+              lvl="n3"
+            />
+            <word
+              w="【裁：さい】【判：ばん】"
+              rom="saiban"
+              tr_en="trial; judgement"
+              hint_en="noun; suru verb; v.t.; noun"
+              lvl="n3"
+            />
+            <word
+              w="【見：けん】【解：かい】"
+              rom="kenkai"
+              tr_en="opinion; point of view"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【詩：し】【人：じん】"
+              rom="shijin"
+              tr_en="poet"
+              hint_en="noun"
+              lvl="n3"
+              category="occupations"
+            />
+            <word
+              w="【講：こう】【演：えん】"
+              rom="kōen"
+              tr_en="lecture; address; speech"
+              hint_en="noun; suru verb"
+              lvl="n3"
+              category="talking"
+              id="kōen-speech"
+            />
+            <word
+              w="【負：ま】け"
+              rom="make"
+              tr_en="defeat; loss; losing (a game) / failing to live up to (one's name, looks, etc.) / discount; loss (on a sale)"
+              hint_en="noun / suffix / noun"
+              lvl="n3"
+            />
+            <word
+              w="【財：ざい】【産：さん】"
+              rom="zaisan"
+              tr_en="property; fortune; assets; estate"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【貢：こう】【献：けん】"
+              rom="kōken"
+              tr_en="contribution (furthering a goal or cause); services (to a cause) / paying tribute; tribute"
+              hint_en="noun; suru verb; v.i."
+              lvl="n3"
+            />
+            <word
+              w="【資：し】【源：げん】"
+              rom="shigen"
+              tr_en="resource"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【連：つ】れ"
+              rom="tsure"
+              tr_en="companion; company / tritagonist; second supporting character"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【連：れん】【想：そう】"
+              rom="rensō"
+              tr_en="association (of ideas); being reminded (of something); suggestion"
+              hint_en="noun; suru verb; v.t."
+              lvl="n3"
+            />
+            <word
+              w="【進：しん】【学：がく】"
+              rom="shingaku"
+              tr_en="advancing to the next stage of education; going on to (high school, college, etc.)"
+              hint_en="noun; suru verb; v.i."
+              lvl="n3"
+              category="education"
+            />
+            <word
+              w="【陸：りく】"
+              rom="riku"
+              tr_en="land; shore"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【集：しゅう】【団：だん】"
+              rom="shūdan"
+              tr_en="group; mass; crowd"
+              hint_en="noun / place"
+              lvl="n3"
+            />
+            <word
+              w="【人：じん】【工：こう】"
+              rom="jinkō"
+              tr_en="man-made; artificial"
+              hint_en="noun"
+              lvl="n3"
+              id="jinkō-manmade"
+            />
+            <word
+              w="【予：よ】【測：そく】"
+              rom="yosoku"
+              tr_en="prediction; estimation"
+              hint_en="noun; suru verb"
+              lvl="n3"
+            />
+            <word
+              w="【事：じ】【務：む】"
+              rom="jimu"
+              tr_en="office work; clerical work; administration; business; affairs"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【参：さん】【考：こう】"
+              rom="sankō"
+              tr_en="reference; consultation"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【候：こう】【補：ほ】"
+              rom="kōho"
+              tr_en="candidate; contender; prospect; pick; choice; list / candidacy; candidature; nomination"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【傾：けい】【向：こう】"
+              rom="keikō"
+              tr_en="tendency; trend; inclination"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【典：てん】【型：けい】"
+              rom="tenkei"
+              tr_en="type; pattern; model; epitome; exemplar; archetype; perfect example"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【否：ひ】【定：てい】"
+              rom="hitei"
+              tr_en="denial; negation; repudiation; disavowal / negation / NOT operation"
+              hint_en="noun; suru verb; v.t."
+              lvl="n3"
+            />
+            <word
+              w="【呼：こ】【吸：きゅう】"
+              rom="kokyū"
+              tr_en="breathing; respiration / knack; trick; secret (of doing something) / harmony; balance; synchronization; accord / short interval; short pause / Breathing"
+              hint_en="noun; suru verb; v.t.; v.i."
+              lvl="n3"
+            />
+            <word
+              w="【地：ち】【位：い】"
+              rom="chii"
+              tr_en="(social) position; status; standing / position (in a company, organization, etc.); post; rank"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【地：ち】【区：く】"
+              rom="chiku"
+              tr_en="district; area; zone; quarter; section; region"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【審：しん】【判：ぱん】"
+              rom="shinpan"
+              tr_en="judgement; judgment; decision; verdict; sentence / refereeing; umpiring; judging / judgement (of God) / referee; umpire; judge"
+              hint_en="noun; suru verb; v.t."
+              lvl="n3"
+            />
+            <word
+              w="【徹：てっ】【底：てい】"
+              rom="tettei"
+              tr_en="thoroughness; completeness; consistency / thorough enforcement; seeing to it that a policy, etc. is carried out without exception"
+              hint_en="noun; suru verb; v.t.; v.i."
+              lvl="n3"
             />
         </section>
     </unit>

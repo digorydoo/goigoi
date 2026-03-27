@@ -1296,6 +1296,8 @@
               lvl="n5"
               id="minna-everyone"
             >
+                <keep_apart_from id="zenin-allofus" />
+                <keep_apart_from id="minasan-allofyou" />
                 <phrase
                   ph="みんなに【優：やさ】しい"
                   rom="minna ni yasashii"
@@ -1322,8 +1324,10 @@
               lvl="n5"
               id="minasan-allofyou"
               HIDDEN="true"
-              rem="must not be together with minna"
-            />
+            >
+                <keep_apart_from id="zenin-allofus" />
+                <keep_apart_from id="minna-everyone" />
+            </word>
             <word
               w="【自：じ】【分：ぶん】"
               rom="jibun"

@@ -129,6 +129,40 @@
                 />
             </word>
             <word
+              w="【速：そく】【度：ど】"
+              rom="sokudo"
+              tr_en="speed; velocity"
+              tr_de="Geschwindigkeit"
+              lvl="n3"
+              category="physics, feet"
+              id="sokudo-speed"
+            >
+                <phrase
+                  ph="【速：そく】【度：ど】が【速：はや】い"
+                  rom="sokudo ga hayai"
+                  tr_en="fast velocity"
+                  tr_de="schnelle Geschwindigkeit"
+                  lvl="n3"
+                  origin="self"
+                />
+                <sentence
+                  s="この【車：くるま】は【速：そく】【度：ど】が【遅：おそ】いね。"
+                  rom="Kono kuruma wa sokudo ga osoi ne."
+                  tr_en="This car is slow, isn't it?"
+                  tr_de="Dieses Auto ist aber langsam."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【飛：ひ】【行：こう】【機：き】は【速：そく】【度：ど】を【増：ま】した。"
+                  rom="Hikōki wa sokudo o mashita."
+                  tr_en="The plane increased speed."
+                  tr_de="Das Flugzeug erhöhte die Geschwindigkeit."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【農：のう】【民：みん】"
               rom="nōmin"
               tr_en="farmer; peasant"
@@ -939,19 +973,6 @@
                 <see id="noboru-ascend" rem="verb" />
                 <see id="kudari-downbound" rem="antonym" />
                 <keep_together id="kudari-downbound" />
-            </word>
-            <word
-              w="【神：かみ】【様：さま】"
-              rom="kami-sama"
-              tr_en="God"
-              tr_de="Gott"
-              lvl="n3"
-              category="culture"
-              id="kamisama-god"
-              rem="jisho has n2"
-            >
-                <keep_apart_from id="kami-spirit" />
-                <keep_apart_from id="sama-mr" />
             </word>
             <word
               w="【完：かん】【成：せい】"

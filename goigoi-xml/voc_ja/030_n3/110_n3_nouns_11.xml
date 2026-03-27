@@ -289,34 +289,6 @@
                 />
             </word>
             <word
-              w="【哲：てつ】【学：がく】"
-              rom="tetsugaku"
-              tr_en="philosophy"
-              tr_de="Philosophie"
-              lvl="n3"
-              category="education"
-              id="tetsugaku-philosophy"
-            >
-                <phrase
-                  ph="【哲：てつ】【学：がく】【者：しゃ】"
-                  rom="tetsugakusha"
-                  tr_en="a philosopher"
-                  tr_de="ein Philosoph"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with jisho"
-                />
-                <sentence
-                  s="【大：だい】【学：がく】で【哲：てつ】【学：がく】を【専：せん】【攻：こう】しています。"
-                  rom="Daigaku de tetsugaku o senkō shite imasu."
-                  tr_en="I'm majoring in philosophy."
-                  tr_de="Ich studiere im Hauptfach Philosophie."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
               w="【配：はい】【達：たつ】"
               rom="haitatsu"
               tr_en="delivery"
@@ -500,6 +472,69 @@
                 />
             </word>
             <word
+              w="【関：かん】【心：しん】"
+              rom="kanshin"
+              tr_en="concern; attention; awareness"
+              tr_de="Betroffenheit; Aufmerksamkeit; Bewusstsein"
+              lvl="n3"
+              id="kanshin-concern"
+            >
+                <keep_apart_from id="kansuru-concern" />
+                <keep_together id="kansuru-concern" />
+                <keep_apart_from id="kyōmi-interest" />
+                <keep_apart_from id="ishiki-awareness" />
+                <!--
+                    関心・かんしん means concern / attention / awareness toward something important.
+                    興味・きょうみ means personal curiosity / attraction / wanting to know more.
+
+                    関心: caring / paying attention / mindset / awareness
+                    意識: realizing / engagement / attention
+                -->
+                <phrase
+                  ph="【関：かん】する"
+                  rom="kan suru"
+                  tr_en="to concern sth.; to be related to sth."
+                  tr_de="etw. betreffen; auf etw. bezogen sein"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                />
+                <phrase
+                  ph="【環：かん】【境：きょう】【問：もん】【題：だい】に【関：かん】【心：しん】がある"
+                  rom="kankyō mondai ni kanshin ga aru"
+                  tr_en="to be concerned about environmental issues"
+                  tr_de="ein Bewusstsein für Umweltsprobleme haben"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【関：かん】する"
+              rom="kan suru"
+              tr_en="to concern; to be related"
+              Langenscheidt="betreffen"
+              lvl="n3"
+              id="kansuru-concern"
+              HIDDEN="true"
+              rem="now a phrase of kanshin-concern"
+            >
+                <keep_apart_from id="kanshin-concern" />
+                <keep_together id="kanshin-concern" />
+            </word>
+            <word
+              w="【合：ごう】【計：けい】"
+              rom="gōkei"
+              tr_en="sum; total amount"
+              tr_de="Summe; Gesamtbetrag"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="finances"
+              id="gōkei-sum"
+              rem="appears in GENKI2 p.329 kanji section"
+            >
+                <keep_apart_from id="kingaku-moneyamount" />
+            </word>
+            <word
               w="【教：きょう】【授：じゅ】"
               rom="kyōju"
               tr_en="professor; teaching"
@@ -612,7 +647,7 @@
             </word>
             <word
               w="【見：み】【送：おく】り"
-              rom="miokuri"
+              rom="mi-okuri"
               tr_en="seeing one off; farewell; escort"
               tr_de="Verabschiedung; Eskorte"
               lvl="n3"
@@ -623,7 +658,7 @@
             </word>
             <word
               w="【取：と】り【替：か】え"
-              rom="torikae"
+              rom="tori-kae"
               tr_en="swap; exchange"
               tr_de="Austausch"
               hint_en="noun"
@@ -665,6 +700,18 @@
                 <keep_apart_from id="sakumotsu-crops" />
             </word>
             <word
+              w="【委：い】【員：いん】"
+              rom="iin"
+              tr_en="committee member"
+              tr_de="Ausschussmitglied"
+              lvl="n3"
+              category="politics, people"
+              id="iin-committeemember"
+            >
+                <keep_apart_from id="gīn-memberofparlia" />
+                <keep_apart_from id="gichō-chairman" />
+            </word>
+            <word
               w="【要：よう】【求：きゅう】"
               rom="yōkyū"
               tr_en="requirement; demand; to desire"
@@ -675,17 +722,6 @@
               id="yōkyū-demand"
             >
                 <!-- 無理な要求 - muri na yōkyū - an unrealistic demand (ChatGPT) -->
-            </word>
-            <word
-              w="【解：かい】【決：けつ】"
-              rom="kaiketsu"
-              tr_en="solution; resolution; being settled"
-              tr_de="Lösung; Auflösung; gelöst werden"
-              lvl="n3"
-              category="quarrel, science"
-              id="kaiketsu-solution"
-            >
-                <!-- 問題を解決する - mondai o kaiketsu suru - to solve a problem (ChatGPT) -->
             </word>
             <word
               w="【布：ぬの】"
@@ -710,38 +746,24 @@
                 <!-- implicit see-also link to bin-flight -->
             </word>
             <word
-              w="【手：て】【洗：あら】い"
-              rom="te-arai"
-              tr_en="washing one's hands; restroom; lavatory"
-              tr_de="Händewaschen; Toilette"
-              hint_en="noun"
-              hint_de="Nomen"
+              w="【恐：きょう】【怖：ふ】"
+              rom="kyōfu"
+              tr_en="fear; dread; dismay"
+              tr_de="Angst; Furcht; Entsetzen"
               lvl="n3"
-              category="hands"
-              id="tearai-restroom"
-              rem="jisho has n2"
+              category="mood, not-good"
+              id="kyōfu-fear"
             />
             <word
-              w="【一：ひと】【言：こと】"
-              rom="hitokoto"
-              tr_en="a few words; brief comment"
-              tr_de="ein paar Worte; kurzer Kommentar"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【回：かい】【復：ふく】"
+              rom="kaifuku"
+              tr_en="recovery"
+              tr_de="Genesung"
+              hint_en="from illness"
+              hint_de="nach einer Krankheit"
               lvl="n3"
-              category="talking"
-              id="hitokoto-fewwords"
-            />
-            <word
-              w="【悪：わる】【口：ぐち】"
-              rom="waruguchi"
-              tr_en="insult; slander; bad-mouthing"
-              tr_de="Beleidigung; Verleumdung; schlecht reden"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="quarrel, talking"
-              id="waruguchi-insult"
+              category="health"
+              id="kaifuku-recovery"
             />
             <word
               w="【帰：き】【宅：たく】"

@@ -47,15 +47,15 @@
                 />
             </word>
             <word
-              w="【抱：いだ】く"
-              rom="idaku"
-              tr_en="to embrace; to hug; to hold in one's arms"
-              tr_de="umarmen; in Armen halten"
+              w="【抱：かか】える"
+              rom="kakaeru"
+              tr_en="to hold; to carry in one's arms"
+              tr_de="(in Armen) halten; tragen"
               lvl="n3"
               category="relationships"
-              id="idaku-embrace"
+              id="kakaeru-hold"
             >
-                <keep_apart_from id="kakaeru-hold" />
+                <keep_apart_from id="idaku-embrace" />
             </word>
             <word
               w="【増：ま】す"
@@ -71,38 +71,101 @@
                 <keep_apart_from id="zōka-increase" />
             </word>
             <word
-              w="【横：よこ】【切：ぎ】る"
-              rom="yokogiru"
-              tr_en="to cross (e.g. road); to traverse"
-              tr_de="überqueren (z.B. die Strasse); traversieren"
-              hint_en="v.t."
-              lvl="n3"
-              category="transportation"
-              id="yokogiru-cross"
-            >
-                <keep_apart_from id="n5-wataru" />
-            </word>
-            <word
               w="【求：もと】める"
               rom="motomeru"
-              tr_en="to wish for sth.; to demand; to pursue (a pleasure)"
-              tr_de="sich etw. wünschen; etw. verlangen; (einem Vergnügen) nachgehen"
+              tr_en="to pursue; to seek; to wish for"
+              tr_de="etw. verfolgen; etw. nachgehen; sich etw. wünschen"
               hint_en="v.t."
               lvl="n3"
               category="general"
               id="motomeru-wishfor"
             >
                 <!-- the noun is motome, nx -->
+                <keep_apart_from id="nozomu-desire" />
+                <keep_apart_from id="meijiru-command" />
+                <keep_apart_from id="negau-desire" />
             </word>
             <word
-              w="【用：もち】いる"
-              rom="mochiiru"
-              tr_en="to use; to make use of; to utilise"
-              tr_de="etw. verwenden; von etw. Gebrauch machen"
+              w="【省：はぶ】く"
+              rom="habuku"
+              tr_en="to omit; to exclude; to curtail"
+              tr_de="etw. weglassen; etw. ausschliessen; etw. verkürzen"
+              hint_en="v.t."
+              lvl="n3"
+              id="habuku-omit"
+            >
+                <keep_apart_from id="nukeru-omit" />
+                <keep_apart_from id="nukasu-omit" />
+            </word>
+            <word
+              w="【追：お】う"
+              rom="ou"
+              tr_en="to chase; to pursue; to follow"
+              tr_de="folgen; verfolgen"
+              lvl="n3"
+              category="motion"
+              id="ou-chase"
+            />
+            <word
+              w="【生：しょう】じる"
+              rom="shōjiru"
+              tr_en="to produce; to yield; to arise"
+              tr_de="etw. produzieren; etw. abgeben; aufkommen"
+              hint_en="v.t. &amp; i."
+              lvl="n3"
+              category="general, work"
+              id="shōjiru-yield"
+            />
+            <word
+              w="【換：か】える"
+              rom="kaeru"
+              tr_en="to replace (a battery); to exchange (money)"
+              tr_de="(Batterie) austauschen; (Geld) umtauschen"
+              Langenscheidt="(Batterie) austauschen; (Geld) umtauschen"
+              hint_en="v.t."
+              lvl="n3"
+              category="technical, finances"
+              id="kaeru-exchange"
+              rem="see also 替える kaeru-replace, 代える kaeru-substitute"
+            />
+            <word
+              w="【備：そな】える"
+              rom="sonaeru"
+              tr_en="to furnish with; to equip with; to prepare for"
+              tr_de="mit etw. ausrüsten; ausstatten; für etw. vorbereiten"
               hint_en="v.t."
               lvl="n3"
               category="general, technical"
-              id="mochiiru-use"
+              id="sonaeru-furnish"
+            />
+            <word
+              w="【扱：あつか】う"
+              rom="atsukau"
+              tr_en="to deal with (a person, problem); to operate (a machine)"
+              tr_de="sich (einem Problem, einer Person) annehmen; (Maschine) bedienen"
+              lvl="n3"
+              category="work, technical"
+              id="atsukau-dealwith"
+            />
+            <word
+              w="【得：う】る"
+              rom="uru"
+              tr_en="to be able to; to acquire sth.; to gain"
+              tr_de="etw. können; sich etw. aneignen; etw. gewinnen"
+              hint_en="v.t."
+              lvl="n3"
+              category="work"
+              id="uru-obtain"
+            />
+            <word
+              w="【頼：たよ】る"
+              rom="tayoru"
+              tr_en="to rely on; to count on; to turn to (for help)"
+              tr_de="sich auf etw. stützen; auf etw. zählen; sich an jem. wenden"
+              hint_en="v.i."
+              lvl="n3"
+              category="relationships, technical"
+              id="tayoru-relyon"
             />
             <word
               w="【疑：うたが】う"
@@ -113,6 +176,16 @@
               lvl="n3"
               category="relationships, thinking"
               id="utagau-doubt"
+            />
+            <word
+              w="【用：もち】いる"
+              rom="mochiiru"
+              tr_en="to use; to make use of; to utilise"
+              tr_de="etw. verwenden; von etw. Gebrauch machen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, technical"
+              id="mochiiru-use"
             />
             <word
               w="【除：のぞ】く"
@@ -163,6 +236,22 @@
               category="not-good, technical"
               id="kakeru-damaged"
             />
+            <word
+              w="【遣：や】る"
+              rom="yaru"
+              tr_en="to give sth."
+              tr_de="etw. geben"
+              hint_en="to pets, plants, younger siblings, etc."
+              hint_de="einem Tier, einer Pflanze, einem jüngeren Geschwister, usw."
+              studyInContext="required"
+              lvl="n3"
+              category="animal, hands"
+              id="yaru-give"
+              usuallyInKana="true"
+              HIDDEN="true"
+            >
+                <!-- implicit see-also link to yaru-undertake -->
+            </word>
         </section>
     </unit>
 </vocabulary>

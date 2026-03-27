@@ -262,7 +262,7 @@ class StudyItemPool(
     companion object {
         private const val TAG = "StudyItemPool"
         private const val MAX_SEEK_AHEAD = 100
-        private const val NUM_WORDS_CONSIDERED_RECENT = 100
+        private const val NUM_WORDS_CONSIDERED_RECENT = 50
         private const val MAX_MILLIS_FOR_SEEK_AHEAD = 150L // milliseconds
     }
 }

@@ -78,14 +78,7 @@ class StudyListMaintainer(
         if (add) {
             Log.d(TAG, "We could add more words, because $reason")
 
-            val roomForNew = list.fold(MAX_NEW_IN_LIST_IDEALLY) { room, item ->
-                when {
-                    room <= 0 -> 0 // early out to avoid calling getWordStudyProgress unnecessarily
-                    stats.getWordStudyProgress(item.word) < 1.0f -> room - 1
-                    stats.getWordTotalRating(item.word) < 0.7f -> room - 1
-                    else -> room
-                }
-            }
+            val roomForNew = countRoomForNewWords()
 
             if (roomForNew > 0) {
                 Log.d(TAG, "Adding one from head as there is room for $roomForNew new word(s)")
@@ -143,6 +136,15 @@ class StudyListMaintainer(
             if (pool.advanceHeadIfPossible(list)) {
                 ensureSuperProgressiveHeadIsInListAndEarly()
             }
+        }
+    }
+
+    private fun countRoomForNewWords() = list.fold(MAX_NEW_IN_LIST_IDEALLY) { room, item ->
+        when {
+            room <= 0 -> 0 // early out to avoid calling getWordStudyProgress unnecessarily
+            stats.getWordStudyProgress(item.word) < 1.0f -> room - 1
+            stats.getWordTotalRating(item.word) < 0.7f -> room - 1
+            else -> room
         }
     }
 
@@ -279,10 +281,10 @@ class StudyListMaintainer(
         myWordsUnyt.forEachWord { list.add(StudyItem.create(it, stats)) }
 
         if (list.size < MIN_INITIAL_LIST_SIZE) {
-            val numNewToAdd = min(MAX_NEW_IN_LIST_IDEALLY, MIN_INITIAL_LIST_SIZE - list.size)
+            val numNewToAdd = countRoomForNewWords()
 
             if (numNewToAdd > 0) {
-                Log.d(TAG, "List size is only ${list.size}. Trying to add words from head with max rating.")
+                Log.d(TAG, "List size is only ${list.size}, but there's room for $numNewToAdd new words.")
                 pool.fillListFromHead(
                     list,
                     list.size + numNewToAdd,

@@ -74,6 +74,26 @@
                 />
             </word>
             <word
+              w="【妙：みょう】"
+              rom="myō"
+              tr_en="weird; odd; mystery"
+              tr_de="komisch; seltsam; mysteriös"
+              hint_en="na-adjective; noun"
+              lvl="n3"
+              id="myō-odd"
+            >
+                <keep_apart_from id="kimyō-strange" />
+                <synonym w="【奇：き】【妙：みょう】" />
+                <sentence
+                  s="【妙：みょう】な【噂：うわさ】が【広：ひろ】がっている。"
+                  rom="Myō na uwasa ga hirogatte iru."
+                  tr_en="Weird rumours are spreading."
+                  tr_de="Man erzählt sich komische Sachen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【哀：あわ】れ"
               rom="aware"
               tr_en="pitiable; pathetic; miserable"
@@ -99,19 +119,24 @@
                 <keep_apart_from id="kashikoi-smart" />
                 <keep_apart_from id="rikō-clever" />
             </word>
+            <word
+              w="【退：たい】【屈：くつ】"
+              rom="taikutsu"
+              tr_en="boredom; to feel bored; to get tired of"
+              tr_de="Langeweile; gelangweilt sein; von etwas die Nase voll haben"
+              hint_en="noun; na-adjective; suru verb"
+              hint_de="Nomen; Na-Adjektiv; Suru-Verb"
+              lvl="n3"
+              category="mood, not-good"
+              id="taikutsu-boredom"
+            >
+                <!-- 退屈な小説 - Boring novel (ChatGPT) -->
+            </word>
 
             <!--
                 FIXME: verify that all of these words are na-adjectives!
             -->
             <!-- unsorted -->
-            <word
-              w="【奇：き】【妙：みょう】"
-              rom="kimyō"
-              tr_en="strange; odd; peculiar"
-              tr_de="seltsam; merkwürdig; eigenartig"
-              lvl="n3"
-              id="kimyō-strange"
-            />
             <word
               w="【意：い】【外：がい】"
               rom="igai"
@@ -373,7 +398,9 @@
               lvl="n3"
               id="junchō-favourable"
               HIDDEN="true"
-            />
+            >
+                <!-- 順調に進む - to make good progress (ChatGPT) -->
+            </word>
             <word
               w="【豪：ごう】【華：か】"
               rom="gōka"

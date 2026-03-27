@@ -7,14 +7,20 @@ import ch.digorydoo.kutils.vector.Vector2i
 import kotlin.math.max
 
 class TategakiLayout {
+    enum class SoftBreak {
+        NONE, // no soft break here
+        NORMAL, // normal soft break
+        FIXED, // normal soft break, and does not change when arrange() is called again
+        WEAK, // weak soft break
+    }
+
     class Element(val startIdx: Int, val text: String, val furigana: String) {
         var x = 0
         var y = 0
         var minHeight = 0
         var trimmableHeight = 0
         val fullHeight get() = minHeight + trimmableHeight
-        var softBreakAfter = false // will be set during each arrangement phase
-        var forceSoftBreakAfter = false // will be set once when elements are added
+        var softBreakAfter = SoftBreak.NONE
     }
 
     private val elements = mutableListOf<Element>()
@@ -25,8 +31,8 @@ class TategakiLayout {
 
     fun add(idx: Int, char: Char) {
         if (char in WHITESPACE) {
-            // We silently drop whitespace, but we force a soft break.
-            elements.lastOrNull()?.forceSoftBreakAfter = true
+            // Silently drop whitespace, but add a soft break.
+            elements.lastOrNull()?.softBreakAfter = SoftBreak.FIXED
         } else {
             elements.add(Element(idx, "$char", ""))
         }
@@ -53,8 +59,8 @@ class TategakiLayout {
         var furiganaSeen = false
         var left = if (elements.isEmpty()) 0 else -charWidth
         var top = 0
-        var pastMaxColumnHeight = 0
         var softBreakAfterIdx = -1
+        var softBreakIsWeak = true
         var lastBreakBeforeIdx = 0
         var elementIdx = 0
 
@@ -70,11 +76,6 @@ class TategakiLayout {
                 if (softBreakAfterIdx > 0) {
                     elementIdx = softBreakAfterIdx + 1 // go back to previous element
                     element = elements[elementIdx]
-                }
-
-                val trimmable = elements.foldIndexed(0) { i, result, e ->
-                    @Suppress("EmptyRange") // linter bug
-                    result + (if (i in lastBreakBeforeIdx ..< elementIdx) e.trimmableHeight else 0)
                 }
 
                 if (firstColumn) {
@@ -94,14 +95,27 @@ class TategakiLayout {
                     }
                 }
 
-                pastMaxColumnHeight = max(pastMaxColumnHeight, top - trimmable)
                 left -= nextColumnWidth
                 top = 0
                 firstColumn = false
                 softBreakAfterIdx = -1
+                softBreakIsWeak = true
                 lastBreakBeforeIdx = elementIdx
-            } else if (element.softBreakAfter && elementIdx - lastBreakBeforeIdx + 1 >= MIN_CHARS_FOR_SOFT_BREAK) {
-                softBreakAfterIdx = elementIdx
+            } else if (elementIdx - lastBreakBeforeIdx + 1 >= MIN_CHARS_FOR_SOFT_BREAK) {
+                when (element.softBreakAfter) {
+                    SoftBreak.NONE -> Unit
+                    SoftBreak.NORMAL, SoftBreak.FIXED -> {
+                        // Make this the new position for a soft break.
+                        softBreakAfterIdx = elementIdx
+                        softBreakIsWeak = false
+                    }
+                    SoftBreak.WEAK -> {
+                        // Make this the new position for a soft break unless there is a non-weak soft break already.
+                        if (softBreakIsWeak) {
+                            softBreakAfterIdx = elementIdx
+                        }
+                    }
+                }
             }
 
             if (!furiganaSeen) {
@@ -126,19 +140,15 @@ class TategakiLayout {
             elementIdx++
         }
 
-        val trimmable = elements.foldIndexed(0) { i, result, e ->
-            result + (if (i >= lastBreakBeforeIdx) e.trimmableHeight else 0)
-        }
-
-        val newHeight = max(pastMaxColumnHeight, top - trimmable)
-
         val newWidth = -left
         val originX = -left
         val originY = 0
+        var newHeight = 0
 
         elements.forEach {
             it.x += originX
             it.y += originY
+            newHeight = max(newHeight, it.y + it.minHeight)
         }
 
         return Vector2i(newWidth, newHeight)
@@ -182,24 +192,55 @@ class TategakiLayout {
 
     private fun determineSoftBreaks() {
         elements.forEachIndexed { i, element ->
+            if (element.softBreakAfter == SoftBreak.FIXED) {
+                return@forEachIndexed // fixed soft breaks never change
+            }
+
             val lastCharOfThisEl = element.text.lastOrNull() ?: Char(0)
+            val prevEl1 = elements.getOrNull(i - 1)?.text
+
+            val prevChar1 =
+                if (element.text.length > 1) element.text[element.text.length - 2]
+                else prevEl1?.lastOrNull() ?: Char(0)
+
             val nextEl1 = elements.getOrNull(i + 1)?.text
             val nextEl2 = elements.getOrNull(i + 2)?.text
             val nextEl3 = elements.getOrNull(i + 3)?.text
+            val nextEl4 = elements.getOrNull(i + 4)?.text
+
             val nextChar1 = nextEl1?.firstOrNull() ?: Char(0)
             val nextChar2 = if (nextEl1?.length != 1) Char(0) else nextEl2?.firstOrNull() ?: Char(0)
             val nextChar3 = if (nextEl2?.length != 1) Char(0) else nextEl3?.firstOrNull() ?: Char(0)
+            val nextChar4 = if (nextEl3?.length != 1) Char(0) else nextEl4?.firstOrNull() ?: Char(0)
 
-            element.softBreakAfter = element.forceSoftBreakAfter ||
-                lastCharOfThisEl in ALWAYS_SOFT_BREAK_AFTER ||
+            val normalBreak = lastCharOfThisEl in ALWAYS_SOFT_BREAK_AFTER ||
                 nextChar1 in ALWAYS_SOFT_BREAK_BEFORE ||
-                nextChar2 in NEVER_AT_START_OF_COLUMN ||
-                (lastCharOfThisEl == 'て' && nextChar1 != 'て') ||
-                (lastCharOfThisEl.isKatakana() && (nextChar1.isHiragana() || nextChar1.isCJKNotKana())) ||
+                (nextChar1 == 'こ' && nextChar2 == 'と' && nextChar3 == Char(0)) ||
                 (nextChar1 == 'で' && nextChar2 == 'す' && nextChar3 == '。') ||
+                (nextChar1 == 'い' && nextChar2 == 'ま' && nextChar3 == 'す' && nextChar4 == '。') ||
+                (nextChar1 == 'し' && nextChar2 == 'っ' && nextChar3 == 'か' && nextChar4 == 'り') ||
+                (nextChar1 == 'な' && nextChar2 == 'さ' && nextChar3 == 'い' && nextChar4 == '。') ||
+                (nextChar1 == 'ほ' && nextChar2 == 'し' && nextChar3 == 'い' && nextChar4 == '。') ||
+                (nextChar1 == 'ま' && nextChar2 == 'し' && nextChar3 == 'た' && nextChar4 == '。') ||
+                (nextChar1 == 'ま' && nextChar2 == 'せ' && nextChar3 == 'ん' && nextChar4 == '。') ||
+                (prevChar1 == '全' && lastCharOfThisEl == '部') ||
+                (lastCharOfThisEl == 'て' && (nextChar1 != 'て' && nextChar1 != 'は')) ||
+                (lastCharOfThisEl == 'も' && nextChar1 == 'い' && nextChar2 == 'い') ||
+                (lastCharOfThisEl == 'は' && nextChar1 == 'い' && nextChar2 == 'け' && nextChar3 == 'な' &&
+                    nextChar4 == 'い') ||
+                (lastCharOfThisEl != 'ま' && nextChar1 == 'し' && nextChar2 == 'た' && nextChar3.isCJKNotKana()) ||
+                (lastCharOfThisEl.isKatakana() && nextChar1.isCJKNotKana()) ||
                 (lastCharOfThisEl.isHiragana() && lastCharOfThisEl != 'お' && lastCharOfThisEl != 'ご' &&
                     (nextChar1 !in NEVER_AT_START_OF_COLUMN) &&
                     (nextChar1.isCJKNotKana() || nextChar1.isKatakana()))
+
+            element.softBreakAfter = when {
+                normalBreak -> SoftBreak.NORMAL
+                nextChar2 in NEVER_AT_START_OF_COLUMN ||
+                    (lastCharOfThisEl.isKatakana() && nextChar1.isHiragana())
+                -> SoftBreak.WEAK
+                else -> SoftBreak.NONE
+            }
         }
     }
 

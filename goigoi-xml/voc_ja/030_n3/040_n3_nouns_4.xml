@@ -651,6 +651,11 @@
               id="chūmon-order"
               rem="appears in GENKI2 p.286 kanji section"
             >
+                <keep_apart_from id="tanomi-request" />
+                <keep_apart_from id="onegai-wish" />
+                <keep_apart_from id="nozomi-wish" />
+                <keep_apart_from id="tanomu-request" />
+                <keep_apart_from id="meijiru-command" />
                 <phrase
                   ph="【料：りょう】【理：り】を【注：ちゅう】【文：もん】する"
                   rom="ryōri o chūmon suru"
@@ -945,6 +950,14 @@
                 <keep_apart_from id="sensei-teacher" />
                 <keep_apart_from id="kyōju-professor" />
                 <keep_apart_from id="kōshi-lecturer" />
+                <sentence
+                  s="その【教：きょう】【師：し】は【講：こう】【堂：どう】に【学：がく】【生：せい】を【集：あつ】めた。"
+                  rom="Sono kyōshi wa kōdō ni gakusei o atsumeta."
+                  tr_en="The teacher assembled the students in the auditorium."
+                  tr_de="Der Lehrer brachte die Studenten im Auditorium zusammen."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【食：しょく】【料：りょう】"

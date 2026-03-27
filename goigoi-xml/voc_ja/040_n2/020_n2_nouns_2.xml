@@ -143,16 +143,23 @@
                 />
             </word>
             <word
-              w="【貸：か】し【出：だ】し"
-              rom="kashidashi"
-              tr_en="lending; loaning"
-              tr_de="Ausleihe; Verleihung"
+              w="【解：かい】【放：ほう】"
+              rom="kaihō"
+              tr_en="liberation; release"
+              tr_de="Befreiung"
+              Langenscheidt="Befreiung"
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n2"
-              id="kashidashi-lending"
+              id="kaihō-release"
             >
-                <!-- the verb is 貸し出す, which is nx -->
+                <sentence
+                  s="ブライアンを【解：かい】【放：ほう】しなさい。"
+                  rom="Buraian o kaihō shi-nasai."
+                  tr_en="Release Brian!"
+                  tr_de="Lass Brian frei!"
+                  lvl="n2"
+                />
             </word>
             <word
               w="【通：つう】【路：ろ】"
@@ -228,6 +235,18 @@
                   lvl="n2"
                   origin="lib0"
                 />
+            </word>
+            <word
+              w="【貸：か】し【出：だ】し"
+              rom="kashidashi"
+              tr_en="lending; loaning"
+              tr_de="Ausleihe; Verleihung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="kashidashi-lending"
+            >
+                <!-- the verb is 貸し出す, which is nx -->
             </word>
             <word
               w="【風：ふう】【船：せん】"
@@ -348,15 +367,6 @@
             >
                 <see id="tokasu-comb" rem="closely related" />
             </word>
-            <word
-              w="【羽：はね】"
-              rom="hane"
-              tr_en="feather; wing"
-              tr_de="Feder; Flügel"
-              lvl="n2"
-              category="bird"
-              id="hane-wing"
-            />
             <word
               w="【肘：ひじ】"
               rom="hiji"
@@ -599,6 +609,7 @@
               id="neji-screw"
             >
                 <!-- ネジを外す – to loosen or remove a screw (ChatGPT) -->
+                <!-- ネジを回す - to turn a screw (lib0) -->
             </word>
             <word
               w="ペンチ"

@@ -195,6 +195,43 @@
                 />
             </word>
             <word
+              w="【性：せい】【格：かく】"
+              rom="seikaku"
+              tr_en="character of a person; personality"
+              tr_de="Charakter einer Person; Persönlichkeit"
+              lvl="n3"
+              category="people, mood"
+              id="seikaku-character"
+            >
+                <keep_apart_from id="jinbutsu-person" />
+                <keep_apart_from id="jinkaku-personality" />
+                <keep_apart_from id="kifū-traits" />
+                <phrase
+                  ph="【真：ま】【面：じ】【目：め】な【性：せい】【格：かく】"
+                  rom="majime na seikaku"
+                  tr_en="an earnest disposition (person)"
+                  tr_de="eine ernsthafte Persönlichkeit"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【古：ふる】【川：かわ】さんは【性：せい】【格：かく】が【明：あか】るい。"
+                  rom="Furukawa-san wa seikaku ga akarui."
+                  tr_en="Mrs Furukawa is a cheerful personality."
+                  tr_de="Frau Furukawa ist eine fröhliche Persönlichkeit."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="その【兄：きょう】【弟：だい】は【性：せい】【格：かく】が【全：まった】く【別：べつ】【々：べつ】だ。"
+                  rom="Sono kyōdai wa seikaku ga mattaku betsu-betsu da."
+                  tr_en="The brothers have completely different personalities."
+                  tr_de="Die Brüder haben zwei komplett verschiedene Persönlichkeiten."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
               w="【衛：えい】【星：せい】"
               rom="eisei"
               tr_en="satellite"
@@ -210,26 +247,6 @@
                   rom="Tsuki wa chikyū no eisei da."
                   tr_en="The moon is the Earth's satellite."
                   tr_de="Der Mond ist der Satellit der Erde."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
-              w="【大：たい】【気：き】"
-              rom="taiki"
-              tr_en="atmosphere; air"
-              tr_de="Atmosphäre; Luft"
-              lvl="n3"
-              category="science, astronomy"
-              id="taiki-atmosphere"
-            >
-                <see id="kūki-air" rem="closely related" />
-                <keep_apart_from id="kūki-air" />
-                <sentence
-                  s="【大：たい】【気：き】が【地：ち】【球：きゅう】を【包：つつ】んでいる。"
-                  rom="Taiki ga chikyū o tsutsunde iru."
-                  tr_en="The atmosphere surrounds the Earth."
-                  tr_de="Die Atmosphäre umgibt die Erde."
                   lvl="n3"
                   origin="lib0"
                 />
@@ -626,27 +643,6 @@
                   tr_de="nervös; überempfindlich; hypersensibel"
                   lvl="n3"
                   origin="GENKI2 p.328"
-                />
-            </word>
-            <word
-              w="【経：けい】【由：ゆ】"
-              rom="keiyu"
-              tr_en="going via; going by way of"
-              tr_de="via einen Ort gehen"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="keiyu-via"
-              rem="appears in GENKI2 p.328 kanji section"
-            >
-                <phrase
-                  ph="【大：おお】【阪：さか】【経：けい】【由：ゆ】"
-                  rom="Ōsaka-keiyu"
-                  tr_en="going via Osaka"
-                  tr_de="via Osaka"
-                  lvl="n3"
-                  origin="GENKI2 p.328"
-                  rem="GENKI2 has パリ経由; verified with ChatGPT"
                 />
             </word>
             <word
@@ -1115,25 +1111,6 @@
                 <!-- 日本経済は安定している - Nihon keizai wa antei shite iru - The Japanese economy is stable (ChatGPT) -->
             </word>
             <word
-              w="【銀：ぎん】"
-              rom="gin"
-              tr_en="silver (metal); silver (colour)"
-              tr_de="Silber (Metall); silbrig"
-              lvl="n3"
-              category="science"
-              id="gin-silver"
-            >
-                <keep_together id="kin-gold" />
-                <phrase
-                  ph="【銀：ぎん】のスプーン"
-                  rom="gin no supūn"
-                  tr_en="a silver spoon"
-                  tr_de="ein silberner Löffel"
-                  lvl="n3"
-                  origin="jpod101 audio"
-                />
-            </word>
-            <word
               w="【知：ち】【恵：え】"
               rom="chie"
               tr_en="wisdom; insight"
@@ -1253,17 +1230,6 @@
                 />
             </word>
             <word
-              w="【金：きん】"
-              rom="kin"
-              tr_en="gold (metal); golden (colour)"
-              tr_de="Gold (Metall); goldig"
-              lvl="n3"
-              category="science"
-              id="kin-gold"
-            >
-                <keep_together id="gin-silver" />
-            </word>
-            <word
               w="【宇：う】【宙：ちゅう】"
               rom="uchū"
               tr_en="universe; cosmos; space"
@@ -1284,6 +1250,16 @@
                   rem="限り changed to 切り, as 限り is usually かぎり; see comments kiri-stop"
                 />
             </word>
+            <word
+              w="【痴：ち】【漢：かん】"
+              rom="chikan"
+              tr_en="groper; pervert"
+              tr_de="Grapscher; Perversling"
+              lvl="n3"
+              category="people, not-good"
+              id="chikan-groper"
+              rem="appears in GENKI2 L21 vocab section; jisho has nx"
+            />
             <word
               w="【収：しゅう】【入：にゅう】"
               rom="shūnyū"
@@ -1325,14 +1301,49 @@
                 <keep_apart_from id="nozomi-wish" />
             </word>
             <word
-              w="【酸：さん】【素：そ】"
-              rom="sanso"
-              tr_en="oxygen"
-              tr_de="Sauerstoff"
+              w="【羽：はね】"
+              rom="hane"
+              tr_en="feather; wing"
+              tr_de="Feder; Flügel"
+              lvl="n3"
+              category="bird"
+              id="hane-wing"
+              rem="jisho originally had n2, they moved it to n3"
+            >
+                <keep_apart_from id="tsubasa-wing" />
+            </word>
+            <word
+              w="【金：きん】"
+              rom="kin"
+              tr_en="gold (metal); golden (colour)"
+              tr_de="Gold (Metall); goldig"
               lvl="n3"
               category="science"
-              id="sanso-oxygen"
-            />
+              id="kin-gold"
+            >
+                <keep_together id="gin-silver" />
+                <keep_apart_from id="kinzoku-metal" />
+            </word>
+            <word
+              w="【銀：ぎん】"
+              rom="gin"
+              tr_en="silver (metal); silver (colour)"
+              tr_de="Silber (Metall); silbrig"
+              lvl="n3"
+              category="science"
+              id="gin-silver"
+            >
+                <keep_together id="kin-gold" />
+                <keep_apart_from id="kinzoku-metal" />
+                <phrase
+                  ph="【銀：ぎん】のスプーン"
+                  rom="gin no supūn"
+                  tr_en="a silver spoon"
+                  tr_de="ein silberner Löffel"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+            </word>
             <word
               w="【鉄：てつ】"
               rom="tetsu"
@@ -1341,15 +1352,18 @@
               lvl="n3"
               category="science"
               id="tetsu-iron"
-            />
+            >
+                <see id="dō-copper" rem="closely related" />
+                <keep_apart_from id="kinzoku-metal" />
+            </word>
             <word
-              w="【金：きん】【属：ぞく】"
-              rom="kinzoku"
-              tr_en="metal"
-              tr_de="Metall"
+              w="【酸：さん】【素：そ】"
+              rom="sanso"
+              tr_en="oxygen"
+              tr_de="Sauerstoff"
               lvl="n3"
               category="science"
-              id="kinzoku-metal"
+              id="sanso-oxygen"
             />
             <word
               w="【目：もく】【標：ひょう】"

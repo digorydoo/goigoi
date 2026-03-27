@@ -211,15 +211,14 @@
               lvl="n2"
               id="kubaru-distribute"
               rem="appears in GENKI2 p.329 kanji section"
-            />
-            <word
-              w="【存：ぞん】じる"
-              rom="zonjiru"
-              tr_en="to think; to feel; to consider"
-              lvl="n2"
-              rem="appears in 500mon q393; but as a polite form of shiru..."
-              id="zonjiru-think"
-            />
+            >
+                <keep_apart_from id="okuru-give" />
+                <!--
+                人気を高めるために、農夫は人々にリンゴを配った。
+                Um seine Beliebtheit zu steigern, hat der Bauer den Leuten Äpfel verschenkt.
+                self/DeepL
+                -->
+            </word>
             <word
               w="【例：たと】える"
               rom="tatoeru"
@@ -271,6 +270,37 @@
                 <keep_together id="chidzimu-shrink" />
                 <keep_apart_from id="chidzireru-curled" />
             </word>
+            <word
+              w="【思：おも】いつく"
+              rom="omoitsuku"
+              tr_en="to think of; to come into one's mind; to be struck with an idea"
+              hint_en="v.t. &amp; i."
+              lvl="n2"
+              id="omoitsuku-thinkof"
+            >
+                <see id="omoitsuki-idea" rem="noun" />
+                <keep_apart_from id="omoi-thought" />
+            </word>
+            <word
+              w="【放：はな】れる"
+              rom="hanareru"
+              tr_en="to get free (from); to be released"
+              hint_en="v.i."
+              lvl="n2"
+              id="hanareru-getfree"
+              HIDDEN="true"
+            >
+                <!-- implicit see-also link to hanareru-goaway -->
+                <keep_apart_from id="nigasu-setfree" />
+            </word>
+            <word
+              w="【存：ぞん】じる"
+              rom="zonjiru"
+              tr_en="to think; to feel; to consider"
+              lvl="n2"
+              rem="appears in 500mon q393; but as a polite form of shiru..."
+              id="zonjiru-think"
+            />
             <word
               w="【潰：つぶ】れる"
               rom="tsubureru"
@@ -328,17 +358,6 @@
               id="akogareru-longfor"
             />
             <word
-              w="【思：おも】いつく"
-              rom="omoitsuku"
-              tr_en="to think of; to come into one's mind; to be struck with an idea"
-              hint_en="v.t. &amp; i."
-              lvl="n2"
-              id="omoitsuku-thinkof"
-            >
-                <see id="omoitsuki-idea" rem="noun" />
-                <keep_apart_from id="omoi-thought" />
-            </word>
-            <word
               w="【転：ころ】がす"
               rom="korogasu"
               tr_en="to roll; to tip over"
@@ -347,17 +366,13 @@
               id="korogasu-roll"
             />
             <word
-              w="【放：はな】れる"
-              rom="hanareru"
-              tr_en="to get free (from); to be released"
+              w="【溢：あふ】れる"
+              rom="afureru"
+              tr_en="to overflow; to brim over; to flood"
               hint_en="v.i."
               lvl="n2"
-              id="hanareru-getfree"
-              HIDDEN="true"
-            >
-                <!-- implicit see-also link to hanareru-goaway -->
-                <keep_apart_from id="nigasu-setfree" />
-            </word>
+              id="afureru-overflow"
+            />
         </section>
     </unit>
 </vocabulary>

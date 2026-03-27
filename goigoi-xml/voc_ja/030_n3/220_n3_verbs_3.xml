@@ -51,41 +51,6 @@
                 />
             </word>
             <word
-              w="【黙：だま】る"
-              rom="damaru"
-              tr_en="to be silent; to say nothing"
-              tr_de="schweigen; nichts sagen"
-              hint_en="v.i."
-              lvl="n3"
-              category="talking"
-              id="damaru-besilent"
-            >
-                <phrase
-                  ph="【黙：だま】り【込：こ】む"
-                  rom="damarikomu"
-                  tr_en="to fall silent; to say no more"
-                  tr_de="still werden; nichts mehr sagen"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【私：わたし】たちはみんな【黙：だま】っていた。"
-                  rom="Watashi-tachi wa minna damatte ita."
-                  tr_en="All of us were silent."
-                  tr_de="Wir waren alle still."
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【黙：だま】って【聞：き】きなさい。"
-                  rom="Damatte kikinasai."
-                  tr_en="Shut up and listen."
-                  tr_de="Halt den Mund und höre zu."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
               w="【外：はず】す"
               rom="hazusu"
               tr_en="to take off sth.; to detach sth.; to unfasten"
@@ -356,6 +321,15 @@
             >
                 <keep_apart_from id="butsu-hit" />
                 <keep_apart_from id="ataru-hit" />
+                <keep_apart_from id="ateru-hit" />
+                <phrase
+                  ph="【殴：なぐ】り【返：かえ】す"
+                  rom="naguri-kaesu"
+                  tr_en="to hit back; to strike back"
+                  tr_de="zurückschlagen"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【殴：なぐ】られました。"
                   rom="Naguraremashita."
@@ -365,6 +339,14 @@
                   explanation_de="「殴られる」ist die passive Form von「殴る」"
                   lvl="n3"
                   origin="Langenscheidt p.197"
+                />
+                <sentence
+                  s="【彼：かれ】は【僕：ぼく】の【顔：かお】をひどく【殴：なぐ】った。"
+                  rom="Kare wa boku no kao o hidoku nagutta."
+                  tr_en="He struck me a heavy blow in the face."
+                  tr_de="Er schlug mir brutal ins Gesicht."
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -399,6 +381,7 @@
             >
                 <see id="owaru-finish" rem="v.i." />
                 <keep_apart_from id="sumaseru-finish" />
+                <keep_apart_from id="tomaru-stop" />
                 <phrase
                   ph="【読：よ】み【終：お】える"
                   rom="yomi-oeru"
@@ -448,6 +431,38 @@
                 />
             </word>
             <word
+              w="【命：めい】じる"
+              rom="meijiru"
+              tr_en="to order sth.; to command; to appoint"
+              tr_de="etw. befehlen; etw. anordnen; etw. festlegen"
+              hint_en="v.t."
+              lvl="n3"
+              category="talking, work"
+              id="meijiru-command"
+            >
+                <keep_apart_from id="tanomu-request" />
+                <keep_apart_from id="motomeru-wishfor" />
+                <keep_apart_from id="negau-desire" />
+                <keep_apart_from id="chūmon-order" />
+                <phrase
+                  ph="そうするように【命：めい】じる"
+                  rom="sō suru yō ni meijiru"
+                  tr_en="to command so. to do it"
+                  tr_de="jem. befehlen, es so zu machen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【兵：へい】【隊：たい】たちは【撃：う】つように【命：めい】じられました。"
+                  rom="Heitai-tachi wa utsu yō ni meijiraremashita."
+                  tr_en="The soldiers were commanded to shoot."
+                  tr_de="Den Söldnern wurde befohlen zu schiessen."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT; 兵士 would be slightly better (more formal), but is n1"
+                />
+            </word>
+            <word
               w="【試：ため】す"
               rom="tamesu"
               tr_en="to attempt; to test; to try out"
@@ -483,27 +498,6 @@
                   tr_de="Die Zeit verstrich schnell."
                   lvl="n3"
                   origin="lib0"
-                />
-            </word>
-            <word
-              w="【近：ちか】づく"
-              rom="chikadzuku"
-              tr_en="to approach; to draw near; to get closer to"
-              tr_de="sich nähern; sich annähern"
-              hint_en="v.i."
-              lvl="n3"
-              category="motion"
-              id="chikadzuku-approach"
-              rem="appears in Doraemon 7, p.76; jisho has n1, but n5 for 近い, n4 for 付く"
-            >
-                <see id="chikadzukeru-bringnear" rem="v.t." />
-                <sentence
-                  s="もうちょっと【近：ちか】づくと【聞：き】こえるはずだ。"
-                  rom="Mō chotto chikadzuku to kikoeru hazu da."
-                  tr_en="Get a little closer, and you should be able to hear."
-                  tr_de="Gehe etwas näher ran, und du solltest es hören können."
-                  lvl="n3"
-                  origin="Oxford p.70"
                 />
             </word>
             <word
@@ -580,6 +574,7 @@
               id="nukeru-omit"
             >
                 <!-- 毛が抜ける - hair is falling out (ChatGPT) -->
+                <keep_apart_from id="habuku-omit" />
             </word>
             <word
               w="【驚：おどろ】かす"
@@ -596,8 +591,8 @@
             <word
               w="【静：しず】まる"
               rom="shizumaru"
-              tr_en="to become quiet; to calm down; to be suppressed"
-              tr_de="still werden; ruhig werden; unterdrückt werden"
+              tr_en="to become quiet; to calm down"
+              tr_de="still werden; ruhig werden"
               hint_en="v.i."
               lvl="n3"
               category="hearing"
@@ -605,6 +600,30 @@
               rem="jisho has n2"
             >
                 <see id="shizuka-quiet" rem="adjective" />
+                <phrase
+                  ph="【静：しず】まり【返：かえ】る"
+                  rom="shizumari-kaeru"
+                  tr_en="to fall completely silent; to become still as death"
+                  tr_de="völlig verstummen; ganz still werden"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【嵐：あらし】が【静：しず】まった。"
+                  rom="Arashi ga shizumatta."
+                  tr_en="The storm has calmed down."
+                  tr_de="Der Sturm hat sich gelegt."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【海：うみ】をじっと【眺：なが】めていると【私：わたし】は【気：き】が【静：しず】まる【感：かん】じがする。"
+                  rom="Umi o jitto nagamete iru to watashi wa ki ga shizumaru kanji ga suru."
+                  tr_en="When I don't move and gaze out at the sea, I feel my mind calm down."
+                  tr_de="Wenn ich still auf das Meer blicke, fühle ich mich innerlich ruhig."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【煙：けむ】る"
@@ -638,7 +657,7 @@
             <word
               w="【高：たか】める"
               rom="takameru"
-              tr_en="to raise; to lift; to boost; to enhance"
+              tr_en="to heighten; to boost; to elevate"
               tr_de="höher machen; erhöhen; steigern"
               hint_en="v.t."
               lvl="n3"
@@ -647,10 +666,40 @@
               rem="jisho has n2"
             >
                 <see id="takai-expensive" rem="adjective" />
+                <see id="takamaru-rise" rem="v.i." />
                 <keep_apart_from id="sasu-raise" />
                 <keep_apart_from id="ageru-raise" />
                 <keep_apart_from id="kau-raise" />
                 <keep_apart_from id="sodateru-makegrow" />
+                <!--
+                    Acc. to ChatGPT, 上げる is broad and versatile,
+                    while 高める is usu. about quality, intensity, awareness, reputation, motivation.
+                -->
+                <phrase
+                  ph="【人：にん】【気：き】を【高：たか】める"
+                  rom="ninki o takameru"
+                  tr_en="to boost the popularity of sth."
+                  tr_de="die Beliebtheit von etw. steigern"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【意：い】【識：しき】を【高：たか】める"
+                  rom="ishiki o takameru"
+                  tr_en="to raise the awareness of sth."
+                  tr_de="das Bewusstsein für etw. fördern"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【環：かん】【境：きょう】【問：もん】【題：だい】への【関：かん】【心：しん】を【高：たか】めるために、さまざまな【取：と】り【組：く】みが【行：おこな】われている。"
+                  rom="Kankyō mondai e no kanshin o takameru tame ni, samazama na tori-kumi ga okonawarete iru."
+                  tr_en="Various initiatives are being carried out to raise awareness in environmental issues."
+                  tr_de="Verschiedene Initiativen sind im Begriff, durchgeführt zu werden, um das Bewusstsein für Umweltsprobleme zu fördern."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
             </word>
             <word
               w="【混：ま】ぜる"
@@ -665,6 +714,26 @@
                 <keep_apart_from id="torimazeru-mix" />
                 <keep_together id="torimazeru-mix" />
                 <keep_together id="mazaru-bemixed" />
+                <!--
+                    かき混ぜる・かきまぜる (nx): to scramble (eggs); to churn
+                    卵よくかき混ぜます。(lib0)
+                -->
+                <phrase
+                  ph="【水：みず】と【混：ま】ぜる"
+                  rom="mizu to mazeru"
+                  tr_en="to mix with water"
+                  tr_de="mit Wasser mischen"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【牛：ぎゅう】【乳：にゅう】と【卵：たまご】を【混：ま】ぜなさい。"
+                  rom="Gyūnyū to tamago o mazenasai."
+                  tr_en="Blend the milk and eggs together."
+                  tr_de="Mische die Milch und die Eier zusammen."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【取：と】り【混：ま】ぜる"
@@ -692,7 +761,23 @@
             >
                 <keep_together id="mazeru-stir" />
                 <keep_apart_from id="majiru-bemixed" />
-                <!-- 油は水と混ざらない。	Oil and water don't mix. lib0 -->
+                <phrase
+                  ph="【砂：すな】と【金：きん】が【混：ま】ざったもの"
+                  rom="suna to kin ga mazatta mono"
+                  tr_en="a mixture of sand and gold"
+                  tr_de="ein Gemisch aus Sand und Gold"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jpod101 audio has similar: 黄色と青色が混ざったもの"
+                />
+                <sentence
+                  s="【油：あぶら】は【水：みず】と【混：ま】ざらない。"
+                  rom="Abura wa mizu to mazaranai."
+                  tr_en="Oil and water don't mix."
+                  tr_de="Öl und Wasser lassen sich nicht zusammenmischen."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【招：まね】く"
@@ -706,6 +791,54 @@
             >
                 <see id="maneki-invitation" rem="noun" />
                 <keep_apart_from id="shōtai-invitation" />
+                <!--
+                    Acc. to ChatGPT, 招待・しょうたい is usually preferred in everyday speech.
+                    招く is slightly more literary/refined.
+                -->
+                <phrase
+                  ph="【夕：ゆう】【食：しょく】に【招：まね】かれている"
+                  rom="yūshoku ni manekarete iru"
+                  tr_en="to be invited to dinner"
+                  tr_de="zum Abendbrot eingeladen sein"
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <phrase
+                  ph="【危：き】【険：けん】を【招：まね】く"
+                  rom="kiken o maneku"
+                  tr_en="to lead to danger"
+                  tr_de="Gefahr mit sich bringen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="'to invite danger' would sound more intentional than 危険を招く"
+                />
+                <sentence
+                  s="【友：ゆう】【人：じん】をみんな【招：まね】いた。"
+                  rom="Yūjin o minna maneita."
+                  tr_en="I invited all my friends."
+                  tr_de="Ich habe alle meine Freunde eingeladen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【組：く】む"
+              rom="kumu"
+              tr_en="to put together; to construct; to cross (legs or arms)"
+              tr_de="zusammentun; konstruieren; (Arme) verschränken"
+              lvl="n3"
+              category="general, work"
+              id="kumu-puttogether"
+            >
+                <phrase
+                  ph="【取：と】り【組：く】み"
+                  rom="tori-kumi"
+                  tr_en="effort; initiative; wrestling with sth."
+                  tr_de="Effort; Initiative; mit etw. kämpfen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx, but n3 for kumu, n5 for toru"
+                />
             </word>
             <word
               w="【好：この】む"
@@ -733,17 +866,6 @@
                 <see id="heru-decrease" rem="v.i." />
             </word>
             <word
-              w="【失：うしな】う"
-              rom="ushinau"
-              tr_en="to lose (hope, money, one's job, etc.)"
-              tr_de="(Hoffnung, Geld, Job) verlieren"
-              lvl="n3"
-              category="not-good"
-              id="ushinau-lose"
-            >
-                <!-- 驚いて言葉を失う - odoroite kotoba o ushinau - Be so surprised that one is lost for words (ChatGPT) -->
-            </word>
-            <word
               w="【振：ふ】る"
               rom="furu"
               tr_en="to wave sth.; to throw (dice); to turn down sb."
@@ -767,6 +889,17 @@
               id="kaeru-substitute"
             >
                 <!-- implicit see-also links to 替える kaeru-replace, 換える kaeru-exchange -->
+            </word>
+            <word
+              w="【失：うしな】う"
+              rom="ushinau"
+              tr_en="to lose (hope, money, one's job, etc.)"
+              tr_de="(Hoffnung, Geld, Job) verlieren"
+              lvl="n3"
+              category="not-good"
+              id="ushinau-lose"
+            >
+                <!-- 驚いて言葉を失う - odoroite kotoba o ushinau - Be so surprised that one is lost for words (ChatGPT) -->
             </word>
             <word
               w="【諦：あきら】める"
@@ -817,6 +950,32 @@
               rem="jisho has n2, but n4 for katadzukeru"
             >
                 <see id="katadzukeru-putinorder" rem="v.t." />
+                <!--
+                    verified with ChatGPT that 片付く may be more common than 片づく, even though both are correct
+                -->
+            </word>
+            <word
+              w="【叱：しか】る"
+              rom="shikaru"
+              tr_en="to scold sb.; to rebuke"
+              tr_de="schimpfen mit jem."
+              lvl="n3"
+              category="talking, quarrel"
+              id="shikaru-scold"
+            >
+                <keep_apart_from id="semeru-blame" />
+            </word>
+            <word
+              w="【倒：たお】す"
+              rom="taosu"
+              tr_en="to throw down; to bring down; to fell"
+              tr_de="herunterzerren; hinunterbringen; fällen"
+              hint_en="v.t."
+              lvl="n3"
+              category="hands"
+              id="taosu-throwdown"
+            >
+                <see id="taoreru-crumble" rem="v.i." />
             </word>
             <word
               w="【落：お】ち【込：こ】む"
@@ -858,17 +1017,6 @@
               id="uragiru-betray"
             />
             <word
-              w="【叱：しか】る"
-              rom="shikaru"
-              tr_en="to scold sb.; to rebuke"
-              tr_de="schimpfen mit jem."
-              lvl="n3"
-              category="talking, quarrel"
-              id="shikaru-scold"
-            >
-                <keep_apart_from id="semeru-blame" />
-            </word>
-            <word
               w="【祝：いわ】う"
               rom="iwau"
               tr_en="to celebrate; to congratulate; to wish for (good fortune)"
@@ -888,14 +1036,18 @@
               id="utsu-shoot"
             />
             <word
-              w="【組：く】む"
-              rom="kumu"
-              tr_en="to put together; to construct; to cross (legs or arms)"
-              tr_de="zusammentun; konstruieren; (Arme) verschränken"
+              w="【確：たし】かめる"
+              rom="tashikameru"
+              tr_en="to make sure; to check"
+              tr_de="sicherstellen; prüfen"
               lvl="n3"
               category="general, work"
-              id="kumu-puttogether"
-            />
+              id="tashikameru-check"
+            >
+                <see id="tashika-sure" rem="adjective" />
+                <keep_apart_from id="kakunin-check" />
+                <keep_apart_from id="kensa-examination" />
+            </word>
             <word
               w="【追：お】い【付：つ】く"
               rom="oitsuku"
@@ -905,15 +1057,6 @@
               lvl="n3"
               category="general, motion"
               id="oitsuku-catchup"
-            />
-            <word
-              w="【効：き】く"
-              rom="kiku"
-              tr_en="to be effective; to be good (for); to function well"
-              tr_de="wirksam sein; gut sein (für); gut funktionieren"
-              lvl="n3"
-              category="work, technical"
-              id="kiku-effective"
             />
         </section>
     </unit>

@@ -54,6 +54,11 @@ android {
     }
 }
 
+tasks.named("preBuild") {
+    dependsOn(":goigoi-core:test")
+    dependsOn(":kutils:test")
+}
+
 dependencies {
     implementation(libs.kotlin.stdlib.jdk7)
     implementation(libs.appcompat)

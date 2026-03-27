@@ -71,7 +71,7 @@ internal class TategakiLayoutTest {
         layout.arrange(
             charWidth = 10,
             charHeight = 10,
-            maxHeight = 120,
+            maxHeight = 32,
             columnSpacing = 1,
             letterSpacing = 1,
             furiganaCharWidth = 5,
@@ -81,16 +81,16 @@ internal class TategakiLayoutTest {
         val s = serialize(layout)
         assertEquals(
             """
-            【私：わたし】x=13, y=0, h=11
-            【は：】x=13, y=11, h=11
-            【元：げん】x=13, y=22, h=11
-            【気：き】x=13, y=33, h=11
-            【に：】x=13, y=44, h=11
-            【や：】x=13, y=55, h=11
-            【っ：】x=13, y=66, h=11
-            【て：】x=13, y=77, h=11
-            【い：】x=13, y=88, h=11
-            【ま：】x=13, y=99, h=11
+            【私：わたし】x=68, y=0, h=11
+            【は：】x=68, y=11, h=11
+            【元：げん】x=51, y=0, h=11
+            【気：き】x=51, y=11, h=11
+            【に：】x=51, y=22, h=11
+            【や：】x=34, y=0, h=11
+            【っ：】x=34, y=11, h=11
+            【て：】x=34, y=22, h=11
+            【い：】x=17, y=0, h=11
+            【ま：】x=17, y=11, h=11
             【す：】x=0, y=0, h=11
             【。：】x=0, y=11, h=11
             """.trimIndent().trim(),
@@ -105,7 +105,7 @@ internal class TategakiLayoutTest {
         layout.arrange(
             charWidth = 10,
             charHeight = 10,
-            maxHeight = 98,
+            maxHeight = 50,
             columnSpacing = 1,
             letterSpacing = 1,
             furiganaCharWidth = 5,
@@ -115,18 +115,18 @@ internal class TategakiLayoutTest {
         val s = serialize(layout)
         assertEquals(
             """
-            【私：わたし】x=13, y=0, h=11
-            【は：】x=13, y=11, h=11
-            【元：げん】x=13, y=22, h=11
-            【気：き】x=13, y=33, h=11
-            【に：】x=13, y=44, h=11
-            【や：】x=0, y=0, h=11
-            【っ：】x=0, y=11, h=11
-            【て：】x=0, y=22, h=11
-            【い：】x=0, y=33, h=11
-            【ま：】x=0, y=44, h=11
-            【す：】x=0, y=55, h=11
-            【。：】x=0, y=66, h=11
+            【私：わたし】x=51, y=0, h=11
+            【は：】x=51, y=11, h=11
+            【元：げん】x=34, y=0, h=11
+            【気：き】x=34, y=11, h=11
+            【に：】x=34, y=22, h=11
+            【や：】x=17, y=0, h=11
+            【っ：】x=17, y=11, h=11
+            【て：】x=17, y=22, h=11
+            【い：】x=0, y=0, h=11
+            【ま：】x=0, y=11, h=11
+            【す：】x=0, y=22, h=11
+            【。：】x=0, y=33, h=11
             """.trimIndent().trim(),
             s
         )
@@ -160,6 +160,42 @@ internal class TategakiLayoutTest {
             【い：】x=0, y=0, h=11
             【ま：】x=0, y=11, h=11
             【す：】x=0, y=22, h=11
+            【。：】x=0, y=33, h=11
+            """.trimIndent().trim(),
+            s
+        )
+    }
+
+    @Test
+    fun `should make the expected layout when suffix is mashita`() {
+        val layout = TategakiLayout().apply {
+            add(0, "殴", "なぐ")
+            add(1, 'ら')
+            add(2, 'れ')
+            add(3, 'ま')
+            add(4, 'し')
+            add(5, 'た')
+            add(6, '。')
+            arrange(
+                charWidth = 10,
+                charHeight = 10,
+                maxHeight = 60,
+                columnSpacing = 1,
+                letterSpacing = 1,
+                furiganaCharWidth = 5,
+                furiganaXDelta = 1,
+                emptyFuriganaWidth = 2,
+            )
+        }
+        val s = serialize(layout)
+        assertEquals(
+            """
+            【殴：なぐ】x=13, y=0, h=11
+            【ら：】x=13, y=11, h=11
+            【れ：】x=13, y=22, h=11
+            【ま：】x=0, y=0, h=11
+            【し：】x=0, y=11, h=11
+            【た：】x=0, y=22, h=11
             【。：】x=0, y=33, h=11
             """.trimIndent().trim(),
             s
