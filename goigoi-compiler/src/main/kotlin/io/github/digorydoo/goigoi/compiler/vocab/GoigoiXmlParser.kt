@@ -6,9 +6,9 @@ import io.github.digorydoo.goigoi.compiler.ParsingFailed
 import io.github.digorydoo.goigoi.compiler.check.check
 import io.github.digorydoo.goigoi.compiler.check.checkPhrase
 import io.github.digorydoo.goigoi.compiler.check.checkSentence
-import io.github.digorydoo.goigoi.core.StudyInContextKind
-import io.github.digorydoo.goigoi.core.WordCategory
-import io.github.digorydoo.goigoi.core.WordHint
+import io.github.digorydoo.goigoi.core.db.StudyInContextKind
+import io.github.digorydoo.goigoi.core.db.WordCategory
+import io.github.digorydoo.goigoi.core.db.WordHint
 import oracle.xml.parser.v2.DOMParser
 import oracle.xml.parser.v2.MyDOMParser
 import org.w3c.dom.Element

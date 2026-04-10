@@ -1,17 +1,17 @@
 package io.github.digorydoo.goigoi.list
 
 import android.content.Context
+import ch.digorydoo.kutils.cjk.JLPTLevel
 import io.github.digorydoo.goigoi.BuildConfig
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.db.Topic
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Unyt.Companion.MIN_NUM_WORDS_FOR_STUDY
-import io.github.digorydoo.goigoi.db.Vocabulary
+import io.github.digorydoo.goigoi.core.db.Topic
+import io.github.digorydoo.goigoi.core.db.Unyt
+import io.github.digorydoo.goigoi.core.db.Unyt.Companion.MIN_NUM_WORDS_FOR_STUDY
+import io.github.digorydoo.goigoi.core.db.Vocabulary
 import io.github.digorydoo.goigoi.drawable.BitmapPool
 import io.github.digorydoo.goigoi.drawable.LargeListItemBgnd
-import io.github.digorydoo.goigoi.helper.UserPrefs.WordListItemMode
 import io.github.digorydoo.goigoi.utils.ScreenSize
-import ch.digorydoo.kutils.cjk.JLPTLevel
+import io.github.digorydoo.goigoi.utils.UserPrefs.WordListItemMode
 
 /**
  * Note: The methods of this class may be called from a thread!

@@ -18,33 +18,25 @@ import io.github.digorydoo.goigoi.activity.prog_study.keyboard.KeyLensDrawable
 import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard
 import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard.Mode
 import io.github.digorydoo.goigoi.bottom_sheet.WordInfoBottomSheet
-import io.github.digorydoo.goigoi.db.KanjiIndex
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Vocabulary
+import io.github.digorydoo.goigoi.core.db.Unyt
+import io.github.digorydoo.goigoi.core.prog_study.QAKind
+import io.github.digorydoo.goigoi.core.prog_study.QuestionAndAnswer
+import io.github.digorydoo.goigoi.core.study.Answer
+import io.github.digorydoo.goigoi.core.study.StudyItemIterator
+import io.github.digorydoo.goigoi.core.study.StudyItemIterator.HowToStudy
 import io.github.digorydoo.goigoi.dialog.HintDialogManager
 import io.github.digorydoo.goigoi.drawable.CheckmarkIcon
 import io.github.digorydoo.goigoi.drawable.FlashIcon
-import io.github.digorydoo.goigoi.stats.Stats
-import io.github.digorydoo.goigoi.study.Answer
-import io.github.digorydoo.goigoi.study.StudyItemIterator
-import io.github.digorydoo.goigoi.study.StudyItemIterator.HowToStudy
-import io.github.digorydoo.goigoi.utils.ActivityUtils
-import io.github.digorydoo.goigoi.utils.DeviceUtils
-import io.github.digorydoo.goigoi.utils.Orientation
-import io.github.digorydoo.goigoi.utils.ResUtils
-import io.github.digorydoo.goigoi.utils.ScreenSize
+import io.github.digorydoo.goigoi.utils.*
 
 class ProgStudyActivity: AppCompatActivity() {
     private lateinit var bindings: Bindings
     private lateinit var choreo: Choreographer
     private lateinit var controller: Controller
     private lateinit var hintDialogMgr: HintDialogManager
-    private lateinit var kanjiIndex: KanjiIndex
     private lateinit var keyboard: Keyboard
     private lateinit var params: ProgStudyActivityParams
     private lateinit var qaProvider: QAProvider
-    private lateinit var vocab: Vocabulary
-    private lateinit var stats: Stats
     private lateinit var values: Values
     private var unyt: Unyt? = null // super-progressive mode when null
 
@@ -54,19 +46,16 @@ class ProgStudyActivity: AppCompatActivity() {
         setContentView(R.layout.prog_study_activity)
 
         val ctx = applicationContext
-        vocab = Vocabulary.getSingleton(ctx)
-
-        stats = Stats.getSingleton(ctx)
+        val vocab = SingletonHolder.vocab
+        val stats = SingletonHolder.stats
+        val kanjiIndex = SingletonHolder.kanjiIndex
         hintDialogMgr = HintDialogManager(stats)
-        kanjiIndex = KanjiIndex.getSingleton(ctx)
         params = ProgStudyActivityParams.fromIntent(intent)
         bindings = Bindings(this)
         values = Values(this)
         unyt = if (params.unytId.isEmpty()) null else vocab.findUnytById(params.unytId)!!
 
         val qaDelegate = object: QAProvider.Delegate {
-            override val isInTestLab = DeviceUtils.isInTestLab(ctx)
-
             override val canUseRomaji: Boolean
                 get() {
                     val unyt = unyt
@@ -83,14 +72,14 @@ class ProgStudyActivity: AppCompatActivity() {
                 get() = (unyt ?: vocab.myWordsUnyt).averageLevelOfWords() ?: JLPTLevel.N5
 
             override fun createIterator() =
-                StudyItemIterator.create(unyt, HowToStudy.WORST_CONTINUOUSLY, ctx) // unyt may be null
+                StudyItemIterator.create(vocab, stats, unyt, HowToStudy.WORST_CONTINUOUSLY) // unyt may be null
 
             override fun ranOutOfWords() {
                 Snackbar.make(bindings.nextBtn, R.string.study_set_restarted, Snackbar.LENGTH_SHORT).show()
             }
         }
 
-        qaProvider = QAProvider(qaDelegate, stats, kanjiIndex)
+        qaProvider = QAProvider(qaDelegate, DeviceUtils.isInTestLab(ctx), kanjiIndex, stats)
         val state = savedInstanceState?.let { ProgStudyState.from(it) }
 
         if (!qaProvider.start(state)) {
@@ -144,7 +133,7 @@ class ProgStudyActivity: AppCompatActivity() {
                 }
 
                 if (--roundsUntilSave <= 0) {
-                    vocab.writeMyWordsUnytIfNecessary(ctx)
+                    vocab.writeMyWordsUnytIfNecessary()
                     roundsUntilSave = ROUNDS_UNTIL_SAVE
                 }
 
@@ -187,7 +176,7 @@ class ProgStudyActivity: AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         hintDialogMgr.cancel()
-        vocab.writeMyWordsUnytIfNecessary(applicationContext)
+        SingletonHolder.vocab.writeMyWordsUnytIfNecessary()
     }
 
     private fun infoBtnClicked() {
@@ -197,7 +186,7 @@ class ProgStudyActivity: AppCompatActivity() {
 
         // If unyt is not null, all words we show should come from that unyt.
         // If unyt is null, we need to search for the original unyt, and it may not be loaded.
-        val unyt = unyt ?: vocab.findFirstUnytContainingWordWithSameFile(word)
+        val unyt = unyt ?: SingletonHolder.vocab.findFirstUnytContainingWordWithSameFile(word)
 
         WordInfoBottomSheet.show(unyt, word, supportFragmentManager) {
             bindings.nextBtn.show()

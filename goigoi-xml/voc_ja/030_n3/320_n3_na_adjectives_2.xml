@@ -132,6 +132,17 @@
             >
                 <!-- 退屈な小説 - Boring novel (ChatGPT) -->
             </word>
+            <word
+              w="【当：あ】たり【前：まえ】"
+              rom="atari-mae"
+              tr_en="obvious; reasonable; commonplace"
+              tr_de="offensichtlich; vernünftig; normal"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="atarimae-obvious"
+              rem="jisho has n2, but n3 for ataru, n5 for mae"
+            />
 
             <!--
                 FIXME: verify that all of these words are na-adjectives!
@@ -271,6 +282,18 @@
                 <keep_apart_from id="tappuri-amply" />
             </word>
             <word
+              w="【冷：れい】【静：せい】"
+              rom="reisei"
+              tr_en="calmness; composure; coolness; serenity; presence of mind"
+              hint_en="noun; na-adjective"
+              lvl="n3"
+              id="reisei-serenity"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="yasashii-gentle" />
+                <keep_apart_from id="odayaka-calm" />
+            </word>
+            <word
               w="【贅：ぜい】【沢：たく】"
               rom="zeitaku"
               tr_en="luxury; extravagance; wasteful; excessive (e.g. demands, expectations)"
@@ -308,15 +331,6 @@
               id="fukuzatsu-complex"
               HIDDEN="true"
               rem="not in GENKI1 nor 2 index; not in 500mon N5/N4 nor N3 index; jisho has n4, but n2 for the kanji"
-            />
-            <word
-              w="【冷：れい】【静：せい】"
-              rom="reisei"
-              tr_en="calmness; composure; coolness; serenity; presence of mind"
-              hint_en="noun; na-adjective (keiyodoshi)"
-              lvl="n3"
-              id="reisei-serenity"
-              HIDDEN="true"
             />
             <word
               w="【明：めい】【確：かく】"

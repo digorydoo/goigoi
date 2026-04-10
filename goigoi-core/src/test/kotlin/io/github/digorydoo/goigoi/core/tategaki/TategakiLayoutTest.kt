@@ -201,4 +201,88 @@ internal class TategakiLayoutTest {
             s
         )
     }
+
+    @Test
+    fun `should insert soft break at koto wo`() {
+        val layout = TategakiLayout().apply {
+            add(0, 'あ')
+            add(1, 'の')
+            add(2, 'ひ')
+            add(3, 'の')
+            add(4, 'こ')
+            add(5, 'と')
+            add(6, 'を')
+            add(7, 'お')
+            add(8, 'も')
+            add(9, 'い')
+            add(10, 'だ')
+            add(11, 'す')
+            arrange(
+                charWidth = 10,
+                charHeight = 10,
+                maxHeight = 110,
+                columnSpacing = 1,
+                letterSpacing = 1,
+                furiganaCharWidth = 5,
+                furiganaXDelta = 1,
+                emptyFuriganaWidth = 2,
+            )
+        }
+        val s = serialize(layout)
+        assertEquals(
+            """
+            【あ：】x=13, y=0, h=11
+            【の：】x=13, y=11, h=11
+            【ひ：】x=13, y=22, h=11
+            【の：】x=13, y=33, h=11
+            【こ：】x=13, y=44, h=11
+            【と：】x=13, y=55, h=11
+            【を：】x=13, y=66, h=11
+            【お：】x=0, y=0, h=11
+            【も：】x=0, y=11, h=11
+            【い：】x=0, y=22, h=11
+            【だ：】x=0, y=33, h=11
+            【す：】x=0, y=44, h=11
+            """.trimIndent().trim(),
+            s
+        )
+    }
+
+    @Test
+    fun `should insert soft break between ga and arimasu`() {
+        val layout = TategakiLayout().apply {
+            add(0, 'ち')
+            add(1, 'ず')
+            add(2, 'が')
+            add(3, 'あ')
+            add(4, 'り')
+            add(5, 'ま')
+            add(6, 'す')
+            add(7, 'か')
+            arrange(
+                charWidth = 10,
+                charHeight = 10,
+                maxHeight = 70,
+                columnSpacing = 1,
+                letterSpacing = 1,
+                furiganaCharWidth = 5,
+                furiganaXDelta = 1,
+                emptyFuriganaWidth = 2,
+            )
+        }
+        val s = serialize(layout)
+        assertEquals(
+            """
+            【ち：】x=13, y=0, h=11
+            【ず：】x=13, y=11, h=11
+            【が：】x=13, y=22, h=11
+            【あ：】x=0, y=0, h=11
+            【り：】x=0, y=11, h=11
+            【ま：】x=0, y=22, h=11
+            【す：】x=0, y=33, h=11
+            【か：】x=0, y=44, h=11
+            """.trimIndent().trim(),
+            s
+        )
+    }
 }

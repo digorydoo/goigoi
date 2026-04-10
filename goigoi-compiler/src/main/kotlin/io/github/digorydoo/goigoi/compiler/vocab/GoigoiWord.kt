@@ -3,9 +3,9 @@ package io.github.digorydoo.goigoi.compiler.vocab
 import ch.digorydoo.kutils.cjk.FuriganaString
 import ch.digorydoo.kutils.cjk.IntlString
 import ch.digorydoo.kutils.cjk.JLPTLevel
-import io.github.digorydoo.goigoi.core.StudyInContextKind
-import io.github.digorydoo.goigoi.core.WordCategory
-import io.github.digorydoo.goigoi.core.WordHint
+import io.github.digorydoo.goigoi.core.db.StudyInContextKind
+import io.github.digorydoo.goigoi.core.db.WordCategory
+import io.github.digorydoo.goigoi.core.db.WordHint
 import io.github.digorydoo.kokuban.ttyBlue
 import io.github.digorydoo.kokuban.ttyFaint
 import io.github.digorydoo.kokuban.ttyGreen

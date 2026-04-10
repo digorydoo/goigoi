@@ -5,15 +5,15 @@ import android.content.DialogInterface
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Vocabulary
-import io.github.digorydoo.goigoi.db.Word
+import io.github.digorydoo.goigoi.core.db.Unyt
+import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.utils.ResUtils
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 
 class WordCtxDlgFragment: DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
         val ctx = requireContext()
-        val vocab = Vocabulary.getSingleton(ctx)
+        val vocab = SingletonHolder.vocab
         val activity = requireActivity()
 
         val args = requireArguments()

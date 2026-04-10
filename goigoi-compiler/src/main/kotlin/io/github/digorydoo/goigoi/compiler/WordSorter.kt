@@ -8,28 +8,99 @@ import ch.digorydoo.kutils.cjk.isKatakana
 import ch.digorydoo.kutils.collections.ValueAndWeight
 import ch.digorydoo.kutils.collections.weightedAverageOrNull
 import ch.digorydoo.kutils.math.lerp
+import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWordLink
-import io.github.digorydoo.goigoi.core.StudyInContextKind
-import io.github.digorydoo.goigoi.core.WordCategory
-import io.github.digorydoo.goigoi.core.WordHint
+import io.github.digorydoo.goigoi.core.db.StudyInContextKind
+import io.github.digorydoo.goigoi.core.db.WordCategory
+import io.github.digorydoo.goigoi.core.db.WordHint
+import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.pow
 
-class WordSorter(private val vocab: GoigoiVocab, private val totalNumVisibleUnyts: Int) {
-    fun getSortIndex(w: GoigoiWord, unytIdx: Int, wordWithinUnytIdx: Int) = arrayOf(
-        42088.0 * getJLPTLevelScore(w),
-        5101.0 * getCatAvgIndex(w) / WordCategory.entries.size,
-        4707.0 * wordWithinUnytIdx * getWordWithinUnytScore(w) / 50.0,
-        2405.0 * unytIdx * getUnytScore(w) / totalNumVisibleUnyts,
-        999.0 * getKanjiDifficulty(w),
-        333.0 * getAmbiguityScore(w),
-        8.0 * getHintScore(w),
-        5.0 * getFlagsScore(w),
-        1.0 * getCharTypeDifficulty(w),
-        0.00001 * min(20, w.translation.en.length) / 20.0,
-    ).sum().toFloat()
+class WordSorter(private val vocab: GoigoiVocab) {
+    private class WordWithSortIndex(
+        val word: GoigoiWord,
+        val unyt: GoigoiUnyt,
+        val unytIdx: Int,
+        val wordWithinUnytIdx: Int,
+    ) {
+        var sortIndex = 0.0f
+    }
+
+    private class UnytWithPrefixSuffix(val unyt: GoigoiUnyt, val prefix: String, val suffixIdx: Int)
+
+    fun getSortedWords(): List<GoigoiWord> {
+        val words = mutableListOf<WordWithSortIndex>()
+        val unyts = mutableListOf<UnytWithPrefixSuffix>()
+        var totalNumVisibleUnyts = 0
+        val mapUnytNamePrefixToCount = mutableMapOf<String, Int>()
+
+        for (topic in vocab.topics) {
+            if (!topic.hidden) {
+                for (unyt in topic.unyts) {
+                    if (!unyt.hidden) {
+                        var wordWithinUnytIdx = 0
+                        unyt.forEachVisibleWord { word, _ ->
+                            words.add(WordWithSortIndex(word, unyt, totalNumVisibleUnyts, wordWithinUnytIdx++))
+                        }
+                        totalNumVisibleUnyts++
+
+                        val suffixIdx = UNYT_NUMBER_SUFFIXES.indexOfFirst { suffix ->
+                            unyt.name.en.endsWith(suffix)
+                        }
+
+                        if (suffixIdx >= 0) {
+                            val suffix = UNYT_NUMBER_SUFFIXES[suffixIdx]
+                            val prefix = unyt.name.en.take(unyt.name.en.length - suffix.length).trim()
+                            mapUnytNamePrefixToCount[prefix] = 1 + (mapUnytNamePrefixToCount[prefix] ?: 0)
+                            unyts.add(UnytWithPrefixSuffix(unyt, prefix, suffixIdx))
+                        }
+                    }
+                }
+            }
+        }
+
+        val mapUnytToSuffixWeight = mutableMapOf<GoigoiUnyt, Double>()
+
+        unyts.forEach { wrapper ->
+            val count = mapUnytNamePrefixToCount[wrapper.prefix]!! // entry must exist, otherwise something's odd
+            val weight = wrapper.suffixIdx.toDouble() / max(1, count - 1)
+            require(weight in 0.0f .. 1.0f)
+            mapUnytToSuffixWeight[wrapper.unyt] = weight
+        }
+
+        words.forEach { wrapper ->
+            val w = wrapper.word
+            val unytSuffixWeight = mapUnytToSuffixWeight[wrapper.unyt] ?: 0.5 // push solo unyts towards the middle
+            wrapper.sortIndex = arrayOf(
+                42088.0 * getJLPTLevelScore(w),
+                5101.0 * getCatAvgIndex(w) / WordCategory.entries.size,
+                4707.0 * wrapper.wordWithinUnytIdx * getWordWithinUnytScore(w) / 50.0,
+                2405.0 * wrapper.unytIdx * getUnytScore(w) / totalNumVisibleUnyts,
+                1999.0 * unytSuffixWeight,
+                999.0 * getKanjiDifficulty(w),
+                333.0 * getAmbiguityScore(w),
+                8.0 * getHintScore(w),
+                5.0 * getFlagsScore(w),
+                1.0 * getCharTypeDifficulty(w),
+                0.00001 * min(20, w.translation.en.length) / 20.0,
+            ).sum().toFloat()
+        }
+
+        words.sortWith { w1, w2 ->
+            val s1 = w1.sortIndex
+            val s2 = w2.sortIndex
+            when {
+                s1 < s2 -> -1
+                s1 > s2 -> 1
+                else -> w1.word.id.compareTo(w2.word.id)
+            }
+        }
+
+        return words.map { it.word }
+    }
 
     private fun GoigoiWord.isDifficult(): Boolean {
         // DAYS_OF_THE_WEEK and MONTHS are rated difficult, because they shouldn't come all grouped together.
@@ -97,7 +168,7 @@ class WordSorter(private val vocab: GoigoiVocab, private val totalNumVisibleUnyt
     private fun getWordWithinUnytScore(w: GoigoiWord) = when {
         w.isDifficult() -> 1.0
         w.cats.contains(WordCategory.TIME) -> 0.3 // there are TIME words that are not difficult
-        w.hint2 == WordHint.LOANWORD -> 0.2 // loanwords are usually not difficult, but it shouldn't pack them together
+        w.hint2 == WordHint.LOANWORD || w.primaryForm.raw.isKatakana() -> 0.21 // don't cluster loanwords together
         w.cats.size == 1 && w.cats.contains(WordCategory.GENERAL) -> 0.2 // general words should be spread out
         w.hint2 == WordHint.ADVERB -> 0.15 // adverbs are often difficult, esp. without context
         w.cats.contains(WordCategory.FAMILY) -> 0.1
@@ -159,111 +230,135 @@ class WordSorter(private val vocab: GoigoiVocab, private val totalNumVisibleUnyt
         val weightedAvg = w.cats
             .weightedAverageOrNull { index, cat ->
                 ValueAndWeight(
-                    value = catRank.indexOf(cat)
+                    value = CAT_RANKS.indexOf(cat)
                         .also { require(it >= 0) { "Missing rank for category $cat" } }
                         .toFloat(),
                     weight = 1.0f / (1.0f + index) // move words towards the first category
                 )
             }
-            ?: catRank.indexOf(null).toFloat()
+            ?: CAT_RANKS.indexOf(null).toFloat()
 
         if (w.isDifficult()) {
             // Move difficult words like counters towards the middle, because they will be spread out.
-            val middle = catRank.indexOf(null).toDouble()
+            val middle = CAT_RANKS.indexOf(null).toDouble()
             return lerp(weightedAvg.toDouble(), middle, 0.9)
         } else {
             return weightedAvg.toDouble()
         }
     }
 
-    private val catRank = arrayOf(
-        WordCategory.TOP_WORDS,
-        WordCategory.TRAVELLING,
-        WordCategory.FOOD,
-        WordCategory.HOLIDAYS,
-        WordCategory.SHOPPING,
-        WordCategory.BEACH,
-        WordCategory.BEVERAGE,
-        WordCategory.TALKING,
-        WordCategory.EDUCATION,
-        WordCategory.HEARING,
-        WordCategory.HAPPINESS,
-        WordCategory.LOOKING,
-        WordCategory.DIRECTIONS,
-        WordCategory.GASTRONOMY,
-        WordCategory.PEOPLE,
-        WordCategory.SPORTS,
-        WordCategory.HANDS,
-        WordCategory.WRITING,
-        WordCategory.FEET,
-        WordCategory.COOKING,
-        WordCategory.GENERAL,
-        WordCategory.WEATHER,
-        WordCategory.COLOUR,
-        WordCategory.SEASONS,
-        WordCategory.TEMPERATURE,
-        WordCategory.FAMILY,
-        WordCategory.FIRE,
-        WordCategory.AQUATIC,
-        WordCategory.CULTURE,
-        WordCategory.PLANT,
-        WordCategory.OBJECTS,
-        WordCategory.ANIMAL,
-        WordCategory.THINKING,
-        WordCategory.NATURE,
-        WordCategory.BIRD,
-        WordCategory.FASHION,
-        WordCategory.MONTHS,
-        WordCategory.HOME,
-        WordCategory.CLEANING,
-        WordCategory.GARDEN,
-        WordCategory.DAYS_OF_THE_WEEK,
-        WordCategory.RELATIONSHIPS,
-        WordCategory.MANGA_ANIME,
-        WordCategory.NOT_GOOD,
-        WordCategory.TIME,
-        WordCategory.GAMES,
-        WordCategory.SCENERY,
-        WordCategory.HEALTH,
-        WordCategory.ARTS,
-        WordCategory.MOOD,
-        WordCategory.QUARREL,
-        WordCategory.BODY,
-        WordCategory.COUNTRYSIDE,
-        WordCategory.WORK,
-        WordCategory.GEOGRAPHY,
-        WordCategory.TRANSPORTATION,
-        WordCategory.CITY,
-        WordCategory.MOTION,
-        WordCategory.INSECT,
-        WordCategory.OCCUPATIONS,
-        WordCategory.GOING_OUT,
-        WordCategory.EMPLOYMENT,
-        WordCategory.LIFE,
-        WordCategory.ENTERTAINMENT,
-        WordCategory.MEETINGS,
-        WordCategory.HOBBY,
-        WordCategory.BUSINESS,
-        WordCategory.DIY,
-        WordCategory.MATHS,
-        WordCategory.TECHNICAL,
-        WordCategory.NEWS,
-        WordCategory.LIGHT,
-        null, // rank for words with no category
-        WordCategory.POLITICS,
-        WordCategory.TRADE,
-        WordCategory.CRIME,
-        WordCategory.FINANCES,
-        WordCategory.SCIENCE,
-        WordCategory.PHYSICS,
-        WordCategory.GOVERNMENT,
-        WordCategory.FACTORY,
-        WordCategory.MILITARY,
-        WordCategory.HISTORICAL,
-        WordCategory.ASTRONOMY,
-        WordCategory.LINGUISTICS,
-        WordCategory.LITERATURE,
-        WordCategory.OLD_FASHIONED,
-        WordCategory.ONOMATOPOEIA,
-    )
+    companion object {
+        private val CAT_RANKS = arrayOf(
+            WordCategory.TOP_WORDS,
+            WordCategory.TRAVELLING,
+            WordCategory.FOOD,
+            WordCategory.HOLIDAYS,
+            WordCategory.SHOPPING,
+            WordCategory.BEACH,
+            WordCategory.BEVERAGE,
+            WordCategory.TALKING,
+            WordCategory.EDUCATION,
+            WordCategory.HEARING,
+            WordCategory.HAPPINESS,
+            WordCategory.LOOKING,
+            WordCategory.DIRECTIONS,
+            WordCategory.GASTRONOMY,
+            WordCategory.PEOPLE,
+            WordCategory.SPORTS,
+            WordCategory.HANDS,
+            WordCategory.WRITING,
+            WordCategory.FEET,
+            WordCategory.COOKING,
+            WordCategory.GENERAL,
+            WordCategory.WEATHER,
+            WordCategory.COLOUR,
+            WordCategory.SEASONS,
+            WordCategory.TEMPERATURE,
+            WordCategory.FAMILY,
+            WordCategory.FIRE,
+            WordCategory.AQUATIC,
+            WordCategory.CULTURE,
+            WordCategory.PLANT,
+            WordCategory.OBJECTS,
+            WordCategory.ANIMAL,
+            WordCategory.THINKING,
+            WordCategory.NATURE,
+            WordCategory.BIRD,
+            WordCategory.FASHION,
+            WordCategory.MONTHS,
+            WordCategory.HOME,
+            WordCategory.CLEANING,
+            WordCategory.GARDEN,
+            WordCategory.DAYS_OF_THE_WEEK,
+            WordCategory.RELATIONSHIPS,
+            WordCategory.MANGA_ANIME,
+            WordCategory.NOT_GOOD,
+            WordCategory.TIME,
+            WordCategory.GAMES,
+            WordCategory.SCENERY,
+            WordCategory.HEALTH,
+            WordCategory.ARTS,
+            WordCategory.MOOD,
+            WordCategory.QUARREL,
+            WordCategory.BODY,
+            WordCategory.COUNTRYSIDE,
+            WordCategory.WORK,
+            WordCategory.GEOGRAPHY,
+            WordCategory.TRANSPORTATION,
+            WordCategory.CITY,
+            WordCategory.MOTION,
+            WordCategory.INSECT,
+            WordCategory.OCCUPATIONS,
+            WordCategory.GOING_OUT,
+            WordCategory.EMPLOYMENT,
+            WordCategory.LIFE,
+            WordCategory.ENTERTAINMENT,
+            WordCategory.MEETINGS,
+            WordCategory.HOBBY,
+            WordCategory.BUSINESS,
+            WordCategory.DIY,
+            WordCategory.MATHS,
+            WordCategory.TECHNICAL,
+            WordCategory.NEWS,
+            WordCategory.LIGHT,
+            null, // rank for words with no category
+            WordCategory.POLITICS,
+            WordCategory.TRADE,
+            WordCategory.CRIME,
+            WordCategory.FINANCES,
+            WordCategory.SCIENCE,
+            WordCategory.PHYSICS,
+            WordCategory.GOVERNMENT,
+            WordCategory.FACTORY,
+            WordCategory.MILITARY,
+            WordCategory.HISTORICAL,
+            WordCategory.ASTRONOMY,
+            WordCategory.LINGUISTICS,
+            WordCategory.LITERATURE,
+            WordCategory.OLD_FASHIONED,
+            WordCategory.ONOMATOPOEIA,
+        )
+        private val UNYT_NUMBER_SUFFIXES = arrayOf(
+            "①",
+            "②",
+            "③",
+            "④",
+            "⑤",
+            "⑥",
+            "⑦",
+            "⑧",
+            "⑨",
+            "(10)",
+            "(11)",
+            "(12)",
+            "(13)",
+            "(14)",
+            "(15)",
+            "(16)",
+            "(17)",
+            "(18)",
+            "(19)",
+            "(20)",
+        )
+    }
 }

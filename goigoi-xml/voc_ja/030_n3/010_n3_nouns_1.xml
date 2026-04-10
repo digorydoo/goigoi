@@ -33,7 +33,7 @@
               hint_en="noun; na-adjective"
               hint_de="Nomen; Na-Adjektiv"
               lvl="n3"
-              category="people"
+              category="people, top-words"
               id="baka-fool"
               usuallyInKana="true"
             >
@@ -154,7 +154,7 @@
               tr_en="laugh; laughter"
               tr_de="Lachen; Gelächter"
               lvl="n3"
-              category="happiness, mood"
+              category="happiness, top-words"
               id="warai-laughter"
             >
                 <see id="warau-laugh" rem="verb" />
@@ -252,6 +252,7 @@
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
+              category="top-words"
               id="asanebō-oversleep"
               rem="appears in GENKI2 p.95 vocab section; jisho has n1"
             >
@@ -1187,35 +1188,6 @@
                 />
             </word>
             <word
-              w="【思：おも】い【出：で】"
-              rom="omoide"
-              tr_en="memories; recollections; reminiscence"
-              tr_de="Erinnerungen; Rückbesinnung"
-              lvl="n3"
-              category="thinking"
-              id="omoide-memories"
-            >
-                <see id="omoidasu-remember" rem="verb" />
-                <keep_apart_from id="omoi-thought" />
-                <phrase
-                  ph="つらい【思：おも】い【出：で】"
-                  rom="tsurai omoide"
-                  tr_en="painful memories"
-                  tr_de="bittere Erinnerungen"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="それはいい【思：おも】い【出：で】になりました。"
-                  rom="Sore wa ii omoide ni narimashita."
-                  tr_en="That became a good memory."
-                  tr_de="Das ist mir als gute Erinnerung geblieben."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
               w="【調：しら】べ"
               rom="shirabe"
               tr_en="investigation; inspection; melody"
@@ -1230,8 +1202,8 @@
                   rom="fukuzatsu na shirabe"
                   tr_en="a complex melody"
                   tr_de="eine komplexe Melodie"
-                  explanation_en="For 'a complex criminal investigation', the phrase【複：ふく】【雑：ざつ】な【捜：そう】【査：さ】 would fit better."
-                  explanation_de="Für 'eine komplexe Kriminaluntersuchung' würde die Phrase【複：ふく】【雑：ざつ】な【捜：そう】【査：さ】 besser passen."
+                  explanation_en="For 'a complex criminal investigation', the phrase 【複：ふく】【雑：ざつ】な【捜：そう】【査：さ】 would fit better."
+                  explanation_de="Für 'eine komplexe Kriminaluntersuchung' würde die Phrase 【複：ふく】【雑：ざつ】な【捜：そう】【査：さ】 besser passen."
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT"
@@ -1276,8 +1248,8 @@
                 <sentence
                   s="【会：かい】【社：しゃ】の【付：つ】き【合：あ】いが【多：おお】くて【疲：つか】れる。"
                   rom="Kaisha no tsukiai ga ōkute tsukareru."
-                  tr_en="I'm tired from all the company social obligations."
-                  tr_de="Mir werden die vielen sozialen Verpflichtungen der Firma langsam zu viel."
+                  tr_en="All these business social obligations are wearing me out."
+                  tr_de="Die vielen geschäftlichen Verpflichtungen machen mich müde."
                   lvl="n3"
                   origin="ChatGPT"
                 />
@@ -1496,6 +1468,7 @@
               id="umare-birth"
             >
                 <see id="umareru-tobeborn" rem="verb" />
+                <keep_apart_from id="tanjō-birth" />
                 <phrase
                   ph="【生：う】まれながらの【画：が】【家：か】"
                   rom="umare-nagara no gaka"
@@ -1536,6 +1509,7 @@
             >
                 <see id="shaberu-chat" rem="verb" />
                 <keep_apart_from id="uwasa-rumour" />
+                <keep_apart_from id="muda-waste" rem="ambiguity with mudabanashi" />
                 <phrase
                   ph="おしゃべりな【人：ひと】"
                   rom="o-shaberi na hito"
@@ -1571,7 +1545,7 @@
                   rom="nigeru ga kachi"
                   tr_en="fleeing is winning"
                   tr_de="fliehen ist gewinnen"
-                  explanation_en="proverb that conveys the idea that sometimes retreating is the wisest choice"
+                  explanation_en="Proverb that conveys the idea that sometimes retreating is the wisest choice"
                   explanation_de="Sprichwort, welches sagt, dass Rückzug manchmal die weiseste Entscheidung ist"
                   lvl="n3"
                   origin="ChatGPT"
@@ -1786,6 +1760,8 @@
               rem="jisho has n1"
             >
                 <see id="oboeru-memorize" rem="verb" />
+                <keep_apart_from id="kioku-memory" />
+                <keep_apart_from id="omoide-memories" />
                 <phrase
                   ph="【覚：おぼ】えやすい"
                   rom="oboe-yasui"
@@ -1802,6 +1778,40 @@
                   lvl="n3"
                   origin="Miku"
                   href="https://youtu.be/-B4W64brkcc"
+                />
+            </word>
+            <word
+              w="【笑：え】【顔：がお】"
+              rom="egao"
+              tr_en="smiling face; smile"
+              tr_de="Lachgesicht; Lächeln"
+              lvl="n3"
+              category="happiness, top-words"
+              id="egao-smiling"
+            >
+                <phrase
+                  ph="おじいさんの【笑：え】【顔：がお】"
+                  rom="o-jīsan no egao"
+                  tr_en="grandfather's smile"
+                  tr_de="Grossvaters Lachgesicht"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【暖：あたた】かい【笑：え】【顔：がお】で"
+                  rom="atatakai egao de"
+                  tr_en="with a warm smile"
+                  tr_de="mit einem warmen Lächeln"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="お【客：きゃく】と【話：はな】す【時：とき】は、いつでも【笑：え】【顔：がお】でいなさい。"
+                  rom="O-kyaku to hanasu toki wa, itsudemo egao de inasai."
+                  tr_en="Always smile when talking with a customer."
+                  tr_de="Lächle stets, wenn du mit einem Kunde sprichst."
+                  lvl="n3"
+                  origin="jpod101 audio"
                 />
             </word>
             <word

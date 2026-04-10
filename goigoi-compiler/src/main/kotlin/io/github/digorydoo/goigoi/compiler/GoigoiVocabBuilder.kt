@@ -74,32 +74,7 @@ class GoigoiVocabBuilder(private val vocab: GoigoiVocab, private val options: Op
     }
 
     private fun buildFileNames() {
-        class WrappedWord(val word: GoigoiWord, val unytIdx: Int, val wordWithinUnytIdx: Int) {
-            var sortIndex = 0.0f
-        }
-
-        val words = mutableListOf<WrappedWord>()
-        var unytIdx = 0
-
-        for (topic in vocab.topics) {
-            if (!topic.hidden) {
-                for (unyt in topic.unyts) {
-                    if (!unyt.hidden) {
-                        var wordWithinUnytIdx = 0
-                        unyt.forEachVisibleWord { word, _ ->
-                            words.add(WrappedWord(word, unytIdx, wordWithinUnytIdx++))
-                        }
-                        unytIdx++
-                    }
-                }
-            }
-        }
-
-        val sorter = WordSorter(vocab, totalNumVisibleUnyts = unytIdx)
-
-        words.forEach {
-            it.sortIndex = sorter.getSortIndex(it.word, it.unytIdx, it.wordWithinUnytIdx)
-        }
+        val sortedWords = WordSorter(vocab).getSortedWords()
 
         // Filenames should be short and unique, to make the VocabIndex occupy less disk space.
         // Enable the extended filename for debugging only.
@@ -109,24 +84,9 @@ class GoigoiVocabBuilder(private val vocab: GoigoiVocab, private val options: Op
             println("Warning: Extended filenames are enabled!")
         }
 
-        // Sort the list of words. This affects the prefix of the filename, and because Goigoi sorts the list of words
-        // by filename, it affects the index of a word within super progressive mode. Do NOT randomize the list, because
-        // the list needs to be stable across builds!
+        val numDigits = floor(log10(sortedWords.size.toDouble())).toInt() + 1
 
-        words.sortWith { w1, w2 ->
-            val s1 = w1.sortIndex
-            val s2 = w2.sortIndex
-            when {
-                s1 < s2 -> -1
-                s1 > s2 -> 1
-                else -> w1.word.id.compareTo(w2.word.id)
-            }
-        }
-
-        val numDigits = floor(log10(words.size.toDouble())).toInt() + 1
-
-        words.forEachIndexed { wordIdx, wrapped ->
-            val word = wrapped.word
+        sortedWords.forEachIndexed { wordIdx, word ->
             val prefix = "w${wordIdx.toString().padStart(numDigits, '0')}"
             val name = word.romaji
                 .ifEmpty { word.primaryForm.raw }

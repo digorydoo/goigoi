@@ -3,7 +3,7 @@ package io.github.digorydoo.goigoi.list
 import android.content.Context
 import androidx.core.content.ContextCompat
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.db.Topic
+import io.github.digorydoo.goigoi.core.db.Topic
 import io.github.digorydoo.goigoi.furigana.FuriganaBuilder
 import io.github.digorydoo.goigoi.utils.DimUtils
 import io.github.digorydoo.goigoi.utils.ResUtils

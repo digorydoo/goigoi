@@ -19,38 +19,47 @@
         <section>
             <!-- unsorted -->
             <word
-              w="【王：おう】【様：さま】"
-              rom="Ō-sama"
+              w="【王：おう】"
+              rom="ō"
               tr_en="king"
               tr_de="König"
               lvl="n3"
-              category="people"
-              id="ōsama-king"
+              id="ō-king"
+              category="people, government"
             >
-                <keep_apart_from id="ō-king" />
-                <keep_together id="ō-king" />
+                <keep_apart_from id="ōsama-king" />
+                <keep_together id="ōsama-king" />
                 <keep_together id="joō-queen" />
                 <keep_together id="ōji-prince" />
                 <keep_together id="ōjo-princess" />
+                <keep_apart_from id="kokuō-monarch" />
+                <phrase
+                  ph="【王：おう】【位：い】"
+                  rom="ōi"
+                  tr_en="throne; crown"
+                  tr_de="Thron; Krone"
+                  lvl="n3"
+                  rem="jisho has nx; Langenscheidt has Thron; Krone"
+                />
                 <sentence
                   s="【昔：むかし】【々：むかし】、ある【国：くに】に【優：やさ】しい【王：おう】【様：さま】が【住：す】んでいました。"
                   rom="Mukashi-mukashi, aru kuni ni yasashii Ō-sama ga sunde imashita."
                   tr_en="Once upon a time, there lived a kind king in a certain land."
-                  tr_de="Es war einmal ein sanfter König, der in einem bestimmten Land lebte."
+                  tr_de="Es war einmal ein guter König, der in einem bestimmten Land lebte."
                   lvl="n3"
                   origin="ChatGPT"
                 />
             </word>
             <word
-              w="【王：おう】"
-              rom="ō"
+              w="【王：おう】【様：さま】"
+              rom="Ō-sama"
               tr_en="king; ruler; sovereign; monarch"
               lvl="n3"
-              id="ō-king"
+              id="ōsama-king"
               HIDDEN="true"
             >
-                <keep_apart_from id="ōsama-king" />
-                <keep_together id="ōsama-king" />
+                <keep_apart_from id="ō-king" />
+                <keep_together id="ō-king" />
             </word>
             <word
               w="【女：じょ】【王：おう】"
@@ -58,12 +67,20 @@
               tr_en="queen"
               tr_de="Königin"
               lvl="n3"
-              category="people"
+              category="people, government"
               id="joō-queen"
             >
-                <keep_together id="ōsama-king" />
+                <keep_together id="ō-king" />
                 <keep_together id="ōji-prince" />
                 <keep_together id="ōjo-princess" />
+                <phrase
+                  ph="【冷：れい】【静：せい】な【女：じょ】【王：おう】"
+                  rom="reisei na joō"
+                  tr_en="a serene queen"
+                  tr_de="eine gelassene Königin"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
                 <sentence
                   s="【女：じょ】【王：おう】の【夫：おっと】は「【王：おう】」と【呼：よ】ばれます。"
                   rom="Joō no otto wa ‘Ō’ to yobaremasu."
@@ -80,12 +97,20 @@
               tr_en="prince"
               tr_de="Prinz"
               lvl="n3"
-              category="people"
+              category="people, government"
               id="ōji-prince"
             >
-                <keep_together id="ōsama-king" />
+                <keep_together id="ō-king" />
                 <keep_together id="joō-queen" />
                 <keep_together id="ōjo-princess" />
+                <phrase
+                  ph="かっこいい【王：おう】【子：じ】"
+                  rom="kakkoii ōji"
+                  tr_en="a good-looking prince"
+                  tr_de="ein gut aussehender Prinz"
+                  lvl="n3"
+                  origin="self"
+                />
                 <sentence
                   s="【王：おう】【子：じ】は【冒：ぼう】【険：けん】に【出：で】かけた。"
                   rom="Ōji wa bōken ni dekaketa."
@@ -101,11 +126,11 @@
               tr_en="princess"
               tr_de="Prinzessin"
               lvl="n3"
-              category="people"
+              category="people, top-words"
               id="ōjo-princess"
               rem="jisho has n2"
             >
-                <keep_together id="ōsama-king" />
+                <keep_together id="ō-king" />
                 <keep_together id="joō-queen" />
                 <keep_together id="ōji-prince" />
                 <phrase
@@ -183,6 +208,14 @@
               category="body"
               id="shita-tongue"
             >
+                <phrase
+                  ph="【舌：した】を【出：だ】す"
+                  rom="shita o dasu"
+                  tr_en="to stick out one's tongue"
+                  tr_de="die Zunge herausstrecken"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【舌：した】を【見：み】せてください。"
                   rom="Shita o misete kudasai."
@@ -201,6 +234,15 @@
               category="body"
               id="hō-cheek"
             >
+                <phrase
+                  ph="【頬：ほお】をたたく"
+                  rom="hō o tataku"
+                  tr_en="to slap so. on the cheek"
+                  tr_de="jem. auf die Wange schlagen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="ChatGPT says 頬を打つ is stronger"
+                />
                 <sentence
                   s="【涙：なみだ】がリサちゃんの【頬：ほお】に【流：なが】れた。"
                   rom="Namida ga Risa-chan no hō ni nagareta."
@@ -219,6 +261,14 @@
               category="body"
               id="kata-shoulder"
             >
+                <phrase
+                  ph="【肩：かた】【幅：はば】"
+                  rom="kata haba"
+                  tr_en="shoulder width"
+                  tr_de="Schulterbreite"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【右：みぎ】【肩：かた】が【痛：いた】い。"
                   rom="Migi kata ga itai."
@@ -236,6 +286,27 @@
               category="body"
               id="hone-bone"
             >
+                <see id="kossetsu-bonefracture" rem="closely related" />
+                <keep_apart_from id="sebone-spine" />
+                <phrase
+                  ph="【犬：いぬ】に【骨：ほね】をやる"
+                  rom="inu ni hone o yaru"
+                  tr_en="to give a bone to the dog"
+                  tr_de="dem Hund einen Knochen geben"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【背：せ】【骨：ぼね】"
+                  rom="sebone"
+                  tr_en="spine"
+                  tr_de="Wirbelsäule"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="jisho has nx"
+                />
                 <sentence
                   s="【骨：ほね】が【多：おお】いので、【魚：さかな】は【食：た】べにくいです。"
                   rom="Hone ga ōi no de, sakana wa tabe-nikui desu."
@@ -248,12 +319,18 @@
             <word
               w="【格：かっ】【好：こう】"
               rom="kakkō"
-              tr_en="shape (of body); appearance; posture"
-              tr_de="Körperfigur; Erscheinung; Körperhaltung"
+              tr_en="shape (of body); appearance; suitable"
+              tr_de="Körperfigur; Erscheinung; passend"
               lvl="n3"
               category="body"
               id="kakkō-shape"
             >
+                <keep_apart_from id="hansamu-handsome" />
+                <keep_apart_from id="katachi-shape" />
+                <keep_apart_from id="tekitō-suitable" />
+                <keep_apart_from id="tekido-proper" />
+                <keep_apart_from id="pittari-ideally" />
+                <keep_apart_from id="risō-ideal" />
                 <phrase
                   ph="かっこいい"
                   rom="kakkoii"
@@ -262,6 +339,23 @@
                   hasDifferentForm="true"
                   lvl="n3"
                   rem="jisho has nx"
+                />
+                <phrase
+                  ph="【格：かっ】【好：こう】のチャンス"
+                  rom="kakkō no chansu"
+                  tr_en="a perfect opportunity"
+                  tr_de="eine günstige Gelegenheit"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="lib0 also uses 格好 in this sense"
+                />
+                <sentence
+                  s="【金：かね】【子：こ】さんはいつも【変：へん】な【格：かっ】【好：こう】をしている。"
+                  rom="Kaneko-san wa itsumo hen na kakkō o shite iru."
+                  tr_en="Mr Kaneko is always dressed in a strange way."
+                  tr_de="Herr Kaneko ist immer seltsam angezogen."
+                  lvl="n3"
+                  origin="ChatGPT"
                 />
             </word>
             <word
@@ -282,6 +376,15 @@
                   lvl="n3"
                   origin="ChatGPT"
                 />
+                <sentence
+                  s="この【川：かわ】の【流：なが】れは【激：はげ】しい。"
+                  rom="Kono kawa no nagare wa hageshii."
+                  tr_en="The current of this river is strong."
+                  tr_de="Dieser Fluss hat eine starke Strömung."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="lib0 has 急 instead of 激しい, which is also correct acc. to ChatGPT"
+                />
             </word>
             <word
               w="【患：かん】【者：じゃ】"
@@ -292,6 +395,15 @@
               category="health"
               id="kanja-patient"
             >
+                <phrase
+                  ph="【気：き】が【短：みじか】い【患：かん】【者：じゃ】"
+                  rom="ki ga mijikai kanja"
+                  tr_en="an impatient patient"
+                  tr_de="ein ungeduldiger Patient"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
                 <sentence
                   s="【患：かん】【者：じゃ】は【退：たい】【院：いん】した。"
                   rom="Kanja wa taiin shita."
@@ -310,6 +422,15 @@
               category="health"
               id="zutsū-headache"
             >
+                <phrase
+                  ph="【軽：かる】い【頭：ず】【痛：つう】"
+                  rom="karui zutsū"
+                  tr_en="a mild headache"
+                  tr_de="leichte Kopfschmerzen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
                 <sentence
                   s="【頭：ず】【痛：つう】が【無：な】くなった。"
                   rom="Zutsū ga nakunatta."
@@ -328,6 +449,23 @@
               id="shujutsu-surgery"
             >
                 <keep_apart_from id="geka-surgery" />
+                <phrase
+                  ph="【手：しゅ】【術：じゅつ】を【行：おこな】う"
+                  rom="shujutsu o okonau"
+                  tr_en="to perform a surgery"
+                  tr_de="eine (chirurgische) Operation durchführen"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【手：しゅ】【術：じゅつ】を【受：う】ける"
+                  rom="shujutsu o ukeru"
+                  tr_en="to undergo surgery"
+                  tr_de="sich einer Operation unterziehen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
                 <sentence
                   s="【手：しゅ】【術：じゅつ】が【必：ひつ】【要：よう】なんです。"
                   rom="Shujutsu ga hitsuyō na n desu."
@@ -380,6 +518,16 @@
                 <!-- 怪我を治す (けがをなおす) - To heal an injury. (ChatGPT) -->
                 <keep_apart_from id="songai-damage" />
                 <keep_apart_from id="gai-harm" />
+                <keep_apart_from id="kizu-scar" />
+                <phrase
+                  ph="ケガ【人：にん】"
+                  rom="kega-nin"
+                  tr_en="injured person"
+                  tr_de="verletzte Person"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="lib0 uses kanji 怪我人, but ChatGPT says ケガ人 is more common"
+                />
                 <sentence
                   s="ケガ【人：にん】が【２：ふた】【人：り】います。"
                   rom="Kega-nin ga futari imasu."
@@ -406,41 +554,37 @@
                 />
             </word>
             <word
-              w="【傷：きず】"
-              rom="kizu"
-              tr_en="cut; scratch; wound"
-              tr_de="Schnittwunde; Kratzer; Wunde"
-              Langenscheidt="Wunde; Kratzer"
+              w="【速：そく】【度：ど】"
+              rom="sokudo"
+              tr_en="speed; velocity"
+              tr_de="Geschwindigkeit"
               lvl="n3"
-              category="health"
-              id="kizu-scar"
+              category="physics, feet"
+              id="sokudo-speed"
             >
-                <see id="kizutsuku-gethurt" rem="verb" />
                 <phrase
-                  ph="【傷：きず】【跡：あと】"
-                  rom="kizuato"
-                  tr_en="a scar"
-                  tr_de="eine Narbe"
-                  lvl="n3"
-                  rem="jisho has nx"
-                />
-                <sentence
-                  s="【傷：きず】はまだ【痛：いた】む。"
-                  rom="Kizu wa mada itamu."
-                  tr_en="The wound still hurts."
-                  tr_de="Die Wunde tut immer noch weh."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="jisho has n1 for itamu"
-                />
-                <sentence
-                  s="ハリーは【額：ひたい】に【傷：きず】【跡：あと】がある。"
-                  rom="Harī wa hitai ni kizuato ga aru."
-                  tr_en="Harry has a scar on the forehead."
-                  tr_de="Harry hat eine Narbe auf der Stirn."
+                  ph="【速：そく】【度：ど】が【速：はや】い"
+                  rom="sokudo ga hayai"
+                  tr_en="fast velocity"
+                  tr_de="schnelle Geschwindigkeit"
                   lvl="n3"
                   origin="self"
-                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="この【車：くるま】は【速：そく】【度：ど】が【遅：おそ】いね。"
+                  rom="Kono kuruma wa sokudo ga osoi ne."
+                  tr_en="This car is slow, isn't it?"
+                  tr_de="Dieses Auto ist aber langsam."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【飛：ひ】【行：こう】【機：き】は【速：そく】【度：ど】を【増：ま】した。"
+                  rom="Hikōki wa sokudo o mashita."
+                  tr_en="The plane increased speed."
+                  tr_de="Das Flugzeug erhöhte die Geschwindigkeit."
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -656,6 +800,7 @@
                 <keep_apart_from id="nozomi-wish" />
                 <keep_apart_from id="tanomu-request" />
                 <keep_apart_from id="meijiru-command" />
+                <keep_apart_from id="seikyū-claim" />
                 <phrase
                   ph="【料：りょう】【理：り】を【注：ちゅう】【文：もん】する"
                   rom="ryōri o chūmon suru"
@@ -781,6 +926,9 @@
               category="home"
               id="koya-shed"
             >
+                <keep_apart_from id="sansō-cottage" />
+                <keep_apart_from id="shūnōko-toolshed" />
+                <keep_apart_from id="kyūsha-barn" />
                 <phrase
                   ph="【犬：いぬ】【小：ご】【屋：や】"
                   rom="inugoya"
@@ -789,6 +937,41 @@
                   hasDifferentForm="true"
                   lvl="n3"
                   rem="if this is considered a word in itself, its nx; see inugoya-kennel"
+                />
+                <phrase
+                  ph="【山：やま】【小：ご】【屋：や】"
+                  rom="yamagoya"
+                  tr_en="mountain hut"
+                  tr_de="Berghütte"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【豚：ぶた】【小：ご】【屋：や】"
+                  rom="butagoya"
+                  tr_en="pigsty"
+                  tr_de="Schweinestall"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【家：いえ】の【後：うし】ろに【小：こ】【屋：や】がある。"
+                  rom="Ie no ushiro ni koya ga aru."
+                  tr_en="There is a shed at the back of the house."
+                  tr_de="Es hat einen Schuppen hinter dem Haus."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【一：ひと】【人：り】でこの【犬：いぬ】【小：ご】【屋：や】を【作：つく】った。"
+                  rom="Hitori de kono inugoya o tsukutta."
+                  tr_en="I made this dog kennel myself."
+                  tr_de="Ich habe diese Hundehütte selber gemacht."
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -801,6 +984,24 @@
               id="tsuyu-rainyseason"
               hasCombinedReading="true"
             >
+                <phrase
+                  ph="【梅雨：つゆ】【入：い】り"
+                  rom="tsuyu-iri"
+                  tr_en="beginning of the rainy season"
+                  tr_de="Anfang der Regenzeit"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【梅雨：つゆ】【明：あ】け"
+                  rom="tsuyu-ake"
+                  tr_en="end of the rainy season"
+                  tr_de="Ende der Regenzeit"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
                 <sentence
                   s="【梅雨：つゆ】は【六：ろく】【月：がつ】から【始：はじ】まる。"
                   rom="Tsuyu wa roku-gatsu kara hajimaru."
@@ -808,6 +1009,14 @@
                   tr_de="Die Regensaison beginnt im Juni."
                   lvl="n3"
                   origin="lib0 modified"
+                />
+                <sentence
+                  s="【今：こ】【年：とし】は【梅雨：つゆ】【明：あ】けが【遅：おそ】かった。"
+                  rom="Kotoshi wa tsuyuake ga osokatta."
+                  tr_en="The end of the rainy season came late this year."
+                  tr_de="Das Ende der Regensaison kam dieses Jahr spät."
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -859,6 +1068,14 @@
               category="education, top-words"
               id="moji-character"
             >
+                <phrase
+                  ph="【発：はつ】【音：おん】しない【文：も】【字：じ】"
+                  rom="hatsuon shinai moji"
+                  tr_en="letters which are not pronounced"
+                  tr_de="Buchstaben, die nicht ausgesprochen werden"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="その【文：も】【字：じ】は【小：ちい】さすぎて、【読：よ】めない。"
                   rom="Sono moji wa chīsa-sugite, yomenai."
@@ -919,6 +1136,26 @@
             >
                 <keep_apart_from id="kion-airtemperature" />
                 <keep_apart_from id="ondo-temperature" />
+                <keep_apart_from id="netsu-fever" />
+                <phrase
+                  ph="【高：たか】い【体：たい】【温：おん】"
+                  rom="takai taion"
+                  tr_en="high body temperatur"
+                  tr_de="hohe Körpertemperatur"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【私：わたし】の【体：たい】【温：おん】は【38：さんじゅうはち】【度：ど】ある。"
+                  rom="Watashi no taion wa san-jū-hachi-do aru."
+                  tr_en="My temperature is 38 degrees."
+                  tr_de="Meine Temperatur beträgt 38 Grad."
+                  explanation_en="「ある」is commonly used for measurable quantities"
+                  explanation_de="「ある」ist gebräuchlich für die Angabe von Messwerten"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; だ instead of ある would also be correct, but slightly less idiomatic"
+                />
             </word>
             <word
               w="【言：い】い【訳：わけ】"
@@ -935,6 +1172,22 @@
                 <see id="mōshiwake-apology" rem="closely related" />
                 <keep_apart_from id="mōshiwake-apology" />
                 <keep_apart_from id="wake-conclusion" />
+                <phrase
+                  ph="【言：い】い【訳：わけ】をする"
+                  rom="iiwake o suru"
+                  tr_en="to make excuses"
+                  tr_de="sich herausreden"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【言：い】い【訳：わけ】をしてもムダだ。"
+                  rom="Iiwake o shite mo muda da."
+                  tr_en="There's no point in making excuses."
+                  tr_de="Ausreden bringen nichts."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【教：きょう】【師：し】"
@@ -950,6 +1203,14 @@
                 <keep_apart_from id="sensei-teacher" />
                 <keep_apart_from id="kyōju-professor" />
                 <keep_apart_from id="kōshi-lecturer" />
+                <phrase
+                  ph="【教：きょう】【師：し】になる"
+                  rom="kyōshi ni naru"
+                  tr_en="to become a teacher"
+                  tr_de="einen Lehrer werden"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="その【教：きょう】【師：し】は【講：こう】【堂：どう】に【学：がく】【生：せい】を【集：あつ】めた。"
                   rom="Sono kyōshi wa kōdō ni gakusei o atsumeta."
@@ -973,19 +1234,66 @@
                 <keep_apart_from id="shokumotsu-food" />
                 <keep_apart_from id="shokuryō-rations" />
                 <keep_apart_from id="shokuryōhin-groceries" />
+                <phrase
+                  ph="【食：しょく】【料：りょう】を【買：か】う"
+                  rom="shokuryō o kau"
+                  tr_en="to buy food"
+                  tr_de="Esswaren kaufen"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【十：じゅう】【分：ぶん】な【食：しょく】【料：りょう】があるか。"
+                  rom="Jūbun na shokuryō ga aru ka?"
+                  tr_en="Do we have enough food?"
+                  tr_de="Haben wir genug Esswaren?"
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="お【連：つ】れ"
               rom="o-tsure"
               tr_en="companion"
-              tr_de="Begleiter; Kamerad"
+              tr_de="Begleiter"
+              hint_en="the person who came with you"
+              hint_de="die Person, die mit dir mitgekommen ist"
               lvl="n3"
               category="relationships"
               id="otsure-companion"
             >
+                <see id="tsureru-takesbwithyou" rem="verb" />
                 <keep_apart_from id="naka-relation" rem="ambiguity in phrases" />
                 <keep_apart_from id="aite-companion" />
                 <keep_apart_from id="dōryō-coworker" />
+                <phrase
+                  ph="【仲：なか】【間：ま】を【連：つ】れて【行：い】く"
+                  rom="nakama o tsurete iku"
+                  tr_en="to take a companion along"
+                  tr_de="mit einem Begleiter hingehen"
+                  explanation_en="「仲間」can be used for your own in-group, while「お連れ」cannot and would be wrong here"
+                  explanation_de="「仲間」kann für die eigene Gruppe verwendet werden, während「お連れ」hier falsch wäre"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="お【連：つ】れの【方：かた】は【何：なん】【名：めい】【様：さま】ですか。"
+                  rom="O-tsure no kata wa nan-mei-sama desu ka?"
+                  tr_en="How many people are with you? (polite)"
+                  tr_de="Wieviele Leute seid ihr? (höflich)"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="お【連：つ】れ【様：さま】のお【席：せき】はこちらです。"
+                  rom="O-tsure-sama no o-seki wa kochira desu."
+                  tr_en="Your companion's seat is here. (polite)"
+                  tr_de="Der Sitzplatz von Ihrer Begleiterin/Ihrem Begleiter ist hier. (höflich)"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
             </word>
             <word
               w="【土：つち】"
@@ -996,7 +1304,41 @@
               category="nature"
               id="tsuchi-soil"
             >
-                <!-- 土を踏む - To tread on the soil (ChatGPT) -->
+                <keep_apart_from id="yuka-floor" />
+                <keep_apart_from id="chi-ground" />
+                <keep_apart_from id="doro-mud" />
+                <keep_apart_from id="tochi-lot" />
+                <!--
+                    土・つち: physical soil, dirt
+                    地・ち: ground as place, surface, or concept; often in compounds like 地下・ちか
+                    泥・どろ: mud; wet, dirty, messy
+                -->
+                <phrase
+                  ph="【庭：にわ】の【土：つち】"
+                  rom="niwa no tsuchi"
+                  tr_en="the garden's soil"
+                  tr_de="Erde aus dem Garten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【土：つち】を【一：ひと】【袋：ふくろ】【買：か】う"
+                  rom="tsuchi o hito-fukuro kau"
+                  tr_en="to buy a sack of soil"
+                  tr_de="einen Sack Erde kaufen"
+                  lvl="n3"
+                  origin="DeepL"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【土：つち】に【花：はな】を【植：う】えましょう。"
+                  rom="Tsuchi ni hana o uemashō."
+                  tr_en="Let's plant flowers in the soil."
+                  tr_de="Plfanzen wir Blumen in die Erde!"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
             </word>
             <word
               w="【平：へい】【和：わ】"
@@ -1010,20 +1352,51 @@
               id="heiwa-peace"
               rem="appears in GENKI2 p.288"
             >
-                <!-- 平和を祈る (へいわをいのる) - Pray for peace (ChatGPT) -->
+                <phrase
+                  ph="【平：へい】【和：わ】を【祈：いの】る"
+                  rom="heiwa o inoru"
+                  tr_en="to pray for peace"
+                  tr_de="für Frieden beten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【３：さん】【年：ねん】にわたる【戦：せん】【争：そう】の【末：すえ】、【平：へい】【和：わ】が【戻：もど】った。"
+                  rom="San-nen ni wataru sensō no sue, heiwa ga modotta."
+                  tr_en="After three years of war, peace returned."
+                  tr_de="Nach drei Jahren Krieg kehrte Frieden wieder ein."
+                  lvl="n3"
+                  origin="DeepL"
+                  rem="verified with ChatGPT; 末 is すえ, not まつ here"
+                />
             </word>
             <word
               w="【旗：はた】"
               rom="hata"
               tr_en="flag"
               tr_de="Flagge"
-              hint_en="esp. national flag"
-              hint_de="insbes. Nationalflagge"
               lvl="n3"
               category="government"
               id="hata-flag"
             >
-                <!-- 旗を立てる to raise a flag (ChatGPT) -->
+                <!-- national flag is 国旗・こっき (nx) -->
+                <phrase
+                  ph="【旗：はた】を【立：た】てる"
+                  rom="hata o tateru"
+                  tr_en="to raise a flag"
+                  tr_de="eine Flagge hissen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【旗：はた】を【振：ふ】る"
+                  rom="hata o furu"
+                  tr_en="to wave a flag"
+                  tr_de="eine Fahne schwingen"
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【楽：がっ】【器：き】"
@@ -1098,7 +1471,9 @@
               lvl="n3"
               category="health"
               id="kossetsu-bonefracture"
-            />
+            >
+                <see id="hone-bone" rem="closely related" />
+            </word>
             <word
               w="【記：き】【録：ろく】"
               rom="kiroku"

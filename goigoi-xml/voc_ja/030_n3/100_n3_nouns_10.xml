@@ -18,72 +18,6 @@
     >
         <section>
             <word
-              w="【理：り】【想：そう】"
-              rom="risō"
-              tr_en="ideal; ideals"
-              tr_de="Ideale; ideal"
-              hint_en="noun"
-              hint_de="Nomen"
-              lvl="n3"
-              id="risō-ideal"
-              rem="appears in GENKI2 L23 vocab section"
-            >
-                <keep_apart_from id="suijun-level" />
-                <phrase
-                  ph="【理：り】【想：そう】の【夫：おっと】"
-                  rom="risō no otto"
-                  tr_en="the ideal husband"
-                  tr_de="der ideale Ehemann"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <phrase
-                  ph="【理：り】【想：そう】が【高：たか】い"
-                  rom="risō ga takai"
-                  tr_en="to have high standards"
-                  tr_de="hohe Ideale haben"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【理：り】【想：そう】と【現：げん】【実：じつ】のギャップに【悩：なや】んでいる。"
-                  rom="Risō to genjitsu no gyappu ni nayande iru."
-                  tr_en="I'm troubled by the gap between ideals and reality."
-                  tr_de="Die Lücke zwischen Ideal und Realität macht mir Sorgen."
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-            </word>
-            <word
-              w="【渋：じゅう】【滞：たい】"
-              rom="jūtai"
-              tr_en="traffic jam; congestion; stagnation"
-              tr_de="Verkehrsstau; Stockung; Stagnation"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="transportation"
-              id="jūtai-congestion"
-            >
-                <phrase
-                  ph="ひどい【渋：じゅう】【滞：たい】"
-                  rom="hidoi jūtai"
-                  tr_en="heavy traffic jam"
-                  tr_de="starker Verkehrsstau"
-                  lvl="n3"
-                  origin="jpod101 audio"
-                />
-                <sentence
-                  s="【渋：じゅう】【滞：たい】で【遅：おく】れてしまいました。"
-                  rom="Jūtai de okurete shimaimashita."
-                  tr_en="I ended up being late because of a traffic jam."
-                  tr_de="Ich war leider zu spät wegen einem Verkehrsstau."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
               w="【営：えい】【業：ぎょう】"
               rom="eigyō"
               tr_en="business operations; sales promotion"
@@ -125,34 +59,6 @@
                 />
             </word>
             <word
-              w="【哲：てつ】【学：がく】"
-              rom="tetsugaku"
-              tr_en="philosophy"
-              tr_de="Philosophie"
-              lvl="n3"
-              category="education"
-              id="tetsugaku-philosophy"
-            >
-                <phrase
-                  ph="【哲：てつ】【学：がく】【者：しゃ】"
-                  rom="tetsugakusha"
-                  tr_en="a philosopher"
-                  tr_de="ein Philosoph"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with jisho"
-                />
-                <sentence
-                  s="【大：だい】【学：がく】で【哲：てつ】【学：がく】を【専：せん】【攻：こう】しています。"
-                  rom="Daigaku de tetsugaku o senkō shite imasu."
-                  tr_en="I'm majoring in philosophy."
-                  tr_de="Ich studiere im Hauptfach Philosophie."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
               w="【交：こう】【換：かん】"
               rom="kōkan"
               tr_en="exchange; substitution; replacement"
@@ -180,7 +86,25 @@
               lvl="n3"
               category="sports, finances"
               id="shō-prize"
+              rem="jisho says 賞 is a suffix, but lib0 has lots of solo uses"
             >
+                <phrase
+                  ph="【特：とく】【別：べつ】【賞：しょう】"
+                  rom="tokubetsu shō"
+                  tr_en="special award (category)"
+                  tr_de="besondere Auszeichnung (Kategorie)"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT that 特別な賞 is less idiomatic when referring to the category"
+                />
+                <phrase
+                  ph="【新：しん】【人：じん】【賞：しょう】"
+                  rom="shin-jin-shō"
+                  tr_en="newcomer award"
+                  tr_de="Newcomer-Auszeichnung; Debutantenpreis"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
                 <sentence
                   s="【賞：しょう】が【取：と】れるといいですね。"
                   rom="Shō ga toreru to ii desu ne."
@@ -246,7 +170,24 @@
               id="ishiki-awareness"
             >
                 <keep_apart_from id="kanshin-concern" />
-                <!-- 意識が覚める (ishiki ga sameru) – "To regain consciousness" or "To become aware" (ChatGPT) -->
+                <keep_apart_from id="sameru-wakeup" />
+                <phrase
+                  ph="【意：い】【識：しき】を【失：うしな】う"
+                  rom="ishiki o ushinau"
+                  tr_en="to lose consciousness"
+                  tr_de="das Bewusstsein verlieren"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【意：い】【識：しき】を【取：と】り【戻：もど】す"
+                  rom="ishiki o tori-modosu"
+                  tr_en="to regain consciousness"
+                  tr_de="das Bewusstsein zurückerlangen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="also correct: 意識を回復する; jisho has n1 for tori-modosu, but n5 for toru, n3 for modosu"
+                />
                 <sentence
                   s="【人：にん】【間：げん】は【意：い】【識：しき】のある【生：い】き【物：もの】だ。"
                   rom="Ningen wa ishiki no aru ikimono da."
@@ -273,6 +214,24 @@
                   tr_de="Wasserversorgung"
                   lvl="n3"
                   origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【議：ぎ】【会：かい】"
+              rom="gikai"
+              tr_en="parliament; congress"
+              tr_de="Parlament; Kongress"
+              lvl="n3"
+              category="government"
+              id="gikai-parliament"
+            >
+                <sentence
+                  s="【議：ぎ】【会：かい】は【解：かい】【散：さん】した。"
+                  rom="Gikai wa kaisan shita."
+                  tr_en="Parliament has been dissolved."
+                  tr_de="Das Parlament ist aufgelöst worden."
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -431,6 +390,69 @@
                 />
             </word>
             <word
+              w="【株：かぶ】"
+              rom="kabu"
+              tr_en="stock; share"
+              tr_de="Aktien; Aktienanteil"
+              lvl="n3"
+              category="finances, business"
+              id="kabu-stock"
+            >
+                <!--
+                    急落・きゅうらく・sudden fall (nx)・株価が急落した (lib0)
+                    急騰・きゅうとう・sudden rise (nx)・株価が急騰した (self)
+                -->
+                <keep_apart_from id="kabushiki-share" />
+                <phrase
+                  ph="【会：かい】【社：しゃ】の【株：かぶ】"
+                  rom="kaisha no kabu"
+                  tr_en="company shares"
+                  tr_de="Firmenaktien"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【最：さい】【近：きん】【株：かぶ】の【値：ね】【段：だん】が【落：お】ちている。"
+                  rom="Saikin kabu no nedan ga ochite iru."
+                  tr_en="The prices of shares have been falling recently."
+                  tr_de="Die Aktienpreise sind in letzter Zeit gefallen."
+                  lvl="n3"
+                  origin="Oxford p.44"
+                  rem="a more specific word for stock prices is 株価・かぶか, which is nx"
+                />
+            </word>
+            <word
+              w="【議：ぎ】【長：ちょう】"
+              rom="gichō"
+              tr_en="speaker of an assembly; chairman"
+              tr_de="Sprecher einer Versammlung; Vorsitzende"
+              lvl="n3"
+              category="politics, people"
+              id="gichō-chairman"
+            >
+                <keep_apart_from id="gīn-memberofparlia" />
+                <keep_apart_from id="iin-committeemember" />
+                <phrase
+                  ph="【議：ぎ】【長：ちょう】に【選：えら】ばれる"
+                  rom="gichō ni erabareru"
+                  tr_en="to be elected chairman"
+                  tr_de="zum Vorsitzenden gewählt werden"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【彼：かれ】は【議：ぎ】【長：ちょう】に【選：えら】ばれた。"
+                  rom="Kare wa gichō ni erabareta."
+                  tr_en="He was elected chairman."
+                  tr_de="Er wurde zum Vorsitzenden gewählt."
+                  explanation_en="「選ばれる」is the passive form of「選ぶ」"
+                  explanation_de="「選ばれる」ist die passive Form von「選ぶ」"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【検：けん】【査：さ】"
               rom="kensa"
               tr_en="examination; scan; checking"
@@ -472,18 +494,6 @@
                   lvl="n3"
                   origin="lib0 modified"
                 />
-            </word>
-            <word
-              w="【影：えい】【響：きょう】"
-              rom="eikyō"
-              tr_en="influence; having an effect on"
-              tr_de="Auswirklung; Beeinflussung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="eikyō-influence"
-            >
-                <!-- phrase 影響を受ける (えいきょうをうける) - Be influenced (ChatGPT); compare to する -->
             </word>
             <word
               w="【承：しょう】【認：にん】"
@@ -556,24 +566,6 @@
                 />
             </word>
             <word
-              w="【乗：じょう】【客：きゃく】"
-              rom="jōkyaku"
-              tr_en="passenger"
-              tr_de="Passagier"
-              lvl="n3"
-              category="transportation"
-              id="jōkyaku-passenger"
-              rem="used to be n1 in jisho; they changed it to n3, which makes more sense"
-            >
-                <sentence
-                  s="【大：おお】【勢：ぜい】の【乗：じょう】【客：きゃく】がケガをした。"
-                  rom="Ōzei no jōkyaku ga kega o shita."
-                  tr_en="A lot of passengers got injured."
-                  tr_de="Viele Passagiere wurden verletzt."
-                  lvl="n3"
-                />
-            </word>
-            <word
               w="【混：こん】【乱：らん】"
               rom="konran"
               tr_en="disorder; chaos; confusion"
@@ -642,10 +634,12 @@
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
+              category="top-words"
               id="tanjō-birth"
             >
                 <keep_apart_from id="soshiki-struct" rem="ambiguity with 'formation'" />
                 <keep_apart_from id="kōsei-composition" rem="ambiguity with 'formation'" />
+                <keep_apart_from id="umare-birth" />
             </word>
             <word
               w="【損：そん】【害：がい】"
@@ -676,23 +670,6 @@
                 <keep_apart_from id="kimochi-sensation" />
                 <keep_apart_from id="kigen-temper" />
                 <keep_apart_from id="kimi-feeling" />
-            </word>
-            <word
-              w="【裏：うら】【口：ぐち】"
-              rom="uraguchi"
-              tr_en="backdoor"
-              tr_de="Hintertür"
-              lvl="n3"
-              category="home"
-              id="uraguchi-backdoor"
-              rem="jisho has n2, ura is n4, kuchi is n5"
-            >
-                <keep_apart_from id="to-door" />
-                <keep_apart_from id="doa-door" />
-                <keep_apart_from id="fusuma-slidingdoor" />
-                <keep_apart_from id="shōji-door" />
-                <keep_apart_from id="amado-stormshutter" />
-                <keep_apart_from id="tobira-door" />
             </word>
             <word
               w="【製：せい】【品：ひん】"
@@ -818,6 +795,7 @@
             >
                 <see id="maneku-invite" rem="verb" />
                 <keep_apart_from id="shōtai-invitation" />
+                <keep_apart_from id="ogoru-givetreat" />
             </word>
             <word
               w="【額：がく】"
@@ -851,20 +829,6 @@
                 <!-- implicit see-also link to kurai-dark -->
             </word>
             <word
-              w="【金：きん】【属：ぞく】"
-              rom="kinzoku"
-              tr_en="metal"
-              tr_de="Metall"
-              lvl="n3"
-              category="science"
-              id="kinzoku-metal"
-            >
-                <keep_apart_from id="kin-gold" />
-                <keep_apart_from id="gin-silver" />
-                <keep_apart_from id="tetsu-iron" />
-                <keep_apart_from id="dō-copper" />
-            </word>
-            <word
               w="【記：き】【入：にゅう】"
               rom="kinyū"
               tr_en="entry (in a form); filling in"
@@ -895,6 +859,59 @@
                     (ChatGPT)
                 -->
             </word>
+            <word
+              w="【金：きん】"
+              rom="kin"
+              tr_en="gold (metal); golden (colour)"
+              tr_de="Gold (Metall); goldig"
+              lvl="n3"
+              category="science"
+              id="kin-gold"
+            >
+                <keep_together id="gin-silver" />
+                <keep_apart_from id="kinzoku-metal" />
+            </word>
+            <word
+              w="【銀：ぎん】"
+              rom="gin"
+              tr_en="silver (metal); silver (colour)"
+              tr_de="Silber (Metall); silbrig"
+              lvl="n3"
+              category="science"
+              id="gin-silver"
+            >
+                <keep_together id="kin-gold" />
+                <keep_apart_from id="kinzoku-metal" />
+                <phrase
+                  ph="【銀：ぎん】のスプーン"
+                  rom="gin no supūn"
+                  tr_en="a silver spoon"
+                  tr_de="ein silberner Löffel"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【鉄：てつ】"
+              rom="tetsu"
+              tr_en="iron (Fe)"
+              tr_de="Eisen (Fe)"
+              lvl="n3"
+              category="science"
+              id="tetsu-iron"
+            >
+                <see id="dō-copper" rem="closely related" />
+                <keep_apart_from id="kinzoku-metal" />
+            </word>
+            <word
+              w="【酸：さん】【素：そ】"
+              rom="sanso"
+              tr_en="oxygen"
+              tr_de="Sauerstoff"
+              lvl="n3"
+              category="science"
+              id="sanso-oxygen"
+            />
             <word
               w="【支：し】【店：てん】"
               rom="shiten"

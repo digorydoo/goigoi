@@ -6,9 +6,8 @@ import android.os.Looper
 import android.util.Log
 import io.github.digorydoo.goigoi.BuildConfig
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Vocabulary
-import io.github.digorydoo.goigoi.stats.Stats
+import io.github.digorydoo.goigoi.core.db.Unyt
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -59,19 +58,18 @@ class UnytCtxMenu(val unyt: Unyt) {
 
     private fun doAction(action: Action, ctx: Context) {
         when (action) {
-            Action.FAKE_GOOD_STATS -> fakeStats(action, 5, 1, ctx)
-            Action.FAKE_AVG_STATS -> fakeStats(action, 4, 2, ctx)
-            Action.FAKE_POOR_STATS -> fakeStats(action, 3, 20, ctx)
+            Action.FAKE_GOOD_STATS -> fakeStats(action, 5, 1)
+            Action.FAKE_AVG_STATS -> fakeStats(action, 4, 2)
+            Action.FAKE_POOR_STATS -> fakeStats(action, 3, 20)
             Action.RESET_STATS -> resetStats(ctx)
-            Action.SET_SUPER_PROGRESSIVE_IDX -> setSuperProgressiveIdx(ctx)
+            Action.SET_SUPER_PROGRESSIVE_IDX -> setSuperProgressiveIdx()
         }
     }
 
-    private fun fakeStats(action: Action, numCorrect: Int, numWrong: Int, ctx: Context) {
-        val stats = Stats.getSingleton(ctx)
-
-        val vocab = Vocabulary.getSingleton(ctx)
-        vocab.loadUnytIfNecessary(unyt, ctx)
+    private fun fakeStats(action: Action, numCorrect: Int, numWrong: Int) {
+        val stats = SingletonHolder.stats
+        val vocab = SingletonHolder.vocab
+        vocab.loadUnytIfNecessary(unyt)
 
         CoroutineScope(Dispatchers.IO).apply {
             launch {
@@ -100,10 +98,9 @@ class UnytCtxMenu(val unyt: Unyt) {
 
         MyDlgBuilder.showTwoWayDlg(msg, okLabel, cancelLabel, ctx) { confirm ->
             if (confirm) {
-                val stats = Stats.getSingleton(ctx)
-
-                val vocab = Vocabulary.getSingleton(ctx)
-                vocab.loadUnytIfNecessary(unyt, ctx)
+                val stats = SingletonHolder.stats
+                val vocab = SingletonHolder.vocab
+                vocab.loadUnytIfNecessary(unyt)
 
                 CoroutineScope(Dispatchers.IO).apply {
                     launch {
@@ -120,8 +117,8 @@ class UnytCtxMenu(val unyt: Unyt) {
         }
     }
 
-    private fun setSuperProgressiveIdx(ctx: Context) {
-        val vocab = Vocabulary.getSingleton(ctx)
+    private fun setSuperProgressiveIdx() {
+        val vocab = SingletonHolder.vocab
         val filename = unyt.wordFilenames.getOrNull(0)
 
         if (filename == null) {
@@ -136,7 +133,7 @@ class UnytCtxMenu(val unyt: Unyt) {
             return
         }
 
-        val stats = Stats.getSingleton(ctx)
+        val stats = SingletonHolder.stats
         stats.setSuperProgressiveIdx(idx)
         Log.d(TAG, "superProgressiveIdx is now at $idx")
     }

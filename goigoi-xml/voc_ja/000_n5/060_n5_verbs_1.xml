@@ -416,6 +416,8 @@
               id="tsukau-use"
             >
                 <!-- the noun is 使い, n1, but we don't link, because it has a specialised meaning -->
+                <keep_apart_from id="riyō-use" />
+                <keep_apart_from id="mochiiru-use" />
                 <phrase
                   ph="【難：むずか】しい【言：こと】【葉：ば】を【使：つか】う"
                   rom="muzukashii kotoba o tsukau"
@@ -703,6 +705,7 @@
               lvl="n5"
               id="yaru-undertake"
             >
+                <keep_apart_from id="tamesu-attempt" />
                 <phrase
                   ph="やってみる"
                   rom="yattemiru"
@@ -1075,9 +1078,11 @@
               rom="abiru"
               tr_en="to bathe in (water); to be flooded with (light)"
               tr_de="duschen; baden; (mit Licht) fluten"
+              hint_en="v.i."
               lvl="n5"
               id="abiru-bathe"
             >
+                <!-- v.t. is abiseru (nx) -->
                 <phrase
                   ph="【雨：あめ】を【浴：あ】びる"
                   rom="ame o abiru"

@@ -16,13 +16,14 @@ import ch.digorydoo.kutils.cjk.japaneseDayOfWeekAbbrev
 import ch.digorydoo.kutils.utils.Moment
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.activity.welcome.BigRing.Companion.CHECKMARK_THRESHOLD
-import io.github.digorydoo.goigoi.db.Vocabulary
+import io.github.digorydoo.goigoi.core.db.Vocabulary
+import io.github.digorydoo.goigoi.core.stats.Stats
 import io.github.digorydoo.goigoi.drawable.AnimatedDrawable
 import io.github.digorydoo.goigoi.drawable.CheckmarkIcon
 import io.github.digorydoo.goigoi.drawable.RingIcon
 import io.github.digorydoo.goigoi.list.AbstrListItem
 import io.github.digorydoo.goigoi.listviewholder.AbstrViewHolder
-import io.github.digorydoo.goigoi.stats.Stats
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 import kotlin.math.min
 import kotlin.time.DurationUnit
 import kotlin.time.toDuration
@@ -65,8 +66,8 @@ class HeaderViewHolder private constructor(
         // drawables need to be recreated when coming back from sleep!
 
         val ctx = rootView.context
-        val vocab = Vocabulary.getSingleton(ctx)
-        val stats = Stats.getSingleton(ctx)
+        val vocab = SingletonHolder.vocab
+        val stats = SingletonHolder.stats
         val relCounts = Array(charts.size) { 0.0f }
         var m = Moment.now()
         var numPastNonZero = 0

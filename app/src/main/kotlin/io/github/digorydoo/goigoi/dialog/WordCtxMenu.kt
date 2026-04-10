@@ -6,10 +6,9 @@ import android.os.Looper
 import android.util.Log
 import io.github.digorydoo.goigoi.BuildConfig
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Vocabulary
-import io.github.digorydoo.goigoi.db.Word
-import io.github.digorydoo.goigoi.stats.Stats
+import io.github.digorydoo.goigoi.core.db.Unyt
+import io.github.digorydoo.goigoi.core.db.Word
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -37,9 +36,9 @@ class WordCtxMenu(private val unyt: Unyt, private val word: Word) {
     var callback: Callback? = null
 
     fun createItems(ctx: Context) {
-        val vocab = Vocabulary.getSingleton(ctx)
+        val vocab = SingletonHolder.vocab
         val myWordsUnyt = vocab.myWordsUnyt
-        vocab.loadUnytIfNecessary(myWordsUnyt, ctx)
+        vocab.loadUnytIfNecessary(myWordsUnyt)
 
         items.clear()
 
@@ -73,18 +72,18 @@ class WordCtxMenu(private val unyt: Unyt, private val word: Word) {
 
     fun doAction(action: Action, ctx: Context) {
         when (action) {
-            Action.ADD_TO_MY_WORDS -> addToMyWords(ctx)
-            Action.REMOVE_FROM_MY_WORDS -> removeFromMyWords(ctx)
+            Action.ADD_TO_MY_WORDS -> addToMyWords()
+            Action.REMOVE_FROM_MY_WORDS -> removeFromMyWords()
             Action.RESET_STATS -> resetStats(ctx)
-            Action.FAKE_GOOD_STATS -> fakeStats(action, 5, 1, ctx)
-            Action.FAKE_AVG_STATS -> fakeStats(action, 4, 2, ctx)
-            Action.FAKE_POOR_STATS -> fakeStats(action, 3, 20, ctx)
-            Action.SET_SUPER_PROGRESSIVE_IDX -> setSuperProgressiveIdx(ctx)
+            Action.FAKE_GOOD_STATS -> fakeStats(action, 5, 1)
+            Action.FAKE_AVG_STATS -> fakeStats(action, 4, 2)
+            Action.FAKE_POOR_STATS -> fakeStats(action, 3, 20)
+            Action.SET_SUPER_PROGRESSIVE_IDX -> setSuperProgressiveIdx()
         }
     }
 
-    private fun addToMyWords(ctx: Context) {
-        val vocab = Vocabulary.getSingleton(ctx)
+    private fun addToMyWords() {
+        val vocab = SingletonHolder.vocab
         val myWordsUnyt = vocab.myWordsUnyt
 
         myWordsUnyt.add(0, word) // put it in front
@@ -94,8 +93,8 @@ class WordCtxMenu(private val unyt: Unyt, private val word: Word) {
         }
     }
 
-    private fun removeFromMyWords(ctx: Context) {
-        val vocab = Vocabulary.getSingleton(ctx)
+    private fun removeFromMyWords() {
+        val vocab = SingletonHolder.vocab
         val myWordsUnyt = vocab.myWordsUnyt
 
         myWordsUnyt.removeAllWithSameId(word)
@@ -109,11 +108,10 @@ class WordCtxMenu(private val unyt: Unyt, private val word: Word) {
         val msg = ctx.getString(R.string.confirm_reset_word_progress_msg)
         val okLabel = ctx.getString(R.string.confirm_reset_word_progress_ok)
         val cancelLabel = ctx.getString(android.R.string.cancel)
+        val stats = SingletonHolder.stats
 
         MyDlgBuilder.showTwoWayDlg(msg, okLabel, cancelLabel, ctx) { confirm ->
             if (confirm) {
-                val stats = Stats.getSingleton(ctx)
-
                 CoroutineScope(Dispatchers.IO).apply {
                     launch {
                         // We're in another Thread.
@@ -129,8 +127,8 @@ class WordCtxMenu(private val unyt: Unyt, private val word: Word) {
         }
     }
 
-    private fun fakeStats(action: Action, numCorrect: Int, numWrong: Int, ctx: Context) {
-        val stats = Stats.getSingleton(ctx)
+    private fun fakeStats(action: Action, numCorrect: Int, numWrong: Int) {
+        val stats = SingletonHolder.stats
 
         CoroutineScope(Dispatchers.IO).apply {
             launch {
@@ -145,8 +143,8 @@ class WordCtxMenu(private val unyt: Unyt, private val word: Word) {
         }
     }
 
-    private fun setSuperProgressiveIdx(ctx: Context) {
-        val vocab = Vocabulary.getSingleton(ctx)
+    private fun setSuperProgressiveIdx() {
+        val vocab = SingletonHolder.vocab
         val idx = vocab.allWordFilenames.indexOf(word.filename)
 
         if (idx < 0) {
@@ -154,7 +152,7 @@ class WordCtxMenu(private val unyt: Unyt, private val word: Word) {
             return
         }
 
-        val stats = Stats.getSingleton(ctx)
+        val stats = SingletonHolder.stats
         stats.setSuperProgressiveIdx(idx)
         Log.d(TAG, "superProgressiveIdx is now at $idx")
     }

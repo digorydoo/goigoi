@@ -17,6 +17,100 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【雷：らい】【雨：う】"
+              rom="raiu"
+              tr_en="thunderstorm"
+              tr_de="Gewitter"
+              lvl="-"
+              id="raiu-thunderstorm"
+              category="weather"
+            >
+                <keep_apart_from id="arashi-storm" />
+            </word>
+            <word
+              w="【砂：さ】【塵：じん】【嵐：あらし】"
+              rom="sajin'arashi"
+              tr_en="sand storm; dust storm"
+              tr_de="Sandsturm"
+              lvl="-"
+              category="weather"
+              id="sajinarashi-duststorm"
+            >
+                <keep_apart_from id="arashi-storm" />
+            </word>
+            <word
+              w="【竜：たつ】【巻：まき】"
+              rom="tatsumaki"
+              tr_en="tornado"
+              tr_de="Tornado"
+              lvl="-"
+              category="weather"
+              id="tatsumaki-tornado"
+            >
+                <keep_apart_from id="taifū-typhoon" />
+            </word>
+            <word
+              w="【収：しゅう】【納：のう】【庫：こ】"
+              rom="shūnōko"
+              tr_en="toolshed; closet"
+              tr_de="Werkzeugschuppen"
+              lvl="-"
+              category="garden, hobby"
+              id="shūnōko-toolshed"
+            >
+                <keep_apart_from id="koya-shed" />
+            </word>
+            <word
+              w="【植：しょく】【物：ぶつ】【園：えん】"
+              rom="shokubutsuen"
+              tr_en="botanical garden"
+              tr_de="botanischer Garten"
+              lvl="-"
+              category="garden"
+              id="shokubutsuen-botanicalgarden"
+            >
+                <keep_apart_from id="niwa-garden" />
+            </word>
+            <word
+              w="【動：どう】【画：が】"
+              rom="dōga"
+              tr_en="video; animation"
+              tr_de="Video; Animation"
+              lvl="-"
+              id="dōga-video"
+              category="entertainment"
+            >
+                <keep_apart_from id="bideo-video" />
+            </word>
+            <word
+              w="【歌：か】【曲：きょく】"
+              rom="kakyoku"
+              tr_en="melody; tune"
+              tr_de="Melodie; Lied"
+              lvl="-"
+              id="kakyoku-melody"
+              category="entertainment"
+            >
+                <keep_apart_from id="merodī-melody" />
+                <keep_apart_from id="senritsu-tune" />
+            </word>
+            <word
+              w="【物：もの】の【怪：け】"
+              rom="mononoke"
+              tr_en="vengeful spirit"
+              tr_de="rachsüchtiger Geist"
+              hint_en="in Japanese classical literature"
+              hint_de="in der klassischen japanischen Literatur"
+              lvl="-"
+              category="culture, manga-anime"
+              id="mononoke-vengefulspirit"
+            >
+                <keep_apart_from id="obake-ghost" />
+                <keep_apart_from id="akuma-devil" />
+                <keep_apart_from id="oni-demon" />
+                <keep_apart_from id="yūrei-ghost" />
+            </word>
+            <word
               w="お【正：しょう】【月：がつ】"
               rom="o-shōgatsu"
               tr_en="new year"
@@ -28,44 +122,6 @@
               id="oshōgatsu-newyear"
               rem="appears in GENKI1 p.339; jisho has nx for both shōgatsu and o-shōgatsu"
             />
-            <word
-              w="【大：おお】【晦：みそ】【日：か】"
-              rom="ōmisoka"
-              tr_en="New Year's Eve"
-              tr_de="Silvester"
-              hint_en="December 31st"
-              hint_de="31. Dezember"
-              lvl="-"
-              category="culture, holidays"
-              id="ōmisoka-newyearseve"
-            >
-                <sentence
-                  s="【十：じゅう】【二：に】【月：がつ】【三：さん】【十：じゅう】【一：いち】【日：にち】は、【大：おお】【晦：みそ】【日：か】だ。"
-                  rom="Jū-ni-gatsu san-jū-ichi-nichi wa, ōmisoka da."
-                  tr_en="December the 31st is New Year's Eve."
-                  tr_de="Am einunddreissigsten Dezember ist Silvester."
-                  lvl="-"
-                  origin="jpod101 audio"
-                />
-            </word>
-            <word
-              w="【元：がん】【日：じつ】"
-              rom="ganjitsu"
-              tr_en="New Year's Day"
-              tr_de="Neujahr"
-              lvl="-"
-              category="culture, holidays"
-              id="ganjitsu-newyearsday"
-            >
-                <sentence
-                  s="【元：がん】【日：じつ】に【神：じん】【社：じゃ】へ【参：さん】【拝：ぱい】する【日：に】【本：ほん】【人：じん】は【多：おお】い。"
-                  rom="Ganjitsu ni jinja e sanpai suru Nihon-jin wa ōi."
-                  tr_en="On New Year's Day, many Japanese go to the shrine to worship."
-                  tr_de="An Neujahr machen viele Japaner einen Schreinbesuch."
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
             <word
               w="お【節：せち】"
               rom="o-sechi"
@@ -83,45 +139,6 @@
               lvl="-"
               category="culture, top-words"
               id="hatsumōde-firstshrinevisit"
-            />
-            <word
-              w="【年：とし】【越：こ】しそば"
-              rom="toshikoshi soba"
-              tr_en="noodles eaten at New Year's Eve"
-              lvl="-"
-              category="culture, food"
-              id="toshikoshisoba-noodles"
-              HIDDEN="true"
-            />
-            <word
-              w="【鏡：かがみ】【餅：もち】"
-              rom="kagamimochi"
-              tr_en="traditional Japanese New Year decoration"
-              hint_en="lit. mirror rice cacke"
-              lvl="-"
-              category="culture"
-              id="kagamimochi-decoration"
-              HIDDEN="true"
-            />
-            <word
-              w="【門：かど】【松：まつ】"
-              rom="kadomatsu"
-              tr_en="traditional Japanese New Year decoration"
-              hint_en="lit. gate pine"
-              lvl="-"
-              category="culture"
-              id="kadomatsu-decoration"
-              HIDDEN="true"
-            />
-            <word
-              w="お【年：とし】【玉：だま】"
-              rom="o-toshidama"
-              tr_en="New Year's gift"
-              hint_en="usu. money given to a child by relatives and visitors"
-              lvl="-"
-              category="culture"
-              id="otoshidama-newyearsgift"
-              HIDDEN="true"
             />
             <word
               w="【神：しん】【道：とう】"
@@ -177,17 +194,6 @@
               id="omikuji-fortuneslip"
             />
             <word
-              w="【神：み】【輿：こし】"
-              rom="mikoshi"
-              tr_en="portable shrine"
-              hint_en="carried in festivals"
-              hint_de="getragen an Festivals"
-              lvl="-"
-              category="culture"
-              id="mikoshi-portableshrine"
-              HIDDEN="true"
-            />
-            <word
               w="てるてる【坊：ぼう】【主：ず】"
               rom="teruteru bōzu"
               tr_en="small traditional hand-made doll"
@@ -197,54 +203,6 @@
               lvl="-"
               category="culture, top-words"
               id="teruterubōzu-handmadedoll"
-            />
-            <word
-              w="【物：もの】の【怪：け】"
-              rom="mononoke"
-              tr_en="vengeful spirit"
-              tr_de="rachsüchtiger Geist"
-              hint_en="in Japanese classical literature"
-              hint_de="in der klassischen japanischen Literatur"
-              lvl="-"
-              category="culture, manga-anime"
-              id="mononoke-vengefulspirit"
-            >
-                <keep_apart_from id="obake-ghost" />
-                <keep_apart_from id="akuma-devil" />
-                <keep_apart_from id="oni-demon" />
-                <keep_apart_from id="yūrei-ghost" />
-            </word>
-            <word
-              w="【四：し】【手：で】"
-              rom="shide"
-              tr_en="zigzag-shaped paper strip"
-              tr_de="Zickzack-förmiger Papierstreifen"
-              hint_en="used to adorn Shintō-related objects"
-              hint_de="um Schinto-bezogene Objekte zu schmücken"
-              lvl="-"
-              category="culture, diy"
-              id="shide-zigzag"
-              HIDDEN="true"
-            />
-            <word
-              w="【神：み】【子：こ】"
-              rom="miko"
-              tr_en="shrine maiden"
-              hint_en="young girl who assists priests at shrines"
-              lvl="-"
-              category="culture, people"
-              id="miko-shrinemaiden"
-              HIDDEN="true"
-            />
-            <word
-              w="【御：お】【札：ふだ】"
-              rom="ofuda"
-              tr_en="household amulet or talisman"
-              hint_en="issued by a Shinto shrine"
-              lvl="-"
-              category="culture"
-              id="ofuda-householdamulet"
-              HIDDEN="true"
             />
             <word
               w="【仏：ぶっ】【教：きょう】"
@@ -276,85 +234,6 @@
               id="sadō-teaceremony"
             />
             <word
-              w="【船：せん】【長：ちょう】"
-              rom="senchō"
-              tr_en="a ship's captain"
-              tr_de="Schiffskapitän"
-              lvl="-"
-              category="occupations, travelling"
-              id="senchō-shipscaptain"
-            >
-                <keep_apart_from id="kyaputen-captain" />
-                <keep_apart_from id="kichō-pilot" />
-                <sentence
-                  s="【突：とつ】【然：ぜん】【船：せん】【長：ちょう】は【船：ふね】を【離：はな】れた。"
-                  rom="Totsuzen senchō wa fune o hanareta."
-                  tr_en="The ship's captain suddenly left the ship."
-                  tr_de="Plötzlich verliess der Schiffskapitän das Schiff."
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
-            <word
-              w="【侘：わ】び【寂：さ】び"
-              rom="wabi-sabi"
-              tr_en="aesthetic sense in Japanese art"
-              tr_de="ästhetischer Sinn in der japanischen Kunst"
-              hint_en="centred on transience and imperfection"
-              hint_de="der die Vergänglichkeit und Unvollkommenheit betont"
-              lvl="-"
-              category="culture, arts"
-              id="wabisabi-aesthetic"
-              HIDDEN="true"
-            />
-            <word
-              w="【絵：え】【巻：まき】"
-              rom="emaki"
-              tr_en="picture scroll"
-              hint_en="ancient handscroll that combine both text and image"
-              lvl="-"
-              category="culture, arts"
-              id="emaki-picturescroll"
-              HIDDEN="true"
-            />
-            <word
-              w="【曼：まん】【荼：だ】【羅：ら】"
-              rom="mandara"
-              tr_en="geometric configuration of symbols"
-              hint_en="used by Buddhists as an aid to meditation"
-              lvl="-"
-              id="mandara-symbols"
-              category="culture, arts"
-              HIDDEN="true"
-            />
-            <word
-              w="【涅：ね】【槃：はん】"
-              rom="nehan"
-              tr_en="Nirvana; supreme englightenment"
-              lvl="-"
-              category="culture"
-              id="nehan-nirvana"
-              HIDDEN="true"
-            />
-            <word
-              w="【瞑：めい】【想：そう】"
-              rom="meisō"
-              tr_en="meditation; contemplation"
-              lvl="-"
-              category="culture"
-              id="meisō-meditation"
-              HIDDEN="true"
-            />
-            <word
-              w="【転：てん】【生：せい】"
-              rom="tensei"
-              tr_en="reincarnation"
-              lvl="-"
-              category="culture"
-              id="tensei-reincarnation"
-              HIDDEN="true"
-            />
-            <word
               w="【劇：げき】【画：が】"
               rom="gekiga"
               tr_en="comic strip with dramatic story"
@@ -377,15 +256,6 @@
               id="mahōshōjo-magicalgirl"
             />
             <word
-              w="【筋：すじ】【書：が】き"
-              rom="sujigaki"
-              tr_en="synopsis; outline; plot"
-              lvl="-"
-              category="literature"
-              id="sujigaki-plot"
-              HIDDEN="true"
-            />
-            <word
               w="【宇：う】【宙：ちゅう】【旅：りょ】【行：こう】"
               rom="uchū ryokō"
               tr_en="space travel"
@@ -403,32 +273,6 @@
               category="manga-anime, games"
               id="jikanryokō-timetravel"
             />
-            <word
-              w="【魔：ま】【法：ほう】"
-              rom="mahō"
-              tr_en="magic; witchcraft; sorcery"
-              tr_de="Magie; Hexenkunst; Zauberei"
-              lvl="-"
-              category="manga-anime, games"
-              id="mahō-magic"
-            >
-                <phrase
-                  ph="【人：ひと】に【魔：ま】【法：ほう】をかける"
-                  rom="hito ni mahō o kakeru"
-                  tr_en="to cast a spell upon a person"
-                  tr_de="einen Menschen verhexen"
-                  lvl="-"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【私：わたし】に【魔：ま】【法：ほう】が【使：つか】えたら【良：よ】いのに。"
-                  rom="Watashi ni mahō ga tsukaetara yoi no ni."
-                  tr_en="I wish I could use magic."
-                  tr_de="Ich wünschte, ich könnte Magie benutzen."
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
             <word
               w="【陰：いん】【謀：ぼう】"
               rom="inbō"
@@ -457,16 +301,6 @@
               lvl="-"
               category="manga-anime, games"
               id="meidokissa-maidcafé"
-            />
-            <word
-              w="【吹：ふ】き【出：だ】し"
-              rom="fukidashi"
-              tr_en="speech balloon"
-              hint_en="in a comic strip"
-              lvl="-"
-              category="manga-anime"
-              id="fukidashi-speechballoon"
-              HIDDEN="true"
             />
             <word
               w="【悪：あく】【人：にん】"
@@ -498,103 +332,6 @@
               id="majo-witch"
             />
             <word
-              w="【竜：りゅう】"
-              rom="ryū"
-              tr_en="dragon"
-              tr_de="Drache"
-              hint_en="esp. a Chinese dragon"
-              hint_de="typ. chinesischer Drache"
-              lvl="-"
-              category="games, culture"
-              id="ryū-dragon"
-            >
-                <see id="tatsu-zodiac" rem="closely related" />
-                <sentence
-                  s="【竜：りゅう】は【巨：きょ】【大：だい】なトカゲのように【見：み】えます。"
-                  rom="Ryū wa kyodai na tokage no yō ni miemasu."
-                  tr_en="A dragon looks like a giant lizard."
-                  tr_de="Ein Drache schaut wie eine riesige Eidechse aus."
-                  lvl="-"
-                  origin="self"
-                />
-            </word>
-            <word
-              w="【怪：かい】【物：ぶつ】"
-              rom="kaibutsu"
-              tr_en="monster"
-              tr_de="Monster"
-              lvl="-"
-              category="manga-anime, games"
-              id="kaibutsu-monster"
-            >
-                <sentence
-                  s="【彼：かれ】が【怪：かい】【物：ぶつ】を【見：み】たと【言：い】う【事：こと】は【本：ほん】【当：とう】だ。"
-                  rom="Kare ga kaibutsu o mita to iu koto wa hontō da."
-                  tr_en="It's true that he saw the monster."
-                  tr_de="Es ist wahr, dass er ein Monster gesehen hat."
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
-            <word
-              w="【人：じん】【狼：ろう】"
-              rom="jinrō"
-              tr_en="werewolf"
-              tr_de="Werwolf"
-              lvl="-"
-              category="manga-anime, games"
-              id="jinrō-werewolf"
-            >
-                <sentence
-                  s="【人：じん】【狼：ろう】は【夜：よる】に【狼：おおかみ】になる【男：おとこ】です。"
-                  rom="Jinrō wa yoru ni ōkami ni naru otoko desu."
-                  tr_en="A werewolf is a man who becomes a wolf at night."
-                  tr_de="Ein Werwolf ist ein Mann, der nachts zum Wolf wird."
-                  lvl="-"
-                  origin="self"
-                />
-            </word>
-            <word
-              w="【人：にん】【魚：ぎょ】"
-              rom="ningyo"
-              tr_en="mermaid"
-              tr_de="Meerjungfrau"
-              lvl="-"
-              category="manga-anime, games"
-              id="ningyo-mermaid"
-              rem="appears in GENKI2 p.286 kanji section"
-            >
-                <sentence
-                  s="【伝：でん】【説：せつ】では、【彼：かの】【女：じょ】は【人：にん】【魚：ぎょ】だったと【言：い】われる。"
-                  rom="Densetsu de wa, kanojo wa ningyo datta to iwareru."
-                  tr_en="The legend says that she was a mermaid."
-                  tr_de="Die Legende sagt, dass sie eine Meerjungfrau war."
-                  explanation_en="「言われる」is the passive form of「言う」"
-                  explanation_de="「言われる」ist die passive Form von「言う」"
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
-            <word
-              w="【妖：よう】【精：せい】"
-              rom="yōsei"
-              tr_en="fairy; elf"
-              tr_de="Fee; Elfe"
-              lvl="-"
-              category="manga-anime, games"
-              id="yōsei-fairy"
-            >
-                <sentence
-                  s="【妖：よう】【精：せい】は【神：しん】【話：わ】や【伝：でん】【説：せつ】に【登：とう】【場：じょう】する【生：い】き【物：もの】です。"
-                  rom="Yōsei wa shinwa ya densetsu ni tōjō suru ikimono desu."
-                  tr_en="Fairies are creatures that appear in myths and legends."
-                  tr_de="Feen sind Lebewesen, die in Mythen und Legenden vorkommen."
-                  lvl="-"
-                  origin="self"
-                  href="https://hinative.com/questions/22250982"
-                />
-            </word>
-            <word
               w="【体：たい】【育：いく】【館：かん】"
               rom="taiikukan"
               tr_en="gym; sports hall"
@@ -604,28 +341,7 @@
               id="taiikukan-gym"
             >
                 <keep_apart_from id="undōjō-sportsground" />
-                <keep_apart_from id="kyōgijō-arena" />
-            </word>
-            <word
-              w="【彼：かれ】【氏：し】"
-              rom="kareshi"
-              tr_en="boyfriend"
-              tr_de="Freund (Beziehung)"
-              lvl="-"
-              category="relationships"
-              id="kareshi-boyfriend"
-            >
-                <see id="kare-he" rem="closely related" />
-                <keep_apart_from id="kare-he" />
-                <sentence
-                  s="【友：とも】【達：だち】の【彼：かれ】【氏：し】は【優：やさ】しそう！"
-                  rom="Tomodachi no kareshi wa yasashisō!"
-                  tr_en="My friend's boyfriend looks kind!"
-                  tr_de="Der Freund meiner Freundin schaut nett aus!"
-                  lvl="-"
-                  origin="Miku"
-                  href="https://youtu.be/l7xZ1TDZ7MU"
-                />
+                <keep_apart_from id="kyōgi-contest" rem="ambiguity in phrases" />
             </word>
             <word
               w="【天：てん】【使：し】"
@@ -715,105 +431,6 @@
               id="saikoro-dice"
             />
             <word
-              w="【輪：りん】【郭：かく】"
-              rom="rinkaku"
-              tr_en="silhouette; outline; sketch"
-              lvl="-"
-              category="arts"
-              id="rinkaku-outline"
-              HIDDEN="true"
-            >
-                <keep_apart_from id="sukecchi-sketch" />
-            </word>
-            <word
-              w="【風：ふう】【刺：し】【画：が】"
-              rom="fūshiga"
-              tr_en="caricature; single-panel cartoon"
-              lvl="-"
-              id="fūshiga-singlepanel"
-              HIDDEN="true"
-            >
-                <keep_apart_from id="deforume-caricature" />
-            </word>
-            <word
-              w="【水：すい】【彩：さい】【画：が】"
-              rom="suisaiga"
-              tr_en="watercolour painting"
-              tr_de="Aquarellmalerei"
-              lvl="-"
-              category="arts"
-              id="suisaiga-watercolourpainting"
-              HIDDEN="true"
-            />
-            <word
-              w="【調：ちょう】【色：しょく】【板：ばん】"
-              rom="chōshokuban"
-              tr_en="palette"
-              tr_de="Palette"
-              lvl="-"
-              category="arts"
-              id="chōshokuban-palette"
-              HIDDEN="true"
-            />
-            <word
-              w="【木：もく】【炭：たん】"
-              rom="mokutan"
-              tr_en="charcoal"
-              tr_de="Zeichenkohle"
-              lvl="-"
-              category="arts"
-              id="mokutan-charcoal"
-              HIDDEN="true"
-            />
-            <word
-              w="【画：が】【布：ふ】"
-              rom="gafu"
-              tr_en="canvas"
-              hint_en="esp. for oil paintings"
-              lvl="-"
-              category="arts"
-              id="gafu-canvas"
-              HIDDEN="true"
-            />
-            <word
-              w="【油：ゆ】【性：せい】ペンキ"
-              rom="yusei penki"
-              tr_en="oil paint"
-              lvl="-"
-              category="arts"
-              id="yuseipenki-oilpaint"
-              HIDDEN="true"
-            />
-            <word
-              w="アクリル【絵：え】の【具：ぐ】"
-              rom="akuriru enogu"
-              tr_en="acrylic paint"
-              tr_de="Acrylfarbe"
-              lvl="-"
-              category="arts"
-              id="akuriruenogu-acrylicpaint"
-              HIDDEN="true"
-            />
-            <word
-              w="【吸：きゅう】【血：けつ】【鬼：き】"
-              rom="kyūketsuki"
-              tr_en="vampire"
-              lvl="-"
-              category="manga-anime, games"
-              id="kyūketsuki-vampire"
-              HIDDEN="true"
-            />
-            <word
-              w="【婚：こん】【約：やく】【者：しゃ】"
-              rom="konyakusha"
-              tr_en="fiancé; fiancée"
-              tr_de="Verlobter; Verlobte"
-              lvl="-"
-              category="relationships"
-              id="konyakusha-fiancé"
-              HIDDEN="true"
-            />
-            <word
               w="【年：とし】【上：うえ】"
               rom="toshiue"
               tr_en="older; senior"
@@ -834,25 +451,6 @@
               category="quarrel, relationships"
               id="fushin-distrust"
             />
-            <word
-              w="【一：ひと】【人：り】っ【子：こ】"
-              rom="hitorikko"
-              tr_en="the only child"
-              tr_de="Einzelkind"
-              lvl="-"
-              category="people"
-              id="hitorikko-onlychild"
-            >
-                <sentence
-                  s="【私：わたし】は【一：ひと】【人：り】っ【子：こ】です。"
-                  rom="Watashi wa hitorikko desu."
-                  tr_en="I am the only child."
-                  tr_de="Ich bin ein Einzelkind."
-                  lvl="-"
-                  origin="Yuko Sensei"
-                  href="https://youtu.be/Ok7z-wYOosY?t=409"
-                />
-            </word>
             <word
               w="【若：わか】【者：もの】"
               rom="wakamono"
@@ -893,131 +491,43 @@
               id="otaku-nerd"
             />
             <word
-              w="【親：おや】【父：じ】"
-              rom="oyaji"
-              tr_en="one's father; old man"
+              w="おさげ"
+              rom="osage"
+              tr_en="braids"
+              tr_de="Zopf"
               lvl="-"
-              category="family"
-              id="oyaji-father"
-              HIDDEN="true"
-              rem="what's the difference to n5 chichi and n3 chichioya?"
+              category="fashion"
+              id="osage-braids"
             />
             <word
-              w="【孫：まご】【娘：むすめ】"
-              rom="magomusume"
-              tr_en="(my) granddaughter"
+              w="【仕：し】【事：ごと】【場：ば】"
+              rom="shigotoba"
+              tr_en="working area; place where one works"
+              tr_de="Arbeitsort; Ort, wo man arbeitet"
               lvl="-"
-              category="family"
-              id="magomusume-granddaughter"
-              HIDDEN="true"
+              category="employment"
+              id="shigotoba-workingarea"
             />
             <word
-              w="【孫：まご】【息：むす】【子：こ】"
-              rom="magomusuko"
-              tr_en="(my) grandson"
+              w="【履：り】【歴：れき】【書：しょ】"
+              rom="rirekisho"
+              tr_en="resumé; curriculum vitæ"
+              tr_de="Lebenslauf; Curriculum Vitae"
+              hint_en="job application"
+              hint_de="Stellenbewerbung"
               lvl="-"
-              category="family"
-              id="magomusuko-grandson"
-              HIDDEN="true"
+              category="employment"
+              id="rirekisho-cv"
+              rem="appears in GENKI2 p.48 vocab section"
             />
             <word
-              w="お【息：むす】【子：こ】さん"
-              rom="o-musukosan"
-              tr_en="son"
-              hint_en="honorific"
+              w="【桜：さくら】んぼ"
+              rom="sakuranbo"
+              tr_en="cherry fruit"
+              tr_de="Kirsche"
               lvl="-"
-              category="family"
-              id="omusukosan-son"
-              HIDDEN="true"
-            />
-            <word
-              w="お【娘：むすめ】さん"
-              rom="o-musumesan"
-              tr_en="daughter"
-              hint_en="honorific"
-              lvl="-"
-              category="family"
-              id="omusumesan-daughter"
-              HIDDEN="true"
-            />
-            <word
-              w="【弟：おとうと】さん"
-              rom="otōto-san"
-              tr_en="younger brother"
-              hint_en="honorific"
-              lvl="-"
-              category="family"
-              id="otōtosan-youngbrother"
-              HIDDEN="true"
-            />
-            <word
-              w="【妹：いもうと】さん"
-              rom="imōtosan"
-              tr_en="younger sister"
-              hint_en="honorific"
-              lvl="-"
-              category="family"
-              id="imōtosan-youngsister"
-              HIDDEN="true"
-            />
-            <word
-              w="ご【家：か】【族：ぞく】"
-              rom="go-kazoku"
-              tr_en="family"
-              hint_en="honorific"
-              lvl="-"
-              category="family"
-              id="gokazoku-family"
-              HIDDEN="true"
-            />
-            <word
-              w="お【子：こ】さん"
-              rom="o-kosan"
-              tr_en="(your) child"
-              hint_en="honorific"
-              lvl="-"
-              category="family"
-              id="okosan-child"
-              HIDDEN="true"
-            />
-            <word
-              w="お【孫：まご】さん"
-              rom="o-magosan"
-              tr_en="(your) grandchild"
-              hint_en="honorific"
-              lvl="-"
-              category="family"
-              id="omagosan-grandchild"
-              HIDDEN="true"
-            />
-            <word
-              w="【義：ぎ】【理：り】の【父：ちち】"
-              rom="giri no chichi"
-              tr_en="father-in-law; stepfather"
-              tr_de="Stiefvater"
-              lvl="-"
-              category="family"
-              id="girinochichi-stepfather"
-              HIDDEN="true"
-            />
-            <word
-              w="【義：ぎ】【理：り】の【母：はは】"
-              rom="giri no haha"
-              tr_en="mother-in-law; stepmother"
-              tr_de="Stiefmutter"
-              lvl="-"
-              category="family"
-              id="girinohaha-stepmother"
-              HIDDEN="true"
-            />
-            <word
-              w="【家：うち】【中：じゅう】"
-              rom="uchijū"
-              tr_en="all members of the family"
-              lvl="-"
-              category="family"
-              id="uchijū-familymembers"
-              HIDDEN="true"
+              category="plant, culture"
+              id="sakuranbo-cherryfruit"
             />
         </section>
     </unit>

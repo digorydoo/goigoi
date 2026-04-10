@@ -19,6 +19,49 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【機：き】【嫌：げん】"
+              rom="kigen"
+              tr_en="humour; temper; well-being"
+              tr_de="Stimmung; Temperament; Wohlbefinden"
+              lvl="n3"
+              category="mood, happiness"
+              id="kigen-temper"
+            >
+                <keep_apart_from id="ki-mood" />
+                <keep_apart_from id="kibun-feeling" />
+                <keep_apart_from id="kanjō-emotion" />
+                <keep_apart_from id="kanji-feeling" />
+                <keep_apart_from id="kimochi-sensation" />
+                <keep_apart_from id="kimi-feeling" />
+                <keep_apart_from id="kankaku-sense" />
+                <phrase
+                  ph="ご【機：き】【嫌：げん】よう"
+                  rom="go-kigen yō"
+                  tr_en="farewell"
+                  tr_de="auf Wiedersehen"
+                  explanation_en="Polite and somewhat old-fashioned greeting that comes from: 「ご機嫌がようございますね」"
+                  explanation_de="Höflicher und etwas altmodischer Gruss, der von 「ご機嫌がようございますね」 kommt."
+                  lvl="n3"
+                  rem="From Bombom TV; ChatGPT says it's a very polite and somewhat old-fashioned greeting."
+                />
+                <sentence
+                  s="ご【機：き】【嫌：げん】いかがですか。"
+                  rom="Go-kigen ikaga desu ka?"
+                  tr_en="How are you feeling? (How's your health?)"
+                  tr_de="Wie fühlen Sie sich? (Wie geht es Ihrer Gesundheit?)"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ハルトさんは【朝：あさ】から【機：き】【嫌：げん】が【悪：わる】いみたい。"
+                  rom="Haruto-san wa asa kara kigen ga warui mitai."
+                  tr_en="Haruto seems to be in a bad mood since morning."
+                  tr_de="Haruto scheint seit dem Morgen in schlechter Stimmung zu sein."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
               w="【商：しょう】【売：ばい】"
               rom="shōbai"
               tr_en="trade; business; occupation"
@@ -52,120 +95,6 @@
                   rom="Yamada-san wa shōbai ga umai hito da ne."
                   tr_en="Mr Yamada is a shrewd businessman, isn't he?"
                   tr_de="Herr Yamada ist ein gewiefter Geschäftsmann, nicht wahr?"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-            </word>
-            <word
-              w="【企：き】【業：ぎょう】"
-              rom="kigyō"
-              tr_en="enterprise; company; corporation"
-              tr_de="Unternehmen; Firma"
-              lvl="n3"
-              category="business"
-              id="kigyō-enterprise"
-            >
-                <keep_apart_from id="kaisha-firm" />
-                <phrase
-                  ph="【国：こく】【際：さい】【企：き】【業：ぎょう】"
-                  rom="kokusai kigyō"
-                  tr_en="an international enterprise"
-                  tr_de="ein internationales Unternehmen"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <phrase
-                  ph="【大：だい】【企：き】【業：ぎょう】"
-                  rom="daikigyō"
-                  tr_en="a big enterprise"
-                  tr_de="ein Grossunternehmen"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="reading verified with jisho; jisho has nx"
-                />
-                <sentence
-                  s="【兄：あに】は【大：だい】【企：き】【業：ぎょう】に【就：しゅう】【職：しょく】した。"
-                  rom="Ani wa daikigyō ni shūshoku shita."
-                  tr_en="My elder brother got a position in a big enterprise."
-                  tr_de="Mein älterer Bruder hat eine Stelle in einem Grossunternehmen bekommen."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
-              w="【銅：どう】【貨：か】"
-              rom="dōka"
-              tr_en="copper coin"
-              tr_de="Kupfermünze"
-              lvl="n3"
-              category="finances, culture"
-              id="dōka-coppercoin"
-            >
-                <!--
-                    Acc. to ChatGPT, the current 10-yen coin is made of copper, but usually small change is
-                    expressed with 小銭・こぜに (n1)
-                -->
-                <keep_apart_from id="kozeni-coins" />
-                <phrase
-                  ph="【昔：むかし】の【銅：どう】【貨：か】を【集：あつ】める"
-                  rom="mukashi no dōka o atsumeru"
-                  tr_en="to collect old copper coins"
-                  tr_de="alte Kupfermünzen sammeln"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="その【道：どう】【具：ぐ】、【銅：どう】【貨：か】【一：いち】【枚：まい】の【価：か】【値：ち】もないぞ。"
-                  rom="Sono dōgu, dōka ichi-mai no kachi mo nai zo."
-                  tr_en="This tool isn't worth a penny."
-                  tr_de="Dieses Werkzeug ist keinen Rappen wert."
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
-              w="【係：かかり】"
-              rom="kakari"
-              tr_en="in charge; duty"
-              tr_de="verantwortlich; Dienst"
-              lvl="n3"
-              category="government, business"
-              id="kakari-incharge"
-              rem="appears in GENKI2 L20 as kakari no mono"
-            >
-                <keep_apart_from id="kinmu-duty" />
-                <keep_apart_from id="sekinin-duty" />
-                <keep_apart_from id="yaku-role" />
-                <keep_apart_from id="gimu-duty" />
-                <keep_apart_from id="yakume-role" />
-                <keep_apart_from id="ninmu-mission" />
-                <keep_apart_from id="tantō-incharge" />
-                <keep_apart_from id="azukaru-keepincustody" />
-                <phrase
-                  ph="【係：かかり】の【者：もの】"
-                  rom="kakari no mono"
-                  tr_en="the person in charge"
-                  tr_de="die verantwortliche Person"
-                  lvl="n3"
-                  origin="GENKI2 p.182"
-                />
-                <phrase
-                  ph="【受：うけ】【付：つけ】【係：がかり】"
-                  rom="uketsuke-gakari"
-                  tr_en="receptionist"
-                  tr_de="Empfangsmitarbeiter; Rezeptionist(in)"
-                  hasDifferentForm="true"
-                  lvl="n3"
-                  origin="ChatGPT"
-                  rem="furigana verified with jisho; jisho has nx, but n4 for uketsuke, n3 for kakari"
-                />
-                <sentence
-                  s="【今日：きょう】は【掃：そう】【除：じ】【係：がかり】です。"
-                  rom="Kyō wa sōji-gakari desu."
-                  tr_en="Today, I'm on cleaning duty."
-                  tr_de="Heute habe ich Reinigungsdienst."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="ChatGPT"
                 />
@@ -390,22 +319,17 @@
                 />
             </word>
             <word
-              w="【生：せい】【命：めい】"
-              rom="seimei"
-              tr_en="life; existence; career"
-              tr_de="Leben; Existenz; Karriere"
+              w="【命：いのち】"
+              rom="inochi"
+              tr_en="life"
+              tr_de="Leben"
               lvl="n3"
               category="life"
-              id="seimei-life"
+              id="inochi-life"
             >
-                <phrase
-                  ph="【生：せい】【命：めい】【保：ほ】【険：けん】"
-                  rom="seimei hoken"
-                  tr_en="life insurance"
-                  tr_de="Lebensversicherung"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
+                <keep_apart_from id="seikatsu-living" />
+                <keep_apart_from id="seimei-life" />
+                <keep_apart_from id="kurashi-livelihood" />
             </word>
             <word
               w="【地：ち】【域：いき】"
@@ -528,6 +452,47 @@
                 />
             </word>
             <word
+              w="【責：せき】【任：にん】"
+              rom="sekinin"
+              tr_en="responsibility; duty"
+              tr_de="Verantwortung; Pflicht"
+              lvl="n3"
+              id="sekinin-duty"
+            >
+                <keep_apart_from id="kinmu-duty" />
+                <keep_apart_from id="yaku-role" />
+                <keep_apart_from id="gimu-duty" />
+                <keep_apart_from id="yakume-role" />
+                <keep_apart_from id="ninmu-mission" />
+                <keep_apart_from id="kakari-incharge" />
+                <phrase
+                  ph="【無：む】【責：せき】【任：にん】な【人：ひと】"
+                  rom="musekinin na hito"
+                  tr_en="an irresponsible person"
+                  tr_de="eine verantwortungslose Person"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; jisho has nx for musekinin"
+                />
+                <phrase
+                  ph="【責：せき】【任：にん】から【逃：に】げる"
+                  rom="sekinin kara nigeru"
+                  tr_en="to avoid responsibility"
+                  tr_de="vor den Pflichten davonrennen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【私：わたし】には【責：せき】【任：にん】がありません。"
+                  rom="Watashi ni wa sekinin ga arimasen."
+                  tr_en="I'm not responsible."
+                  tr_de="Ich bin nicht dafür verantwortlich."
+                  lvl="n3"
+                  origin="Langenscheidt"
+                  rem="Langenscheidt hat 'Es ist nicht meine Schuld.'"
+                />
+            </word>
+            <word
               w="【跡：あと】"
               rom="ato"
               tr_en="scar; mark"
@@ -546,27 +511,6 @@
                   tr_de="Die Wunde am Arm hat eine Narbe hinterlassen."
                   lvl="n3"
                   origin="lib0"
-                />
-            </word>
-            <word
-              w="【両：りょう】【替：がえ】"
-              rom="ryōgae"
-              tr_en="money exchange; change money"
-              tr_de="Geldwechsel; Geld wechseln"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="trade, finances"
-              id="ryōgae-exchange"
-              rem="appears in GENKI2 p.91"
-            >
-                <sentence
-                  s="アメリカドルを【日：に】【本：ほん】【円：えん】に【両：りょう】【替：がえ】できますか。"
-                  rom="Amerika-doru o Nihon-en ni ryōgae dekimasu ka?"
-                  tr_en="Can you change US dollars to Japanese yen?"
-                  tr_de="Können Sie US-Dollar in japanische Yen wechseln?"
-                  lvl="n3"
-                  origin="GENKI2 p.91"
                 />
             </word>
             <word
@@ -787,6 +731,32 @@
                 />
             </word>
             <word
+              w="【気：き】【候：こう】"
+              rom="kikō"
+              tr_en="climate"
+              tr_de="Klima"
+              lvl="n3"
+              category="weather"
+              id="kikō-climate"
+            >
+                <phrase
+                  ph="ひどい【気：き】【候：こう】"
+                  rom="hidoi kikō"
+                  tr_en="a harsh climate"
+                  tr_de="ein rauhes Klima"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【日：に】【本：ほん】は【穏：おだ】やかな【気：き】【候：こう】だ。"
+                  rom="Nihon wa odayaka na kikō da."
+                  tr_en="Japan has a mild climate."
+                  tr_de="Japan hat ein mildes Klima."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【悪：あく】【魔：ま】"
               rom="akuma"
               tr_en="devil; demon; evil spirit"
@@ -809,21 +779,27 @@
                 />
             </word>
             <word
-              w="【大：たい】【気：き】"
-              rom="taiki"
-              tr_en="atmosphere; air"
-              tr_de="Atmosphäre; Luft"
+              w="【記：き】【事：じ】"
+              rom="kiji"
+              tr_en="newspaper article"
+              tr_de="Zeitungsartikel"
               lvl="n3"
-              category="science, astronomy"
-              id="taiki-atmosphere"
+              category="news"
+              id="kiji-article"
             >
-                <see id="kūki-air" rem="closely related" />
-                <keep_apart_from id="kūki-air" />
+                <phrase
+                  ph="【記：き】【事：じ】を【書：か】く"
+                  rom="kiji o kaku"
+                  tr_en="to write a newspaper article"
+                  tr_de="einen Zeitungsartikel schreiben"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
-                  s="【大：たい】【気：き】が【地：ち】【球：きゅう】を【包：つつ】んでいる。"
-                  rom="Taiki ga chikyū o tsutsunde iru."
-                  tr_en="The atmosphere surrounds the Earth."
-                  tr_de="Die Atmosphäre umgibt die Erde."
+                  s="【私：わたし】たちの【学：がっ】【校：こう】の【記：き】【事：じ】が【新：しん】【聞：ぶん】に【出：で】た。"
+                  rom="Watashi-tachi no gakkō no kiji ga shinbun ni deta."
+                  tr_en="An article about our school appeared in the newspaper."
+                  tr_de="In der Zeitung erschien ein Artikel über unsere Schule."
                   lvl="n3"
                   origin="lib0"
                 />
@@ -959,6 +935,14 @@
               id="yunyū-import"
             >
                 <keep_together id="yushutsu-export" />
+                <phrase
+                  ph="【輸：ゆ】【入：にゅう】を【減：へ】らす"
+                  rom="yunyū o herasu"
+                  tr_en="to reduce the imports"
+                  tr_de="die Importe reduzieren"
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【輸：ゆ】【出：しゅつ】"
@@ -986,24 +970,17 @@
                 <see id="senpai-superior" rem="antonym" />
             </word>
             <word
-              w="【環：かん】【境：きょう】"
-              rom="kankyō"
-              tr_en="environment; circumstance"
-              tr_de="Umgebung; Umstände"
+              w="【残：ざん】【業：ぎょう】"
+              rom="zangyō"
+              tr_en="overtime work"
+              tr_de="Überstunden (Arbeit)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
-              id="kankyō-environment"
-              rem="appears in GENKI2 L21 vocab section"
-            >
-                <!-- phrase 環境に慣れる (かんきょうになれる) - Get used to the environment. (ChatGPT) -->
-                <phrase
-                  ph="【環：かん】【境：きょう】【問：もん】【題：だい】への【関：かん】【心：しん】を【高：たか】める"
-                  rom="kankyō mondai e no kanshin o takameru"
-                  tr_en="to raise the awareness about environmental issues"
-                  tr_de="das Bewusstsein für Umweltsprobleme fördern"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-            </word>
+              category="employment"
+              id="zangyō-overtime"
+              rem="appears in GENKI2 p.116 vocab section; jisho has nx"
+            />
             <word
               w="【症：しょう】【状：じょう】"
               rom="shōjō"
@@ -1012,6 +989,15 @@
               lvl="n3"
               category="health"
               id="shōjō-symptoms"
+            />
+            <word
+              w="【心：しん】【臓：ぞう】"
+              rom="shinzō"
+              tr_en="heart (anatomy); central part"
+              tr_de="Herz (Anatomie); Kernstück"
+              lvl="n3"
+              category="body"
+              id="shinzō-heart"
             />
             <word
               w="【蚊：か】"
@@ -1066,6 +1052,24 @@
               id="shinrai-trust"
             >
                 <!-- 信頼できる人 shinrai dekiru hito - a trustworthy person (ChatGPT) -->
+                <sentence
+                  s="【友：とも】だちの【信：しん】【頼：らい】を【決：けっ】して【裏：うら】【切：ぎ】るな。"
+                  rom="Tomodachi no shinrai o kesshite uragiru na."
+                  tr_en="Never betray the trust of your friends."
+                  tr_de="Brich niemals das Vertrauen deiner Freunde."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【宝：ほう】【石：せき】"
+              rom="hōseki"
+              tr_en="gem; jewel; precious stone"
+              tr_de="Edelstein; Juwel"
+              lvl="n3"
+              id="hōseki-gem"
+            >
+                <see id="takara-treasure" rem="closely related" />
             </word>
             <word
               w="【食：しょく】【卓：たく】"
@@ -1102,15 +1106,6 @@
               lvl="n3"
               category="culture, top-words"
               id="obi-belt"
-            />
-            <word
-              w="【命：いのち】"
-              rom="inochi"
-              tr_en="life"
-              tr_de="Leben"
-              lvl="n3"
-              category="life"
-              id="inochi-life"
             />
         </section>
     </unit>

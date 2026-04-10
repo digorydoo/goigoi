@@ -5,7 +5,7 @@ import io.github.digorydoo.goigoi.compiler.CheckFailed
 import io.github.digorydoo.goigoi.compiler.supportedLanguages
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiTopic
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
-import io.github.digorydoo.goigoi.core.StudyInContextKind
+import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 
 fun GoigoiUnyt.check(topic: GoigoiTopic) {
     // Check that the unyt's levels match those required by the topic.

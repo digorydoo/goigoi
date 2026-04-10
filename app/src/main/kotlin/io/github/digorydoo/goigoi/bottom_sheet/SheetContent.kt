@@ -5,21 +5,21 @@ import android.net.Uri
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import ch.digorydoo.kutils.cjk.JLPTLevel
+import ch.digorydoo.kutils.cjk.Unicode
 import io.github.digorydoo.goigoi.BuildConfig
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.db.KanjiIndex
-import io.github.digorydoo.goigoi.db.Phrase
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Word
-import io.github.digorydoo.goigoi.db.WordLink
+import io.github.digorydoo.goigoi.core.db.KanjiIndex
+import io.github.digorydoo.goigoi.core.db.Phrase
+import io.github.digorydoo.goigoi.core.db.Unyt
+import io.github.digorydoo.goigoi.core.db.Word
+import io.github.digorydoo.goigoi.core.db.WordLink
 import io.github.digorydoo.goigoi.dialog.WordCtxMenu
 import io.github.digorydoo.goigoi.furigana.FuriganaBuilder
 import io.github.digorydoo.goigoi.furigana.buildSpan
-import io.github.digorydoo.goigoi.helper.MyLayoutInflater
-import io.github.digorydoo.goigoi.stats.Stats
 import io.github.digorydoo.goigoi.utils.LangUtils
-import ch.digorydoo.kutils.cjk.JLPTLevel
-import ch.digorydoo.kutils.cjk.Unicode
+import io.github.digorydoo.goigoi.utils.MyLayoutInflater
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 import java.util.Locale
 import kotlin.math.roundToInt
 
@@ -36,7 +36,7 @@ class SheetContent(
 
     fun insertContent(inflater: LayoutInflater, ctx: Context) {
         val myInflater = MyLayoutInflater(inflater, bindings.content)
-        val kanjiIndex = KanjiIndex.getSingleton(ctx)
+        val kanjiIndex = SingletonHolder.kanjiIndex
 
         insertBasicWordInfo(ctx, kanjiIndex)
         insertWordStats(ctx)
@@ -48,7 +48,7 @@ class SheetContent(
         insertOtherLanguages(ctx, myInflater)
 
         if (BuildConfig.DEBUG) {
-            insertDebugInfo(ctx, myInflater)
+            insertDebugInfo(myInflater)
         }
     }
 
@@ -142,7 +142,7 @@ class SheetContent(
     }
 
     private fun insertWordStats(ctx: Context) {
-        val stats = Stats.getSingleton(ctx)
+        val stats = SingletonHolder.stats
         val seenCount = stats.getWordTotalSeenCount(word)
         val progress = stats.getWordStudyProgress(word)
         val rating = stats.getWordTotalRating(word)
@@ -295,8 +295,8 @@ class SheetContent(
         }
     }
 
-    private fun insertDebugInfo(ctx: Context, inflater: MyLayoutInflater) {
-        val stats = Stats.getSingleton(ctx)
+    private fun insertDebugInfo(inflater: MyLayoutInflater) {
+        val stats = SingletonHolder.stats
         inflater.insertSubheader("DEBUG")
         inflater.insertItemMultiLine("Word", stats.getDebugInfo(word))
         inflater.insertItemMultiLine("Unyt", "${unyt.name.en}\n" + stats.getDebugInfo(unyt))

@@ -15,18 +15,6 @@
       requiresIds="true"
     >
         <section>
-            <!-- noun -->
-            <word
-              w="【背：せい】"
-              rom="sei"
-              tr_en="height; stature"
-              tr_de="Körpergrösse; Statur"
-              lvl="n3"
-              id="sei-stature"
-              HIDDEN="true"
-              rem="not a good word; is this a suffix? is this really n3?"
-            />
-
             <!-- adverbial noun -->
             <word
               w="【以：い】【前：ぜん】"
@@ -143,29 +131,41 @@
 
             <!-- not clearly a noun -->
             <word
-              w="【以：い】【来：らい】"
-              rom="irai"
-              tr_en="since; henceforth"
-              tr_de="seit; künftig"
-              hint_en="noun"
-              hint_de="Nomen"
+              w="【頂：ちょう】【戴：だい】"
+              rom="chōdai"
+              tr_en="please do for me"
+              tr_de="bitte tue für mich"
+              hint_en="noun; feminine or childish term"
+              hint_de="Nomen; femininer oder kindlicher Ausdruck"
+              usuallyInKana="true"
               lvl="n3"
-              id="irai-since"
-              HIDDEN="true"
+              id="chōdai-eatdrink"
             >
-                <keep_apart_from id="izen-ago" />
+                <keep_apart_from id="kudasai-please" />
+                <!--
+                    When used as 'please do for me', chōdai follows て-form and is written in kana.
+                    It can also be used as a suru verb, which means eating and drinking like itadaku, e.g.
+                    お茶を頂戴しました
+                    but itadaku is more command acc. to ChatGPT. It can also be used as a noun meaning 'receiving':
+                    手紙を頂戴し、私にとって大きな助けとなりました
+                    but it's old-fashioned and stiff acc. to ChatGPT.
+                -->
+                <sentence
+                  s="【塩：しお】をちょうだい。"
+                  rom="Shio o chōdai."
+                  tr_en="Pass me the salt, please."
+                  tr_de="Bitte reiche mir das Salz."
+                  lvl="n3"
+                />
+                <sentence
+                  s="【赤：あか】い【本：ほん】を【渡：わた】してちょうだい。"
+                  rom="Akai hon o watashite chōdai."
+                  tr_en="Would you pass me the red book, please?"
+                  tr_de="Könntest du mir bitte das rote Buch reichen?"
+                  lvl="n3"
+                  origin="Oxford p.123"
+                />
             </word>
-            <word
-              w="【一：いち】【時：じ】"
-              rom="ichi-ji"
-              tr_en="at one time; formerly; one o'clock"
-              hint_en="noun"
-              hint_de="Nomen"
-              lvl="n3"
-              id="ichiji-atonetime"
-              HIDDEN="true"
-              rem="why is this n3? formerly?? needs example"
-            />
             <word
               w="【海：かい】【外：がい】"
               rom="kaigai"
@@ -192,11 +192,36 @@
                 />
             </word>
             <word
+              w="【以：い】【来：らい】"
+              rom="irai"
+              tr_en="since; henceforth"
+              tr_de="seit; künftig"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              id="irai-since"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="izen-ago" />
+            </word>
+            <word
+              w="【一：いち】【時：じ】"
+              rom="ichi-ji"
+              tr_en="at one time; formerly; one o'clock"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n3"
+              id="ichiji-atonetime"
+              HIDDEN="true"
+              rem="why is this n3? formerly?? needs example"
+            />
+            <word
               w="【最：さい】【高：こう】"
               rom="saikō"
               tr_en="highest; supreme; best"
               tr_de="höchstes; maximales; bestes"
               lvl="n3"
+              category="top-words"
               id="saikō-best"
             >
                 <sentence
@@ -227,7 +252,9 @@
               lvl="n3"
               category="government"
               id="zenkoku-wholecountry"
-            />
+            >
+                <keep_apart_from id="kokumin-citizen" rem="ambiguity in phrases" />
+            </word>
             <word
               w="【都：と】【市：し】"
               rom="toshi"
@@ -252,6 +279,7 @@
               rem="jisho has n1 for the word, but n3 for the kanji; appears in GENKI2 p.313"
             >
                 <keep_apart_from id="kamisama-god" />
+                <keep_apart_from id="ojōsan-younglady" rem="ambiguity in phrases" />
                 <phrase
                   ph="お【嬢：じょう】【様：さま】"
                   rom="o-jō-sama"
@@ -306,6 +334,68 @@
             />
 
             <!-- suffix, prefix -->
+            <word
+              w="【質：しつ】"
+              rom="shitsu"
+              tr_en="quality; value"
+              tr_de="Qualität; Wert"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              lvl="n3"
+              id="shitsu-quality"
+              studyInContext="required"
+            >
+                <phrase
+                  ph="【品：ひん】【質：しつ】"
+                  rom="hin-shitsu"
+                  tr_en="quality of a product"
+                  tr_de="Qualität eines Produktes"
+                  lvl="n3"
+                  rem="jisho has n1"
+                />
+                <phrase
+                  ph="【性：せい】【質：しつ】"
+                  rom="sei-shitsu"
+                  tr_en="nature (of a person); characteristics; disposition"
+                  tr_de="Natur (einer Person); Merkmale; Disposition"
+                  lvl="n3"
+                  rem="jisho has n2; ChatGPT: sometimes close to 'trait', can apply to people or things"
+                />
+                <phrase
+                  ph="【質：しつ】の【低：ひく】い【教：きょう】【育：いく】"
+                  rom="shitsu no hikui kyōiku"
+                  tr_en="a poor education"
+                  tr_de="eine schlechte Ausbildung"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【水：すい】【質：しつ】"
+                  rom="sui-shitsu"
+                  tr_en="water quality"
+                  tr_de="Wasserqualität"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="この【犬：いぬ】は【性：せい】【質：しつ】が【穏：おだ】やかですね。"
+                  rom="Kono inu wa sei-shitsu ga odayaka desu ne."
+                  tr_en="This dog has a calm nature, don't you think?"
+                  tr_de="Dieser Hund ist von einer gelassenen Natur, findest du nicht?"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="このパソコンの【品：ひん】【質：しつ】はあまり【良：よ】くないと【思：おも】います。"
+                  rom="Kono pasokon no hin-shitsu wa amari yokunai to omoimasu."
+                  tr_en="I don't think the quality of this computer is very good."
+                  tr_de="Ich finde nicht, dass die Qualität dieses Computers besonders gut ist."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
             <word
               w="【的：てき】"
               rom="teki"
@@ -363,6 +453,9 @@
               studyInContext="preferred"
             >
                 <see id="kurasu-live" rem="verb" />
+                <keep_apart_from id="inochi-life" />
+                <keep_apart_from id="seikatsu-living" />
+                <keep_apart_from id="seimei-life" />
                 <phrase
                   ph="【一：ひと】【人：り】【暮：ぐ】らし"
                   rom="hitori-gurashi"
@@ -499,7 +592,9 @@
               lvl="n3"
               id="bun-part"
               HIDDEN="true"
-            />
+            >
+                <keep_apart_from id="bubun-part" />
+            </word>
 
             <!-- adverbial expressions -->
             <word
@@ -588,7 +683,10 @@
               rom="taishita"
               tr_en="considerable; significant; a big deal"
               tr_de="beträchtlich; signifikant; etwas Ernstes"
+              hint_en="expression"
+              hint_de="Ausdruck"
               lvl="n3"
+              category="top-words"
               id="taishita-bigdeal"
             >
                 <keep_apart_from id="daibu-greatly" />

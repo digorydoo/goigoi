@@ -11,7 +11,7 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n2"
-      translations="en"
+      translations="en, de"
       requiresSentences="false"
       requiresIds="true"
     >
@@ -238,9 +238,28 @@
                 />
             </word>
             <word
+              w="【拭：ふ】く"
+              rom="fuku"
+              tr_en="to wipe; to dry; to wash"
+              tr_de="abwischen; abtrocknen; waschen"
+              hint_en="v.t."
+              lvl="n2"
+              id="fuku-wipe"
+            >
+                <sentence
+                  s="タオルを【水：みず】で【濡：ぬ】らして、【顔：かお】を【拭：ふ】いた。"
+                  rom="Taoru o mizu de nurashite, kao o fuita."
+                  tr_en="I (did) wet a towel with water and wiped my face."
+                  tr_de="Ich machte das Frottiertuch nass und wusch mein Gesicht."
+                  lvl="n2"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
               w="【打：ぶ】【付：つ】ける"
               rom="butsukeru"
               tr_en="to hit (e.g. one's head); to collide with sth."
+              tr_de="(Kopf) stossen; kollidieren"
               hint_en="v.t."
               usuallyInKana="true"
               lvl="n2"
@@ -286,21 +305,10 @@
                 <see id="chikadzuku-approach" rem="v.i." />
             </word>
             <word
-              w="【増：ふ】やす"
-              rom="fuyasu"
-              tr_en="to increase sth; to augment sth."
-              tr_de="etw. erhöhen; etw. erweitern"
-              hint_en="v.t."
-              lvl="n2"
-              category="general, maths"
-              id="fuyasu-increasesth"
-            >
-                <see id="fueru-increase" rem="v.i." />
-            </word>
-            <word
               w="【足：た】る"
               rom="taru"
               tr_en="to be sufficient; to be enough; to be worth doing"
+              tr_de="genügen; genug sein; es wert sein"
               hint_en="v.i."
               lvl="n2"
               id="taru-beenough"
@@ -361,6 +369,7 @@
               w="【出：で】【来：き】【上：あ】がる"
               rom="dekiagaru"
               tr_en="to be finished; to be ready (e.g. to serve or eat); to be very drunk"
+              tr_de="fertig sein; bereit sein; betrunken sein"
               hint_en="v.i."
               lvl="n2"
               id="dekiagaru-befinished"
@@ -376,21 +385,13 @@
             <word
               w="【刺：さ】さる"
               rom="sasaru"
-              tr_en="to prick; to pierce; to get stuck (in)"
-              tr_de="stechen; durchstechen; steckenbleiben"
+              tr_en="to get pricked; to get stinged; to get stuck"
+              tr_de="gestochen werden; steckenbleiben"
               hint_en="v.i."
               lvl="n2"
-              id="sasaru-prick"
+              id="sasaru-pricked"
             >
-                <sentence
-                  s="【蜂：はち】に【刺：さ】されました。"
-                  rom="Hachi ni sasaremashita."
-                  tr_en="I was stung by a bee."
-                  tr_de="Ich bin von einer Biene gestochen worden."
-                  lvl="n2"
-                  origin="lib0"
-                  rem="similar Langenscheidt p.205; shouldn't it be sasararemashita???"
-                />
+                <see id="sasu-sting" rem="v.t." />
             </word>
             <word
               w="【冷：ひ】やす"
@@ -617,6 +618,7 @@
               w="【捕：と】る"
               rom="toru"
               tr_en="to take; to catch; to capture"
+              tr_de="nehmen; fangen; einfangen"
               hint_en="v.t."
               lvl="n2"
               category="hands"
@@ -730,27 +732,15 @@
                 <keep_apart_from id="mawasu-turn" rem="mawasu can have the meaning of 'pass around'" />
             </word>
             <word
-              w="【替：か】える"
-              rom="kaeru"
-              tr_en="to replace sth."
-              tr_de="etw. ersetzen"
+              w="【物：もの】【語：がた】る"
+              rom="monogataru"
+              tr_en="to tell (a story); to give an account of (an event); to indicate"
+              tr_de="(Geschichte) erzählen; (Ereignis) rapportieren"
               hint_en="v.t."
               lvl="n2"
-              id="kaeru-replace"
-              rem="jisho has n3; rated n2, because the kanji 替 is n2; keeping it n3 would generate ambiguity with kaeru-exchange"
+              id="monogataru-tell"
             >
-                <see id="kawaru-takeplaceof" rem="v.i." />
-                <!-- implicit see-also links to kaeru-exchange, kaeru-substitute -->
-            </word>
-            <word
-              w="【替：か】わる"
-              rom="kawaru"
-              tr_en="to succeed; to take over for; to change (places with)"
-              hint_en="v.i."
-              lvl="n2"
-              id="kawaru-takeplaceof"
-            >
-                <see id="kaeru-replace" rem="v.t." />
+                <keep_apart_from id="kataru-recite" />
             </word>
             <word
               w="【止：とど】まる"
@@ -767,6 +757,7 @@
               w="【温：あたた】まる"
               rom="atatamaru"
               tr_en="to warm oneself; to warm up"
+              tr_de="sich wärmen; warm werden"
               hint_en="v.i."
               lvl="n2"
               category="temperature, body"
@@ -863,20 +854,31 @@
               id="hosu-toair"
             />
             <word
-              w="【物：もの】【語：がた】る"
-              rom="monogataru"
-              tr_en="to tell (a story); to give an account of (an event); to indicate"
-              hint_en="v.t."
-              lvl="n2"
-              id="monogataru-tell"
-            />
-            <word
               w="【心：こころ】【得：え】る"
               rom="kokoroeru"
-              tr_en="to know; to understand; to be aware of; to regard as"
+              tr_en="to know; to understand; to be aware of"
+              tr_de="wissen; verstehen; sich etw. bewusst sein"
               hint_en="v.t."
               lvl="n2"
               id="kokoroeru-know"
+            />
+            <word
+              w="【散：ち】らす"
+              rom="chirasu"
+              tr_en="to scatter; to spread; to cause a shower of"
+              tr_de="verstreuen; streuen; versprühen"
+              hint_en="v.t."
+              lvl="n2"
+              id="chirasu-spread"
+            />
+            <word
+              w="【解：ほど】く"
+              rom="hodoku"
+              tr_en="to undo; to untie; to unfasten"
+              tr_de="lösen; aufbinden; entwirren"
+              hint_en="v.t."
+              lvl="n2"
+              id="hodoku-undo"
             />
         </section>
     </unit>

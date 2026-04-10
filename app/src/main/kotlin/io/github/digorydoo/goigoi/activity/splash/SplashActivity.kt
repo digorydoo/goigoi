@@ -3,15 +3,16 @@ package io.github.digorydoo.goigoi.activity.splash
 import android.animation.ValueAnimator
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.util.Log
 import android.view.animation.LinearInterpolator
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import ch.digorydoo.kutils.logging.Log
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.activity.welcome.startWelcomeActivity
-import io.github.digorydoo.goigoi.db.Vocabulary
-import io.github.digorydoo.goigoi.helper.UserPrefs
-import io.github.digorydoo.goigoi.stats.Stats
+import io.github.digorydoo.goigoi.core.db.Vocabulary
+import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.utils.AndroidLogStrategy
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 
 /**
  * An application should not provide its own launch screen. Problem is, the animated logo needs to be an Animated Vector
@@ -42,13 +43,13 @@ class SplashActivity: AppCompatActivity() {
         val ctx = applicationContext
         bindings = Bindings(this)
 
-        val hasAllSingletons =
-            (Vocabulary.hasSingleton() && Stats.hasSingleton() && UserPrefs.hasSingleton())
+        // Initialize kutil's Log facilities.
+        Log.strategies = mutableListOf(AndroidLogStrategy())
 
         val drawable = AnimatedLogo(ctx)
         bindings.logo.setImageDrawable(drawable)
 
-        if (hasAllSingletons) {
+        if (SingletonHolder.singletonsExist) {
             // Startup won't take long. Suppress the animation!
             drawable.animValue = 1.0f
             bindings.logo.invalidate()
@@ -79,17 +80,14 @@ class SplashActivity: AppCompatActivity() {
         val self: AppCompatActivity = this
 
         Thread {
-            // Simply call getSingleton to create the singletons and initialize them
-
             val startMillis = System.currentTimeMillis()
             val ctx = applicationContext
 
-            Vocabulary.getSingleton(ctx)
-            UserPrefs.getSingleton(ctx)
-
-            val stats = Stats.getSingleton(ctx)
+            SingletonHolder.createSingletons(ctx)
+            val vocab = SingletonHolder.vocab
+            val stats = SingletonHolder.stats
             stats.notifyAppLaunch()
-            stats.prefillCaches()
+            prefillCaches(vocab, stats)
 
             // The following exports the stats in the downloads folder. Use Android Studio's device explorer to
             // retrieve them from /storage/self/primary/Download
@@ -103,7 +101,7 @@ class SplashActivity: AppCompatActivity() {
             if (waitForAnim) {
                 val millisPassed = System.currentTimeMillis() - startMillis
                 val millisLeft = (1000.0f * PROCEED_AFTER).toInt() - millisPassed
-                Log.d(TAG, "Done after ${millisPassed.toFloat() / 1000.0f}s")
+                Log.debug(TAG, "Done after ${millisPassed.toFloat() / 1000.0f}s")
 
                 if (millisLeft > 0) {
                     try {
@@ -121,8 +119,27 @@ class SplashActivity: AppCompatActivity() {
         }.start()
     }
 
+    private fun prefillCaches(vocab: Vocabulary, stats: Stats) {
+        var toGo = 30
+
+        for (t in vocab.topics) {
+            for (u in t.unyts) {
+                // None of the unyt ratings are going to be looked up on first launch as study
+                // progress values will still be 0. On later launches, UnytStatsFile should have the
+                // ratings ready in a single value. So, let's just pre-fill the progress values.
+                stats.getUnytStudyProgress(u)
+                toGo--
+
+                if (toGo <= 0) {
+                    // We stop here to make sure the first launch does not take forever
+                    return
+                }
+            }
+        }
+    }
+
     companion object {
-        private const val TAG = "SplashActivity"
+        private val TAG = Log.Tag("SplashActivity")
         private const val ANIM_DURATION = 2.0f // seconds
         private const val PROCEED_AFTER = ANIM_DURATION + 0.1f
     }

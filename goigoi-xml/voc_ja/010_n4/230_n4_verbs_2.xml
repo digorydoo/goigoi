@@ -202,8 +202,8 @@
                   rom="Kore wa mō iranai kara sutemasu."
                   tr_en="I don't need this any more, so I'm going to throw it away."
                   tr_de="Ich brauche das nicht mehr, deshalb werde ich es wegwerfen."
-                  explanation_en="【要：い】らない = not needed, unwanted"
-                  explanation_de="【要：い】らない = nicht benötigt"
+                  explanation_en="いらない = not needed, unwanted"
+                  explanation_de="いらない = nicht benötigt"
                   lvl="n4"
                   origin="500mon q401"
                 />
@@ -331,6 +331,7 @@
               id="kaeru-change"
             >
                 <see id="kawaru-change" rem="v.i." />
+                <keep_apart_from id="kaeru-substitute" />
                 <phrase
                   ph="【仕：し】【事：ごと】を【変：か】える"
                   rom="shigoto o kaeru"
@@ -377,6 +378,7 @@
               id="kawaru-change"
             >
                 <see id="kaeru-change" rem="v.t." />
+                <keep_apart_from id="kawaru-takeover" />
                 <phrase
                   ph="【急：きゅう】に【変：か】わる"
                   rom="kyū ni kawaru"
@@ -763,6 +765,8 @@
               id="hikaru-shine"
             >
                 <see id="hikari-ray" rem="noun" />
+                <keep_apart_from id="kagayaku-shine" />
+                <keep_apart_from id="sasu-shine" />
                 <phrase
                   ph="【星：ほし】が【光：ひか】っている"
                   rom="hoshi ga hikatte iru"
@@ -870,6 +874,8 @@
             >
                 <see id="otosu-drop" rem="v.t." />
                 <keep_apart_from id="sagaru-drop" />
+                <keep_apart_from id="ochikomu-feelsad" />
+                <keep_apart_from id="korobu-falldown" />
                 <phrase
                   ph="ゆっくり【落：お】ちる"
                   rom="yukkuri ochiru"

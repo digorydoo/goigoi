@@ -2,8 +2,10 @@ package io.github.digorydoo.goigoi.activity.prog_study
 
 import android.os.Bundle
 import android.util.Log
-import io.github.digorydoo.goigoi.study.Answer
-import io.github.digorydoo.goigoi.study.StudyItemIteratorState
+import io.github.digorydoo.goigoi.core.prog_study.QAKind
+import io.github.digorydoo.goigoi.core.prog_study.RoundsTracker
+import io.github.digorydoo.goigoi.core.study.Answer
+import io.github.digorydoo.goigoi.utils.StudyItemIteratorState
 import io.github.digorydoo.goigoi.utils.getIntOrNull
 import io.github.digorydoo.goigoi.utils.getSerializableOrNull
 
@@ -86,4 +88,18 @@ class ProgStudyState private constructor(
             }
         }
     }
+}
+
+fun RoundsTracker.saveState(outState: ProgStudyState) {
+    outState.round = round
+    outState.lastTrivial = lastTrivial
+    outState.roundsMap.clear()
+    outState.roundsMap.putAll(map)
+}
+
+fun RoundsTracker.restoreState(state: ProgStudyState) {
+    round = state.round
+    lastTrivial = state.lastTrivial
+    map.clear()
+    map.putAll(state.roundsMap)
 }

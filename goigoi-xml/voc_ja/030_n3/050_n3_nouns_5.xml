@@ -19,6 +19,45 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【傷：きず】"
+              rom="kizu"
+              tr_en="cut; scratch; wound"
+              tr_de="Schnittwunde; Kratzer; Wunde"
+              Langenscheidt="Wunde; Kratzer"
+              lvl="n3"
+              category="health"
+              id="kizu-scar"
+            >
+                <see id="kizutsuku-gethurt" rem="verb" />
+                <keep_apart_from id="kega-injury" />
+                <phrase
+                  ph="【傷：きず】【跡：あと】"
+                  rom="kizuato"
+                  tr_en="a scar"
+                  tr_de="eine Narbe"
+                  lvl="n3"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【傷：きず】はまだ【痛：いた】む。"
+                  rom="Kizu wa mada itamu."
+                  tr_en="The wound still hurts."
+                  tr_de="Die Wunde tut immer noch weh."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="jisho has n1 for itamu"
+                />
+                <sentence
+                  s="ハリーは【額：ひたい】に【傷：きず】【跡：あと】がある。"
+                  rom="Harī wa hitai ni kizuato ga aru."
+                  tr_en="Harry has a scar on the forehead."
+                  tr_de="Harry hat eine Narbe auf der Stirn."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
               w="【型：かた】"
               rom="kata"
               tr_en="model (of a machine); type (of goods)"
@@ -100,82 +139,27 @@
                 />
             </word>
             <word
-              w="【大：だい】【統：とう】【領：りょう】"
-              rom="daitōryō"
-              tr_en="president"
-              tr_de="Präsident"
+              w="【虫：むし】【歯：ば】"
+              rom="mushiba"
+              tr_en="tooth decay; decayed tooth"
+              tr_de="Karies; verfaulter Zahn"
               lvl="n3"
-              category="politics, people"
-              id="daitōryō-president"
+              category="health"
+              id="mushiba-toothdecay"
             >
-                <keep_apart_from id="shushō-premier" />
-                <keep_apart_from id="taishi-ambassador" />
                 <phrase
-                  ph="ロシア【大：だい】【統：とう】【領：りょう】"
-                  rom="Roshia-daitōryō"
-                  tr_en="President of Russia"
-                  tr_de="Präsident von Russland"
-                  lvl="n3"
-                  origin="jpod101 audio"
-                  rem="Roshia is nx"
-                />
-                <sentence
-                  s="【新：あたら】しい【大：だい】【統：とう】【領：りょう】は【評：ひょう】【判：ばん】がよい。"
-                  rom="Atarashii daitōryō wa hyōban ga yoi."
-                  tr_en="The new president has a good reputation."
-                  tr_de="Der neue Präsident hat einen guten Ruf."
+                  ph="【虫：むし】【歯：ば】を【抜：ぬ】く"
+                  rom="mushiba o nuku"
+                  tr_en="to pull out a bad tooth"
+                  tr_de="einen schlechten Zahn ziehen"
                   lvl="n3"
                   origin="lib0"
                 />
-            </word>
-            <word
-              w="【速：そく】【度：ど】"
-              rom="sokudo"
-              tr_en="speed; velocity"
-              tr_de="Geschwindigkeit"
-              lvl="n3"
-              category="physics, feet"
-              id="sokudo-speed"
-            >
-                <phrase
-                  ph="【速：そく】【度：ど】が【速：はや】い"
-                  rom="sokudo ga hayai"
-                  tr_en="fast velocity"
-                  tr_de="schnelle Geschwindigkeit"
-                  lvl="n3"
-                  origin="self"
-                />
                 <sentence
-                  s="この【車：くるま】は【速：そく】【度：ど】が【遅：おそ】いね。"
-                  rom="Kono kuruma wa sokudo ga osoi ne."
-                  tr_en="This car is slow, isn't it?"
-                  tr_de="Dieses Auto ist aber langsam."
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【飛：ひ】【行：こう】【機：き】は【速：そく】【度：ど】を【増：ま】した。"
-                  rom="Hikōki wa sokudo o mashita."
-                  tr_en="The plane increased speed."
-                  tr_de="Das Flugzeug erhöhte die Geschwindigkeit."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
-              w="【農：のう】【民：みん】"
-              rom="nōmin"
-              tr_en="farmer; peasant"
-              tr_de="Bauer"
-              lvl="n3"
-              category="occupations, countryside"
-              id="nōmin-farmer"
-            >
-                <sentence
-                  s="【農：のう】【民：みん】は【作：さく】【物：もつ】を【作：つく】る。"
-                  rom="Nōmin wa sakumotsu o tsukuru."
-                  tr_en="Farmers produce crops."
-                  tr_de="Bauern produzieren landwirtschaftliche Produkte."
+                  s="【私：わたし】には【虫：むし】【歯：ば】が【二：に】【本：ほん】ある。"
+                  rom="Watashi ni wa mushiba ga ni-hon aru."
+                  tr_en="I have two bad teeth."
+                  tr_de="Ich habe zwei schlechte Zähne."
                   lvl="n3"
                   origin="lib0"
                 />
@@ -332,6 +316,24 @@
               rem="appears in GENKI2 p.287 kanji section"
             >
                 <keep_together id="taiyō-sun" />
+            </word>
+            <word
+              w="【農：のう】【民：みん】"
+              rom="nōmin"
+              tr_en="farmer; peasant"
+              tr_de="Bauer"
+              lvl="n3"
+              category="occupations, countryside"
+              id="nōmin-farmer"
+            >
+                <sentence
+                  s="【農：のう】【民：みん】は【作：さく】【物：もつ】を【作：つく】る。"
+                  rom="Nōmin wa sakumotsu o tsukuru."
+                  tr_en="Farmers produce crops."
+                  tr_de="Bauern produzieren landwirtschaftliche Produkte."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【書：しょ】【類：るい】"
@@ -726,26 +728,6 @@
                 />
             </word>
             <word
-              w="【記：き】【念：ねん】"
-              rom="kinen"
-              tr_en="commemoration; remembrance; honouring"
-              tr_de="Gedenken; Erinnerung; Ehrung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="culture"
-              id="kinen-celebration"
-            >
-                <sentence
-                  s="ここは【有：ゆう】【名：めい】なので【記：き】【念：ねん】【写：しゃ】【真：しん】を【撮：と】ります。"
-                  rom="Koko wa yūmei na no de kinen-shashin o torimasu."
-                  tr_en="This is a famous spot, so I'll take a souvenir photo."
-                  tr_de="Dies ist ein berühmter Ort, deshalb mache ich ein Erinnerungsfoto."
-                  lvl="n3"
-                  origin="Oxford p.144"
-                />
-            </word>
-            <word
               w="【発：はっ】【車：しゃ】"
               rom="hassha"
               tr_en="departure (of a train, etc.); leaving"
@@ -795,17 +777,73 @@
                 <keep_apart_from id="shiai-match" />
                 <keep_apart_from id="kyōsō-race" />
                 <keep_apart_from id="taikai-grandevent" />
+                <keep_apart_from id="undōjō-sportsground" rem="ambiguity in phrases" />
+                <keep_apart_from id="taiikukan-gym" rem="ambiguity in phrases" />
+                <phrase
+                  ph="【競：きょう】【技：ぎ】【場：じょう】"
+                  rom="kyōgijō"
+                  tr_en="sports stadium; arena"
+                  tr_de="Sportstadium; Arena"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【団：だん】【体：たい】【競：きょう】【技：ぎ】"
+                  rom="dantai kyōgi"
+                  tr_en="team game"
+                  tr_de="Mannschaftsspiel"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="その【競：きょう】【技：ぎ】【場：じょう】はバスで【行：い】ける。"
+                  rom="Sono kyōgijō wa basu de ikeru."
+                  tr_en="You can go to the stadium by bus."
+                  tr_de="Du kannst mit dem Bus zum Stadium gelangen."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
-              w="【選：せん】【手：しゅ】"
-              rom="senshu"
-              tr_en="athlete; sports team member"
-              tr_de="Sportler; Mitglied einer Sportmannschaft"
+              w="【告：こく】【白：はく】"
+              rom="kokuhaku"
+              tr_en="confession"
+              tr_de="Bekenntnis; Geständnis"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              studyInContext="preferred"
               lvl="n3"
-              category="sports"
-              id="senshu-athlete"
+              category="relationships, talking"
+              id="kokuhaku-confession"
+              rem="jisho has n1; moved this to n3, because it's very common; kanji 白 is n5, 告 is n3"
             >
-                <keep_apart_from id="aite-companion" />
+                <phrase
+                  ph="【愛：あい】を【告：こく】【白：はく】する"
+                  rom="ai o kokuhaku suru"
+                  tr_en="to confess one's love"
+                  tr_de="die Liebe gestehen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【罪：つみ】を【告：こく】【白：はく】する"
+                  rom="tsumi o kokuhaku suru"
+                  tr_en="to confess a crime"
+                  tr_de="ein Verbrechen bekennen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【勇：ゆう】【気：き】を【出：だ】して【告：こく】【白：はく】したけど、【振：ふ】られた。"
+                  rom="Yūki o dashite kokuhaku shita kedo, furareta."
+                  tr_en="I plucked up the courage to confess (my feelings), but I was rejected."
+                  tr_de="Ich habe meinen Mut zusammengenommen und ihr (meine Gefühle) gestanden, aber sie hat mich abgewiesen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
             </word>
             <word
               w="【刑：けい】【事：じ】"
@@ -897,6 +935,7 @@
               category="people"
               id="hitogomi-crowd"
             >
+                <synonym w="【大：おお】【勢：ぜい】" />
                 <keep_apart_from id="ōzei-crowd" />
                 <keep_apart_from id="katagata-people" />
             </word>
@@ -997,10 +1036,28 @@
             >
                 <keep_apart_from id="maneku-invite" />
                 <keep_apart_from id="maneki-invitation" />
+                <keep_apart_from id="ogoru-givetreat" />
                 <!-- 招待してくれてありがとう。でも、遠慮します。 Thank you for the invitation, but I’ll pass. (ChatGPT) -->
                 <!--
                     招待する invite so. to an event or place GENKI2 L19 vocab section
                 -->
+            </word>
+            <word
+              w="【裏：うら】【口：ぐち】"
+              rom="uraguchi"
+              tr_en="backdoor"
+              tr_de="Hintertür"
+              lvl="n3"
+              category="home"
+              id="uraguchi-backdoor"
+              rem="jisho has n2, ura is n4, kuchi is n5"
+            >
+                <keep_apart_from id="to-door" />
+                <keep_apart_from id="doa-door" />
+                <keep_apart_from id="fusuma-slidingdoor" />
+                <keep_apart_from id="shōji-door" />
+                <keep_apart_from id="amado-stormshutter" />
+                <keep_apart_from id="tobira-door" />
             </word>
             <word
               w="【不：ふ】【思：し】【議：ぎ】"

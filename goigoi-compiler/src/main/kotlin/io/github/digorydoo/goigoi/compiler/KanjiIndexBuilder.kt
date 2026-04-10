@@ -182,7 +182,7 @@ class KanjiIndexBuilder(
 
     private fun convertReadings() {
         if (!options.quiet) {
-            println("Converting readings")
+            println("Converting readings...")
         }
 
         val newReadings = mutableMapOf<String, MutableSet<String>>()
@@ -190,10 +190,6 @@ class KanjiIndexBuilder(
         readings.forEach { (kana, kanjis) ->
             if (kana.isKatakana()) {
                 val hiragana = kana.toHiragana()
-
-                if (!options.quiet) {
-                    println("   $kana -> $hiragana")
-                }
 
                 val otherKanjis = readings[hiragana]
                     ?: mutableSetOf<String>().also { newReadings[hiragana] = it }
@@ -210,9 +206,5 @@ class KanjiIndexBuilder(
         }
 
         readings.putAll(newReadings)
-
-        if (!options.quiet) {
-            println("")
-        }
     }
 }

@@ -6,23 +6,21 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.updateLayoutParams
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.activity.unyt.startUnytActivityAsync
-import io.github.digorydoo.goigoi.db.Topic
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Vocabulary
+import io.github.digorydoo.goigoi.core.db.Topic
+import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.dialog.UnytCtxDlgFragment
 import io.github.digorydoo.goigoi.dialog.UnytCtxMenu
 import io.github.digorydoo.goigoi.drawable.SheetHead
-import io.github.digorydoo.goigoi.helper.addMyListOnScrollHandler
 import io.github.digorydoo.goigoi.list.*
 import io.github.digorydoo.goigoi.listviewholder.ClickableItemDelegate
 import io.github.digorydoo.goigoi.utils.DeviceUtils
 import io.github.digorydoo.goigoi.utils.ResUtils
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 
 class TopicActivity: AppCompatActivity(), UnytCtxMenu.Callback {
     private lateinit var params: TopicActivityParams
     private lateinit var bindings: Bindings
     private lateinit var values: Values
-    private lateinit var vocab: Vocabulary
     private lateinit var adapter: MyListAdapter
     private lateinit var topic: Topic
     private var unytLaunched: Unyt? = null
@@ -37,7 +35,8 @@ class TopicActivity: AppCompatActivity(), UnytCtxMenu.Callback {
         params = TopicActivityParams.fromIntent(intent)
         bindings = Bindings(this)
         values = Values(this)
-        vocab = Vocabulary.getSingleton(ctx)
+
+        val vocab = SingletonHolder.vocab
         topic = vocab.findTopicById(params.topicId)!!
 
         val itemDelegate = object: ClickableItemDelegate {

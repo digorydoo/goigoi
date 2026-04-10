@@ -933,6 +933,9 @@
               id="seikatsu-living"
               rem="appears in GENKI2 L20 vocab section"
             >
+                <keep_apart_from id="inochi-life" />
+                <keep_apart_from id="seimei-life" />
+                <keep_apart_from id="kurashi-livelihood" />
                 <phrase
                   ph="【社：しゃ】【会：かい】【生：せい】【活：かつ】"
                   rom="shakai seikatsu"
@@ -1075,6 +1078,8 @@
               category="general"
               id="riyō-use"
             >
+                <keep_apart_from id="tsukau-use" />
+                <keep_apart_from id="mochiiru-use" />
                 <phrase
                   ph="【機：き】【会：かい】を【利：り】【用：よう】する"
                   rom="kikai o riyō suru"
@@ -1277,6 +1282,7 @@
               id="shitsurei-discourtesy"
               rem="appears in 500mon; jisho has nx"
             >
+                <keep_apart_from id="jama-interrupt" />
                 <phrase
                   ph="【失：しつ】【礼：れい】な【言：こと】【葉：ば】"
                   rom="shitsurei na kotoba"

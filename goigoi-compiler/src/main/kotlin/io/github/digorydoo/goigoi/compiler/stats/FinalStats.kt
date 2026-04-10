@@ -4,7 +4,7 @@ import ch.digorydoo.kutils.cjk.JLPTLevel
 import io.github.digorydoo.goigoi.compiler.KanjiLevels
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
-import io.github.digorydoo.goigoi.core.WordHint
+import io.github.digorydoo.goigoi.core.db.WordHint
 
 class FinalStats(
     private val vocab: GoigoiVocab,

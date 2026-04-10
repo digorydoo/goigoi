@@ -588,13 +588,6 @@
               lvl="n2"
             />
             <word
-              w="【毛：け】【皮：がわ】"
-              rom="kegawa"
-              tr_en="fur; skin; pelt"
-              hint_en="noun; no-adjective"
-              lvl="n2"
-            />
-            <word
               w="【毛：け】【糸：いと】"
               rom="keito"
               tr_en="knitting wool; woolen yarn; woollen yarn"
@@ -611,13 +604,6 @@
               w="えっと"
               rom="etto"
               tr_en="let me see; well; errr ...; uhh ..."
-              lvl="n2"
-            />
-            <word
-              w="お【待：ま】たせしました"
-              rom="o-mataseshimashita"
-              tr_en="thank you for waiting; sorry to have kept you waiting"
-              hint_en="expression"
               lvl="n2"
             />
             <word
@@ -798,7 +784,10 @@
               tr_en="king; queen; monarch; sovereign; the Crown (as a focus of authority in the UK, etc.); the throne"
               hint_en="noun"
               lvl="n2"
-            />
+              id="kokuō-monarch"
+            >
+                <keep_apart_from id="ō-king" />
+            </word>
             <word
               w="【国：こく】【籍：せき】"
               rom="kokuseki"
@@ -1335,9 +1324,14 @@
             <word
               w="【皮：ひ】【膚：ふ】"
               rom="hifu"
-              tr_en="skin"
+              tr_en="(human) skin"
+              tr_de="(menschliche) Haut"
               lvl="n2"
-            />
+              id="hifu-skin"
+            >
+                <see id="kawa-skin" rem="closely related" />
+                <keep_apart_from id="kawa-skin" />
+            </word>
             <word
               w="【盆：ぼん】"
               rom="bon"
@@ -1401,6 +1395,53 @@
               hint_en="noun"
               lvl="n2"
             />
+            <word
+              w="【焦：しょう】【点：てん】"
+              rom="shōten"
+              tr_en="focus; focal point / focus (of attention, a discussion, etc.); point at issue; central point / focus"
+              hint_en="noun"
+              lvl="n2"
+              id="shōten-focus"
+              HIDDEN="true"
+            >
+                <!-- その花にカメラの焦点を合わせる。Focus your camera on the flower. (lib0) -->
+            </word>
+            <word
+              w="【売：う】り【切：き】れ"
+              rom="uri-kire"
+              tr_en="sold-out"
+              hint_en="noun"
+              lvl="n2"
+              id="urikire-soldout"
+            >
+                <see id="urikireru-soldout" rem="verb" />
+            </word>
+            <word
+              w="【作：さく】【成：せい】"
+              rom="sakusei"
+              tr_en="making (a report, plan, contract, etc.); drawing up; writing out; preparing; creating (a file, website, account, etc.)"
+              hint_en="noun; suru verb"
+              lvl="n2"
+              id="sakusei-making"
+            >
+                <!--
+                    環境問題への関心を高めるために、ポスターや動画を作成した。
+                    We created posters and videos to increase awareness.
+                    (ChatGPT)
+                -->
+            </word>
+            <word
+              w="【耕：たがや】す"
+              rom="tagayasu"
+              tr_en="to till; to plow; to plough; to cultivate"
+              hint_en="godan verb with 'su' ending; transitive verb"
+              lvl="n2"
+              id="tagayasu-till"
+            >
+                <!--
+                土を耕す "to till the soil" (ChatGPT)
+                -->
+            </word>
             <word
               w="【展：てん】【開：かい】"
               rom="tenkai"
@@ -2021,17 +2062,6 @@
               id="fugō-symbol"
             />
             <word
-              w="【焦：しょう】【点：てん】"
-              rom="shōten"
-              tr_en="focus; focal point / focus (of attention, a discussion, etc.); point at issue; central point / focus"
-              hint_en="noun"
-              lvl="n2"
-              id="shōten-focus"
-              HIDDEN="true"
-            >
-                <!-- その花にカメラの焦点を合わせる。Focus your camera on the flower. (lib0) -->
-            </word>
-            <word
               w="【特：とく】【定：てい】"
               rom="tokutei"
               tr_en="specific; particular; designated; special / specifying; designating; identifying; pinpointing"
@@ -2477,16 +2507,6 @@
               lvl="n2"
             />
             <word
-              w="【売：う】り【切：き】れ"
-              rom="uri-kire"
-              tr_en="sold-out"
-              hint_en="noun"
-              lvl="n2"
-              id="urikire-soldout"
-            >
-                <see id="urikireru-soldout" rem="verb" />
-            </word>
-            <word
               w="【売：う】れ【行：ゆ】き"
               rom="ureyuki"
               tr_en="sales; demand"
@@ -2563,20 +2583,6 @@
               id="kanadzukai-orthography"
             />
             <word
-              w="【作：さく】【成：せい】"
-              rom="sakusei"
-              tr_en="making (a report, plan, contract, etc.); drawing up; writing out; preparing; creating (a file, website, account, etc.)"
-              hint_en="noun; suru verb"
-              lvl="n2"
-              id="sakusei-making"
-            >
-                <!--
-                    環境問題への関心を高めるために、ポスターや動画を作成した。
-                    We created posters and videos to increase awareness.
-                    (ChatGPT)
-                -->
-            </word>
-            <word
               w="【作：さく】【製：せい】"
               rom="sakusei"
               tr_en="manufacture; production"
@@ -2631,6 +2637,115 @@
               tr_en="two days before yesterday; three days back (ago)"
               hint_en="noun; adverb (fukushi)"
               lvl="n2"
+            />
+            <word
+              w="【耕：こう】【地：ち】"
+              rom="kōchi"
+              tr_en="arable land; plantation; farmland / fazenda; hacienda; large estate"
+              hint_en="noun"
+              lvl="n2"
+              id="kōchi-plantation"
+            />
+            <word
+              w="【肌：はだ】【着：ぎ】"
+              rom="hadagi"
+              tr_en="underwear; underclothes; lingerie; chemise; singlet"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【肯：こう】【定：てい】"
+              rom="kōtei"
+              tr_en="affirmation / affirmative"
+              hint_en="noun; suru verb; transitive verb"
+              lvl="n2"
+              id="kōtei-affirm"
+            />
+            <word
+              w="【育：いく】【児：じ】"
+              rom="ikuji"
+              tr_en="childcare; child-rearing; nursing; upbringing"
+              hint_en="noun; suru verb; intransitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【能：のう】【率：りつ】"
+              rom="nōritsu"
+              tr_en="efficiency / moment"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【脅：おど】かす"
+              rom="odokasu"
+              tr_en="to threaten; to menace; to intimidate / to startle; to frighten; to scare"
+              hint_en="godan verb with 'su' ending; transitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【臍：へそ】"
+              rom="heso"
+              tr_en="navel; belly button / protrusion or depression in the middle of an object / center; centre; most important part; main point"
+              hint_en="noun / noun; only applies to へそ; only applies to ヘソ"
+              lvl="n2"
+            />
+            <word
+              w="【臨：りん】【時：じ】"
+              rom="rinji"
+              tr_en="temporary; provisional; interim / special; extraordinary; extra"
+              hint_en="noun which may take the genitive case particle 'no'; noun"
+              lvl="n2"
+            />
+            <word
+              w="【自：じ】【習：しゅう】"
+              rom="jishū"
+              tr_en="self-study; teaching oneself / studying by oneself (at school) while the teacher is absent"
+              hint_en="noun; suru verb; transitive verb / noun; suru verb; transitive verb; intransitive verb; only applies to 自習"
+              lvl="n2"
+            />
+            <word
+              w="【自：じ】【衛：えい】"
+              rom="jiei"
+              tr_en="self-defense; self-defence"
+              hint_en="noun; suru verb; transitive verb; intransitive verb; noun which may take the genitive case particle 'no'"
+              lvl="n2"
+            />
+            <word
+              w="【至：し】【急：きゅう】"
+              rom="shikyū"
+              tr_en="urgent; pressing; immediate; prompt; express / urgently; promptly; at once; right away; without delay; as soon as possible"
+              hint_en="noun which may take the genitive case particle 'no'; noun / noun; adverb (fukushi)"
+              lvl="n2"
+              id="shikyū-urgent"
+            />
+            <word
+              w="【艶：つや】"
+              rom="tsuya"
+              tr_en="gloss; luster; lustre; shine; sheen; polish / mellowness (of a voice); youthfulness (e.g. of skin) / interest; appeal; charm; color; colour; feeling / romance; love; sexiness"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【芸：げい】【能：のう】"
+              rom="geinō"
+              tr_en="public entertainment; performing arts / accomplishments; attainments"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【苦：く】【心：しん】"
+              rom="kushin"
+              tr_en="pains; hard work; effort; trouble; labour; labor"
+              hint_en="noun; suru verb; intransitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【英：えい】【和：わ】"
+              rom="eiwa"
+              tr_en="English-Japanese / English-Japanese dictionary"
+              hint_en="noun"
+              lvl="n2"
+              id="eiwa-engjpn"
             />
         </section>
     </unit>

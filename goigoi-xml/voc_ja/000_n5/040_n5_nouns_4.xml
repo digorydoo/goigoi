@@ -771,14 +771,19 @@
                 />
             </word>
             <word
-              w="お【手：て】【洗：あら】い"
-              rom="o-tearai"
-              tr_en="toilet; lavatory"
-              tr_de="Toilette"
+              w="【手：て】【洗：あら】い"
+              rom="te-arai"
+              tr_en="restroom; lavatory; washing one's hands"
+              tr_de="Toilette; Händewaschen"
+              hint_en="noun"
+              hint_de="Nomen"
               lvl="n5"
-              category="home"
-              id="otearai-lavatory"
+              category="home, hands"
+              id="tearai-restroom"
+              rem="jisho has n2, but n5 for o-tearai, te, arau"
             >
+                <keep_apart_from id="otearai-lavatory" />
+                <keep_together id="otearai-lavatory" />
                 <phrase
                   ph="【広：ひろ】いお【手：て】【洗：あら】い"
                   rom="hiroi o-tearai"
@@ -795,6 +800,17 @@
                   lvl="n5"
                   origin="500mon q8"
                 />
+            </word>
+            <word
+              w="お【手：て】【洗：あら】い"
+              rom="o-tearai"
+              tr_en="toilet; lavatory"
+              lvl="n5"
+              id="otearai-lavatory"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="tearai-restroom" />
+                <keep_together id="tearai-restroom" />
             </word>
             <word
               w="【新：しん】【聞：ぶん】"

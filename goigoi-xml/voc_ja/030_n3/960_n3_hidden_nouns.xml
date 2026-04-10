@@ -17,15 +17,27 @@
         <section>
             <!-- unsorted -->
             <word
-              w="【入：にゅう】【場：じょう】"
-              rom="nyūjō"
-              tr_en="admission; admittance; entering"
-              tr_de="Zulassung; Eintritt; Eintreten"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【背：せい】"
+              rom="sei"
+              tr_en="height; stature"
+              tr_de="Körpergrösse; Statur"
               lvl="n3"
-              id="nyūjō-admission"
+              id="sei-stature"
+              HIDDEN="true"
+              rem="not a good word; is this a suffix? is this really n3?"
             />
+            <word
+              w="【背：せ】【骨：ぼね】"
+              rom="sebone"
+              tr_en="spine"
+              tr_de="Wirbelsäule"
+              lvl="n3"
+              id="sebone-spine"
+              HIDDEN="true"
+              rem="is a phrase of hone-bone"
+            >
+                <keep_apart_from id="hone-bone" />
+            </word>
             <word
               w="【方：ほう】【々：ぼう】"
               rom="hō-bō"
@@ -1453,7 +1465,9 @@
               tr_en="job; work; employment; occupation; position / duties / trade; skill"
               hint_en="noun; noun, used as a suffix"
               lvl="n3"
-            />
+            >
+                <!-- 職を失う - to lose one's job (lib0) -->
+            </word>
             <word
               w="【肌：はだ】"
               rom="hada"

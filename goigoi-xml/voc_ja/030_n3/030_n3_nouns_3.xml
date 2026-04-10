@@ -193,8 +193,11 @@
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
+              category="top-words"
               id="jama-interrupt"
             >
+                <keep_apart_from id="shitsurei-discourtesy" />
+                <keep_apart_from id="meiwaku-nuisance" />
                 <phrase
                   ph="【邪：じゃ】【魔：ま】をする"
                   rom="jama o suru"
@@ -704,6 +707,7 @@
               id="yuka-floor"
             >
                 <!-- implicit see-also link to toko-bed: same kanji -->
+                <keep_apart_from id="tsuchi-soil" />
                 <phrase
                   ph="【床：ゆか】に【座：すわ】っている"
                   rom="yuka ni suwatte iru"
@@ -729,6 +733,7 @@
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
+              category="top-words"
               id="hirune-siesta"
               rem="appears in GENKI2 L21 vocab section; jisho has n2"
             >

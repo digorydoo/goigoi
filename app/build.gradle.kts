@@ -52,6 +52,19 @@ android {
     buildFeatures {
         buildConfig = true
     }
+
+    tasks.whenTaskAdded {
+        // Android linting takes a long time, so let's disable it by default.
+        // You can still call it manually with ./gradlew lint
+        if (name.startsWith("lint")) {
+            val lintExplicitlyWanted = gradle.startParameter.taskNames.any {
+                it.contains("lint", ignoreCase = true)
+            }
+            if (!lintExplicitlyWanted) {
+                enabled = false
+            }
+        }
+    }
 }
 
 tasks.named("preBuild") {

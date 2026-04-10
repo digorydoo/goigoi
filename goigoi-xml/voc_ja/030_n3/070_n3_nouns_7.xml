@@ -19,6 +19,75 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【同：どう】【僚：りょう】"
+              rom="dōryō"
+              tr_en="co-worker; colleague"
+              tr_de="Kollege; Mitarbeiter"
+              lvl="n3"
+              category="business, people"
+              id="dōryō-coworker"
+              rem="appears in GENKI2 L21 vocab section"
+            >
+                <keep_apart_from id="shokuin-personnel" />
+                <keep_apart_from id="shiyōnin-employee" />
+                <keep_apart_from id="kaishain-employee" />
+                <keep_apart_from id="jūgyōin-employee" />
+                <keep_apart_from id="otsure-companion" />
+                <keep_apart_from id="aite-companion" />
+                <keep_apart_from id="naka-relation" rem="ambiguity in phrases" />
+                <phrase
+                  ph="【友：ゆう】【人：じん】であり【同：どう】【僚：りょう】"
+                  rom="yūjin de ari dōryō"
+                  tr_en="a friend and colleague"
+                  tr_de="ein Freund und Kollege"
+                  explanation_en="The phrasing 〜であり〜 gives it a slightly formal or written tone."
+                  explanation_de="Das Konstrukt 〜であり〜 gibt dem Ausdruck einen formellen oder geschriebenen Ton."
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【二：ふた】【人：り】とも【私：わたし】の【同：どう】【僚：りょう】です。"
+                  rom="Futari to mo watashi no dōryō desu."
+                  tr_en="Both of them are my colleagues."
+                  tr_de="Beide sind meine Kollegen."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【就：しゅう】【職：しょく】"
+              rom="shūshoku"
+              tr_en="getting a full-time job; to find employment"
+              tr_de="einen Vollzeitjob finden; eine Stelle finden"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="employment"
+              id="shūshoku-findemployment"
+              rem="appears in GENKI2 p.117 vocab section"
+            >
+                <!-- a job offer is 内定, which is nx -->
+                <phrase
+                  ph="【就：しゅう】【職：しょく】の【面：めん】【接：せつ】"
+                  rom="shūshoku no mensetsu"
+                  tr_en="a job interview"
+                  tr_de="ein Vorstellungsgespräch"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="その【会：かい】【社：しゃ】には【就：しゅう】【職：しょく】できませんでした。"
+                  rom="Sono kaisha ni wa shūshoku dekimasen deshita."
+                  tr_en="I wasn't able to get a job at that company."
+                  tr_de="Ich habe es nicht geschafft, bei jener Firma eine Stelle zu bekommen."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
               w="【過：か】【去：こ】"
               rom="kako"
               tr_en="the past; bygone days"
@@ -124,54 +193,6 @@
                   lvl="n3"
                   origin="Oxford p.128"
                   rem="ChatGPT says のために would also be correct if perhaps slightly more formal"
-                />
-            </word>
-            <word
-              w="【相：あい】【手：て】"
-              rom="aite"
-              tr_en="partner; the other party"
-              tr_de="Partner; Gegner"
-              Langenscheidt="Partner; Gegner"
-              lvl="n3"
-              id="aite-companion"
-              category="people"
-              rem="appears in GENKI2 L22 vocab section"
-            >
-                <keep_apart_from id="otsure-companion" />
-                <keep_apart_from id="dōryō-coworker" />
-                <keep_apart_from id="naka-relation" rem="ambiguity in phrases" />
-                <keep_apart_from id="senshu-athlete" />
-                <phrase
-                  ph="【結：けっ】【婚：こん】【相：あい】【手：て】"
-                  rom="kekkon aite"
-                  tr_en="marriage partner"
-                  tr_de="Ehepartner"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <phrase
-                  ph="【試：し】【合：あい】の【相：あい】【手：て】"
-                  rom="shiai no aite"
-                  tr_en="opponent (in a match)"
-                  tr_de="Gegner (in einem Spiel)"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【話：はな】し【相：あい】【手：て】がほしい。"
-                  rom="Hanashi-aite ga hoshii."
-                  tr_en="I need someone to talk with."
-                  tr_de="Ich brauche jemanden, mit dem ich reden kann."
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【僕：ぼく】には【相：そう】【談：だん】【相：あい】【手：て】がない。"
-                  rom="Boku ni wa sōdan-aite ga nai."
-                  tr_en="I have no one to turn to for advice."
-                  tr_de="Ich habe niemanden, den ich um Rat fragen könnte."
-                  lvl="n3"
-                  origin="lib0"
                 />
             </word>
             <word
@@ -518,23 +539,29 @@
                 />
             </word>
             <word
-              w="【最：さい】【終：しゅう】"
-              rom="saishū"
-              tr_en="last; final; closing"
-              tr_de="letzte(r); finale(r)"
-              hint_en="noun"
-              hint_de="Nomen"
+              w="【選：せん】【手：しゅ】"
+              rom="senshu"
+              tr_en="athlete; sports team member"
+              tr_de="Sportler; Mitglied einer Sportmannschaft"
               lvl="n3"
-              id="saishū-final"
+              category="sports"
+              id="senshu-athlete"
             >
-                <see id="saigo-end" rem="closely related" />
-                <keep_apart_from id="owari-end" />
-                <keep_apart_from id="saigo-end" />
+                <keep_apart_from id="aite-companion" />
                 <phrase
-                  ph="【最：さい】【終：しゅう】バス"
-                  rom="saishū basu"
-                  tr_en="the last bus"
-                  tr_de="der letzte Bus"
+                  ph="サッカー【選：せん】【手：しゅ】"
+                  rom="sakkā senshu"
+                  tr_en="soccer player"
+                  tr_de="Fussballspieler"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for sakkā"
+                />
+                <sentence
+                  s="【好：す】きな【選：せん】【手：しゅ】は【誰：だれ】ですか。"
+                  rom="Suki na senshu wa dare desu ka?"
+                  tr_en="Who is your favourite athlete?"
+                  tr_de="Wer ist dein Lieblingsathlet?"
                   lvl="n3"
                   origin="lib0"
                 />
@@ -634,46 +661,23 @@
                 />
             </word>
             <word
-              w="【機：き】【嫌：げん】"
-              rom="kigen"
-              tr_en="humour; temper; well-being"
-              tr_de="Stimmung; Temperament; Wohlbefinden"
+              w="【首：しゅ】【相：しょう】"
+              rom="shushō"
+              tr_en="Prime Minister; chancellor; premier"
+              tr_de="Premierminister; Kanzler"
               lvl="n3"
-              category="mood, happiness"
-              id="kigen-temper"
+              category="politics, people"
+              id="shushō-premier"
+              rem="appears in GENKI2 p.116 vocab section"
             >
-                <keep_apart_from id="ki-mood" />
-                <keep_apart_from id="kibun-feeling" />
-                <keep_apart_from id="kanjō-emotion" />
-                <keep_apart_from id="kanji-feeling" />
-                <keep_apart_from id="kimochi-sensation" />
-                <keep_apart_from id="kimi-feeling" />
-                <keep_apart_from id="kankaku-sense" />
-                <phrase
-                  ph="ご【機：き】【嫌：げん】よう"
-                  rom="go-kigen yō"
-                  tr_en="farewell"
-                  tr_de="auf Wiedersehen"
-                  explanation_en="Polite and somewhat old-fashioned greeting that comes from: 「ご機嫌がようございますね」"
-                  explanation_de="Höflicher und etwas altmodischer Gruss, der von 「ご機嫌がようございますね」 kommt."
-                  lvl="n3"
-                  rem="From Bombom TV; ChatGPT says it's a very polite and somewhat old-fashioned greeting."
-                />
+                <keep_apart_from id="daitōryō-president" />
                 <sentence
-                  s="ご【機：き】【嫌：げん】いかがですか。"
-                  rom="Go-kigen ikaga desu ka?"
-                  tr_en="How are you feeling? (How's your health?)"
-                  tr_de="Wie fühlen Sie sich? (Wie geht es Ihrer Gesundheit?)"
+                  s="【国：こく】【民：みん】はだれでも【首：しゅ】【相：しょう】を【尊：そん】【敬：けい】している。"
+                  rom="Kokumin wa daredemo shushō o sonkei shite iru."
+                  tr_en="The people of the country respect the Prime Minister."
+                  tr_de="Das Volk respektiert den Premierminister."
                   lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="ハルトさんは【朝：あさ】から【機：き】【嫌：げん】が【悪：わる】いみたい。"
-                  rom="Haruto-san wa asa kara kigen ga warui mitai."
-                  tr_en="Haruto seems to be in a bad mood since morning."
-                  tr_de="Haruto scheint seit dem Morgen in schlechter Stimmung zu sein."
-                  lvl="n3"
-                  origin="ChatGPT"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -877,42 +881,6 @@
                 />
             </word>
             <word
-              w="【歩：ほ】【道：どう】"
-              rom="hodō"
-              tr_en="sidewalk; pavement; footpath"
-              tr_de="Bürgersteig; Fussweg"
-              lvl="n3"
-              category="city, transportation"
-              id="hodō-sidewalk"
-            >
-                <keep_apart_from id="ōdan-crossing" />
-                <phrase
-                  ph="【歩：ほ】【道：どう】を【歩：ある】く"
-                  rom="hodō o aruku"
-                  tr_en="to walk on the pavement"
-                  tr_de="auf dem Bürgersteig gehen"
-                  lvl="n3"
-                  origin="jpod101 audio"
-                />
-                <phrase
-                  ph="【曲：ま】がった【歩：ほ】【道：どう】"
-                  rom="magatta hodō"
-                  tr_en="curving footpath"
-                  tr_de="schlingender Fussweg"
-                  lvl="n3"
-                  origin="jpod101 audio"
-                />
-                <sentence
-                  s="【歩：ほ】【道：どう】を【歩：ある】けば【安：あん】【全：ぜん】だよ。"
-                  rom="Hodō o arukeba anzen da yo."
-                  tr_en="You'll be safer walking on the pavement."
-                  tr_de="Auf dem Bürgersteig gehen wäre sicherer."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="rephrased by ChatGPT"
-                />
-            </word>
-            <word
               w="【針：はり】"
               rom="hari"
               tr_en="needle; pin; counter for stitches"
@@ -957,48 +925,6 @@
                   lvl="n3"
                   origin="lib0 modified"
                   rem="verified with ChatGPT; jisho has n2 for sasu"
-                />
-            </word>
-            <word
-              w="【文：もん】【句：く】"
-              rom="monku"
-              tr_en="complaint; grumbling; objection"
-              tr_de="Klage; Beschwerde; Reklamation"
-              lvl="n3"
-              category="talking, not-good"
-              id="monku-complaint"
-              rem="appears in GENKI2 L21 vocab section"
-            >
-                <keep_apart_from id="uttaeru-complain" />
-                <phrase
-                  ph="【文：もん】【句：く】を【言：い】う"
-                  rom="monku o iu"
-                  tr_en="to complain"
-                  tr_de="sich beklagen"
-                  lvl="n3"
-                  origin="GENKI2 p.209"
-                />
-                <sentence
-                  s="【文：もん】【句：く】を【言：い】えば【切：き】りがない。"
-                  rom="Monku o ieba kiri ga nai."
-                  tr_en="Once the complaining starts, it never ends."
-                  tr_de="Wenn die Beschwerden einmal anfangen, hören sie nicht mehr auf."
-                  explanation_en="Or, depending on context: If I complained, there would be no end."
-                  explanation_de="Oder, abhängig vom Kontext: Wenn ich mich beklagen würde, könnte ich nicht mehr aufhören."
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【文：もん】【句：く】を【言：い】っても【始：はじ】まらないだろ。"
-                  rom="Monku o itte mo hajimaranai daro."
-                  tr_en="Complaining won't change anything."
-                  tr_de="Sich beschweren bringt gar nichts."
-                  explanation_en="「始まらない」can have the meaning of 'there's no point'"
-                  explanation_de="「始まらない」kann die Bedeutung von 'es bringt nichts' haben"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="始まらない verified with jisho; jisho has nx for this meaning"
                 />
             </word>
             <word
@@ -1088,6 +1014,88 @@
                 />
             </word>
             <word
+              w="【皮：かわ】"
+              rom="kawa"
+              tr_en="skin; peel"
+              tr_de="Haut; Schale"
+              lvl="n3"
+              category="body, animal"
+              id="kawa-skin"
+            >
+                <keep_apart_from id="kegawa-fur" />
+                <keep_together id="kegawa-fur" />
+                <see id="hifu-skin" rem="closely related" />
+                <keep_apart_from id="hifu-skin" />
+                <!-- human skin is 皮膚・ひふ (n2) -->
+                <!-- the scalp is 頭皮・とうひ (nx) -->
+                <phrase
+                  ph="りんごの【皮：かわ】"
+                  rom="ringo no kawa"
+                  tr_en="peel of an apple"
+                  tr_de="Schale eines Apfels"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【毛：け】【皮：がわ】"
+                  rom="kegawa"
+                  tr_en="fur; pelt"
+                  tr_de="Fell; Pelz"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【動：どう】【物：ぶつ】の【皮：かわ】は【毛：け】で【覆：おお】われている。"
+                  rom="Dōbutsu no kawa wa ke de ōwarete iru."
+                  tr_en="The skin of animals is covered with fur."
+                  tr_de="Die Haus von Tieren ist bedeckt von Fell."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="そのコートは【毛：け】【皮：がわ】でできている。"
+                  rom="Sono kōto wa kegawa de dekite iru."
+                  tr_en="That coat is made from fur."
+                  tr_de="Dieser Mantel ist aus Pelz."
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【毛：け】【皮：がわ】"
+              rom="kegawa"
+              tr_en="fur; pelt"
+              lvl="n3"
+              id="kegawa-fur"
+              HIDDEN="true"
+              rem="jisho has n2, but n4 for ke, n3 for kawa"
+            >
+                <keep_apart_from id="kawa-skin" />
+                <keep_together id="kawa-skin" />
+            </word>
+            <word
+              w="【大：たい】【気：き】"
+              rom="taiki"
+              tr_en="atmosphere; air"
+              tr_de="Atmosphäre; Luft"
+              lvl="n3"
+              category="science, astronomy"
+              id="taiki-atmosphere"
+            >
+                <see id="kūki-air" rem="closely related" />
+                <keep_apart_from id="kūki-air" />
+                <sentence
+                  s="【大：たい】【気：き】が【地：ち】【球：きゅう】を【包：つつ】んでいる。"
+                  rom="Taiki ga chikyū o tsutsunde iru."
+                  tr_en="The atmosphere surrounds the Earth."
+                  tr_de="Die Atmosphäre umgibt die Erde."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【勘：かん】【定：じょう】"
               rom="kanjō"
               tr_en="bill; payment"
@@ -1135,6 +1143,45 @@
                   tr_de="Feuerversicherung"
                   lvl="n3"
                   origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【記：き】【念：ねん】"
+              rom="kinen"
+              tr_en="commemoration; remembrance; honouring"
+              tr_de="Gedenken; Erinnerung; Ehrung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="culture"
+              id="kinen-celebration"
+            >
+                <phrase
+                  ph="【記：き】【念：ねん】【日：び】"
+                  rom="kinenbi"
+                  tr_en="memorial day; anniversary"
+                  tr_de="Gedenktag; Jubiläum"
+                  lvl="n3"
+                  origin="Oxford p.77"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="ここは【有：ゆう】【名：めい】なので【記：き】【念：ねん】【写：しゃ】【真：しん】を【撮：と】ります。"
+                  rom="Koko wa yūmei na no de kinen-shashin o torimasu."
+                  tr_en="This is a famous spot, so I'll take a souvenir photo."
+                  tr_de="Dies ist ein berühmter Ort, deshalb mache ich ein Erinnerungsfoto."
+                  lvl="n3"
+                  origin="Oxford p.144"
+                />
+                <sentence
+                  s="【先：せん】【生：せい】が【学：がく】【生：せい】に「サラダ【記：き】【念：ねん】【日：び】」を【読：よ】ませた。"
+                  rom="Sensei ga gakusei ni ‘Sarada Kinenbi’ o yomaseta."
+                  tr_en="The teacher made the students read 'Salad Anniversary'."
+                  tr_de="Der Lehrer veranlasste die Schüler, 'Salat-Jubiläum' zu lesen."
+                  explanation_en="'Salad Anniversary' is a book of poems by Tawara Machi from 1987."
+                  explanation_de="'Salat-Jubiläum' ist ein Gedichtband von Tawara Machi aus dem Jahr 1987."
+                  lvl="n3"
+                  origin="Oxford p.77"
                 />
             </word>
             <word
@@ -1253,6 +1300,7 @@
               id="uwasa-rumour"
             >
                 <keep_apart_from id="oshaberi-gossip" />
+                <keep_apart_from id="muda-waste" rem="ambiguity with mudabanashi" />
             </word>
             <word
               w="【実：じっ】【験：けん】"
@@ -1268,15 +1316,6 @@
                 <!-- 実験を行う - (じっけんをおこなう) - "To conduct an experiment" (ChatGPT) -->
             </word>
             <word
-              w="【心：しん】【臓：ぞう】"
-              rom="shinzō"
-              tr_en="heart (anatomy); central part"
-              tr_de="Herz (Anatomie); Kernstück"
-              lvl="n3"
-              category="body"
-              id="shinzō-heart"
-            />
-            <word
               w="【終：しゅう】【電：でん】"
               rom="shūden"
               tr_en="last train"
@@ -1289,37 +1328,40 @@
               rem="appears in GENKI2 L21 vocab section; jisho has nx"
             />
             <word
-              w="【残：ざん】【業：ぎょう】"
-              rom="zangyō"
-              tr_en="overtime work"
-              tr_de="Überstunden (Arbeit)"
+              w="【両：りょう】【替：がえ】"
+              rom="ryōgae"
+              tr_en="money exchange; change money"
+              tr_de="Geldwechsel; Geld wechseln"
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
-              category="employment"
-              id="zangyō-overtime"
-              rem="appears in GENKI2 p.116 vocab section; jisho has nx"
-            />
+              category="trade, finances"
+              id="ryōgae-exchange"
+              rem="appears in GENKI2 p.91"
+            >
+                <sentence
+                  s="アメリカドルを【日：に】【本：ほん】【円：えん】に【両：りょう】【替：がえ】できますか。"
+                  rom="Amerika-doru o Nihon-en ni ryōgae dekimasu ka?"
+                  tr_en="Can you change US dollars to Japanese yen?"
+                  tr_de="Können Sie US-Dollar in japanische Yen wechseln?"
+                  lvl="n3"
+                  origin="GENKI2 p.91"
+                />
+            </word>
             <word
-              w="【皮：かわ】"
-              rom="kawa"
-              tr_en="skin; hide; pelt; fur; shell"
-              tr_de="Haut; Pelz; Fell; Schale"
+              w="【大：たい】【使：し】"
+              rom="taishi"
+              tr_en="ambassador"
+              tr_de="Botschafter"
+              hint_en="highest-ranking diplomat"
+              hint_de="Diplomat mit höchstem Rang"
               lvl="n3"
-              category="animal"
-              id="kawa-fur"
-            />
-            <word
-              w="【高：こう】【速：そく】"
-              rom="kōsoku"
-              tr_en="high-speed; rapid; express"
-              tr_de="Hochgeschwindigkeit; Express"
-              hint_en="noun; na-adjective"
-              hint_de="Nomen; Na-Adjektiv"
-              lvl="n3"
-              category="transportation"
-              id="kōsoku-hispeed"
-            />
+              category="politics, people"
+              id="taishi-ambassador"
+              rem="jisho has n5 for taishikan, n3 for taishi"
+            >
+                <keep_apart_from id="daitōryō-president" />
+            </word>
         </section>
     </unit>
 </vocabulary>

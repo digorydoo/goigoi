@@ -19,29 +19,24 @@ import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.activity.flipthru.FlipThruActivityParams
 import io.github.digorydoo.goigoi.activity.flipthru.startFlipThruActivity
 import io.github.digorydoo.goigoi.bottom_sheet.WordInfoBottomSheet
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Vocabulary
-import io.github.digorydoo.goigoi.db.Word
+import io.github.digorydoo.goigoi.core.db.Unyt
+import io.github.digorydoo.goigoi.core.db.Word
+import io.github.digorydoo.goigoi.core.stats.StatsKey
 import io.github.digorydoo.goigoi.dialog.WordCtxDlgFragment
 import io.github.digorydoo.goigoi.dialog.WordCtxMenu
 import io.github.digorydoo.goigoi.drawable.SheetHead
-import io.github.digorydoo.goigoi.helper.UserPrefs
-import io.github.digorydoo.goigoi.helper.UserPrefs.WordListItemMode
-import io.github.digorydoo.goigoi.helper.addMyListOnScrollHandler
 import io.github.digorydoo.goigoi.list.*
 import io.github.digorydoo.goigoi.listviewholder.ClickableItemDelegate
-import io.github.digorydoo.goigoi.stats.Stats
-import io.github.digorydoo.goigoi.stats.StatsKey
 import io.github.digorydoo.goigoi.utils.DeviceUtils
 import io.github.digorydoo.goigoi.utils.ResUtils
+import io.github.digorydoo.goigoi.utils.SingletonHolder
+import io.github.digorydoo.goigoi.utils.UserPrefs.WordListItemMode
 
 class UnytActivity: AppCompatActivity(), WordCtxMenu.Callback {
     private lateinit var params: UnytActivityParams
     private lateinit var bindings: Bindings
     private lateinit var values: Values
-    private lateinit var vocab: Vocabulary
     private lateinit var unyt: Unyt
-    private lateinit var prefs: UserPrefs
     private lateinit var adapter: MyListAdapter
 
     private var listItemMode = WordListItemMode.SHOW_ROMAJI
@@ -55,11 +50,11 @@ class UnytActivity: AppCompatActivity(), WordCtxMenu.Callback {
         params = UnytActivityParams.fromIntent(intent)
         bindings = Bindings(this)
         values = Values(this)
-        vocab = Vocabulary.getSingleton(ctx)
-        unyt = vocab.findUnytById(params.unytId)!!
-        prefs = UserPrefs.getSingleton(ctx)
 
-        val stats = Stats.getSingleton(ctx)
+        val vocab = SingletonHolder.vocab
+        unyt = vocab.findUnytById(params.unytId)!!
+
+        val stats = SingletonHolder.stats
         stats.notifyUnytActivityLaunched(unyt)
 
         setSupportActionBar(bindings.toolbar)
@@ -104,6 +99,8 @@ class UnytActivity: AppCompatActivity(), WordCtxMenu.Callback {
     }
 
     private fun setupRecyclerView(ctx: Context) {
+        val prefs = SingletonHolder.prefs
+
         listItemMode = when {
             canSeeMode(prefs.wordListItemMode) -> prefs.wordListItemMode
             canSeeMode(WordListItemMode.SHOW_ROMAJI) -> WordListItemMode.SHOW_ROMAJI
@@ -165,9 +162,8 @@ class UnytActivity: AppCompatActivity(), WordCtxMenu.Callback {
     override fun onResume() {
         super.onResume()
 
-        val ctx = applicationContext
-        val vocab = Vocabulary.getSingleton(ctx)
-        vocab.writeMyWordsUnytIfNecessary(ctx)
+        val vocab = SingletonHolder.vocab
+        vocab.writeMyWordsUnytIfNecessary()
 
         loadUnytIfNecessaryAndRebuildWordsListAsync()
     }
@@ -175,9 +171,8 @@ class UnytActivity: AppCompatActivity(), WordCtxMenu.Callback {
     override fun onPause() {
         super.onPause()
 
-        val ctx = applicationContext
-        val vocab = Vocabulary.getSingleton(ctx)
-        vocab.writeMyWordsUnytIfNecessary(ctx)
+        val vocab = SingletonHolder.vocab
+        vocab.writeMyWordsUnytIfNecessary()
     }
 
     private fun loadUnytIfNecessaryAndRebuildWordsListAsync(done: (() -> Unit)? = null) {
@@ -190,9 +185,10 @@ class UnytActivity: AppCompatActivity(), WordCtxMenu.Callback {
 
         val mode = listItemMode
         val firstItemTopMargin = values.firstItemTopMargin
+        val vocab = SingletonHolder.vocab
 
         Thread {
-            vocab.loadUnytIfNecessary(unyt, ctx)
+            vocab.loadUnytIfNecessary(unyt)
             val newItems = ListBuilder.buildWordsList(unyt, mode, firstItemTopMargin, ctx)
 
             Handler(Looper.getMainLooper()).post {
@@ -218,7 +214,7 @@ class UnytActivity: AppCompatActivity(), WordCtxMenu.Callback {
             R.id.action_show_romaji -> WordListItemMode.SHOW_ROMAJI
             else -> WordListItemMode.SHOW_TRANSLATION
         }
-        prefs.wordListItemMode = listItemMode
+        SingletonHolder.prefs.wordListItemMode = listItemMode
         adjustMenuItems(menu)
         loadUnytIfNecessaryAndRebuildWordsListAsync()
     }
@@ -275,8 +271,7 @@ class UnytActivity: AppCompatActivity(), WordCtxMenu.Callback {
 
     // Called by WordsListFragment
     fun showBottomSheet(word: Word) {
-        val ctx = applicationContext
-        val stats = Stats.getSingleton(ctx)
+        val stats = SingletonHolder.stats
         stats.incUserStudyCountOfToday(StatsKey.BOTTOM_SHEET)
         bindings.startBtn.hide()
 

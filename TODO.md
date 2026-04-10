@@ -10,6 +10,10 @@
 
 * When hint has "noun", tr_en should have -ing rather than "to ~"
 
+* Katakana font should be larger when word is short
+
+* Add a tool that checks jisho db if none of kanjis in dont_confuse index groups are ambiguously used in jisho words
+
 * Tategaki view should treat numbers specially (unless their furigana is broken in parts)
     - single digit numbers should use wide chars
     - two-digit numbers should use normal-width chars and occupy one space
@@ -17,8 +21,10 @@
 
 * Tategaki view: Wavy dash 〰 (nami) should also be rotated
 
-* Should not pick sentences and phrases whose level more difficult than the most difficult word in the study list,
-  except when it's the only one (which can happen if requireSentences/Phrases isn't true)
+* If there is more than one sentence/phrase, it should not pick a sentence/phrase whose level is more difficult than
+  the word it's in, except if the word's rating is fairly high
+
+* It should somehow mark the answer when accepting a synonym instead of the actual word, e.g. use (!) icon
 
 * Allow hints in phrases and sentences (e.g. to mark ガソリンスタンド as a noun), but restrict them to known hints
 

@@ -5,9 +5,9 @@ import android.net.Uri
 import androidx.core.net.toUri
 import ch.digorydoo.kutils.cjk.isCJKNotKana
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.db.KanjiIndex
-import io.github.digorydoo.goigoi.db.Word
-import io.github.digorydoo.goigoi.helper.MyLayoutInflater
+import io.github.digorydoo.goigoi.core.db.Word
+import io.github.digorydoo.goigoi.utils.MyLayoutInflater
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 
 class KanjiDetailsLinksBuilder(private val word: Word) {
     fun build(ctx: Context, inflater: MyLayoutInflater, onClick: (uri: Uri) -> Unit) {
@@ -19,7 +19,7 @@ class KanjiDetailsLinksBuilder(private val word: Word) {
 
         inflater.insertSubheader(ctx.getString(R.string.kanji_details))
 
-        val kanjiIndex = KanjiIndex.getSingleton(ctx)
+        val kanjiIndex = SingletonHolder.kanjiIndex
 
         kanjis.forEach { kanji ->
             val readings = word.primaryForm.readings

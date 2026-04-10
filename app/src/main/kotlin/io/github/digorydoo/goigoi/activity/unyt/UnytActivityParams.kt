@@ -5,8 +5,8 @@ import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 import io.github.digorydoo.goigoi.BuildConfig
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Vocabulary
+import io.github.digorydoo.goigoi.core.db.Unyt
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 
 class UnytActivityParams(val unytId: String) {
     fun putInto(intent: Intent) {
@@ -28,10 +28,10 @@ class UnytActivityParams(val unytId: String) {
  * it improves the transition. Important: Make sure to disallow selecting the item again until done is called!
  */
 fun Activity.startUnytActivityAsync(unyt: Unyt, done: () -> Unit) {
+    val vocab = SingletonHolder.vocab
+
     Thread {
-        val ctx = applicationContext
-        val vocab = Vocabulary.getSingleton(ctx)
-        vocab.loadUnytIfNecessary(unyt, ctx)
+        vocab.loadUnytIfNecessary(unyt)
 
         Handler(Looper.getMainLooper()).post {
             // Back on the main thread

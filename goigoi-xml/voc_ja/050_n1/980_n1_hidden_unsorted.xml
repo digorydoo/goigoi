@@ -2286,6 +2286,86 @@
               lvl="n1"
             />
             <word
+              w="【明：あ】かす"
+              rom="akasu"
+              tr_en="to pass (the night); to spend; to reveal; to divulge; to disclose; to expose; to prove; to verify"
+              hint_en="v.t."
+              lvl="n1"
+              id="akasu-spend"
+            >
+                <keep_apart_from id="arawasu-reveal" />
+            </word>
+            <word
+              w="【織：お】る"
+              rom="oru"
+              tr_en="to weave"
+              hint_en="v.t."
+              lvl="n1"
+              id="oru-weave"
+            >
+                <keep_apart_from id="amu-toknit" />
+            </word>
+            <word
+              w="【織：おり】【物：もの】"
+              rom="orimono"
+              tr_en="textile; fabric"
+              hint_en="noun"
+              lvl="n1"
+              id="orimono-textile"
+            >
+                <keep_apart_from id="amimono-knitting" />
+                <keep_apart_from id="nuno-cloth" />
+            </word>
+            <word
+              w="【大：たい】【金：きん】"
+              rom="taikin"
+              tr_en="large amount of money; great cost"
+              hint_en="noun"
+              lvl="n1"
+              id="taikin-lotofmoney"
+            >
+                <!--
+                大金を失う - to lose a large sum of money (DeepL)
+                -->
+            </word>
+            <word
+              w="【冷：れい】【酷：こく】"
+              rom="reikoku"
+              tr_en="coldheartedness; ruthless; cruelty"
+              tr_de="rücksichtslos; grausam; Herzlosigkeit"
+              hint_en="na-adjective; noun"
+              lvl="n1"
+              id="reikoku-cruelty"
+            >
+                <phrase
+                  ph="【冷：れい】【酷：こく】な【女：じょ】【王：おう】"
+                  rom="reikoku na joō"
+                  tr_en="a coldhearted queen"
+                  tr_de="eine herzlose Königin"
+                  lvl="n1"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【写：うつ】し"
+              rom="utsushi"
+              tr_en="copy; duplicate; facsimile; transcript"
+              hint_en="noun"
+              lvl="n1"
+              id="utsushi-copy"
+            >
+                <see id="utsusu-imitate" rem="verb" />
+            </word>
+            <word
+              w="【掲：かか】げる"
+              rom="kakageru"
+              tr_en="to put up (a notice, sign, etc.); to hang out (e.g. a banner); to fly (e.g. a flag); to hoist; to raise; to display / to hold up high; to raise"
+              hint_en="v.t."
+              lvl="n1"
+            >
+                <!-- 旗をかかげる (to hoist a flag) lib0 -->
+            </word>
+            <word
               w="【指：し】【揮：き】"
               rom="shiki"
               tr_en="command; direction"
@@ -4232,16 +4312,6 @@
               lvl="n1"
             />
             <word
-              w="【明：あ】かす"
-              rom="akasu"
-              tr_en="to pass (the night); to spend; to reveal; to divulge; to disclose; to expose; to prove; to verify"
-              hint_en="v.t."
-              lvl="n1"
-              id="akasu-spend"
-            >
-                <keep_apart_from id="arawasu-reveal" />
-            </word>
-            <word
               w="【明：あ】くる"
               rom="akuru"
               tr_en="next (day, morning, etc.); following"
@@ -4291,26 +4361,6 @@
               hint_en="noun which may take the genitive case particle 'no'; noun"
               lvl="n1"
             />
-            <word
-              w="【織：お】る"
-              rom="oru"
-              tr_en="to weave"
-              hint_en="v.t."
-              lvl="n1"
-              id="oru-weave"
-            >
-                <keep_apart_from id="amu-toknit" />
-            </word>
-            <word
-              w="【織：おり】【物：もの】"
-              rom="orimono"
-              tr_en="textile; fabric"
-              hint_en="noun"
-              lvl="n1"
-              id="orimono-textile"
-            >
-                <keep_apart_from id="amimono-knitting" />
-            </word>
             <word
               w="【繕：つくろ】う"
               rom="tsukurou"
@@ -4384,6 +4434,208 @@
               w="【鼾：いびき】"
               rom="ibiki"
               tr_en="snoring; snore"
+              hint_en="noun"
+              lvl="n1"
+            />
+            <word
+              w="【失：しっ】【格：かく】"
+              rom="shikkaku"
+              tr_en="disqualification; elimination; incapacity / being unfit for one's role; being a failure"
+              hint_en="noun; suru verb"
+              lvl="n1"
+            />
+            <word
+              w="【失：しっ】【調：ちょう】"
+              rom="shicchō"
+              tr_en="lack of harmony; lack of balance; lack of coordination; malfunction / ataxia / Ataxia"
+              hint_en="noun"
+              lvl="n1"
+            />
+            <word
+              w="【奴：やっこ】"
+              rom="yakko"
+              tr_en="servant (esp. a samurai's attendant) / chivalrous man (Edo period) / cubed tofu (often served cold) / kite shaped like an Edo-period footman / Edo-period hairstyle worn by samurai's attendants / enslavement (of a woma"
+              hint_en="noun / pronoun"
+              lvl="n1"
+            />
+            <word
+              w="【好：こう】【意：い】"
+              rom="kōi"
+              tr_en="kindness; favour; friendliness / goodwill; affection; liking (for someone)"
+              hint_en="noun"
+              lvl="n1"
+              id="kōi-favour"
+            />
+            <word
+              w="【好：こう】【況：きょう】"
+              rom="kōkyō"
+              tr_en="prosperous (economic) conditions; favourable conditions; (economic) boom; thriving business; brisk market"
+              hint_en="noun"
+              lvl="n1"
+              id="kōkyō-boom"
+            />
+            <word
+              w="【好：こう】【評：ひょう】"
+              rom="kōhyō"
+              tr_en="favorable reception; good reputation; popularity"
+              hint_en="noun; na-adjective (keiyodoshi); noun which may take the genitive case particle 'no'"
+              lvl="n1"
+            />
+            <word
+              w="【奇：き】【数：すう】"
+              rom="kisū"
+              tr_en="odd number"
+              hint_en="noun; noun which may take the genitive case particle 'no'"
+              lvl="n1"
+            />
+            <word
+              w="【再：さい】【現：げん】"
+              rom="saigen"
+              tr_en="reappearance; reemergence; return; revival / reproduction; reenactment; recreation"
+              hint_en="noun; suru verb; noun which may take the genitive case particle 'no'"
+              lvl="n1"
+              id="saigen-revival"
+            />
+            <word
+              w="【再：さい】【発：はつ】"
+              rom="saihatsu"
+              tr_en="return; relapse; recurrence"
+              hint_en="noun; suru verb; intransitive verb"
+              lvl="n1"
+              id="saihatsu-return"
+            />
+            <word
+              w="【再：さい】【建：けん】"
+              rom="saiken"
+              tr_en="rebuilding; reconstruction; rehabilitation / protoform reconstruction"
+              hint_en="noun; suru verb; transitive verb"
+              lvl="n1"
+              id="saiken-rebuild"
+            />
+            <word
+              w="【再：さい】"
+              rom="sai"
+              tr_en="re-; again"
+              hint_en="prefix"
+              lvl="n1"
+              id="sai-re"
+            />
+            <word
+              w="【冒：ぼう】【頭：とう】"
+              rom="bōtō"
+              tr_en="beginning; opening; start; outset"
+              hint_en="noun"
+              lvl="n1"
+            />
+            <word
+              w="【凶：きょう】【作：さく】"
+              rom="kyōsaku"
+              tr_en="bad harvest; poor crop"
+              hint_en="noun; noun which may take the genitive case particle 'no'"
+              lvl="n1"
+            />
+            <word
+              w="【怒：いか】り"
+              rom="ikari"
+              tr_en="anger; rage; fury; wrath; indignation"
+              hint_en="noun"
+              lvl="n1"
+            />
+            <word
+              w="【思：し】【考：こう】"
+              rom="shikō"
+              tr_en="thought; consideration; thinking"
+              hint_en="noun; suru verb; transitive verb; intransitive verb; noun which may take the genitive case particle 'no'"
+              lvl="n1"
+            />
+            <word
+              w="【怪：かい】【獣：じゅう】"
+              rom="kaijū"
+              tr_en="monster"
+              hint_en="noun"
+              lvl="n1"
+            />
+            <word
+              w="【怯：おび】える"
+              rom="obieru"
+              tr_en="to become frightened; to be frightened (of); to be scared (of)"
+              hint_en="ichidan verb; intransitive verb"
+              lvl="n1"
+            />
+            <word
+              w="【恵：めぐ】み"
+              rom="megumi"
+              tr_en="blessing; grace"
+              hint_en="noun"
+              lvl="n1"
+            />
+            <word
+              w="【恵：めぐ】む"
+              rom="megumu"
+              tr_en="to bless; to show mercy to / to give (money, etc.)"
+              hint_en="godan verb with 'mu' ending; transitive verb"
+              lvl="n1"
+            />
+            <word
+              w="【恐：おそ】れ【入：い】る"
+              rom="osore-iru"
+              tr_en="to be sorry; to beg someone's pardon; to feel small / to be much obliged; to be grateful; to be thankful / to be amazed; to be greatly impressed"
+              hint_en="v.i."
+              lvl="n1"
+            />
+            <word
+              w="【恐：おそ】れ"
+              rom="osore"
+              tr_en="fear; horror; anxiety; concern; uneasiness; reverence"
+              hint_en="noun"
+              lvl="n1"
+            />
+            <word
+              w="【悉：ことごと】く"
+              rom="kotogotoku"
+              tr_en="altogether; entirely"
+              hint_en="adverb (fukushi)"
+              lvl="n1"
+            />
+            <word
+              w="【悩：なや】ましい"
+              rom="nayamashii"
+              tr_en="seductive; carnal; enchanting / troubling; difficult; thorny; hard / anxious; uneasy"
+              hint_en="i-adjective (keiyoushi)"
+              lvl="n1"
+            />
+            <word
+              w="【悩：なや】ます"
+              rom="nayamasu"
+              tr_en="to afflict; to torment; to harass; to molest"
+              hint_en="godan verb with 'su' ending; transitive verb"
+              lvl="n1"
+            />
+            <word
+              w="【悪：あく】どい"
+              rom="akudoi"
+              tr_en="gaudy; showy; garish; loud / crooked; vicious; wicked; nasty; unscrupulous; dishonest"
+              hint_en="i-adjective (keiyoushi)"
+              lvl="n1"
+            />
+            <word
+              w="【悲：ひ】【惨：さん】"
+              rom="hisan"
+              tr_en="disastrous; tragic; miserable; wretched; pitiful; woeful; outrageous"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n1"
+            />
+            <word
+              w="【悲：ひ】【観：かん】"
+              rom="hikan"
+              tr_en="pessimism; (taking a) gloomy view; discouragement; despondency; despair; disappointment"
+              hint_en="noun; suru verb; transitive verb; intransitive verb"
+              lvl="n1"
+            />
+            <word
+              w="【悲：ひ】【鳴：めい】"
+              rom="himei"
+              tr_en="shriek; scream"
               hint_en="noun"
               lvl="n1"
             />

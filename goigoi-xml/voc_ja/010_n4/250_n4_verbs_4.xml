@@ -376,6 +376,7 @@
               id="tsureru-takesbwithyou"
               rem="appears in 500mon q185 and GENKI2 p.95 vocab section as 連れていく; jisho has nx"
             >
+                <see id="otsure-companion" rem="noun" />
                 <phrase
                   ph="【連：つ】れていく"
                   rom="tsurete iku"
@@ -404,7 +405,7 @@
               category="mood"
               id="odoroku-besurprised"
             >
-                <see id="odorokasu-surprise" rem="v.t." />
+                <see id="odorokaseru-startle" rem="v.t." />
                 <phrase
                   ph="【驚：おどろ】くほど【多：おお】くの【人：ひと】"
                   rom="odoroku hodo ōku no hito"
@@ -790,6 +791,7 @@
               id="nakunaru-die"
             >
                 <keep_apart_from id="shinu-die" />
+                <keep_apart_from id="ushinau-lose" />
                 <phrase
                   ph="【急：きゅう】に【亡：な】くなる"
                   rom="kyū ni nakunaru"
@@ -1121,6 +1123,8 @@
               category="motion"
               id="yureru-sway"
             >
+                <!-- v.t. is 揺る (nx) or 揺さぶる (n1) -->
+                <keep_apart_from id="furu-sprinkle" />
                 <phrase
                   ph="【軽：かる】く【揺：ゆ】れる"
                   rom="karuku yureru"
@@ -1229,6 +1233,7 @@
             >
                 <see id="oriru-descend" rem="v.i." />
                 <keep_apart_from id="sageru-lower" />
+                <keep_apart_from id="taosu-throwdown" />
                 <phrase
                   ph="お【金：かね】を【下：お】ろす"
                   rom="o-kane o orosu"
@@ -1436,7 +1441,7 @@
               category="general"
               id="utsusu-imitate"
             >
-                <!-- the noun is 写し, which is n1 -->
+                <see id="utsushi-copy" rem="noun" />
                 <phrase
                   ph="ノートを【写：うつ】す"
                   rom="nōto o utsusu"
@@ -1477,6 +1482,7 @@
                 <see id="samasu-awaken" rem="v.t." />
                 <see id="okiru-wakeup" rem="closely related" />
                 <keep_apart_from id="okiru-wakeup" />
+                <keep_apart_from id="ishiki-awareness" />
                 <phrase
                   ph="【夢：ゆめ】から【覚：さ】める"
                   rom="yume kara sameru"

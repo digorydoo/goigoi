@@ -60,54 +60,6 @@
                 />
             </word>
             <word
-              w="【訓：くん】【練：れん】"
-              rom="kunren"
-              tr_en="drill; training; practice"
-              tr_de="Drill; Training; Übung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="sports, military"
-              id="kunren-drill"
-            >
-                <!--
-                    訓練・くんれん: training to build discipline, ability, or readiness for something practical;
-                       esp. in contexts like military, police, fire brigade, rescue, company drills, animal training
-                    練習・れんしゅう: practice in general; sports, music, daily skills
-                -->
-                <keep_apart_from id="renshū-practice" />
-                <keep_apart_from id="torēningu-training" />
-                <keep_apart_from id="undō-workout" />
-                <phrase
-                  ph="【歌：か】【手：しゅ】になる【訓：くん】【練：れん】を【受：う】ける"
-                  rom="kashu ni naru kunren o ukeru"
-                  tr_en="to receive training to become a singer"
-                  tr_de="eine Gesangsausbildung erhalten"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT; lib0 also has 〜となる and 〜として, but ChatGPT likes 〜になる best"
-                />
-                <sentence
-                  s="【犬：いぬ】に【新：しん】【聞：ぶん】を【取：と】ってくるように【訓：くん】【練：れん】した。"
-                  rom="Inu ni shinbun o totte kuru yō ni kunren shita."
-                  tr_en="I trained my dog to fetch the newspaper."
-                  tr_de="Ich habe meinen Hund dressiert, die Zeitung zu holen."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【軍：ぐん】【隊：たい】では【兵：へい】【隊：たい】が【毎：まい】【日：にち】 【訓：くん】【練：れん】しなければならない。"
-                  rom="Guntai de wa heitai ga mai-nichi kunren shinakereba naranai."
-                  tr_en="In the army, soldiers have to train every day."
-                  tr_de="Im Militär müssen die Söldner jeden Tag trainieren."
-                  allowSpaces="true"
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
               w="【設：せっ】【計：けい】"
               rom="sekkei"
               tr_en="design; layout; designing"
@@ -173,6 +125,8 @@
               id="seikyū-claim"
             >
                 <keep_apart_from id="shuchō-claim" />
+                <keep_apart_from id="chūmon-order" />
+                <keep_apart_from id="meijiru-command" />
                 <phrase
                   ph="【保：ほ】【険：けん】を【請：せい】【求：きゅう】する"
                   rom="hoken o seikyū suru"
@@ -374,45 +328,6 @@
                 />
             </word>
             <word
-              w="【知：し】り【合：あ】い"
-              rom="shiriai"
-              tr_en="acquaintance"
-              tr_de="Bekanntschaft"
-              hint_en="noun"
-              hint_de="Nomen"
-              lvl="n3"
-              category="people, relationships"
-              id="shiriai-acquaintance"
-              rem="jisho has n2"
-            >
-                <phrase
-                  ph="【知：し】り【合：あ】いになる"
-                  rom="shiriai ni naru"
-                  tr_en="to get to know so."
-                  tr_de="jem. kennenlernen"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【山：やま】【口：ぐち】さんと【知：し】り【合：あ】いです。"
-                  rom="Yamaguchi-san to shiriai desu."
-                  tr_en="I am acquainted with Mr Yamaguchi."
-                  tr_de="Ich kenne Herrn Yamaguchi."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="あ、お【知：し】り【合：あ】いなんですか。"
-                  rom="A, o-shiriai na n desu ka?"
-                  tr_en="Ah, so you know him?"
-                  tr_de="Ah, Sie kennen ihn also?"
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
               w="【担：たん】【当：とう】"
               rom="tantō"
               tr_en="being in charge; being responsible"
@@ -436,39 +351,6 @@
                   lvl="n3"
                   origin="ChatGPT"
                   rem="jisho has nx for purojekuto"
-                />
-            </word>
-            <word
-              w="【切：き】り"
-              rom="kiri"
-              tr_en="stop; limits"
-              tr_de="Stopp; Grenze"
-              lvl="n3"
-              id="kiri-stop"
-              rem="jisho has n1"
-            >
-                <see id="kiru-cut" rem="closely related" />
-                <keep_apart_from id="kiri-limits" />
-                <!--
-                ChatGPT says 切りがない and 限りがない both exist:
-                   切りがない - very common
-                   限りがない - much less common
-                Examples by ChatGPT:
-                    文句を言い出したら切りがない
-                    心配し始めたら切りがない
-                lib0 has 宇宙には限りはない.
-                Some hinative user corrected 宇宙には切りがない to 宇宙には限りがない
-                (https://hinative.com/questions/22253622)
-                Compare with kiri-limits.
-                -->
-                <phrase
-                  ph="【切：き】りがない"
-                  rom="kiri ga nai"
-                  tr_en="endless; without limits"
-                  tr_de="endlos; grenzenlos"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT; jisho has n1 for kiri, but n5 for kiru"
                 />
             </word>
             <word
@@ -585,6 +467,20 @@
                 <keep_together id="hamigakiosuru-brushteeth" />
             </word>
             <word
+              w="【金：きん】【属：ぞく】"
+              rom="kinzoku"
+              tr_en="metal"
+              tr_de="Metall"
+              lvl="n3"
+              category="science"
+              id="kinzoku-metal"
+            >
+                <keep_apart_from id="kin-gold" />
+                <keep_apart_from id="gin-silver" />
+                <keep_apart_from id="tetsu-iron" />
+                <keep_apart_from id="dō-copper" />
+            </word>
+            <word
               w="【歯：は】【磨：みが】きをする"
               rom="hamigaki o suru"
               tr_en="brushing one's teeth"
@@ -641,6 +537,7 @@
               tr_en="remnant; residue; left-over"
               tr_de="Überbleibsel; Rest"
               lvl="n3"
+              category="top-words"
               id="nokori-remnant"
             >
                 <see id="nokoru-remain" rem="verb" />
@@ -726,13 +623,30 @@
             <word
               w="【布：ぬの】"
               rom="nuno"
-              tr_en="cloth"
-              tr_de="(Kleidungs-) Stoff"
+              tr_en="cloth; textile"
+              tr_de="Kleidungsstoff; Textilien"
+              hint_en="material"
+              hint_de="Material"
               lvl="n3"
               category="fashion"
               id="nuno-cloth"
             >
+                <keep_apart_from id="seni-fibre" />
+                <keep_apart_from id="orimono-textile" />
                 <!-- 絹の布 (きぬのぬの) - Silk cloth (ChatGPT) -->
+            </word>
+            <word
+              w="【入：にゅう】【場：じょう】"
+              rom="nyūjō"
+              tr_en="admission; admittance; entering"
+              tr_de="Zulassung; Eintritt; Eintreten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="nyūjō-admission"
+            >
+                <keep_apart_from id="nyūgaku-matriculation" />
+                <keep_apart_from id="nyūin-hospitalisation" />
             </word>
             <word
               w="【瓶：びん】"
@@ -744,6 +658,18 @@
               id="bin-jar"
             >
                 <!-- implicit see-also link to bin-flight -->
+            </word>
+            <word
+              w="【影：えい】【響：きょう】"
+              rom="eikyō"
+              tr_en="influence; having an effect on"
+              tr_de="Auswirklung; Beeinflussung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="eikyō-influence"
+            >
+                <!-- phrase 影響を受ける (えいきょうをうける) - Be influenced (ChatGPT); compare to する -->
             </word>
             <word
               w="【恐：きょう】【怖：ふ】"

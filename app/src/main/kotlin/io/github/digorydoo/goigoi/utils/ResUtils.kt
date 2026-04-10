@@ -8,16 +8,15 @@ import android.util.TypedValue
 import android.widget.ArrayAdapter
 import androidx.appcompat.view.ContextThemeWrapper
 import androidx.core.content.ContextCompat
-import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.helper.UserPrefs
 import ch.digorydoo.kutils.colour.Colour
+import io.github.digorydoo.goigoi.R
 
 object ResUtils {
     private const val TAG = "ResUtils"
 
     fun setActivityTheme(activity: Activity, lightThemeResId: Int? = null, darkThemeResId: Int? = null) {
         val ctx = activity.applicationContext
-        val prefs = UserPrefs.getSingleton(ctx)
+        val prefs = SingletonHolder.prefs
 
         val themeId = if (prefs.darkMode) {
             darkThemeResId ?: R.style.MyDarkTheme

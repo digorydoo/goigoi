@@ -19,6 +19,37 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【思：おも】い【出：で】"
+              rom="omoide"
+              tr_en="memories; recollections; reminiscence"
+              tr_de="Erinnerungen; Rückbesinnung"
+              lvl="n3"
+              category="thinking"
+              id="omoide-memories"
+            >
+                <see id="omoidasu-remember" rem="verb" />
+                <keep_apart_from id="omoi-thought" />
+                <keep_apart_from id="kioku-memory" />
+                <keep_apart_from id="oboe-memory" />
+                <phrase
+                  ph="つらい【思：おも】い【出：で】"
+                  rom="tsurai omoide"
+                  tr_en="painful memories"
+                  tr_de="bittere Erinnerungen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="それはいい【思：おも】い【出：で】になりました。"
+                  rom="Sore wa ii omoide ni narimashita."
+                  tr_en="That became a good memory."
+                  tr_de="Das ist mir als gute Erinnerung geblieben."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
               w="【生：せい】【物：ぶつ】"
               rom="seibutsu"
               tr_en="organism; living thing"
@@ -764,11 +795,12 @@
               category="people, politics"
               id="kokumin-citizen"
             >
+                <keep_apart_from id="zenkoku-wholecountry" rem="ambiguity in phrases" />
                 <phrase
                   ph="【全：ぜん】【国：こく】【民：みん】"
                   rom="zenkokumin"
-                  tr_en="the entire nation"
-                  tr_de="die ganze Nation"
+                  tr_en="people of the entire nation"
+                  tr_de="die Menschen der ganzen Nation"
                   lvl="n3"
                   origin="lib0"
                   rem="furigana verified with jisho and ChatGPT"
@@ -901,40 +933,6 @@
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT; it changed iro-iro to sama-zama to give it a more literary tone"
-                />
-            </word>
-            <word
-              w="【笑：え】【顔：がお】"
-              rom="egao"
-              tr_en="smiling face; smile"
-              tr_de="Lachgesicht; Lächeln"
-              lvl="n3"
-              category="happiness, mood"
-              id="egao-smiling"
-            >
-                <phrase
-                  ph="おじいさんの【笑：え】【顔：がお】"
-                  rom="o-jīsan no egao"
-                  tr_en="grandfather's smile"
-                  tr_de="Grossvaters Lachgesicht"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <phrase
-                  ph="【暖：あたた】かい【笑：え】【顔：がお】で"
-                  rom="atatakai egao de"
-                  tr_en="with a warm smile"
-                  tr_de="mit einem warmen Lächeln"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="お【客：きゃく】と【話：はな】す【時：とき】は、いつでも【笑：え】【顔：がお】でいなさい。"
-                  rom="O-kyaku to hanasu toki wa, itsudemo egao de inasai."
-                  tr_en="Always smile when talking with a customer."
-                  tr_de="Lächle stets, wenn du mit einem Kunde sprichst."
-                  lvl="n3"
-                  origin="jpod101 audio"
                 />
             </word>
             <word
@@ -1118,7 +1116,7 @@
               tr_en="girl; young woman"
               tr_de="Mädchen; junge Frau"
               lvl="n3"
-              category="people"
+              category="people, top-words"
               id="joshi-girl"
               rem="must not be together with shōjo"
             >
@@ -1185,6 +1183,7 @@
               rom="nioi"
               tr_en="stench; bad smell"
               tr_de="Gestank; schlechter Geruch"
+              studyInContext="preferred"
               lvl="n3"
               category="not-good"
               id="nioi-stench"
@@ -1202,6 +1201,15 @@
                   tr_de="ein Gestank"
                   lvl="n3"
                   origin="jpod101 audio"
+                />
+                <phrase
+                  ph="【腐：くさ】った【卵：たまご】みたいな【臭：にお】いがする"
+                  rom="kusatta tamago mitai na nioi ga suru"
+                  tr_en="to smell like rotten eggs"
+                  tr_de="nach verdorbenem Ei riechen"
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
                 />
                 <sentence
                   s="この【肉：にく】は【腐：くさ】った【臭：にお】いがする。"
@@ -1479,6 +1487,7 @@
               category="nature"
               id="doro-mud"
             >
+                <keep_apart_from id="tsuchi-soil" />
                 <phrase
                   ph="【泥：どろ】【水：みず】"
                   rom="doro mizu"

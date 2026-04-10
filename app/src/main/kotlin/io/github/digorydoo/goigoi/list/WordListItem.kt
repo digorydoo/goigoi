@@ -1,10 +1,10 @@
 package io.github.digorydoo.goigoi.list
 
 import android.content.Context
-import io.github.digorydoo.goigoi.db.Word
+import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.drawable.AnimatedDrawable
 import io.github.digorydoo.goigoi.drawable.IconBuilder
-import io.github.digorydoo.goigoi.helper.UserPrefs.WordListItemMode
+import io.github.digorydoo.goigoi.utils.UserPrefs.WordListItemMode
 
 class WordListItem(
     val word: Word,

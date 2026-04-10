@@ -1,10 +1,10 @@
 package io.github.digorydoo.goigoi.activity.prog_study.keyboard
 
-import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard.KeyLensPart
 import ch.digorydoo.kutils.cjk.toSmallKana
 import ch.digorydoo.kutils.cjk.toggleDakuten
 import ch.digorydoo.kutils.cjk.toggleHandakuten
+import io.github.digorydoo.goigoi.R
+import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard.KeyLensPart
 
 // KeyDef is immutable
 class KeyDef(

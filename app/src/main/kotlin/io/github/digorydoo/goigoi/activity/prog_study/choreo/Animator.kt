@@ -3,9 +3,10 @@ package io.github.digorydoo.goigoi.activity.prog_study.choreo
 import android.animation.ValueAnimator
 import android.view.View
 import android.view.animation.LinearInterpolator
-import io.github.digorydoo.goigoi.activity.prog_study.Bindings
 import ch.digorydoo.kutils.math.decel
 import ch.digorydoo.kutils.math.lerp
+import io.github.digorydoo.goigoi.activity.prog_study.Bindings
+import io.github.digorydoo.goigoi.core.prog_study.Layout
 
 class Animator(private val bindings: Bindings) {
     fun start(fromLayout: Layout, toLayout: Layout, onFinish: (newLayout: Layout) -> Unit) {

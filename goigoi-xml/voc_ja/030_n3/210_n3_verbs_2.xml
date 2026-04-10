@@ -12,8 +12,8 @@
       defaultHint_de="Verb"
       lvl="n3"
       translations="en, de"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
       requiresIds="true"
     >
         <section>
@@ -238,14 +238,17 @@
                 <keep_apart_from id="sawaru-touch" />
                 <keep_apart_from id="kanjiru-feel" />
                 <phrase
-                  ph="ボタンに【触：ふ】れる"
-                  rom="botan ni fureru"
-                  tr_en="to touch a button"
-                  tr_de="einen Schalter berühren"
-                  explanation_en="You could also say:「ボタンを【触：さわ】る」which sound more intentional."
-                  explanation_de="Man kann auch sagen:「ボタンを【触：さわ】る」um zu Absicht zu unterstreichen."
+                  ph="【間：ま】【違：ちが】ってボタンに【触：ふ】れる"
+                  rom="machigatte botan ni fureru"
+                  tr_en="to touch a button by mistake"
+                  tr_de="versehentlich einen Schalter berühren"
                   lvl="n3"
                   origin="lib0"
+                  rem="
+                    verified with ChatGPT
+                    Also possible: うっかりボタンに触れる; but ukkari is n2
+                    The verb 触る・さわる cannot be used here, because sawaru is usually intentional.
+                  "
                 />
                 <sentence
                   s="【何：なに】かが【足：あし】に【触：ふ】れるのを【感：かん】じた。"
@@ -1689,7 +1692,7 @@ s                -->
                 <phrase
                   ph="【全：ぜん】【国：こく】に【広：ひろ】がる"
                   rom="zenkoku ni hirogaru"
-                  tr_en="to spread over the entire country"
+                  tr_en="it spreads over the entire country"
                   tr_de="sich im ganzen Land ausbreiten"
                   lvl="n3"
                   origin="lib0"
@@ -1713,7 +1716,32 @@ s                -->
               lvl="n3"
               category="not-good, quarrel"
               id="kirau-hate"
-            />
+            >
+                <phrase
+                  ph="【数：すう】【学：がく】を【嫌：きら】う"
+                  rom="sūgaku o kirau"
+                  tr_en="to loathe mathematics"
+                  tr_de="Mathe hassen"
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【父：ちち】は【変：へん】【化：か】を【嫌：きら】う【性：せい】【格：かく】だ。"
+                  rom="Chichi wa henka o kirau seikaku da."
+                  tr_en="My father has personality that dislikes change."
+                  tr_de="Mein Vater hat eine Persönlichkeit, die Veränderungen hasst."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】は【注：ちゅう】【目：もく】されるのを【嫌：きら】う。"
+                  rom="Kanojo wa chūmoku sareru no o kirau."
+                  tr_en="She hates being the centre of attention."
+                  tr_de="Sie hasst es, im Zentrum der Aufmerksamkeit zu sein."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
             <word
               w="【当：あ】たる"
               rom="ataru"
@@ -1727,13 +1755,30 @@ s                -->
                 <see id="ateru-hit" rem="v.t." />
                 <keep_apart_from id="butsu-hit" />
                 <keep_apart_from id="naguru-hit" />
-                <!-- the sentence may be confusing, because it's v.t. in English -->
+                <phrase
+                  ph="【思：おも】い【当：あ】たる"
+                  rom="omoi-ataru"
+                  tr_en="to suddenly understand; to recall in a flash"
+                  tr_de="etw. plötzlich verstehen; sich plötzlich erinnern"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx, but n4 for omou, n3 for ataru"
+                />
                 <sentence
                   s="ボールが【木：き】【村：むら】さんの【目：め】に【当：あ】たった。"
                   rom="Bōru ga Kimura-san no me ni atatta."
                   tr_en="The ball hit Miss Kimura in the eye."
                   tr_de="Der Ball traf Frau Kimura ins Auge."
                   lvl="n3"
+                  origin="lib0"
+                  rem="The sentence may be confusing, because it's v.t. in English"
+                />
+                <sentence
+                  s="【私：わたし】の【靴：くつ】が【見：み】【当：あ】たらない。"
+                  rom="Watashi no kutsu ga mi-ataranai."
+                  tr_en="I can't find my shoes."
+                  tr_de="Ich kann meine Schuhe nicht finden."
+                  lvl="-"
                   origin="lib0"
                 />
             </word>
@@ -1749,6 +1794,30 @@ s                -->
             >
                 <see id="ataru-hit" rem="v.i." />
                 <keep_apart_from id="naguru-hit" />
+                <phrase
+                  ph="【言：い】い【当：あ】てる"
+                  rom="ii-ateru"
+                  tr_en="to guess it right"
+                  tr_de="richtig raten"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <!-- needs a sentence
+                  ph="【割：わ】り【当：あ】てる"
+                  rom="wari-ateru"
+                  tr_en="to assign; to distribute"
+                  tr_de="etw. zuweisen; etw. verteilen"
+                  lvl="n3"
+                  origin="lib0"
+                -->
+                <sentence
+                  s="【濡：ぬ】れた【服：ふく】を【日：にっ】【光：こう】に【当：あ】てておこう。"
+                  rom="Nureta fuku o nikkō ni atete okō."
+                  tr_en="Let's put the wet clothes into the sunlight."
+                  tr_de="Legen wir die nassen Kleider ins Sonnenlicht!"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
             </word>
             <word
               w="【待：ま】たせる"
@@ -1758,8 +1827,39 @@ s                -->
               lvl="n3"
               category="work, relationships"
               id="mataseru-keepwaiting"
-              rem="appears in GENKI2 L20 vocab section; jisho has nx"
-            />
+              rem="appears in GENKI2 L20 vocab section; jisho has nx, but n2 for o-matase shimashita"
+            >
+                <keep_apart_from id="omataseshimashita-thx4waiting" />
+                <keep_together id="omataseshimashita-thx4waiting" />
+                <phrase
+                  ph="【長：なが】い【間：あいだ】【待：ま】たせる"
+                  rom="nagai aida mataseru"
+                  tr_en="to keep sb. waiting for a long time"
+                  tr_de="jem. eine lange Zeit warten lassen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="お【待：ま】たせしました。"
+                  rom="O-matase shimashita."
+                  tr_en="Sorry to have kept you waiting."
+                  tr_de="Tut mir leid, dass ich Sie habe warten lassen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="お【待：ま】たせしました"
+              rom="o-matase shimashita"
+              tr_en="thank you for waiting; sorry to have kept you waiting"
+              lvl="n3"
+              id="omataseshimashita-thx4waiting"
+              HIDDEN="true"
+              rem="jisho has n2"
+            >
+                <keep_apart_from id="mataseru-keepwaiting" />
+                <keep_together id="mataseru-keepwaiting" />
+            </word>
             <word
               w="【離：はな】す"
               rom="hanasu"
@@ -1771,6 +1871,23 @@ s                -->
               id="hanasu-separate"
             >
                 <see id="hanareru-drift" rem="v.i." />
+                <phrase
+                  ph="【木：き】から【枝：えだ】を【切：き】り【離：はな】す"
+                  rom="ki kara eda o kiri-hanasu"
+                  tr_en="to cut off a branch from a tree"
+                  tr_de="von einem Baum einen Zweig abschneiden"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for kiri-hanasu, but n5 for kiru, n3 for hanasu"
+                />
+                <sentence
+                  s="ロープを【離：はな】しなさい。"
+                  rom="Rōpu o hanashi-nasai."
+                  tr_en="Let go of the rope."
+                  tr_de="Lass das Seil los."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
         </section>
     </unit>

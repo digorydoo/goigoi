@@ -7,7 +7,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.view.updateLayoutParams
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.db.Topic
+import io.github.digorydoo.goigoi.core.db.Topic
 import io.github.digorydoo.goigoi.drawable.SheetHead
 import io.github.digorydoo.goigoi.furigana.FuriganaBuilder
 import io.github.digorydoo.goigoi.list.AbstrListItem

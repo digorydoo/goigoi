@@ -15,14 +15,13 @@ import ch.digorydoo.kutils.math.accel
 import ch.digorydoo.kutils.math.decel
 import ch.digorydoo.kutils.math.lerp
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Vocabulary
+import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.furigana.FuriganaBuilder
 import io.github.digorydoo.goigoi.furigana.FuriganaSpan
 import io.github.digorydoo.goigoi.furigana.buildSpan
-import io.github.digorydoo.goigoi.stats.Stats
 import io.github.digorydoo.goigoi.utils.DeviceUtils
 import io.github.digorydoo.goigoi.utils.ScreenSize
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 import kotlin.math.min
 
 class FlipThruFragment: Fragment() {
@@ -33,7 +32,6 @@ class FlipThruFragment: Fragment() {
     private lateinit var params: FlipThruFragmentParams
     private lateinit var bindings: Bindings
     private lateinit var values: Values
-    private lateinit var stats: Stats
     private lateinit var unyt: Unyt
     private lateinit var data: FlipThruData
     private var text1Height = 0
@@ -56,8 +54,7 @@ class FlipThruFragment: Fragment() {
     ): View? {
         val ctx = requireContext()
         values = Values(ctx)
-        stats = Stats.getSingleton(ctx)
-        val vocab = Vocabulary.getSingleton(ctx)
+        val vocab = SingletonHolder.vocab
 
         params = FlipThruFragmentParams.fromBundle(requireArguments())
         unyt = vocab.findUnytById(params.unytId)!!

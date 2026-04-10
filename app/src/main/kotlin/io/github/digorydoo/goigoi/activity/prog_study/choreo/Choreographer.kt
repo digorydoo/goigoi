@@ -15,17 +15,17 @@ import ch.digorydoo.kutils.math.clamp
 import ch.digorydoo.kutils.math.lerp
 import ch.digorydoo.kutils.utils.OneOf
 import io.github.digorydoo.goigoi.activity.prog_study.Bindings
-import io.github.digorydoo.goigoi.activity.prog_study.QAKind
-import io.github.digorydoo.goigoi.activity.prog_study.QuestionAndAnswer
-import io.github.digorydoo.goigoi.activity.prog_study.QuestionAndAnswer.FontType
 import io.github.digorydoo.goigoi.activity.prog_study.Values
 import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard
+import io.github.digorydoo.goigoi.core.prog_study.Layout
+import io.github.digorydoo.goigoi.core.prog_study.QAKind
+import io.github.digorydoo.goigoi.core.prog_study.QuestionAndAnswer
+import io.github.digorydoo.goigoi.core.prog_study.QuestionAndAnswer.FontType
+import io.github.digorydoo.goigoi.core.study.Answer
 import io.github.digorydoo.goigoi.furigana.FuriganaSpan
 import io.github.digorydoo.goigoi.furigana.buildSpan
-import io.github.digorydoo.goigoi.study.Answer
 import io.github.digorydoo.goigoi.utils.Orientation
 import io.github.digorydoo.goigoi.utils.ScreenSize
-import kotlin.math.max
 import kotlin.math.min
 
 class Choreographer(
@@ -363,7 +363,12 @@ class Choreographer(
             }
         }
 
-        size = min(size, maxSize)
+        val minSize = when (qa.fontType) {
+            FontType.PENCIL -> values.len18QuestionTextSize
+            else -> values.minQuestionTextSize
+        }
+
+        size = clamp(size, minSize, maxSize)
 
         size *= when (delegate.screenSize) {
             ScreenSize.SMALL -> 0.8f
@@ -373,8 +378,6 @@ class Choreographer(
             }
             ScreenSize.LARGE -> 1.1f
         }
-
-        size = max(size, values.minQuestionTextSize)
 
         Log.d(TAG, "Using text size $size px for length $len: $text")
         return size

@@ -5,35 +5,27 @@ import android.os.Bundle
 import android.view.View
 import android.view.ViewTreeObserver.OnGlobalLayoutListener
 import androidx.appcompat.app.AppCompatActivity
+import ch.digorydoo.kutils.cjk.JLPTLevel
+import com.google.android.material.snackbar.Snackbar
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.activity.flipthru.Choreographer.State
 import io.github.digorydoo.goigoi.activity.flipthru.fragment.FlipThruFragment
 import io.github.digorydoo.goigoi.activity.flipthru.fragment.FlipThruFragmentParams
 import io.github.digorydoo.goigoi.bottom_sheet.WordInfoBottomSheet
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Vocabulary
+import io.github.digorydoo.goigoi.core.db.Unyt
+import io.github.digorydoo.goigoi.core.stats.StatsKey
+import io.github.digorydoo.goigoi.core.study.Answer
+import io.github.digorydoo.goigoi.core.study.StudyItemIterator
+import io.github.digorydoo.goigoi.core.study.StudyItemIterator.HowToStudy
 import io.github.digorydoo.goigoi.drawable.CheckmarkIcon
 import io.github.digorydoo.goigoi.drawable.FlashIcon
-import io.github.digorydoo.goigoi.helper.MyGestureDetector
-import io.github.digorydoo.goigoi.stats.Stats
-import io.github.digorydoo.goigoi.stats.StatsKey
-import io.github.digorydoo.goigoi.study.Answer
-import io.github.digorydoo.goigoi.study.StudyItemIterator
-import io.github.digorydoo.goigoi.study.StudyItemIterator.HowToStudy
-import io.github.digorydoo.goigoi.study.StudyItemIteratorState
-import io.github.digorydoo.goigoi.utils.ActivityUtils
-import io.github.digorydoo.goigoi.utils.DimUtils
-import io.github.digorydoo.goigoi.utils.ResUtils
-import ch.digorydoo.kutils.cjk.JLPTLevel
-import com.google.android.material.snackbar.Snackbar
+import io.github.digorydoo.goigoi.utils.*
 import kotlin.random.Random
 
 class FlipThruActivity: AppCompatActivity() {
     private lateinit var params: FlipThruActivityParams
     private lateinit var bindings: Bindings
-    private lateinit var stats: Stats
     private lateinit var unyt: Unyt
-    private lateinit var vocab: Vocabulary
     private lateinit var studyItemIterator: StudyItemIterator
     private lateinit var gesture: MyGestureDetector
     private lateinit var choreo: Choreographer
@@ -47,11 +39,11 @@ class FlipThruActivity: AppCompatActivity() {
         params = FlipThruActivityParams.fromIntent(intent)
         bindings = Bindings(this)
 
-        vocab = Vocabulary.getSingleton(ctx)
-        stats = Stats.getSingleton(ctx)
+        val vocab = SingletonHolder.vocab
+        val stats = SingletonHolder.stats
 
         unyt = vocab.findUnytById(params.unytId)!!
-        studyItemIterator = StudyItemIterator.create(unyt, HowToStudy.EACH_ONCE, ctx)
+        studyItemIterator = StudyItemIterator.create(vocab, stats, unyt, HowToStudy.EACH_ONCE)
 
         savedInstanceState
             ?.let { StudyItemIteratorState.from(it) }
@@ -68,8 +60,9 @@ class FlipThruActivity: AppCompatActivity() {
             setDisplayHomeAsUpEnabled(true)
             setHomeButtonEnabled(true)
             title = unyt.name.withSystemLang
-            subtitle = studyItemIterator.getSummary(ctx)
         }
+
+        updateActionBarSubtitle()
 
         // Set up gesture detector
 
@@ -120,7 +113,7 @@ class FlipThruActivity: AppCompatActivity() {
     override fun onPause() {
         super.onPause()
         choreo.pause()
-        vocab.writeMyWordsUnytIfNecessary(applicationContext)
+        SingletonHolder.vocab.writeMyWordsUnytIfNecessary()
     }
 
     override fun onResume() {
@@ -153,9 +146,15 @@ class FlipThruActivity: AppCompatActivity() {
             choreo.continueFlingDown()
         }
 
-        val ctx = applicationContext
-        val stats = Stats.getSingleton(ctx)
+        val stats = SingletonHolder.stats
         stats.incUserStudyCountOfToday(StatsKey.BOTTOM_SHEET)
+    }
+
+    private fun updateActionBarSubtitle() {
+        val ctx = applicationContext
+        supportActionBar?.subtitle = ctx.getString(R.string.n_of_m)
+            .replace("\${N}", "${studyItemIterator.index + 1}")
+            .replace("\${M}", "${studyItemIterator.size}")
     }
 
     private inner class ChoreoDelegate(ctx: Context): Choreographer.Delegate() {
@@ -168,7 +167,7 @@ class FlipThruActivity: AppCompatActivity() {
         override fun createNewCard(): FlipThruFragment {
             val word = studyItemIterator.curWord
             val studyPrimaryForm = Random.nextFloat() > 0.5f
-            val isWordKnown = stats.getWordTotalCorrectCount(word) > 5
+            val isWordKnown = SingletonHolder.stats.getWordTotalCorrectCount(word) > 5
             val canStudyRomaji = unyt.levelOfMostDifficultWord == JLPTLevel.N5
             val studyRomaji = !isWordKnown && canStudyRomaji
 
@@ -198,17 +197,17 @@ class FlipThruActivity: AppCompatActivity() {
         }
 
         override fun aboutToStartWordAppearing(newWord: Boolean) {
-            val ctx = applicationContext
-
             if (choreo.state != State.INITIAL && newWord) {
                 if (studyItemIterator.hasNext()) {
                     studyItemIterator.next()
                 } else {
-                    studyItemIterator = StudyItemIterator.create(unyt, HowToStudy.EACH_ONCE, ctx)
+                    val vocab = SingletonHolder.vocab
+                    val stats = SingletonHolder.stats
+                    studyItemIterator = StudyItemIterator.create(vocab, stats, unyt, HowToStudy.EACH_ONCE)
                     Snackbar.make(bindings.scrollContainer, R.string.study_set_restarted, Snackbar.LENGTH_SHORT).show()
                 }
 
-                supportActionBar?.subtitle = studyItemIterator.getSummary(ctx)
+                updateActionBarSubtitle()
             }
 
             gesture.canFlingLeft = false

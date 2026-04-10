@@ -1,11 +1,10 @@
 package io.github.digorydoo.goigoi.drawable
 
 import android.content.Context
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Vocabulary
-import io.github.digorydoo.goigoi.db.Word
-import io.github.digorydoo.goigoi.stats.Stats
 import ch.digorydoo.kutils.utils.Moment
+import io.github.digorydoo.goigoi.core.db.Unyt
+import io.github.digorydoo.goigoi.core.db.Word
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 import kotlin.time.DurationUnit
 import kotlin.time.toDuration
 
@@ -13,7 +12,7 @@ object IconBuilder {
     private const val DAYS_BEFORE_ZZZ = 99
 
     fun makeWordIcon(ctx: Context, word: Word): AnimatedDrawable {
-        val stats = Stats.getSingleton(ctx)
+        val stats = SingletonHolder.stats
         val progress = stats.getWordStudyProgress(word)
 
         if (progress < 1.0f) {
@@ -25,7 +24,7 @@ object IconBuilder {
     }
 
     fun makeUnytIcon(ctx: Context, unyt: Unyt): AnimatedDrawable {
-        val stats = Stats.getSingleton(ctx)
+        val stats = SingletonHolder.stats
 
         var progress = stats.getUnytStudyProgress(unyt)
 
@@ -37,8 +36,8 @@ object IconBuilder {
             // its words' stats have changed, so we load those only.
 
             if (stats.getUnytStudyMoment(unyt) != null) {
-                val vocab = Vocabulary.getSingleton(ctx)
-                vocab.loadUnytIfNecessary(unyt, ctx)
+                val vocab = SingletonHolder.vocab
+                vocab.loadUnytIfNecessary(unyt)
                 progress = stats.getUnytStudyProgress(unyt)
             }
         }

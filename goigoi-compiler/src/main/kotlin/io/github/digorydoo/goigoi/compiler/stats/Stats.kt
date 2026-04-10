@@ -11,7 +11,7 @@ import io.github.digorydoo.goigoi.compiler.knownSurnames
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
-import io.github.digorydoo.goigoi.core.WordCategory
+import io.github.digorydoo.goigoi.core.db.WordCategory
 import kotlin.math.roundToInt
 
 object Stats {
@@ -372,20 +372,21 @@ object Stats {
         val originPrefixes = arrayOf(
             "self",
             "500mon",
+            "BondLingo",
+            "ChatGPT",
+            "DeepL",
+            "Doraemon",
             "GENKI",
-            "lib0",
-            "jpod",
-            "Oxford",
             "Kaname Naito",
             "Langenscheidt",
             "Miku",
+            "Oxford",
             "Yuko",
-            "BondLingo",
             "duolingo",
             "hinative",
+            "jpod",
+            "lib0",
             "tofugu",
-            "ChatGPT",
-            "Doraemon",
         )
         val originsMap = mutableMapOf<String, Int>()
 

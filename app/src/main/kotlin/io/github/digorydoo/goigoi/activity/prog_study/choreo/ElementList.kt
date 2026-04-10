@@ -3,9 +3,10 @@ package io.github.digorydoo.goigoi.activity.prog_study.choreo
 import android.view.View
 import androidx.core.view.isVisible
 import io.github.digorydoo.goigoi.activity.prog_study.Bindings
-import io.github.digorydoo.goigoi.activity.prog_study.QAKind
 import io.github.digorydoo.goigoi.activity.prog_study.Values
 import io.github.digorydoo.goigoi.activity.prog_study.choreo.Choreographer.State
+import io.github.digorydoo.goigoi.core.prog_study.Layout
+import io.github.digorydoo.goigoi.core.prog_study.QAKind
 
 // The ElementList and its Elements are immutable
 class ElementList(bindings: Bindings, values: Values) {

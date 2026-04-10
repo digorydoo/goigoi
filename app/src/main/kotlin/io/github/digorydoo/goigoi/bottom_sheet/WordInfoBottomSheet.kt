@@ -10,16 +10,16 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ScrollView
 import androidx.fragment.app.FragmentManager
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.db.Unyt
-import io.github.digorydoo.goigoi.db.Vocabulary
-import io.github.digorydoo.goigoi.db.Word
+import io.github.digorydoo.goigoi.core.db.Unyt
+import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.dialog.WordCtxMenu
 import io.github.digorydoo.goigoi.dialog.WordCtxMenu.Action
 import io.github.digorydoo.goigoi.utils.DeviceUtils
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 import io.github.digorydoo.goigoi.view.BottomSheetScrollView
-import com.google.android.material.bottomsheet.BottomSheetDialog
-import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class WordInfoBottomSheet: BottomSheetDialogFragment() {
     private lateinit var bindings: Bindings
@@ -38,10 +38,10 @@ class WordInfoBottomSheet: BottomSheetDialogFragment() {
         val wordId = args?.getString("wordId")!!
         val unytId = args.getString("unytId")!!
 
-        val vocab = Vocabulary.getSingleton(ctx)
+        val vocab = SingletonHolder.vocab
 
         unyt = vocab.findUnytById(unytId)!!
-        vocab.loadUnytIfNecessary(unyt, ctx)
+        vocab.loadUnytIfNecessary(unyt)
 
         word = vocab.findWordById(wordId)!!
 

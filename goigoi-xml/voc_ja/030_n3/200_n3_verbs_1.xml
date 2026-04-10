@@ -1039,10 +1039,12 @@
             </word>
             <word
               w="【受：う】け【取：と】る"
-              rom="uketoru"
+              rom="uke-toru"
               tr_en="to receive (a physical object); to take"
               tr_de="(Objekt) entgegennehmen"
               Langenscheidt="(Brief) in Empfang nehmen"
+              hint_en="compound verb"
+              hint_de="zusammengesetztes Verb"
               lvl="n3"
               category="hands"
               id="uketoru-receive"
@@ -1341,7 +1343,7 @@
               tr_en="to study in depth; to learn"
               tr_de="eingehend studieren; lernen"
               lvl="n3"
-              category="education"
+              category="education, top-words"
               id="manabu-study"
             >
                 <keep_apart_from id="benkyō-study" />
@@ -1415,13 +1417,13 @@
                 <see id="kiru-cut" rem="v.t." />
                 <keep_apart_from id="urikireru-soldout" />
                 <phrase
-                  ph="【売：う】り【切：き】れる"
-                  rom="uri-kireru"
+                  ph="【売：う】り【切：き】れている"
+                  rom="uri-kirete iru"
                   tr_en="to be sold out"
                   tr_de="ausverkauft sein"
                   lvl="n3"
-                  origin="lib0"
-                  rem="jisho has n2"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; jisho has n2"
                 />
                 <sentence
                   s="【電：でん】【球：きゅう】が【切：き】れた。"
@@ -1429,6 +1431,15 @@
                   tr_en="A light bulb has gone out."
                   tr_de="Eine Glühbirne ist kaputt."
                   lvl="n3"
+                />
+                <sentence
+                  s="おにぎりが【売：う】り【切：き】れている。"
+                  rom="O-nigiri ga urikirete iru."
+                  tr_en="The rice balls are sold out."
+                  tr_de="Die Reisbälle sind ausverkauft."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -1549,11 +1560,15 @@
               rom="korobu"
               tr_en="to fall down; to fall over"
               tr_de="hinfallen; umfallen"
+              hint_en="v.i."
               lvl="n3"
               category="not-good"
               id="korobu-falldown"
               rem="appears in GENKI2 p.287 kanji section"
             >
+                <keep_apart_from id="sagaru-drop" />
+                <keep_apart_from id="ochiru-fall" />
+                <keep_apart_from id="taosu-throwdown" />
                 <phrase
                   ph="【転：ころ】びそうになる"
                   rom="korobi-sō ni naru"
@@ -1585,6 +1600,7 @@
                 <see id="kuwawaru-beadded" rem="v.i." />
                 <keep_apart_from id="tasu-add" />
                 <keep_apart_from id="tsukekuwaeru-add" />
+                <keep_apart_from id="tameru-saveupmoney" />
                 <phrase
                   ph="【紅：こう】【茶：ちゃ】に【砂：さ】【糖：とう】を【加：くわ】える"
                   rom="kōcha ni satō o kuwaeru"

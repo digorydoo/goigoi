@@ -3,14 +3,14 @@ package io.github.digorydoo.goigoi.list
 import android.content.Context
 import android.graphics.drawable.Drawable
 import androidx.core.content.ContextCompat
+import ch.digorydoo.kutils.cjk.Unicode
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.db.Unyt
+import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.drawable.IconBuilder
 import io.github.digorydoo.goigoi.furigana.FuriganaBuilder
-import io.github.digorydoo.goigoi.helper.formatRelativeTime
-import io.github.digorydoo.goigoi.stats.Stats
 import io.github.digorydoo.goigoi.utils.ResUtils
-import ch.digorydoo.kutils.cjk.Unicode
+import io.github.digorydoo.goigoi.utils.SingletonHolder
+import io.github.digorydoo.goigoi.utils.formatRelativeTime
 import kotlin.math.max
 
 class UnytListItem(
@@ -31,7 +31,7 @@ class UnytListItem(
     override val primaryText = FuriganaBuilder.buildSpan(unyt.name.withSystemLang, false)
 
     override val secondaryText = run {
-        val stats = Stats.getSingleton(ctx)
+        val stats = SingletonHolder.stats
         val studyDate = stats.getUnytStudyMoment(unyt)
 
         val numWordsText = "${max(unyt.numWordsLoaded, unyt.numWordsAvailable)}"

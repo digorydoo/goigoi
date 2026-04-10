@@ -213,31 +213,31 @@ class TategakiLayout {
             val nextChar3 = if (nextEl2?.length != 1) Char(0) else nextEl3?.firstOrNull() ?: Char(0)
             val nextChar4 = if (nextEl3?.length != 1) Char(0) else nextEl4?.firstOrNull() ?: Char(0)
 
-            val normalBreak = lastCharOfThisEl in ALWAYS_SOFT_BREAK_AFTER ||
-                nextChar1 in ALWAYS_SOFT_BREAK_BEFORE ||
-                (nextChar1 == 'こ' && nextChar2 == 'と' && nextChar3 == Char(0)) ||
-                (nextChar1 == 'で' && nextChar2 == 'す' && nextChar3 == '。') ||
-                (nextChar1 == 'い' && nextChar2 == 'ま' && nextChar3 == 'す' && nextChar4 == '。') ||
-                (nextChar1 == 'し' && nextChar2 == 'っ' && nextChar3 == 'か' && nextChar4 == 'り') ||
-                (nextChar1 == 'な' && nextChar2 == 'さ' && nextChar3 == 'い' && nextChar4 == '。') ||
-                (nextChar1 == 'ほ' && nextChar2 == 'し' && nextChar3 == 'い' && nextChar4 == '。') ||
-                (nextChar1 == 'ま' && nextChar2 == 'し' && nextChar3 == 'た' && nextChar4 == '。') ||
-                (nextChar1 == 'ま' && nextChar2 == 'せ' && nextChar3 == 'ん' && nextChar4 == '。') ||
+            var normalBreak = lastCharOfThisEl in ALWAYS_SOFT_BREAK_AFTER ||
+                nextChar1 in ALWAYS_SOFT_BREAK_BEFORE_CHARS ||
                 (prevChar1 == '全' && lastCharOfThisEl == '部') ||
-                (lastCharOfThisEl == 'て' && (nextChar1 != 'て' && nextChar1 != 'は')) ||
-                (lastCharOfThisEl == 'も' && nextChar1 == 'い' && nextChar2 == 'い') ||
-                (lastCharOfThisEl == 'は' && nextChar1 == 'い' && nextChar2 == 'け' && nextChar3 == 'な' &&
-                    nextChar4 == 'い') ||
+                (lastCharOfThisEl == 'て' && nextChar1 != 'て' && nextChar1 != 'は' && nextChar1 != 'も') ||
+                (lastCharOfThisEl != 'い' && nextChar1 == 'ま' && nextChar2 == 'し' && nextChar3 == 'た') ||
+                (lastCharOfThisEl != 'い' && nextChar1 == 'ま' && nextChar2 == 'せ' && nextChar3 == 'ん') ||
                 (lastCharOfThisEl != 'ま' && nextChar1 == 'し' && nextChar2 == 'た' && nextChar3.isCJKNotKana()) ||
                 (lastCharOfThisEl.isKatakana() && nextChar1.isCJKNotKana()) ||
                 (lastCharOfThisEl.isHiragana() && lastCharOfThisEl != 'お' && lastCharOfThisEl != 'ご' &&
                     (nextChar1 !in NEVER_AT_START_OF_COLUMN) &&
                     (nextChar1.isCJKNotKana() || nextChar1.isKatakana()))
 
+            if (!normalBreak) {
+                val ahead = "$nextChar1$nextChar2$nextChar3$nextChar4" // 0 bytes don't truncate String!
+                normalBreak = ALWAYS_SOFT_BREAK_BEFORE_STRINGS.any { ahead.startsWith(it) }
+
+                if (!normalBreak) {
+                    val thisAndAhead = "$lastCharOfThisEl$ahead"
+                    normalBreak = ALWAYS_SOFT_BREAK_AFTER_FIRST_CHAR.any { thisAndAhead.startsWith(it) }
+                }
+            }
+
             element.softBreakAfter = when {
                 normalBreak -> SoftBreak.NORMAL
-                nextChar2 in NEVER_AT_START_OF_COLUMN ||
-                    (lastCharOfThisEl.isKatakana() && nextChar1.isHiragana())
+                nextChar2 in NEVER_AT_START_OF_COLUMN || (lastCharOfThisEl.isKatakana() && nextChar1.isHiragana())
                 -> SoftBreak.WEAK
                 else -> SoftBreak.NONE
             }
@@ -246,9 +246,35 @@ class TategakiLayout {
 
     companion object {
         private const val MIN_CHARS_FOR_SOFT_BREAK = 2
-        private const val ALWAYS_SOFT_BREAK_AFTER = "を、。：；!！?？・」』】〕）"
-        private const val ALWAYS_SOFT_BREAK_BEFORE = "「『【〔（"
-        private const val NEVER_AT_START_OF_COLUMN = "、。!！?？"
         private const val WHITESPACE = " \t　\n\r"
+        private const val NEVER_AT_START_OF_COLUMN = "、。!！?？"
+        private const val ALWAYS_SOFT_BREAK_AFTER = "を、。：；!！?？・」』】〕）"
+        private const val ALWAYS_SOFT_BREAK_BEFORE_CHARS = "「『【〔（"
+
+        private val ALWAYS_SOFT_BREAK_BEFORE_STRINGS = arrayOf(
+            "います。",
+            "こと\u0000", // 0 byte marks end of text, or furigana pair follows
+            "ことを",
+            "しっかり",
+            "そんな",
+            "だった。",
+            "です。",
+            "なかった",
+            "なさい。",
+            "ほしい。",
+            "やすい",
+        ).onEach { require(it.length <= 4) { "Too long: $it" } }
+
+        private val ALWAYS_SOFT_BREAK_AFTER_FIRST_CHAR = arrayOf(
+            "があります",
+            "がある。",
+            "がとても",
+            "たことが",
+            "でいました",
+            "はあります",
+            "はある。",
+            "はいけない",
+            "もいい",
+        ).onEach { require(it.length <= 5) { "Too long: $it" } }
     }
 }

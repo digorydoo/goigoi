@@ -989,6 +989,7 @@
               id="netsu-fever"
             >
                 <!-- 高い熱 takai netsu is uncommon; 高熱 kōnetsu is the word, but it's nx -->
+                <keep_apart_from id="taion-bodytemp" />
                 <phrase
                   ph="【軽：かる】い【熱：ねつ】"
                   rom="karui netsu"
@@ -1087,6 +1088,7 @@
               category="health"
               id="nyūin-hospitalisation"
             >
+                <keep_apart_from id="nyūjō-admission" />
                 <phrase
                   ph="【入：にゅう】【院：いん】【中：ちゅう】"
                   rom="nyūin-chū"

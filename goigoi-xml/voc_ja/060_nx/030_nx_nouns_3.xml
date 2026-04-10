@@ -17,25 +17,108 @@
         <section>
             <!-- unsorted -->
             <word
-              w="【外：がい】【食：しょく】"
-              rom="gaishoku"
-              tr_en="eating out"
-              tr_de="zum Essen ausgehen"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【淡：あわ】【雪：ゆき】"
+              rom="awayuki"
+              tr_en="light snowfall"
+              tr_de="leichter Schneefall"
               lvl="-"
-              category="going-out"
-              id="gaishoku-eatingout"
-            >
-                <sentence
-                  s="【東：とう】【京：きょう】に【住：す】んでいるときは【毎：まい】【日：にち】【外：がい】【食：しょく】をしていました。"
-                  rom="Tōkyō ni sunde iru toki wa mainichi gaishoku o shite imashita."
-                  tr_en="When I lived in Tokyo, I ate out every day."
-                  tr_de="Als ich in Tokyo wohnte, ging ich jeden Tag auswärts essen."
-                  lvl="-"
-                  origin="Oxford p.45"
-                />
-            </word>
+              category="weather"
+              id="awayuki-lightsnowfall"
+            />
+            <word
+              w="【荒：あら】【波：なみ】"
+              rom="aranami"
+              tr_en="stormy sea; raging waves"
+              tr_de="stürmisches Meer; tobende Wellen"
+              lvl="-"
+              category="weather, beach"
+              id="aranami-stormysea"
+            />
+            <word
+              w="【雨：あま】【水：みず】"
+              rom="amamizu"
+              tr_en="rain water"
+              tr_de="Regenwasser"
+              lvl="-"
+              category="weather"
+              id="amamizu-rainwater"
+            />
+            <word
+              w="【朝：あさ】【露：つゆ】"
+              rom="asa-tsuyu"
+              tr_en="morning dew"
+              tr_de="Morgentau"
+              lvl="-"
+              category="nature"
+              id="asatsuyu-morningdew"
+            />
+            <word
+              w="【氷：ひょう】【海：かい】"
+              rom="hyōkai"
+              tr_en="frozen sea; icy waters"
+              tr_de="zugefrorener See; Eiswasser"
+              lvl="-"
+              category="weather, nature"
+              id="hyōkai-frozensea"
+            />
+            <word
+              w="【庭：にわ】【木：き】【戸：ど】"
+              rom="niwakido"
+              tr_en="garden gate"
+              tr_de="Gartentür"
+              lvl="-"
+              category="garden"
+              id="niwakido-gardengate"
+            />
+            <word
+              w="【遣：や】り【水：みず】"
+              rom="yarimizu"
+              tr_en="narrow stream"
+              tr_de="schmaler Bach"
+              hint_en="in a Japanese garden"
+              hint_de="in einem japanischen Garten"
+              lvl="-"
+              category="nature, garden"
+              id="yarimizu-narrowstream"
+            />
+            <word
+              w="【盆：ぼん】【栽：さい】"
+              rom="bonsai"
+              tr_en="Japanese miniature tree"
+              tr_de="japanischer Miniaturbaum"
+              lvl="-"
+              category="garden, top-words"
+              id="bonsai-miniaturetree"
+              rem="bonsai actually refers to a miniature garden, not just a tree; see ja.wikipedia.org"
+            />
+            <word
+              w="【水：みず】【差：さ】し"
+              rom="mizusashi"
+              tr_en="watering can; water jug"
+              tr_de="Wasserkanne; Wasserkrug"
+              hint_en="for watering flowers or drinking"
+              hint_de="zum Wässern von Blumen oder zum Trinken"
+              lvl="-"
+              id="mizusashi-wateringcan"
+            />
+            <word
+              w="【巻：まき】【尺：じゃく】"
+              rom="makijaku"
+              tr_en="tape measure"
+              tr_de="Massband"
+              lvl="-"
+              category="hobby, diy"
+              id="makijaku-tapemeasure"
+            />
+            <word
+              w="【小：こ】【道：どう】【具：ぐ】"
+              rom="kodōgu"
+              tr_en="stage prop; small gadget"
+              tr_de="Requisite"
+              lvl="-"
+              category="entertainment"
+              id="kodōgu-stageprop"
+            />
             <word
               w="【肉：にく】【屋：や】"
               rom="nikuya"
@@ -45,24 +128,6 @@
               category="shopping, city"
               id="nikuya-butcher"
             />
-            <word
-              w="パン【屋：や】"
-              rom="panya"
-              tr_en="baker"
-              tr_de="Bäckerei"
-              lvl="-"
-              category="shopping, city"
-              id="panya-baker"
-            >
-                <sentence
-                  s="そのパン【屋：や】は【肉：にく】【屋：や】の【隣：となり】です。"
-                  rom="Sono panya wa nikuya no tonari desu."
-                  tr_en="That baker's is next door to the butcher's."
-                  tr_de="Die Bäckerei ist gleich neben der Metzgerei."
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
             <word
               w="【寿：す】【司：し】【屋：や】"
               rom="sushiya"
@@ -141,28 +206,6 @@
               id="ninjin-carrot"
             />
             <word
-              w="ほうれん【草：そう】"
-              rom="hōrensō"
-              tr_en="spinach"
-              tr_de="Spinat"
-              lvl="-"
-              category="food"
-              id="hōrensō-spinach"
-              rem="appears in 500mon q328"
-            >
-                <sentence
-                  s="【子：こ】【供：ども】のころ、【母：はは】に【毎：まい】【日：にち】ほうれん【草：そう】を【食：た】べさせられました。"
-                  rom="Kodomo no koro, haha ni mai-nichi hōrensō o tabe-saseraremashita."
-                  tr_en="When I was a child, my mother made me eat spinach every day."
-                  tr_de="Als ich ein Kind war, zwang mich meine Mutter, jeden Tag Spinat zu essen."
-                  explanation_en="「食べさせられる」is the causative-passive form of「食べる」"
-                  explanation_de="「食べさせられる」ist die kausativ-passive Form von「食べる」"
-                  lvl="-"
-                  origin="500mon q328"
-                  rem="jisho has nx for hōrensō"
-                />
-            </word>
-            <word
               w="じゃがいも"
               rom="jagaimo"
               tr_en="potato"
@@ -217,33 +260,6 @@
               id="edamame-greensoybean"
             />
             <word
-              w="【林：リン】【檎：ゴ】"
-              rom="ringo"
-              tr_en="apple"
-              tr_de="Apfel"
-              usuallyInKana="true"
-              lvl="-"
-              category="food"
-              id="ringo-apple"
-            >
-                <sentence
-                  s="テーブルの【上：うえ】にはリンゴが【４：よん】【個：こ】ある。"
-                  rom="Tēburu no ue ni wa ringo ga yon-ko aru."
-                  tr_en="There are four apples on the table."
-                  tr_de="Auf dem Tisch sind vier Äpfel."
-                  lvl="-"
-                  origin="lib0 modified"
-                />
-                <sentence
-                  s="リンゴとオレンジとぶどうとでは、どれが【一：いち】【番：ばん】【好：す】きですか。"
-                  rom="Ringo to orenji to budō to de wa, dore ga ichi-ban suki desu ka?"
-                  tr_en="Which do you like best, apples, oranges or grapes?"
-                  tr_de="Was magst du am liebsten, Äpfel, Orangen oder Trauben?"
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
-            <word
               w="【南瓜：かぼちゃ】"
               rom="kabocha"
               tr_en="pumpkin"
@@ -262,24 +278,6 @@
               category="food"
               id="momo-peach"
             />
-            <word
-              w="【梨：なし】"
-              rom="nashi"
-              tr_en="pear"
-              tr_de="Birne"
-              lvl="-"
-              category="food"
-              id="nashi-pear"
-            >
-                <sentence
-                  s="【箱：はこ】の【中：なか】には【梨：なし】がいくつかある。"
-                  rom="Hako no naka ni wa nashi ga ikutsuka aru."
-                  tr_en="There are several pears in the box."
-                  tr_de="In der Schachtel hat es einige Birnen."
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
             <word
               w="【鰐：わに】【梨：なし】"
               rom="waninashi"
@@ -339,35 +337,6 @@
               id="dango-sweetdumpling"
             />
             <word
-              w="【納：なっ】【豆：とう】"
-              rom="nattō"
-              tr_en="fermented soy beans"
-              tr_de="fermentierte Sojabohnen"
-              lvl="-"
-              category="food"
-              id="nattō-soybeans"
-            >
-                <sentence
-                  s="【納：なっ】【豆：とう】は【美味：おい】しくなさそう。"
-                  rom="Nattō wa oishiku nasasō."
-                  tr_en="Nattō doesn't look delicious."
-                  tr_de="Nattō sieht nicht (sonderlich) appetitlich aus."
-                  lvl="-"
-                  origin="Miku"
-                  href="https://youtu.be/l7xZ1TDZ7MU"
-                />
-                <sentence
-                  s="【納：なっ】【豆：とう】を【食：た】べたことがある？"
-                  rom="Nattō o tabeta koto ga aru?"
-                  tr_en="Have (you) ever tried nattō?"
-                  tr_de="Hast (du) je Nattō gegessen?"
-                  lvl="-"
-                  rem="rated nx because of nattō"
-                  origin="Miku"
-                  href="https://youtu.be/4_XMsDpRgM8"
-                />
-            </word>
-            <word
               w="【朝：ちょう】【食：しょく】"
               rom="chōshoku"
               tr_en="breakfast"
@@ -379,37 +348,6 @@
                 <keep_apart_from id="asagohan-breakfast" />
             </word>
             <word
-              w="【菜：さい】【箸：ばし】"
-              rom="saibashi"
-              tr_en="long chopsticks"
-              tr_de="lange Essstäbchen"
-              hint_en="for cooking"
-              hint_de="zum Kochen"
-              lvl="-"
-              category="cooking"
-              id="saibashi-longchopsticks"
-            />
-            <word
-              w="【生：せい】【乳：にゅう】"
-              rom="seinyū"
-              tr_en="raw milk"
-              tr_de="Vollmilch, rohe Milch"
-              lvl="-"
-              category="cooking"
-              id="seinyū-rawmilk"
-            />
-            <word
-              w="【卒：そつ】【業：ぎょう】【生：せい】"
-              rom="sotsugyōsei"
-              tr_en="graduate; alumnus"
-              tr_de="Absolvent; Alumnus"
-              lvl="-"
-              category="education"
-              id="sotsugyōsei-alumnus"
-            >
-                <keep_apart_from id="gakushi-bachelor" />
-            </word>
-            <word
               w="【卒：そつ】【業：ぎょう】【証：しょう】【書：しょ】"
               rom="sotsugyō-shōsho"
               tr_en="graduation certificate; diploma"
@@ -419,27 +357,6 @@
               category="education"
             />
             <word
-              w="【居：い】【酒：ざか】【屋：や】"
-              rom="izakaya"
-              tr_en="Japanese bar"
-              tr_de="japanische Bar"
-              hint_en="that also serves various dishes and snacks"
-              hint_de="wo man auch verschiedene Gerichte und Snacks bekommt"
-              lvl="-"
-              category="gastronomy"
-              id="izakaya-japanesebar"
-            >
-                <keep_apart_from id="sakaba-tavern" />
-                <sentence
-                  s="この【辺：あた】りに【人：にん】【気：き】のある【居：い】【酒：ざか】【屋：や】はありますか。"
-                  rom="Kono atari ni ninki no aru izakaya wa arimasu ka?"
-                  tr_en="Is there a popular Japanese bar around here?"
-                  tr_de="Gibt es in der Nähe eine beliebte japanische Bar?"
-                  lvl="-"
-                  origin="Langenscheidt p.167"
-                />
-            </word>
-            <word
               w="【天：てん】ぷら"
               rom="tenpura"
               tr_en="deep-fried fish and vegetables in a light batter"
@@ -448,28 +365,6 @@
               category="food, gastronomy"
               id="tenpura-deepfriedfish"
             />
-            <word
-              w="お【寿：す】【司：し】"
-              rom="o-sushi"
-              tr_en="Japanese dish of vinegared rice"
-              tr_de="japanisches Gericht mit gesäuertem Reis"
-              hint_en="often with raw fish"
-              hint_de="oft mit rohem Fisch"
-              lvl="-"
-              category="food, gastronomy"
-              id="osushi-sushi"
-              rem="appears in GENKI1 L10 as すし; jisho has nx for kanji 寿, n1 for 司"
-            >
-                <sentence
-                  s="【寿：す】【司：し】より【安：やす】いものを【食：た】べましょう。"
-                  rom="Sushi yori yasui mono o tabemashō."
-                  tr_en="Let's eat something cheaper than sushi."
-                  tr_de="Lass uns etwas billigeres als Sushi essen."
-                  lvl="-"
-                  hasDifferentForm="true"
-                  origin="Oxford p.105"
-                />
-            </word>
             <word
               w="【海苔：のり】【巻：ま】き"
               rom="norimaki"
@@ -568,14 +463,26 @@
               id="mirin-ricewine"
             />
             <word
-              w="【二：ふつ】【日：か】【酔：よ】い"
-              rom="futsukayoi"
-              tr_en="hangover"
-              tr_de="Kater; Hangover"
+              w="【堆：たい】【肥：ひ】"
+              rom="taihi"
+              tr_en="compost"
+              tr_de="Kompost"
+              hint_en="decomposed organic matter"
+              hint_de="zersetzendes organisches Material"
               lvl="-"
-              category="going-out"
-              id="futsukayoi-hangover"
-              rem="appears in GENKI1 p.268 vocab section; jisho has nx"
+              category="nature, garden"
+              id="taihi-compost"
+            />
+            <word
+              w="【猫：ねこ】【車：ぐるま】"
+              rom="nekoguruma"
+              tr_en="wheelbarrow"
+              tr_de="Schubkarre"
+              hint_en="lit. catcar"
+              hint_de="wörtl. Katzenauto"
+              lvl="-"
+              category="hobby, garden"
+              id="nekoguruma-wheelbarrow"
             />
             <word
               w="【料：りょう】【理：り】【人：にん】"
@@ -585,15 +492,6 @@
               lvl="-"
               category="occupations"
               id="ryōrinin-cook"
-            />
-            <word
-              w="【船：せん】【員：いん】"
-              rom="sen'in"
-              tr_en="sailor"
-              tr_de="Matrose"
-              lvl="-"
-              id="senin-sailor"
-              category="occupations, travelling"
             />
         </section>
     </unit>

@@ -17,32 +17,6 @@
         <section>
             <!-- unsorted -->
             <word
-              w="【名：めい】【声：せい】"
-              rom="meisei"
-              tr_en="fame; reputation; renown"
-              tr_de="Berühmtheit; Ruf; Ruhm"
-              lvl="-"
-              id="meisei-fame"
-            >
-                <phrase
-                  ph="【名：めい】【声：せい】を【高：たか】める"
-                  rom="meisei o takameru"
-                  tr_en="to enhance one's prestige"
-                  tr_de="den Bekanntheitsgrad steigern"
-                  lvl="-"
-                  origin="lib0"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="その【小：しょう】【説：せつ】は【彼：かれ】の【名：めい】【声：せい】を【高：たか】めた。"
-                  rom="Sono shōsetsu wa kare no meisei o takameta."
-                  tr_en="This novel has added to his renown."
-                  tr_de="Dieser Roman hat seinen Bekanntheitsgrad gesteigert."
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
-            <word
               w="【機：き】【長：ちょう】"
               rom="kichō"
               tr_en="pilot; captain"
@@ -81,49 +55,119 @@
                 <keep_apart_from id="hisho-secretary" />
             </word>
             <word
-              w="【建：けん】【築：ちく】【家：か】"
-              rom="kenchikuka"
-              tr_en="architect"
-              tr_de="Architekt"
+              w="【罰：ばっ】【金：きん】"
+              rom="bakkin"
+              tr_en="fine; penalty"
+              tr_de="Busse; Strafgeld"
               lvl="-"
-              category="occupations"
-              id="kenchikuka-architect"
+              category="crime"
+              id="bakkin-penalty"
             >
-                <sentence
-                  s="【有：ゆう】【名：めい】な【建：けん】【築：ちく】【家：か】がこの【家：いえ】を【建：た】てた。"
-                  rom="Yūmei na kenchikuka ga kono ie o tateta."
-                  tr_en="A famous architect built this house."
-                  tr_de="Ein berühmter Architekt hat dieses Haus gebaut."
-                  lvl="-"
-                  origin="lib0"
-                />
+                <!--
+                    罰金で済んだ。
+                    I got away with just a fine.
+                    ChatGPT
+                -->
             </word>
             <word
-              w="【弁：べん】【護：ご】【士：し】"
-              rom="bengoshi"
-              tr_en="lawyer"
-              tr_de="Rechtsanwalt"
+              w="【満：まん】【潮：ちょう】"
+              rom="manchō"
+              tr_en="high tide"
+              tr_de="Flut (Gezeiten)"
               lvl="-"
-              category="occupations, government"
-              id="bengoshi-lawyer"
-            >
-                <sentence
-                  s="【弁：べん】【護：ご】【士：し】と【相：そう】【談：だん】したらどうですか。"
-                  rom="Bengoshi to sōdan shitara dō desu ka?"
-                  tr_en="Maybe you should consult a lawyer?"
-                  tr_de="Vielleicht solltest du einen Rechtsanwalt konsultieren?"
-                  lvl="-"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【谷：たに】【口：ぐち】さんの【職：しょく】【業：ぎょう】は【弁：べん】【護：ご】【士：し】です。"
-                  rom="Taniguchi-san no shokugyō wa bengoshi desu."
-                  tr_en="Mrs Taniguchi is a lawyer by profession."
-                  tr_de="Frau Taniguchi ist von Beruf Rechtsanwalt."
-                  lvl="-"
-                  origin="lib0 modified"
-                />
-            </word>
+              category="physics"
+              id="manchō-hightide"
+            />
+            <word
+              w="【夜：よ】【桜：ざくら】"
+              rom="yozakura"
+              tr_en="cherry blossoms at night"
+              tr_de="Kirschblüten nachts"
+              lvl="-"
+              category="culture, nature"
+              id="yozakura-cherryblmatnight"
+            />
+            <word
+              w="【節：せつ】【分：ぶん】"
+              rom="setsubun"
+              tr_en="bean-scattering ceremony marking the end of winter"
+              tr_de="Bohnenstreu-Zeremonie, die das Ende des Winters markiert"
+              hint_en="February 3rd"
+              hint_de="3. Februar"
+              lvl="-"
+              category="culture, top-words"
+              id="setsubun-beanscattering"
+            />
+            <word
+              w="【雛：ひな】【祭：まつ】り"
+              rom="hinamatsuri"
+              tr_en="Dolls festival"
+              tr_de="Puppenfestival"
+              hint_en="March 3rd"
+              hint_de="3. März"
+              lvl="-"
+              category="culture, holidays"
+              id="hinamatsuri-dollsfestival"
+            />
+            <word
+              w="【花：はな】【祭：まつ】り"
+              rom="hanamatsuri"
+              tr_en="Buddha's birthday festival; Vesak"
+              tr_de="Buddhas Geburtstags-Festival; Vesak"
+              hint_en="April 8th"
+              hint_de="8. April"
+              lvl="-"
+              category="culture, holidays"
+              id="hanamatsuri-vesak"
+            />
+            <word
+              w="お【盆：ぼん】"
+              rom="o-bon"
+              tr_en="Japanese lantern festival"
+              tr_de="japanisches Laternen-Festival"
+              hint_en="Buddhist festival of the dead"
+              hint_de="Buddhistisches Fest der Toten"
+              lvl="-"
+              category="culture, holidays"
+              id="obon-lanternfestival"
+            />
+            <word
+              w="【掃：そう】【除：じ】【係：がかり】"
+              rom="sōji-gakari"
+              tr_en="cleaning duty; person in charge for cleaning"
+              tr_de="Reinigungsdienst; für die Reinigung verantwortlich sein"
+              lvl="-"
+              id="sōjigakari-cleaningduty"
+              rem="also a phrase of kakari; jisho has nx, but n5 for sōji, n3 for kakari"
+            />
+            <word
+              w="【遠：とお】【吠：ぼ】え"
+              rom="tōboe"
+              tr_en="distant howling; criticizing so. behind their back"
+              tr_de="entferntes Bellen; jem. hinter dem Rücken kritisieren"
+              lvl="-"
+              category="animal, talking"
+              id="tōboe-disthowling"
+            />
+            <word
+              w="【本：ほん】【革：がわ】"
+              rom="hongawa"
+              tr_en="genuine leather"
+              tr_de="echtes Leder"
+              lvl="-"
+              category="fashion"
+              id="hongawa-realleather"
+              rem="provides the furigana for certain phrases"
+            />
+            <word
+              w="【姫：ひめ】"
+              rom="hime"
+              tr_en="young lady of noble birth; princess"
+              tr_de="junge Frau von adeliger Herkunft; Prinzessin"
+              lvl="-"
+              category="people"
+              id="hime-princess"
+            />
             <word
               w="【宇：う】【宙：ちゅう】【飛：ひ】【行：こう】【士：し】"
               rom="uchūhikōshi"
@@ -155,123 +199,6 @@
               id="gijiroku-minutes"
             />
             <word
-              w="【罰：ばっ】【金：きん】"
-              rom="bakkin"
-              tr_en="fine; penalty"
-              tr_de="Busse; Strafgeld"
-              lvl="-"
-              category="crime"
-              id="bakkin-penalty"
-            >
-                <!--
-                    罰金で済んだ。
-                    I got away with just a fine.
-                    ChatGPT
-                -->
-            </word>
-            <word
-              w="【流：なが】れ【星：ぼし】"
-              rom="nagareboshi"
-              tr_en="shooting star"
-              tr_de="Sternschnuppe"
-              lvl="-"
-              category="astronomy"
-              id="nagareboshi-shootingstar"
-            >
-                <sentence
-                  s="【流：なが】れ【星：ぼし】が【空：そら】を【駆：か】けた。"
-                  rom="Nagareboshi ga sora o kaketa."
-                  tr_en="A shooting star dashed through the sky."
-                  tr_de="Eine Sternschnuppe schoss durch den Himmel."
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
-            <word
-              w="【月：げっ】【食：しょく】"
-              rom="gesshoku"
-              tr_en="lunar eclipse"
-              tr_de="Mondfinsternis"
-              lvl="-"
-              category="astronomy"
-              id="gesshoku-lunareclipse"
-            >
-                <sentence
-                  s="【月：げっ】【食：しょく】は【珍：めずら】しい【現：げん】【象：しょう】だ。"
-                  rom="Gesshoku wa mezurashii genshō da."
-                  tr_en="A lunar eclipse is a rare phenomenon."
-                  tr_de="Eine Mondfinsternis ist ein seltenes Phänomen."
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
-            <word
-              w="【原：げん】【子：し】【力：りょく】"
-              rom="genshiryoku"
-              tr_en="atomic energy; nuclear power"
-              tr_de="Atomenergie; Kernkraft"
-              lvl="-"
-              category="physics"
-              id="genshiryoku-atomicenergy"
-            >
-                <sentence
-                  s="【現：げん】【代：だい】は【原：げん】【子：し】【力：りょく】の【時：じ】【代：だい】だ。"
-                  rom="Gendai wa genshiryoku no jidai da."
-                  tr_en="We live in the atomic age."
-                  tr_de="Wir leben im Zeitalter der Atomkraft."
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
-            <word
-              w="【満：まん】【潮：ちょう】"
-              rom="manchō"
-              tr_en="high tide"
-              tr_de="Flut (Gezeiten)"
-              lvl="-"
-              category="physics"
-              id="manchō-hightide"
-            />
-            <word
-              w="【干：かん】【潮：ちょう】"
-              rom="kanchō"
-              tr_en="low tide; ebb"
-              tr_de="Ebbe"
-              lvl="-"
-              category="physics"
-              id="kanchō-ebb"
-            >
-                <sentence
-                  s="【干：かん】【潮：ちょう】はいつですか。"
-                  rom="Kanchō wa itsu desu ka?"
-                  tr_en="When is low tide?"
-                  tr_de="Wann ist Ebbe?"
-                  origin="Langenscheidt p.168"
-                  lvl="-"
-                />
-            </word>
-            <word
-              w="【魚：うお】【心：ごころ】"
-              rom="uogokoro"
-              tr_en="kindness; goodwill"
-              tr_de="Freundlichkeit; Wohlwollen"
-              lvl="-"
-              category="people, mood"
-              id="uogokoro-kindness"
-            >
-                <sentence
-                  s="【魚：うお】【心：ごころ】あれば【水：みず】【心：ごころ】。"
-                  rom="Uogokoro areba mizugokoro."
-                  tr_en="If a fish is kind to the water, the water will be kind to the fish."
-                  tr_de="Wenn ein Fisch nett zum Wasser ist, ist das Wasser nett zum Fisch."
-                  explanation_en="Proverb that is similar to 'What goes around comes around'."
-                  explanation_de="Sprichwort, welches ähnlich ist zu 'Wie man in den Wald ruft, so ruft es zurück'."
-                  lvl="-"
-                  origin="ChatGPT"
-                  rem="verified with jisho"
-                />
-            </word>
-            <word
               w="【編：あ】み【針：ばり】"
               rom="amibari"
               tr_en="sewing needle"
@@ -290,15 +217,6 @@
               hint_de="eines Bootes, usw."
               lvl="-"
               id="ho-sail"
-            />
-            <word
-              w="【掃：そう】【除：じ】【係：がかり】"
-              rom="sōji-gakari"
-              tr_en="cleaning duty; person in charge for cleaning"
-              tr_de="Reinigungsdienst; für die Reinigung verantwortlich sein"
-              lvl="-"
-              id="sōjigakari-cleaningduty"
-              rem="also a phrase of kakari; jisho has nx, but n5 for sōji, n3 for kakari"
             />
             <word
               w="【太：たい】【陽：よう】【風：ふう】"
@@ -348,16 +266,6 @@
               id="nisshoku-solareclipse"
             />
             <word
-              w="【王：おう】【位：い】"
-              rom="ōi"
-              tr_en="throne; crown"
-              tr_de="Thron; Krone"
-              Langenscheidt="Thron; Krone"
-              lvl="-"
-              category="government"
-              id="ōi-throne"
-            />
-            <word
               w="【検：けん】【閲：えつ】"
               rom="ken'etsu"
               tr_en="censorship"
@@ -365,15 +273,6 @@
               lvl="-"
               category="government, news"
               id="kenetsu-censorship"
-            />
-            <word
-              w="【天：てん】【文：もん】【学：がく】"
-              rom="tenmongaku"
-              tr_en="astronomy"
-              tr_de="Astronomie"
-              lvl="-"
-              category="astronomy"
-              id="tenmongaku-astronomy"
             />
             <word
               w="【小：しょう】【惑：わく】【星：せい】"
@@ -385,13 +284,13 @@
               id="shōwakusei-asteroid"
             />
             <word
-              w="【姫：ひめ】"
-              rom="hime"
-              tr_en="young lady of noble birth; princess"
-              tr_de="junge Frau von adeliger Herkunft; Prinzessin"
+              w="【天：てん】【文：もん】【学：がく】"
+              rom="tenmongaku"
+              tr_en="astronomy"
+              tr_de="Astronomie"
               lvl="-"
-              category="people"
-              id="hime-princess"
+              category="astronomy"
+              id="tenmongaku-astronomy"
             />
             <word
               w="【隕：いん】【石：せき】"
@@ -402,92 +301,56 @@
               category="astronomy"
               id="inseki-meteorite"
             />
-
-            <!-- hidden -->
             <word
-              w="【生：せい】【物：ぶつ】【学：がく】"
-              rom="seibutsugaku"
-              tr_en="biology"
-              tr_de="Biologie"
+              w="【雁：がん】【爪：づめ】"
+              rom="gandzume"
+              tr_en="rake"
+              tr_de="Harke"
+              hint_en="for loosening the soil"
+              hint_de="zum Lockern des Bodens"
               lvl="-"
-              category="science, life"
-              id="seibutsugaku-biology"
-              HIDDEN="true"
-              rem="now a phrase of seibutsu"
+              category="garden"
+              id="gandzume-rake"
             >
-                <keep_apart_from id="seibutsu-organism" />
+                <keep_apart_from id="rēki-rake" />
             </word>
             <word
-              w="【漬：つけ】【物：もの】"
-              rom="tsukemono"
-              tr_en="Japanese pickled vegetables"
+              w="【柔：じゅう】【術：じゅつ】"
+              rom="jūjutsu"
+              tr_en="Japanese martial art"
+              tr_de="japanische Kampfkunst"
+              hint_en="ref. to fighting without a weapon"
               lvl="-"
-              id="tsukemono-pickled"
-              HIDDEN="true"
-              rem="now a phrase of tsukeru"
+              category="sports"
+              id="jūjutsu-martialart"
             >
-                <keep_apart_from id="tsukeru-soak" />
+                <keep_apart_from id="jūdō-martialart" />
+                <keep_apart_from id="karate-martialart" />
             </word>
             <word
-              w="【旋：せん】【律：りつ】"
-              rom="senritsu"
-              tr_en="melody; tune"
+              w="【検：けん】【診：しん】"
+              rom="kenshin"
+              tr_en="physical examination; health checkup"
+              tr_de="ärztliche Untersuchung; Gesundheits-Check"
               lvl="-"
-              id="senritsu-tune"
-              category="entertainment"
-              HIDDEN="true"
+              category="health"
+              id="kenshin-healthcheckup"
             >
-                <keep_apart_from id="kakyoku-melody" />
+                <keep_apart_from id="kensa-examination" />
+                <keep_apart_from id="shinsatsu-medexamination" />
             </word>
             <word
-              w="【琵：び】【琶：わ】"
-              rom="biwa"
-              tr_en="Japanese lute"
+              w="【注：ちゅう】【射：しゃ】【器：き】"
+              rom="chūshaki"
+              tr_en="syringe"
+              tr_de="Spritze"
               lvl="-"
-              category="entertainment"
-              id="biwa-lute"
-              HIDDEN="true"
+              common="false"
+              category="health"
+              id="chūshaki-syringe"
             >
-                <keep_apart_from id="shamisen-lute" />
+                <keep_apart_from id="shirinji-syringe" />
             </word>
-            <word
-              w="【客：きゃく】【室：しつ】【乗：じょう】【務：む】【員：いん】"
-              rom="kyakushitsu-jōmuin"
-              tr_en="flight attendant"
-              tr_de="Flugbegleiter/in"
-              lvl="-"
-              category="occupations, travelling"
-              id="kyakushitsujōmuin-flightattn"
-              HIDDEN="true"
-            />
-            <word
-              w="【忍：にん】【者：じゃ】"
-              rom="ninja"
-              tr_en="person trained in ninjutsu and employed for covert purposes"
-              hint_en="in feudal Japan"
-              lvl="-"
-              category="historical, top-words"
-              id="ninja-feudaljapan"
-              HIDDEN="true"
-            />
-            <word
-              w="【銘：めい】【柄：がら】"
-              rom="meigara"
-              tr_en="brand; trading name"
-              lvl="-"
-              category="business, trade"
-              id="meigara-brand"
-              HIDDEN="true"
-            />
-            <word
-              w="【商：しょう】【標：ひょう】"
-              rom="shōhyō"
-              tr_en="trademark"
-              lvl="-"
-              category="trade, business"
-              id="shōhyō-trademark"
-              HIDDEN="true"
-            />
             <word
               w="【領：りょう】【事：じ】【館：かん】"
               rom="ryōjikan"
@@ -496,17 +359,6 @@
               lvl="-"
               category="government"
               id="ryōjikan-consulate"
-              HIDDEN="true"
-            />
-            <word
-              w="【公：こう】【会：かい】【堂：どう】"
-              rom="kōkaidō"
-              tr_en="town hall"
-              hint_en="building that houses the local government offices"
-              lvl="-"
-              category="government"
-              id="kōkaidō-townhall"
-              HIDDEN="true"
             />
             <word
               w="【演：えん】【出：しゅつ】【家：か】"
@@ -516,27 +368,6 @@
               lvl="-"
               category="entertainment"
               id="enshutsuka-theatredirector"
-              HIDDEN="true"
-            />
-            <word
-              w="【楽：がく】【団：だん】"
-              rom="gakudan"
-              tr_en="orchestra; band"
-              hint_en="usu. Western-style folk music"
-              lvl="-"
-              id="gakudan-band"
-              category="entertainment"
-              HIDDEN="true"
-            />
-            <word
-              w="【浄：じょう】【瑠：る】【璃：り】"
-              rom="jōruri"
-              tr_en="dramatic recitation accompanied by a shamisen"
-              hint_en="associated with Japanese puppet theater"
-              lvl="-"
-              category="entertainment, culture"
-              id="jōruri-recitation"
-              HIDDEN="true"
             />
             <word
               w="【超：ちょう】【高：こう】【層：そう】ビル"
@@ -546,7 +377,6 @@
               lvl="-"
               category="city"
               id="chōkōsōbiru-skyscraper"
-              HIDDEN="true"
             />
             <word
               w="【乗：の】り【場：ば】"
@@ -556,17 +386,7 @@
               lvl="-"
               category="transportation"
               id="noriba-taxistand"
-              HIDDEN="true"
               rem="is this really just for taxis? keep apart from basutei?"
-            />
-            <word
-              w="【超：ちょう】【新：しん】【星：せい】"
-              rom="chōshinsei"
-              tr_en="supernova"
-              lvl="-"
-              category="astronomy"
-              id="chōshinsei-supernova"
-              HIDDEN="true"
             />
             <word
               w="【天：てん】【頂：ちょう】"
@@ -576,34 +396,6 @@
               lvl="-"
               id="tenchō-zenith"
               category="astronomy"
-              HIDDEN="true"
-            />
-            <word
-              w="【宇：う】【宙：ちゅう】【船：せん】"
-              rom="uchūsen"
-              tr_en="spaceship"
-              lvl="-"
-              category="astronomy"
-              id="uchūsen-spaceship"
-              HIDDEN="true"
-            />
-            <word
-              w="【反：はん】【物：ぶっ】【質：しつ】"
-              rom="han-busshitsu"
-              tr_en="antimatter"
-              lvl="-"
-              category="physics"
-              id="hanbusshitsu-antimatter"
-              HIDDEN="true"
-            />
-            <word
-              w="【暗：あん】【黒：こく】【物：ぶっ】【質：しつ】"
-              rom="ankoku-busshitsu"
-              tr_en="dark matter"
-              lvl="-"
-              category="physics"
-              id="ankokubusshitsu-darkmatter"
-              HIDDEN="true"
             />
             <word
               w="【陽：よう】【子：し】"
@@ -613,7 +405,6 @@
               lvl="-"
               category="physics"
               id="yōshi-proton"
-              HIDDEN="true"
             />
             <word
               w="【中：ちゅう】【性：せい】【子：し】"
@@ -623,7 +414,6 @@
               lvl="-"
               category="physics"
               id="chūseishi-neutron"
-              HIDDEN="true"
             />
             <word
               w="【質：しつ】【量：りょう】"
@@ -635,16 +425,6 @@
               lvl="-"
               category="physics"
               id="shitsuryō-mass"
-              HIDDEN="true"
-            />
-            <word
-              w="【波：は】【長：ちょう】"
-              rom="hachō"
-              tr_en="wavelength"
-              lvl="-"
-              category="physics"
-              id="hachō-wavelength"
-              HIDDEN="true"
             />
             <word
               w="【磁：じ】【場：ば】"
@@ -654,7 +434,6 @@
               lvl="-"
               category="physics"
               id="jiba-magneticfield"
-              HIDDEN="true"
             />
             <word
               w="【核：かく】【分：ぶん】【裂：れつ】"
@@ -664,7 +443,6 @@
               lvl="-"
               category="physics"
               id="kakubunretsu-nuclearfission"
-              HIDDEN="true"
             />
             <word
               w="【核：かく】【融：ゆう】【合：ごう】"
@@ -674,7 +452,6 @@
               lvl="-"
               category="physics"
               id="kakuyūgō-nuclearfusion"
-              HIDDEN="true"
             />
             <word
               w="【星：せい】【雲：うん】"
@@ -684,87 +461,24 @@
               lvl="-"
               category="astronomy"
               id="seiun-nebula"
-              HIDDEN="true"
             />
             <word
-              w="【倫：りん】【理：り】"
-              rom="rinri"
-              tr_en="ethics; morals"
+              w="【義：ぎ】【理：り】の【父：ちち】"
+              rom="giri no chichi"
+              tr_en="father-in-law; stepfather"
+              tr_de="Stiefvater"
               lvl="-"
-              category="politics"
-              id="rinri-ethics"
-              HIDDEN="true"
+              category="family"
+              id="girinochichi-stepfather"
             />
             <word
-              w="【水：すい】【星：せい】"
-              rom="suisei"
-              tr_en="Mercury"
-              hint_en="planet"
+              w="【義：ぎ】【理：り】の【母：はは】"
+              rom="giri no haha"
+              tr_en="mother-in-law; stepmother"
+              tr_de="Stiefmutter"
               lvl="-"
-              category="astronomy"
-              id="suisei-mercury"
-              HIDDEN="true"
-              rem="must not be together with suisei-comet"
-            />
-            <word
-              w="【金：きん】【星：せい】"
-              rom="kinsei"
-              tr_en="Venus"
-              hint_en="planet"
-              lvl="-"
-              category="astronomy"
-              id="kinsei-venus"
-              HIDDEN="true"
-            />
-            <word
-              w="【木：もく】【星：せい】"
-              rom="mokusei"
-              tr_en="Jupiter"
-              hint_en="planet"
-              lvl="-"
-              category="astronomy"
-              id="mokusei-jupiter"
-              HIDDEN="true"
-            />
-            <word
-              w="【土：ど】【星：せい】"
-              rom="dosei"
-              tr_en="Saturn"
-              hint_en="planet"
-              lvl="-"
-              category="astronomy"
-              id="dosei-saturn"
-              HIDDEN="true"
-            />
-            <word
-              w="【天：てん】【王：のう】【星：せい】"
-              rom="tennōsei"
-              tr_en="Uranus"
-              hint_en="planet"
-              lvl="-"
-              category="astronomy"
-              id="tennōsei-uranus"
-              HIDDEN="true"
-            />
-            <word
-              w="【海：かい】【王：おう】【星：せい】"
-              rom="kaiōsei"
-              tr_en="Neptune"
-              hint_en="planet"
-              lvl="-"
-              category="astronomy"
-              id="kaiōsei-neptune"
-              HIDDEN="true"
-            />
-            <word
-              w="【冥：めい】【王：おう】【星：せい】"
-              rom="meiōsei"
-              tr_en="Pluto"
-              hint_en="planet"
-              lvl="-"
-              category="astronomy"
-              id="meiōsei-pluto"
-              HIDDEN="true"
+              category="family"
+              id="girinohaha-stepmother"
             />
             <word
               w="【大：おお】さじ"
@@ -774,7 +488,6 @@
               lvl="-"
               category="cooking"
               id="ōsaji-tablespoon"
-              HIDDEN="true"
               rem="is this only a counter?"
             />
             <word
@@ -785,7 +498,6 @@
               lvl="-"
               category="cooking"
               id="kosaji-teaspoon"
-              HIDDEN="true"
               rem="is this only a counter?"
             />
             <word
@@ -796,7 +508,6 @@
               lvl="-"
               category="food"
               id="surimi-mincedfish"
-              HIDDEN="true"
             />
             <word
               w="お【好：この】み【焼：や】き"
@@ -806,7 +517,6 @@
               lvl="-"
               category="food, gastronomy"
               id="okonomiyaki-pancake"
-              HIDDEN="true"
             />
         </section>
     </unit>

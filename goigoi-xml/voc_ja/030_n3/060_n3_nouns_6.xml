@@ -19,41 +19,41 @@
         <section>
             <!-- unsorted -->
             <word
-              w="【同：どう】【僚：りょう】"
-              rom="dōryō"
-              tr_en="co-worker; colleague"
-              tr_de="Kollege; Mitarbeiter"
+              w="【悪：わる】【口：ぐち】"
+              rom="waruguchi"
+              tr_en="insult; slander; bad-mouthing"
+              tr_de="Beleidigung; Verleumdung; schlecht reden"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
-              category="business, people"
-              id="dōryō-coworker"
-              rem="appears in GENKI2 L21 vocab section"
+              category="quarrel, talking"
+              id="waruguchi-insult"
             >
-                <keep_apart_from id="shokuin-personnel" />
-                <keep_apart_from id="shiyōnin-employee" />
-                <keep_apart_from id="kaishain-employee" />
-                <keep_apart_from id="jūgyōin-employee" />
-                <keep_apart_from id="otsure-companion" />
-                <keep_apart_from id="aite-companion" />
-                <keep_apart_from id="naka-relation" rem="ambiguity in phrases" />
                 <phrase
-                  ph="【友：ゆう】【人：じん】であり【同：どう】【僚：りょう】"
-                  rom="yūjin de ari dōryō"
-                  tr_en="a friend and colleague"
-                  tr_de="ein Freund und Kollege"
-                  explanation_en="The phrasing 〜であり〜 gives it a slightly formal or written tone."
-                  explanation_de="Das Konstrukt 〜であり〜 gibt dem Ausdruck einen formellen oder geschriebenen Ton."
-                  lvl="n3"
-                  origin="jpod101 audio"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【二：ふた】【人：り】とも【私：わたし】の【同：どう】【僚：りょう】です。"
-                  rom="Futari to mo watashi no dōryō desu."
-                  tr_en="Both of them are my colleagues."
-                  tr_de="Beide sind meine Kollegen."
+                  ph="【悪：わる】【口：ぐち】を【浴：あ】びせる"
+                  rom="waruguchi o abiseru"
+                  tr_en="to hurl abuse at so.; to shower so. with insults"
+                  tr_de="jem. mit Beleidigungen überschütten"
                   lvl="n3"
                   origin="lib0"
-                  rem="verified with ChatGPT"
+                  rem="jisho has n5 for abiru, nx for abiseru"
+                />
+                <sentence
+                  s="【人：ひと】の【陰：かげ】で【悪：わる】【口：ぐち】を【言：い】うな。"
+                  rom="Hito no kage de waruguchi o iu na."
+                  tr_en="Don't speak ill of others behind their back."
+                  tr_de="Rede nicht schlecht über andere hinter ihrem Rücken."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】は【私：わたし】に【悪：わる】【口：ぐち】を【浴：あ】びせた。"
+                  rom="Kanojo wa watashi ni waruguchi o abiseta."
+                  tr_en="She hurled abuse at me."
+                  tr_de="Sie überschüttete mich mit Beleidungen."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; jisho has n5 for abiru, nx for abiseru"
                 />
             </word>
             <word
@@ -253,37 +253,6 @@
                 <keep_together id="komugi-wheat" />
             </word>
             <word
-              w="【就：しゅう】【職：しょく】"
-              rom="shūshoku"
-              tr_en="getting a full-time job; to find employment"
-              tr_de="einen Vollzeitjob finden; eine Stelle finden"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="employment"
-              id="shūshoku-findemployment"
-              rem="appears in GENKI2 p.117 vocab section"
-            >
-                <!-- a job offer is 内定, which is nx -->
-                <phrase
-                  ph="【就：しゅう】【職：しょく】の【面：めん】【接：せつ】"
-                  rom="shūshoku no mensetsu"
-                  tr_en="a job interview"
-                  tr_de="ein Vorstellungsgespräch"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="その【会：かい】【社：しゃ】には【就：しゅう】【職：しょく】できませんでした。"
-                  rom="Sono kaisha ni wa shūshoku dekimasen deshita."
-                  tr_en="I wasn't able to get a job at that company."
-                  tr_de="Ich habe es nicht geschafft, bei jener Firma eine Stelle zu bekommen."
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
               w="【機：き】【関：かん】"
               rom="kikan"
               tr_en="engine; organisation; system"
@@ -361,65 +330,81 @@
                 <keep_together id="kikan-engine" />
             </word>
             <word
-              w="【虫：むし】【歯：ば】"
-              rom="mushiba"
-              tr_en="tooth decay; decayed tooth"
-              tr_de="Karies; verfaulter Zahn"
+              w="【文：もん】【句：く】"
+              rom="monku"
+              tr_en="complaint; grumbling; objection"
+              tr_de="Klage; Beschwerde; Reklamation"
               lvl="n3"
-              category="health"
-              id="mushiba-toothdecay"
+              category="talking, not-good"
+              id="monku-complaint"
+              rem="appears in GENKI2 L21 vocab section"
             >
+                <keep_apart_from id="uttaeru-complain" />
                 <phrase
-                  ph="【虫：むし】【歯：ば】を【抜：ぬ】く"
-                  rom="mushiba o nuku"
-                  tr_en="to pull out a bad tooth"
-                  tr_de="einen schlechten Zahn ziehen"
+                  ph="【文：もん】【句：く】を【言：い】う"
+                  rom="monku o iu"
+                  tr_en="to complain"
+                  tr_de="sich beklagen"
                   lvl="n3"
-                  origin="lib0"
+                  origin="GENKI2 p.209"
                 />
                 <sentence
-                  s="【私：わたし】には【虫：むし】【歯：ば】が【二：に】【本：ほん】ある。"
-                  rom="Watashi ni wa mushiba ga ni-hon aru."
-                  tr_en="I have two bad teeth."
-                  tr_de="Ich habe zwei schlechte Zähne."
+                  s="【文：もん】【句：く】を【言：い】えば【切：き】りがない。"
+                  rom="Monku o ieba kiri ga nai."
+                  tr_en="Once the complaining starts, it never ends."
+                  tr_de="Wenn die Beschwerden einmal anfangen, hören sie nicht mehr auf."
+                  explanation_en="Or, depending on context: If I complained, there would be no end."
+                  explanation_de="Oder, abhängig vom Kontext: Wenn ich mich beklagen würde, könnte ich nicht mehr aufhören."
                   lvl="n3"
                   origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【文：もん】【句：く】を【言：い】っても【始：はじ】まらないだろ。"
+                  rom="Monku o itte mo hajimaranai daro."
+                  tr_en="Complaining won't change anything."
+                  tr_de="Sich beschweren bringt gar nichts."
+                  explanation_en="「始まらない」can have the meaning of 'there's no point'"
+                  explanation_de="「始まらない」kann die Bedeutung von 'es bringt nichts' haben"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="始まらない verified with jisho; jisho has nx for this meaning"
                 />
             </word>
             <word
-              w="【頂：ちょう】【戴：だい】"
-              rom="chōdai"
-              tr_en="please do for me"
-              tr_de="bitte tue für mich"
-              hint_en="noun; feminine or childish term"
-              hint_de="Nomen; femininer oder kindlicher Ausdruck"
-              usuallyInKana="true"
+              w="【歩：ほ】【道：どう】"
+              rom="hodō"
+              tr_en="sidewalk; pavement; footpath"
+              tr_de="Bürgersteig; Fussweg"
               lvl="n3"
-              id="chōdai-eatdrink"
+              category="city, transportation"
+              id="hodō-sidewalk"
             >
-                <keep_apart_from id="kudasai-please" />
-                <!--
-                    When used as 'please do for me', chōdai follows て-form and is written in kana.
-                    It can also be used as a suru verb, which means eating and drinking like itadaku, e.g.
-                    お茶を頂戴しました
-                    but itadaku is more command acc. to ChatGPT. It can also be used as a noun meaning 'receiving':
-                    手紙を頂戴し、私にとって大きな助けとなりました
-                    but it's old-fashioned and stiff acc. to ChatGPT.
-                -->
-                <sentence
-                  s="【塩：しお】をちょうだい。"
-                  rom="Shio o chōdai."
-                  tr_en="Pass me the salt, please."
-                  tr_de="Bitte reiche mir das Salz."
+                <keep_apart_from id="ōdan-crossing" />
+                <phrase
+                  ph="【歩：ほ】【道：どう】を【歩：ある】く"
+                  rom="hodō o aruku"
+                  tr_en="to walk on the pavement"
+                  tr_de="auf dem Bürgersteig gehen"
                   lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <phrase
+                  ph="【曲：ま】がった【歩：ほ】【道：どう】"
+                  rom="magatta hodō"
+                  tr_en="curving footpath"
+                  tr_de="schlingender Fussweg"
+                  lvl="n3"
+                  origin="jpod101 audio"
                 />
                 <sentence
-                  s="【赤：あか】い【本：ほん】を【渡：わた】してちょうだい。"
-                  rom="Akai hon o watashite chōdai."
-                  tr_en="Would you pass me the red book, please?"
-                  tr_de="Könntest du mir bitte das rote Buch reichen?"
+                  s="【歩：ほ】【道：どう】を【歩：ある】けば【安：あん】【全：ぜん】だよ。"
+                  rom="Hodō o arukeba anzen da yo."
+                  tr_en="You'll be safer walking on the pavement."
+                  tr_de="Auf dem Bürgersteig gehen wäre sicherer."
                   lvl="n3"
-                  origin="Oxford p.123"
+                  origin="lib0 modified"
+                  rem="rephrased by ChatGPT"
                 />
             </word>
             <word
@@ -581,6 +566,54 @@
                 />
             </word>
             <word
+              w="【相：あい】【手：て】"
+              rom="aite"
+              tr_en="partner; the other party"
+              tr_de="Partner; Gegner"
+              Langenscheidt="Partner; Gegner"
+              lvl="n3"
+              id="aite-companion"
+              category="people"
+              rem="appears in GENKI2 L22 vocab section"
+            >
+                <keep_apart_from id="otsure-companion" />
+                <keep_apart_from id="dōryō-coworker" />
+                <keep_apart_from id="naka-relation" rem="ambiguity in phrases" />
+                <keep_apart_from id="senshu-athlete" />
+                <phrase
+                  ph="【結：けっ】【婚：こん】【相：あい】【手：て】"
+                  rom="kekkon aite"
+                  tr_en="marriage partner"
+                  tr_de="Ehepartner"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【試：し】【合：あい】の【相：あい】【手：て】"
+                  rom="shiai no aite"
+                  tr_en="opponent (in a match)"
+                  tr_de="Gegner (in einem Spiel)"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【話：はな】し【相：あい】【手：て】がほしい。"
+                  rom="Hanashi-aite ga hoshii."
+                  tr_en="I need someone to talk with."
+                  tr_de="Ich brauche jemanden, mit dem ich reden kann."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【僕：ぼく】には【相：そう】【談：だん】【相：あい】【手：て】がない。"
+                  rom="Boku ni wa sōdan-aite ga nai."
+                  tr_en="I have no one to turn to for advice."
+                  tr_de="Ich habe niemanden, den ich um Rat fragen könnte."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【中：ちゅう】【止：し】"
               rom="chūshi"
               tr_en="abandoning; suspension; discontinuance"
@@ -620,21 +653,30 @@
                 />
             </word>
             <word
-              w="【首：しゅ】【相：しょう】"
-              rom="shushō"
-              tr_en="Prime Minister; chancellor; premier"
-              tr_de="Premierminister; Kanzler"
+              w="【大：だい】【統：とう】【領：りょう】"
+              rom="daitōryō"
+              tr_en="president"
+              tr_de="Präsident"
               lvl="n3"
               category="politics, people"
-              id="shushō-premier"
-              rem="appears in GENKI2 p.116 vocab section"
+              id="daitōryō-president"
             >
-                <keep_apart_from id="daitōryō-president" />
+                <keep_apart_from id="shushō-premier" />
+                <keep_apart_from id="taishi-ambassador" />
+                <phrase
+                  ph="ロシア【大：だい】【統：とう】【領：りょう】"
+                  rom="Roshia-daitōryō"
+                  tr_en="President of Russia"
+                  tr_de="Präsident von Russland"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="Roshia is nx"
+                />
                 <sentence
-                  s="【国：こく】【民：みん】はだれでも【首：しゅ】【相：しょう】を【尊：そん】【敬：けい】している。"
-                  rom="Kokumin wa daredemo shushō o sonkei shite iru."
-                  tr_en="The people of the country respect the Prime Minister."
-                  tr_de="Das Volk respektiert den Premierminister."
+                  s="【新：あたら】しい【大：だい】【統：とう】【領：りょう】は【評：ひょう】【判：ばん】がよい。"
+                  rom="Atarashii daitōryō wa hyōban ga yoi."
+                  tr_en="The new president has a good reputation."
+                  tr_de="Der neue Präsident hat einen guten Ruf."
                   lvl="n3"
                   origin="lib0"
                 />
@@ -959,6 +1001,10 @@
               lvl="n3"
               id="muda-waste"
             >
+                <keep_apart_from id="oshaberi-gossip" />
+                <keep_apart_from id="uwasa-rumour" />
+                <keep_apart_from id="mudabanashi-gossip" />
+                <keep_together id="mudabanashi-gossip" />
                 <phrase
                   ph="【無：む】【駄：だ】【遣：づか】い"
                   rom="mudadzukai"
@@ -968,6 +1014,26 @@
                   origin="GENKI2 p.230"
                   rem="appears in GENKI2 L22 vocab section; jisho has n1"
                 />
+                <phrase
+                  ph="【無：む】【駄：だ】【話：ばなし】"
+                  rom="mudabanashi"
+                  tr_en="idle talk; chit-chat"
+                  tr_de="dummes Geschwätz; Gefasel"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+            </word>
+            <word
+              w="【無：む】【駄：だ】【話：ばなし】"
+              rom="mudabanashi"
+              tr_en="idle talk; gossip"
+              lvl="-"
+              id="mudabanashi-gossip"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="muda-waste" />
+                <keep_together id="muda-waste" />
             </word>
             <word
               w="【不：ふ】【足：そく】"
@@ -1005,6 +1071,25 @@
                   tr_en="leather belt"
                   tr_de="Ledergürtel"
                   lvl="n3"
+                />
+                <sentence
+                  s="その【靴：くつ】は【本：ほん】【革：がわ】で【作：つく】られていますか。"
+                  rom="Sono kutsu wa hongawa de tsukurarete imasu ka?"
+                  tr_en="Are those shoes made of real leather?"
+                  tr_de="Sind diese Schuhe aus echtem Leder?"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; jisho has nx for hongawa; jisho says hon-kawa is also correct"
+                />
+                <sentence
+                  s="その【革：かわ】は【本：ほん】【物：もの】ではありません。"
+                  rom="Sono kawa wa honmono de wa arimasen."
+                  tr_en="That leather is not genuine."
+                  tr_de="Dieses Leder ist nicht echt."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -1084,6 +1169,8 @@
               rom="kata-gata"
               tr_en="people"
               tr_de="Leute"
+              hint_en="formal"
+              hint_de="formell"
               lvl="n3"
               category="people"
               id="katagata-people"
@@ -1181,6 +1268,40 @@
                 />
             </word>
             <word
+              w="【切：き】り"
+              rom="kiri"
+              tr_en="stop; limits"
+              tr_de="Stopp; Grenze"
+              lvl="n3"
+              id="kiri-stop"
+              rem="jisho has n1"
+            >
+                <see id="kiru-cut" rem="closely related" />
+                <keep_apart_from id="kiri-limits" />
+                <keep_apart_from id="shimekiri-deadline" />
+                <!--
+                ChatGPT says 切りがない and 限りがない both exist:
+                   切りがない - very common
+                   限りがない - much less common
+                Examples by ChatGPT:
+                    文句を言い出したら切りがない
+                    心配し始めたら切りがない
+                lib0 has 宇宙には限りはない.
+                Some hinative user corrected 宇宙には切りがない to 宇宙には限りがない
+                (https://hinative.com/questions/22253622)
+                Compare with kiri-limits.
+                -->
+                <phrase
+                  ph="【切：き】りがない"
+                  rom="kiri ga nai"
+                  tr_en="endless; without limits"
+                  tr_de="endlos; grenzenlos"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; jisho has n1 for kiri, but n5 for kiru"
+                />
+            </word>
+            <word
               w="【不：ふ】【幸：こう】"
               rom="fukō"
               tr_en="misfortune; tragedy; unhappy"
@@ -1202,19 +1323,16 @@
                 />
             </word>
             <word
-              w="【大：たい】【使：し】"
-              rom="taishi"
-              tr_en="ambassador"
-              tr_de="Botschafter"
-              hint_en="highest-ranking diplomat"
-              hint_de="Diplomat mit höchstem Rang"
+              w="【高：こう】【速：そく】"
+              rom="kōsoku"
+              tr_en="high-speed; rapid; express"
+              tr_de="Hochgeschwindigkeit; Express"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
               lvl="n3"
-              category="politics, people"
-              id="taishi-ambassador"
-              rem="jisho has n5 for taishikan, n3 for taishi"
-            >
-                <keep_apart_from id="daitōryō-president" />
-            </word>
+              category="transportation"
+              id="kōsoku-hispeed"
+            />
             <word
               w="【単：たん】【語：ご】"
               rom="tango"
@@ -1305,28 +1423,27 @@
               id="hitokoto-fewwords"
             />
             <word
-              w="【悪：わる】【口：ぐち】"
-              rom="waruguchi"
-              tr_en="insult; slander; bad-mouthing"
-              tr_de="Beleidigung; Verleumdung; schlecht reden"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="quarrel, talking"
-              id="waruguchi-insult"
-            />
-            <word
-              w="【手：て】【洗：あら】い"
-              rom="te-arai"
-              tr_en="washing one's hands; restroom; lavatory"
-              tr_de="Händewaschen; Toilette"
+              w="【最：さい】【終：しゅう】"
+              rom="saishū"
+              tr_en="last; final; closing"
+              tr_de="letzte(r); finale(r)"
               hint_en="noun"
               hint_de="Nomen"
               lvl="n3"
-              category="hands"
-              id="tearai-restroom"
-              rem="jisho has n2, but n5 for te, arau"
-            />
+              id="saishū-final"
+            >
+                <see id="saigo-end" rem="closely related" />
+                <keep_apart_from id="owari-end" />
+                <keep_apart_from id="saigo-end" />
+                <!-- needs verification; might be saigo
+                  ph="【最：さい】【終：しゅう】バス"
+                  rom="saishū basu"
+                  tr_en="the last bus"
+                  tr_de="der letzte Bus"
+                  lvl="n3"
+                  origin="lib0"
+                -->
+            </word>
         </section>
     </unit>
 </vocabulary>

@@ -11,10 +11,10 @@ import ch.digorydoo.kutils.cjk.hasDakuten
 import ch.digorydoo.kutils.cjk.hasHandakuten
 import ch.digorydoo.kutils.cjk.hasSmallKana
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.activity.prog_study.QuestionAndAnswer
 import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard
-import io.github.digorydoo.goigoi.stats.HintDlgKey
-import io.github.digorydoo.goigoi.stats.Stats
+import io.github.digorydoo.goigoi.core.prog_study.QuestionAndAnswer
+import io.github.digorydoo.goigoi.core.stats.HintDlgKey
+import io.github.digorydoo.goigoi.core.stats.Stats
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

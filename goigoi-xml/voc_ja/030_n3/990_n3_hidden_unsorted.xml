@@ -147,7 +147,10 @@
               tr_en="portion; section; part"
               hint_en="noun"
               lvl="n3"
-            />
+              id="bubun-part"
+            >
+                <keep_apart_from id="bun-part" />
+            </word>
             <word
               w="【大：だい】【部：ぶ】【分：ぶん】"
               rom="daibubun"
@@ -455,6 +458,7 @@
               category="time"
               id="chōki-longterm"
               HIDDEN="true"
+              rem="why is chōki n3, but tanki n2???"
             >
                 <see id="tanki-shortterm" rem="antonym" />
             </word>
@@ -653,15 +657,6 @@
             >
                 <keep_apart_from id="okage-grace" />
                 <keep_apart_from id="kansha-thanks" />
-            </word>
-            <word
-              w="【宝：ほう】【石：せき】"
-              rom="hōseki"
-              tr_en="gem; jewel; precious stone"
-              lvl="n3"
-              id="hōseki-gem"
-            >
-                <see id="takara-treasure" rem="closely related" />
             </word>
             <word
               w="【騒：そう】【音：おん】"
@@ -1317,7 +1312,7 @@
             <word
               w="【団：だん】【体：たい】"
               rom="dantai"
-              tr_en="organization; organisation; association"
+              tr_en="team; organization; association"
               hint_en="noun; place"
               lvl="n3"
             />
@@ -1339,18 +1334,23 @@
             <word
               w="【土：と】【地：ち】"
               rom="tochi"
-              tr_en="plot of land; lot; soil; locality; region; place"
+              tr_en="plot of land; soil; locality"
               hint_en="noun"
               lvl="n3"
-            />
+              id="tochi-lot"
+            >
+                <keep_apart_from id="tsuchi-soil" />
+            </word>
             <word
               w="【地：ち】"
               rom="chi"
-              tr_en="earth; ground; land; soil; place; territory; bottom (of a package, book, etc.); earth (one of the five elements)"
+              tr_en="earth; ground; land; soil; place; territory"
               hint_en="noun; suffix"
               lvl="n3"
               id="chi-ground"
-            />
+            >
+                <keep_apart_from id="tsuchi-soil" />
+            </word>
             <word
               w="【家：や】【賃：ちん】"
               rom="yachin"
@@ -1834,7 +1834,10 @@
               lvl="n3"
               category="thinking"
               id="kioku-memory"
-            />
+            >
+                <keep_apart_from id="omoide-memories" />
+                <keep_apart_from id="oboe-memory" />
+            </word>
             <word
               w="【位：い】【置：ち】"
               rom="ichi"
@@ -2105,7 +2108,9 @@
               tr_en="fee; charge; fare"
               hint_en="noun"
               lvl="n3"
-            />
+            >
+                <!-- 料金を支払う — pay a fee (ChatGPT) -->
+            </word>
             <word
               w="【済：す】みません"
               rom="sumimasen"
@@ -2120,7 +2125,11 @@
               hint_en="noun; noun, used as a suffix"
               lvl="n3"
               id="ryō-quantity"
-            />
+            >
+                <!--
+                    たばこの量を減らしなさい。You should smoke less. (lib0)
+                -->
+            </word>
             <word
               w="ご【苦：く】【労：ろう】【様：さま】"
               rom="go-kurō-sama"
@@ -2185,16 +2194,6 @@
                     ChatGPT says 翼・つばさ is more literary and elevated than 羽・はね
                 -->
             </word>
-            <word
-              w="【眺：なが】める"
-              rom="nagameru"
-              tr_en="to gaze at; to admire (the scenery); to contemplate (a painting)"
-              tr_de="betrachten; (Landschaft) bewundern; (einem Gemälde) nachsinnen"
-              hint_en="v.t."
-              lvl="n3"
-              category="looking"
-              id="nagameru-gaze"
-            />
             <word
               w="【芝：しば】【居：い】"
               rom="shibai"

@@ -84,6 +84,7 @@
                 <keep_apart_from id="nozomu-desire" />
                 <keep_apart_from id="meijiru-command" />
                 <keep_apart_from id="negau-desire" />
+                <keep_apart_from id="tanomu-request" />
             </word>
             <word
               w="【省：はぶ】く"
@@ -97,6 +98,25 @@
                 <keep_apart_from id="nukeru-omit" />
                 <keep_apart_from id="nukasu-omit" />
             </word>
+            <word
+              w="【効：き】く"
+              rom="kiku"
+              tr_en="to be effective; to be good (for); to function well"
+              tr_de="wirksam sein; gut sein (für); gut funktionieren"
+              lvl="n3"
+              category="work, technical"
+              id="kiku-effective"
+            />
+            <word
+              w="【酔：よ】う"
+              rom="you"
+              tr_en="to get drunk; to feel sick; to be spellbound"
+              tr_de="sich betrinken; sich nicht wohl fühlen; gebannt sein"
+              hint_en="v.i."
+              lvl="n3"
+              category="going-out, beverage"
+              id="you-getdrunk"
+            />
             <word
               w="【追：お】う"
               rom="ou"
@@ -115,18 +135,6 @@
               lvl="n3"
               category="general, work"
               id="shōjiru-yield"
-            />
-            <word
-              w="【換：か】える"
-              rom="kaeru"
-              tr_en="to replace (a battery); to exchange (money)"
-              tr_de="(Batterie) austauschen; (Geld) umtauschen"
-              Langenscheidt="(Batterie) austauschen; (Geld) umtauschen"
-              hint_en="v.t."
-              lvl="n3"
-              category="technical, finances"
-              id="kaeru-exchange"
-              rem="see also 替える kaeru-replace, 代える kaeru-substitute"
             />
             <word
               w="【備：そな】える"
@@ -186,7 +194,10 @@
               lvl="n3"
               category="general, technical"
               id="mochiiru-use"
-            />
+            >
+                <keep_apart_from id="tsukau-use" />
+                <keep_apart_from id="riyō-use" />
+            </word>
             <word
               w="【除：のぞ】く"
               rom="nozoku"

@@ -15,7 +15,33 @@
       requiresIds="true"
     >
         <section>
-            <!-- at the beach -->
+            <!-- unsorted -->
+            <word
+              w="【名：めい】【声：せい】"
+              rom="meisei"
+              tr_en="fame; reputation; renown"
+              tr_de="Berühmtheit; Ruf; Ruhm"
+              lvl="-"
+              id="meisei-fame"
+            >
+                <phrase
+                  ph="【名：めい】【声：せい】を【高：たか】める"
+                  rom="meisei o takameru"
+                  tr_en="to enhance one's prestige"
+                  tr_de="den Bekanntheitsgrad steigern"
+                  lvl="-"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="その【小：しょう】【説：せつ】は【彼：かれ】の【名：めい】【声：せい】を【高：たか】めた。"
+                  rom="Sono shōsetsu wa kare no meisei o takameta."
+                  tr_en="This novel has added to his renown."
+                  tr_de="Dieser Roman hat seinen Bekanntheitsgrad gesteigert."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【日：ひ】【焼：や】け【止：ど】め"
               rom="hiyakedome"
@@ -129,16 +155,23 @@
                 />
             </word>
             <word
-              w="【日：にっ】【光：こう】【浴：よく】"
-              rom="nikkōyoku"
-              tr_en="sunbathing"
-              tr_de="Sonnenbad"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【氷：ひょう】【河：が】"
+              rom="hyōga"
+              tr_en="glacier"
+              tr_de="Gletscher"
               lvl="-"
-              category="holidays, light"
-              id="nikkōyoku-sunbathing"
-            />
+              category="nature"
+              id="hyōga-glacier"
+            >
+                <sentence
+                  s="【氷：ひょう】【河：が】はゆっくり【動：うご】いている。"
+                  rom="Hyōga wa yukkuri ugoite iru."
+                  tr_en="Glaciers move slowly."
+                  tr_de="Gletscher bewegen sich langsam."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【海：かい】パン"
               rom="kaipan"
@@ -160,6 +193,17 @@
                 />
             </word>
             <word
+              w="【日：にっ】【光：こう】【浴：よく】"
+              rom="nikkōyoku"
+              tr_en="sunbathing"
+              tr_de="Sonnenbad"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="-"
+              category="holidays, light"
+              id="nikkōyoku-sunbathing"
+            />
+            <word
               w="【日：にっ】【射：しゃ】【病：びょう】"
               rom="nisshabyō"
               tr_en="sunstroke"
@@ -177,8 +221,6 @@
               category="holidays"
               id="mushiyokesupurē-repellent"
             />
-
-            <!-- camping -->
             <word
               w="【寝：ね】【袋：ぶくろ】"
               rom="nebukuro"
@@ -210,62 +252,6 @@
               lvl="-"
               id="kaya-mosquitonet"
             />
-            <word
-              w="【栓：せん】【抜：ぬ】き"
-              rom="sennuki"
-              tr_en="bottle opener; corkscrew"
-              lvl="-"
-              id="sennuki-corkscrew"
-              HIDDEN="true"
-            />
-            <word
-              w="【懐：かい】【中：ちゅう】【電：でん】【灯：とう】"
-              rom="kaichūdentō"
-              tr_en="electric torch; pocket light"
-              lvl="-"
-              category="light"
-              id="kaichūdentō-pocketlight"
-              HIDDEN="true"
-            />
-            <word
-              w="【方：ほう】【位：い】【磁：じ】【針：しん】"
-              rom="hōijishin"
-              tr_en="compass"
-              hint_en="navigational instrument"
-              lvl="-"
-              id="hōijishin-compass"
-              HIDDEN="true"
-            />
-            <word
-              w="【薪：まき】"
-              rom="maki"
-              tr_en="firewood"
-              tr_de="Brennholz"
-              lvl="-"
-              id="maki-firewood"
-              HIDDEN="true"
-            />
-            <word
-              w="【折：お】りたたみ【椅：い】【子：す】"
-              rom="oritatami isu"
-              tr_en="folding chair"
-              tr_de="Klappstuhl"
-              lvl="-"
-              id="oritatamiisu-foldingchair"
-              HIDDEN="true"
-            />
-            <word
-              w="キャンプ【用：よう】【枕：まくら】"
-              rom="kyanpu-yō makura"
-              tr_en="camping pillow"
-              tr_de="Campingkissen"
-              lvl="-"
-              category="holidays"
-              id="kyanpuyōmakura-campingpillow"
-              HIDDEN="true"
-            />
-
-            <!-- travelling -->
             <word
               w="【旅：りょ】【行：こう】【会：がい】【社：しゃ】"
               rom="ryokōgaisha"
@@ -313,18 +299,6 @@
               id="mibunshōmeisho-id"
               rem="also a phrase of shōmei"
             />
-
-            <!-- sightseeing -->
-            <word
-              w="【観：かん】【光：こう】【客：きゃく】"
-              rom="kankō-kyaku"
-              tr_en="tourist"
-              tr_de="Tourist"
-              lvl="-"
-              category="holidays"
-              id="kankōkyaku-tourist"
-              HIDDEN="true"
-            />
             <word
               w="【観：かん】【光：こう】【地：ち】"
               rom="kankōchi"
@@ -342,8 +316,6 @@
                   lvl="-"
                 />
             </word>
-
-            <!-- body -->
             <word
               w="【屁：おなら】"
               rom="onara"
@@ -364,23 +336,6 @@
                   lvl="-"
                 />
             </word>
-
-            <!-- names of cities -->
-            <word
-              w="【大：おお】【阪：さか】"
-              rom="Ōsaka"
-              tr_en="Osaka"
-              tr_de="Osaka"
-              hint_en="city"
-              hint_de="Grossstadt"
-              lvl="-"
-              category="city"
-              id="ōsaka-osaka"
-              rem="does this appear in 500mon??"
-              HIDDEN="true"
-            />
-
-            <!-- unsorted -->
             <word
               w="【尺：しゃく】【八：はち】"
               rom="shakuhachi"
@@ -479,25 +434,6 @@
               id="kōkūken-flugticket"
             >
                 <keep_apart_from id="kippu-ticket" />
-            </word>
-            <word
-              w="【記：き】【念：ねん】【日：び】"
-              rom="kinenbi"
-              tr_en="memorial day; anniversary"
-              tr_de="Gedenktag; Jubiläum"
-              lvl="-"
-              id="kinenbi-anniversary"
-            >
-                <sentence
-                  s="【先：せん】【生：せい】が【学：がく】【生：せい】に「サラダ【記：き】【念：ねん】【日：び】」を【読：よ】ませた。"
-                  rom="Sensei ga gakusei ni ‘Sarada Kinenbi’ o yomaseta."
-                  tr_en="The teacher made the students read 'Salad Anniversary'."
-                  tr_de="Der Lehrer veranlasste die Schüler, 'Salat-Jubiläum' zu lesen."
-                  explanation_en="'Salad Anniversary' is a book of poems by Tawara Machi from 1987."
-                  explanation_de="'Salat-Jubiläum' ist ein Gedichtband von Tawara Machi aus dem Jahr 1987."
-                  lvl="-"
-                  origin="Oxford p.77"
-                />
             </word>
             <word
               w="【一：ひと】【人：り】【暮：ぐ】らし"
@@ -631,6 +567,123 @@
                 />
             </word>
             <word
+              w="【青：あお】【空：ぞら】"
+              rom="aozora"
+              tr_en="blue sky"
+              tr_de="blauer Himmel"
+              lvl="-"
+              category="weather"
+              id="aozora-bluesky"
+            >
+                <sentence
+                  s="【青：あお】【空：ぞら】を【見：み】たくなったら、【屋：おく】【上：じょう】に【行：い】きます。"
+                  rom="Aozora o mitaku nattara, okujō ni ikimasu."
+                  tr_en="I go up to the rooftop when I want to see the blue sky."
+                  tr_de="Ich gehe aufs Dach, wenn ich den blauen Himmel sehen will."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【裏：うら】【庭：にわ】"
+              rom="uraniwa"
+              tr_en="backyard; rear garden"
+              tr_de="Hinterhof; Garten hinter dem Haus"
+              lvl="-"
+              category="garden"
+              id="uraniwa-backyard"
+              rem="jisho has nx, ura is n4, niwa is n5"
+            >
+                <keep_apart_from id="niwa-garden" />
+                <keep_apart_from id="sono-orchard" />
+                <sentence
+                  s="【私：わたし】は【裏：うら】【庭：にわ】に【小：こ】【屋：や】を【立：た】てた。"
+                  rom="Watashi wa uraniwa ni koya o tateta."
+                  tr_en="I put up a small hut in the backyard."
+                  tr_de="Ich habe eine kleine Hütte im Hinterhof errichtet."
+                  explanation_en="「立てた」is a colloquial shortening of「立ていた」"
+                  explanation_de="「立てた」ist eine umgangssprachliche Kurzform von「立ていた」"
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【薔：バ】【薇：ラ】"
+              rom="bara"
+              tr_en="rose"
+              tr_de="Rose"
+              usuallyInKana="true"
+              lvl="-"
+              category="plant, garden"
+              id="bara-rose"
+            >
+                <sentence
+                  s="このバラは【美：うつく】しい。"
+                  rom="Kono bara wa utsukushii."
+                  tr_en="This rose is beautiful."
+                  tr_de="Diese Rose ist wunderschön."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【雑：ざっ】【草：そう】"
+              rom="zassō"
+              tr_en="weed"
+              tr_de="Unkraut"
+              lvl="-"
+              category="garden, plant"
+              id="zassō-weed"
+            >
+                <phrase
+                  ph="【雑：ざっ】【草：そう】を【抜：ぬ】く"
+                  rom="zassō o nuku"
+                  tr_en="to weed"
+                  tr_de="jäten"
+                  lvl="-"
+                  origin="lib0"
+                />
+                <sentence
+                  s="うちの【庭：にわ】は【雑：ざっ】【草：そう】だらけだった。"
+                  rom="Uchi no niwa wa zassō darake datta."
+                  tr_en="Our garden was full of weeds."
+                  tr_de="Unser Garten war voller Unkraut."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="ラーメン"
+              rom="rāmen"
+              tr_en="Chinese-style noodles"
+              tr_de="chinesische Nudeln"
+              lvl="-"
+              category="food"
+              id="rāmen-noodles"
+            >
+                <sentence
+                  s="ラーメンを【食：た】べに【行：い】かない？"
+                  rom="Rāmen o tabe ni ikanai?"
+                  tr_en="Why don't (we) go and eat rāmen?"
+                  tr_de="Wollen (wir) nicht Rāmen essen gehen?"
+                  lvl="-"
+                  rem="rated nx because of rāmen"
+                  origin="Miku"
+                  href="https://youtu.be/TjmlAiqjpmk"
+                />
+            </word>
+            <word
+              w="【鳥：とり】おどし"
+              rom="tori-odoshi"
+              tr_en="scarecrow"
+              tr_de="Vogelscheuche"
+              lvl="-"
+              category="countryside"
+              id="toriodoshi-scarecrow"
+            >
+                <keep_apart_from id="odosu-threaten" />
+            </word>
+            <word
               w="【裏：うら】【通：どう】り"
               rom="uradōri"
               tr_en="side street; alleyway"
@@ -659,62 +712,6 @@
               id="chikadō-underpass"
             />
             <word
-              w="【工：こう】【事：じ】【現：げん】【場：ば】"
-              rom="kōjigenba"
-              tr_en="construction site"
-              tr_de="Baustelle"
-              lvl="-"
-              category="city"
-              id="kōjigenba-constructionsite"
-            />
-            <word
-              w="【解：かい】【体：たい】【屋：や】"
-              rom="kaitaiya"
-              tr_en="junkyard"
-              tr_de="Schrottplatz"
-              lvl="-"
-              category="city"
-              id="kaitaiya-junkyard"
-            />
-            <word
-              w="【歩：ほ】【行：こう】【者：しゃ】"
-              rom="hokōsha"
-              tr_en="pedestrian"
-              tr_de="Fussgänger"
-              lvl="-"
-              category="city"
-              id="hokōsha-pedestrian"
-            />
-            <word
-              w="【山：さん】【荘：そう】"
-              rom="sansō"
-              tr_en="mountain villa; cottage"
-              tr_de="Berghütte; Bergvilla"
-              lvl="-"
-              category="countryside"
-              id="sansō-cottage"
-            />
-            <word
-              w="【厩：きゅう】【舎：しゃ】"
-              rom="kyūsha"
-              tr_en="barn; stable"
-              tr_de="Scheune; Stall"
-              hint_en="for horses, etc."
-              hint_de="für Pferde, usw."
-              lvl="-"
-              category="countryside"
-              id="kyūsha-barn"
-            />
-            <word
-              w="【林：りん】【道：どう】"
-              rom="rindō"
-              tr_en="path through a forest"
-              tr_de="Waldweg"
-              lvl="-"
-              category="nature"
-              id="rindō-waldweg"
-            />
-            <word
               w="【田舎：いなか】【道：みち】"
               hasCombinedReading="true"
               rom="inakamichi"
@@ -723,15 +720,6 @@
               lvl="-"
               category="countryside"
               id="inakamichi-countryroad"
-            />
-            <word
-              w="【鳥：とり】おどし"
-              rom="tori-odoshi"
-              tr_en="scarecrow"
-              tr_de="Vogelscheuche"
-              lvl="-"
-              category="countryside"
-              id="toriodoshi-scarecrow"
             />
             <word
               w="【干：ほ】し【草：くさ】の【山：やま】"

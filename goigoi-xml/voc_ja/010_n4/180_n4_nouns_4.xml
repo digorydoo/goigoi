@@ -738,8 +738,8 @@
                   rom="Kaneko-san wa tatami no ue ni dai no ji ni natta."
                   tr_en="Mr Kaneko lay himself on the floormat spread-eagled."
                   tr_de="Herr Kaneko legte sich mit gespreizten Armen und Beinen auf die Bodenmatte."
-                  explanation_en="lit. he became like the shape of the kanji 【大：だい】"
-                  explanation_de="wörtl. er wurde wie die Form des Zeichens 【大：だい】"
+                  explanation_en="lit. he became like the shape of the kanji 大"
+                  explanation_de="wörtl. er wurde wie die Form des Zeichens 大"
                   lvl="n4"
                   origin="lib0 modified"
                 />
@@ -1604,7 +1604,9 @@
               id="kawari-substitute"
               rem="o-kawari is n2 and means second helping; Langenscheidt also distinguishes between kawari and o-kawari"
             >
+                <see id="kawaru-takeover" rem="verb" />
                 <keep_apart_from id="torikae-swap" />
+                <keep_apart_from id="kawaru-takeover" />
                 <phrase
                   ph="【代：か】わりに"
                   rom="kawari ni"

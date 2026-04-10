@@ -78,6 +78,74 @@
                 />
             </word>
             <word
+              w="【奢：おご】る"
+              rom="ogoru"
+              tr_en="to give sb. a treat; to pay for sb."
+              tr_de="jem. eine Freude machen; für jem. bezahlen"
+              usuallyInKana="true"
+              lvl="n3"
+              category="going-out"
+              id="ogoru-givetreat"
+              rem="appears in GENKI2 p.94 vocab section; jisho has n1"
+            >
+                <keep_apart_from id="shōtai-invitation" />
+                <keep_apart_from id="maneku-invite" />
+                <keep_apart_from id="maneki-invitation" />
+                <keep_apart_from id="okuru-give" />
+                <sentence
+                  s="おごりたいのですが。"
+                  rom="Ogoritai no desu ga."
+                  tr_en="I would like to pay for us."
+                  tr_de="Ich möchte Sie einladen."
+                  lvl="n3"
+                  origin="Langenscheidt"
+                />
+                <sentence
+                  s="【一：いっ】【杯：ぱい】【奢：おご】りましょうか。"
+                  rom="Ippai ogorimashō ka?"
+                  tr_en="May I invite you to a drink?"
+                  tr_de="Darf ich Sie zu einem Drink einladen?"
+                  lvl="n3"
+                  origin="Langenscheidt p.192"
+                />
+            </word>
+            <word
+              w="【劣：おと】る"
+              rom="otoru"
+              tr_en="to fall behind; to be inferior to"
+              tr_de="zurückfallen; unterlegen sein"
+              lvl="n3"
+              category="general"
+              id="otoru-fallbehind"
+            >
+                <phrase
+                  ph="【誰：だれ】にも【劣：おと】らない"
+                  rom="dare ni mo otoranai"
+                  tr_en="second to none; unsurpassed"
+                  tr_de="steht niemandem nach; unübertroffen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【点：てん】で【私：わたし】は【彼：かれ】に【劣：おと】る。"
+                  rom="Kono ten de watashi wa kare ni otoru."
+                  tr_en="I fall behind him in this respect."
+                  tr_de="Ich bin ihm in diesem Punkt unterlegen."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; このことについて would be grammatically correct, but not idiomatic"
+                />
+                <sentence
+                  s="【彼：かれ】は【物：ぶつ】【理：り】では【誰：だれ】にも【劣：おと】らない。"
+                  rom="Kare wa butsuri de wa dare ni mo otoranai."
+                  tr_en="He is second to none in physics."
+                  tr_de="In Physik steht er niemandem nach."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; 物理学 would also be correct, but 物理 is fine for casual speech"
+                />
+            </word>
+            <word
               w="【至：いた】る"
               rom="itaru"
               tr_en="to lead to (a place); to arrive at (a decision); to reach (a stage)"
@@ -531,6 +599,25 @@
                 />
             </word>
             <word
+              w="【計：はか】る"
+              rom="hakaru"
+              tr_en="to measure; to weigh"
+              tr_de="messen; abwägen"
+              hint_en="v.t."
+              lvl="n3"
+              id="hakaru-weigh"
+              rem="appears in GENKI2 p.329 kanji section; jisho used to rate this n2, but now it's n3"
+            >
+                <phrase
+                  ph="【体：たい】【温：おん】を【計：はか】る"
+                  rom="taion o hakaru"
+                  tr_en="to measure the body temperature"
+                  tr_de="die Körpertemperatur messen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【預：あず】かる"
               rom="azukaru"
               tr_en="to keep in custody; to be put in charge of"
@@ -570,6 +657,33 @@
                   tr_de="Ich habe es zu erlangen versucht, aber es war vergeblich."
                   lvl="n3"
                   origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【狂：くる】う"
+              rom="kuruu"
+              tr_en="to go mad; to lose one's mind; to malfunction"
+              tr_de="den Verstand verlieren; nicht richtig funktionieren"
+              lvl="n3"
+              category="thinking, technical"
+              id="kuruu-gomad"
+            >
+                <sentence
+                  s="この【機：き】【械：かい】 【狂：くる】ってる。"
+                  rom="Kono kikai kurutteru."
+                  tr_en="This machine is malfunctioning."
+                  tr_de="Diese Maschine funktioniert nicht richtig."
+                  allowSpaces="true"
+                  lvl="n3"
+                  origin="Doraemon 7, p.60"
+                />
+                <sentence
+                  s="ギターの【調：ちょう】【子：し】が【狂：くる】っている。"
+                  rom="Gitā no chōshi ga kurutte iru."
+                  tr_en="The tuning of the guitar is off."
+                  tr_de="Die Gitarre ist verstimmt."
+                  lvl="n3"
+                  origin="ChatGPT"
                 />
             </word>
             <word
@@ -629,63 +743,6 @@
                 />
             </word>
             <word
-              w="【贈：おく】る"
-              rom="okuru"
-              tr_en="to give sth. as a present; to award so."
-              tr_de="etw. schenken; jem. belohnen"
-              studyInContext="preferred"
-              Langenscheidt="schenken"
-              lvl="n3"
-              category="hands, relationships"
-              id="okuru-give"
-            >
-                <see id="okurimono-gift" rem="closely related" />
-                <keep_apart_from id="ageru-give" />
-                <keep_apart_from id="sashiageru-give" />
-                <keep_apart_from id="ataeru-grant" />
-                <keep_apart_from id="kubaru-distribute" />
-                <phrase
-                  ph="【誕：たん】【生：じょう】【日：び】に【贈：おく】る"
-                  rom="tanjōbi ni okuru"
-                  tr_en="to give as a birthday present"
-                  tr_de="zum Geburtstag schenken"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <phrase
-                  ph="【自：じ】【転：てん】【車：しゃ】を【贈：おく】る"
-                  rom="jitensha o okuru"
-                  tr_en="to give a bicycle (as a present)"
-                  tr_de="ein Fahrrad schenken"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <phrase
-                  ph="【先：せん】【生：せい】に【本：ほん】を【贈：おく】る"
-                  rom="sensei ni hon o okuru"
-                  tr_en="to give a book to the teacher (as a present)"
-                  tr_de="dem Lehrer/der Lehrerin ein Buch schenken"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="リサちゃんに【人：にん】【形：ぎょう】を【贈：おく】った。"
-                  rom="Risa-chan ni ningyō o okutta."
-                  tr_en="I gave Risa a doll (as a present)."
-                  tr_de="Ich habe Risa eine Puppe geschenkt."
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【珍：めずら】しい【花：か】【瓶：びん】を【贈：おく】ってくれた。"
-                  rom="Mezurashii kabin o okutte kureta."
-                  tr_en="I got a rare flower vase as a present."
-                  tr_de="Ich habe eine seltene Blumenvase als Geschenk bekommen."
-                  lvl="n3"
-                  origin="lib0 modified"
-                />
-            </word>
-            <word
               w="【望：のぞ】む"
               rom="nozomu"
               tr_en="to desire; to wish for; to expect"
@@ -699,6 +756,18 @@
                 <keep_apart_from id="inoru-wish" />
                 <keep_apart_from id="motomeru-wishfor" />
                 <keep_apart_from id="tanomu-request" />
+            </word>
+            <word
+              w="【避：さ】ける"
+              rom="sakeru"
+              tr_en="to avoid; to ward off; to move out of the way"
+              tr_de="etw. umgehen; etw. abwenden; etw. aus dem Weg gehen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, motion"
+              id="sakeru-avoid"
+            >
+                <keep_apart_from id="nukeru-omit" />
             </word>
             <word
               w="【済：す】ませる"
@@ -781,15 +850,6 @@
               id="kazoeru-count"
             />
             <word
-              w="【劣：おと】る"
-              rom="otoru"
-              tr_en="to fall behind; to be inferior to"
-              tr_de="zurückfallen; unterlegen sein"
-              lvl="n3"
-              category="general"
-              id="otoru-fallbehind"
-            />
-            <word
               w="【溺：おぼ】れる"
               rom="oboreru"
               tr_en="to drown; to lose one's head over sth."
@@ -805,10 +865,16 @@
               rom="utsusu"
               tr_en="to swap; to substitute; to change the object of one's focus"
               tr_de="vertauschen; austauschen; sich etw. anderem zuwenden"
+              hint_en="v.t."
               lvl="n3"
               category="general"
               id="utsusu-swap"
-            />
+            >
+                <see id="utsuru-movehouse" rem="v.i." />
+                <keep_apart_from id="kaeru-substitute" />
+                <keep_apart_from id="kaeru-exchange" />
+                <keep_apart_from id="kaeru-replace" />
+            </word>
             <word
               w="【勧：すす】める"
               rom="susumeru"
@@ -905,16 +971,6 @@
                 />
             </word>
             <word
-              w="【避：さ】ける"
-              rom="sakeru"
-              tr_en="to avoid; to ward off; to move out of the way"
-              tr_de="etw. umgehen; etw. abwenden; etw. aus dem Weg gehen"
-              hint_en="v.t."
-              lvl="n3"
-              category="general, motion"
-              id="sakeru-avoid"
-            />
-            <word
               w="【飽：あ】きる"
               rom="akiru"
               tr_en="to lose interest in; to be fed up with"
@@ -923,20 +979,6 @@
               category="mood"
               id="akiru-fedupwith"
             />
-            <word
-              w="【握：にぎ】る"
-              rom="nigiru"
-              tr_en="to grasp; to grip; to hold"
-              tr_de="etw. fassen; etw. halten"
-              hint_en="v.t."
-              lvl="n3"
-              id="nigiru-grasp"
-            >
-                <see id="onigiri-riceball" rem="noun" />
-                <keep_apart_from id="motsu-carry" />
-                <keep_apart_from id="tsukamu-grab" />
-                <keep_apart_from id="tsukamaru-tobecaught" />
-            </word>
             <word
               w="【論：ろん】じる"
               rom="ronjiru"
@@ -966,6 +1008,7 @@
               id="kurushimu-suffer"
             >
                 <!-- the noun is kurushimi, which is nx -->
+                <keep_apart_from id="itamu-hurt" />
             </word>
             <word
               w="【優：すぐ】れる"
@@ -976,15 +1019,6 @@
               lvl="n3"
               category="general"
               id="sugureru-excel"
-            />
-            <word
-              w="【効：き】く"
-              rom="kiku"
-              tr_en="to be effective; to be good (for); to function well"
-              tr_de="wirksam sein; gut sein (für); gut funktionieren"
-              lvl="n3"
-              category="work, technical"
-              id="kiku-effective"
             />
         </section>
     </unit>

@@ -1,8 +1,8 @@
 package io.github.digorydoo.goigoi.compiler
 
+import ch.digorydoo.kutils.cjk.FuriganaString
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
-import ch.digorydoo.kutils.cjk.FuriganaString
 
 class Surname(
     val suffices: Array<String>,
@@ -54,6 +54,7 @@ val allowedOrigins = arrayOf(
     Regex("500mon(| N3| N2| N1) q[0-9.]*(|, q[0-9.]*)(| modified)"),
     Regex("BondLingo(| modified)"),
     Regex("ChatGPT"),
+    Regex("DeepL"),
     Regex("Doraemon [0-9]+, p\\.[0-9]+(| modified)"), // too tedious to type: ドラえもん第２巻、20頁
     Regex("GENKI[12](| p\\.[0-9]*)(| modified)"),
     Regex("Kaname Naito(| modified)"),

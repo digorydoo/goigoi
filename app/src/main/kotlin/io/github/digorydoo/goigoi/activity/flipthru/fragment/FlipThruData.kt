@@ -1,7 +1,7 @@
 package io.github.digorydoo.goigoi.activity.flipthru.fragment
 
-import io.github.digorydoo.goigoi.db.Word
 import ch.digorydoo.kutils.cjk.FuriganaString
+import io.github.digorydoo.goigoi.core.db.Word
 
 class FlipThruData(
     private val word: Word,
@@ -46,7 +46,7 @@ class FlipThruData(
             else -> word.hintsWithSystemLang
         }
 
-    // The info is additional information that should never be shown on the front.
+    // The explanation is additional information that should never be shown on the front.
     val explanation: String
         get() = when {
             phraseIdx != null -> word.phrases[phraseIdx].explanation.withSystemLang

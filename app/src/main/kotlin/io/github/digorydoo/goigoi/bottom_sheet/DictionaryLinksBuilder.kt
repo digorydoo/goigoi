@@ -3,11 +3,11 @@ package io.github.digorydoo.goigoi.bottom_sheet
 import android.content.Context
 import android.net.Uri
 import androidx.core.net.toUri
-import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.db.Word
-import io.github.digorydoo.goigoi.helper.MyLayoutInflater
 import ch.digorydoo.kutils.cjk.hasBracket
 import ch.digorydoo.kutils.cjk.hasPunctuation
+import io.github.digorydoo.goigoi.R
+import io.github.digorydoo.goigoi.core.db.Word
+import io.github.digorydoo.goigoi.utils.MyLayoutInflater
 
 class DictionaryLinksBuilder(private val word: Word, private val studyLang: String) {
     private val dictionaries = arrayOf(

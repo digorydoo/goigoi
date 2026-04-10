@@ -5,9 +5,9 @@ import io.github.digorydoo.goigoi.compiler.CheckFailed
 import io.github.digorydoo.goigoi.compiler.checkRomaji
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
-import io.github.digorydoo.goigoi.core.StudyInContextKind
-import io.github.digorydoo.goigoi.core.WordCategory
-import io.github.digorydoo.goigoi.core.WordHint
+import io.github.digorydoo.goigoi.core.db.StudyInContextKind
+import io.github.digorydoo.goigoi.core.db.WordCategory
+import io.github.digorydoo.goigoi.core.db.WordHint
 
 private const val KANJI_MAX_LENGTH = 10 // also applies to kana of words with no kanji
 private const val KANA_MAX_LENGTH = 10

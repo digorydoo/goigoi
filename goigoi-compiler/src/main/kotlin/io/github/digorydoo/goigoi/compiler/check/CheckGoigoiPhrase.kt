@@ -48,7 +48,7 @@ private fun checkSentenceOrPhrase(
     checkRomaji(s.primaryForm.raw, s.romaji, unyt, word)
 
     val maxLen = when (isPhrase) {
-        true -> 38
+        true -> 42
         false -> 88
     }
 

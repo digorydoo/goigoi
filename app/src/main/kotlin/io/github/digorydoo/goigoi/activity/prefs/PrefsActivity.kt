@@ -7,21 +7,19 @@ import androidx.appcompat.app.AppCompatActivity
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.activity.about.startAboutActivity
 import io.github.digorydoo.goigoi.activity.welcome.startWelcomeActivity
-import io.github.digorydoo.goigoi.helper.UserPrefs
 import io.github.digorydoo.goigoi.utils.ResUtils
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 
 class PrefsActivity: AppCompatActivity() {
     private lateinit var bindings: Bindings
     private lateinit var values: Values
-    private lateinit var prefs: UserPrefs
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ResUtils.setActivityTheme(this)
         setContentView(R.layout.prefs_activity)
 
-        val ctx = applicationContext
-        prefs = UserPrefs.getSingleton(ctx)
+        val prefs = SingletonHolder.prefs
         bindings = Bindings(this)
         values = Values(this)
 
@@ -62,7 +60,7 @@ class PrefsActivity: AppCompatActivity() {
     }
 
     private fun changeThemeBtnClicked() {
-        prefs.darkMode = bindings.changeThemeBtn.isChecked // isChecked already has new value
+        SingletonHolder.prefs.darkMode = bindings.changeThemeBtn.isChecked // isChecked already has new value
         // recreate() -- NO, problems with status bar styling!
         finish()
         startPrefsActivity()

@@ -13,23 +13,20 @@ import io.github.digorydoo.goigoi.activity.prog_study.startProgStudyActivity
 import io.github.digorydoo.goigoi.activity.topic.TopicActivityParams
 import io.github.digorydoo.goigoi.activity.topic.startTopicActivity
 import io.github.digorydoo.goigoi.activity.unyt.startUnytActivityAsync
-import io.github.digorydoo.goigoi.db.Vocabulary
 import io.github.digorydoo.goigoi.dialog.HintDialogManager
 import io.github.digorydoo.goigoi.drawable.HintBalloon
 import io.github.digorydoo.goigoi.furigana.FuriganaBuilder
 import io.github.digorydoo.goigoi.furigana.FuriganaSpan
-import io.github.digorydoo.goigoi.helper.UserPrefs
 import io.github.digorydoo.goigoi.list.*
 import io.github.digorydoo.goigoi.listviewholder.ClickableItemDelegate
-import io.github.digorydoo.goigoi.stats.Stats
 import io.github.digorydoo.goigoi.utils.DeviceUtils
 import io.github.digorydoo.goigoi.utils.ResUtils
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 import io.github.digorydoo.goigoi.utils.withStudyLang
 
 class WelcomeActivity: AppCompatActivity() {
     private lateinit var bindings: Bindings
     private lateinit var values: Values
-    private lateinit var vocab: Vocabulary
     private lateinit var adapter: MyListAdapter
     private var lastItemSelected: AbstrListItem? = null
     private var uiDisabled = false
@@ -42,7 +39,6 @@ class WelcomeActivity: AppCompatActivity() {
         val ctx = applicationContext
         bindings = Bindings(this)
         values = Values(this)
-        vocab = Vocabulary.getSingleton(ctx)
 
         val itemDelegate = object: ClickableItemDelegate {
             override fun onClick(item: AbstrListItem) {
@@ -124,7 +120,7 @@ class WelcomeActivity: AppCompatActivity() {
         bindings.topicsList.setHasFixedSize(false)
         bindings.topicsList.addItemDecoration(MyItemDecoration(ctx))
 
-        val prefs = UserPrefs.getSingleton(ctx)
+        val prefs = SingletonHolder.prefs
 
         if (!prefs.darkMode) {
             // Since this activity does not have a green toolbar, the green status bar
@@ -153,8 +149,7 @@ class WelcomeActivity: AppCompatActivity() {
     override fun onResume() {
         super.onResume()
 
-        val ctx = applicationContext
-        val stats = Stats.getSingleton(ctx)
+        val stats = SingletonHolder.stats
         stats.notifyMainActivityResume() // to clear old statistics
 
         rebuildList()
@@ -176,7 +171,7 @@ class WelcomeActivity: AppCompatActivity() {
         // does not look good (jerky transition).
 
         adapter.items = ListBuilder.buildWelcomeList(
-            vocab,
+            SingletonHolder.vocab,
             screenSize,
             lrMargin,
             imageMargin,
