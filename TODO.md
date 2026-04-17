@@ -5,8 +5,10 @@
 * Bug: Asynchronous reset stats/set fake stats can garble stats data since stats are not thread-safe! The dialogue
   window should stay open until the task is done.
 
-* When dropping a word, it should always drop the one with the best score, not necessarily the one being presented
-  (but never the super progressive head).
+* Phrases and sentences of verbs should mark their verb with 〈〉, allowing the app to ask for the form; compiler
+  should remove these characters and store the range to relieve the app from that task
+
+* When picking word from past, the study moment should be taken into account
 
 * When hint has "noun", tr_en should have -ing rather than "to ~"
 

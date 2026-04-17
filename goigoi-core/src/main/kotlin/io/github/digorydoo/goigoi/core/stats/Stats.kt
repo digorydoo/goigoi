@@ -58,13 +58,16 @@ class Stats(private val assets: AssetsAccessor) {
     fun getWordCorrectCount(word: Word, key: StatsKey) =
         wordStatsFile.getCorrectCount(word, key)
 
+    fun getWordWrongCount(word: Word, key: StatsKey) =
+        wordStatsFile.getWrongCount(word, key)
+
     fun getWordTotalSeenCount(word: Word) =
         wordStatsFile.getTotalSeenCount(word)
 
     fun getWordTotalCorrectCount(word: Word) =
         wordStatsFile.getTotalCorrectCount(word)
 
-    private fun getWordTotalWrongCount(word: Word) =
+    fun getWordTotalWrongCount(word: Word) =
         wordStatsFile.getTotalWrongCount(word)
 
     fun getWordStudyProgress(word: Word): Float =
@@ -75,6 +78,9 @@ class Stats(private val assets: AssetsAccessor) {
 
     fun getWordTotalRating(word: Word): Float =
         wordStatsFile.getTotalRating(word)
+
+    fun getWordStudyMoment(word: Word) =
+        wordStatsFile.getStudyMoment(word)
 
     fun getUnytStudyMoment(unyt: Unyt) =
         unytStatsFile.getStudyMoment(unyt)
@@ -184,31 +190,6 @@ class Stats(private val assets: AssetsAccessor) {
             result // 0..1
         }
     }
-
-    // Shown on BottomSheet
-    fun getDebugInfo(word: Word) =
-        "Progress: ${wordStatsFile.getStudyProgress(word)} (based on total correct)\n" +
-            "Rating: ${getWordTotalRating(word)}, " +
-            "seen: ${getWordTotalSeenCount(word)}, " +
-            "correct: ${getWordTotalCorrectCount(word)}, " +
-            "wrong: ${getWordTotalWrongCount(word)}\n" +
-            "\n" +
-            StatsKey.entries.flatMap { statsKey ->
-                val rating = wordStatsFile.getRating(word, statsKey)
-                val seenCount = wordStatsFile.getSeenCount(word, statsKey)
-                val correctCount = wordStatsFile.getCorrectCount(word, statsKey)
-                val wrongCount = wordStatsFile.getWrongCount(word, statsKey)
-                listOf(
-                    statsKey.name,
-                    "    Rating: $rating, seen: $seenCount, correct: $correctCount, wrong: $wrongCount",
-                )
-            }.joinToString("\n")
-
-    // Shown on BottomSheet
-    fun getDebugInfo(unyt: Unyt) =
-        """
-        Study moment ${getUnytStudyMoment(unyt)?.formatAsZoneAgnosticDateTime()}
-        """.trimIndent()
 
     // This may take a while, so be sure to always call this from a coroutine!
     // FIXME: wordStatsFile and unytStatsFile are not Thread-safe!

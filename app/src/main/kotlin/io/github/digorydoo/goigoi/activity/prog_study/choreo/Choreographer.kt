@@ -249,7 +249,7 @@ class Choreographer(
             }
         } else {
             // We update our TategakiView
-            val availHeight = bindings.rootView.measuredHeight - delegate.minTop - values.topBottomMargin
+            val availHeight = bindings.rootView.measuredHeight - delegate.minTop - values.bottomMargin
             val allowedHeight = min(availHeight, values.tategakiMaxHeight).toInt()
 
             bindings.questionInCalligraphyFontTategakiView.apply {

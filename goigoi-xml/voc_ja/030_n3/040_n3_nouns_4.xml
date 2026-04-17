@@ -12,8 +12,8 @@
       defaultHint_de="Nomen"
       lvl="n3"
       translations="en, de"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
       requiresIds="true"
     >
         <section>
@@ -1058,6 +1058,14 @@
                   lvl="n3"
                   origin="ChatGPT"
                 />
+                <sentence
+                  s="【自：じ】【動：どう】【車：しゃ】【市：し】【場：じょう】は【拡：かく】【大：だい】しています。"
+                  rom="Jidōsha-shijō wa kakudai shite imasu."
+                  tr_en="The car market is expanding."
+                  tr_de="Der Markt von Automobilen ist sich am ausweiten."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
             </word>
             <word
               w="【文：も】【字：じ】"
@@ -1397,6 +1405,15 @@
                   lvl="n3"
                   origin="lib0"
                 />
+                <sentence
+                  s="【入：いり】【口：ぐち】に【旗：はた】を【立：た】ててあります。"
+                  rom="Iriguchi ni hata o tatete arimasu."
+                  tr_en="They've put up a flag at the entrance."
+                  tr_de="Am Eingang haben sie eine Flagge gehisst."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
             </word>
             <word
               w="【楽：がっ】【器：き】"
@@ -1407,17 +1424,54 @@
               category="entertainment, hearing"
               id="gakki-musicalinstrument"
               rem="appears in GENKI2 Workbook p.21; jisho has n2"
-            />
+            >
+                <phrase
+                  ph="【楽：がっ】【器：き】を【演：えん】【奏：そう】する"
+                  rom="gakki o ensō suru"
+                  tr_en="to perform a musical instrument"
+                  tr_de="ein Musikinstrument spielen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【楽：がっ】【器：き】、【何：なに】かできるの？"
+                  rom="Gakki, nanika dekiru no?"
+                  tr_en="Can you play any instrument?"
+                  tr_de="Kannst du irgend ein Instrument spielen?"
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
             <word
               w="【家：か】【事：じ】"
               rom="kaji"
               tr_en="housework; domestic chores"
-              tr_de="Häusliche Arbeit; Haushaltstätigkeiten"
+              tr_de="häusliche Arbeit; Haushaltstätigkeiten"
               lvl="n3"
               category="home"
               id="kaji-housework"
               rem="appears in GENKI2 L22 vocab section"
-            />
+            >
+                <phrase
+                  ph="【母：はは】の【家：か】【事：じ】を【手：て】【伝：つだ】う"
+                  rom="haha no kaji o tetsudau"
+                  tr_en="to help mother with the housework"
+                  tr_de="der Mutter im Haushalt helfen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; haha ni kaji o tetsudau would be wrong; DeepL also suggests の"
+                />
+                <sentence
+                  s="【家：か】【事：じ】で【一：いち】【日：にち】【中：じゅう】【忙：いそが】しいよ。"
+                  rom="Kaji de ichi-nichi-jū isogashii yo."
+                  tr_en="I'm busy with housework all day (I tell you)."
+                  tr_de="Ich bin den ganzen Tag mit Hausarbeiten beschäftigt."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
             <word
               w="【額：ひたい】"
               rom="hitai"
@@ -1426,7 +1480,36 @@
               lvl="n3"
               category="body"
               id="hitai-forehead"
-            />
+            >
+                <!-- the same kanji can be pronounced gaku, which means picture frame -->
+                <keep_apart_from id="gaku-frame" />
+                <phrase
+                  ph="【額：ひたい】の【傷：きず】【跡：あと】"
+                  rom="hitai no kizuato"
+                  tr_en="a scar on the forehead"
+                  tr_de="eine Narbe an der Stirn"
+                  lvl="n3"
+                  origin="DeepL"
+                  rem="jisho has nx for kizuato, but n3 for kizu, ato"
+                />
+                <phrase
+                  ph="【額：ひたい】の【汗：あせ】を【拭：ぬぐ】う"
+                  rom="hitai no ase o nuguu"
+                  tr_en="to wipe the sweat from one's forehead"
+                  tr_de="sich den Schweiss von der Stirn abwischen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for nuguu"
+                />
+                <sentence
+                  s="【彼：かれ】は【娘：むすめ】の【額：ひたい】にキスした。"
+                  rom="Kare wa musume no hitai ni kisu shita."
+                  tr_en="He kissed his daughter on the forehead."
+                  tr_de="Er küsste seine Tochter auf die Stirn."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【膝：ひざ】"
               rom="hiza"
@@ -1435,7 +1518,24 @@
               lvl="n3"
               category="body"
               id="hiza-knee"
-            />
+            >
+                <phrase
+                  ph="【膝：ひざ】のケガ"
+                  rom="hiza no kega"
+                  tr_en="knee injury"
+                  tr_de="Verletzung am Knie"
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【膝：ひざ】が【震：ふる】えるのを【感：かん】じた。"
+                  rom="Hiza ga furueru no o kanjita."
+                  tr_en="I felt my knees tremble."
+                  tr_de="Ich fühlte, wie meine Knie zitterten."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
             <word
               w="【腰：こし】"
               rom="koshi"
@@ -1444,7 +1544,27 @@
               lvl="n3"
               category="body"
               id="koshi-hips"
-            />
+            >
+                <keep_apart_from id="suwaru-sit" />
+                <keep_apart_from id="koshikakeru-sitdown" />
+                <phrase
+                  ph="【腰：こし】【周：まわ】り"
+                  rom="koshi-mawari"
+                  tr_en="hip circumference"
+                  tr_de="Hüftumfang"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【木：き】の【陰：かげ】に【腰：こし】を【下：お】ろしました。"
+                  rom="Ki no kage ni koshi o oroshimashita."
+                  tr_en="I sat down in the shade of a tree."
+                  tr_de="Ich setzte mich in den Schatten eines Baumes."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
             <word
               w="【胸：むね】"
               rom="mune"
@@ -1453,7 +1573,42 @@
               lvl="n3"
               category="body"
               id="mune-chest"
-            />
+            >
+                <phrase
+                  ph="【胸：むね】の【痛：いた】み"
+                  rom="mune no itami"
+                  tr_en="chest pain"
+                  tr_de="Schmerzen in der Brust"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【胸：むね】を【張：は】る"
+                  rom="mune o haru"
+                  tr_en="to hold one's head high; to be proud"
+                  tr_de="die Brust herausstrecken; stolz sein"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【喜：よろこ】びで【胸：むね】がいっぱいになった。"
+                  rom="Yorokobi de mune ga ippai ni natta."
+                  tr_en="My heart became filled with joy."
+                  tr_de="Mein Herz füllte sich mit Freude."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【試：し】【験：けん】に【合：ごう】【格：かく】して、【胸：むね】を【張：は】って【家：いえ】に【帰：かえ】った。"
+                  rom="Shiken ni gōkaku shite, mune o hatte ie ni kaetta."
+                  tr_en="I passed the exam, and went home with pride."
+                  tr_de="Ich bestand die Prüfung und ging ganz stolz nach Hause."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
             <word
               w="【筋：きん】【肉：にく】"
               rom="kinniku"
@@ -1462,7 +1617,26 @@
               lvl="n3"
               category="body"
               id="kinniku-muscle"
-            />
+            >
+                <phrase
+                  ph="【筋：きん】【肉：にく】【質：しつ】の【腕：うで】"
+                  rom="kinniku-shitsu no ude"
+                  tr_en="muscular arms"
+                  tr_de="muskulöse Arme"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="verified with ChatGPT; 筋肉的な腕 would not be quite right"
+                />
+                <sentence
+                  s="【運：うん】【動：どう】【不：ぶ】【足：そく】で【筋：きん】【肉：にく】が【弱：よわ】くなった。"
+                  rom="Undōbusoku de kinniku ga yowaku natta."
+                  tr_en="My muscules have weakened from lack of exercise."
+                  tr_de="Wegen ungenügendem Training sind meine Muskeln schwach geworden."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT that it's indeed pronounced busoku here, not fusoku."
+                />
+            </word>
             <word
               w="【骨：こっ】【折：せつ】"
               rom="kossetsu"
@@ -1473,6 +1647,23 @@
               id="kossetsu-bonefracture"
             >
                 <see id="hone-bone" rem="closely related" />
+                <phrase
+                  ph="【腕：うで】を【骨：こっ】【折：せつ】する"
+                  rom="ude o kossetsu suru"
+                  tr_en="to break one's arm"
+                  tr_de="sich den Arm brechen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【右：みぎ】【腕：うで】を【骨：こっ】【折：せつ】したようです。"
+                  rom="Migi-ude o kossetsu shita yō desu."
+                  tr_en="I think my right arm is broken."
+                  tr_de="Ich glaube, mein rechter Arm ist gebrochen."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; shita mitai desu would also be correct, but slightly more casual"
+                />
             </word>
             <word
               w="【記：き】【録：ろく】"
@@ -1484,17 +1675,63 @@
               lvl="n3"
               category="sports"
               id="kiroku-score"
-            />
+            >
+                <phrase
+                  ph="【記：き】【録：ろく】を【破：やぶ】る"
+                  rom="kiroku o yaburu"
+                  tr_en="to break the record (score)"
+                  tr_de="den Rekord brechen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="ChatGPT says yaburu is more emphatic than 更新する (nx)"
+                />
+                <phrase
+                  ph="【世：せ】【界：かい】【記：き】【録：ろく】"
+                  rom="sekai kiroku"
+                  tr_en="world record"
+                  tr_de="Weltrekord"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【彼：かれ】の【記：き】【録：ろく】は【誰：だれ】にも【破：やぶ】れない。"
+                  rom="Kare no kiroku wa dare ni mo yaburenai."
+                  tr_en="Nobody can break his record."
+                  tr_de="Niemand kann seinen Rekord brechen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
             <word
               w="【落：お】ち【葉：ば】"
               rom="ochiba"
               tr_en="fallen leaves; defoliation"
-              tr_de="Laub; gefallene Blätter"
+              tr_de="Laub; herabgefallene Blätter"
               lvl="n3"
               category="plant, nature"
               id="ochiba-fallenleaves"
               rem="jisho has n1, but n4 for ochiru, ha"
-            />
+            >
+                <phrase
+                  ph="【落：お】ち【葉：ば】の【山：やま】"
+                  rom="ochiba no yama"
+                  tr_en="a heap of fallen leaves"
+                  tr_de="einen Haufen mit herabgefallenen Blättern"
+                  lvl="n3"
+                  origin="DeepL"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【庭：にわ】は【落：お】ち【葉：ば】で【覆：おお】われていた。"
+                  rom="Niwa wa ochiba de ōwarete ita."
+                  tr_en="The garden  was covered with fallen leaves."
+                  tr_de="Der Garten war von heruntergefallenen Blättern überdeckt."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【死：し】【亡：ぼう】"
               rom="shibō"
@@ -1505,7 +1742,27 @@
               lvl="n3"
               category="health, not-good"
               id="shibō-death"
-            />
+            >
+                <keep_apart_from id="nakunaru-die" />
+                <keep_apart_from id="shinu-die" />
+                <phrase
+                  ph="【死：し】【亡：ぼう】【率：りつ】"
+                  rom="shibō-ritsu"
+                  tr_en="death rate"
+                  tr_de="Sterberate"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【妻：つま】はその【事：じ】【故：こ】で【死：し】【亡：ぼう】した。"
+                  rom="Tsuma wa sono jiko de shibō shita."
+                  tr_en="My wife was killed in the accident."
+                  tr_de="Meine Frau ist in dem Unfall umgekommen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
         </section>
     </unit>
 </vocabulary>

@@ -14,6 +14,7 @@ import io.github.digorydoo.goigoi.core.db.Phrase
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.db.WordLink
+import io.github.digorydoo.goigoi.core.stats.StatsKey
 import io.github.digorydoo.goigoi.dialog.WordCtxMenu
 import io.github.digorydoo.goigoi.furigana.FuriganaBuilder
 import io.github.digorydoo.goigoi.furigana.buildSpan
@@ -296,10 +297,38 @@ class SheetContent(
     }
 
     private fun insertDebugInfo(inflater: MyLayoutInflater) {
-        val stats = SingletonHolder.stats
         inflater.insertSubheader("DEBUG")
-        inflater.insertItemMultiLine("Word", stats.getDebugInfo(word))
-        inflater.insertItemMultiLine("Unyt", "${unyt.name.en}\n" + stats.getDebugInfo(unyt))
+        inflater.insertItemMultiLine("Word", getDebugInfo(word))
+        inflater.insertItemMultiLine("Unyt", "${unyt.name.en}\n" + getDebugInfo(unyt))
+    }
+
+    private fun getDebugInfo(word: Word): String {
+        val stats = SingletonHolder.stats
+        return "Progress: ${stats.getWordStudyProgress(word)} (based on total correct)\n" +
+            "Rating: ${stats.getWordTotalRating(word)}, " +
+            "seen: ${stats.getWordTotalSeenCount(word)}, " +
+            "correct: ${stats.getWordTotalCorrectCount(word)}, " +
+            "wrong: ${stats.getWordTotalWrongCount(word)}\n" +
+            "Study moment: ${stats.getWordStudyMoment(word)?.formatAsZoneAgnosticDateTime()}\n" +
+            "\n" +
+            StatsKey.entries.joinToString("\n") { statsKey ->
+                val rating = stats.getWordRating(word, statsKey)
+                val seenCount = stats.getWordSeenCount(word, statsKey)
+                val correctCount = stats.getWordCorrectCount(word, statsKey)
+                val wrongCount = stats.getWordWrongCount(word, statsKey)
+                val name = if (statsKey.name.startsWith("PROGSTUDY_")) statsKey.name.substring(10) else statsKey.name
+                """
+                    $name
+                        Rating: $rating, seen: $seenCount, correct: $correctCount, wrong: $wrongCount
+                """.trimIndent()
+            }
+    }
+
+    private fun getDebugInfo(unyt: Unyt): String {
+        val stats = SingletonHolder.stats
+        return """
+            Study moment: ${stats.getUnytStudyMoment(unyt)?.formatAsZoneAgnosticDateTime()}
+            """.trimIndent()
     }
 
     companion object {

@@ -2,6 +2,7 @@ package io.github.digorydoo.goigoi.core.stats
 
 import ch.digorydoo.kutils.math.clamp
 import ch.digorydoo.kutils.math.lerp
+import ch.digorydoo.kutils.utils.Moment
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.study.Answer
 import java.io.File
@@ -20,14 +21,19 @@ class WordStatsFile(dir: File): Exportable {
                 incInt("$key.$ANSWER_CORRECT_ID", word, 1)
                 setRecentAnswer(key, word, 1)
                 updateCumulRating(word, correct = true)
+                setStudyMoment(word)
             }
             Answer.WRONG -> {
                 incInt("$key.$ANSWER_WRONG_ID", word, 1)
                 setRecentAnswer(key, word, 0)
                 updateCumulRating(word, correct = false)
+                setStudyMoment(word)
             }
+
             Answer.CORRECT_EXCEPT_KANA_SIZE, // counted as neither correct nor wrong
             Answer.TRIVIAL, // word, phrase or sentence just presented
+            -> setStudyMoment(word)
+
             Answer.SKIP, // user skipped word in FlipThru
             Answer.NONE, // shouldn't happen
             -> Unit
@@ -170,12 +176,21 @@ class WordStatsFile(dir: File): Exportable {
         file.setFloat(key, new)
     }
 
+    private fun setStudyMoment(word: Word) {
+        setMoment(STUDY_DATE_ID, word, Moment.now())
+    }
+
+    fun getStudyMoment(word: Word): Moment? {
+        return getMoment(STUDY_DATE_ID, word)
+    }
+
     fun reset(w: Word) {
         StatsKey.entries.forEach { key ->
             file.remove(getKey("$key.$WORD_SEEN_ID", w))
             file.remove(getKey("$key.$ANSWER_CORRECT_ID", w))
             file.remove(getKey("$key.$ANSWER_WRONG_ID", w))
             file.remove(getKey(CUMUL_RATING_ID, w))
+            file.remove(getKey(STUDY_DATE_ID, w))
 
             recentAnswerIds(key).forEach { id ->
                 file.remove(getKey(id, w))
@@ -198,6 +213,16 @@ class WordStatsFile(dir: File): Exportable {
         file.incInt(key, defaultVal, maxVal)
     }
 
+    private fun getMoment(id: String, w: Word): Moment? {
+        val key = getKey(id, w)
+        return file.getMoment(key)
+    }
+
+    private fun setMoment(id: String, w: Word, m: Moment) {
+        val key = getKey(id, w)
+        file.setMoment(key, m)
+    }
+
     private fun getKey(counterId: String, word: Word): String {
         return word.id + "." + counterId
     }
@@ -209,6 +234,7 @@ class WordStatsFile(dir: File): Exportable {
         private const val WORD_SEEN_ID = "seen"
         private const val ANSWER_CORRECT_ID = "ok"
         private const val ANSWER_WRONG_ID = "no"
+        private const val STUDY_DATE_ID = "sd"
 
         private const val ANSWER_CYCLE_ID = "Z"
         private const val ANSWER_CYCLE_SIZE = 3

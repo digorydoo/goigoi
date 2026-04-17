@@ -216,6 +216,24 @@
                 <!-- verified with ChatGPT, jisho and lib0 that 訳 is indeed the わけ appearing in 500mon N3 q322 -->
                 <keep_apart_from id="mōshiwake-apology" />
                 <keep_apart_from id="iiwake-excuse" />
+                <phrase
+                  ph="わけもなく"
+                  rom="wake mo naku"
+                  tr_en="without cause; without reason"
+                  tr_de="ohne Grund; grundlos"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="jisho has nx; lib0 uses kanji"
+                />
+                <phrase
+                  ph="わけもなく【悲：かな】しくなる"
+                  rom="wake mo naku kanashiku naru"
+                  tr_en="to become sad for no reason"
+                  tr_de="ohne Grund traurig werden"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="jisho has nx; lib0 uses kanji"
+                />
                 <sentence
                   s="【山：やま】【下：した】さんの【行：こう】【動：どう】のわけが【分：わ】かりません。"
                   rom="Yamashita-san no kōdō no wake ga wakarimasen."
@@ -286,6 +304,22 @@
               id="taiyō-sun"
             >
                 <keep_together id="chikyū-earth" />
+                <phrase
+                  ph="【真：ま】っ【赤：か】な【太：たい】【陽：よう】"
+                  rom="makka na taiyō"
+                  tr_en="a deep red sun"
+                  tr_de="eine tiefrote Sonne"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【太：たい】【陽：よう】【風：ふう】"
+                  rom="taiyō-fū"
+                  tr_en="solar wind"
+                  tr_de="Sonnenwind"
+                  lvl="n3"
+                  rem="jisho has nx"
+                />
                 <sentence
                   s="【太：たい】【陽：よう】は【西：にし】に【沈：しず】む。"
                   rom="Taiyō wa nishi ni shizumu."
@@ -316,6 +350,31 @@
               rem="appears in GENKI2 p.287 kanji section"
             >
                 <keep_together id="taiyō-sun" />
+                <phrase
+                  ph="【地：ち】【球：きゅう】の【表：ひょう】【面：めん】"
+                  rom="chikyū no hyōmen"
+                  tr_en="the surface of the Earth"
+                  tr_de="die Oberfläche der Erde"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【地：ち】【球：きゅう】は【太：たい】【陽：よう】の【周：しゅう】【囲：い】を【回：まわ】る。"
+                  rom="Chikyū wa taiyō no shūi o mawaru."
+                  tr_en="The earth goes around the sun."
+                  tr_de="Die Erde dreht sich um die Sonne."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【地：ち】【球：きゅう】の【形：かたち】はオレンジに【似：に】ている。"
+                  rom="Chikyū no katachi wa orenji ni nite iru."
+                  tr_en="Earth's shape is similar to an orange."
+                  tr_de="Die Form der Erde gleicht einer Orange."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has n1 for orenji"
+                />
             </word>
             <word
               w="【農：のう】【民：みん】"
@@ -326,6 +385,14 @@
               category="occupations, countryside"
               id="nōmin-farmer"
             >
+                <phrase
+                  ph="【貧：まず】しい【農：のう】【民：みん】"
+                  rom="mazushii nōmin"
+                  tr_en="a poor peasant"
+                  tr_de="ein armer Bauer"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【農：のう】【民：みん】は【作：さく】【物：もつ】を【作：つく】る。"
                   rom="Nōmin wa sakumotsu o tsukuru."
@@ -381,6 +448,15 @@
                   lvl="n3"
                   rem="the kanji for かく would be 掻く, but it's very uncommon to use it with 汗"
                 />
+                <sentence
+                  s="【寝：ね】【汗：あせ】がひどいです。"
+                  rom="Ne-ase ga hidoi desu."
+                  tr_en="I sweat a lot during sleep."
+                  tr_de="Ich schwitze stark beim Schlafen."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for ne-ase"
+                />
             </word>
             <word
               w="【演：えん】【技：ぎ】"
@@ -400,6 +476,14 @@
                   tr_de="Vorführung auf der Bühne"
                   lvl="n3"
                   origin="jpod101 audio"
+                />
+                <sentence
+                  s="【君：きみ】の【演：えん】【技：ぎ】は【完：かん】【璧：ぺき】だった。"
+                  rom="Kimi no engi wa kanpeki datta."
+                  tr_en="Your acting was perfect."
+                  tr_de="Deine Vorführung war perfekt."
+                  lvl="n3"
+                  origin="lib0 modified"
                 />
             </word>
             <word
@@ -430,6 +514,23 @@
                   tr_de="Komödie"
                   lvl="n3"
                   rem="jisho has n1"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】は【初：はじ】めて【劇：げき】に【出：で】た。"
+                  rom="Kanojo wa hajimete geki ni deta."
+                  tr_en="She acted in a play for the first time."
+                  tr_de="Sie ist zum ersten Mal in einem Theaterstück aufgetreten."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【悲：ひ】【劇：げき】は【突：とつ】【然：ぜん】 【起：お】こった。"
+                  rom="Higeki wa totsuzen okotta."
+                  tr_en="The tragedy happened suddenly."
+                  tr_de="Die Tragödie ereignete sich plötzlich."
+                  allowSpaces="true"
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -527,6 +628,14 @@
                   tr_de="am Strassenrand parkiert sein"
                   lvl="n3"
                 />
+                <sentence
+                  s="どこに【駐：ちゅう】【車：しゃ】できますか。"
+                  rom="Doko ni chūsha dekimasu ka?"
+                  tr_en="Where can I park?"
+                  tr_de="Wo kann ich parkieren?"
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【機：き】【械：かい】"
@@ -538,6 +647,15 @@
               id="kikai-machine"
             >
                 <keep_apart_from id="kikan-engine" />
+                <phrase
+                  ph="【複：ふく】【雑：ざつ】な【機：き】【械：かい】"
+                  rom="fukuzatsu na kikai"
+                  tr_en="a complex machine"
+                  tr_de="eine komplexe Maschine"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has n4 for fukuzatsu"
+                />
                 <sentence
                   s="これは【印：いん】【刷：さつ】をするための【機：き】【械：かい】です。"
                   rom="Kore wa insatsu o suru tame no kikai desu."
@@ -627,10 +745,18 @@
                   ph="【期：き】【末：まつ】【試：し】【験：けん】"
                   rom="kimatsu-shiken"
                   tr_en="examination at end of term; final exam"
-                  tr_de="Prüfung am Semesterende; Schlussprüfung"
+                  tr_de="Prüfung am Semesterende; Semesterprüfungen"
                   lvl="n3"
                   origin="GENKI2 p.94"
                   rem="appears in vocab section"
+                />
+                <sentence
+                  s="やっと【期：き】【末：まつ】【試：し】【験：けん】が【終：お】わった。"
+                  rom="Yatto kimatsu-shiken ga owatta."
+                  tr_en="At last, the end of term exams are over."
+                  tr_de="Endlich, die Semesterprüfungen sind vorbei."
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -650,6 +776,35 @@
                   lvl="n3"
                   origin="ChatGPT"
                 />
+                <phrase
+                  ph="【電：でん】【子：し】【工：こう】【学：がく】"
+                  rom="denshi kōgaku"
+                  tr_en="electronics (field of study)"
+                  tr_de="Elektronik (Fachrichtung)"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【電：でん】【子：し】レンジ"
+                  rom="denshi renji"
+                  tr_en="microwave oven"
+                  tr_de="Mikrowellenherd"
+                  explanation_en="レンジ is derived from the English word 'range'."
+                  explanation_de="レンジ ist vom englischen Wort 'range' abgeleitet."
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【電：でん】【子：し】【工：こう】【学：がく】を【研：けん】【究：きゅう】するために【大：だい】【学：がく】に【入：はい】った。"
+                  rom="Denshi-kōgaku o kenkyū suru tame ni daigaku ni haitta."
+                  tr_en="I entered the college to study electronics."
+                  tr_de="Ich bin in die Universität eingetreten, Elektronik zu studieren."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; lib0 has へ; ChatGPT agrees that に is better; を would be incorrect"
+                />
             </word>
             <word
               w="【霜：しも】"
@@ -666,6 +821,15 @@
                   tr_en="morning frost"
                   tr_de="Morgenfrost"
                   lvl="n3"
+                />
+                <sentence
+                  s="【草：くさ】に【霜：しも】が【降：お】りている。"
+                  rom="Kusa ni shimo ga orite iru."
+                  tr_en="There is frost on the grass."
+                  tr_de="Auf dem Gras hat es Frost."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -711,31 +875,60 @@
             <word
               w="【旅：たび】"
               rom="tabi"
-              tr_en="travel; trip; journey"
+              tr_en="journey; travel; trip"
               tr_de="Reise"
               lvl="n3"
               category="travelling"
               id="tabi-trip"
             >
-                <sentence
-                  s="【旅：たび】の【準：じゅん】【備：び】で【忙：いそが】しい。"
-                  rom="Tabi no junbi de isogashii."
-                  tr_en="I'm busy with travel preparations."
-                  tr_de="Ich bin mit Reisevorbereitungen beschäftigt."
+                <keep_apart_from id="bin-flight" />
+                <keep_apart_from id="ryokō-travel" />
+                <!--
+                    旅: more emotional, literary; refers to the experience or journey itself
+                    旅行: More practical, everyday; refers to a trip as an event
+                -->
+                <phrase
+                  ph="【旅：たび】【人：びと】"
+                  rom="tabibito"
+                  tr_en="traveller; wayfarer"
+                  tr_de="Reisender; Wanderer"
                   lvl="n3"
-                  origin="lib0 modified"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【飛：ひ】【行：こう】【機：き】の【旅：たび】はいかがでしたか。"
+                  rom="Hikōki no tabi wa ikaga deshita ka?"
+                  tr_en="How was your flight?"
+                  tr_de="Wie war Ihr Flug?"
+                  lvl="n3"
+                  origin="lib0"
                   rem="verified with ChatGPT"
                 />
             </word>
             <word
               w="【発：はっ】【車：しゃ】"
               rom="hassha"
-              tr_en="departure (of a train, etc.); leaving"
-              tr_de="Abfahrt (eines Zuges, usw.); Losfahren"
+              tr_en="departure (of a train, etc.)"
+              tr_de="Abfahrt (eines Zuges, usw.)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
               category="transportation"
               id="hassha-departure"
             >
+                <!--
+                  発車・はっしゃ: Used specifically for vehicles leaving a station or stop.
+                  出発・しゅっぱつ: Much more general. Can be used for people, vehicles, trips.
+                -->
+                <keep_apart_from id="shuppatsu-departure" />
+                <phrase
+                  ph="【発：はっ】【車：しゃ】【時：じ】【刻：こく】"
+                  rom="hassha jikoku"
+                  tr_en="departure time"
+                  tr_de="Abfahrtszeit"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
                 <sentence
                   s="バスは【六：ろっ】【分：ぷん】【後：ご】に【発：はっ】【車：しゃ】です。"
                   rom="Basu wa roppun-go ni hassha desu."
@@ -749,20 +942,44 @@
             <word
               w="【横：おう】【断：だん】"
               rom="ōdan"
-              tr_en="crossing"
-              tr_de="Übergang; Kreuzung"
+              tr_en="(act of) crossing"
+              tr_de="Kreuzen; überqueren"
+              hint_en="noun; suru verb; formal"
+              hint_de="Nomen; Suru-Verb; formell"
               lvl="n3"
               category="city, transportation"
               id="ōdan-crossing"
             >
+                <keep_apart_from id="kōsaten-crossing" />
                 <keep_apart_from id="hodō-sidewalk" />
+                <keep_apart_from id="jūjiro-crossroads" />
+                <keep_apart_from id="kōsa-crossing" />
+                <keep_apart_from id="wataru-cross" />
+                <keep_apart_from id="yokogiru-cross" />
                 <phrase
                   ph="【横：おう】【断：だん】【歩：ほ】【道：どう】"
-                  rom="ōdanhodō"
+                  rom="ōdan hodō"
                   tr_en="crosswalk; pedestrian crossing"
                   tr_de="Zebrastreifen; Fussgängerübergang"
                   lvl="n3"
                   rem="jisho has nx, but n3 for ōdan, hodō"
+                />
+                <phrase
+                  ph="【道：どう】【路：ろ】【横：おう】【断：だん】【禁：きん】【止：し】"
+                  rom="dōro ōdan kinshi"
+                  tr_en="crossing the road prohibited"
+                  tr_de="Strasse überkreuzen verboten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【祖：そ】【母：ぼ】は【通：とお】りを【横：おう】【断：だん】【中：ちゅう】に【車：くるま】にはねられた。"
+                  rom="Sobo wa tōri o ōdan-chū ni kuruma ni hanerareta."
+                  tr_en="Grandmother was hit by a car while crossing the road."
+                  tr_de="Grossmutter wurde von einem Auto angefahren, während sie die Strasse überquerte."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT, also that 中 isn't jū here; jisho has n2 for hanerareta"
                 />
             </word>
             <word
@@ -857,6 +1074,14 @@
                 <keep_apart_from id="keikan-constable" />
                 <keep_apart_from id="keibu-inspector" />
                 <keep_apart_from id="hori-constable" />
+                <phrase
+                  ph="【刑：けい】【事：じ】になる"
+                  rom="keiji ni naru"
+                  tr_en="to become a detective"
+                  tr_de="einen Detektiv werden"
+                  lvl="n3"
+                  origin="self"
+                />
                 <sentence
                   s="その【泥：どろ】【棒：ぼう】は【刑：けい】【事：じ】を【見：み】ると【走：はし】って【逃：に】げた。"
                   rom="Sono dorobō wa keiji o miru to hashitte nigeta."
@@ -876,25 +1101,61 @@
               id="ondo-temperature"
             >
                 <!--
-                    kion - air temperature
-                    taion - body temperature
-                    ondo - ?
+                    温度・おんど: temperature in general
+                    気温・きおん (n4): air temperature
+                    体温・たいおん (n3): body temperature
+                    水温・すいおん (nx): water temperature
+                    室温・しつおん (nx): room temperature
                 -->
                 <keep_apart_from id="kion-airtemperature" />
                 <keep_apart_from id="taion-bodytemp" />
+                <phrase
+                  ph="【高：たか】い【温：おん】【度：ど】"
+                  rom="takai ondo"
+                  tr_en="high (room) temperature"
+                  tr_de="hohe (Raum-) Temperatur"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【低：ひく】い【温：おん】【度：ど】"
+                  rom="hikui ondo"
+                  tr_en="low (room) temperature"
+                  tr_de="tiefe (Raum-) Temperatur"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="lib0 has 寒い温度, but ChatGPT says it's wrong"
+                />
+                <sentence
+                  s="この【部：へ】【屋：や】の【温：おん】【度：ど】は【高：たか】いので、【眠：ねむ】くなります。"
+                  rom="Kono heya no ondo wa takai no de, nemuku narimasu."
+                  tr_en="I get sleepy, because the temperature in this room is really warm."
+                  tr_de="Weil dieser Raum zu warm ist, werde ich schläfrig."
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
             </word>
             <word
-              w="お【尻：しり】"
-              rom="o-shiri"
+              w="【尻：しり】"
+              rom="shiri"
               tr_en="bottom; buttocks"
               tr_de="Hintern; Gesäss"
               lvl="n3"
               category="body"
-              id="oshiri-bottom"
+              id="shiri-bottom"
               rem="jisho has nx for o-shiri, n3 for shiri"
             >
-                <keep_apart_from id="shiri-bottom" />
-                <keep_together id="shiri-bottom" />
+                <keep_apart_from id="oshiri-bottom" />
+                <keep_together id="oshiri-bottom" />
+                <phrase
+                  ph="【尻：しり】が【重：おも】い"
+                  rom="shiri ga omoi"
+                  tr_en="lazy; reluctant to act"
+                  tr_de="träge; zögerlich"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
                 <sentence
                   s="やめなさい、お【尻：しり】をぶちますよ。"
                   rom="Yamenasai, o-shiri o buchimasu yo."
@@ -905,15 +1166,15 @@
                 />
             </word>
             <word
-              w="【尻：しり】"
-              rom="shiri"
+              w="お【尻：しり】"
+              rom="o-shiri"
               tr_en="buttocks; behind; undersurface"
               lvl="n3"
-              id="shiri-bottom"
+              id="oshiri-bottom"
               HIDDEN="true"
             >
-                <keep_apart_from id="oshiri-bottom" />
-                <keep_together id="oshiri-bottom" />
+                <keep_apart_from id="shiri-bottom" />
+                <keep_together id="shiri-bottom" />
             </word>
             <word
               w="【永：えい】【遠：えん】"
@@ -925,6 +1186,27 @@
               id="eien-eternity"
             >
                 <keep_apart_from id="eikyū-eternity" />
+                <!--
+                    永遠・えいえん: abstract, emotional, philosophical; something that feels timeless or everlasting
+                    永久・えいきゅう: factual, or technical; suggests durability or permanence in a practical sense
+                -->
+                <phrase
+                  ph="【永：えい】【遠：えん】に【若：わか】い"
+                  rom="eien ni wakai"
+                  tr_en="forever young"
+                  tr_de="jung für immer und ewig"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【君：きみ】を【永：えい】【遠：えん】に【愛：あい】します。"
+                  rom="Kimi o eien ni ai shimasu."
+                  tr_en="I'll love you forever."
+                  tr_de="Ich werde dich ewig lieben."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【人：ひと】ごみ"
@@ -936,14 +1218,33 @@
               id="hitogomi-crowd"
             >
                 <synonym w="【大：おお】【勢：ぜい】" />
+                <keep_apart_from id="komu-crowded" />
                 <keep_apart_from id="ōzei-crowd" />
                 <keep_apart_from id="katagata-people" />
+                <phrase
+                  ph="【人：ひと】ごみを【抜：ぬ】ける"
+                  rom="hitogomi o nukeru"
+                  tr_en="to get out of the crowd"
+                  tr_de="aus der Menschenmenge herauskommen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT;
+                    lib0 also has 抜け出す (n1); ChatGPT says nuke-dasu is stronger (escape fromt he crowd)"
+                />
+                <sentence
+                  s="すりは【人：ひと】ごみの【中：なか】に【消：き】えた。"
+                  rom="Suri wa hitogomi no naka ni kieta."
+                  tr_en="The pickpocket disappeared in the crowd."
+                  tr_de="Der Taschendieb tauchte in der Menge unter."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【人：にん】【気：き】"
               rom="ninki"
-              tr_en="popular"
-              tr_de="beliebt; populär"
+              tr_en="popularity; popular"
+              tr_de="Beliebtheit; populär"
               hint_en="noun"
               hint_de="Nomen"
               lvl="n3"
@@ -958,53 +1259,130 @@
                   lvl="n3"
                   origin="ChatGPT"
                 />
+                <sentence
+                  s="【彼：かれ】の【人：にん】【気：き】は【落：お】ちている。"
+                  rom="Kare no ninki wa ochite iru."
+                  tr_en="His popularity is falling."
+                  tr_de="Seine Beliebtheit ist im freien Fall."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT that te iru is an on-going action here"
+                />
             </word>
             <word
-              w="【診：しん】【察：さつ】"
-              rom="shinsatsu"
-              tr_en="medical examination"
-              tr_de="ärztliche Untersuchung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【知：し】り【合：あ】い"
+              rom="shiriai"
+              tr_en="acquaintance"
+              tr_de="Bekanntschaft"
+              hint_en="noun"
+              hint_de="Nomen"
               lvl="n3"
-              category="health"
-              id="shinsatsu-medexamination"
+              category="people, relationships"
+              id="shiriai-acquaintance"
+              rem="jisho has n2"
             >
-                <keep_apart_from id="kensa-examination" />
-                <keep_apart_from id="kenshin-healthcheckup" />
+                <phrase
+                  ph="【知：し】り【合：あ】いになる"
+                  rom="shiriai ni naru"
+                  tr_en="to get to know so."
+                  tr_de="jem. kennenlernen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【山：やま】【口：ぐち】さんと【知：し】り【合：あ】いです。"
+                  rom="Yamaguchi-san to shiriai desu."
+                  tr_en="I am acquainted with Mr Yamaguchi."
+                  tr_de="Ich kenne Herrn Yamaguchi."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="あ、お【知：し】り【合：あ】いなんですか。"
+                  rom="A, o-shiriai na n desu ka?"
+                  tr_en="Ah, so you know him?"
+                  tr_de="Ah, Sie kennen ihn also?"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
             </word>
             <word
               w="【語：ご】【学：がく】"
               rom="gogaku"
-              tr_en="study of foreign languages; linguistics"
-              tr_de="Fremdsprachenstudium; Linguistik"
+              tr_en="study of foreign languages"
+              tr_de="Fremdsprachenstudium"
               lvl="n3"
               category="education, linguistics"
-              id="gogaku-linguistics"
+              id="gogaku-langlearn"
             >
                 <keep_apart_from id="gengo-language" />
+                <!--
+                    ChatGPT says gengogaku (linguistics) is not the same as gogaku.
+                -->
+                <phrase
+                  ph="【語：ご】【学：がく】【力：りょく】"
+                  rom="gogaku ryoku"
+                  tr_en="language learning skills"
+                  tr_de="Sprachlernfähigkeiten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【語：ご】【学：がく】を【勉：べん】【強：きょう】するのは【好：す】きだ。"
+                  rom="Gogaku o benkyō suru no wa suki da."
+                  tr_en="I like studying foreign languages."
+                  tr_de="Ich mag es, Fremdsprachen zu studieren."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
             </word>
             <word
               w="【下：くだ】り"
               rom="kudari"
               tr_en="descent; going down"
               tr_de="Abstieg; Hinuntergehen"
-              hint_en="also used for trains travelling away from Tokyo"
-              hint_de="kann auch ein Zug bedeuten, der sich von Tokyo wegbewegt"
               lvl="n3"
               id="kudari-downbound"
             >
                 <see id="kudaru-godown" rem="verb" />
                 <see id="nobori-upbound" rem="antonym" />
                 <keep_together id="nobori-upbound" />
+                <phrase
+                  ph="【下：くだ】り【電：でん】【車：しゃ】"
+                  rom="kudari-densha"
+                  tr_en="train travelling away from the main city"
+                  tr_de="Zug, der sich von der Hauptstadt wegbewegt"
+                  lvl="n3"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【川：かわ】【下：くだ】り"
+                  rom="kawa-kudari"
+                  tr_en="river boat ride downstream"
+                  tr_de="Bootsfahrt flussabwärts"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="ChatGPT says kawa-kudari does not usually mean Wildwasserfahren/river rafting"
+                />
+                <sentence
+                  s="【山：やま】【道：みち】の【下：くだ】りが【急：きゅう】だったので、【危：き】【険：けん】だった。"
+                  rom="Yama-michi no kudari ga kyū datta no de, kiken datta."
+                  tr_en="The descent along the mountain path was steep, so it was dangerous."
+                  tr_de="Der Abstieg auf dem Bergweg war steil und daher gefährlich."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
             </word>
             <word
               w="【上：のぼ】り"
               rom="nobori"
               tr_en="ascent; climbing"
               tr_de="Aufstieg; Hinaufgehen"
-              hint_en="also used for trains travelling towards Tokyo"
-              hint_de="kann auch ein Zug bedeuten, der sich auf dem Weg nach Tokyo befindet"
               lvl="n3"
               id="nobori-upbound"
               rem="jisho has n2 for nobori, n3 for kudari"
@@ -1012,6 +1390,31 @@
                 <see id="noboru-ascend" rem="verb" />
                 <see id="kudari-downbound" rem="antonym" />
                 <keep_together id="kudari-downbound" />
+                <phrase
+                  ph="【上：のぼ】り【電：でん】【車：しゃ】"
+                  rom="nobori-densha"
+                  tr_en="train travelling towards the main city"
+                  tr_de="Zug, der sich auf dem Weg in die Hauptstadt hinein befindet"
+                  lvl="n3"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【階：かい】【段：だん】を【上：のぼ】りながら"
+                  rom="kaidan o nobori nagara"
+                  tr_en="while going up the stairs"
+                  tr_de="während dem Hochsteigen der Treppe"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【上：のぼ】りエスカレータはどこですか。"
+                  rom="Nobori esukarēta wa doko desu ka?"
+                  tr_en="Where's the escalator going up?"
+                  tr_de="Wo ist die Rolltreppe, die nach oben geht?"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="ChatGPT can't quite settle on what is the most natural form for this sentence"
+                />
             </word>
             <word
               w="【完：かん】【成：せい】"

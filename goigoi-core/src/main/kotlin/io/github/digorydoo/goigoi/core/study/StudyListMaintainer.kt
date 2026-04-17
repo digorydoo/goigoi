@@ -1,6 +1,7 @@
 package io.github.digorydoo.goigoi.core.study
 
 import ch.digorydoo.kutils.logging.Log
+import ch.digorydoo.kutils.utils.Moment
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.stats.Stats
@@ -8,6 +9,7 @@ import io.github.digorydoo.goigoi.core.study.MyWordsMaintainer.Companion.MIN_RAT
 import kotlin.math.min
 import kotlin.math.roundToInt
 import kotlin.random.Random
+import kotlin.time.Duration.Companion.days
 
 class StudyListMaintainer(
     private val delegate: Delegate,
@@ -108,29 +110,30 @@ class StudyListMaintainer(
         val reasonForNotTryingToRemoveAnother = when {
             removed -> "we've removed one already"
             list.size <= MIN_LIST_SIZE_FOR_REMOVE -> "the list size is too small"
-            Random.nextFloat() > PROBABILITY_FOR_REMOVE_FROM_BACK -> "rnd > $PROBABILITY_FOR_REMOVE_FROM_BACK"
             else -> null
         }
 
         if (reasonForNotTryingToRemoveAnother != null) {
             Log.debug(TAG, "Not looking to remove any highly rated words, because $reasonForNotTryingToRemoveAnother")
         } else {
-            // Check if there is any word whose rating is already very high. Since new words are added in front
-            // except initially, we search from the back in order not to remove a word that has been re-added
-            // to the list only recently.
+            // Check if there is any word whose rating is already very high. Take study moment into account in order
+            // not to discard any recently added words before actually showing them.
 
-            val drop = (list.lastIndex downTo list.size / 2) // search from back to front, stop in the middle
+            val minStudyMoment = Moment.now() - 1.days
+
+            val drop = (list.lastIndex downTo 5) // search from back to front, ignore first five
                 .firstNotNullOfOrNull { i ->
                     val item = list[i]
                     when {
                         stats.getWordStudyProgress(item.word) < 1.0f -> null
                         stats.getWordTotalRating(item.word) < MIN_RATING_FOR_REMOVE_FROM_BACK -> null
+                        stats.getWordStudyMoment(item.word)?.let { it < minStudyMoment } ?: true -> null
                         else -> item
                     }
                 }
 
             if (drop == null) {
-                Log.debug(TAG, "Looked to remove any highly rated words, but found none in the searched range")
+                Log.debug(TAG, "Looked to remove any highly rated words, but found none within constraints")
             } else {
                 Log.debug(TAG, "Dropping ${drop.word.id} since rating is high: ${stats.getWordTotalRating(drop.word)}")
                 list.remove(drop)
@@ -391,7 +394,6 @@ class StudyListMaintainer(
         private const val MIN_ROUNDS_FOR_ADD_MORE_WORDS = POS_FOR_NEW_WORD
         private const val MAX_NEW_IN_LIST_IDEALLY = 3
         private const val PROBABILITY_FOR_ADD_WORD_FROM_FAR_PAST = 0.42f
-        private const val PROBABILITY_FOR_REMOVE_FROM_BACK = 0.75f
-        private const val MIN_RATING_FOR_REMOVE_FROM_BACK = MIN_RATING_FOR_REMOVAL_FROM_MY_WORDS + 0.02f
+        private const val MIN_RATING_FOR_REMOVE_FROM_BACK = MIN_RATING_FOR_REMOVAL_FROM_MY_WORDS + 0.01f
     }
 }
