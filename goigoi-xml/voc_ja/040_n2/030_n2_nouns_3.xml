@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n2"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <word
@@ -334,6 +332,15 @@
                 />
             </word>
             <word
+              w="【調：ちょう】【味：み】【料：りょう】"
+              rom="chōmiryō"
+              tr_en="seasoning; flavouring"
+              tr_de="Würze; Gewürz"
+              lvl="n2"
+              category="cooking"
+              id="chōmiryō-seasoning"
+            />
+            <word
               w="【送：そう】【料：りょう】"
               rom="sōryō"
               tr_en="carriage; shipping charge"
@@ -419,27 +426,50 @@
             <word
               w="【食：しょく】【糧：りょう】"
               rom="shokuryō"
-              tr_en="food (esp. rice, wheat); rations; food supply"
-              tr_de="Essen (insb. Reis, Weizen); Rationen; Erährungsversorgung"
+              tr_en="food supply; rations"
+              tr_de="Erährungsversorgung; Rationen"
               lvl="n2"
               category="food"
               id="shokuryō-rations"
-              rem="jisho has n3; moved to n2, because n3 already has shokuryō-food, and the distinction is unclear"
+              rem="jisho has n3; moved to n2, because n3 already has shokuryō-food"
             >
                 <keep_apart_from id="tabemono-food" />
                 <keep_apart_from id="shokuhin-foodproducts" />
                 <keep_apart_from id="shokumotsu-food" />
                 <keep_apart_from id="shokuryō-food" />
                 <keep_apart_from id="shokuryōhin-groceries" />
+                <sentence
+                  s="【食：しょく】【糧：りょう】が【不：ふ】【足：そく】した。"
+                  rom="Shokuryō ga fusoku shita."
+                  tr_en="We ran short of food."
+                  tr_de="Unser Essen wird knapp."
+                  lvl="n2"
+                  origin="lib0"
+                />
             </word>
             <word
-              w="【便：べん】【所：じょ】"
-              rom="benjo"
-              tr_en="toilet; restroom"
-              tr_de="Toilette"
+              w="【絵：え】の【具：ぐ】"
+              rom="enogu"
+              tr_en="paint; colouring materials"
+              tr_de="Malfarbe; Farbstoff"
               lvl="n2"
-              id="benjo-toilet"
-            />
+              category="arts"
+              id="enogu-paint"
+            >
+                <keep_apart_from id="penki-paint" />
+            </word>
+            <word
+              w="【貸：か】し【出：だ】し"
+              rom="kashi-dashi"
+              tr_en="lending; loaning"
+              tr_de="Ausleihe; Verleihung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              id="kashidashi-lending"
+            >
+                <!-- the verb is 貸し出す, which is nx -->
+            </word>
             <word
               w="【通：つう】【勤：きん】"
               rom="tsūkin"
@@ -472,18 +502,22 @@
               id="katamichi-oneway"
             >
                 <see id="ōfuku-roundtrip" rem="closely related" />
+                <keep_together id="ōfuku-roundtrip" />
             </word>
             <word
-              w="【植：うえ】【木：き】"
-              rom="ueki"
-              tr_en="potted plant"
-              tr_de="Topfpflanze"
-              hint_en="small tree or shrub"
-              hint_de="kleiner Baum oder Busch"
+              w="【往：おう】【復：ふく】"
+              rom="ōfuku"
+              tr_en="round-trip"
+              tr_de="Hin- und Rückfahrt"
+              hint_en="ticket"
+              hint_de="Fahrkarte"
               lvl="n2"
-              category="garden, plant"
-              id="ueki-potplant"
-            />
+              category="transportation"
+              id="ōfuku-roundtrip"
+            >
+                <see id="katamichi-oneway" rem="closely related" />
+                <keep_together id="katamichi-oneway" />
+            </word>
             <word
               w="【倉：そう】【庫：こ】"
               rom="sōko"
@@ -495,21 +529,20 @@
                 <!-- should this have category shopping, or is it more the house? -->
             </word>
             <word
-              w="【草：ぞう】【履：り】"
-              rom="zōri"
-              tr_en="traditional Japanese sandals"
-              tr_de="traditionelle japanische Sandalen"
-              hint_en="thonged"
-              hint_de="geschnürt"
+              w="【乗：の】り【換：か】え"
+              rom="norikae"
+              tr_en="transfer; connection; changing"
+              tr_de="Transfer; Verbindung; wechseln"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n2"
-              category="fashion"
-              id="zōri-sandals"
+              id="norikae-transfer"
             >
-                <keep_apart_from id="sandaru-sandals" />
+                <see id="norikaeru-transfer" rem="verb" />
             </word>
             <word
               w="【街：まち】【角：かど】"
-              rom="machikado"
+              rom="machi-kado"
               tr_en="small spot in a town; street corner"
               tr_de="kleiner Ort in einer Stadt; Strassenecke"
               lvl="n2"
@@ -530,6 +563,36 @@
             >
                 <!-- 車輪の回りが速くなる - sharin no mawari ga hayaku naru - the rotation of the wheel becomes faster (ChatGPT) -->
             </word>
+            <word
+              w="【酒：さか】【場：ば】"
+              rom="sakaba"
+              tr_en="bar; pub; tavern"
+              tr_de="Bar; Pub; Wirtshaus"
+              lvl="n2"
+              category="gastronomy"
+              id="sakaba-tavern"
+            >
+                <keep_apart_from id="izakaya-japanesebar" />
+            </word>
+            <word
+              w="【商：しょう】【店：てん】"
+              rom="shōten"
+              tr_en="shop; small store"
+              tr_de="kleiner Laden"
+              lvl="n2"
+              id="shōten-shop"
+            />
+            <word
+              w="【植：うえ】【木：き】"
+              rom="ueki"
+              tr_en="potted plant"
+              tr_de="Topfpflanze"
+              hint_en="small tree or shrub"
+              hint_de="kleiner Baum oder Busch"
+              lvl="n2"
+              category="garden, plant"
+              id="ueki-potplant"
+            />
             <word
               w="【大：おお】【通：どお】り"
               rom="ōdōri"
@@ -576,26 +639,6 @@
               id="toshin-citycentre"
             />
             <word
-              w="【酒：さか】【場：ば】"
-              rom="sakaba"
-              tr_en="bar; pub; tavern"
-              tr_de="Bar; Pub; Wirtshaus"
-              lvl="n2"
-              category="gastronomy"
-              id="sakaba-tavern"
-            >
-                <keep_apart_from id="izakaya-japanesebar" />
-            </word>
-            <word
-              w="【牧：ぼく】【場：じょう】"
-              rom="bokujō"
-              tr_en="farm; ranch; pasture land"
-              tr_de="Bauernhof; Weideland"
-              lvl="n2"
-              category="countryside"
-              id="bokujō-farm"
-            />
-            <word
               w="お【洒：しゃ】【落：れ】"
               rom="o-share"
               tr_en="smartly dressed; fashion-conscious"
@@ -620,18 +663,14 @@
                 <keep_apart_from id="kaori-fragrance" />
             </word>
             <word
-              w="【往：おう】【復：ふく】"
-              rom="ōfuku"
-              tr_en="round-trip"
-              tr_de="Hin- und Rückfahrt"
-              hint_en="ticket"
-              hint_de="Fahrkarte"
+              w="【牧：ぼく】【場：じょう】"
+              rom="bokujō"
+              tr_en="farm; ranch; pasture land"
+              tr_de="Bauernhof; Weideland"
               lvl="n2"
-              category="transportation"
-              id="ōfuku-roundtrip"
-            >
-                <see id="katamichi-oneway" rem="closely related" />
-            </word>
+              category="countryside"
+              id="bokujō-farm"
+            />
             <word
               w="【書：か】き【取：と】り"
               rom="kaki-tori"
@@ -666,38 +705,6 @@
               category="games"
               id="karuta-cards"
             />
-            <word
-              w="【将：しょう】【棋：ぎ】"
-              rom="shōgi"
-              tr_en="Game of Generals"
-              tr_de="Spiel der Generäle"
-              hint_en="Japanese chess"
-              hint_de="japanisches Schach"
-              lvl="n2"
-              category="games"
-              id="shōgi-chess"
-            />
-            <word
-              w="【生：い】け【花：ばな】"
-              rom="ikebana"
-              tr_en="Japanese art of flower arrangement"
-              tr_de="japanische Kunst des Blumenarrangements"
-              lvl="n2"
-              category="culture, arts"
-              id="ikebana-flowerarr"
-            />
-            <word
-              w="【乗：の】り【換：か】え"
-              rom="norikae"
-              tr_en="transfer; connection; changing"
-              tr_de="Transfer; Verbindung; wechseln"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n2"
-              id="norikae-transfer"
-            >
-                <see id="norikaeru-transfer" rem="verb" />
-            </word>
             <word
               w="【匙：さじ】"
               rom="saji"

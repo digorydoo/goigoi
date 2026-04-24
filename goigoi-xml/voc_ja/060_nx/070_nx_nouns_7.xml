@@ -9,27 +9,33 @@
       hasRomaji="true"
       hasFurigana="true"
       lvl="-"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
             <word
-              w="【機：き】【長：ちょう】"
-              rom="kichō"
-              tr_en="pilot; captain"
-              tr_de="Pilot; Kapitän"
-              hint_en="of an aircraft"
-              hint_de="eines Flugzeuges"
+              w="【次：じ】【男：なん】"
+              rom="jinan"
+              tr_en="second son"
+              tr_de="zweit-ältester Sohn"
               lvl="-"
-              id="kichō-pilot"
-              category="occupations, travelling"
+              category="family, people"
+              id="jinan-2ndson"
+              rem="appears in 500mon N3 q47 (no example)"
             >
-                <keep_apart_from id="pairotto-pilot" />
-                <keep_apart_from id="kyaputen-captain" />
-                <keep_apart_from id="senchō-shipscaptain" />
+                <see id="chōnan-eldestson" rem="closely related" />
+            </word>
+            <word
+              w="【漬：つけ】【物：もの】"
+              rom="tsukemono"
+              tr_en="Japanese pickled vegetables"
+              tr_de="japanisches eingelegtes Gemüse"
+              lvl="-"
+              id="tsukemono-pickled"
+              rem="is also a phrase of tsukeru"
+            >
+                <keep_apart_from id="tsukeru-soak" />
             </word>
             <word
               w="【科：か】【学：がく】【者：しゃ】"
@@ -53,21 +59,6 @@
               id="shoki-secretary"
             >
                 <keep_apart_from id="hisho-secretary" />
-            </word>
-            <word
-              w="【罰：ばっ】【金：きん】"
-              rom="bakkin"
-              tr_en="fine; penalty"
-              tr_de="Busse; Strafgeld"
-              lvl="-"
-              category="crime"
-              id="bakkin-penalty"
-            >
-                <!--
-                    罰金で済んだ。
-                    I got away with just a fine.
-                    ChatGPT
-                -->
             </word>
             <word
               w="【満：まん】【潮：ちょう】"
@@ -343,6 +334,14 @@
                 <keep_apart_from id="shirinji-syringe" />
             </word>
             <word
+              w="【麦：むぎ】【畑：ばたけ】"
+              rom="mugibatake"
+              tr_en="wheat field"
+              tr_de="Weizenfeld"
+              lvl="-"
+              id="mugibatake-wheatfield"
+            />
+            <word
               w="【領：りょう】【事：じ】【館：かん】"
               rom="ryōjikan"
               tr_en="consulate"
@@ -492,15 +491,6 @@
               rem="is this only a counter?"
             />
             <word
-              w="すり【身：み】"
-              rom="surimi"
-              tr_en="minced fish mashed into a paste"
-              tr_de="pürierter Fisch"
-              lvl="-"
-              category="food"
-              id="surimi-mincedfish"
-            />
-            <word
               w="お【好：この】み【焼：や】き"
               rom="o-konomiyaki"
               tr_en="pancake containing meat or seafood and vegetables"
@@ -508,6 +498,14 @@
               lvl="-"
               category="food, gastronomy"
               id="okonomiyaki-pancake"
+            />
+            <word
+              w="【折：お】りたたみ【椅：い】【子：す】"
+              rom="oritatami isu"
+              tr_en="folding chair"
+              tr_de="Klappstuhl"
+              lvl="-"
+              id="oritatamiisu-foldingchair"
             />
         </section>
     </unit>

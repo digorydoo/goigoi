@@ -11,10 +11,8 @@
       defaultHint_en="adverb"
       defaultHint_de="Adverb"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="false"
     >
         <section>
             <!-- unsorted -->
@@ -312,6 +310,16 @@
 
             <!-- HIDDEN -->
             <word
+              w="【後：のち】"
+              rom="nochi"
+              tr_en="later; afterwards; future; after one's death; descendant"
+              hint_en="noun; adverb"
+              lvl="n3"
+              id="nochi-later"
+              rem="appears in 500mon N3 q32 as nochi-hodo (with example)"
+              HIDDEN="true"
+            />
+            <word
               w="【略：ほぼ】"
               rom="hobo"
               tr_en="almost; roughly; approximately"
@@ -353,6 +361,15 @@
                 <keep_apart_from id="suijun-level" />
             </word>
             <word
+              w="【遂：つい】に"
+              rom="tsui ni"
+              tr_en="finally; at last; in the end; after all; never (happened)"
+              hint_en="adverb"
+              lvl="n3"
+              usuallyInKana="true"
+              HIDDEN="true"
+            />
+            <word
               w="【直：ただ】ちに"
               rom="tadachi ni"
               tr_en="at once; immediately; right away; without delay; directly (face, lead to, etc.); automatically (mean, result in, etc.)"
@@ -368,15 +385,6 @@
               hint_en="noun; suffix; adverb"
               lvl="n3"
               id="nakaba-half"
-              HIDDEN="true"
-            />
-            <word
-              w="【後：のち】"
-              rom="nochi"
-              tr_en="later; afterwards; future; after one's death; descendant"
-              hint_en="noun; adverb"
-              lvl="n3"
-              id="nochi-later"
               HIDDEN="true"
             />
             <word
@@ -556,15 +564,6 @@
               hint_en="adverb"
               hasCombinedReading="true"
               lvl="n3"
-              HIDDEN="true"
-            />
-            <word
-              w="【遂：つい】に"
-              rom="tsui ni"
-              tr_en="finally; at last; in the end; after all; never (happened)"
-              hint_en="adverb"
-              lvl="n3"
-              usuallyInKana="true"
               HIDDEN="true"
             />
             <word

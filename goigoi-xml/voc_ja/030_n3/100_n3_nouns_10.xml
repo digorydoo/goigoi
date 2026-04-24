@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <word
@@ -132,35 +130,6 @@
                 />
             </word>
             <word
-              w="【禁：きん】【止：し】"
-              rom="kinshi"
-              tr_en="prohibition; inhibition; ban"
-              tr_de="Verbot; Sperre; Bann"
-              lvl="n3"
-              category="politics"
-              id="kinshi-ban"
-            >
-                <keep_apart_from id="kinen-nosmoking" />
-                <phrase
-                  ph="【立：た】ち【入：い】り【禁：きん】【止：し】"
-                  rom="tachiiri-kinshi"
-                  tr_en="keep out; no entry"
-                  tr_de="Zutritt verboten"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT; furigana verified with jisho; jisho has nx, but n5 for tatsu, hairu, ireru"
-                />
-                <sentence
-                  s="その【橋：はし】は【通：つう】【行：こう】【禁：きん】【止：し】です。"
-                  rom="Sono hashi wa tsūkō-kinshi desu."
-                  tr_en="That bridge is closed to traffic."
-                  tr_de="Die Brücke ist geschlossen für den Verkehr."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT; tsūkō is n3"
-                />
-            </word>
-            <word
               w="【意：い】【識：しき】"
               rom="ishiki"
               tr_en="consciousness; awareness"
@@ -196,6 +165,27 @@
                   lvl="n3"
                   origin="lib0 modified"
                   rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【姉：し】【妹：まい】"
+              rom="shimai"
+              tr_en="sisters"
+              tr_de="Schwestern"
+              lvl="n3"
+              category="family"
+              id="shimai-sisters"
+              rem="appears in GENKI2 p.329 kanji section"
+            >
+                <phrase
+                  ph="【姉：し】【妹：まい】【校：こう】"
+                  rom="shimaikō"
+                  tr_en="sister school"
+                  tr_de="Schwesterschulen"
+                  explanation_en="two schools that have a specially close relationship"
+                  explanation_de="zwei Schulen, die eine speziell enge Verbindung haben"
+                  lvl="n3"
+                  origin="GENKI2 p.329"
                 />
             </word>
             <word
@@ -265,7 +255,7 @@
               lvl="n3"
               category="employment"
               id="mensetsu-interview"
-              rem="appears in GENKI2 L23 vocab section; jisho has n2"
+              rem="appears in GENKI2 L23 vocab section and 500mon N3 q30; jisho has n2"
             >
                 <!--
                     mensetsu can also be a university entrance interview, visa interview, etc.
@@ -282,6 +272,15 @@
                   tr_de="interviewt werden; an einem Interview teilnehmen"
                   lvl="n3"
                   origin="ChatGPT"
+                />
+                <sentence
+                  s="【明日：あした】の【面：めん】【接：せつ】【試：し】【験：けん】のことが【気：き】になって【眠：ねむ】れない。"
+                  rom="Ashita no mensetsu-shiken no koto ga ki ni natte nemurenai."
+                  tr_en="I'm so worried about tomorrow's interview exam that I can't sleep."
+                  tr_de="Ich bin so aufgeregt wegen dem morgigen Vorstellungsgespräch, dass ich nicht schlafen kann."
+                  lvl="n3"
+                  origin="500mon N3 q30"
+                  rem="verified with ChatGPT that mensetsu-shiken is not the same as an oral exam"
                 />
             </word>
             <word
@@ -546,26 +545,6 @@
                 />
             </word>
             <word
-              w="【経：けい】【営：えい】"
-              rom="keiei"
-              tr_en="management; administration; running a business"
-              tr_de="Unternehmensführung; Geschäftsleitung; ein Geschäft führen"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="keiei-management"
-              rem="appears in GENKI2 p.328 kanji section"
-            >
-                <phrase
-                  ph="【経：けい】【営：えい】【学：がく】"
-                  rom="keieigaku"
-                  tr_en="management studies; field of business administration"
-                  tr_de="Management-Studien; Studium der Unternehmensführung"
-                  lvl="n3"
-                  origin="GENKI2 p.328"
-                />
-            </word>
-            <word
               w="【混：こん】【乱：らん】"
               rom="konran"
               tr_en="disorder; chaos; confusion"
@@ -586,25 +565,49 @@
                 />
             </word>
             <word
-              w="【経：けい】【由：ゆ】"
-              rom="keiyu"
-              tr_en="going via; going by way of"
-              tr_de="via einen Ort gehen"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【神：しん】【経：けい】"
+              rom="shinkei"
+              tr_en="nerves; sensitivity"
+              tr_de="Nerven; Sensitivität"
               lvl="n3"
-              id="keiyu-via"
+              id="shinkei-nerves"
               rem="appears in GENKI2 p.328 kanji section"
             >
                 <phrase
-                  ph="【大：おお】【阪：さか】【経：けい】【由：ゆ】"
-                  rom="Ōsaka-keiyu"
-                  tr_en="going via Osaka"
-                  tr_de="via Osaka"
+                  ph="【神：しん】【経：けい】【質：しつ】"
+                  rom="shinkei-shitsu"
+                  tr_en="nervous; oversensitive; fussy"
+                  tr_de="nervös; überempfindlich; hypersensibel"
                   lvl="n3"
                   origin="GENKI2 p.328"
-                  rem="GENKI2 has パリ経由; verified with ChatGPT"
                 />
+            </word>
+            <word
+              w="【残：ざん】【業：ぎょう】"
+              rom="zangyō"
+              tr_en="overtime work"
+              tr_de="Überstunden (Arbeit)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="employment"
+              id="zangyō-overtime"
+              rem="appears in GENKI2 p.116 vocab section; jisho has nx"
+            />
+            <word
+              w="【大：たい】【使：し】"
+              rom="taishi"
+              tr_en="ambassador"
+              tr_de="Botschafter"
+              hint_en="highest-ranking diplomat"
+              hint_de="Diplomat mit höchstem Rang"
+              lvl="n3"
+              category="politics, people"
+              id="taishi-ambassador"
+              rem="jisho has n5 for taishikan, n3 for taishi"
+            >
+                <keep_apart_from id="daitōryō-president" />
+                <keep_apart_from id="shushō-premier" />
             </word>
             <word
               w="【進：すす】み"
@@ -759,17 +762,6 @@
                 <keep_apart_from id="itami-pain" />
             </word>
             <word
-              w="【玉：たま】"
-              rom="tama"
-              tr_en="ball; sphere; bulb"
-              tr_de="Ball; Kugel"
-              lvl="n3"
-              id="tama-ball"
-            >
-                <keep_apart_from id="bōru-ball" />
-                <keep_apart_from id="mari-ball" />
-            </word>
-            <word
               w="【成：せい】【長：ちょう】"
               rom="seichō"
               tr_en="growth; development"
@@ -905,13 +897,14 @@
                 <keep_apart_from id="kinzoku-metal" />
             </word>
             <word
-              w="【酸：さん】【素：そ】"
-              rom="sanso"
-              tr_en="oxygen"
-              tr_de="Sauerstoff"
+              w="【痴：ち】【漢：かん】"
+              rom="chikan"
+              tr_en="groper; pervert"
+              tr_de="Grapscher; Perversling"
               lvl="n3"
-              category="science"
-              id="sanso-oxygen"
+              category="people, not-good"
+              id="chikan-groper"
+              rem="appears in GENKI2 L21 vocab section; jisho has nx"
             />
             <word
               w="【支：し】【店：てん】"
@@ -924,6 +917,15 @@
               rem="appears in GENKI2 L20 vocab section"
             />
             <word
+              w="【酸：さん】【素：そ】"
+              rom="sanso"
+              tr_en="oxygen"
+              tr_de="Sauerstoff"
+              lvl="n3"
+              category="science"
+              id="sanso-oxygen"
+            />
+            <word
               w="【犯：はん】【罪：ざい】"
               rom="hanzai"
               tr_en="crime; offence"
@@ -932,18 +934,6 @@
               category="crime"
               id="hanzai-crime"
             />
-            <word
-              w="【医：い】【療：りょう】"
-              rom="iryō"
-              tr_en="medical treatment"
-              tr_de="medizinische Behandlung"
-              Langenscheidt="med. Behandlung"
-              lvl="n3"
-              category="health"
-              id="iryō-healthcare"
-            >
-                <!-- implicit see-also link to iryō-clothing -->
-            </word>
             <word
               w="【栄：えい】【養：よう】"
               rom="eiyō"

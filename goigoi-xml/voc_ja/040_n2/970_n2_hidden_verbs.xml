@@ -8,10 +8,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n2"
-      translations="en"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="false"
       HIDDEN="true"
     >
         <section>
@@ -55,8 +53,88 @@
               lvl="n2"
               id="umeru-fillaposition"
             >
+                <see id="umaru-overflow" rem="v.i." />
                 <!-- 埋め合わせる・うめあわせる: to make up for; to compensate for -->
             </word>
+            <word
+              w="【塞：ふさ】がる"
+              rom="fusagaru"
+              tr_en="to be closed; to be blocked; to be healed (e.g. wound); to be shut up / to be clogged; to be plugged up / to be occupied; to be taken (e.g. accommodation)"
+              hint_en="godan verb with ru ending; intransitive verb"
+              lvl="n2"
+              id="fusagaru-blocked"
+              rem="appears in 500mon N3 q26 (without examples)"
+            >
+                <!-- antonym suggested by 500mon N3 q26 -->
+                <see id="aku-open" rem="antonym" />
+            </word>
+            <word
+              w="【余：あま】る"
+              rom="amaru"
+              tr_en="to remain; to be left over; to be too many"
+              tr_de="zurückbleiben; übrig bleiben; zuviel sein"
+              hint_en="v.i."
+              lvl="n2"
+              id="amaru-remain"
+              rem="appears in 500mon N3 q26 (without examples)"
+            >
+                <keep_apart_from id="nokoru-remain" />
+            </word>
+            <word
+              w="【煮：に】る"
+              rom="niru"
+              tr_en="to boil; to simmer; to stew; to seethe"
+              hint_en="v.t."
+              lvl="n2"
+              id="niru-simmer"
+              rem="appears in 500mon N3 q50 (no example)"
+            />
+            <word
+              w="【張：は】り【切：き】る"
+              rom="hari-kiru"
+              tr_en="to be enthusiastic; to be in high spirits; to stretch to breaking point"
+              lvl="n2"
+              id="harikiru-highspirits"
+              rem="appears in 500mon N3 q38 (no example)"
+            />
+            <word
+              w="【浮：う】かべる"
+              rom="ukaberu"
+              tr_en="to set sth. afloat; to launch sth.; to imagine sth."
+              hint_en="v.t."
+              lvl="n2"
+              id="ukaberu-float"
+              rem="appears in 500mon N3 q59 as 思い浮かべる・おもいうかべる (nx): to remember; to recall; to call to mind"
+            />
+            <word
+              w="【祭：まつ】る"
+              rom="matsuru"
+              tr_en="to pray; to worship; to enshrine"
+              tr_de="beten; verehren; verewigen"
+              hint_en="v.t."
+              lvl="n2"
+              category="culture"
+              id="matsuru-pray"
+            />
+            <word
+              w="【蒔：ま】く"
+              rom="maku"
+              tr_en="to sow; to seed"
+              tr_de="säen"
+              hint_en="v.t."
+              lvl="n2"
+              category="garden, nature"
+              id="maku-tosow"
+            />
+            <word
+              w="【逸：そ】れる"
+              rom="soreru"
+              tr_en="to miss (e.g. a target); to deviate; to go astray"
+              tr_de="etw. verfehlen; von etw. abweichen"
+              hint_en="v.i."
+              lvl="n2"
+              id="soreru-miss"
+            />
             <word
               w="【滑：ず】らす"
               rom="zurasu"
@@ -178,14 +256,6 @@
               hint_en="v.t., v.i."
               lvl="n2"
               id="seou-carryonback"
-            />
-            <word
-              w="【余：あま】る"
-              rom="amaru"
-              tr_en="to remain; to be left over; to be too many"
-              hint_en="v.i."
-              lvl="n2"
-              id="amaru-remain"
             />
             <word
               w="【咥：くわ】える"
@@ -601,13 +671,6 @@
               lvl="n2"
             />
             <word
-              w="【張：は】り【切：き】る"
-              rom="harikiru"
-              tr_en="to be in high spirits; to be full of vigor (vigour); to be enthusiastic; to be eager; to stretch to breaking point"
-              hint_en="godan verb with ru ending"
-              lvl="n2"
-            />
-            <word
               w="【立：た】ち【止：ど】まる"
               rom="tachidomaru"
               tr_en="to stop (in one's tracks); to come to a stop; to halt; to pause; to stand still"
@@ -629,14 +692,6 @@
               hint_en="v.t."
               lvl="n2"
               id="aratameru-alter"
-            />
-            <word
-              w="【散：ち】らかす"
-              rom="chirakasu"
-              tr_en="to scatter around; to leave untidy"
-              hint_en="v.t."
-              lvl="n2"
-              id="chirakasu-scatter"
             />
             <word
               w="【浮：う】く"
@@ -719,7 +774,9 @@
               hint_en="v.t."
               lvl="n2"
               id="maku-sprinkle"
-            />
+            >
+                <!-- 小麦の種を畑に撒く。Seed the fields with wheat. (lib0) -->
+            </word>
             <word
               w="【載：の】る"
               rom="noru"
@@ -751,6 +808,7 @@
               usuallyInKana="true"
               lvl="n2"
               id="muku-peel"
+              rem="appears in 500mon N3 q50 (no example)"
             >
                 <!-- バナナの皮をむく - to peel a banana (DeepL) -->
             </word>
@@ -774,13 +832,6 @@
               rom="matomeru"
               tr_en="to collect; to put (it all) together; to integrate; to consolidate; to unify / to summarize; to aggregate / to bring to a conclusion; to finalize; to settle; to put in order / to establish; to decide"
               hint_en="ichidan verb; transitive verb"
-              lvl="n2"
-            />
-            <word
-              w="【塞：ふさ】がる"
-              rom="fusagaru"
-              tr_en="to be closed; to be blocked; to be healed (e.g. wound); to be shut up / to be clogged; to be plugged up / to be occupied; to be taken (e.g. accommodation)"
-              hint_en="godan verb with ru ending; intransitive verb"
               lvl="n2"
             />
             <word
@@ -942,14 +993,6 @@
               id="semaru-approach"
             />
             <word
-              w="【煮：に】る"
-              rom="niru"
-              tr_en="to boil; to simmer; to stew; to seethe"
-              hint_en="ichidan verb; transitive verb"
-              lvl="n2"
-              id="niru-simmer"
-            />
-            <word
               w="【略：りゃく】す"
               rom="ryakusu"
               tr_en="to abbreviate; to abridge; to shorten / to omit; to leave out / to take; to capture; to steal"
@@ -1100,13 +1143,6 @@
               hint_en="godan verb with 'mu' ending; transitive verb"
               lvl="n2"
               id="kumu-pump"
-            />
-            <word
-              w="【浮：う】かべる"
-              rom="ukaberu"
-              tr_en="to float; to set afloat; to launch / to show on one's face (smile, sadness, etc.) / to recall; to call to mind; to imagine; to think of"
-              hint_en="ichidan verb; transitive verb"
-              lvl="n2"
             />
             <word
               w="【湿：しめ】る"

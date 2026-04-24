@@ -11,10 +11,8 @@
       defaultHint_en="adjective"
       defaultHint_de="Adjektiv"
       lvl="n5"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- far, near -->
@@ -268,7 +266,7 @@
               category="time, motion"
               id="hayai-fast"
               HIDDEN="true"
-              rem="just to provide the kanji..."
+              rem="just to provide the kanji; appears in 500mon N3 q49 with this kanji"
             >
                 <!-- the noun is 速さ, nx, common -->
             </word>
@@ -1095,6 +1093,7 @@
               id="jōzu-skilled"
             >
                 <see id="heta-unskilled" rem="antonym" />
+                <keep_apart_from id="jōtō-superior" />
                 <phrase
                   ph="【上：じょう】【手：ず】な【料：りょう】【理：り】【人：にん】"
                   rom="jōzu na ryōrinin"
@@ -1112,6 +1111,14 @@
                   lvl="n5"
                   origin="500mon q19"
                 />
+                <!--
+                  500mon N3 q32:
+                  WRONG: 私はテニスが上手です
+                  Correct: 私はテニスが得意です
+                  ChatGPT disagrees, and says both are natural.
+                  However, it's unclear why 500mon says it's wrong.
+                  Possibly, because the sentence compares with 苦手 as the opposite, not 下手.
+                -->
             </word>
             <word
               w="【下手：へた】"

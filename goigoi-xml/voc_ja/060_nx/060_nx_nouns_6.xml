@@ -9,13 +9,26 @@
       hasRomaji="true"
       hasFurigana="true"
       lvl="-"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
+            <word
+              w="【機：き】【長：ちょう】"
+              rom="kichō"
+              tr_en="pilot; captain"
+              tr_de="Pilot; Kapitän"
+              hint_en="of an aircraft"
+              hint_de="eines Flugzeuges"
+              lvl="-"
+              id="kichō-pilot"
+              category="occupations, travelling"
+            >
+                <keep_apart_from id="pairotto-pilot" />
+                <keep_apart_from id="kyaputen-captain" />
+                <keep_apart_from id="senchō-shipscaptain" />
+            </word>
             <word
               w="【雷：らい】【雨：う】"
               rom="raiu"
@@ -111,17 +124,20 @@
                 <keep_apart_from id="yūrei-ghost" />
             </word>
             <word
-              w="お【正：しょう】【月：がつ】"
-              rom="o-shōgatsu"
-              tr_en="new year"
-              tr_de="neues Jahr"
-              hint_en="esp. the first three days"
-              hint_de="bes. die ersten drei Tage"
+              w="【罰：ばっ】【金：きん】"
+              rom="bakkin"
+              tr_en="fine; penalty"
+              tr_de="Busse; Strafgeld"
               lvl="-"
-              category="culture, holidays"
-              id="oshōgatsu-newyear"
-              rem="appears in GENKI1 p.339; jisho has nx for both shōgatsu and o-shōgatsu"
-            />
+              category="crime"
+              id="bakkin-penalty"
+            >
+                <!--
+                    罰金で済んだ。
+                    I got away with just a fine.
+                    ChatGPT
+                -->
+            </word>
             <word
               w="お【節：せち】"
               rom="o-sechi"
@@ -431,18 +447,6 @@
               id="saikoro-dice"
             />
             <word
-              w="【年：とし】【上：うえ】"
-              rom="toshiue"
-              tr_en="older; senior"
-              tr_de="älter; der Ältere"
-              hint_en="noun"
-              hint_de="Nomen"
-              lvl="-"
-              category="relationships"
-              id="toshiue-older"
-              rem="appears in GENKI2 p.283"
-            />
-            <word
               w="【不：ふ】【信：しん】"
               rom="fushin"
               tr_en="distrust; insincerity"
@@ -452,14 +456,13 @@
               id="fushin-distrust"
             />
             <word
-              w="【若：わか】【者：もの】"
-              rom="wakamono"
-              tr_en="young person; youth"
-              tr_de="junge Person; Jüngling"
+              w="【虫：むし】【除：よ】けスプレー"
+              rom="mushiyoke supurē"
+              tr_en="insect repellent; bug spray"
+              tr_de="Mückenspray; Insektenspray"
               lvl="-"
-              category="people"
-              id="wakamono-youth"
-              rem="appears in GENKI2 p.289"
+              category="holidays"
+              id="mushiyokesupurē-repellent"
             />
             <word
               w="【引：ひ】きこもり"
@@ -509,16 +512,13 @@
               id="shigotoba-workingarea"
             />
             <word
-              w="【履：り】【歴：れき】【書：しょ】"
-              rom="rirekisho"
-              tr_en="resumé; curriculum vitæ"
-              tr_de="Lebenslauf; Curriculum Vitae"
-              hint_en="job application"
-              hint_de="Stellenbewerbung"
+              w="【日：にっ】【射：しゃ】【病：びょう】"
+              rom="nisshabyō"
+              tr_en="sunstroke"
+              tr_de="Sonnenstich"
               lvl="-"
-              category="employment"
-              id="rirekisho-cv"
-              rem="appears in GENKI2 p.48 vocab section"
+              category="holidays, health"
+              id="nisshabyō-sunstroke"
             />
             <word
               w="【桜：さくら】んぼ"

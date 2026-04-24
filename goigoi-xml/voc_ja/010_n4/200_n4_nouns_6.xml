@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n4"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -337,6 +335,7 @@
               category="science, thinking"
               id="kenkyū-research"
             >
+                <keep_apart_from id="chōsa-survey" />
                 <phrase
                   ph="この【問：もん】【題：だい】について【研：けん】【究：きゅう】する"
                   rom="kono mondai ni tsuite kenkyū suru"

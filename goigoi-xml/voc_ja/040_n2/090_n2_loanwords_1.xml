@@ -11,10 +11,8 @@
       defaultHint_en="loanword"
       defaultHint_de="Lehnwort"
       lvl="n2"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <word
@@ -315,6 +313,15 @@
                   lvl="n2"
                   origin="ChatGPT"
                 />
+                <sentence
+                  s="【風邪：かぜ】がうつらないように、マスクをします。"
+                  rom="Kaze ga utsuranai yō ni, masuku o shimasu."
+                  tr_en="I'll wear a mask to make sure my cold doesn't spread."
+                  tr_de="Ich werde eine Maske tragen, damit ich meine Erkältung nicht verbreite."
+                  lvl="n2"
+                  origin="500mon N3 q48"
+                  rem="500mon uses kana for utsuranai"
+                />
             </word>
             <word
               w="カバー"
@@ -417,6 +424,9 @@
               id="aidea-idea"
             >
                 <!-- アイデアが三つあります。 (ChatGPT) -->
+                <keep_apart_from id="shisō-idea" />
+                <keep_apart_from id="an-idea" />
+                <keep_apart_from id="hassō-idea" />
             </word>
             <word
               w="テーマ"

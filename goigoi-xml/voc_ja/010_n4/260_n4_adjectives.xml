@@ -11,10 +11,8 @@
       defaultHint_en="adjective"
       defaultHint_de="Adjektiv"
       lvl="n4"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- i-adjective -->
@@ -371,6 +369,9 @@
               lvl="n4"
               id="komakai-minor"
             >
+                <!--
+                  appears in 500mon N3 q61 as komakaku suru (example already used)
+                -->
                 <phrase
                   ph="【細：こま】かい【問：もん】【題：だい】"
                   rom="komakai mondai"
@@ -873,6 +874,7 @@
               id="hen-odd"
               rem="appears in GENKI2 L21 vocab section"
             >
+                <keep_apart_from id="fushigi-mysterious" />
                 <phrase
                   ph="【変：へん】な【魚：さかな】"
                   rom="hen na sakana"
@@ -993,6 +995,14 @@
                   tr_de="Bei dieser Postkarte muss man keine Briefmarke drauf kleben."
                   lvl="n4"
                   origin="500mon q303"
+                />
+                <sentence
+                  s="【高：たか】くても【必：ひつ】【要：よう】な【物：もの】は【買：か】うしかないだろう。"
+                  rom="Takakute mo hitsuyō na mono wa kau shika nai darō."
+                  tr_en="Even if they're expensive, I've got no choice but to buy the necessary things, I suppose."
+                  tr_de="Auch wenn sie teuer sind, muss ich die notwendigen Sachen wohl kaufen."
+                  lvl="n3"
+                  origin="500mon N3 q57"
                 />
             </word>
             <word

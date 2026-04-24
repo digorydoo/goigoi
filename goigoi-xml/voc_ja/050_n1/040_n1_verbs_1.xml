@@ -11,9 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n1"
-      translations="en, de"
       requiresSentences="false"
-      requiresIds="true"
+      requiresPhrases="false"
     >
         <section>
             <word
@@ -223,6 +222,66 @@
                 />
             </word>
             <word
+              w="【告：つ】げる"
+              rom="tsugeru"
+              tr_en="to inform; to announce; to indicate"
+              tr_de="über etw. informieren; etw. ankündigen; etw. signalisieren"
+              hint_en="v.t."
+              lvl="n1"
+              id="tsugeru-inform"
+            >
+                <!--
+                  appears in Doraemon 0, p.18 as つげ口
+                -->
+                <phrase
+                  ph="【告：つ】げ【口：ぐち】"
+                  rom="tsugeguchi"
+                  tr_en="telling on so.; tattletale"
+                  tr_de="Petze; verpfeifen"
+                  lvl="n1"
+                  origin="Doraemon 0, p.18"
+                />
+            </word>
+            <word
+              w="【化：ば】ける"
+              rom="bakeru"
+              tr_en="to disguise oneself; to transform into sth."
+              tr_de="sich verkleiden; sich in etw. verwandeln"
+              hint_en="v.i."
+              lvl="n1"
+              category="top-words"
+              id="bakeru-takeform"
+              rem="appears in Doraemon 0, p.20"
+            >
+                <sentence
+                  s="のび【太：た】くんに【化：ば】けて【行：い】こう。"
+                  rom="Nobita-kun ni bakete ikō."
+                  tr_en="I'll disguise myself as Nobita, then let's go."
+                  tr_de="Ich verkleide mich als Nobita, dann gehen wir los."
+                  lvl="n1"
+                  origin="Doraemon 0, p.20"
+                />
+            </word>
+            <word
+              w="【親：した】しむ"
+              rom="shitashimu"
+              tr_en="to be intimate with; to befriend"
+              tr_de="sich anfreunden; sich näherkommen"
+              hint_en="v.i."
+              lvl="n1"
+              id="shitashimu-befriend"
+              rem="appears in 500mon N3 q6"
+            >
+                <sentence
+                  s="ゲームをしてばかりいないで、【自：し】【然：ぜん】に【親：した】しんだらどうですか。"
+                  rom="Gēmu o shite bakari inai de, shizen ni shitashindara dō desu ka?"
+                  tr_en="Instead of playing games all day, why don't you go and befriend nature?"
+                  tr_de="Anstatt den ganzen Tag Games zu spielen, wie wär's, wenn du dich mit der Natur anfreunden würdest?"
+                  lvl="n1"
+                  origin="500mon N3 q6"
+                />
+            </word>
+            <word
               w="【摘：つま】む"
               rom="tsumamu"
               tr_en="to pinch; to pick; to summarize"
@@ -316,8 +375,171 @@
                 <keep_apart_from id="modosu-putback" />
             </word>
             <word
+              w="【痛：いた】む"
+              rom="itamu"
+              tr_en="to hurt; to ache; to feel a pain"
+              tr_de="weh tun; schmerzen; Schmerzen haben"
+              hint_en="v.i."
+              lvl="n1"
+              id="itamu-hurt"
+              rem="is this really n1???"
+            >
+                <see id="itai-painful" rem="adjective" />
+                <see id="itami-pain" rem="noun" />
+                <see id="itameru-hurt" rem="v.t." />
+                <keep_apart_from id="kurushimu-suffer" />
+                <keep_apart_from id="kizutsuku-gethurt" />
+                <!-- 心が痛む (こころがいたむ) To feel pained; to feel emotional pain (ChatGPT) -->
+            </word>
+            <word
+              w="【痛：いた】める"
+              rom="itameru"
+              tr_en="to hurt sb.; to cause pain; to harm sth."
+              tr_de="jem. wehtun; jem. Schmerzen zufügen; schaden"
+              hint_en="v.t."
+              lvl="n1"
+              id="itameru-hurt"
+            >
+                <see id="itamu-hurt" rem="v.i." />
+                <keep_apart_from id="itameru-fry" />
+            </word>
+            <word
+              w="【赤：あか】らむ"
+              rom="akaramu"
+              tr_en="to become red; to redden; to blush"
+              tr_de="rot werden; erröten; sich schämen"
+              hint_en="v.i."
+              lvl="n1"
+              id="akaramu-getred"
+            >
+                <see id="akai-red" rem="adjective" />
+            </word>
+            <word
+              w="【可愛：かわい】がる"
+              rom="kawaigaru"
+              tr_en="to cherish sth.; to be affectionate; to treat sb. tenderly"
+              tr_de="etw. hegen; liebevoll sein; jem. zärtlich behandeln"
+              hint_en="v.t."
+              hasCombinedReading="true"
+              lvl="n1"
+              id="kawaigaru-cherish"
+            >
+                <see id="kawaii-cute" rem="adjective" />
+            </word>
+            <word
+              w="【弱：よわ】る"
+              rom="yowaru"
+              tr_en="to weaken; to grow weak; to be at a loss"
+              tr_de="schwach werden; schwächeln; ratlos sein"
+              hint_en="v.i."
+              lvl="n1"
+              id="yowaru-weaken"
+            >
+                <see id="yowai-weak" rem="adjective" />
+            </word>
+            <word
+              w="【目：め】【覚：ざ】める"
+              rom="mezameru"
+              tr_en="to wake up; to awaken to; to become aware of"
+              tr_de="aufwachen; sich etw. bewusst werden; etw. erwacht"
+              hint_en="v.i."
+              lvl="n1"
+              id="mezameru-wakeup"
+            >
+                <keep_apart_from id="samasu-awaken" />
+                <keep_apart_from id="okosu-wakeup" />
+            </word>
+            <word
+              w="【遅：おく】らす"
+              rom="okurasu"
+              tr_en="to delay sth.; to slow down sth.; to postpone"
+              tr_de="etw. verzögern; etw. verlangsamen; etw. aufschieben"
+              hint_en="v.t."
+              lvl="n1"
+              id="okurasu-postpone"
+            >
+                <see id="okureru-delayed" rem="v.i." />
+            </word>
+            <word
+              w="【慣：な】らす"
+              rom="narasu"
+              tr_en="to train (one's ear, etc.); to tame (an animal); to domesticate"
+              tr_de="(Ohr) trainieren; (Tier) bändigen; zähmen"
+              hint_en="v.t."
+              lvl="n1"
+              id="narasu-accustom"
+            >
+                <see id="nareru-getusedto" rem="v.i." />
+            </word>
+            <word
+              w="【取：と】り【除：のぞ】く"
+              rom="tori-nozoku"
+              tr_en="to remove sth.; to deinstall; to set apart"
+              tr_de="etw. entfernen; deinstallieren; etw. wegbewegen"
+              hint_en="v.t."
+              lvl="n1"
+              category="hands"
+              id="torinozoku-remove"
+            >
+                <keep_apart_from id="nozoku-eliminate" />
+            </word>
+            <word
+              w="【受：う】け【付：つ】ける"
+              rom="uke-tsukeru"
+              tr_en="to accept; to tolerate; to endure"
+              tr_de="etw. akzeptieren; etw. tolerieren; etw. aushalten"
+              hint_en="v.t."
+              lvl="n1"
+              id="uketsukeru-endure"
+            />
+            <word
+              w="【読：よ】み【上：あ】げる"
+              rom="yomi-ageru"
+              tr_en="to read aloud; to read through"
+              tr_de="etw. laut lesen; etw. durchlesen"
+              hint_en="v.t."
+              lvl="n1"
+              id="yomiageru-readaloud"
+            />
+            <word
+              w="【押：お】し【込：こ】む"
+              rom="oshi-komu"
+              tr_en="to push into; to cram into; to stuff into"
+              tr_de="in etw. hineindrücken; hineinstopfen"
+              hint_en="v.t. &amp; i."
+              lvl="n1"
+              id="oshikomu-pushinto"
+            />
+            <word
+              w="【抜：ぬ】け【出：だ】す"
+              rom="nuke-dasu"
+              tr_en="to sneak away; to break free; to get through (a difficult situation)"
+              tr_de="davonschleichen; sich freischlagen; (durch eine Situation) durchkommen"
+              hint_en="v.i."
+              lvl="n1"
+              id="nukedasu-sneakaway"
+            />
+            <word
+              w="【乗：の】り【込：こ】む"
+              rom="nori-komu"
+              tr_en="to board; to embark on; to get into (a car)"
+              tr_de="einsteigen (in ein Auto, usw.)"
+              hint_en="v.i."
+              lvl="n1"
+              id="norikomu-embark"
+            />
+            <word
+              w="【打：う】ち【切：き】る"
+              rom="uchi-kiru"
+              tr_en="to stop; to abort; to discontinue"
+              tr_de="etw. stoppen; etw. beenden"
+              hint_en="v.t."
+              lvl="n1"
+              id="uchikiru-abort"
+            />
+            <word
               w="【飲：の】み【込：こ】む"
-              rom="nomikomu"
+              rom="nomi-komu"
               tr_en="to gulp down; to swallow"
               tr_de="schlucken; herunterschlucken"
               lvl="n1"
@@ -325,7 +547,7 @@
             />
             <word
               w="【差：さ】し【出：だ】す"
-              rom="sashidasu"
+              rom="sashi-dasu"
               tr_en="to present; to hold out (one's hand); to offer"
               tr_de="etw. präsentieren; (die Hand) ausstrecken; offerieren"
               lvl="n1"
@@ -333,11 +555,30 @@
             />
             <word
               w="【放：ほう】り【出：だ】す"
-              rom="hōridasu"
+              rom="hōri-dasu"
               tr_en="to throw out; to dump; to abandon"
               tr_de="etw. hinauswerfen; etw. verwerfen"
               lvl="n1"
               id="hōridasu-throwout"
+            />
+            <word
+              w="【見：み】【渡：わた】す"
+              rom="mi-watasu"
+              tr_en="to look out over; to survey (scene); to take an extensive view of"
+              tr_de="darüberschauen; (eine Szene) überblicken"
+              hint_en="v.t."
+              lvl="n1"
+              category="looking"
+              id="miwatasu-takeaview"
+            />
+            <word
+              w="【申：もう】し【出：で】る"
+              rom="mōshi-deru"
+              tr_en="to offer; to suggest; to propose"
+              tr_de="offerieren; vorschlagen; vorbringen"
+              hint_en="v.t."
+              lvl="n1"
+              id="mōshideru-offer"
             />
             <word
               w="【引：ひ】っ【掛：か】ける"
@@ -349,7 +590,7 @@
             />
             <word
               w="【切：き】り【替：か】える"
-              rom="kirikaeru"
+              rom="kiri-kaeru"
               tr_en="to exchange; to convert; to renew"
               tr_de="etw. vertauschen; etw. konvertieren; etw. erneuern"
               hint_en="v.t."
@@ -367,7 +608,7 @@
             />
             <word
               w="【組：く】み【合：あ】わせる"
-              rom="kumiawaseru"
+              rom="kumi-awaseru"
               tr_en="to join together; to combine"
               tr_de="etw. zusammenfügen; etw. kombinieren"
               hint_en="v.t."
@@ -376,7 +617,7 @@
             />
             <word
               w="【組：く】み【込：こ】む"
-              rom="kumikomu"
+              rom="kumi-komu"
               tr_en="to include; to incorporate"
               tr_de="etw. hinzunehmen; etw. einbauen"
               hint_en="v.t."
@@ -413,266 +654,12 @@
             />
             <word
               w="【申：もう】し【入：い】れる"
-              rom="mōshiireru"
+              rom="mōshi-ireru"
               tr_en="to propose; to suggest"
               tr_de="etw. vorschlagen"
               hint_en="v.t."
               lvl="n1"
               id="mōshiireru-propose"
-            />
-            <word
-              w="やり【遂：と】げる"
-              rom="yaritogeru"
-              tr_en="to accomplish; to finish; to carry through"
-              tr_de="etw. fertigbringen; etw. zu Ende bringen"
-              hint_en="v.t."
-              lvl="n1"
-              id="yaritogeru-accomplish"
-            />
-            <word
-              w="【重：おも】んじる"
-              rom="omonjiru"
-              tr_en="to respect sb.; to honour sb.; to esteem"
-              tr_de="jem. respektieren; jem. ehren; etw. wertschätzen"
-              hint_en="v.t."
-              lvl="n1"
-              id="omonjiru-honour"
-            />
-            <word
-              w="【付：つ】け【加：くわ】える"
-              rom="tsukekuwaeru"
-              tr_en="to add (a few more words, an explanation, etc.)"
-              tr_de="(einige Worte, eine Erklärung) anfügen"
-              hint_en="v.t."
-              lvl="n1"
-              category="talking"
-              id="tsukekuwaeru-add"
-            >
-                <keep_apart_from id="kuwaeru-add" />
-            </word>
-            <word
-              w="【似：に】【通：かよ】う"
-              rom="nikayou"
-              tr_en="to resemble closely"
-              tr_de="sich stark ähneln; sich gleichen"
-              hint_en="v.i."
-              lvl="n1"
-              id="nikayou-resemble"
-            />
-            <word
-              w="【冷：ひ】やかす"
-              rom="hiyakasu"
-              tr_en="to make fun of; to refrigerate; to look at without buying"
-              tr_de="sich lustig machen; etw. einfrieren; anschauen, ohne zu kaufen"
-              hint_en="v.t."
-              lvl="n1"
-              id="hiyakasu-jeerat"
-            />
-            <word
-              w="【倣：なら】う"
-              rom="narau"
-              tr_en="to imitate; to follow; to emulate"
-              tr_de="imitieren; folgen; emulieren"
-              Langenscheidt="-"
-              hint_en="v.i."
-              lvl="n1"
-              id="narau-imitate"
-            />
-            <word
-              w="【傷：きず】つく"
-              rom="kizutsuku"
-              tr_en="to get injured; to get hurt; to get damaged"
-              tr_de="verletzt werden; sich wehtun; kaputt gehen"
-              hint_en="v.i."
-              lvl="n1"
-              id="kizutsuku-gethurt"
-            >
-                <see id="kizu-scar" rem="noun" />
-            </word>
-            <word
-              w="【備：そな】わる"
-              rom="sonawaru"
-              tr_en="to be furnished with; to be provided with; to be equipped with"
-              tr_de="möbiliert sein; mit etw. versorgt werden; mit etw. ausgerüstet sein"
-              hint_en="v.i."
-              lvl="n1"
-              id="sonawaru-beprovidedwith"
-            />
-            <word
-              w="【赤：あか】らむ"
-              rom="akaramu"
-              tr_en="to become red; to redden; to blush"
-              tr_de="rot werden; erröten; sich schämen"
-              hint_en="v.i."
-              lvl="n1"
-              id="akaramu-getred"
-            >
-                <see id="akai-red" rem="adjective" />
-            </word>
-            <word
-              w="【可愛：かわい】がる"
-              rom="kawaigaru"
-              tr_en="to cherish sth.; to be affectionate; to treat sb. tenderly"
-              tr_de="etw. hegen; liebevoll sein; jem. zärtlich behandeln"
-              hint_en="v.t."
-              hasCombinedReading="true"
-              lvl="n1"
-              id="kawaigaru-cherish"
-            >
-                <see id="kawaii-cute" rem="adjective" />
-            </word>
-            <word
-              w="【痛：いた】む"
-              rom="itamu"
-              tr_en="to hurt; to ache; to feel a pain"
-              tr_de="weh tun; schmerzen; Schmerzen haben"
-              hint_en="v.i."
-              lvl="n1"
-              id="itamu-hurt"
-              rem="is this really n1???"
-            >
-                <see id="itai-painful" rem="adjective" />
-                <see id="itami-pain" rem="noun" />
-                <see id="itameru-hurt" rem="v.t." />
-                <keep_apart_from id="kurushimu-suffer" />
-                <!-- 心が痛む (こころがいたむ) To feel pained; to feel emotional pain (ChatGPT) -->
-            </word>
-            <word
-              w="【痛：いた】める"
-              rom="itameru"
-              tr_en="to hurt sb.; to cause pain; to harm sth."
-              tr_de="jem. wehtun; jem. Schmerzen zufügen; schaden"
-              hint_en="v.t."
-              lvl="n1"
-              id="itameru-hurt"
-            >
-                <see id="itamu-hurt" rem="v.i." />
-            </word>
-            <word
-              w="【緩：ゆる】む"
-              rom="yurumu"
-              tr_en="to become loose; to become less tense; to relax"
-              tr_de="locker werden; sich lockern; sich entspannen"
-              hint_en="v.i."
-              lvl="n1"
-              id="yurumu-becomeloose"
-            >
-                <see id="yurumeru-loosen" rem="v.t." />
-            </word>
-            <word
-              w="【緩：ゆる】める"
-              rom="yurumeru"
-              tr_en="to loosen sth.; to slacken sth.; to relax (a rule, etc.)"
-              tr_de="etw. lösen; etw. abschwächen; (eine Regel, usw.) lockern"
-              hint_en="v.t."
-              lvl="n1"
-              id="yurumeru-loosen"
-            >
-                <see id="yurumu-becomeloose" rem="v.i." />
-            </word>
-            <word
-              w="【弱：よわ】る"
-              rom="yowaru"
-              tr_en="to weaken; to grow weak; to be at a loss"
-              tr_de="schwach werden; schwächeln; ratlos sein"
-              hint_en="v.i."
-              lvl="n1"
-              id="yowaru-weaken"
-            >
-                <see id="yowai-weak" rem="adjective" />
-            </word>
-            <word
-              w="【目：め】【覚：ざ】める"
-              rom="mezameru"
-              tr_en="to wake up; to awaken to; to become aware of"
-              tr_de="aufwachen; sich etw. bewusst werden; etw. erwacht"
-              hint_en="v.i."
-              lvl="n1"
-              id="mezameru-wakeup"
-            >
-                <keep_apart_from id="samasu-awaken" />
-                <keep_apart_from id="okosu-wakeup" />
-            </word>
-            <word
-              w="【口：くち】ずさむ"
-              rom="kuchizusamu"
-              tr_en="to hum (a tune); to sing to oneself; to croon"
-              tr_de="(eine Melodie) summen; leise singen"
-              hint_en="v.t."
-              lvl="n1"
-              id="kuchizusamu-hum"
-            />
-            <word
-              w="【受：う】け【継：つ】ぐ"
-              rom="uketsugu"
-              tr_en="to inherit; to succeed; to take over"
-              tr_de="etw. erben; nach etw. kommen; etw. übernehmen"
-              hint_en="v.t."
-              lvl="n1"
-              id="uketsugu-inherit"
-            />
-            <word
-              w="【受：う】け【付：つ】ける"
-              rom="uketsukeru"
-              tr_en="to accept; to tolerate; to endure"
-              tr_de="etw. akzeptieren; etw. tolerieren; etw. aushalten"
-              hint_en="v.t."
-              lvl="n1"
-              id="uketsukeru-endure"
-            />
-            <word
-              w="【受：う】け【入：い】れる"
-              rom="ukeireru"
-              tr_en="to receive sth.; to accept sth."
-              tr_de="etw. annehmen; etw. akzeptieren"
-              hint_en="v.t."
-              lvl="n1"
-              id="ukeireru-accept"
-            />
-            <word
-              w="【心：こころ】がける"
-              rom="kokorogakeru"
-              tr_en="to bear in mind; to aim to do; to endeavour"
-              tr_de="etw. im Auge behalten; auf etw. abzielen; bestrebt sein"
-              hint_en="v.t."
-              lvl="n1"
-              id="kokorogakeru-endeavour"
-            />
-            <word
-              w="【化：ば】ける"
-              rom="bakeru"
-              tr_en="to take the form of (a fox, etc.); to transform oneself into sth."
-              tr_de="die Form (eines Fuchses, usw.) annehmen; sich in etw. verwandeln"
-              hint_en="v.i."
-              lvl="n1"
-              id="bakeru-takeform"
-            />
-            <word
-              w="【交：か】わす"
-              rom="kawasu"
-              tr_en="to exchange (greetings, etc.); to cross"
-              tr_de="(Grüsse, usw.) austauschen; kreuzen"
-              hint_en="v.t."
-              lvl="n1"
-              id="kawasu-cross"
-            />
-            <word
-              w="【焦：あせ】る"
-              rom="aseru"
-              tr_en="to be impatient; to be in a hurry"
-              tr_de="ungedulig sein; in Eile sein"
-              lvl="n1"
-              category="mood, not-good"
-              id="aseru-impatient"
-            />
-            <word
-              w="【呟：つぶや】く"
-              rom="tsubuyaku"
-              tr_en="to grumble"
-              tr_de="murren; schimpfen"
-              lvl="n1"
-              category="mood, not-good"
-              id="tsubuyaku-grumble"
             />
         </section>
     </unit>

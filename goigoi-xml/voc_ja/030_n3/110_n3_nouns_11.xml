@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <word
@@ -113,6 +111,26 @@
                 <!--
                 お会計は、千円です。jpod101 audio
                 -->
+            </word>
+            <word
+              w="【経：けい】【営：えい】"
+              rom="keiei"
+              tr_en="management; administration; running a business"
+              tr_de="Unternehmensführung; Geschäftsleitung; ein Geschäft führen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="keiei-management"
+              rem="appears in GENKI2 p.328 kanji section"
+            >
+                <phrase
+                  ph="【経：けい】【営：えい】【学：がく】"
+                  rom="keieigaku"
+                  tr_en="management studies; field of business administration"
+                  tr_de="Management-Studien; Studium der Unternehmensführung"
+                  lvl="n3"
+                  origin="GENKI2 p.328"
+                />
             </word>
             <word
               w="【請：せい】【求：きゅう】"
@@ -343,6 +361,7 @@
                     担当・たんとう: can be used as a noun, or suru verb
                 -->
                 <keep_apart_from id="kakari-incharge" />
+                <keep_apart_from id="hikiukeru-takeon" />
                 <sentence
                   s="このプロジェクトの【担：たん】【当：とう】は【誰：だれ】ですか。"
                   rom="Kono purojekuto no tantō wa dare desu ka?"
@@ -388,6 +407,41 @@
                   lvl="n3"
                   origin="ChatGPT"
                 />
+            </word>
+            <word
+              w="【経：けい】【由：ゆ】"
+              rom="keiyu"
+              tr_en="going via; going by way of"
+              tr_de="via einen Ort gehen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="keiyu-via"
+              rem="appears in GENKI2 p.328 kanji section"
+            >
+                <phrase
+                  ph="【大：おお】【阪：さか】【経：けい】【由：ゆ】"
+                  rom="Ōsaka-keiyu"
+                  tr_en="going via Osaka"
+                  tr_de="via Osaka"
+                  lvl="n3"
+                  origin="GENKI2 p.328"
+                  rem="GENKI2 has パリ経由; verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【診：しん】【察：さつ】"
+              rom="shinsatsu"
+              tr_en="medical examination"
+              tr_de="ärztliche Untersuchung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="health"
+              id="shinsatsu-medexamination"
+            >
+                <keep_apart_from id="kensa-examination" />
+                <keep_apart_from id="kenshin-healthcheckup" />
             </word>
             <word
               w="【関：かん】する"
@@ -609,18 +663,6 @@
                 <keep_apart_from id="gichō-chairman" />
             </word>
             <word
-              w="【要：よう】【求：きゅう】"
-              rom="yōkyū"
-              tr_en="requirement; demand; to desire"
-              tr_de="Anforderung; Nachfrage; wünschen"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="yōkyū-demand"
-            >
-                <!-- 無理な要求 - muri na yōkyū - an unrealistic demand (ChatGPT) -->
-            </word>
-            <word
               w="【布：ぬの】"
               rom="nuno"
               tr_en="cloth; textile"
@@ -647,6 +689,29 @@
             >
                 <keep_apart_from id="nyūgaku-matriculation" />
                 <keep_apart_from id="nyūin-hospitalisation" />
+            </word>
+            <word
+              w="【博：はく】【物：ぶつ】【館：かん】"
+              rom="hakubutsukan"
+              tr_en="museum"
+              tr_de="Museum"
+              lvl="n3"
+              category="arts"
+              id="hakubutsukan-museum"
+            >
+                <keep_apart_from id="bijutsukan-gallery" />
+            </word>
+            <word
+              w="【医：い】【療：りょう】"
+              rom="iryō"
+              tr_en="medical treatment"
+              tr_de="medizinische Behandlung"
+              Langenscheidt="med. Behandlung"
+              lvl="n3"
+              category="health"
+              id="iryō-healthcare"
+            >
+                <!-- implicit see-also link to iryō-clothing -->
             </word>
             <word
               w="【瓶：びん】"
@@ -681,17 +746,6 @@
               id="kyōfu-fear"
             />
             <word
-              w="【回：かい】【復：ふく】"
-              rom="kaifuku"
-              tr_en="recovery"
-              tr_de="Genesung"
-              hint_en="from illness"
-              hint_de="nach einer Krankheit"
-              lvl="n3"
-              category="health"
-              id="kaifuku-recovery"
-            />
-            <word
               w="【帰：き】【宅：たく】"
               rom="kitaku"
               tr_en="returning home"
@@ -723,15 +777,6 @@
               lvl="n3"
               category="relationships"
               id="shinyō-confidence"
-            />
-            <word
-              w="【博：はく】【物：ぶつ】【館：かん】"
-              rom="hakubutsukan"
-              tr_en="museum"
-              tr_de="Museum"
-              lvl="n3"
-              category="arts"
-              id="hakubutsukan-museum"
             />
             <word
               w="【物：ぶっ】【質：しつ】"
@@ -799,15 +844,6 @@
               id="sonkei-honour"
             />
             <word
-              w="【外：がい】【交：こう】"
-              rom="gaikō"
-              tr_en="diplomacy"
-              tr_de="Diplomatie"
-              lvl="n3"
-              category="politics"
-              id="gaikō-diplomacy"
-            />
-            <word
               w="【論：ろん】【争：そう】"
               rom="ronsō"
               tr_en="controversy; debate; argument"
@@ -836,16 +872,6 @@
               lvl="n3"
               category="transportation"
               id="tsūkō-passage"
-            />
-            <word
-              w="【評：ひょう】【判：ばん】"
-              rom="hyōban"
-              tr_en="reputation; popularity; rumour"
-              tr_de="Ruf; Popularität; Munkeln"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="hyōban-reputation"
             />
             <word
               w="【決：けっ】【心：しん】"

@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n4"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- family -->
@@ -590,6 +588,9 @@
               category="plant, nature"
               id="eda-twig"
             >
+                <keep_apart_from id="e-stalk" />
+                <keep_apart_from id="kuki-stem" />
+                <see id="miki-treetrunk" rem="closely related" />
                 <phrase
                   ph="【細：ほそ】い【枝：えだ】"
                   rom="hosoi eda"
@@ -1157,6 +1158,7 @@
               lvl="n4"
               category="shopping"
               id="uriba-sellarea"
+              rem="appears in 500mon N3 q62 (no example)"
             >
                 <phrase
                   ph="【賑：にぎ】やかな【売：う】り【場：ば】"

@@ -11,12 +11,29 @@
       defaultHint_en="adverb"
       defaultHint_de="Adverb"
       lvl="n2"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="false"
     >
         <section>
+            <word
+              w="【間：ま】もなく"
+              rom="mamonaku"
+              tr_en="soon; shortly; before long"
+              tr_de="bald; nächstens; in Kürze"
+              lvl="n2"
+              usuallyInKana="true"
+              id="mamonaku-soon"
+              rem="appears in 500mon N3 q19"
+            >
+                <sentence
+                  s="まもなく【電：でん】【車：しゃ】が【参：まい】ります。"
+                  rom="Mamonaku densha ga mairimasu."
+                  tr_en="The train will soon arrive. (humble)"
+                  tr_de="Der Zug trifft bald ein. (bescheiden)"
+                  lvl="n2"
+                  origin="500mon N3 q19"
+                />
+            </word>
             <word
               w="【漸：ようや】く"
               rom="yōyaku"
@@ -44,6 +61,17 @@
               id="sassoku-atonce"
             >
                 <keep_apart_from id="sugu-immediately" />
+            </word>
+            <word
+              w="【思：おも】い【切：き】り"
+              rom="omoi-kiri"
+              tr_en="with all one's strength; with all one's heart"
+              tr_de="mit aller Kraft; von Herzen"
+              lvl="n2"
+              id="omoikiri-withallstrength"
+            >
+                <keep_apart_from id="kiri-cut" />
+                <keep_apart_from id="isshōkenmei-utmosteffort" />
             </word>
             <word
               w="【流石：さすが】"
@@ -115,28 +143,12 @@
               id="ichiichi-onebyone"
             />
             <word
-              w="【間：ま】もなく"
-              rom="mamonaku"
-              tr_en="soon; shortly; before long"
-              tr_de="bald; nächstens; in Kürze"
-              lvl="n2"
-              id="mamonaku-soon"
-            />
-            <word
               w="すっきり"
               rom="sukkiri"
               tr_en="feeling refreshed; shapely"
               tr_de="sich erholt fühlen; wohlgeformt"
               lvl="n2"
               id="sukkiri-feelingrefreshed"
-            />
-            <word
-              w="【思：おも】い【切：き】り"
-              rom="omoikiri"
-              tr_en="with all one's strength; with all one's heart"
-              tr_de="mit aller Kraft; von Herzen"
-              lvl="n2"
-              id="omoikiri-withallstrength"
             />
             <word
               w="【相：あい】【変：か】わらず"

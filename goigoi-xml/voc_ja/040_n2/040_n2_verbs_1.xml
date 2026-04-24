@@ -11,9 +11,7 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n2"
-      translations="en, de"
       requiresSentences="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -254,6 +252,39 @@
                   lvl="n2"
                   origin="ChatGPT"
                 />
+            </word>
+            <word
+              w="【散：ち】らかる"
+              rom="chirakaru"
+              tr_en="to be in disorder; to lie scattered around"
+              tr_de="in Unordnung sein; herumliegen"
+              hint_en="v.i."
+              lvl="n2"
+              id="chirakaru-indisorder"
+              rem="appears in 500mon N3 q59 as the answer"
+            >
+                <see id="chirakasu-scatter" rem="v.t." />
+                <sentence
+                  s="【散：ち】らかっていますが、どうぞお【入：はい】りください。"
+                  rom="Chirakatte imasu ga, dōzo o-hairi kudasai."
+                  tr_en="It's a little messy, but please come in."
+                  tr_de="Es ist ein bisschen unorderntlich, aber bitte kommen Sie doch herein."
+                  lvl="n2"
+                  origin="500mon N3 q59"
+                />
+            </word>
+            <word
+              w="【散：ち】らかす"
+              rom="chirakasu"
+              tr_en="to scatter around; to leave untidy"
+              tr_de="etw. herumstreuen; etw. in Unordnung bringen"
+              hint_en="v.t."
+              lvl="n2"
+              id="chirakasu-scatter"
+            >
+                <see id="chirakaru-indisorder" rem="v.i." />
+                <keep_apart_from id="chirasu-spread" />
+                <!-- what's the difference to chirasu? -->
             </word>
             <word
               w="【打：ぶ】【付：つ】ける"
@@ -705,6 +736,7 @@
               lvl="n2"
               category="cooking"
               id="yuderu-boil"
+              rem="appears in 500mon N3 q50"
             >
                 <keep_apart_from id="wakasu-boil" />
             </word>
@@ -755,6 +787,19 @@
               id="todomaru-confined"
             >
                 <!-- implicit see-also link to tomaru-stop -->
+            </word>
+            <word
+              w="【引：ひ】き【受：う】ける"
+              rom="hiki-ukeru"
+              tr_en="to accept; to take charge of; to take over"
+              tr_de="sich etw. annehmen; (Verantwortung) übernehmen"
+              hint_en="v.t."
+              lvl="n2"
+              id="hikiukeru-takeon"
+              rem="appears in Doraemon 0, p.29"
+            >
+                <keep_apart_from id="tantō-incharge" />
+                <keep_apart_from id="kakari-incharge" />
             </word>
             <word
               w="【温：あたた】まる"
@@ -855,33 +900,6 @@
               lvl="n2"
               category="cleaning, home"
               id="hosu-toair"
-            />
-            <word
-              w="【心：こころ】【得：え】る"
-              rom="kokoroeru"
-              tr_en="to know; to understand; to be aware of"
-              tr_de="wissen; verstehen; sich etw. bewusst sein"
-              hint_en="v.t."
-              lvl="n2"
-              id="kokoroeru-know"
-            />
-            <word
-              w="【散：ち】らす"
-              rom="chirasu"
-              tr_en="to scatter; to spread; to cause a shower of"
-              tr_de="verstreuen; streuen; versprühen"
-              hint_en="v.t."
-              lvl="n2"
-              id="chirasu-spread"
-            />
-            <word
-              w="【解：ほど】く"
-              rom="hodoku"
-              tr_en="to undo; to untie; to unfasten"
-              tr_de="lösen; aufbinden; entwirren"
-              hint_en="v.t."
-              lvl="n2"
-              id="hodoku-undo"
             />
         </section>
     </unit>

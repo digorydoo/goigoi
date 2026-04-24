@@ -11,12 +11,29 @@
       defaultHint_en="na-adjective"
       defaultHint_de="Na-Adjektiv"
       lvl="n2"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="false"
     >
         <section>
+            <word
+              w="【余：よ】【計：けい】"
+              rom="yokei"
+              tr_en="unnecessary; superfluous; excessive"
+              tr_de="unnötig; überflüssig; ausufernd"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              lvl="n2"
+              id="yokei-extra"
+            >
+                <sentence
+                  s="【余：よ】【計：けい】なお【世：せ】【話：わ】だ、【帰：かえ】れ。"
+                  rom="Yokei na o-sewa da, kaere."
+                  tr_en="I don't need you to look after me; go home!"
+                  tr_de="Deine Betreuung ist überflüssig; geh nach Hause!"
+                  lvl="n2"
+                  origin="Doraemon 0, p.28"
+                />
+            </word>
             <word
               w="【逆：さか】さ"
               rom="sakasa"
@@ -83,7 +100,10 @@
               hint_de="Na-Adjektiv"
               lvl="n2"
               id="kōkyū-highclass"
-            />
+              rem="appears in 500mon N3 q 23 (without example)"
+            >
+                <keep_apart_from id="jōtō-superior" />
+            </word>
             <word
               w="【案：あん】【外：がい】"
               rom="angai"
@@ -165,14 +185,6 @@
               rom="māmā"
               tr_en="so-so; passable; now, now; my, my"
               hint_en="na-adjective; adverb"
-              lvl="n2"
-              HIDDEN="true"
-            />
-            <word
-              w="【四：し】【角：かく】"
-              rom="shikaku"
-              tr_en="quadrilateral; square"
-              hint_en="noun; na-adjective"
               lvl="n2"
               HIDDEN="true"
             />

@@ -243,16 +243,6 @@ fun GoigoiUnyt.check(topic: GoigoiTopic) {
         }
     }
 
-    // Check if unyt requires ids
-
-    if (!requiresIds) {
-        when {
-            levels.size == 1 -> Unit // allow missing ids when unyt is dedicated to a single JLPT-level
-            name.en.startsWith("Numbers") -> Unit // numbers don't need any id
-            else -> throw CheckFailed("Unyt needs to set requiresIds=true as exceptions do not apply!", this)
-        }
-    }
-
     // Check that we can rely solely on unyt.hidden when topic is hidden
 
     if (!hidden && topic.hidden) {

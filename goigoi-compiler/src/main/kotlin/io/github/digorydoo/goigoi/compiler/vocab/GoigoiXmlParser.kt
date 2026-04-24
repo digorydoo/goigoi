@@ -282,11 +282,9 @@ class GoigoiXmlParser {
                 "name_fr",
                 "name_it",
                 "name_ja",
-                "requiresIds",
                 "requiresPhrases",
                 "requiresSentences",
                 "studyLang",
-                "translations",
             ),
             getException = { ParsingFailed("Unyt $en: $it", root) }
         )
@@ -314,16 +312,16 @@ class GoigoiXmlParser {
             ignoresCombinedReadings = getBooleanAttr(root, "ignoresCombinedReadings")
             requiresSentences = getBooleanAttr(root, "requiresSentences")
             requiresPhrases = getBooleanAttr(root, "requiresPhrases")
-            requiresIds = getBooleanAttr(root, "requiresIds")
 
             levels = (getOptionalAttr(root, "lvl") ?: "")
                 .split(',')
                 .mapNotNull { JLPTLevel.fromString(it.trim()) }
 
-            requiredTranslations = (getOptionalAttr(root, "translations") ?: "")
-                .split(',')
-                .map { it.trim() }
-                .filter { it.isNotEmpty() }
+            // requiredTranslations is now fixed, there is no longer an attribute.
+            requiredTranslations = when {
+                hidden -> listOf("en")
+                else -> listOf("en", "de")
+            }
         }
 
         topic.unyts.add(unyt)
@@ -368,6 +366,7 @@ class GoigoiXmlParser {
     private fun readWord(root: Element, section: GoigoiSection, unyt: GoigoiUnyt) {
         val thePrimaryForm = getMandatoryAttr(root, "w")
         val theRomaji = getOptionalAttr(root, "rom") ?: ""
+        val theHidden = getBooleanAttr(root, "HIDDEN")
 
         checkAttributes(
             root,
@@ -404,7 +403,7 @@ class GoigoiXmlParser {
 
         val customWordId = getOptionalAttr(root, "id") ?: ""
 
-        if (customWordId.isEmpty() && unyt.requiresIds) {
+        if (!theHidden && !unyt.hidden && customWordId.isEmpty()) {
             throw ParsingFailed("Id for word is missing, but unyt requires ids", root, unyt)
         }
 
@@ -428,8 +427,6 @@ class GoigoiXmlParser {
                 unyt
             )
         }
-
-        val theHidden = getBooleanAttr(root, "HIDDEN")
 
         val theHint = IntlString()
         getOptionalAttr(root, "hint", theHint)

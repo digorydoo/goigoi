@@ -9,18 +9,10 @@ import java.io.File
 import kotlin.system.exitProcess
 
 fun compileGoigoi(options: Options) {
-    if (options.srcDir.isEmpty()) {
-        throw ShellCommandError("The input directory has not been set.")
-    }
-
     val srcDir = File(options.srcDir)
 
     if (!srcDir.isDirectory) {
         throw ShellCommandError("Not a directory: ${options.srcDir}")
-    }
-
-    if (options.dstDir.isEmpty()) {
-        throw ShellCommandError("The output directory has not been set.")
     }
 
     val dstDir = File(options.dstDir)
@@ -49,6 +41,20 @@ fun compileGoigoi(options: Options) {
     )
 
     FinalChecks(vocab, kanjiLevels, readings, options).check()
+
+    val wordIndexWriter = WordIndexWriter(vocab, options.quiet)
+
+    if (options.generateWordIndexPath.isNotEmpty()) {
+        wordIndexWriter.writeWordIndex(options.generateWordIndexPath)
+    }
+
+    if (options.generatePhraseIndexPath.isNotEmpty()) {
+        wordIndexWriter.writePhraseIndex(options.generatePhraseIndexPath)
+    }
+
+    if (options.generateSentenceIndexPath.isNotEmpty()) {
+        wordIndexWriter.writeSentenceIndex(options.generateSentenceIndexPath)
+    }
 
     if (!options.quiet) {
         FinalStats(vocab, kanjiLevels, readings).print()

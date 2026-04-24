@@ -296,8 +296,11 @@ fun GoigoiWord.check(crossDict: Boolean, hasCombinedReading: Boolean, unyt: Goig
     val enHints = arrayOf(hint.en, hint2?.en).filterNotNull().joinToString(";").split(";").map { it.trim() }
 
     if (!unyt.hidden && !hidden && studyInContext == StudyInContextKind.NOT_REQUIRED) {
-        if (enHints.contains("prefix") || enHints.contains("suffix")) {
-            throw CheckFailed("Word having hint '${hint.en}' should be marked with studyInContext", unyt, this)
+        if (enHints.contains("prefix")) {
+            throw CheckFailed("Word having hint 'prefix' should be marked with studyInContext", unyt, this)
+        }
+        if (enHints.contains("suffix")) {
+            throw CheckFailed("Word having hint 'suffix' should be marked with studyInContext", unyt, this)
         }
         if (translation.en.contains("~") || translation.de.contains("~")) {
             throw CheckFailed("Word having tilde in translation should be marked with studyInContext", unyt, this)

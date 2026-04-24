@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n2"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <word
@@ -35,6 +33,147 @@
                   origin="self"
                 />
             </word>
+            <word
+              w="【三：さん】【角：かく】"
+              rom="sankaku"
+              tr_en="triangle; triangular"
+              tr_de="Dreieck; dreieckig"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n2"
+              id="sankaku-triangle"
+              rem="appears in 500mon N3 q55 (no example); can this be used as a な adjective?"
+            >
+                <see id="kado-corner" rem="closely related" />
+                <keep_together id="shikaku-square" />
+            </word>
+            <word
+              w="【四：し】【角：かく】"
+              rom="shikaku"
+              tr_en="square; quadrilateral"
+              tr_de="Viereck; Rechteck; Quadrat"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n2"
+              id="shikaku-square"
+              rem="appears in 500mon N3 q55 (no example); can this be used as a な adjective?"
+            >
+                <see id="kado-corner" rem="closely related" />
+                <keep_together id="sankaku-triangle" />
+            </word>
+            <word
+              w="【障：しょう】【子：じ】"
+              rom="shōji"
+              tr_en="paper sliding door"
+              tr_de="papierene Schiebetür"
+              hint_en="lets in natural light"
+              hint_de="lichtdurchlässig"
+              lvl="n2"
+              id="shōji-door"
+            >
+                <see id="fusuma-slidingdoor" rem="closely related" />
+                <keep_apart_from id="fusuma-slidingdoor" />
+                <keep_apart_from id="to-door" />
+                <keep_apart_from id="doa-door" />
+                <keep_apart_from id="uraguchi-backdoor" />
+                <keep_apart_from id="amado-stormshutter" />
+                <keep_apart_from id="tobira-door" />
+            </word>
+            <word
+              w="【点：てん】【数：すう】"
+              rom="tensū"
+              tr_en="runs (baseball); score; points"
+              tr_de="Läufe (Baseball); Spielstand; Punkte"
+              lvl="n2"
+              category="sports"
+              id="tensū-score"
+            >
+                <keep_apart_from id="ten-mark" />
+                <keep_apart_from id="seiseki-results" />
+                <keep_apart_from id="tokuten-score" />
+            </word>
+            <word
+              w="【便：びん】【箋：せん】"
+              rom="binsen"
+              tr_en="writing paper; stationery"
+              tr_de="Schreibpapier"
+              lvl="n2"
+              category="writing"
+              id="binsen-writingpaper"
+            >
+                <keep_apart_from id="kami-paper" />
+            </word>
+            <word
+              w="【競：けい】【馬：ば】"
+              rom="keiba"
+              tr_en="horse racing"
+              tr_de="Pferderennen"
+              lvl="n2"
+              category="sports"
+              id="keiba-horseracing"
+            >
+                <keep_apart_from id="bajutsu-horseriding" />
+            </word>
+            <word
+              w="【缶：かん】【詰：づめ】"
+              rom="kandzume"
+              tr_en="canned food; being stuck in a confined space"
+              tr_de="Konservenbüchse; in einen engen Raum gestopft sein"
+              lvl="n2"
+              id="kandzume-cannedfood"
+            >
+                <see id="tsumeru-pack" rem="closely related" />
+            </word>
+            <word
+              w="【草：ぞう】【履：り】"
+              rom="zōri"
+              tr_en="traditional Japanese sandals"
+              tr_de="traditionelle japanische Sandalen"
+              hint_en="thonged"
+              hint_de="geschnürt"
+              lvl="n2"
+              category="fashion"
+              id="zōri-sandals"
+            >
+                <keep_apart_from id="sandaru-sandals" />
+            </word>
+            <word
+              w="【将：しょう】【棋：ぎ】"
+              rom="shōgi"
+              tr_en="Game of Generals"
+              tr_de="Spiel der Generäle"
+              hint_en="Japanese chess"
+              hint_de="japanisches Schach"
+              lvl="n2"
+              category="games"
+              id="shōgi-chess"
+            />
+            <word
+              w="【生：い】け【花：ばな】"
+              rom="ikebana"
+              tr_en="Japanese art of flower arrangement"
+              tr_de="japanische Kunst des Blumenarrangements"
+              lvl="n2"
+              category="culture, arts"
+              id="ikebana-flowerarr"
+            />
+            <word
+              w="【便：べん】【所：じょ】"
+              rom="benjo"
+              tr_en="toilet; restroom"
+              tr_de="Toilette"
+              lvl="n2"
+              id="benjo-toilet"
+            />
+            <word
+              w="【物：もの】【差：さ】し"
+              rom="monosashi"
+              tr_en="ruler"
+              tr_de="Lineal"
+              lvl="n2"
+              category="education, arts"
+              id="monosashi-ruler"
+            />
             <word
               w="【独：ひと】り【言：ごと】"
               rom="hitorigoto"
@@ -162,69 +301,6 @@
               category="entertainment, top-words"
               id="koto-zither"
             />
-            <word
-              w="【障：しょう】【子：じ】"
-              rom="shōji"
-              tr_en="paper sliding door"
-              tr_de="papierene Schiebetür"
-              hint_en="lets in natural light"
-              hint_de="lichtdurchlässig"
-              lvl="n2"
-              id="shōji-door"
-            >
-                <see id="fusuma-slidingdoor" rem="closely related" />
-                <keep_apart_from id="fusuma-slidingdoor" />
-                <keep_apart_from id="to-door" />
-                <keep_apart_from id="doa-door" />
-                <keep_apart_from id="uraguchi-backdoor" />
-                <keep_apart_from id="amado-stormshutter" />
-                <keep_apart_from id="tobira-door" />
-            </word>
-            <word
-              w="【点：てん】【数：すう】"
-              rom="tensū"
-              tr_en="runs (baseball); score; points"
-              tr_de="Läufe (Baseball); Spielstand; Punkte"
-              lvl="n2"
-              category="sports"
-              id="tensū-score"
-            >
-                <keep_apart_from id="ten-mark" />
-                <keep_apart_from id="seiseki-results" />
-                <keep_apart_from id="tokuten-score" />
-            </word>
-            <word
-              w="【便：びん】【箋：せん】"
-              rom="binsen"
-              tr_en="writing paper; stationery"
-              tr_de="Schreibpapier"
-              lvl="n2"
-              category="writing"
-              id="binsen-writingpaper"
-            >
-                <keep_apart_from id="kami-paper" />
-            </word>
-            <word
-              w="【競：けい】【馬：ば】"
-              rom="keiba"
-              tr_en="horse racing"
-              tr_de="Pferderennen"
-              lvl="n2"
-              category="sports"
-              id="keiba-horseracing"
-            >
-                <keep_apart_from id="bajutsu-horseriding" />
-            </word>
-            <word
-              w="【缶：かん】【詰：づめ】"
-              rom="kandzume"
-              tr_en="canned food; being stuck in a confined space"
-              tr_de="Konservenbüchse; in einen engen Raum gestopft sein"
-              lvl="n2"
-              id="kandzume-cannedfood"
-            >
-                <see id="tsumeru-pack" rem="closely related" />
-            </word>
         </section>
     </unit>
 </vocabulary>

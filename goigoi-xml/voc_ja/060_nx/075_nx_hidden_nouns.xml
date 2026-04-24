@@ -8,24 +8,12 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="-"
-      translations="en"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="false"
       HIDDEN="true"
     >
         <section>
             <!-- unsorted -->
-            <word
-              w="【漬：つけ】【物：もの】"
-              rom="tsukemono"
-              tr_en="Japanese pickled vegetables"
-              lvl="-"
-              id="tsukemono-pickled"
-              rem="now a phrase of tsukeru"
-            >
-                <keep_apart_from id="tsukeru-soak" />
-            </word>
             <word
               w="【旋：せん】【律：りつ】"
               rom="senritsu"
@@ -56,6 +44,15 @@
             >
                 <keep_apart_from id="suiei-swimming" />
             </word>
+            <word
+              w="すり【身：み】"
+              rom="surimi"
+              tr_en="minced fish mashed into a paste"
+              tr_de="pürierter Fisch"
+              lvl="-"
+              category="food"
+              id="surimi-mincedfish"
+            />
             <word
               w="【忍：にん】【者：じゃ】"
               rom="ninja"
@@ -250,14 +247,6 @@
               tr_de="Brennholz"
               lvl="-"
               id="maki-firewood"
-            />
-            <word
-              w="【折：お】りたたみ【椅：い】【子：す】"
-              rom="oritatami isu"
-              tr_en="folding chair"
-              tr_de="Klappstuhl"
-              lvl="-"
-              id="oritatamiisu-foldingchair"
             />
             <word
               w="キャンプ【用：よう】【枕：まくら】"
@@ -735,6 +724,7 @@
               lvl="-"
               category="culture"
               id="mikoshi-portableshrine"
+              rem="appears in 500mon N3 q60 (example not usable)"
             />
             <word
               w="【四：し】【手：で】"

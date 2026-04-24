@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n5"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- body -->
@@ -1217,6 +1215,13 @@
               category="general"
               id="bangō-number"
             >
+                <!--
+                   番号・ばんごう is a number as an identifier, e.g. ticket number, etc.
+                   数字・すうじ (n3) is a digit, figure, or number you can add up
+                   数・かず (n1) is a quantity or count, not the actual numerals in computation
+                -->
+                <keep_apart_from id="sūji-digit" />
+                <keep_apart_from id="kazu-count" />
                 <phrase
                   ph="【電：でん】【話：わ】【番：ばん】【号：ごう】"
                   rom="denwa-bangō"
@@ -1670,6 +1675,8 @@
                     sumi is a corner of a room, nook, inside-corner, sheltered place
                 -->
                 <see id="sumi-corner" rem="closely related" />
+                <see id="sankaku-triangle" rem="closely related" />
+                <see id="shikaku-square" rem="closely related" />
                 <keep_apart_from id="sumi-corner" />
                 <keep_apart_from id="katasumi-corner" />
                 <phrase
@@ -1688,7 +1695,61 @@
                   lvl="n5"
                   origin="ChatGPT"
                 />
+                <sentence
+                  s="【橋：はし】を【渡：わた】って、【二：ふた】つ【目：め】の【角：かど】を【右：みぎ】へ【曲：ま】がると【郵：ゆう】【便：びん】【局：きょく】があります。"
+                  rom="Hashi o watatte, futatsu-me no kado o migi e magaru to yūbinkyoku ga arimasu."
+                  tr_en="After crossing the bridge, turn right at the second corner, and you'll see the post office."
+                  tr_de="Gehen Sie über die Brücke, und wenn Sie sich an der zweiten Ecke nach rechts wenden, sehen Sie das Postamt."
+                  lvl="n4"
+                  origin="500mon N3 q55"
+                  rem="rated n4 because grammar 'magaru to'"
+                />
             </word>
+            <word
+              w="【他：ほか】"
+              rom="hoka"
+              tr_en="the other; the rest"
+              tr_de="die anderen; der Rest"
+              hint_en="places, things, persons"
+              hint_de="Orte, Sachen, Personen"
+              lvl="n5"
+              id="hoka-other"
+            >
+                <phrase
+                  ph="【他：ほか】に"
+                  rom="hoka ni"
+                  tr_en="other; besides; in addition to"
+                  tr_de="andere; anderes; sonstiges"
+                  lvl="n5"
+                />
+                <sentence
+                  s="【他：ほか】の ものが ありますか。"
+                  rom="Hoka no mono ga arimasu ka?"
+                  tr_en="Do you have any others?"
+                  tr_de="Haben Sie noch andere?"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【他：ほか】に 【道：みち】は ない。"
+                  rom="Hoka ni michi wa nai."
+                  tr_en="There is no other way."
+                  tr_de="Es gibt keinen anderen Weg."
+                  lvl="n5"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【他：ほか】に"
+              rom="hoka ni"
+              tr_en="other; besides; in addition to"
+              hint_en="expression"
+              hint_de="Ausdruck"
+              lvl="n5"
+              id="hokani-other"
+              HIDDEN="true"
+              rem="is now a phrase; keep in to silence goigoi-find-missing.sh"
+            />
         </section>
     </unit>
 </vocabulary>

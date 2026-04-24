@@ -13,7 +13,6 @@ class GoigoiUnyt {
     var hasRomaji = false
     var hasFurigana = false
     var ignoresCombinedReadings = false
-    var requiresIds = false
     var requiresSentences = false
     var requiresPhrases = false
     var requiredTranslations = listOf<String>()

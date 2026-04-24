@@ -11,10 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -347,15 +345,6 @@
               id="ōjiru-accept"
             >
                 <keep_apart_from id="sansei-approval" />
-                <phrase
-                  ph="【招：しょう】【待：たい】に【応：おう】じる"
-                  rom="shōtai ni ōjiru"
-                  tr_en="to accept an invitation"
-                  tr_de="eine Einladung annehmen"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT"
-                />
                 <phrase
                   ph="【頼：たの】みに【応：おう】じる"
                   rom="tanomi ni ōjiru"
@@ -720,6 +709,7 @@
               lvl="n3"
               category="mood, talking"
               id="unaru-groan"
+              rem="appears in Doraemon 0, p.24 as unattari shite and unarigoe"
             >
                 <sentence
                   s="【虎：とら】の【唸：うな】り【声：ごえ】が【聞：き】こえる。"
@@ -748,6 +738,41 @@
                   allowSpaces="true"
                   lvl="n3"
                   origin="lib0"
+                />
+            </word>
+            <word
+              w="【持：も】たせる"
+              rom="motaseru"
+              tr_en="to have so. hold; to let so. have"
+              tr_de="jem. etw. zum Halten geben; jem. etw. halten lassen"
+              lvl="n3"
+              category="hands"
+              id="motaseru-lethave"
+              rem="appears in Doraemon 0, p.11; jisho has nx"
+            >
+                <phrase
+                  ph="【気：き】を【持：も】たせる"
+                  rom="ki o motaseru"
+                  tr_en="to give so. false hopes"
+                  tr_de="jem. falsche Hoffnungen machen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="あまり【気：き】を【持：も】たせるようなことは【言：い】わないで。"
+                  rom="Amari ki o motaseru yō na koto wa iwanai de."
+                  tr_en="Don't say things that give me false hope."
+                  tr_de="Sag mir nicht Sachen, die mir falsche Hoffnung machen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【僕：ぼく】にもちょっと【持：も】たせて。"
+                  rom="Boku ni mo chotto motasete."
+                  tr_en="Let me hold it for a moment, too."
+                  tr_de="Lass es mich auch mal halten."
+                  lvl="n3"
+                  origin="Doraemon 0, p.11"
                 />
             </word>
             <word
@@ -1018,6 +1043,7 @@
             >
                 <!-- the noun is kurushimi, which is nx -->
                 <keep_apart_from id="itamu-hurt" />
+                <keep_apart_from id="kizutsuku-gethurt" />
             </word>
             <word
               w="【優：すぐ】れる"

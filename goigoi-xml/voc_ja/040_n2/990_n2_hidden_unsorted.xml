@@ -7,7 +7,6 @@
       hasFurigana="true"
       lvl="n2"
       HIDDEN="true"
-      translations="en"
       ignoresCombinedReadings="false"
     >
         <section>
@@ -185,6 +184,15 @@
                 <see id="urikire-soldout" rem="noun" />
             </word>
             <word
+              w="【見：み】【直：なお】す"
+              rom="mi-naosu"
+              tr_en="to look again; to re-examine; to review"
+              hint_en="v.t. &amp; i."
+              lvl="n2"
+              id="minaosu-reexamine"
+              rem="appears in 500mon N3 q38 (no example)"
+            />
+            <word
               w="【混：ま】じる"
               rom="majiru"
               tr_en="to be mixed; to be blended with; to be combined"
@@ -194,6 +202,31 @@
             >
                 <keep_apart_from id="mazaru-bemixed" />
             </word>
+            <word
+              w="【夫：ふ】【妻：さい】"
+              rom="fusai"
+              tr_en="husband and wife; married couple"
+              tr_de="Ehemann und Ehefrau; Ehepaar"
+              lvl="n2"
+              id="fusai-couple"
+              rem="appears in 500mon N3 q31 (without example)"
+            >
+                <keep_apart_from id="fūfu-couple" />
+            </word>
+            <word
+              w="【毎：まい】【度：ど】"
+              rom="mai-do"
+              tr_en="each time; always; often / thank you for your continued patronage"
+              hint_en="noun; adverb (fukushi)"
+              lvl="n2"
+            />
+            <word
+              w="【心：こころ】【当：あ】たり"
+              rom="kokoro-atari"
+              tr_en="having in mind; happening to know (of); idea (of); inkling"
+              hint_en="noun"
+              lvl="n2"
+            />
             <word
               w="【通：つう】【帳：ちょう】"
               rom="tsūchō"
@@ -874,13 +907,6 @@
               id="yakan-nighttime"
             />
             <word
-              w="【夫：ふ】【妻：さい】"
-              rom="fusai"
-              tr_en="husband and wife; married couple"
-              hint_en="noun"
-              lvl="n2"
-            />
-            <word
               w="【好：す】き【好：ず】き"
               rom="sukizuki"
               tr_en="matter of taste"
@@ -1252,13 +1278,6 @@
               lvl="n2"
             />
             <word
-              w="【余：よ】【計：けい】"
-              rom="yokei"
-              tr_en="excessive; superfluous; extra"
-              hint_en="adj."
-              lvl="n2"
-            />
-            <word
               w="【灯：とう】【油：ゆ】"
               rom="tōyu"
               tr_en="kerosene; paraffin; lamp oil"
@@ -1405,16 +1424,6 @@
               HIDDEN="true"
             >
                 <!-- その花にカメラの焦点を合わせる。Focus your camera on the flower. (lib0) -->
-            </word>
-            <word
-              w="【売：う】り【切：き】れ"
-              rom="uri-kire"
-              tr_en="sold-out"
-              hint_en="noun"
-              lvl="n2"
-              id="urikire-soldout"
-            >
-                <see id="urikireru-soldout" rem="verb" />
             </word>
             <word
               w="【作：さく】【成：せい】"
@@ -2402,7 +2411,11 @@
               hint_en="noun; suru verb"
               lvl="n2"
               id="hassō-idea"
-            />
+            >
+                <keep_apart_from id="shisō-idea" />
+                <keep_apart_from id="an-idea" />
+                <keep_apart_from id="aidea-idea" />
+            </word>
             <word
               w="【目：もく】【次：じ】"
               rom="mokuji"
@@ -2751,6 +2764,292 @@
               hint_en="noun"
               lvl="n2"
               id="eiwa-engjpn"
+            />
+            <word
+              w="【引：ひ】き【分：わ】け"
+              rom="hiki-wake"
+              tr_en="draw (in competition); tie game"
+              hint_en="noun"
+              lvl="n2"
+              id="hikiwake-tie"
+            />
+            <word
+              w="【引：ひ】き【止：と】める"
+              rom="hiki-tomeru"
+              tr_en="to detain; to check; to restrain; to stop"
+              hint_en="ichidan verb; transitive verb"
+              lvl="n2"
+              id="hikitomeru-detain"
+            />
+            <word
+              w="【引：いん】【力：りょく】"
+              rom="inryoku"
+              tr_en="attraction (e.g. magnetic, gravitation); affinity; gravitational pull / attractiveness; magnetism"
+              hint_en="noun"
+              lvl="n2"
+              id="inryoku-attraction"
+            />
+            <word
+              w="【弱：じゃく】【点：てん】"
+              rom="jakuten"
+              tr_en="weak point; weakness; shortcoming; defect; flaw; sore spot; tender spot"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【採：さい】【点：てん】"
+              rom="saiten"
+              tr_en="marking; grading; scoring"
+              hint_en="noun; suru verb; transitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【怒：ど】【鳴：な】る"
+              rom="donaru"
+              tr_en="to shout (in anger); to yell"
+              hint_en="godan verb with 'ru' ending; intransitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【性：せい】【別：べつ】"
+              rom="seibetsu"
+              tr_en="(distinction of) sex; gender"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【見：み】【下：お】ろす"
+              rom="mi-orosu"
+              tr_en="to overlook; to command a view of; to look down on / to despise; to look down on"
+              hint_en="godan verb with 'su' ending; transitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【見：み】【出：だ】し"
+              rom="midashi"
+              tr_en="heading; headline; title; caption / index / headword"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【見：み】【慣：な】れる"
+              rom="mi-nareru"
+              tr_en="to get used to seeing; to become accustomed to seeing; to be familiar with"
+              hint_en="ichidan verb; intransitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【見：み】【本：ほん】"
+              rom="mihon"
+              tr_en="sample; specimen; pattern / model; example"
+              hint_en="noun; noun which may take the genitive case particle 'no'"
+              lvl="n2"
+            />
+            <word
+              w="【見：み】【舞：ま】う"
+              rom="mi-mau"
+              tr_en="to visit and comfort or console; to go to see (e.g. someone in hospital); to ask after (e.g. someone's health); to inquire after / to attack; to hit; to strike; to deal (a punch)"
+              hint_en="godan verb with 'u' ending; transitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【規：き】【律：りつ】"
+              rom="kiritsu"
+              tr_en="order; observance; discipline / rules; law; regulations"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【観：かん】【念：ねん】"
+              rom="kannen"
+              tr_en="idea; notion; concept; conception / sense (e.g. of duty) / resignation (to one's fate); acceptance; preparedness / observation and contemplation; meditation / Idea"
+              hint_en="noun / noun; suru verb; transitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【比：ひ】【較：かく】【的：てき】"
+              rom="hikaku-teki"
+              tr_en="comparatively; relatively"
+              hint_en="adverb (fukushi)"
+              lvl="n2"
+            />
+            <word
+              w="【歌：か】【謡：よう】"
+              rom="kayō"
+              tr_en="song; ballad"
+              hint_en="noun"
+              lvl="n2"
+              id="kayō-song"
+            />
+            <word
+              w="【正：しょう】【味：み】"
+              rom="shōmi"
+              tr_en="net (amount); clear; full (e.g. working hours) / net weight / net price; cost price / actual content; useful part / Shoumi"
+              hint_en="noun which may take the genitive case particle 'no' / place"
+              lvl="n2"
+            />
+            <word
+              w="【正：せい】【門：もん】"
+              rom="seimon"
+              tr_en="main gate; main entrance / Seimon"
+              hint_en="noun / place"
+              lvl="n2"
+            />
+            <word
+              w="【此間：こないだ】"
+              rom="konaida"
+              tr_en="the other day; lately; recently"
+              hint_en="noun; adverb (fukushi)"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              lvl="n2"
+            />
+            <word
+              w="【段：だん】【階：かい】"
+              rom="dankai"
+              tr_en="stage; step; phase / level; rank; grade; gradation / order / stairs"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【下：げ】【品：ひん】"
+              rom="gehin"
+              tr_en="vulgar; indecent; coarse; crude"
+              hint_en="na-adjective (keiyodoshi); noun"
+              lvl="n2"
+            />
+            <word
+              w="【下：げ】【旬：じゅん】"
+              rom="gejun"
+              tr_en="last third of a month; 21st to the last day of a month"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【下：した】【書：が】き"
+              rom="shitagaki"
+              tr_en="draft; rough copy"
+              hint_en="noun; suru verb"
+              lvl="n2"
+            />
+            <word
+              w="【下：げ】【水：すい】"
+              rom="gesui"
+              tr_en="drainage; ditch; gutter; sewerage / sewage; black water"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【下：げ】【車：しゃ】"
+              rom="gesha"
+              tr_en="alighting (from a train, bus, etc.); getting off; getting out (of a car)"
+              hint_en="noun; suru verb; intransitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【両：りょう】【側：がわ】"
+              rom="ryōgawa"
+              tr_en="both sides"
+              hint_en="noun; noun which may take the genitive case particle 'no'"
+              lvl="n2"
+            />
+            <word
+              w="【並：なみ】【木：き】"
+              rom="namiki"
+              tr_en="roadside trees; row of trees"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【敬：うやま】う"
+              rom="uyamau"
+              tr_en="to show respect for; to revere; to honour; to honor; to worship; to hold in esteem"
+              hint_en="godan verb with 'u' ending; transitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【方：ほう】【程：てい】【式：しき】"
+              rom="hōteishiki"
+              tr_en="equation; formula / method for solving a problem; set way of achieving a particular result / Equation"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【方：ほう】【角：がく】"
+              rom="hōgaku"
+              tr_en="direction; way / point of the compass; cardinal direction; bearing / method; means; approach"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【方：ほう】【面：めん】"
+              rom="hōmen"
+              tr_en="direction; district; area / field (e.g. of study); sphere; quarter; aspect; angle"
+              hint_en="noun; noun, used as a suffix"
+              lvl="n2"
+            />
+            <word
+              w="【文：ぶん】【房：ぼう】【具：ぐ】"
+              rom="bunbōgu"
+              tr_en="stationery"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【文：ぶん】【脈：みゃく】"
+              rom="bunmyaku"
+              tr_en="context (of a passage); line of thought / context (of a matter, event, etc.); circumstances; background"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【文：ぶん】【芸：げい】"
+              rom="bungei"
+              tr_en="art and literature; liberal arts"
+              hint_en="noun"
+              lvl="n2"
+            />
+            <word
+              w="【妨：さまた】げる"
+              rom="samatageru"
+              tr_en="to disturb; to prevent; to obstruct; to hinder"
+              hint_en="ichidan verb; transitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【始：し】【終：じゅう】"
+              rom="shijū"
+              tr_en="continuously; from beginning to end; from first to last"
+              hint_en="adverb (fukushi); noun"
+              lvl="n2"
+            />
+            <word
+              w="【娯：ご】【楽：らく】"
+              rom="goraku"
+              tr_en="amusement; entertainment; recreation; pleasure; pastime; hobby"
+              hint_en="noun; suru verb"
+              lvl="n2"
+            />
+            <word
+              w="【忽：たちま】ち"
+              rom="tachimachi"
+              tr_en="in an instant; in a moment; immediately; right away; at once / suddenly; all of a sudden; all at once"
+              hint_en="adverb (fukushi)"
+              lvl="n2"
+            />
+            <word
+              w="【応：おう】ずる"
+              rom="ōzuru"
+              tr_en="to answer; to respond; to meet / to satisfy; to accept"
+              hint_en="ichidan verb - zuru verb (alternative form of -jiru verbs); intransitive verb"
+              lvl="n2"
+            />
+            <word
+              w="【応：おう】【用：よう】"
+              rom="ōyō"
+              tr_en="(practical) application; putting to practical use / applied (e.g. physics, linguistics, research)"
+              hint_en="noun; suru verb; transitive verb / noun or verb acting prenominally"
+              lvl="n2"
             />
         </section>
     </unit>

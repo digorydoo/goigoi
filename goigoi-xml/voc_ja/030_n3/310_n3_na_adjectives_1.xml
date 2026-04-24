@@ -11,13 +11,51 @@
       defaultHint_en="na-adjective"
       defaultHint_de="Na-Adjektiv"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- na-adjective -->
+            <word
+              w="【不：ふ】【満：まん】"
+              rom="fuman"
+              tr_en="dissatisfaction; displeasure; discontent"
+              tr_de="Unzufriedenheit; Unmut; Unbehagen"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              category="mood"
+              id="fuman-dissatisfaction"
+            >
+                <phrase
+                  ph="【不：ふ】【満：まん】な【気：き】【持：も】ち"
+                  rom="fuman na kimochi"
+                  tr_en="a feeling of dissatisfaction"
+                  tr_de="ein Gefühl der Unzufriedenheit"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【気：き】の【毒：どく】"
+              rom="ki no doku"
+              tr_en="unfortunate; miserable; wretched"
+              tr_de="bedauerlich; unglücklich; kümmerlich"
+              hint_en="expression; na-adjective"
+              hint_de="Ausdruck; Na-Adjektiv"
+              lvl="n3"
+              id="kinodoku-unfortunate"
+              rem="appears in 500mon N3 q56"
+            >
+                <sentence
+                  s="お【気：き】の【毒：どく】に。"
+                  rom="O-ki no doku ni."
+                  tr_en="That's too bad."
+                  tr_de="Das ist bedauerlich."
+                  lvl="n3"
+                  origin="500mon N3 q56"
+                />
+            </word>
             <word
               w="【満：まん】【足：ぞく】"
               rom="manzoku"
@@ -42,26 +80,6 @@
               lvl="n3"
               id="yūshū-superior"
             />
-            <word
-              w="【不：ふ】【満：まん】"
-              rom="fuman"
-              tr_en="dissatisfaction; displeasure; discontent"
-              tr_de="Unzufriedenheit; Unmut; Unbehagen"
-              hint_en="noun; na-adjective"
-              hint_de="Nomen; Na-Adjektiv"
-              lvl="n3"
-              category="mood"
-              id="fuman-dissatisfaction"
-            >
-                <phrase
-                  ph="【不：ふ】【満：まん】な【気：き】【持：も】ち"
-                  rom="fuman na kimochi"
-                  tr_en="a feeling of dissatisfaction"
-                  tr_de="ein Gefühl der Unzufriedenheit"
-                  lvl="n3"
-                  origin="jpod101 audio"
-                />
-            </word>
             <word
               w="【強：きょう】【力：りょく】"
               rom="kyōryoku"
@@ -135,16 +153,6 @@
               hint_de="Nomen; Na-Adjektiv"
               lvl="n3"
               id="gyaku-reverse"
-            />
-            <word
-              w="【気：き】の【毒：どく】"
-              rom="ki no doku"
-              tr_en="unfortunate; miserable; wretched"
-              tr_de="bedauerlich; unglücklich; kümmerlich"
-              hint_en="expression; na-adjective"
-              hint_de="Ausdruck; Na-Adjektiv"
-              lvl="n3"
-              id="kinodoku-unfortunate"
             />
             <word
               w="【完：かん】【全：ぜん】"
@@ -250,6 +258,9 @@
               id="raku-ease"
               rem="appears in GENKI2 L22 vocab section"
             >
+                <!--
+                  appears in Doraemon 0, p.28 as 楽々・らくらく (nx): comfortably; easy
+                -->
                 <phrase
                   ph="【楽：らく】な【生：せい】【活：かつ】"
                   rom="raku na seikatsu"
@@ -445,11 +456,15 @@
               id="nigate-notlike"
             >
                 <!--
-                    A see-also link to heta-unskilled may be confusing.
-                    nigate is more when one does not like something
-                    see https://hinative.com/questions/22231680
+                  A see-also link to heta-unskilled may be confusing.
+                  nigate is more when one does not like something
+                  see https://hinative.com/questions/22231680
                 -->
                 <keep_apart_from id="heta-unskilled" />
+                <!--
+                  Acc. to 500mon N3 q23, nigate and tokui are opposites.
+                -->
+                <see id="tokui-pride" rem="antonym" />
                 <phrase
                   ph="【苦：にが】【手：て】な【科：か】【目：もく】"
                   rom="nigate na kamoku"

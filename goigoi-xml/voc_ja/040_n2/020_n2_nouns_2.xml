@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n2"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <word
@@ -291,16 +289,68 @@
                 />
             </word>
             <word
-              w="【貸：か】し【出：だ】し"
-              rom="kashidashi"
-              tr_en="lending; loaning"
-              tr_de="Ausleihe; Verleihung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【末：すえ】っ【子：こ】"
+              rom="suekko"
+              tr_en="youngest child"
+              tr_de="jüngstes Geschwister"
               lvl="n2"
-              id="kashidashi-lending"
+              id="suekko-youngestchild"
+              rem="appears in 500mon N3 q47 as the answer"
             >
-                <!-- the verb is 貸し出す, which is nx -->
+                <see id="chōnan-eldestson" rem="closely related" />
+                <see id="hitorikko-onlychild" rem="closely related" />
+                <sentence
+                  s="【僕：ぼく】は【末：すえ】っ【子：こ】で、【姉：あね】が【一：ひと】【人：り】、【兄：あに】が【二：ふた】【人：り】います。"
+                  rom="Boku wa suekko de, ane ga hitori, ani ga futari imasu."
+                  tr_en="I'm the youngest child, and I have one sister and two brothers."
+                  tr_de="Ich bin das jüngste Kind, und ich habe eine Schwester und zwei Brüder."
+                  lvl="n2"
+                  origin="500mon N3 q47"
+                />
+            </word>
+            <word
+              w="【売：う】り【上：あ】げ"
+              rom="uri-age"
+              tr_en="amount sold; takings; turnover"
+              tr_de="Verkaufsmenge; Einnahmen; Umsatz"
+              lvl="n2"
+              id="uriage-sales"
+              rem="appears in 500mon N3 q62 as the answer"
+            >
+                <sentence
+                  s="この【店：みせ】の【一：いち】【日：にち】の【売：う】り【上：あ】げは、【約：やく】【10：じゅう】【万：まん】【円：えん】です。"
+                  rom="Kono mise no ichi-nichi no uri-age wa, yaku jū-man-en desu."
+                  tr_en="This shop's turnover is about 100'000 yen per day."
+                  tr_de="Der Umsatz von diesem Laden beträgt etwa 100'000 Yen pro Tag."
+                  lvl="n2"
+                  origin="500mon N3 q62"
+                />
+            </word>
+            <word
+              w="【売：う】り【切：き】れ"
+              rom="uri-kire"
+              tr_en="sold-out"
+              tr_de="ausverkauft"
+              hint_en="noun"
+              hint_de="Nomen"
+              lvl="n2"
+              id="urikire-soldout"
+              rem="appears in 500mon N3 q62 (no example)"
+            >
+                <see id="urikireru-soldout" rem="verb" />
+            </word>
+            <word
+              w="【長：ちょう】【男：なん】"
+              rom="chōnan"
+              tr_en="eldest son; first-born son"
+              tr_de="ältester Sohn; erstgeborener Sohn"
+              lvl="n2"
+              category="family, people"
+              id="chōnan-eldestson"
+              rem="appears in 500mon N3 q47 (no example)"
+            >
+                <see id="jinan-2ndson" rem="closely related" />
+                <see id="suekko-youngestchild" rem="closely related" />
             </word>
             <word
               w="【風：ふう】【船：せん】"
@@ -356,14 +406,6 @@
               tr_de="Ende; Schluss"
               lvl="n2"
               id="shūryō-end"
-            />
-            <word
-              w="【商：しょう】【店：てん】"
-              rom="shōten"
-              tr_en="shop; small store"
-              tr_de="kleiner Laden"
-              lvl="n2"
-              id="shōten-shop"
             />
             <word
               w="【窓：まど】【口：ぐち】"
@@ -480,15 +522,6 @@
               id="shinwa-myth"
             />
             <word
-              w="【調：ちょう】【味：み】【料：りょう】"
-              rom="chōmiryō"
-              tr_en="seasoning; flavouring"
-              tr_de="Würze; Gewürz"
-              lvl="n2"
-              category="cooking"
-              id="chōmiryō-seasoning"
-            />
-            <word
               w="【浴衣：ゆかた】"
               rom="yukata"
               tr_en="light cotton clothing"
@@ -587,17 +620,6 @@
               id="hōki-broom"
             />
             <word
-              w="【絵：え】の【具：ぐ】"
-              rom="enogu"
-              tr_en="paint; colouring materials"
-              tr_de="Malfarbe; Farbstoff"
-              lvl="n2"
-              category="arts"
-              id="enogu-paint"
-            >
-                <keep_apart_from id="penki-paint" />
-            </word>
-            <word
               w="ノコギリ"
               rom="nokogiri"
               tr_en="saw"
@@ -635,6 +657,7 @@
               tr_en="ladder"
               tr_de="Leiter"
               hasCombinedReading="true"
+              usuallyInKana="true"
               lvl="n2"
               category="garden, home"
               id="hashigo-ladder"

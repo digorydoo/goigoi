@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n4"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -433,7 +431,7 @@
               rem="appears in GENKI2 p.72 vocab section; jisho has n2"
             >
                 <see id="shimekiru-shutup" rem="verb" />
-                <keep_apart_from id="kiri-stop" />
+                <keep_apart_from id="kiri-cut" />
                 <phrase
                   ph="【締：し】め【切：き】りに【遅：おく】れる"
                   rom="shimekiri ni okureru"
@@ -561,6 +559,13 @@
                 <keep_apart_from id="tameni-sakeof" />
                 <keep_together id="tameni-sakeof" />
                 <keep_apart_from id="yō-use" />
+                <!--
+                  500mon N3 q48:
+                  WRONG: 風邪がうつらないために、マスクをします。
+                  Correct: 風邪がうつらないように、マスクをします。
+                  ChatGPT agrees and says ように is more common when it's about prevention or precaution.
+                  However, it remains unclear, esp. whether the examples below are actually fine.
+                -->
                 <phrase
                   ph="【自：じ】【由：ゆう】のために"
                   rom="jiyū no tame ni"

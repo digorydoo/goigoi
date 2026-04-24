@@ -11,10 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -99,6 +97,31 @@
                 <keep_apart_from id="nukasu-omit" />
             </word>
             <word
+              w="【頼：たよ】る"
+              rom="tayoru"
+              tr_en="to rely on; to count on; to turn to (for help)"
+              tr_de="sich auf etw. stützen; auf etw. zählen; sich an jem. wenden"
+              hint_en="v.i."
+              lvl="n3"
+              category="relationships, technical"
+              id="tayoru-relyon"
+            >
+                <see id="tayori-reliance" rem="noun" />
+            </word>
+            <word
+              w="【用：もち】いる"
+              rom="mochiiru"
+              tr_en="to use; to make use of; to utilise"
+              tr_de="etw. verwenden; von etw. Gebrauch machen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general, technical"
+              id="mochiiru-use"
+            >
+                <keep_apart_from id="tsukau-use" />
+                <keep_apart_from id="riyō-use" />
+            </word>
+            <word
               w="【効：き】く"
               rom="kiku"
               tr_en="to be effective; to be good (for); to function well"
@@ -166,16 +189,6 @@
               id="uru-obtain"
             />
             <word
-              w="【頼：たよ】る"
-              rom="tayoru"
-              tr_en="to rely on; to count on; to turn to (for help)"
-              tr_de="sich auf etw. stützen; auf etw. zählen; sich an jem. wenden"
-              hint_en="v.i."
-              lvl="n3"
-              category="relationships, technical"
-              id="tayoru-relyon"
-            />
-            <word
               w="【疑：うたが】う"
               rom="utagau"
               tr_en="to doubt; to distrust; to suspect"
@@ -186,19 +199,6 @@
               id="utagau-doubt"
             />
             <word
-              w="【用：もち】いる"
-              rom="mochiiru"
-              tr_en="to use; to make use of; to utilise"
-              tr_de="etw. verwenden; von etw. Gebrauch machen"
-              hint_en="v.t."
-              lvl="n3"
-              category="general, technical"
-              id="mochiiru-use"
-            >
-                <keep_apart_from id="tsukau-use" />
-                <keep_apart_from id="riyō-use" />
-            </word>
-            <word
               w="【除：のぞ】く"
               rom="nozoku"
               tr_en="to remove sth.; to eliminate; to exclude"
@@ -207,7 +207,9 @@
               lvl="n3"
               category="general"
               id="nozoku-eliminate"
-            />
+            >
+                <keep_apart_from id="torinozoku-remove" />
+            </word>
             <word
               w="【防：ふせ】ぐ"
               rom="fusegu"

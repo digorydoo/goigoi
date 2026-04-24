@@ -296,5 +296,7 @@ class FinalStats(
         firstWordWithNoSentence
             ?.toPrettyString(withKanjiKanaSeparated = true, withLvl = true, withId = true, withColour = false)
             .let { print("\nFirst word with no sentence: $it") }
+
+        println()
     }
 }

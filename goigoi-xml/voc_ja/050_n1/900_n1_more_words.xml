@@ -9,9 +9,7 @@
       hasRomaji="true"
       hasFurigana="true"
       lvl="n1"
-      translations="en, de"
       requiresSentences="false"
-      requiresIds="true"
     >
         <section>
             <!-- noun -->
@@ -174,6 +172,42 @@
                 />
             </word>
             <word
+              w="【製：せい】"
+              rom="sei"
+              tr_en="made from; made of"
+              tr_de="gemacht aus"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              studyInContext="preferred"
+              lvl="n1"
+              id="sei-made"
+            >
+                <phrase
+                  ph="【木：もく】【製：せい】の【床：ゆか】"
+                  rom="mokusei no yuka"
+                  tr_en="a wooden floor"
+                  tr_de="ein hölzerner Boden"
+                  lvl="n1"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="この【道：どう】【具：ぐ】の【柄：え】は【木：もく】【製：せい】です。"
+                  rom="Kono dōgu no e wa mokusei desu."
+                  tr_en="The handle of this tool is made of wood."
+                  tr_de="Der Griff dieses Werkzeugs ist aus Holz."
+                  lvl="n1"
+                  origin="DeepL"
+                />
+                <sentence
+                  s="【子：こ】ども【用：よう】の【食：しょっ】【器：き】は【割：わ】れにくいプラスチック【製：せい】が【多：おお】いです。"
+                  rom="Kodomo-yō no shokki wa ware-nikui purasuchikku-sei ga ōi desu."
+                  tr_en="Children's tableware is often made of break-resistant plastic."
+                  tr_de="Besteck für Kinder ist oft aus bruchfestem Plastik gemacht."
+                  lvl="n1"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
               w="【扱：あつか】い"
               rom="atsukai"
               tr_en="treatment; service; handling"
@@ -255,22 +289,6 @@
                 <keep_apart_from id="ōzei-crowd" />
                 <keep_apart_from id="gurūpu-group" />
                 <keep_apart_from id="gunshū-crowd" />
-            </word>
-            <word
-              w="【製：せい】"
-              rom="sei"
-              tr_en="-made; make"
-              hint_en="noun; suffix"
-              lvl="n1"
-              id="sei-made"
-              HIDDEN="true"
-            >
-                <!--
-                    子ども用の食器は割れにくいプラスチック製が多いです。
-                    Children's tableware is often made of break-resistant plastic.
-                    (ChatGPT)
-                -->
-                <!-- 木製の床 もくせいのゆか wooden floor (jpod101 audio) -->
             </word>
             <word
               w="【上：あ】がり"

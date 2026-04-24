@@ -64,6 +64,7 @@ val allowedOrigins = arrayOf(
     Regex("Yuko Sensei(| modified)"),
     Regex("duolingo(| modified)"),
     Regex("hinative(| modified)"),
+    Regex("jisho"),
     Regex("jpod101(| audio)(| modified)"),
     Regex("lib0(| modified)"),
     Regex("tofugu(| modified)"),
@@ -113,3 +114,6 @@ fun checkRomaji(primaryForm: String, givenRomaji: String, unyt: GoigoiUnyt, word
         )
     }
 }
+
+fun encodeJSONValue(s: String) =
+    s.replace("\"", "\\\"").replace("\n", "\\n").replace("\r", "").let { "\"$it\"" }

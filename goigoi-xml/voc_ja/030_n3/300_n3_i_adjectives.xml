@@ -11,10 +11,8 @@
       defaultHint_en="i-adjective"
       defaultHint_de="I-Adjektiv"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!--
@@ -126,6 +124,7 @@
               tr_de="detailliert; gut informiert; vertraut mit"
               lvl="n3"
               id="kuwashii-detailed"
+              rem="appears in 500mon N3 q41"
             >
                 <sentence
                   s="この【辺：へん】に【詳：くわ】しいですか。"
@@ -142,6 +141,14 @@
                   tr_de="Er kennt sich mit der japanischen Kultur gut aus."
                   lvl="n3"
                   origin="lib0"
+                />
+                <sentence
+                  s="もう【少：すこ】し【詳：くわ】しく【説：せつ】【明：めい】してくださいませんか。"
+                  rom="Mō sukoshi kuwashiku setsumei shite kudasaimasen ka?"
+                  tr_en="Could you please give me a more detailed explanation?"
+                  tr_de="Könnten Sie mir das etwas detaillierter erklären?"
+                  lvl="n3"
+                  origin="500mon N3 q41"
                 />
             </word>
             <word

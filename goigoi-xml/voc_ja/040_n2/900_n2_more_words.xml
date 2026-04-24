@@ -9,9 +9,7 @@
       hasRomaji="true"
       hasFurigana="true"
       lvl="n2"
-      translations="en"
       requiresSentences="false"
-      requiresIds="true"
     >
         <section>
             <!-- noun -->
@@ -253,6 +251,38 @@
                   lvl="n2"
                   origin="Oxford p.57"
                 />
+            </word>
+            <word
+              w="〜に【於：お】いて"
+              rom="~ ni oite"
+              tr_en="when it comes to ~; with respect to ~; under the authority of ~"
+              tr_de="betreffend ~; bezüglich ~; im Namen von ~"
+              usuallyInKana="true"
+              studyInContext="required"
+              lvl="n2"
+              id="nioite-regarding"
+              HIDDEN="true"
+              rem="appears in 500mon N3 q63 as the answer; jisho has nx for nioite, but n1 for oite"
+            >
+                <keep_apart_from id="oite-at" />
+                <keep_together id="oite-at" />
+                <!--
+                    The verb is 於ける・おける (nx).
+                    500mon N3 q63 also has example for 〜における; jisho has nx for niokeru
+                -->
+            </word>
+            <word
+              w="【於：おい】て"
+              rom="oite"
+              tr_en="at; in; on"
+              hint_en="conjunction"
+              lvl="n2"
+              id="oite-at"
+              HIDDEN="true"
+              rem="jisho has n1"
+            >
+                <keep_apart_from id="nioite-regarding" />
+                <keep_together id="nioite-regarding" />
             </word>
         </section>
     </unit>

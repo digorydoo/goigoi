@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n5"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- travelling, holidays -->
@@ -144,6 +142,7 @@
               lvl="n5"
               category="transportation, top-words"
               id="hikōki-aeroplane"
+              rem="kanji is asked in 500mon N3 q49"
             >
                 <phrase
                   ph="【飛：ひ】【行：こう】【機：き】に【乗：の】る"
@@ -882,6 +881,7 @@
               category="city, top-words"
               id="michi-street"
             >
+                <keep_apart_from id="dōro-road" />
                 <phrase
                   ph="【道：みち】を【渡：わた】る"
                   rom="michi o wataru"

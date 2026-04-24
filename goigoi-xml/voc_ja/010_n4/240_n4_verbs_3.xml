@@ -11,10 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n4"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <word
@@ -123,7 +121,8 @@
               lvl="n4"
               category="general"
               id="iru-needed"
-              rem="jisho has n5, but maybe they mixed it up with the other iru..."
+              rem="jisho has n5, but maybe they mixed it up with the other iru.
+                jisho has usuallyInKana, but Oxford p.144 and 500mon N3 q22 use kanji 要る"
             >
                 <phrase
                   ph="お【金：かね】が【要：い】る"
@@ -148,7 +147,14 @@
                   tr_de="Da ich bereits gegessen habe, brauche ich nichts."
                   lvl="n4"
                   origin="Oxford p.144"
-                  rem="Oxford uses kanji 要る; jisho says usually in kana; but maybe that's for the other iru"
+                />
+                <sentence
+                  s="やり【方：かた】は【簡：かん】【単：たん】です。【心：しん】【配：ぱい】は【要：い】りません。"
+                  rom="Yari-kata wa kantan desu. Shinpai wa irimasen."
+                  tr_en="It is easy to do. There is no need to worry."
+                  tr_de="Das geht ganz leicht. Sie brauchen sich keine Sorgen zu machen."
+                  lvl="n4"
+                  origin="500mon N3 q22"
                 />
             </word>
             <word
@@ -337,10 +343,12 @@
               rom="nareru"
               tr_en="to get used to; to become familiar with"
               tr_de="sich an etw. gewöhnen; etw. kennenlernen"
+              hint_en="v.i."
               lvl="n4"
               category="general"
               id="nareru-getusedto"
             >
+                <see id="narasu-accustom" rem="v.t." />
                 <phrase
                   ph="【仕：し】【事：ごと】に【慣：な】れる"
                   rom="shigoto ni nareru"
@@ -608,8 +616,9 @@
             <word
               w="【移：うつ】る"
               rom="utsuru"
-              tr_en="to move (house); to change (the target of interest)"
-              tr_de="umziehen (in eine andere Wohnung); (die Interessen) ändern"
+              tr_en="to move (house); to change (one's interest); to spread (infection)"
+              tr_de="(Wohnung) umziehen; (die Interessen) ändern; (Infektion) verbreiten"
+              studyInContext="preferred"
               hint_en="v.i."
               lvl="n4"
               category="general, home"

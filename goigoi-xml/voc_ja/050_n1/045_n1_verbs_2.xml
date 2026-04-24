@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N1 verbs ②"
+      name_de="N1-Verben ②"
+      name_fr="Les verbes N1 ②"
+      name_it="Verbi N1 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="verb"
+      defaultHint_de="Verb"
+      lvl="n1"
+      requiresSentences="false"
+      requiresPhrases="false"
+    >
+        <section>
+            <word
+              w="【炒：いた】める"
+              rom="itameru"
+              tr_en="to stir-fry; to saute"
+              tr_de="rührbraten; sautieren"
+              hint_en="v.t."
+              lvl="n1"
+              category="cooking"
+              id="itameru-fry"
+            >
+                <keep_apart_from id="itameru-hurt" />
+                <phrase
+                  ph="【野：や】【菜：さい】を【炒：いた】める"
+                  rom="yasai o itameru"
+                  tr_en="to stir-fry vegetables"
+                  tr_de="Gemüse rührbraten"
+                  lvl="n1"
+                />
+            </word>
+            <word
+              w="【付：つ】け【加：くわ】える"
+              rom="tsukekuwaeru"
+              tr_en="to add (a few more words, an explanation, etc.)"
+              tr_de="(einige Worte, eine Erklärung) anfügen"
+              hint_en="v.t."
+              lvl="n1"
+              category="talking"
+              id="tsukekuwaeru-add"
+            >
+                <keep_apart_from id="kuwaeru-add" />
+            </word>
+            <word
+              w="【傷：きず】つく"
+              rom="kizu-tsuku"
+              tr_en="to get injured; to get hurt; to get damaged"
+              tr_de="verletzt werden; sich wehtun; kaputt gehen"
+              hint_en="v.i."
+              lvl="n1"
+              id="kizutsuku-gethurt"
+            >
+                <see id="kizu-scar" rem="noun" />
+                <keep_apart_from id="itamu-hurt" />
+                <keep_apart_from id="kurushimu-suffer" />
+            </word>
+            <word
+              w="【緩：ゆる】む"
+              rom="yurumu"
+              tr_en="to become loose; to become less tense; to relax"
+              tr_de="locker werden; sich lockern; sich entspannen"
+              hint_en="v.i."
+              lvl="n1"
+              id="yurumu-becomeloose"
+            >
+                <see id="yurumeru-loosen" rem="v.t." />
+            </word>
+            <word
+              w="【緩：ゆる】める"
+              rom="yurumeru"
+              tr_en="to loosen sth.; to slacken sth.; to relax (a rule, etc.)"
+              tr_de="etw. lösen; etw. abschwächen; (eine Regel, usw.) lockern"
+              hint_en="v.t."
+              lvl="n1"
+              id="yurumeru-loosen"
+            >
+                <see id="yurumu-becomeloose" rem="v.i." />
+            </word>
+            <word
+              w="【試：こころ】みる"
+              rom="kokoro-miru"
+              tr_en="to try; to have a go (at sth.)"
+              tr_de="etw. versuchen; etw. ausprobieren"
+              hint_en="v.t."
+              lvl="n1"
+              id="kokoromiru-try"
+            >
+                <keep_apart_from id="tamesu-attempt" />
+            </word>
+            <word
+              w="【埋：う】まる"
+              rom="umaru"
+              tr_en="to be buried; to be crowded; to be filled"
+              tr_de="begraben werden; überfüllt sein; sich füllen"
+              Langenscheidt="begraben werden, sich füllen"
+              hint_en="v.i."
+              lvl="n1"
+              id="umaru-overflow"
+            >
+                <see id="aku-empty" rem="antonym" />
+                <see id="umeru-fillaposition" rem="v.t." />
+            </word>
+            <word
+              w="【帯：お】びる"
+              rom="obiru"
+              tr_en="to wear (a sword, a decoration); to be entrusted with sth."
+              tr_de="(Schwert, Auszeichnung) tragen; mit etw. anvertraut sein"
+              hint_en="v.t."
+              lvl="n1"
+              id="obiru-wear"
+            />
+            <word
+              w="やり【遂：と】げる"
+              rom="yari-togeru"
+              tr_en="to accomplish; to finish; to carry through"
+              tr_de="etw. fertigbringen; etw. zu Ende bringen"
+              hint_en="v.t."
+              lvl="n1"
+              id="yaritogeru-accomplish"
+            />
+            <word
+              w="【重：おも】んじる"
+              rom="omonjiru"
+              tr_en="to respect sb.; to honour sb.; to esteem"
+              tr_de="jem. respektieren; jem. ehren; etw. wertschätzen"
+              hint_en="v.t."
+              lvl="n1"
+              id="omonjiru-honour"
+            />
+            <word
+              w="【似：に】【通：かよ】う"
+              rom="ni-kayou"
+              tr_en="to resemble closely"
+              tr_de="sich stark ähneln; sich gleichen"
+              hint_en="v.i."
+              lvl="n1"
+              id="nikayou-resemble"
+            />
+            <word
+              w="【冷：ひ】やかす"
+              rom="hiyakasu"
+              tr_en="to make fun of; to refrigerate; to look at without buying"
+              tr_de="sich lustig machen; etw. einfrieren; anschauen, ohne zu kaufen"
+              hint_en="v.t."
+              lvl="n1"
+              id="hiyakasu-jeerat"
+            />
+            <word
+              w="【倣：なら】う"
+              rom="narau"
+              tr_en="to imitate; to follow; to emulate"
+              tr_de="imitieren; folgen; emulieren"
+              Langenscheidt="-"
+              hint_en="v.i."
+              lvl="n1"
+              id="narau-imitate"
+            />
+            <word
+              w="【備：そな】わる"
+              rom="sonawaru"
+              tr_en="to be furnished with; to be provided with; to be equipped with"
+              tr_de="möbiliert sein; mit etw. versorgt werden; mit etw. ausgerüstet sein"
+              hint_en="v.i."
+              lvl="n1"
+              id="sonawaru-beprovidedwith"
+            />
+            <word
+              w="【口：くち】ずさむ"
+              rom="kuchizusamu"
+              tr_en="to hum (a tune); to sing to oneself; to croon"
+              tr_de="(eine Melodie) summen; leise singen"
+              hint_en="v.t."
+              lvl="n1"
+              id="kuchizusamu-hum"
+            />
+            <word
+              w="【受：う】け【継：つ】ぐ"
+              rom="uke-tsugu"
+              tr_en="to inherit; to succeed; to take over"
+              tr_de="etw. erben; nach etw. kommen; etw. übernehmen"
+              hint_en="v.t."
+              lvl="n1"
+              id="uketsugu-inherit"
+            />
+            <word
+              w="【受：う】け【入：い】れる"
+              rom="uke-ireru"
+              tr_en="to receive sth.; to accept sth."
+              tr_de="etw. annehmen; etw. akzeptieren"
+              hint_en="v.t."
+              lvl="n1"
+              id="ukeireru-accept"
+            />
+            <word
+              w="【心：こころ】がける"
+              rom="kokorogakeru"
+              tr_en="to bear in mind; to aim to do; to endeavour"
+              tr_de="etw. im Auge behalten; auf etw. abzielen; bestrebt sein"
+              hint_en="v.t."
+              lvl="n1"
+              id="kokorogakeru-endeavour"
+            />
+            <word
+              w="【交：か】わす"
+              rom="kawasu"
+              tr_en="to exchange (greetings, etc.); to cross"
+              tr_de="(Grüsse, usw.) austauschen; kreuzen"
+              hint_en="v.t."
+              lvl="n1"
+              id="kawasu-cross"
+            />
+            <word
+              w="【焦：あせ】る"
+              rom="aseru"
+              tr_en="to be impatient; to be in a hurry"
+              tr_de="ungedulig sein; in Eile sein"
+              lvl="n1"
+              category="mood, not-good"
+              id="aseru-impatient"
+            />
+            <word
+              w="【呟：つぶや】く"
+              rom="tsubuyaku"
+              tr_en="to grumble"
+              tr_de="murren; schimpfen"
+              lvl="n1"
+              category="mood, not-good"
+              id="tsubuyaku-grumble"
+            />
+        </section>
+    </unit>
+</vocabulary>

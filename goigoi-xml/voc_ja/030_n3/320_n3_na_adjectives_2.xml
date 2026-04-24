@@ -11,10 +11,8 @@
       defaultHint_en="na-adjective"
       defaultHint_de="Na-Adjektiv"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- na-adjective -->
@@ -94,6 +92,20 @@
                 />
             </word>
             <word
+              w="【微：び】【妙：みょう】"
+              rom="bimyō"
+              tr_en="tricky; questionable; subtle"
+              tr_de="zweifelhaft; heikel; subtil"
+              hint_en="na-adjective; noun"
+              lvl="n3"
+              id="bimyō-iffy"
+            >
+                <!--
+                  Acc. to ChatGPT, 微妙 is not "delicate" in the sense of a "delicate flower", more
+                  like a subtle question, a bit off or "iffy".
+                -->
+            </word>
+            <word
               w="【哀：あわ】れ"
               rom="aware"
               tr_en="pitiable; pathetic; miserable"
@@ -118,6 +130,22 @@
                 <keep_apart_from id="umai-clever" />
                 <keep_apart_from id="kashikoi-smart" />
                 <keep_apart_from id="rikō-clever" />
+            </word>
+            <word
+              w="【上：じょう】【等：とう】"
+              rom="jōtō"
+              tr_en="superior; first-class; top quality"
+              tr_de="hochwertig; erstklassig; beste Qualität"
+              hint_en="noun; na-adjective"
+              hint_de="Nomen; Na-Adjektiv"
+              lvl="n3"
+              id="jōtō-superior"
+              rem="appears in 500mon N3 q23 (without example)"
+            >
+                <keep_apart_from id="ichiban-best" />
+                <keep_apart_from id="tokui-pride" />
+                <keep_apart_from id="jōzu-skilled" />
+                <keep_apart_from id="kōkyū-highclass" />
             </word>
             <word
               w="【退：たい】【屈：くつ】"
@@ -541,15 +569,6 @@
               hint_en="noun; na-adjective (keiyodoshi); suru verb"
               lvl="n3"
               id="fujiyū-discomfort"
-              HIDDEN="true"
-            />
-            <word
-              w="【上：じょう】【等：とう】"
-              rom="jōtō"
-              tr_en="superior; first-class; excellent; top quality; (that's) just fine!; bring it on!"
-              hint_en="noun; na-adjective"
-              lvl="n3"
-              id="jōtō-superior"
               HIDDEN="true"
             />
             <word

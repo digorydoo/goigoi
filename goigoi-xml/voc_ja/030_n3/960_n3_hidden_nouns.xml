@@ -8,14 +8,34 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      translations="en"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="false"
       HIDDEN="true"
     >
         <section>
             <!-- unsorted -->
+            <word
+              w="【評：ひょう】【判：ばん】"
+              rom="hyōban"
+              tr_en="reputation; popularity; rumour"
+              tr_de="Ruf; Popularität; Munkeln"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="hyōban-reputation"
+            />
+            <word
+              w="【要：よう】【求：きゅう】"
+              rom="yōkyū"
+              tr_en="requirement; demand; to desire"
+              tr_de="Anforderung; Nachfrage; wünschen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="yōkyū-demand"
+            >
+                <!-- 無理な要求 - muri na yōkyū - an unrealistic demand (ChatGPT) -->
+            </word>
             <word
               w="【発：はっ】【達：たつ】"
               rom="hattatsu"
@@ -116,6 +136,22 @@
                 <keep_apart_from id="jōtatsu-improve" />
 
                 <keep_apart_from id="zōka-increase" />
+            </word>
+            <word
+              w="【思：し】【想：そう】"
+              rom="shisō"
+              tr_en="thought; idea; ideology"
+              tr_de="Gedanke; Idee; Ideologie"
+              hint_en="noun"
+              lvl="n3"
+              category="thinking"
+              id="shisō-idea"
+            >
+                <keep_apart_from id="an-idea" />
+                <keep_apart_from id="aidea-idea" />
+                <keep_apart_from id="hassō-idea" />
+                <keep_apart_from id="kangae-thought" />
+                <keep_apart_from id="omoi-thought" />
             </word>
             <word
               w="【実：じっ】【行：こう】"
@@ -483,6 +519,26 @@
             >
                 <!-- 問題を解決する - mondai o kaiketsu suru - to solve a problem (ChatGPT) -->
             </word>
+            <word
+              w="【外：がい】【交：こう】"
+              rom="gaikō"
+              tr_en="diplomacy"
+              tr_de="Diplomatie"
+              lvl="n3"
+              category="politics"
+              id="gaikō-diplomacy"
+            />
+            <word
+              w="【回：かい】【復：ふく】"
+              rom="kaifuku"
+              tr_en="recovery"
+              tr_de="Genesung"
+              hint_en="from illness"
+              hint_de="nach einer Krankheit"
+              lvl="n3"
+              category="health"
+              id="kaifuku-recovery"
+            />
             <word
               w="【例：たと】え"
               rom="tatoe"
@@ -1107,7 +1163,10 @@
               tr_en="news; tidings; information; correspondence; letter"
               hint_en="noun; suffix; suru verb"
               lvl="n3"
-            />
+              id="tayori-news"
+            >
+                <!-- keep_apart_from shirase -->
+            </word>
             <word
               w="【丸：まる】"
               rom="maru"
@@ -1360,14 +1419,6 @@
               id="keiji-post"
             />
             <word
-              w="【思：し】【想：そう】"
-              rom="shisō"
-              tr_en="thought; idea; ideology"
-              hint_en="noun"
-              lvl="n3"
-              category="thinking"
-            />
-            <word
               w="【憲：けん】【法：ぽう】"
               rom="kenpō"
               tr_en="constitution / rules; regulation"
@@ -1471,9 +1522,14 @@
               w="【決：けっ】【定：てい】"
               rom="kettei"
               tr_en="decision; determination"
-              hint_en="noun; suru verb; v.t.; v.i."
+              tr_de="Entscheidung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
-            />
+              id="kettei-decision"
+            >
+                <!-- この決定は最終的だ。 This decision is final. (lib0) -->
+            </word>
             <word
               w="【考：こう】【慮：りょ】"
               rom="kōryo"

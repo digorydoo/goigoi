@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n5"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- family -->
@@ -734,6 +732,7 @@
               category="general"
               id="iriguchi-entrance"
             >
+                <keep_together id="deguchi-exit" />
                 <phrase
                   ph="【店：みせ】の【入：いり】【口：ぐち】"
                   rom="mise no iriguchi"
@@ -741,6 +740,15 @@
                   tr_de="Eingang des Ladens"
                   lvl="n5"
                   origin="ChatGPT"
+                />
+                <phrase
+                  ph="【出：で】【入：いり】【口：ぐち】"
+                  rom="deiriguchi"
+                  tr_en="entrance and exit"
+                  tr_de="Ein- und Ausgang"
+                  lvl="n5"
+                  origin="Doraemon 0, p.17 modified"
+                  rem="Doraemon has 出入り口; changed to 出入口 for consistency; both spellings are common"
                 />
                 <sentence
                   s="【小：こ】【山：やま】さんが 【入：いり】【口：ぐち】に 【立：た】って いました。"
@@ -760,6 +768,7 @@
               category="general"
               id="deguchi-exit"
             >
+                <keep_together id="iriguchi-entrance" />
                 <phrase
                   ph="【地：ち】【下：か】【鉄：てつ】の【出：で】【口：ぐち】"
                   rom="chikatetsu no deguchi"

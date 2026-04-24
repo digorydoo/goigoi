@@ -18,10 +18,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n2"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -127,6 +125,37 @@
                   lvl="n2"
                   origin="self"
                   rem="rephrased by ChatGPT"
+                />
+            </word>
+            <word
+              w="【和：わ】【室：しつ】"
+              rom="washitsu"
+              tr_en="Japanese-style room"
+              tr_de="Raum im japanischen Stil"
+              lvl="n2"
+              category="home"
+              id="washitsu-japanesestyleroom"
+              rem="appears in 500mon q454, 500mon N3 q10"
+            >
+                <keep_apart_from id="ima-livingroom" />
+                <sentence
+                  s="【向：む】こうの【和：わ】【室：しつ】でお【茶：ちゃ】とお【菓：か】【子：し】をいただきましょう。"
+                  rom="Mukō no washitsu de o-cha to o-kashi o itadakimashō."
+                  tr_en="Let's have tea and sweets at the Japanese-style room over there."
+                  tr_de="Lasst uns Tea und Süssigkeiten im japanischen Raum gegenüber einnehmen."
+                  lvl="n2"
+                  origin="500mon N3 q10"
+                />
+                <sentence
+                  s="この【和：わ】【室：しつ】の【雨：あま】【戸：ど】は【古：ふる】くて【重：おも】いので【閉：し】めるのに【力：ちから】がいります。"
+                  rom="Kono washitsu no amado wa furukute omoi no de shimeru no ni chikara ga irimasu."
+                  tr_en="Since the shutters of this Japanese-style room are old and heavy, it takes some strength to close them."
+                  tr_de="Da die Fensterläden dieses japanischen Raumes so alt und schwer sind, braucht es Kraft, um sie zu schliessen."
+                  explanation_en="「【要：い】る」= to need, to want"
+                  explanation_de="「【要：い】る」= brauchen, wollen"
+                  lvl="n2"
+                  origin="500mon q454"
+                  rem="jisho has nx for washitsu, n2 for amado"
                 />
             </word>
             <word
@@ -401,15 +430,25 @@
                 />
             </word>
             <word
-              w="【火：か】【山：ざん】"
-              rom="kazan"
-              tr_en="volcano"
-              tr_de="Vulkan"
+              w="【貝：かい】"
+              rom="kai"
+              tr_en="shellfish"
+              tr_de="Muscheltier"
               lvl="n2"
-              category="fire, nature"
-              id="kazan-volcano"
+              category="nature, animal"
+              id="kai-shellfish"
             >
-                <!-- 火山の活動 - volcanic activity (ChatGPT) -->
+                <keep_apart_from id="kaigara-seashell" />
+                <keep_together id="kara-shell" />
+                <sentence
+                  s="その【絵：かい】【画：が】には【貝：かい】が【描：か】かれている。"
+                  rom="Sono kaiga ni wa kai ga kakarete iru."
+                  tr_en="This painting depicts shellfish."
+                  tr_de="Auf diesem Gemälde hat es Muscheln."
+                  lvl="n2"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
             </word>
             <word
               w="【噴：ふん】【火：か】"
@@ -500,6 +539,17 @@
                 />
             </word>
             <word
+              w="【火：か】【山：ざん】"
+              rom="kazan"
+              tr_en="volcano"
+              tr_de="Vulkan"
+              lvl="n2"
+              category="fire, nature"
+              id="kazan-volcano"
+            >
+                <!-- 火山の活動 - volcanic activity (ChatGPT) -->
+            </word>
+            <word
               w="【金：きん】【魚：ぎょ】"
               rom="kingyo"
               tr_en="goldfish"
@@ -509,18 +559,6 @@
               id="kingyo-goldfish"
               rem="appears in GENKI2 p.286 kanji section"
             />
-            <word
-              w="【貝：かい】"
-              rom="kai"
-              tr_en="shellfish"
-              tr_de="Muscheltier"
-              lvl="n2"
-              category="nature, animal"
-              id="kai-shellfish"
-            >
-                <keep_apart_from id="kaigara-seashell" />
-                <keep_together id="kara-shell" />
-            </word>
             <word
               w="【殻：から】"
               rom="kara"
@@ -727,17 +765,8 @@
               id="ashiato-footprints"
             />
             <word
-              w="【物：もの】【差：さ】し"
-              rom="monosashi"
-              tr_en="ruler"
-              tr_de="Lineal"
-              lvl="n2"
-              category="education, arts"
-              id="monosashi-ruler"
-            />
-            <word
               w="【待：まち】【合：あい】【室：しつ】"
-              rom="machiaishitsu"
+              rom="machiai-shitsu"
               tr_en="waiting room"
               tr_de="Wartezimmer"
               lvl="n2"

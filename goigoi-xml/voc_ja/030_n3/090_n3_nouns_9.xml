@@ -11,13 +11,54 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
+            <word
+              w="【機：き】【嫌：げん】"
+              rom="kigen"
+              tr_en="humour; temper; well-being"
+              tr_de="Stimmung; Temperament; Wohlbefinden"
+              lvl="n3"
+              category="mood, happiness"
+              id="kigen-temper"
+            >
+                <keep_apart_from id="ki-mood" />
+                <keep_apart_from id="kibun-feeling" />
+                <keep_apart_from id="kanjō-emotion" />
+                <keep_apart_from id="kanji-feeling" />
+                <keep_apart_from id="kimochi-sensation" />
+                <keep_apart_from id="kimi-feeling" />
+                <keep_apart_from id="kankaku-sense" />
+                <phrase
+                  ph="ご【機：き】【嫌：げん】よう"
+                  rom="go-kigen yō"
+                  tr_en="farewell"
+                  tr_de="auf Wiedersehen"
+                  explanation_en="Polite and somewhat old-fashioned greeting that comes from: 「ご機嫌がようございますね」"
+                  explanation_de="Höflicher und etwas altmodischer Gruss, der von 「ご機嫌がようございますね」 kommt."
+                  lvl="n3"
+                  rem="From Bombom TV; ChatGPT says it's a very polite and somewhat old-fashioned greeting."
+                />
+                <sentence
+                  s="ご【機：き】【嫌：げん】いかがですか。"
+                  rom="Go-kigen ikaga desu ka?"
+                  tr_en="How are you feeling? (How's your health?)"
+                  tr_de="Wie fühlen Sie sich? (Wie geht es Ihrer Gesundheit?)"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ハルトさんは【朝：あさ】から【機：き】【嫌：げん】が【悪：わる】いみたい。"
+                  rom="Haruto-san wa asa kara kigen ga warui mitai."
+                  tr_en="Haruto seems to be in a bad mood since morning."
+                  tr_de="Haruto scheint seit dem Morgen in schlechter Stimmung zu sein."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
             <word
               w="【企：き】【業：ぎょう】"
               rom="kigyō"
@@ -169,54 +210,6 @@
                 />
             </word>
             <word
-              w="【訓：くん】【練：れん】"
-              rom="kunren"
-              tr_en="drill; training; practice"
-              tr_de="Drill; Training; Übung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="sports, military"
-              id="kunren-drill"
-            >
-                <!--
-                    訓練・くんれん: training to build discipline, ability, or readiness for something practical;
-                       esp. in contexts like military, police, fire brigade, rescue, company drills, animal training
-                    練習・れんしゅう: practice in general; sports, music, daily skills
-                -->
-                <keep_apart_from id="renshū-practice" />
-                <keep_apart_from id="torēningu-training" />
-                <keep_apart_from id="undō-workout" />
-                <phrase
-                  ph="【歌：か】【手：しゅ】になる【訓：くん】【練：れん】を【受：う】ける"
-                  rom="kashu ni naru kunren o ukeru"
-                  tr_en="to receive training to become a singer"
-                  tr_de="eine Gesangsausbildung erhalten"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT; lib0 also has 〜となる and 〜として, but ChatGPT likes 〜になる best"
-                />
-                <sentence
-                  s="【犬：いぬ】に【新：しん】【聞：ぶん】を【取：と】ってくるように【訓：くん】【練：れん】した。"
-                  rom="Inu ni shinbun o totte kuru yō ni kunren shita."
-                  tr_en="I trained my dog to fetch the newspaper."
-                  tr_de="Ich habe meinen Hund dressiert, die Zeitung zu holen."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【軍：ぐん】【隊：たい】では【兵：へい】【隊：たい】が【毎：まい】【日：にち】 【訓：くん】【練：れん】しなければならない。"
-                  rom="Guntai de wa heitai ga mai-nichi kunren shinakereba naranai."
-                  tr_en="In the army, soldiers have to train every day."
-                  tr_de="Im Militär müssen die Söldner jeden Tag trainieren."
-                  allowSpaces="true"
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
               w="【観：かん】【察：さつ】"
               rom="kansatsu"
               tr_en="observation; watching"
@@ -251,38 +244,6 @@
                   rom="Nishimura-san no kansatsu wa seikaku da."
                   tr_en="Mr Nishimura's observations are accurate."
                   tr_de="Die Beobachtungen von Herrn Nishimura sind zutreffend."
-                  lvl="n3"
-                  origin="lib0 modified"
-                />
-            </word>
-            <word
-              w="【証：しょう】【明：めい】"
-              rom="shōmei"
-              tr_en="proof (of guilt, innocence, etc.); verification"
-              tr_de="Beweis (der Schuld, Unschuld, usw.); Nachweis"
-              Langenscheidt="Nachweis, nachweisen"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="crime"
-              id="shōmei-proof"
-            >
-                <keep_apart_from id="akashi-proof" />
-                <keep_apart_from id="shōko-proof" />
-                <phrase
-                  ph="【身：み】【分：ぶん】【証：しょう】【明：めい】【書：しょ】"
-                  rom="mibun shōmeisho"
-                  tr_en="identification papers; ID"
-                  tr_de="Identitätsausweis; ID"
-                  lvl="n3"
-                  origin="self"
-                  rem="jsho has nx"
-                />
-                <sentence
-                  s="【小：こ】【林：ばやし】さんが【正：しょう】【直：じき】だと【証：しょう】【明：めい】します。"
-                  rom="Kobayashi-san ga shōjiki da to shōmei shimasu."
-                  tr_en="I will prove that Mr Kobayashi is honest."
-                  tr_de="Ich werde nachweisen, dass Kobayashi ehrlich ist."
                   lvl="n3"
                   origin="lib0 modified"
                 />
@@ -325,23 +286,68 @@
                 />
             </word>
             <word
-              w="【衛：えい】【星：せい】"
-              rom="eisei"
-              tr_en="satellite"
-              tr_de="Satellit"
-              hint_en="natural or artificial"
-              hint_de="natürlich oder künstlich"
+              w="【禁：きん】【止：し】"
+              rom="kinshi"
+              tr_en="prohibition; inhibition; ban"
+              tr_de="Verbot; Sperre; Bann"
               lvl="n3"
-              category="astronomy"
-              id="eisei-satellite"
+              category="politics"
+              id="kinshi-ban"
             >
-                <sentence
-                  s="【月：つき】は【地：ち】【球：きゅう】の【衛：えい】【星：せい】だ。"
-                  rom="Tsuki wa chikyū no eisei da."
-                  tr_en="The moon is the Earth's satellite."
-                  tr_de="Der Mond ist der Satellit der Erde."
+                <keep_apart_from id="kinen-nosmoking" />
+                <phrase
+                  ph="【立：た】ち【入：い】り【禁：きん】【止：し】"
+                  rom="tachiiri-kinshi"
+                  tr_en="keep out; no entry"
+                  tr_de="Zutritt verboten"
                   lvl="n3"
                   origin="lib0"
+                  rem="verified with ChatGPT; furigana verified with jisho; jisho has nx, but n5 for tatsu, hairu, ireru"
+                />
+                <sentence
+                  s="その【橋：はし】は【通：つう】【行：こう】【禁：きん】【止：し】です。"
+                  rom="Sono hashi wa tsūkō-kinshi desu."
+                  tr_en="That bridge is closed to traffic."
+                  tr_de="Die Brücke ist geschlossen für den Verkehr."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; tsūkō is n3"
+                />
+            </word>
+            <word
+              w="【調：ちょう】【査：さ】"
+              rom="chōsa"
+              tr_en="survey; enquiry; to investigate"
+              tr_de="Umfrage; Untersuchung; untersuchen"
+              Langenscheidt="Untersuchung; Umfrage"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="chōsa-survey"
+              rem="appears in GENKI2 L23 vocab section"
+            >
+                <see id="sōsa-enquiry" rem="closely related" />
+                <keep_apart_from id="kenkyū-research" />
+                <keep_apart_from id="sōsa-enquiry" />
+                <keep_apart_from id="kensa-examination" />
+                <keep_apart_from id="mensetsu-interview" />
+                <keep_apart_from id="ankēto-enquête" />
+                <phrase
+                  ph="【事：じ】【故：こ】の【原：げん】【因：いん】を【調：ちょう】【査：さ】する"
+                  rom="jiko no gen'in o chōsa suru"
+                  tr_en="to investigate the cause of the accident"
+                  tr_de="den Grund des Unfalls untersuchen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【警：けい】【察：さつ】は【調：ちょう】【査：さ】を【続：つづ】けた。"
+                  rom="Keisatsu wa chōsa o tsudzuketa."
+                  tr_en="The police continued their investigation."
+                  tr_de="Die Polizei hat ihre Untersuchungen fortgesetzt."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="for a criminal investigation, 捜査 (そうさ) would be even more specific, but it's n1"
                 />
             </word>
             <word
@@ -424,42 +430,6 @@
                   tr_de="In dem Laden dort werden Früchte und Gemüse verkauft."
                   lvl="n3"
                   origin="lib0"
-                />
-            </word>
-            <word
-              w="【環：かん】【境：きょう】"
-              rom="kankyō"
-              tr_en="environment; circumstance"
-              tr_de="Umgebung; Umstände"
-              lvl="n3"
-              id="kankyō-environment"
-              rem="appears in GENKI2 L21 vocab section"
-            >
-                <!-- phrase 環境に慣れる (かんきょうになれる) - Get used to the environment. (ChatGPT) -->
-                <phrase
-                  ph="【環：かん】【境：きょう】【問：もん】【題：だい】への【関：かん】【心：しん】を【高：たか】める"
-                  rom="kankyō mondai e no kanshin o takameru"
-                  tr_en="to raise the awareness about environmental issues"
-                  tr_de="das Bewusstsein für Umweltsprobleme fördern"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-            </word>
-            <word
-              w="【塀：へい】"
-              rom="hei"
-              tr_en="fence; wall"
-              tr_de="Zaun; Mauer"
-              lvl="n3"
-              id="hei-fence"
-            >
-                <keep_apart_from id="saku-fence" />
-                <sentence
-                  s="【庭：にわ】の【回：まわ】りに【高：たか】い【塀：へい】があった。"
-                  rom="Niwa no mawari ni takai hei ga atta."
-                  tr_en="There was a high fence around the garden."
-                  tr_de="Der Garten war von einem hohen Zaun umgeben."
-                  lvl="n3"
                 />
             </word>
             <word
@@ -589,6 +559,7 @@
                 <keep_apart_from id="ninmu-mission" />
                 <keep_apart_from id="tantō-incharge" />
                 <keep_apart_from id="azukaru-keepincustody" />
+                <keep_apart_from id="hikiukeru-takeon" />
                 <phrase
                   ph="【係：かかり】の【者：もの】"
                   rom="kakari no mono"
@@ -615,6 +586,62 @@
                   hasDifferentForm="true"
                   lvl="n3"
                   origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【衛：えい】【星：せい】"
+              rom="eisei"
+              tr_en="satellite"
+              tr_de="Satellit"
+              hint_en="natural or artificial"
+              hint_de="natürlich oder künstlich"
+              lvl="n3"
+              category="astronomy"
+              id="eisei-satellite"
+            >
+                <sentence
+                  s="【月：つき】は【地：ち】【球：きゅう】の【衛：えい】【星：せい】だ。"
+                  rom="Tsuki wa chikyū no eisei da."
+                  tr_en="The moon is the Earth's satellite."
+                  tr_de="Der Mond ist der Satellit der Erde."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【環：かん】【境：きょう】"
+              rom="kankyō"
+              tr_en="environment; circumstance"
+              tr_de="Umgebung; Umstände"
+              lvl="n3"
+              id="kankyō-environment"
+              rem="appears in GENKI2 L21 vocab section"
+            >
+                <!-- phrase 環境に慣れる (かんきょうになれる) - Get used to the environment. (ChatGPT) -->
+                <phrase
+                  ph="【環：かん】【境：きょう】【問：もん】【題：だい】への【関：かん】【心：しん】を【高：たか】める"
+                  rom="kankyō mondai e no kanshin o takameru"
+                  tr_en="to raise the awareness about environmental issues"
+                  tr_de="das Bewusstsein für Umweltsprobleme fördern"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【塀：へい】"
+              rom="hei"
+              tr_en="fence; wall"
+              tr_de="Zaun; Mauer"
+              lvl="n3"
+              id="hei-fence"
+            >
+                <keep_apart_from id="saku-fence" />
+                <sentence
+                  s="【庭：にわ】の【回：まわ】りに【高：たか】い【塀：へい】があった。"
+                  rom="Niwa no mawari ni takai hei ga atta."
+                  tr_en="There was a high fence around the garden."
+                  tr_de="Der Garten war von einem hohen Zaun umgeben."
+                  lvl="n3"
                 />
             </word>
             <word
@@ -831,41 +858,6 @@
                   lvl="n3"
                   origin="lib0"
                   rem="verified with ChatGPT"
-                />
-            </word>
-            <word
-              w="【調：ちょう】【査：さ】"
-              rom="chōsa"
-              tr_en="survey; enquiry; to investigate"
-              tr_de="Umfrage; Untersuchung; untersuchen"
-              Langenscheidt="Untersuchung; Umfrage"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="chōsa-survey"
-              rem="appears in GENKI2 L23 vocab section"
-            >
-                <see id="sōsa-enquiry" rem="closely related" />
-                <keep_apart_from id="sōsa-enquiry" />
-                <keep_apart_from id="kensa-examination" />
-                <keep_apart_from id="mensetsu-interview" />
-                <keep_apart_from id="ankēto-enquête" />
-                <phrase
-                  ph="【事：じ】【故：こ】の【原：げん】【因：いん】を【調：ちょう】【査：さ】する"
-                  rom="jiko no gen'in o chōsa suru"
-                  tr_en="to investigate the cause of the accident"
-                  tr_de="den Grund des Unfalls untersuchen"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【警：けい】【察：さつ】は【調：ちょう】【査：さ】を【続：つづ】けた。"
-                  rom="Keisatsu wa chōsa o tsudzuketa."
-                  tr_en="The police continued their investigation."
-                  tr_de="Die Polizei hat ihre Untersuchungen fortgesetzt."
-                  lvl="n3"
-                  origin="lib0"
-                  rem="for a criminal investigation, 捜査 (そうさ) would be even more specific, but it's n1"
                 />
             </word>
             <word
@@ -1197,56 +1189,6 @@
                 />
             </word>
             <word
-              w="【誠：まこと】"
-              rom="makoto"
-              tr_en="truth; sincerity; fidelity"
-              tr_de="Wahrheit; Wirklichkeit; Echtheit"
-              lvl="n3"
-              id="makoto-truth"
-              rem="jisho has n1 for makoto, but n3 for makoto ni; appears in GENKI2 L20 vocab section as makoto ni"
-            >
-                <keep_apart_from id="makotoni-indeed" />
-                <keep_together id="makotoni-indeed" />
-                <phrase
-                  ph="【誠：まこと】に"
-                  rom="makoto ni"
-                  tr_en="indeed; really; absolutely"
-                  tr_de="in der Tat; wirklich; absolut"
-                  lvl="n3"
-                  origin="GENKI2 p.183"
-                />
-            </word>
-            <word
-              w="【誠：まこと】に"
-              rom="makoto ni"
-              tr_en="indeed; really; absolutely; truly; actually; very; quite"
-              lvl="n3"
-              HIDDEN="true"
-              id="makotoni-indeed"
-              rem="now a phrase of makoto-truth"
-            >
-                <keep_apart_from id="makoto-truth" />
-                <keep_together id="makoto-truth" />
-            </word>
-            <word
-              w="【神：しん】【経：けい】"
-              rom="shinkei"
-              tr_en="nerves; sensitivity"
-              tr_de="Nerven; Sensitivität"
-              lvl="n3"
-              id="shinkei-nerves"
-              rem="appears in GENKI2 p.328 kanji section"
-            >
-                <phrase
-                  ph="【神：しん】【経：けい】【質：しつ】"
-                  rom="shinkeishitsu"
-                  tr_en="nervous; oversensitive; fussy"
-                  tr_de="nervös; überempfindlich; hypersensibel"
-                  lvl="n3"
-                  origin="GENKI2 p.328"
-                />
-            </word>
-            <word
               w="【乗：じょう】【客：きゃく】"
               rom="jōkyaku"
               tr_en="passenger"
@@ -1364,29 +1306,72 @@
                 />
             </word>
             <word
-              w="【診：しん】【察：さつ】"
-              rom="shinsatsu"
-              tr_en="medical examination"
-              tr_de="ärztliche Untersuchung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【首：しゅ】【相：しょう】"
+              rom="shushō"
+              tr_en="Prime Minister; chancellor; premier"
+              tr_de="Premierminister; Kanzler"
               lvl="n3"
-              category="health"
-              id="shinsatsu-medexamination"
+              category="politics, people"
+              id="shushō-premier"
+              rem="appears in GENKI2 p.116 vocab section"
             >
-                <keep_apart_from id="kensa-examination" />
-                <keep_apart_from id="kenshin-healthcheckup" />
+                <keep_apart_from id="daitōryō-president" />
+                <keep_apart_from id="taishi-ambassador" />
+                <sentence
+                  s="【国：こく】【民：みん】はだれでも【首：しゅ】【相：しょう】を【尊：そん】【敬：けい】している。"
+                  rom="Kokumin wa daredemo shushō o sonkei shite iru."
+                  tr_en="The people of the country respect the Prime Minister."
+                  tr_de="Das Volk respektiert den Premierminister."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
-              w="【痴：ち】【漢：かん】"
-              rom="chikan"
-              tr_en="groper; pervert"
-              tr_de="Grapscher; Perversling"
+              w="【誠：まこと】"
+              rom="makoto"
+              tr_en="truth; sincerity; fidelity"
+              tr_de="Wahrheit; Wirklichkeit; Echtheit"
               lvl="n3"
-              category="people, not-good"
-              id="chikan-groper"
-              rem="appears in GENKI2 L21 vocab section; jisho has nx"
-            />
+              id="makoto-truth"
+              rem="jisho has n1 for makoto, but n3 for makoto ni; appears in GENKI2 L20 vocab section as makoto ni"
+            >
+                <keep_apart_from id="makotoni-indeed" />
+                <keep_together id="makotoni-indeed" />
+                <phrase
+                  ph="【誠：まこと】に"
+                  rom="makoto ni"
+                  tr_en="indeed; really; absolutely"
+                  tr_de="in der Tat; wirklich; absolut"
+                  lvl="n3"
+                  origin="GENKI2 p.183"
+                />
+            </word>
+            <word
+              w="【誠：まこと】に"
+              rom="makoto ni"
+              tr_en="indeed; really; absolutely; truly; actually; very; quite"
+              lvl="n3"
+              HIDDEN="true"
+              id="makotoni-indeed"
+              rem="now a phrase of makoto-truth"
+            >
+                <keep_apart_from id="makoto-truth" />
+                <keep_together id="makoto-truth" />
+            </word>
+            <word
+              w="【品：しな】"
+              rom="shina"
+              tr_en="article; item; goods"
+              tr_de="Artikel; Stück; Güter"
+              lvl="n3"
+              category="shopping, factory"
+              id="shina-item"
+            >
+                <keep_apart_from id="shōhin-commodity" />
+                <keep_apart_from id="seihin-product" />
+                <keep_apart_from id="shinamono-article" />
+                <keep_apart_from id="sakuhin-work" />
+            </word>
             <word
               w="【収：しゅう】【入：にゅう】"
               rom="shūnyū"
@@ -1398,22 +1383,6 @@
             >
                 <keep_apart_from id="kyūryō-salary" />
                 <keep_apart_from id="chingin-wages" />
-            </word>
-            <word
-              w="【作：さく】【品：ひん】"
-              rom="sakuhin"
-              tr_en="works of art; composition; product"
-              tr_de="Kunstwerk; Komposition; Produkt"
-              lvl="n3"
-              category="arts"
-              id="sakuhin-work"
-            >
-                <!-- 作品をご覧に入れます - I will show you the piece (of work). (ChatGPT) -->
-                <keep_apart_from id="shōhin-commodity" />
-                <keep_apart_from id="seihin-product" />
-                <keep_apart_from id="shina-item" />
-                <keep_apart_from id="shinamono-article" />
-                <keep_apart_from id="sakumotsu-crops" />
             </word>
             <word
               w="【好：この】み"
@@ -1450,6 +1419,24 @@
                 <!-- 目標を決める (もくひょうをきめる) - to set a goal (ChatGPT) -->
                 <!-- 毎年の目標をノートに書いています。 - ChatGPT -->
             </word>
+            <word
+              w="【症：しょう】【状：じょう】"
+              rom="shōjō"
+              tr_en="symptoms"
+              tr_de="Symptome"
+              lvl="n3"
+              category="health"
+              id="shōjō-symptoms"
+            />
+            <word
+              w="【心：しん】【臓：ぞう】"
+              rom="shinzō"
+              tr_en="heart (anatomy); central part"
+              tr_de="Herz (Anatomie); Kernstück"
+              lvl="n3"
+              category="body"
+              id="shinzō-heart"
+            />
             <word
               w="【時：じ】【刻：こく】"
               rom="jikoku"

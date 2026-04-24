@@ -11,10 +11,8 @@
       defaultHint_en="loanword"
       defaultHint_de="Lehnwort"
       lvl="n4"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- at home -->
@@ -882,6 +880,15 @@
                   tr_de="Sitzbank im Park"
                   lvl="n4"
                   origin="ChatGPT"
+                />
+                <sentence
+                  s="このベンチ、しっかりしてる？"
+                  rom="Kono benchi, shikkari shiteru?"
+                  tr_en="Is this bench sturdy?"
+                  tr_de="Ist diese Sitzbank robust?"
+                  lvl="n4"
+                  origin="lib0 modified"
+                  rem="corrected by ChatGPT; also correct: このベンチ、しっかりした？"
                 />
             </word>
             <word

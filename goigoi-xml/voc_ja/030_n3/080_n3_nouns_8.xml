@@ -11,54 +11,76 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
             <word
-              w="【機：き】【嫌：げん】"
-              rom="kigen"
-              tr_en="humour; temper; well-being"
-              tr_de="Stimmung; Temperament; Wohlbefinden"
+              w="【就：しゅう】【職：しょく】"
+              rom="shūshoku"
+              tr_en="getting a full-time job; to find employment"
+              tr_de="einen Vollzeitjob finden; eine Stelle finden"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
-              category="mood, happiness"
-              id="kigen-temper"
+              category="employment"
+              id="shūshoku-findemployment"
+              rem="appears in GENKI2 p.117 vocab section"
             >
-                <keep_apart_from id="ki-mood" />
-                <keep_apart_from id="kibun-feeling" />
-                <keep_apart_from id="kanjō-emotion" />
-                <keep_apart_from id="kanji-feeling" />
-                <keep_apart_from id="kimochi-sensation" />
-                <keep_apart_from id="kimi-feeling" />
-                <keep_apart_from id="kankaku-sense" />
+                <!-- a job offer is 内定, which is nx -->
                 <phrase
-                  ph="ご【機：き】【嫌：げん】よう"
-                  rom="go-kigen yō"
-                  tr_en="farewell"
-                  tr_de="auf Wiedersehen"
-                  explanation_en="Polite and somewhat old-fashioned greeting that comes from: 「ご機嫌がようございますね」"
-                  explanation_de="Höflicher und etwas altmodischer Gruss, der von 「ご機嫌がようございますね」 kommt."
+                  ph="【就：しゅう】【職：しょく】の【面：めん】【接：せつ】"
+                  rom="shūshoku no mensetsu"
+                  tr_en="a job interview"
+                  tr_de="ein Vorstellungsgespräch"
                   lvl="n3"
-                  rem="From Bombom TV; ChatGPT says it's a very polite and somewhat old-fashioned greeting."
+                  origin="lib0"
                 />
                 <sentence
-                  s="ご【機：き】【嫌：げん】いかがですか。"
-                  rom="Go-kigen ikaga desu ka?"
-                  tr_en="How are you feeling? (How's your health?)"
-                  tr_de="Wie fühlen Sie sich? (Wie geht es Ihrer Gesundheit?)"
+                  s="その【会：かい】【社：しゃ】には【就：しゅう】【職：しょく】できませんでした。"
+                  rom="Sono kaisha ni wa shūshoku dekimasen deshita."
+                  tr_en="I wasn't able to get a job at that company."
+                  tr_de="Ich habe es nicht geschafft, bei jener Firma eine Stelle zu bekommen."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【失：しつ】【業：ぎょう】"
+              rom="shitsugyō"
+              tr_en="unemployment; losing one's job; becoming unemployed"
+              tr_de="Arbeitslosigkeit; den Job verlieren; arbeitslos werden"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="employment"
+              id="shitsugyō-unemployment"
+            >
+                <phrase
+                  ph="【失：しつ】【業：ぎょう】したパイロット"
+                  rom="shitsugyō shita pairotto"
+                  tr_en="unemployed pilot"
+                  tr_de="arbeitsloser Pilot"
+                  lvl="n3"
+                  origin="jpod101 modified"
+                />
+                <phrase
+                  ph="【失：しつ】【業：ぎょう】【保：ほ】【険：けん】"
+                  rom="shitsugyō hoken"
+                  tr_en="unemployment insurance"
+                  tr_de="Arbeitslosenversicherung"
                   lvl="n3"
                   origin="ChatGPT"
                 />
                 <sentence
-                  s="ハルトさんは【朝：あさ】から【機：き】【嫌：げん】が【悪：わる】いみたい。"
-                  rom="Haruto-san wa asa kara kigen ga warui mitai."
-                  tr_en="Haruto seems to be in a bad mood since morning."
-                  tr_de="Haruto scheint seit dem Morgen in schlechter Stimmung zu sein."
+                  s="【兄：あに】は【失：しつ】【業：ぎょう】している。"
+                  rom="Ani wa shitsugyō shite iru."
+                  tr_en="My older brother is unemployed."
+                  tr_de="Mein älterer Bruder ist arbeitslos."
                   lvl="n3"
-                  origin="ChatGPT"
+                  origin="lib0 modified"
                 />
             </word>
             <word
@@ -100,75 +122,6 @@
                 />
             </word>
             <word
-              w="【袖：そで】"
-              rom="sode"
-              tr_en="sleeve"
-              tr_de="Ärmel"
-              lvl="n3"
-              category="fashion"
-              id="sode-sleeve"
-              rem="can also mean wings (of a stage, etc.), see phrases"
-            >
-                <!--
-                    袖に涙 tears on one’s sleeve; sadness; ChatGPT
-                    袖を濡らす to wet one’s sleeve with tears (n2) ChatGPT
-                    袖をまくる to toll up one's sleeves (n1) ChatGPT
-                    袖にすがる to cling to someone’s sleeve (i.e. to beg or plead) (nx) ChatGPT
-                -->
-                <phrase
-                  ph="【長：なが】【袖：そで】"
-                  rom="nagasode"
-                  tr_en="long sleeves"
-                  tr_de="lange Ärmel"
-                  lvl="n3"
-                  rem="jisho has nx"
-                />
-                <phrase
-                  ph="【半：はん】【袖：そで】"
-                  rom="hansode"
-                  tr_en="short sleeves"
-                  tr_de="kurze Ärmel"
-                  lvl="n3"
-                  rem="jisho has nx"
-                />
-                <phrase
-                  ph="【舞：ぶ】【台：たい】の【袖：そで】"
-                  rom="butai no sode"
-                  tr_en="wings of a stage; side areas of a stage"
-                  tr_de="Bühnenflügel; Seitenbereich der Bühne"
-                  lvl="n3"
-                  origin="self"
-                  rem="from jisho; verified with ChatGPT"
-                />
-                <sentence
-                  s="【着：き】【物：もの】の【袖：そで】が【長：なが】い。"
-                  rom="Kimono no sode ga nagai."
-                  tr_en="The sleeves of a kimono are long."
-                  tr_de="Die Ärmel eines Kimono sind lange."
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【彼：かの】【女：じょ】に【袖：そで】にされた。"
-                  rom="Kanojo ni sode ni sareta."
-                  tr_en="She turned me down."
-                  tr_de="Sie hat mir die kalte Schulter gezeigt."
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【涙：なみだ】ながらに【袖：そで】を【分：わ】けた。"
-                  rom="Namida nagara ni sode o waketa."
-                  tr_en="(They) parted in tears."
-                  tr_de="(Sie) trennten sich in Tränen."
-                  explanation_en="Literally, 'They parted sleeves'"
-                  explanation_de="Wörtlich, 'Sie haben ihre Ärmel getrennt'"
-                  lvl="n3"
-                  origin="ChatGPT"
-                  rem="ChatGPT says に is normally used after ながら when it modifies the manner of an action"
-                />
-            </word>
-            <word
               w="【完：かん】【了：りょう】"
               rom="kanryō"
               tr_en="completion (of a work, order, mission, etc.)"
@@ -194,6 +147,54 @@
                   rom="Dōro kōji ga kanryō shimashita."
                   tr_en="Road construction has been completed."
                   tr_de="Die Strassenarbeiten sind abgeschlossen."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【訓：くん】【練：れん】"
+              rom="kunren"
+              tr_en="drill; training; practice"
+              tr_de="Drill; Training; Übung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="sports, military"
+              id="kunren-drill"
+            >
+                <!--
+                    訓練・くんれん: training to build discipline, ability, or readiness for something practical;
+                       esp. in contexts like military, police, fire brigade, rescue, company drills, animal training
+                    練習・れんしゅう: practice in general; sports, music, daily skills
+                -->
+                <keep_apart_from id="renshū-practice" />
+                <keep_apart_from id="torēningu-training" />
+                <keep_apart_from id="undō-workout" />
+                <phrase
+                  ph="【歌：か】【手：しゅ】になる【訓：くん】【練：れん】を【受：う】ける"
+                  rom="kashu ni naru kunren o ukeru"
+                  tr_en="to receive training to become a singer"
+                  tr_de="eine Gesangsausbildung erhalten"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; lib0 also has 〜となる and 〜として, but ChatGPT likes 〜になる best"
+                />
+                <sentence
+                  s="【犬：いぬ】に【新：しん】【聞：ぶん】を【取：と】ってくるように【訓：くん】【練：れん】した。"
+                  rom="Inu ni shinbun o totte kuru yō ni kunren shita."
+                  tr_en="I trained my dog to fetch the newspaper."
+                  tr_de="Ich habe meinen Hund dressiert, die Zeitung zu holen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【軍：ぐん】【隊：たい】では【兵：へい】【隊：たい】が【毎：まい】【日：にち】 【訓：くん】【練：れん】しなければならない。"
+                  rom="Guntai de wa heitai ga mai-nichi kunren shinakereba naranai."
+                  tr_en="In the army, soldiers have to train every day."
+                  tr_de="Im Militär müssen die Söldner jeden Tag trainieren."
+                  allowSpaces="true"
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT"
@@ -265,6 +266,8 @@
               category="transportation"
               id="konzatsu-congestion"
             >
+                <keep_apart_from id="komu-crowded" />
+                <keep_apart_from id="hitogomi-crowd" />
                 <!-- 混雑した売り場 (こんざつしたうりば, konzatsu shita uriba) - Crowded sales floor (ChatGPT) -->
                 <sentence
                   s="お【盆：ぼん】【期：き】【間：かん】【中：ちゅう】は【駅：えき】はとても【混：こん】【雑：ざつ】する。"
@@ -349,24 +352,6 @@
                   tr_de="die lokale Bibliothek"
                   lvl="n3"
                   origin="ChatGPT"
-                />
-            </word>
-            <word
-              w="【苦：く】【労：ろう】"
-              rom="kurō"
-              tr_en="trouble; hardship; anxiety"
-              tr_de="Mühe; Not; Schwierigkeiten"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="kurō-trouble"
-            >
-                <sentence
-                  s="ご【苦：く】【労：ろう】さま！"
-                  rom="Go-kurō sama!"
-                  tr_en="Thank you for your hard work!"
-                  tr_de="Danke für Ihre harte Arbeit!"
-                  lvl="n3"
                 />
             </word>
             <word
@@ -498,9 +483,7 @@
               tr_en="scar; mark"
               tr_de="Narbe; Spuren"
               lvl="n3"
-              category="health"
               id="ato-mark"
-              rem="is health OK, or is it more general?"
             >
                 <!-- implicit see-also link to ato-behind -->
                 <!-- kizuato is a phrase of kizu -->
@@ -665,7 +648,7 @@
               id="kanri-control"
             >
                 <!--
-                    kanri suru: controlling, organising sth, often continuous; to keep things in order
+                    kanri suru: controlling, organizing sth, often continuous; to keep things in order
                     kakunin suru: checking, verifying sth, typically momentary, occasional; to ensure correctness
                     iji suru: focuses on keeping something in its current state, preventing decline or change
                 -->
@@ -731,32 +714,6 @@
                 />
             </word>
             <word
-              w="【気：き】【候：こう】"
-              rom="kikō"
-              tr_en="climate"
-              tr_de="Klima"
-              lvl="n3"
-              category="weather"
-              id="kikō-climate"
-            >
-                <phrase
-                  ph="ひどい【気：き】【候：こう】"
-                  rom="hidoi kikō"
-                  tr_en="a harsh climate"
-                  tr_de="ein rauhes Klima"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【日：に】【本：ほん】は【穏：おだ】やかな【気：き】【候：こう】だ。"
-                  rom="Nihon wa odayaka na kikō da."
-                  tr_en="Japan has a mild climate."
-                  tr_de="Japan hat ein mildes Klima."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
               w="【悪：あく】【魔：ま】"
               rom="akuma"
               tr_en="devil; demon; evil spirit"
@@ -779,6 +736,33 @@
                 />
             </word>
             <word
+              w="【記：き】【者：しゃ】"
+              rom="kisha"
+              tr_en="reporter; journalist"
+              tr_de="Reporter; Journalist"
+              lvl="n3"
+              category="news, occupations"
+              id="kisha-reporter"
+            >
+                <keep_together id="kiji-article" />
+                <phrase
+                  ph="【新：しん】【聞：ぶん】【記：き】【者：しゃ】"
+                  rom="shinbun kisha"
+                  tr_en="a reporter for a newspaper"
+                  tr_de="ein Reporter einer Zeitung"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="スポーツ【記：き】【者：しゃ】になりたい。"
+                  rom="Supōtsu kisha ni naritai."
+                  tr_en="I want to become a sports reporter."
+                  tr_de="Ich will ein Sportreporter werden."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
               w="【記：き】【事：じ】"
               rom="kiji"
               tr_en="newspaper article"
@@ -787,6 +771,7 @@
               category="news"
               id="kiji-article"
             >
+                <keep_together id="kisha-reporter" />
                 <phrase
                   ph="【記：き】【事：じ】を【書：か】く"
                   rom="kiji o kaku"
@@ -800,6 +785,35 @@
                   rom="Watashi-tachi no gakkō no kiji ga shinbun ni deta."
                   tr_en="An article about our school appeared in the newspaper."
                   tr_de="In der Zeitung erschien ein Artikel über unsere Schule."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【大：だい】【統：とう】【領：りょう】"
+              rom="daitōryō"
+              tr_en="president"
+              tr_de="Präsident"
+              lvl="n3"
+              category="politics, people"
+              id="daitōryō-president"
+            >
+                <keep_apart_from id="shushō-premier" />
+                <keep_apart_from id="taishi-ambassador" />
+                <phrase
+                  ph="ロシア【大：だい】【統：とう】【領：りょう】"
+                  rom="Roshia-daitōryō"
+                  tr_en="President of Russia"
+                  tr_de="Präsident von Russland"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="Roshia is nx"
+                />
+                <sentence
+                  s="【新：あたら】しい【大：だい】【統：とう】【領：りょう】は【評：ひょう】【判：ばん】がよい。"
+                  rom="Atarashii daitōryō wa hyōban ga yoi."
+                  tr_en="The new president has a good reputation."
+                  tr_de="Der neue Präsident hat einen guten Ruf."
                   lvl="n3"
                   origin="lib0"
                 />
@@ -852,25 +866,6 @@
                 <keep_apart_from id="shijō-market" />
             </word>
             <word
-              w="【一：いっ】【種：しゅ】"
-              rom="isshu"
-              tr_en="species; kind; sort"
-              tr_de="Spezies; Art; Typ"
-              lvl="n3"
-              id="isshu-kind"
-            >
-                <keep_apart_from id="shu-species" />
-                <keep_apart_from id="shurui-type" />
-                <!-- is this correct?
-                  s="【飴：あめ】は【一：いっ】【種：しゅ】の【甘：あま】いお【菓：か】【子：し】です。"
-                  rom="Ame wa isshu no amai o-kashi desu."
-                  tr_en="Candy is a kind of sweet confection."
-                  tr_de="Bonbons sind eine Art süsser Nascherei."
-                  lvl="n3"
-                  origin="ChatGPT"
-                -->
-            </word>
-            <word
               w="【望：のぞ】み"
               rom="nozomi"
               tr_en="wish; desire; hope"
@@ -913,15 +908,41 @@
                 <keep_apart_from id="shingō-signal" />
             </word>
             <word
-              w="【毛：もう】【布：ふ】"
-              rom="mōfu"
-              tr_en="blanket; bedding cloth"
-              tr_de="Bettdecke; Leintuch"
+              w="【信：しん】【頼：らい】"
+              rom="shinrai"
+              tr_en="trust; reliance"
+              tr_de="Vertrauen"
               lvl="n3"
-              category="home"
-              id="mōfu-blanket"
+              category="relationships"
+              id="shinrai-trust"
             >
-                <keep_apart_from id="yagu-bedding" />
+                <!-- 信頼できる人 shinrai dekiru hito - a trustworthy person (ChatGPT) -->
+                <sentence
+                  s="【友：とも】だちの【信：しん】【頼：らい】を【決：けっ】して【裏：うら】【切：ぎ】るな。"
+                  rom="Tomodachi no shinrai o kesshite uragiru na."
+                  tr_en="Never betray the trust of your friends."
+                  tr_de="Brich niemals das Vertrauen deiner Freunde."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【苦：く】【労：ろう】"
+              rom="kurō"
+              tr_en="trouble; hardship; anxiety"
+              tr_de="Mühe; Not; Schwierigkeiten"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="kurō-trouble"
+            >
+                <sentence
+                  s="ご【苦：く】【労：ろう】さま！"
+                  rom="Go-kurō sama!"
+                  tr_en="Thank you for your hard work!"
+                  tr_de="Danke für Ihre harte Arbeit!"
+                  lvl="n3"
+                />
             </word>
             <word
               w="【輸：ゆ】【入：にゅう】"
@@ -958,6 +979,29 @@
                 <keep_together id="yunyū-import" />
             </word>
             <word
+              w="【噂：うわさ】"
+              rom="uwasa"
+              tr_en="rumour; gossip; hearsay"
+              tr_de="Gerücht; Hörensagen"
+              lvl="n3"
+              category="news, talking"
+              id="uwasa-rumour"
+            >
+                <keep_apart_from id="oshaberi-gossip" />
+                <keep_apart_from id="muda-waste" rem="ambiguity with mudabanashi" />
+            </word>
+            <word
+              w="【毛：もう】【布：ふ】"
+              rom="mōfu"
+              tr_en="blanket; bedding cloth"
+              tr_de="Bettdecke; Leintuch"
+              lvl="n3"
+              category="home"
+              id="mōfu-blanket"
+            >
+                <keep_apart_from id="yagu-bedding" />
+            </word>
+            <word
               w="【後：こう】【輩：はい】"
               rom="kōhai"
               tr_en="junior (at work, etc.); younger student"
@@ -969,36 +1013,6 @@
             >
                 <see id="senpai-superior" rem="antonym" />
             </word>
-            <word
-              w="【残：ざん】【業：ぎょう】"
-              rom="zangyō"
-              tr_en="overtime work"
-              tr_de="Überstunden (Arbeit)"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="employment"
-              id="zangyō-overtime"
-              rem="appears in GENKI2 p.116 vocab section; jisho has nx"
-            />
-            <word
-              w="【症：しょう】【状：じょう】"
-              rom="shōjō"
-              tr_en="symptoms"
-              tr_de="Symptome"
-              lvl="n3"
-              category="health"
-              id="shōjō-symptoms"
-            />
-            <word
-              w="【心：しん】【臓：ぞう】"
-              rom="shinzō"
-              tr_en="heart (anatomy); central part"
-              tr_de="Herz (Anatomie); Kernstück"
-              lvl="n3"
-              category="body"
-              id="shinzō-heart"
-            />
             <word
               w="【蚊：か】"
               rom="ka"
@@ -1043,23 +1057,29 @@
               rem="appears in GENKI2 L20 vocab section; jisho has nx"
             />
             <word
-              w="【信：しん】【頼：らい】"
-              rom="shinrai"
-              tr_en="trust; reliance"
-              tr_de="Vertrauen"
+              w="【愛：あい】【情：じょう】"
+              rom="aijō"
+              tr_en="love; affection"
+              tr_de="Liebe; Zuneigung"
               lvl="n3"
               category="relationships"
-              id="shinrai-trust"
+              id="aijō-love"
             >
-                <!-- 信頼できる人 shinrai dekiru hito - a trustworthy person (ChatGPT) -->
-                <sentence
-                  s="【友：とも】だちの【信：しん】【頼：らい】を【決：けっ】して【裏：うら】【切：ぎ】るな。"
-                  rom="Tomodachi no shinrai o kesshite uragiru na."
-                  tr_en="Never betray the trust of your friends."
-                  tr_de="Brich niemals das Vertrauen deiner Freunde."
-                  lvl="n3"
-                  origin="lib0"
-                />
+                <keep_apart_from id="ai-love" />
+                <keep_apart_from id="koi-love" />
+            </word>
+            <word
+              w="【通：つう】【信：しん】"
+              rom="tsūshin"
+              tr_en="correspondence; communication"
+              tr_de="Korrespondenz; Kommunikation"
+              lvl="n3"
+              category="business, talking"
+              id="tsūshin-correspondence"
+            >
+                <!--
+                  appears in Doraemon 0, p.25 as 通信簿・つうしんぼ (nx): report card
+                -->
             </word>
             <word
               w="【宝：ほう】【石：せき】"
@@ -1079,15 +1099,6 @@
               lvl="n3"
               category="home"
               id="shokutaku-diningtbl"
-            />
-            <word
-              w="【通：つう】【信：しん】"
-              rom="tsūshin"
-              tr_en="correspondence; communication"
-              tr_de="Korrespondenz; Kommunikation"
-              lvl="n3"
-              category="business, talking"
-              id="tsūshin-correspondence"
             />
             <word
               w="【缶：かん】"

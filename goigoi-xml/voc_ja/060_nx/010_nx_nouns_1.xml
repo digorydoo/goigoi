@@ -9,10 +9,8 @@
       hasRomaji="true"
       hasFurigana="true"
       lvl="-"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -38,6 +36,112 @@
                   rom="Sono shōsetsu wa kare no meisei o takameta."
                   tr_en="This novel has added to his renown."
                   tr_de="Dieser Roman hat seinen Bekanntheitsgrad gesteigert."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【凧：たこ】"
+              rom="tako"
+              tr_en="kite"
+              tr_de="Winddrachen; Kite"
+              hint_en="tethered aircraft made from bamboo, paper, etc."
+              hint_de="angebundenes Flugobjekt aus Bambus, Papier, usw."
+              lvl="-"
+              category="culture"
+              id="tako-kite"
+            >
+                <phrase
+                  ph="【凧：たこ】【上：あ】げする"
+                  rom="takoage suru"
+                  tr_en="to let a kite fly; to play kiteflying"
+                  tr_de="einen Drachen steigen lassen"
+                  lvl="-"
+                />
+                <sentence
+                  s="ナオミは【凧：たこ】に【糸：いと】をつけた。"
+                  rom="Naomi wa tako ni ito o tsuketa."
+                  tr_en="Naomi attached the string to the kite."
+                  tr_de="Naomi bindete die Schnur an den Winddrachen."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【雑：ざっ】【草：そう】"
+              rom="zassō"
+              tr_en="weed"
+              tr_de="Unkraut"
+              lvl="-"
+              category="garden, plant"
+              id="zassō-weed"
+            >
+                <phrase
+                  ph="【雑：ざっ】【草：そう】を【抜：ぬ】く"
+                  rom="zassō o nuku"
+                  tr_en="to weed"
+                  tr_de="jäten"
+                  lvl="-"
+                  origin="lib0"
+                />
+                <sentence
+                  s="うちの【庭：にわ】は【雑：ざっ】【草：そう】だらけだった。"
+                  rom="Uchi no niwa wa zassō darake datta."
+                  tr_en="Our garden was full of weeds."
+                  tr_de="Unser Garten war voller Unkraut."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【熊：クマ】"
+              rom="kuma"
+              tr_en="bear"
+              tr_de="Bär"
+              usuallyInKana="true"
+              lvl="-"
+              category="animal"
+              id="kuma-bear"
+            >
+                <phrase
+                  ph="クマを【撃：う】つ"
+                  rom="kuma o utsu"
+                  tr_en="to shoot a bear"
+                  tr_de="einen Bären erschiessen"
+                  lvl="-"
+                  origin="lib0"
+                />
+                <sentence
+                  s="あの【雲：くも】はクマの【形：かたち】をしている。"
+                  rom="Ano kumo wa kuma no katachi o shite iru."
+                  tr_en="That cloud is in the shape of a bear."
+                  tr_de="Die Wolke dort hat die Form eines Bären."
+                  lvl="-"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【魔：ま】【法：ほう】"
+              rom="mahō"
+              tr_en="magic; witchcraft; sorcery"
+              tr_de="Magie; Hexenkunst; Zauberei"
+              lvl="-"
+              category="manga-anime, games"
+              id="mahō-magic"
+            >
+                <phrase
+                  ph="【人：ひと】に【魔：ま】【法：ほう】をかける"
+                  rom="hito ni mahō o kakeru"
+                  tr_en="to cast a spell upon a person"
+                  tr_de="einen Menschen verhexen"
+                  lvl="-"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【私：わたし】に【魔：ま】【法：ほう】が【使：つか】えたら【良：よ】いのに。"
+                  rom="Watashi ni mahō ga tsukaetara yoi no ni."
+                  tr_en="I wish I could use magic."
+                  tr_de="Ich wünschte, ich könnte Magie benutzen."
                   lvl="-"
                   origin="lib0"
                 />
@@ -193,35 +297,6 @@
                 />
             </word>
             <word
-              w="【日：にっ】【光：こう】【浴：よく】"
-              rom="nikkōyoku"
-              tr_en="sunbathing"
-              tr_de="Sonnenbad"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="-"
-              category="holidays, light"
-              id="nikkōyoku-sunbathing"
-            />
-            <word
-              w="【日：にっ】【射：しゃ】【病：びょう】"
-              rom="nisshabyō"
-              tr_en="sunstroke"
-              tr_de="Sonnenstich"
-              lvl="-"
-              category="holidays, health"
-              id="nisshabyō-sunstroke"
-            />
-            <word
-              w="【虫：むし】【除：よ】けスプレー"
-              rom="mushiyoke supurē"
-              tr_en="insect repellent; bug spray"
-              tr_de="Mückenspray; Insektenspray"
-              lvl="-"
-              category="holidays"
-              id="mushiyokesupurē-repellent"
-            />
-            <word
               w="【寝：ね】【袋：ぶくろ】"
               rom="nebukuro"
               tr_en="sleeping bag"
@@ -244,14 +319,6 @@
                   href="https://hinative.com/en-US/questions/21759164"
                 />
             </word>
-            <word
-              w="【蚊：か】【帳：や】"
-              rom="kaya"
-              tr_en="mosquito net"
-              tr_de="Mosquitonetz"
-              lvl="-"
-              id="kaya-mosquitonet"
-            />
             <word
               w="【旅：りょ】【行：こう】【会：がい】【社：しゃ】"
               rom="ryokōgaisha"
@@ -289,16 +356,6 @@
                   lvl="-"
                 />
             </word>
-            <word
-              w="【身：み】【分：ぶん】【証：しょう】【明：めい】【書：しょ】"
-              rom="mibun shōmeisho"
-              tr_en="identification papers; ID"
-              tr_de="Identitätsausweis; ID"
-              lvl="-"
-              category="holidays, government"
-              id="mibunshōmeisho-id"
-              rem="also a phrase of shōmei"
-            />
             <word
               w="【観：かん】【光：こう】【地：ち】"
               rom="kankōchi"
@@ -355,118 +412,6 @@
                 />
             </word>
             <word
-              w="【帰：かえ】り【道：みち】"
-              rom="kaeri-michi"
-              tr_en="the way home"
-              tr_de="Rückweg; Heimweg"
-              lvl="-"
-              category="transportation"
-              id="kaerimichi-wayhome"
-              rem="jisho has nx; should be n4 or even n5; is now a phrase of kaeri n4"
-            />
-            <word
-              w="【空：くう】【席：せき】"
-              rom="kūseki"
-              tr_en="unoccupied seat"
-              tr_de="freier Sitzplatz"
-              lvl="-"
-              category="transportation"
-              id="kūseki-unoccupiedseat"
-            />
-            <word
-              w="【窓：まど】【側：がわ】の【席：せき】"
-              rom="madogawa no seki"
-              tr_en="window-side seat"
-              tr_de="Fensterplatz"
-              lvl="-"
-              category="transportation"
-              id="madogawanoseki-windowsideseat"
-            />
-            <word
-              w="バス【停：てい】"
-              rom="basutei"
-              tr_en="bus stop"
-              tr_de="Bushaltestelle"
-              lvl="-"
-              category="transportation"
-              id="basutei-busstop"
-            />
-            <word
-              w="【高：こう】【速：そく】【道：どう】【路：ろ】"
-              rom="kōsokudōro"
-              tr_en="highway"
-              tr_de="Autobahn"
-              lvl="-"
-              category="transportation"
-              id="kōsokudōro-highway"
-            />
-            <word
-              w="【人：じん】【力：りき】【車：しゃ】"
-              rom="jinrikisha"
-              tr_en="rickshaw"
-              tr_de="Rikscha"
-              hint_en="human-pulled vehicle"
-              hint_de="von einem Mensch gezogenes Fahrzeug"
-              lvl="-"
-              category="transportation"
-              id="jinrikisha-rickshaw"
-            />
-            <word
-              w="【乗：じょう】【車：しゃ】【券：けん】"
-              rom="jōshaken"
-              tr_en="passenger ticket"
-              tr_de="Passagier-Fahrkarte"
-              hint_en="bus, train"
-              hint_de="Bus, Zug"
-              lvl="-"
-              category="transportation"
-              id="jōshaken-ticket"
-            >
-                <keep_apart_from id="kippu-ticket" />
-            </word>
-            <word
-              w="【航：こう】【空：くう】【券：けん】"
-              rom="kōkūken"
-              tr_en="airline ticket"
-              tr_de="Flugticket"
-              lvl="-"
-              category="transportation"
-              id="kōkūken-flugticket"
-            >
-                <keep_apart_from id="kippu-ticket" />
-            </word>
-            <word
-              w="【一：ひと】【人：り】【暮：ぐ】らし"
-              rom="hitori-gurashi"
-              tr_en="living alone"
-              tr_de="alleinstehend; alleine wohnend"
-              lvl="-"
-              id="hitorigurashi-livingalone"
-              rem="appears in GENKI2 p.230 vocab section; jisho has nx; is now a phrase of kurashi-livelihood"
-            />
-            <word
-              w="ドッキリ"
-              rom="dokkiri"
-              tr_en="prank; being startled"
-              tr_de="Streich; Schabernack; erschrecken"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="-"
-              id="dokkiri-prank"
-              common="false"
-            />
-            <word
-              w="【外：はず】れ"
-              rom="hazure"
-              tr_en="miss; failure"
-              tr_de="Fehltreffer; Fehlschuss; Scheitern"
-              lvl="-"
-              id="hazure-failure"
-            >
-                <see id="hazureru-getitwrong" rem="verb" />
-                <!-- seems to be often combined with another word, such as 的外れ・まとはずれ, nx -->
-            </word>
-            <word
               w="【砂：すな】【場：ば】"
               rom="sunaba"
               tr_en="sandbox; sand pit"
@@ -501,16 +446,6 @@
                   origin="lib0"
                 />
             </word>
-            <word
-              w="【嫌：けん】【悪：お】"
-              rom="ken'o"
-              tr_en="disgust; repugnance; loathing"
-              tr_de="Ekel; Abscheu; Hass"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="-"
-              id="keno-disgust"
-            />
             <word
               w="【勝：かっ】【手：て】"
               rom="katte"
@@ -627,32 +562,6 @@
                 />
             </word>
             <word
-              w="【雑：ざっ】【草：そう】"
-              rom="zassō"
-              tr_en="weed"
-              tr_de="Unkraut"
-              lvl="-"
-              category="garden, plant"
-              id="zassō-weed"
-            >
-                <phrase
-                  ph="【雑：ざっ】【草：そう】を【抜：ぬ】く"
-                  rom="zassō o nuku"
-                  tr_en="to weed"
-                  tr_de="jäten"
-                  lvl="-"
-                  origin="lib0"
-                />
-                <sentence
-                  s="うちの【庭：にわ】は【雑：ざっ】【草：そう】だらけだった。"
-                  rom="Uchi no niwa wa zassō darake datta."
-                  tr_en="Our garden was full of weeds."
-                  tr_de="Unser Garten war voller Unkraut."
-                  lvl="-"
-                  origin="lib0"
-                />
-            </word>
-            <word
               w="ラーメン"
               rom="rāmen"
               tr_en="Chinese-style noodles"
@@ -673,83 +582,465 @@
                 />
             </word>
             <word
-              w="【鳥：とり】おどし"
-              rom="tori-odoshi"
-              tr_en="scarecrow"
-              tr_de="Vogelscheuche"
+              w="【外：がい】【食：しょく】"
+              rom="gaishoku"
+              tr_en="eating out"
+              tr_de="zum Essen ausgehen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="-"
-              category="countryside"
-              id="toriodoshi-scarecrow"
+              category="going-out"
+              id="gaishoku-eatingout"
             >
-                <keep_apart_from id="odosu-threaten" />
+                <sentence
+                  s="【東：とう】【京：きょう】に【住：す】んでいるときは【毎：まい】【日：にち】【外：がい】【食：しょく】をしていました。"
+                  rom="Tōkyō ni sunde iru toki wa mainichi gaishoku o shite imashita."
+                  tr_en="When I lived in Tokyo, I ate out every day."
+                  tr_de="Als ich in Tokyo wohnte, ging ich jeden Tag auswärts essen."
+                  lvl="-"
+                  origin="Oxford p.45"
+                />
             </word>
             <word
-              w="【裏：うら】【通：どう】り"
-              rom="uradōri"
-              tr_en="side street; alleyway"
-              tr_de="Gasse; Seitenstrasse"
+              w="パン【屋：や】"
+              rom="panya"
+              tr_en="baker"
+              tr_de="Bäckerei"
               lvl="-"
-              category="city"
-              id="uradōri-alleyway"
-              rem="jisho has nx, ura is n4, tōri is n3"
-            />
+              category="shopping, city"
+              id="panya-baker"
+            >
+                <sentence
+                  s="そのパン【屋：や】は【肉：にく】【屋：や】の【隣：となり】です。"
+                  rom="Sono panya wa nikuya no tonari desu."
+                  tr_en="That baker's is next door to the butcher's."
+                  tr_de="Die Bäckerei ist gleich neben der Metzgerei."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
             <word
-              w="【小：こ】【道：みち】"
-              rom="komichi"
-              tr_en="path; small road"
-              tr_de="Pfad; kleiner Weg"
+              w="ほうれん【草：そう】"
+              rom="hōrensō"
+              tr_en="spinach"
+              tr_de="Spinat"
               lvl="-"
-              category="city"
-              id="komichi-path"
-            />
+              category="food"
+              id="hōrensō-spinach"
+              rem="appears in 500mon q328"
+            >
+                <sentence
+                  s="【子：こ】【供：ども】のころ、【母：はは】に【毎：まい】【日：にち】ほうれん【草：そう】を【食：た】べさせられました。"
+                  rom="Kodomo no koro, haha ni mai-nichi hōrensō o tabe-saseraremashita."
+                  tr_en="When I was a child, my mother made me eat spinach every day."
+                  tr_de="Als ich ein Kind war, zwang mich meine Mutter, jeden Tag Spinat zu essen."
+                  explanation_en="「食べさせられる」is the causative-passive form of「食べる」"
+                  explanation_de="「食べさせられる」ist die kausativ-passive Form von「食べる」"
+                  lvl="-"
+                  origin="500mon q328"
+                  rem="jisho has nx for hōrensō"
+                />
+            </word>
             <word
-              w="【地：ち】【下：か】【道：どう】"
-              rom="chikadō"
-              tr_en="underpass; short tunnel"
-              tr_de="Unterführung; kurzes Tunnel"
+              w="【林：リン】【檎：ゴ】"
+              rom="ringo"
+              tr_en="apple"
+              tr_de="Apfel"
+              usuallyInKana="true"
               lvl="-"
-              category="city"
-              id="chikadō-underpass"
-            />
+              category="food"
+              id="ringo-apple"
+            >
+                <sentence
+                  s="テーブルの【上：うえ】にはリンゴが【４：よん】【個：こ】ある。"
+                  rom="Tēburu no ue ni wa ringo ga yon-ko aru."
+                  tr_en="There are four apples on the table."
+                  tr_de="Auf dem Tisch sind vier Äpfel."
+                  lvl="-"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="リンゴとオレンジとぶどうとでは、どれが【一：いち】【番：ばん】【好：す】きですか。"
+                  rom="Ringo to orenji to budō to de wa, dore ga ichi-ban suki desu ka?"
+                  tr_en="Which do you like best, apples, oranges or grapes?"
+                  tr_de="Was magst du am liebsten, Äpfel, Orangen oder Trauben?"
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
             <word
-              w="【田舎：いなか】【道：みち】"
+              w="【梨：なし】"
+              rom="nashi"
+              tr_en="pear"
+              tr_de="Birne"
+              lvl="-"
+              category="food"
+              id="nashi-pear"
+            >
+                <sentence
+                  s="【箱：はこ】の【中：なか】には【梨：なし】がいくつかある。"
+                  rom="Hako no naka ni wa nashi ga ikutsuka aru."
+                  tr_en="There are several pears in the box."
+                  tr_de="In der Schachtel hat es einige Birnen."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【納：なっ】【豆：とう】"
+              rom="nattō"
+              tr_en="fermented soy beans"
+              tr_de="fermentierte Sojabohnen"
+              lvl="-"
+              category="food"
+              id="nattō-soybeans"
+            >
+                <sentence
+                  s="【納：なっ】【豆：とう】は【美味：おい】しくなさそう。"
+                  rom="Nattō wa oishiku nasasō."
+                  tr_en="Nattō doesn't look delicious."
+                  tr_de="Nattō sieht nicht (sonderlich) appetitlich aus."
+                  lvl="-"
+                  origin="Miku"
+                  href="https://youtu.be/l7xZ1TDZ7MU"
+                />
+                <sentence
+                  s="【納：なっ】【豆：とう】を【食：た】べたことがある？"
+                  rom="Nattō o tabeta koto ga aru?"
+                  tr_en="Have (you) ever tried nattō?"
+                  tr_de="Hast (du) je Nattō gegessen?"
+                  lvl="-"
+                  rem="rated nx because of nattō"
+                  origin="Miku"
+                  href="https://youtu.be/4_XMsDpRgM8"
+                />
+            </word>
+            <word
+              w="【居：い】【酒：ざか】【屋：や】"
+              rom="izakaya"
+              tr_en="Japanese bar"
+              tr_de="japanische Bar"
+              hint_en="that also serves various dishes and snacks"
+              hint_de="wo man auch verschiedene Gerichte und Snacks bekommt"
+              lvl="-"
+              category="gastronomy"
+              id="izakaya-japanesebar"
+            >
+                <keep_apart_from id="sakaba-tavern" />
+                <sentence
+                  s="この【辺：あた】りに【人：にん】【気：き】のある【居：い】【酒：ざか】【屋：や】はありますか。"
+                  rom="Kono atari ni ninki no aru izakaya wa arimasu ka?"
+                  tr_en="Is there a popular Japanese bar around here?"
+                  tr_de="Gibt es in der Nähe eine beliebte japanische Bar?"
+                  lvl="-"
+                  origin="Langenscheidt p.167"
+                />
+            </word>
+            <word
+              w="お【寿：す】【司：し】"
+              rom="o-sushi"
+              tr_en="Japanese dish of vinegared rice"
+              tr_de="japanisches Gericht mit gesäuertem Reis"
+              hint_en="often with raw fish"
+              hint_de="oft mit rohem Fisch"
+              lvl="-"
+              category="food, gastronomy"
+              id="osushi-sushi"
+              rem="appears in GENKI1 L10 as すし; jisho has nx for kanji 寿, n1 for 司"
+            >
+                <sentence
+                  s="【寿：す】【司：し】より【安：やす】いものを【食：た】べましょう。"
+                  rom="Sushi yori yasui mono o tabemashō."
+                  tr_en="Let's eat something cheaper than sushi."
+                  tr_de="Lass uns etwas billigeres als Sushi essen."
+                  lvl="-"
+                  hasDifferentForm="true"
+                  origin="Oxford p.105"
+                />
+            </word>
+            <word
+              w="【海月：クラゲ】"
+              rom="kurage"
+              tr_en="jellyfish"
+              tr_de="Qualle"
+              usuallyInKana="true"
               hasCombinedReading="true"
-              rom="inakamichi"
-              tr_en="country road"
-              tr_de="Landstrasse"
               lvl="-"
-              category="countryside"
-              id="inakamichi-countryroad"
-            />
+              category="aquatic"
+              id="kurage-jellyfish"
+            >
+                <!--
+                    Cf. ここには クラゲが いますか。
+                    -> I already know there are jellyfish in other places.
+                -->
+                <sentence
+                  s="ここにクラゲはいますか。"
+                  rom="Koko ni kurage wa imasu ka?"
+                  tr_en="Are there any jellyfish here?"
+                  tr_de="Gibt es hier Quallen?"
+                  lvl="-"
+                  origin="Langenscheidt p.168"
+                  href="https://hinative.com/questions/22290208"
+                />
+            </word>
             <word
-              w="【干：ほ】し【草：くさ】の【山：やま】"
-              rom="hoshikusa no yama"
-              tr_en="haystack"
-              tr_de="Heuhaufen"
+              w="【海豚：イルカ】"
+              rom="iruka"
+              tr_en="dolphin"
+              tr_de="Delfin"
+              usuallyInKana="true"
+              hasCombinedReading="true"
               lvl="-"
-              category="countryside"
-              id="hoshikusanoyama-haystack"
-            />
+              category="aquatic"
+              id="iruka-dolphin"
+            >
+                <sentence
+                  s="イルカは【頭：あたま】のよい【遊：あそ】び【好：す】きな【生：い】き【物：もの】だ。"
+                  rom="Iruka wa atama no yoi asobi suki na ikimono da."
+                  tr_en="Dolphins are intelligent and playful creatures."
+                  tr_de="Delfine sind intelligente und verspielte Lebewesen."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
             <word
-              w="【折：お】り【紙：がみ】"
-              rom="origami"
-              tr_en="the art of paper folding"
-              tr_de="die Kunst des Papierfaltens"
+              w="【鯨：クジラ】"
+              rom="kujira"
+              tr_en="whale"
+              tr_de="Walfisch"
+              usuallyInKana="true"
               lvl="-"
-              category="culture, top-words"
-              id="origami-paperfolding"
-              rem="this is now also a phrase of oru-fold"
-            />
+              category="aquatic"
+              id="kujira-whale"
+              rem="appears in GENKI2 p.288 as くじら"
+            >
+                <sentence
+                  s="クジラは【長：なが】い【間：あいだ】【水：みず】に【潜：もぐ】っていられる。"
+                  rom="Kujira wa nagai aida mizu ni mogutte irareru."
+                  tr_en="Whales can remain submerged for a long time."
+                  tr_de="Walfische können lange unter Wasser bleiben."
+                  explanation_en="「いられる」is the potential form of「いる」"
+                  explanation_de="「いられる」ist die potentielle Form von「いる」"
+                  lvl="-"
+                  href="https://hinative.com/en-US/questions/20058656"
+                />
+            </word>
             <word
-              w="【歌：か】【舞：ぶ】【伎：き】"
-              rom="kabuki"
-              tr_en="Japanese classical dance-drama"
-              tr_de="klassisches japanisches Tanzdrama"
+              w="【白：シロ】【熊：クマ】"
+              rom="shirokuma"
+              tr_en="polar bear"
+              tr_de="Eisbär"
+              usuallyInKana="true"
               lvl="-"
-              id="kabuki-drama"
-              category="entertainment, top-words"
-              rem="appears in GENKI1 p.210 vocab section"
-            />
+              category="animal"
+              id="shirokuma-polarbear"
+            >
+                <sentence
+                  s="シロクマは【北：ほっ】【極：きょく】【地：ち】【方：ほう】に【住：す】んでいる。"
+                  rom="Shirokuma wa hokkyoku chihō ni sunde iru."
+                  tr_en="Polar bears live in the Arctic."
+                  tr_de="Eisbären leben in der Arktis."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【狐：キツネ】"
+              rom="kitsune"
+              tr_en="fox"
+              tr_de="Fuchs"
+              usuallyInKana="true"
+              lvl="-"
+              category="animal"
+              id="kitsune-fox"
+            >
+                <sentence
+                  s="キツネは【裏：うら】【庭：にわ】を【静：しず】かに【歩：ある】いていました。"
+                  rom="Kitsune wa uraniwa o shizuka ni aruite imashita."
+                  tr_en="A fox was sneaking around in the backyard."
+                  tr_de="Ein Fuchs schlich im Hinterhof herum."
+                  lvl="-"
+                  href="https://hinative.com/en-US/questions/22302913"
+                />
+            </word>
+            <word
+              w="【羊：ひつじ】"
+              rom="hitsuji"
+              tr_en="sheep"
+              tr_de="Schaf"
+              lvl="-"
+              category="animal"
+              id="hitsuji-sheep"
+            >
+                <see id="hitsuji-zodiac" rem="closely related" />
+                <sentence
+                  s="【羊：ひつじ】は【草：くさ】を【食：た】べる。"
+                  rom="Hitsuji wa kusa o taberu."
+                  tr_en="Sheep feed on grass."
+                  tr_de="Schafe essen Gras."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="アライグマ"
+              rom="araiguma"
+              tr_en="raccoon"
+              tr_de="Waschbär"
+              lvl="-"
+              category="animal"
+              id="araiguma-raccoon"
+            >
+                <phrase
+                  ph="【毛：け】で【覆：おお】われたアライグマ"
+                  rom="ke de ōwareta araiguma"
+                  tr_en="a furry raccoon"
+                  tr_de="ein pelziger Waschbär"
+                  lvl="-"
+                  origin="jpod101 audio"
+                />
+            </word>
+            <word
+              w="【自：じ】【販：はん】【機：き】"
+              rom="jihanki"
+              tr_en="vending machine"
+              tr_de="Verkaufsautomat"
+              lvl="-"
+              category="city, shopping"
+              id="jihanki-vendingmachine"
+              rem="自販機 is an abbrev. of 自動販売機 jidōhanbaiki"
+            >
+                <!-- appears on 500mon N3 q61 has jidōhanbaiki -->
+                <sentence
+                  s="【外：そと】の【自：じ】【販：はん】【機：き】が【壊：こわ】れている。"
+                  rom="Soto no jihanki ga kowarete iru."
+                  tr_en="The vending machine outside is broken."
+                  tr_de="Der Verkaufsautomat draussen ist kaputt."
+                  lvl="-"
+                  origin="Oxford p.43"
+                />
+            </word>
+            <word
+              w="【蝉：せみ】"
+              rom="semi"
+              tr_en="cicada; locust"
+              tr_de="Zikade; Heuschrecke"
+              lvl="-"
+              category="insect"
+              id="semi-cicada"
+            >
+                <sentence
+                  s="【蝉：せみ】が【鳴：な】いている。"
+                  rom="Semi ga naite iru."
+                  tr_en="The cicadas are chirping."
+                  tr_de="Die Zikaden zirpen."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【蜘蛛：クモ】"
+              rom="kumo"
+              tr_en="spider"
+              tr_de="Spinne"
+              usuallyInKana="true"
+              hasCombinedReading="true"
+              lvl="-"
+              category="insect"
+              id="kumo-spider"
+            >
+                <sentence
+                  s="クモは【網：あみ】を【張：は】る。"
+                  rom="Kumo wa ami o haru."
+                  tr_en="Spiders spin webs."
+                  tr_de="Spinnen spinnen Spinnennetze."
+                  lvl="-"
+                />
+                <sentence
+                  s="クモには【８：はっ】【本：ぽん】の【脚：あし】がある。"
+                  rom="Kumo ni wa happon no ashi ga aru."
+                  tr_en="Spiders have eight legs."
+                  tr_de="Spinnen haben acht Beine."
+                  lvl="-"
+                  href="https://hinative.com/questions/20378375 (脚 vs. 足)"
+                />
+            </word>
+            <word
+              w="【卓：たっ】【球：きゅう】"
+              rom="takkyū"
+              tr_en="ping-pong; table tennis"
+              tr_de="Pingpong; Tischtennis"
+              lvl="-"
+              category="sports"
+              id="takkyū-pingpong"
+            >
+                <sentence
+                  s="【卓：たっ】【球：きゅう】はどこでできるのですか。"
+                  rom="Takkyū wa doko de dekiru no desu ka?"
+                  tr_en="Where can you play ping-pong?"
+                  tr_de="Wo kann man Tischtennis spielen?"
+                  lvl="-"
+                  origin="Langenscheidt p.175"
+                />
+            </word>
+            <word
+              w="【一：いち】【輪：りん】【車：しゃ】"
+              rom="ichirinsha"
+              tr_en="unicycle; monocycle"
+              tr_de="Einrad"
+              lvl="-"
+              category="sports"
+              id="ichirinsha-unicycle"
+            >
+                <sentence
+                  s="【一：いち】【輪：りん】【車：しゃ】は【車：しゃ】【輪：りん】がひとつしかありません。"
+                  rom="Ichirinsha wa sharin ga hito-tsu shika arimasen."
+                  tr_en="A unicycle has only one wheel."
+                  tr_de="Ein Einrad hat nur ein Rad."
+                  lvl="-"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【片：かた】【隅：すみ】"
+              rom="katasumi"
+              tr_en="corner"
+              tr_de="Ecke"
+              hint_en="of a room"
+              hint_de="eines Raumes"
+              lvl="-"
+              category="home"
+              id="katasumi-corner"
+            >
+                <keep_apart_from id="kado-corner" />
+                <keep_apart_from id="sumi-corner" />
+                <sentence
+                  s="ベッドは【片：かた】【隅：すみ】にあります。"
+                  rom="Beddo wa katasumi ni arimasu."
+                  tr_en="The bed is in the corner."
+                  tr_de="Das Bett ist in der Ecke."
+                  lvl="-"
+                  origin="duolingo"
+                />
+            </word>
+            <word
+              w="【眉：まゆ】【毛：げ】"
+              rom="mayuge"
+              tr_en="eyebrow"
+              tr_de="Augenbraue"
+              lvl="-"
+              category="body"
+              id="mayuge-eyebrow"
+            >
+                <sentence
+                  s="【眉：まゆ】【毛：げ】を【染：そ】めてください。"
+                  rom="Mayuge o somete kudasai."
+                  tr_en="Please dye my eyebrows."
+                  tr_de="Bitte färben Sie mir die Augenbrauen."
+                  lvl="-"
+                  origin="Langenscheidt p.173"
+                />
+            </word>
         </section>
     </unit>
 </vocabulary>

@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n4"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- people -->
@@ -737,6 +735,7 @@
               category="science"
               id="kagaku-science"
             >
+                <keep_apart_from id="kagaku-chemistry" />
                 <phrase
                   ph="【科：か】【学：がく】【者：しゃ】"
                   rom="kagakusha"
@@ -1669,6 +1668,7 @@
             >
                 <!--
                     Note that this word is typically written in kanji, while yō-appearing is written in kana alone.
+                    However, 〜ように is usually in kana as well.
                 -->
                 <keep_apart_from id="tame-purpose" />
                 <keep_apart_from id="tsukai-use" />
@@ -1691,13 +1691,15 @@
                   rem="verified with ChatGPT; natsu-bōshi would be 'summer hat', while yō focuses on the purpose"
                 />
                 <sentence
-                  s="【毎：まい】【日：にち】 【子：こ】【供：ども】に、【車：くるま】に【気：き】を【付：つ】ける【用：よう】に【言：い】っています。"
+                  s="【毎：まい】【日：にち】 【子：こ】【供：ども】に、【車：くるま】に【気：き】を【付：つ】けるように【言：い】っています。"
                   rom="Mai-nichi kodomo ni, kuruma ni ki o tsukeru yō ni itte imasu."
                   tr_en="I tell my kids to watch out for cars every day."
                   tr_de="Ich sage meinen Kindern jeden Tag, sie sollen wegen den Autos aufpassen."
+                  hasDifferentForm="true"
                   allowSpaces="true"
                   lvl="n4"
                   origin="500mon q456"
+                  rem="500mon doesn't use kanji here"
                 />
             </word>
             <word

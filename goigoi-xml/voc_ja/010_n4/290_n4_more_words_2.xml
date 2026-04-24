@@ -9,10 +9,8 @@
       hasRomaji="true"
       hasFurigana="true"
       lvl="n4"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- noun -->
@@ -743,13 +741,16 @@
                   origin="lib0"
                 />
                 <sentence
-                  s="このベンチ、しっかりしてる？"
-                  rom="Kono benchi, shikkari shiteru?"
-                  tr_en="Is this bench sturdy?"
-                  tr_de="Ist diese Sitzbank robust?"
+                  s="もっとしっかりしなくちゃ、【困：こま】るな。"
+                  rom="Motto shikkari shinakucha, komaru na."
+                  tr_en="You've got to be more reliable, or this is going to be a problem."
+                  tr_de="Du musst dich mehr zusammenreissen, oder das wird zu einem Problem."
+                  explanation_en="「しなくちゃ」is a colloquial contraction of「しなくてはいけない」"
+                  explanation_de="「しなくちゃ」ist eine umgangssprachliche Kurzform von「しなくてはいけない」"
                   lvl="n4"
-                  origin="lib0 modified"
-                  rem="corrected by ChatGPT; also correct: このベンチ、しっかりした？"
+                  origin="Doraemon 0, p.17"
+                  rem="verified with ChatGPT that な here is the self-directed, reflective な,
+                    not the male version of the affirmation-seeking ね"
                 />
             </word>
             <word
@@ -1570,7 +1571,9 @@
               lvl="n4"
               id="sokode-then"
               HIDDEN="true"
-              rem="not a good word; derived from soko-there (n5), not soko-bottom (n3); jisho has n3"
+              rem="appears in Doraemon 0, p.28;
+                not a good word;
+                derived from soko-there (n5), not soko-bottom (n3), but jisho has n3"
             />
             <word
               w="ところで"

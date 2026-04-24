@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -169,6 +167,7 @@
                 <keep_apart_from id="omoidasu-remember" />
                 <keep_apart_from id="omoitsuku-thinkof" />
                 <keep_apart_from id="omoitsuki-idea" />
+                <keep_apart_from id="shisō-idea" />
                 <!--
                     物思い - mono-omoi - nx - reverie; meditation
                     彼は物思いにふけっている - He is buried in thought - lib0 - nx for ふける・耽る
@@ -1733,34 +1732,33 @@
                 />
             </word>
             <word
-              w="【死：し】【亡：ぼう】"
-              rom="shibō"
-              tr_en="death; mortality; to die; to pass away"
-              tr_de="Tod; Mortalität; sterben"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【農：のう】【民：みん】"
+              rom="nōmin"
+              tr_en="farmer; peasant"
+              tr_de="Bauer"
               lvl="n3"
-              category="health, not-good"
-              id="shibō-death"
+              category="occupations, countryside"
+              id="nōmin-farmer"
             >
-                <keep_apart_from id="nakunaru-die" />
-                <keep_apart_from id="shinu-die" />
+                <keep_apart_from id="nōka-farmhouse" />
+                <!--
+                  ChatGPT says 農民 is old-fashioned; nowadays 農家の人 is more common
+                -->
                 <phrase
-                  ph="【死：し】【亡：ぼう】【率：りつ】"
-                  rom="shibō-ritsu"
-                  tr_en="death rate"
-                  tr_de="Sterberate"
+                  ph="【貧：まず】しい【農：のう】【民：みん】"
+                  rom="mazushii nōmin"
+                  tr_en="a poor peasant"
+                  tr_de="ein armer Bauer"
                   lvl="n3"
                   origin="lib0"
                 />
                 <sentence
-                  s="【妻：つま】はその【事：じ】【故：こ】で【死：し】【亡：ぼう】した。"
-                  rom="Tsuma wa sono jiko de shibō shita."
-                  tr_en="My wife was killed in the accident."
-                  tr_de="Meine Frau ist in dem Unfall umgekommen."
+                  s="【農：のう】【民：みん】は【作：さく】【物：もつ】を【作：つく】る。"
+                  rom="Nōmin wa sakumotsu o tsukuru."
+                  tr_en="Farmers produce crops."
+                  tr_de="Bauern produzieren landwirtschaftliche Produkte."
                   lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
+                  origin="lib0"
                 />
             </word>
         </section>

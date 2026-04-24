@@ -11,10 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n5"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- traffic, transportation -->
@@ -415,7 +413,7 @@
               category="diy, hands"
               id="tsukau-use"
             >
-                <!-- the noun is 使い, n1, but we don't link, because it has a specialised meaning -->
+                <!-- the noun is 使い, n1, but we don't link, because it has a specialized meaning -->
                 <keep_apart_from id="riyō-use" />
                 <keep_apart_from id="mochiiru-use" />
                 <phrase
@@ -562,6 +560,7 @@
               id="aku-open"
             >
                 <see id="akeru-open" rem="v.t." />
+                <see id="fusagaru-blocked" rem="antonym" />
                 <phrase
                   ph="【開：あ】いている【窓：まど】"
                   rom="aite iru mado"
@@ -1054,9 +1053,11 @@
               rom="watasu"
               tr_en="to hand over; to transfer"
               tr_de="übergeben; transferieren"
+              hint_en="v.t."
               lvl="n5"
               id="watasu-transfer"
             >
+                <see id="wataru-cross" rem="closely related" />
                 <phrase
                   ph="【鍵：かぎ】を【渡：わた】す"
                   rom="kagi o watasu"

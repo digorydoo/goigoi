@@ -7,201 +7,29 @@
       hasFurigana="true"
       lvl="n3"
       HIDDEN="true"
-      translations="en"
       ignoresCombinedReadings="false"
     >
         <section>
-            <!-- pre-noun adjectival -->
-            <word
-              w="【或：あ】る"
-              rom="aru"
-              tr_en="a certain ...; some ..."
-              hint_en="pre-noun adjectival"
-              lvl="n3"
-              id="aru-acertain"
-              usuallyInKana="true"
-            />
-            <word
-              w="どんな"
-              rom="donna"
-              tr_en="what kind of; what sort of; what / no matter what (kind of); whatever; any; all"
-              hint_en="pre-noun adjectival (rentaishi)"
-              lvl="n3"
-              HIDDEN="true"
-              rem="why is this n3???"
-            />
-            <word
-              w="【単：たん】なる"
-              rom="tannaru"
-              tr_en="mere; simple; sheer"
-              hint_en="pre-noun adjectival (rentaishi)"
-              lvl="n3"
-            />
-
-            <!-- prefix, suffix -->
-            <word
-              w="【旧：きゅう】〜"
-              rom="kyū~"
-              tr_en="old; former; ex-"
-              hint_en="prefix"
-              hint_de="Präfix"
-              lvl="n3"
-            />
-            <word
-              w="【級：きゅう】"
-              rom="kyū"
-              tr_en="grade; rank; class"
-              hint_en="suffix"
-              hint_de="Suffix"
-              lvl="n3"
-              id="kyū-rank"
-            />
-            <word
-              w="【球：きゅう】"
-              rom="kyū"
-              tr_en="sphere / counter for balls"
-              hint_en="noun / suffix; counter"
-              lvl="n3"
-              id="kyū-sphere"
-              HIDDEN="true"
-            />
-            <word
-              w="【旧：きゅう】"
-              rom="kyū"
-              tr_en="old; former; ex- / the old; old things; old customs / old times; bygone days / Japan's old (lunisolar) calendar"
-              hint_en="prefix / noun / noun; prefix"
-              lvl="n3"
-              id="kyū-former"
-              HIDDEN="true"
-            />
-            <word
-              w="【案：あん】"
-              rom="an"
-              tr_en="idea; proposal; suggestion"
-              hint_en="suffix"
-              hint_de="Suffix"
-              lvl="n3"
-            />
-            <word
-              w="【組：くみ】"
-              rom="kumi"
-              tr_en="set (of items); group (of people)"
-              hint_en="suffix"
-              hint_de="Suffix"
-              lvl="n3"
-            />
-            <word
-              w="【暮：く】れ"
-              rom="kure"
-              tr_en="sunset; nightfall; end (of the year)"
-              hint_en="suffix"
-              hint_de="Suffix"
-              lvl="n3"
-              category="nature, light"
-            />
-            <word
-              w="【柄：がら】"
-              rom="gara"
-              tr_en="pattern; essential qualities; appropriate"
-              hint_en="suffix"
-              hint_de="Suffix"
-              lvl="n3"
-              id="gara-pattern"
-            />
-            <word
-              w="【数：すう】"
-              rom="sū"
-              tr_en="several; quantity; numbers"
-              hint_en="prefix or suffix"
-              hint_de="Präfix oder Suffix"
-              lvl="n3"
-              id="sū-several"
-            />
-            <word
-              w="【表：ひょう】【現：げん】"
-              rom="hyōgen"
-              tr_en="expression; representation"
-              lvl="n3"
-              id="hyōgen-expression"
-            >
-                <keep_apart_from id="dairi-agency" />
-                <keep_apart_from id="arawasu-reveal" />
-            </word>
-            <word
-              w="【期：き】【間：かん】"
-              rom="kikan"
-              tr_en="period; term; interval"
-              lvl="n3"
-              id="kikan-period"
-            />
-            <word
-              w="【行：い】き"
-              rom="iki"
-              tr_en="the way there; bound for ..."
-              lvl="n3"
-              id="iki-way"
-            />
-            <word
-              w="【部：ぶ】【分：ぶん】"
-              rom="bubun"
-              tr_en="portion; section; part"
-              hint_en="noun"
-              lvl="n3"
-              id="bubun-part"
-            >
-                <keep_apart_from id="bun-part" />
-            </word>
-            <word
-              w="【大：だい】【部：ぶ】【分：ぶん】"
-              rom="daibubun"
-              tr_en="majority; the most part"
-              lvl="n3"
-            />
-
-            <!-- pronouns and particles -->
-            <word
-              w="これら"
-              rom="korera"
-              tr_en="these"
-              tr_de="diese"
-              hint_en="things"
-              hint_de="Sachen"
-              lvl="n3"
-            />
-            <word
-              w="お【前：まえ】"
-              rom="o-mae"
-              tr_en="you"
-              tr_de="du"
-              hint_en="ref. to an equal or inferior; can be rude; rarely used outside movies"
-              hint_de="bezogen auf gleichen oder niedrigeren Rang; kann unhöflich sein"
-              lvl="n3"
-            />
-
-            <!-- conjunction -->
-            <word
-              w="なぜなら"
-              rom="nazenara"
-              tr_en="because; the reason is"
-              lvl="n3"
-            />
-
-            <!-- expression -->
-            <word
-              w="いらっしゃい"
-              rom="irasshai"
-              tr_en="welcome"
-              lvl="n3"
-              rem="is this really n3? irassharu is n4"
-            />
-            <word
-              w="あんなに"
-              rom="anna ni"
-              tr_en="to that extent; to that degree"
-              lvl="n3"
-            />
-
             <!-- unsorted -->
+            <word
+              w="【承：しょう】【知：ち】"
+              rom="shōchi"
+              tr_en="knowledge; awareness; consent"
+              tr_de="Wissen; Kenntnisnahme; sich etw. bewusst sein"
+              lvl="n3"
+              id="shōchi-knowledge"
+              rem="appears in 500mon N3 q29 explanations"
+            />
+            <word
+              w="【議：ぎ】【論：ろん】"
+              rom="giron"
+              tr_en="argument; discussion; controversy"
+              tr_de="Auseinandersetzung; Diskussion"
+              lvl="n3"
+              id="giron-argument"
+            >
+                <!-- 彼と議論しても無駄だ。It's no use arguing with him. (lib0) -->
+            </word>
             <word
               w="【奇：き】【妙：みょう】"
               rom="kimyō"
@@ -463,6 +291,17 @@
                 <see id="tanki-shortterm" rem="antonym" />
             </word>
             <word
+              w="【夫：ふう】【婦：ふ】"
+              rom="fūfu"
+              tr_en="married couple; husband and wife"
+              tr_de="verheiratetes Paar; Ehepaar"
+              lvl="n3"
+              id="fūfu-couple"
+              rem="appears in 500mon N3 q31 (no example)"
+            >
+                <keep_apart_from id="fusai-couple" />
+            </word>
+            <word
               w="【欠：けっ】【陥：かん】"
               rom="kekkan"
               tr_en="defect; fault; flaw"
@@ -687,9 +526,14 @@
             <word
               w="【数：かず】"
               rom="kazu"
-              tr_en="number; amount"
+              tr_en="amount; count"
+              tr_de="Betrag; Anzahl"
               lvl="n3"
-            />
+              id="kazu-count"
+            >
+                <keep_apart_from id="sūji-digit" />
+                <keep_apart_from id="bangō-number" />
+            </word>
             <word
               w="【日：ひ】【付：づけ】"
               rom="hidzuke"
@@ -952,25 +796,10 @@
               lvl="n3"
             />
             <word
-              w="だって"
-              rom="datte"
-              tr_en="after all; because; but; even; too; as well; also; they say; I hear; you mean"
-              hint_en="conjunction; particle"
-              lvl="n3"
-            />
-            <word
               w="ジェット【機：き】"
               rom="jettoki"
               tr_en="jet aeroplane; jet airplane; Jet aircraft"
               lvl="n3"
-            />
-            <word
-              w="と"
-              rom="to"
-              tr_en="if; when; and; with; used for quoting (thoughts, speech, etc.); promoted pawn; indicates a question; To (kana)"
-              hint_en="particle; conjunction; noun; particle"
-              lvl="n3"
-              id="to-if"
             />
             <word
               w="ト"
@@ -1002,13 +831,6 @@
               lvl="n3"
               category="light"
               id="hi-light"
-            />
-            <word
-              w="【然：しか】も"
-              rom="shikamo"
-              tr_en="moreover; furthermore; nevertheless; and yet"
-              hint_en="conjunction"
-              lvl="n3"
             />
             <word
               w="【無：ぶ】"
@@ -1452,13 +1274,6 @@
               lvl="n3"
             />
             <word
-              w="【夫：ふう】【婦：ふ】"
-              rom="fūfu"
-              tr_en="married couple; husband and wife; man and wife; his and hers; pair of objects, one larger (for man), one smaller (for woman)"
-              hint_en="noun; prefix; only applies to めおと"
-              lvl="n3"
-            />
-            <word
               w="【姿：すがた】"
               rom="sugata"
               tr_en="figure; form; shape; appearance; dress; guise; state; condition; picture; image; form (of a waka); dressed in ...; wearing ..."
@@ -1529,13 +1344,6 @@
               id="go-prefix"
               HIDDEN="true"
               rem="rōmaji not unique"
-            />
-            <word
-              w="【従：したが】って"
-              rom="shitagatte"
-              tr_en="therefore; consequently; accordingly"
-              hint_en="conjunction"
-              lvl="n3"
             />
             <word
               w="【章：しょう】"
@@ -1639,13 +1447,6 @@
               rom="ware-ware"
               tr_en="we"
               hint_en="pronoun"
-              lvl="n3"
-            />
-            <word
-              w="【手：て】【品：じな】"
-              rom="tejina"
-              tr_en="magic (illusion); conjuring; magic trick; conjuring trick; sleight of hand"
-              hint_en="noun"
               lvl="n3"
             />
             <word
@@ -1938,13 +1739,6 @@
               lvl="n3"
             />
             <word
-              w="【議：ぎ】【論：ろん】"
-              rom="giron"
-              tr_en="argument; discussion; controversy"
-              tr_de="Auseinandersetzung; Diskussion"
-              lvl="n3"
-            />
-            <word
               w="【行：ぎょう】【儀：ぎ】"
               rom="gyōgi"
               tr_en="manners; behaviour"
@@ -1970,12 +1764,6 @@
               lvl="n3"
             />
             <word
-              w="【承：しょう】【知：ち】"
-              rom="shōchi"
-              tr_en="knowledge; awareness; consent"
-              lvl="n3"
-            />
-            <word
               w="【餌：えさ】"
               rom="esa"
               tr_en="animal fodder; pet food; bait"
@@ -1987,14 +1775,6 @@
               rom="osen"
               tr_en="pollution; contamination"
               lvl="n3"
-            />
-            <word
-              w="【感：かん】【心：しん】"
-              rom="kanshin"
-              tr_en="admiration; being impressed; astonishment"
-              lvl="n3"
-              id="kanshin-admiration"
-              HIDDEN="true"
             />
             <word
               w="【一：いっ】【生：しょう】"
@@ -2130,13 +1910,6 @@
               hint_en="expressions (phrases, clauses, etc.)"
               lvl="n3"
               rem="jisho has n2"
-            />
-            <word
-              w="【所：ところ】が"
-              rom="tokoro ga"
-              tr_en="even so; however; still; whereupon; even though; nevertheless; on the contrary; as a matter of fact; despite"
-              hint_en="conjunction"
-              lvl="n3"
             />
             <word
               w="【分：ぶん】【野：や】"
@@ -2327,14 +2100,6 @@
               id="dai-machines"
             />
             <word
-              w="【即：すなわ】ち"
-              rom="sunawachi"
-              tr_en="that is (to say); namely; i.e. / precisely; exactly; just; nothing but; neither more nor less / (and) then"
-              hint_en="conjunction"
-              lvl="n3"
-              id="sunawachi-thatis"
-            />
-            <word
               w="【怠：なま】ける"
               rom="namakeru"
               tr_en="to be lazy; to be idle; to slack / to neglect (e.g. one's work); to be neglectful of; to skip (e.g. school)"
@@ -2351,33 +2116,12 @@
               id="yōbi-dayofweek"
             />
             <word
-              w="【札：さつ】"
-              rom="satsu"
-              tr_en="banknote; bill; paper money"
-              tr_de="Banknote; Papiergeld"
-              hint_en="noun; suffix"
-              hint_de="Nomen; Suffix"
-              studyInContext="preferred"
-              lvl="n3"
-              category="finances"
-              id="satsu-banknote"
-              HIDDEN="true"
-            />
-            <word
               w="【止：よ】す"
               rom="yosu"
               tr_en="to cease; to desist; to cut it out; to lay off (an activity); to drop (a subject) to abolish; to resign; to give up"
               hint_en="v.t."
               lvl="n3"
               id="yosu-cease"
-            />
-            <word
-              w="だが"
-              rom="da ga"
-              tr_en="but; however; (and) yet; nevertheless; still; for all that"
-              hint_en="conjunction"
-              lvl="n3"
-              id="daga-andyet"
             />
             <word
               w="【幕：まく】"
@@ -2477,13 +2221,6 @@
               lvl="n3"
             />
             <word
-              w="【孫：まご】"
-              rom="mago"
-              tr_en="grandchild"
-              hint_en="noun"
-              lvl="n3"
-            />
-            <word
               w="【堪：たま】らない"
               rom="tamaranai"
               tr_en="intolerable; unbearable; unendurable / irresistible; tremendous; out of this world / cannot help (doing); cannot but do; anxious to do; cannot get enough of"
@@ -2579,13 +2316,6 @@
               lvl="n3"
             />
             <word
-              w="ですから"
-              rom="desu kara"
-              tr_en="so; therefore; accordingly; consequently; on those grounds; that is why; for that reason"
-              hint_en="conjunction"
-              lvl="n3"
-            />
-            <word
               w="【率：りつ】"
               rom="ritsu"
               tr_en="rate; ratio; proportion; percentage"
@@ -2635,13 +2365,6 @@
               rom="fuka"
               tr_en="wrong; bad; improper; unjustifiable; inadvisable / not allowed; not possible / failing grade"
               hint_en="noun; na-adjective (keiyodoshi); noun; noun, used as a suffix"
-              lvl="n3"
-            />
-            <word
-              w="【微：び】【妙：みょう】"
-              rom="bimyō"
-              tr_en="subtle; delicate; fine / difficult; complex; tricky; delicate (situation, position, etc.); close (e.g. decision) / doubtful; questionable; dicey / not great; iffy"
-              hint_en="na-adjective (keiyodoshi); noun"
               lvl="n3"
             />
             <word

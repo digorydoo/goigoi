@@ -144,7 +144,7 @@ class GoigoiVocabBuilder(private val vocab: GoigoiVocab, private val options: Op
     }
 
     private fun writeVocabIndex() {
-        val indexFname = "${options.dstDir}/index.voc"
+        val indexFname = "${options.dstDir}/index.voc" // FIXME path should come from Options like the rest
 
         if (options.quiet) {
             print(".")
@@ -153,11 +153,7 @@ class GoigoiVocabBuilder(private val vocab: GoigoiVocab, private val options: Op
         val indexFile = File(indexFname)
 
         if (indexFile.exists()) {
-            if (options.overwrite) {
-                indexFile.delete()
-            } else {
-                throw ShellCommandError("\nFile already exists: $indexFname")
-            }
+            indexFile.delete()
         }
 
         if (!indexFile.createNewFile()) {
@@ -174,11 +170,7 @@ class GoigoiVocabBuilder(private val vocab: GoigoiVocab, private val options: Op
         val file = File(fname)
 
         if (file.exists()) {
-            if (options.overwrite) {
-                file.delete()
-            } else {
-                throw ShellCommandError("\nFile already exists: ${file.path}")
-            }
+            file.delete()
         }
 
         if (!file.createNewFile()) {

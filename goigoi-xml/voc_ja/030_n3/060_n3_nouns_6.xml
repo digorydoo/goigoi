@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      translations="en, de"
-      requiresSentences="false"
-      requiresPhrases="false"
-      requiresIds="true"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -614,32 +612,87 @@
                 />
             </word>
             <word
-              w="【中：ちゅう】【止：し】"
-              rom="chūshi"
-              tr_en="abandoning; suspension; discontinuance"
-              tr_de="Aufgeben; Abbruch"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【宝：たから】"
+              rom="takara"
+              tr_en="treasure"
+              tr_de="Schatz"
               lvl="n3"
-              category="mood, not-good"
-              id="chūshi-abandon"
-              rem="appears in 500mon q406"
+              category="entertainment, finances"
+              id="takara-treasure"
             >
-                <sentence
-                  s="【工：こう】【場：じょう】を【建：た】てる【計：けい】【画：かく】が【中：ちゅう】【止：し】になった。"
-                  rom="Kōjō o tateru keikaku ga chūshi ni natta."
-                  tr_en="The plan to build a factory has been abandoned."
-                  tr_de="Der Plan, eine Fabrik zu bauen, wurde aufgegeben."
+                <keep_together id="takarajima-treasureisland" />
+                <see id="hōseki-gem" rem="closely related" />
+                <phrase
+                  ph="【宝：たから】【島：じま】"
+                  rom="takarajima"
+                  tr_en="treasure island"
+                  tr_de="Schatzinsel"
                   lvl="n3"
-                  origin="500mon q406"
-                  rem="jisho has n3 for keikaku, chūshi"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【宝：たから】【箱：ばこ】"
+                  rom="takarabako"
+                  tr_en="treasure chest"
+                  tr_de="Schatztruhe"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="その【宝：たから】【島：じま】では【宝：たから】【箱：ばこ】が【全：ぜん】【部：ぶ】なくなっちゃってる。"
+                  rom="Sono takarajima de wa takarabako ga zenbu nakunacchatteru."
+                  tr_en="On this treasure island, all the treasure chests are already gone."
+                  tr_de="Auf dieser Schatzinsel sind schon alle Schatztruhen weg."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【宝：たから】【島：じま】"
+              rom="takarajima"
+              tr_en="treasure island"
+              lvl="n3"
+              id="takarajima-treasureisland"
+              HIDDEN="true"
+              rem="just to provide the furigana; is a phrase of takara"
+            >
+                <keep_together id="takara-treasure" />
+            </word>
+            <word
+              w="【手：て】【品：じな】"
+              rom="tejina"
+              tr_en="magic trick; conjuring; illusion"
+              tr_de="Zaubertrick; Zauberei; Illusion"
+              lvl="n3"
+              id="tejina-conjuring"
+              rem="appears in Doraemon 0, p.28"
+            >
+                <phrase
+                  ph="【手：て】【品：じな】【師：し】"
+                  rom="tejinashi"
+                  tr_en="magician; conjurer; illusionist"
+                  tr_de="Magier; Zauberer; Illusionist"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="その【手：て】【品：じな】をやってみよう。"
+                  rom="Sono tejina o yatte miyō."
+                  tr_en="Let's try that magic trick!"
+                  tr_de="Lass mich diesen Zaubertrick versuchen!"
+                  lvl="n3"
+                  origin="Doraemon 0, p.28 modified"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
               w="【書：しょ】【斎：さい】"
               rom="shosai"
-              tr_en="study (room); library; reading room"
-              tr_de="Studierzimmer; Bibliothek; Leseraum"
+              tr_en="private study; study room"
+              tr_de="Studierzimmer; Arbeitszimmer"
               lvl="n3"
               category="literature"
               id="shosai-library"
@@ -647,38 +700,17 @@
                 <phrase
                   ph="【静：しず】かな【書：しょ】【斎：さい】"
                   rom="shizuka na shosai"
-                  tr_en="quiet study (room)"
+                  tr_en="quiet study room"
                   tr_de="ruhiges Studierzimmer"
                   lvl="n3"
                 />
-            </word>
-            <word
-              w="【大：だい】【統：とう】【領：りょう】"
-              rom="daitōryō"
-              tr_en="president"
-              tr_de="Präsident"
-              lvl="n3"
-              category="politics, people"
-              id="daitōryō-president"
-            >
-                <keep_apart_from id="shushō-premier" />
-                <keep_apart_from id="taishi-ambassador" />
-                <phrase
-                  ph="ロシア【大：だい】【統：とう】【領：りょう】"
-                  rom="Roshia-daitōryō"
-                  tr_en="President of Russia"
-                  tr_de="Präsident von Russland"
-                  lvl="n3"
-                  origin="jpod101 audio"
-                  rem="Roshia is nx"
-                />
                 <sentence
-                  s="【新：あたら】しい【大：だい】【統：とう】【領：りょう】は【評：ひょう】【判：ばん】がよい。"
-                  rom="Atarashii daitōryō wa hyōban ga yoi."
-                  tr_en="The new president has a good reputation."
-                  tr_de="Der neue Präsident hat einen guten Ruf."
+                  s="おじいさんは【書：しょ】【斎：さい】にいる。"
+                  rom="O-jīsan wa shosai ni iru."
+                  tr_en="Grandfather is in his study."
+                  tr_de="Grossvater ist in seinem Arbeitszimmer."
                   lvl="n3"
-                  origin="lib0"
+                  origin="lib0 modified"
                 />
             </word>
             <word
@@ -686,14 +718,36 @@
               rom="zaseki"
               tr_en="seat"
               tr_de="Platz"
-              hint_en="in a theatre, airplane, etc."
+              hint_en="in a theatre, aeroplane, etc."
               hint_de="in einem Theater, Flugzeug, usw."
               lvl="n3"
               id="zaseki-seat"
             >
                 <!--
                     See https://hinative.com/questions/22015162 (difference between seki and zaseki)
+                    座席: fixed seat (in a theatre, aeroplane, etc.)
+                    席: a seat, often mobile; a place where a person sits
+                    Acc. to ChatGPT, zaseki is more formal; in conversation, seki is often preferred
                 -->
+                <keep_apart_from id="seki-seat" />
+                <phrase
+                  ph="【映：えい】【画：が】【館：かん】の【座：ざ】【席：せき】"
+                  rom="eigakan no zaseki"
+                  tr_en="a seat in a movie theatre"
+                  tr_de="ein Platz in Kino"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【飛：ひ】【行：こう】【機：き】の【座：ざ】【席：せき】"
+                  rom="hikōki no zaseki"
+                  tr_en="a seat in an aeroplane"
+                  tr_de="ein Platz im Flugzeug"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
                 <sentence
                   s="【座：ざ】【席：せき】には【番：ばん】【号：ごう】が【付：つ】いていますか。"
                   rom="Zaseki ni wa bangō ga tsuite imasu ka?"
@@ -715,6 +769,18 @@
                 <keep_apart_from id="shiai-match" />
                 <keep_apart_from id="kyōsō-race" />
                 <keep_apart_from id="kyōgi-contest" />
+                <!--
+                  党大会・とうたいかい (nx): (political) party convention
+                  選手権大会・せんしゅけんたいかい (nx): championship series
+                -->
+                <phrase
+                  ph="【水：すい】【泳：えい】【大：たい】【会：かい】"
+                  rom="suiei taikai"
+                  tr_en="swimming tournament"
+                  tr_de="Schwimmwettkampf"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="スポーツ【大：たい】【会：かい】に【参：さん】【加：か】することは【健：けん】【康：こう】にいいです。"
                   rom="Supōtsu taikai ni sanka suru koto wa kenkō ni ii desu."
@@ -733,6 +799,25 @@
               category="education"
               id="kamoku-curriculum"
             >
+                <!--
+                  必修科目・ひっしゅうかもく (n1): compulsory course
+                -->
+                <phrase
+                  ph="【面：おも】【白：しろ】い【科：か】【目：もく】"
+                  rom="omoshiroi kamoku"
+                  tr_en="an interesting school subject"
+                  tr_de="ein interessantes Schulfach"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【得：とく】【意：い】な【科：か】【目：もく】"
+                  rom="tokui na kamoku"
+                  tr_en="one's strongest school subject"
+                  tr_de="stärkstes Fach; bestes Fach; (meine) Paradedisziplin"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【数：すう】【学：がく】は【難：むずか】しい【科：か】【目：もく】だ。"
                   rom="Sūgaku wa muzukashii kamoku da."
@@ -858,6 +943,14 @@
                 <keep_apart_from id="shūi-circumference" />
                 <keep_apart_from id="enshū-circumference" />
                 <keep_apart_from id="shūhen-circumference" />
+                <phrase
+                  ph="【公：こう】【園：えん】【辺：あた】りに【住：す】む"
+                  rom="kōen-atari ni sumu"
+                  tr_en="to live in the vicinity of a park"
+                  tr_de="in der Nähe eines Parkes wohnen"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="この【辺：あた】りは【夕：ゆう】【方：がた】になると【静：しず】かになります。"
                   rom="Kono atari wa yūgata ni naru to shizuka ni narimasu."
@@ -877,6 +970,14 @@
               id="kaiga-painting"
             >
                 <keep_apart_from id="e-picture" />
+                <phrase
+                  ph="【現：げん】【代：だい】【絵：かい】【画：が】"
+                  rom="gendai kaiga"
+                  tr_en="modern painting; contemporary painting"
+                  tr_de="moderne Malerei; zeitgenössische Malerei"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【美：び】【術：じゅつ】【館：かん】で【絵：かい】【画：が】を【見：み】るのが【好：す】きです。"
                   rom="Bijutsukan de kaiga o miru no ga suki desu."
@@ -887,20 +988,42 @@
                 />
             </word>
             <word
-              w="【化：ばけ】【学：がく】"
-              rom="bakegaku"
+              w="【化：か】【学：がく】"
+              rom="kagaku"
               tr_en="chemistry"
               tr_de="Chemie"
               lvl="n3"
               category="science, education"
-              id="bakegaku-chemistry"
+              id="kagaku-chemistry"
             >
+                <!--
+                  ChatGPT says 化学 is usually read as かがく, not ばけがく, even though 科学 is a homophone.
+                  jpod101 audio also pronounces it as かがく.
+                -->
+                <keep_apart_from id="kagaku-science" />
                 <phrase
-                  ph="【化：ばけ】【学：がく】の【実：じっ】【験：けん】"
-                  rom="bakegaku no jikken"
+                  ph="【化：か】【学：がく】の【実：じっ】【験：けん】"
+                  rom="kagaku no jikken"
                   tr_en="chemistry experiment"
                   tr_de="Chemie-Experiment"
                   lvl="n3"
+                />
+                <phrase
+                  ph="【化：か】【学：がく】の【実：じっ】【験：けん】【室：しつ】"
+                  rom="kagaku no jikken shitsu"
+                  tr_en="chemistry lab"
+                  tr_de="Chemielabor"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【化：か】【学：がく】は【私：わたし】の【苦：にが】【手：て】な【科：か】【目：もく】だ。"
+                  rom="Kagaku wa watashi no nigate na kamoku da."
+                  tr_en="Chemistry is my weak subject."
+                  tr_de="Chemie ist nicht mein Lieblingsfach."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -921,6 +1044,14 @@
                   tr_de="das (eigene) Verhalten erklären"
                   lvl="n3"
                 />
+                <sentence
+                  s="【行：こう】【動：どう】は【言：こと】【葉：ば】より【大：たい】【切：せつ】です。"
+                  rom="Kōdō wa kotoba yori taisetsu desu."
+                  tr_en="What you do is more important than what you say."
+                  tr_de="Was man tut ist wichtiger als was man sagt."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【変：へん】【化：か】"
@@ -940,6 +1071,14 @@
                   lvl="n3"
                   origin="ChatGPT"
                 />
+                <sentence
+                  s="【彼：かれ】の【意：い】【見：けん】は【変：へん】【化：か】しやすい。"
+                  rom="Kare no iken wa henka shi-yasui."
+                  tr_en="His opinion changes easily."
+                  tr_de="Er ändert schnell mal seine Meinung."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【柄：え】"
@@ -950,12 +1089,52 @@
               category="nature, diy"
               id="e-stalk"
             >
+                <!--
+                  茎・くき (n1): main stem of a plant, e.g. キノコの茎
+                  柄・え (n3) can be the narrower connecting stalks, e.g. 葉の柄
+                  ChatGPT says キノコの柄 is possible, but キノコの茎 is more natural.
+                  Also:
+                  横柄・おうへい (nx): arrogant; haughty; insolent (lib0)
+                  花柄・かへい (nx) peduncle (botany) != 花柄・はながら (nx) flower pattern
+                -->
+                <keep_apart_from id="kuki-stem" />
+                <keep_apart_from id="miki-treetrunk" />
+                <keep_apart_from id="eda-twig" />
+                <phrase
+                  ph="【葉：は】の【柄：え】"
+                  rom="ha no e"
+                  tr_en="stalk of a leaf"
+                  tr_de="Stiehl eines Blattes"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
                 <phrase
                   ph="【木：き】の【柄：え】"
                   rom="ki no e"
-                  tr_en="wooden handle (of a tool, etc.)"
-                  tr_de="hölzerner Griff"
+                  tr_en="wooden handle (of a tool)"
+                  tr_de="hölzerner Griff (eines Werkzeugs)"
+                  explanation_en="For the trunk of a tree, use 【幹：みき】. For a branch, use 【枝：えだ】."
+                  explanation_de="Der Stamm eines Baumes ist 【幹：みき】. Zweige sind 【枝：えだ】."
                   lvl="n3"
+                  origin="jpod101 modified"
+                />
+                <phrase
+                  ph="【取：と】り【柄：え】"
+                  rom="tori-e"
+                  tr_en="worth; merit; value"
+                  tr_de="Wert; Nutzen; Stärke"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="この【道：どう】【具：ぐ】の【柄：え】は、なんだか【使：つか】いにくい。"
+                  rom="Kono dōgu no e wa, nanda ka tsukai-nikui."
+                  tr_en="The handle of this tool is somewhat uncomfortable."
+                  tr_de="Der Griff dieses Werkzeugs ist irgendwie unbequem."
+                  lvl="n3"
+                  origin="DeepL"
                 />
             </word>
             <word
@@ -998,13 +1177,23 @@
               tr_de="Verschwendung; Nutzlosigkeit"
               hint_en="noun; na-adjective"
               hint_de="Nomen; Na-Adjektiv"
+              studyInContext="preferred"
               lvl="n3"
               id="muda-waste"
+              rem="appears in 500mon N3 q42"
             >
                 <keep_apart_from id="oshaberi-gossip" />
                 <keep_apart_from id="uwasa-rumour" />
                 <keep_apart_from id="mudabanashi-gossip" />
                 <keep_together id="mudabanashi-gossip" />
+                <phrase
+                  ph="【無：む】【駄：だ】になる"
+                  rom="muda ni naru"
+                  tr_en="to come to nothing"
+                  tr_de="nichts draus werden"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <phrase
                   ph="【無：む】【駄：だ】【遣：づか】い"
                   rom="mudadzukai"
@@ -1022,6 +1211,22 @@
                   lvl="n3"
                   origin="lib0"
                   rem="jisho has nx"
+                />
+                <sentence
+                  s="【無：む】【駄：だ】にする【時：じ】【間：かん】はない。"
+                  rom="Muda ni suru jikan wa nai."
+                  tr_en="There is no time to waste."
+                  tr_de="Wir haben keine Zeit zum Verschwenden."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="それは【時：じ】【間：かん】の【無：む】【駄：だ】です。"
+                  rom="Sore wa jikan no muda desu."
+                  tr_en="That's a waste of time."
+                  tr_de="Das ist Zeitverschwendung."
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -1047,6 +1252,15 @@
               id="fusoku-shortage"
             >
                 <phrase
+                  ph="【寝：ね】【不：ぶ】【足：そく】"
+                  rom="nebusoku"
+                  tr_en="lack of sleep"
+                  tr_de="Schlafmangel"
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
                   ph="【水：みず】【不：ぶ】【足：そく】"
                   rom="mizubusoku"
                   tr_en="water shortage; insufficient water supply"
@@ -1054,6 +1268,32 @@
                   hasDifferentForm="true"
                   lvl="n3"
                   origin="GENKI2 p.286"
+                />
+                <phrase
+                  ph="【不：ふ】【足：そく】なし"
+                  rom="fusoku-nashi"
+                  tr_en="nothing lacking"
+                  tr_de="nichts fehlt"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="お【金：かね】が【不：ふ】【足：そく】している。"
+                  rom="O-kane ga fusoku shite iru."
+                  tr_en="I am short of money."
+                  tr_de="Mir geht das Geld aus."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【寝：ね】【不：ぶ】【足：そく】で【疲：つか】れた。"
+                  rom="Nebusoku de tsukareta."
+                  tr_en="I'm tired from lack of sleep."
+                  tr_de="Ich bin müde, weil ich zuwenig geschlafen habe."
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -1095,12 +1335,15 @@
             <word
               w="【道：どう】【路：ろ】"
               rom="dōro"
-              tr_en="road; highway"
-              tr_de="Strasse; Autobahn"
+              tr_en="road; street"
+              tr_de="Weg; Strasse"
+              hint_en="technical"
+              hint_de="technischer Begriff"
               lvl="n3"
               category="city"
               id="dōro-road"
             >
+                <keep_apart_from id="michi-street" />
                 <phrase
                   ph="【道：どう】【路：ろ】【工：こう】【事：じ】"
                   rom="dōro kōji"
@@ -1108,6 +1351,32 @@
                   tr_de="Strassenarbeiten"
                   lvl="n3"
                   origin="lib0"
+                />
+                <phrase
+                  ph="【高：こう】【速：そく】【道：どう】【路：ろ】"
+                  rom="kōsoku-dōro"
+                  tr_en="highway"
+                  tr_de="Autobahn"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="jisho has nx, but n3 for kōsoku, dōro"
+                />
+                <phrase
+                  ph="【道：どう】【路：ろ】【地：ち】【図：ず】"
+                  rom="dōro-chizu"
+                  tr_en="roadmap"
+                  tr_de="Strassenkarte"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx, for n3 for dōro, n5 for chizu"
+                />
+                <sentence
+                  s="【北：ほっ】【海：かい】【道：どう】の【道：どう】【路：ろ】は【幅：はば】が【広：ひろ】いです。"
+                  rom="Hokkaidō no dōro wa haba ga hiroi desu."
+                  tr_en="The roads in Hokkaidō are wide."
+                  tr_de="Die Strassen von Hokkaidō sind breit."
+                  lvl="n3"
+                  origin="lib0 modified"
                 />
             </word>
             <word
@@ -1120,12 +1389,27 @@
               id="retsu-queue"
               rem="also a counter for rows"
             >
+                <!--
+                  陳列品・ちんれつひん (nx): exhibit; showpiece; article on display (lib0)
+                     lib0 also has 陳列物, but jisho doesn't list it.
+                  最前列・さいぜんれつ (nx): front row (e.g. seats) (lib0)
+                  最後列・さいこうれつ (nx): back row; last row
+                -->
                 <phrase
                   ph="【列：れつ】を【作：つく】って【並：なら】ぶ"
                   rom="retsu o tsukutte narabu"
                   tr_en="to line up in a queue"
                   tr_de="in einer Schlange anstehen"
                   lvl="n3"
+                />
+                <sentence
+                  s="【窓：まど】【口：ぐち】の【前：まえ】で【長：なが】い【列：れつ】ができていました。"
+                  rom="Madoguchi no mae de nagai retsu ga dekite imashita."
+                  tr_en="A long queue had formed in front of the ticket window."
+                  tr_de="Es hatte sich eine lange Schlage vor dem Schalter gebildet."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -1270,27 +1554,34 @@
             <word
               w="【切：き】り"
               rom="kiri"
-              tr_en="stop; limits"
-              tr_de="Stopp; Grenze"
+              tr_en="cut; stop; limits"
+              tr_de="Schnitt; Stopp; Grenze"
               lvl="n3"
-              id="kiri-stop"
+              id="kiri-cut"
               rem="jisho has n1"
             >
                 <see id="kiru-cut" rem="closely related" />
                 <keep_apart_from id="kiri-limits" />
                 <keep_apart_from id="shimekiri-deadline" />
+                <keep_apart_from id="omoikiri-withallstrength" />
+                <keep_apart_from id="kizu-scar" />
                 <!--
-                ChatGPT says 切りがない and 限りがない both exist:
-                   切りがない - very common
-                   限りがない - much less common
-                Examples by ChatGPT:
-                    文句を言い出したら切りがない
-                    心配し始めたら切りがない
-                lib0 has 宇宙には限りはない.
-                Some hinative user corrected 宇宙には切りがない to 宇宙には限りがない
-                (https://hinative.com/questions/22253622)
-                Compare with kiri-limits.
+                  ChatGPT says 切りがない and 限りがない both exist:
+                     切りがない - very common
+                     限りがない - much less common
+                  lib0 has 宇宙には限りはない.
+                  Some hinative user corrected 宇宙には切りがない to 宇宙には限りがない
+                  (https://hinative.com/questions/22253622)
+                  Compare with kiri-limits.
                 -->
+                <phrase
+                  ph="【深：ふか】い【切：き】り【傷：きず】"
+                  rom="fukai kiri-kizu"
+                  tr_en="a deep cut (wound)"
+                  tr_de="tiefe Schnittwunde"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
                 <phrase
                   ph="【切：き】りがない"
                   rom="kiri ga nai"
@@ -1299,6 +1590,14 @@
                   lvl="n3"
                   origin="lib0"
                   rem="verified with ChatGPT; jisho has n1 for kiri, but n5 for kiru"
+                />
+                <sentence
+                  s="この【話：はなし】は【切：き】りがないから、ここでやめよう。"
+                  rom="Kono hanashi wa kiri ga nai kara, koko de yameyō."
+                  tr_en="This talk could go on forever, so let's stop here."
+                  tr_de="Diese Geschichte könnte endlos weitergehen, deshalb brechen wir hier ab."
+                  lvl="n3"
+                  origin="ChatGPT"
                 />
             </word>
             <word
@@ -1313,11 +1612,63 @@
               id="fukō-misfortune"
               rem="appears in GENKI2 p.329 kanji section"
             >
+                <keep_apart_from id="higeki-tragedy" />
+                <phrase
+                  ph="【不：ふ】【幸：こう】な【出：で】【来：き】【事：ごと】"
+                  rom="fukō na dekigoto"
+                  tr_en="unfortunate events"
+                  tr_de="tragische Ereignisse"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【不：ふ】【幸：こう】な【生：せい】【活：かつ】"
+                  rom="fukō na seikatsu"
+                  tr_en="an unhappy life"
+                  tr_de="ein unglückliches Leben"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【私：わたし】は【友：とも】【達：だち】がいないことは【不：ふ】【幸：こう】だと【思：おも】う。"
                   rom="Watashi wa tomodachi ga inai koto wa fukō da to omou."
                   tr_en="I think that having no friends is a tragedy."
                   tr_de="Ich finde, keine Freunde haben ist eine Tragödie."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【頼：たよ】り"
+              rom="tayori"
+              tr_en="reliance; dependence"
+              tr_de="Zuverlässigkeit; Abhängigkeit"
+              lvl="n3"
+              id="tayori-reliance"
+              rem="jisho has nx, but n3 for tayoru; appears in Doraemon 0, p.25 as tayori nai"
+            >
+                <see id="tayoru-relyon" rem="verb" />
+                <phrase
+                  ph="【頼：たよ】りない"
+                  rom="tayori nai"
+                  tr_en="unreliable"
+                  tr_de="unzuverlässig"
+                  lvl="n3"
+                  origin="Doraemon 0, p.25"
+                />
+                <phrase
+                  ph="【頼：たよ】りになる【人：ひと】"
+                  rom="tayori ni naru hito"
+                  tr_en="a person you can depend on"
+                  tr_de="eine Person, auf die man sich verlassen kann"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="あまり【両：りょう】【親：しん】を【頼：たよ】りすぎてはいけない。"
+                  rom="Amari ryōshin o tayori-sugite wa ikenai."
+                  tr_en="Don't depend on your parents too much."
+                  tr_de="Verlasse dich nicht zu sehr auf deine Eltern."
                   lvl="n3"
                   origin="lib0"
                 />
@@ -1332,7 +1683,61 @@
               lvl="n3"
               category="transportation"
               id="kōsoku-hispeed"
-            />
+            >
+                <!-- kōsoku-dōro is a phrase of dōro -->
+                <phrase
+                  ph="【高：こう】【速：そく】【道：どう】【路：ろ】を【走：はし】るトラック"
+                  rom="kōsoku-dōro o hashiru torakku"
+                  tr_en="a truck driving on a highway"
+                  tr_de="ein auf der Autobahn fahrender Truck"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【高：こう】【速：そく】【道：どう】【路：ろ】は【何：なん】【千：ぜん】もの【車：くるま】で【渋：じゅう】【滞：たい】した。"
+                  rom="Kōsoku-dōro wa nanzen mo no kuruma de jūtai shita."
+                  tr_en="The highway was congested with thousands of cars."
+                  tr_de="Auf der Autobahn staute sich der Verkehr mit tausenden von Autos."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for nanzen"
+                />
+            </word>
+            <word
+              w="【作：さく】【品：ひん】"
+              rom="sakuhin"
+              tr_en="works of art; piece of work"
+              tr_de="Kunstwerk; Werk"
+              lvl="n3"
+              category="arts"
+              id="sakuhin-work"
+            >
+                <keep_apart_from id="shōhin-commodity" />
+                <keep_apart_from id="seihin-product" />
+                <keep_apart_from id="shina-item" />
+                <keep_apart_from id="shinamono-article" />
+                <keep_apart_from id="sakumotsu-crops" />
+                <!--
+                  lib0 also has 芸術作品・げいじゅつさくひん (nx): work of art; artwork; objet d'art
+                  but the meaning is too close to make it a phrase
+                -->
+                <phrase
+                  ph="【有：ゆう】【名：めい】な【画：が】【家：か】の【作：さく】【品：ひん】"
+                  rom="yūmei na gaka no sakuhin"
+                  tr_en="the works of a famous painter"
+                  tr_de="die Werke eines berühmten Malers"
+                  lvl="n3"
+                  origin="self"
+                />
+                <sentence
+                  s="【彼：かれ】の【作：さく】【品：ひん】の【中：なか】でこれが【最：さい】【高：こう】だ。"
+                  rom="Kare no sakuhin no naka de kore ga saikō da."
+                  tr_en="Among his works, this one's the best."
+                  tr_de="Von all seinen Werken ist dieses das beste."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【単：たん】【語：ご】"
               rom="tango"
@@ -1346,20 +1751,22 @@
             >
                 <keep_apart_from id="gengo-language" />
                 <keep_apart_from id="kotoba-words" />
-            </word>
-            <word
-              w="【品：しな】"
-              rom="shina"
-              tr_en="article; item; goods"
-              tr_de="Artikel; Stück; Güter"
-              lvl="n3"
-              category="shopping, factory"
-              id="shina-item"
-            >
-                <keep_apart_from id="shōhin-commodity" />
-                <keep_apart_from id="seihin-product" />
-                <keep_apart_from id="shinamono-article" />
-                <keep_apart_from id="sakuhin-work" />
+                <phrase
+                  ph="【単：たん】【語：ご】を【辞：じ】【書：しょ】で【調：しら】べる"
+                  rom="tango o jisho de shiraberu"
+                  tr_en="to look up a word in the dictionary"
+                  tr_de="ein Wort im Wörterbuch nachschlagen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【単：たん】【語：ご】は【発：はつ】【音：おん】しにくい。"
+                  rom="Kono tango wa hatsuon shi-nikui."
+                  tr_en="This word is difficult to pronounce."
+                  tr_de="Dieses Wort ist schwer auszusprechen."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【自：じ】【慢：まん】"
@@ -1373,18 +1780,30 @@
               id="jiman-boast"
             >
                 <keep_apart_from id="tokui-pride" />
-            </word>
-            <word
-              w="【愛：あい】【情：じょう】"
-              rom="aijō"
-              tr_en="love; affection"
-              tr_de="Liebe; Zuneigung"
-              lvl="n3"
-              category="relationships"
-              id="aijō-love"
-            >
-                <keep_apart_from id="ai-love" />
-                <keep_apart_from id="koi-love" />
+                <phrase
+                  ph="【自：じ】【慢：まん】【話：ばなし】"
+                  rom="jiman-banashi"
+                  tr_en="bragging; boastful speech"
+                  tr_de="Prahlerei; Angeberei"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【娘：むすめ】を【自：じ】【慢：まん】にしている"
+                  rom="musume o jiman ni shite iru"
+                  tr_en="to be proud of one's daughter"
+                  tr_de="stolz sein auf die eigene Tochter"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】は【料：りょう】【理：り】がうまいと【自：じ】【慢：まん】している。"
+                  rom="Kanojo wa ryōri ga umai to jiman shite iru."
+                  tr_en="She boasts that her cooking is good."
+                  tr_de="Sie prahlt davon, wie lecker ihre eigenen Gerichte seien."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【医：い】【師：し】"
@@ -1397,6 +1816,22 @@
             >
                 <!-- See https://hinative.com/questions/22019349 (diff between isha and ishi) -->
                 <keep_apart_from id="isha-physician" />
+                <phrase
+                  ph="【医：い】【師：し】になるために【勉：べん】【強：きょう】する"
+                  rom="ishi ni naru tame ni benkyō suru"
+                  tr_en="to study in order to become a physician"
+                  tr_de="studieren, um einen Arzt zu werden"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【医：い】【師：し】のいう【通：とお】りにしなさい。"
+                  rom="Ishi no iu tōri ni shi-nasai."
+                  tr_en="Please do as the doctor told you."
+                  tr_de="Bitte tue, was der Arzt dir gesagt hat."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【方：ほう】【法：ほう】"
@@ -1407,13 +1842,27 @@
               category="technical"
               id="hōhō-method"
             >
-                <!-- この方法でよろしいですか？ (Kono hōhō de yoroshii desu ka?) – "Is this method acceptable?" (ChatGPT) -->
-                <!-- 確かな方法 - tashika na hōhō - the surest way to do it (lib0) -->
                 <keep_apart_from id="shikata-method" />
+                <phrase
+                  ph="【確：たし】かな【方：ほう】【法：ほう】"
+                  rom="tashika na hōhō"
+                  tr_en="the surest way to do it"
+                  tr_de="die zuverlässigste Methode"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【方：ほう】【法：ほう】でよろしいですか。"
+                  rom="Kono hōhō de yoroshii desu ka?"
+                  tr_en="Is this method acceptable?"
+                  tr_de="Ist diese Methode akzeptabel?"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
             </word>
             <word
               w="【一：ひと】【言：こと】"
-              rom="hitokoto"
+              rom="hito-koto"
               tr_en="a few words; brief comment"
               tr_de="ein paar Worte; kurzer Kommentar"
               hint_en="noun; suru verb"
@@ -1421,7 +1870,24 @@
               lvl="n3"
               category="talking"
               id="hitokoto-fewwords"
-            />
+            >
+                <phrase
+                  ph="【一：ひと】【言：こと】も【言：い】わないで【出：で】て【行：い】く"
+                  rom="hito-koto mo iwanai de dete iku"
+                  tr_en="to leave without saying a word"
+                  tr_de="hinausgehen, ohne ein Wort zu sagen"
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【彼：かれ】は【一：ひと】【言：こと】も【答：こた】えなかった。"
+                  rom="Kare wa hito-koto mo kotaenakatta."
+                  tr_en="He did not answer with a single word."
+                  tr_de="Er antwortete kein Wort."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【最：さい】【終：しゅう】"
               rom="saishū"
@@ -1435,14 +1901,22 @@
                 <see id="saigo-end" rem="closely related" />
                 <keep_apart_from id="owari-end" />
                 <keep_apart_from id="saigo-end" />
-                <!-- needs verification; might be saigo
-                  ph="【最：さい】【終：しゅう】バス"
-                  rom="saishū basu"
-                  tr_en="the last bus"
-                  tr_de="der letzte Bus"
+                <phrase
+                  ph="【最：さい】【終：しゅう】バスに【遅：おく】れる"
+                  rom="saishū basu ni okureru"
+                  tr_en="to be late for the last bus"
+                  tr_de="den letzten Bus verpassen"
                   lvl="n3"
                   origin="lib0"
-                -->
+                />
+                <sentence
+                  s="【最：さい】【終：しゅう】【電：でん】【車：しゃ】はいつ【出：で】ますか。"
+                  rom="Saishū densha wa itsu demasu ka?"
+                  tr_en="When does the last train leave?"
+                  tr_de="Wann fährt der letzte Zug?"
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
         </section>
     </unit>

@@ -11,10 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n5"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- traffic + transportation -->
@@ -28,7 +26,9 @@
               lvl="n5"
               category="transportation"
               id="wataru-cross"
+              rem="kanji is asked by 500mon N3 q55"
             >
+                <see id="watasu-transfer" rem="closely related" />
                 <keep_apart_from id="yokogiru-cross" />
                 <keep_apart_from id="ōdan-crossing" />
                 <phrase
@@ -227,7 +227,7 @@
             >
                 <see id="kireru-snap" rem="v.i." />
                 <see id="kire-slice" rem="noun" />
-                <see id="kiri-stop" rem="closely related" />
+                <see id="kiri-cut" rem="closely related" />
                 <phrase
                   ph="【薄：うす】く【切：き】る"
                   rom="usuku kiru"

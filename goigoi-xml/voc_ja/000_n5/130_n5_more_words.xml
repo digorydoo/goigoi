@@ -9,10 +9,8 @@
       hasRomaji="true"
       hasFurigana="true"
       lvl="n5"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- direction words -->
@@ -827,51 +825,6 @@
                   origin="lib0"
                 />
             </word>
-            <word
-              w="【他：ほか】"
-              rom="hoka"
-              tr_en="the other; the rest"
-              tr_de="die anderen; der Rest"
-              hint_en="places, things, persons"
-              hint_de="Orte, Sachen, Personen"
-              lvl="n5"
-              id="hoka-other"
-            >
-                <phrase
-                  ph="【他：ほか】に"
-                  rom="hoka ni"
-                  tr_en="other; besides; in addition to"
-                  tr_de="andere; anderes; sonstiges"
-                  lvl="n5"
-                />
-                <sentence
-                  s="【他：ほか】の ものが ありますか。"
-                  rom="Hoka no mono ga arimasu ka?"
-                  tr_en="Do you have any others?"
-                  tr_de="Haben Sie noch andere?"
-                  lvl="n5"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【他：ほか】に 【道：みち】は ない。"
-                  rom="Hoka ni michi wa nai."
-                  tr_en="There is no other way."
-                  tr_de="Es gibt keinen anderen Weg."
-                  lvl="n5"
-                  origin="lib0"
-                />
-            </word>
-            <word
-              w="【他：ほか】に"
-              rom="hoka ni"
-              tr_en="other; besides; in addition to"
-              hint_en="expression"
-              hint_de="Ausdruck"
-              lvl="n5"
-              id="hokani-other"
-              HIDDEN="true"
-              rem="is now a phrase; keep in to silence goigoi-find-missing.sh"
-            />
             <word
               w="そば"
               rom="soba"

@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n4"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -1314,6 +1312,7 @@
               category="general"
               id="seki-seat"
             >
+                <keep_apart_from id="zaseki-seat" />
                 <phrase
                   ph="【席：せき】に【戻：もど】る"
                   rom="seki ni modoru"
@@ -1321,6 +1320,16 @@
                   tr_de="an den Sitzplatz zurückkehren"
                   lvl="n4"
                   origin="ChatGPT"
+                />
+                <phrase
+                  ph="【教：きょう】【室：しつ】の【自：じ】【分：ぶん】の【席：せき】に【着：つ】く"
+                  rom="kyōshitsu no jibun no seki ni tsuku"
+                  tr_en="to (go and) sit in one's own seat in the classroom"
+                  tr_de="sich in den eigenen Stuhl im Klassenzimmer setzen"
+                  lvl="n3"
+                  origin="hinative"
+                  href="https://hinative.com/questions/22015162"
+                  rem="verified with ChatGPT"
                 />
                 <sentence
                   s="この【席：せき】は【空：あ】いていますか。"
@@ -1702,6 +1711,10 @@
             >
                 <keep_apart_from id="hōkō-orientation" />
                 <keep_apart_from id="muki-direction" />
+                <!--
+                  There is also ほう in kana alone, but the meaning is different.
+                  500mon N3 q49: 船より飛行機のほうが速い。(phrase of fune)
+                -->
                 <phrase
                   ph="【東：ひがし】の【方：ほう】に【向：む】かう"
                   rom="higashi no hō ni mukau"

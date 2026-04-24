@@ -13,10 +13,6 @@ class KanjiIndexWriter(private val options: Options) {
         kanjiByFreq: String,
         dontConfuse: List<String>,
     ) {
-        if (!options.quiet) {
-            println("Writing kanji index...")
-        }
-
         writeKanjiIndex(kanjiLevels) // JLPT level followed by all kanjis of that level
         writeReadings(readings) // hiragana followed by all kanjis with that reading
         writeKanjiBySchoolYear(kanjiBySchoolYear) // grade number followed by all kanjis of that school year
@@ -25,7 +21,8 @@ class KanjiIndexWriter(private val options: Options) {
     }
 
     private fun writeKanjiIndex(kanjiLevels: KanjiLevels) {
-        val file = File("${options.dstDir}/all-kanjis.txt")
+        val file = File(options.generateKanjiIndexPath)
+        if (!options.quiet) println("Writing ${file.name}...")
         FileWriter(file).use { writer ->
             writeKanjiIndex(kanjiLevels.n5, "n5", writer)
             writeKanjiIndex(kanjiLevels.n4, "n4", writer)
@@ -43,7 +40,8 @@ class KanjiIndexWriter(private val options: Options) {
     }
 
     private fun writeReadings(readings: Map<String, Set<String>>) {
-        val file = File("${options.dstDir}/readings.txt")
+        val file = File(options.generateReadingsIndexPath)
+        if (!options.quiet) println("Writing ${file.name}...")
         FileWriter(file).use { writer ->
             readings.forEach { (kana, set) ->
                 writer.write("$kana:")
@@ -54,7 +52,8 @@ class KanjiIndexWriter(private val options: Options) {
     }
 
     private fun writeKanjiBySchoolYear(kanjiBySchoolYear: Map<Int, Set<Char>>) {
-        val file = File("${options.dstDir}/schoolyears.txt")
+        val file = File(options.generateSchoolYearsIndexPath)
+        if (!options.quiet) println("Writing ${file.name}...")
         FileWriter(file).use { writer ->
             kanjiBySchoolYear.forEach { (year, kanjis) ->
                 writer.apply {
@@ -67,14 +66,16 @@ class KanjiIndexWriter(private val options: Options) {
     }
 
     private fun writeKanjiByFrequency(kanjiByFreq: String) {
-        val file = File("${options.dstDir}/kanji-freq.txt")
+        val file = File(options.generateKanjiFreqIndexPath)
+        if (!options.quiet) println("Writing ${file.name}...")
         FileWriter(file).use { writer ->
             writer.write("$kanjiByFreq\n")
         }
     }
 
     private fun writeDontConfuse(dontConfuse: List<String>) {
-        val file = File("${options.dstDir}/dont-confuse.txt")
+        val file = File(options.generateDontConfuseIndexPath)
+        if (!options.quiet) println("Writing ${file.name}...")
         FileWriter(file).use { writer ->
             dontConfuse.forEach { similarKanjis ->
                 similarKanjis.forEach { kanji ->

@@ -11,10 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n4"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- potential form -->
@@ -1227,6 +1225,7 @@
             >
                 <see id="okure-delay" rem="noun" />
                 <see id="chikoku-lateness" rem="closely related" />
+                <see id="okurasu-postpone" rem="v.t." />
                 <keep_apart_from id="chikoku-lateness" />
                 <phrase
                   ph="いつも【遅：おく】れる"
@@ -1810,6 +1809,14 @@
                   lvl="n4"
                   origin="self"
                   rem="jisho has this as an expression (nx); but it's just the て-form of 急ぐ"
+                />
+                <sentence
+                  s="【急：いそ】げ。"
+                  rom="Isoge."
+                  tr_en="Hurry!"
+                  tr_de="Beeil dich!"
+                  lvl="n4"
+                  origin="Doraemon 0, p.21"
                 />
                 <sentence
                   s="【急：いそ】がないと【会：かい】【議：ぎ】に【遅：おく】れますよ。"

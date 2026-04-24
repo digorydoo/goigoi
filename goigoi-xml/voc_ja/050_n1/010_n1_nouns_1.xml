@@ -18,10 +18,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n1"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -893,12 +891,28 @@
               category="plant, nature"
               id="kuki-stem"
             >
+                <!--
+                  ChatGPT says, 茎 is the main stem of a plant and cannot be used for the narrower
+                  connecting stalks, so X: 葉の茎 would not be not correct
+                -->
+                <keep_apart_from id="e-stalk" />
+                <keep_apart_from id="miki-treetrunk" />
+                <keep_apart_from id="eda-twig" />
                 <phrase
                   ph="【茎：くき】が【長：なが】い【花：はな】"
                   rom="kuki ga nagai hana"
                   tr_en="a long-stemmed flower"
                   tr_de="eine Blume mit langem Stiel"
                   lvl="n1"
+                />
+                <sentence
+                  s="キノコの【茎：くき】を【切：き】り【落：お】としてください。"
+                  rom="Kinoko no kuki o kiri-otoshite kudasai."
+                  tr_en="Please cut off the stem of the mushroom."
+                  tr_de="Bitte scheide den Stiehl des Pilzes ab."
+                  lvl="n1"
+                  origin="DeepL"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word

@@ -11,10 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n4"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- gather -->
@@ -136,6 +134,7 @@
                 -->
                 <see id="suku-becomeempty" rem="antonym" /><!-- https://hinative.com/questions/22452052 -->
                 <keep_apart_from id="hitogomi-crowd" />
+                <keep_apart_from id="konzatsu-congestion" />
                 <phrase
                   ph="【混：こ】んでいるエレベーター"
                   rom="konde iru erebētā"
@@ -184,6 +183,7 @@
               category="general, people"
               id="suku-becomeempty"
             >
+                <!-- antonym suggested by 500mon N3 q26 -->
                 <see id="komu-crowded" rem="antonym" />
                 <keep_apart_from id="aku-empty" />
                 <phrase
@@ -1089,6 +1089,7 @@
             >
                 <see id="nokosu-leavebehind" rem="v.t." />
                 <see id="nokori-remnant" rem="noun" />
+                <keep_apart_from id="amaru-remain" />
                 <phrase
                   ph="【心：こころ】に【残：のこ】る"
                   rom="kokoro ni nokoru"

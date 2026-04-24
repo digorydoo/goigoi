@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n1"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -37,6 +35,155 @@
                   lvl="n1"
                   origin="lib0"
                 />
+            </word>
+            <word
+              w="【金：かな】【槌：づち】"
+              rom="kanadzuchi"
+              tr_en="hammer"
+              tr_de="Hammer"
+              lvl="n1"
+              category="diy"
+              id="kanadzuchi-hammer"
+            >
+                <sentence
+                  s="その【金：かな】【槌：づち】の【柄：え】はプラスチックなので、【手：て】が【滑：すべ】りやすくて【危：あぶ】ない。"
+                  rom="Sono kanadzuchi no e wa purasuchikku na no de, te ga suberi-yasukute abunai."
+                  tr_en="The handle of that hammer is plastic, so it's dangerously easy for your hand to slip."
+                  tr_de="Weil der Griff von diesem Hammer aus Plastik ist, kann er gefährlich leicht aus der Hand rutschen."
+                  lvl="n1"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
+            <word
+              w="【軌：き】【道：どう】"
+              rom="kidō"
+              tr_en="orbit; trajectory"
+              tr_de="Orbit; Umlaufbahn"
+              lvl="n1"
+              category="astronomy"
+              id="kidō-orbit"
+            >
+                <sentence
+                  s="【衛：えい】【星：せい】は【今：いま】【軌：き】【道：どう】に【乗：の】っている。"
+                  rom="Eisei wa ima kidō ni notte iru."
+                  tr_en="The satellite is now in orbit."
+                  tr_de="Der Satellit ist jetzt in der Umlaufbahn."
+                  lvl="n1"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【正：せい】【解：かい】"
+              rom="seikai"
+              tr_en="correct (answer, solution)"
+              tr_de="korrekt (Antwort, Lösung)"
+              lvl="n1"
+              category="education"
+              id="seikai-correct"
+            >
+                <keep_apart_from id="tadashii-right" />
+            </word>
+            <word
+              w="【貝：かい】【殻：がら】"
+              rom="kaigara"
+              tr_en="seashell"
+              tr_de="Muschel"
+              lvl="n1"
+              category="beach, animal"
+              id="kaigara-seashell"
+            >
+                <keep_apart_from id="kai-shellfish" />
+                <keep_apart_from id="kara-shell" />
+            </word>
+            <word
+              w="【幹：みき】"
+              rom="miki"
+              tr_en="tree trunk"
+              tr_de="Baumstamm"
+              lvl="n1"
+              category="plant, nature"
+              id="miki-treetrunk"
+            >
+                <keep_apart_from id="e-stalk" />
+                <keep_apart_from id="kuki-stem" />
+                <see id="eda-twig" rem="closely related" />
+            </word>
+            <word
+              w="【音：ね】【色：いろ】"
+              rom="neiro"
+              tr_en="tone colour; timbre"
+              tr_de="Klangfarbe; Timbre"
+              lvl="n1"
+              id="neiro-timbre"
+            >
+                <keep_apart_from id="shikisai-hue" />
+            </word>
+            <word
+              w="【浜：はま】"
+              rom="hama"
+              tr_en="beach; seashore"
+              tr_de="Strand; Meeresufer"
+              lvl="n1"
+              category="beach"
+              id="hama-beach"
+            >
+                <keep_apart_from id="engan-coast" />
+                <keep_apart_from id="hamabe-foreshore" />
+                <keep_apart_from id="umibe-beach" />
+                <keep_apart_from id="kaigan-coast" />
+                <keep_apart_from id="kishi-shore" />
+            </word>
+            <word
+              w="【警：けい】【部：ぶ】"
+              rom="keibu"
+              tr_en="inspector (police)"
+              tr_de="Inspektor (Polizei)"
+              lvl="n1"
+              category="crime, people"
+              id="keibu-inspector"
+            >
+                <keep_apart_from id="keiji-detective" />
+                <keep_apart_from id="keikan-constable" />
+                <keep_apart_from id="hori-constable" />
+            </word>
+            <word
+              w="【自：じ】【信：しん】"
+              rom="jishin"
+              tr_en="confidence in oneself"
+              tr_de="Selbstvertrauen; an sich selbst glauben"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              category="mood"
+              id="jishin-confidence"
+            >
+                <keep_apart_from id="jikaku-selfaware" />
+            </word>
+            <word
+              w="【蜂：はち】【蜜：みつ】"
+              rom="hachimitsu"
+              tr_en="honey"
+              tr_de="Honig"
+              lvl="n1"
+              category="food, cooking"
+              id="hachimitsu-honey"
+            >
+                <!--
+                    砂糖に代えてはちみつを使う
+                    use honey instead of sugar
+                    ChatGPT
+                -->
+            </word>
+            <word
+              w="【面：おもて】"
+              rom="omote"
+              tr_en="face; surface; mask"
+              tr_de="Fläche; Oberfläche; Maske"
+              lvl="n1"
+              id="omote-mask"
+            >
+                <!-- implicit see-also link to omote-frontside -->
             </word>
             <word
               w="【侍：さむらい】"
@@ -75,17 +222,6 @@
               id="chakuriku-touchdown"
             />
             <word
-              w="【正：せい】【解：かい】"
-              rom="seikai"
-              tr_en="correct (answer, solution)"
-              tr_de="korrekt (Antwort, Lösung)"
-              lvl="n1"
-              category="education"
-              id="seikai-correct"
-            >
-                <keep_apart_from id="tadashii-right" />
-            </word>
-            <word
               w="【鳥：とり】【居：い】"
               rom="torii"
               tr_en="Shintō shrine archway"
@@ -106,18 +242,6 @@
               category="city, scenery"
               id="fūsha-windmill"
             />
-            <word
-              w="【貝：かい】【殻：がら】"
-              rom="kaigara"
-              tr_en="seashell"
-              tr_de="Muschel"
-              lvl="n1"
-              category="beach, animal"
-              id="kaigara-seashell"
-            >
-                <keep_apart_from id="kai-shellfish" />
-                <keep_apart_from id="kara-shell" />
-            </word>
             <word
               w="【犀：サイ】"
               rom="sai"
@@ -161,15 +285,6 @@
               tr_de="Pfeil; Keil"
               lvl="n1"
               id="ya-arrow"
-            />
-            <word
-              w="【金：かな】【槌：づち】"
-              rom="kanadzuchi"
-              tr_en="hammer"
-              tr_de="Hammer"
-              lvl="n1"
-              category="diy"
-              id="kanadzuchi-hammer"
             />
             <word
               w="【取：と】っ【手：て】"
@@ -223,15 +338,6 @@
               id="ago-jaw"
             />
             <word
-              w="【美：び】【術：じゅつ】"
-              rom="bijutsu"
-              tr_en="art; fine arts"
-              tr_de="Kunst; bildende Kunst"
-              lvl="n1"
-              category="arts"
-              id="bijutsu-arts"
-            />
-            <word
               w="【禅：ぜん】"
               rom="zen"
               tr_en="school of Buddhism"
@@ -250,15 +356,6 @@
               lvl="n1"
               category="nature, scenery"
               id="numa-swamp"
-            />
-            <word
-              w="【幹：みき】"
-              rom="miki"
-              tr_en="tree trunk"
-              tr_de="Baumstamm"
-              lvl="n1"
-              category="plant, nature"
-              id="miki-treetrunk"
             />
             <word
               w="【前：まえ】【売：う】り"
@@ -320,16 +417,6 @@
               rem="why is this n1?"
             />
             <word
-              w="【音：ね】【色：いろ】"
-              rom="neiro"
-              tr_en="tone colour; timbre"
-              tr_de="Klangfarbe; Timbre"
-              lvl="n1"
-              id="neiro-timbre"
-            >
-                <keep_apart_from id="shikisai-hue" />
-            </word>
-            <word
               w="【劇：げき】【団：だん】"
               rom="gekidan"
               tr_en="theatrical company; troupe"
@@ -339,21 +426,6 @@
               id="gekidan-troupe"
             />
             <word
-              w="【浜：はま】"
-              rom="hama"
-              tr_en="beach; seashore"
-              tr_de="Strand; Meeresufer"
-              lvl="n1"
-              category="beach"
-              id="hama-beach"
-            >
-                <keep_apart_from id="engan-coast" />
-                <keep_apart_from id="hamabe-foreshore" />
-                <keep_apart_from id="umibe-beach" />
-                <keep_apart_from id="kaigan-coast" />
-                <keep_apart_from id="kishi-shore" />
-            </word>
-            <word
               w="【墓：ぼ】【地：ち】"
               rom="bochi"
               tr_en="graveyard; cemetery"
@@ -362,32 +434,6 @@
               category="city"
               id="bochi-cemetery"
             />
-            <word
-              w="【警：けい】【部：ぶ】"
-              rom="keibu"
-              tr_en="inspector (police)"
-              tr_de="Inspektor (Polizei)"
-              lvl="n1"
-              category="crime, people"
-              id="keibu-inspector"
-            >
-                <keep_apart_from id="keiji-detective" />
-                <keep_apart_from id="keikan-constable" />
-                <keep_apart_from id="hori-constable" />
-            </word>
-            <word
-              w="【自：じ】【信：しん】"
-              rom="jishin"
-              tr_en="confidence in oneself"
-              tr_de="Selbstvertrauen; an sich selbst glauben"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n1"
-              category="mood"
-              id="jishin-confidence"
-            >
-                <keep_apart_from id="jikaku-selfaware" />
-            </word>
             <word
               w="【黒：くろ】【字：じ】"
               rom="kuroji"
@@ -409,31 +455,6 @@
               category="transportation"
               id="jikokuhyō-timetbl"
             />
-            <word
-              w="【蜂：はち】【蜜：みつ】"
-              rom="hachimitsu"
-              tr_en="honey"
-              tr_de="Honig"
-              lvl="n1"
-              category="food, cooking"
-              id="hachimitsu-honey"
-            >
-                <!--
-                    砂糖に代えてはちみつを使う
-                    use honey instead of sugar
-                    ChatGPT
-                -->
-            </word>
-            <word
-              w="【面：おもて】"
-              rom="omote"
-              tr_en="face; surface; mask"
-              tr_de="Fläche; Oberfläche; Maske"
-              lvl="n1"
-              id="omote-mask"
-            >
-                <!-- implicit see-also link to omote-frontside -->
-            </word>
             <word
               w="【天：てん】【体：たい】"
               rom="tentai"

@@ -11,10 +11,8 @@
       defaultHint_en="adverb"
       defaultHint_de="Adverb"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -194,7 +192,7 @@
               tr_en="approximately; about"
               tr_de="ungefähr; etwa"
               lvl="n3"
-              rem="appears in 500mon q196; jisho has n3"
+              rem="appears in 500mon q196, but jisho has n3; also appears in 500mon N3 q62 (example already used)"
               id="yaku-about"
             >
                 <keep_apart_from id="hobo-almost" />
@@ -223,6 +221,7 @@
               lvl="n3"
               category="onomatopoeia"
               id="sappari-notintheleast"
+              rem="appears in Doraemon 0, p.27"
             >
                 <sentence
                   s="【中：なか】【村：むら】さんは【夕：ゆう】【食：しょく】の【前：まえ】にさっぱりした。"
@@ -240,6 +239,7 @@
                   tr_de="Ich versteh's überhaupt nicht."
                   lvl="n3"
                   origin="Oxford p.114"
+                  rem="similar in Doraemon 0, p.27"
                 />
             </word>
             <word
@@ -515,6 +515,14 @@
               id="achikochi-hereandthere"
             >
                 <keep_apart_from id="hōbō-hereandthere" />
+                <sentence
+                  s="【昨日：きのう】、【運：うん】【動：どう】しすぎて、【体：からだ】のあちこちが【痛：いた】いです。"
+                  rom="Kinō, undō shi-sugite, karada no achi-kochi ga itai desu."
+                  tr_en="I'm aching all over because I overdid it with my training yesterday."
+                  tr_de="Mir tut es überall weh, weil ich gestern übertrieben habe mit dem Training."
+                  lvl="n3"
+                  origin="500mon N3 q35"
+                />
             </word>
         </section>
     </unit>

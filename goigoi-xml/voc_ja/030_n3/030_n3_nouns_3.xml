@@ -11,10 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      translations="en, de"
       requiresSentences="true"
       requiresPhrases="true"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
@@ -195,6 +193,7 @@
               lvl="n3"
               category="top-words"
               id="jama-interrupt"
+              rem="appears in 500mon N3 q29 (without example)"
             >
                 <keep_apart_from id="shitsurei-discourtesy" />
                 <keep_apart_from id="meiwaku-nuisance" />
@@ -1158,7 +1157,7 @@
               lvl="n3"
               id="shusseki-attend"
             >
-                <see id="kesseki-absence" rem="closely related" />
+                <see id="kesseki-absence" rem="antonym" />
                 <keep_apart_from id="sanka-participation" />
                 <phrase
                   ph="【会：かい】【議：ぎ】に【出：しゅっ】【席：せき】する"
@@ -1175,6 +1174,14 @@
                   tr_de="Alle waren anwesend."
                   lvl="n3"
                   origin="lib0"
+                />
+                <sentence
+                  s="【残：ざん】【念：ねん】ですが、パーティーに【出：しゅっ】【席：せき】できません。"
+                  rom="Zannen desu ga, pātī ni shusseki dekimasen."
+                  tr_en="It's unfortunate, but I won't be able to attend the party."
+                  tr_de="Es ist bedauerlich, aber ich kann nicht an die Party kommen."
+                  lvl="n3"
+                  origin="500mon N3 q58"
                 />
             </word>
             <word

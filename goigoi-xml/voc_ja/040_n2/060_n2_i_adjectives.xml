@@ -11,10 +11,8 @@
       defaultHint_en="i-adjective"
       defaultHint_de="I-Adjektiv"
       lvl="n2"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="false"
     >
         <section>
             <word
@@ -162,13 +160,49 @@
                 -->
             </word>
             <word
+              w="だらしない"
+              rom="darashinai"
+              tr_en="sloppy; undisciplined; cowardly"
+              tr_de="schlufrig; undiszipliniert; feige"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n2"
+              category="top-words, not-good"
+              id="darashinai-sloppy"
+              rem="appears in Doraemon 0, p.19"
+            />
+            <word
+              w="【偉：えら】い"
+              rom="erai"
+              tr_en="admirable; remarkable; extremely"
+              tr_de="bewundernswert; bemerkenswert; extrem"
+              hint_en="i-adjective; adverb"
+              hint_de="I-Adjektiv; Adverb"
+              lvl="n2"
+              category="top-words"
+              id="erai-admirable"
+              rem="appears in Doraemon 0, p.19"
+            />
+            <word
               w="【若：わか】【々：わか】しい"
               rom="waka-wakashii"
               tr_en="youthful; young-looking"
               tr_de="jugendlich; jung aussehend"
               lvl="n2"
+              category="top-words"
               id="wakawakashii-young"
               rem="appears in GENKI2 p.328 kanji section"
+            />
+            <word
+              w="【険：けわ】しい"
+              rom="kewashii"
+              tr_en="steep; inaccessible; impregnable"
+              tr_de="steil; unzugänglich; uneinnehmbar"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="n2"
+              id="kewashii-steep"
+              rem="appears in 500mon N3 q41 (no example)"
             />
             <word
               w="【痒：かゆ】い"
@@ -378,14 +412,6 @@
               HIDDEN="true"
             />
             <word
-              w="【偉：えら】い"
-              rom="erai"
-              tr_en="great; excellent; admirable; remarkable; distinguished; important; celebrated; famous; eminent; very troublesome; awful; terrible; tiring; tough; very; extremely"
-              hint_en="i-adjective; adverb"
-              lvl="n2"
-              HIDDEN="true"
-            />
-            <word
               w="【力：ちから】【強：づよ】い"
               rom="chikaradzuyoi"
               tr_en="powerful; strong; forceful; vigorous; reassuring; encouraging"
@@ -420,27 +446,9 @@
               HIDDEN="true"
             />
             <word
-              w="だらしない"
-              rom="darashinai"
-              tr_en="slovenly (appearance, work, etc.); sloppy; untidy; undisciplined; careless; loose; slack / weak; feeble; weak-willed; cowardly; gutless"
-              hint_en="i-adjective"
-              lvl="n2"
-              category="not-good"
-              id="darashinai-sloppy"
-              HIDDEN="true"
-            />
-            <word
               w="【鈍：にぶ】い"
               rom="nibui"
               tr_en="dull (e.g. a knife); blunt / thickheaded; obtuse; stupid / dull (sound, color, etc.); dim (light) / slow; sluggish; inert; lethargic / insensitive; dull (e.g. reflexes); unperceptive; unfeeling"
-              hint_en="i-adjective"
-              lvl="n2"
-              HIDDEN="true"
-            />
-            <word
-              w="【険：けわ】しい"
-              rom="kewashii"
-              tr_en="precipitous; rugged; inaccessible; impregnable; steep / grim; severe; stern"
               hint_en="i-adjective"
               lvl="n2"
               HIDDEN="true"

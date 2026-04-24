@@ -11,18 +11,16 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      translations="en, de"
-      requiresSentences="false"
-      requiresPhrases="false"
-      requiresIds="true"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
             <word
               w="【傷：きず】"
               rom="kizu"
-              tr_en="cut; scratch; wound"
-              tr_de="Schnittwunde; Kratzer; Wunde"
+              tr_en="wound; scratch"
+              tr_de="Wunde; Kratzer"
               Langenscheidt="Wunde; Kratzer"
               lvl="n3"
               category="health"
@@ -30,6 +28,7 @@
             >
                 <see id="kizutsuku-gethurt" rem="verb" />
                 <keep_apart_from id="kega-injury" />
+                <keep_apart_from id="kiri-cut" />
                 <phrase
                   ph="【傷：きず】【跡：あと】"
                   rom="kizuato"
@@ -213,7 +212,10 @@
               usuallyInKana="true"
               rem="not in GENKI index; jisho has n4"
             >
-                <!-- verified with ChatGPT, jisho and lib0 that 訳 is indeed the わけ appearing in 500mon N3 q322 -->
+                <!--
+                  verified with ChatGPT, jisho and lib0 that 訳 is indeed the わけ appearing in 500mon N3 q322
+                  also appears in 500mon N3 q51 in kana alone
+                -->
                 <keep_apart_from id="mōshiwake-apology" />
                 <keep_apart_from id="iiwake-excuse" />
                 <phrase
@@ -377,32 +379,6 @@
                 />
             </word>
             <word
-              w="【農：のう】【民：みん】"
-              rom="nōmin"
-              tr_en="farmer; peasant"
-              tr_de="Bauer"
-              lvl="n3"
-              category="occupations, countryside"
-              id="nōmin-farmer"
-            >
-                <phrase
-                  ph="【貧：まず】しい【農：のう】【民：みん】"
-                  rom="mazushii nōmin"
-                  tr_en="a poor peasant"
-                  tr_de="ein armer Bauer"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【農：のう】【民：みん】は【作：さく】【物：もつ】を【作：つく】る。"
-                  rom="Nōmin wa sakumotsu o tsukuru."
-                  tr_en="Farmers produce crops."
-                  tr_de="Bauern produzieren landwirtschaftliche Produkte."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
               w="【書：しょ】【類：るい】"
               rom="shorui"
               tr_en="document; official papers"
@@ -544,6 +520,7 @@
             >
                 <keep_apart_from id="geki-play" />
                 <keep_together id="geki-play" />
+                <keep_apart_from id="fukō-misfortune" />
             </word>
             <word
               w="【喜：き】【劇：げき】"
@@ -1219,6 +1196,7 @@
             >
                 <synonym w="【大：おお】【勢：ぜい】" />
                 <keep_apart_from id="komu-crowded" />
+                <keep_apart_from id="konzatsu-congestion" />
                 <keep_apart_from id="ōzei-crowd" />
                 <keep_apart_from id="katagata-people" />
                 <phrase
@@ -1419,19 +1397,72 @@
             <word
               w="【完：かん】【成：せい】"
               rom="kansei"
-              tr_en="completion (of a work); accomplishment"
-              tr_de="Fertigstellung (einer Arbeit); Errungenschaft"
+              tr_en="completion (of a work)"
+              tr_de="Fertigstellung (einer Arbeit)"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
               category="work, top-words"
               id="kansei-completion"
             >
                 <keep_apart_from id="kanryō-completion" />
+                <!--
+                  完成 cannot be used for "achievement"; that's 成果・せいか (n1) or 業績・ぎょうせき (n1)
+                -->
+                <phrase
+                  ph="【完：かん】【成：せい】【品：ひん】"
+                  rom="kansei-hin"
+                  tr_en="the finished product"
+                  tr_de="das fertige Produkt"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【完：かん】【成：せい】【度：ど】"
+                  rom="kansei-do"
+                  tr_en="degree of completion; polish; quality"
+                  tr_de="Grad der Fertigstellung; Schliff; Qualität"
+                  lvl="n3"
+                  origin="jisho"
+                  rem="verified with ChatGPT; jisho has nx"
+                />
+                <sentence
+                  s="【橋：はし】は【今：こ】【年：とし】【末：まつ】までに【完：かん】【成：せい】されるだろう。"
+                  rom="Hashi wa kotoshi-matsu made ni kansei sareru darō."
+                  tr_en="The bridge will probably be completed by the end of this year."
+                  tr_de="Die Brücke wird wahrscheinlich bis Ende Jahr fertig."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT, also the furigana for kotoshi-matsu;
+                    jisho doesn't list kotoshi-matsu, but has n4 for shū-matsu, n3 for ki-matsu;
+                    lib0 has an additional wa after ni, which adds emphasis"
+                />
+                <sentence
+                  s="【彼：かれ】は【独：どく】【力：りょく】でその【仕：し】【事：ごと】を【完：かん】【成：せい】しました。"
+                  rom="Kare wa dokuryoku de sono shigoto o kansei shimashita."
+                  tr_en="He completed the work all by himself."
+                  tr_de="Er hat die Arbeit ganz alleine zu Ende gebracht."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for dokuryoku, but n3 for dokuritsu, dokushin, doryoku, kyōryoku"
+                />
+                <sentence
+                  s="このゲームは【完：かん】【成：せい】【度：ど】が【高：たか】い。"
+                  rom="Kono gēmu wa kansei-do ga takai."
+                  tr_en="This game is very polished."
+                  tr_de="Dieses (Video-) Spiel ist von hoher Qualität."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
             </word>
             <word
               w="【招：しょう】【待：たい】"
               rom="shōtai"
               tr_en="invitation"
               tr_de="Einladung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
               category="relationships"
               id="shōtai-invitation"
@@ -1440,9 +1471,25 @@
                 <keep_apart_from id="maneku-invite" />
                 <keep_apart_from id="maneki-invitation" />
                 <keep_apart_from id="ogoru-givetreat" />
-                <!-- 招待してくれてありがとう。でも、遠慮します。 Thank you for the invitation, but I’ll pass. (ChatGPT) -->
+                <phrase
+                  ph="【招：しょう】【待：たい】に【応：おう】じる"
+                  rom="shōtai ni ōjiru"
+                  tr_en="to accept an invitation"
+                  tr_de="eine Einladung annehmen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="だれを【招：しょう】【待：たい】しようかな。"
+                  rom="Dare o shōtai shiyō ka na."
+                  tr_en="I wonder who I should invite."
+                  tr_de="Wen sollte ich wohl einladen...?"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <!--
-                    招待する invite so. to an event or place GENKI2 L19 vocab section
+                  招待してくれてありがとう。でも、遠慮します。 Thank you for the invitation, but I’ll pass. (ChatGPT)
                 -->
             </word>
             <word
@@ -1461,11 +1508,28 @@
                 <keep_apart_from id="shōji-door" />
                 <keep_apart_from id="amado-stormshutter" />
                 <keep_apart_from id="tobira-door" />
+                <phrase
+                  ph="【裏：うら】【口：ぐち】から【家：いえ】に【入：はい】る"
+                  rom="uraguchi kara ie ni hairu"
+                  tr_en="to enter the house by the back door"
+                  tr_de="das Haus durch die Hintertür betreten"
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="あの【子：こ】は【裏：うら】【口：ぐち】から【入：はい】った。"
+                  rom="Ano ko wa uraguchi kara haitta."
+                  tr_en="That child entered by the back door."
+                  tr_de="Das Kind ist durch die Hintertür hereingekommen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
             </word>
             <word
               w="【不：ふ】【思：し】【議：ぎ】"
               rom="fushigi"
-              tr_en="mysterious; strange; wonderful"
+              tr_en="mysterious; strange; hard to explain"
               tr_de="mysteriös; seltsam; wunderlich"
               Langenscheidt="seltsam, rätselhaft"
               hint_en="noun; na-adjective"
@@ -1473,7 +1537,26 @@
               lvl="n3"
               id="fushigi-mysterious"
               rem="appears in GENKI2 L20 vocab section"
-            />
+            >
+                <keep_apart_from id="hen-odd" />
+                <phrase
+                  ph="【不：ふ】【思：し】【議：ぎ】な【魅：み】【力：りょく】"
+                  rom="fushigi na miryoku"
+                  tr_en="a mysterious charm; a strange attraction"
+                  tr_de="eine seltsame Anziehungskraft"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【夕：ゆう】べ、【不：ふ】【思：し】【議：ぎ】な【夢：ゆめ】を【見：み】た。"
+                  rom="Yūbe, fushigi na yume o mita."
+                  tr_en="I had a mysterious dream last night."
+                  tr_de="Ich hatte einen wunderlichen Traum letzte Nacht."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
             <word
               w="【出：しゅっ】【版：ぱん】"
               rom="shuppan"
@@ -1485,19 +1568,63 @@
               category="science, news"
               id="shuppan-publishing"
               rem="appears in GENKI2 p.193"
-            />
+            >
+                <phrase
+                  ph="【出：しゅっ】【版：ぱん】【社：しゃ】"
+                  rom="shuppan-sha"
+                  tr_en="publisher; publishing company"
+                  tr_de="Verleger; Verlag"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="ついにその【本：ほん】を【出：しゅっ】【版：ぱん】した。"
+                  rom="Tsui ni sono hon o shuppan shita."
+                  tr_en="We finally published the book."
+                  tr_de="Wir haben das Buch endlich publiziert."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【化：け】【粧：しょう】"
               rom="keshō"
-              tr_en="cosmetics; makeup"
-              tr_de="Kosmetik; Makeup"
+              tr_en="makeup (cosmetics); making up"
+              tr_de="Makeup; schminken"
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
               category="fashion"
               id="keshō-makeup"
               rem="appears in GENKI2 p.117 vocab section"
-            />
+            >
+                <phrase
+                  ph="【化：け】【粧：しょう】【品：ひん】"
+                  rom="keshō-hin"
+                  tr_en="cosmetics (products)"
+                  tr_de="Kosmetikprodukte"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【濃：こ】い【化：け】【粧：しょう】をする"
+                  rom="koi keshō o suru"
+                  tr_en="to put on a thick layer of makeup"
+                  tr_de="Makeup dick auftragen"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】は【毎：まい】【朝：あさ】【化：け】【粧：しょう】をする。"
+                  rom="Kanojo wa mai-asa keshō o suru."
+                  tr_en="She makes herself up every morning."
+                  tr_de="Sie schminkt sich jeden Morgen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【数：すう】【字：じ】"
               rom="sūji"
@@ -1506,16 +1633,73 @@
               lvl="n3"
               category="maths, writing"
               id="sūji-digit"
-            />
+            >
+                <keep_apart_from id="bangō-number" />
+                <keep_apart_from id="kazu-count" />
+                <phrase
+                  ph="【漢：かん】【数：すう】【字：じ】"
+                  rom="kan-sūji"
+                  tr_en="Chinese numerals"
+                  tr_de="chinesische Zahlen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="アラビア【数：すう】【字：じ】"
+                  rom="arabia sūji"
+                  tr_en="Arabic numerals"
+                  tr_de="arabische Zahlen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="ローマ【数：すう】【字：じ】"
+                  rom="rōma sūji"
+                  tr_en="Roman numerals"
+                  tr_de="römische Zahlen"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="verified with ChatGPT; jisho has nx"
+                />
+                <sentence
+                  s="【数：すう】【字：じ】を【合：ごう】【計：けい】してください。"
+                  rom="Sūji o gōkei shite kudasai."
+                  tr_en="Please add up the numbers."
+                  tr_de="Bitte zähle die Zahlen zusammen."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+            </word>
             <word
               w="【刀：かたな】"
               rom="katana"
-              tr_en="single-edged sword; dagger"
-              tr_de="einschneidiges Schwert; Dolch"
+              tr_en="Samurai sword; one-sided blade"
+              tr_de="Samuraischwert; Langschwert"
               lvl="n3"
               category="entertainment, crime"
               id="katana-sword"
-            />
+            >
+                <phrase
+                  ph="【刀：かたな】を【振：ふ】る"
+                  rom="katana o furu"
+                  tr_en="to wield (swing) a sword"
+                  tr_de="das Schwert schwingen"
+                  lvl="n3"
+                  origin="DeepL"
+                />
+                <sentence
+                  s="その【刀：かたな】は【王：おう】【子：じ】にふさわしい。"
+                  rom="Sono katana wa ōji ni fusawashii."
+                  tr_en="This Samurai sword is fit for a price."
+                  tr_de="Dieses Samuraischwert ist eines Prinzen würdig."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has n1 for fusawashii"
+                />
+            </word>
             <word
               w="【老：ろう】【人：じん】"
               rom="rōjin"
@@ -1524,16 +1708,92 @@
               lvl="n3"
               category="people"
               id="rōjin-aged"
-            />
+            >
+                <phrase
+                  ph="【元：げん】【気：き】な【老：ろう】【人：じん】"
+                  rom="genki na rōjin"
+                  tr_en="a lively elderly person"
+                  tr_de="eine rüstige ältere Person"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【老：ろう】【人：じん】に【親：しん】【切：せつ】にしなさい。"
+                  rom="Rōjin ni shinsetsu ni shinasai."
+                  tr_en="Be kind to elderly people."
+                  tr_de="Sei freundlich zu älteren Menschen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【死：し】【亡：ぼう】"
+              rom="shibō"
+              tr_en="death; mortality; to die; to pass away"
+              tr_de="Tod; Mortalität; sterben"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="health, not-good"
+              id="shibō-death"
+            >
+                <keep_apart_from id="nakunaru-die" />
+                <keep_apart_from id="shinu-die" />
+                <phrase
+                  ph="【死：し】【亡：ぼう】【率：りつ】"
+                  rom="shibō-ritsu"
+                  tr_en="death rate"
+                  tr_de="Sterberate"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【妻：つま】はその【事：じ】【故：こ】で【死：し】【亡：ぼう】した。"
+                  rom="Tsuma wa sono jiko de shibō shita."
+                  tr_en="My wife was killed in the accident."
+                  tr_de="Meine Frau ist in dem Unfall umgekommen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
             <word
               w="【農：のう】【家：か】"
               rom="nōka"
-              tr_en="farmhouse"
-              tr_de="Bauernhaus"
+              tr_en="farmhouse; farming family"
+              tr_de="Bauernhaus; Bauernfamilie"
               lvl="n3"
               category="countryside"
               id="nōka-farmhouse"
-            />
+            >
+                <keep_apart_from id="nōmin-farmer" />
+                <phrase
+                  ph="【古：ふる】い【農：のう】【家：か】の【家：いえ】"
+                  rom="furui nōka no ie"
+                  tr_en="an old farmhouse"
+                  tr_de="ein altes Bauernhaus"
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+                <phrase
+                  ph="【農：のう】【家：か】の【子：こ】"
+                  rom="nōka no ko"
+                  tr_en="a farmer's child"
+                  tr_de="ein Bauernkind"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; 農民の子 would be understandable, but less natural"
+                />
+                <sentence
+                  s="【彼：かれ】の【家：か】【族：ぞく】は【小：こ】【麦：むぎ】【農：のう】【家：か】だった。"
+                  rom="Kare no kazoku wa komugi nōka datta."
+                  tr_en="His family had been wheat farmers."
+                  tr_de="Seine Familie waren Weizenbauern."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【畑：はたけ】"
               rom="hatake"
@@ -1542,7 +1802,33 @@
               lvl="n3"
               category="countryside"
               id="hatake-field"
-            />
+            >
+                <phrase
+                  ph="【畑：はたけ】【違：ちが】い"
+                  rom="hatake-chigai"
+                  tr_en="outside one's field; out of one's line"
+                  tr_de="anderes Fachgebiet; fachfremd"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="ここは【昔：むかし】、【畑：はたけ】だった。"
+                  rom="Koko wa mukashi, hatake datta."
+                  tr_en="This place used to be a field."
+                  tr_de="Hier war früher einmal ein Feld."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【農：のう】【家：か】の【人：ひと】は【畑：はたけ】で【働：はたら】いている。"
+                  rom="Nōka no hito wa hatake de hataraite iru."
+                  tr_en="The farmers are working in the field."
+                  tr_de="Die Bauern arbeiten im Feld."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="ChatGPT says 農民 is old-fashioned; nowadays 農家の人 is more common"
+                />
+            </word>
         </section>
     </unit>
 </vocabulary>

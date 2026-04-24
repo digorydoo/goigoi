@@ -9,10 +9,8 @@
       hasRomaji="true"
       hasFurigana="true"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- adverbial noun -->
@@ -192,6 +190,53 @@
                 />
             </word>
             <word
+              w="【全：ぜん】【員：いん】"
+              rom="zen'in"
+              tr_en="all of us; everybody; the whole crew"
+              tr_de="wir alle; jedermann; die ganze Meute"
+              lvl="n3"
+              category="people"
+              id="zenin-allofus"
+            >
+                <keep_apart_from id="minna-everyone" />
+                <keep_apart_from id="minasan-allofyou" />
+                <phrase
+                  ph="【全：ぜん】【員：いん】【出：しゅっ】【席：せき】"
+                  rom="zen'in shusseki"
+                  tr_en="all present; everybody here"
+                  tr_de="alle anwesend"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【全：ぜん】【員：いん】その【車：くるま】に【乗：の】った。"
+                  rom="Zen'in sono kuruma ni notta."
+                  tr_en="The whole crew got into the car."
+                  tr_de="Die ganze Meute stieg in das Auto ein."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【一：いっ】【種：しゅ】"
+              rom="isshu"
+              tr_en="species; kind; sort"
+              tr_de="Spezies; Art; Typ"
+              lvl="n3"
+              id="isshu-kind"
+            >
+                <keep_apart_from id="shu-species" />
+                <keep_apart_from id="shurui-type" />
+                <!-- is this correct?
+                  s="【飴：あめ】は【一：いっ】【種：しゅ】の【甘：あま】いお【菓：か】【子：し】です。"
+                  rom="Ame wa isshu no amai o-kashi desu."
+                  tr_en="Candy is a kind of sweet confection."
+                  tr_de="Bonbons sind eine Art süsser Nascherei."
+                  lvl="n3"
+                  origin="ChatGPT"
+                -->
+            </word>
+            <word
               w="【以：い】【来：らい】"
               rom="irai"
               tr_en="since; henceforth"
@@ -241,7 +286,17 @@
               lvl="n3"
               category="gastronomy, cooking"
               id="nama-raw"
-            />
+              rem="appears in 500mon N3 q50"
+            >
+                <sentence
+                  s="この【野：や】【菜：さい】は【生：なま】では【食：た】べられません。"
+                  rom="Kono yasai wa nama de wa taberaremasen."
+                  tr_en="You cannot eat this vegetable raw."
+                  tr_de="Dieses Gemüse ist roh nicht essbar."
+                  lvl="n3"
+                  origin="500mon N3 q50"
+                />
+            </word>
             <word
               w="【全：ぜん】【国：こく】"
               rom="zenkoku"
@@ -265,49 +320,6 @@
               id="toshi-urban"
               HIDDEN="true"
             />
-            <word
-              w="【様：さま】"
-              rom="sama"
-              tr_en="Mr ~; Mrs ~; Ms ~"
-              tr_de="Herr ~; Frau ~"
-              hint_en="suffix; polite"
-              hint_de="Suffix; höflich"
-              studyInContext="preferred"
-              lvl="n3"
-              category="people, top-words"
-              id="sama-mr"
-              rem="jisho has n1 for the word, but n3 for the kanji; appears in GENKI2 p.313"
-            >
-                <keep_apart_from id="kamisama-god" />
-                <keep_apart_from id="ojōsan-younglady" rem="ambiguity in phrases" />
-                <phrase
-                  ph="お【嬢：じょう】【様：さま】"
-                  rom="o-jō-sama"
-                  tr_en="young lady; someone else's daughter"
-                  tr_de="junge Dame; Tochter von jem. anderem"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="jisho has nx; jisho has 'young lady of pampered upbringing', but ChatGPT disagrees"
-                />
-                <sentence
-                  s="【神：かみ】【様：さま】を【信：しん】じますか。"
-                  rom="Kami-sama o shinjimasu ka?"
-                  tr_en="Do you believe in God?"
-                  tr_de="Glauben Sie an Gott?"
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="お【客：きゃく】【様：さま】がお【着：つ】きになりました。"
-                  rom="O-kyaku-sama ga o-tsuki ni narimashita."
-                  tr_en="The guest has arrived."
-                  tr_de="Der Gast ist angekommen."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
-            </word>
             <word
               w="【一：いっ】【般：ぱん】"
               rom="ippan"
@@ -484,33 +496,85 @@
                 />
             </word>
             <word
-              w="【法：ほう】"
-              rom="hō"
-              tr_en="law; principle; method"
-              tr_de="Gesetz; Prinzip; Methode"
-              hint_en="noun; suffix"
-              hint_de="Nomen; Suffix"
+              w="【様：さま】"
+              rom="sama"
+              tr_en="Mr ~; Mrs ~; Ms ~"
+              tr_de="Herr ~; Frau ~"
+              hint_en="suffix; polite"
+              hint_de="Suffix; höflich"
+              studyInContext="preferred"
               lvl="n3"
-              id="hō-law"
-              HIDDEN="true"
-              rem="not a good word"
+              category="people, top-words"
+              id="sama-mr"
+              rem="jisho has n1 for the word, but n3 for the kanji; appears in GENKI2 p.313"
             >
-                <keep_apart_from id="hōritsu-law" />
-                <keep_apart_from id="hōgaku-law" />
+                <keep_apart_from id="kamisama-god" />
+                <keep_apart_from id="ojōsan-younglady" rem="ambiguity in phrases" />
+                <phrase
+                  ph="お【嬢：じょう】【様：さま】"
+                  rom="o-jō-sama"
+                  tr_en="young lady; someone else's daughter"
+                  tr_de="junge Dame; Tochter von jem. anderem"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx; jisho has 'young lady of pampered upbringing', but ChatGPT disagrees"
+                />
+                <sentence
+                  s="【神：かみ】【様：さま】を【信：しん】じますか。"
+                  rom="Kami-sama o shinjimasu ka?"
+                  tr_en="Do you believe in God?"
+                  tr_de="Glauben Sie an Gott?"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="お【客：きゃく】【様：さま】がお【着：つ】きになりました。"
+                  rom="O-kyaku-sama ga o-tsuki ni narimashita."
+                  tr_en="The guest has arrived."
+                  tr_de="Der Gast ist angekommen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
             </word>
             <word
-              w="【学：がく】"
-              rom="gaku"
-              tr_en="learning; education"
-              tr_de="Lernen; Bildung"
+              w="【札：さつ】"
+              rom="satsu"
+              tr_en="banknote; bill; paper money"
+              tr_de="Banknote; Papiergeld"
               hint_en="noun; suffix"
               hint_de="Nomen; Suffix"
+              studyInContext="preferred"
               lvl="n3"
-              category="education"
-              id="gaku-learning"
-              HIDDEN="true"
-              rem="not a good word without context"
-            />
+              category="finances"
+              id="satsu-banknote"
+            >
+                <phrase
+                  ph="【１：いち】【万：まん】【円：えん】【札：さつ】"
+                  rom="ichi-man-en satsu"
+                  tr_en="10'000 yen bill note"
+                  tr_de="10'000-Yen-Note"
+                  lvl="n3"
+                  origin="500mon N3 q61"
+                />
+                <phrase
+                  ph="【千：せん】【円：えん】【札：さつ】"
+                  rom="sen-en satsu"
+                  tr_en="1000 yen note"
+                  tr_de="1000-Yen-Note"
+                  lvl="n3"
+                  origin="500mon N3 q61"
+                />
+                <sentence
+                  s="【自：じ】【動：どう】【販：はん】【売：ばい】【機：き】を【使：つか】いたいので、【１：いち】【万：まん】【円：えん】【札：さつ】を【細：こま】かくしてくれませんか。"
+                  rom="Jidōhanbaiki o tsukaitai no de, ichi-man-en satsu o komakaku shite kuremasen ka?"
+                  tr_en="I want to use the vending machine, so could you break this 10'000 yen bill for me?"
+                  tr_de="Da ich den Automat benutzen möchte, könnten Sie mir diese 10'000-Yen-Note in Kleingeld verwandeln?"
+                  lvl="n3"
+                  origin="500mon N3 q61"
+                />
+            </word>
             <word
               w="【無：な】し"
               rom="nashi"
@@ -552,6 +616,34 @@
                   rem="appears in vocab section; jisho has nx"
                 />
             </word>
+            <word
+              w="【法：ほう】"
+              rom="hō"
+              tr_en="law; principle; method"
+              tr_de="Gesetz; Prinzip; Methode"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              lvl="n3"
+              id="hō-law"
+              HIDDEN="true"
+              rem="not a good word"
+            >
+                <keep_apart_from id="hōritsu-law" />
+                <keep_apart_from id="hōgaku-law" />
+            </word>
+            <word
+              w="【学：がく】"
+              rom="gaku"
+              tr_en="learning; education"
+              tr_de="Lernen; Bildung"
+              hint_en="noun; suffix"
+              hint_de="Nomen; Suffix"
+              lvl="n3"
+              category="education"
+              id="gaku-learning"
+              HIDDEN="true"
+              rem="not a good word without context"
+            />
             <word
               w="【面：めん】"
               rom="men"
@@ -595,6 +687,145 @@
             >
                 <keep_apart_from id="bubun-part" />
             </word>
+            <word
+              w="【旧：きゅう】〜"
+              rom="kyū~"
+              tr_en="old; former; ex-"
+              hint_en="prefix"
+              hint_de="Präfix"
+              lvl="n3"
+              id="kyū-old"
+              HIDDEN="true"
+            />
+            <word
+              w="【級：きゅう】"
+              rom="kyū"
+              tr_en="grade; rank; class"
+              hint_en="suffix"
+              hint_de="Suffix"
+              lvl="n3"
+              id="kyū-rank"
+              HIDDEN="true"
+            />
+            <word
+              w="【球：きゅう】"
+              rom="kyū"
+              tr_en="sphere / counter for balls"
+              hint_en="noun / suffix; counter"
+              lvl="n3"
+              id="kyū-sphere"
+              HIDDEN="true"
+            />
+            <word
+              w="【旧：きゅう】"
+              rom="kyū"
+              tr_en="old; former; ex- / the old; old things; old customs / old times; bygone days / Japan's old (lunisolar) calendar"
+              hint_en="prefix / noun / noun; prefix"
+              lvl="n3"
+              id="kyū-former"
+              HIDDEN="true"
+            />
+            <word
+              w="【案：あん】"
+              rom="an"
+              tr_en="idea; proposal; suggestion"
+              hint_en="suffix"
+              hint_de="Suffix"
+              lvl="n3"
+              id="an-idea"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="shisō-idea" />
+                <keep_apart_from id="aidea-idea" />
+                <keep_apart_from id="hassō-idea" />
+            </word>
+            <word
+              w="【組：くみ】"
+              rom="kumi"
+              tr_en="set (of items); group (of people)"
+              hint_en="suffix"
+              hint_de="Suffix"
+              lvl="n3"
+              id="kumi-set"
+              HIDDEN="true"
+            />
+            <word
+              w="【暮：く】れ"
+              rom="kure"
+              tr_en="sunset; nightfall; end (of the year)"
+              hint_en="suffix"
+              hint_de="Suffix"
+              lvl="n3"
+              category="nature, light"
+              id="kure-sunset"
+              HIDDEN="true"
+            />
+            <word
+              w="【柄：がら】"
+              rom="gara"
+              tr_en="pattern; essential qualities; appropriate"
+              hint_en="suffix"
+              hint_de="Suffix"
+              lvl="n3"
+              id="gara-pattern"
+              HIDDEN="true"
+            />
+            <word
+              w="【数：すう】"
+              rom="sū"
+              tr_en="several; quantity; numbers"
+              hint_en="prefix or suffix"
+              hint_de="Präfix oder Suffix"
+              lvl="n3"
+              id="sū-several"
+              HIDDEN="true"
+            />
+            <word
+              w="【表：ひょう】【現：げん】"
+              rom="hyōgen"
+              tr_en="expression; representation"
+              lvl="n3"
+              id="hyōgen-expression"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="dairi-agency" />
+                <keep_apart_from id="arawasu-reveal" />
+            </word>
+            <word
+              w="【期：き】【間：かん】"
+              rom="kikan"
+              tr_en="period; term; interval"
+              lvl="n3"
+              id="kikan-period"
+              HIDDEN="true"
+            />
+            <word
+              w="【行：い】き"
+              rom="iki"
+              tr_en="the way there; bound for ..."
+              lvl="n3"
+              id="iki-way"
+              HIDDEN="true"
+            />
+            <word
+              w="【部：ぶ】【分：ぶん】"
+              rom="bubun"
+              tr_en="portion; section; part"
+              hint_en="noun"
+              lvl="n3"
+              id="bubun-part"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="bun-part" />
+            </word>
+            <word
+              w="【大：だい】【部：ぶ】【分：ぶん】"
+              rom="dai-bubun"
+              tr_en="majority; the most part"
+              lvl="n3"
+              id="daibubun-majority"
+              HIDDEN="true"
+            />
 
             <!-- adverbial expressions -->
             <word
@@ -680,7 +911,7 @@
             <!-- pre-noun adjectival -->
             <word
               w="【大：たい】した"
-              rom="taishita"
+              rom="tai shita"
               tr_en="considerable; significant; a big deal"
               tr_de="beträchtlich; signifikant; etwas Ernstes"
               hint_en="expression"
@@ -688,6 +919,7 @@
               lvl="n3"
               category="top-words"
               id="taishita-bigdeal"
+              rem="appears in Doraemon 0, p.21, and 500mon N3 q56"
             >
                 <keep_apart_from id="daibu-greatly" />
                 <keep_apart_from id="ōini-verymuch" />
@@ -695,8 +927,17 @@
                 <keep_apart_from id="kanari-fairly" />
                 <keep_apart_from id="zuibun-very" />
                 <sentence
+                  s="【大：たい】したことない。"
+                  rom="Tai shita koto nai."
+                  tr_en="It's no big deal."
+                  tr_de="Keine grosse Sache."
+                  lvl="n3"
+                  origin="Doraemon 0, p.21"
+                  rem="500mon N3 q56 has taishita koto ga nai (with ga)"
+                />
+                <sentence
                   s="【大：たい】した【病：びょう】【気：き】ではありません。"
-                  rom="Taishita byōki de wa arimasen."
+                  rom="Tai shita byōki de wa arimasen."
                   tr_en="The illness is nothing serious."
                   tr_de="Die Krankheit ist nichts Ernstes."
                   lvl="n3"
@@ -719,6 +960,35 @@
               id="arayuru-every"
               HIDDEN="true"
               rem="needs an example"
+            />
+            <word
+              w="【或：あ】る"
+              rom="aru"
+              tr_en="a certain ...; some ..."
+              hint_en="pre-noun adjectival"
+              lvl="n3"
+              id="aru-acertain"
+              usuallyInKana="true"
+              HIDDEN="true"
+            />
+            <word
+              w="どんな"
+              rom="donna"
+              tr_en="what kind of; what sort of; what / no matter what (kind of); whatever; any; all"
+              hint_en="pre-noun adjectival (rentaishi)"
+              lvl="n3"
+              HIDDEN="true"
+              id="donna-any"
+              rem="why is this n3???"
+            />
+            <word
+              w="【単：たん】なる"
+              rom="tannaru"
+              tr_en="mere; simple; sheer"
+              hint_en="pre-noun adjectival (rentaishi)"
+              lvl="n3"
+              id="tannaru-mere"
+              HIDDEN="true"
             />
 
             <!-- suru verbs -->
@@ -776,6 +1046,17 @@
               id="ore-me"
               rem="jisho has n1"
             />
+            <word
+              w="お【前：まえ】"
+              rom="o-mae"
+              tr_en="you"
+              tr_de="du"
+              hint_en="ref. to an equal or inferior; can be rude; rarely used outside movies"
+              hint_de="bezogen auf gleichen oder niedrigeren Rang; kann unhöflich sein"
+              lvl="n3"
+              id="omae-you"
+              HIDDEN="true"
+            />
 
             <!-- particle -->
             <word
@@ -786,7 +1067,7 @@
               hint_en="used with neg. verb"
               hint_de="mit negativem Verb"
               lvl="n3"
-              rem="appears in 500mon q128, q436; jisho has nx; must not be together with dake"
+              rem="appears in 500mon q128, q436; also in 500mon N3 q57; jisho has nx"
               id="shika-only"
             >
                 <see id="dake-only" rem="closely related" />
@@ -800,7 +1081,7 @@
                   tr_de="Mein Ehemann isst nichts als Gemüse."
                   lvl="n3"
                   origin="500mon q436"
-                  rem="jisho has nx for shika"
+                  rem="jisho has nx for shika; jisho has nx for shujin, but n4 for go-shujin"
                 />
                 <sentence
                   s="【私：わたし】は【日：に】【本：ほん】【語：ご】が【少：すこ】ししか【話：はな】せません。"
@@ -811,7 +1092,42 @@
                   origin="500mon q128"
                   rem="jisho has nx for shika"
                 />
+                <sentence
+                  s="【考：かんが】えてもどうにもならない。【忘：わす】れるしかない。"
+                  rom="Kangaete mo dō ni mo naranai. Wasureru shika nai."
+                  tr_en="There's no use thinking about it. You might as well just forget it."
+                  tr_de="Es bringt nichts, darüber nachzudenken. Am besten, du vergisst es einfach."
+                  lvl="n3"
+                  origin="500mon N3 q57"
+                />
+                <sentence
+                  s="もうバスはない。【歩：ある】くしかない。"
+                  rom="Mō basu wa nai. Aruku shika nai."
+                  tr_en="There is no longer a bus. I've got no choice but to walk."
+                  tr_de="Es fährt kein Bus mehr. Es bleibt nichts anderes übrig, als zu Fuss zu gehen."
+                  lvl="n3"
+                  origin="500mon N3 q57"
+                />
+                <sentence
+                  s="だれもいない。【私：わたし】がやるしかない。"
+                  rom="Dare mo inai. Watashi ga yaru shika nai."
+                  tr_en="There's nobody here. I'll have to do it myself."
+                  tr_de="Niemand ist da. Ich muss es wohl alleine machen."
+                  lvl="n3"
+                  origin="500mon N3 q57"
+                />
             </word>
+            <word
+              w="これら"
+              rom="korera"
+              tr_en="these"
+              tr_de="diese"
+              hint_en="things"
+              hint_de="Sachen"
+              lvl="n3"
+              id="korera-these"
+              HIDDEN="true"
+            />
 
             <!-- conjunction -->
             <word
@@ -850,6 +1166,86 @@
               HIDDEN="true"
               id="aruiwa-or"
               rem="unclear if it's ha or wa"
+            />
+            <word
+              w="なぜなら"
+              rom="nazenara"
+              tr_en="because; the reason is"
+              lvl="n3"
+              id="nazenara-because"
+              HIDDEN="true"
+            />
+            <word
+              w="【即：すなわ】ち"
+              rom="sunawachi"
+              tr_en="that is (to say); namely; i.e. / precisely; exactly; just; nothing but; neither more nor less / (and) then"
+              hint_en="conjunction"
+              lvl="n3"
+              id="sunawachi-thatis"
+              HIDDEN="true"
+            />
+            <word
+              w="【従：したが】って"
+              rom="shitagatte"
+              tr_en="therefore; consequently; accordingly"
+              hint_en="conjunction"
+              lvl="n3"
+              id="shitagatte-therefore"
+              HIDDEN="true"
+            />
+            <word
+              w="と"
+              rom="to"
+              tr_en="if; when; and; with; used for quoting (thoughts, speech, etc.); promoted pawn; indicates a question; To (kana)"
+              hint_en="particle; conjunction; noun; particle"
+              lvl="n3"
+              id="to-if"
+              HIDDEN="true"
+            />
+            <word
+              w="だって"
+              rom="datte"
+              tr_en="after all; because; but; even; too; as well; also; they say; I hear; you mean"
+              hint_en="conjunction; particle"
+              lvl="n3"
+              id="datte-but"
+              HIDDEN="true"
+            />
+            <word
+              w="【然：しか】も"
+              rom="shikamo"
+              tr_en="moreover; furthermore; nevertheless; and yet"
+              hint_en="conjunction"
+              lvl="n3"
+              id="shikamo-andyet"
+              HIDDEN="true"
+            />
+            <word
+              w="【所：ところ】が"
+              rom="tokoro ga"
+              tr_en="even so; however; still; whereupon; even though; nevertheless; on the contrary; as a matter of fact; despite"
+              hint_en="conjunction"
+              lvl="n3"
+              id="tokoroga-evenso"
+              HIDDEN="true"
+            />
+            <word
+              w="だが"
+              rom="da ga"
+              tr_en="but; however; (and) yet; nevertheless; still; for all that"
+              hint_en="conjunction"
+              lvl="n3"
+              id="daga-andyet"
+              HIDDEN="true"
+            />
+            <word
+              w="ですから"
+              rom="desu kara"
+              tr_en="so; therefore; accordingly; consequently; on those grounds; that is why; for that reason"
+              hint_en="conjunction"
+              lvl="n3"
+              id="desukara-so"
+              HIDDEN="true"
             />
 
             <!-- expression -->
@@ -931,7 +1327,7 @@
               tr_de="gewiss"
               lvl="n3"
               id="kashikomarimashita-certainly"
-              rem="appears in GENKI2 L20 vocab section; jisho has n2"
+              rem="appears in GENKI2 L20 vocab section and 500mon N3 q29 (example not usable); jisho has n2"
             >
                 <!-- the verb should be 畏まる; jisho has nx -->
                 <keep_apart_from id="zehi-certainly" />
@@ -1004,6 +1400,23 @@
                 <keep_apart_from id="hanashiau-discuss" />
                 <keep_apart_from id="kataru-recite" />
             </word>
+            <word
+              w="いらっしゃい"
+              rom="irasshai"
+              tr_en="welcome"
+              lvl="n3"
+              id="irasshai-welcome"
+              rem="is this really n3? irassharu is n4"
+              HIDDEN="true"
+            />
+            <word
+              w="あんなに"
+              rom="anna ni"
+              tr_en="to that extent; to that degree"
+              lvl="n3"
+              id="annani-tothatextent"
+              HIDDEN="true"
+            />
         </section>
     </unit>
 </vocabulary>

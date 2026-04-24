@@ -11,31 +11,11 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n1"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
-            <word
-              w="【軌：き】【道：どう】"
-              rom="kidō"
-              tr_en="orbit; trajectory"
-              tr_de="Orbit; Umlaufbahn"
-              lvl="n1"
-              category="astronomy"
-              id="kidō-orbit"
-            >
-                <sentence
-                  s="【衛：えい】【星：せい】は【今：いま】【軌：き】【道：どう】に【乗：の】っている。"
-                  rom="Eisei wa ima kidō ni notte iru."
-                  tr_en="The satellite is now in orbit."
-                  tr_de="Der Satellit ist jetzt in der Umlaufbahn."
-                  lvl="n1"
-                  origin="lib0"
-                />
-            </word>
             <word
               w="【診：しん】【療：りょう】"
               rom="shinryō"
@@ -136,9 +116,11 @@
               rom="ryōkai"
               tr_en="comprehension; consent; agreement"
               tr_de="Verständnis; Zustimmung; Vereinbarung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n1"
               id="ryōkai-consent"
-              rem="must not be together with dōi"
+              rem="must not be together with dōi; appears in 500mon N3 q29 (without example)"
             >
                 <sentence
                   s="【了：りょう】【解：かい】です。"

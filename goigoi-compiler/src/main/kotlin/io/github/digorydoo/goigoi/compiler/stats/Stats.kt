@@ -17,6 +17,29 @@ import kotlin.math.roundToInt
 object Stats {
     private data class VisibleHidden(var visible: Int, var hidden: Int)
 
+    private val originPrefixes = arrayOf(
+        "self",
+        "500mon N3", // must appear before 500mon in this list
+        "500mon N2", // dito
+        "500mon N1", // dito
+        "500mon", // denotes 500mon N5/n4
+        "BondLingo",
+        "ChatGPT",
+        "DeepL",
+        "Doraemon",
+        "GENKI",
+        "Kaname Naito",
+        "Langenscheidt",
+        "Miku",
+        "Oxford",
+        "Yuko",
+        "duolingo",
+        "hinative",
+        "jpod",
+        "lib0",
+        "tofugu",
+    )
+
     fun printStats(vocab: GoigoiVocab) {
         var totalNumUnyts = 0
         var totalNumWords = 0
@@ -369,25 +392,6 @@ object Stats {
 
         println("\nOrigins of sentences")
 
-        val originPrefixes = arrayOf(
-            "self",
-            "500mon",
-            "BondLingo",
-            "ChatGPT",
-            "DeepL",
-            "Doraemon",
-            "GENKI",
-            "Kaname Naito",
-            "Langenscheidt",
-            "Miku",
-            "Oxford",
-            "Yuko",
-            "duolingo",
-            "hinative",
-            "jpod",
-            "lib0",
-            "tofugu",
-        )
         val originsMap = mutableMapOf<String, Int>()
 
         vocab.forEachVisibleWord { word ->

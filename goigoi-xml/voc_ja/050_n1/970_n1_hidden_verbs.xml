@@ -8,32 +8,12 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n1"
-      translations="en"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="false"
       HIDDEN="true"
     >
         <section>
             <!-- unsorted -->
-            <word
-              w="【炒：いた】める"
-              rom="itameru"
-              tr_en="to stir-fry; to saute"
-              tr_de="rührbraten; sautieren"
-              hint_en="v.t."
-              lvl="n1"
-              category="cooking"
-              id="itameru-fry"
-            >
-                <phrase
-                  ph="【野：や】【菜：さい】を【炒：いた】める"
-                  rom="yasai o itameru"
-                  tr_en="to stir-fry vegetables"
-                  tr_de="Gemüse rührbraten"
-                  lvl="n1"
-                />
-            </word>
             <word
               w="【高：たか】まる"
               rom="takamaru"
@@ -45,6 +25,22 @@
             >
                 <see id="takameru-raise" rem="v.t." />
             </word>
+            <word
+              w="【咎：とが】める"
+              rom="togameru"
+              tr_en="to blame; to reproach; to censure; to rebuke; to reprove; to find fault"
+              hint_en="v.t. &amp; i."
+              lvl="n1"
+              id="togameru-blame"
+            />
+            <word
+              w="【唱：とな】える"
+              rom="tonaeru"
+              tr_en="to recite; to chant; to yell"
+              hint_en="v.t."
+              lvl="n1"
+              id="tonaeru-chant"
+            />
             <word
               w="【齎：もたら】す"
               rom="motarasu"
@@ -98,15 +94,6 @@
               id="toku-preach"
             />
             <word
-              w="【読：よ】み【上：あ】げる"
-              rom="yomiageru"
-              tr_en="to read aloud; to read through"
-              tr_de="etw. laut lesen; etw. durchlesen"
-              hint_en="v.t."
-              lvl="n1"
-              id="yomiageru-readaloud"
-            />
-            <word
               w="【染：そ】める"
               rom="someru"
               tr_en="to dye; to colour"
@@ -135,15 +122,6 @@
               id="yorikakaru-relyon"
             />
             <word
-              w="【乗：の】り【込：こ】む"
-              rom="norikomu"
-              tr_en="to board; to embark on; to get into (a car)"
-              tr_de="einsteigen (in ein Auto, usw.)"
-              hint_en="v.i."
-              lvl="n1"
-              id="norikomu-embark"
-            />
-            <word
               w="【成：な】り【立：た】つ"
               rom="naritatsu"
               tr_en="to consist of; to be composed of; to hold true"
@@ -153,17 +131,8 @@
               id="naritatsu-consistof"
             />
             <word
-              w="【打：う】ち【切：き】る"
-              rom="uchikiru"
-              tr_en="to stop; to abort; to discontinue"
-              tr_de="etw. stoppen; etw. beenden"
-              hint_en="v.t."
-              lvl="n1"
-              id="uchikiru-abort"
-            />
-            <word
               w="【打：う】ち【合：あ】わせる"
-              rom="uchiawaseru"
+              rom="uchi-awaseru"
               tr_en="to discuss in advance; to arrange a meeting"
               tr_de="absprechen; sich verabreden"
               Langenscheidt="absprechen, sich verabreden"
@@ -174,7 +143,7 @@
             />
             <word
               w="【打：う】ち【込：こ】む"
-              rom="uchikomu"
+              rom="uchi-komu"
               tr_en="to drive in (a nail); to hit (a ball); to launch (a missile)"
               tr_de="(Nagel) einschlagen; (Ball) schlagen; (Rakete) abfeuern"
               hint_en="v.t."
@@ -183,40 +152,13 @@
             />
             <word
               w="【押：お】し【寄：よ】せる"
-              rom="oshiyoseru"
+              rom="oshi-yoseru"
               tr_en="to rush for (the door); to close in; to march on"
               tr_de="(zur Tür) eilen; näherrücken; einmarschieren"
               Langenscheidt="-"
               hint_en="v.i."
               lvl="n1"
               id="oshiyoseru-closein"
-            />
-            <word
-              w="【押：お】し【込：こ】む"
-              rom="oshikomu"
-              tr_en="to push into; to cram into; to stuff into"
-              tr_de="in etw. hineindrücken; hineinstopfen"
-              hint_en="v.t. &amp; i."
-              lvl="n1"
-              id="oshikomu-pushinto"
-            />
-            <word
-              w="【抜：ぬ】け【出：だ】す"
-              rom="nukedasu"
-              tr_en="to sneak away; to break free; to get through (a difficult situation)"
-              tr_de="davonschleichen; sich freischlagen; (durch eine Situation) durchkommen"
-              hint_en="v.i."
-              lvl="n1"
-              id="nukedasu-sneakaway"
-            />
-            <word
-              w="【遅：おく】らす"
-              rom="okurasu"
-              tr_en="to delay sth.; to slow down sth.; to postpone"
-              tr_de="etw. verzögern; etw. verlangsamen; etw. aufschieben"
-              hint_en="v.t."
-              lvl="n1"
-              id="okurasu-postpone"
             />
             <word
               w="【転：てん】じる"
@@ -245,17 +187,6 @@
               lvl="n1"
               id="boyakeru-becomedim"
             />
-            <word
-              w="【試：こころ】みる"
-              rom="kokoromiru"
-              tr_en="to try; to have a go (at sth.)"
-              tr_de="etw. versuchen; etw. ausprobieren"
-              hint_en="v.t."
-              lvl="n1"
-              id="kokoromiru-try"
-            >
-                <keep_apart_from id="tamesu-attempt" />
-            </word>
             <word
               w="【老：お】いる"
               rom="oiru"
@@ -403,15 +334,6 @@
               rem="must not be together with kokorogakeru"
             />
             <word
-              w="【帯：お】びる"
-              rom="obiru"
-              tr_en="to wear (a sword, a decoration); to be entrusted with sth."
-              tr_de="(Schwert, Auszeichnung) tragen; mit etw. anvertraut sein"
-              hint_en="v.t."
-              lvl="n1"
-              id="obiru-wear"
-            />
-            <word
               w="【弾：はじ】く"
               rom="hajiku"
               tr_en="to flick; to repel; to pluck (the strings of a guitar, etc.)"
@@ -430,16 +352,6 @@
               id="shiiru-coerce"
             />
             <word
-              w="【見：み】【渡：わた】す"
-              rom="miwatasu"
-              tr_en="to look out over; to survey (scene); to take an extensive view of"
-              tr_de="darüberschauen; (eine Szene) überblicken"
-              hint_en="v.t."
-              lvl="n1"
-              category="looking"
-              id="miwatasu-takeaview"
-            />
-            <word
               w="【済：す】ます"
               rom="sumasu"
               tr_en="to get it over with; to settle sth.; to get along with sth."
@@ -448,18 +360,6 @@
               lvl="n1"
               id="sumasu-finish"
             />
-            <word
-              w="【埋：う】まる"
-              rom="umaru"
-              tr_en="to be buried; to be crowded; to be filled"
-              tr_de="begraben werden; überfüllt sein; sich füllen"
-              Langenscheidt="begraben werden, sich füllen"
-              hint_en="v.i."
-              lvl="n1"
-              id="umaru-overflow"
-            >
-                <see id="aku-empty" rem="antonym" />
-            </word>
             <word
               w="【栄：さか】える"
               rom="sakaeru"
@@ -488,6 +388,7 @@
               category="general, life"
               id="gozaimasu-be"
               rem="is this not the masu form, or why is this n1?"
+              HIDDEN="true"
             />
             <word
               w="【退：しりぞ】く"
@@ -516,24 +417,6 @@
               lvl="n1"
               category="looking"
               id="tsuburu-shut"
-            />
-            <word
-              w="【申：もう】し【出：で】る"
-              rom="mōshideru"
-              tr_en="to offer; to suggest; to propose"
-              tr_de="offerieren; vorschlagen; vorbringen"
-              hint_en="v.t."
-              lvl="n1"
-              id="mōshideru-offer"
-            />
-            <word
-              w="【取：と】り【除：のぞ】く"
-              rom="tori-nozoku"
-              tr_en="to remove; to deinstall; to take away; to set apart"
-              hint_en="v.t."
-              lvl="n1"
-              category="hands"
-              id="torinozoku-remove"
             />
             <word
               w="【捗：はかど】る"
@@ -594,14 +477,6 @@
               hint_en="v.i."
               lvl="n1"
               id="ikigomu-beeager"
-            />
-            <word
-              w="【慣：な】らす"
-              rom="narasu"
-              tr_en="to accustom to sth.; to tame; to domesticate"
-              hint_en="v.t."
-              lvl="n1"
-              id="narasu-accustom"
             />
             <word
               w="【抓：つね】る"
@@ -801,14 +676,6 @@
               hint_en="v.t."
               lvl="n1"
               id="sabaku-judge"
-            />
-            <word
-              w="【親：した】しむ"
-              rom="shitashimu"
-              tr_en="to be intimate with; to befriend"
-              hint_en="v.i."
-              lvl="n1"
-              id="shitashimu-befriend"
             />
             <word
               w="【面：めん】する"

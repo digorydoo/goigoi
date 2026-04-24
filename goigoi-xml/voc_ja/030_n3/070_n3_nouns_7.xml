@@ -11,13 +11,61 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      translations="en, de"
       requiresSentences="false"
       requiresPhrases="false"
-      requiresIds="true"
     >
         <section>
             <!-- unsorted -->
+            <word
+              w="【美：び】【術：じゅつ】"
+              rom="bijutsu"
+              tr_en="art; fine arts"
+              tr_de="Kunst; bildende Kunst"
+              lvl="n3"
+              category="arts"
+              id="bijutsu-arts"
+              rem="jisho has n1, but n4 for bijutsu-kan; appears in 500mon N3 q52 as the answer"
+            >
+                <keep_together id="bijutsukan-gallery" />
+            </word>
+            <word
+              w="【美：び】【術：じゅつ】【館：かん】"
+              rom="bijutsu-kan"
+              tr_en="art gallery"
+              tr_de="Kunstgallerie"
+              lvl="n3"
+              category="arts"
+              id="bijutsukan-gallery"
+              rem="jisho has n4 for bijutsukan, but n1 for bijutsu; bijutsu appears in 500mon N3 q52 as the answer"
+            >
+                <keep_together id="bijutsu-arts" />
+                <keep_apart_from id="hakubutsukan-museum" />
+                <phrase
+                  ph="【美：び】【術：じゅつ】【館：かん】で【写：しゃ】【真：しん】を【見：み】る"
+                  rom="bijutsu-kan de shashin o miru"
+                  tr_en="to look at photographs in an art gallery"
+                  tr_de="in einer Kunstgallerie Fotos anschauen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="このバスは【美：び】【術：じゅつ】【館：かん】まで【行：い】きますか。"
+                  rom="Kono basu wa bijutsu-kan made ikimasu ka?"
+                  tr_en="Does this bus go to the museum?"
+                  tr_de="Geht dieser Bus bis zum Museum?"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【道：みち】を【行：い】けば【美：び】【術：じゅつ】【館：かん】に【出：で】ます。"
+                  rom="Kono michi o ikeba bijutsu-kan ni demasu."
+                  tr_en="If you walk down this road, it'll lead you to the art gallery."
+                  tr_de="Wenn du diese Strasse entlang gehst, wirst du zur Kunstgallerie kommen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【同：どう】【僚：りょう】"
               rom="dōryō"
@@ -57,34 +105,29 @@
                 />
             </word>
             <word
-              w="【就：しゅう】【職：しょく】"
-              rom="shūshoku"
-              tr_en="getting a full-time job; to find employment"
-              tr_de="einen Vollzeitjob finden; eine Stelle finden"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【気：き】【候：こう】"
+              rom="kikō"
+              tr_en="climate"
+              tr_de="Klima"
               lvl="n3"
-              category="employment"
-              id="shūshoku-findemployment"
-              rem="appears in GENKI2 p.117 vocab section"
+              category="weather"
+              id="kikō-climate"
             >
-                <!-- a job offer is 内定, which is nx -->
                 <phrase
-                  ph="【就：しゅう】【職：しょく】の【面：めん】【接：せつ】"
-                  rom="shūshoku no mensetsu"
-                  tr_en="a job interview"
-                  tr_de="ein Vorstellungsgespräch"
+                  ph="ひどい【気：き】【候：こう】"
+                  rom="hidoi kikō"
+                  tr_en="a harsh climate"
+                  tr_de="ein rauhes Klima"
                   lvl="n3"
                   origin="lib0"
                 />
                 <sentence
-                  s="その【会：かい】【社：しゃ】には【就：しゅう】【職：しょく】できませんでした。"
-                  rom="Sono kaisha ni wa shūshoku dekimasen deshita."
-                  tr_en="I wasn't able to get a job at that company."
-                  tr_de="Ich habe es nicht geschafft, bei jener Firma eine Stelle zu bekommen."
+                  s="【日：に】【本：ほん】は【穏：おだ】やかな【気：き】【候：こう】だ。"
+                  rom="Nihon wa odayaka na kikō da."
+                  tr_en="Japan has a mild climate."
+                  tr_de="Japan hat ein mildes Klima."
                   lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -174,7 +217,7 @@
               lvl="n3"
               id="kesseki-absence"
             >
-                <see id="shusseki-attend" rem="closely related" />
+                <see id="shusseki-attend" rem="antonym" />
                 <keep_apart_from id="rusu-absence" />
                 <phrase
                   ph="【会：かい】【議：ぎ】に【欠：けっ】【席：せき】する"
@@ -440,6 +483,148 @@
                 />
             </word>
             <word
+              w="【袖：そで】"
+              rom="sode"
+              tr_en="sleeve"
+              tr_de="Ärmel"
+              lvl="n3"
+              category="fashion"
+              id="sode-sleeve"
+              rem="can also mean wings (of a stage, etc.), see phrases"
+            >
+                <!--
+                    袖に涙 tears on one’s sleeve; sadness; ChatGPT
+                    袖を濡らす to wet one’s sleeve with tears (n2) ChatGPT
+                    袖をまくる to toll up one's sleeves (n1) ChatGPT
+                    袖にすがる to cling to someone’s sleeve (i.e. to beg or plead) (nx) ChatGPT
+                -->
+                <phrase
+                  ph="【長：なが】【袖：そで】"
+                  rom="nagasode"
+                  tr_en="long sleeves"
+                  tr_de="lange Ärmel"
+                  lvl="n3"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【半：はん】【袖：そで】"
+                  rom="hansode"
+                  tr_en="short sleeves"
+                  tr_de="kurze Ärmel"
+                  lvl="n3"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【舞：ぶ】【台：たい】の【袖：そで】"
+                  rom="butai no sode"
+                  tr_en="wings of a stage; side areas of a stage"
+                  tr_de="Bühnenflügel; Seitenbereich der Bühne"
+                  lvl="n3"
+                  origin="self"
+                  rem="from jisho; verified with ChatGPT"
+                />
+                <sentence
+                  s="【着：き】【物：もの】の【袖：そで】が【長：なが】い。"
+                  rom="Kimono no sode ga nagai."
+                  tr_en="The sleeves of a kimono are long."
+                  tr_de="Die Ärmel eines Kimono sind lange."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】に【袖：そで】にされた。"
+                  rom="Kanojo ni sode ni sareta."
+                  tr_en="She turned me down."
+                  tr_de="Sie hat mir die kalte Schulter gezeigt."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【涙：なみだ】ながらに【袖：そで】を【分：わ】けた。"
+                  rom="Namida nagara ni sode o waketa."
+                  tr_en="(They) parted in tears."
+                  tr_de="(Sie) trennten sich in Tränen."
+                  explanation_en="Literally, 'They parted sleeves'"
+                  explanation_de="Wörtlich, 'Sie haben ihre Ärmel getrennt'"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="ChatGPT says に is normally used after ながら when it modifies the manner of an action"
+                />
+            </word>
+            <word
+              w="【証：しょう】【明：めい】"
+              rom="shōmei"
+              tr_en="proof (of guilt, innocence, etc.); verification"
+              tr_de="Beweis (der Schuld, Unschuld, usw.); Nachweis"
+              Langenscheidt="Nachweis, nachweisen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="crime"
+              id="shōmei-proof"
+            >
+                <keep_apart_from id="akashi-proof" />
+                <keep_apart_from id="shōko-proof" />
+                <phrase
+                  ph="【身：み】【分：ぶん】【証：しょう】【明：めい】【書：しょ】"
+                  rom="mibun shōmeisho"
+                  tr_en="identification papers; ID"
+                  tr_de="Identitätsausweis; ID"
+                  lvl="n3"
+                  origin="self"
+                  rem="jsho has nx"
+                />
+                <sentence
+                  s="【小：こ】【林：ばやし】さんが【正：しょう】【直：じき】だと【証：しょう】【明：めい】します。"
+                  rom="Kobayashi-san ga shōjiki da to shōmei shimasu."
+                  tr_en="I will prove that Mr Kobayashi is honest."
+                  tr_de="Ich werde nachweisen, dass Kobayashi ehrlich ist."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【中：ちゅう】【止：し】"
+              rom="chūshi"
+              tr_en="abandoning; suspension; discontinuance"
+              tr_de="Aufgeben; Abbruch"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="mood, not-good"
+              id="chūshi-abandon"
+              rem="appears in 500mon q406"
+            >
+                <sentence
+                  s="【工：こう】【場：じょう】を【建：た】てる【計：けい】【画：かく】が【中：ちゅう】【止：し】になった。"
+                  rom="Kōjō o tateru keikaku ga chūshi ni natta."
+                  tr_en="The plan to build a factory has been abandoned."
+                  tr_de="Der Plan, eine Fabrik zu bauen, wurde aufgegeben."
+                  lvl="n3"
+                  origin="500mon q406"
+                  rem="jisho has n3 for keikaku, chūshi"
+                />
+            </word>
+            <word
+              w="【感：かん】【心：しん】"
+              rom="kanshin"
+              tr_en="admiration; being impressed; astonishment"
+              tr_de="Bewunderung; beeidruckt sein; erstaunt sein"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="kanshin-admiration"
+            >
+                <sentence
+                  s="【感：かん】【心：しん】したぞ。"
+                  rom="Kanshin shita zo."
+                  tr_en="I'm impressed!"
+                  tr_de="Ich bin beeindruckt!"
+                  lvl="n3"
+                  origin="Doraemon 0, p.21"
+                />
+            </word>
+            <word
               w="【努：ど】【力：りょく】"
               rom="doryoku"
               tr_en="effort; endeavour; hard work"
@@ -458,63 +643,6 @@
                   lvl="n3"
                   origin="lib0"
                   href="https://hinative.com/questions/22110146 (pronounciation of 点)"
-                />
-            </word>
-            <word
-              w="【失：しつ】【業：ぎょう】"
-              rom="shitsugyō"
-              tr_en="unemployment; losing one's job; becoming unemployed"
-              tr_de="Arbeitslosigkeit; den Job verlieren; arbeitslos werden"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="employment"
-              id="shitsugyō-unemployment"
-            >
-                <phrase
-                  ph="【失：しつ】【業：ぎょう】したパイロット"
-                  rom="shitsugyō shita pairotto"
-                  tr_en="unemployed pilot"
-                  tr_de="arbeitsloser Pilot"
-                  lvl="n3"
-                  origin="jpod101 modified"
-                />
-                <phrase
-                  ph="【失：しつ】【業：ぎょう】【保：ほ】【険：けん】"
-                  rom="shitsugyō hoken"
-                  tr_en="unemployment insurance"
-                  tr_de="Arbeitslosenversicherung"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【兄：あに】は【失：しつ】【業：ぎょう】している。"
-                  rom="Ani wa shitsugyō shite iru."
-                  tr_en="My older brother is unemployed."
-                  tr_de="Mein älterer Bruder ist arbeitslos."
-                  lvl="n3"
-                  origin="lib0 modified"
-                />
-            </word>
-            <word
-              w="【姉：し】【妹：まい】"
-              rom="shimai"
-              tr_en="sisters"
-              tr_de="Schwestern"
-              lvl="n3"
-              category="family"
-              id="shimai-sisters"
-              rem="appears in GENKI2 p.329 kanji section"
-            >
-                <phrase
-                  ph="【姉：し】【妹：まい】【校：こう】"
-                  rom="shimaikō"
-                  tr_en="sister school"
-                  tr_de="Schwesterschulen"
-                  explanation_en="two schools that have a specially close relationship"
-                  explanation_de="zwei Schulen, die eine speziell enge Verbindung haben"
-                  lvl="n3"
-                  origin="GENKI2 p.329"
                 />
             </word>
             <word
@@ -567,81 +695,6 @@
                 />
             </word>
             <word
-              w="【記：き】【者：しゃ】"
-              rom="kisha"
-              tr_en="reporter; journalist"
-              tr_de="Reporter; Journalist"
-              lvl="n3"
-              category="news, occupations"
-              id="kisha-reporter"
-            >
-                <phrase
-                  ph="【新：しん】【聞：ぶん】【記：き】【者：しゃ】"
-                  rom="shinbun kisha"
-                  tr_en="a reporter for a newspaper"
-                  tr_de="ein Reporter einer Zeitung"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="スポーツ【記：き】【者：しゃ】になりたい。"
-                  rom="Supōtsu kisha ni naritai."
-                  tr_en="I want to become a sports reporter."
-                  tr_de="Ich will ein Sportreporter werden."
-                  lvl="n3"
-                  origin="lib0 modified"
-                />
-            </word>
-            <word
-              w="【宝：たから】"
-              rom="takara"
-              tr_en="treasure"
-              tr_de="Schatz"
-              lvl="n3"
-              category="entertainment, finances"
-              id="takara-treasure"
-            >
-                <keep_together id="takarajima-treasureisland" />
-                <see id="hōseki-gem" rem="closely related" />
-                <phrase
-                  ph="【宝：たから】【島：じま】"
-                  rom="takarajima"
-                  tr_en="treasure island"
-                  tr_de="Schatzinsel"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <phrase
-                  ph="【宝：たから】【箱：ばこ】"
-                  rom="takarabako"
-                  tr_en="treasure chest"
-                  tr_de="Schatztruhe"
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="その【宝：たから】【島：じま】では【宝：たから】【箱：ばこ】が【全：ぜん】【部：ぶ】なくなっちゃってる。"
-                  rom="Sono takarajima de wa takarabako ga zenbu nakunacchatteru."
-                  tr_en="On this treasure island, all the treasure chests are already gone."
-                  tr_de="Auf dieser Schatzinsel sind schon alle Schatztruhen weg."
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
-              w="【宝：たから】【島：じま】"
-              rom="takarajima"
-              tr_en="treasure island"
-              lvl="n3"
-              id="takarajima-treasureisland"
-              HIDDEN="true"
-              rem="just to provide the furigana; is a phrase of takara"
-            >
-                <keep_together id="takara-treasure" />
-            </word>
-            <word
               w="【様：よう】【子：す】"
               rom="yōsu"
               tr_en="appearance; circumstances"
@@ -658,26 +711,6 @@
                   lvl="n3"
                   origin="Oxford p.114"
                   rem="どうも in the sense of 'somehow' may not be n5, but n3 should be fine"
-                />
-            </word>
-            <word
-              w="【首：しゅ】【相：しょう】"
-              rom="shushō"
-              tr_en="Prime Minister; chancellor; premier"
-              tr_de="Premierminister; Kanzler"
-              lvl="n3"
-              category="politics, people"
-              id="shushō-premier"
-              rem="appears in GENKI2 p.116 vocab section"
-            >
-                <keep_apart_from id="daitōryō-president" />
-                <sentence
-                  s="【国：こく】【民：みん】はだれでも【首：しゅ】【相：しょう】を【尊：そん】【敬：けい】している。"
-                  rom="Kokumin wa daredemo shushō o sonkei shite iru."
-                  tr_en="The people of the country respect the Prime Minister."
-                  tr_de="Das Volk respektiert den Premierminister."
-                  lvl="n3"
-                  origin="lib0"
                 />
             </word>
             <word
@@ -782,34 +815,6 @@
                 />
             </word>
             <word
-              w="【全：ぜん】【員：いん】"
-              rom="zen'in"
-              tr_en="all of us; everybody; the whole crew"
-              tr_de="wir alle; jedermann; die ganze Meute"
-              lvl="n3"
-              category="people"
-              id="zenin-allofus"
-            >
-                <keep_apart_from id="minna-everyone" />
-                <keep_apart_from id="minasan-allofyou" />
-                <phrase
-                  ph="【全：ぜん】【員：いん】【出：しゅっ】【席：せき】"
-                  rom="zen'in shusseki"
-                  tr_en="all present; everybody here"
-                  tr_de="alle anwesend"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【全：ぜん】【員：いん】その【車：くるま】に【乗：の】った。"
-                  rom="Zen'in sono kuruma ni notta."
-                  tr_en="The whole crew got into the car."
-                  tr_de="Die ganze Meute stieg in das Auto ein."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
               w="【発：はっ】【見：けん】"
               rom="hakken"
               tr_en="discovery; detection; finding"
@@ -860,24 +865,6 @@
                   lvl="n3"
                   origin="lib0"
                   rem="ChatGPT 4.1mini insists on the combination of をも"
-                />
-            </word>
-            <word
-              w="【地：ち】【方：ほう】"
-              rom="chihō"
-              tr_en="regional; locality; countryside"
-              tr_de="regional; Lokalität; auf dem Land"
-              lvl="n3"
-              category="countryside, geography"
-              id="chihō-locality"
-            >
-                <keep_apart_from id="chiiki-region" />
-                <phrase
-                  ph="【地：ち】【方：ほう】【新：しん】【聞：ぶん】"
-                  rom="chihō shinbun"
-                  tr_en="local newspaper"
-                  tr_de="regionale Zeitung"
-                  lvl="n3"
                 />
             </word>
             <word
@@ -1104,6 +1091,63 @@
                 />
             </word>
             <word
+              w="【記：き】【念：ねん】"
+              rom="kinen"
+              tr_en="commemoration; remembrance; honouring"
+              tr_de="Gedenken; Erinnerung; Ehrung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="culture"
+              id="kinen-celebration"
+            >
+                <phrase
+                  ph="【記：き】【念：ねん】【日：び】"
+                  rom="kinenbi"
+                  tr_en="memorial day; anniversary"
+                  tr_de="Gedenktag; Jubiläum"
+                  lvl="n3"
+                  origin="Oxford p.77"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="ここは【有：ゆう】【名：めい】なので【記：き】【念：ねん】【写：しゃ】【真：しん】を【撮：と】ります。"
+                  rom="Koko wa yūmei na no de kinen-shashin o torimasu."
+                  tr_en="This is a famous spot, so I'll take a souvenir photo."
+                  tr_de="Dies ist ein berühmter Ort, deshalb mache ich ein Erinnerungsfoto."
+                  lvl="n3"
+                  origin="Oxford p.144"
+                />
+                <sentence
+                  s="【先：せん】【生：せい】が【学：がく】【生：せい】に「サラダ【記：き】【念：ねん】【日：び】」を【読：よ】ませた。"
+                  rom="Sensei ga gakusei ni ‘Sarada Kinenbi’ o yomaseta."
+                  tr_en="The teacher made the students read 'Salad Anniversary'."
+                  tr_de="Der Lehrer veranlasste die Schüler, 'Salat-Jubiläum' zu lesen."
+                  explanation_en="'Salad Anniversary' is a book of poems by Tawara Machi from 1987."
+                  explanation_de="'Salat-Jubiläum' ist ein Gedichtband von Tawara Machi aus dem Jahr 1987."
+                  lvl="n3"
+                  origin="Oxford p.77"
+                />
+            </word>
+            <word
+              w="【地：ち】【方：ほう】"
+              rom="chihō"
+              tr_en="regional; locality; countryside"
+              tr_de="regional; Lokalität; auf dem Land"
+              lvl="n3"
+              category="countryside, geography"
+              id="chihō-locality"
+            >
+                <keep_apart_from id="chiiki-region" />
+                <phrase
+                  ph="【地：ち】【方：ほう】【新：しん】【聞：ぶん】"
+                  rom="chihō shinbun"
+                  tr_en="local newspaper"
+                  tr_de="regionale Zeitung"
+                  lvl="n3"
+                />
+            </word>
+            <word
               w="【勘：かん】【定：じょう】"
               rom="kanjō"
               tr_en="bill; payment"
@@ -1154,45 +1198,6 @@
                 />
             </word>
             <word
-              w="【記：き】【念：ねん】"
-              rom="kinen"
-              tr_en="commemoration; remembrance; honouring"
-              tr_de="Gedenken; Erinnerung; Ehrung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="culture"
-              id="kinen-celebration"
-            >
-                <phrase
-                  ph="【記：き】【念：ねん】【日：び】"
-                  rom="kinenbi"
-                  tr_en="memorial day; anniversary"
-                  tr_de="Gedenktag; Jubiläum"
-                  lvl="n3"
-                  origin="Oxford p.77"
-                  rem="jisho has nx"
-                />
-                <sentence
-                  s="ここは【有：ゆう】【名：めい】なので【記：き】【念：ねん】【写：しゃ】【真：しん】を【撮：と】ります。"
-                  rom="Koko wa yūmei na no de kinen-shashin o torimasu."
-                  tr_en="This is a famous spot, so I'll take a souvenir photo."
-                  tr_de="Dies ist ein berühmter Ort, deshalb mache ich ein Erinnerungsfoto."
-                  lvl="n3"
-                  origin="Oxford p.144"
-                />
-                <sentence
-                  s="【先：せん】【生：せい】が【学：がく】【生：せい】に「サラダ【記：き】【念：ねん】【日：び】」を【読：よ】ませた。"
-                  rom="Sensei ga gakusei ni ‘Sarada Kinenbi’ o yomaseta."
-                  tr_en="The teacher made the students read 'Salad Anniversary'."
-                  tr_de="Der Lehrer veranlasste die Schüler, 'Salat-Jubiläum' zu lesen."
-                  explanation_en="'Salad Anniversary' is a book of poems by Tawara Machi from 1987."
-                  explanation_de="'Salat-Jubiläum' ist ein Gedichtband von Tawara Machi aus dem Jahr 1987."
-                  lvl="n3"
-                  origin="Oxford p.77"
-                />
-            </word>
-            <word
               w="【得：とく】【意：い】"
               rom="tokui"
               tr_en="pride; triumph"
@@ -1203,7 +1208,9 @@
               category="mood"
               id="tokui-pride"
             >
+                <see id="nigate-notlike" rem="antonym" />
                 <keep_apart_from id="jiman-boast" />
+                <keep_apart_from id="jōtō-superior" />
                 <sentence
                   s="【誰：だれ】にも【得：とく】【意：い】な【時：じ】【代：だい】はある。"
                   rom="Dare ni mo tokui na jidai wa aru."
@@ -1212,6 +1219,99 @@
                   lvl="n3"
                   origin="lib0"
                   rem="wouldn't がある be better???"
+                />
+            </word>
+            <word
+              w="【言：げん】【語：ご】"
+              rom="gengo"
+              tr_en="language"
+              tr_de="Sprache"
+              lvl="n3"
+              category="linguistics"
+              id="gengo-language"
+            >
+                <keep_apart_from id="kotoba-words" />
+                <keep_apart_from id="gogaku-langlearn" />
+                <keep_apart_from id="tango-word" />
+                <phrase
+                  ph="【言：げん】【語：ご】【学：がく】"
+                  rom="gengo gaku"
+                  tr_en="linguistics"
+                  tr_de="Linguistik"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <phrase
+                  ph="【言：げん】【語：ご】【学：がく】を【専：せん】【攻：こう】する"
+                  rom="gengo gaku o senkō suru"
+                  tr_en="to major in linguistics"
+                  tr_de="Linguistik als Hauptfach nehmen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【便：びん】"
+              rom="bin"
+              tr_en="flight"
+              tr_de="Flug"
+              lvl="n3"
+              category="transportation"
+              id="bin-flight"
+            >
+                <keep_apart_from id="hikō-aviation" />
+                <keep_apart_from id="tabi-trip" />
+                <!--
+                    便・びん: a certain flight you take
+                    空の旅・そらのたび: air travel; journey through the sky
+                -->
+                <sentence
+                  s="【次：つぎ】の【便：びん】に【乗：の】ります。"
+                  rom="Tsugi no bin ni norimasu."
+                  tr_en="I'll take the next flight."
+                  tr_de="Ich werde den nächsten Flug nehmen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【両：りょう】【替：がえ】"
+              rom="ryōgae"
+              tr_en="money exchange; change money"
+              tr_de="Geldwechsel; Geld wechseln"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="trade, finances"
+              id="ryōgae-exchange"
+              rem="appears in GENKI2 p.91"
+            >
+                <sentence
+                  s="アメリカドルを【日：に】【本：ほん】【円：えん】に【両：りょう】【替：がえ】できますか。"
+                  rom="Amerika-doru o Nihon-en ni ryōgae dekimasu ka?"
+                  tr_en="Can you change US dollars to Japanese yen?"
+                  tr_de="Können Sie US-Dollar in japanische Yen wechseln?"
+                  lvl="n3"
+                  origin="GENKI2 p.91"
+                />
+            </word>
+            <word
+              w="【孫：まご】"
+              rom="mago"
+              tr_en="grandchild"
+              tr_de="Enkel"
+              lvl="n3"
+              category="family"
+              id="mago-grandchild"
+              rem="appears in Doraemon 0, p.27"
+            >
+                <sentence
+                  s="【僕：ぼく】は【君：きみ】の【孫：まご】の【孫：まご】だよ。"
+                  rom="Boku wa kimi no mago no mago da yo."
+                  tr_en="I am your grandchild's grandchild."
+                  tr_de="Ich bin der Enkel deines Enkels."
+                  lvl="n3"
+                  origin="Doraemon 0, p.27"
                 />
             </word>
             <word
@@ -1260,59 +1360,6 @@
                 <!-- 仏のおかげで - hotoke no o-kage de - grace of Buddha, benevolence of Buddha (self) -->
             </word>
             <word
-              w="【便：びん】"
-              rom="bin"
-              tr_en="flight"
-              tr_de="Flug"
-              lvl="n3"
-              category="transportation"
-              id="bin-flight"
-            >
-                <keep_apart_from id="hikō-aviation" />
-                <keep_apart_from id="tabi-trip" />
-                <!--
-                    便・びん: a certain flight you take
-                    空の旅・そらのたび: air travel; journey through the sky
-                -->
-                <sentence
-                  s="【次：つぎ】の【便：びん】に【乗：の】ります。"
-                  rom="Tsugi no bin ni norimasu."
-                  tr_en="I'll take the next flight."
-                  tr_de="Ich werde den nächsten Flug nehmen."
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-            </word>
-            <word
-              w="【言：げん】【語：ご】"
-              rom="gengo"
-              tr_en="language"
-              tr_de="Sprache"
-              lvl="n3"
-              category="linguistics"
-              id="gengo-language"
-            >
-                <keep_apart_from id="kotoba-words" />
-                <keep_apart_from id="gogaku-langlearn" />
-                <keep_apart_from id="tango-word" />
-                <phrase
-                  ph="【言：げん】【語：ご】【学：がく】"
-                  rom="gengo gaku"
-                  tr_en="linguistics"
-                  tr_de="Linguistik"
-                  lvl="n3"
-                  origin="jpod101 audio"
-                />
-                <phrase
-                  ph="【言：げん】【語：ご】【学：がく】を【専：せん】【攻：こう】する"
-                  rom="gengo gaku o senkō suru"
-                  tr_en="to major in linguistics"
-                  tr_de="Linguistik als Hauptfach nehmen"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-            </word>
-            <word
               w="【飯：めし】"
               rom="meshi"
               tr_en="cooked rice; meal; livelihood"
@@ -1328,16 +1375,15 @@
                 <keep_apart_from id="chūshoku-lunch" />
             </word>
             <word
-              w="【噂：うわさ】"
-              rom="uwasa"
-              tr_en="rumour; gossip; hearsay"
-              tr_de="Gerücht; Hörensagen"
+              w="【玉：たま】"
+              rom="tama"
+              tr_en="ball; sphere; bulb"
+              tr_de="Ball; Kugel"
               lvl="n3"
-              category="news, talking"
-              id="uwasa-rumour"
+              id="tama-ball"
             >
-                <keep_apart_from id="oshaberi-gossip" />
-                <keep_apart_from id="muda-waste" rem="ambiguity with mudabanashi" />
+                <keep_apart_from id="bōru-ball" />
+                <keep_apart_from id="mari-ball" />
             </word>
             <word
               w="【実：じっ】【験：けん】"
@@ -1364,41 +1410,6 @@
               id="shūden-lasttrain"
               rem="appears in GENKI2 L21 vocab section; jisho has nx"
             />
-            <word
-              w="【両：りょう】【替：がえ】"
-              rom="ryōgae"
-              tr_en="money exchange; change money"
-              tr_de="Geldwechsel; Geld wechseln"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="trade, finances"
-              id="ryōgae-exchange"
-              rem="appears in GENKI2 p.91"
-            >
-                <sentence
-                  s="アメリカドルを【日：に】【本：ほん】【円：えん】に【両：りょう】【替：がえ】できますか。"
-                  rom="Amerika-doru o Nihon-en ni ryōgae dekimasu ka?"
-                  tr_en="Can you change US dollars to Japanese yen?"
-                  tr_de="Können Sie US-Dollar in japanische Yen wechseln?"
-                  lvl="n3"
-                  origin="GENKI2 p.91"
-                />
-            </word>
-            <word
-              w="【大：たい】【使：し】"
-              rom="taishi"
-              tr_en="ambassador"
-              tr_de="Botschafter"
-              hint_en="highest-ranking diplomat"
-              hint_de="Diplomat mit höchstem Rang"
-              lvl="n3"
-              category="politics, people"
-              id="taishi-ambassador"
-              rem="jisho has n5 for taishikan, n3 for taishi"
-            >
-                <keep_apart_from id="daitōryō-president" />
-            </word>
         </section>
     </unit>
 </vocabulary>
