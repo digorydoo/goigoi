@@ -4,7 +4,7 @@ class GoigoiWordLink(
     val kind: Kind,
     var wordId: String,
     val remark: String,
-    var word: GoigoiWord? = null, // when multiple words share the same id, this is the one we've picked
+    var word: GoigoiWord? = null,
 ) {
     enum class Kind {
         XML_SEE_ALSO, // manual <see> link from goigoi-xml
@@ -57,7 +57,7 @@ class GoigoiWordLink(
         }
 
     override fun toString() =
-        "GoigoiWordLink(id=$wordId, word=$word)"
+        "Link to word ${word?.toString() ?: wordId}"
 
     init {
         require(word == null || word?.id == wordId) { "Mismatch between word and id" }

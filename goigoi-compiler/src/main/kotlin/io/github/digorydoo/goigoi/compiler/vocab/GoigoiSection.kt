@@ -40,4 +40,9 @@ class GoigoiSection {
 
         return result
     }
+
+    override fun toString() = "Section" + when {
+        name.en.isNotEmpty() -> " ${name.en}"
+        else -> ""
+    }
 }

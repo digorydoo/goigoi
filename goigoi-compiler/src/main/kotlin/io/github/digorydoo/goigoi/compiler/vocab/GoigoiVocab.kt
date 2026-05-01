@@ -24,18 +24,8 @@ class GoigoiVocab {
 
     fun forEachUnyt(lambda: (u: GoigoiUnyt, t: GoigoiTopic) -> Unit) {
         for (t in topics) {
-            t.forEachUnyt { u ->
+            t.unyts.forEach { u ->
                 lambda(u, t)
-            }
-        }
-    }
-
-    fun forEachVisibleUnyt(lambda: (u: GoigoiUnyt, t: GoigoiTopic) -> Unit) {
-        for (t in topics) {
-            if (!t.hidden) {
-                t.forEachVisibleUnyt { u ->
-                    lambda(u, t)
-                }
             }
         }
     }

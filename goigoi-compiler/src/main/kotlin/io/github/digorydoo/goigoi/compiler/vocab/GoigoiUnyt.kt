@@ -5,7 +5,7 @@ import ch.digorydoo.kutils.cjk.JLPTLevel
 
 class GoigoiUnyt {
     var id = ""
-    var fileName = ""
+    var filename = ""
     val name = IntlString()
     val defaultHint = IntlString()
     var studyLang = ""
@@ -124,16 +124,8 @@ class GoigoiUnyt {
     }
 
     override fun toString() =
-        "GoigoiUnyt(name=${nameForStdout})"
-
-    fun prettyPrint() {
-        // Output is meant for console, so we could use Kokuban here
-        print(nameForStdout)
-
-        if (fileName.isNotEmpty()) {
-            print(" (${fileName})")
+        "Unyt \"$nameForStdout\"" + when {
+            filename.isNotEmpty() -> " ($filename)"
+            else -> ""
         }
-
-        println()
-    }
 }

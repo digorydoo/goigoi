@@ -1,6 +1,6 @@
 package io.github.digorydoo.goigoi.compiler
 
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhrase
+import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhraseOrSentence
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
 import java.io.File
@@ -74,7 +74,7 @@ class WordIndexWriter(private val vocab: GoigoiVocab, private val quiet: Boolean
         writer.write("{$body},\n")
     }
 
-    private fun writePhraseOrSentence(phrase: GoigoiPhrase, writer: FileWriter) {
+    private fun writePhraseOrSentence(phrase: GoigoiPhraseOrSentence, writer: FileWriter) {
         val body = arrayOf(
             "\"jp\":${encodeJSONValue(phrase.kanji)}",
             "\"en\":${encodeJSONValue(phrase.translation.en)}",

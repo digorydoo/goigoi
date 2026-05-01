@@ -15,12 +15,6 @@ class GoigoiTopic {
     var hidden = false
     var bgColour = ""
 
-    fun forEachUnyt(lambda: (u: GoigoiUnyt) -> Unit) {
-        for (u in unyts) {
-            lambda(u)
-        }
-    }
-
     fun forEachVisibleUnyt(lambda: (u: GoigoiUnyt) -> Unit) {
         for (u in unyts) {
             if (!u.hidden) {
@@ -64,11 +58,5 @@ class GoigoiTopic {
         }
     }
 
-    override fun toString() =
-        "GoigoiTopic(name_en=${name.en})"
-
-    fun prettyPrint() {
-        // Output is meant for console, so we could use Kokuban here
-        println(name.en)
-    }
+    override fun toString() = "Topic \"${name.en}\""
 }

@@ -31,15 +31,17 @@ class GoigoiWord {
     var usuallyInKana = false
     var hidden = false
     var common: Boolean? = null // corresponds to jisho's common word flag (true=green, null=our XML lacks the flag)
+    var crossDict = false
+    var hasCombinedReading = false
     var fileName = ""
     val synonyms = mutableListOf<FuriganaString>()
-    val phrases = mutableListOf<GoigoiPhrase>()
-    val sentences = mutableListOf<GoigoiPhrase>()
+    val phrases = mutableListOf<GoigoiPhraseOrSentence>()
+    val sentences = mutableListOf<GoigoiPhraseOrSentence>()
     val links = mutableListOf<GoigoiWordLink>()
     val cats = mutableSetOf<WordCategory>()
 
     override fun toString() =
-        "GoigoiWord(w=${primaryForm}, rom=${romaji}, lvl=$level, id=${id})"
+        "Word " + id.ifEmpty { romaji }.ifEmpty { translation.en }.ifEmpty { kana }.ifEmpty { kanji }
 
     fun prettyPrint(
         withRomaji: Boolean = false,

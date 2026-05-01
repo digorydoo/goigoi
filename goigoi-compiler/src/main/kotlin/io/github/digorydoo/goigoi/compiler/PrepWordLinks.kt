@@ -1,15 +1,15 @@
 package io.github.digorydoo.goigoi.compiler
 
+import ch.digorydoo.kutils.cjk.toHiragana
+import ch.digorydoo.kutils.string.lpad
+import ch.digorydoo.kutils.string.rpad
+import ch.digorydoo.kutils.string.trunc
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiTopic
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWordLink
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWordLink.Kind
-import ch.digorydoo.kutils.cjk.toHiragana
-import ch.digorydoo.kutils.string.lpad
-import ch.digorydoo.kutils.string.rpad
-import ch.digorydoo.kutils.string.trunc
 
 class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
     private data class WordUnytTopic(val word: GoigoiWord, val unyt: GoigoiUnyt, val topic: GoigoiTopic) {
@@ -99,7 +99,7 @@ class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
                 val tr = partialTranslation.trim().lowercase()
 
                 if (tr.isEmpty()) {
-                    throw CheckFailed("Word has empty translation", wut.unyt, wut.word)
+                    throw CheckFailed("Word ${wut.word} has empty translation")
                 }
 
                 if (!map.containsKey(tr)) {

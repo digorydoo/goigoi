@@ -5,16 +5,16 @@ import ch.digorydoo.kutils.cjk.JLPTLevel.Companion.toJLPTLevelOrNull
 import io.github.digorydoo.goigoi.compiler.CheckFailed
 import io.github.digorydoo.goigoi.compiler.KanjiLevels
 import io.github.digorydoo.goigoi.compiler.Options
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhrase
+import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhraseOrSentence
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
 import kotlin.math.min
 
 /**
  * Implements the checks that need to access both the vocab and the kanji index. Note that the checks that do not need
- * access to the kanji index should be implemented in CheckGoigoiVocab.
+ * access to the kanji index should be implemented in PreChecks.
  */
-class FinalChecks(
+class PostChecks(
     private val vocab: GoigoiVocab,
     private val kanjiLevels: KanjiLevels,
     private val readings: Map<String, MutableSet<String>>,
@@ -81,7 +81,7 @@ class FinalChecks(
         }
     }
 
-    private fun checkKanjis(s: GoigoiPhrase, what: String) {
+    private fun checkKanjis(s: GoigoiPhraseOrSentence, what: String) {
         FuriganaIterator(s.primaryForm.raw).forEach { range ->
             val errorCtx = "${what}\n   ${s.primaryForm.kanji}\n   ${s.romaji}"
             val kanji = range.primaryText.toString()

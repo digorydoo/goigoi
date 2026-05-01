@@ -1,6 +1,7 @@
 package io.github.digorydoo.goigoi.compiler
 
-import io.github.digorydoo.goigoi.compiler.check.check
+import ch.digorydoo.kutils.cjk.FuriganaIterator.MalformedFuriganaException
+import io.github.digorydoo.goigoi.compiler.check.PreChecks
 import io.github.digorydoo.goigoi.compiler.stats.Stats
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
@@ -20,13 +21,11 @@ class GoigoiVocabBuilder(private val vocab: GoigoiVocab, private val options: Op
 
         readGoigoiXmls(srcDir.listFiles()!!)
 
-        buildFileNames() // creates file names for *.voc files, ignoring original XML number prefixes
-
         if (!options.quiet) {
-            println("Checking vocab...")
+            println("Checking...")
         }
 
-        vocab.check() // checks constraints that cannot be checked at XML reading time
+        PreChecks().check(vocab)
 
         if (!options.quiet) {
             Stats.printStats(vocab) // stats about see-also links will be emitted by prepare below
@@ -39,6 +38,13 @@ class GoigoiVocabBuilder(private val vocab: GoigoiVocab, private val options: Op
         if (!options.quiet) {
             println("Writing vocab index...")
         }
+
+        // Sort words and create filenames for their *.voc files.
+        // This must happen after PrepWordLinks, because PrepWordLinks creates new links that can affect the rank!
+
+        buildFileNames()
+
+        // Write the *.voc files
 
         writeVocabIndex()
 
@@ -133,13 +139,15 @@ class GoigoiVocabBuilder(private val vocab: GoigoiVocab, private val options: Op
         try {
             val stream = xmlFile.inputStream()
             val parser = GoigoiXmlParser()
-            parser.parse(stream, vocab)
+            parser.parse(stream, vocab, xmlFile.name)
+        } catch (e: MalformedFuriganaException) {
+            throw MalformedFuriganaException("${xmlFile.path}\n${e.message?.prependIndent("   ")}", e)
         } catch (e: ParsingFailed) {
-            throw ParsingFailed("${xmlFile.path}\n   ${e.message}", e)
+            throw ParsingFailed("${xmlFile.path}\n${e.message?.prependIndent("   ")}", e)
         } catch (e: CheckFailed) {
-            throw CheckFailed("${xmlFile.path}\n   ${e.message}", e)
+            throw CheckFailed("${xmlFile.path}\n${e.message?.prependIndent("   ")}", e)
         } catch (e: Exception) {
-            throw RuntimeException("${xmlFile.path}\n   ${e.message}")
+            throw Exception("${xmlFile.path}\n${e.message?.prependIndent("   ")}", e)
         }
     }
 

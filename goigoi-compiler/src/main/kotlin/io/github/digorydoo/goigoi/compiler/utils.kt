@@ -1,8 +1,6 @@
 package io.github.digorydoo.goigoi.compiler
 
 import ch.digorydoo.kutils.cjk.FuriganaString
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
 
 class Surname(
     val suffices: Array<String>,
@@ -80,7 +78,7 @@ val supportedLanguages = arrayOf("en", "de", "fr", "it", "ja")
  * the computed rōmaji isn't perfect (no space, for instance), and on the other hand, we need the
  * XML rōmaji when the XML is imported in japanese-wotd!
  */
-fun checkRomaji(primaryForm: String, givenRomaji: String, unyt: GoigoiUnyt, word: GoigoiWord) {
+fun checkRomaji(primaryForm: String, givenRomaji: String) {
     val computedRomaji = FuriganaString(primaryForm).romaji
 
     val ck1 = givenRomaji
@@ -109,8 +107,6 @@ fun checkRomaji(primaryForm: String, givenRomaji: String, unyt: GoigoiUnyt, word
                 "Check 1 (XML):      $ck1",
                 "Check 2 (computed): $ck2",
             ).joinToString("\n"),
-            unyt,
-            word,
         )
     }
 }
