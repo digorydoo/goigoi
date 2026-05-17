@@ -72,7 +72,7 @@ class GoigoiXmlParser {
         val errorCtx = "<set>"
 
         try {
-            val lvl = getOptionalAttr(root, "lvl")?.let { JLPTLevel.fromStringNotNull(it) }
+            val lvl = getOptionalAttr(root, "lvl")?.let { JLPTLevel.fromStringOrNull(it) }
 
             val schoolYear = getOptionalAttr(root, "schoolyear")
                 ?.let { it.toIntOrNull() ?: throw ParsingFailed("Value of school year not an int: $it") }
@@ -247,7 +247,7 @@ class GoigoiXmlParser {
 
                 levels = (getOptionalAttr(root, "lvl") ?: "")
                     .split(',')
-                    .mapNotNull { JLPTLevel.fromString(it.trim()) }
+                    .mapNotNull { JLPTLevel.fromStringOrNull(it.trim()) }
             }
 
             errorCtx = "$theTopic"
@@ -342,7 +342,7 @@ class GoigoiXmlParser {
 
                 levels = (getOptionalAttr(root, "lvl") ?: "")
                     .split(',')
-                    .mapNotNull { JLPTLevel.fromString(it.trim()) }
+                    .mapNotNull { JLPTLevel.fromStringOrNull(it.trim()) }
 
                 // requiredTranslations is now fixed, there is no longer an attribute.
                 requiredTranslations = when {
@@ -443,7 +443,7 @@ class GoigoiXmlParser {
             val theHidden = getBooleanAttr(root, "HIDDEN")
             // FIXME move this to CheckGoigoiVocab (use word's hasCustomId: Boolean)
             if (!theHidden && !unyt.hidden && customWordId.isEmpty()) {
-                throw CheckFailed("Id for word is missing, but unyt requires ids")
+                throw CheckFailed("Id for word is missing, word is not hidden")
             }
 
             val wordId = customWordId.let {
@@ -516,7 +516,7 @@ class GoigoiXmlParser {
                 hint = theHint
                 hint2 = theHint2
                 href = getOptionalAttr(root, "href") ?: ""
-                level = JLPTLevel.fromString(getOptionalAttr(root, "lvl") ?: "")
+                level = JLPTLevel.fromStringOrNull(getOptionalAttr(root, "lvl") ?: "")
                 deLangenscheidt = getOptionalAttr(root, "Langenscheidt") ?: ""
                 remark = getOptionalAttr(root, "rem") ?: ""
                 dictionaryWord = getOptionalAttr(root, "dict") ?: ""
@@ -652,7 +652,7 @@ class GoigoiXmlParser {
                 romaji = theRomaji
                 translation = IntlString().apply { getMandatoryAttr(root, "tr", this) }
                 explanation = IntlString().apply { getOptionalAttr(root, "explanation", this) }
-                level = JLPTLevel.fromString(getMandatoryAttr(root, "lvl"))
+                level = JLPTLevel.fromStringOrNull(getMandatoryAttr(root, "lvl"))
                 hasDifferentForm = getBooleanAttr(root, "hasDifferentForm")
                 allowSpaces = getBooleanAttrOrNull(root, "allowSpaces")
                 origin = getOptionalAttr(root, "origin") ?: ""
@@ -719,7 +719,7 @@ class GoigoiXmlParser {
                 romaji = theRomaji
                 translation = IntlString().apply { getMandatoryAttr(root, "tr", this) }
                 explanation = IntlString().apply { getOptionalAttr(root, "explanation", this) }
-                level = JLPTLevel.fromString(getMandatoryAttr(root, "lvl"))
+                level = JLPTLevel.fromStringOrNull(getMandatoryAttr(root, "lvl"))
                 hasDifferentForm = getBooleanAttr(root, "hasDifferentForm")
                 allowSpaces = getBooleanAttrOrNull(root, "allowSpaces")
                 origin = getOptionalAttr(root, "origin") ?: ""

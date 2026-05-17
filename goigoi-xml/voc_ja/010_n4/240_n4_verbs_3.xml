@@ -595,6 +595,12 @@
                   lvl="n4"
                   origin="ChatGPT"
                 />
+                <!--
+                  jisho has this, but ChatGPT says it's archaic.
+                  ph="【年：とし】が【寄：よ】る"
+                  rom="toshi ga yoru"
+                  tr_en="to grow old"
+                -->
                 <sentence
                   s="【家：いえ】に【帰：かえ】る【途：と】【中：ちゅう】でパン【屋：や】に【寄：よ】った。"
                   rom="Ie ni kaeru tochū de panya ni yotta."
@@ -1254,6 +1260,7 @@
               category="temperature"
               id="atatameru-warmup"
             >
+                <see id="atatamaru-warmup" rem="v.i." />
                 <!-- see id="atatakai-warm" rem="adjective" NO, different kanji! -->
                 <phrase
                   ph="【牛：ぎゅう】【乳：にゅう】を【温：あたた】める"

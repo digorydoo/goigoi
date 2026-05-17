@@ -750,6 +750,9 @@
               category="general, culture"
               id="oiwai-celebration"
             >
+                <keep_apart_from id="iwai-celebration" />
+                <keep_together id="iwai-celebration" />
+                <keep_apart_from id="shukuga-celebration" />
                 <phrase
                   ph="【誕：たん】【生：じょう】【日：び】のお【祝：いわ】い"
                   rom="tanjōbi no o-iwai"
@@ -767,6 +770,18 @@
                   origin="lib0"
                   rem="verified with ChatGPT"
                 />
+            </word>
+            <word
+              w="【祝：いわ】い"
+              rom="iwai"
+              tr_en="celebration"
+              lvl="n4"
+              id="iwai-celebration"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="oiwai-celebration" />
+                <keep_together id="oiwai-celebration" />
+                <keep_apart_from id="shukuga-celebration" />
             </word>
             <word
               w="【最：さい】【初：しょ】"

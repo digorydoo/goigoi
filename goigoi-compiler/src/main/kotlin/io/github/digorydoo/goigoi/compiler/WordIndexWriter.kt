@@ -1,5 +1,6 @@
 package io.github.digorydoo.goigoi.compiler
 
+import ch.digorydoo.kutils.json.stringify
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhraseOrSentence
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
@@ -64,11 +65,11 @@ class WordIndexWriter(private val vocab: GoigoiVocab, private val quiet: Boolean
 
     private fun writeWord(word: GoigoiWord, writer: FileWriter) {
         val body = arrayOf(
-            "\"k\":${encodeJSONValue(if (word.usuallyInKana || word.kanji == word.kana) "" else word.kanji)}",
-            "\"n\":${encodeJSONValue(word.kana)}",
-            "\"r\":${encodeJSONValue(word.romaji)}",
-            "\"t\":${encodeJSONValue(word.translation.en)}",
-            "\"l\":${encodeJSONValue(word.level?.toString() ?: "-")}",
+            "\"k\":${stringify(if (word.usuallyInKana || word.kanji == word.kana) "" else word.kanji)}",
+            "\"n\":${stringify(word.kana)}",
+            "\"r\":${stringify(word.romaji)}",
+            "\"t\":${stringify(word.translation.en)}",
+            "\"l\":${stringify(word.level?.toString() ?: "-")}",
         ).joinToString(",")
 
         writer.write("{$body},\n")
@@ -76,8 +77,8 @@ class WordIndexWriter(private val vocab: GoigoiVocab, private val quiet: Boolean
 
     private fun writePhraseOrSentence(phrase: GoigoiPhraseOrSentence, writer: FileWriter) {
         val body = arrayOf(
-            "\"jp\":${encodeJSONValue(phrase.kanji)}",
-            "\"en\":${encodeJSONValue(phrase.translation.en)}",
+            "\"jp\":${stringify(phrase.kanji)}",
+            "\"en\":${stringify(phrase.translation.en)}",
             "\"o\":\"goigoi\"",
         ).joinToString(",")
 

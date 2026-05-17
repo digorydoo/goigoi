@@ -30,7 +30,7 @@ class WordFileReader(
             WORD_HINT_JA_KEY -> word.hint.ja = value
             WORD_KNOWN_HINT_KEY -> word.hint2 = value.toIntOrNull()?.let { WordHint.fromInt(it) }
             WORD_DICTIONARY_WORD_KEY -> word.dictionaryWord = value
-            WORD_LEVEL_KEY -> word.level = JLPTLevel.fromString(value)
+            WORD_LEVEL_KEY -> word.level = JLPTLevel.fromStringOrNull(value, nxIsNull = false)
             WORD_USUALLY_IN_KANA_KEY -> word.usuallyInKana = value.toBoolean()
             WORD_STUDY_IN_CONTEXT_KEY -> word.studyInContext = value.toIntOrNull()
                 ?.let { StudyInContextKind.fromInt(it) }

@@ -27,6 +27,33 @@
               id="iikagen-irresponsible"
               rem="appears in 500mon N3 q56 (with examples)"
             />
+            <word
+              w="【碌：ろく】"
+              rom="roku"
+              tr_en="(not) satisfactory; (not) decent; (not) proper"
+              tr_de="(un-) befriedigend; (un-) angebracht; (nicht) richtig"
+              hint_en="na-adjective"
+              hint_de="Na-Adjektiv"
+              usuallyInKana="true"
+              lvl="n1"
+              id="roku-indecent"
+              rem="appears in Doraemon 13 p.111"
+            >
+                <keep_together id="rokuna-indecent" />
+                <keep_apart_from id="rokuna-indecent" />
+            </word>
+            <word
+              w="【碌：ろく】な"
+              rom="roku na"
+              tr_en="(not) satisfactory; (not) decent; (not) proper"
+              hint_en="pre-noun adjectival"
+              lvl="n1"
+              id="rokuna-indecent"
+              HIDDEN="true"
+            >
+                <keep_together id="roku-indecent" />
+                <keep_apart_from id="roku-indecent" />
+            </word>
 
             <!--
                 FIXME verify that all of these are actually na-adjectives

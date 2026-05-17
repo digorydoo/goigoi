@@ -13,7 +13,10 @@ class KanjiIndexReader(private val stream: InputStream) {
         BufferedReader(InputStreamReader(stream, "UTF-8")).useLines { seq ->
             seq.forEach { line ->
                 val colonAt = line.indexOf(':')
-                val level = JLPTLevel.fromString(line.substring(0, colonAt))!!
+                val rawLevel = line.substring(0, colonAt)
+
+                val level = JLPTLevel.fromStringOrNull(rawLevel, nxIsNull = false)
+                    ?: throw Exception("Not a valid JLPT level: $rawLevel")
 
                 line.substring(colonAt + 1).forEach { kanji ->
                     lambda(kanji, level)

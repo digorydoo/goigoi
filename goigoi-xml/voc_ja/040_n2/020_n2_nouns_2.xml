@@ -353,70 +353,6 @@
                 <see id="suekko-youngestchild" rem="closely related" />
             </word>
             <word
-              w="【風：ふう】【船：せん】"
-              rom="fūsen"
-              tr_en="balloon (esp. small)"
-              tr_de="Luftballon"
-              lvl="n2"
-              category="games, diy"
-              id="fūsen-balloon"
-            />
-            <word
-              w="【行：ぎょう】【列：れつ】"
-              rom="gyōretsu"
-              tr_en="procession; parade"
-              tr_de="Umzug; Parade"
-              lvl="n2"
-              category="culture"
-              id="gyōretsu-procession"
-            />
-            <word
-              w="【書：しょ】【道：どう】"
-              rom="shodō"
-              tr_en="calligraphy"
-              tr_de="Kalligraphie"
-              hint_en="lit. the Way of Writing"
-              hint_de="wörtl. der Weg des Schreibens"
-              lvl="n2"
-              category="arts"
-              id="shodō-calligraphy"
-            />
-            <word
-              w="【俳：はい】【句：く】"
-              rom="haiku"
-              tr_en="very short form of Japanese poetry"
-              tr_de="sehr kurze Form der japanischen Poesie"
-              lvl="n2"
-              category="arts, literature"
-              id="haiku-shortpoem"
-            />
-            <word
-              w="【学：がく】【部：ぶ】"
-              rom="gakubu"
-              tr_en="department of a university; faculty"
-              tr_de="Departement der Universität; Fakultät"
-              lvl="n2"
-              category="education"
-              id="gakubu-faculty"
-            />
-            <word
-              w="【終：しゅう】【了：りょう】"
-              rom="shūryō"
-              tr_en="end; termination"
-              tr_de="Ende; Schluss"
-              lvl="n2"
-              id="shūryō-end"
-            />
-            <word
-              w="【窓：まど】【口：ぐち】"
-              rom="madoguchi"
-              tr_en="teller window; ticket window"
-              tr_de="Kassierfenster; Ticketfenster"
-              lvl="n2"
-              category="business, entertainment"
-              id="madoguchi-tellerwindow"
-            />
-            <word
               w="【櫛：くし】"
               rom="kushi"
               tr_en="comb"
@@ -427,6 +363,153 @@
             >
                 <see id="tokasu-comb" rem="closely related" />
             </word>
+            <word
+              w="【電：でん】【球：きゅう】"
+              rom="denkyū"
+              tr_en="light bulb"
+              tr_de="Glühbirne"
+              lvl="n2"
+              category="home, light"
+              id="denkyū-lightbulb"
+            >
+                <see id="dentō-light" rem="closely related" />
+            </word>
+            <word
+              w="【足：た】【袋：び】"
+              rom="tabi"
+              tr_en="Japanese socks"
+              tr_de="japanische Socken"
+              hint_en="with split toe"
+              hint_de="mit abgetrenntem grossen Zeh"
+              lvl="n2"
+              category="fashion"
+              id="tabi-socks"
+            >
+                <see id="kutsushita-socks" rem="closely related" />
+                <keep_apart_from id="kutsushita-socks" />
+                <keep_apart_from id="sokkusu-socks" />
+            </word>
+            <word
+              w="【店：みせ】【屋：や】"
+              rom="miseya"
+              tr_en="store; shop"
+              tr_de="Geschäft; Laden"
+              lvl="n2"
+              category="shopping"
+              id="miseya-shop"
+            >
+                <keep_apart_from id="mise-store" />
+                <keep_apart_from id="omise-store" />
+            </word>
+            <word
+              w="【枕：まくら】"
+              rom="makura"
+              tr_en="pillow"
+              tr_de="Kopfkissen"
+              lvl="n2"
+              category="home"
+              id="makura-pillow"
+            >
+                <see id="zabuton-floorcushion" rem="closely related" />
+                <keep_apart_from id="zabuton-floorcushion" />
+            </word>
+            <word
+              w="【螺子：ネジ】"
+              rom="neji"
+              tr_en="screw"
+              tr_de="Schraube"
+              hasCombinedReading="true"
+              usuallyInKana="true"
+              lvl="n2"
+              category="diy"
+              id="neji-screw"
+            >
+                <!-- ネジを外す – to loosen or remove a screw (ChatGPT) -->
+                <!-- ネジを回す - to turn a screw (lib0) -->
+            </word>
+            <word
+              w="【雨：あま】【戸：ど】"
+              rom="amado"
+              tr_en="storm shutters (of a window)"
+              tr_de="Sturmfensterläden"
+              lvl="n2"
+              category="home"
+              id="amado-stormshutter"
+              rem="appears in 500mon q454; jisho has n2"
+            >
+                <keep_apart_from id="doa-door" />
+                <keep_apart_from id="to-door" />
+                <keep_apart_from id="uraguchi-backdoor" />
+                <keep_apart_from id="fusuma-slidingdoor" />
+                <keep_apart_from id="shōji-door" />
+                <keep_apart_from id="tobira-door" />
+            </word>
+            <word
+              w="【原：げん】【料：りょう】"
+              rom="genryō"
+              tr_en="raw materials; ingredient"
+              tr_de="Rohmaterial; Zusammensetzung"
+              lvl="n2"
+              id="genryō-material"
+              rem="appears in Doraemon 13 p.111"
+            />
+            <word
+              w="【風：ふう】【船：せん】"
+              rom="fūsen"
+              tr_en="balloon (esp. small)"
+              tr_de="Luftballon"
+              lvl="n2"
+              category="games, diy"
+              id="fūsen-balloon"
+            />
+            <word
+              w="【終：しゅう】【了：りょう】"
+              rom="shūryō"
+              tr_en="end; termination"
+              tr_de="Ende; Schluss"
+              lvl="n2"
+              id="shūryō-end"
+            />
+            <word
+              w="【兵：へい】【隊：たい】"
+              rom="heitai"
+              tr_en="soldier"
+              tr_de="Soldat"
+              lvl="n2"
+              category="military"
+              id="heitai-soldier"
+            />
+            <word
+              w="【天：てん】【皇：のう】"
+              rom="tennō"
+              tr_en="emperor"
+              tr_de="Kaiser"
+              hint_en="of Japan"
+              hint_de="von Japan"
+              lvl="n2"
+              category="government"
+              id="tennō-emperor"
+            />
+            <word
+              w="【梯子：はしご】"
+              rom="hashigo"
+              tr_en="ladder"
+              tr_de="Leiter"
+              hasCombinedReading="true"
+              usuallyInKana="true"
+              lvl="n2"
+              category="garden, home"
+              id="hashigo-ladder"
+            />
+            <word
+              w="【窓：まど】【口：ぐち】"
+              rom="madoguchi"
+              tr_en="teller window; ticket window"
+              tr_de="Kassierfenster; Ticketfenster"
+              lvl="n2"
+              category="business, entertainment"
+              id="madoguchi-tellerwindow"
+            />
             <word
               w="【肘：ひじ】"
               rom="hiji"
@@ -482,24 +565,33 @@
               id="koyubi-pinky"
             />
             <word
-              w="【兵：へい】【隊：たい】"
-              rom="heitai"
-              tr_en="soldier"
-              tr_de="Soldat"
+              w="【行：ぎょう】【列：れつ】"
+              rom="gyōretsu"
+              tr_en="procession; parade"
+              tr_de="Umzug; Parade"
               lvl="n2"
-              category="military"
-              id="heitai-soldier"
+              category="culture"
+              id="gyōretsu-procession"
             />
             <word
-              w="【天：てん】【皇：のう】"
-              rom="tennō"
-              tr_en="emperor"
-              tr_de="Kaiser"
-              hint_en="of Japan"
-              hint_de="von Japan"
+              w="【書：しょ】【道：どう】"
+              rom="shodō"
+              tr_en="calligraphy"
+              tr_de="Kalligraphie"
+              hint_en="lit. the Way of Writing"
+              hint_de="wörtl. der Weg des Schreibens"
               lvl="n2"
-              category="government"
-              id="tennō-emperor"
+              category="arts"
+              id="shodō-calligraphy"
+            />
+            <word
+              w="【学：がく】【部：ぶ】"
+              rom="gakubu"
+              tr_en="department of a university; faculty"
+              tr_de="Departement der Universität; Fakultät"
+              lvl="n2"
+              category="education"
+              id="gakubu-faculty"
             />
             <word
               w="【坊：ぼう】さん"
@@ -534,17 +626,6 @@
               id="yukata-bathrobe"
             />
             <word
-              w="【電：でん】【球：きゅう】"
-              rom="denkyū"
-              tr_en="light bulb"
-              tr_de="Glühbirne"
-              lvl="n2"
-              category="home, light"
-              id="denkyū-lightbulb"
-            >
-                <see id="dentō-light" rem="closely related" />
-            </word>
-            <word
               w="【電：でん】【力：りょく】"
               rom="denryoku"
               tr_en="electric power"
@@ -554,21 +635,6 @@
               id="denryoku-electricpower"
             />
             <word
-              w="【足：た】【袋：び】"
-              rom="tabi"
-              tr_en="Japanese socks"
-              tr_de="japanische Socken"
-              hint_en="with split toe"
-              hint_de="mit abgetrenntem grossen Zeh"
-              lvl="n2"
-              category="fashion"
-              id="tabi-socks"
-            >
-                <see id="kutsushita-socks" rem="closely related" />
-                <keep_apart_from id="kutsushita-socks" />
-                <keep_apart_from id="sokkusu-socks" />
-            </word>
-            <word
               w="【売：ばい】【店：てん】"
               rom="baiten"
               tr_en="kiosk"
@@ -577,30 +643,6 @@
               category="shopping, city"
               id="baiten-kiosk"
             />
-            <word
-              w="【店：みせ】【屋：や】"
-              rom="miseya"
-              tr_en="store; shop"
-              tr_de="Geschäft; Laden"
-              lvl="n2"
-              category="shopping"
-              id="miseya-shop"
-            >
-                <keep_apart_from id="mise-store" />
-                <keep_apart_from id="omise-store" />
-            </word>
-            <word
-              w="【枕：まくら】"
-              rom="makura"
-              tr_en="pillow"
-              tr_de="Kopfkissen"
-              lvl="n2"
-              category="home"
-              id="makura-pillow"
-            >
-                <see id="zabuton-floorcushion" rem="closely related" />
-                <keep_apart_from id="zabuton-floorcushion" />
-            </word>
             <word
               w="【扇：せん】【風：ぷう】【機：き】"
               rom="senpūki"
@@ -629,20 +671,6 @@
               id="nokogiri-saw"
             />
             <word
-              w="【螺子：ネジ】"
-              rom="neji"
-              tr_en="screw"
-              tr_de="Schraube"
-              hasCombinedReading="true"
-              usuallyInKana="true"
-              lvl="n2"
-              category="diy"
-              id="neji-screw"
-            >
-                <!-- ネジを外す – to loosen or remove a screw (ChatGPT) -->
-                <!-- ネジを回す - to turn a screw (lib0) -->
-            </word>
-            <word
               w="ペンチ"
               rom="penchi"
               tr_en="pliers"
@@ -651,34 +679,6 @@
               category="diy"
               id="penchi-pliers"
             />
-            <word
-              w="【梯子：はしご】"
-              rom="hashigo"
-              tr_en="ladder"
-              tr_de="Leiter"
-              hasCombinedReading="true"
-              usuallyInKana="true"
-              lvl="n2"
-              category="garden, home"
-              id="hashigo-ladder"
-            />
-            <word
-              w="【雨：あま】【戸：ど】"
-              rom="amado"
-              tr_en="storm shutters (of a window)"
-              tr_de="Sturmfensterläden"
-              lvl="n2"
-              category="home"
-              id="amado-stormshutter"
-              rem="appears in 500mon q454; jisho has n2"
-            >
-                <keep_apart_from id="doa-door" />
-                <keep_apart_from id="to-door" />
-                <keep_apart_from id="uraguchi-backdoor" />
-                <keep_apart_from id="fusuma-slidingdoor" />
-                <keep_apart_from id="shōji-door" />
-                <keep_apart_from id="tobira-door" />
-            </word>
         </section>
     </unit>
 </vocabulary>

@@ -100,7 +100,7 @@ fun checkRomaji(primaryForm: String, givenRomaji: String) {
     if (ck1 != ck2) {
         throw CheckFailed(
             arrayOf(
-                "\nRōmaji forms do not match!",
+                "Rōmaji forms do not match!",
                 "XML w:              $primaryForm",
                 "XML rom:            $givenRomaji",
                 "Computed:           $computedRomaji",
@@ -110,6 +110,3 @@ fun checkRomaji(primaryForm: String, givenRomaji: String) {
         )
     }
 }
-
-fun encodeJSONValue(s: String) =
-    s.replace("\"", "\\\"").replace("\n", "\\n").replace("\r", "").let { "\"$it\"" }

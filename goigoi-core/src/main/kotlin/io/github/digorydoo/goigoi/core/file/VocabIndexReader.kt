@@ -49,7 +49,7 @@ class VocabIndexReader(
             UNYT_SUBHEADER_JA_KEY -> unyt!!.subheader.ja = value
             UNYT_LEVELS_KEY -> unyt!!.levels = value.takeIf { it.isNotEmpty() }
                 ?.split(",")
-                ?.mapNotNull { JLPTLevel.fromString(it) }
+                ?.mapNotNull { JLPTLevel.fromStringOrNull(it, nxIsNull = false) }
                 ?: emptyList()
             WORD_FILE_NAME_KEY -> {
                 unyt!!.wordFilenames.add(value)
