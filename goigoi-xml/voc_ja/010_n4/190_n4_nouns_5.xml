@@ -23,8 +23,11 @@
               tr_de="Dankbarkeit; Manieren; Verbeugung"
               lvl="n4"
               category="general, relationships"
-              id="orei-etiquette"
+              id="orei-manners"
+              rem="jisho has n3 for rei, n4 for o-rei"
             >
+                <keep_apart_from id="rei-manners" />
+                <keep_together id="rei-manners" />
                 <phrase
                   ph="お【礼：れい】の【手：て】【紙：がみ】"
                   rom="o-rei no tegami"
@@ -41,6 +44,18 @@
                   lvl="n4"
                   origin="lib0"
                 />
+            </word>
+            <word
+              w="【礼：れい】"
+              rom="rei"
+              tr_en="gratitude; manners; etiquette"
+              lvl="n4"
+              id="rei-manners"
+              rem="jisho has n3 for rei, n4 for o-rei"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="orei-manners" />
+                <keep_together id="orei-manners" />
             </word>
             <word
               w="ご【存：ぞん】じ"

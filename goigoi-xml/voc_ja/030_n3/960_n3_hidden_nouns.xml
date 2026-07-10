@@ -15,6 +15,29 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【恐：きょう】【怖：ふ】"
+              rom="kyōfu"
+              tr_en="fear; dread; dismay"
+              tr_de="Angst; Furcht; Entsetzen"
+              lvl="n3"
+              category="mood, not-good"
+              id="kyōfu-fear"
+            />
+            <word
+              w="【制：せい】【限：げん】"
+              rom="seigen"
+              tr_en="restriction; restraint; limitation"
+              tr_de="Einschränkung; Zurückhaltung; Begrenzung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="seigen-restrict"
+            >
+                <keep_apart_from id="kagiru-restrict" />
+                <keep_apart_from id="kagiri-limits" />
+                <keep_apart_from id="genkai-limit" />
+            </word>
+            <word
               w="【評：ひょう】【判：ばん】"
               rom="hyōban"
               tr_en="reputation; popularity; rumour"
@@ -49,50 +72,6 @@
                 <!-- 水泳は筋肉を発達させる。	Swimming develops our muscles. (lib0) -->
             </word>
             <word
-              w="【背：せ】【骨：ぼね】"
-              rom="sebone"
-              tr_en="spine"
-              tr_de="Wirbelsäule"
-              lvl="n3"
-              id="sebone-spine"
-              HIDDEN="true"
-              rem="is a phrase of hone-bone"
-            >
-                <keep_apart_from id="hone-bone" />
-            </word>
-            <word
-              w="【方：ほう】【々：ぼう】"
-              rom="hō-bō"
-              tr_en="here and there; this way and that way; all over"
-              tr_de="hier und dort; hierher und dorthin; überall"
-              lvl="n3"
-              category="directions"
-              id="hōbō-hereandthere"
-            >
-                <keep_apart_from id="katagata-people" rem="same kanji" />
-                <keep_apart_from id="achikochi-hereandthere" />
-                <!--
-                    FIXME ambiguity with katagata!
-                    Adding a hint is useless, because hint is not shown when asking kana or kanji...
-                    compileGoigoi should detect this and require a hint + flag showHint="always-unless-trivial"
-                -->
-                <!-- 日本方々を旅行しました。 -->
-            </word>
-            <word
-              w="【制：せい】【限：げん】"
-              rom="seigen"
-              tr_en="restriction; restraint; limitation"
-              tr_de="Einschränkung; Zurückhaltung; Begrenzung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="seigen-restrict"
-            >
-                <keep_apart_from id="kagiru-restrict" />
-                <keep_apart_from id="kagiri-limits" />
-                <keep_apart_from id="genkai-limit" />
-            </word>
-            <word
               w="【予：よ】【防：ぼう】"
               rom="yobō"
               tr_en="prevention; protection; precaution"
@@ -103,18 +82,6 @@
               id="yobō-prevention"
             >
                 <keep_apart_from id="yōjin-care" />
-            </word>
-            <word
-              w="【選：せん】【択：たく】"
-              rom="sentaku"
-              tr_en="selection; choice; option"
-              tr_de="Selektion; Auswahl; Option"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="sentaku-choice"
-            >
-                <!-- よろしい選択 (yoroshii sentaku) – "acceptable choice" (ChatGPT) -->
             </word>
             <word
               w="【発：はっ】【展：てん】"
@@ -136,6 +103,18 @@
                 <keep_apart_from id="jōtatsu-improve" />
 
                 <keep_apart_from id="zōka-increase" />
+            </word>
+            <word
+              w="【選：せん】【択：たく】"
+              rom="sentaku"
+              tr_en="selection; choice; option"
+              tr_de="Selektion; Auswahl; Option"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="sentaku-choice"
+            >
+                <!-- よろしい選択 (yoroshii sentaku) – "acceptable choice" (ChatGPT) -->
             </word>
             <word
               w="【思：し】【想：そう】"
@@ -201,7 +180,6 @@
               lvl="n3"
               category="education, business"
               id="shidō-guidance"
-              HIDDEN="true"
             >
                 <keep_apart_from id="kōchi-coach" />
                 <keep_apart_from id="annai-guidance" />
@@ -216,7 +194,6 @@
               lvl="n3"
               category="news"
               id="hōkoku-report"
-              HIDDEN="true"
             >
                 <keep_apart_from id="repōto-report" />
                 <keep_apart_from id="jōhō-info" />
@@ -278,7 +255,6 @@
               lvl="n3"
               category="work, motion"
               id="jōtatsu-improve"
-              HIDDEN="true"
             >
                 <keep_apart_from id="susumi-progress" />
                 <keep_apart_from id="zenshin-advance" />
@@ -299,7 +275,6 @@
               lvl="n3"
               category="technical"
               id="jitsugen-impl"
-              HIDDEN="true"
             >
                 <keep_apart_from id="jikkō-exec" />
                 <keep_apart_from id="jisshi-enforce" />
@@ -324,6 +299,94 @@
                 <keep_apart_from id="hatten-growth" />
                 <keep_apart_from id="jōtatsu-improve" />
             </word>
+            <word
+              w="【分：ぶん】【析：せき】"
+              rom="bunseki"
+              tr_en="analysis"
+              tr_de="Analyse"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="science"
+              id="bunseki-analysis"
+            >
+                <!-- 市場分析 Marktanalyse (ChatGPT, DeepL) -->
+            </word>
+            <word
+              w="【沖：おき】"
+              rom="oki"
+              tr_en="open sea"
+              tr_de="offenes Meer"
+              lvl="n3"
+              category="beach, nature"
+              id="oki-opensea"
+            />
+            <word
+              w="【平：ひら】【仮：が】【名：な】"
+              rom="hiragana"
+              tr_en="cursive Japanese syllabary"
+              tr_de="geschwungene japanische Silbenschrift"
+              hint_en="used primarily for native words"
+              hint_de="hauptsächlich für einheimische Wörter verwendet"
+              usuallyInKana="true"
+              lvl="n3"
+              rem="jisho has n2"
+              id="hiragana-cursivesyl"
+            />
+            <word
+              w="【片：カタ】【仮：カ】【名：ナ】"
+              rom="katakana"
+              tr_en="angular Japanese syllabary"
+              tr_de="eckige japanische Silbenschrift"
+              hint_en="used primarily for loanwords"
+              hint_de="hauptsächlich für Lehnworte verwendet"
+              usuallyInKana="true"
+              lvl="n3"
+              id="katakana-angularsyl"
+              rem="jisho has n2"
+            />
+            <word
+              w="【批：ひ】【評：ひょう】"
+              rom="hihyō"
+              tr_en="criticism; critique; review"
+              tr_de="Kritik; Rezension; kritisieren"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="technical, quarrel"
+              id="hihyō-criticism"
+            />
+            <word
+              w="【平：へい】【均：きん】"
+              rom="heikin"
+              tr_en="average; mean; equilibrium"
+              tr_de="Durchschnitt; Balance; Gleichgewicht"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="science"
+              id="heikin-average"
+            />
+            <word
+              w="【延：えん】【期：き】"
+              rom="enki"
+              tr_en="postponement; deferment; adjournment"
+              tr_de="Aufschub; Vertagung; aufschieben"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="enki-postpone"
+            />
+            <word
+              w="【提：てい】【案：あん】"
+              rom="teian"
+              tr_en="proposal; proposition; suggestion"
+              tr_de="Vorschlag; Anregung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="teian-proposal"
+            />
             <word
               w="【労：ろう】【働：どう】"
               rom="rōdō"
@@ -483,19 +546,6 @@
                 <!-- keep apart from tsukamaru -->
             </word>
             <word
-              w="【分：ぶん】【析：せき】"
-              rom="bunseki"
-              tr_en="analysis"
-              tr_de="Analyse"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="science"
-              id="bunseki-analysis"
-            >
-                <!-- 市場分析 Marktanalyse (ChatGPT, DeepL) -->
-            </word>
-            <word
               w="【理：り】【解：かい】"
               rom="rikai"
               tr_en="understanding; comprehension; appreciation"
@@ -529,6 +579,14 @@
               id="gaikō-diplomacy"
             />
             <word
+              w="【熱：ねっ】【帯：たい】"
+              rom="nettai"
+              tr_en="tropics"
+              tr_de="Tropen"
+              lvl="n3"
+              id="nettai-tropics"
+            />
+            <word
               w="【回：かい】【復：ふく】"
               rom="kaifuku"
               tr_en="recovery"
@@ -538,54 +596,6 @@
               lvl="n3"
               category="health"
               id="kaifuku-recovery"
-            />
-            <word
-              w="【例：たと】え"
-              rom="tatoe"
-              tr_en="example / simile; metaphor; allegory; fable; parable"
-              lvl="n3"
-              id="tatoe-example"
-            >
-                <see id="tatoeba-forexample" rem="closely related" />
-                <see id="tatoeru-compare" rem="verb" />
-            </word>
-            <word
-              w="【支：し】【払：はら】い"
-              rom="shiharai"
-              tr_en="payment"
-              hint_en="noun"
-              lvl="n3"
-              category="business, trade"
-              id="shiharai-payment"
-            >
-                <see id="shiharau-topay" rem="verb" />
-            </word>
-            <word
-              w="【独：どく】【身：しん】"
-              rom="dokushin"
-              tr_en="unmarried; single person"
-              hint_en="noun; noun"
-              lvl="n3"
-              id="dokushin-single"
-            >
-                <!-- 彼は一生独身で通した。	He remained single all his life. (lib0) -->
-            </word>
-            <word
-              w="【職：しょく】"
-              rom="shoku"
-              tr_en="job; work; employment; occupation; position / duties / trade; skill"
-              hint_en="noun; noun, used as a suffix"
-              lvl="n3"
-            >
-                <!-- 職を失う - to lose one's job (lib0) -->
-            </word>
-            <word
-              w="【表：ひょう】【面：めん】"
-              rom="hyōmen"
-              tr_en="surface; face; exterior"
-              tr_de="Oberfläche; Fläche; Aussenseite"
-              lvl="n3"
-              id="hyōmen-face"
             />
             <word
               w="【刺：し】【激：げき】"
@@ -620,15 +630,6 @@
               id="ryūkō-fashion"
             />
             <word
-              w="【沖：おき】"
-              rom="oki"
-              tr_en="open sea"
-              tr_de="offenes Meer"
-              lvl="n3"
-              category="beach, nature"
-              id="oki-opensea"
-            />
-            <word
               w="【克：そく】【服：ふく】"
               rom="sokufuku"
               tr_en="overcoming; surmounting; bringing under control"
@@ -650,52 +651,6 @@
               id="shōtotsu-crash"
             />
             <word
-              w="【批：ひ】【評：ひょう】"
-              rom="hihyō"
-              tr_en="criticism; critique; review"
-              tr_de="Kritik; Rezension; kritisieren"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="technical, quarrel"
-              id="hihyō-criticism"
-            />
-            <word
-              w="【平：ひら】【仮：が】【名：な】"
-              rom="hiragana"
-              tr_en="cursive Japanese syllabary"
-              tr_de="geschwungene japanische Silbenschrift"
-              hint_en="used primarily for native words"
-              hint_de="hauptsächlich für einheimische Wörter verwendet"
-              usuallyInKana="true"
-              lvl="n3"
-              rem="jisho has n2"
-              id="hiragana-cursivesyl"
-            />
-            <word
-              w="【片：カタ】【仮：カ】【名：ナ】"
-              rom="katakana"
-              tr_en="angular Japanese syllabary"
-              tr_de="eckige japanische Silbenschrift"
-              hint_en="used primarily for loanwords"
-              hint_de="hauptsächlich für Lehnworte verwendet"
-              usuallyInKana="true"
-              lvl="n3"
-              id="katakana-angularsyl"
-              rem="jisho has n2"
-            />
-            <word
-              w="【平：へい】【均：きん】"
-              rom="heikin"
-              tr_en="average; mean; equilibrium"
-              tr_de="Durchschnitt; Balance; Gleichgewicht"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="science"
-              id="heikin-average"
-            />
-            <word
               w="【重：じゅう】【視：し】"
               rom="jūshi"
               tr_en="regarding as important; putting emphasis on"
@@ -714,26 +669,6 @@
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
               id="mane-imitate"
-            />
-            <word
-              w="【延：えん】【期：き】"
-              rom="enki"
-              tr_en="postponement; deferment; adjournment"
-              tr_de="Aufschub; Vertagung; aufschieben"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="enki-postpone"
-            />
-            <word
-              w="【提：てい】【案：あん】"
-              rom="teian"
-              tr_en="proposal; proposition; suggestion"
-              tr_de="Vorschlag; Anregung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="teian-proposal"
             />
             <word
               w="【処：しょ】【理：り】"
@@ -1111,16 +1046,6 @@
               id="kentō-review"
             />
             <word
-              w="【成：せい】【功：こう】"
-              rom="seikō"
-              tr_en="success; hit"
-              tr_de="Erfolg; erfolgreich sein"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="seikō-hit"
-            />
-            <word
               w="【嗽：うがい】"
               rom="ugai"
               usuallyInKana="true"
@@ -1142,6 +1067,96 @@
               HIDDEN="true"
               rem="not a good word; is this a suffix? is this really n3?"
             />
+            <word
+              w="【表：ひょう】【面：めん】"
+              rom="hyōmen"
+              tr_en="surface; face; exterior"
+              tr_de="Oberfläche; Fläche; Aussenseite"
+              lvl="n3"
+              id="hyōmen-face"
+            />
+            <word
+              w="【決：けっ】【定：てい】"
+              rom="kettei"
+              tr_en="decision; determination"
+              tr_de="Entscheidung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="kettei-decision"
+            >
+                <!-- この決定は最終的だ。 This decision is final. (lib0) -->
+            </word>
+            <word
+              w="【委：い】【員：いん】"
+              rom="iin"
+              tr_en="committee member"
+              tr_de="Ausschussmitglied"
+              lvl="n3"
+              category="politics, people"
+              id="iin-committeemember"
+            >
+                <keep_apart_from id="gīn-memberofparlia" />
+                <keep_apart_from id="gichō-chairman" />
+            </word>
+            <word
+              w="【方：ほう】【々：ぼう】"
+              rom="hō-bō"
+              tr_en="here and there; this way and that way; all over"
+              tr_de="hier und dort; hierher und dorthin; überall"
+              lvl="n3"
+              category="directions"
+              id="hōbō-hereandthere"
+            >
+                <keep_apart_from id="katagata-people" rem="same kanji" />
+                <keep_apart_from id="achikochi-hereandthere" />
+                <!--
+                    FIXME ambiguity with katagata!
+                    Adding a hint is useless, because hint is not shown when asking kana or kanji...
+                    compileGoigoi should detect this and require a hint + flag showHint="always-unless-trivial"
+                -->
+                <!-- 日本方々を旅行しました。 -->
+            </word>
+            <word
+              w="【例：たと】え"
+              rom="tatoe"
+              tr_en="example / simile; metaphor; allegory; fable; parable"
+              lvl="n3"
+              id="tatoe-example"
+            >
+                <see id="tatoeba-forexample" rem="closely related" />
+                <see id="tatoeru-compare" rem="verb" />
+            </word>
+            <word
+              w="【支：し】【払：はら】い"
+              rom="shiharai"
+              tr_en="payment"
+              hint_en="noun"
+              lvl="n3"
+              category="business, trade"
+              id="shiharai-payment"
+            >
+                <see id="shiharau-topay" rem="verb" />
+            </word>
+            <word
+              w="【独：どく】【身：しん】"
+              rom="dokushin"
+              tr_en="unmarried; single person"
+              hint_en="noun; noun"
+              lvl="n3"
+              id="dokushin-single"
+            >
+                <!-- 彼は一生独身で通した。	He remained single all his life. (lib0) -->
+            </word>
+            <word
+              w="【職：しょく】"
+              rom="shoku"
+              tr_en="job; work; employment; occupation; position / duties / trade; skill"
+              hint_en="noun; noun, used as a suffix"
+              lvl="n3"
+            >
+                <!-- 職を失う - to lose one's job (lib0) -->
+            </word>
             <word
               w="【通：つう】【過：か】"
               rom="tsūka"
@@ -1203,8 +1218,6 @@
               hint_en="noun"
               lvl="n3"
               id="kōka-efficacy"
-              HIDDEN="true"
-              rem="rōmaji not unique"
             />
             <word
               w="【助：じょ】【手：しゅ】"
@@ -1242,7 +1255,6 @@
               hint_en="noun"
               lvl="n3"
               id="fujin-woman"
-              HIDDEN="true"
             />
             <word
               w="【棒：ぼう】"
@@ -1300,7 +1312,6 @@
               hint_en="noun; suru verb"
               lvl="n3"
               id="mushi-ignore"
-              HIDDEN="true"
             />
             <word
               w="【独：どく】【特：とく】"
@@ -1351,15 +1362,6 @@
               hint_en="noun; noun, used as a prefix; noun"
               lvl="n3"
               id="rei-habit"
-            />
-            <word
-              w="【礼：れい】"
-              rom="rei"
-              tr_en="gratitude; manners; etiquette; bowing; reward; gift; ceremony; ritual"
-              hint_en="noun; counter"
-              lvl="n3"
-              id="rei-manners"
-              HIDDEN="true"
             />
             <word
               w="【礼：れい】【儀：ぎ】"
@@ -1518,18 +1520,6 @@
               hint_en="noun"
               lvl="n3"
             />
-            <word
-              w="【決：けっ】【定：てい】"
-              rom="kettei"
-              tr_en="decision; determination"
-              tr_de="Entscheidung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              id="kettei-decision"
-            >
-                <!-- この決定は最終的だ。 This decision is final. (lib0) -->
-            </word>
             <word
               w="【考：こう】【慮：りょ】"
               rom="kōryo"

@@ -1,4 +1,4 @@
-package io.github.digorydoo.goigoi.compiler
+package io.github.digorydoo.goigoi.compiler.writer
 
 import ch.digorydoo.kutils.json.stringify
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhraseOrSentence
@@ -11,8 +11,7 @@ class WordIndexWriter(private val vocab: GoigoiVocab, private val quiet: Boolean
     /**
      * The word index is used by jwotd/goigoi-find-missing.sh to iterate over Goigoi words.
      */
-    fun writeWordIndex(path: String) {
-        val file = File(path)
+    fun writeWordIndex(file: File) {
         if (!quiet) println("Writing ${file.name}...")
 
         FileWriter(file).use { writer ->
@@ -28,8 +27,7 @@ class WordIndexWriter(private val vocab: GoigoiVocab, private val quiet: Boolean
     /**
      * The phrase index is used by Sites/api/search.php to include Goigoi phrases in the search results.
      */
-    fun writePhraseIndex(path: String) {
-        val file = File(path)
+    fun writePhraseIndex(file: File) {
         if (!quiet) println("Writing ${file.name}...")
 
         FileWriter(file).use { writer ->
@@ -47,8 +45,7 @@ class WordIndexWriter(private val vocab: GoigoiVocab, private val quiet: Boolean
     /**
      * The sentence index is used by Sites/api/search.php to include Goigoi sentences in the search results.
      */
-    fun writeSentenceIndex(path: String) {
-        val file = File(path)
+    fun writeSentenceIndex(file: File) {
         if (!quiet) println("Writing ${file.name}...")
 
         FileWriter(file).use { writer ->

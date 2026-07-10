@@ -6,6 +6,7 @@ import ch.digorydoo.kutils.string.lpad
 import ch.digorydoo.kutils.string.lpadOrEmpty
 import ch.digorydoo.kutils.string.trunc
 import ch.digorydoo.kutils.string.withPercent
+import io.github.digorydoo.goigoi.compiler.CheckFailed
 import io.github.digorydoo.goigoi.compiler.knownFirstnames
 import io.github.digorydoo.goigoi.compiler.knownSurnames
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
@@ -26,6 +27,7 @@ object Stats {
         "BondLingo",
         "ChatGPT",
         "DeepL",
+        "Dragon Ball",
         "Doraemon",
         "GENKI",
         "Kaname Naito",
@@ -35,6 +37,7 @@ object Stats {
         "Yuko",
         "duolingo",
         "hinative",
+        "jisho",
         "jpod",
         "lib0",
         "tofugu",
@@ -399,7 +402,10 @@ object Stats {
                 val key = sentence.origin.let { o ->
                     when (o.isEmpty()) {
                         true -> "empty"
-                        false -> originPrefixes.find { o.startsWith(it) } ?: "other"
+                        false -> originPrefixes.find { o.startsWith(it) }
+                            ?: throw CheckFailed(
+                                "Word ${word.id}: No prefix matches origin of sentence: ${sentence.origin}"
+                            )
                     }
                 }
                 val count = originsMap[key] ?: 0
@@ -411,7 +417,6 @@ object Stats {
             println(dots("   $prefix") + lpad(originsMap[prefix] ?: 0))
         }
 
-        println(dots("   other") + lpad(originsMap["other"] ?: 0))
         println(dots("   empty") + lpad(originsMap["empty"] ?: 0))
 
         // Print the name of the unyts that require phrases for each word
@@ -458,7 +463,10 @@ object Stats {
                 val key = phrase.origin.let { o ->
                     when (o.isEmpty()) {
                         true -> "empty"
-                        false -> originPrefixes.find { o.startsWith(it) } ?: "other"
+                        false -> originPrefixes.find { o.startsWith(it) }
+                            ?: throw CheckFailed(
+                                "Word ${word.id}: No prefix matches origin of phrase: ${phrase.origin}"
+                            )
                     }
                 }
                 val count = originsMap[key] ?: 0
@@ -470,7 +478,6 @@ object Stats {
             println(dots("   $prefix") + lpad(originsMap[prefix] ?: 0))
         }
 
-        println(dots("   other") + lpad(originsMap["other"] ?: 0))
         println(dots("   empty") + lpad(originsMap["empty"] ?: 0))
 
         // Emit status about manualKanjiLevel

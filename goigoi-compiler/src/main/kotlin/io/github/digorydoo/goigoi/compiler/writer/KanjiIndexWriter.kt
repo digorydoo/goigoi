@@ -2,7 +2,6 @@ package io.github.digorydoo.goigoi.compiler.writer
 
 import io.github.digorydoo.goigoi.compiler.KanjiLevels
 import io.github.digorydoo.goigoi.compiler.Options
-import java.io.File
 import java.io.FileWriter
 
 class KanjiIndexWriter(private val options: Options) {
@@ -21,7 +20,7 @@ class KanjiIndexWriter(private val options: Options) {
     }
 
     private fun writeKanjiIndex(kanjiLevels: KanjiLevels) {
-        val file = File(options.generateKanjiIndexPath)
+        val file = options.generateKanjiIndexFile
         if (!options.quiet) println("Writing ${file.name}...")
         FileWriter(file).use { writer ->
             writeKanjiIndex(kanjiLevels.n5, "n5", writer)
@@ -40,7 +39,7 @@ class KanjiIndexWriter(private val options: Options) {
     }
 
     private fun writeReadings(readings: Map<String, Set<String>>) {
-        val file = File(options.generateReadingsIndexPath)
+        val file = options.generateReadingsIndexFile
         if (!options.quiet) println("Writing ${file.name}...")
         FileWriter(file).use { writer ->
             readings.forEach { (kana, set) ->
@@ -52,7 +51,7 @@ class KanjiIndexWriter(private val options: Options) {
     }
 
     private fun writeKanjiBySchoolYear(kanjiBySchoolYear: Map<Int, Set<Char>>) {
-        val file = File(options.generateSchoolYearsIndexPath)
+        val file = options.generateSchoolYearsIndexFile
         if (!options.quiet) println("Writing ${file.name}...")
         FileWriter(file).use { writer ->
             kanjiBySchoolYear.forEach { (year, kanjis) ->
@@ -66,7 +65,7 @@ class KanjiIndexWriter(private val options: Options) {
     }
 
     private fun writeKanjiByFrequency(kanjiByFreq: String) {
-        val file = File(options.generateKanjiFreqIndexPath)
+        val file = options.generateKanjiFreqIndexFile
         if (!options.quiet) println("Writing ${file.name}...")
         FileWriter(file).use { writer ->
             writer.write("$kanjiByFreq\n")
@@ -74,7 +73,7 @@ class KanjiIndexWriter(private val options: Options) {
     }
 
     private fun writeDontConfuse(dontConfuse: List<String>) {
-        val file = File(options.generateDontConfuseIndexPath)
+        val file = options.generateDontConfuseIndexFile
         if (!options.quiet) println("Writing ${file.name}...")
         FileWriter(file).use { writer ->
             dontConfuse.forEach { similarKanjis ->

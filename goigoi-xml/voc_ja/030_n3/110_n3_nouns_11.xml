@@ -16,6 +16,79 @@
     >
         <section>
             <word
+              w="【銅：どう】【貨：か】"
+              rom="dōka"
+              tr_en="copper coin"
+              tr_de="Kupfermünze"
+              lvl="n3"
+              category="finances, culture"
+              id="dōka-coppercoin"
+            >
+                <!--
+                    Acc. to ChatGPT, the current 10-yen coin is made of copper, but usually small change is
+                    expressed with 小銭・こぜに (n1)
+                -->
+                <keep_apart_from id="kozeni-coins" />
+                <phrase
+                  ph="【昔：むかし】の【銅：どう】【貨：か】を【集：あつ】める"
+                  rom="mukashi no dōka o atsumeru"
+                  tr_en="to collect old copper coins"
+                  tr_de="alte Kupfermünzen sammeln"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="その【道：どう】【具：ぐ】、【銅：どう】【貨：か】【一：いち】【枚：まい】の【価：か】【値：ち】もないぞ。"
+                  rom="Sono dōgu, dōka ichi-mai no kachi mo nai zo."
+                  tr_en="This tool isn't worth a penny."
+                  tr_de="Dieses Werkzeug ist keinen Rappen wert."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【営：えい】【業：ぎょう】"
+              rom="eigyō"
+              tr_en="business operations; sales promotion"
+              tr_de="Geschäftbetrieb; Verkaufsförderung"
+              hint_en="activity of generating business"
+              hint_de="geschäftsfördernde Tätigkeit"
+              lvl="n3"
+              category="business, trade"
+              id="eigyō-trade"
+            >
+                <keep_apart_from id="shōbai-trade" />
+                <keep_apart_from id="hanbai-sales" />
+                <phrase
+                  ph="【営：えい】【業：ぎょう】【会：かい】【議：ぎ】"
+                  rom="eigyō-kaigi"
+                  tr_en="sales meeting"
+                  tr_de="Verkaufstagung"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="verified with the web"
+                />
+                <phrase
+                  ph="【自：じ】【営：えい】【業：ぎょう】"
+                  rom="ji-eigyō"
+                  tr_en="self-employment; independent business"
+                  tr_de="Selbstanstellung; unabhängiges Geschäft"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; jisho has nx"
+                />
+                <sentence
+                  s="この【店：みせ】は【日：にち】【曜：よう】【日：び】も【営：えい】【業：ぎょう】しています。"
+                  rom="Kono mise wa nichi-yōbi mo eigyō shite imasu."
+                  tr_en="This shop does business (is open) even on Sundays."
+                  tr_de="Dieser Laden macht selbst an Sonntagen Geschäft (hat offen)."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jpod101 audio has a similar but longer sentence"
+                />
+            </word>
+            <word
               w="【単：たん】【位：い】"
               rom="tan'i"
               tr_en="unit; (academic) credits; in amounts of"
@@ -88,6 +161,125 @@
                   lvl="n3"
                   origin="lib0 modified"
                   rem="rephrased by ChatGPT"
+                />
+            </word>
+            <word
+              w="【株：かぶ】"
+              rom="kabu"
+              tr_en="stock; share"
+              tr_de="Aktien; Aktienanteil"
+              lvl="n3"
+              category="finances, business"
+              id="kabu-stock"
+            >
+                <!--
+                    急落・きゅうらく・sudden fall (nx)・株価が急落した (lib0)
+                    急騰・きゅうとう・sudden rise (nx)・株価が急騰した (self)
+                -->
+                <keep_apart_from id="kabushiki-share" />
+                <phrase
+                  ph="【会：かい】【社：しゃ】の【株：かぶ】"
+                  rom="kaisha no kabu"
+                  tr_en="company shares"
+                  tr_de="Firmenaktien"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【最：さい】【近：きん】【株：かぶ】の【値：ね】【段：だん】が【落：お】ちている。"
+                  rom="Saikin kabu no nedan ga ochite iru."
+                  tr_en="The prices of shares have been falling recently."
+                  tr_de="Die Aktienpreise sind in letzter Zeit gefallen."
+                  lvl="n3"
+                  origin="Oxford p.44"
+                  rem="a more specific word for stock prices is 株価・かぶか, which is nx"
+                />
+            </word>
+            <word
+              w="【議：ぎ】【長：ちょう】"
+              rom="gichō"
+              tr_en="speaker of an assembly; chairman"
+              tr_de="Sprecher einer Versammlung; Vorsitzende"
+              lvl="n3"
+              category="politics, people"
+              id="gichō-chairman"
+            >
+                <keep_apart_from id="gīn-memberofparlia" />
+                <keep_apart_from id="iin-committeemember" />
+                <phrase
+                  ph="【議：ぎ】【長：ちょう】に【選：えら】ばれる"
+                  rom="gichō ni erabareru"
+                  tr_en="to be elected chairman"
+                  tr_de="zum Vorsitzenden gewählt werden"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【彼：かれ】は【議：ぎ】【長：ちょう】に【選：えら】ばれた。"
+                  rom="Kare wa gichō ni erabareta."
+                  tr_en="He was elected chairman."
+                  tr_de="Er wurde zum Vorsitzenden gewählt."
+                  explanation_en="「選ばれる」is the passive form of「選ぶ」"
+                  explanation_de="「選ばれる」ist die passive Form von「選ぶ」"
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【混：こん】【乱：らん】"
+              rom="konran"
+              tr_en="disorder; chaos; confusion"
+              tr_de="Unordnung; Chaos; Verwirrung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="not-good"
+              id="konran-chaos"
+            >
+                <phrase
+                  ph="【混：こん】【乱：らん】を【招：まね】く"
+                  rom="konran o maneku"
+                  tr_en="to cause confusion"
+                  tr_de="Verwirrung stiften"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【供：きょう】【給：きゅう】"
+              rom="kyōkyū"
+              tr_en="supply; provision"
+              tr_de="Versorgung"
+              Langenscheidt="Versorgung"
+              lvl="n3"
+              id="kyōkyū-supply"
+            >
+                <phrase
+                  ph="【水：みず】の【供：きょう】【給：きゅう】"
+                  rom="mizu no kyōkyū"
+                  tr_en="water supply"
+                  tr_de="Wasserversorgung"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【議：ぎ】【会：かい】"
+              rom="gikai"
+              tr_en="parliament; congress"
+              tr_de="Parlament; Kongress"
+              lvl="n3"
+              category="government"
+              id="gikai-parliament"
+            >
+                <sentence
+                  s="【議：ぎ】【会：かい】は【解：かい】【散：さん】した。"
+                  rom="Gikai wa kaisan shita."
+                  tr_en="Parliament has been dissolved."
+                  tr_de="Das Parlament ist aufgelöst worden."
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -409,6 +601,19 @@
                 />
             </word>
             <word
+              w="【関：かん】する"
+              rom="kan suru"
+              tr_en="to concern; to be related"
+              Langenscheidt="betreffen"
+              lvl="n3"
+              id="kansuru-concern"
+              HIDDEN="true"
+              rem="now a phrase of kanshin-concern"
+            >
+                <keep_apart_from id="kanshin-concern" />
+                <keep_together id="kanshin-concern" />
+            </word>
+            <word
               w="【経：けい】【由：ゆ】"
               rom="keiyu"
               tr_en="going via; going by way of"
@@ -449,6 +654,24 @@
                   lvl="n3"
                   origin="Doraemon 13, p.118"
                 />
+                <sentence
+                  s="ぼくの【決：けっ】【心：しん】は【硬：かた】いんだ。"
+                  rom="Boku no kesshin wa katai n da."
+                  tr_en="I'm absolutely determined."
+                  tr_de="Ich bin absolut entschlossen."
+                  lvl="n3"
+                  origin="Doraemon 14, p.79"
+                />
+            </word>
+            <word
+              w="【期：き】【待：たい】"
+              rom="kitai"
+              tr_en="expectation; anticipation; hope"
+              tr_de="Erwartung; Hoffnung"
+              lvl="n3"
+              id="kitai-expectation"
+            >
+                <!-- 無理な期待 - むりなきたい - Unrealistic expectations (ChatGPT) -->
             </word>
             <word
               w="【診：しん】【察：さつ】"
@@ -463,19 +686,6 @@
             >
                 <keep_apart_from id="kensa-examination" />
                 <keep_apart_from id="kenshin-healthcheckup" />
-            </word>
-            <word
-              w="【関：かん】する"
-              rom="kan suru"
-              tr_en="to concern; to be related"
-              Langenscheidt="betreffen"
-              lvl="n3"
-              id="kansuru-concern"
-              HIDDEN="true"
-              rem="now a phrase of kanshin-concern"
-            >
-                <keep_apart_from id="kanshin-concern" />
-                <keep_together id="kanshin-concern" />
             </word>
             <word
               w="【合：ごう】【計：けい】"
@@ -542,20 +752,6 @@
                 <keep_together id="hamigakiosuru-brushteeth" />
             </word>
             <word
-              w="【金：きん】【属：ぞく】"
-              rom="kinzoku"
-              tr_en="metal"
-              tr_de="Metall"
-              lvl="n3"
-              category="science"
-              id="kinzoku-metal"
-            >
-                <keep_apart_from id="kin-gold" />
-                <keep_apart_from id="gin-silver" />
-                <keep_apart_from id="tetsu-iron" />
-                <keep_apart_from id="dō-copper" />
-            </word>
-            <word
               w="【歯：は】【磨：みが】きをする"
               rom="hamigaki o suru"
               tr_en="brushing one's teeth"
@@ -568,95 +764,18 @@
                 <keep_together id="hamigaki-brushing" />
             </word>
             <word
-              w="【予：よ】【報：ほう】"
-              rom="yohō"
-              tr_en="forecast; prediction"
-              tr_de="Vorhersage"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【金：きん】【属：ぞく】"
+              rom="kinzoku"
+              tr_en="metal"
+              tr_de="Metall"
               lvl="n3"
               category="science"
-              id="yohō-forecast"
+              id="kinzoku-metal"
             >
-                <keep_apart_from id="yoki-expectation" />
-                <keep_apart_from id="tenkiyohō-forecast" />
-            </word>
-            <word
-              w="【知：ち】【識：しき】"
-              rom="chishiki"
-              tr_en="knowledge; information"
-              tr_de="Wissen; Information"
-              lvl="n3"
-              category="education, culture"
-              id="chishiki-knowledge"
-            >
-                <keep_apart_from id="jōhō-info" />
-                <keep_apart_from id="gakumon-learning" />
-            </word>
-            <word
-              w="【使：し】【用：よう】"
-              rom="shiyō"
-              tr_en="use; utilisation; application"
-              tr_de="Gebrauch; Verwendung; Anwendung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="technical"
-              id="shiyō-use"
-            >
-                <keep_apart_from id="tekiyō-apply" />
-            </word>
-            <word
-              w="【残：のこ】り"
-              rom="nokori"
-              tr_en="remnant; residue; left-over"
-              tr_de="Überbleibsel; Rest"
-              lvl="n3"
-              category="top-words"
-              id="nokori-remnant"
-            >
-                <see id="nokoru-remain" rem="verb" />
-            </word>
-            <word
-              w="【見：み】【送：おく】り"
-              rom="mi-okuri"
-              tr_en="seeing one off; farewell; escort"
-              tr_de="Verabschiedung; Eskorte"
-              lvl="n3"
-              category="transportation"
-              id="miokuri-farewell"
-            >
-                <see id="miokuru-seesboff" rem="verb" />
-            </word>
-            <word
-              w="【取：と】り【替：か】え"
-              rom="tori-kae"
-              tr_en="swap; exchange"
-              tr_de="Austausch"
-              hint_en="noun"
-              hint_de="Nomen"
-              lvl="n3"
-              id="torikae-swap"
-              rem="jisho has n1"
-            >
-                <see id="torikaeru-swap" rem="verb" />
-                <keep_apart_from id="kawari-substitute" />
-            </word>
-            <word
-              w="お【握：にぎ】り"
-              rom="o-nigiri"
-              tr_en="rice ball"
-              tr_de="Reisball"
-              hint_en="wrapped in nori"
-              hint_de="in ein Noriblatt gewickelt"
-              usuallyInKana="true"
-              lvl="n3"
-              category="food"
-              id="onigiri-riceball"
-              rem="appears in GENKI2 L20 vocab section"
-            >
-                <see id="nigiru-grasp" rem="verb" />
-                <!-- おにぎりを三つ食べました。 (ChatGPT) -->
+                <keep_apart_from id="kin-gold" />
+                <keep_apart_from id="gin-silver" />
+                <keep_apart_from id="tetsu-iron" />
+                <keep_apart_from id="dō-copper" />
             </word>
             <word
               w="【収：しゅう】【穫：かく】"
@@ -672,16 +791,16 @@
                 <keep_apart_from id="sakumotsu-crops" />
             </word>
             <word
-              w="【委：い】【員：いん】"
-              rom="iin"
-              tr_en="committee member"
-              tr_de="Ausschussmitglied"
+              w="【状：じょう】【態：たい】"
+              rom="jōtai"
+              tr_en="state; situation; circumstances"
+              tr_de="Zustand; Situation; Umstände"
               lvl="n3"
-              category="politics, people"
-              id="iin-committeemember"
+              id="jōtai-state"
             >
-                <keep_apart_from id="gīn-memberofparlia" />
-                <keep_apart_from id="gichō-chairman" />
+                <!-- 緊張状態 - きんちょうじょうたい - under tension (ChatGPT) -->
+                <keep_apart_from id="tsugō-circumstances" />
+                <keep_apart_from id="jōkyō-situation" />
             </word>
             <word
               w="【布：ぬの】"
@@ -757,15 +876,6 @@
             >
                 <!-- phrase 影響を受ける (えいきょうをうける) - Be influenced (ChatGPT); compare to する -->
             </word>
-            <word
-              w="【恐：きょう】【怖：ふ】"
-              rom="kyōfu"
-              tr_en="fear; dread; dismay"
-              tr_de="Angst; Furcht; Entsetzen"
-              lvl="n3"
-              category="mood, not-good"
-              id="kyōfu-fear"
-            />
             <word
               w="【帰：き】【宅：たく】"
               rom="kitaku"

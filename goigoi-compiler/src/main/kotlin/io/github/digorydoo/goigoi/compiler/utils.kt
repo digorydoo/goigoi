@@ -53,7 +53,8 @@ val allowedOrigins = arrayOf(
     Regex("BondLingo(| modified)"),
     Regex("ChatGPT"),
     Regex("DeepL"),
-    Regex("Doraemon [0-9]+, p\\.[0-9]+(| modified)"), // too tedious to type: ドラえもん第２巻、20頁
+    Regex("Doraemon [0-9]+, p\\.[0-9]+(| modified)"),
+    Regex("Dragon Ball [0-9]+, p\\.[0-9]+(| modified)"),
     Regex("GENKI[12](| p\\.[0-9]*)(| modified)"),
     Regex("Kaname Naito(| modified)"),
     Regex("Langenscheidt(| p\\.[0-9]+)"),

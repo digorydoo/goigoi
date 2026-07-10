@@ -41,12 +41,12 @@ class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
         buildHiraganaToVisibleWordsMap() // builds a map from reading in kana to a list of WordAndUnytTopic
         buildKanjiToVisibleWordsMap() // builds a map from kanji to a list of WordUnytTopic
         buildTranslationToVisibleWordsMap() // builds a map from partial translation to a list of WordUnytTopic
-
         connectSeeAlsoLinks() // finds the other word of see-also links and sets see.word
+        if (options.quiet) print(".")
+
         generateSameReadingLinks() // adds AUTO_SAME_READING between visible words with identical kana
         generateSameKanjiLinks() // adds AUTO_SAME_KANJI between visible words with identical kanji
         generateSameTranslationLinks() // adds AUTO_SAME_TRANSLATION when at least one translation is identical
-
         buildSeeAlsoLinkStats() // do this even in quiet mode, because it also does some integrity checks
 
         if (!options.quiet) {
@@ -58,6 +58,7 @@ class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
         kanjiToVisibleWords.clear()
         enTranslationToVisibleWords.clear()
         deTranslationToVisibleWords.clear()
+        if (options.quiet) print(".")
     }
 
     private fun buildHiraganaToVisibleWordsMap() {

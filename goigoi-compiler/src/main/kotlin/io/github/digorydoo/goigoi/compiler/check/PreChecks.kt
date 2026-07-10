@@ -1,6 +1,7 @@
 package io.github.digorydoo.goigoi.compiler.check
 
 import io.github.digorydoo.goigoi.compiler.CheckFailed
+import io.github.digorydoo.goigoi.compiler.Options
 import io.github.digorydoo.goigoi.compiler.check.prechecks.PhraseOrSentenceChecker
 import io.github.digorydoo.goigoi.compiler.check.prechecks.TopicChecker
 import io.github.digorydoo.goigoi.compiler.check.prechecks.UnytChecker
@@ -12,7 +13,7 @@ import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
  * These checks happen after the XML has parsed, but before anything gets written. Note that compileGoigoi's kanjiIndex
  * is not available here; those checks happen in PostChecks.
  */
-class PreChecks {
+class PreChecks(private val options: Options) {
     private val topicChecker = TopicChecker()
     private val unytChecker = UnytChecker()
     private val wordChecker = WordChecker()
@@ -20,6 +21,8 @@ class PreChecks {
     private val phraseOrSentenceChecker = PhraseOrSentenceChecker()
 
     fun check(vocab: GoigoiVocab) {
+        var count = 0
+
         for (topic in vocab.topics) {
             try {
                 topicChecker.check(topic)
@@ -59,6 +62,8 @@ class PreChecks {
                                 } catch (e: Exception) {
                                     throw CheckFailed("$word:\n${e.message?.prependIndent("   ")}", e)
                                 }
+
+                                if (options.quiet && count++ % 400 == 0) print(".")
                             }
                         }
                     } catch (e: Exception) {

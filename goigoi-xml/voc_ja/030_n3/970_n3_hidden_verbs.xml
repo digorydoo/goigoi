@@ -15,6 +15,31 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【欠：か】ける"
+              rom="kakeru"
+              tr_en="to be damaged; to be lacking; to be missing"
+              tr_de="beschädigt sein; fehlen"
+              lvl="n3"
+              category="not-good, technical"
+              id="kakeru-damaged"
+            />
+            <word
+              w="【遣：や】る"
+              rom="yaru"
+              tr_en="to give sth."
+              tr_de="etw. geben"
+              hint_en="to pets, plants, younger siblings, etc."
+              hint_de="einem Tier, einer Pflanze, einem jüngeren Geschwister, usw."
+              studyInContext="required"
+              lvl="n3"
+              category="animal, hands"
+              id="yaru-give"
+              usuallyInKana="true"
+              HIDDEN="true"
+            >
+                <!-- implicit see-also link to yaru-undertake -->
+            </word>
+            <word
               w="【眺：なが】める"
               rom="nagameru"
               tr_en="to gaze at; to admire (the scenery); to contemplate (a painting)"
@@ -72,11 +97,15 @@
             <word
               w="【解：と】く"
               rom="toku"
-              tr_en="to unfasten; to unbind; to untangle"
+              tr_en="to unfasten; to untangle; to unravel"
+              tr_de="aufbinden; entwirren; (Rätsel) lüften"
               hint_en="v.t."
               lvl="n3"
               id="toku-untie"
-            />
+              rem="appears in Doraemon 13, p.185 (example already used)"
+            >
+                <!-- 謎を解く to unravel a mistery (self; needs verification) -->
+            </word>
             <word
               w="【燃：も】える"
               rom="moeru"
