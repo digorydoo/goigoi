@@ -16,39 +16,6 @@
     >
         <section>
             <word
-              w="【永：えい】【久：きゅう】"
-              rom="eikyū"
-              tr_en="eternity; permanence"
-              tr_de="Ewigkeit; Konstanz"
-              Langenscheidt="Ewigkeit"
-              hint_en="formal or technical"
-              hint_de="formell oder technisch"
-              lvl="n3"
-              category="time"
-              id="eikyū-eternity"
-            >
-                <keep_apart_from id="eien-eternity" />
-                <phrase
-                  ph="【永：えい】【久：きゅう】【歯：し】"
-                  rom="eikyūshi"
-                  tr_en="permanent teeth"
-                  tr_de="bleibende Zähne"
-                  explanation_en="adult teeth that replace the baby teeth"
-                  explanation_de="Zähne eines Erwachsenen, welche die Babyzähne ersetzen"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="the phrase is quite specific; jisho has nx"
-                />
-                <sentence
-                  s="【彼：かれ】の【名：な】【前：まえ】は【永：えい】【久：きゅう】に【残：のこ】るでしょう。"
-                  rom="Kare no namae wa eikyū ni nokoru deshō."
-                  tr_en="His name will remain permanently."
-                  tr_de="Sein Name wird permanent bleiben."
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-            </word>
-            <word
               w="【企：き】【業：ぎょう】"
               rom="kigyō"
               tr_en="enterprise; company; corporation"
@@ -172,6 +139,15 @@
                   tr_de="Newcomer-Auszeichnung; Debutantenpreis"
                   lvl="n3"
                   origin="ChatGPT"
+                />
+                <phrase
+                  ph="【三：さん】【等：とう】【賞：しょう】を【得：え】る"
+                  rom="san-tōshō o eru"
+                  tr_en="to obtain the third prize"
+                  tr_de="den dritten Platz gewinnen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for san-tōshō"
                 />
                 <sentence
                   s="【賞：しょう】が【取：と】れるといいですね。"
@@ -463,6 +439,38 @@
                   tr_de="Ich werde meine Augen untersuchen lassen."
                   lvl="n3"
                   origin="lib0 modified"
+                />
+            </word>
+            <word
+              w="【銅：どう】【貨：か】"
+              rom="dōka"
+              tr_en="copper coin"
+              tr_de="Kupfermünze"
+              lvl="n3"
+              category="finances, culture"
+              id="dōka-coppercoin"
+            >
+                <!--
+                    Acc. to ChatGPT, the current 10-yen coin is made of copper, but usually small change is
+                    expressed with 小銭・こぜに (n1)
+                -->
+                <keep_apart_from id="kozeni-coins" />
+                <phrase
+                  ph="【昔：むかし】の【銅：どう】【貨：か】を【集：あつ】める"
+                  rom="mukashi no dōka o atsumeru"
+                  tr_en="to collect old copper coins"
+                  tr_de="alte Kupfermünzen sammeln"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="その【道：どう】【具：ぐ】、【銅：どう】【貨：か】【一：いち】【枚：まい】の【価：か】【値：ち】もないぞ。"
+                  rom="Sono dōgu, dōka ichi-mai no kachi mo nai zo."
+                  tr_en="This tool isn't worth a penny."
+                  tr_de="Dieses Werkzeug ist keinen Rappen wert."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word

@@ -322,6 +322,7 @@ class WordSorter(private val vocab: GoigoiVocab) {
             WordCategory.NEWS,
             WordCategory.LIGHT,
             null, // rank for words with no category
+            WordCategory.FORMAL,
             WordCategory.POLITICS,
             WordCategory.TRADE,
             WordCategory.CRIME,

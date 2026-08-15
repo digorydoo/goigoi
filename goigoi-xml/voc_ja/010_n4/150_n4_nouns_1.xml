@@ -19,7 +19,7 @@
       defaultHint_de="Nomen"
       lvl="n4"
       requiresSentences="true"
-      requiresPhrases="true"
+      requiresPhrases="false"
     >
         <section>
             <!-- holiday -->
@@ -1381,6 +1381,7 @@
               category="general"
               id="yotei-plans"
             >
+                <keep_apart_from id="keikaku-project" />
                 <phrase
                   ph="【明日：あした】の【予：よ】【定：てい】"
                   rom="ashita no yotei"

@@ -43,30 +43,6 @@ class GoigoiWord {
     override fun toString() =
         "Word " + id.ifEmpty { romaji }.ifEmpty { translation.en }.ifEmpty { kana }.ifEmpty { kanji }
 
-    fun prettyPrint(
-        withRomaji: Boolean = false,
-        withTranslation: Boolean = false,
-        withHint: Boolean = false,
-        withLvl: Boolean = false,
-        withFileName: Boolean = false,
-        withKanjiKanaSeparated: Boolean = false,
-        withColour: Boolean = true,
-        withId: Boolean = false,
-    ) {
-        println(
-            toPrettyString(
-                withRomaji = withRomaji,
-                withTranslation = withTranslation,
-                withHint = withHint,
-                withLvl = withLvl,
-                withFileName = withFileName,
-                withKanjiKanaSeparated = withKanjiKanaSeparated,
-                withColour = withColour,
-                withId = withId,
-            )
-        )
-    }
-
     fun toPrettyString(
         withRomaji: Boolean = false,
         withTranslation: Boolean = false,

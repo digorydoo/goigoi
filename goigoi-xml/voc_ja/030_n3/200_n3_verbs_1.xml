@@ -11,8 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n3"
-      requiresSentences="true"
-      requiresPhrases="true"
+      requiresSentences="false"
+      requiresPhrases="false"
     >
         <section>
             <!-- unsorted -->
@@ -376,6 +376,7 @@
             >
                 <see id="tasukaru-behelped" rem="v.i." />
                 <keep_apart_from id="sukuu-rescue" />
+                <keep_apart_from id="kyūjo-aid" />
                 <phrase
                   ph="【助：たす】けに【来：く】る"
                   rom="tasuke ni kuru"
@@ -924,6 +925,7 @@
               category="general, employment"
               id="yameru-resign"
             >
+                <keep_apart_from id="yosu-cease" />
                 <phrase
                   ph="【仕：し】【事：ごと】を【辞：や】める"
                   rom="shigoto o yameru"

@@ -79,7 +79,7 @@
               w="【奢：おご】る"
               rom="ogoru"
               tr_en="to give sb. a treat; to pay for sb."
-              tr_de="jem. eine Freude machen; für jem. bezahlen"
+              tr_de="für jem. bezahlen"
               usuallyInKana="true"
               lvl="n3"
               category="going-out"
@@ -90,6 +90,14 @@
                 <keep_apart_from id="maneku-invite" />
                 <keep_apart_from id="maneki-invitation" />
                 <keep_apart_from id="okuru-give" />
+                <phrase
+                  ph="【一：いっ】【杯：ぱい】おごる"
+                  rom="ippai ogoru"
+                  tr_en="to pay for one drink"
+                  tr_de="auf einen Drink einladen"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="おごりたいのですが。"
                   rom="Ogoritai no desu ga."
@@ -141,24 +149,6 @@
                   lvl="n3"
                   origin="lib0"
                   rem="verified with ChatGPT; 物理学 would also be correct, but 物理 is fine for casual speech"
-                />
-            </word>
-            <word
-              w="【至：いた】る"
-              rom="itaru"
-              tr_en="to lead to (a place); to arrive at (a decision); to reach (a stage)"
-              tr_de="(an einen Ort) führen; (Entscheidung) treffen; (Stadium) erreichen"
-              lvl="n3"
-              category="general, motion"
-              id="itaru-arriveat"
-            >
-                <sentence
-                  s="この【道：みち】は【公：こう】【園：えん】に【至：いた】る。"
-                  rom="Kono michi wa kōen ni itaru."
-                  tr_en="This road goes to the park."
-                  tr_de="Dieser Weg führt zum Park."
-                  lvl="n3"
-                  origin="lib0"
                 />
             </word>
             <word
@@ -341,7 +331,7 @@
               hint_de="formell"
               studyInContext="preferred"
               lvl="n3"
-              category="general"
+              category="general, formal"
               id="ōjiru-accept"
             >
                 <keep_apart_from id="sansei-approval" />
@@ -613,6 +603,22 @@
                   lvl="n3"
                   origin="jpod101 audio"
                 />
+                <sentence
+                  s="【看：かん】【護：ご】【師：し】は【僕：ぼく】の【体：たい】【温：おん】を【計：はか】った。"
+                  rom="Kangoshi wa boku no taion o hakatta."
+                  tr_en="The nurse took my temperature."
+                  tr_de="Die Krankenpflegerin mass meine Temperatur."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【重：おも】さを【計：はか】ってもらえませんか。"
+                  rom="Kono omosa o hakatte moraemasen ka?"
+                  tr_en="Can you weigh this, please?"
+                  tr_de="Können Sie das bitte wägen?"
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【預：あず】かる"
@@ -628,6 +634,30 @@
             >
                 <see id="azukeru-putincare" rem="closely related" />
                 <keep_apart_from id="kakari-incharge" />
+                <phrase
+                  ph="【鍵：かぎ】を【預：あず】かる"
+                  rom="kagi o azukaru"
+                  tr_en="to be put in charge of the keys"
+                  tr_de="die Schlüssel aufbewahren"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【荷：に】【物：もつ】を【預：あず】かる"
+                  rom="nimotsu o azukaru"
+                  tr_en="to keep the luggage in custody"
+                  tr_de="auf das Reisegepäck aufpassen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【銀：ぎん】【行：こう】は【人：ひと】の【金：かね】を【預：あず】かる。"
+                  rom="Ginkō wa hito no kane o azukaru."
+                  tr_en="The bank keeps people's money."
+                  tr_de="Die Bank bewahrt das Geld der Leute auf."
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【二：に】【時：じ】まで【荷：に】【物：もつ】を【預：あず】かってもらえますか。"
                   rom="Ni-ji made nimotsu o azukatte moraemasu ka?"
@@ -647,6 +677,23 @@
               category="general, work"
               id="eru-earn"
             >
+                <keep_apart_from id="osameru-pay" />
+                <phrase
+                  ph="【本：ほん】から【大：おお】きな【喜：よろこ】びを【得：え】る"
+                  rom="hon kara ōki na yorokobi o eru"
+                  tr_en="to obtain a lot of pleasure from books"
+                  tr_de="von Büchern viel Freude gewinnen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="ほとんど【得：え】るところがなかった。"
+                  rom="Hotondo eru tokoro ga nakatta."
+                  tr_en="I got next to nothing."
+                  tr_de="Es hat praktisch nichts gebracht."
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【私：わたし】はそれを【得：え】ようとしたがダメだった。"
                   rom="Watashi wa sore o eyō to shita ga dame datta."
@@ -655,16 +702,66 @@
                   lvl="n3"
                   origin="lib0 modified"
                 />
+                <sentence
+                  s="【彼：かの】【女：じょ】は【一：いっ】【等：とう】【賞：しょう】を【得：え】た。"
+                  rom="Kanojo wa ittō-shō o eta."
+                  tr_en="She won the first prize."
+                  tr_de="Sie hat den ersten Platz gewonnen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="jisho has nx for ittō-shō, but n3 for shō"
+                />
             </word>
             <word
               w="【狂：くる】う"
               rom="kuruu"
               tr_en="to go mad; to lose one's mind; to malfunction"
               tr_de="den Verstand verlieren; nicht richtig funktionieren"
+              studyInContext="preferred"
               lvl="n3"
               category="thinking, technical"
               id="kuruu-gomad"
             >
+                <phrase
+                  ph="【気：き】が【狂：くる】う"
+                  rom="ki ga kuruu"
+                  tr_en="to go mad; to lose one's mind"
+                  tr_de="den Verstand verlieren"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【計：けい】【画：かく】が【狂：くる】う"
+                  rom="keikaku ga kuruu"
+                  tr_en="(schedule) to get out of hand"
+                  tr_de="(Zeitplan) aus dem Ruder geraten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【狂：くる】ったように【笑：わら】う"
+                  rom="kurutta-yō ni warau"
+                  tr_en="to laugh like a mad person"
+                  tr_de="wie ein Verrückter lachen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【狂：くる】った【値：ね】【段：だん】"
+                  rom="kurutta nedan"
+                  tr_en="a crazy price"
+                  tr_de="ein verrückter Preis"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】のせいで【気：き】が【狂：くる】いそうだ。"
+                  rom="Kanojo no sei de ki ga kurui-sō da."
+                  tr_en="She's driving me crazy."
+                  tr_de="Sie bringt mich zum Wahnsinn."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
                 <sentence
                   s="この【機：き】【械：かい】 【狂：くる】ってる。"
                   rom="Kono kikai kurutteru."
@@ -682,35 +779,87 @@
                   lvl="n3"
                   origin="ChatGPT"
                 />
+                <sentence
+                  s="この【時：と】【計：けい】は【絶：ぜっ】【対：たい】に【狂：くる】わないと【言：い】いました。"
+                  rom="Kono tokei wa zettai ni kuruwanai to īmashita."
+                  tr_en="(He/she) said this watch will never lose or gain time."
+                  tr_de="(Er/sie) sagte, diese Uhr wird niemals vor- oder nachgehen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
             </word>
             <word
-              w="【収：おさ】める"
-              rom="osameru"
-              tr_en="to pay (fees); to bring to a close; to achieve (a result)"
-              tr_de="(Gebühren) zahlen; beenden; (ein Resultat) erreichen"
+              w="【除：のぞ】く"
+              rom="nozoku"
+              tr_en="to remove sth.; to eliminate; to exclude"
+              tr_de="etw. entfernen; eliminieren; ausschliessen"
+              hint_en="v.t."
               lvl="n3"
-              category="work, finances"
-              id="osameru-pay"
+              category="general"
+              id="nozoku-eliminate"
             >
+                <keep_apart_from id="torinozoku-remove" />
                 <phrase
-                  ph="【成：せい】【功：こう】を【収：おさ】める"
-                  rom="seikō o osameru"
-                  tr_en="to come out successful; to achieve success"
-                  tr_de="erfolgreich sein; Erfolg haben"
+                  ph="【一：ひと】【人：り】を【除：のぞ】いて"
+                  rom="hitori o nozoite"
+                  tr_en="except for one person"
+                  tr_de="ausser einer (einzigen) Person"
                   lvl="n3"
                   origin="lib0"
+                />
+                <sentence
+                  s="【１：ひと】つを【除：のぞ】いて【全：ぜん】【部：ぶ】【見：み】つかった。"
+                  rom="Hito-tsu o nozoite zenbu mitsukatta."
+                  tr_en="I found them all but one."
+                  tr_de="Ich habe alle ausser einem gefunden."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【日：にち】【曜：よう】【日：び】を【除：のぞ】いて【毎：まい】【日：にち】【働：はたら】いている。"
+                  rom="Nichi-yōbi o nozoite mai-nichi hataraite iru."
+                  tr_en="I work every day except on Sundays."
+                  tr_de="Ich arbeite an jedem Tag ausser an Sonntagen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【屋：や】【根：ね】の【雪：ゆき】を【取：と】り【除：のぞ】いた。"
+                  rom="Yane no yuki o tori-nozoita."
+                  tr_en="I cleared the roof of snow."
+                  tr_de="Ich habe den Schnee vom Dache geräumt."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【落：お】ち【葉：ば】を【取：と】り【除：のぞ】いてください。"
+                  rom="Ochiba o tori-nozoite kudasai."
+                  tr_en="Please get rid of the dead leaves."
+                  tr_de="Bitte räume die heruntergefallenen Blätter weg."
+                  lvl="n3"
+                  origin="lib0 modified"
                 />
             </word>
             <word
               w="【唸：うな】る"
               rom="unaru"
-              tr_en="to groan; to moan; to snarl"
-              tr_de="stöhnen; ächzen; knurren"
+              tr_en="to groan; to growl; to snarl"
+              tr_de="stöhnen; knurren; fauchen"
               lvl="n3"
               category="mood, talking"
               id="unaru-groan"
               rem="appears in Doraemon 0, p.24 as unattari shite and unarigoe"
             >
+                <phrase
+                  ph="【犬：いぬ】の【唸：うな】り【声：ごえ】"
+                  rom="inu no unarigoe"
+                  tr_en="the growling of a dog"
+                  tr_de="das Knurren eines Hundes"
+                  lvl="n3"
+                  origin="self"
+                  rem="tora no unarigoe is already a phrase of tora"
+                />
                 <sentence
                   s="【虎：とら】の【唸：うな】り【声：ごえ】が【聞：き】こえる。"
                   rom="Tora no unarigoe ga kikoeru."
@@ -718,6 +867,14 @@
                   tr_de="Man kann das Knurren eines Tigers hören."
                   lvl="n3"
                   origin="ChatGPT"
+                />
+                <sentence
+                  s="その【犬：いぬ】は【小：ちい】さな【男：おとこ】の【子：こ】に【向：む】かって【唸：うな】った。"
+                  rom="Sono inu wa chīsana otoko no ko ni mukatte unatta."
+                  tr_en="The dog turned and growled at a little boy."
+                  tr_de="Der Hund drehte sich und knurrte den kleinen Knaben an."
+                  lvl="n3"
+                  origin="lib0"
                 />
             </word>
             <word
@@ -730,12 +887,28 @@
               id="tazuneru-visit"
               rem="does not appear in GENKI2 index, nor in 500mon index; jisho has n4 for word and n3 for kanji"
             >
+                <phrase
+                  ph="【友：とも】【達：だち】の【家：いえ】を【訪：たず】ねる"
+                  rom="tomodachi no ie o tazuneru"
+                  tr_en="to pay a visit to a friend's house"
+                  tr_de="beim Haus eines Freundes vorbeischauen"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【私：わたし】は【時：とき】【々：どき】 【友：とも】【達：だち】の【家：いえ】を【訪：たず】ねる。"
                   rom="Watashi wa toki-doki tomodachi no ie o tazuneru."
                   tr_en="I pay a visit to my friend's house now and then."
                   tr_de="Ich besuche ab und zu das Haus meines Freundes."
                   allowSpaces="true"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【明日：あした】、きっと【君：きみ】を【訪：たず】ねます。"
+                  rom="Ashita, kitto kimi o tazunemasu."
+                  tr_en="I will surely pay you a visit tomorrow."
+                  tr_de="Ich werde bestimmt bei dir morgen einen Besuch abstatten."
                   lvl="n3"
                   origin="lib0"
                 />
@@ -789,6 +962,25 @@
                 <keep_apart_from id="inoru-wish" />
                 <keep_apart_from id="motomeru-wishfor" />
                 <keep_apart_from id="tanomu-request" />
+                <phrase
+                  ph="【幸：こう】【福：ふく】を【望：のぞ】む"
+                  rom="kōfuku o nozomu"
+                  tr_en="to wish for well-being"
+                  tr_de="sich Glück wünschen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <!--
+                  seikō o nozomu already a phrase of seikō
+                -->
+                <sentence
+                  s="【平：へい】【和：わ】を【望：のぞ】まない【人：ひと】はいない。"
+                  rom="Heiwa o nozomanai hito wa inai."
+                  tr_en="There is no one who does not desire peace."
+                  tr_de="Es gibt niemanden, der sich nicht Frieden wünscht."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【避：さ】ける"
@@ -801,6 +993,32 @@
               id="sakeru-avoid"
             >
                 <keep_apart_from id="nukeru-omit" />
+                <phrase
+                  ph="【雨：あめ】を【避：さ】ける"
+                  rom="ame o sakeru"
+                  tr_en="to avoid the rain"
+                  tr_de="dem Regen ausweichen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【戦：せん】【争：そう】を【避：さ】ける"
+                  rom="sensō o sakeru"
+                  tr_en="to avert war"
+                  tr_de="einen Krieg verhindern"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="ラッシュを【避：さ】けるために【早：はや】く【出：しゅっ】【発：ぱつ】した。"
+                  rom="Rasshu o sakeru tame ni hayaku shuppatsu shita."
+                  tr_en="I left early in order to avoid the rush hour."
+                  tr_de="Ich bin früh aufgebrochen, um (dem Verkehr der) Stosszeit aus dem Weg zu gehen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="lib0 has ために; asked ChatGPT about ために vs. ように; ChatGPT says ために is better here;
+                    but this contradicts 500mon N3 explanation that ために is usually for the benefit of someone"
+                />
             </word>
             <word
               w="【済：す】ませる"
@@ -815,6 +1033,32 @@
                 <see id="sumu-end" rem="v.i." />
                 <keep_apart_from id="oeru-finish" />
                 <keep_apart_from id="tomaru-stop" />
+                <phrase
+                  ph="【宿：しゅく】【題：だい】を【済：す】ませる"
+                  rom="shukudai o sumaseru"
+                  tr_en="to finish one's homework"
+                  tr_de="die Hausaufgaben zu Ende bringen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【支：し】【払：はら】いを【済：す】ませてください。"
+                  rom="Shiharai o sumasete kudasai."
+                  tr_en="Please complete the payment."
+                  tr_de="Bitte bringen Sie die Bezahlung zu Ende."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【英：えい】【語：ご】の【辞：じ】【書：しょ】なしで【済：す】ませることができますか。"
+                  rom="Eigo no jisho nashi de sumaseru koto ga dekimasu ka?"
+                  tr_en="Can you do without an English dictionary?"
+                  tr_de="Kannst du ohne Englisch-Wörterbuch auskommen?"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT;
+                    ChatGPT says the object being completed is left out and derived from context"
+                />
             </word>
             <word
               w="【恐：おそ】れる"
@@ -825,7 +1069,32 @@
               lvl="n3"
               category="mood, not-good"
               id="osoreru-fear"
-            />
+            >
+                <phrase
+                  ph="【失：しっ】【敗：ぱい】を【恐：おそ】れる"
+                  rom="shippai o osoreru"
+                  tr_en="to be afraid of (making) mistakes"
+                  tr_de="Angst haben, Fehler zu machen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【彼：かれ】は【危：き】【険：けん】を【恐：おそ】れない。"
+                  rom="Kare wa kiken o osorenai."
+                  tr_en="He is not afraid of danger."
+                  tr_de="Er fürchtet sich nicht vor Gefahren."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【笑：わら】われることを【恐：おそ】れた。"
+                  rom="Warawareru koto o osoreta."
+                  tr_en="I was afraid of being laughed at."
+                  tr_de="Ich hatte Angst davon, ausgelacht zu werden."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+            </word>
             <word
               w="【救：すく】う"
               rom="sukuu"
@@ -836,7 +1105,32 @@
               category="general, relationships"
               id="sukuu-rescue"
             >
+                <see id="sukui-aid" rem="noun" />
                 <keep_apart_from id="tasukeru-help" />
+                <keep_apart_from id="kyūjo-aid" />
+                <!--
+                  助ける・たすける: to help
+                  救う・すくう: to save
+                  救助する・きゅうじょする: to rescue; to carry out a rescue operation; formal
+                -->
+                <phrase
+                  ph="【世：せ】【界：かい】を【救：すく】う"
+                  rom="sekai o sukuu"
+                  tr_en="to save the world"
+                  tr_de="die Welt retten"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【僕：ぼく】たちはその【少：しょう】【年：ねん】を【救：すく】うためにできる【限：かぎ】りのことをした。"
+                  rom="Boku-tachi wa sono shōnen o sukuu tame ni dekiru kagiri no koto o shita."
+                  tr_en="We did everything we could to save that boy."
+                  tr_de="Wir haben alles unternommen, um den Knaben zu retten."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; ChatGPT says, できるだけのこと would also work, but is less strong, like
+                  saying 'We did as much as we could'"
+                />
             </word>
             <word
               w="【通：つう】じる"
@@ -849,6 +1143,74 @@
             >
                 <keep_apart_from id="tōru-gopast" />
                 <keep_apart_from id="tōsu-stickthru" />
+                <keep_apart_from id="itaru-arriveat" />
+                <phrase
+                  ph="【駅：えき】へ【通：つう】じる【道：みち】"
+                  rom="eki e tsūjiru michi"
+                  tr_en="the road that leads to the station"
+                  tr_de="die Strasse, die zum Bahnhof führt"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【村：むら】へ【通：つう】じる【山：やま】【道：みち】"
+                  rom="mura e tsūjiru yama-michi"
+                  tr_en="the mountain path that leads to the village"
+                  tr_de="der Bergweg, der zum Dorf führt"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【止：よ】す"
+              rom="yosu"
+              tr_en="to stop (doing); to cease; to quit"
+              tr_de="mit etw. aufhören"
+              usuallyInKana="true"
+              hint_en="v.t."
+              lvl="n3"
+              id="yosu-cease"
+            >
+                <keep_apart_from id="yameru-stop" />
+                <keep_apart_from id="yameru-resign" />
+                <keep_apart_from id="tomeru-stop" />
+                <keep_apart_from id="akirameru-giveup" />
+                <keep_apart_from id="hikaeru-abstain" />
+                <!--
+                    それはよそう。 "Let's not do that." (ChatGPT)
+                -->
+                <phrase
+                  ph="タバコをよす"
+                  rom="tabako o yosu"
+                  tr_en="to quit smoking"
+                  tr_de="mit Rauchen aufhören"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【酒：さけ】をよす"
+                  rom="sake o yosu"
+                  tr_en="to give up (drinking) alcohol"
+                  tr_de="mit dem Alkohol (Trinken) aufhören"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="よせ！"
+                  rom="Yose!"
+                  tr_en="Stop it!"
+                  tr_de="Hör damit auf!"
+                  lvl="n3"
+                  origin="Doraemon 14, p.79"
+                />
+                <sentence
+                  s="およしなさいよ、バカなこと。"
+                  rom="O-yoshinasai yo, baka na koto."
+                  tr_en="Please stop it, that's nonsense."
+                  tr_de="Bitte hör auf damit, das ist doch Blödsinn."
+                  lvl="n3"
+                  origin="Doraemon 14, p.140"
+                />
             </word>
             <word
               w="【抱：いだ】く"
@@ -860,12 +1222,30 @@
               id="idaku-embrace"
             >
                 <keep_apart_from id="kakaeru-hold" />
+                <phrase
+                  ph="【胸：むね】にしっかりと【抱：いだ】く"
+                  rom="mune ni shikkari to idaku"
+                  tr_en="to hold tightly to one's breast"
+                  tr_de="fest an die Brust drücken"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】はその【子：こ】を【胸：むね】に【抱：いだ】いた。"
+                  rom="Kanojo wa sono ko o mune ni idaita."
+                  tr_en="She held that child to her bosom."
+                  tr_de="Sie drückte das Kind an ihre Brust."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【横：よこ】【切：ぎ】る"
               rom="yokogiru"
               tr_en="to cross (e.g. road); to traverse"
               tr_de="überqueren (z.B. die Strasse); traversieren"
+              studyInContext="preferred"
               hint_en="v.t."
               lvl="n3"
               category="transportation"
@@ -873,6 +1253,46 @@
             >
                 <keep_apart_from id="wataru-cross" />
                 <keep_apart_from id="ōdan-crossing" />
+                <phrase
+                  ph="【運：うん】【動：どう】【場：じょう】を【横：よこ】【切：ぎ】る"
+                  rom="undōjō o yokogiru"
+                  tr_en="to traverse the sports ground"
+                  tr_de="den Sportplatz überqueren"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【庭：にわ】を【歩：ある】いて【横：よこ】【切：ぎ】る"
+                  rom="niwa o aruite yokogiru"
+                  tr_en="to walk across the garden"
+                  tr_de="durch den Garten hindurch gehen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【通：とお】りを【走：はし】って【横：よこ】【切：ぎ】る"
+                  rom="tōri o hashitte yokogiru"
+                  tr_en="to run across the street"
+                  tr_de="über die Strasse rennen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【先：せん】【生：せい】が【通：とお】りを【横：よこ】【切：ぎ】るのが【見：み】えた。"
+                  rom="Sensei ga tōri o yokogiru no ga mieta."
+                  tr_en="I saw the teacher cross the street."
+                  tr_de="Ich habe den Lehrer gesehen, wie er die Strasse überquerte."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【道：どう】【路：ろ】を【横：よこ】【切：ぎ】るときは【車：くるま】に【注：ちゅう】【意：い】しなさい。"
+                  rom="Dōro o yokogiru toki wa kuruma ni chūi shinasai."
+                  tr_en="When you cross the street, watch out for cars."
+                  tr_de="Wenn du die Strasse überquerst, achte auf die Autos."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【数：かぞ】える"
@@ -882,7 +1302,40 @@
               lvl="n3"
               category="maths"
               id="kazoeru-count"
-            />
+            >
+                <phrase
+                  ph="【一：いち】から【十：じゅう】まで【数：かぞ】える"
+                  rom="ichi kara jū made kazoeru"
+                  tr_en="to count from one to ten"
+                  tr_de="von eins bis zehn zählen"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <phrase
+                  ph="【硬：こう】【貨：か】を【数：かぞ】える"
+                  rom="kōka o kazoeru"
+                  tr_en="to count coins"
+                  tr_de="Münzen zählen"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="【子：こ】【供：ども】は【十：じゅう】まで【数：かぞ】えた。"
+                  rom="Kodomo wa jū made kazoeta."
+                  tr_en="The child counted to ten."
+                  tr_de="Das Kind zählte bis zehn."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="【空：そら】には【数：かぞ】え【切：き】れないほど【星：ほし】が【出：で】ている。"
+                  rom="Sora ni wa kazoe-kirenai hodo hoshi ga dete iru."
+                  tr_en="There are more stars in the sky that one can count."
+                  tr_de="Am Himmel hat es mehr Sterne, als man zählen kann."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【溺：おぼ】れる"
               rom="oboreru"
@@ -893,12 +1346,47 @@
               lvl="n3"
               category="not-good"
               id="oboreru-drown"
-            />
+            >
+                <phrase
+                  ph="【恋：こい】に【溺：おぼ】れる"
+                  rom="koi ni oboreru"
+                  tr_en="to lose oneself in romantic longing"
+                  tr_de="sich in romantischer Sehnsucht verlieren"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【酒：さけ】に【溺：おぼ】れる"
+                  rom="sake ni oboreru"
+                  tr_en="to drown oneself in alcohol"
+                  tr_de="sich dem Alkohol hingeben"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【溺：おぼ】れている【人：ひと】を【救：すく】う"
+                  rom="oborete iru hito o sukuu"
+                  tr_en="to save a person from drowning"
+                  tr_de="eine Person vor dem Ertrinken retten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="その【男：おとこ】の【子：こ】はもう【少：すこ】しで【溺：おぼ】れ【死：し】ぬところでした。"
+                  rom="Sono otoko no ko wa mō sukoshi de obore-shinu tokoro deshita."
+                  tr_en="The boy narrowly escaped drowning."
+                  tr_de="Der Knabe wäre fast ertrunken."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="lib0 has oborete shinu here, obore-shinu elsewhere; ChatGPT says obore-shinu is better"
+                />
+            </word>
             <word
               w="【移：うつ】す"
               rom="utsusu"
-              tr_en="to swap; to substitute; to change the object of one's focus"
-              tr_de="vertauschen; austauschen; sich etw. anderem zuwenden"
+              tr_en="to move sth.; to shift; to transfer"
+              tr_de="etw. verschieben; schieben; tauschen"
               hint_en="v.t."
               lvl="n3"
               category="general"
@@ -908,6 +1396,56 @@
                 <keep_apart_from id="kaeru-substitute" />
                 <keep_apart_from id="kaeru-exchange" />
                 <keep_apart_from id="kaeru-replace" />
+                <phrase
+                  ph="【考：かんが】えを【実：じっ】【行：こう】に【移：うつ】す"
+                  rom="kangae o jikkō ni utsusu"
+                  tr_en="to put an idea into practice"
+                  tr_de="eine Idee in die Praxis umsetzen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【言：い】ったことを【実：じっ】【行：こう】に【移：うつ】す"
+                  rom="itta koto o jikkō ni utsusu"
+                  tr_en="to put words into action"
+                  tr_de="das Gesagte in die Tat umsetzen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with DeepL"
+                />
+                <phrase
+                  ph="【会：かい】【議：ぎ】を【別：べつ】の【部：へ】【屋：や】に【移：うつ】す"
+                  rom="kaigi o betsu no heya ni utsusu"
+                  tr_en="to move the meeting into another room"
+                  tr_de="die Sitzung in einen anderen Raum verlegen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <!--
+                  古いパソコンからデータを移す。 Transfer the data from the old computer. (ChatGPT)
+                  別のことに注意を移す。 Shift one's attention to something else. (ChatGPT)
+                -->
+                <sentence
+                  s="【次：つぎ】の【話：わ】【題：だい】に【移：うつ】しましょう。"
+                  rom="Tsugi no wadai ni utsushimashō."
+                  tr_en="Let's move on to the next topic."
+                  tr_de="Gehen wir zum nächsten Thema über."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【病：びょう】【気：き】をうつさないためにマスクをした。"
+                  rom="Byōki o utsusanai tame ni masuku o shita."
+                  tr_en="I wore a mask so that I would not pass on my illness."
+                  tr_de="Ich trug eine Maske, um niemanden mit meiner Krankheit anzustecken."
+                  hasDifferentForm="true"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT;
+                    ChatGPT says うつす is written in kana here;
+                    ChatGPT says 〜ように would also work here;
+                    jisho has n2 for masuku"
+                />
             </word>
             <word
               w="【勧：すす】める"
@@ -920,6 +1458,24 @@
             >
                 <see id="osusume-recommend" rem="noun" />
                 <keep_apart_from id="keikoku-advice" />
+                <phrase
+                  ph="【息：むす】【子：こ】に【野：や】【球：きゅう】を【勧：すす】める"
+                  rom="musuko ni yakyū o susumeru"
+                  tr_en="to recommend baseball to one's son"
+                  tr_de="dem Sohn Baseball empfehlen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【医：い】【者：しゃ】にダイエットして【痩：や】せるように【勧：すす】められた。"
+                  rom="Isha ni daietto shite yaseru yō ni susumerareta."
+                  tr_en="I was advised by the doctor to diet and lose weight."
+                  tr_de="Mir wurde vom Arzt geraten, eine Diät zu machen und abzunehmen."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
             </word>
             <word
               w="【去：さ】る"
@@ -930,26 +1486,54 @@
               lvl="n3"
               category="motion"
               id="saru-goaway"
-            />
-            <word
-              w="【罹：かか】る"
-              rom="kakaru"
-              tr_en="to suffer from (an illness, disease)"
-              tr_de="(an einer Krankheit) leiden"
-              usuallyInKana="true"
-              lvl="n3"
-              category="health, not-good"
-              id="kakaru-suffer"
-            />
-            <word
-              w="【刈：か】る"
-              rom="karu"
-              tr_en="to cut (grass, hair, etc.); to trim"
-              tr_de="schneiden (Gras, Haar, usw.); trimmen"
-              lvl="n3"
-              category="general"
-              id="karu-trim"
-            />
+            >
+                <keep_apart_from id="kaeru-return" />
+                <keep_apart_from id="modoru-turnback" />
+                <keep_apart_from id="wasureru-forget" />
+                <keep_apart_from id="tobu-fly" />
+                <keep_apart_from id="hashiru-run" />
+                <phrase
+                  ph="【忘：わす】れ【去：さ】る"
+                  rom="wasure-saru"
+                  tr_en="to forget completely; to leave behind"
+                  tr_de="vollständig vergessen; hinter sich lassen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【飛：と】び【去：さ】る"
+                  rom="tobi-saru"
+                  tr_en="to fly away"
+                  tr_de="davonfliegen; wegfliegen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【走：はし】り【去：さ】る"
+                  rom="hashiri-saru"
+                  tr_en="to run away"
+                  tr_de="davonrennen; wegrennen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【去：さ】る【前：まえ】には【火：ひ】を【確：かく】【実：じつ】に【消：け】しなさい。"
+                  rom="Saru mae ni wa hi o kakujitsu ni keshinasai."
+                  tr_en="Make sure to put out the fire before you leave."
+                  tr_de="Lösch das Feuer unbedingt, bevor du gehst."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="サルはよく【走：はし】り【去：さ】る。"
+                  rom="Saru wa yoku hashiri-saru."
+                  tr_en="Monkeys often run away."
+                  tr_de="Affen rennen oft davon."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
             <word
               w="【詰：つ】める"
               rom="tsumeru"
@@ -1005,6 +1589,103 @@
                 />
             </word>
             <word
+              w="【罹：かか】る"
+              rom="kakaru"
+              tr_en="to suffer from sth.; to fall ill"
+              tr_de="an etw. leiden; an etw. erkranken"
+              studyInContext="required"
+              usuallyInKana="true"
+              lvl="n3"
+              category="health, not-good"
+              id="kakaru-suffer"
+            >
+                <keep_apart_from id="kaze-flu" rem="ambiguity in phrases" />
+                <keep_apart_from id="hiku-pull" rem="ambiguity in phrases" />
+                <phrase
+                  ph="【病：びょう】【気：き】にかかる"
+                  rom="byōki ni kakaru"
+                  tr_en="to suffer from an illness"
+                  tr_de="an einer Krankheit leiden"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="インフルエンザにかかる"
+                  rom="infuruenza ni kakaru"
+                  tr_en="to suffer from the flu"
+                  tr_de="sich erkältet haben (an einer Grippe leiden)"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has nx for infurenza"
+                />
+                <phrase
+                  ph="ひどい【風邪：かぜ】にかかっている"
+                  rom="hidoi kaze ni kakatte iru"
+                  tr_en="to suffer from a terrible cold"
+                  tr_de="an einer schlimmen Erkältung leiden"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; lib0 uses kanji; ChatGPT agrees with jisho that it's usually in kana"
+                />
+                <sentence
+                  s="【君：きみ】はひどい【病：びょう】【気：き】にかかるかもしれない。"
+                  rom="Kimi wa hidoi byōki ni kakaru kamoshirenai."
+                  tr_en="You may get a serious disease."
+                  tr_de="Du könntest eine schwere Krankheit bekommen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="インフルエンザにかからないように、マフラーを【巻：ま】いてください。"
+                  rom="Infuruenza ni kakaranai yō ni, mafurā o maite kudasai."
+                  tr_en="Please put on a scarf in order not to catch the flu."
+                  tr_de="Bitte ziehe einen Schal an, um keine Grippe zu erwischen."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT;
+                     ChatGPT says 風邪を引く would be more appropriate here, and changed it to インフルエンザ;
+                     jisho has nx for インフルエンザ"
+                />
+            </word>
+            <word
+              w="【刈：か】る"
+              rom="karu"
+              tr_en="to cut sth. short; to trim"
+              tr_de="etw. kurz schneiden; trimmen"
+              lvl="n3"
+              category="general"
+              id="karu-trim"
+            >
+                <phrase
+                  ph="【羊：ひつじ】の【毛：け】を【刈：か】る"
+                  rom="hitsuji no ke o karu"
+                  tr_en="to shear sheep"
+                  tr_de="Schafe scheren"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="ChatGPT says 羊を刈る would also be fine"
+                />
+                <phrase
+                  ph="【芝：しば】【生：ふ】を【刈：か】る"
+                  rom="shibafu o karu"
+                  tr_en="to mow the lawn"
+                  tr_de="den Rasen mähen"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="lib0 has just 芝 (n1); ChatGPT says 芝生 can also be used here"
+                />
+                <sentence
+                  s="【芝：しば】【生：ふ】は【刈：か】る【必：ひつ】【要：よう】がある。"
+                  rom="Shibafu wa karu hitsuyō ga aru."
+                  tr_en="The lawn needs mowing."
+                  tr_de="Der Rasen muss gemäht werden."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="lib0 has just 芝 (n1);
+                    ChatGPT says, this sentence is much more idiomatic than 芝生は刈るのが必要です"
+                />
+            </word>
+            <word
               w="【飽：あ】きる"
               rom="akiru"
               tr_en="to lose interest in; to be fed up with"
@@ -1012,14 +1693,61 @@
               lvl="n3"
               category="mood"
               id="akiru-fedupwith"
-            />
+            >
+                <phrase
+                  ph="もう【飽：あ】きた"
+                  rom="mō akita"
+                  tr_en="already tired of it"
+                  tr_de="schon die Nase voll davon"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with DeepL"
+                />
+                <phrase
+                  ph="【見：み】【飽：あ】きる"
+                  rom="mi-akiru"
+                  tr_en="to get tired of seeing"
+                  tr_de="genug davon gesehen haben"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【聞：き】き【飽：あ】きる"
+                  rom="kiki-akiru"
+                  tr_en="to get tired of hearing"
+                  tr_de="es schon genug gehört haben"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="その【映：えい】【画：が】はもう【見：み】【飽：あ】きた。"
+                  rom="Sono eiga wa mō mi-akita."
+                  tr_en="I've seen that film enough times."
+                  tr_de="Ich habe diesen Film schon oft genug gesehen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="lib0 has similar; jisho has nx for mi-akiru"
+                />
+                <sentence
+                  s="【彼：かれ】はもうすぐその【仕：し】【事：ごと】に【飽：あ】きるだろう。"
+                  rom="Kare wa mō sugu sono shigoto ni akiru darō."
+                  tr_en="He will get tired of that job soon, I suppose."
+                  tr_de="Die Arbeit wird ihm wohl bald verleiden."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="lib0 uses すぐ; ChatGPT agrees that もうすぐ is more appropriate here"
+                />
+            </word>
             <word
               w="【論：ろん】じる"
               rom="ronjiru"
               tr_en="to discuss sth.; to talk about sth."
               tr_de="etw. diskutieren; (ein Thema) behandeln"
               Langenscheidt="diskutieren, (Thema) behandeln"
-              hint_en="v.t."
+              hint_en="v.t.; formal"
+              hint_de="v.t.; formell"
               lvl="n3"
               category="talking"
               id="ronjiru-discuss"
@@ -1031,6 +1759,23 @@
                 <keep_apart_from id="hanashiau-discuss" />
                 <keep_apart_from id="hanashikakeru-addresssb" />
                 <keep_apart_from id="kataru-recite" />
+                <phrase
+                  ph="【環：かん】【境：きょう】【問：もん】【題：だい】を【論：ろん】じる"
+                  rom="kankyō-mondai o ronjiru"
+                  tr_en="to discuss environmental problems"
+                  tr_de="über Umweltprobleme diskutieren"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="lib0 has both を and について; ChatGPT says both are correct here"
+                />
+                <sentence
+                  s="これ【以：い】【上：じょう】この【問：もん】【題：だい】は【論：ろん】じない。"
+                  rom="Kore ijō kono mondai wa ronjinai."
+                  tr_en="I shall not discuss this matter any further."
+                  tr_de="Ich werde dieses Problem this weiter erörtern."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【苦：くる】しむ"

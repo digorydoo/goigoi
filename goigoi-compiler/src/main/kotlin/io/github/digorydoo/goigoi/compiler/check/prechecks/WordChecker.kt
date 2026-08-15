@@ -8,16 +8,31 @@ import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
 import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 import io.github.digorydoo.goigoi.core.db.WordCategory
 import io.github.digorydoo.goigoi.core.db.WordHint
+import io.github.digorydoo.goigoi.core.prog_study.QAPicker.Companion.MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_NOT_REQUIRED
+import io.github.digorydoo.goigoi.core.prog_study.QAPicker.Companion.MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_PREFERRED
+import io.github.digorydoo.goigoi.core.prog_study.QAPicker.Companion.MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_REQUIRED
 
 class WordChecker {
     private val romajisSet = mutableSetOf<String>()
 
     fun check(word: GoigoiWord, unyt: GoigoiUnyt) {
         @Suppress("SimplifyBooleanWithConstants")
-        require(KANJI_MAX_LENGTH <= MAX_NUM_CHARS_IN_ANSWER)
+        require(KANJI_MAX_LENGTH <= MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_NOT_REQUIRED)
 
         @Suppress("SimplifyBooleanWithConstants")
-        require(KANA_MAX_LENGTH <= MAX_NUM_CHARS_IN_ANSWER)
+        require(KANJI_MAX_LENGTH <= MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_PREFERRED)
+
+        @Suppress("SimplifyBooleanWithConstants")
+        require(KANJI_MAX_LENGTH <= MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_REQUIRED)
+
+        @Suppress("SimplifyBooleanWithConstants")
+        require(KANA_MAX_LENGTH <= MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_NOT_REQUIRED)
+
+        @Suppress("SimplifyBooleanWithConstants")
+        require(KANA_MAX_LENGTH <= MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_PREFERRED)
+
+        @Suppress("SimplifyBooleanWithConstants")
+        require(KANA_MAX_LENGTH <= MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_REQUIRED)
 
         // Restrictions for custom word ids
 
@@ -373,58 +388,99 @@ class WordChecker {
 
         // The flag studyInContext requires phrases and sentences
 
-        if (word.studyInContext != StudyInContextKind.NOT_REQUIRED && !word.hidden) {
+        val studyInContext = word.studyInContext
+
+        val maxNumCharsInAnswer = when (studyInContext) {
+            StudyInContextKind.NOT_REQUIRED -> MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_NOT_REQUIRED
+            StudyInContextKind.PREFERRED -> MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_PREFERRED
+            StudyInContextKind.REQUIRED -> MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_REQUIRED
+        }
+
+        if (!word.hidden) {
             val kanaOnly = word.usuallyInKana || word.kanji == word.kana
 
-            if (word.phrases.isEmpty()) {
-                throw CheckFailed("Word marked as studyInContext requires at least one phrase")
-            } else {
-                val phrasesThatCanBeUsed = word.phrases.filter {
-                    // verbs may appear in different form even though hasDifferentForm is not set
-                    !it.hasDifferentForm && it.kana.length <= MAX_NUM_CHARS_IN_ANSWER && when {
-                        word.usuallyInKana -> it.kana.contains(word.kana)
-                        else -> it.primaryForm.contains(word.primaryForm.raw)
-                    }
-                }
-
-                if (phrasesThatCanBeUsed.size < 2) {
-                    val tail = when {
-                        phrasesThatCanBeUsed.size == word.phrases.size -> ""
-                        else -> " (only ${phrasesThatCanBeUsed.size} of the ${word.phrases.size} phrases can be used in " +
-                            "study due to hasDifferentForm and/or length)"
-                    }
-                    if (kanaOnly) {
-                        throw CheckFailed("Kana-only word marked as studyInContext requires at least 2 phrases$tail")
-                    } else if (word.studyInContext == StudyInContextKind.REQUIRED) {
-                        throw CheckFailed("Word that has studyInContext=\"required\" requires at least 2 phrases$tail")
-                    }
+            val numPhrasesRequired = when (studyInContext) {
+                StudyInContextKind.REQUIRED -> 2
+                StudyInContextKind.PREFERRED -> 2
+                StudyInContextKind.NOT_REQUIRED -> when (unyt.requiresPhrases) {
+                    true -> 1
+                    false -> 0
                 }
             }
 
-            if (word.sentences.isEmpty()) {
-                throw CheckFailed("Word marked as studyInContext requires at least one sentence")
-            } else {
-                val sentencesThatCanBeUsed = word.sentences.filter {
-                    !it.hasDifferentForm && when {
-                        word.usuallyInKana -> it.kana.contains(word.kana)
-                        else -> it.primaryForm.contains(word.primaryForm.raw)
-                    }
-                }
+            if (numPhrasesRequired > 0 && word.phrases.isEmpty()) {
+                throw CheckFailed("Word requires at least one phrase")
+            }
 
-                if (sentencesThatCanBeUsed.isEmpty()) {
-                    val tail = when {
-                        word.sentences.isEmpty() -> ""
-                        else -> " (none of the ${word.sentences.size} sentences can be used in study due to hasDifferentForm)"
-                    }
-                    if (kanaOnly) {
-                        throw CheckFailed("Kana-only word marked as studyInContext requires at least 1 sentence$tail")
-                    } else if (word.studyInContext == StudyInContextKind.REQUIRED) {
-                        throw CheckFailed("Word that has studyInContext=\"required\" requires at least 1 sentence$tail")
-                    }
+            val phrasesThatCanBeUsed = word.phrases.filter {
+                // verbs may appear in different form even though hasDifferentForm is not set
+                !it.hasDifferentForm && it.kana.length <= maxNumCharsInAnswer && when {
+                    word.usuallyInKana -> it.kana.contains(word.kana)
+                    else -> it.primaryForm.contains(word.primaryForm.raw)
                 }
             }
 
-            if (word.phrases.size + word.sentences.size < 3) {
+            if (phrasesThatCanBeUsed.size < numPhrasesRequired) {
+                val tail = when {
+                    phrasesThatCanBeUsed.size == word.phrases.size -> ""
+                    else -> " (only ${phrasesThatCanBeUsed.size} of the ${word.phrases.size} phrases can be used in " +
+                        "study due to hasDifferentForm and/or length)"
+                }
+                if (studyInContext === StudyInContextKind.NOT_REQUIRED) {
+                    throw CheckFailed("Word requires at least $numPhrasesRequired phrases$tail")
+                } else if (kanaOnly) {
+                    throw CheckFailed(
+                        "Kana-only word marked as studyInContext requires at least $numPhrasesRequired phrases$tail"
+                    )
+                } else if (studyInContext == StudyInContextKind.REQUIRED) {
+                    throw CheckFailed(
+                        "Word that has studyInContext=\"required\" requires at least $numPhrasesRequired phrases$tail"
+                    )
+                }
+            }
+
+            val numSentencesRequired = when (studyInContext) {
+                StudyInContextKind.REQUIRED -> 1
+                StudyInContextKind.PREFERRED -> 1
+                StudyInContextKind.NOT_REQUIRED -> when (unyt.requiresSentences) {
+                    true -> 1
+                    false -> 0
+                }
+            }
+
+            if (numSentencesRequired > 0 && word.sentences.isEmpty()) {
+                throw CheckFailed("Word requires at least one sentence")
+            }
+
+            val sentencesThatCanBeUsed = word.sentences.filter {
+                !it.hasDifferentForm && when {
+                    word.usuallyInKana -> it.kana.contains(word.kana)
+                    else -> it.primaryForm.contains(word.primaryForm.raw)
+                }
+            }
+
+            if (sentencesThatCanBeUsed.size < numSentencesRequired) {
+                val tail = when {
+                    word.sentences.isEmpty() -> ""
+                    else -> " (none of the ${word.sentences.size} sentences can be used in study " +
+                        "due to hasDifferentForm)"
+                }
+                if (studyInContext === StudyInContextKind.NOT_REQUIRED) {
+                    throw CheckFailed("Word requires at least $numSentencesRequired sentence(s)$tail")
+                } else if (kanaOnly) {
+                    throw CheckFailed(
+                        "Kana-only word marked as studyInContext requires at least " +
+                            "$numSentencesRequired sentence(s)$tail"
+                    )
+                } else if (studyInContext == StudyInContextKind.REQUIRED) {
+                    throw CheckFailed(
+                        "Word that has studyInContext=\"required\" requires at least " +
+                            "$numSentencesRequired sentence(s)$tail"
+                    )
+                }
+            }
+
+            if (studyInContext !== StudyInContextKind.NOT_REQUIRED && word.phrases.size + word.sentences.size < 3) {
                 throw CheckFailed("Word marked as studyInContext requires #phrases + #sentences >= 3")
             }
         }
@@ -446,6 +502,5 @@ class WordChecker {
         private const val ROMAJI_MAX_LENGTH = 29
         private const val TRANSLATION_MAX_LENGTH = 70
         private const val HINT_MAX_LENGTH = 70
-        private const val MAX_NUM_CHARS_IN_ANSWER = 10 // keep this in sync with QAProvider
     }
 }

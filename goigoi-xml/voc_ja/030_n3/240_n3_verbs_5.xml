@@ -45,6 +45,47 @@
                 />
             </word>
             <word
+              w="【至：いた】る"
+              rom="itaru"
+              tr_en="to lead to (a place); to arrive at (a decision); to reach (a stage)"
+              tr_de="(an einen Ort) führen; (Entscheidung) treffen; (Stadium) erreichen"
+              hint_en="formal"
+              hint_de="formell"
+              lvl="n3"
+              category="general, motion"
+              id="itaru-arriveat"
+            >
+                <keep_apart_from id="tsūjiru-getthru" />
+                <!--
+                    Acc. to ChatGPT, itaru is more formal or literay than tsūjiru.
+                -->
+                <phrase
+                  ph="【公：こう】【園：えん】に【至：いた】る"
+                  rom="kōen ni itaru"
+                  tr_en="to lead to the park"
+                  tr_de="zum Park führen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【大：だい】【事：じ】に【至：いた】る【前：まえ】に"
+                  rom="daiji ni itaru mae ni"
+                  tr_en="before it reaches a serious stage"
+                  tr_de="bevor es ein schwerwiegendes Stadium erreicht"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【道：みち】は【公：こう】【園：えん】に【至：いた】ります。"
+                  rom="Kono michi wa kōen ni itarimasu."
+                  tr_en="This road goes to the park."
+                  tr_de="Dieser Weg führt zum Park."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
               w="【備：そな】える"
               rom="sonaeru"
               tr_en="to furnish with; to equip with; to prepare for"
@@ -62,33 +103,6 @@
                   tr_de="Lass uns schon jetzt üben, um uns auf diesen Tag vorzubereiten."
                   lvl="n3"
                   origin="Doraemon 13, p.156"
-                />
-            </word>
-            <word
-              w="【止：よ】す"
-              rom="yosu"
-              tr_en="to stop (doing); to cease; to quit"
-              tr_de="mit etw. aufhören"
-              usuallyInKana="true"
-              hint_en="v.t."
-              lvl="n3"
-              id="yosu-cease"
-            >
-                <sentence
-                  s="よせ！"
-                  rom="Yose!"
-                  tr_en="Stop it!"
-                  tr_de="Hör damit auf!"
-                  lvl="n3"
-                  origin="Doraemon 14, p.79"
-                />
-                <sentence
-                  s="およしなさいよ、バカなこと。"
-                  rom="O-yoshinasai yo, baka na koto."
-                  tr_en="Please stop it, that's nonsense."
-                  tr_de="Bitte hör auf damit, das ist doch Blödsinn."
-                  lvl="n3"
-                  origin="Doraemon 14, p.140"
                 />
             </word>
             <word
@@ -236,16 +250,23 @@
               id="utagau-doubt"
             />
             <word
-              w="【除：のぞ】く"
-              rom="nozoku"
-              tr_en="to remove sth.; to eliminate; to exclude"
-              tr_de="etw. entfernen; eliminieren; ausschliessen"
-              hint_en="v.t."
+              w="【収：おさ】める"
+              rom="osameru"
+              tr_en="to pay (fees); to bring to a close; to achieve (a result)"
+              tr_de="(Gebühren) zahlen; beenden; (ein Resultat) erreichen"
               lvl="n3"
-              category="general"
-              id="nozoku-eliminate"
+              category="work, finances"
+              id="osameru-pay"
             >
-                <keep_apart_from id="torinozoku-remove" />
+                <keep_apart_from id="eru-earn" />
+                <phrase
+                  ph="【成：せい】【功：こう】を【収：おさ】める"
+                  rom="seikō o osameru"
+                  tr_en="to come out successful; to achieve success"
+                  tr_de="erfolgreich sein; Erfolg haben"
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【防：ふせ】ぐ"

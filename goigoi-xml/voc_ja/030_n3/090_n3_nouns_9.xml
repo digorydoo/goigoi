@@ -17,36 +17,6 @@
         <section>
             <!-- unsorted -->
             <word
-              w="【政：せい】【府：ふ】"
-              rom="seifu"
-              tr_en="government; administration"
-              tr_de="Regierung; Administration"
-              lvl="n3"
-              category="government"
-              id="seifu-administration"
-              rem="appears in GENKI2 L21 vocab section"
-            >
-                <phrase
-                  ph="【政：せい】【府：ふ】【機：き】【関：かん】"
-                  rom="seifu-kikan"
-                  tr_en="government agency"
-                  tr_de="Regierungsbehörde"
-                  lvl="n3"
-                  origin="ChatGPT"
-                  rem="verified with jisho"
-                />
-                <sentence
-                  s="【政：せい】【府：ふ】は【倒：たお】された。"
-                  rom="Seifu wa taosareta."
-                  tr_en="The government was overthrown."
-                  tr_de="Die Regierung wurde umgestürzt."
-                  explanation_en="「倒された」is the passive form of「倒す」"
-                  explanation_de="「倒された」ist die passive Form von「倒す」"
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
               w="【禁：きん】【止：し】"
               rom="kinshi"
               tr_en="prohibition; inhibition; ban"
@@ -323,6 +293,7 @@
               hint_en="formal"
               hint_de="formell"
               lvl="n3"
+              category="formal"
               id="shūi-circumference"
             >
                 <!--
@@ -477,6 +448,39 @@
                   tr_en="Today, I'm on cleaning duty."
                   tr_de="Heute habe ich Reinigungsdienst."
                   hasDifferentForm="true"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【永：えい】【久：きゅう】"
+              rom="eikyū"
+              tr_en="eternity; permanence"
+              tr_de="Ewigkeit; Konstanz"
+              Langenscheidt="Ewigkeit"
+              hint_en="formal or technical"
+              hint_de="formell oder technisch"
+              lvl="n3"
+              category="time, formal"
+              id="eikyū-eternity"
+            >
+                <keep_apart_from id="eien-eternity" />
+                <phrase
+                  ph="【永：えい】【久：きゅう】【歯：し】"
+                  rom="eikyūshi"
+                  tr_en="permanent teeth"
+                  tr_de="bleibende Zähne"
+                  explanation_en="adult teeth that replace the baby teeth"
+                  explanation_de="Zähne eines Erwachsenen, welche die Babyzähne ersetzen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="the phrase is quite specific; jisho has nx"
+                />
+                <sentence
+                  s="【彼：かれ】の【名：な】【前：まえ】は【永：えい】【久：きゅう】に【残：のこ】るでしょう。"
+                  rom="Kare no namae wa eikyū ni nokoru deshō."
+                  tr_en="His name will remain permanently."
+                  tr_de="Sein Name wird permanent bleiben."
                   lvl="n3"
                   origin="ChatGPT"
                 />

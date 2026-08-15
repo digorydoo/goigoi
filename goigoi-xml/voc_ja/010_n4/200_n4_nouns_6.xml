@@ -12,7 +12,7 @@
       defaultHint_de="Nomen"
       lvl="n4"
       requiresSentences="true"
-      requiresPhrases="true"
+      requiresPhrases="false"
     >
         <section>
             <!-- unsorted -->
@@ -548,6 +548,7 @@
               rem="jisho has n3 for sōdan, n4 for sōdan suru"
             >
                 <keep_apart_from id="sōdansuru-consult" />
+                <keep_apart_from id="hakaru-consult" />
                 <phrase
                   ph="【友：とも】だちに【相：そう】【談：だん】する"
                   rom="tomodachi ni sōdan suru"

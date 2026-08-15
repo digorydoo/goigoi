@@ -11,8 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n5"
-      requiresSentences="true"
-      requiresPhrases="true"
+      requiresSentences="false"
+      requiresPhrases="false"
     >
         <section>
             <!-- traffic, transportation -->
@@ -909,6 +909,8 @@
             >
                 <see id="kaeri-return" rem="noun" />
                 <see id="kaesu-sendback" rem="v.t." />
+                <keep_apart_from id="saru-goaway" />
+                <keep_apart_from id="modoru-turnback" />
                 <phrase
                   ph="【家：いえ】に【帰：かえ】る"
                   rom="ie ni kaeru"

@@ -54,7 +54,7 @@ class PostChecks(
                     }
 
                 if (withoutManualLevel.isNotEmpty()) {
-                    word.prettyPrint(withRomaji = true, withLvl = true, withKanjiKanaSeparated = true)
+                    println(word.toPrettyString(withRomaji = true, withLvl = true, withKanjiKanaSeparated = true))
 
                     when (word.level) {
                         JLPTLevel.N5 -> n5KanjisMissing.addAll(withoutManualLevel.toList())

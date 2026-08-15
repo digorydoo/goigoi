@@ -15,6 +15,68 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【市：いち】"
+              rom="ichi"
+              tr_en="market; fair"
+              tr_de="Markt; Messe"
+              lvl="n3"
+              category="city, culture"
+              id="ichi-fair"
+              HIDDEN="true"
+              rem="ambiguous, because 市 can also be read as し, see shi-city; often used as 市場, see ichiba-market"
+            >
+                <keep_apart_from id="māketto-market" />
+                <keep_apart_from id="ichiba-market" />
+                <keep_apart_from id="shijō-market" />
+                <keep_apart_from id="shi-city" rem="same kanji" />
+            </word>
+            <word
+              w="【収：しゅう】【穫：かく】"
+              rom="shūkaku"
+              tr_en="harvest; crop; fruits of one's labours"
+              tr_de="Ernte; Früchte der Arbeit"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="countryside"
+              id="shūkaku-harvest"
+            >
+                <keep_apart_from id="sakumotsu-crops" />
+            </word>
+            <word
+              w="【状：じょう】【態：たい】"
+              rom="jōtai"
+              tr_en="state; situation; circumstances"
+              tr_de="Zustand; Situation; Umstände"
+              lvl="n3"
+              id="jōtai-state"
+            >
+                <!-- 緊張状態 - きんちょうじょうたい - under tension (ChatGPT) -->
+                <keep_apart_from id="tsugō-circumstances" />
+                <keep_apart_from id="jōkyō-situation" />
+            </word>
+            <word
+              w="【医：い】【療：りょう】"
+              rom="iryō"
+              tr_en="medical treatment"
+              tr_de="medizinische Behandlung"
+              Langenscheidt="med. Behandlung"
+              lvl="n3"
+              category="health"
+              id="iryō-healthcare"
+            >
+                <!-- implicit see-also link to iryō-clothing -->
+            </word>
+            <word
+              w="【現：げん】【象：しょう】"
+              rom="genshō"
+              tr_en="phenomenon"
+              tr_de="Phänomen"
+              lvl="n3"
+              category="science"
+              id="genshō-phenomenon"
+            />
+            <word
               w="【恐：きょう】【怖：ふ】"
               rom="kyōfu"
               tr_en="fear; dread; dismay"

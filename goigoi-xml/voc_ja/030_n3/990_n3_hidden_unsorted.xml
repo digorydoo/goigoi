@@ -38,6 +38,7 @@
               hint_en="na-adjective; noun"
               hint_de="Na-adjective; Nomen"
               lvl="n3"
+              category="formal"
               id="kimyō-strange"
               HIDDEN="true"
             >
@@ -640,6 +641,7 @@
               rom="wadai"
               tr_en="topic; subject"
               lvl="n3"
+              id="wadai-topic"
             />
             <word
               w="【説：せつ】"
@@ -1506,7 +1508,11 @@
               rom="kyūjo"
               tr_en="relief; aid; rescue"
               lvl="n3"
-            />
+              id="kyūjo-aid"
+            >
+                <keep_apart_from id="tasukeru-help" />
+                <keep_apart_from id="sukuu-rescue" />
+            </word>
             <word
               w="【援：えん】【助：じょ】"
               rom="enjo"

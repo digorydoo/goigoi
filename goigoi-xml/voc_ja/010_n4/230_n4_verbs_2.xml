@@ -11,8 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n4"
-      requiresSentences="true"
-      requiresPhrases="true"
+      requiresSentences="false"
+      requiresPhrases="false"
     >
         <section>
             <!-- eyes -->
@@ -258,6 +258,8 @@
               id="modoru-turnback"
             >
                 <see id="modosu-putback" rem="v.t." />
+                <keep_apart_from id="kaeru-return" />
+                <keep_apart_from id="saru-goaway" />
                 <phrase
                   ph="【戻：もど】ってくる"
                   rom="modotte kuru"
@@ -567,6 +569,7 @@
             >
                 <see id="tomeru-stop" rem="closely related" />
                 <keep_apart_from id="tomeru-stop" />
+                <keep_apart_from id="yosu-cease" />
                 <phrase
                   ph="タバコをやめる"
                   rom="tabako o yameru"

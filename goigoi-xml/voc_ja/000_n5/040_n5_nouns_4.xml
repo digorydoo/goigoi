@@ -12,7 +12,7 @@
       defaultHint_de="Nomen"
       lvl="n5"
       requiresSentences="true"
-      requiresPhrases="true"
+      requiresPhrases="false"
     >
         <section>
             <!-- people -->
@@ -1555,6 +1555,7 @@
               id="kaze-flu"
             >
                 <keep_apart_from id="byōki-illness" />
+                <keep_apart_from id="kakaru-suffer" rem="ambiguity in phrases" />
                 <phrase
                   ph="ひどい【風邪：かぜ】"
                   rom="hidoi kaze"

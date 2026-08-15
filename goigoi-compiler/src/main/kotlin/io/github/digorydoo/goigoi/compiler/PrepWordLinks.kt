@@ -271,7 +271,9 @@ class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
 
         hiraganaToVisibleWords[hiraganaWithMostWords]?.forEach { (w, u, _) ->
             print("   ${lpad(trunc(u.name.en, 20), 20)}: ")
-            w.prettyPrint(withRomaji = true, withLvl = true, withKanjiKanaSeparated = true, withColour = false)
+            println(
+                w.toPrettyString(withRomaji = true, withLvl = true, withKanjiKanaSeparated = true, withColour = false)
+            )
         }
 
         println("")
@@ -295,11 +297,13 @@ class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
         } else {
             print("\n   ")
 
-            mostActiveLinksWord.prettyPrint(
-                withRomaji = true,
-                withLvl = true,
-                withKanjiKanaSeparated = true,
-                withColour = false
+            println(
+                mostActiveLinksWord.toPrettyString(
+                    withRomaji = true,
+                    withLvl = true,
+                    withKanjiKanaSeparated = true,
+                    withColour = false
+                )
             )
 
             println("   Unyt ${mostActiveLinksUnyt?.nameForStdout}")

@@ -11,8 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n3"
-      requiresSentences="true"
-      requiresPhrases="true"
+      requiresSentences="false"
+      requiresPhrases="false"
     >
         <section>
             <!-- unsorted -->
@@ -1418,6 +1418,8 @@
               category="mood, not-good"
               id="akirameru-giveup"
             >
+                <keep_apart_from id="yosu-cease" />
+                <keep_apart_from id="hikaeru-abstain" />
                 <phrase
                   ph="【希：き】【望：ぼう】を【諦：あきら】める"
                   rom="kibō o akirameru"

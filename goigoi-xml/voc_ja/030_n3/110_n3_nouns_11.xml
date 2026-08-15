@@ -16,38 +16,6 @@
     >
         <section>
             <word
-              w="【銅：どう】【貨：か】"
-              rom="dōka"
-              tr_en="copper coin"
-              tr_de="Kupfermünze"
-              lvl="n3"
-              category="finances, culture"
-              id="dōka-coppercoin"
-            >
-                <!--
-                    Acc. to ChatGPT, the current 10-yen coin is made of copper, but usually small change is
-                    expressed with 小銭・こぜに (n1)
-                -->
-                <keep_apart_from id="kozeni-coins" />
-                <phrase
-                  ph="【昔：むかし】の【銅：どう】【貨：か】を【集：あつ】める"
-                  rom="mukashi no dōka o atsumeru"
-                  tr_en="to collect old copper coins"
-                  tr_de="alte Kupfermünzen sammeln"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="その【道：どう】【具：ぐ】、【銅：どう】【貨：か】【一：いち】【枚：まい】の【価：か】【値：ち】もないぞ。"
-                  rom="Sono dōgu, dōka ichi-mai no kachi mo nai zo."
-                  tr_en="This tool isn't worth a penny."
-                  tr_de="Dieses Werkzeug ist keinen Rappen wert."
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
               w="【営：えい】【業：ぎょう】"
               rom="eigyō"
               tr_en="business operations; sales promotion"
@@ -664,44 +632,6 @@
                 />
             </word>
             <word
-              w="【期：き】【待：たい】"
-              rom="kitai"
-              tr_en="expectation; anticipation; hope"
-              tr_de="Erwartung; Hoffnung"
-              lvl="n3"
-              id="kitai-expectation"
-            >
-                <!-- 無理な期待 - むりなきたい - Unrealistic expectations (ChatGPT) -->
-            </word>
-            <word
-              w="【診：しん】【察：さつ】"
-              rom="shinsatsu"
-              tr_en="medical examination"
-              tr_de="ärztliche Untersuchung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="health"
-              id="shinsatsu-medexamination"
-            >
-                <keep_apart_from id="kensa-examination" />
-                <keep_apart_from id="kenshin-healthcheckup" />
-            </word>
-            <word
-              w="【合：ごう】【計：けい】"
-              rom="gōkei"
-              tr_en="sum; total amount"
-              tr_de="Summe; Gesamtbetrag"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="finances"
-              id="gōkei-sum"
-              rem="appears in GENKI2 p.329 kanji section"
-            >
-                <keep_apart_from id="kingaku-moneyamount" />
-            </word>
-            <word
               w="【教：きょう】【授：じゅ】"
               rom="kyōju"
               tr_en="professor; teaching"
@@ -778,31 +708,6 @@
                 <keep_apart_from id="dō-copper" />
             </word>
             <word
-              w="【収：しゅう】【穫：かく】"
-              rom="shūkaku"
-              tr_en="harvest; crop; fruits of one's labours"
-              tr_de="Ernte; Früchte der Arbeit"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="countryside"
-              id="shūkaku-harvest"
-            >
-                <keep_apart_from id="sakumotsu-crops" />
-            </word>
-            <word
-              w="【状：じょう】【態：たい】"
-              rom="jōtai"
-              tr_en="state; situation; circumstances"
-              tr_de="Zustand; Situation; Umstände"
-              lvl="n3"
-              id="jōtai-state"
-            >
-                <!-- 緊張状態 - きんちょうじょうたい - under tension (ChatGPT) -->
-                <keep_apart_from id="tsugō-circumstances" />
-                <keep_apart_from id="jōkyō-situation" />
-            </word>
-            <word
               w="【布：ぬの】"
               rom="nuno"
               tr_en="cloth; textile"
@@ -842,18 +747,6 @@
                 <keep_apart_from id="bijutsukan-gallery" />
             </word>
             <word
-              w="【医：い】【療：りょう】"
-              rom="iryō"
-              tr_en="medical treatment"
-              tr_de="medizinische Behandlung"
-              Langenscheidt="med. Behandlung"
-              lvl="n3"
-              category="health"
-              id="iryō-healthcare"
-            >
-                <!-- implicit see-also link to iryō-clothing -->
-            </word>
-            <word
               w="【瓶：びん】"
               rom="bin"
               tr_en="bottle; decanter; flagon"
@@ -865,28 +758,43 @@
                 <!-- implicit see-also link to bin-flight -->
             </word>
             <word
-              w="【影：えい】【響：きょう】"
-              rom="eikyō"
-              tr_en="influence; having an effect on"
-              tr_de="Auswirklung; Beeinflussung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
+              w="【期：き】【待：たい】"
+              rom="kitai"
+              tr_en="expectation; anticipation; hope"
+              tr_de="Erwartung; Hoffnung"
               lvl="n3"
-              id="eikyō-influence"
+              id="kitai-expectation"
             >
-                <!-- phrase 影響を受ける (えいきょうをうける) - Be influenced (ChatGPT); compare to する -->
+                <!-- 無理な期待 - むりなきたい - Unrealistic expectations (ChatGPT) -->
             </word>
             <word
-              w="【帰：き】【宅：たく】"
-              rom="kitaku"
-              tr_en="returning home"
-              tr_de="Rückweg; nach Hause gehen"
+              w="【診：しん】【察：さつ】"
+              rom="shinsatsu"
+              tr_en="medical examination"
+              tr_de="ärztliche Untersuchung"
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
-              category="transportation"
-              id="kitaku-returninghome"
-            />
+              category="health"
+              id="shinsatsu-medexamination"
+            >
+                <keep_apart_from id="kensa-examination" />
+                <keep_apart_from id="kenshin-healthcheckup" />
+            </word>
+            <word
+              w="【合：ごう】【計：けい】"
+              rom="gōkei"
+              tr_en="sum; total amount"
+              tr_de="Summe; Gesamtbetrag"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="finances"
+              id="gōkei-sum"
+              rem="appears in GENKI2 p.329 kanji section"
+            >
+                <keep_apart_from id="kingaku-moneyamount" />
+            </word>
             <word
               w="【冒：ぼう】【険：けん】"
               rom="bōken"
@@ -897,17 +805,6 @@
               lvl="n3"
               category="entertainment, mood"
               id="bōken-adventure"
-            />
-            <word
-              w="【信：しん】【用：よう】"
-              rom="shinyō"
-              tr_en="confidence; trust; reputation"
-              tr_de="Zuversicht; Vertrauen; Ruf"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="relationships"
-              id="shinyō-confidence"
             />
             <word
               w="【物：ぶっ】【質：しつ】"
@@ -975,6 +872,48 @@
               id="sonkei-honour"
             />
             <word
+              w="【魅：み】【力：りょく】"
+              rom="miryoku"
+              tr_en="charm; fascination; appeal"
+              tr_de="Charme; Faszination; Reiz"
+              lvl="n3"
+              id="miryoku-charm"
+            />
+            <word
+              w="【影：えい】【響：きょう】"
+              rom="eikyō"
+              tr_en="influence; having an effect on"
+              tr_de="Auswirklung; Beeinflussung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              id="eikyō-influence"
+            >
+                <!-- phrase 影響を受ける (えいきょうをうける) - Be influenced (ChatGPT); compare to する -->
+            </word>
+            <word
+              w="【帰：き】【宅：たく】"
+              rom="kitaku"
+              tr_en="returning home"
+              tr_de="Rückweg; nach Hause gehen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="transportation"
+              id="kitaku-returninghome"
+            />
+            <word
+              w="【信：しん】【用：よう】"
+              rom="shinyō"
+              tr_en="confidence; trust; reputation"
+              tr_de="Zuversicht; Vertrauen; Ruf"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="relationships"
+              id="shinyō-confidence"
+            />
+            <word
               w="【論：ろん】【争：そう】"
               rom="ronsō"
               tr_en="controversy; debate; argument"
@@ -984,14 +923,6 @@
               lvl="n3"
               category="quarrel"
               id="ronsō-controversy"
-            />
-            <word
-              w="【魅：み】【力：りょく】"
-              rom="miryoku"
-              tr_en="charm; fascination; appeal"
-              tr_de="Charme; Faszination; Reiz"
-              lvl="n3"
-              id="miryoku-charm"
             />
             <word
               w="【通：つう】【行：こう】"
@@ -1013,15 +944,6 @@
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
               id="chūmoku-notice"
-            />
-            <word
-              w="【現：げん】【象：しょう】"
-              rom="genshō"
-              tr_en="phenomenon"
-              tr_de="Phänomen"
-              lvl="n3"
-              category="science"
-              id="genshō-phenomenon"
             />
         </section>
     </unit>

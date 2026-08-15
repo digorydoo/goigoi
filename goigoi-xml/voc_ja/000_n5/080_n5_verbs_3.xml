@@ -11,8 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n5"
-      requiresSentences="true"
-      requiresPhrases="true"
+      requiresSentences="false"
+      requiresPhrases="false"
     >
         <section>
             <!-- traffic + transportation -->
@@ -316,6 +316,7 @@
               lvl="n5"
               id="wasureru-forget"
             >
+                <keep_apart_from id="saru-goaway" rem="ambiguity in phrases" />
                 <phrase
                   ph="いつも【人：ひと】の【名：な】【前：まえ】を【忘：わす】れている"
                   rom="itsumo hito no namae o wasurete iru"
@@ -373,6 +374,7 @@
               id="hiku-pull"
             >
                 <see id="osu-push" rem="antonym" />
+                <keep_apart_from id="kakaru-suffer" rem="ambiguity in phrases" />
                 <phrase
                   ph="【風邪：かぜ】を【引：ひ】く"
                   rom="kaze o hiku"
@@ -946,6 +948,7 @@
             >
                 <keep_apart_from id="haneru-leap" />
                 <keep_apart_from id="tobihaneru-hop" />
+                <keep_apart_from id="saru-goaway" rem="amgiguity in phrases" />
                 <phrase
                   ph="【高：たか】く【飛：と】ぶ"
                   rom="takaku tobu"

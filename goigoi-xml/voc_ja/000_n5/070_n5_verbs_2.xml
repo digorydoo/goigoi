@@ -11,8 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n5"
-      requiresSentences="true"
-      requiresPhrases="true"
+      requiresSentences="false"
+      requiresPhrases="false"
     >
         <section>
             <word
@@ -970,6 +970,7 @@
               category="sports, feet"
               id="hashiru-run"
             >
+                <keep_apart_from id="saru-goaway" rem="ambiguity in phrases" />
                 <phrase
                   ph="【速：はや】く【走：はし】る"
                   rom="hayaku hashiru"

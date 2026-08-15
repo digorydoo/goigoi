@@ -11,8 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n4"
-      requiresSentences="true"
-      requiresPhrases="true"
+      requiresSentences="false"
+      requiresPhrases="false"
     >
         <section>
             <word
@@ -432,6 +432,7 @@
                 <see id="tomaru-stop" rem="v.i." />
                 <see id="yameru-stop" rem="closely related" />
                 <keep_apart_from id="yameru-stop" />
+                <keep_apart_from id="yosu-cease" />
                 <phrase
                   ph="【嘘：うそ】を【止：と】める"
                   rom="uso o tomeru"

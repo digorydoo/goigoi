@@ -19,7 +19,7 @@
       defaultHint_de="Nomen"
       lvl="n5"
       requiresSentences="true"
-      requiresPhrases="true"
+      requiresPhrases="false"
     >
         <section>
             <!-- school, university -->
@@ -104,6 +104,14 @@
                 <keep_apart_from id="kyōshi-teacher" />
                 <keep_apart_from id="kyōju-professor" />
                 <keep_apart_from id="kōshi-lecturer" />
+                <phrase
+                  ph="【私：わたし】の【先：せん】【生：せい】"
+                  rom="watashi no sensei"
+                  tr_en="my teacher"
+                  tr_de="mein Lehrer"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <phrase
                   ph="【先：せん】【生：せい】に【質：しつ】【問：もん】をする"
                   rom="sensei ni shitsumon o suru"
@@ -384,6 +392,14 @@
               id="shashin-picture"
             >
                 <phrase
+                  ph="【犬：いぬ】の【写：しゃ】【真：しん】"
+                  rom="inu no shashin"
+                  tr_en="a photo of a dog"
+                  tr_de="ein Foto von einem Hund"
+                  lvl="n5"
+                  origin="lib0"
+                />
+                <phrase
                   ph="【友：とも】【達：だち】に【写：しゃ】【真：しん】を【見：み】せる"
                   rom="tomodachi ni shashin o miseru"
                   tr_en="to show the pictures to a friend"
@@ -461,12 +477,11 @@
                 <keep_apart_from id="genkin-cash" />
                 <keep_apart_from id="kinsen-money" />
                 <phrase
-                  ph="【金：かね】をかける"
-                  rom="kane o kakeru"
+                  ph="お【金：かね】をかける"
+                  rom="o-kane o kakeru"
                   tr_en="to spend money"
                   tr_de="Geld ausgeben"
                   lvl="n5"
-                  hasDifferentForm="true"
                 />
                 <sentence
                   s="【金：かね】【子：こ】さんは いつも お【金：かね】が ない。"
@@ -723,6 +738,13 @@
               id="ie-house"
             >
                 <keep_apart_from id="uchi-house" />
+                <phrase
+                  ph="【大：おお】きい【家：いえ】"
+                  rom="ōkii ie"
+                  tr_en="a big house"
+                  tr_de="ein grosses Haus"
+                  lvl="n5"
+                />
                 <phrase
                   ph="【大：おお】きい【家：いえ】に【住：す】んでいる"
                   rom="ōkii ie ni sunde iru"
@@ -1013,6 +1035,14 @@
               category="cooking"
               id="obentō-boxedlunch"
             >
+                <phrase
+                  ph="お【弁：べん】【当：とう】を【買：か】う"
+                  rom="o-bentō o kau"
+                  tr_en="to buy a lunchbox"
+                  tr_de="eine Lunchbox kaufen"
+                  lvl="n5"
+                  origin="self"
+                />
                 <phrase
                   ph="お【弁：べん】【当：とう】を【持：も】っている"
                   rom="o-bentō o motte iru"

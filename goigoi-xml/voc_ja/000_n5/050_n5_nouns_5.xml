@@ -12,7 +12,7 @@
       defaultHint_de="Nomen"
       lvl="n5"
       requiresSentences="true"
-      requiresPhrases="true"
+      requiresPhrases="false"
     >
         <section>
             <!-- body -->
@@ -530,6 +530,7 @@
               category="travelling, geography"
               id="gaikoku-foreigncountry"
             >
+                <keep_apart_from id="kaigai-foreign" />
                 <phrase
                   ph="【外：がい】【国：こく】【語：ご】"
                   rom="gaikokugo"

@@ -11,7 +11,7 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      requiresSentences="false"
+      requiresSentences="true"
       requiresPhrases="false"
     >
         <section>
@@ -152,6 +152,7 @@
               hint_en="noun; suru verb"
               hint_de="Nomen; Suru-Verb"
               lvl="n3"
+              category="formal"
               id="kanryō-completion"
             >
                 <keep_apart_from id="kansei-completion" />
@@ -1066,29 +1067,72 @@
             <word
               w="【会：かい】【合：ごう】"
               rom="kaigō"
-              tr_en="meeting; assembly"
-              tr_de="Treffen; Versammlung"
+              tr_en="formal gathering; (political) assembly"
+              tr_de="formelle Zusammenkunft; (politische) Versammlung"
               lvl="n3"
-              category="meetings"
+              category="formal, meetings"
               id="kaigō-meeting"
             >
                 <keep_apart_from id="kaigi-meeting" />
                 <keep_apart_from id="atsumari-meeting" />
                 <keep_apart_from id="mītingu-meeting" />
                 <keep_apart_from id="kai-club" />
+                <!--
+                    ChatGPT:
+                    会議・かいぎ: more common word; business meetings, government meetings, project meetings;
+                        focuses on the discussion, making decisions
+                    会合・かいごう: formal and broader; gathering or assembly of people, e.g. political gatherings;
+                        focuses on people coming together
+                    集まり・あつまり: gathering or get-together; less formal than 会合; no implication about how formal or
+                        organized the event is; e.g. gathering of friends, family gathering, etc.
+                -->
+                <phrase
+                  ph="【会：かい】【合：ごう】に【出：しゅっ】【席：せき】する"
+                  rom="kaigō ni shusseki suru"
+                  tr_en="to attend a formal gathering"
+                  tr_de="an einer formellen Zusammenkunft teilnehmen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【国：こく】【際：さい】【会：かい】【合：ごう】を【開：ひら】いています。"
+                  rom="Kokusai-kaigō o hiraite imasu."
+                  tr_en="An international gathering is taking place."
+                  tr_de="Es findet gerade eine internationale Versammlung statt."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
             </word>
             <word
-              w="【市：いち】"
-              rom="ichi"
-              tr_en="market; fair"
-              tr_de="Markt; Messe"
+              w="【政：せい】【府：ふ】"
+              rom="seifu"
+              tr_en="government; administration"
+              tr_de="Regierung; Administration"
               lvl="n3"
-              category="city, culture"
-              id="ichi-fair"
+              category="government"
+              id="seifu-administration"
+              rem="appears in GENKI2 L21 vocab section"
             >
-                <keep_apart_from id="māketto-market" />
-                <keep_apart_from id="ichiba-market" />
-                <keep_apart_from id="shijō-market" />
+                <phrase
+                  ph="【政：せい】【府：ふ】【機：き】【関：かん】"
+                  rom="seifu-kikan"
+                  tr_en="government agency"
+                  tr_de="Regierungsbehörde"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="verified with jisho"
+                />
+                <sentence
+                  s="【政：せい】【府：ふ】は【倒：たお】された。"
+                  rom="Seifu wa taosareta."
+                  tr_en="The government was overthrown."
+                  tr_de="Die Regierung wurde umgestürzt."
+                  explanation_en="「倒された」is the passive form of「倒す」"
+                  explanation_de="「倒された」ist die passive Form von「倒す」"
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【望：のぞ】み"
@@ -1105,6 +1149,25 @@
                 <keep_apart_from id="onegai-wish" />
                 <keep_apart_from id="konomi-liking" />
                 <keep_apart_from id="chūmon-order" />
+                <phrase
+                  ph="【望：のぞ】みを【捨：す】てる"
+                  rom="nozomi o suteru"
+                  tr_en="to give up hope"
+                  tr_de="die Hoffnung aufgeben"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【成：せい】【功：こう】の【望：のぞ】みが【薄：うす】い。"
+                  rom="Seikō no nozomi ga usui."
+                  tr_en="The chances of success are slim."
+                  tr_de="Die Chancen auf Erfolg sind gering."
+                  explanation_en="Literally: The hope for success is thin."
+                  explanation_de="Wörtlich: Die Hoffnung auf Erfolg ist dünn."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
             </word>
             <word
               w="【代：だい】【金：きん】"
@@ -1116,21 +1179,70 @@
               id="daikin-bill"
             >
                 <keep_apart_from id="kanjō-bill" />
-                <!-- 代金を払う (だいきんをはらう) To pay the bill (ChatGPT) -->
+                <phrase
+                  ph="【代：だい】【金：きん】を【払：はら】う"
+                  rom="daikin o harau"
+                  tr_en="to pay the bill"
+                  tr_de="die Rechnung einzahlen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="その【靴：くつ】の【代：だい】【金：きん】を【払：はら】いましたか。"
+                  rom="Sono kutsu no daikin o haraimashita ka?"
+                  tr_en="Did you pay the bill for those shoes?"
+                  tr_de="Haben Sie die Rechnung für diese Schuhe eingezahlt?"
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【合：あい】【図：ず】"
               rom="aizu"
               tr_en="sign; signal; cue"
               tr_de="Zeichen; Signal"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
               category="technical"
               id="aizu-sign"
             >
-                <!-- 始まりの合図 (はじまりのあいず) signal to start; starting signal (ChatGPT) -->
                 <keep_apart_from id="shomei-signature" />
                 <keep_apart_from id="sain-sign" />
                 <keep_apart_from id="shingō-signal" />
+                <phrase
+                  ph="【手：て】で【合：あい】【図：ず】する"
+                  rom="te de aizu suru"
+                  tr_en="to signal with one's hands"
+                  tr_de="Handzeichen geben"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【目：め】で【合：あい】【図：ず】する"
+                  rom="me de aizu suru"
+                  tr_en="to signal with one's eyes"
+                  tr_de="mit den Augen signalisieren"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【合：あい】【図：ず】の【笛：ふえ】"
+                  rom="aizu no fue"
+                  tr_en="(starting) signal whistle"
+                  tr_de="(Start-) Signal-Pfeife"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】に【近：ちか】づくように【合：あい】【図：ず】した。"
+                  rom="Kanojo ni chikadzuku yō ni aizu shita."
+                  tr_en="I signalled for her to come closer."
+                  tr_de="Ich gab ihr Zeichen, näher zu kommen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; lib0 omits に after よう; ChatGPT agrees that it's more common to use に"
+                />
             </word>
             <word
               w="【信：しん】【頼：らい】"
@@ -1141,7 +1253,14 @@
               category="relationships"
               id="shinrai-trust"
             >
-                <!-- 信頼できる人 shinrai dekiru hito - a trustworthy person (ChatGPT) -->
+                <phrase
+                  ph="【信：しん】【頼：らい】できる【男：おとこ】"
+                  rom="shinrai dekiru otoko"
+                  tr_en="a guy whom one can trust"
+                  tr_de="ein Typ, dem man vertrauen kann"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【友：とも】だちの【信：しん】【頼：らい】を【決：けっ】して【裏：うら】【切：ぎ】るな。"
                   rom="Tomodachi no shinrai o kesshite uragiru na."
@@ -1161,12 +1280,38 @@
               lvl="n3"
               id="kurō-trouble"
             >
-                <sentence
-                  s="ご【苦：く】【労：ろう】さま！"
-                  rom="Go-kurō sama!"
-                  tr_en="Thank you for your hard work!"
-                  tr_de="Danke für Ihre harte Arbeit!"
+                <phrase
+                  ph="【空：くう】【港：こう】に【行：い】くのに【苦：く】【労：ろう】する"
+                  rom="kūkō ni iku no ni kurō suru"
+                  tr_en="to have difficulties getting to the airport"
+                  tr_de="Schwierigkeiten haben, zum Flughafen zu kommen"
                   lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【駐：ちゅう】【車：しゃ】【場：じょう】を【見：み】つけるのに【苦：く】【労：ろう】する"
+                  rom="chūshajō o mitsukeru no ni kurō suru"
+                  tr_en="to have difficulties finding a parking space"
+                  tr_de="Schwierigkeiten haben, einen Parkplatz zu finden"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="ご【苦：く】【労：ろう】さまでした。"
+                  rom="Go-kurō sama deshita."
+                  tr_en="Thank you for your hard work."
+                  tr_de="Danke für Ihre harte Arbeit."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【苦：く】【労：ろう】してこの【歌：うた】を【書：か】いた。"
+                  rom="Kurō shite kono uta o kaita."
+                  tr_en="I took the trouble writing this song."
+                  tr_de="Ich habe mir die Mühe gemacht, diesen Song zu schreiben."
+                  lvl="n3"
+                  origin="lib0 modified"
                 />
             </word>
             <word
@@ -1176,6 +1321,7 @@
               tr_de="Import"
               hint_en="of goods"
               hint_de="von Gütern"
+              studyInContext="preferred"
               lvl="n3"
               category="business, government"
               id="yunyū-import"
@@ -1189,6 +1335,41 @@
                   lvl="n3"
                   origin="lib0"
                 />
+                <phrase
+                  ph="【輸：ゆ】【入：にゅう】【車：しゃ】"
+                  rom="yunyū-sha"
+                  tr_en="imported cars"
+                  tr_de="importierte Autos"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <phrase
+                  ph="【輸：ゆ】【入：にゅう】【品：ひん】"
+                  rom="yunyū-hin"
+                  tr_en="imported goods"
+                  tr_de="importierte Güter"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="その【店：みせ】は【輸：ゆ】【入：にゅう】【品：ひん】を【売：う】っています。"
+                  rom="Sono mise wa yunyū-hin o utte imasu."
+                  tr_en="They sell imported goods at that shop."
+                  tr_de="In diesem Laden werden importierte Güter verkauft."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="これはドイツから【輸：ゆ】【入：にゅう】した【車：くるま】です。"
+                  rom="Kore wa Doitsu kara yunyū shita kuruma desu."
+                  tr_en="This is a car imported from Germany."
+                  tr_de="Dies ist ein aus Deutschland importiertes Auto."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for Doitsu"
+                />
             </word>
             <word
               w="【輸：ゆ】【出：しゅつ】"
@@ -1197,17 +1378,64 @@
               tr_de="Export"
               hint_en="of goods"
               hint_de="von Gütern"
+              studyInContext="preferred"
               lvl="n3"
               category="business, government"
               id="yushutsu-export"
             >
                 <keep_together id="yunyū-import" />
+                <!--
+                    輸出を【活：かっ】【性：せい】【化：か】させる: den Export ankurbeln (DeepL) nx
+                -->
+                <phrase
+                  ph="【輸：ゆ】【出：しゅつ】【産：さん】【業：ぎょう】"
+                  rom="yushutsu-sangyō"
+                  tr_en="export industry"
+                  tr_de="Exportindustrie"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【輸：ゆ】【出：しゅつ】【市：し】【場：じょう】"
+                  rom="yushutsu-shijō"
+                  tr_en="export market"
+                  tr_de="Exportmarkt"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【輸：ゆ】【出：しゅつ】【品：ひん】"
+                  rom="yushutsu-hin"
+                  tr_en="exported goods"
+                  tr_de="exportierte Güter"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【武：ぶ】【器：き】の【輸：ゆ】【出：しゅつ】が【禁：きん】【止：し】された。"
+                  rom="Buki no yushutsu ga kinshi sareta."
+                  tr_en="The export of weapons was prohibited."
+                  tr_de="Der Export von Waffen ist verboten worden."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【日：にっ】【本：ぽん】は【多：おお】くの【自：じ】【動：どう】【車：しゃ】を【外：がい】【国：こく】へ【輸：ゆ】【出：しゅつ】している。"
+                  rom="Nippon wa ōku no jidōsha o gaikoku e yushutsu shite iru."
+                  tr_en="Japan exports a great number of cars to foreign countries."
+                  tr_de="Japan exportiert viele Autos in andere Länder."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【便：びん】"
               rom="bin"
-              tr_en="flight"
-              tr_de="Flug"
+              tr_en="flight (service)"
+              tr_de="Flug (-dienst)"
+              hint_en="formal"
+              hint_de="formell"
               lvl="n3"
               category="transportation"
               id="bin-flight"
@@ -1218,6 +1446,34 @@
                     便・びん: a certain flight you take
                     空の旅・そらのたび: air travel; journey through the sky
                 -->
+                <!--
+                    その便は【欠：けっ】【航：こう】となりました - That flight was cancelled. (DeepL) nx
+                -->
+                <phrase
+                  ph="【午：ご】【前：ぜん】の【便：びん】"
+                  rom="gozen no bin"
+                  tr_en="morning flight"
+                  tr_de="Vormittagsflug"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【第：だい】714【便：びん】"
+                  rom="dai 714 bin"
+                  tr_en="flight 714"
+                  tr_de="Flug 714"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【東：とう】【京：きょう】【行：い】きの【便：びん】"
+                  rom="Tōkyō-iki no bin"
+                  tr_en="the flight (service) to Tokyo"
+                  tr_de="der Flug (-dienst) nach Tokyo"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
                 <sentence
                   s="【次：つぎ】の【便：びん】に【乗：の】ります。"
                   rom="Tsugi no bin ni norimasu."
@@ -1241,6 +1497,30 @@
                 <see id="nigate-notlike" rem="antonym" />
                 <keep_apart_from id="jiman-boast" />
                 <keep_apart_from id="jōtō-superior" />
+                <phrase
+                  ph="【得：とく】【意：い】な【料：りょう】【理：り】"
+                  rom="tokui na ryōri"
+                  tr_en="the dishes I'm best at cooking"
+                  tr_de="Gerichte, die ich gut kochen kann"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <!-- slightly unclear without context
+                  ph="【得：とく】【意：い】になる"
+                  rom="tokui ni naru"
+                  tr_en="to become pleased with oneself"
+                  tr_de="mit sich selbst zufrieden sein"
+                  lvl="n3"
+                  origin="lib0"
+                -->
+                <sentence
+                  s="【数：すう】【学：がく】が【得：とく】【意：い】です。"
+                  rom="Sūgaku ga tokui desu."
+                  tr_en="Math is my strong suit (my triumph)."
+                  tr_de="Mathe ist meine Stärke (mein Triumph)."
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【誰：だれ】にも【得：とく】【意：い】な【時：じ】【代：だい】はある。"
                   rom="Dare ni mo tokui na jidai wa aru."
@@ -1255,12 +1535,33 @@
               w="【毛：もう】【布：ふ】"
               rom="mōfu"
               tr_en="blanket; bedding cloth"
-              tr_de="Bettdecke; Leintuch"
+              tr_de="Bettdecke; Wolldecke"
               lvl="n3"
               category="home"
               id="mōfu-blanket"
             >
                 <keep_apart_from id="yagu-bedding" />
+                <!--
+                    Note: 毛布 = blanket != Leintuch; Leintuch = (bed) sheet = シーツ (n2)
+                -->
+                <phrase
+                  ph="【着：き】る【毛：もう】【布：ふ】"
+                  rom="kiru mōfu"
+                  tr_en="a wearable blanket"
+                  tr_de="eine Kuscheldecke"
+                  explanation_en="blanket made into a robe-like garment"
+                  explanation_de="Decke, die zu einem mantelartigen Kleidungsstück verarbeitet wurde"
+                  lvl="n3"
+                  rem="found on the web; verified with ChatGPT"
+                />
+                <sentence
+                  s="【毛：もう】【布：ふ】を【持：も】ってきてください。"
+                  rom="Mōfu o motte kite kudasai."
+                  tr_en="Please bring me a blanket."
+                  tr_de="Bitte bring mir eine Bettdecke."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【後：こう】【輩：はい】"
@@ -1273,6 +1574,22 @@
               rem="appears in GENKI2 L22 vocab section; jisho has n2"
             >
                 <see id="senpai-superior" rem="antonym" />
+                <phrase
+                  ph="【後：こう】【輩：はい】にアドバイスする"
+                  rom="kōhai ni adobaisu suru"
+                  tr_en="to give advice to the younger students"
+                  tr_de="den jüngeren Schülern mit Rat beistehen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【彼：かれ】は【私：わたし】より【３：さん】【年：ねん】【後：こう】【輩：はい】です。"
+                  rom="Kare wa watashi yori san-nen kōhai desu."
+                  tr_en="He is my junior by three years."
+                  tr_de="Er ist drei Jahrgänge jünger als ich."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【蚊：か】"
@@ -1283,7 +1600,24 @@
               category="insect"
               id="ka-mosquito"
               rem="appears in GENKI2 L21 vocab section; jisho has n2"
-            />
+            >
+                <phrase
+                  ph="【血：ち】を【吸：す】う【蚊：か】"
+                  rom="chi o suu ka"
+                  tr_en="a blood-sucking mosquito"
+                  tr_de="eine blutsaugende Mücke"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
+                <sentence
+                  s="ひどく【蚊：か】に【刺：さ】されてしまった。"
+                  rom="Hidoku ka ni sasarete shimatta."
+                  tr_en="I ended up being badly bitten by mosquitoes."
+                  tr_de="Ich wurde furchtbar von Mücken gestochen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【犯：はん】【人：にん】"
               rom="hannin"
@@ -1293,7 +1627,30 @@
               category="crime"
               id="hannin-criminal"
               rem="appears in GENKI2 L21 vocab section"
-            />
+            >
+                <!--
+                    逃亡犯人・とうぼうはんにん - fugitive criminal (n1) lib0
+                    脱走犯人・だっそうはんにん - escaped criminal (nx) lib0
+                    脱獄した犯人・たつごくしたはんにん - escaped criminal (nx) lib0
+                -->
+                <phrase
+                  ph="【乗：の】っ【取：と】りをした【犯：はん】【人：にん】"
+                  rom="nottori o shita hannin"
+                  tr_en="the criminal who hijacked the aircraft"
+                  tr_de="der Täter, der die Maschine gekapert hat"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="nottori just means something was taken over, not necessarily an aircraft"
+                />
+                <sentence
+                  s="【犯：はん】【人：にん】は【足：あし】【跡：あと】を【残：のこ】していた。"
+                  rom="Hannin wa ashiato o nokoshite ita."
+                  tr_en="The culprit left footprints."
+                  tr_de="Der Täter hat Fussspuren hinterlassen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【扇：せん】【子：す】"
               rom="sensu"
@@ -1304,7 +1661,33 @@
               category="fashion, culture"
               id="sensu-fan"
               rem="appears in GENKI2 L20 vocab section; jisho has n2"
-            />
+            >
+                <phrase
+                  ph="【昔：むかし】の【扇：せん】【子：す】"
+                  rom="mukashi no sensu"
+                  tr_en="a folding fan from olden times"
+                  tr_de="ein Handfächer von Anno dazumals"
+                  lvl="n3"
+                  origin="self"
+                />
+                <phrase
+                  ph="【飾：かざ】り【扇：せん】【子：す】"
+                  rom="kazari sensu"
+                  tr_en="decorative folding fan"
+                  tr_de="dekorativer Fächer"
+                  lvl="n3"
+                  rem="found on the web; on a stand or pinned to the wall; jisho has n2 for kazari, but n4 for kazaru"
+                />
+                <sentence
+                  s="センスのいい【女：じょ】【性：せい】はおしゃれな【扇：せん】【子：す】を【選：えら】ぶ。"
+                  rom="Sensu no ii josei wa o-share na sensu o erabu."
+                  tr_en="A woman with good taste will choose a stylish folding fan."
+                  tr_de="Eine Frau mit gutem Geschmack wird sich einen stylischen Handfächer aussuchen."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT; jisho has n1 for sensu, n2 for o-share"
+                />
+            </word>
             <word
               w="【返：へん】【品：ぴん】"
               rom="henpin"
@@ -1316,12 +1699,35 @@
               category="shopping, not-good"
               id="henpin-returning"
               rem="appears in GENKI2 L20 vocab section; jisho has nx"
-            />
+            >
+                <!--
+                    返品お断り・へんぴんおことわり: no merchandise can be returned (nx) lib0
+                -->
+                <phrase
+                  ph="【返：へん】【品：ぴん】した【品：しな】【物：もの】"
+                  rom="henpin shita shinamono"
+                  tr_en="a returned item"
+                  tr_de="ein zurückgebrachter Artikel"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【箱：はこ】を【開：あ】けちゃったけど、まだ【返：へん】【品：ぴん】できるかな。"
+                  rom="Hako o akechatta kedo, mada henpin dekiru ka na."
+                  tr_en="I opened the package, but I wonder if I can still return it."
+                  tr_de="Ich habe die Schachtel aufgemacht, aber ich frage mich, ob ich es noch zurückgeben kann."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
             <word
               w="【通：つう】【信：しん】"
               rom="tsūshin"
               tr_en="correspondence; communication"
               tr_de="Korrespondenz; Kommunikation"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
               lvl="n3"
               category="business, talking"
               id="tsūshin-correspondence"
@@ -1329,6 +1735,34 @@
                 <!--
                   appears in Doraemon 0, p.25 as 通信簿・つうしんぼ (nx): report card
                 -->
+                <!--
+                  無線通信・むせんつうしん: wireless communication (n1) lib0
+                -->
+                <phrase
+                  ph="【通：つう】【信：しん】【員：いん】"
+                  rom="tsūshin'in"
+                  tr_en="correspondent; reporter"
+                  tr_de="Korrespondent; Reporter"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx, but n4 for ten'in"
+                />
+                <phrase
+                  ph="【通：つう】【信：しん】【衛：えい】【星：せい】"
+                  rom="tsūshin-eisei"
+                  tr_en="communications satellite"
+                  tr_de="Kommunikationssatellit"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【彼：かれ】は【海：かい】【外：がい】【通：つう】【信：しん】【員：いん】です。"
+                  rom="Kare wa kaigai tsūshin'in desu."
+                  tr_en="He is an overseas correspondent."
+                  tr_de="Er ist ein Auslandkorrespondent."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【宝：ほう】【石：せき】"
@@ -1339,6 +1773,25 @@
               id="hōseki-gem"
             >
                 <see id="takara-treasure" rem="closely related" />
+                <!--
+                    偽物の宝石・にせもののほうせき: fake jewels (n1) (ChatGPT)
+                -->
+                <phrase
+                  ph="【小：ちい】さい【宝：ほう】【石：せき】がついている【指：ゆび】【輪：わ】"
+                  rom="chīsai hōseki ga tsuite iru yubiwa"
+                  tr_en="a ring with a tiny gem in it"
+                  tr_de="ein Ring mit einem kleinen Edelstein"
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="その【宝：ほう】【石：せき】は【夜：よる】の【間：あいだ】に【盗：ぬす】まれた。"
+                  rom="Sono hōseki wa yoru no aida ni nusumareta."
+                  tr_en="The jewel was stolen during the night."
+                  tr_de="Der Edelstein wurde während der Nacht gestohlen."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【食：しょく】【卓：たく】"
@@ -1348,7 +1801,25 @@
               lvl="n3"
               category="home"
               id="shokutaku-diningtbl"
-            />
+            >
+                <keep_apart_from id="tēburu-table" />
+                <phrase
+                  ph="【食：しょく】【卓：たく】の【上：うえ】にある【果：くだ】【物：もの】"
+                  rom="shokutaku no ue ni aru kudamono"
+                  tr_en="the fruits on the dining table"
+                  tr_de="die Früchte auf dem Esstisch"
+                  lvl="n3"
+                  origin="self"
+                />
+                <sentence
+                  s="【母：はは】は【食：しょく】【卓：たく】に【食：しょく】【事：じ】の【用：よう】【意：い】をした。"
+                  rom="Haha wa shokutaku ni shokuji no yōi o shita."
+                  tr_en="Mom spread the table."
+                  tr_de="Mutter deckte den Tisch."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【缶：かん】"
               rom="kan"
@@ -1357,7 +1828,35 @@
               lvl="n3"
               category="cooking"
               id="kan-tin"
-            />
+            >
+                <keep_apart_from id="kandzume-cannedfood" />
+                <keep_apart_from id="yakan-kettle" />
+                <phrase
+                  ph="【缶：かん】【切：き】り"
+                  rom="kan-kiri"
+                  tr_en="can opener"
+                  tr_de="Dosenöffner"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                  rem="jisho has nx"
+                />
+                <sentence
+                  s="【道：みち】に【缶：かん】を【捨：す】てるな。"
+                  rom="Michi ni kan o suteru na."
+                  tr_en="Don't throw away cans on the street!"
+                  tr_de="Wirf die Dosen nicht auf die Strasse!"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="その【缶：かん】は【灰：はい】【皿：ざら】の【代：か】わりになる。"
+                  rom="Sono kan wa haizara no kawari ni naru."
+                  tr_en="The can will do for an ashtray."
+                  tr_de="Diese Dose passt als Ersatz für einen Aschenbecher."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
             <word
               w="【帯：おび】"
               rom="obi"
@@ -1366,7 +1865,38 @@
               lvl="n3"
               category="culture, top-words"
               id="obi-belt"
-            />
+            >
+                <see id="obiru-wear" rem="closely related" />
+                <!--
+                    地帯・ちたい (n2) geographical belt (region)
+                -->
+                <phrase
+                  ph="【着：き】【物：もの】と【帯：おび】"
+                  rom="kimono to obi"
+                  tr_en="kimono and kimono sash"
+                  tr_de="Kimono und Kimono-Gürtel"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【帯：おび】を【結：むす】ぶ"
+                  rom="obi o musubu"
+                  tr_en="to tie a kimono sash"
+                  tr_de="einen Kimono-Gürtel binden"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with DeepL"
+                />
+                <sentence
+                  s="【帯：おび】の【結：むす】び【方：かた】を【教：おし】えてくれますか。"
+                  rom="Obi no musubi-kata o oshiete kuremasu ka?"
+                  tr_en="Could you teach me how to tie a kimono sash?"
+                  tr_de="Könnten Sie mir zeigen, wie man einen Kimono-Gürtel bindet?"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+            </word>
         </section>
     </unit>
 </vocabulary>

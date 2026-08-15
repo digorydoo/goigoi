@@ -117,7 +117,7 @@ class Controller(
             qa.word.level == JLPTLevel.N5 -> false // N5 learners have rōmaji instead
             qa.kind == QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> false // answers would get too ambiguous
             stats.getWordTotalSeenCount(qa.word) < 5 -> false // FIXED_KEYS is easier
-            stats.getWordTotalRating(qa.word) < 0.75f -> false
+            stats.getWordTotalRating(qa.word) < 0.77f -> false
             else -> true
         }
 
