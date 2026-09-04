@@ -9,8 +9,8 @@
       hasRomaji="true"
       hasFurigana="true"
       lvl="n5, n4"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section
           name_en="The twelve months"
@@ -734,28 +734,31 @@
                   rom="ichi-ji"
                   tr_en="one o'clock"
                   tr_de="ein Uhr"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="GENKI1 p.57"
-                />
+                >
+                    <ask w="【時：じ】" />
+                </phrase>
                 <phrase
                   ph="【一：いち】【時：じ】【間：かん】"
                   rom="ichi-ji-kan"
                   tr_en="(span of) one hour"
                   tr_de="eine Stunde (Dauer)"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="lib0"
-                />
+                >
+                    <ask w="【時：じ】" />
+                </phrase>
                 <sentence
                   s="【今：いま】、【一：いち】【時：じ】【半：はん】です。"
                   rom="Ima, ichi-ji-han desu."
                   tr_en="It's half past one now."
                   tr_de="Es ist jetzt halb zwei."
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="GENKI1 p.49"
-                />
+                >
+                    <ask w="【時：じ】" />
+                </sentence>
                 <!--
                   s="【今：いま】、【三：さん】【時：じ】です。"
                   rom="Ima, san-ji desu."
@@ -769,10 +772,11 @@
                   rom="Ima, yo-ji desu."
                   tr_en="It's four o'clock now."
                   tr_de="Es ist jetzt vier Uhr."
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="500mon q7"
-                />
+                >
+                    <ask w="【時：じ】" />
+                </sentence>
             </word>
             <word
               w="【１：いち】【時：じ】"
@@ -853,10 +857,11 @@
                   rom="ippun"
                   tr_en="one minute"
                   tr_de="eine Minute"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="GENKI2 p.386"
-                />
+                >
+                    <ask w="【分：ぷん】" />
+                </phrase>
                 <phrase
                   ph="【二：に】【分：ふん】"
                   rom="ni-fun"
@@ -870,19 +875,21 @@
                   rom="san-pun"
                   tr_en="three minutes"
                   tr_de="drei Minuten"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="GENKI2 p.386"
-                />
+                >
+                    <ask w="【分：ぷん】" />
+                </phrase>
                 <phrase
                   ph="【四：よん】【分：ぷん】"
                   rom="yon-pun"
                   tr_en="four minutes"
                   tr_de="vier Minuten"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="GENKI2 p.386"
-                />
+                >
+                    <ask w="【分：ぷん】" />
+                </phrase>
                 <!--
                   ph="【五：ご】【分：ふん】"
                   rom="go-fun"
@@ -896,10 +903,11 @@
                   rom="roppun"
                   tr_en="six minutes"
                   tr_de="sechs Minuten"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="GENKI2 p.386"
-                />
+                >
+                    <ask w="【分：ぷん】" />
+                </phrase>
                 <!--
                   ph="【七：なな】【分：ふん】"
                   rom="nana-fun"
@@ -913,10 +921,11 @@
                   rom="happun"
                   tr_en="eight minutes"
                   tr_de="acht Minuten"
-                  hasDifferentForm="true"
                   lvl="n5"
                   rem="hachi-fun is also possible; see GENKI2 p.386"
-                />
+                >
+                    <ask w="【分：ぷん】" />
+                </phrase>
                 <!--
                   ph="【九：きゅう】【分：ふん】"
                   rom="kyū-fun"
@@ -930,20 +939,22 @@
                   rom="juppun"
                   tr_en="ten minutes"
                   tr_de="zehn Minuten"
-                  hasDifferentForm="true"
                   lvl="n5"
                   rem="jippun is also possible; see GENKI2 p.386"
-                />
+                >
+                    <ask w="【分：ぷん】" />
+                </phrase>
                 <sentence
                   s="【車：くるま】で 【何：なん】【分：ぷん】かかりますか。"
                   rom="Kuruma de nanpun kakarimasu ka?"
                   tr_en="How many minutes does it take by car?"
                   tr_de="Wieviele Minuten geht es mit dem Auto?"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="Langenscheidt"
                   rem="see also GENKI2 p.386"
-                />
+                >
+                    <ask w="【分：ぷん】" />
+                </sentence>
             </word>
             <word
               w="【６：ろっ】【分：ぷん】"

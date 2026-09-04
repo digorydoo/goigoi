@@ -32,6 +32,7 @@
     <string name="hint_when_show_translation_ask_kanji_among_similar">Selezionate il kanji corrispondente alla traduzione.</string>
     <string name="hint_when_show_translation_ask_kanji_among_words">Scrivete la parola corrispondente in kanji.</string>
     <string name="hint_when_show_s_or_ph_ask_kanji">Selezionate la parola da inserire nello spazio vuoto.</string>
+    <string name="hint_when_show_s_or_ph_ask_kana">Scrivetelo la parola da inserire nello spazio vuoto.</string>
     <string name="hint_when_new_word">Dai un\'occhiata a questa nuova parola.</string>
     <string name="hint_when_asking_nothing">Pronunciatelo ad alta voce.</string>
     <string name="hint_when_show_ph_translation_ask_ph_kana">Scrivete questa frase in kana.</string>
@@ -50,8 +51,10 @@
 
     <!-- UnitCtxDialogFragment -->
     <string name="item_reset_unyt_progress">Azzeramento dei progressi</string>
-    <string name="confirm_reset_unyt_progress_msg">Le statistiche di avanzamento della lezione selezionata e della ${N} parole contenenti saranno azzerate</string>
+    <string name="confirm_reset_unyt_progress_msg">Le statistiche di avanzamento della lezione selezionata e della ${N} parole contenenti saranno azzerate.</string>
     <string name="confirm_reset_unyt_progress_ok">AZZERARE</string>
+    <string name="confirm_set_super_prog_idx_to_unyt_msg">L\'indice super progressivo verrà impostato all\'inizio di questa lezione.</string>
+    <string name="confirm_set_super_prog_idx_to_unyt_ok">IMPOSTARE</string>
 
     <!-- UnitsOverviewActivity -->
     <string name="n_words">${N} parole</string>
@@ -121,9 +124,6 @@ selezionata saranno azzerate</string>
     <string name="got_it">CAPITO</string>
 
     <!-- HintDialogManager -->
-    <string name="rate_us_message">Volete dirci come potremmo migliorare questa applicazione?</string>
-    <string name="rate_us_btn">VALUTATECI</string>
-    <string name="not_now_btn">NON ORA</string>
     <string name="first_time_extkb_shown">Questa è la tastiera kana estesa. Trascinate i pulsanti a sinistra, a destra, in alto o in basso per visualizzare i caratteri aggiuntivi.</string>
     <string name="first_time_extkb_small_kana">I kana piccoli possono essere scritti scrivendo prima il kana in dimensioni normali e poi rimpicciolendolo tirando il tasto trasforma verso il basso.</string>
     <string name="first_time_extkb_dakuten_handakuten">Dakuten come ば e handakuten come ぱ possono essere scritti scrivendo prima il kana は e poi tirando il tasto di trasformazione a sinistra o a destra.</string>

@@ -9,8 +9,8 @@
       hasRomaji="true"
       hasFurigana="true"
       lvl="n5"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- direction words -->
@@ -327,18 +327,20 @@
                   tr_en="it takes many years"
                   tr_de="es braucht viele Jahre"
                   lvl="n5"
-                  hasDifferentForm="true"
                   origin="lib0"
-                />
+                >
+                    <ask w="【何：なん】" />
+                </phrase>
                 <sentence
                   s="【何：なん】【年：ねん】【生：せい】ですか。"
                   rom="Nan-nen-sei desu ka?"
                   tr_en="What grade are you in?"
                   tr_de="In welcher Klasse bist du?"
                   lvl="n5"
-                  hasDifferentForm="true"
                   origin="lib0"
-                />
+                >
+                    <ask w="【何：なん】" />
+                </sentence>
             </word>
             <word
               w="【何：なに】も"

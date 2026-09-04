@@ -1,9 +1,8 @@
 package io.github.digorydoo.goigoi.activity.prog_study.keyboard
 
 import android.content.res.ColorStateList
-import android.util.TypedValue
 import android.view.View
-import ch.digorydoo.kutils.cjk.isSmallKana
+import ch.digorydoo.kutils.cjk.isKana
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import io.github.digorydoo.goigoi.R
@@ -22,6 +21,7 @@ class Keyboard(
 ) {
     enum class Mode { JUST_REVEAL, FIXED_KEYS, HIRAGANA, KATAKANA }
     enum class KeyLensPart { CENTRE, LEFT, ABOVE, RIGHT, BELOW }
+    enum class ChipSize { XXLARGE, XLARGE, LARGE, NORMAL }
 
     interface TextAndCaret {
         var text: CharSequence
@@ -29,9 +29,7 @@ class Keyboard(
     }
 
     abstract class Delegate {
-        abstract val chipFontSize: Float
-        abstract val chipFontSizeForSmallKana: Float
-        abstract fun createNewChip(iconResId: Int?, contentDescResId: Int?): Chip
+        abstract fun createNewChip(chipText: String, iconResId: Int?, contentDescResId: Int?, size: ChipSize): Chip
         abstract fun createNewChipGroup(): ChipGroup
         abstract fun createNewButton(strResId: Int): View
         abstract fun createNewKeyLensDrawable(keyDef: KeyDef): KeyLensDrawable
@@ -57,56 +55,74 @@ class Keyboard(
         bindings.keyboardView.removeAllViews()
 
         when (mode) {
-            JUST_REVEAL -> {
-                addChipGroup().let {
-                    addRevealBtn(it)
-                }
+            JUST_REVEAL -> addChipsForJustReveal()
+            FIXED_KEYS -> addChipsForFixedChoices(keys ?: emptyList())
+            else -> addChipsForGeneralKeyboard()
+        }
+    }
+
+    private fun addChipsForJustReveal() {
+        addChipGroup().let {
+            addRevealBtn(it)
+        }
+    }
+
+    private fun addChipsForFixedChoices(choices: List<String>) {
+        val maxLen = if (choices.isEmpty()) 0 else choices.maxOf { it.length }
+
+        val size = when {
+            choices.size > 4 -> ChipSize.NORMAL
+            choices.all { it.isKana() } -> ChipSize.NORMAL
+            maxLen == 1 -> ChipSize.XXLARGE
+            maxLen == 2 -> ChipSize.XLARGE
+            maxLen == 3 -> ChipSize.LARGE
+            else -> ChipSize.NORMAL
+        }
+
+        addChipGroup().let { group ->
+            choices.forEach { addKeyChip(group, it, size) }
+        }
+
+        addChipGroup().let {
+            addActionChip(it, R.drawable.ic_backspace_24dp, R.string.backspace_key) {
+                backspaceBtnClicked()
             }
-            FIXED_KEYS -> {
-                addChipGroup().let { group ->
-                    keys?.forEach { addKeyChip(group, it) }
-                }
-                addChipGroup().let {
-                    addActionChip(it, R.drawable.ic_backspace_24dp, R.string.backspace_key) {
-                        backspaceBtnClicked()
-                    }
-                    addActionChip(it, R.drawable.ic_enter_white_24dp, R.string.enter_key, true) {
-                        delegate.okBtnClicked()
-                    }
-                }
+            addActionChip(it, R.drawable.ic_enter_white_24dp, R.string.enter_key, true) {
+                delegate.okBtnClicked()
             }
-            else -> {
-                addChipGroup().let {
-                    addInvisibleChip(it)
-                    addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaVowelKey else KeyDef.katakanaVowelKey)
-                    addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaKxKey else KeyDef.katakanaKxKey)
-                    addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaSxKey else KeyDef.katakanaSxKey)
-                    addActionChip(it, R.drawable.ic_backspace_24dp, R.string.backspace_key) {
-                        backspaceBtnClicked()
-                    }
-                }
+        }
+    }
 
-                addChipGroup().let {
-                    addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaTxKey else KeyDef.katakanaTxKey)
-                    addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaNxKey else KeyDef.katakanaNxKey)
-                    addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaHxKey else KeyDef.katakanaHxKey)
-                }
+    private fun addChipsForGeneralKeyboard() {
+        addChipGroup().let {
+            addInvisibleChip(it)
+            addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaVowelKey else KeyDef.katakanaVowelKey)
+            addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaKxKey else KeyDef.katakanaKxKey)
+            addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaSxKey else KeyDef.katakanaSxKey)
+            addActionChip(it, R.drawable.ic_backspace_24dp, R.string.backspace_key) {
+                backspaceBtnClicked()
+            }
+        }
 
-                addChipGroup().let {
-                    addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaMxKey else KeyDef.katakanaMxKey)
-                    addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaYxKey else KeyDef.katakanaYxKey)
-                    addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaRxKey else KeyDef.katakanaRxKey)
-                }
+        addChipGroup().let {
+            addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaTxKey else KeyDef.katakanaTxKey)
+            addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaNxKey else KeyDef.katakanaNxKey)
+            addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaHxKey else KeyDef.katakanaHxKey)
+        }
 
-                addChipGroup().let {
-                    addInvisibleChip(it)
-                    addKeyChip(it, KeyDef.transformsKey)
-                    addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaWxKey else KeyDef.katakanaWxKey)
-                    addKeyChip(it, KeyDef.punctuationsKey)
-                    addActionChip(it, R.drawable.ic_enter_white_24dp, R.string.enter_key, true) {
-                        delegate.okBtnClicked()
-                    }
-                }
+        addChipGroup().let {
+            addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaMxKey else KeyDef.katakanaMxKey)
+            addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaYxKey else KeyDef.katakanaYxKey)
+            addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaRxKey else KeyDef.katakanaRxKey)
+        }
+
+        addChipGroup().let {
+            addInvisibleChip(it)
+            addKeyChip(it, KeyDef.transformsKey)
+            addKeyChip(it, if (mode == HIRAGANA) KeyDef.hiraganaWxKey else KeyDef.katakanaWxKey)
+            addKeyChip(it, KeyDef.punctuationsKey)
+            addActionChip(it, R.drawable.ic_enter_white_24dp, R.string.enter_key, true) {
+                delegate.okBtnClicked()
             }
         }
     }
@@ -114,26 +130,13 @@ class Keyboard(
     private fun addChipGroup() =
         delegate.createNewChipGroup().also { bindings.keyboardView.addView(it, bindings.keyboardView.childCount) }
 
-    private fun addKeyChip(group: ChipGroup, chipText: String) =
-        addKeyChip(group, KeyDef(chipText))
+    private fun addKeyChip(group: ChipGroup, chipText: String, size: ChipSize) =
+        addKeyChip(group, KeyDef(chipText), size)
 
-    private fun addKeyChip(group: ChipGroup, def: KeyDef) {
+    private fun addKeyChip(group: ChipGroup, def: KeyDef, size: ChipSize = ChipSize.NORMAL) {
         val chipText = if (def.mainIconResId != null) "" else def.mainText
 
-        val chip = delegate.createNewChip(def.mainIconResId, def.contentDescResId).apply {
-            if (chipText.isNotEmpty()) {
-                text = chipText
-
-                setTextSize(
-                    TypedValue.COMPLEX_UNIT_PX,
-                    if (chipText.length == 1 && chipText[0].isSmallKana()) {
-                        delegate.chipFontSizeForSmallKana
-                    } else {
-                        delegate.chipFontSize
-                    }
-                )
-            }
-
+        val chip = delegate.createNewChip(chipText, def.mainIconResId, def.contentDescResId, size).apply {
             addHapticFeedback()
 
             if (def.shouldShowLens) {
@@ -162,7 +165,7 @@ class Keyboard(
         primaryColour: Boolean,
         onClick: () -> Unit,
     ) {
-        val chip = delegate.createNewChip(iconResId, contentDescResId).apply {
+        val chip = delegate.createNewChip("", iconResId, contentDescResId, ChipSize.NORMAL).apply {
             addHapticFeedback()
             setOnClickListener { onClick() }
             if (primaryColour) chipBackgroundColor = values.primaryColour.let { ColorStateList.valueOf(it) }
@@ -172,7 +175,7 @@ class Keyboard(
 
     private fun addInvisibleChip(group: ChipGroup) {
         // using ic_backspace just to get the correct size
-        val chip = delegate.createNewChip(R.drawable.ic_backspace_24dp, null).apply {
+        val chip = delegate.createNewChip("", R.drawable.ic_backspace_24dp, null, ChipSize.NORMAL).apply {
             visibility = View.INVISIBLE
         }
         group.addView(chip, group.childCount)

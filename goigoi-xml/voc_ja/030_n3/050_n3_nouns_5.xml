@@ -11,8 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -70,47 +70,52 @@
                   rom="shingata"
                   tr_en="a new type; a new model"
                   tr_de="ein neues Modell; ein neuer Typ"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
                   rem="note that kata turns into gata here; jisho has nx for shingata"
-                />
+                >
+                    <ask w="【型：がた】" />
+                </phrase>
                 <phrase
                   ph="【髪：かみ】【型：がた】"
                   rom="kamigata"
                   tr_en="hair style; hairdo"
                   tr_de="Haar-Style; Frisur"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【型：がた】" />
+                </phrase>
                 <phrase
                   ph="1995【年：ねん】【型：がた】の【自：じ】【動：どう】【車：しゃ】"
                   rom="1995 nengata no jidōsha"
                   tr_en="a 1995 model of a car"
                   tr_de="ein 1995-Modell eines Autos"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【型：がた】" />
+                </phrase>
                 <sentence
                   s="これが【新：しん】【型：がた】の【車：くるま】です。"
                   rom="Kore ga shingata no kuruma desu."
                   tr_en="This is a new type of car."
                   tr_de="Dies ist ein neuer Typ Auto."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【型：がた】" />
+                </sentence>
                 <sentence
                   s="これはポケット【型：がた】の【辞：じ】【書：しょ】だ。"
                   rom="Kore wa pokettogata no jisho da."
                   tr_en="This is a pocket-sized dictionary."
                   tr_de="Dies ist ein Wörterbuch, das in die Hosentasche passt."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【型：がた】" />
+                </sentence>
             </word>
             <word
               w="【穴：あな】"

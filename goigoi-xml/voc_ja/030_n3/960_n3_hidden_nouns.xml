@@ -15,6 +15,35 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【品：しな】"
+              rom="shina"
+              tr_en="article; item; goods"
+              tr_de="Artikel; Stück; Güter"
+              lvl="n3"
+              category="shopping, factory"
+              id="shina-item"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="shōhin-commodity" />
+                <keep_apart_from id="seihin-product" />
+                <keep_apart_from id="shinamono-article" />
+                <keep_apart_from id="sakuhin-work" />
+                <keep_apart_from id="hin-grace" />
+                <keep_together id="hin-grace" />
+            </word>
+            <word
+              w="【品：ひん】"
+              rom="hin"
+              tr_en="elegance; grace; refinement; class; dignity; article; item; counter for items or dishes"
+              hint_en="noun; suffix; counter"
+              lvl="n3"
+              id="hin-grace"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="shina-item" />
+                <keep_together id="shina-item" />
+            </word>
+            <word
               w="【市：いち】"
               rom="ichi"
               tr_en="market; fair"
@@ -1064,17 +1093,6 @@
               id="sakkyoku-composition"
             />
             <word
-              w="【障：しょう】【害：がい】"
-              rom="shōgai"
-              tr_en="obstacle; hindrance; impairment"
-              tr_de="Hindernis; Behinderung; Beeinträchtigung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="not-good"
-              id="shōgai-obstacle"
-            />
-            <word
               w="【攻：こう】【撃：げき】"
               rom="kōgeki"
               tr_en="attack; assault; raid"
@@ -1084,6 +1102,19 @@
               lvl="n3"
               category="government, crime"
               id="kōgeki-attack"
+            >
+                <!-- 攻撃に備える kōgeki ni sonaeru to prepare for an attack (lib0) -->
+            </word>
+            <word
+              w="【障：しょう】【害：がい】"
+              rom="shōgai"
+              tr_en="obstacle; hindrance; impairment"
+              tr_de="Hindernis; Behinderung; Beeinträchtigung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="not-good"
+              id="shōgai-obstacle"
             />
             <word
               w="【想：そう】【像：ぞう】"
@@ -1683,7 +1714,9 @@
               tr_en="property; fortune; assets; estate"
               hint_en="noun"
               lvl="n3"
-            />
+            >
+                <!-- 財産を譲る・ざいさんをゆずる: to transfer a property to someone else (ChatGPT) -->
+            </word>
             <word
               w="【貢：こう】【献：けん】"
               rom="kōken"

@@ -488,17 +488,6 @@
                 <keep_apart_from id="genzai-present" />
             </word>
             <word
-              w="【有：あ】り【難：がと】う"
-              rom="arigatou"
-              tr_en="thank you; thanks"
-              lvl="n3"
-              id="arigatou-thanks"
-              rem="why is this n3???"
-            >
-                <keep_apart_from id="okage-grace" />
-                <keep_apart_from id="kansha-thanks" />
-            </word>
-            <word
               w="【騒：そう】【音：おん】"
               rom="sōon"
               tr_en="loud noise; din"
@@ -943,7 +932,9 @@
               rom="jiken"
               tr_en="event; affair; incident; case; plot; trouble; scandal"
               lvl="n3"
-            />
+            >
+                <!-- 大きな事件が起こるだろう。Big events will come to pass. (lib0) -->
+            </word>
             <word
               w="【互：たが】い"
               rom="tagai"
@@ -1145,6 +1136,7 @@
               id="tochi-lot"
             >
                 <keep_apart_from id="tsuchi-soil" />
+                <!-- 土地を譲る・とちをゆずる: to transfer the land to someone else (ChatGPT) -->
             </word>
             <word
               w="【地：ち】"
@@ -2163,7 +2155,9 @@
               rom="kenri"
               tr_en="rights; privilege"
               lvl="n3"
-            />
+            >
+                <!-- 権利を譲る・けんりをゆずる: to grant a right (ChatGPT); but grant is something else??? -->
+            </word>
             <word
               w="【余：よ】【裕：ゆう】"
               rom="yoyū"
@@ -2372,6 +2366,74 @@
               lvl="n3"
               id="hokori-credit"
               HIDDEN="true"
+            />
+            <word
+              w="【文：ぶん】"
+              rom="bun"
+              tr_en="sentence; composition; text; writings; the literary arts (as opposed to the military arts); academia; literature; statement"
+              hint_en="noun"
+              lvl="n3"
+              id="bun-text"
+            />
+            <word
+              w="【空：から】"
+              rom="kara"
+              tr_en="emptiness; being empty; not carrying anything; unburdened; empty-handed; dishonoured (bill, promise, etc.); false; no-show (reservation); put-on (cheeriness, courage, etc.); empty (compliments); insincere; Sky"
+              hint_en="noun; prefix"
+              lvl="n3"
+              id="kara-empty"
+            />
+            <word
+              w="【灰：はい】"
+              rom="hai"
+              tr_en="ash; ashes; Ash (analytical chemistry)"
+              hint_en="noun"
+              lvl="n3"
+              id="hai-ash"
+            />
+            <word
+              w="【軒：のき】"
+              rom="noki"
+              tr_en="eaves; narrow aisle surrounding the core of a temple building"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【節：ふし】"
+              rom="fushi"
+              tr_en="joint; knuckle; tune; melody; node (of a plant stem); knot (in wood); knob; (notable) point; part; node"
+              hint_en="noun"
+              lvl="n3"
+            />
+            <word
+              w="【克：こく】【服：ふく】"
+              rom="kokufuku"
+              tr_en="conquest (of a difficulty, illness, crisis, etc.); overcoming; surmounting; bringing under control"
+              hint_en="noun; suru verb; v.t."
+              lvl="n3"
+            />
+            <word
+              w="【訓：くん】"
+              rom="kun"
+              tr_en="native Japanese reading of a Chinese character; precept; lesson; one's teachings"
+              hint_en="noun; suffix"
+              lvl="n3"
+              id="kun-lesson"
+            />
+            <word
+              w="【州：しゅう】"
+              rom="shū"
+              tr_en="state (of the US, Australia, India, Germany, etc.); province (e.g. of Canada); county (e.g. of the UK); region (e.g. of Italy); canton; oblast; continent; province (of Japan); province (of ancient China); prefecture"
+              hint_en="noun; suffix"
+              lvl="n3"
+              id="shū-state"
+            />
+            <word
+              w="【左：さ】【右：ゆう】"
+              rom="sayū"
+              tr_en="left and right; right and left; (asserting) control; influence; domination; one's attendants; people accompanying one; (serving at someone's) side; equivocation; Sou; Relative direction"
+              hint_en="noun; suru verb; v.t.; place"
+              lvl="n3"
             />
         </section>
     </unit>

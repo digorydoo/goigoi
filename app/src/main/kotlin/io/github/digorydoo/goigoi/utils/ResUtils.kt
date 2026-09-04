@@ -2,12 +2,9 @@ package io.github.digorydoo.goigoi.utils
 
 import android.app.Activity
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.util.Log
 import android.util.TypedValue
-import android.widget.ArrayAdapter
 import androidx.appcompat.view.ContextThemeWrapper
-import androidx.core.content.ContextCompat
 import ch.digorydoo.kutils.colour.Colour
 import io.github.digorydoo.goigoi.R
 
@@ -27,25 +24,6 @@ object ResUtils {
         activity.setTheme(themeId)
         ctx.theme.applyStyle(themeId, true)
         DeviceUtils.setNavBarAppearance(prefs.darkMode, activity.window)
-    }
-
-    /**
-     * Determines whether the navigation bar is onscreen.
-     * See also: DeviceUtils.getNavBarPos
-     */
-    fun hasOnscreenNavBar(ctx: Context): Boolean {
-        /*
-        Alternative, not sure if this would be better:
-            val vcf = ViewConfiguration.get(ctx)
-
-            if (vcf.hasPermanentMenuKey()) {
-                return false
-            }
-        */
-        val res = ctx.resources
-        // FIXME can I use R.android.bool config_shownavigationBar here?
-        val id = res.getIdentifier("config_showNavigationBar", "bool", "android")
-        return id > 0 && res.getBoolean(id)
     }
 
     fun getDialogThemeWrapper(ctx: Context): ContextThemeWrapper {
@@ -81,11 +59,6 @@ object ResUtils {
             ?: fallback
     }
 
-    fun getDrawableFromAttr(attrResId: Int, ctx: Context): Drawable? {
-        val resId = getTypedValueResId(attrResId, ctx, R.drawable.ic_flash_on_black_24dp)
-        return ContextCompat.getDrawable(ctx, resId)
-    }
-
     fun getARGBFromRes(resId: Int, ctx: Context): Int {
         return ctx.getColor(resId)
     }
@@ -99,10 +72,6 @@ object ResUtils {
         return Colour.fromARGB(getARGBFromRes(resId, ctx))
     }
 
-    fun getColourFromAttr(attrId: Int, ctx: Context): Colour {
-        return Colour.fromARGB(getARGBFromAttr(attrId, ctx))
-    }
-
     fun getDimensionFromAttr(attrResId: Int, activity: Activity): Float {
         val dm = activity.resources.displayMetrics
         val ctx = activity.applicationContext
@@ -111,29 +80,5 @@ object ResUtils {
 
     fun getStringArray(resId: Int, ctx: Context): Array<String> {
         return ctx.resources.getStringArray(resId)
-    }
-
-    @Suppress("unused")
-    fun createArrayAdapter(
-        textArrayResId: Int,
-        activity: Activity,
-    ): ArrayAdapter<CharSequence> {
-        val adapter = ArrayAdapter.createFromResource(
-            activity, textArrayResId, android.R.layout.simple_spinner_item // standard
-        )
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item) // standard
-        return adapter
-    }
-
-    fun createArrayAdapter(
-        textArray: Array<String?>,
-        activity: Activity,
-    ): ArrayAdapter<CharSequence?> {
-        val adapter = ArrayAdapter<CharSequence?>(
-            activity, android.R.layout.simple_spinner_item,  // standard
-            textArray
-        )
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item) // standard
-        return adapter
     }
 }

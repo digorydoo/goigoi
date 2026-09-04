@@ -11,8 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n4"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -1112,8 +1112,9 @@
                   tr_de="ein guter Duft"
                   lvl="n4"
                   origin="ChatGPT"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="【匂：にお】い" />
+                </phrase>
                 <phrase
                   ph="【悪：わる】い【臭：にお】い"
                   rom="warui nioi"
@@ -1121,17 +1122,19 @@
                   tr_de="ein übler Gestank"
                   lvl="n4"
                   origin="ChatGPT"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="【臭：にお】い" />
+                </phrase>
                 <sentence
                   s="ガスの【臭：にお】いがする。"
                   rom="Gasu no nioi ga suru."
                   tr_en="I smell gas."
                   tr_de="Es stinkt nach Gas."
-                  hasDifferentForm="true"
                   lvl="n4"
                   origin="Oxford p.94"
-                />
+                >
+                    <ask w="【臭：にお】い" />
+                </sentence>
             </word>
             <word
               w="【心：しん】【配：ぱい】"

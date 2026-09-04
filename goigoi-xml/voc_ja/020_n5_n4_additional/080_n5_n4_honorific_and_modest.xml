@@ -16,8 +16,8 @@
       hasRomaji="true"
       hasFurigana="true"
       lvl="n5, n4"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <!--
             There are three forms of 敬語・けいご:
@@ -51,13 +51,6 @@
                     ている becomes ていらっしゃいます
                 -->
                 <phrase
-                  ph="いらっしゃいませ"
-                  rom="irasshaimase"
-                  tr_en="expression used in shops to welcome clients"
-                  tr_de="Ausdruck, der in Geschäften verwendet wird, um Kunden zu begrüssen"
-                  lvl="n4"
-                />
-                <phrase
                   ph="いらっしゃるお【客：きゃく】【様：さま】"
                   rom="irassharu o-kyaku-sama"
                   tr_en="the customers who are present (honorific)"
@@ -82,13 +75,24 @@
                   origin="ChatGPT"
                 -->
                 <sentence
+                  s="いらっしゃいませ！"
+                  rom="Irasshaimase!"
+                  tr_en="expression used in shops to welcome clients"
+                  tr_de="Ausdruck, der in Geschäften verwendet wird, um Kunden zu begrüssen"
+                  lvl="n4"
+                >
+                    <ask w="いらっしゃいませ" />
+                </sentence>
+                <sentence
                   s="【先：せん】【生：せい】は【東：とう】【京：きょう】へよくいらっしゃいますか。"
                   rom="Sensei wa Tōkyō e yoku irasshaimasu ka?"
                   tr_en="Teacher, do you often go to Tokyo? (honorific)"
                   tr_de="Herr Lehrer, gehen Sie oft nach Tokyo? (respektvoll)"
                   lvl="n4"
                   origin="Oxford p.112"
-                />
+                >
+                    <ask stem="いらっしゃい" suffix="ます" />
+                </sentence>
                 <sentence
                   s="どちらに【住：す】んでいらっしゃいますか。"
                   rom="Dochira ni sunde irasshaimasu ka?"
@@ -99,7 +103,9 @@
                   lvl="n4"
                   origin="GENKI2 p.192"
                   rem="from audio; verified with ChatGPT"
-                />
+                >
+                    <ask stem="いらっしゃい" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【谷：たに】【口：ぐち】さんがいらっしゃるかどうか【分：わ】かりません。"
                   rom="Taniguchi-san ga irassharu ka dō ka wakarimasen."
@@ -152,7 +158,9 @@
                   tr_de="Um welche Zeit ungefähr essen Sie normalerweise zu Abend? (respektvoll)"
                   lvl="n4"
                   origin="500mon q410"
-                />
+                >
+                    <ask stem="【召：め】し【上：あ】がり" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【何：なに】を【召：め】し【上：あ】がりますか。"
                   rom="Nani o meshiagarimasu ka?"
@@ -160,7 +168,9 @@
                   tr_de="Was möchten Sie essen/trinken? (respektvoll)"
                   lvl="n4"
                   origin="GENKI2 p.165"
-                />
+                >
+                    <ask stem="【召：め】し【上：あ】がり" suffix="ます" />
+                </sentence>
                 <sentence
                   s="お【酒：さけ】をよく【召：め】し【上：あ】がりますか。"
                   rom="O-sake o yoku meshiagarimasu ka?"
@@ -169,7 +179,9 @@
                   lvl="n4"
                   origin="GENKI2 p.192"
                   rem="from audio; verified with ChatGPT"
-                />
+                >
+                    <ask stem="【召：め】し【上：あ】がり" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【為：な】さる"
@@ -208,7 +220,9 @@
                   explanation_de="「なさい」ist die imperative Form von「なさる」, eine respektvolle Form von「する」."
                   lvl="n4"
                   rem="the expression may be n5"
-                />
+                >
+                    <ask w="なさい" />
+                </phrase>
                 <sentence
                   s="どうなさいましたか。"
                   rom="Dō nasaimashita ka?"
@@ -216,7 +230,9 @@
                   tr_de="Ist etwas nicht in Ordnung? (respektvoll)"
                   lvl="n4"
                   origin="500mon q396"
-                />
+                >
+                    <ask stem="なさい" suffix="ました" />
+                </sentence>
                 <sentence
                   s="【何：なに】をなさるつもりですか。"
                   rom="Nani o nasaru tsumori desu ka?"
@@ -236,7 +252,9 @@
                   lvl="n4"
                   origin="GENKI2 p.192"
                   rem="from audio; verified with ChatGPT"
-                />
+                >
+                    <ask stem="なさい" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【毎：まい】【日：にち】【何：なん】【時：じ】【間：かん】【日：に】【本：ほん】【語：ご】を【勉：べん】【強：きょう】なさいますか。"
                   rom="Mai-nichi nan-jikan Nihon-go o benkyō nasaimasu ka?"
@@ -245,7 +263,9 @@
                   lvl="n4"
                   origin="GENKI2 p.192"
                   rem="from audio; verified with ChatGPT"
-                />
+                >
+                    <ask stem="なさい" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="ご【覧：らん】"
@@ -329,7 +349,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="おっしゃって" />
+                </phrase>
                 <sentence
                   s="【何：なに】とおっしゃいましたか。"
                   rom="Nani to osshaimashita ka?"
@@ -339,7 +361,9 @@
                   explanation_de="Beachte die unregelmässige Konjugation des Verbs おっしゃる"
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask stem="おっしゃい" suffix="ました" />
+                </sentence>
                 <sentence
                   s="【何：なに】をおっしゃりたいのですか。"
                   rom="Nani o ossharitai no desu ka?"
@@ -347,7 +371,9 @@
                   tr_de="Was willst du sagen? (respektvoll)"
                   lvl="n4"
                   origin="lib0"
-                />
+                >
+                    <ask w="おっしゃりたい" />
+                </sentence>
                 <sentence
                   s="【山：やま】【口：ぐち】【先：せん】【生：せい】は【来：らい】【週：しゅう】は【授：じゅ】【業：ぎょう】がないとおっしゃっていました。"
                   rom="Yamaguchi-sensei wa raishū wa jugyō ga nai to osshatte imashita."
@@ -355,7 +381,9 @@
                   tr_de="Professor Yamaguchi sagte, dass die Lektion nächste Woche ausfallen würde."
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="おっしゃって" />
+                </sentence>
             </word>
         </section>
         <section
@@ -384,14 +412,18 @@
                   tr_de="erklären gehen (bescheiden)"
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask stem="【参：まい】り" suffix="ます" />
+                </phrase>
                 <sentence
                   s="【行：い】って【参：まい】ります。"
                   rom="Itte mairimasu."
                   tr_en="I'm off! (I go and will come again; extra-modest)"
                   tr_de="Ich bin mal weg! (Ich gehe und werde wieder kommen; bescheiden)"
                   lvl="n4"
-                />
+                >
+                    <ask stem="【参：まい】り" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【電：でん】【車：しゃ】が【参：まい】ります。"
                   rom="Densha ga mairimasu."
@@ -399,7 +431,9 @@
                   tr_de="Der Zug kommt. (bescheiden)"
                   lvl="n4"
                   origin="GENKI2 p.191"
-                />
+                >
+                    <ask stem="【参：まい】り" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【明日：あした】もう【一：いち】【度：ど】【参：まい】ります。"
                   rom="Ashita mō ichi-do mairimasu."
@@ -408,7 +442,9 @@
                   lvl="n4"
                   origin="lib0"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask stem="【参：まい】り" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【週：しゅう】【末：まつ】、【美：び】【術：じゅつ】【館：かん】へ【参：まい】りました。"
                   rom="Shūmatsu, bijutsukan e mairimashita."
@@ -417,7 +453,9 @@
                   lvl="n4"
                   origin="GENKI2 p.192 modified"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask stem="【参：まい】り" suffix="ました" />
+                </sentence>
             </word>
             <word
               w="【申：もう】す"
@@ -449,7 +487,9 @@
                   tr_de="Entschuldigung"
                   lvl="n4"
                   rem="jisho has n3; I use kanji for in mōshiwake-apology"
-                />
+                >
+                    <ask w="【申：もう】し" />
+                </phrase>
                 <phrase
                   ph="もう【一：いち】【度：ど】【申：もう】す"
                   rom="mō ichi-do mōsu"
@@ -466,7 +506,9 @@
                   tr_de="Mein Name ist Ken Ogawa. (bescheiden)"
                   lvl="n4"
                   origin="GENKI2 p.184 modified"
-                />
+                >
+                    <ask stem="【申：もう】し" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【致：いた】す"
@@ -508,7 +550,9 @@
                   lvl="n4"
                   origin="lib0"
                   rem="lib0 has kanji どう致しまして"
-                />
+                >
+                    <ask w="いたしまして" />
+                </phrase>
                 <sentence
                   s="【毎：まい】【日：にち】【二：に】【時：じ】【間：かん】ぐらい【勉：べん】【強：きょう】いたします。"
                   rom="Mainichi ni-jikan gurai benkyō itashimasu."
@@ -517,7 +561,9 @@
                   lvl="n4"
                   origin="GENKI2 p.192 modified"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask stem="いたし" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【私：わたくし】は【今：こ】【年：とし】の【六：ろく】【月：がつ】に【大：だい】【学：がく】を【卒：そつ】【業：ぎょう】いたしました。"
                   rom="Watakushi wa kotoshi no roku-gatsu ni daigaku o sotsugyō itashimashita."
@@ -525,7 +571,9 @@
                   tr_de="Ich habe die Universität im Juni dieses Jahres abgeschlossen. (bescheiden)"
                   lvl="n4"
                   origin="GENKI2 p.184"
-                />
+                >
+                    <ask stem="いたし" suffix="ました" />
+                </sentence>
                 <sentence
                   s="ご【連：れん】【絡：らく】いたすまでお【待：ま】ちください。"
                   rom="Go-renraku itasu made o-machi kudasai."
@@ -554,7 +602,10 @@
                   tr_en="expression of gratitude before meals"
                   tr_de="Guten Appetit!"
                   lvl="n4"
-                />
+                >
+                    <!-- FIXME the form is the phrase itself, which is not ideal -->
+                    <ask stem="いただき" suffix="ます" />
+                </phrase>
                 <!--
                   ph="【空：くう】【港：こう】へ【迎：むか】えに【来：き】ていただく"
                   rom="kūkō e mukae ni kite itadaku"
@@ -571,7 +622,9 @@
                   tr_de="Ich möchte gern einen Stadtplan."
                   lvl="n4"
                   origin="Langenscheidt"
-                />
+                >
+                    <ask w="いただきたい" />
+                </sentence>
                 <sentence
                   s="【塩：しお】を【取：と】っていただけませんか。"
                   rom="Shio o totte itadakemasen ka?"
@@ -581,7 +634,9 @@
                   explanation_de="wörtl. 'Können Sie für mich das Salz nehmen?'"
                   lvl="n4"
                   origin="GENKI2 p.166"
-                />
+                >
+                    <ask stem="いただけ" suffix="ません" />
+                </sentence>
                 <sentence
                   s="お【酒：さけ】を【少：すこ】しいただきます。"
                   rom="O-sake o sukoshi itadakimasu."
@@ -590,7 +645,9 @@
                   lvl="n4"
                   origin="GENKI2 p.192 modified"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask stem="いただき" suffix="ます" />
+                </sentence>
                 <sentence
                   s="ナイフとフォークをいただけませんか。"
                   rom="Naifu to fōku o itadakemasen ka?"
@@ -598,7 +655,9 @@
                   tr_de="Könnte ich ein Messer und eine Gabel bekommen?"
                   lvl="n4"
                   origin="Langenscheidt"
-                />
+                >
+                    <ask stem="いただけ" suffix="ません" />
+                </sentence>
                 <!--
                   s="【道：みち】を【教：おし】えていただきました。"
                   rom="Michi o oshiete itadakimashita."
@@ -686,7 +745,9 @@
                   lvl="n4"
                   origin="GENKI2 p.195"
                   rem="GENKI2 uses kana for both ashita and ukagau; verified with ChatGPT"
-                />
+                >
+                    <ask stem="【伺：うかが】い" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【昨日：きのう】、【先：せん】【生：せい】のお【宅：たく】に【伺：うかが】いました。"
                   rom="Kinō, sensei no o-taku ni ukagaimashita."
@@ -694,7 +755,9 @@
                   tr_de="Ich habe gestern das Haus meiner Lehrerin besucht. (bescheiden)"
                   lvl="n4"
                   origin="500mon q315"
-                />
+                >
+                    <ask stem="【伺：うかが】い" suffix="ました" />
+                </sentence>
                 <sentence
                   s="【私：わたし】は【先：せん】【生：せい】にテストについて【伺：うかが】いました。"
                   rom="Watashi wa sensei ni tesuto ni tsuite ukagaimashita."
@@ -702,8 +765,12 @@
                   tr_de="Ich habe bei meinem Lehrer bezüglich der Prüfung nachgefragt. (bescheiden)"
                   origin="GENKI2 p.186"
                   lvl="n4"
-                  rem="GENKI2 uses ukagau in kana for both senses; jisho does not have usuallyInKana flag; lib0 has more kanji examples than kana"
-                />
+                  rem="GENKI2 uses ukagau in kana for both senses;
+                    jisho does not have usuallyInKana flag;
+                    lib0 has more kanji examples than kana"
+                >
+                    <ask stem="【伺：うかが】い" suffix="ました" />
+                </sentence>
             </word>
             <word
               w="【差：さ】し【上：あ】げる"
@@ -735,7 +802,9 @@
                   tr_de="Das ist für dich. (bescheiden)"
                   lvl="n4"
                   origin="lib0"
-                />
+                >
+                    <ask stem="【差：さ】し【上：あ】げ" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【飲：の】み【物：もの】を【差：さ】し【上：あ】げましょうか。"
                   rom="Nomimono o sashiagemashō ka?"
@@ -743,7 +812,9 @@
                   tr_de="Kann ich Ihnen einen Drink anbieten?"
                   lvl="n4"
                   origin="lib0"
-                />
+                >
+                    <ask stem="【差：さ】し【上：あ】げ" suffix="ましょう" />
+                </sentence>
                 <sentence
                   s="【私：わたし】は【先：せん】【生：せい】に【花：はな】を【差：さ】し【上：あ】げます。"
                   rom="Watashi wa sensei ni hana o sashiagemasu."
@@ -752,7 +823,9 @@
                   lvl="n4"
                   origin="GENKI2 p.186"
                   rem="GENKI2 uses さしあげる in kana here; but jisho does not have usuallyInKana flag, and lib0 has more kanji examples than kana"
-                />
+                >
+                    <ask stem="【差：さ】し【上：あ】げ" suffix="ます" />
+                </sentence>
             </word>
         </section>
         <section

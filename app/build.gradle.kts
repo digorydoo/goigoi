@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    alias(libs.plugins.compose.compiler)
 }
 
 kotlin {
@@ -19,7 +20,7 @@ android {
     defaultConfig {
         applicationId = "io.github.digorydoo.goigoi"
         minSdk = 31
-        compileSdk = 36
+        compileSdk = 37
         targetSdk = 36
         versionCode = 50
         versionName = "2.5.3"
@@ -51,6 +52,7 @@ android {
 
     buildFeatures {
         buildConfig = true
+        compose = true
     }
 
     tasks.whenTaskAdded {
@@ -75,6 +77,7 @@ tasks.named("preBuild") {
 dependencies {
     implementation(libs.kotlin.stdlib.jdk7)
     implementation(libs.appcompat)
+    implementation(libs.activity)
     implementation(libs.activity.ktx)
     implementation(libs.fragment.ktx)
     implementation(libs.recyclerview)
@@ -83,6 +86,15 @@ dependencies {
     implementation(libs.material)
     implementation(libs.constraintlayout)
     implementation(libs.core.splashscreen)
+
+    implementation(platform(libs.compose.bom))
+    implementation(libs.compose.ui)
+    implementation(libs.compose.ui.graphics)
+    implementation(libs.compose.ui.tooling.preview)
+    debugImplementation(libs.compose.ui.tooling)
+    implementation(libs.compose.material3)
+    implementation(libs.compose.material.icons.extended)
+    implementation(libs.activity.compose)
 
     // implementation(libs.kstruct)
 

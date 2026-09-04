@@ -20,8 +20,8 @@ class Word {
     var usuallyInKana = false
     var studyInContext = StudyInContextKind.NOT_REQUIRED
     val synonyms = mutableListOf<FuriganaString>()
-    val phrases = mutableListOf<Phrase>()
-    val sentences = mutableListOf<Phrase>()
+    val phrases = mutableListOf<PhraseOrSentence>()
+    val sentences = mutableListOf<PhraseOrSentence>()
     val links = mutableListOf<WordLink>()
     val cats = mutableListOf<WordCategory>()
     var filename = ""

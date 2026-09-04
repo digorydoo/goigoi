@@ -1,14 +1,15 @@
 package io.github.digorydoo.goigoi.compiler.check.prechecks
 
 import ch.digorydoo.kutils.cjk.JLPTLevel
+import ch.digorydoo.kutils.cjk.isHiragana
 import io.github.digorydoo.goigoi.compiler.*
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhraseOrSentence
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
 
 class PhraseOrSentenceChecker {
-    val sentenceRomajis = mutableSetOf<String>()
-    val phraseRomajis = mutableSetOf<String>()
+    private val sentenceRomajis = mutableSetOf<String>()
+    private val phraseRomajis = mutableSetOf<String>()
 
     fun check(phors: GoigoiPhraseOrSentence, word: GoigoiWord, unyt: GoigoiUnyt) {
         val kindAsString = if (phors.isPhrase) "Phrase" else "Sentence"
@@ -107,8 +108,12 @@ class PhraseOrSentenceChecker {
             }
         }
 
-        if (!phors.hasDifferentForm) {
-            // Check that the word.primaryForm appears in the sentence or phrase.
+        // Check that the word appears in the sentence or phrase
+
+        if (phors.wordFormToAsk.isEmpty()) {
+            if (phors.wordFormToAskSuffix.isNotEmpty()) {
+                throw CheckFailed("Stem must be defined when suffix is specified for word form")
+            }
 
             var ck = word.primaryForm.raw
 
@@ -119,51 +124,108 @@ class PhraseOrSentenceChecker {
                 ck = word.primaryForm.kana
             }
 
-            if (ck.endsWith("をする")) {
-                // A suru verb. Check the stem only.
-                ck = ck.slice(0 ..< ck.length - 3)
-            } else if (ck.endsWith("する")) {
-                // Probably a suru verb.
-                ck = ck.slice(0 ..< ck.length - 2)
-            } else if (
-                ck.endsWith("う") ||
-                ck.endsWith("く") ||
-                ck.endsWith("ぐ") ||
-                ck.endsWith("す") ||
-                ck.endsWith("つ") ||
-                ck.endsWith("ぬ") ||
-                ck.endsWith("ぶ") ||
-                ck.endsWith("む") ||
-                ck.endsWith("る")
-            ) {
-                // Probably a verb.
-                ck = ck.slice(0 ..< ck.length - 1)
-            } else if (ck.endsWith("い")) {
-                // Probably an adjective.
-                ck = ck.slice(0 ..< ck.length - 1)
-            }
-
             if (ck.isNotEmpty()) {
+                val msgTail = "or use <ask> to declare the word form"
+
                 if (phors.primaryForm.contains(ck)) {
                     // The word was found in the sentence. However, if we were looking for the kana,
                     // we want to make sure that we didn't find the kana within the furigana bracket.
                     if (word.usuallyInKana && phors.primaryForm.contains(word.primaryForm.raw)) {
                         throw CheckFailed(
-                            "$kindAsString should use the word in kana as stated by usuallyInKana, " +
-                                "or declare hasDifferentForm"
+                            "$kindAsString must use the word in kana as stated by usuallyInKana $msgTail"
                         )
                     }
                 } else if (word.usuallyInKana) {
-                    throw CheckFailed(
-                        "$kindAsString must contain the word in hiragana only, or declare hasDifferentForm"
-                    )
+                    throw CheckFailed("$kindAsString must contain the word in hiragana only $msgTail")
                 } else {
-                    throw CheckFailed(
-                        "$kindAsString must contain the word it is associated with, or declare hasDifferentForm"
-                    )
+                    throw CheckFailed("$kindAsString must contain the word it is associated with $msgTail")
+                }
+            }
+        } else {
+            // The reason why we declare the wordForm is that the app needs to find the word in the phrase or
+            // sentence in order to be able to remove it with a placeholder the user is supposed to fill in.
+
+            val wordFormToAsk = phors.wordFormToAsk
+            val kanaToAsk = wordFormToAsk.kana
+            val kanjiToAsk = wordFormToAsk.kanji
+            val suffix = phors.wordFormToAskSuffix
+
+            if ((!word.usuallyInKana && wordFormToAsk.raw == word.primaryForm.raw) ||
+                (word.usuallyInKana && wordFormToAsk.raw == word.kana)
+            ) {
+                throw CheckFailed("Do not specify word form when it's identical to word kanji form")
+            }
+
+            if (!phors.primaryForm.raw.contains(wordFormToAsk.raw + suffix)) {
+                throw CheckFailed("Word form does not appear like this: ${wordFormToAsk.raw + suffix}")
+            }
+
+            if (kanaToAsk.length + suffix.length > MAX_WORD_FORM_LENGTH) {
+                throw CheckFailed(
+                    "Form is too long: allowed=$MAX_WORD_FORM_LENGTH, actual=${kanaToAsk.length + suffix.length}"
+                )
+            }
+
+            if (word.usuallyInKana) {
+                if (kanaToAsk.contains(word.kana)) {
+                    if (word.kanji == word.kana || !wordFormToAsk.raw.contains(word.primaryForm.raw)) {
+                        throw CheckFailed("Custom form containing the unchanged word is pointless")
+                    }
+                }
+            } else if (wordFormToAsk.raw.contains(word.primaryForm.raw)) {
+                throw CheckFailed("Custom form containing the unchanged word is pointless")
+            }
+
+            val kanjiAndSuffix = kanjiToAsk + suffix
+            val kanjiFormCount = phors.kanji.windowed(kanjiAndSuffix.length).count { it == kanjiAndSuffix }
+
+            if (kanjiFormCount != 1) {
+                throw CheckFailed(
+                    "Expected kanji form $kanjiAndSuffix to occur exactly once, but found $kanjiFormCount occurrences"
+                )
+            }
+
+            val kanaAndSuffix = kanaToAsk + suffix
+            val kanaFormCount = phors.kana.windowed(kanaAndSuffix.length).count { it == kanaAndSuffix }
+
+            if (kanaFormCount != 1) {
+                throw CheckFailed(
+                    "Expected kana form $kanaAndSuffix to occur exactly once, but found $kanaFormCount occurrences"
+                )
+            }
+
+            val hasTeIru = arrayOf("ている", "ています", "ていた", "ていました").any { kanaToAsk.endsWith(it) }
+
+            if (hasTeIru) {
+                throw CheckFailed("Form should stop at the て-form")
+            }
+
+            if (kanaToAsk.endsWith("なさい") && word.kana != "なさる") {
+                throw CheckFailed("Form should not include なさい")
+            }
+
+            // Depending on how the app is going to ask, some forms are ambiguous. For instance, one can often exchange
+            // the polite and plain forms to get a correct sentence. But they cannot always be exchanged, because the
+            // grammar requires plain form, or other parts of the sentence already indicate polite form. To make the
+            // question non-ambiguous, we require that those forms are split into stem + suffix. When the app is asking
+            // full words, it can ask the combined stem + suffix like before, but if it is asking the user to enter
+            // text, it can restrict it to ask the stem only, which should be non-ambiguous.
+
+            if (suffix.isEmpty()) {
+                val needsSplit = arrayOf("ます", "ません", "ました", "ませんでした", "ましょう")
+                    .any { kanaToAsk.endsWith(it) }
+
+                if (needsSplit) {
+                    throw CheckFailed("Form should be split into stem and suffix")
+                }
+            } else {
+                if (!suffix.isHiragana() || suffix.contains('【')) {
+                    throw CheckFailed("Suffix must be hiragana-only (okurigana or part of okurigana)")
                 }
             }
         }
+
+        // Check punctuation
 
         if (!phors.isPhrase) {
             when {
@@ -342,5 +404,9 @@ class PhraseOrSentenceChecker {
         if (phors.remark.contains("http")) {
             throw CheckFailed("Remark should not contain any hrefs, use href instead: ${phors.remark}")
         }
+    }
+
+    companion object {
+        private const val MAX_WORD_FORM_LENGTH = 10
     }
 }

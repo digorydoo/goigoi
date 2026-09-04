@@ -2,6 +2,10 @@ package io.github.digorydoo.goigoi.furigana
 
 import android.graphics.Canvas
 import android.graphics.Paint
+import android.graphics.Typeface
+import android.text.Spanned
+import android.text.TextPaint
+import android.text.style.CharacterStyle
 import android.text.style.ReplacementSpan
 import ch.digorydoo.kutils.math.clamp
 import kotlin.math.ceil
@@ -94,27 +98,39 @@ class FuriganaSpan(
         bottom: Int,
         paint: Paint,
     ) {
+        // If our FuriganaSpan is used inside another span that provides a different foreground colour, we need to
+        // apply those draw states. Note that this won't work if the caller uses a Paint that is not a TextPaint.
+
+        val baseFg = paint.color
+
+        if (text is Spanned && paint is TextPaint) {
+            val spans = text.getSpans(start, end, CharacterStyle::class.java)
+            for (span in spans) {
+                if (span !is FuriganaSpan) {
+                    span.updateDrawState(paint)
+                }
+            }
+        }
+
         val spanWidth = max(primaryWidth, secondaryWidth)
         val cx = left + spanWidth / 2.0f
         val x1 = cx - primaryWidth / 2.0f
         canvas.drawText(primaryText, 0, primaryText.length, x1, yBaseLine.toFloat(), paint)
 
         if (options.canSeeFurigana) {
-            val primarySize = paint.textSize
-            val secondarySize = options.getFuriganaTextSize(primarySize)
+            val furiganaPaint = Paint(paint).apply {
+                textSize = options.getFuriganaTextSize(textSize)
+                color = baseFg // do not apply the colour from surrounding spans to the furigana
+                alpha = (alpha * options.opacity).toInt() // 0..255
+                typeface = Typeface.create(paint.typeface, Typeface.NORMAL) // furigana should never be bold or italic
+            }
 
-            val primaryAlpha = paint.alpha // 0..255
-            val secondaryAlpha = (primaryAlpha * options.opacity).toInt()
-
-            paint.textSize = secondarySize
-            paint.alpha = secondaryAlpha
-
-            val y2 = top - paint.ascent() // ascent is negative!
+            val y2 = top - furiganaPaint.ascent() // ascent is negative!
 
             if (primaryWidth <= secondaryWidth || primaryText.length < 2 || secondaryText.length < 2) {
                 // Draw secondaryText centred in spanWidth.
                 val x2 = cx - secondaryWidth / 2.0f
-                canvas.drawText(secondaryText, 0, secondaryText.length, x2, y2, paint)
+                canvas.drawText(secondaryText, 0, secondaryText.length, x2, y2, furiganaPaint)
             } else {
                 // Draw the chars of secondaryText spread to cover spanWidth.
 
@@ -123,7 +139,7 @@ class FuriganaSpan(
 
                 val arr = secondaryText.map { c ->
                     val s = "$c"
-                    val w = paint.measureText(s)
+                    val w = furiganaPaint.measureText(s)
                     sum += w + gap // add a gap after each char
                     w
                 }
@@ -132,18 +148,10 @@ class FuriganaSpan(
 
                 secondaryText.forEachIndexed { i, c ->
                     val s = "$c"
-                    canvas.drawText(s, x2, y2, paint)
+                    canvas.drawText(s, x2, y2, furiganaPaint)
                     x2 += arr[i] + gap
                 }
             }
-
-            paint.textSize = primarySize
-            paint.alpha = primaryAlpha
         }
-    }
-
-    companion object {
-        @Suppress("unused")
-        private const val TAG = "FuriganaSpan"
     }
 }

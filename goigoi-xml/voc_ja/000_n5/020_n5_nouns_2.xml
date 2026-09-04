@@ -12,7 +12,7 @@
       defaultHint_de="Nomen"
       lvl="n5"
       requiresSentences="true"
-      requiresPhrases="false"
+      requiresPhrases="true"
     >
         <section>
             <!-- travelling, holidays -->
@@ -69,6 +69,16 @@
                   lvl="n5"
                   origin="Langenscheidt"
                   rem="ChatGPT says this and 私の荷物はどこですか are essentially equivalent."
+                />
+                <sentence
+                  s="【荷：に】【物：もつ】を ドアの 【近：ちか】くに 【置：お】いて おいて ください。"
+                  rom="Nimotsu o doa no chikaku ni oite oite kudasai."
+                  tr_en="Please put the luggage by the door."
+                  tr_de="Bitte stelle das Gepäck neben die Tür."
+                  explanation_en="「〜ておく」shows that an action is done to prepare something for future use"
+                  explanation_de="「〜ておく」zeigt auf, dass die Aktion eine Vorbereitung für späteren Gebrauch ist"
+                  lvl="n5"
+                  origin="Oxford p.52"
                 />
             </word>
             <word
@@ -285,8 +295,9 @@
                   tr_de="Frau Tanaka, wollen wir essen gehen?"
                   lvl="n5"
                   origin="500mon q127"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="【昼：ひる】ごはん" />
+                </sentence>
             </word>
             <word
               w="【晩：ばん】ご【飯：はん】"
@@ -1690,9 +1701,10 @@
                   tr_en="Professor Yamaguchi was about to speak."
                   tr_de="Professor Yamaguchi war im Begriff zu sprechen."
                   lvl="n5"
-                  hasDifferentForm="true"
                   origin="lib0"
-                />
+                >
+                    <ask w="ところ" />
+                </sentence>
             </word>
         </section>
     </unit>

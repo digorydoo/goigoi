@@ -89,7 +89,7 @@ class Choreographer(
 
         when (state) {
             State.QUESTION -> {
-                val (prefix, suffix) = qa?.getPrefill() ?: Pair("", "")
+                val (prefix, suffix) = getAnswerPrefill() ?: Pair("", "")
                 bindings.inputTextView.apply {
                     @SuppressLint("SetTextI18n")
                     text = prefix + suffix
@@ -103,6 +103,40 @@ class Choreographer(
                 updateLayoutIfNecessary()
             }
             else -> Unit
+        }
+    }
+
+    /**
+     * If the word has a kana prefix, it may be an honorific prefix. Since the word without honorific prefix would also
+     * be correct, we pre-fill the prefix to make it non-ambigous. On the other hand, if we're showing kana or kanji and
+     * are asking kanji or kana, and there is a kana prefix and/or suffix, we also pre-fill the prefix or suffix,
+     * because the user would simply have to copy the same kana in the answer.
+     * @return a Pair of prefix and suffix to fill in automatically; null if nothing should be prefilled.
+     */
+    private fun getAnswerPrefill(): Pair<String, String>? {
+        val qa = qa ?: return null
+        val word = qa.word
+        val kind = qa.kind
+        val questionWithoutFurigana = qa.questionWithoutFurigana
+        val answers = qa.answers
+        val presentWholeWords = qa.presentWholeWords
+        return when {
+            presentWholeWords -> null
+            kind.doesNotAskAnything -> null
+            kind == QAKind.SHOW_ROMAJI_ASK_KANA -> null
+            word.kanji == word.kana -> null
+            else -> {
+                val prefix = word.kanaPrefix
+                val suffix = word.kanaSuffix
+                val answer = answers.firstOrNull() // the other answers are synonyms
+                val answerHasPrefix = answer?.startsWith(prefix) ?: false
+                val answerHasSuffix = answer?.endsWith(suffix) ?: false
+                val questionHasSuffix = questionWithoutFurigana.endsWith(suffix)
+                Pair(
+                    if (answerHasPrefix) prefix else "",
+                    if (answerHasSuffix && questionHasSuffix) suffix else "",
+                )
+            }
         }
     }
 
@@ -144,7 +178,7 @@ class Choreographer(
         layout.keyboard.apply {
             y = bindings.rootView.measuredHeight -
                 keyboardH.toFloat() +
-                if (state == State.QUESTION) 0.0f else 8.0f * values.spacing
+                if (state == State.QUESTION) 0.0f else 8.0f * values.elementSpacing
 
             alpha = if (state == State.QUESTION) 1.0f else 0.0f
         }
@@ -434,7 +468,7 @@ class Choreographer(
         }
     }
 
-    fun revealAnswer(answer: Answer, questionWithGapFilled: CharSequence?) {
+    fun revealAnswer(answer: Answer, updatedQuestion: CharSequence?) {
         // Answer elements are automatically revealed, because ElementList adjusts their alpha according to state.
 
         val qa = qa ?: return
@@ -445,7 +479,7 @@ class Choreographer(
 
         bindings.inputTextView.setCaretEnabled(false)
 
-        if (questionWithGapFilled != null) {
+        if (updatedQuestion != null) {
             val textView = when (qa.fontType) {
                 FontType.CALLIGRAPHY -> null // TategakiView is not a TextView
                 FontType.PENCIL -> bindings.questionInPencilFontTextView
@@ -455,9 +489,9 @@ class Choreographer(
             }
 
             if (textView != null) {
-                textView.text = questionWithGapFilled
+                textView.text = updatedQuestion
             } else {
-                bindings.questionInCalligraphyFontTategakiView.setText(questionWithGapFilled)
+                bindings.questionInCalligraphyFontTategakiView.setText(updatedQuestion)
             }
         }
 

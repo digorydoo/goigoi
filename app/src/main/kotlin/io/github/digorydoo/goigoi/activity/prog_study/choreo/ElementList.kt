@@ -21,7 +21,7 @@ class ElementList(bindings: Bindings, values: Values) {
     private val elements = arrayOf(
         Element(
             bindings.questionInDefaultFontTextView,
-            values.spacing,
+            values.elementSpacing,
             attr = { it.questionInDefaultFont },
             expanded = { _, _ -> true },
             alpha = {
@@ -34,7 +34,7 @@ class ElementList(bindings: Bindings, values: Values) {
         ),
         Element(
             bindings.questionInHiraganaFontTextView,
-            values.spacing,
+            values.elementSpacing,
             attr = { it.questionInHiraganaFont },
             expanded = { _, _ -> true },
             alpha = {
@@ -47,7 +47,7 @@ class ElementList(bindings: Bindings, values: Values) {
         ),
         Element(
             bindings.questionInKatakanaFontTextView,
-            values.spacing,
+            values.elementSpacing,
             attr = { it.questionInKatakanaFont },
             expanded = { _, _ -> true },
             alpha = {
@@ -60,7 +60,7 @@ class ElementList(bindings: Bindings, values: Values) {
         ),
         Element(
             bindings.questionInPencilFontTextView,
-            values.spacing,
+            values.elementSpacing,
             attr = { it.questionInPencilFont },
             expanded = { _, _ -> true },
             alpha = {
@@ -73,7 +73,7 @@ class ElementList(bindings: Bindings, values: Values) {
         ),
         Element(
             bindings.questionInCalligraphyFontTategakiView,
-            values.spacing,
+            values.elementSpacing,
             attr = { it.questionInCalligraphyFont },
             expanded = { _, _ -> true },
             alpha = {
@@ -86,7 +86,7 @@ class ElementList(bindings: Bindings, values: Values) {
         ),
         Element(
             bindings.questionHintTextView,
-            values.spacing,
+            values.elementSpacing,
             attr = { it.questionHint },
             expanded = { _, _ -> bindings.questionHintTextView.text.isNotEmpty() },
             alpha = {
@@ -100,7 +100,7 @@ class ElementList(bindings: Bindings, values: Values) {
         ),
         Element(
             bindings.correctedTextView,
-            values.spacing,
+            values.elementSpacing,
             attr = { it.corrected },
             expanded = { _, _ -> bindings.correctedTextView.text.isNotEmpty() },
             alpha = {
@@ -114,7 +114,7 @@ class ElementList(bindings: Bindings, values: Values) {
         ),
         Element(
             bindings.inputTextView,
-            values.spacing,
+            values.elementSpacing,
             attr = { it.input },
             expanded = { s, _ -> s != State.EXPLANATION },
             alpha = {
@@ -129,7 +129,7 @@ class ElementList(bindings: Bindings, values: Values) {
         ),
         Element(
             bindings.stateIconView,
-            5 * values.spacing,
+            5 * values.elementSpacing,
             attr = { it.icon },
             expanded = { state, kind ->
                 when (state) {
@@ -148,7 +148,7 @@ class ElementList(bindings: Bindings, values: Values) {
         ),
         Element(
             bindings.revealedKanjiOrKanaTextView,
-            values.spacing,
+            values.elementSpacing,
             attr = { it.revealedKanjiOrKana },
             expanded = { s, _ -> s != State.QUESTION && bindings.revealedKanjiOrKanaTextView.text.isNotEmpty() },
             alpha = {
@@ -162,7 +162,7 @@ class ElementList(bindings: Bindings, values: Values) {
         ),
         Element(
             bindings.revealedTranslationTextView,
-            values.spacing,
+            values.elementSpacing,
             attr = { it.revealedTranslation },
             expanded = { s, _ -> s != State.QUESTION && bindings.revealedTranslationTextView.text.isNotEmpty() },
             alpha = {
@@ -176,7 +176,7 @@ class ElementList(bindings: Bindings, values: Values) {
         ),
         Element(
             bindings.revealedHintTextView,
-            values.spacing,
+            values.elementSpacing,
             attr = { it.revealedHint },
             expanded = { s, _ -> s != State.QUESTION && bindings.revealedHintTextView.text.isNotEmpty() },
             alpha = {
@@ -189,7 +189,7 @@ class ElementList(bindings: Bindings, values: Values) {
         ),
         Element(
             bindings.explanationRow,
-            values.spacing,
+            values.elementSpacing,
             attr = { it.explanation },
             expanded = { s, _ -> s == State.EXPLANATION },
             alpha = {

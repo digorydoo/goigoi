@@ -12,7 +12,7 @@
       defaultHint_de="Nomen"
       lvl="n3"
       requiresSentences="true"
-      requiresPhrases="false"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -1275,19 +1275,21 @@
                   rom="nebusoku"
                   tr_en="lack of sleep"
                   tr_de="Schlafmangel"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【不：ぶ】【足：そく】" />
+                </phrase>
                 <phrase
                   ph="【水：みず】【不：ぶ】【足：そく】"
                   rom="mizubusoku"
                   tr_en="water shortage; insufficient water supply"
                   tr_de="Wassermangel; ungenügende Wasserversorgung"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="GENKI2 p.286"
-                />
+                >
+                    <ask w="【不：ぶ】【足：そく】" />
+                </phrase>
                 <phrase
                   ph="【不：ふ】【足：そく】なし"
                   rom="fusoku-nashi"
@@ -1310,10 +1312,11 @@
                   rom="Nebusoku de tsukareta."
                   tr_en="I'm tired from lack of sleep."
                   tr_de="Ich bin müde, weil ich zuwenig geschlafen habe."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【不：ぶ】【足：そく】" />
+                </sentence>
             </word>
             <word
               w="【革：かわ】"
@@ -1336,11 +1339,12 @@
                   rom="Sono kutsu wa hongawa de tsukurarete imasu ka?"
                   tr_en="Are those shoes made of real leather?"
                   tr_de="Sind diese Schuhe aus echtem Leder?"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT; jisho has nx for hongawa; jisho says hon-kawa is also correct"
-                />
+                >
+                    <ask w="【革：がわ】" />
+                </sentence>
                 <sentence
                   s="その【革：かわ】は【本：ほん】【物：もの】ではありません。"
                   rom="Sono kawa wa honmono de wa arimasen."

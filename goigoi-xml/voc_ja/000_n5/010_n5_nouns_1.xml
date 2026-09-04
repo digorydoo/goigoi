@@ -19,7 +19,7 @@
       defaultHint_de="Nomen"
       lvl="n5"
       requiresSentences="true"
-      requiresPhrases="false"
+      requiresPhrases="true"
     >
         <section>
             <!-- school, university -->
@@ -933,9 +933,10 @@
                   rom="Kōhī to cha to dochira ga suki desu ka?"
                   tr_en="Which do you like better, coffee or tea?"
                   tr_de="Was magst du lieber, Kaffee oder Tee?"
-                  hasDifferentForm="true"
                   lvl="n5"
-                />
+                >
+                    <ask w="【茶：ちゃ】" />
+                </sentence>
             </word>
             <word
               w="【茶：ちゃ】"

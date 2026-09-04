@@ -1,49 +1,56 @@
 package io.github.digorydoo.goigoi.core.file
 
+import ch.digorydoo.kutils.file.KDataInputStream.FileMarker
+import io.github.digorydoo.goigoi.core.file.GoigoiFileMarker.*
 import java.io.OutputStream
 
+// FIXME get rid of this, use KDataOutputStream from kutils
 abstract class BinaryFileWriter(private val stream: OutputStream) {
     private val buf = ByteArray(2)
 
     abstract fun write()
 
     protected fun beginUnyt(id: String) {
-        write(BinaryFileReader.UNYT_ID_KEY, id)
+        write(UNYT_ID, id)
     }
 
     protected fun beginWord(id: String) {
-        write(BinaryFileReader.WORD_ID_KEY, id)
+        write(WORD_ID, id)
     }
 
     protected fun beginPhrase() {
-        write(BinaryFileReader.PHRASE_ID_KEY, "") // currently without id
+        write(PHRASE_ID, "") // currently without id
     }
 
     protected fun beginSentence() {
-        write(BinaryFileReader.SENTENCE_ID_KEY, "") // currently without id
+        write(SENTENCE_ID, "") // currently without id
     }
 
     protected fun beginSeeAlso(otherWordId: String) {
-        write(BinaryFileReader.WORDLINK_ID_KEY, otherWordId)
+        write(WORDLINK_ID, otherWordId)
     }
 
     protected fun writeEOFMarker() {
-        writeUInt16(BinaryFileReader.EOF_KEY)
+        writeUShort16(EOF.value)
     }
 
-    protected fun write(key: Int, value: String) {
-        writeUInt16(key)
+    protected fun write(marker: FileMarker, value: String) {
+        writeUShort16(marker.value)
         writeUTF8(value)
     }
 
-    protected fun writeIfNonEmpty(key: Int, value: String) {
+    protected fun writeIfNonEmpty(marker: FileMarker, value: String) {
         if (value.isNotEmpty()) {
-            write(key, value)
+            write(marker, value)
         }
     }
 
-    protected fun write(key: Int, value: Boolean) {
-        write(key, "$value")
+    protected fun write(marker: FileMarker, value: Boolean) {
+        write(marker, "$value")
+    }
+
+    private fun writeUShort16(us: UShort) {
+        writeUInt16(us.toInt())
     }
 
     private fun writeUInt16(i: Int) {

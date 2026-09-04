@@ -68,12 +68,10 @@ class ListItemViewHolder private constructor(
             delegate: ClickableItemDelegate,
         ): ListItemViewHolder {
             val resId = when (itemType) {
-                ItemViewType.SINGLE -> R.layout.my_list_item_1
                 ItemViewType.SINGLE_WITH_DRAWABLE -> R.layout.my_list_item_1
                 ItemViewType.DOUBLE -> R.layout.my_list_item_2
                 ItemViewType.DOUBLE_WITH_DRAWABLE -> R.layout.my_list_item_2_drw
                 ItemViewType.DOUBLE_WITH_DRAWABLE_AND_BADGE -> R.layout.my_list_item_2_drw_badge
-                ItemViewType.LARGE -> R.layout.my_list_item_large
                 else -> throw RuntimeException("Item type not supported: $itemType")
             }
             val rootView = inflater.inflate(resId, parent, false)

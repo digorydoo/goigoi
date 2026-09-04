@@ -2,6 +2,7 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
     alias(libs.plugins.agp) apply false
+    alias(libs.plugins.compose.compiler) apply false
 }
 
 allprojects {

@@ -23,6 +23,7 @@ class StudyItemPool(
 
     fun advanceHeadIfPossible(list: List<StudyItem>): Boolean {
         var didAdvance = false
+        val startIdx = superProgressiveIdx
         var idx = superProgressiveIdx
 
         while (idx < allWordFilenames.size) {
@@ -30,20 +31,26 @@ class StudyItemPool(
             val progress = stats.getWordStudyProgress(word)
             val rating = stats.getWordTotalRating(word)
 
-            if (progress < 1.0f || rating < MyWordsMaintainer.MIN_RATING_FOR_REMOVAL_FROM_MY_WORDS) {
-                // Advancing cannot continue. The word will be grabbed from the pool with the normal mechanism.
-                break
+            when {
+                progress < 1f -> {
+                    Log.debug(TAG, "Not advancing superProgressiveIdx further, because progress=$progress")
+                    break
+                }
+                idx == startIdx -> {
+                    if (rating < MyWordsMaintainer.MIN_RATING_FOR_REMOVAL_FROM_MY_WORDS) {
+                        Log.debug(TAG, "Not advancing superProgressiveIdx at all, because rating=$rating")
+                        break
+                    }
+                }
+                rating < MIN_RATING_FOR_KEEP_ADVANCING -> {
+                    Log.debug(TAG, "Not advancing superProgressiveIdx further, because rating=$rating")
+                    break
+                }
             }
 
-            Log.debug(TAG, "Word at $idx is ${word.id}, advancing since progress=$progress, rating=$rating")
+            Log.debug(TAG, "Advancing superProgressiveIdx, skipping ${word.id}, rating=$rating")
             stats.setSuperProgressiveIdx(++idx)
             didAdvance = true
-        }
-
-        if (didAdvance) {
-            Log.debug(TAG, "Advanced superProgressiveIdx to $idx")
-        } else {
-            Log.debug(TAG, "superProgressiveIdx stays at $idx")
         }
 
         return didAdvance
@@ -262,5 +269,6 @@ class StudyItemPool(
         private const val MAX_SEEK_AHEAD = 100
         private const val NUM_WORDS_CONSIDERED_RECENT = 50
         private const val MAX_MILLIS_FOR_SEEK_AHEAD = 150L // milliseconds
+        private const val MIN_RATING_FOR_KEEP_ADVANCING = 0.95f
     }
 }

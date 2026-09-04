@@ -159,6 +159,39 @@
                 />
             </word>
             <word
+              w="【設：せっ】【計：けい】"
+              rom="sekkei"
+              tr_en="design; layout; designing"
+              tr_de="Design; Schema; bauen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="technical"
+              id="sekkei-design"
+            >
+                <keep_apart_from id="tsukuru-make" />
+                <keep_apart_from id="seisan-production" />
+                <keep_apart_from id="kōgyō-manufacturing" />
+                <phrase
+                  ph="よく【設：せっ】【計：けい】されている"
+                  rom="yoku sekkei sarete iru"
+                  tr_en="well designed"
+                  tr_de="gut konstruiert"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="その【車：くるま】を【設：せっ】【計：けい】させていただきました。"
+                  rom="Sono kuruma o sekkei sasete itadakimashita."
+                  tr_en="I had the privilege to design that car."
+                  tr_de="Ich durfte dieses Auto designen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="rephrased by ChatGPT"
+                />
+            </word>
+            <word
               w="【偶：ぐう】【然：ぜん】"
               rom="gūzen"
               tr_en="coincidence; by chance"
@@ -167,50 +200,20 @@
               id="gūzen-coincidence"
             >
                 <sentence
+                  s="【偶：ぐう】【然：ぜん】に【頼：たよ】るな。"
+                  rom="Gūzen ni tayoru na."
+                  tr_en="Don't leave it up to chance."
+                  tr_de="Überlasse es nicht dem Zufall."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
                   s="【散：さん】【歩：ぽ】の【途：と】【中：ちゅう】で【友：とも】【達：だち】に【偶：ぐう】【然：ぜん】【会：あ】いました。"
                   rom="Sanpo no tochū de tomodachi ni gūzen aimashita."
                   tr_en="I ran into a friend by chance while taking a walk."
                   tr_de="Unterwegs beim Spazieren habe ich zufällig einen Freund getroffen."
                   lvl="n3"
                   origin="ChatGPT"
-                />
-            </word>
-            <word
-              w="【意：い】【識：しき】"
-              rom="ishiki"
-              tr_en="consciousness; awareness"
-              tr_de="Bewusstsein; sich etw. bewusst sein"
-              lvl="n3"
-              category="health, thinking"
-              id="ishiki-awareness"
-            >
-                <keep_apart_from id="kanshin-concern" />
-                <keep_apart_from id="sameru-wakeup" />
-                <phrase
-                  ph="【意：い】【識：しき】を【失：うしな】う"
-                  rom="ishiki o ushinau"
-                  tr_en="to lose consciousness"
-                  tr_de="das Bewusstsein verlieren"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <phrase
-                  ph="【意：い】【識：しき】を【取：と】り【戻：もど】す"
-                  rom="ishiki o tori-modosu"
-                  tr_en="to regain consciousness"
-                  tr_de="das Bewusstsein zurückerlangen"
-                  lvl="n3"
-                  origin="ChatGPT"
-                  rem="also correct: 意識を回復する; jisho has n1 for tori-modosu, but n5 for toru, n3 for modosu"
-                />
-                <sentence
-                  s="【人：にん】【間：げん】は【意：い】【識：しき】のある【生：い】き【物：もの】だ。"
-                  rom="Ningen wa ishiki no aru ikimono da."
-                  tr_en="Humans are beings that have consciousness."
-                  tr_de="Menschen sind Wesen mit einem Bewusstsein."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
                 />
             </word>
             <word

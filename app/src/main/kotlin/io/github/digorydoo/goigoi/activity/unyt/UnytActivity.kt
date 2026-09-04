@@ -24,7 +24,7 @@ import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.stats.StatsKey
 import io.github.digorydoo.goigoi.dialog.WordCtxDlgFragment
 import io.github.digorydoo.goigoi.dialog.WordCtxMenu
-import io.github.digorydoo.goigoi.drawable.SheetHead
+import io.github.digorydoo.goigoi.drawable.IconBuilder
 import io.github.digorydoo.goigoi.list.*
 import io.github.digorydoo.goigoi.listviewholder.ClickableItemDelegate
 import io.github.digorydoo.goigoi.utils.DeviceUtils
@@ -141,7 +141,7 @@ class UnytActivity: AppCompatActivity(), WordCtxMenu.Callback {
                     parent,
                     layoutInflater,
                     unyt,
-                    SheetHead(ctx),
+                    IconBuilder.getSheetHeadDrawable(ctx),
                     headerDelegate
                 )
                 else -> null

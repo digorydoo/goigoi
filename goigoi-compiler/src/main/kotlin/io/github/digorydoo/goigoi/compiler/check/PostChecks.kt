@@ -25,14 +25,43 @@ class PostChecks(
             println("Final integrity checks...")
         }
 
+        checkSchoolYears()
+        checkDontConfuseKanjis()
         checkRequiredManualKanjiLevels()
         checkKanjisInPhrasesAndSentences()
         checkUsuallyInKana()
         checkConsistentKanjiLevels()
-        checkDontConfuseKanjis()
 
         if (!options.quiet) {
             vocab.warnings.forEach { println(it) }
+        }
+    }
+
+    private fun checkSchoolYears() {
+        val schoolYearsMap = mutableMapOf<Char, Int>()
+
+        for ((year, kanjis) in vocab.kanjiBySchoolYear) {
+            for (kanji in kanjis) {
+                schoolYearsMap[kanji] = year
+            }
+        }
+
+        for (level in JLPTLevel.entries) {
+            val errors = mutableListOf<String>()
+
+            for (kanji in kanjiLevels.get(level)) {
+                val year = schoolYearsMap[kanji]
+
+                if (year == null && level.isEasierThan(JLPTLevel.N2)) {
+                    errors += "Kanji $kanji is not in any schoolyear and should be at least N2 or harder"
+                } else if (year != null && level.isMoreDifficultThan(JLPTLevel.N2)) {
+                    errors += "Kanji $kanji is taught in school and should be at least N2 or easier"
+                }
+            }
+
+            if (errors.isNotEmpty()) {
+                throw CheckFailed(errors.joinToString("\n"))
+            }
         }
     }
 

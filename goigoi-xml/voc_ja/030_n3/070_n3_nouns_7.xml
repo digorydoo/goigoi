@@ -12,7 +12,7 @@
       defaultHint_de="Nomen"
       lvl="n3"
       requiresSentences="true"
-      requiresPhrases="false"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -1018,11 +1018,12 @@
                   rom="amibari"
                   tr_en="sewing needle"
                   tr_de="Nähnadel"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="jpod101 audio"
                   rem="jisho has nx, but n3 for amu, hari"
-                />
+                >
+                    <ask w="【針：ばり】" />
+                </phrase>
                 <sentence
                   s="【針：はり】で【指：ゆび】を【刺：さ】しちゃった。"
                   rom="Hari de yubi o sashichatta."
@@ -1147,10 +1148,11 @@
                   rom="kegawa"
                   tr_en="fur; pelt"
                   tr_de="Fell; Pelz"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【皮：がわ】" />
+                </phrase>
                 <sentence
                   s="【動：どう】【物：ぶつ】の【皮：かわ】は【毛：け】で【覆：おお】われている。"
                   rom="Dōbutsu no kawa wa ke de ōwarete iru."
@@ -1164,10 +1166,11 @@
                   rom="Sono kōto wa kegawa de dekite iru."
                   tr_en="That coat is made from fur."
                   tr_de="Dieser Mantel ist aus Pelz."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【毛：け】【皮：がわ】" />
+                </sentence>
             </word>
             <word
               w="【毛：け】【皮：がわ】"
@@ -1777,11 +1780,12 @@
                   rom="keitodama"
                   tr_en="ball of wool"
                   tr_de="Wollknäuel"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="jpod101 audio"
                   rem="not in jisho as a word"
-                />
+                >
+                    <ask w="【玉：だま】" />
+                </phrase>
                 <phrase
                   ph="【玉：たま】【葱：ねぎ】"
                   rom="tamanegi"
@@ -1796,21 +1800,23 @@
                   rom="medama"
                   tr_en="eyeball"
                   tr_de="Augapfel"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
                   rem="jisho has nx"
-                />
+                >
+                    <ask w="【玉：だま】" />
+                </phrase>
                 <phrase
                   ph="シャボン【玉：だま】"
                   rom="shabondama"
                   tr_en="soap bubbles"
                   tr_de="Seifenblasen"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
                   rem="jisho has nx"
-                />
+                >
+                    <ask w="【玉：だま】" />
+                </phrase>
                 <!-- too many phrases
                   ph="【水：みず】【玉：たま】"
                   rom="mizu-tama"

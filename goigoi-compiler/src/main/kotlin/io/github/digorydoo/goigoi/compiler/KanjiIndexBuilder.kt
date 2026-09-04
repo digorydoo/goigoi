@@ -122,36 +122,41 @@ class KanjiIndexBuilder(
 
         val kanjisMentioned = mutableSetOf<Char>()
         val changes = mutableListOf<Change>()
+        val errors = mutableListOf<String>()
 
         vocab.manualKanjiLevels.forEach { (setToLvl, kanjis) ->
             kanjis.forEach { kanji ->
                 if (kanjisMentioned.contains(kanji)) {
-                    throw Exception("Manual kanji correction mentions kanji more than once: $kanji")
-                }
+                    errors += "Manual kanji correction mentions kanji more than once: $kanji"
+                } else {
+                    kanjisMentioned.add(kanji)
+                    var found = false
 
-                kanjisMentioned.add(kanji)
-                var found = false
+                    JLPTLevel.entries.forEach { lvl ->
+                        val before = kanjiLevels.get(lvl)
 
-                JLPTLevel.entries.forEach { lvl ->
-                    val before = kanjiLevels.get(lvl)
-
-                    if (before.contains(kanji)) {
-                        found = true
-                        if (lvl == setToLvl) {
-                            if (!options.quiet) {
-                                println("   $kanji: $lvl is already $setToLvl")
+                        if (before.contains(kanji)) {
+                            found = true
+                            if (lvl == setToLvl) {
+                                if (!options.quiet) {
+                                    println("   $kanji: $lvl is already $setToLvl")
+                                }
+                            } else {
+                                changes.add(Change(from = lvl, to = setToLvl, kanji = kanji))
                             }
-                        } else {
-                            changes.add(Change(from = lvl, to = setToLvl, kanji = kanji))
                         }
                     }
-                }
 
-                if (!found) {
-                    // This happens if ignored characters such as 々 appear in manual kanji-index.
-                    changes.add(Change(from = JLPTLevel.Nx, to = setToLvl, kanji = kanji))
+                    if (!found) {
+                        // This happens if ignored characters such as 々 appear in manual kanji-index.
+                        changes.add(Change(from = JLPTLevel.Nx, to = setToLvl, kanji = kanji))
+                    }
                 }
             }
+        }
+
+        if (errors.isNotEmpty()) {
+            throw CheckFailed(errors.joinToString("\n"))
         }
 
         changes.forEach {

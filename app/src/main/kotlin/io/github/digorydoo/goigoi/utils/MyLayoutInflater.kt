@@ -27,7 +27,6 @@ class MyLayoutInflater(private val inflater: LayoutInflater, private val root: V
         }
     }
 
-    @Suppress("unused")
     fun insertItem(primaryText: String) {
         val group = inflater.inflate(R.layout.my_list_item_1, root, false)
         root.addView(group)
@@ -63,7 +62,7 @@ class MyLayoutInflater(private val inflater: LayoutInflater, private val root: V
         }
     }
 
-    fun insertItemWithFurigana(primaryText: CharSequence, secondaryText: String) {
+    fun insertItemWithFurigana(primaryText: CharSequence, secondaryText: CharSequence) {
         val group = inflater.inflate(R.layout.my_list_item_2_furigana, root, false)
         root.addView(group)
 
@@ -76,7 +75,7 @@ class MyLayoutInflater(private val inflater: LayoutInflater, private val root: V
         }
     }
 
-    fun insertItemWithFurigana(primaryText: CharSequence, secondaryText: String, tertiaryText: CharSequence) {
+    fun insertItemWithFurigana(primaryText: CharSequence, secondaryText: CharSequence, tertiaryText: CharSequence) {
         if (tertiaryText.isEmpty()) {
             insertItemWithFurigana(primaryText, secondaryText)
         } else {
@@ -123,7 +122,6 @@ class MyLayoutInflater(private val inflater: LayoutInflater, private val root: V
         }
     }
 
-    @Suppress("unused")
     fun insertItem(imgResId: Int, primaryText: String, secondaryText: String, onClick: () -> Unit) {
         val ctx = root.context
         val group = inflater.inflate(R.layout.my_list_item_2_drw, root, false)

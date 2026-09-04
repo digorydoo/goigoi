@@ -11,8 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -31,11 +31,12 @@
                   rom="kami bukuro"
                   tr_en="paper bag"
                   tr_de="Papiertüte"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
                   rem="jisho has nx"
-                />
+                >
+                    <ask w="【袋：ぶくろ】" />
+                </phrase>
                 <phrase
                   ph="【小：こ】【麦：むぎ】【粉：こ】の【袋：ふくろ】"
                   rom="komugiko no fukuro"
@@ -240,6 +241,7 @@
                 -->
                 <keep_apart_from id="shitaku-preparation" />
                 <keep_apart_from id="yōi-preparation" />
+                <keep_apart_from id="sonaeru-furnish" />
                 <phrase
                   ph="【授：じゅ】【業：ぎょう】の【準：じゅん】【備：び】をする"
                   rom="jugyō no junbi o suru"
@@ -929,7 +931,6 @@
                   lvl="n3"
                   origin="Miku"
                   href="https://youtu.be/iDFFO3hkxVA"
-                  hasDifferentForm="true"
                 />
             </word>
             <word
@@ -1541,6 +1542,7 @@
               id="saiaku-worst"
               rem="appears in GENKI2 p.117 vocab section; jisho has nx"
             >
+                <keep_apart_from id="osoroshii-terrible" />
                 <phrase
                   ph="【最：さい】【悪：あく】の【事：じ】【態：たい】に【備：そな】える"
                   rom="saiaku no jitai ni sonaeru"
@@ -1800,20 +1802,22 @@
                   rom="shoku-yō yu"
                   tr_en="edible oil"
                   tr_de="Speiseöl"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
                   rem="jisho has nx; ChatGPT and macOS TextToSpeech say しょくようゆ, but jisho has しょくようあぶら"
-                />
+                >
+                    <ask w="【油：ゆ】" />
+                </phrase>
                 <phrase
                   ph="【石：せき】【油：ゆ】"
                   rom="sekiyu"
                   tr_en="crude oil; petroleum"
                   tr_de="Rohöl; Erdöl"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【油：ゆ】" />
+                </phrase>
                 <sentence
                   s="【服：ふく】は【油：あぶら】で【汚：よご】れていた。"
                   rom="Fuku wa abura de yogorete ita."

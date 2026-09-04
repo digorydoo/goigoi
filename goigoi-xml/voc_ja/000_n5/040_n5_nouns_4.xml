@@ -12,7 +12,7 @@
       defaultHint_de="Nomen"
       lvl="n5"
       requiresSentences="true"
-      requiresPhrases="false"
+      requiresPhrases="true"
     >
         <section>
             <!-- people -->
@@ -947,10 +947,11 @@
                   tr_de="Ich werde ein heisses Bad nehmen und dann ins Bett gehen."
                   explanation_en="「寝よう」is the volitional form of「寝る」and indicates a decision"
                   explanation_de="「寝よう」ist die Willensform von「寝る」und zeigt eine Entscheidung an"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="lib0"
-                />
+                >
+                    <ask w="【風：ふ】【呂：ろ】" />
+                </sentence>
             </word>
             <word
               w="【風：ふ】【呂：ろ】"

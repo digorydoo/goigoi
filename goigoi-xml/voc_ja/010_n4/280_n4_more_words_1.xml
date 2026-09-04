@@ -9,7 +9,7 @@
       hasRomaji="true"
       hasFurigana="true"
       lvl="n4"
-      requiresSentences="false"
+      requiresSentences="true"
       requiresPhrases="false"
     >
         <section>
@@ -292,6 +292,8 @@
               id="hidoi-cruel"
             >
                 <keep_apart_from id="kibishii-strict" rem="ambiguity in phrases" />
+                <keep_apart_from id="hageshii-violent" />
+                <keep_apart_from id="osoroshii-terrible" />
                 <phrase
                   ph="ひどい【天：てん】【気：き】"
                   rom="hidoi tenki"
@@ -1104,11 +1106,12 @@
                   rom="kono gurai"
                   tr_en="about this much"
                   tr_de="etwa soviel"
-                  hasDifferentForm="true"
                   lvl="n4"
                   origin="GENKI2 p.95"
                   rem="appears in vocab section"
-                />
+                >
+                    <ask w="ぐらい" />
+                </phrase>
                 <phrase
                   ph="【五：ご】【百：ひゃく】【円：えん】くらい"
                   rom="go-hyaku-en kurai"
@@ -1131,19 +1134,21 @@
                   tr_en="London is as expensive as Tokyo."
                   tr_de="London ist so teuer wie Tokyo."
                   lvl="n4"
-                  hasDifferentForm="true"
                   origin="Oxford p.105"
                   rem="jisho has nx for Rondon, Tōkyō; n1 for kurai"
-                />
+                >
+                    <ask w="ぐらい" />
+                </sentence>
                 <sentence
                   s="【子：こ】【供：ども】でもわかるぐらい【簡：かん】【単：たん】だよ。"
                   rom="Kodomo de mo wakaru gurai kantan da yo."
                   tr_en="It's so easy even a child could understand it."
                   tr_de="Das ist doch so leicht, dass es selbst ein Kind verstehen würde oder so."
-                  hasDifferentForm="true"
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="ぐらい" />
+                </sentence>
                 <sentence
                   s="【一：いち】【日：にち】くらい【休：やす】んでもいいでしょう。"
                   rom="Ichi-nichi kurai yasunde mo ii deshō."
@@ -1231,10 +1236,11 @@
                   rom="Ashita wa hachi-ji made ni kaisha ni ikanakute wa ikemasen."
                   tr_en="I have to be at work by 8 o'clock tomorrow."
                   tr_de="Ich muss morgen spätestens um 8 Uhr in der Firma sein."
-                  hasDifferentForm="true"
                   lvl="n4"
                   origin="500mon q402 modified"
-                />
+                >
+                    <ask stem="いけ" suffix="ません" />
+                </sentence>
             </word>
             <word
               w="ついて"

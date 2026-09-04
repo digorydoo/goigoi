@@ -158,31 +158,33 @@ class UnytChecker {
 
         // Check that translations + hints are unique among visible words in this unyt.
 
-        languages.forEach { langId ->
-            val found = mutableSetOf<String>()
+        if (!unyt.hidden) {
+            languages.forEach { langId ->
+                val found = mutableSetOf<String>()
 
-            for (section in unyt.sections) {
-                for (word in section.words) {
-                    if (!word.hidden) {
-                        val tr = word.translation.withLanguage(langId)
-                            .takeIf { it.isNotEmpty() }
-                            ?: word.translation.en
+                for (section in unyt.sections) {
+                    for (word in section.words) {
+                        if (!word.hidden) {
+                            val tr = word.translation.withLanguage(langId)
+                                .takeIf { it.isNotEmpty() }
+                                ?: word.translation.en
 
-                        val hint = word.hint.withLanguage(langId)
-                            .takeIf { it.isNotEmpty() }
-                            ?: word.hint.en
+                            val hint = word.hint.withLanguage(langId)
+                                .takeIf { it.isNotEmpty() }
+                                ?: word.hint.en
 
-                        val hint2 = when (langId) {
-                            "de" -> word.hint2?.de
-                            else -> word.hint2?.en
-                        } ?: ""
+                            val hint2 = when (langId) {
+                                "de" -> word.hint2?.de
+                                else -> word.hint2?.en
+                            } ?: ""
 
-                        val trAndHint = "${tr}/${hint}/${hint2}"
+                            val trAndHint = "${tr}/${hint}/${hint2}"
 
-                        if (found.contains(trAndHint)) {
-                            throw CheckFailed("Translation/hint ($langId) not unique in unyt: $trAndHint")
-                        } else {
-                            found.add(trAndHint)
+                            if (found.contains(trAndHint)) {
+                                throw CheckFailed("Translation/hint ($langId) not unique in unyt: $trAndHint")
+                            } else {
+                                found.add(trAndHint)
+                            }
                         }
                     }
                 }

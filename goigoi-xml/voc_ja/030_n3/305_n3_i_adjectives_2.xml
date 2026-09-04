@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<vocabulary>
+    <unit
+      name_en="N3 i-adjectives ②"
+      name_de="N3 I-Adjektive ②"
+      name_fr="Les i-adjectifs N3 ②"
+      name_it="I-aggettivi N3 ②"
+      studyLang="ja"
+      hasRomaji="true"
+      hasFurigana="true"
+      defaultHint_en="i-adjective"
+      defaultHint_de="I-Adjektiv"
+      lvl="n3"
+      requiresSentences="false"
+      requiresPhrases="false"
+    >
+        <section>
+            <word
+              w="【賢：かしこ】い"
+              rom="kashikoi"
+              tr_en="clever; smart; wise"
+              tr_de="schlau; intelligent; weise"
+              lvl="n3"
+              id="kashikoi-smart"
+            >
+                <keep_apart_from id="umai-clever" />
+                <keep_apart_from id="kiyō-clever" />
+                <keep_apart_from id="rikō-clever" />
+                <sentence
+                  s="あなたは【何：なん】と【賢：かしこ】い【生：せい】【徒：と】なのでしょう！"
+                  rom="Anata wa nanto kashikoi seito na no deshō!"
+                  tr_en="What a clever student you are!"
+                  tr_de="Du bist aber ein schlauer Schüler!"
+                  lvl="n3"
+                />
+            </word>
+            <word
+              w="【苦：くる】しい"
+              rom="kurushii"
+              tr_en="painful; distressing; tough"
+              tr_de="schmerzhaft; anstrengend; schlimm"
+              lvl="n3"
+              id="kurushii-tough"
+            >
+                <!-- the noun is 苦しみ, nx, common -->
+                <see id="kurushimu-suffer" rem="verb" />
+                <keep_apart_from id="kitsui-tough" />
+                <phrase
+                  ph="【寝：ね】【苦：ぐる】しい"
+                  rom="negurushii"
+                  tr_en="unable to sleep; sleeping restlessly"
+                  tr_de="schlaflos; unruhig schlafend"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                >
+                    <ask w="【苦：ぐる】しい" />
+                </phrase>
+                <phrase
+                  ph="【息：いき】【苦：ぐる】しい"
+                  rom="ikigurushii"
+                  tr_en="suffocating; choking; oppressive"
+                  tr_de="erstickend; würgend; beklemmend"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx"
+                >
+                    <ask w="【苦：ぐる】しい" />
+                </phrase>
+                <phrase
+                  ph="【狭：せま】【苦：くる】しい【部：へ】【屋：や】"
+                  rom="sema-kurushii heya"
+                  tr_en="an uncomfortably cramped room"
+                  tr_de="ein unangenehm überfüllter Raum"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【激：はげ】しい"
+              rom="hageshii"
+              tr_en="furious; fierce; incessant"
+              tr_de="wütend; erbittert; unaufhörlich"
+              lvl="n3"
+              id="hageshii-violent"
+            >
+                <keep_apart_from id="hidoi-cruel" />
+                <keep_apart_from id="osoroshii-terrible" />
+                <keep_apart_from id="arai-wild" />
+                <!-- 激しい台風 (hageshii taifū) - a violent typhoon (ChatGPT) -->
+                <!-- 激しく揺れる (はげしくゆれる) shakes violently (ChatGPT) -->
+            </word>
+            <word
+              w="【濃：こ】い"
+              rom="koi"
+              tr_en="deep (colour); strong (flavour); dense"
+              tr_de="(Farbe) tief; (Geschmack) streng; dicht"
+              lvl="n3"
+              id="koi-deep"
+            />
+            <word
+              w="【等：ひと】しい"
+              rom="hitoshii"
+              tr_en="equal; identical; equivalent"
+              tr_de="gleich; identisch; äquivalent"
+              lvl="n3"
+              id="hitoshii-equal"
+            />
+            <word
+              w="【鋭：するど】い"
+              rom="surudoi"
+              tr_en="sharp (blade); stabbing (pain); quick (mind)"
+              tr_de="scharf (Messer); stechend (Schmerz); scharf (Verstand)"
+              lvl="n3"
+              id="surudoi-sharp"
+            />
+            <word
+              w="【素：す】【晴：ば】らしい"
+              rom="subarashii"
+              tr_en="wonderful; splendid"
+              tr_de="wundervoll; prächtig"
+              lvl="n3"
+              category="top-words"
+              id="subarashii-splendid"
+            >
+                <keep_apart_from id="sugureru-excel" />
+                <keep_apart_from id="erai-admirable" />
+                <keep_apart_from id="mezamashii-splendid" />
+            </word>
+            <word
+              w="【貧：まず】しい"
+              rom="mazushii"
+              tr_en="poor; needy; lacking"
+              tr_de="arm; bedürftig; mittellos"
+              lvl="n3"
+              id="mazushii-poor"
+            />
+            <word
+              w="【親：した】しい"
+              rom="shitashii"
+              tr_en="close (friend, relative); intimate"
+              tr_de="enger (Freund, Verwandter); intim"
+              lvl="n3"
+              category="relationships"
+              id="shitashii-close"
+            />
+            <word
+              w="【可：か】【愛：わい】らしい"
+              rom="kawairashii"
+              tr_en="lovely; sweet"
+              tr_de="lieblich; süss"
+              lvl="n3"
+              id="kawairashii-lovely"
+            />
+            <word
+              w="【幼：おさな】い"
+              rom="osanai"
+              tr_en="very young; childish; immature"
+              tr_de="sehr jung; kindlich; kindisch"
+              lvl="n3"
+              id="osanai-childish"
+            />
+        </section>
+    </unit>
+</vocabulary>

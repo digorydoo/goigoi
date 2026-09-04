@@ -30,13 +30,6 @@ object MyDlgBuilder {
         return builder.create().apply { show() }
     }
 
-    fun showRateUsDlg(ctx: Context, reply: (confirm: Boolean) -> Unit): AlertDialog {
-        val message = ContextCompat.getString(ctx, R.string.rate_us_message)
-        val okBtnCaption = ContextCompat.getString(ctx, R.string.rate_us_btn)
-        val cancelBtnCaption = ContextCompat.getString(ctx, R.string.not_now_btn)
-        return showTwoWayDlg(message, okBtnCaption, cancelBtnCaption, ctx, reply)
-    }
-
     fun showHintDlg(stringResId: Int, ctx: Context, onDismiss: (() -> Unit)? = null): AlertDialog {
         val wrapper = ResUtils.getDialogThemeWrapper(ctx)
         val builder = AlertDialog.Builder(wrapper)

@@ -1,161 +1,89 @@
 package io.github.digorydoo.goigoi.activity.topic
 
 import android.os.Bundle
-import android.view.View
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.updateLayoutParams
-import io.github.digorydoo.goigoi.R
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.activity.enableEdgeToEdge
+import androidx.lifecycle.lifecycleScope
+import io.github.digorydoo.goigoi.activity.topic.TopicActivityModel.Subheader
+import io.github.digorydoo.goigoi.activity.topic.TopicActivityModel.UnytInfo
+import io.github.digorydoo.goigoi.activity.topic.TopicActivityModel.UnytsListItem
+import io.github.digorydoo.goigoi.activity.topic.components.TopicScreen
 import io.github.digorydoo.goigoi.activity.unyt.startUnytActivityAsync
 import io.github.digorydoo.goigoi.core.db.Topic
 import io.github.digorydoo.goigoi.core.db.Unyt
-import io.github.digorydoo.goigoi.dialog.UnytCtxDlgFragment
-import io.github.digorydoo.goigoi.dialog.UnytCtxMenu
-import io.github.digorydoo.goigoi.drawable.SheetHead
-import io.github.digorydoo.goigoi.list.*
-import io.github.digorydoo.goigoi.listviewholder.ClickableItemDelegate
-import io.github.digorydoo.goigoi.utils.DeviceUtils
+import io.github.digorydoo.goigoi.providers.DevicePropsProvider
+import io.github.digorydoo.goigoi.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.utils.ResUtils
 import io.github.digorydoo.goigoi.utils.SingletonHolder
 
-class TopicActivity: AppCompatActivity(), UnytCtxMenu.Callback {
-    private lateinit var params: TopicActivityParams
-    private lateinit var bindings: Bindings
-    private lateinit var values: Values
-    private lateinit var adapter: MyListAdapter
+class TopicActivity: ComponentActivity() {
     private lateinit var topic: Topic
-    private var unytLaunched: Unyt? = null
-    private var uiDisabled = false
+    private lateinit var model: TopicActivityModel
+    private lateinit var tasks: TopicActivityTasks
+    private var navigatedToUnyt: Unyt? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ResUtils.setActivityTheme(this)
-        setContentView(R.layout.topic_activity)
+        enableEdgeToEdge()
 
-        val ctx = applicationContext
-        params = TopicActivityParams.fromIntent(intent)
-        bindings = Bindings(this)
-        values = Values(this)
-
+        val params = TopicActivityParams.fromIntent(intent)
         val vocab = SingletonHolder.vocab
         topic = vocab.findTopicById(params.topicId)!!
 
-        val itemDelegate = object: ClickableItemDelegate {
-            override fun onClick(item: AbstrListItem) {
-                when (item) {
-                    is UnytListItem -> unytListItemClicked(item)
-                    else -> Unit
+        val stats = SingletonHolder.stats
+        tasks = TopicActivityTasks(vocab, stats, applicationContext, lifecycleScope)
+
+        model = TopicActivityModel(tasks, lifecycleScope)
+        fillListWithPlaceholders()
+
+        setContent {
+            SingletonsProvider(this) {
+                DevicePropsProvider(this) {
+                    GoigoiTheme {
+                        TopicScreen(
+                            topic,
+                            model,
+                            onUnytClicked = { unyt ->
+                                startUnytActivityAsync(
+                                    unyt,
+                                    done = { navigatedToUnyt = unyt }
+                                )
+                            },
+                            onBack = { finish() }
+                        )
+                    }
                 }
             }
+        }
+    }
 
-            override fun onLongClick(item: AbstrListItem): Boolean {
-                if (uiDisabled) return false
-                val uitem = item as? UnytListItem ?: return false
-                val dlg = UnytCtxDlgFragment.createNewFragment(uitem.unyt)
-                dlg.show(supportFragmentManager, UnytCtxDlgFragment.TAG)
-                return true
+    private fun fillListWithPlaceholders() {
+        val list = mutableListOf<UnytsListItem>()
+
+        for (unyt in topic.unyts) {
+            val subheader = unyt.subheader.withSystemLang
+
+            if (subheader.isNotEmpty()) {
+                list.add(Subheader(subheader))
             }
+
+            list.add(UnytInfo(unyt, isMyWordsUnyt = false, data = null))
         }
 
-        val screenSize = DeviceUtils.getScreenSize(this)
-        val orient = DeviceUtils.getOrientation(this)
-
-        val gapSize = values.gapSize(screenSize, orient).toInt()
-
-        if (gapSize > 0) {
-            bindings.leftGap.updateLayoutParams { width = gapSize }
-            bindings.rightGap.updateLayoutParams { width = gapSize }
-
-            bindings.unytsList.apply {
-                setPadding(
-                    gapSize,
-                    paddingTop,
-                    gapSize,
-                    paddingBottom
-                )
-            }
-        } else {
-            bindings.leftGap.visibility = View.GONE
-            bindings.rightGap.visibility = View.GONE
-        }
-
-        setSupportActionBar(bindings.toolbar)
-
-        supportActionBar?.apply {
-            setDisplayHomeAsUpEnabled(true)
-            setHomeButtonEnabled(true)
-            title = topic.name.withSystemLang
-        }
-
-        adapter = MyListAdapter(itemDelegate, layoutInflater) { parent, type ->
-            when (type) {
-                ItemViewType.HEADER -> HeaderViewHolder.create(
-                    parent,
-                    layoutInflater,
-                    topic,
-                    SheetHead(ctx)
-                )
-                else -> null
-            }
-        }
-
-        val unytsList = bindings.unytsList
-        unytsList.adapter = adapter
-        unytsList.setHasFixedSize(false)
-        unytsList.addItemDecoration(MyItemDecoration(ctx))
-        unytsList.addMyListOnScrollHandler(bindings.toolbar)
+        model.setList(list)
     }
 
     override fun onResume() {
         super.onResume()
 
-        rebuildList()
-
-        unytLaunched?.let { unyt ->
-            hiliteItem(unyt)
-            unyt.unload()
+        navigatedToUnyt?.let { unyt ->
+            model.updateItemOfUnyt(unyt, onDone = { unyt.unload() })
+            model.setHighlightedUnyt(unyt)
         }
 
-        unytLaunched = null
-    }
-
-    private fun hiliteItem(unyt: Unyt) {
-        adapter.items
-            .indexOfFirst { item -> (item as? UnytListItem)?.unyt == unyt }
-            .takeIf { it >= 0 }
-            ?.let { adapter.hiliteItemAfterUpdates(it) }
-    }
-
-    private fun unytListItemClicked(item: UnytListItem) {
-        if (uiDisabled) return
-        uiDisabled = true // make sure the item cannot be clicked again while the activity launches
-        unytLaunched = item.unyt // remember which unyt was launched when we come back
-
-        startUnytActivityAsync(item.unyt) {
-            uiDisabled = false
-        }
-    }
-
-    override fun onUnytCtxMenuAction(action: UnytCtxMenu.Action) {
-        when (action) {
-            UnytCtxMenu.Action.FAKE_AVG_STATS -> rebuildList()
-            UnytCtxMenu.Action.FAKE_GOOD_STATS -> rebuildList()
-            UnytCtxMenu.Action.FAKE_POOR_STATS -> rebuildList()
-            UnytCtxMenu.Action.RESET_STATS -> rebuildList()
-            UnytCtxMenu.Action.SET_SUPER_PROGRESSIVE_IDX -> Unit
-        }
-    }
-
-    private fun rebuildList() {
-        adapter.items = ListBuilder.buildUnytsList(
-            topic,
-            values.listItemTopMargin,
-            values.listItemTopMarginWhenSubheader,
-            applicationContext
-        )
-    }
-
-    companion object {
-        @Suppress("unused")
-        private const val TAG = "TopicActivity"
+        navigatedToUnyt = null
     }
 }

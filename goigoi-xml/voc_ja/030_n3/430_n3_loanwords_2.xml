@@ -7,7 +7,7 @@
       name_it="Parole di prestito N3 ②"
       studyLang="ja"
       hasRomaji="true"
-      hasFurigana="false"
+      hasFurigana="true"
       defaultHint_en="loanword"
       defaultHint_de="Lehnwort"
       lvl="n3"
@@ -685,7 +685,9 @@
               category="physics"
               id="enerugī-energy"
               HIDDEN="true"
-            />
+            >
+                <!-- 日光からエネルギーを得る事ができる。	You can get energy from the sunshine. (lib0) -->
+            </word>
             <word
               w="ベルト"
               rom="beruto"
@@ -717,7 +719,23 @@
               category="sports"
               id="auto-out"
               HIDDEN="true"
-            />
+            >
+                <keep_apart_from id="auto-outalt" />
+                <keep_together id="auto-outalt" />
+            </word>
+            <word
+              w="【ＯＵＴ：アウト】"
+              rom="auto"
+              tr_en="out (of a ball; in tennis, etc.); outside the line; out"
+              hasCombinedReading="true"
+              usuallyInKana="true"
+              lvl="n3"
+              id="auto-outalt"
+              HIDDEN="true"
+            >
+                <keep_apart_from id="auto-out" />
+                <keep_together id="auto-out" />
+            </word>
             <word
               w="スキー"
               rom="sukī"

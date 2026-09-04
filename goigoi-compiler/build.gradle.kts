@@ -21,6 +21,11 @@ dependencies {
     implementation(project(":kutils"))
 }
 
+tasks.named("build") {
+    dependsOn(":goigoi-core:test")
+    dependsOn(":kutils:test")
+}
+
 tasks.jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 

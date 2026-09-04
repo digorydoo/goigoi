@@ -11,10 +11,12 @@ enum class QAKind(val intValue: Int) {
     SHOW_WORD_ASK_NOTHING(6),
     SHOW_PHRASE_ASK_NOTHING(7),
     SHOW_SENTENCE_ASK_NOTHING(8),
-    SHOW_PHRASE_ASK_KANJI(9),
-    SHOW_SENTENCE_ASK_KANJI(10),
+    SHOW_PHRASE_ASK_WORD_KANJI(9),
+    SHOW_SENTENCE_ASK_WORD_KANJI(10),
     SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR(11),
-    SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA(12);
+    SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA(12),
+    SHOW_PHRASE_ASK_WORD_KANA(13),
+    SHOW_SENTENCE_ASK_WORD_KANA(14);
 
     val shouldUseWeightBasedOnKanji: Boolean
         get() = when (this) {
@@ -26,10 +28,12 @@ enum class QAKind(val intValue: Int) {
             SHOW_WORD_ASK_NOTHING -> false
             SHOW_PHRASE_ASK_NOTHING -> false
             SHOW_SENTENCE_ASK_NOTHING -> false
-            SHOW_PHRASE_ASK_KANJI -> true
-            SHOW_SENTENCE_ASK_KANJI -> true
+            SHOW_PHRASE_ASK_WORD_KANJI -> true
+            SHOW_SENTENCE_ASK_WORD_KANJI -> true
             SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR -> true
             SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> false
+            SHOW_PHRASE_ASK_WORD_KANA -> false
+            SHOW_SENTENCE_ASK_WORD_KANA -> false
         }
 
     val doesNotAskAnything: Boolean
@@ -42,10 +46,12 @@ enum class QAKind(val intValue: Int) {
             SHOW_WORD_ASK_NOTHING -> true
             SHOW_PHRASE_ASK_NOTHING -> true
             SHOW_SENTENCE_ASK_NOTHING -> true
-            SHOW_PHRASE_ASK_KANJI -> false
-            SHOW_SENTENCE_ASK_KANJI -> false
+            SHOW_PHRASE_ASK_WORD_KANJI -> false
+            SHOW_SENTENCE_ASK_WORD_KANJI -> false
             SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR -> false
             SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> false
+            SHOW_PHRASE_ASK_WORD_KANA -> false
+            SHOW_SENTENCE_ASK_WORD_KANA -> false
         }
 
     val asksForKanji: Boolean
@@ -58,10 +64,12 @@ enum class QAKind(val intValue: Int) {
             SHOW_WORD_ASK_NOTHING -> false
             SHOW_PHRASE_ASK_NOTHING -> false
             SHOW_SENTENCE_ASK_NOTHING -> false
-            SHOW_PHRASE_ASK_KANJI -> true
-            SHOW_SENTENCE_ASK_KANJI -> true
+            SHOW_PHRASE_ASK_WORD_KANJI -> true
+            SHOW_SENTENCE_ASK_WORD_KANJI -> true
             SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR -> true
             SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> false
+            SHOW_PHRASE_ASK_WORD_KANA -> false
+            SHOW_SENTENCE_ASK_WORD_KANA -> false
         }
 
     val asksForKana: Boolean
@@ -74,10 +82,12 @@ enum class QAKind(val intValue: Int) {
             SHOW_WORD_ASK_NOTHING -> false
             SHOW_PHRASE_ASK_NOTHING -> false
             SHOW_SENTENCE_ASK_NOTHING -> false
-            SHOW_PHRASE_ASK_KANJI -> false
-            SHOW_SENTENCE_ASK_KANJI -> false
+            SHOW_PHRASE_ASK_WORD_KANJI -> false
+            SHOW_SENTENCE_ASK_WORD_KANJI -> false
             SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR -> false
             SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> true
+            SHOW_PHRASE_ASK_WORD_KANA -> true
+            SHOW_SENTENCE_ASK_WORD_KANA -> true
         }
 
     val involvesPhrases: Boolean
@@ -91,9 +101,11 @@ enum class QAKind(val intValue: Int) {
             SHOW_WORD_ASK_NOTHING -> false
             SHOW_PHRASE_ASK_NOTHING -> true
             SHOW_SENTENCE_ASK_NOTHING -> false
-            SHOW_PHRASE_ASK_KANJI -> true
-            SHOW_SENTENCE_ASK_KANJI -> false
+            SHOW_PHRASE_ASK_WORD_KANJI -> true
+            SHOW_SENTENCE_ASK_WORD_KANJI -> false
             SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> true
+            SHOW_PHRASE_ASK_WORD_KANA -> true
+            SHOW_SENTENCE_ASK_WORD_KANA -> false
         }
 
     val involvesSentences: Boolean
@@ -107,26 +119,15 @@ enum class QAKind(val intValue: Int) {
             SHOW_WORD_ASK_NOTHING -> false
             SHOW_PHRASE_ASK_NOTHING -> false
             SHOW_SENTENCE_ASK_NOTHING -> true
-            SHOW_PHRASE_ASK_KANJI -> false
-            SHOW_SENTENCE_ASK_KANJI -> true
+            SHOW_PHRASE_ASK_WORD_KANJI -> false
+            SHOW_SENTENCE_ASK_WORD_KANJI -> true
             SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> false
+            SHOW_PHRASE_ASK_WORD_KANA -> false
+            SHOW_SENTENCE_ASK_WORD_KANA -> true
         }
 
     val involvesPhrasesOrSentences: Boolean
-        get() = when (this) {
-            SHOW_KANJI_ASK_KANA -> false
-            SHOW_KANA_ASK_KANJI -> false
-            SHOW_ROMAJI_ASK_KANA -> false
-            SHOW_TRANSLATION_ASK_KANA -> false
-            SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS -> false
-            SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR -> false
-            SHOW_WORD_ASK_NOTHING -> false
-            SHOW_PHRASE_ASK_NOTHING -> true
-            SHOW_SENTENCE_ASK_NOTHING -> true
-            SHOW_PHRASE_ASK_KANJI -> true
-            SHOW_SENTENCE_ASK_KANJI -> true
-            SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> true
-        }
+        get() = involvesPhrases || involvesSentences
 
     fun toStatsKey() = when (this) {
         SHOW_KANJI_ASK_KANA -> StatsKey.PROGSTUDY_SHOW_KANJI_ASK_KANA
@@ -137,10 +138,12 @@ enum class QAKind(val intValue: Int) {
         SHOW_WORD_ASK_NOTHING -> StatsKey.PROGSTUDY_SHOW_WORD_ASK_NOTHING
         SHOW_PHRASE_ASK_NOTHING -> StatsKey.PROGSTUDY_SHOW_PHRASE_ASK_NOTHING
         SHOW_SENTENCE_ASK_NOTHING -> StatsKey.PROGSTUDY_SHOW_SENTENCE_ASK_NOTHING
-        SHOW_PHRASE_ASK_KANJI -> StatsKey.PROGSTUDY_SHOW_PHRASE_ASK_KANJI
-        SHOW_SENTENCE_ASK_KANJI -> StatsKey.PROGSTUDY_SHOW_SENTENCE_ASK_KANJI
+        SHOW_PHRASE_ASK_WORD_KANJI -> StatsKey.PROGSTUDY_SHOW_PHRASE_ASK_WORD_KANJI
+        SHOW_SENTENCE_ASK_WORD_KANJI -> StatsKey.PROGSTUDY_SHOW_SENTENCE_ASK_WORD_KANJI
         SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR -> StatsKey.PROGSTUDY_SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR
         SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> StatsKey.PROGSTUDY_SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA
+        SHOW_PHRASE_ASK_WORD_KANA -> StatsKey.PROGSTUDY_SHOW_PHRASE_ASK_WORD_KANA
+        SHOW_SENTENCE_ASK_WORD_KANA -> StatsKey.PROGSTUDY_SHOW_SENTENCE_ASK_WORD_KANA
     }
 
     companion object {

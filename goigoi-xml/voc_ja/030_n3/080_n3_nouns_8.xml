@@ -12,7 +12,7 @@
       defaultHint_de="Nomen"
       lvl="n3"
       requiresSentences="true"
-      requiresPhrases="false"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -549,6 +549,14 @@
                   origin="lib0"
                   rem="verified with ChatGPT; these are fixed expressions, verbs cannot be interchanged"
                 />
+                <phrase
+                  ph="【腹：はら】を【抱：かか】えて【笑：わら】う"
+                  rom="hara o kakaete warau"
+                  tr_en="to hold one's belly laughing"
+                  tr_de="sich vor Lachen den Bauch halten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
                 <sentence
                   s="【子：こ】【供：ども】が【疲：つか】れているし、【腹：はら】が【減：へ】ったし、もう【帰：かえ】りましょう。"
                   rom="Kodomo ga tsukarete iru shi, hara ga hetta shi, mō kaerimashō."
@@ -778,10 +786,11 @@
                   rom="menbō"
                   tr_en="cotton swab"
                   tr_de="Wattestäbchen"
-                  hasDifferentForm="true"
                   lvl="n3"
                   rem="verified with DeepL and the web; jisho has nx for menbō, but n3 for men, bō"
-                />
+                >
+                    <ask w="【綿：めん】" />
+                </phrase>
                 <phrase
                   ph="ぬいぐるみにワタを【詰：つ】める"
                   rom="nuigurumi ni wata o tsumeru"

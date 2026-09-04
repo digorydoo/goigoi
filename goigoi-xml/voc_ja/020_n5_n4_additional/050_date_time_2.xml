@@ -10,7 +10,7 @@
       hasFurigana="true"
       lvl="n5, n4"
       requiresSentences="true"
-      requiresPhrases="false"
+      requiresPhrases="true"
     >
         <section
           name_en="Every..."
@@ -331,8 +331,9 @@
                   tr_en="Good evening!"
                   tr_de="Guten Abend!"
                   lvl="n5"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="こんばんは" />
+                </sentence>
                 <sentence
                   s="【今：こん】【晩：ばん】 【映：えい】【画：が】を 【見：み】に 【行：い】きたいです。"
                   rom="Konban eiga o mi ni ikitai desu."
@@ -615,11 +616,12 @@
                   rom="ototoi no ban"
                   tr_en="the night before last"
                   tr_de="vorletzte Nacht"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="lib0"
                   rem="lib0 has ototoi both in kana and kanji"
-                />
+                >
+                    <ask w="おととい" />
+                </phrase>
                 <sentence
                   s="【一昨日：おととい】は 【何：なに】を しましたか。"
                   rom="Ototoi wa nani o shimashita ka?"
@@ -776,17 +778,19 @@
                   rom="tsuitachi"
                   tr_en="first day of the month"
                   tr_de="erster Tag des Monats"
-                  hasDifferentForm="true"
                   lvl="n5"
-                />
+                >
+                    <ask w="【一日：ついたち】" />
+                </phrase>
                 <phrase
                   ph="【二：ふつ】【日：か】"
                   rom="futsuka"
                   tr_en="second day of the month; two days"
                   tr_de="zweiter Tag des Monats; zwei Tage"
-                  hasDifferentForm="true"
                   lvl="n5"
-                />
+                >
+                    <ask w="【二：ふつ】【日：か】" />
+                </phrase>
                 <!--
                   ph="【二：ふつ】【日：か】【以：い】【内：ない】に"
                   rom="futsuka inai ni"
@@ -810,10 +814,11 @@
                   rom="mikka inai ni"
                   tr_en="within three days"
                   tr_de="innerhalb drei Tagen"
-                  hasDifferentForm="true"
                   lvl="n4"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【三：みっ】【日：か】" />
+                </phrase>
                 <!--
                   ph="【四：よっ】【日：か】"
                   rom="yokka"
@@ -827,18 +832,20 @@
                   rom="go-gatsu yokka"
                   tr_en="the fourth of May"
                   tr_de="am vierten Mai"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="self"
-                />
+                >
+                    <ask w="【四：よっ】【日：か】" />
+                </phrase>
                 <phrase
                   ph="【五：いつ】【日：か】"
                   rom="itsuka"
                   tr_en="fifth day of the month; five days"
                   tr_de="fünfter Tag des Monats; fünf Tage"
-                  hasDifferentForm="true"
                   lvl="n5"
-                />
+                >
+                    <ask w="【五：いつ】【日：か】" />
+                </phrase>
                 <!--
                   ph="【四：し】【月：がつ】【五：いつ】【日：か】"
                   rom="shi-gatsu itsuka"
@@ -861,18 +868,20 @@
                   rom="muika inai ni"
                   tr_en="within six days"
                   tr_de="innerhalb sechs Tagen"
-                  hasDifferentForm="true"
                   lvl="n4"
                   origin="self"
-                />
+                >
+                    <ask w="【六：むい】【日：か】" />
+                </phrase>
                 <phrase
                   ph="【七：なの】【日：か】"
                   rom="nanoka"
                   tr_en="seventh day of the month; seven days"
                   tr_de="siebenter Tag des Monats; sieben Tage"
-                  hasDifferentForm="true"
                   lvl="n5"
-                />
+                >
+                    <ask w="【七：なの】【日：か】" />
+                </phrase>
                 <!--
                   ph="【七：しち】【月：がつ】【七：なの】【日：か】"
                   rom="shichi-gatsu nanoka"
@@ -895,10 +904,11 @@
                   rom="hachi-gatsu yōka"
                   tr_en="the eighth of August"
                   tr_de="am achten August"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="self"
-                />
+                >
+                    <ask w="【八：よう】【日：か】" />
+                </phrase>
                 <!--
                   ph="【九：ここの】【日：か】"
                   rom="kokonoka"
@@ -912,11 +922,12 @@
                   rom="kokonoka inai ni"
                   tr_en="within six days"
                   tr_de="innerhalb sechs Tagen"
-                  hasDifferentForm="true"
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【九：ここの】【日：か】" />
+                </phrase>
                 <!--
                   ph="【十：とお】【日：か】"
                   rom="tōka"
@@ -930,10 +941,11 @@
                   rom="maitsuki tōka"
                   tr_en="on the tenth of every month"
                   tr_de="jeden Monat am zehnten"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="self"
-                />
+                >
+                    <ask w="【十：とお】【日：か】" />
+                </phrase>
                 <sentence
                   s="【休：やす】みの 【日：ひ】は 【何：なに】を して いるの？"
                   rom="Yasumi no hi wa nani o shite iru no?"
@@ -947,21 +959,23 @@
                   rom="Tōkyō ni mikka ite sore kara Kyōto e ikimasu."
                   tr_en="We will be in Tokyo for three days, and then go to Kyoto."
                   tr_de="Wir werden drei Tage in Tokyo sein und dann nach Kyoto gehen."
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="Oxford p.138"
                   rem="jisho has nx for Tōkyō, Kyōto"
-                />
+                >
+                    <ask w="【三：みっ】【日：か】" />
+                </sentence>
                 <sentence
                   s="【私：わたし】の【休：やす】みは【一：いち】【月：がつ】【六：むい】【日：か】に【終：お】わる。"
                   rom="Watashi no yasumi wa ichi-gatsu muika ni owaru."
                   tr_en="My holidays will end on the sixth of January."
                   tr_de="Meine Ferien sind am sechsten Januar vorbei."
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【六：むい】【日：か】" />
+                </sentence>
             </word>
             <word
               w="【一日：ついたち】"

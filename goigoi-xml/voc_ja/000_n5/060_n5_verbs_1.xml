@@ -11,8 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n5"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- traffic, transportation -->
@@ -44,7 +44,9 @@
                   tr_de="Bitte steigen Sie ins Auto ein."
                   lvl="n5"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【乗：の】って" />
+                </sentence>
             </word>
             <word
               w="【降：お】りる"
@@ -113,7 +115,9 @@
                   tr_de="Herr Yamashita liest kaum Bücher."
                   lvl="n5"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【読：よ】まない" />
+                </sentence>
             </word>
             <word
               w="【書：か】く"
@@ -148,7 +152,9 @@
                   tr_de="Ich werde einen Brief an meinen Freund schreiben."
                   lvl="n5"
                   origin="duolingo"
-                />
+                >
+                    <ask stem="【書：か】き" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【教：おし】える"
@@ -175,7 +181,9 @@
                   lvl="n5"
                   origin="500mon q136"
                   rem="jisho has nx for adoresu"
-                />
+                >
+                    <ask w="【教：おし】えて" />
+                </sentence>
             </word>
             <word
               w="【覚：おぼ】える"
@@ -204,7 +212,9 @@
                   lvl="n5"
                   origin="Miku"
                   href="https://youtu.be/-B4W64brkcc"
-                />
+                >
+                    <ask w="【覚：おぼ】えて" />
+                </sentence>
                 <sentence
                   s="その【映：えい】【画：が】を 【見：み】たのを 【覚：おぼ】えて いる。"
                   rom="Sono eiga o mita no o oboete iru."
@@ -212,7 +222,9 @@
                   tr_de="Ich erinnere mich, diesen Film gesehen zu haben."
                   lvl="n5"
                   origin="lib0"
-                />
+                >
+                    <ask w="【覚：おぼ】えて" />
+                </sentence>
                 <sentence
                   s="もっと 【漢：かん】【字：じ】を 【覚：おぼ】えたい。"
                   rom="Motto kanji o oboetai."
@@ -221,7 +233,9 @@
                   lvl="n5"
                   origin="Miku"
                   href="https://youtu.be/-B4W64brkcc"
-                />
+                >
+                    <ask w="【覚：おぼ】えたい" />
+                </sentence>
                 <!--
                   s="【漢：かん】【字：じ】が【覚：おぼ】えられない。"
                   rom="Kanji ga oboerarenai."
@@ -260,7 +274,9 @@
                   tr_de="Du musst es nicht essen."
                   lvl="n5"
                   origin="lib0"
-                />
+                >
+                    <ask w="【食：た】べない" />
+                </sentence>
                 <sentence
                   s="おはしではちょっと【食：た】べにくいです。"
                   rom="O-hashi de wa chotto tabe-nikui desu."
@@ -269,7 +285,9 @@
                   lvl="n5"
                   origin="500mon q271"
                   rem="nikui may be n4"
-                />
+                >
+                    <ask w="【食：た】べにくい" />
+                </sentence>
             </word>
             <word
               w="【飲：の】む"
@@ -298,7 +316,9 @@
                   tr_de="Ich möchte kaltes Wasser drinken."
                   lvl="n5"
                   origin="500mon q5"
-                />
+                >
+                    <ask w="【飲：の】みたい" />
+                </sentence>
                 <sentence
                   s="【飲：の】みに 【行：い】かない？"
                   rom="Nomi ni ikanai?"
@@ -307,7 +327,9 @@
                   lvl="n5"
                   origin="Miku"
                   href="https://youtu.be/TjmlAiqjpmk"
-                />
+                >
+                    <ask w="【飲：の】み" />
+                </sentence>
             </word>
             <word
               w="【話：はな】す"
@@ -340,7 +362,9 @@
                   tr_en="Do you speak English?"
                   tr_de="Sprechen Sie englisch?"
                   lvl="n5"
-                />
+                >
+                    <ask stem="【話：はな】せ" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【座：すわ】って 【話：はな】そう。"
                   rom="Suwatte hanasō."
@@ -349,7 +373,9 @@
                   lvl="n5"
                   origin="Miku"
                   href="https://youtu.be/4KT6rRxLDWo"
-                />
+                >
+                    <ask w="【話：はな】そう" />
+                </sentence>
             </word>
             <word
               w="【答：こた】える"
@@ -375,7 +401,9 @@
                   tr_de="Bitte beantworte die Frage."
                   lvl="n5"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【答：こた】えて" />
+                </sentence>
             </word>
 
             <!-- hands -->
@@ -404,7 +432,9 @@
                   tr_de="Ich will den Kanal wechseln, also reiche mir bitte die Fernbedienung."
                   lvl="n5"
                   origin="500mon q26"
-                />
+                >
+                    <ask w="【取：と】って" />
+                </sentence>
             </word>
             <word
               w="【使：つか】う"
@@ -433,7 +463,9 @@
                   tr_de="Ich verwende es."
                   lvl="n5"
                   origin="lib0"
-                />
+                >
+                    <ask stem="【使：つか】い" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【電：でん】【話：わ】を 【使：つか】っても いいですか。"
                   rom="Denwa o tsukatte mo ii desu ka?"
@@ -441,7 +473,9 @@
                   tr_de="Darf ich das Telefon benutzen?"
                   lvl="n5"
                   origin="Oxford p.54"
-                />
+                >
+                    <ask w="【使：つか】って" />
+                </sentence>
             </word>
 
             <!-- legs, feet -->
@@ -472,7 +506,9 @@
                   tr_de="Wieviele Minuten sind es zu Fuss?"
                   lvl="n5"
                   origin="Langenscheidt"
-                />
+                >
+                    <ask w="【歩：ある】いて" />
+                </sentence>
                 <sentence
                   s="【駅：えき】まで 【歩：ある】きます。"
                   rom="Eki made arukimasu."
@@ -480,7 +516,9 @@
                   tr_de="Ich werde (zu Fuss) zum Bahnhof gehen."
                   lvl="n5"
                   origin="duolingo"
-                />
+                >
+                    <ask stem="【歩：ある】き" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【入：はい】る"
@@ -550,7 +588,9 @@
                   tr_de="Ich öffnete das Fenster."
                   lvl="n5"
                   origin="Oxford p.87"
-                />
+                >
+                    <ask stem="【開：あ】け" suffix="ました" />
+                </sentence>
             </word>
             <word
               w="【開：あ】く"
@@ -570,7 +610,9 @@
                   tr_de="ein offenes Fenster"
                   lvl="n5"
                   origin="Oxford p.110"
-                />
+                >
+                    <ask w="【開：あ】いて" />
+                </phrase>
                 <sentence
                   s="ドアが ゆっくりと 【開：あ】きました。"
                   rom="Doa ga yukkuri to akimashita."
@@ -578,7 +620,9 @@
                   tr_de="Die Türe öffnete sich langsam."
                   lvl="n5"
                   origin="Oxford p.87"
-                />
+                >
+                    <ask stem="【開：あ】き" suffix="ました" />
+                </sentence>
                 <sentence
                   s="【近：ちか】くの スーパーは 【夜：よる】 【10：じゅう】【時：じ】まで 【開：あ】いています。"
                   rom="Chikaku no sūpā wa yoru jū-ji made aite imasu."
@@ -586,7 +630,9 @@
                   tr_de="Der Supermarkt in der Nähe hat bis um 10 Uhr nachts geöffnet."
                   lvl="n5"
                   origin="500mon q42"
-                />
+                >
+                    <ask w="【開：あ】いて" />
+                </sentence>
             </word>
             <word
               w="【閉：し】める"
@@ -613,7 +659,9 @@
                   tr_de="Soll ich die Türe schliessen?"
                   lvl="n5"
                   origin="lib0"
-                />
+                >
+                    <ask stem="【閉：し】め" suffix="ましょう" />
+                </sentence>
             </word>
             <word
               w="【閉：し】まる"
@@ -640,7 +688,9 @@
                   tr_de="Das Fenster ist geschlossen."
                   lvl="n5"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【閉：し】まって" />
+                </sentence>
                 <sentence
                   s="この ドアは よく 【閉：し】まりません。"
                   rom="Kono doa wa yoku shimarimasen."
@@ -648,7 +698,9 @@
                   tr_de="Diese Türe schliesst nicht richtig."
                   lvl="n5"
                   origin="lib0"
-                />
+                >
+                    <ask stem="【閉：し】まり" suffix="ません" />
+                </sentence>
             </word>
 
             <!-- suru/yaru/dekiru -->
@@ -679,24 +731,27 @@
                   tr_de="Hast du das gemacht?"
                   lvl="n5"
                   origin="500mon q158"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="した" />
+                </sentence>
                 <sentence
                   s="どうしよう？"
                   rom="Dō shiyō?"
                   tr_en="What can I do?"
                   tr_de="Was kann ich bloss tun?"
                   lvl="n5"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="しよう" />
+                </sentence>
                 <sentence
                   s="どうしてる？"
                   rom="Dō shiteru?"
                   tr_en="How's it going?"
                   tr_de="Wie läuft's?"
                   lvl="n5"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="してる" />
+                </sentence>
             </word>
             <word
               w="やる"
@@ -714,28 +769,36 @@
                   tr_de="etw. zu machen versuchen; ausprobieren"
                   lvl="n5"
                   origin="self"
-                />
+                >
+                    <ask w="やって" />
+                </phrase>
                 <sentence
                   s="やった！"
                   rom="Yatta!"
                   tr_en="Hooray! I did it!"
                   tr_de="Hurra! Ich hab's geschafft!"
                   lvl="n5"
-                />
+                >
+                    <ask w="やった" />
+                </sentence>
                 <sentence
                   s="やってみたい！"
                   rom="Yatte mitai!"
                   tr_en="I want to try!"
                   tr_de="Ich will es versuchen!"
                   lvl="n5"
-                />
+                >
+                    <ask w="やって" />
+                </sentence>
                 <sentence
                   s="やってみよう！"
                   rom="Yatte miyō!"
                   tr_en="Let's try! Let's have a go!"
                   tr_de="Versuchen wir's!"
                   lvl="n5"
-                />
+                >
+                    <ask w="やって" />
+                </sentence>
             </word>
             <word
               w="できる"
@@ -852,8 +915,9 @@
                   tr_de="Herr Tanaka und Frau Nakamura waren auch dort."
                   lvl="n5"
                   origin="500mon q69"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="【来：き】て" />
+                </sentence>
             </word>
             <word
               w="【行：い】く"
@@ -878,14 +942,18 @@
                   tr_en="I'm off! (I go and will come again.)"
                   tr_de="Ich bin mal weg! (Ich gehe und werde wieder kommen.)"
                   lvl="n5"
-                />
+                >
+                    <ask w="【行：い】って" />
+                </sentence>
                 <sentence
                   s="【行：い】ってらっしゃい！"
                   rom="Itterasshai!"
                   tr_en="(Have a good day! Take care!)"
                   tr_de="(Ich wünsch dir einen schönen Tag!)"
                   lvl="n5"
-                />
+                >
+                    <ask w="【行：い】って" />
+                </sentence>
                 <sentence
                   s="もう【行：い】こうか。"
                   rom="Mō ikō ka?"
@@ -893,7 +961,9 @@
                   tr_de="Wollen wir gehen?"
                   lvl="n5"
                   origin="Oxford p.81"
-                />
+                >
+                    <ask w="【行：い】こう" />
+                </sentence>
             </word>
 
             <!-- unsorted -->
@@ -943,7 +1013,9 @@
                   tr_en="to be resting in bed"
                   tr_de="sich im Bett ausruhen"
                   lvl="n5"
-                />
+                >
+                    <ask w="【休：やす】んで" />
+                </phrase>
                 <sentence
                   s="リサは 【休：やす】んで いる。"
                   rom="Risa wa yasunde iru."
@@ -951,7 +1023,9 @@
                   tr_de="Risa ist abwesend."
                   lvl="n5"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【休：やす】んで" />
+                </sentence>
             </word>
             <word
               w="【疲：つか】れる"
@@ -979,14 +1053,18 @@
                   tr_de="Ich bin etwas müde."
                   lvl="n5"
                   origin="lib0"
-                />
+                >
+                    <ask w="【疲：つか】れた" />
+                </sentence>
                 <sentence
                   s="お【疲：つか】れ【様：さま】！"
                   rom="O-tsukaresama!"
                   tr_en="Much appreciated! That's enough for today!"
                   tr_de="Sehr geschätzt! Das ist genug für heute!"
                   lvl="n5"
-                />
+                >
+                    <ask w="【疲：つか】れ" />
+                </sentence>
             </word>
             <word
               w="【働：はたら】く"
@@ -1013,7 +1091,9 @@
                   tr_de="Ich arbeite bei einer Bank."
                   lvl="n5"
                   origin="lib0"
-                />
+                >
+                    <ask w="【働：はたら】いて" />
+                </sentence>
             </word>
             <word
               w="【晴：は】れる"
@@ -1034,7 +1114,9 @@
                   lvl="n5"
                   origin="lib0"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【晴：は】れた" />
+                </phrase>
                 <sentence
                   s="【今日：きょう】は 【晴：は】れていて、【空：そら】には 【雲：くも】が 【一：ひと】つも ない。"
                   rom="Kyō wa harete ite, sora ni wa kumo ga hito-tsu mo nai."
@@ -1042,7 +1124,9 @@
                   tr_de="Heute ist schön, und es hat keine einzige Wolke am Himmel."
                   lvl="n5"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【晴：は】れて" />
+                </sentence>
                 <sentence
                   s="【空：そら】は 【晴：は】れて いますか。【曇：くも】って いますか。"
                   rom="Sora wa harete imasu ka? Kumotte imasu ka?"
@@ -1050,7 +1134,9 @@
                   tr_de="Ist der Himmel klar oder bewölkt?"
                   lvl="n5"
                   origin="duolingo"
-                />
+                >
+                    <ask w="【晴：は】れて" />
+                </sentence>
             </word>
             <word
               w="【渡：わた】す"
@@ -1076,7 +1162,9 @@
                   tr_en="Please hand me that book."
                   tr_de="Bitte gib mir das Buch."
                   lvl="n5"
-                />
+                >
+                    <ask w="【渡：わた】して" />
+                </sentence>
             </word>
             <word
               w="【浴：あ】びる"
@@ -1103,7 +1191,9 @@
                   tr_de="Meine ältere Schwester duscht jeden Morgen."
                   lvl="n5"
                   origin="lib0 modified"
-                />
+                >
+                    <ask stem="【浴：あ】び" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【違：ちが】う"
@@ -1128,7 +1218,9 @@
                   tr_en="No, that's not right."
                   tr_de="Nein, das ist nicht richtig."
                   lvl="n5"
-                />
+                >
+                    <ask stem="【違：ちが】い" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【死：し】ぬ"
@@ -1156,7 +1248,9 @@
                   tr_de="Mein Grossvater starb im Alter von 54 Jahren."
                   lvl="n5"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【死：し】んだ" />
+                </sentence>
             </word>
             <word
               w="【始：はじ】まる"
@@ -1194,7 +1288,9 @@
                   tr_de="Der Film hat gerade angefangen."
                   lvl="n5"
                   origin="500mon q465"
-                />
+                >
+                    <ask w="【始：はじ】まった" />
+                </sentence>
             </word>
             <word
               w="【付：つ】ける"
@@ -1236,7 +1332,9 @@
                   tr_en="Be careful!"
                   tr_de="Sei vorsichtig!"
                   lvl="n5"
-                />
+                >
+                    <ask w="つけて" />
+                </sentence>
             </word>
             <word
               w="【入：い】れる"
@@ -1266,7 +1364,9 @@
                   tr_en="Let me in (into the house)."
                   tr_de="Lass mich rein (ins Haus)."
                   lvl="n5"
-                />
+                >
+                    <ask w="【入：い】れて" />
+                </sentence>
                 <sentence
                   s="【小：ちい】さな【鍵：かぎ】を 【手：て】に【入：い】れた。"
                   rom="Chiisana kagi o te ni ireta."
@@ -1275,7 +1375,9 @@
                   lvl="n5"
                   origin="self"
                   rem="appears in Zelda: Link's Awakening; verified with ChatGPT"
-                />
+                >
+                    <ask w="【入：い】れた" />
+                </sentence>
             </word>
             <word
               w="【貼：は】る"
@@ -1302,7 +1404,9 @@
                   tr_de="Frau Nakagawa klebte eine Briefmarke auf den Brief."
                   lvl="n5"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【貼：は】った" />
+                </sentence>
             </word>
             <word
               w="【出：で】かける"
@@ -1330,7 +1434,9 @@
                   tr_de="Um welche Zeit wirst (du) losgehen?"
                   origin="lib0"
                   lvl="n5"
-                />
+                >
+                    <ask stem="【出：で】かけ" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【出：で】かける【時：じ】【間：かん】よ。"
                   rom="Dekakeru jikan yo."

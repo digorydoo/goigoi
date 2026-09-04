@@ -11,8 +11,8 @@
       defaultHint_en="adjective"
       defaultHint_de="Adjektiv"
       lvl="n4"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- i-adjective -->
@@ -96,7 +96,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【浅：あさ】く" />
+                </phrase>
                 <sentence
                   s="この【川：かわ】はあそこで【浅：あさ】くなっている。"
                   rom="Kono kawa wa asoko de asaku natte iru."
@@ -104,7 +106,9 @@
                   tr_de="Der Fluss wird dort untief."
                   lvl="n4"
                   origin="lib0"
-                />
+                >
+                    <ask w="【浅：あさ】く" />
+                </sentence>
             </word>
             <word
               w="【硬：かた】い"
@@ -133,7 +137,9 @@
                   lvl="n4"
                   origin="Miku"
                   href="https://youtu.be/qKbysEzHWXw"
-                />
+                >
+                    <ask w="【硬：かた】くて" />
+                </sentence>
                 <sentence
                   s="すみません。お【肉：にく】は【硬：かた】いですが。"
                   rom="Sumimasen. O-niku wa katai desu ga."
@@ -189,7 +195,9 @@
                   allowSpaces="true"
                   lvl="n4"
                   origin="Oxford p.48"
-                />
+                >
+                    <ask w="【珍：めずら】しく" />
+                </sentence>
                 <sentence
                   s="【先：せん】【生：せい】に【珍：めずら】しい【漢：かん】【字：じ】を【教：おし】えていただきました。"
                   rom="Sensei ni mezurashii kanji o oshiete itadakimashita."
@@ -318,7 +326,9 @@
                   tr_de="Ich glaub, ich werd verrückt…"
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="おかしく" />
+                </sentence>
             </word>
             <word
               w="【厳：きび】しい"
@@ -436,7 +446,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="すごく" />
+                </phrase>
                 <sentence
                   s="【山：やま】【下：した】さんはすごい【雪：ゆき】のために【遅：おく】れた。"
                   rom="Yamashita-san wa sugoi yuki no tame ni okureta."
@@ -478,7 +490,9 @@
                   tr_de="Schön, Sie kennenzulernen!"
                   lvl="n4"
                   rem="jisho has n3 for yoroshiku"
-                />
+                >
+                    <ask w="よろしく" />
+                </sentence>
                 <sentence
                   s="【汚：きたな】い【灰：はい】【皿：ざら】を【取：と】ってもよろしいでしょうか。"
                   rom="Kitanai haizara o totte mo yoroshii deshō ka?"
@@ -597,7 +611,9 @@
                   lvl="n4"
                   origin="Oxford p.101"
                   rem="deshō is tentative, see Oxford p.118"
-                />
+                >
+                    <ask w="【悲：かな】しかった" />
+                </sentence>
             </word>
             <word
               w="【寂：さび】しい"
@@ -617,7 +633,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【寂：さび】しそう" />
+                </phrase>
                 <sentence
                   s="【君：きみ】がいなくて【寂：さび】しいよ。"
                   rom="Kimi ga inakute sabishii yo."
@@ -655,7 +673,9 @@
                   lvl="n4"
                   origin="Miku"
                   href="https://youtu.be/l7xZ1TDZ7MU"
-                />
+                >
+                    <ask w="【眠：ねむ】そう" />
+                </sentence>
             </word>
             <word
               w="【怖：こわ】い"
@@ -667,6 +687,7 @@
               category="mood, not-good"
               id="kowai-scary"
             >
+                <keep_apart_from id="osoroshii-terrible" />
                 <!-- to be frightened is kowagaru, which is nx -->
                 <phrase
                   ph="【怖：こわ】い【映：えい】【画：が】"
@@ -710,7 +731,9 @@
                   allowSpaces="true"
                   lvl="n4"
                   origin="500mon q270"
-                />
+                >
+                    <ask w="【恥：は】ずかしかった" />
+                </sentence>
                 <sentence
                   s="【初：はじ】めて【人：ひと】に【会：あ】うのはとても【恥：は】ずかしい。"
                   rom="Hajimete hito ni au no wa totemo hazukashii."
@@ -738,7 +761,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【嬉：うれ】しそう" />
+                </phrase>
                 <sentence
                   s="【台：たい】【風：ふう】が【過：す】ぎたと【聞：き】いて【嬉：うれ】しかった。"
                   rom="Taifū ga sugita to kīte ureshikatta."
@@ -747,7 +772,9 @@
                   lvl="n4"
                   origin="self"
                   rem="corrected by ChatGPT"
-                />
+                >
+                    <ask w="【嬉：うれ】しかった" />
+                </sentence>
             </word>
 
             <!-- na-adjective -->
@@ -1171,6 +1198,7 @@
               rom="kyū"
               tr_en="sudden; urgent; emergency"
               tr_de="plötzlich; dringend; Dringlichkeit"
+              studyInContext="preferred"
               hint_en="na-adjective; noun"
               hint_de="Na-Adjektiv; Nomen"
               lvl="n4"
@@ -1270,11 +1298,12 @@
                   rom="O-kanemochi kamo shirenai kedo, kechi da."
                   tr_en="He may be rich, but he's a cheapskate."
                   tr_de="Er mag zwar reich sein, aber er ist ein Geizhals."
-                  hasDifferentForm="true"
                   lvl="n4"
                   origin="lib0 modified"
                   rem="verified with ChatGPT; using katakana, because it seems equally common and improves readability here"
-                />
+                >
+                    <ask w="ケチ" />
+                </sentence>
             </word>
             <word
               w="【盛：さか】ん"

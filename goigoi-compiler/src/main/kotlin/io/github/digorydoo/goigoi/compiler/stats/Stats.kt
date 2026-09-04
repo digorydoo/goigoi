@@ -18,6 +18,14 @@ import kotlin.math.roundToInt
 object Stats {
     private data class VisibleHidden(var visible: Int, var hidden: Int)
 
+    private class UnytAndCount(val unyt: GoigoiUnyt, val count: Int) {
+        fun print(postfix: String) {
+            val total = unyt.countWords { !it.hidden }
+            val percent = (100.0f * count / total).roundToInt()
+            println("${dots("   " + unyt.nameForStdout)}${lpad(count)} of $total words (${percent}%) $postfix")
+        }
+    }
+
     private val originPrefixes = arrayOf(
         "self",
         "500mon N3", // must appear before 500mon in this list
@@ -44,10 +52,23 @@ object Stats {
     )
 
     fun printStats(vocab: GoigoiVocab) {
+        printWordsStats(vocab)
+        printGeneralSentencePhraseStats(vocab)
+        printTopicsAndUnytsStats(vocab)
+        printLengthyWordsStats(vocab)
+        printRequireSentencesStats(vocab)
+        printUnytsWithHiddenSentences(vocab)
+        printSurnameFirstnameStats(vocab)
+        printSentenceOriginStats(vocab)
+        printRequirePhrasesStats(vocab)
+        printPhraseOriginStats(vocab)
+        printManualKanjiLevelStats(vocab)
+        printCategories(vocab)
+    }
+
+    private fun printWordsStats(vocab: GoigoiVocab) {
         var totalNumUnyts = 0
         var totalNumWords = 0
-        var totalNumSentences = 0
-        var totalNumPhrases = 0
         var numVisibleWords = 0
         var numVisibleWordsWithSentences = 0
         var numVisibleWordsWithPhrases = 0
@@ -70,10 +91,6 @@ object Stats {
         val n2PrimaryForms = mutableMapOf<String, VisibleHidden>()
         val n1PrimaryForms = mutableMapOf<String, VisibleHidden>()
         val nxPrimaryForms = mutableMapOf<String, VisibleHidden>()
-
-        val categoriesUsedByVisibleWordsSolo = mutableMapOf<WordCategory, MutableSet<GoigoiWord>>()
-        val categoriesUsedByVisibleWordsInCombination = mutableMapOf<WordCategory, MutableSet<GoigoiWord>>()
-        val categoriesUsedByHiddenWords = mutableMapOf<WordCategory, MutableSet<GoigoiWord>>()
 
         vocab.forEachUnyt { unyt, topic ->
             totalNumUnyts++
@@ -134,29 +151,15 @@ object Stats {
                 }
 
                 if (word.sentences.isNotEmpty()) {
-                    totalNumSentences += word.sentences.size
-
                     if (!topic.hidden && !unyt.hidden && !word.hidden) {
                         numVisibleWordsWithSentences++
                     }
                 }
 
                 if (word.phrases.isNotEmpty()) {
-                    totalNumPhrases += word.phrases.size
-
                     if (!topic.hidden && !unyt.hidden && !word.hidden) {
                         numVisibleWordsWithPhrases++
                     }
-                }
-
-                val catsMap = when {
-                    topic.hidden || unyt.hidden || word.hidden -> categoriesUsedByHiddenWords
-                    word.cats.size == 1 -> categoriesUsedByVisibleWordsSolo
-                    else -> categoriesUsedByVisibleWordsInCombination
-                }
-
-                word.cats.forEach { cat ->
-                    catsMap[cat] = (catsMap[cat] ?: mutableSetOf()).apply { add(word) }
                 }
             }
         }
@@ -226,12 +229,9 @@ object Stats {
         println("   Words with custom id  . . . . . . ${withPercent(numWordsWithCustomIds, totalNumWords)}")
         println("   Visible words with sentences. . . ${withPercent(numVisibleWordsWithSentences, numVisibleWords)}")
         println("   Visible words with phrases  . . . ${withPercent(numVisibleWordsWithPhrases, numVisibleWords)}\n")
+    }
 
-        println("Total #nested sentences  . . . . . . ${lpad(totalNumSentences)}")
-        println("Total #nested phrases  . . . . . . . ${lpad(totalNumPhrases)}")
-
-        // Print the name of each unyt along with the number of words in it
-
+    private fun printTopicsAndUnytsStats(vocab: GoigoiVocab) {
         for (topic in vocab.topics) {
             var text = topic.name.en
 
@@ -269,9 +269,9 @@ object Stats {
                 )
             }
         }
+    }
 
-        // Print the name of unyts that have lengthy words
-
+    private fun printLengthyWordsStats(vocab: GoigoiVocab) {
         var foundLengthyWords = false
 
         vocab.forEachUnyt { unyt, _ ->
@@ -298,51 +298,68 @@ object Stats {
                 }
             }
         }
+    }
 
-        // Print the name of unyts that require sentences for each word
+    private fun printGeneralSentencePhraseStats(vocab: GoigoiVocab) {
+        var totalNumSentences = 0
+        var totalNumPhrases = 0
+        var numSentencesWithFormUnchanged = 0
+        var numSentencesWithFormSpecified = 0
+        var numSentencesThatShouldSpecifyForm = 0
+        var numPhrasesWithFormUnchanged = 0
+        var numPhrasesWithFormSpecified = 0
+        var numPhrasesThatShouldSpecifyForm = 0
 
-        println("\nUnyts that require sentences for each word")
+        vocab.forEachWord { word ->
+            totalNumSentences += word.sentences.size
+            totalNumPhrases += word.phrases.size
 
-        class UnytAndCount(val unyt: GoigoiUnyt, val count: Int) {
-            fun print(postfix: String) {
-                val total = unyt.countWords { !it.hidden }
-                val percent = (100.0f * count / total).roundToInt()
-                println("${dots("   " + unyt.nameForStdout)}${lpad(count)} of $total words (${percent}%) $postfix")
+            for (sentence in word.sentences) {
+                if (sentence.wordFormToAsk.isNotEmpty()) {
+                    numSentencesWithFormSpecified++
+                } else if (
+                    (!word.usuallyInKana && sentence.primaryForm.raw.contains(word.primaryForm.raw)) ||
+                    (word.usuallyInKana && sentence.kana.contains(word.kana))
+                ) {
+                    numSentencesWithFormUnchanged++
+                } else {
+                    numSentencesThatShouldSpecifyForm++
+                }
+            }
+
+            for (phrase in word.phrases) {
+                if (phrase.wordFormToAsk.isNotEmpty()) {
+                    numPhrasesWithFormSpecified++
+                } else if (
+                    (!word.usuallyInKana && phrase.primaryForm.raw.contains(word.primaryForm.raw)) ||
+                    (word.usuallyInKana && phrase.kana.contains(word.kana))
+                ) {
+                    numPhrasesWithFormUnchanged++
+                } else {
+                    numPhrasesThatShouldSpecifyForm++
+                }
             }
         }
 
-        mutableListOf<UnytAndCount>()
-            .also { list ->
-                vocab.forEachUnyt { unyt, _ ->
-                    if (unyt.requiresSentences) {
-                        val count = unyt.countVisibleWordsWithSentences()
-                        list.add(UnytAndCount(unyt, count))
-                    }
-                }
-            }
-            .sortedBy { -it.count }
-            .onEach { it.print("have sentences") }
-            .also { println("   total: ${it.size}") }
+        val strSentencesWithFormUnchanged = withPercent(numSentencesWithFormUnchanged, totalNumSentences)
+        val strSentencesWithFormSpecified = withPercent(numSentencesWithFormSpecified, totalNumSentences)
+        val strSentencesThatShouldSpecifyForm = withPercent(numSentencesThatShouldSpecifyForm, totalNumSentences)
 
-        // Print the name of unyts that do not require sentences for each word
+        val strPhrasesWithFormUnchanged = withPercent(numPhrasesWithFormUnchanged, totalNumPhrases)
+        val strPhrasesWithFormSpecified = withPercent(numPhrasesWithFormSpecified, totalNumPhrases)
+        val strPhrasesThatShouldSpecifyForm = withPercent(numPhrasesThatShouldSpecifyForm, totalNumPhrases)
 
-        println("\nUnyts that do not require sentences for each word")
+        println("Total #nested sentences  . . . . . . ${lpad(totalNumSentences)}")
+        println("   with form unchanged . . . . . . . $strSentencesWithFormUnchanged")
+        println("   with form specified . . . . . . . $strSentencesWithFormSpecified")
+        println("   should specify form . . . . . . . $strSentencesThatShouldSpecifyForm")
+        println("Total #nested phrases  . . . . . . . ${lpad(totalNumPhrases)}")
+        println("   with form unchanged . . . . . . . $strPhrasesWithFormUnchanged")
+        println("   with form specified . . . . . . . $strPhrasesWithFormSpecified")
+        println("   should specify form . . . . . . . $strPhrasesThatShouldSpecifyForm")
+    }
 
-        mutableListOf<UnytAndCount>()
-            .also { list ->
-                vocab.forEachUnyt { unyt, _ ->
-                    if (!unyt.requiresSentences) {
-                        val count = unyt.countVisibleWordsWithSentences()
-                        list.add(UnytAndCount(unyt, count))
-                    }
-                }
-            }
-            .sortedBy { -it.count }
-            .onEach { it.print("have sentences") }
-            .also { println("   total: ${it.size}") }
-
-        // Print the name of unyts that contain hidden sentences
-
+    private fun printUnytsWithHiddenSentences(vocab: GoigoiVocab) {
         println("\nUnyts with hidden sentences")
 
         mutableMapOf<GoigoiUnyt, Int>()
@@ -358,9 +375,9 @@ object Stats {
             .sortedBy { (_, count) -> -count }
             .onEach { (unyt, count) -> println(dots("   " + unyt.nameForStdout) + lpad(count)) }
             .also { println("   total: ${it.size}") }
+    }
 
-        // Count the number of sentence per known surname
-
+    private fun printSurnameFirstnameStats(vocab: GoigoiVocab) {
         println("\nSurnames used in visible sentences")
 
         knownSurnames.forEach { (surname, _) ->
@@ -375,8 +392,6 @@ object Stats {
             println(dots("   $surname") + lpad(count))
         }
 
-        // Count the number of sentence per known firstname
-
         println("\nFirstnames used in visible sentences")
 
         knownFirstnames.forEach { (firstname, _) ->
@@ -390,9 +405,73 @@ object Stats {
             }
             println(dots("   $firstname") + lpad(count))
         }
+    }
 
-        // Count the number of sentence origins
+    private fun printRequireSentencesStats(vocab: GoigoiVocab) {
+        println("\nUnyts that require sentences for each word")
 
+        mutableListOf<UnytAndCount>()
+            .also { list ->
+                vocab.forEachUnyt { unyt, _ ->
+                    if (unyt.requiresSentences) {
+                        val count = unyt.countVisibleWordsWithSentences()
+                        list.add(UnytAndCount(unyt, count))
+                    }
+                }
+            }
+            .sortedBy { -it.count }
+            .onEach { it.print("have sentences") }
+            .also { println("   total: ${it.size}") }
+
+        println("\nUnyts that do not require sentences for each word")
+
+        mutableListOf<UnytAndCount>()
+            .also { list ->
+                vocab.forEachUnyt { unyt, _ ->
+                    if (!unyt.requiresSentences) {
+                        val count = unyt.countVisibleWordsWithSentences()
+                        list.add(UnytAndCount(unyt, count))
+                    }
+                }
+            }
+            .sortedBy { -it.count }
+            .onEach { it.print("have sentences") }
+            .also { println("   total: ${it.size}") }
+    }
+
+    private fun printRequirePhrasesStats(vocab: GoigoiVocab) {
+        println("\nUnyts that require phrases for each word")
+
+        mutableListOf<UnytAndCount>()
+            .also { list ->
+                vocab.forEachUnyt { unyt, _ ->
+                    if (unyt.requiresPhrases) {
+                        val count = unyt.countVisibleWordsWithPhrases()
+                        list.add(UnytAndCount(unyt, count))
+                    }
+                }
+            }
+            .sortedBy { -it.count }
+            .onEach { it.print("have phrases") }
+            .also { println("   total: ${it.size}") }
+
+        println("\nUnyts that do not require phrases for each word")
+
+        mutableListOf<UnytAndCount>()
+            .also { list ->
+                vocab.forEachUnyt { unyt, _ ->
+                    if (!unyt.requiresPhrases) {
+                        val count = unyt.countVisibleWordsWithPhrases()
+                        list.add(UnytAndCount(unyt, count))
+                    }
+                }
+            }
+            .sortedBy { -it.count }
+            .onEach { it.print("have phrases") }
+            .also { println("   total: ${it.size}") }
+    }
+
+    private fun printSentenceOriginStats(vocab: GoigoiVocab) {
         println("\nOrigins of sentences")
 
         val originsMap = mutableMapOf<String, Int>()
@@ -418,45 +497,12 @@ object Stats {
         }
 
         println(dots("   empty") + lpad(originsMap["empty"] ?: 0))
+    }
 
-        // Print the name of the unyts that require phrases for each word
-
-        println("\nUnyts that require phrases for each word")
-
-        mutableListOf<UnytAndCount>()
-            .also { list ->
-                vocab.forEachUnyt { unyt, _ ->
-                    if (unyt.requiresPhrases) {
-                        val count = unyt.countVisibleWordsWithPhrases()
-                        list.add(UnytAndCount(unyt, count))
-                    }
-                }
-            }
-            .sortedBy { -it.count }
-            .onEach { it.print("have phrases") }
-            .also { println("   total: ${it.size}") }
-
-        // Print the name of the unyts that do not require phrases for each word
-
-        println("\nUnyts that do not require phrases for each word")
-
-        mutableListOf<UnytAndCount>()
-            .also { list ->
-                vocab.forEachUnyt { unyt, _ ->
-                    if (!unyt.requiresPhrases) {
-                        val count = unyt.countVisibleWordsWithPhrases()
-                        list.add(UnytAndCount(unyt, count))
-                    }
-                }
-            }
-            .sortedBy { -it.count }
-            .onEach { it.print("have phrases") }
-            .also { println("   total: ${it.size}") }
-
-        // Count the number of phrase origins
-
+    private fun printPhraseOriginStats(vocab: GoigoiVocab) {
         println("\nOrigins of phrases")
-        originsMap.clear()
+
+        val originsMap = mutableMapOf<String, Int>()
 
         vocab.forEachVisibleWord { word ->
             word.phrases.forEach { phrase ->
@@ -479,19 +525,37 @@ object Stats {
         }
 
         println(dots("   empty") + lpad(originsMap["empty"] ?: 0))
+    }
 
-        // Emit status about manualKanjiLevel
-
+    private fun printManualKanjiLevelStats(vocab: GoigoiVocab) {
         println("\nManual kanji levels")
 
         JLPTLevel.entries.forEach { lvl ->
             val count = vocab.manualKanjiLevels[lvl]?.size ?: 0
             println(dots("   $lvl") + (lpad(count)))
         }
+    }
 
-        // Emit categories
-
+    private fun printCategories(vocab: GoigoiVocab) {
         println("\nCategories")
+
+        val categoriesUsedByVisibleWordsSolo = mutableMapOf<WordCategory, MutableSet<GoigoiWord>>()
+        val categoriesUsedByVisibleWordsInCombination = mutableMapOf<WordCategory, MutableSet<GoigoiWord>>()
+        val categoriesUsedByHiddenWords = mutableMapOf<WordCategory, MutableSet<GoigoiWord>>()
+
+        vocab.forEachUnyt { unyt, topic ->
+            unyt.forEachWord { word, _ ->
+                val catsMap = when {
+                    topic.hidden || unyt.hidden || word.hidden -> categoriesUsedByHiddenWords
+                    word.cats.size == 1 -> categoriesUsedByVisibleWordsSolo
+                    else -> categoriesUsedByVisibleWordsInCombination
+                }
+
+                word.cats.forEach { cat ->
+                    catsMap[cat] = (catsMap[cat] ?: mutableSetOf()).apply { add(word) }
+                }
+            }
+        }
 
         WordCategory.entries.forEach { cat ->
             val numHidden = categoriesUsedByHiddenWords[cat]?.size ?: 0

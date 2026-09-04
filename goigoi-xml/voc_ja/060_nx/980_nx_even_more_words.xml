@@ -216,6 +216,18 @@
               id="iradatashii-irritating"
             />
             <word
+              w="【寝：ね】【苦：ぐる】しい"
+              rom="negurushii"
+              tr_en="unable to sleep; sleeping restlessly"
+              tr_de="schlaflos; unruhig schlafend"
+              hint_en="i-adjective"
+              hint_de="I-Adjektiv"
+              lvl="-"
+              origin="lib0"
+              id="negurushii-sleepless"
+              rem="also a phrase of kurushii-tough; kept here to provide the furigana"
+            />
+            <word
               w="やばい"
               rom="yabai"
               tr_en="dangerous; terrible; crazy"
@@ -224,7 +236,9 @@
               hint_de="umgangssprachlich"
               lvl="-"
               id="yabai-crazy"
-            />
+            >
+                <keep_apart_from id="osoroshii-terrible" />
+            </word>
 
             <!-- na-adjectives -->
             <!-- can't find a good sentence
@@ -311,8 +325,9 @@
                   tr_de="Endlich tauchte Yoshi auf."
                   lvl="-"
                   origin="lib0 modified"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="やって【来：き】た" />
+                </sentence>
             </word>
             <word
               w="だろう"

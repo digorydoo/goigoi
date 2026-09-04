@@ -11,8 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -92,11 +92,12 @@
                   rom="suigyū"
                   tr_en="water buffalo"
                   tr_de="Wasserbüffel"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
                   rem="jisho has nx"
-                />
+                >
+                    <ask w="【牛：ぎゅう】" />
+                </phrase>
                 <sentence
                   s="【牛：うし】は【決：けっ】して【賢：かしこ】くはない。"
                   rom="Ushi wa kesshite kashikoku wa nai."
@@ -329,20 +330,22 @@
                   rom="kawa no mukōgishi"
                   tr_en="the opposite bank of the river"
                   tr_de="das andere Ufer des Flusses"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【岸：ぎし】" />
+                </phrase>
                 <sentence
                   s="【川：かわ】の【向：む】こう【岸：ぎし】まで【泳：およ】いで【渡：わた】りましょう。"
                   rom="Kawa no mukōgishi made oyoide watarimashō."
                   tr_en="Let's swim across to the opposite bank of the river."
                   tr_de="Lasst uns über den Fluss bis zum anderen Ufer schwimmen."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0 modified"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【岸：ぎし】" />
+                </sentence>
             </word>
             <word
               w="【向：む】こう【岸：ぎし】"
@@ -1579,19 +1582,21 @@
                   rom="ringo no ippai haitta kago"
                   tr_en="a basket full of apples"
                   tr_de="ein Korb voll mit Äpfel"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【籠：かご】" />
+                </phrase>
                 <sentence
                   s="【猫：ねこ】は【籠：かご】から【出：で】てきた。"
                   rom="Neko wa kago kara dete kita."
                   tr_en="The cat came out of the basket."
                   tr_de="Die Katze kam aus dem Korb heraus."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【籠：かご】" />
+                </sentence>
                 <sentence
                   s="かごの【中：なか】にはほとんどリンゴがない。"
                   rom="Kago no naka ni wa hotondo ringo ga nai."
@@ -1758,10 +1763,11 @@
                   rom="Sono hasami wa kirenai."
                   tr_en="Those scissors aren't sharp (don't cut well)."
                   tr_de="Diese Schere schneidet nicht gut (ist nicht scharf)."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="ハサミ" />
+                </sentence>
             </word>
         </section>
     </unit>

@@ -157,6 +157,32 @@
 
             <!-- unsorted -->
             <word
+              w="【有：あ】り【難：がと】う"
+              rom="arigatou"
+              tr_en="thank you; thanks"
+              usuallyInKana="true"
+              lvl="n5"
+              id="arigatou-thanks"
+              rem="jisho has n3"
+            >
+                <keep_apart_from id="okage-grace" />
+                <keep_apart_from id="kansha-thanks" />
+                <keep_apart_from id="arigatou-thxalt" />
+                <keep_together id="arigatou-thxalt" />
+            </word>
+            <word
+              w="【有：あり】【難：がと】う"
+              rom="arigatou"
+              tr_en="thank you; thanks"
+              usuallyInKana="true"
+              lvl="n5"
+              id="arigatou-thxalt"
+              rem="jisho has n3"
+            >
+                <keep_apart_from id="arigatou-thanks" />
+                <keep_together id="arigatou-thanks" />
+            </word>
+            <word
               w="【頂：いただ】きます"
               rom="itadakimasu"
               tr_en="thank you (for the meal just served); I receive (this meal)"

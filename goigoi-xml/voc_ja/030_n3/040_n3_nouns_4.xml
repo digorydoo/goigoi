@@ -11,8 +11,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -302,11 +302,12 @@
                   rom="sebone"
                   tr_en="spine"
                   tr_de="Wirbelsäule"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="jpod101 audio"
                   rem="jisho has nx"
-                />
+                >
+                    <ask w="【骨：ぼね】" />
+                </phrase>
                 <sentence
                   s="【骨：ほね】が【多：おお】いので、【魚：さかな】は【食：た】べにくいです。"
                   rom="Hone ga ōi no de, sakana wa tabe-nikui desu."
@@ -348,10 +349,11 @@
                   rom="kakkoii"
                   tr_en="attractive; good-looking"
                   tr_de="attraktiv; gut aussehend"
-                  hasDifferentForm="true"
                   lvl="n3"
                   rem="jisho has nx"
-                />
+                >
+                    <ask w="かっこいい" />
+                </phrase>
                 <phrase
                   ph="【格：かっ】【好：こう】のチャンス"
                   rom="kakkō no chansu"
@@ -686,20 +688,22 @@
                   rom="sekikomu"
                   tr_en="to have a coughing fit"
                   tr_de="einen Hustenanfall bekommen"
-                  hasDifferentForm="true"
                   lvl="n3"
                   rem="jisho has nx"
-                />
+                >
+                    <ask w="【咳：せ】き" />
+                </phrase>
                 <sentence
                   s="おじいさんはひどく【咳：せ】き【込：こ】んだ。"
                   rom="O-jīsan wa hidoku sekikonda."
                   tr_en="Grandfather had a violent coughing fit."
                   tr_de="Grossvater hatte einen starken Hustenanfall."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="self"
                   rem="rephrased by ChatGPT"
-                />
+                >
+                    <ask w="【咳：せ】き" />
+                </sentence>
             </word>
             <word
               w="【筆：ふで】"
@@ -946,28 +950,31 @@
                   rom="inugoya"
                   tr_en="a dog kennel"
                   tr_de="eine Hundehütte"
-                  hasDifferentForm="true"
                   lvl="n3"
                   rem="if this is considered a word in itself, its nx; see inugoya-kennel"
-                />
+                >
+                    <ask w="【小：ご】【屋：や】" />
+                </phrase>
                 <phrase
                   ph="【山：やま】【小：ご】【屋：や】"
                   rom="yamagoya"
                   tr_en="mountain hut"
                   tr_de="Berghütte"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【小：ご】【屋：や】" />
+                </phrase>
                 <phrase
                   ph="【豚：ぶた】【小：ご】【屋：や】"
                   rom="butagoya"
                   tr_en="pigsty"
                   tr_de="Schweinestall"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【小：ご】【屋：や】" />
+                </phrase>
                 <sentence
                   s="【家：いえ】の【後：うし】ろに【小：こ】【屋：や】がある。"
                   rom="Ie no ushiro ni koya ga aru."
@@ -981,10 +988,11 @@
                   rom="Hitori de kono inugoya o tsukutta."
                   tr_en="I made this dog kennel myself."
                   tr_de="Ich habe diese Hundehütte selber gemacht."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【小：ご】【屋：や】" />
+                </sentence>
             </word>
             <word
               w="【梅雨：つゆ】"
@@ -1293,11 +1301,12 @@
                   tr_de="mit einem Begleiter hingehen"
                   explanation_en="「仲間」can be used for your own in-group, while「お連れ」cannot and would be wrong here"
                   explanation_de="「仲間」kann für die eigene Gruppe verwendet werden, während「お連れ」hier falsch wäre"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【連：つ】れて" />
+                </phrase>
                 <sentence
                   s="お【連：つ】れの【方：かた】は【何：なん】【名：めい】【様：さま】ですか。"
                   rom="O-tsure no kata wa nan-mei-sama desu ka?"

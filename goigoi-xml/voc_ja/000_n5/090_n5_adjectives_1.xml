@@ -11,8 +11,8 @@
       defaultHint_en="adjective"
       defaultHint_de="Adjektiv"
       lvl="n5"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- colours -->
@@ -50,7 +50,9 @@
                   tr_de="Frau Kimura errötete."
                   lvl="n5"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【赤：あか】く" />
+                </sentence>
             </word>
             <word
               w="【赤：あか】"
@@ -99,7 +101,9 @@
                   tr_de="Herr Tanakas Gesicht wurde blass."
                   lvl="n5"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【青：あお】く" />
+                </sentence>
             </word>
             <word
               w="【青：あお】"
@@ -425,7 +429,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【暗：くら】く" />
+                </sentence>
             </word>
 
             <!-- thin, fat -->
@@ -455,7 +461,9 @@
                   tr_de="Schneide das Fleisch dünn (in dünne Scheiben)."
                   lvl="n5"
                   origin="lib0"
-                />
+                >
+                    <ask w="【薄：うす】く" />
+                </sentence>
             </word>
             <word
               w="【細：ほそ】い"
@@ -518,7 +526,9 @@
                   tr_de="Da hat's eine dicke braune Katze."
                   lvl="n5"
                   origin="500mon q317"
-                />
+                >
+                    <ask w="【太：ふと】った" />
+                </sentence>
             </word>
 
             <!-- light, heavy -->
@@ -619,7 +629,9 @@
                   tr_de="Gestern war nicht so kalt (oder was meinst du)."
                   lvl="n5"
                   origin="500mon q24"
-                />
+                >
+                    <ask w="【寒：さむ】くなかった" />
+                </sentence>
                 <sentence
                   s="【昨日：きのう】より 【今日：きょう】の ほうが 【寒：さむ】いですね。"
                   rom="Kinō yori kyō no hō ga samui desu ne."
@@ -729,7 +741,9 @@
                   lvl="n5"
                   origin="Oxford p.97 modified"
                   rem="jisho has nx for Suisu"
-                />
+                >
+                    <ask w="【暑：あつ】くない" />
+                </sentence>
             </word>
             <word
               w="【暖：あたた】かい"
@@ -759,7 +773,9 @@
                   tr_de="Ich habe den Raum wärmer gemacht (die Heizung aufgedreht)."
                   lvl="n5"
                   origin="Oxford p.92"
-                />
+                >
+                    <ask w="【暖：あたた】かく" />
+                </sentence>
             </word>
             <word
               w="【温：ぬる】い"
@@ -877,7 +893,9 @@
                   lvl="n5"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【楽：たの】しかった" />
+                </sentence>
                 <sentence
                   s="【日：に】【本：ほん】【語：ご】の 【勉：べん】【強：きょう】は 【大：たい】【変：へん】だが、【楽：たの】しい。"
                   rom="Nihon-go no benkyō wa taihen da ga, tanoshii."
@@ -1008,10 +1026,11 @@
                   tr_de="Ich war froh, dass es nicht regnete."
                   explanation_en="よかった is the past tense of いい"
                   explanation_de="よかった ist die Vergangenheitsform von いい"
-                  hasDifferentForm="true"
                   lvl="n5"
                   origin="Oxford p.58"
-                />
+                >
+                    <ask w="よかった" />
+                </sentence>
             </word>
             <word
               w="【良：よ】い"
@@ -1055,7 +1074,9 @@
                   tr_de="Nicht schlecht!"
                   lvl="n5"
                   origin="lib0"
-                />
+                >
+                    <ask w="【悪：わる】くない" />
+                </sentence>
             </word>
 
             <!-- easy/difficult -->
@@ -1111,7 +1132,9 @@
                   origin="500mon q161"
                   rem="ん: 'Ich erkenne jetzt, dass es 難しい war'"
                   href="https://hinative.com/en-US/questions/21815394"
-                />
+                >
+                    <ask w="【難：むずか】しかった" />
+                </sentence>
             </word>
 
             <!-- big, small -->
@@ -1132,7 +1155,9 @@
                   tr_de="mit lauter Stimme"
                   lvl="n5"
                   origin="lib0"
-                />
+                >
+                    <ask w="【大：おお】きな" />
+                </phrase>
                 <phrase
                   ph="【大：おお】きくて【古：ふる】い【家：いえ】"
                   rom="ōkikute furui ie"
@@ -1140,7 +1165,9 @@
                   tr_de="ein grosses, altes Haus"
                   lvl="n5"
                   origin="Oxford p.101"
-                />
+                >
+                    <ask w="【大：おお】きくて" />
+                </phrase>
                 <sentence
                   s="もうちょっと【大：おお】きく【書：か】いて ください。"
                   rom="Mō chotto ōkiku kaite kudasai."
@@ -1148,7 +1175,9 @@
                   tr_de="Bitte schreiben Sie etwas grösser."
                   lvl="n5"
                   origin="Oxford p.107"
-                />
+                >
+                    <ask w="【大：おお】きく" />
+                </sentence>
             </word>
             <word
               w="【小：ちい】さい"
@@ -1166,7 +1195,9 @@
                   tr_de="ein kleiner Raum"
                   lvl="n5"
                   href="https://hinative.com/questions/22152543 (小さな vs. 小さい)"
-                />
+                >
+                    <ask w="【小：ちい】さな" />
+                </phrase>
                 <sentence
                   s="これは とても 【小：ちい】さい【本：ほん】です。"
                   rom="Kore wa totemo chīsai hon desu."
@@ -1299,7 +1330,9 @@
                   href="https://youtu.be/l7xZ1TDZ7MU"
                   lvl="n5"
                   rem="grammar may be n4"
-                />
+                >
+                    <ask w="おいしそう" />
+                </sentence>
                 <sentence
                   s="おいしくなさそう！"
                   rom="Oishiku nasasō!"
@@ -1309,7 +1342,9 @@
                   href="https://youtu.be/l7xZ1TDZ7MU"
                   lvl="n5"
                   rem="grammar may be n4"
-                />
+                >
+                    <ask w="おいしく" />
+                </sentence>
                 <sentence
                   s="【塩：しお】を 【入：い】れると もっとおいしくなりますよ。"
                   rom="Shio o ireru to motto oishiku narimasu yo."
@@ -1317,7 +1352,9 @@
                   tr_de="Es schmeckt noch besser, wenn du etwas Salz hinein tust."
                   lvl="n5"
                   origin="Oxford p.107"
-                />
+                >
+                    <ask w="おいしく" />
+                </sentence>
             </word>
         </section>
     </unit>

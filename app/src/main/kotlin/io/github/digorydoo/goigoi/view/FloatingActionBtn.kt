@@ -8,10 +8,11 @@ import android.view.MotionEvent
 import android.view.animation.LinearInterpolator
 import androidx.appcompat.widget.AppCompatImageButton
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.drawable.FabIcon
+import io.github.digorydoo.goigoi.drawable.FabIconDrawable
+import io.github.digorydoo.goigoi.drawable.IconBuilder
 
 class FloatingActionBtn: AppCompatImageButton {
-    private lateinit var fabIcon: FabIcon
+    private lateinit var fabIcon: FabIconDrawable
     private var animDuration = DEFAULT_ANIM_DURATION
     private var shouldGlow = false
     private var glowAnimator: ValueAnimator? = null
@@ -33,12 +34,12 @@ class FloatingActionBtn: AppCompatImageButton {
         sattr.recycle()
 
         val iconName = when (strIconName) {
-            "play" -> FabIcon.IconName.PLAY
-            "arrowRight" -> FabIcon.IconName.ARROW_RIGHT
-            else -> FabIcon.IconName.NONE
+            "play" -> FabIconDrawable.IconName.PLAY
+            "arrowRight" -> FabIconDrawable.IconName.ARROW_RIGHT
+            else -> FabIconDrawable.IconName.NONE
         }
 
-        fabIcon = FabIcon(ctx, iconName)
+        fabIcon = IconBuilder.getFabIconDrawable(ctx, iconName)
         background = fabIcon
 
         if (initiallyShown) {

@@ -32,7 +32,7 @@ class StudyItemIterator private constructor(
     private val updateMyWordsUnyt = unyt != vocab.myWordsUnyt
 
     fun set(newIndex: Int, curWordId: String, newNumCorrect: Int, newNumWrong: Int) {
-        index = if (newIndex in 0 ..< list.size) newIndex else 0
+        index = if (newIndex in list.indices) newIndex else 0
 
         val curItem = curWordId
             .takeIf { it.isNotEmpty() }

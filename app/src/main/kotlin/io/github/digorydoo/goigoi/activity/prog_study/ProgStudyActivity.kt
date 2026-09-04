@@ -2,11 +2,13 @@ package io.github.digorydoo.goigoi.activity.prog_study
 
 import android.os.Bundle
 import android.util.Log
+import android.util.TypedValue
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import ch.digorydoo.kutils.cjk.JLPTLevel
+import ch.digorydoo.kutils.cjk.isSmallKana
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.google.android.material.snackbar.Snackbar
@@ -16,6 +18,7 @@ import io.github.digorydoo.goigoi.activity.prog_study.choreo.Choreographer
 import io.github.digorydoo.goigoi.activity.prog_study.keyboard.KeyDef
 import io.github.digorydoo.goigoi.activity.prog_study.keyboard.KeyLensDrawable
 import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard
+import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard.ChipSize
 import io.github.digorydoo.goigoi.activity.prog_study.keyboard.Keyboard.Mode
 import io.github.digorydoo.goigoi.bottom_sheet.WordInfoBottomSheet
 import io.github.digorydoo.goigoi.core.db.Unyt
@@ -25,9 +28,12 @@ import io.github.digorydoo.goigoi.core.study.Answer
 import io.github.digorydoo.goigoi.core.study.StudyItemIterator
 import io.github.digorydoo.goigoi.core.study.StudyItemIterator.HowToStudy
 import io.github.digorydoo.goigoi.dialog.HintDialogManager
-import io.github.digorydoo.goigoi.drawable.CheckmarkIcon
-import io.github.digorydoo.goigoi.drawable.FlashIcon
-import io.github.digorydoo.goigoi.utils.*
+import io.github.digorydoo.goigoi.drawable.IconBuilder
+import io.github.digorydoo.goigoi.utils.DeviceUtils
+import io.github.digorydoo.goigoi.utils.Orientation
+import io.github.digorydoo.goigoi.utils.ResUtils
+import io.github.digorydoo.goigoi.utils.ScreenSize
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 
 class ProgStudyActivity: AppCompatActivity() {
     private lateinit var bindings: Bindings
@@ -38,6 +44,7 @@ class ProgStudyActivity: AppCompatActivity() {
     private lateinit var params: ProgStudyActivityParams
     private lateinit var qaProvider: QAProvider
     private lateinit var values: Values
+    private lateinit var screenValues: Values.ScreenDependentValues
     private var unyt: Unyt? = null // super-progressive mode when null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -45,15 +52,20 @@ class ProgStudyActivity: AppCompatActivity() {
         ResUtils.setActivityTheme(this)
         setContentView(R.layout.prog_study_activity)
 
-        val ctx = applicationContext
         val vocab = SingletonHolder.vocab
         val stats = SingletonHolder.stats
         val kanjiIndex = SingletonHolder.kanjiIndex
         hintDialogMgr = HintDialogManager(stats)
         params = ProgStudyActivityParams.fromIntent(intent)
         bindings = Bindings(this)
-        values = Values(this)
         unyt = if (params.unytId.isEmpty()) null else vocab.findUnytById(params.unytId)!!
+        val unyt = unyt
+
+        values = Values(this)
+
+        val screenSize = DeviceUtils.getScreenSize(this)
+        val orient = DeviceUtils.getOrientation(this)
+        screenValues = values.getScreenDependent(screenSize, orient)
 
         val qaDelegate = object: QAProvider.Delegate {
             override val canUseRomaji: Boolean
@@ -79,7 +91,7 @@ class ProgStudyActivity: AppCompatActivity() {
             }
         }
 
-        qaProvider = QAProvider(qaDelegate, DeviceUtils.isInTestLab(ctx), kanjiIndex, stats)
+        qaProvider = QAProvider(qaDelegate, kanjiIndex, stats)
         val state = savedInstanceState?.let { ProgStudyState.from(it) }
 
         if (!qaProvider.start(state)) {
@@ -89,19 +101,15 @@ class ProgStudyActivity: AppCompatActivity() {
         }
 
         bindings.toolbar.let {
-            ActivityUtils.adjustSubtitleTextColour(it, ctx)
             setSupportActionBar(it)
         }
 
         supportActionBar?.apply {
             setDisplayHomeAsUpEnabled(true)
             setHomeButtonEnabled(true)
-            title = unyt?.name?.withSystemLang ?: ""
-            subtitle = qaProvider.getSummary(ctx)
         }
 
-        val screenSize = DeviceUtils.getScreenSize(this)
-        val orient = DeviceUtils.getOrientation(this)
+        updateActionBar()
 
         if (screenSize != ScreenSize.LARGE && orient != Orientation.PORTRAIT) {
             // There is too little vertical space in landscape on SMALL and NORMAL sized phones for the AppBar!
@@ -137,14 +145,11 @@ class ProgStudyActivity: AppCompatActivity() {
                     roundsUntilSave = ROUNDS_UNTIL_SAVE
                 }
 
-                supportActionBar?.subtitle = qaProvider.getSummary(ctx)
+                updateActionBar()
             }
         }
 
         val ctrlDelegate = object: Controller.Delegate {
-            override fun isInTestLab() =
-                DeviceUtils.isInTestLab(this@ProgStudyActivity)
-
             override fun showKeyboardHintIfAppropriate(qa: QuestionAndAnswer, mode: Mode) {
                 hintDialogMgr.showKeyboardHintIfAppropriate(qa, mode, this@ProgStudyActivity)
             }
@@ -171,6 +176,20 @@ class ProgStudyActivity: AppCompatActivity() {
         }
 
         controller.updateContent()
+    }
+
+    private fun updateActionBar() {
+        val ctx = applicationContext
+        val unyt = unyt
+        supportActionBar?.apply {
+            if (unyt != null) {
+                title = unyt.name.withSystemLang
+                subtitle = qaProvider.getSummary(ctx)
+            } else {
+                title = qaProvider.getSummary(ctx)
+                subtitle = ""
+            }
+        }
     }
 
     override fun onPause() {
@@ -205,24 +224,27 @@ class ProgStudyActivity: AppCompatActivity() {
     }
 
     private inner class ChoreoDelegate: Choreographer.Delegate {
-        override val iconWhenCorrect = CheckmarkIcon(this@ProgStudyActivity)
-        override val iconWhenWrong = FlashIcon(this@ProgStudyActivity)
+        override val iconWhenCorrect = IconBuilder.getCheckmarkIconDrawable(this@ProgStudyActivity)
+        override val iconWhenWrong = IconBuilder.getFlashIconDrawable(this@ProgStudyActivity)
+
         override val iconWhenAlmostCorrect =
             ContextCompat.getDrawable(this@ProgStudyActivity, R.drawable.ic_attention_24dp)
 
         override val screenSize = DeviceUtils.getScreenSize(this@ProgStudyActivity)
         override val screenOrientation = DeviceUtils.getOrientation(this@ProgStudyActivity)
-        override val minTop = values.getMinTop(screenSize, screenOrientation)
+        override val minTop = screenValues.minTop
 
         override fun getWhatToDoHint(qa: QuestionAndAnswer): String =
             ContextCompat.getString(
                 this@ProgStudyActivity,
                 when (qa.kind) {
                     QAKind.SHOW_KANJI_ASK_KANA -> R.string.hint_when_show_kanji_ask_kana
+
                     QAKind.SHOW_KANA_ASK_KANJI -> when (qa.answers.firstOrNull()?.length == 1) {
                         true -> R.string.hint_when_show_kana_ask_kanji_singular
                         false -> R.string.hint_when_show_kana_ask_kanji_plural
                     }
+
                     QAKind.SHOW_ROMAJI_ASK_KANA -> R.string.hint_when_show_romaji_ask_kana
                     QAKind.SHOW_TRANSLATION_ASK_KANA -> R.string.hint_when_show_translation_ask_kana
 
@@ -233,13 +255,21 @@ class ProgStudyActivity: AppCompatActivity() {
                     -> R.string.hint_when_show_translation_ask_kanji_among_words
 
                     QAKind.SHOW_WORD_ASK_NOTHING -> R.string.hint_when_new_word
-                    QAKind.SHOW_PHRASE_ASK_NOTHING -> R.string.hint_when_asking_nothing
-                    QAKind.SHOW_SENTENCE_ASK_NOTHING -> R.string.hint_when_asking_nothing
-                    QAKind.SHOW_PHRASE_ASK_KANJI -> R.string.hint_when_show_s_or_ph_ask_kanji
-                    QAKind.SHOW_SENTENCE_ASK_KANJI -> R.string.hint_when_show_s_or_ph_ask_kanji
+
+                    QAKind.SHOW_PHRASE_ASK_NOTHING,
+                    QAKind.SHOW_SENTENCE_ASK_NOTHING,
+                    -> R.string.hint_when_asking_nothing
+
+                    QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
+                    QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
+                    -> R.string.hint_when_show_s_or_ph_ask_kanji
 
                     QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA,
                     -> R.string.hint_when_show_ph_translation_ask_ph_kana
+
+                    QAKind.SHOW_PHRASE_ASK_WORD_KANA,
+                    QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
+                    -> R.string.hint_when_show_s_or_ph_ask_kana
                 }
             )
 
@@ -265,30 +295,37 @@ class ProgStudyActivity: AppCompatActivity() {
     }
 
     private inner class KeyboardDelegate: Keyboard.Delegate() {
-        private val screenSize = DeviceUtils.getScreenSize(this@ProgStudyActivity)
-        private val orient = DeviceUtils.getOrientation(this@ProgStudyActivity)
+        override fun createNewChip(chipText: String, iconResId: Int?, contentDescResId: Int?, size: ChipSize): Chip {
+            val chipValues = screenValues.getChipValues(size)
 
-        override val chipFontSize = values.getChipFontSize(screenSize, orient)
-        override val chipFontSizeForSmallKana = values.getChipFontSizeForSmallKana(screenSize, orient)
+            val textSize =
+                if (size == ChipSize.NORMAL && chipText.isSmallKana()) screenValues.smallKanaFontSize
+                else chipValues.fontSize
 
-        override fun createNewChip(iconResId: Int?, contentDescResId: Int?) =
-            Chip(applicationContext).apply {
-                minWidth = values.getChipMinWidth(screenSize, orient).toInt()
-                chipMinHeight = values.getChipMinHeight(screenSize, orient)
+            return Chip(applicationContext).apply {
+                setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize)
+                text = chipText
+                minWidth = chipValues.minWidth.toInt()
+                chipMinHeight = chipValues.minHeight
+                chipStartPadding = chipValues.lrPadding
+                chipEndPadding = chipStartPadding
+
                 if (contentDescResId != null) {
                     contentDescription = ContextCompat.getString(applicationContext, contentDescResId)
                 }
+
                 if (iconResId != null) {
                     chipIcon = ContextCompat.getDrawable(applicationContext, iconResId)
                     isChipIconVisible = true
-                    chipIconSize = values.getChipIconSize(screenSize, orient)
-                    chipStartPadding = values.getChipIconXShift(screenSize, orient)
+                    chipIconSize = screenValues.iconSize
+                    chipStartPadding = screenValues.iconXShift
                 }
             }
+        }
 
         override fun createNewChipGroup() =
             ChipGroup(applicationContext).apply {
-                chipSpacingVertical = values.getChipSpacing(screenSize).toInt()
+                chipSpacingVertical = screenValues.chipSpacing.toInt()
                 chipSpacingHorizontal = chipSpacingVertical
                 layoutParams = ChipGroup.LayoutParams(
                     ChipGroup.LayoutParams.WRAP_CONTENT,

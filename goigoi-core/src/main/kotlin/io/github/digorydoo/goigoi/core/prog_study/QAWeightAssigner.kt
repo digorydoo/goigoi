@@ -64,11 +64,11 @@ class QAWeightAssigner(
 
         val numPhrasesOrSentences = when {
             kind.involvesPhrases -> when (kind.asksForKanji) {
-                true -> info.phrasesUsableForAskKanji.size
+                true -> info.phrasesUsableForAskGap.size
                 false -> word.phrases.size
             }
             kind.involvesSentences -> when (kind.asksForKanji) {
-                true -> info.sentencesUsableForAskKanji.size
+                true -> info.sentencesUsableForAskGap.size
                 false -> word.sentences.size
             }
             else -> 0
@@ -231,7 +231,7 @@ class QAWeightAssigner(
             }
             QAKind.SHOW_PHRASE_ASK_NOTHING -> {
                 val seenCount = stats.getWordSeenCount(word, kind.toStatsKey())
-                val shouldAskKanji = seenCount >= word.phrases.size && info.phrasesUsableForAskKanji.isNotEmpty()
+                val shouldAskKanji = seenCount >= word.phrases.size && info.phrasesUsableForAskGap.isNotEmpty()
 
                 when (word.studyInContext) {
                     StudyInContextKind.PREFERRED, StudyInContextKind.REQUIRED -> when {
@@ -254,7 +254,7 @@ class QAWeightAssigner(
                 val seenCount = stats.getWordSeenCount(word, kind.toStatsKey())
                 val phraseAskNothingCount = stats.getWordSeenCount(word, QAKind.SHOW_PHRASE_ASK_NOTHING.toStatsKey())
                 val shouldShowPhraseFirst = phraseAskNothingCount <= seenCount && word.phrases.isNotEmpty()
-                val shouldAskKanji = seenCount >= word.sentences.size && info.sentencesUsableForAskKanji.isNotEmpty()
+                val shouldAskKanji = seenCount >= word.sentences.size && info.sentencesUsableForAskGap.isNotEmpty()
 
                 when (word.studyInContext) {
                     StudyInContextKind.PREFERRED, StudyInContextKind.REQUIRED -> when {
@@ -275,49 +275,75 @@ class QAWeightAssigner(
                     }
                 }
             }
-            QAKind.SHOW_PHRASE_ASK_KANJI -> {
+            QAKind.SHOW_PHRASE_ASK_WORD_KANA -> {
                 val askNothingCount = stats.getWordSeenCount(word, QAKind.SHOW_PHRASE_ASK_NOTHING.toStatsKey())
                 val thisKindCount = stats.getWordSeenCount(word, kind.toStatsKey())
-                val sentenceKindCount = stats.getWordSeenCount(word, QAKind.SHOW_SENTENCE_ASK_KANJI.toStatsKey())
-                val repeatingPhrases = thisKindCount >= info.phrasesUsableForAskKanji.size
-                val repeatingSentences = sentenceKindCount >= info.sentencesUsableForAskKanji.size
                 val shouldAskNothingFirst = askNothingCount < word.phrases.size && askNothingCount <= thisKindCount
-                val hasNonRepeatedSentences = !repeatingSentences && info.sentencesUsableForAskKanji.isNotEmpty()
 
                 when {
                     shouldAskNothingFirst -> ALMOST_NEVER
+                    else -> 1.0f
+                }
+            }
+            QAKind.SHOW_PHRASE_ASK_WORD_KANJI -> {
+                val askNothingCount = stats.getWordSeenCount(word, QAKind.SHOW_PHRASE_ASK_NOTHING.toStatsKey())
+                val thisKindCount = stats.getWordSeenCount(word, kind.toStatsKey())
+                val kanaKindCount = stats.getWordSeenCount(word, QAKind.SHOW_PHRASE_ASK_WORD_KANA.toStatsKey())
+                val sentenceKindCount = stats.getWordSeenCount(word, QAKind.SHOW_SENTENCE_ASK_WORD_KANJI.toStatsKey())
+                val repeatingPhrases = thisKindCount >= info.phrasesUsableForAskGap.size
+                val repeatingSentences = sentenceKindCount >= info.sentencesUsableForAskGap.size
+                val shouldAskNothingFirst = askNothingCount < word.phrases.size && askNothingCount <= thisKindCount
+                val shouldAskKanaFirst = kanaKindCount < word.phrases.size && kanaKindCount <= thisKindCount
+                val hasNonRepeatedSentences = !repeatingSentences && info.sentencesUsableForAskGap.isNotEmpty()
+
+                when {
+                    shouldAskNothingFirst -> ALMOST_NEVER
+                    shouldAskKanaFirst -> RARE
                     repeatingPhrases && hasNonRepeatedSentences -> SOMETIMES
                     else -> 1.0f
                 }
             }
-            QAKind.SHOW_SENTENCE_ASK_KANJI -> {
+            QAKind.SHOW_SENTENCE_ASK_WORD_KANA -> {
                 val askNothingCount = stats.getWordSeenCount(word, QAKind.SHOW_SENTENCE_ASK_NOTHING.toStatsKey())
                 val thisKindCount = stats.getWordSeenCount(word, kind.toStatsKey())
-                val phraseKindCount = stats.getWordSeenCount(word, QAKind.SHOW_PHRASE_ASK_KANJI.toStatsKey())
-                val repeatingSentences = thisKindCount >= info.sentencesUsableForAskKanji.size
-                val repeatingPhrases = phraseKindCount >= info.phrasesUsableForAskKanji.size
                 val shouldAskNothingFirst = askNothingCount < word.sentences.size && askNothingCount <= thisKindCount
-                val hasNonRepeatedPhrases = !repeatingPhrases && info.phrasesUsableForAskKanji.isNotEmpty()
 
                 when {
                     shouldAskNothingFirst -> ALMOST_NEVER
+                    else -> 1.0f
+                }
+            }
+            QAKind.SHOW_SENTENCE_ASK_WORD_KANJI -> {
+                val askNothingCount = stats.getWordSeenCount(word, QAKind.SHOW_SENTENCE_ASK_NOTHING.toStatsKey())
+                val thisKindCount = stats.getWordSeenCount(word, kind.toStatsKey())
+                val kanaKindCount = stats.getWordSeenCount(word, QAKind.SHOW_SENTENCE_ASK_WORD_KANA.toStatsKey())
+                val phraseKindCount = stats.getWordSeenCount(word, QAKind.SHOW_PHRASE_ASK_WORD_KANJI.toStatsKey())
+                val repeatingSentences = thisKindCount >= info.sentencesUsableForAskGap.size
+                val repeatingPhrases = phraseKindCount >= info.phrasesUsableForAskGap.size
+                val shouldAskNothingFirst = askNothingCount < word.sentences.size && askNothingCount <= thisKindCount
+                val shouldAskKanaFirst = kanaKindCount < word.sentences.size && kanaKindCount <= thisKindCount
+                val hasNonRepeatedPhrases = !repeatingPhrases && info.phrasesUsableForAskGap.isNotEmpty()
+
+                when {
+                    shouldAskNothingFirst -> ALMOST_NEVER
+                    shouldAskKanaFirst -> RARE
                     repeatingSentences && hasNonRepeatedPhrases -> RARE
                     else -> 1.0f
                 }
             }
             QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> {
                 val askNothingCount = stats.getWordSeenCount(word, QAKind.SHOW_PHRASE_ASK_NOTHING.toStatsKey())
-                val askKanjiCount = stats.getWordSeenCount(word, QAKind.SHOW_PHRASE_ASK_KANJI.toStatsKey())
+                val askKanjiCount = stats.getWordSeenCount(word, QAKind.SHOW_PHRASE_ASK_WORD_KANJI.toStatsKey())
                 val thisKindCount = stats.getWordSeenCount(word, kind.toStatsKey())
-                val sentenceKindCount = stats.getWordSeenCount(word, QAKind.SHOW_SENTENCE_ASK_KANJI.toStatsKey())
+                val sentenceKindCount = stats.getWordSeenCount(word, QAKind.SHOW_SENTENCE_ASK_WORD_KANJI.toStatsKey())
                 val repeatingPhrases = thisKindCount >= word.phrases.size // word not removed with this kind
-                val repeatingSentences = sentenceKindCount >= info.sentencesUsableForAskKanji.size
+                val repeatingSentences = sentenceKindCount >= info.sentencesUsableForAskGap.size
                 val shouldAskNothingFirst = askNothingCount < word.phrases.size && askNothingCount <= thisKindCount
                 val kanjiLevel = kanjiIndex.levelOfMostDifficultKanji(word.kanji) ?: JLPTLevel.Nx
 
                 val shouldAskKanjiFirst = !word.usuallyInKana && word.kanji != word.kana &&
                     askKanjiCount < word.phrases.size && askKanjiCount <= thisKindCount &&
-                    info.phrasesUsableForAskKanji.isNotEmpty() && // ask kanji is based on phrasesWithWordRemoved
+                    info.phrasesUsableForAskGap.isNotEmpty() &&
                     !kanjiLevel.isMoreDifficultThan(word.level ?: JLPTLevel.Nx)
 
                 when (word.studyInContext) {
@@ -325,7 +351,7 @@ class QAWeightAssigner(
                         shouldAskNothingFirst -> RARE
                         shouldAskKanjiFirst -> RARE // ask kanji only asks for word, this kind asks entire phrase
                         repeatingPhrases -> when {
-                            info.sentencesUsableForAskKanji.isEmpty() || repeatingSentences -> 0.5f
+                            info.sentencesUsableForAskGap.isEmpty() || repeatingSentences -> 0.5f
                             word.usuallyInKana || word.kanji == word.kana -> SOMETIMES
                             else -> JUST_ABOVE_RARE
                         }
@@ -336,7 +362,7 @@ class QAWeightAssigner(
                         shouldAskKanjiFirst -> RARE
                         repeatingPhrases -> when {
                             word.usuallyInKana || word.kanji == word.kana -> 0.5f
-                            info.sentencesUsableForAskKanji.isEmpty() || repeatingSentences -> 0.3f
+                            info.sentencesUsableForAskGap.isEmpty() || repeatingSentences -> 0.3f
                             else -> RARE
                         }
                         else -> 1.0f

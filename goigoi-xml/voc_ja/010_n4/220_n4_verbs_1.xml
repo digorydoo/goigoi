@@ -11,8 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n4"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- potential form -->
@@ -34,7 +34,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【食：た】べられない" />
+                </phrase>
                 <sentence
                   s="これは、まずくて【食：た】べられない。"
                   rom="Kore wa, mazukute taberarenai."
@@ -42,7 +44,9 @@
                   tr_de="Dies schmeckt so schlecht, ich kann es nicht essen."
                   lvl="n4"
                   origin="500mon q14"
-                />
+                >
+                    <ask w="【食：た】べられない" />
+                </sentence>
                 <sentence
                   s="このカレーは【辛：から】すぎて、【食：た】べられない。"
                   rom="Kono karē wa kara-sugite, taberarenai."
@@ -51,7 +55,9 @@
                   lvl="n4"
                   origin="lib0 modified"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【食：た】べられない" />
+                </sentence>
                 <sentence
                   s="そのキノコは【食：た】べられますか。"
                   rom="Sono kinoko wa taberaremasu ka?"
@@ -60,7 +66,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT; kinoko is nx"
-                />
+                >
+                    <ask stem="【食：た】べられ" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【飲：の】める"
@@ -88,7 +96,9 @@
                   tr_de="Dieses Wasser kann man trinken."
                   lvl="n4"
                   origin="lib0"
-                />
+                >
+                    <ask stem="【飲：の】め" suffix="ます" />
+                </sentence>
                 <sentence
                   s="こんな【甘：あま】いコーヒーは【飲：の】めない。"
                   rom="Konna amai kōhī wa nomenai."
@@ -96,7 +106,9 @@
                   tr_de="Einen solch süssen Kaffee kann ich nicht trinken."
                   lvl="n4"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【飲：の】めない" />
+                </sentence>
             </word>
             <word
               w="【見：み】られる"
@@ -163,7 +175,9 @@
                   lvl="n4"
                   origin="lib0 modified"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【読：よ】めない" />
+                </sentence>
                 <sentence
                   s="この【漢：かん】【字：じ】が【読：よ】めますか。"
                   rom="Kono kanji ga yomemasu ka?"
@@ -172,7 +186,9 @@
                   lvl="n4"
                   origin="lib0"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask stem="【読：よ】め" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【書：か】ける"
@@ -200,7 +216,9 @@
                   lvl="n4"
                   origin="lib0 modified"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask stem="【書：か】け" suffix="ます" />
+                </sentence>
                 <sentence
                   s="このペンでは【書：か】けない。"
                   rom="Kono pen de wa kakenai."
@@ -209,7 +227,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【書：か】けない" />
+                </sentence>
             </word>
             <word
               w="【乗：の】れる"
@@ -293,7 +313,9 @@
                   lvl="n4"
                   origin="lib0 modified"
                   rem="jisho has nx for Chūgoku"
-                />
+                >
+                    <ask stem="【話：はな】せ" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【池：いけ】【田：だ】さんは【英：えい】【語：ご】をちっとも【話：はな】せません。"
                   rom="Ikeda-san wa eigo o chitto mo hanasemasen."
@@ -302,7 +324,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask stem="【話：はな】せ" suffix="ません" />
+                </sentence>
             </word>
             <word
               w="【答：こた】えられる"
@@ -329,7 +353,9 @@
                   tr_de="Können Sie diese Frage beantworten?"
                   lvl="n4"
                   origin="lib0"
-                />
+                >
+                    <ask stem="【答：こた】えられ" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【誰：だれ】もその【質：しつ】【問：もん】に【答：こた】えられないでしょう。"
                   rom="Dare mo sono shitsumon ni kotaerarenai deshō."
@@ -338,7 +364,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【答：こた】えられない" />
+                </sentence>
             </word>
             <word
               w="【取：と】れる"
@@ -374,7 +402,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask stem="【取：と】れ" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【私：わたし】は【用：よう】【事：じ】が【多：おお】すぎて、【休：やす】みが【取：と】れない。"
                   rom="Watashi wa yōji ga ōsugite, yasumi ga torenai."
@@ -383,7 +413,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【取：と】れない" />
+                </sentence>
             </word>
             <word
               w="【使：つか】える"
@@ -412,7 +444,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【使：つか】えない" />
+                </sentence>
                 <sentence
                   s="【親：おや】の【車：くるま】が【自：じ】【由：ゆう】に【使：つか】える。"
                   rom="Oya no kuruma ga jiyū ni tsukaeru."
@@ -451,7 +485,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【開：あ】けられない" />
+                </sentence>
                 <!-- FIXME ChatGPT was confused, try again -->
                 <sentence
                   s="うちの【猫：ねこ】はうまくて、ドアも【開：あ】けられる。"
@@ -503,7 +539,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask stem="【休：やす】め" suffix="ません" />
+                </sentence>
             </word>
 
             <!-- unsorted -->
@@ -538,7 +576,9 @@
                   explanation_de="「踊れる」ist die potenzielle Form von「踊る」"
                   lvl="n4"
                   origin="Langenscheidt p.191"
-                />
+                >
+                    <ask w="【踊：おど】れる" />
+                </sentence>
                 <sentence
                   s="【歌：うた】に【合：あ】わせて【踊：おど】ろう。"
                   rom="Uta ni awasete odorō."
@@ -549,7 +589,9 @@
                   lvl="n4"
                   origin="lib0"
                   rem="jisho has n3 for 合わせる, n4 for 合う"
-                />
+                >
+                    <ask w="【踊：おど】ろう" />
+                </sentence>
             </word>
             <word
               w="【引：ひ】っ【越：こ】す"
@@ -575,7 +617,9 @@
                   lvl="n4"
                   origin="BondLingo"
                   href="https://youtu.be/Z2XH9qVh2rQ"
-                />
+                >
+                    <ask stem="【引：ひ】っ【越：こ】し" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【今：こん】【度：ど】 【引：ひ】っ【越：こ】すんですよ。"
                   rom="Kondo hikkosu n desu yo."
@@ -612,7 +656,9 @@
                   tr_de="ähnlich, aber doch anders"
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【似：に】て" />
+                </phrase>
                 <sentence
                   s="【母：はは】【親：おや】に【似：に】ています。"
                   rom="Hahaoya ni nite imasu."
@@ -620,7 +666,9 @@
                   tr_de="Sie gleicht ihrer Mutter."
                   lvl="n4"
                   origin="duolingo"
-                />
+                >
+                    <ask w="【似：に】て" />
+                </sentence>
                 <sentence
                   s="【私：わたし】は【父：ちち】に よく 【似：に】ていると【言：い】われます。"
                   rom="Watashi wa chichi ni yoku nite iru to iwaremasu."
@@ -631,7 +679,9 @@
                   allowSpaces="true"
                   lvl="n4"
                   origin="500mon q276"
-                />
+                >
+                    <ask w="【似：に】て" />
+                </sentence>
             </word>
             <word
               w="【無：な】くなる"
@@ -661,7 +711,9 @@
                   lvl="n4"
                   origin="ChatGPT"
                   rem="verified with Google search"
-                />
+                >
+                    <ask stem="なくなり" suffix="ました" />
+                </sentence>
                 <sentence
                   s="ガソリンがなくなってしまいました。"
                   rom="Gasorin ga naku natte shimaimashita."
@@ -669,7 +721,9 @@
                   tr_de="(Das Auto) hat kein Benzin mehr."
                   lvl="n4"
                   origin="Langenscheidt"
-                />
+                >
+                    <ask w="なくなって" />
+                </sentence>
             </word>
             <word
               w="【痩：や】せる"
@@ -697,8 +751,9 @@
                   explanation_en="やせなくちゃ = やせなければならない"
                   lvl="n4"
                   origin="500mon q330"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="やせ" />
+                </sentence>
                 <sentence
                   s="【痩：や】せるためには、【何：なに】かスポーツをしたほうがいい。"
                   rom="Yaseru tame ni wa, nanika supōtsu o shita hō ga ii."
@@ -716,7 +771,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT; -eba may be n3"
-                />
+                >
+                    <ask stem="【痩：や】せ" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【太：ふと】る"
@@ -745,7 +802,9 @@
                   lvl="n4"
                   origin="500mon q330"
                   rem="shimau gives the sentence a regretful feel"
-                />
+                >
+                    <ask w="【太：ふと】っ" />
+                </sentence>
                 <sentence
                   s="【太：ふと】りすぎなので、【甘：あま】いものをやめなければなりません。"
                   rom="Futori-sugina no de, amai mono o yamenakereba narimasen."
@@ -755,7 +814,9 @@
                   explanation_de="〜なければならない = muss (etw. tun)"
                   lvl="n4"
                   origin="500mon q395"
-                />
+                >
+                    <ask w="【太：ふと】り" />
+                </sentence>
             </word>
             <word
               w="【思：おも】い【出：だ】す"
@@ -784,7 +845,9 @@
                   lvl="n4"
                   origin="Miku"
                   href="https://youtu.be/-B4W64brkcc"
-                />
+                >
+                    <ask w="【思：おも】い【出：だ】した" />
+                </sentence>
                 <sentence
                   s="【映：えい】【画：が】の【名：な】【前：まえ】は【思：おも】い【出：だ】せない。"
                   rom="Eiga no namae wa omoidasenai."
@@ -793,7 +856,9 @@
                   lvl="n4"
                   origin="Miku"
                   href="https://youtu.be/-B4W64brkcc"
-                />
+                >
+                    <ask w="【思：おも】い【出：だ】せない" />
+                </sentence>
             </word>
             <word
               w="【降：ふ】り【出：だ】す"
@@ -830,7 +895,9 @@
                   lvl="n4"
                   origin="lib0"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【降：ふ】り【出：だ】し" />
+                </sentence>
                 <sentence
                   s="【雨：あめ】が【降：ふ】り【出：だ】しそうだ。"
                   rom="Ame ga furidashisō da."
@@ -839,7 +906,9 @@
                   lvl="n4"
                   origin="lib0"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【降：ふ】り【出：だ】し" />
+                </sentence>
             </word>
             <word
               w="【取：と】り【替：か】える"
@@ -867,7 +936,9 @@
                   tr_de="Ich werde mein Hemd wechseln."
                   lvl="n4"
                   origin="lib0 modified"
-                />
+                >
+                    <ask stem="【取：と】り【替：か】え" suffix="ます" />
+                </sentence>
                 <sentence
                   s="これを【青：あお】いのと【取：と】り【替：か】えてください。"
                   rom="Kore o aoi no to torikaete kudasai."
@@ -875,7 +946,9 @@
                   tr_de="Bitte tauschen Sie diesen gegen einen blauen aus."
                   lvl="n4"
                   origin="lib0"
-                />
+                >
+                    <ask w="【取：と】り【替：か】えて" />
+                </sentence>
             </word>
             <word
               w="【引：ひ】き【出：だ】す"
@@ -902,7 +975,9 @@
                   tr_de="Frau Nakamura hob das Geld von der Bank ab."
                   lvl="n4"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【引：ひ】き【出：だ】した" />
+                </sentence>
                 <sentence
                   s="【封：ふう】【筒：とう】を【開：あ】けて 【手：て】【紙：がみ】を【引：ひ】き【出：だ】した。"
                   rom="Fūtō o akete tegami o hikidashita."
@@ -911,7 +986,9 @@
                   allowSpaces="true"
                   lvl="n4"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【引：ひ】き【出：だ】した" />
+                </sentence>
             </word>
             <word
               w="【仕：し】【舞：ま】う"
@@ -969,7 +1046,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask stem="しまい" suffix="ました" />
+                </sentence>
                 <sentence
                   s="【怒：おこ】ってしまうことがある。"
                   rom="Okotte shimau koto ga aru."
@@ -984,10 +1063,11 @@
                   tr_en="I drank a bottle of wine by myself."
                   tr_de="Ich trank eine Flasche Wein für mich alleine."
                   explanation_en="飲んでしまった → 飲んじゃった"
-                  hasDifferentForm="true"
                   lvl="n4"
                   origin="500mon q304"
-                />
+                >
+                    <ask w="じゃった" />
+                </sentence>
                 <sentence
                   s="さっき【聞：き】いたのに、もう【忘：わす】れてしまいました。"
                   rom="Sakki kiita no ni, mō wasurete shimaimashita."
@@ -995,7 +1075,9 @@
                   tr_de="Ich habe es vor Kurzem gehört, aber ich habe es bereits vergessen."
                   lvl="n4"
                   origin="500mon q417"
-                />
+                >
+                    <ask stem="しまい" suffix="ました" />
+                </sentence>
                 <sentence
                   s="【昨日：きのう】 【勉：べん】【強：きょう】したのに、もう【忘：わす】れちゃった。"
                   rom="Kinō benkyō shita no ni, mō wasurechatta."
@@ -1007,8 +1089,9 @@
                   lvl="n4"
                   origin="500mon q267"
                   rem="rated n4 because of shimau"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="ちゃった" />
+                </sentence>
             </word>
             <word
               w="【笑：わら】う"
@@ -1035,7 +1118,9 @@
                   tr_de="lachende Kinder"
                   lvl="n4"
                   origin="Oxford p.110"
-                />
+                >
+                    <ask w="【笑：わら】って" />
+                </phrase>
                 <sentence
                   s="【一：いち】【度：ど】も【笑：わら】わない【人：ひと】もいるかもしれない。"
                   rom="Ichi-do mo warawanai hito mo iru kamoshirenai."
@@ -1043,7 +1128,9 @@
                   tr_de="Es gibt wohl Leute, die niemals lachen."
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【笑：わら】わない" />
+                </sentence>
             </word>
             <word
               w="【描：か】く"
@@ -1076,7 +1163,9 @@
                   explanation_de="「〜ておく」zeigt auf, dass die Aktion eine Vorbereitung für späteren Gebrauch ist"
                   lvl="n4"
                   origin="Oxford p.53"
-                />
+                >
+                    <ask w="【描：か】いて" />
+                </sentence>
             </word>
             <word
               w="【泣：な】く"
@@ -1103,7 +1192,9 @@
                   tr_de="Ich fühlte mich so einsam, dass ich weinte."
                   lvl="n4"
                   origin="Oxford p.117"
-                />
+                >
+                    <ask w="【泣：な】いて" />
+                </sentence>
                 <sentence
                   s="【隣：となり】の【部：へ】【屋：や】から【子：こ】【供：ども】が【泣：な】いている【声：こえ】が【聞：き】こえる。"
                   rom="Tonari no heya kara kodomo ga naite iru koe ga kikoeru."
@@ -1111,7 +1202,9 @@
                   tr_de="Im Raum nebenan hört man ein Kind weinen."
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【泣：な】いて" />
+                </sentence>
             </word>
             <word
               w="【楽：たの】しむ"
@@ -1138,7 +1231,9 @@
                   allowSpaces="true"
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【楽：たの】しんで" />
+                </sentence>
             </word>
             <word
               w="【過：す】ぎる"
@@ -1150,6 +1245,7 @@
               id="sugiru-exceed"
               usuallyInKana="true"
             >
+                <keep_apart_from id="sugureru-excel" />
                 <phrase
                   ph="【働：はたら】きすぎる"
                   rom="hataraki-sugiru"
@@ -1165,7 +1261,9 @@
                   lvl="n4"
                   origin="Miku"
                   href="https://youtu.be/iDFFO3hkxVA"
-                />
+                >
+                    <ask w="すぎて" />
+                </sentence>
                 <sentence
                   s="【食：た】べすぎてはいけない。"
                   rom="Tabe-sugite wa ikenai."
@@ -1176,7 +1274,9 @@
                   lvl="n4"
                   origin="lib0 modified"
                   rem="lib0 uses kanji 過ぎて"
-                />
+                >
+                    <ask w="すぎて" />
+                </sentence>
                 <sentence
                   s="【暑：あつ】すぎて、【死：し】にそう。"
                   rom="Atsu sugite, shinisō."
@@ -1185,7 +1285,9 @@
                   lvl="n4"
                   origin="Miku"
                   href="https://youtu.be/iDFFO3hkxVA"
-                />
+                >
+                    <ask w="すぎて" />
+                </sentence>
             </word>
             <word
               w="【釣：つ】る"
@@ -1204,7 +1306,9 @@
                   tr_de="fischen gehen"
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【釣：つ】り" />
+                </phrase>
                 <sentence
                   s="【今日：きょう】は【魚：さかな】を【三：さん】【匹：びき】【釣：つ】りました。"
                   rom="Kyō wa sakana o sanbiki tsurimashita."
@@ -1212,7 +1316,9 @@
                   tr_de="Ich habe heute drei Fische gefangen."
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask stem="【釣：つ】り" suffix="ました" />
+                </sentence>
             </word>
             <word
               w="【遅：おく】れる"
@@ -1244,7 +1350,9 @@
                   tr_de="Ich bin froh, dass ich nicht zu spät zur Verabredung gekommen bin."
                   lvl="n4"
                   origin="GENKI2 p.167"
-                />
+                >
+                    <ask w="【遅：おく】れなくて" />
+                </sentence>
                 <sentence
                   s="【事：じ】【故：こ】で【電：でん】【車：しゃ】が【遅：おく】れたため、【会：かい】【議：ぎ】に【間：ま】に【合：あ】わなかった。"
                   rom="Jiko de densha ga okureta tame, kaigi ni maniawanakatta."
@@ -1252,7 +1360,9 @@
                   tr_de="Ich bin nicht rechtzeitig zur Konferenz gekommen, weil der Zug wegen eines Unfalls Verspätung hatte."
                   lvl="n4"
                   origin="500mon q206"
-                />
+                >
+                    <ask w="【遅：おく】れた" />
+                </sentence>
             </word>
             <word
               w="【運：はこ】ぶ"
@@ -1279,7 +1389,9 @@
                   tr_de="Könnten Sie das Gepäck zum Taxi tragen?"
                   lvl="n4"
                   origin="Langenscheidt"
-                />
+                >
+                    <ask w="【運：はこ】んで" />
+                </sentence>
                 <sentence
                   s="【大：おお】きな【箱：はこ】を【運：はこ】ぶのを【手：て】【伝：つだ】ってくれてありがとう。"
                   rom="Ōki na hako o hakobu no o tetsudatte kurete arigatō."
@@ -1319,7 +1431,9 @@
                   lvl="n4"
                   origin="lib0 modified"
                   rem="jisho has n3 for konkai"
-                />
+                >
+                    <ask w="【勝：か】ち" />
+                </sentence>
             </word>
             <word
               w="【負：ま】ける"
@@ -1347,7 +1461,9 @@
                   tr_de="Wir haben zwar den gestrigen Match verloren, aber wir werden beim nächsten alles geben."
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【負：ま】けて" />
+                </sentence>
             </word>
             <word
               w="【噛：か】む"
@@ -1399,7 +1515,9 @@
                   tr_de="Ich grilliere oft Fleisch im Garten."
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask stem="【焼：や】き" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【焼：や】ける"
@@ -1418,7 +1536,9 @@
                   tr_de="zu lange grillieren; anbrennen lassen"
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【焼：や】け" />
+                </phrase>
                 <sentence
                   s="【魚：さかな】が【焼：や】けるまで【少：すこ】しだけ【待：ま】ってください。"
                   rom="Sakana ga yakeru made sukoshi dake matte kudasai."
@@ -1447,7 +1567,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【合：あ】わない" />
+                </phrase>
                 <sentence
                   s="このシャツとスカートの【色：いろ】がよく【合：あ】うね。"
                   rom="Kono shatsu to sukāto no iro ga yoku au ne."
@@ -1463,7 +1585,9 @@
                   tr_de="Wir haben unterschiedliche Meinungen."
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【合：あ】わない" />
+                </sentence>
                 <sentence
                   s="【私：わたし】の【口：くち】には【合：あ】いません。"
                   rom="Watashi no kuchi ni wa aimasen."
@@ -1471,7 +1595,9 @@
                   tr_de="Es schmeckt mir nicht."
                   lvl="n4"
                   origin="lib0"
-                />
+                >
+                    <ask stem="【合：あ】い" suffix="ません" />
+                </sentence>
             </word>
             <word
               w="【逃：に】げる"
@@ -1509,7 +1635,9 @@
                   tr_de="Der Dieb entfloh."
                   lvl="n4"
                   origin="lib0"
-                />
+                >
+                    <ask w="【逃：に】げた" />
+                </sentence>
             </word>
             <word
               w="【投：な】げる"
@@ -1536,7 +1664,9 @@
                   tr_de="Bitte wirf den Ball."
                   lvl="n4"
                   origin="lib0"
-                />
+                >
+                    <ask w="【投：な】げて" />
+                </sentence>
                 <sentence
                   s="レオくんは【石：いし】を【池：いけ】に【投：な】げた。"
                   rom="Reo-kun wa ishi o ike ni nageta."
@@ -1544,7 +1674,9 @@
                   tr_de="Reo warf einen Stein in den Teich."
                   lvl="n4"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【投：な】げた" />
+                </sentence>
             </word>
             <word
               w="【怒：おこ】る"
@@ -1564,7 +1696,9 @@
                   tr_de="schrecklich wütend"
                   lvl="n4"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【怒：おこ】って" />
+                </phrase>
                 <sentence
                   s="ヨシは まだ 【怒：おこ】ってる。"
                   rom="Yoshi wa mada okotteru."
@@ -1575,7 +1709,9 @@
                   allowSpaces="true"
                   lvl="n4"
                   origin="lib0"
-                />
+                >
+                    <ask w="【怒：おこ】って" />
+                </sentence>
                 <sentence
                   s="【父：ちち】が【私：わたし】に【怒：おこ】っています。"
                   rom="Chichi ga watashi ni okotte imasu."
@@ -1583,7 +1719,9 @@
                   tr_de="Mein Vater ist wütend auf mich."
                   lvl="n4"
                   origin="jpod101 audio"
-                />
+                >
+                    <ask w="【怒：おこ】って" />
+                </sentence>
                 <sentence
                   s="その【猫：ねこ】が【怒：おこ】っているときはご【注：ちゅう】【意：い】ください。"
                   rom="Sono neko ga okotte iru toki wa go-chūi kudasai."
@@ -1592,7 +1730,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【怒：おこ】って" />
+                </sentence>
             </word>
             <word
               w="【泊：と】まる"
@@ -1629,8 +1769,9 @@
                   tr_de="Ich werde im Haus eines Freundes übernachten."
                   origin="lib0"
                   lvl="n4"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="【泊：と】まり" />
+                </sentence>
             </word>
             <word
               w="【沸：わ】かす"
@@ -1660,7 +1801,9 @@
                   tr_de="Koche etwas Wasser."
                   lvl="n4"
                   origin="lib0"
-                />
+                >
+                    <ask w="【沸：わ】かして" />
+                </sentence>
                 <sentence
                   s="【牛：ぎゅう】【乳：にゅう】を【沸：わ】かさないでください。"
                   rom="Gyūnyū o wakasanaide kudasai."
@@ -1669,7 +1812,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【沸：わ】かさない" />
+                </sentence>
             </word>
             <word
               w="【沸：わ】く"
@@ -1690,7 +1835,9 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【沸：わ】かない" />
+                </phrase>
                 <sentence
                   s="お【湯：ゆ】が【沸：わ】いたよ。"
                   rom="O-yu ga waita yo."
@@ -1698,7 +1845,9 @@
                   tr_de="Das Wasser kocht."
                   lvl="n4"
                   origin="500mon q306"
-                />
+                >
+                    <ask w="【沸：わ】いた" />
+                </sentence>
                 <sentence
                   s="【牛：ぎゅう】【乳：にゅう】が【沸：わ】かないように、【火：ひ】からおろしてください。"
                   rom="Gyūnyū ga wakanai yō ni, hi kara oroshite kudasai."
@@ -1707,7 +1856,9 @@
                   lvl="n4"
                   origin="ChatGPT"
                   rem="ChatGPT is confused, thinking that you should take the milk off the fire after it has boiled"
-                />
+                >
+                    <ask w="【沸：わ】かない" />
+                </sentence>
             </word>
             <word
               w="【払：はら】う"
@@ -1734,7 +1885,9 @@
                   tr_de="Wieviel hast du für diesen Kimono bezahlt?"
                   lvl="n4"
                   origin="lib0 modified"
-                />
+                >
+                    <ask stem="【払：はら】い" suffix="ました" />
+                </sentence>
                 <sentence
                   s="お【客：きゃく】さんは【払：はら】わないで【出：で】て【行：い】ったようです。"
                   rom="O-kyaku-san wa harawanaide dete itta yō desu."
@@ -1743,7 +1896,9 @@
                   lvl="n4"
                   origin="self"
                   rem="corrected by ChatGPT; ないで in this sense appears in GENKI2 L20 grammar section"
-                />
+                >
+                    <ask w="【払：はら】わない" />
+                </sentence>
             </word>
             <word
               w="【盗：ぬす】む"
@@ -1773,7 +1928,9 @@
                   explanation_en="「盗まれる」is the passive form of「盗む」"
                   explanation_de="「盗まれる」ist die passive Form von「盗む」"
                   lvl="n4"
-                />
+                >
+                    <ask stem="【盗：ぬす】まれ" suffix="ました" />
+                </sentence>
                 <sentence
                   s="【彼：かれ】が【私：わたし】の【財：さい】【布：ふ】を【盗：ぬす】んだ。"
                   rom="Kare ga watashi no saifu o nusunda."
@@ -1781,7 +1938,9 @@
                   tr_de="Er hat meinen Geldbeutel gestohlen."
                   lvl="n4"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【盗：ぬす】んだ" />
+                </sentence>
                 <sentence
                   s="【盗：ぬす】むのはいけないことだ。"
                   rom="Nusumu no wa ikenai koto da."
@@ -1792,6 +1951,17 @@
                   explanation_en="いけない literally means 'you cannot go'"
                   explanation_de="いけない bedeutet wörtlich 'du kannst nicht gehen'"
                 />
+                <sentence
+                  s="【三：さん】【足：ぞく】の【山：さん】【賊：ぞく】は【靴：くつ】【下：した】を【三：さん】【足：ぞく】【盗：ぬす】んだ。"
+                  rom="Sanzoku no sanzoku wa kutsushita o sanzoku nusunda."
+                  tr_en="The three-legged bandit stole three pairs of socks."
+                  tr_de="Der dreibeinige Bandit stahl drei Paar Socken."
+                  origin="self"
+                  lvl="n4"
+                  rem="verified with ChatGPT; 山賊 is nx"
+                >
+                    <ask w="【盗：ぬす】んだ" />
+                </sentence>
             </word>
             <word
               w="【急：いそ】ぐ"
@@ -1810,7 +1980,10 @@
                   lvl="n4"
                   origin="self"
                   rem="jisho has this as an expression (nx); but it's just the て-form of 急ぐ"
-                />
+                >
+                    <!-- FIXME the phrase is the form itself, not ideal -->
+                    <ask w="【急：いそ】いで" />
+                </phrase>
                 <sentence
                   s="【急：いそ】げ。"
                   rom="Isoge."
@@ -1818,7 +1991,9 @@
                   tr_de="Beeil dich!"
                   lvl="n4"
                   origin="Doraemon 0, p.21"
-                />
+                >
+                    <ask w="【急：いそ】げ" />
+                </sentence>
                 <sentence
                   s="【急：いそ】がないと【会：かい】【議：ぎ】に【遅：おく】れますよ。"
                   rom="Isoganai to kaigi ni okuremasu yo."
@@ -1826,7 +2001,9 @@
                   tr_de="Wenn du dich nicht beeilst, kommst du zu spät zur Konferenz."
                   lvl="n4"
                   origin="500mon q443"
-                />
+                >
+                    <ask w="【急：いそ】がない" />
+                </sentence>
                 <sentence
                   s="【仕：し】【事：ごと】の【後：あと】 【急：いそ】いで【帰：かえ】りました。"
                   rom="Shigoto no ato isoide kaerimashita."
@@ -1835,7 +2012,9 @@
                   allowSpaces="true"
                   lvl="n4"
                   origin="Oxford p.42"
-                />
+                >
+                    <ask w="【急：いそ】いで" />
+                </sentence>
             </word>
             <word
               w="【探：さが】す"
@@ -1864,7 +2043,9 @@
                   tr_de="Herr Tanaka suchte nach dem Schlüssel."
                   lvl="n4"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【探：さが】した" />
+                </sentence>
             </word>
             <word
               w="【捜：さが】す"
@@ -1913,7 +2094,9 @@
                   tr_de="Meine Mutter gab mir ein Buch."
                   lvl="n4"
                   origin="Oxford p.94"
-                />
+                >
+                    <ask stem="くれ" suffix="ました" />
+                </sentence>
                 <sentence
                   s="ちょっと【見：み】てくれますか。"
                   rom="Chotto mite kuremasu ka?"
@@ -1921,7 +2104,9 @@
                   tr_de="Können Sie mal nachsehen?"
                   lvl="n4"
                   origin="Langenscheidt"
-                />
+                >
+                    <ask stem="くれ" suffix="ます" />
+                </sentence>
                 <sentence
                   s="【町：まち】まで【行：い】くのなら【郵：ゆう】【便：びん】【局：きょく】にも【行：い】ってくれる？"
                   rom="Machi made iku no nara yūbinkyoku ni mo itte kureru?"
@@ -1939,7 +2124,9 @@
                   tr_de="Unser Hund bringt uns jeden Morgen die Zeitung."
                   lvl="n4"
                   origin="500mon q457"
-                />
+                >
+                    <ask stem="くれ" suffix="ます" />
+                </sentence>
                 <!-- TODO move this to ikaseru -->
                 <sentence
                   s="【父：ちち】はパーティーに【行：い】かせてくれなかった。"
@@ -1951,7 +2138,9 @@
                   lvl="n4"
                   origin="Oxford p.76"
                   rem="ikaseru may be n3"
-                />
+                >
+                    <ask w="くれなかった" />
+                </sentence>
             </word>
             <word
               w="【選：えら】ぶ"
@@ -1979,7 +2168,9 @@
                   lvl="n4"
                   origin="lib0 modified"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【選：えら】んで" />
+                </sentence>
                 <sentence
                   s="どうしてその【仕：し】【事：ごと】を【選：えら】んだのか、【自：じ】【分：ぶん】でもわかりません。"
                   rom="Dōshite sono shigoto o eranda no ka, jibun demo wakarimasen."
@@ -1988,7 +2179,9 @@
                   lvl="n4"
                   origin="self"
                   rem="corrected by ChatGPT; grammar acc. to GENKI2 L20 p.189 footnote"
-                />
+                >
+                    <ask w="【選：えら】んだ" />
+                </sentence>
             </word>
             <word
               w="【思：おも】う"
@@ -2027,7 +2220,19 @@
                   explanation_de="「寝よう」ist die Willensform von「寝る」und zeigt eine Entscheidung an"
                   lvl="n4"
                   origin="lib0 modified"
-                />
+                >
+                    <ask stem="【思：おも】い" suffix="ます" />
+                </sentence>
+                <sentence
+                  s="【一：ひと】【人：り】も【来：こ】ないと【思：おも】っていましたが、【５：ご】【人：にん】も【来：き】ました。"
+                  rom="Hitori mo konai to omotte imashita ga, go-nin mo kimashita."
+                  tr_en="I didn't think even one person would come, but five people came."
+                  tr_de="Ich dachte, nicht einmal eine Person würde kommen, aber es kamen fünf."
+                  lvl="n4"
+                  origin="500mon q277"
+                >
+                    <ask w="【思：おも】って" />
+                </sentence>
                 <sentence
                   s="【来：らい】【年：ねん】の【夏：なつ】 【日：に】【本：ほん】へ【行：い】こうと【思：おも】っています。"
                   rom="Rainen no natsu Nihon e ikō to omotte imasu."
@@ -2039,7 +2244,9 @@
                   lvl="n4"
                   origin="Oxford p.82 modified"
                   rem="changed to と思っています according to GENKI2 p.75"
-                />
+                >
+                    <ask w="【思：おも】って" />
+                </sentence>
             </word>
         </section>
     </unit>

@@ -11,8 +11,8 @@
       defaultHint_en="counter"
       defaultHint_de="Zählwort"
       lvl="n5"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section
           name_en="つ: Generic counter for things"
@@ -369,41 +369,44 @@
                   rom="hitori"
                   tr_en="one person; alone"
                   tr_de="eine Person; alleine"
-                  hasDifferentForm="true"
                   lvl="n5"
-                />
+                >
+                    <ask w="【人：り】" />
+                </phrase>
                 <phrase
                   ph="【二：ふた】【人：り】"
                   rom="futari"
                   tr_en="two persons; pair"
                   tr_de="zwei Personen; Paar"
-                  hasDifferentForm="true"
                   lvl="n5"
-                />
+                >
+                    <ask w="【人：り】" />
+                </phrase>
                 <phrase
                   ph="【三：さん】【人：にん】"
                   rom="san-nin"
                   tr_en="three people"
                   tr_de="drei Personen"
-                  hasDifferentForm="true"
                   lvl="n5"
                   rem="see GENKI1 p.174"
-                />
+                >
+                    <ask w="【人：にん】" />
+                </phrase>
                 <phrase
                   ph="【四：よ】【人：にん】"
                   rom="yonin"
                   tr_en="four people"
                   tr_de="vier Personen"
-                  hasDifferentForm="true"
                   lvl="n5"
                   rem="see GENKI1 p.174"
-                />
+                >
+                    <ask w="【人：にん】" />
+                </phrase>
                 <!--
                   ph="【五：ご】【人：にん】"
                   rom="go-nin"
                   tr_en="five people"
                   tr_de="fünf Personen"
-                  hasDifferentForm="true"
                   lvl="n5"
                   rem="see GENKI1 p.174"
                 -->
@@ -412,7 +415,6 @@
                   rom="roku-nin"
                   tr_en="six people"
                   tr_de="sechs Personen"
-                  hasDifferentForm="true"
                   lvl="n5"
                   rem="see GENKI1 p.174"
                 -->
@@ -421,7 +423,6 @@
                   rom="nana-nin"
                   tr_en="seven people"
                   tr_de="sieben Personen"
-                  hasDifferentForm="true"
                   lvl="n5"
                   rem="see GENKI1 p.174; しちにん is also possible"
                 -->
@@ -430,7 +431,6 @@
                   rom="hachi-nin"
                   tr_en="eight people"
                   tr_de="acht Personen"
-                  hasDifferentForm="true"
                   lvl="n5"
                   rem="see GENKI1 p.174"
                 -->
@@ -439,7 +439,6 @@
                   rom="kyū-nin"
                   tr_en="nine people"
                   tr_de="neun Personen"
-                  hasDifferentForm="true"
                   lvl="n5"
                   rem="see GENKI1 p.174"
                 -->
@@ -448,7 +447,6 @@
                   rom="jū-nin"
                   tr_en="ten people"
                   tr_de="zehn Personen"
-                  hasDifferentForm="true"
                   lvl="n5"
                   rem="see GENKI1 p.174"
                 -->
@@ -457,7 +455,6 @@
                   rom="ni-jū-nin"
                   tr_en="twenty people"
                   tr_de="zwanzig Personen"
-                  hasDifferentForm="true"
                   lvl="n5"
                 -->
                 <!--
@@ -465,7 +462,6 @@
                   rom="nan-nin"
                   tr_en="how many people"
                   tr_de="wieviele Leute"
-                  hasDifferentForm="true"
                   lvl="n5"
                   rem="GENKI2 p.286"
                 -->
@@ -474,21 +470,13 @@
                   rom="Kinō no pātī ni wa gakusei ga ni-jū-nin mo kimashita."
                   tr_en="As many as twenty students showed up at the party yesterday."
                   tr_de="Nicht weniger als zwanzig Studenten sind an die Party gestern gekommen."
-                  hasDifferentForm="true"
                   explanation_en="も after the number word has the meaning of 'as many as'."
                   explanation_de="も nach dem Zählwort hat die Bedeutung von 'nicht weniger als', 'ganze'."
                   lvl="n5"
                   origin="GENKI2 p.55"
-                />
-                <sentence
-                  s="【一：ひと】【人：り】も 【来：こ】ないと 【思：おも】って いましたが、【５：ご】【人：にん】も 【来：き】ました。"
-                  rom="Hitori mo konai to omotte imashita ga, go-nin mo kimashita."
-                  tr_en="I didn't think even one person would come, but five people came."
-                  tr_de="Ich dachte, nicht einmal eine Person würde kommen, aber es kamen fünf."
-                  hasDifferentForm="true"
-                  lvl="n5"
-                  origin="500mon q277"
-                />
+                >
+                    <ask w="【人：にん】" />
+                </sentence>
             </word>
             <word
               w="【１：ひと】【人：り】"
@@ -680,7 +668,6 @@
                   tr_en="How old are you?"
                   tr_de="Wie alt bist du?"
                   lvl="n5"
-                  hasDifferentForm="true"
                   origin="lib0"
                   rem="jisho has nx for sai, but it appears in GENKI1 p.44"
                 />

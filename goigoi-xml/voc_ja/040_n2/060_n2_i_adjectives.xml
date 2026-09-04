@@ -52,7 +52,9 @@
                   tr_de="Dieses Restaurant ist turbulent und lärmig."
                   lvl="n2"
                   href="https://hinative.com/en-US/questions/22152786"
-                />
+                >
+                    <ask w="【騒：さわ】がしくて" />
+                </sentence>
             </word>
             <word
               w="【物：もの】【凄：すご】い"
@@ -69,7 +71,9 @@
                   tr_en="to oppose vehemently"
                   tr_de="sich vehement wehren"
                   lvl="n2"
-                />
+                >
+                    <ask w="ものすごく" />
+                </phrase>
             </word>
             <word
               w="【塩：しお】【辛：から】い"
@@ -110,7 +114,9 @@
                   lvl="n2"
                   origin="Langenscheidt p.224"
                   rem="translation should probably have 'they say'"
-                />
+                >
+                    <ask w="【蒸：む】し【暑：あつ】く" />
+                </sentence>
             </word>
             <word
               w="【酸：す】っぱい"
@@ -183,7 +189,11 @@
               category="top-words"
               id="erai-admirable"
               rem="appears in Doraemon 0, p.19"
-            />
+            >
+                <keep_apart_from id="sugureru-excel" rem="ambiguous with sugureta" />
+                <keep_apart_from id="subarashii-splendid" />
+                <keep_apart_from id="mezamashii-splendid" />
+            </word>
             <word
               w="【若：わか】【々：わか】しい"
               rom="waka-wakashii"
@@ -286,7 +296,9 @@
               lvl="n2"
               id="arai-wild"
               HIDDEN="true"
-            />
+            >
+                <keep_apart_from id="hageshii-violent" />
+            </word>
             <word
               w="【惜：お】しい"
               rom="oshii"
@@ -395,7 +407,9 @@
               category="not-good"
               id="hanahadashii-severe"
               HIDDEN="true"
-            />
+            >
+                <keep_apart_from id="osoroshii-terrible" />
+            </word>
             <word
               w="【恋：こい】しい"
               rom="koishii"

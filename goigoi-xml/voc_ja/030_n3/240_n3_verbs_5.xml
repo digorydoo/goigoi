@@ -17,6 +17,110 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【論：ろん】じる"
+              rom="ronjiru"
+              tr_en="to discuss sth.; to talk about sth."
+              tr_de="etw. diskutieren; (ein Thema) behandeln"
+              Langenscheidt="diskutieren, (Thema) behandeln"
+              hint_en="v.t.; formal"
+              hint_de="v.t.; formell"
+              lvl="n3"
+              category="talking"
+              id="ronjiru-discuss"
+            >
+                <keep_apart_from id="hanasu-talk" />
+                <keep_apart_from id="iu-say" />
+                <keep_apart_from id="mōsu-say" />
+                <keep_apart_from id="mōshiageru-tell" />
+                <keep_apart_from id="hanashiau-discuss" />
+                <keep_apart_from id="hanashikakeru-addresssb" />
+                <keep_apart_from id="kataru-recite" />
+                <phrase
+                  ph="【環：かん】【境：きょう】【問：もん】【題：だい】を【論：ろん】じる"
+                  rom="kankyō-mondai o ronjiru"
+                  tr_en="to discuss environmental problems"
+                  tr_de="über Umweltprobleme diskutieren"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="lib0 has both を and について; ChatGPT says both are correct here"
+                />
+                <sentence
+                  s="これ【以：い】【上：じょう】この【問：もん】【題：だい】は【論：ろん】じない。"
+                  rom="Kore ijō kono mondai wa ronjinai."
+                  tr_en="I shall not discuss this matter any further."
+                  tr_de="Ich werde dieses Problem this weiter erörtern."
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【論：ろん】じない" />
+                </sentence>
+            </word>
+            <word
+              w="【罹：かか】る"
+              rom="kakaru"
+              tr_en="to suffer from sth.; to fall ill"
+              tr_de="an etw. leiden; an etw. erkranken"
+              studyInContext="required"
+              usuallyInKana="true"
+              lvl="n3"
+              category="health, not-good"
+              id="kakaru-suffer"
+            >
+                <keep_apart_from id="kaze-flu" rem="ambiguity in phrases" />
+                <keep_apart_from id="hiku-pull" rem="ambiguity in phrases" />
+                <keep_apart_from id="yamu-fallill" />
+                <keep_apart_from id="kurushimu-suffer" />
+                <phrase
+                  ph="【病：びょう】【気：き】にかかる"
+                  rom="byōki ni kakaru"
+                  tr_en="to suffer from an illness"
+                  tr_de="an einer Krankheit leiden"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="インフルエンザにかかる"
+                  rom="infuruenza ni kakaru"
+                  tr_en="to suffer from the flu"
+                  tr_de="sich erkältet haben (an einer Grippe leiden)"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has nx for infurenza"
+                />
+                <phrase
+                  ph="ひどい【風邪：かぜ】にかかっている"
+                  rom="hidoi kaze ni kakatte iru"
+                  tr_en="to suffer from a terrible cold"
+                  tr_de="an einer schlimmen Erkältung leiden"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT; lib0 uses kanji; ChatGPT agrees with jisho that it's usually in kana"
+                >
+                    <ask w="かかって" />
+                </phrase>
+                <sentence
+                  s="【君：きみ】はひどい【病：びょう】【気：き】にかかるかもしれない。"
+                  rom="Kimi wa hidoi byōki ni kakaru kamoshirenai."
+                  tr_en="You may get a serious disease."
+                  tr_de="Du könntest eine schwere Krankheit bekommen."
+                  lvl="n3"
+                  origin="lib0 modified"
+                />
+                <sentence
+                  s="インフルエンザにかからないように、マフラーを【巻：ま】いてください。"
+                  rom="Infuruenza ni kakaranai yō ni, mafurā o maite kudasai."
+                  tr_en="Please put on a scarf in order not to catch the flu."
+                  tr_de="Bitte ziehe einen Schal an, um keine Grippe zu erwischen."
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT;
+                     ChatGPT says 風邪を引く would be more appropriate here, and changed it to インフルエンザ;
+                     jisho has nx for インフルエンザ"
+                >
+                    <ask w="かからない" />
+                </sentence>
+            </word>
+            <word
               w="【覆：おお】う"
               rom="ōu"
               tr_en="to cover; to conceal; to disguise"
@@ -34,7 +138,9 @@
                   tr_de="ein von Schnee bedeckter Berg"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【覆：おお】われた" />
+                </phrase>
                 <sentence
                   s="【歩：ほ】【道：どう】は【落：お】ち【葉：ば】で【覆：おお】われていた。"
                   rom="Hodō wa ochiba de ōwarete ita."
@@ -42,7 +148,9 @@
                   tr_de="Der Bürgersteig war von heruntergefallenen Blättern überdeckt."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【覆：おお】われて" />
+                </sentence>
             </word>
             <word
               w="【至：いた】る"
@@ -83,19 +191,31 @@
                   lvl="n3"
                   origin="lib0 modified"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask stem="【至：いた】り" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【備：そな】える"
               rom="sonaeru"
-              tr_en="to furnish with; to equip with; to prepare for"
-              tr_de="mit etw. ausrüsten; ausstatten; für etw. vorbereiten"
+              tr_en="to prepare for; to furnish with; to equip with"
+              tr_de="für etw. vorbereiten; mit etw. ausrüsten; ausstatten"
               hint_en="v.t."
               lvl="n3"
               category="general, technical"
               id="sonaeru-furnish"
               rem="appears in Doraemon 13, p.156"
             >
+                <keep_apart_from id="oku-put" />
+                <keep_apart_from id="junbi-preparation" />
+                <phrase
+                  ph="【最：さい】【悪：あく】に【備：そな】える"
+                  rom="saiaku ni sonaeru"
+                  tr_en="to prepare for the worst"
+                  tr_de="sich auf das Schlimmste vorbereiten"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="その【日：ひ】に【備：そな】えてもう【練：れん】【習：しゅう】しよう。"
                   rom="Sono hi ni sonaete mō renshū shiyō."
@@ -103,59 +223,164 @@
                   tr_de="Lass uns schon jetzt üben, um uns auf diesen Tag vorzubereiten."
                   lvl="n3"
                   origin="Doraemon 13, p.156"
-                />
+                >
+                    <ask w="【備：そな】えて" />
+                </sentence>
+                <sentence
+                  s="【部：へ】【屋：や】には【大：おお】きな【机：つくえ】が【備：そな】えてある。"
+                  rom="Heya ni wa ōki na tsukue ga sonaete aru."
+                  tr_en="The room is equipped with large desks."
+                  tr_de="Der Raum ist mit grossen Tischen ausgestattet."
+                  lvl="n3"
+                  origin="lib0 modified"
+                >
+                    <ask w="【備：そな】えて" />
+                </sentence>
             </word>
             <word
               w="【抱：かか】える"
               rom="kakaeru"
-              tr_en="to hold; to carry in one's arms"
-              tr_de="(in Armen) halten; tragen"
+              tr_en="to hold (in one's arms); to carry"
+              tr_de="(in den Armen) halten; tragen"
               lvl="n3"
-              category="relationships"
               id="kakaeru-hold"
             >
                 <keep_apart_from id="idaku-embrace" />
+                <keep_apart_from id="motsu-carry" />
+                <!--
+                   ChatGPT: 抱える tends to imply that the thing is substantial, difficult to deal with, or physically
+                   held close to the body
+                -->
+                <phrase
+                  ph="【赤：あか】ちゃんを【抱：かか】える"
+                  rom="akachan o kakaeru"
+                  tr_en="to hold a baby (in one's arms)"
+                  tr_de="ein Baby (in den Armen) halten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【大：おお】きな【箱：はこ】を【抱：かか】える"
+                  rom="ōki na hako o kakaeru"
+                  tr_en="to carry a large box"
+                  tr_de="eine grosse Kiste tragen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【難：むずか】しい【問：もん】【題：だい】に【頭：あたま】を【抱：かか】える"
+                  rom="muzukashii mondai ni atama o kakaeru"
+                  tr_en="to be at one's wits' end over a difficult problem"
+                  tr_de="wegen eines schwierigen Problems mit dem Latein am Ende sein"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="lib0 has similar"
+                />
+                <sentence
+                  s="【彼：かれ】は【両：りょう】【手：て】に【大：おお】きな【箱：はこ】を【抱：かか】えていた。"
+                  rom="Kare wa ryōte ni ōki na hako o kakaete ita."
+                  tr_en="He was holding a big box in both hands."
+                  tr_de="Er hielt eine grosse Schachtel in beiden Händen."
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【抱：かか】えて" />
+                </sentence>
             </word>
             <word
               w="【増：ま】す"
               rom="masu"
               tr_en="to increase; to grow"
               tr_de="mehr werden; etw. vermehren"
-              hint_en="v.t. &amp; i."
+              hint_en="v.t. &amp; i.; formal"
+              hint_de="v.t. &amp; i.; formell"
               lvl="n3"
               category="general, maths"
               id="masu-grow"
             >
                 <keep_apart_from id="fueru-increase" />
                 <keep_apart_from id="zōka-increase" />
-            </word>
-            <word
-              w="【求：もと】める"
-              rom="motomeru"
-              tr_en="to pursue; to seek; to wish for"
-              tr_de="etw. verfolgen; etw. nachgehen; sich etw. wünschen"
-              hint_en="v.t."
-              lvl="n3"
-              category="general"
-              id="motomeru-wishfor"
-            >
-                <!-- the noun is motome, nx -->
-                <keep_apart_from id="nozomu-desire" />
-                <keep_apart_from id="meijiru-command" />
-                <keep_apart_from id="negau-desire" />
-                <keep_apart_from id="tanomu-request" />
+                <keep_apart_from id="fuyasu-increasesth" />
+                <!--
+                   ChatGPT: With concrete quantities, 増やす is usually preferred, whereas 増す has a strong tendency
+                   towards degree, intensity, quality, or abstract properties.
+                -->
+                <phrase
+                  ph="【効：こう】【果：か】が【増：ま】す"
+                  rom="kōka ga masu"
+                  tr_en="the effect increases"
+                  tr_de="der Effekt wird vergrössert"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【効：こう】【果：か】を【増：ま】す"
+                  rom="kōka o masu"
+                  tr_en="to increase the effect"
+                  tr_de="den Effekt vergrössern"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="トウガラシの【種：たね】も【使：つか】うとより【辛：から】さが【増：ま】す。"
+                  rom="Tōgarashi no tane mo tsukau to yori karasa ga masu."
+                  tr_en="Leaving the seeds in a chilli pepper will increase the spiciness."
+                  tr_de="Wenn man die Samen von Chili mitverwendet, wird es schärfer."
+                  lvl="n3"
+                  origin="jpod101 modified"
+                />
             </word>
             <word
               w="【省：はぶ】く"
               rom="habuku"
-              tr_en="to omit; to exclude; to curtail"
-              tr_de="etw. weglassen; etw. ausschliessen; etw. verkürzen"
+              tr_en="to omit; to leave out; to curtail"
+              tr_de="etw. weglassen; etw. verkürzen"
               hint_en="v.t."
               lvl="n3"
               id="habuku-omit"
             >
                 <keep_apart_from id="nukeru-omit" />
                 <keep_apart_from id="nukasu-omit" />
+                <keep_apart_from id="sageru-lower" />
+                <keep_apart_from id="nozoku-eliminate" />
+                <phrase
+                  ph="【外：がい】【国：こく】の【本：ほん】を【省：はぶ】く"
+                  rom="gaikoku no hon o habuku"
+                  tr_en="to leave out the foreign books"
+                  tr_de="die fremdsprachigen Bücher weglassen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【練：れん】【習：しゅう】【問：もん】【題：だい】を【省：はぶ】く"
+                  rom="renshū-mondai o habuku"
+                  tr_en="to omit the pracice exercises"
+                  tr_de="die Übungsaufgaben weglassen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【文：ぶん】【章：しょう】を【省：はぶ】いたほうがいいと【思：おも】います。"
+                  rom="Kono bunshō o habuita hō ga ii to omoimasu."
+                  tr_en="I think it would be better to omit this sentence."
+                  tr_de="Ich denke, es wäre besser, diesen Satz wegzulassen."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                >
+                    <ask w="【省：はぶ】いた" />
+                </sentence>
+                <sentence
+                  s="【機：き】【械：かい】は【多：おお】くの【人：ひと】【手：で】を【省：はぶ】きます。"
+                  rom="Kikai wa ōku no hitode o habukimasu."
+                  tr_en="Machinery dispenses with much labour."
+                  tr_de="Maschinen ersparen viel menschliche Arbeit."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="ChatGPT is unclear whether the sentence is natural"
+                >
+                    <ask stem="【省：はぶ】き" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【頼：たよ】る"
@@ -168,19 +393,80 @@
               id="tayoru-relyon"
             >
                 <see id="tayori-reliance" rem="noun" />
+                <keep_apart_from id="makaseru-entrust" />
+                <phrase
+                  ph="【人：ひと】に【頼：たよ】る"
+                  rom="hito ni tayoru"
+                  tr_en="to rely on people"
+                  tr_de="sich auf Menschen verlassen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT;
+                    lib0 has 【他：た】【人：にん】に頼る, but ChatGPT says this often has a negative nuance;
+                    【他：ほか】の【人：ひと】に頼る is also natural and is neutral"
+                />
+                <sentence
+                  s="【酒：さけ】に【頼：たよ】るべきではない。"
+                  rom="Sake ni tayoru beki de wa nai."
+                  tr_en="You should not resort to drink."
+                  tr_de="Du solltest dich nicht dem Alkohol zuwenden."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【仕：し】【事：ごと】を【失：うしな】っても、【僕：ぼく】は【貯：ちょ】【金：きん】に【頼：たよ】ることができる。"
+                  rom="Shigoto o ushinatte mo, boku wa chokin ni tayoru koto ga dekiru."
+                  tr_en="I can fall back on my savings if I lose my job."
+                  tr_de="Wenn ich meinen Job verlieren sollte, kann ich mich auf meine Ersparnisse stützen."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【用：もち】いる"
               rom="mochiiru"
               tr_en="to use; to make use of; to utilise"
               tr_de="etw. verwenden; von etw. Gebrauch machen"
-              hint_en="v.t."
+              hint_en="v.t.; formal"
+              hint_de="v.t.; formell"
               lvl="n3"
               category="general, technical"
               id="mochiiru-use"
             >
                 <keep_apart_from id="tsukau-use" />
                 <keep_apart_from id="riyō-use" />
+                <!--
+                    ChatGPT says 用いる is often the formal/technical equivalent for 使う
+                -->
+                <phrase
+                  ph="【機：き】【械：かい】を【用：もち】いる"
+                  rom="kikai o mochiiru"
+                  tr_en="to utilise machines"
+                  tr_de="von Maschinen Gebrauch machen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【絵：え】を【用：もち】いて【理：り】【論：ろん】を【説：せつ】【明：めい】する"
+                  rom="e o mochiite riron o setsumei suru"
+                  tr_en="to explain the theory with the use of pictures"
+                  tr_de="die Theorie mit Hilfe von Bildern erklären"
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【用：もち】いて" />
+                </phrase>
+                <sentence
+                  s="【赤：あか】い【光：ひかり】は【警：けい】【告：こく】【信：しん】【号：ごう】としてよく【用：もち】いられます。"
+                  rom="Akai hikari wa keikoku-shingō to shite yoku mochiiraremasu."
+                  tr_en="Red light is often used as a warning signal."
+                  tr_de="Rotes Licht wird oft verwendet als Warnsignal."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                >
+                    <ask stem="【用：もち】いられ" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【効：き】く"
@@ -190,7 +476,34 @@
               lvl="n3"
               category="work, technical"
               id="kiku-effective"
-            />
+            >
+                <phrase
+                  ph="【風邪：かぜ】に【効：き】く【薬：くすり】"
+                  rom="kaze ni kiku kusuri"
+                  tr_en="a drug against the cold"
+                  tr_de="ein Arzneimittel bei Erkältung"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【薬：くすり】は【頭：ず】【痛：つう】に【効：き】く。"
+                  rom="Kono kusuri wa zutsū ni kiku."
+                  tr_en="This medicine is effective against headache."
+                  tr_de="Dieses Arzneimittel ist gut gegen Kopfschmerzen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="この【薬：くすり】はインフルエンザには【全：まった】く【効：き】かない。"
+                  rom="Kono kusuri wa infuruenza ni wa mattaku kikanai."
+                  tr_en="This drug is not effective against the flu at all."
+                  tr_de="Dieses Arzneimittel hilft überhaupt nicht bei Grippe."
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【効：き】かない" />
+                </sentence>
+            </word>
             <word
               w="【酔：よ】う"
               rom="you"
@@ -200,7 +513,28 @@
               lvl="n3"
               category="going-out, beverage"
               id="you-getdrunk"
-            />
+            >
+                <phrase
+                  ph="【酒：さけ】に【酔：よ】った【男：おとこ】"
+                  rom="sake ni yotta otoko"
+                  tr_en="a drunken man"
+                  tr_de="ein Betrunkener"
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【酔：よ】った" />
+                </phrase>
+                <sentence
+                  s="【船：ふね】に【乗：の】ると、いつも【酔：よ】ってしまいます。"
+                  rom="Fune ni noru to, itsumo yotte shimaimasu."
+                  tr_en="When I get on a ship, I always end up getting seasick."
+                  tr_de="Wenn ich in ein Schiff steige, wird mir immer schlecht."
+                  lvl="n3"
+                  rem="there is also 船酔いする・ふなよいする (nx)"
+                >
+                    <ask w="【酔：よ】って" />
+                </sentence>
+            </word>
             <word
               w="【追：お】う"
               rom="ou"
@@ -209,7 +543,37 @@
               lvl="n3"
               category="motion"
               id="ou-chase"
-            />
+            >
+                <keep_apart_from id="motomeru-wishfor" />
+                <phrase
+                  ph="【夢：ゆめ】を【追：お】う"
+                  rom="yume o ou"
+                  tr_en="to pursue one's dream"
+                  tr_de="den (eigenen) Traum nachgehen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【流：りゅう】【行：こう】を【追：お】う【若：わか】【者：もの】"
+                  rom="ryūkō o ou wakamono"
+                  tr_en="young people who follow the trends"
+                  tr_de="Jugendliche, die den Trends nachlaufen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="lib0 has similar"
+                />
+                <sentence
+                  s="シカの【後：あと】を【追：お】って、【森：もり】の【中：なか】に【入：はい】った。"
+                  rom="Shika no ato o otte, mori no naka ni haitta."
+                  tr_en="I followed the deer into the forest."
+                  tr_de="Ich folgte dem Reh in den Wald."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="lib0 has similar; jisho has nx for shika"
+                >
+                    <ask w="【追：お】って" />
+                </sentence>
+            </word>
             <word
               w="【生：しょう】じる"
               rom="shōjiru"
@@ -219,7 +583,18 @@
               lvl="n3"
               category="general, work"
               id="shōjiru-yield"
-            />
+            >
+                <sentence
+                  s="【最：さい】【悪：あく】の【事：じ】【態：たい】が【生：しょう】じた。"
+                  rom="Saiaku no jitai ga shōjita."
+                  tr_en="It lead to the worst of all situations."
+                  tr_de="Das Schlimmste ist eingetreten."
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【生：しょう】じた" />
+                </sentence>
+            </word>
             <word
               w="【扱：あつか】う"
               rom="atsukau"

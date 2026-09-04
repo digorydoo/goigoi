@@ -18,8 +18,8 @@
       defaultHint_en="noun"
       defaultHint_de="Nomen"
       lvl="n3"
-      requiresPhrases="false"
       requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -1114,10 +1114,11 @@
                   rom="ika no tōri"
                   tr_en="as follows; as stated below"
                   tr_de="wie folgt; siehe unten"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="とおり" />
+                </phrase>
                 <sentence
                   s="【二：に】【本：ほん】【目：め】の【通：とお】りを【左：ひだり】に【曲：ま】がってください。"
                   rom="Ni-hon-me no tōri o hidari ni magatte kudasai."
@@ -1135,8 +1136,9 @@
                   explanation_de="とおり wird hier im Übertragenen verwendet"
                   lvl="n3"
                   origin="lib0"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="とおり" />
+                </sentence>
                 <sentence
                   s="【私：わたし】が【言：い】うとおりにしなさい。"
                   rom="Watashi ga iu tōri ni shi-nasai."
@@ -1146,8 +1148,9 @@
                   explanation_de="とおり wird hier im Übertragenen verwendet"
                   lvl="n3"
                   origin="Oxford p.127"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="とおり" />
+                </sentence>
             </word>
             <word
               w="【勤：つと】め"
@@ -1232,18 +1235,20 @@
                   rom="kinjo-dzukiai"
                   tr_en="interaction with one's neighbours"
                   tr_de="Interagieren mit den Nachbarn"
-                  hasDifferentForm="true"
                   lvl="n3"
-                />
+                >
+                    <ask w="【付：づ】き【合：あ】い" />
+                </phrase>
                 <sentence
                   s="【近：きん】【所：じょ】【付：づ】き【合：あ】いがあまりない。"
                   rom="Kinjo-dzukiai ga amari nai."
                   tr_en="I don't really interact with my neighbours."
                   tr_de="Ich habe kaum etwas mit meinen Nachbarn zu tun."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【付：づ】き【合：あ】い" />
+                </sentence>
                 <sentence
                   s="【会：かい】【社：しゃ】の【付：つ】き【合：あ】いが【多：おお】くて【疲：つか】れる。"
                   rom="Kaisha no tsukiai ga ōkute tsukareru."
@@ -1830,19 +1835,21 @@
                   rom="kodzutsumi"
                   tr_en="small parcel; small package"
                   tr_de="Päckchen; kleines Paket"
-                  hasDifferentForm="true"
                   lvl="n3"
-                />
+                >
+                    <ask w="【包：づつみ】" />
+                </phrase>
                 <sentence
                   s="【郵：ゆう】【便：びん】【局：きょく】で【小：こ】【包：づつみ】を【送：おく】った。"
                   rom="Yūbinkyoku de kodzutsumi o okutta."
                   tr_en="I sent a small parcel at the post office."
                   tr_de="Ich habe ein Päckchen auf der Post aufgegeben."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【包：づつみ】" />
+                </sentence>
                 <sentence
                   s="その【包：つつ】みは【昨日：きのう】 【配：はい】【達：たつ】された。"
                   rom="Sono tsutsumi wa kinō haitatsu sareta."

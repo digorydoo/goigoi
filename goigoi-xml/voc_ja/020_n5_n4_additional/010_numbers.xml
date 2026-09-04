@@ -19,7 +19,7 @@
       defaultHint_en="number"
       defaultHint_de="Zahl"
       requiresSentences="true"
-      requiresPhrases="false"
+      requiresPhrases="true"
     >
         <section>
             <word
@@ -1280,9 +1280,10 @@
                   rom="sanzen"
                   tr_en="3000; three thousand"
                   tr_de="3000; dreitausend"
-                  hasDifferentForm="true"
                   lvl="n5"
-                />
+                >
+                    <ask w="【千：ぜん】" />
+                </phrase>
                 <phrase
                   ph="【八：はっ】【千：せん】"
                   rom="hassen"

@@ -1,16 +1,19 @@
 package io.github.digorydoo.goigoi.bottom_sheet
 
 import android.content.Context
+import android.graphics.Typeface
 import android.net.Uri
+import android.text.SpannableStringBuilder
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import ch.digorydoo.kutils.cjk.JLPTLevel
 import ch.digorydoo.kutils.cjk.Unicode
+import ch.digorydoo.kutils.colour.Colour
 import io.github.digorydoo.goigoi.BuildConfig
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.core.db.KanjiIndex
-import io.github.digorydoo.goigoi.core.db.Phrase
+import io.github.digorydoo.goigoi.core.db.PhraseOrSentence
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.db.WordLink
@@ -18,9 +21,7 @@ import io.github.digorydoo.goigoi.core.stats.StatsKey
 import io.github.digorydoo.goigoi.dialog.WordCtxMenu
 import io.github.digorydoo.goigoi.furigana.FuriganaBuilder
 import io.github.digorydoo.goigoi.furigana.buildSpan
-import io.github.digorydoo.goigoi.utils.LangUtils
-import io.github.digorydoo.goigoi.utils.MyLayoutInflater
-import io.github.digorydoo.goigoi.utils.SingletonHolder
+import io.github.digorydoo.goigoi.utils.*
 import java.util.Locale
 import kotlin.math.roundToInt
 
@@ -38,10 +39,11 @@ class SheetContent(
     fun insertContent(inflater: LayoutInflater, ctx: Context) {
         val myInflater = MyLayoutInflater(inflater, bindings.content)
         val kanjiIndex = SingletonHolder.kanjiIndex
+        val hiliteColour = ResUtils.getColourFromRes(R.color.green_750, ctx)
 
         insertBasicWordInfo(ctx, kanjiIndex)
         insertWordStats(ctx)
-        insertPhrasesAndSentences(myInflater)
+        insertPhrasesAndSentences(myInflater, hiliteColour)
         insertDictionaryLinks(ctx, myInflater)
         insertKanjiDetailsLinks(ctx, myInflater)
         insertSeeAlso(ctx, myInflater)
@@ -196,20 +198,33 @@ class SheetContent(
         }
     }
 
-    private fun insertPhrasesAndSentences(inflater: MyLayoutInflater) {
+    private fun insertPhrasesAndSentences(inflater: MyLayoutInflater, hiliteColour: Colour) {
         if (word.phrases.isEmpty() && word.sentences.isEmpty()) {
             return
         }
 
         inflater.insertSubheader(R.string.examples)
 
-        word.phrases.forEach { insert1Phrase(it, inflater) }
-        word.sentences.forEach { insert1Phrase(it, inflater) }
+        word.phrases.forEach { insert1Phrase(it, inflater, hiliteColour) }
+        word.sentences.forEach { insert1Phrase(it, inflater, hiliteColour) }
     }
 
-    private fun insert1Phrase(ph: Phrase, inflater: MyLayoutInflater) {
+    private fun insert1Phrase(ph: PhraseOrSentence, inflater: MyLayoutInflater, hiliteColour: Colour) {
+        val parts = ph.primaryFormInParts(word)
+
+        val primaryForm = SpannableStringBuilder().apply {
+            append(parts.begin.buildSpan())
+            appendColoured(hiliteColour) {
+                appendStyled(Typeface.BOLD) {
+                    append(parts.wordStem.buildSpan())
+                }
+                append(parts.wordSuffix) // doesn't have furigana
+            }
+            append(parts.end.buildSpan())
+        }
+
         inflater.insertItemWithFurigana(
-            ph.primaryForm.buildSpan(),
+            primaryForm,
             ph.translation.withSystemLang,
             FuriganaBuilder.buildSpan(ph.explanation.withSystemLang)
         )

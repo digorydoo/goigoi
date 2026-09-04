@@ -11,8 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n3"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -44,7 +44,9 @@
                   tr_de="Wolken wurden am Himmel sichtbar."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【現：あらわ】れた" />
+                </sentence>
                 <sentence
                   s="オバケが【庭：にわ】に【現：あらわ】れた。"
                   rom="Obake ga niwa ni arawareta."
@@ -53,7 +55,9 @@
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT; jisho has nx for obake"
-                />
+                >
+                    <ask w="【現：あらわ】れた" />
+                </sentence>
             </word>
             <word
               w="【現：あらわ】す"
@@ -88,7 +92,9 @@
                   tr_de="Sie hat sich nicht blicken lassen."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【現：あらわ】さなかった" />
+                </sentence>
             </word>
             <word
               w="【任：まか】せる"
@@ -100,13 +106,16 @@
               category="work, relationships"
               id="makaseru-entrust"
             >
+                <keep_apart_from id="tayoru-relyon" />
                 <phrase
                   ph="【任：まか】せて"
                   rom="makasete"
                   tr_en="count on me"
                   tr_de="zähle auf mich"
                   lvl="n3"
-                />
+                >
+                    <ask w="【任：まか】せて" />
+                </phrase>
                 <sentence
                   s="そのことなら【僕：ぼく】に【任：まか】せてください。"
                   rom="Sono koto nara boku ni makasete kudasai."
@@ -115,7 +124,9 @@
                   lvl="n3"
                   origin="lib0 modified"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【任：まか】せて" />
+                </sentence>
             </word>
             <word
               w="【梳：と】かす"
@@ -146,7 +157,9 @@
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="とかし" />
+                </sentence>
             </word>
             <word
               w="【気：き】づく"
@@ -183,7 +196,9 @@
                   tr_de="Gerade als ich am Flughafen ankam, wurde mir bewusst, dass ich den Pass nicht dabei hatte."
                   lvl="n3"
                   origin="Oxford p.134"
-                />
+                >
+                    <ask w="【気：き】づいた" />
+                </sentence>
                 <sentence
                   s="【商：しょう】【売：ばい】が【活：かっ】【気：き】づきそうです。"
                   rom="Shōbai ga kakkidzuki-sō desu."
@@ -192,7 +207,9 @@
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【活：かっ】【気：き】づき" />
+                </sentence>
             </word>
             <word
               w="【言：い】わせる"
@@ -212,7 +229,9 @@
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【言：い】わせて" />
+                </phrase>
                 <sentence
                   s="【最：さい】【後：ご】まで【言：い】わせてください。"
                   rom="Saigo made iwasete kudasai."
@@ -220,7 +239,9 @@
                   tr_de="Lass mich zu Ende reden."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【言：い】わせて" />
+                </sentence>
             </word>
             <word
               w="【触：ふ】れる"
@@ -264,7 +285,9 @@
                   lvl="n3"
                   origin="lib0 modified"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【触：ふ】れた" />
+                </sentence>
             </word>
             <word
               w="【責：せ】める"
@@ -286,7 +309,9 @@
                   tr_de="scharf kritisieren; anklagen"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【責：せ】め" />
+                </phrase>
                 <sentence
                   s="【自：じ】【分：ぶん】を【責：せ】めることはない。"
                   rom="Jibun o semeru koto wa nai."
@@ -302,7 +327,9 @@
                   tr_de="Man kann niemanden wegen dieses Problems beschuldigen."
                   lvl="n3"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【責：せ】められる" />
+                </sentence>
             </word>
             <word
               w="【沈：しず】む"
@@ -351,7 +378,9 @@
                   tr_de="ein Ort, an dem man mit den Händen nicht rankommt"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【届：とど】かない" />
+                </phrase>
                 <sentence
                   s="【薬：くすり】は【子：こ】【供：ども】の【手：て】の【届：とど】かない【所：ところ】に【置：お】きなさい。"
                   rom="Kusuri wa kodomo no te no todokanai tokoro ni okinasai."
@@ -359,7 +388,9 @@
                   tr_de="Versorge die Medikamente an einem Ort, wo die Kinder nicht rankommen."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【届：とど】かない" />
+                </sentence>
                 <sentence
                   s="【十：とお】【日：か】【以：い】【内：ない】に【届：とど】けるって【書：か】いてあったのに、まだ【届：とど】いてない。"
                   rom="Tōka inai ni todokeru tte kaite atta no ni, mada todoite nai."
@@ -368,7 +399,9 @@
                   lvl="n3"
                   origin="self"
                   rem="rephrased by ChatGPT"
-                />
+                >
+                    <ask w="【届：とど】いて" />
+                </sentence>
             </word>
             <word
               w="【合：あ】わせる"
@@ -407,7 +440,9 @@
                   tr_de="Lass uns mit lauter Stimme zum Klavier singen."
                   lvl="n3"
                   origin="500mon q187"
-                />
+                >
+                    <ask w="【合：あ】わせて" />
+                </sentence>
             </word>
             <word
               w="【注：そそ】ぐ"
@@ -438,7 +473,9 @@
                   tr_de="Sie goss Milch in die Tasse."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【注：そそ】いだ" />
+                </sentence>
             </word>
             <word
               w="【注：つ】ぐ"
@@ -472,7 +509,9 @@
                   lvl="n3"
                   origin="self"
                   rem="rephrased by ChatGPT; also possible: 海に囲まれている島"
-                />
+                >
+                    <ask w="【囲：かこ】まれた" />
+                </phrase>
                 <phrase
                   ph="【四：し】【方：ほう】から【取：と】り【囲：かこ】む"
                   rom="shi-hō kara tori-kakomu"
@@ -490,7 +529,9 @@
                   lvl="n3"
                   origin="ChatGPT"
                   rem="ChatGPT says tori-kakomu adds emphasis"
-                />
+                >
+                    <ask w="【囲：かこ】んだ" />
+                </sentence>
             </word>
             <word
               w="【腐：くさ】る"
@@ -508,7 +549,9 @@
                   tr_de="saure Milch"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【腐：くさ】った" />
+                </phrase>
                 <sentence
                   s="その【果：くだ】【物：もの】は【腐：くさ】った。"
                   rom="Sono kudamono wa kusatta."
@@ -516,7 +559,9 @@
                   tr_de="Diese Frucht ist verfault."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【腐：くさ】った" />
+                </sentence>
             </word>
             <word
               w="【限：かぎ】る"
@@ -539,7 +584,9 @@
                   tr_de="in der begrenzten Zeit"
                   lvl="n3"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【限：かぎ】られた" />
+                </phrase>
                 <sentence
                   s="【夏：なつ】はビールに【限：かぎ】るね。"
                   rom="Natsu wa bīru ni kagiru ne."
@@ -560,7 +607,9 @@
                   tr_de="Sich aufs Bett hinlegen bedeutet nicht unbedingt, dass man schläft."
                   lvl="n3"
                   href="https://hinative.com/en-US/questions/22229768"
-                />
+                >
+                    <ask w="【限：かぎ】らない" />
+                </sentence>
             </word>
             <word
               w="【降：お】ろす"
@@ -600,7 +649,9 @@
                   tr_de="Wo soll ich dich absetzen? (Wo willst du aussteigen?)"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【降：お】ろそう" />
+                </sentence>
                 <sentence
                   s="【美：び】【術：じゅつ】【館：かん】【前：まえ】で【降：お】ろしてください。"
                   rom="Bijutsukan mae de oroshite kudasai."
@@ -608,7 +659,9 @@
                   tr_de="Bitte lassen Sie mich vor dem Museum aussteigen."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【降：お】ろして" />
+                </sentence>
             </word>
             <word
               w="【微笑：ほほえ】む"
@@ -628,7 +681,9 @@
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT; jisho has nx; lib0 has すてきな微笑み (charming smile)"
-                />
+                >
+                    <ask w="【微笑：ほほえ】み" />
+                </phrase>
                 <sentence
                   s="【中：なか】【村：むら】さんはうれしそうに【微笑：ほほえ】んだ。"
                   rom="Nakamura-san wa ureshisō ni hohoenda."
@@ -636,7 +691,9 @@
                   tr_de="Frau Nakamura lächelte glücklich."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【微笑：ほほえ】んだ" />
+                </sentence>
                 <sentence
                   s="【中：なか】【村：むら】さんが【私：わたし】に【微笑：ほほえ】んだ。"
                   rom="Nakamura-san ga watashi ni hohoenda."
@@ -644,7 +701,9 @@
                   tr_de="Frau Nakamura lächelte mich an."
                   lvl="n3"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【微笑：ほほえ】んだ" />
+                </sentence>
             </word>
             <word
               w="【凍：こお】る"
@@ -664,7 +723,9 @@
                   tr_de="gefrorener Bürgersteig"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【凍：こお】った" />
+                </phrase>
                 <sentence
                   s="【湖：みずうみ】は【凍：こお】っていたので【氷：こおり】の【上：うえ】を【歩：ある】いて【渡：わた】った。"
                   rom="Mizūmi wa kōtte ita no de kōri no ue o aruite watatta."
@@ -673,7 +734,9 @@
                   lvl="n3"
                   origin="lib0"
                   rem="verified with ChatGPT that the tense of kōtte ita is correct"
-                />
+                >
+                    <ask w="【凍：こお】って" />
+                </sentence>
             </word>
             <word
               w="【戻：もど】す"
@@ -731,7 +794,9 @@
                   lvl="n3"
                   origin="self"
                   rem="rephrased by ChatGPT"
-                />
+                >
+                    <ask w="【戻：もど】せば" />
+                </sentence>
             </word>
             <word
               w="【通：とお】す"
@@ -762,7 +827,9 @@
                   tr_de="Dieser Mantel ist regenfest."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【通：とお】さない" />
+                </sentence>
                 <sentence
                   s="【電：でん】【線：せん】は【電：でん】【気：き】を【通：とお】す。"
                   rom="Densen wa denki o tōsu."
@@ -827,7 +894,9 @@
                   tr_de="jem. im Auto mitnehmen"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【乗：の】せて" />
+                </phrase>
                 <phrase
                   ph="【駅：えき】まで【乗：の】せてもらう"
                   rom="eki made nosete morau"
@@ -835,7 +904,9 @@
                   tr_de="eine Mitfahrgelegenheit bis zum Bahnhof bekommen"
                   lvl="n3"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【乗：の】せて" />
+                </phrase>
                 <sentence
                   s="【車：くるま】に【乗：の】せてくれないか。"
                   rom="Kuruma ni nosete kurenai ka?"
@@ -843,7 +914,9 @@
                   tr_de="Könntest du mich im Auto mitnehmen?"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【乗：の】せて" />
+                </sentence>
                 <sentence
                   s="【車：くるま】に【乗：の】せてあげましょうか。"
                   rom="Kuruma ni nosete agemashō ka?"
@@ -851,7 +924,9 @@
                   tr_de="Kann ich Sie im Auto mitnehmen?"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【乗：の】せて" />
+                </sentence>
             </word>
             <word
               w="【売：う】れる"
@@ -887,7 +962,9 @@
                   tr_de="Dieses Haus wird in sich im momentanen Zustand nicht gut verkaufen lassen."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【売：う】れない" />
+                </sentence>
             </word>
             <word
               w="【進：すす】める"
@@ -904,7 +981,7 @@
                 <!--
                     続ける・つづける: focus is on not stopping
                     進める・すすめる: focus is on moving forward
-s                -->
+                -->
                 <phrase
                   ph="【仕：し】【事：ごと】を【進：すす】める"
                   rom="shigoto o susumeru"
@@ -921,7 +998,9 @@ s                -->
                   tr_de="Ich habe die Uhrzeiger vorgestellt."
                   lvl="n3"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【進：すす】めた" />
+                </sentence>
             </word>
             <word
               w="【編：あ】む"
@@ -980,7 +1059,9 @@ s                -->
                   tr_de="in den falschen Bus einsteigen"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【間：ま】【違：ちが】った" />
+                </phrase>
                 <sentence
                   s="【誰：だれ】でも【間：ま】【違：ちが】う【事：こと】はある。"
                   rom="Dare demo machigau koto wa aru."
@@ -1016,7 +1097,9 @@ s                -->
                   tr_de="Ich wiederholte die Frage."
                   lvl="n3"
                   origin="lib0 modified"
-                />
+                >
+                    <ask stem="【繰：く】り【返：かえ】し" suffix="ました" />
+                </sentence>
                 <sentence
                   s="【彼：かれ】は【同：おな】じ【冗：じょう】【談：だん】を【繰：く】り【返：かえ】してばかりいる。"
                   rom="Kare wa onaji jōdan o kurikaeshite bakari iru."
@@ -1024,7 +1107,9 @@ s                -->
                   tr_de="Er erzählt ständig den gleichen Witz immer wieder."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【繰：く】り【返：かえ】して" />
+                </sentence>
             </word>
             <word
               w="【着：き】【替：が】える"
@@ -1059,7 +1144,9 @@ s                -->
                   tr_de="Ich werde mich umziehen und komme gleich wieder zurück."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【着：き】【替：が】えて" />
+                </sentence>
             </word>
             <word
               w="【殺：ころ】す"
@@ -1087,7 +1174,9 @@ s                -->
                   tr_de="Töte dieses Insekt nicht."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【殺：ころ】さないで" />
+                </sentence>
             </word>
             <word
               w="【黙：だま】る"
@@ -1106,7 +1195,9 @@ s                -->
                   tr_de="still werden; nichts mehr sagen"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【黙：だま】り" />
+                </phrase>
                 <sentence
                   s="【私：わたし】たちはみんな【黙：だま】っていた。"
                   rom="Watashi-tachi wa minna damatte ita."
@@ -1114,7 +1205,9 @@ s                -->
                   tr_de="Wir waren alle still."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【黙：だま】って" />
+                </sentence>
                 <sentence
                   s="【黙：だま】って【聞：き】きなさい。"
                   rom="Damatte kikinasai."
@@ -1122,7 +1215,9 @@ s                -->
                   tr_de="Halt den Mund und höre zu."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【黙：だま】って" />
+                </sentence>
             </word>
             <word
               w="【悩：なや】む"
@@ -1152,7 +1247,9 @@ s                -->
                   tr_de="Ich war sehr besorgt aufgrund dieser Nachricht."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【悩：なや】んだ" />
+                </sentence>
             </word>
             <word
               w="【動：うご】かす"
@@ -1180,56 +1277,9 @@ s                -->
                   tr_de="Bewege deine Hand nicht."
                   lvl="n3"
                   origin="lib0"
-                />
-            </word>
-            <word
-              w="【離：はな】れる"
-              rom="hanareru"
-              tr_en="to be separated; to drift away"
-              tr_de="auseinander gehen; abdriften"
-              studyInContext="preferred"
-              hint_en="v.i."
-              lvl="n3"
-              category="motion, mood"
-              id="hanareru-drift"
-            >
-                <see id="hanasu-separate" rem="v.t." />
-                <phrase
-                  ph="【船：ふね】を【離：はな】れる"
-                  rom="fune o hanareru"
-                  tr_en="to abandon (leave) the ship"
-                  tr_de="das Schiff aufgeben (verlassen)"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【彼：かれ】と【彼：かの】【女：じょ】は【離：はな】れてしまった。"
-                  rom="Kare to kanojo wa hanarete shimatta."
-                  tr_en="He and she ended up growing apart."
-                  tr_de="Er und sie haben sich leider getrennt."
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【駅：えき】は【少：すこ】し【離：はな】れている。"
-                  rom="Eki wa sukoshi hanarete iru."
-                  tr_en="The station is a little way off."
-                  tr_de="Der Bahnhof ist ein Stück weit entfernt."
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="なぜ【頭：あたま】から【離：はな】れない？"
-                  rom="Naze atama kara hanarenai?"
-                  tr_en="Why can't I get it out of my head?"
-                  tr_de="Warum kann ich es nicht aus meinem Kopf bekommen?"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【動：うご】かさないで" />
+                </sentence>
             </word>
             <word
               w="【向：む】く"
@@ -1254,7 +1304,9 @@ s                -->
                   tr_de="in die entgegengesetzte Richtung schauen"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【向：む】いて" />
+                </phrase>
                 <phrase
                   ph="【南：みなみ】を【向：む】いている"
                   rom="minami o muite iru"
@@ -1262,7 +1314,9 @@ s                -->
                   tr_de="nach Süden schauen"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【向：む】いて" />
+                </phrase>
                 <sentence
                   s="【左：ひだり】を【向：む】いてください。"
                   rom="Hidari o muite kudasai."
@@ -1271,7 +1325,9 @@ s                -->
                   lvl="n3"
                   origin="lib0"
                   rem="ChatGPT says へ is also possible, but を is more common"
-                />
+                >
+                    <ask w="【向：む】いて" />
+                </sentence>
                 <sentence
                   s="【私：わたし】の【方：ほう】を【向：む】いてください。"
                   rom="Watashi no hō o muite kudasai."
@@ -1279,7 +1335,9 @@ s                -->
                   tr_de="Bitte schau in meine Richtung."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【向：む】いて" />
+                </sentence>
             </word>
             <word
               w="【向：む】ける"
@@ -1308,7 +1366,9 @@ s                -->
                   tr_de="Ich steuerte meine Schritte in Richtung Park."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【向：む】けた" />
+                </sentence>
             </word>
             <word
               w="【近：ちか】づく"
@@ -1329,7 +1389,9 @@ s                -->
                   tr_de="halte dich fern"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【近：ちか】づかない" />
+                </phrase>
                 <phrase
                   ph="【近：ちか】づいてくる【台：たい】【風：ふう】"
                   rom="chikadzuite kuru taifū"
@@ -1337,7 +1399,9 @@ s                -->
                   tr_de="herannahender Hurrikan"
                   lvl="n3"
                   origin="jpod101 modified"
-                />
+                >
+                    <ask w="【近：ちか】づいて" />
+                </phrase>
                 <sentence
                   s="あの【犬：いぬ】には【近：ちか】づくな。"
                   rom="Ano inu ni wa chikadzuku na."
@@ -1489,7 +1553,9 @@ s                -->
                   lvl="n3"
                   origin="lib0"
                   rem="verified with ChatGPT that it cannot mean turning the page upside-down or flipping it"
-                />
+                >
+                    <ask w="【回：まわ】して" />
+                </sentence>
                 <sentence
                   s="【塩：しお】を【回：まわ】してくれませんか。"
                   rom="Shio o mawashite kuremasen ka?"
@@ -1497,7 +1563,9 @@ s                -->
                   tr_de="Können Sie mir bitte das Salz reichen?"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【回：まわ】して" />
+                </sentence>
             </word>
             <word
               w="【震：ふる】える"
@@ -1517,7 +1585,9 @@ s                -->
                   lvl="n3"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【震：ふる】えて" />
+                </phrase>
                 <phrase
                   ph="【恐：きょう】【怖：ふ】で【震：ふる】えている"
                   rom="kyōfu de furuete iru"
@@ -1525,7 +1595,9 @@ s                -->
                   tr_de="vor Angst zittern"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【震：ふる】えて" />
+                </phrase>
                 <sentence
                   s="【寒：さむ】くて みんな【震：ふる】えていた。"
                   rom="Samukute minna furuete ita."
@@ -1535,7 +1607,9 @@ s                -->
                   lvl="n3"
                   origin="self"
                   rem="rephrased by ChatGPT"
-                />
+                >
+                    <ask w="【震：ふる】えて" />
+                </sentence>
             </word>
             <word
               w="【通：とお】り【過：す】ぎる"
@@ -1548,6 +1622,7 @@ s                -->
               id="tōrisugiru-gopast"
             >
                 <keep_apart_from id="tōru-gopast" />
+                <keep_apart_from id="tōrikakaru-passby" />
                 <phrase
                   ph="【喫：きっ】【茶：さ】【店：てん】を【通：とお】り【過：す】ぎる"
                   rom="kissaten o tōri-sugiru"
@@ -1563,7 +1638,9 @@ s                -->
                   tr_de="Viele Autos fuhren vorbei."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【通：とお】り【過：す】ぎた" />
+                </sentence>
                 <sentence
                   s="【彼：かの】【女：じょ】は【僕：ぼく】に【気：き】がつかずに【通：とお】り【過：す】ぎた。"
                   rom="Kanojo wa boku ni ki ga tsukazu ni tōri-sugita."
@@ -1571,7 +1648,9 @@ s                -->
                   tr_de="Sie ging an mir vorbei, ohne mich zu sehen."
                   lvl="n3"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【通：とお】り【過：す】ぎた" />
+                </sentence>
             </word>
             <word
               w="【願：ねが】う"
@@ -1594,7 +1673,9 @@ s                -->
                   tr_de="sich Weltfrieden wünschen"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【願：ねが】って" />
+                </phrase>
                 <sentence
                   s="【誰：だれ】でも【幸：こう】【福：ふく】を【願：ねが】っている。"
                   rom="Dare demo kōfuku o negatte iru."
@@ -1604,7 +1685,9 @@ s                -->
                   origin="lib0"
                   rem="ChatGPT says, this is also possible: 誰でも幸福を求めている
                     but that would sound more like striving, everyone pursues happiness"
-                />
+                >
+                    <ask w="【願：ねが】って" />
+                </sentence>
             </word>
             <word
               w="【悲：かな】しむ"
@@ -1620,21 +1703,15 @@ s                -->
                     嘆き悲む・なげきかなしむ: to grieve; to lament (nx)
                 -->
                 <phrase
-                  ph="【悲：かな】しみ"
-                  rom="kanashimi"
-                  tr_en="sadness; sorrow; grief"
-                  tr_de="Traurigkeit; Trauer"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <phrase
                   ph="【悲：かな】しみを【隠：かく】す"
                   rom="kanashimi o kakusu"
                   tr_en="to hide one's grief"
                   tr_de="die Trauer verbergen"
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【悲：かな】しみ" />
+                </phrase>
                 <sentence
                   s="【悲：かな】しまないでください。"
                   rom="Kanashimanaide kudasai."
@@ -1642,7 +1719,9 @@ s                -->
                   tr_de="Bitte sei nicht traurig."
                   lvl="n3"
                   origin="lib0 modified"
-                />
+                >
+                    <ask w="【悲：かな】しまないで" />
+                </sentence>
             </word>
             <word
               w="【広：ひろ】げる"
@@ -1673,7 +1752,9 @@ s                -->
                   lvl="n3"
                   origin="lib0 modified"
                   rem="replaced 翼・つばさ by 羽・はね, which acc. to ChatGPT is the same but more common in everyday speech"
-                />
+                >
+                    <ask w="【広：ひろ】げた" />
+                </sentence>
             </word>
             <word
               w="【広：ひろ】がる"
@@ -1703,7 +1784,9 @@ s                -->
                   lvl="n3"
                   origin="lib0"
                   rem="jisho has まちなか and まちじゅう for 町中; machi-naka is downtown, machijū is all over town"
-                />
+                >
+                    <ask w="【広：ひろ】がった" />
+                </sentence>
             </word>
             <word
               w="【嫌：きら】う"
@@ -1770,7 +1853,9 @@ s                -->
                   lvl="n3"
                   origin="lib0"
                   rem="The sentence may be confusing, because it's v.t. in English"
-                />
+                >
+                    <ask w="【当：あ】たった" />
+                </sentence>
                 <sentence
                   s="【私：わたし】の【靴：くつ】が【見：み】【当：あ】たらない。"
                   rom="Watashi no kutsu ga mi-ataranai."
@@ -1778,7 +1863,9 @@ s                -->
                   tr_de="Ich kann meine Schuhe nicht finden."
                   lvl="-"
                   origin="lib0"
-                />
+                >
+                    <ask w="【当：あ】たらない" />
+                </sentence>
             </word>
             <word
               w="【当：あ】てる"
@@ -1815,7 +1902,9 @@ s                -->
                   tr_de="Legen wir die nassen Kleider ins Sonnenlicht!"
                   lvl="n3"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【当：あ】てて" />
+                </sentence>
             </word>
             <word
               w="【待：ま】たせる"
@@ -1844,7 +1933,9 @@ s                -->
                   tr_de="Tut mir leid, dass ich Sie habe warten lassen."
                   lvl="n3"
                   origin="lib0"
-                />
+                >
+                    <ask w="【待：ま】たせ" />
+                </sentence>
             </word>
             <word
               w="お【待：ま】たせしました"
@@ -1859,33 +1950,218 @@ s                -->
                 <keep_together id="mataseru-keepwaiting" />
             </word>
             <word
-              w="【離：はな】す"
-              rom="hanasu"
-              tr_en="to separate; to keep apart from"
-              tr_de="separieren; auseinander halten"
+              w="【代：か】える"
+              rom="kaeru"
+              tr_en="to substitute sth.; to exchange sth."
+              tr_de="etw. ersetzen; etw. austauschen"
               hint_en="v.t."
               lvl="n3"
-              category="quarrel, relationships"
-              id="hanasu-separate"
+              id="kaeru-substitute"
             >
-                <see id="hanareru-drift" rem="v.i." />
+                <see id="kawaru-takeover" rem="v.i." />
+                <keep_apart_from id="kaeru-change" />
+                <keep_apart_from id="kaeru-replace" />
+                <keep_together id="kaeru-replace" />
+                <keep_apart_from id="kaeru-exchange" />
+                <keep_together id="kaeru-exchange" />
+                <keep_apart_from id="utsusu-swap" />
+                <!--
+                    NOTE: Differences between kanji are from ChatGPT, but they do not match what jisho says!
+                -->
+                <!--
+                    代える: substitution of roles, position, or equivalents
+                -->
                 <phrase
-                  ph="【木：き】から【枝：えだ】を【切：き】り【離：はな】す"
-                  rom="ki kara eda o kiri-hanasu"
-                  tr_en="to cut off a branch from a tree"
-                  tr_de="von einem Baum einen Zweig abschneiden"
+                  ph="【部：ぶ】【長：ちょう】を【代：か】える"
+                  rom="buchō o kaeru"
+                  tr_en="to replace the division manager"
+                  tr_de="den Abteilungsleiter ersetzen"
                   lvl="n3"
-                  origin="lib0"
-                  rem="jisho has nx for kiri-hanasu, but n5 for kiru, n3 for hanasu"
+                  origin="ChatGPT"
                 />
                 <sentence
-                  s="ロープを【離：はな】しなさい。"
-                  rom="Rōpu o hanashi-nasai."
-                  tr_en="Let go of the rope."
-                  tr_de="Lass das Seil los."
+                  s="【塩：しお】は【別：べつ】のものに【代：か】えてもいいですか。"
+                  rom="Shio wa betsu no mono ni kaete mo ii desu ka?"
+                  tr_en="Is it OK to replace the salt with something else?"
+                  tr_de="Ist es okay, wenn ich das Salz mit etwas anderem ersetze?"
+                  lvl="n3"
+                  origin="ChatGPT"
+                >
+                    <ask w="【代：か】えて" />
+                </sentence>
+                <!--
+                    替える: replacement; switching to a different one
+                    This kanji is used in 着替える・きがえる kigaeru-changeclothes
+                -->
+                <phrase
+                  ph="【電：でん】【池：ち】を【替：か】える"
+                  rom="denchi o kaeru"
+                  tr_en="to replace a battery"
+                  tr_de="die Batterien austauschen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                >
+                    <ask w="【替：か】える" />
+                </phrase>
+                <sentence
+                  s="【電：でん】【池：ち】が【切：き】れたから【替：か】えた。"
+                  rom="Denchi ga kireta kara kaeta."
+                  tr_en="Since the batteries were drained, I replaced them."
+                  tr_de="Da die Batterien leer waren, habe ich sie ersetzt."
+                  lvl="n3"
+                  origin="ChatGPT"
+                >
+                    <ask w="【替：か】えた" />
+                </sentence>
+                <!--
+                    換える: (money) exchange; conversion
+                    Langenscheidt: (Batterie) austauschen; (Geld) umtauschen;
+                    but Langenscheidt doesn't mention the other kanjis
+                -->
+                <phrase
+                  ph="【円：えん】をユーロに【換：か】える"
+                  rom="en o yūro ni kaeru"
+                  tr_en="to convert Yen into Euros"
+                  tr_de="Yen in Euros umtauschen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                >
+                    <ask w="【換：か】える" />
+                </phrase>
+                <phrase
+                  ph="ポイントを【商：しょう】【品：ひん】に【換：か】える"
+                  rom="pointo o shōhin ni kaeru"
+                  tr_en="to convert points into goods"
+                  tr_de="Punkte in Güter umwandeln"
+                  lvl="n3"
+                  origin="ChatGPT"
+                >
+                    <ask w="【換：か】える" />
+                </phrase>
+            </word>
+            <word
+              w="【代：か】わる"
+              rom="kawaru"
+              tr_en="to act in place of sth."
+              tr_de="anstelle von etw. agieren"
+              hint_en="v.i."
+              lvl="n3"
+              id="kawaru-takeover"
+            >
+                <see id="kaeru-substitute" rem="v.t." />
+                <see id="kawari-substitute" rem="noun" />
+                <keep_apart_from id="kawaru-change" />
+                <keep_apart_from id="kawari-substitute" />
+                <keep_apart_from id="kawaru-takeplaceof" />
+                <keep_together id="kawaru-takeplaceof" />
+                <keep_apart_from id="kawaru-beexchanged" />
+                <keep_together id="kawaru-beexchanged" />
+                <keep_apart_from id="utsuru-movehouse" />
+                <!--
+                    NOTE: Differences between kanji are from ChatGPT, but they do not match what jisho says!
+                -->
+                <!--
+                    代わる: substitution of roles, position, or equivalents
+                -->
+                <phrase
+                  ph="【私：わたし】の【代：か】わりに"
+                  rom="watashi no kawari ni"
+                  tr_en="instead of me"
+                  tr_de="anstelle von mir"
                   lvl="n3"
                   origin="lib0"
-                />
+                  rem="no kawari ni (instead of) is usually の代わりに (replacement)"
+                >
+                    <ask w="【代：か】わり" />
+                </phrase>
+                <sentence
+                  s="【部：ぶ】【長：ちょう】に【代：か】わって【私：わたし】が【説：せつ】【明：めい】します。"
+                  rom="Buchō ni kawatte watashi ga setsumei shimasu."
+                  tr_en="I will explain it in place of the division manager."
+                  tr_de="Ich werde es anstelle des Abteilungsleiters erklären."
+                  explanation_en="In this context,「代わる」is more common than「替わる」"
+                  explanation_de="In diesem Kontext ist「代わる」gebräuchlicher als「替わる」"
+                  lvl="n3"
+                  origin="ChatGPT"
+                >
+                    <ask w="【代：か】わって" />
+                </sentence>
+                <!--
+                    替わる: replacement / switching to a different one
+                -->
+                <!--
+                    換わる: (money) exchange; conversion
+                -->
+            </word>
+            <word
+              w="【替：か】える"
+              rom="kaeru"
+              tr_en="to replace so.; to convert sth."
+              tr_de="jem. ersetzen; etw. umformen"
+              hint_en="v.t."
+              lvl="n3"
+              id="kaeru-replace"
+              HIDDEN="true"
+            >
+                <see id="kawaru-takeplaceof" rem="v.i." />
+                <keep_apart_from id="kaeru-substitute" />
+                <keep_together id="kaeru-substitute" />
+                <keep_apart_from id="kaeru-exchange" />
+                <keep_together id="kaeru-exchange" />
+                <keep_apart_from id="utsusu-swap" />
+            </word>
+            <word
+              w="【替：か】わる"
+              rom="kawaru"
+              tr_en="to change (places with); it replaces sth."
+              tr_de="(Plätze) tauschen; es ersetzt etw."
+              hint_en="v.i."
+              lvl="n3"
+              category="general"
+              id="kawaru-takeplaceof"
+              HIDDEN="true"
+            >
+                <see id="kaeru-replace" rem="v.t." />
+                <keep_apart_from id="kawaru-beexchanged" />
+                <keep_together id="kawaru-beexchanged" />
+                <keep_apart_from id="kawaru-takeover" />
+                <keep_together id="kawaru-takeover" />
+                <keep_apart_from id="utsuru-movehouse" />
+            </word>
+            <word
+              w="【換：か】える"
+              rom="kaeru"
+              tr_en="to replace"
+              Langenscheidt="(Batterie) austauschen; (Geld) umtauschen"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="kaeru-exchange"
+              HIDDEN="true"
+            >
+                <see id="kawaru-beexchanged" rem="v.i." />
+                <keep_apart_from id="kaeru-replace" />
+                <keep_together id="kaeru-replace" />
+                <keep_apart_from id="kaeru-substitute" />
+                <keep_together id="kaeru-substitute" />
+                <keep_apart_from id="utsusu-swap" />
+            </word>
+            <word
+              w="【換：か】わる"
+              rom="kawaru"
+              tr_en="to take the place of"
+              hint_en="v.i."
+              lvl="n3"
+              id="kawaru-beexchanged"
+              HIDDEN="true"
+            >
+                <see id="kaeru-exchange" rem="v.t." />
+                <keep_apart_from id="kawaru-takeplaceof" />
+                <keep_together id="kawaru-takeplaceof" />
+                <keep_apart_from id="kawaru-takeover" />
+                <keep_together id="kawaru-takeover" />
+                <keep_apart_from id="utsuru-movehouse" />
             </word>
         </section>
     </unit>

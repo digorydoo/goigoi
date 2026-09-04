@@ -282,26 +282,6 @@ class WordChecker {
             }
         }
 
-        // Checks that enforce studyInContext in some cases
-
-        val enHints =
-            arrayOf(word.hint.en, word.hint2?.en).filterNotNull().joinToString(";").split(";").map { it.trim() }
-
-        if (!unyt.hidden && !word.hidden && word.studyInContext == StudyInContextKind.NOT_REQUIRED) {
-            if (enHints.contains("prefix")) {
-                throw CheckFailed("Word having hint 'prefix' should be marked with studyInContext")
-            }
-            if (enHints.contains("suffix")) {
-                throw CheckFailed("Word having hint 'suffix' should be marked with studyInContext")
-            }
-            if (word.translation.en.contains("~") || word.translation.de.contains("~")) {
-                throw CheckFailed("Word having tilde in translation should be marked with studyInContext")
-            }
-            if (word.romaji.contains("~")) {
-                throw CheckFailed("Word having tilde in rōmaji should be marked with studyInContext")
-            }
-        }
-
         // Check categories
 
         if (word.cats.size > 2) {
@@ -386,6 +366,26 @@ class WordChecker {
             throw CheckFailed("The flag usuallyInKana makes no sense if primaryForm is kana-only")
         }
 
+        // Checks that enforce studyInContext in some cases
+
+        val enHints =
+            arrayOf(word.hint.en, word.hint2?.en).filterNotNull().joinToString(";").split(";").map { it.trim() }
+
+        if (!unyt.hidden && !word.hidden && word.studyInContext == StudyInContextKind.NOT_REQUIRED) {
+            if (enHints.contains("prefix")) {
+                throw CheckFailed("Word having hint 'prefix' should be marked with studyInContext")
+            }
+            if (enHints.contains("suffix")) {
+                throw CheckFailed("Word having hint 'suffix' should be marked with studyInContext")
+            }
+            if (word.translation.en.contains("~") || word.translation.de.contains("~")) {
+                throw CheckFailed("Word having tilde in translation should be marked with studyInContext")
+            }
+            if (word.romaji.contains("~")) {
+                throw CheckFailed("Word having tilde in rōmaji should be marked with studyInContext")
+            }
+        }
+
         // The flag studyInContext requires phrases and sentences
 
         val studyInContext = word.studyInContext
@@ -403,7 +403,11 @@ class WordChecker {
                 StudyInContextKind.REQUIRED -> 2
                 StudyInContextKind.PREFERRED -> 2
                 StudyInContextKind.NOT_REQUIRED -> when (unyt.requiresPhrases) {
-                    true -> 1
+                    true -> when {
+                        // Phrases with intransitive verbs often better use 〜ている instead of the dictionary form.
+                        word.hint2 == WordHint.V_I || word.hint.en.contains("v.i.") -> 0
+                        else -> 1
+                    }
                     false -> 0
                 }
             }
@@ -412,20 +416,28 @@ class WordChecker {
                 throw CheckFailed("Word requires at least one phrase")
             }
 
-            val phrasesThatCanBeUsed = word.phrases.filter {
-                // verbs may appear in different form even though hasDifferentForm is not set
-                !it.hasDifferentForm && it.kana.length <= maxNumCharsInAnswer && when {
-                    word.usuallyInKana -> it.kana.contains(word.kana)
-                    else -> it.primaryForm.contains(word.primaryForm.raw)
+            val phrasesThatCanBeUsed = word.phrases.filter { phrase ->
+                // Unlike sentences, phrases can be asked in full (but kana only)
+                val canAskKana = phrase.kana.length <= maxNumCharsInAnswer ||
+                    when (phrase.wordFormToAsk.isEmpty()) {
+                        true -> word.kana.length <= maxNumCharsInAnswer
+                        false -> phrase.wordFormToAsk.kana.length <= maxNumCharsInAnswer
+                    }
+                // FIXME we should check max level of kanji, but KanjiIndex is not available during pre-checks
+                val canAskKanji = when (phrase.wordFormToAsk.isEmpty()) {
+                    true -> word.kanji.length <= maxNumCharsInAnswer
+                    false -> phrase.wordFormToAsk.kanji.length <= maxNumCharsInAnswer
                 }
+                return@filter canAskKana || canAskKanji
             }
 
             if (phrasesThatCanBeUsed.size < numPhrasesRequired) {
                 val tail = when {
                     phrasesThatCanBeUsed.size == word.phrases.size -> ""
-                    else -> " (only ${phrasesThatCanBeUsed.size} of the ${word.phrases.size} phrases can be used in " +
-                        "study due to hasDifferentForm and/or length)"
+                    else -> " (only ${phrasesThatCanBeUsed.size} of the ${word.phrases.size} phrases " +
+                        "can be used in study due to form and length)"
                 }
+
                 if (studyInContext === StudyInContextKind.NOT_REQUIRED) {
                     throw CheckFailed("Word requires at least $numPhrasesRequired phrases$tail")
                 } else if (kanaOnly) {
@@ -452,19 +464,26 @@ class WordChecker {
                 throw CheckFailed("Word requires at least one sentence")
             }
 
-            val sentencesThatCanBeUsed = word.sentences.filter {
-                !it.hasDifferentForm && when {
-                    word.usuallyInKana -> it.kana.contains(word.kana)
-                    else -> it.primaryForm.contains(word.primaryForm.raw)
+            val sentencesThatCanBeUsed = word.sentences.filter { sentence ->
+                val canAskKana = when (sentence.wordFormToAsk.isEmpty()) {
+                    true -> word.kana.length <= maxNumCharsInAnswer
+                    false -> sentence.wordFormToAsk.kana.length <= maxNumCharsInAnswer
                 }
+                // FIXME we should check max level of kanji, but KanjiIndex is not available during pre-checks
+                val canAskKanji = when (sentence.wordFormToAsk.isEmpty()) {
+                    true -> word.kanji.length <= maxNumCharsInAnswer
+                    false -> sentence.wordFormToAsk.kanji.length <= maxNumCharsInAnswer
+                }
+                return@filter canAskKana || canAskKanji
             }
 
             if (sentencesThatCanBeUsed.size < numSentencesRequired) {
                 val tail = when {
                     word.sentences.isEmpty() -> ""
-                    else -> " (none of the ${word.sentences.size} sentences can be used in study " +
-                        "due to hasDifferentForm)"
+                    else -> " (only ${sentencesThatCanBeUsed.size} of the ${word.sentences.size} sentences " +
+                        "can be used in study due to form and length)"
                 }
+
                 if (studyInContext === StudyInContextKind.NOT_REQUIRED) {
                     throw CheckFailed("Word requires at least $numSentencesRequired sentence(s)$tail")
                 } else if (kanaOnly) {

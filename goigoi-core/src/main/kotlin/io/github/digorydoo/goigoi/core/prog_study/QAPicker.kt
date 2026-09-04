@@ -11,7 +11,6 @@ import io.github.digorydoo.goigoi.core.stats.Stats
 import kotlin.random.Random
 
 class QAPicker(
-    private val isInTestLab: Boolean,
     private val kanjiIndex: KanjiIndex,
     private val rounds: RoundsTracker,
     private val stats: Stats,
@@ -21,8 +20,8 @@ class QAPicker(
     }
 
     class WordInfo(word: Word) {
-        val phrasesUsableForAskKanji = word.phrases.filter { it.canRemoveWordFromPrimaryForm(word) }
-        val sentencesUsableForAskKanji = word.sentences.filter { it.canRemoveWordFromPrimaryForm(word) }
+        val phrasesUsableForAskGap = word.phrases.filter { it.canRemoveWordFromPrimaryForm(word) }
+        val sentencesUsableForAskGap = word.sentences.filter { it.canRemoveWordFromPrimaryForm(word) }
 
         val maxNumCharsInAnswer = when (word.studyInContext) {
             StudyInContextKind.NOT_REQUIRED -> MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_NOT_REQUIRED
@@ -55,7 +54,7 @@ class QAPicker(
         Log.debug(TAG, "Picked: $picked, index=$index")
         val kindSeenCount = picked?.let { stats.getWordSeenCount(word, it.toStatsKey()) } ?: 0
         val questionHasFurigana = picked?.doesNotAskAnything != true && kindSeenCount < 1
-        return picked?.let { QuestionAndAnswer(word, it, index, questionHasFurigana) }
+        return picked?.let { QuestionAndAnswer.create(word, it, index, questionHasFurigana) }
     }
 
     private fun getIndexOfNextPhraseOrSentence(word: Word, info: WordInfo, kind: QAKind): Int {
@@ -67,26 +66,35 @@ class QAPicker(
                 word.phrases.isEmpty() -> -1
                 else -> kindSeenCount % word.phrases.size
             }
+
             QAKind.SHOW_SENTENCE_ASK_NOTHING -> when {
                 word.sentences.isEmpty() -> -1
                 else -> kindSeenCount % word.sentences.size
             }
-            QAKind.SHOW_PHRASE_ASK_KANJI -> when {
-                info.phrasesUsableForAskKanji.isEmpty() -> -1
+
+            QAKind.SHOW_PHRASE_ASK_WORD_KANA,
+            QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
+            -> when {
+                info.phrasesUsableForAskGap.isEmpty() -> -1
                 else -> word.phrases.indexOf(
-                    info.phrasesUsableForAskKanji[kindSeenCount % info.phrasesUsableForAskKanji.size]
+                    info.phrasesUsableForAskGap[kindSeenCount % info.phrasesUsableForAskGap.size]
                 )
             }
-            QAKind.SHOW_SENTENCE_ASK_KANJI -> when {
-                info.sentencesUsableForAskKanji.isEmpty() -> -1
+
+            QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
+            QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
+            -> when {
+                info.sentencesUsableForAskGap.isEmpty() -> -1
                 else -> word.sentences.indexOf(
-                    info.sentencesUsableForAskKanji[kindSeenCount % info.sentencesUsableForAskKanji.size]
+                    info.sentencesUsableForAskGap[kindSeenCount % info.sentencesUsableForAskGap.size]
                 )
             }
+
             QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> when {
                 info.shortPhrases.isEmpty() -> -1
                 else -> word.phrases.indexOf(info.shortPhrases[kindSeenCount % info.shortPhrases.size])
             }
+
             else -> -1
         }
     }
@@ -101,7 +109,6 @@ class QAPicker(
         val anySentenceSeen = stats.getWordSeenCount(word, QAKind.SHOW_SENTENCE_ASK_NOTHING.toStatsKey()) > 0
 
         val hasSeenWord = when {
-            isInTestLab -> true // otherwise most kinds would never show up in test lab
             stats.getWordTotalSeenCount(word) > 0 -> true
             else -> false
         }
@@ -132,14 +139,24 @@ class QAPicker(
                             canFillChips
                         }
                     }
-                    QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS -> hasSeenWord && canUseKanji &&
-                        !kanjiTooLongForAnswer
+
+                    QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS,
+                    -> hasSeenWord && canUseKanji && !kanjiTooLongForAnswer
+
                     QAKind.SHOW_WORD_ASK_NOTHING -> !hasSeenWord
                     QAKind.SHOW_PHRASE_ASK_NOTHING -> word.phrases.isNotEmpty()
-                    QAKind.SHOW_PHRASE_ASK_KANJI -> anyPhraseSeen && info.phrasesUsableForAskKanji.isNotEmpty()
-                    QAKind.SHOW_SENTENCE_ASK_NOTHING -> (anyPhraseSeen || word.phrases.isEmpty()) &&
-                        word.sentences.isNotEmpty()
-                    QAKind.SHOW_SENTENCE_ASK_KANJI -> anySentenceSeen && info.sentencesUsableForAskKanji.isNotEmpty()
+
+                    QAKind.SHOW_SENTENCE_ASK_NOTHING,
+                    -> (anyPhraseSeen || word.phrases.isEmpty()) && word.sentences.isNotEmpty()
+
+                    QAKind.SHOW_PHRASE_ASK_WORD_KANA,
+                    QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
+                    -> anyPhraseSeen && info.phrasesUsableForAskGap.isNotEmpty()
+
+                    QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
+                    QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
+                    -> anySentenceSeen && info.sentencesUsableForAskGap.isNotEmpty()
+
                     QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> anyPhraseSeen && info.shortPhrases.isNotEmpty()
                 }
             }
@@ -152,9 +169,9 @@ class QAPicker(
         // Long answers are tedious, so apply a maximum length. Phrases exceeding this maximum will not be asked as
         // a whole. However, if studyInContext is set, we must make sure enough phrases can actually be used, therefore
         // we use a different maximum.
-        const val MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_NOT_REQUIRED = 10
+        const val MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_NOT_REQUIRED = 12
         const val MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_PREFERRED = 13
-        const val MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_REQUIRED = 20
+        const val MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_REQUIRED = 14
 
         private fun Collection<KindAndWeight>.pickOne(): QAKind? {
             val sum = sumOf { it.weight.toDouble() }

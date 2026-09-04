@@ -6,12 +6,10 @@ enum class ItemViewType {
     NONE,
     HEADER,
     SUBHEADER,
-    SINGLE,
     SINGLE_WITH_DRAWABLE,
     DOUBLE,
     DOUBLE_WITH_DRAWABLE,
     DOUBLE_WITH_DRAWABLE_AND_BADGE,
-    LARGE,
 }
 
 abstract class AbstrListItem(val viewType: ItemViewType) {
@@ -31,10 +29,3 @@ class HeaderItem: AbstrListItem(ItemViewType.HEADER)
 class SubheaderItem(override val secondaryText: String): AbstrListItem(ItemViewType.SUBHEADER) {
     override var hasTopDivider = true
 }
-
-class ActionItem(
-    override val primaryText: CharSequence,
-    override val secondaryText: String,
-    override val drawable: Drawable?,
-    override val lrMargin: Int,
-): AbstrListItem(ItemViewType.LARGE)

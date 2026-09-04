@@ -17,7 +17,6 @@ import io.github.digorydoo.goigoi.utils.saveState
 
 class QAProvider(
     private val delegate: Delegate,
-    isInTestLab: Boolean,
     kanjiIndex: KanjiIndex,
     stats: Stats,
 ) {
@@ -32,7 +31,7 @@ class QAProvider(
 
     private var iterator: StudyItemIterator? = null
     private val rounds = RoundsTracker()
-    private val qaPicker = QAPicker(isInTestLab, kanjiIndex, rounds, stats)
+    private val qaPicker = QAPicker(kanjiIndex, rounds, stats)
 
     private var _qa: QuestionAndAnswer? = null
     val qa get() = _qa!!
@@ -49,7 +48,7 @@ class QAProvider(
 
         iterator.restoreState(state.studyItemIteratorState)
         rounds.restoreState(state)
-        _qa = QuestionAndAnswer(iterator.curWord, state.qaKind, state.qaIndex, state.questionHasFurigana)
+        _qa = QuestionAndAnswer.create(iterator.curWord, state.qaKind, state.qaIndex, state.questionHasFurigana)
         return true
     }
 

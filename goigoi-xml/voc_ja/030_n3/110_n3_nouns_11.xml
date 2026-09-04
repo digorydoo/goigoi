@@ -99,39 +99,6 @@
                 />
             </word>
             <word
-              w="【設：せっ】【計：けい】"
-              rom="sekkei"
-              tr_en="design; layout; designing"
-              tr_de="Design; Schema; bauen"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="technical"
-              id="sekkei-design"
-            >
-                <keep_apart_from id="tsukuru-make" />
-                <keep_apart_from id="seisan-production" />
-                <keep_apart_from id="kōgyō-manufacturing" />
-                <phrase
-                  ph="よく【設：せっ】【計：けい】されている"
-                  rom="yoku sekkei sarete iru"
-                  tr_en="well designed"
-                  tr_de="gut konstruiert"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="その【車：くるま】を【設：せっ】【計：けい】させていただきました。"
-                  rom="Sono kuruma o sekkei sasete itadakimashita."
-                  tr_en="I had the privilege to design that car."
-                  tr_de="Ich durfte dieses Auto designen."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="rephrased by ChatGPT"
-                />
-            </word>
-            <word
               w="【株：かぶ】"
               rom="kabu"
               tr_en="stock; share"
@@ -556,9 +523,10 @@
                   rom="kan suru"
                   tr_en="to concern sth.; to be related to sth."
                   tr_de="etw. betreffen; auf etw. bezogen sein"
-                  hasDifferentForm="true"
                   lvl="n3"
-                />
+                >
+                    <ask w="【関：かん】" />
+                </phrase>
                 <phrase
                   ph="【環：かん】【境：きょう】【問：もん】【題：だい】に【関：かん】【心：しん】がある"
                   rom="kankyō mondai ni kanshin ga aru"

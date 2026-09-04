@@ -17,8 +17,7 @@ import io.github.digorydoo.goigoi.core.stats.StatsKey
 import io.github.digorydoo.goigoi.core.study.Answer
 import io.github.digorydoo.goigoi.core.study.StudyItemIterator
 import io.github.digorydoo.goigoi.core.study.StudyItemIterator.HowToStudy
-import io.github.digorydoo.goigoi.drawable.CheckmarkIcon
-import io.github.digorydoo.goigoi.drawable.FlashIcon
+import io.github.digorydoo.goigoi.drawable.IconBuilder
 import io.github.digorydoo.goigoi.utils.*
 import kotlin.random.Random
 
@@ -52,7 +51,6 @@ class FlipThruActivity: AppCompatActivity() {
         // Set up the toolbar/actionbar
 
         bindings.toolbar.let {
-            ActivityUtils.adjustSubtitleTextColour(it, ctx)
             setSupportActionBar(it)
         }
 
@@ -159,8 +157,8 @@ class FlipThruActivity: AppCompatActivity() {
 
     private inner class ChoreoDelegate(ctx: Context): Choreographer.Delegate() {
         override val oneDip = DimUtils.dpToPx(1.0f, ctx)
-        override val correctIcon = CheckmarkIcon(ctx)
-        override val wrongIcon = FlashIcon(ctx)
+        override val correctIcon = IconBuilder.getCheckmarkIconDrawable(ctx)
+        override val wrongIcon = IconBuilder.getFlashIconDrawable(ctx)
         override val textForSkipAction = ctx.getString(R.string.skip_action_text)
         override val textForInfoAction = ctx.getString(R.string.info_action_text)
 

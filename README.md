@@ -83,7 +83,7 @@ Some of the fonts were stripped with `fonttools` for smaller download size.
 
 I obtained Dela Gothic One from fonts.google.com, which refers to github.com/syakuzen/DelaGothic, which declares it
 under Open Font License version 1.1, which in turn allows for redistribution of the font, PROVIDED that I show their
-copyright notice somewhere inside the App. Which I currently don't: *TODO*
+copyright notice somewhere inside the App.
 
 The font is quite large, so I stripped it down to just include katakana and some punctuation characters like this:
 
@@ -114,8 +114,7 @@ using fontforge:
 ### Mochiy Pop One
 
 I obtained Mochiy Pop One from fonts.google.com, which states it's licensed under Open Font License version 1.1. So
-again, redistribution should be OK, PROVIDED that I show their copyright notice somewhere inside the App, which I
-currently don't: *TODO*
+again, redistribution should be OK, PROVIDED that I show their copyright notice somewhere inside the App.
 
 I stripped the font to include hiragana only like this:
 
@@ -137,8 +136,7 @@ I stripped the font to include hiragana only like this:
 ### Zen Kurenaido
 
 I obtained Zen Kurenaido from fonts.google.com, which states it's licensed under Open Font License version 1.1. So
-again, redistribution should be OK, PROVIDED that I show their copyright notice somewhere inside the App, which I
-currently don't: *TODO*
+again, redistribution should be OK, PROVIDED that I show their copyright notice somewhere inside the App.
 
 ### EPSON Tai Xing Shu Tib 2
 
@@ -172,7 +170,7 @@ Sentences sometimes use fictional names to give them some context. They do not r
 * (11) 西村さん - Mr Nishimura (25, likes sports, graduated from university, friends with Nakagawa)
 * (13) 中川さん - Ms Nakagawa (25, likes books, quit her job for writing, friends with Nishimura)
 * ( 7) 小川さん - Mr Ogawa Ken (24, studies law, can speak a little Chinese, has a calm attitude)
-* (11) 小林さん - Mr Kobayashi (23, university student, unreliable)
+* (12) 小林さん - Mr Kobayashi (23, university student, math genius, unreliable)
 * (12) 木村さん - Miss Kimura (23, likes sports, has a strict mother)
 * (10) 山下さん - Mr Yamashita (19, likes going abroad, doesn't read books)
 * (13) 高橋さん - Miss Takahashi (18, stylish, singer)

@@ -11,8 +11,8 @@
       defaultHint_en="adjective"
       defaultHint_de="Adjektiv"
       lvl="n5"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- far, near -->
@@ -51,7 +51,9 @@
                   tr_de="Es ist wohl ein weiter (Weg) bis hierher gewesen."
                   lvl="n5"
                   origin="500mon q89"
-                />
+                >
+                    <ask w="【遠：とお】かった" />
+                </sentence>
                 <sentence
                   s="うちから 【遠：とお】いデパートまで 【行：い】かないと ワインを 【買：か】えないんだ。"
                   rom="Uchi kara tōi depāto made ikanai to wain o kaenai n da."
@@ -87,7 +89,9 @@
                   lvl="n5"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【近：ちか】くない" />
+                </phrase>
                 <sentence
                   s="【駅：えき】は ここから 【近：ちか】いです。"
                   rom="Eki wa koko kara chikai desu."
@@ -136,7 +140,9 @@
                   tr_en="Isn't it expensive?"
                   tr_de="Ist es nicht teuer?"
                   lvl="n5"
-                />
+                >
+                    <ask w="【高：たか】くない" />
+                </sentence>
                 <sentence
                   s="ちょっと【高：たか】いですね。"
                   rom="Chotto takai desu ne."
@@ -181,7 +187,9 @@
                   tr_de="Dieses Restaurant ist günstig und gut."
                   lvl="n5"
                   origin="Oxford p.101"
-                />
+                >
+                    <ask w="【安：やす】くて" />
+                </sentence>
                 <sentence
                   s="【安：やす】くなりましたので、【買：か】いましょうか。"
                   rom="Yasuku narimashita no de, kaimashō ka?"
@@ -190,7 +198,9 @@
                   lvl="n5"
                   origin="Oxford p.143"
                   rem="ので may be n4"
-                />
+                >
+                    <ask w="【安：やす】く" />
+                </sentence>
             </word>
 
             <!-- slow, late, early, fast -->
@@ -215,7 +225,9 @@
                   lvl="n5"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【早：はや】く" />
+                </phrase>
                 <phrase
                   ph="【速：はや】い【車：くるま】"
                   rom="hayai kuruma"
@@ -224,18 +236,20 @@
                   explanation_en="When describing speed, the kanji 速 is usually preferred over 早"
                   explanation_de="Wenn es um Geschwindigkeit geht, verwendet man meistens das Kanji 速 statt 早"
                   lvl="n5"
-                  hasDifferentForm="true"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【速：はや】い" />
+                </phrase>
                 <sentence
                   s="お【早：はよ】うございます！"
                   rom="O-hayō gozaimasu!"
                   tr_en="Good morning!"
                   tr_de="Guten Morgen!"
                   lvl="n5"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="お【早：はよ】う" />
+                </sentence>
                 <sentence
                   s="みんな、こっちへ 【速：はや】く【来：き】なさい。"
                   rom="Minna, kocchi e hayaku ki-nasai."
@@ -243,19 +257,21 @@
                   tr_de="Kommt alle schnell hierher!"
                   lvl="n5"
                   origin="Oxford p.119"
-                  hasDifferentForm="true"
                   rem="they use 早く here even though the meaning is 'fast'"
-                />
+                >
+                    <ask w="【速：はや】く" />
+                </sentence>
                 <sentence
                   s="【時：と】【計：けい】は 【二：に】【分：ふん】【速：はや】い。"
                   rom="Tokei wa ni-fun hayai."
                   tr_en="The clock is two minutes fast."
                   tr_de="Die Uhr geht zwei Minuten vor."
                   lvl="n5"
-                  hasDifferentForm="true"
                   origin="lib0 modified"
                   rem="lib0 has 早い here, but the translation is 'fast'"
-                />
+                >
+                    <ask w="【速：はや】い" />
+                </sentence>
             </word>
             <word
               w="【速：はや】い"
@@ -304,7 +320,9 @@
                   tr_de="Wird es bei dir heute wieder spät?"
                   lvl="n5"
                   origin="500mon q447"
-                />
+                >
+                    <ask w="【遅：おそ】く" />
+                </sentence>
             </word>
 
             <!-- strong, weak -->
@@ -342,7 +360,9 @@
                   tr_de="Der Wind ist nicht sehr stark."
                   lvl="n5"
                   origin="duolingo"
-                />
+                >
+                    <ask w="【強：つよ】くない" />
+                </sentence>
             </word>
             <word
               w="【弱：よわ】い"
@@ -372,7 +392,9 @@
                   tr_de="Der Wind weht schwach im Sommer."
                   lvl="n5"
                   origin="duolingo"
-                />
+                >
+                    <ask w="【弱：よわ】く" />
+                </sentence>
             </word>
 
             <!-- narrow, spacious -->
@@ -584,7 +606,9 @@
                   lvl="n5"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【甘：あま】くない" />
+                </phrase>
                 <sentence
                   s="チョコレートは 【甘：あま】い。"
                   rom="Chokorēto wa amai."
@@ -615,7 +639,9 @@
                   lvl="n5"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【痛：いた】くなかった" />
+                </phrase>
                 <sentence
                   s="お【腹：なか】が 【痛：いた】い。"
                   rom="O-naka ga itai."
@@ -717,7 +743,9 @@
                   lvl="n5"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【多：おお】くの" />
+                </phrase>
                 <sentence
                   s="【一：いち】【年：ねん】【中：じゅう】 【雨：あめ】が 【多：おお】い。"
                   rom="Ichi-nen-jū ame ga ōi."
@@ -756,7 +784,9 @@
                   lvl="n5"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【少：すく】なかった" />
+                </phrase>
                 <sentence
                   s="【英：えい】【語：ご】が とても【上：じょう】【手：ず】な 【日：に】【本：ほん】【人：じん】が 【少：すく】ない。"
                   rom="Eigo ga totemo jōzu na Nihon-jin ga sukunai."
@@ -777,6 +807,11 @@
               category="food, gastronomy"
               id="karai-spicy"
             >
+                <!--
+                    The noun is karasa (nx); jisho has only tsurasa (nx);
+                    ChatGPT says both exist, and are two different words;
+                    jpod101 has audio with "karasa"
+                -->
                 <phrase
                   ph="【辛：から】い【料：りょう】【理：り】"
                   rom="karai ryōri"
@@ -1094,6 +1129,7 @@
             >
                 <see id="heta-unskilled" rem="antonym" />
                 <keep_apart_from id="jōtō-superior" />
+                <keep_apart_from id="sugureru-excel" />
                 <phrase
                   ph="【上：じょう】【手：ず】な【料：りょう】【理：り】【人：にん】"
                   rom="jōzu na ryōrinin"

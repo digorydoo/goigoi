@@ -10,7 +10,7 @@
       hasFurigana="true"
       lvl="n5"
       requiresSentences="true"
-      requiresPhrases="false"
+      requiresPhrases="true"
     >
         <section>
             <!-- i-adjective -->
@@ -712,7 +712,6 @@
                   allowSpaces="true"
                   lvl="n4"
                   origin="500mon q304"
-                  hasDifferentForm="true"
                 />
             </word>
             <word
@@ -1005,11 +1004,12 @@
                   rom="Tōkyō made ato donokurai kakarimasu ka?"
                   tr_en="How much longer will it take to get to Tokyo?"
                   tr_de="Wie lange geht es noch bis Tokyo?"
-                  hasDifferentForm="true"
                   lvl="n4"
                   origin="500mon q20"
                   rem="jisho has nx for donokurai"
-                />
+                >
+                    <ask w="あと" />
+                </sentence>
             </word>
             <word
               w="【先：さき】"

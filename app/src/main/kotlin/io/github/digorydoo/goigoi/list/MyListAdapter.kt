@@ -4,11 +4,9 @@ import android.annotation.SuppressLint
 import android.os.Handler
 import android.os.Looper
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.view.ViewTreeObserver
 import androidx.recyclerview.widget.RecyclerView
-import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.listviewholder.AbstrViewHolder
 import io.github.digorydoo.goigoi.listviewholder.ClickableItemDelegate
 import io.github.digorydoo.goigoi.listviewholder.ListItemViewHolder
@@ -98,10 +96,7 @@ class MyListAdapter(
         val recyclerView = theRecyclerView ?: return
 
         recyclerView.findViewHolderForAdapterPosition(pos)?.itemView?.let { view ->
-            // Most my_list_item_*.xml apply the ripple to their root view.
-            // When they don't, they should assign R.id.ripple to some View instead.
-
-            (view.background ?: view.findViewById<View>(R.id.ripple)?.background)?.let { drw ->
+            view.background?.let { drw ->
                 val arr = ArrayList(drw.state.asList())
                 arr.add(android.R.attr.state_pressed)
                 drw.state = arr.toIntArray()

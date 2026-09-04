@@ -218,6 +218,8 @@ class TategakiLayout {
                 (prevChar1 == '全' && lastCharOfThisEl == '部') ||
                 (lastCharOfThisEl == 'て' && nextChar1 != 'て' && nextChar1 != 'は' && nextChar1 != 'も') ||
                 (lastCharOfThisEl != 'い' && nextChar1 == 'ま' && nextChar2 == 'し' && nextChar3 == 'た') ||
+                (lastCharOfThisEl != 'い' && nextChar1 == 'ま' && nextChar2 == 'す' && nextChar3 == '。') ||
+                (lastCharOfThisEl != 'い' && nextChar1 == 'ま' && nextChar2 == 'す' && nextChar3 == 'か') ||
                 (lastCharOfThisEl != 'い' && nextChar1 == 'ま' && nextChar2 == 'せ' && nextChar3 == 'ん') ||
                 (lastCharOfThisEl != 'ま' && nextChar1 == 'し' && nextChar2 == 'た' && nextChar3.isCJKNotKana()) ||
                 (lastCharOfThisEl.isKatakana() && nextChar1.isCJKNotKana()) ||

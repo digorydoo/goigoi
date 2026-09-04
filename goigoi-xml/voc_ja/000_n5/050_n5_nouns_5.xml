@@ -12,7 +12,7 @@
       defaultHint_de="Nomen"
       lvl="n5"
       requiresSentences="true"
-      requiresPhrases="false"
+      requiresPhrases="true"
     >
         <section>
             <!-- body -->
@@ -1132,9 +1132,10 @@
                   explanation_en="年 is pronounced ねん here, because it is used as a counter"
                   explanation_de="年 wird hier ねん ausgesprochen, weil es als Zählwort verwendet wird"
                   lvl="n5"
-                  hasDifferentForm="true"
                   origin="GENKI1 p.44"
-                />
+                >
+                    <ask w="【年：ねん】" />
+                </sentence>
             </word>
             <word
               w="【眼：メ】【鏡：ガネ】"

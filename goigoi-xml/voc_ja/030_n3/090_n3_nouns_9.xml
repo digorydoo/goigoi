@@ -437,20 +437,22 @@
                   rom="uketsuke-gakari"
                   tr_en="receptionist"
                   tr_de="Empfangsmitarbeiter; Rezeptionist(in)"
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="ChatGPT"
                   rem="furigana verified with jisho; jisho has nx, but n4 for uketsuke, n3 for kakari"
-                />
+                >
+                    <ask w="【係：がかり】" />
+                </phrase>
                 <sentence
                   s="【今日：きょう】は【掃：そう】【除：じ】【係：がかり】です。"
                   rom="Kyō wa sōji-gakari desu."
                   tr_en="Today, I'm on cleaning duty."
                   tr_de="Heute habe ich Reinigungsdienst."
-                  hasDifferentForm="true"
                   lvl="n3"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【係：がかり】" />
+                </sentence>
             </word>
             <word
               w="【永：えい】【久：きゅう】"
@@ -1044,6 +1046,44 @@
                 />
             </word>
             <word
+              w="【意：い】【識：しき】"
+              rom="ishiki"
+              tr_en="consciousness; awareness"
+              tr_de="Bewusstsein; sich etw. bewusst sein"
+              lvl="n3"
+              category="health, thinking"
+              id="ishiki-awareness"
+            >
+                <keep_apart_from id="kanshin-concern" />
+                <keep_apart_from id="sameru-wakeup" />
+                <phrase
+                  ph="【意：い】【識：しき】を【失：うしな】う"
+                  rom="ishiki o ushinau"
+                  tr_en="to lose consciousness"
+                  tr_de="das Bewusstsein verlieren"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【意：い】【識：しき】を【取：と】り【戻：もど】す"
+                  rom="ishiki o tori-modosu"
+                  tr_en="to regain consciousness"
+                  tr_de="das Bewusstsein zurückerlangen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="also correct: 意識を回復する; jisho has n1 for tori-modosu, but n5 for toru, n3 for modosu"
+                />
+                <sentence
+                  s="【人：にん】【間：げん】は【意：い】【識：しき】のある【生：い】き【物：もの】だ。"
+                  rom="Ningen wa ishiki no aru ikimono da."
+                  tr_en="Humans are beings that have consciousness."
+                  tr_de="Menschen sind Wesen mit einem Bewusstsein."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
               w="【商：しょう】【人：にん】"
               rom="shōnin"
               tr_en="merchant; tradesman; dealer"
@@ -1317,20 +1357,6 @@
             >
                 <keep_apart_from id="ai-love" />
                 <keep_apart_from id="koi-love" />
-            </word>
-            <word
-              w="【品：しな】"
-              rom="shina"
-              tr_en="article; item; goods"
-              tr_de="Artikel; Stück; Güter"
-              lvl="n3"
-              category="shopping, factory"
-              id="shina-item"
-            >
-                <keep_apart_from id="shōhin-commodity" />
-                <keep_apart_from id="seihin-product" />
-                <keep_apart_from id="shinamono-article" />
-                <keep_apart_from id="sakuhin-work" />
             </word>
             <word
               w="【収：しゅう】【入：にゅう】"

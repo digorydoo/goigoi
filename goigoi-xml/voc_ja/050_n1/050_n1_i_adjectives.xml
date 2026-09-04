@@ -242,8 +242,11 @@
               tr_en="frightening; scary / extreme; exaggerated; huge"
               hint_en="i-adjective"
               lvl="n1"
+              id="okkanai-scary"
               HIDDEN="true"
-            />
+            >
+                <keep_apart_from id="osoroshii-terrible" />
+            </word>
             <word
               w="ややこしい"
               rom="yayakoshii"
@@ -291,8 +294,13 @@
               tr_en="remarkable; striking; brilliant; splendid; spectacular; wonderful; conspicuous"
               hint_en="i-adjective"
               lvl="n1"
+              id="mezamashii-splendid"
               HIDDEN="true"
-            />
+            >
+                <keep_apart_from id="sugureru-excel" />
+                <keep_apart_from id="subarashii-splendid" />
+                <keep_apart_from id="erai-admirable" />
+            </word>
             <word
               w="【真：ま】ん【丸：まる】い"
               rom="manmarui"

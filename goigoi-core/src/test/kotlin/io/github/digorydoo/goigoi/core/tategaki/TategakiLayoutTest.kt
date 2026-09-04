@@ -251,18 +251,19 @@ internal class TategakiLayoutTest {
     @Test
     fun `should insert soft break between ga and arimasu`() {
         val layout = TategakiLayout().apply {
-            add(0, 'ち')
-            add(1, 'ず')
-            add(2, 'が')
-            add(3, 'あ')
-            add(4, 'り')
-            add(5, 'ま')
-            add(6, 'す')
-            add(7, 'か')
+            add(0, 'チ')
+            add(1, 'ー')
+            add(2, 'ズ')
+            add(3, 'が')
+            add(4, 'あ')
+            add(5, 'り')
+            add(6, 'ま')
+            add(7, 'す')
+            add(8, 'か')
             arrange(
                 charWidth = 10,
                 charHeight = 10,
-                maxHeight = 70,
+                maxHeight = 60,
                 columnSpacing = 1,
                 letterSpacing = 1,
                 furiganaCharWidth = 5,
@@ -273,9 +274,10 @@ internal class TategakiLayoutTest {
         val s = serialize(layout)
         assertEquals(
             """
-            【ち：】x=13, y=0, h=11
-            【ず：】x=13, y=11, h=11
-            【が：】x=13, y=22, h=11
+            【チ：】x=13, y=0, h=11
+            【ー：】x=13, y=11, h=11
+            【ズ：】x=13, y=22, h=11
+            【が：】x=13, y=33, h=11
             【あ：】x=0, y=0, h=11
             【り：】x=0, y=11, h=11
             【ま：】x=0, y=22, h=11

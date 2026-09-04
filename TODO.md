@@ -5,8 +5,9 @@
 * Bug: Asynchronous reset stats/set fake stats can garble stats data since stats are not thread-safe! The dialogue
   window should stay open until the task is done.
 
-* Phrases and sentences of verbs should mark their verb with 〈〉, allowing the app to ask for the form; compiler
-  should remove these characters and store the range to relieve the app from that task
+* Bug: Height available for TategakiView is slightly too high for 4.95inch Nexus
+
+* Show streak in header
 
 * When picking word from past, the study moment should be taken into account
 

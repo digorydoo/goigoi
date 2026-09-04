@@ -33,6 +33,7 @@
     <string name="hint_when_show_translation_ask_kanji_among_similar">Select the kanji matching the translation.</string>
     <string name="hint_when_show_translation_ask_kanji_among_words">Write the matching word in kanji.</string>
     <string name="hint_when_show_s_or_ph_ask_kanji">Select the word that goes into the gap.</string>
+    <string name="hint_when_show_s_or_ph_ask_kana">Write the word that goes into the gap.</string>
     <string name="hint_when_new_word">Have a look at this new word.</string>
     <string name="hint_when_asking_nothing">Pronounce this aloud.</string>
     <string name="hint_when_show_ph_translation_ask_ph_kana">Write this phrase in kana.</string>
@@ -53,8 +54,10 @@
 
     <!-- UnitCtxDialogFragment -->
     <string name="item_reset_unyt_progress">Reset progress</string>
-    <string name="confirm_reset_unyt_progress_msg">The progress statistics of the selected unit and its containing ${N} word(s) will be reset</string>
+    <string name="confirm_reset_unyt_progress_msg">The progress statistics of the selected unit and its containing ${N} word(s) will be reset.</string>
     <string name="confirm_reset_unyt_progress_ok">RESET</string>
+    <string name="confirm_set_super_prog_idx_to_unyt_msg">The super progressive index will be set to the start of this unit.</string>
+    <string name="confirm_set_super_prog_idx_to_unyt_ok">SET</string>
 
     <!-- UnitsOverviewActivity -->
     <string name="n_words">${N} words</string>
@@ -145,9 +148,6 @@
     <string name="got_it">GOT IT</string>
 
     <!-- HintDialogManager -->
-    <string name="rate_us_message">Would you like to tell us how we could improve this app?</string>
-    <string name="rate_us_btn">RATE US</string>
-    <string name="not_now_btn">NOT NOW</string>
     <string name="first_time_extkb_shown">This is the extended kana keyboard. Drag the buttons left, right, up or down to see additional characters.</string>
     <string name="first_time_extkb_small_kana">Small kana can be produced by first writing the kana in normal size, and then making it smaller by pulling the transforms key downwards.</string>
     <string name="first_time_extkb_dakuten_handakuten">Dakuten such as ば and handakuten such as ぱ can be produced by first writing the kana は and then pulling the transforms key to the left or right.</string>

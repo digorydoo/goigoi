@@ -7,6 +7,7 @@ import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 import io.github.digorydoo.goigoi.core.db.WordCategory
 import io.github.digorydoo.goigoi.core.db.WordHint
 import oracle.xml.parser.v2.DOMParser
+import oracle.xml.parser.v2.XMLText
 import org.w3c.dom.Element
 import org.w3c.dom.Node
 import java.io.InputStream
@@ -76,7 +77,7 @@ class GoigoiXmlParser {
 
             val schoolYear = getOptionalAttr(root, "schoolyear")
                 ?.let { it.toIntOrNull() ?: throw ParsingFailed("Value of school year not an int: $it") }
-                ?.also { year -> require(year in 1 .. 6) { "Bad value for school year: $year" } }
+                ?.also { year -> require(year in 1 .. 7) { "Bad value for school year: $year" } }
 
             checkAttributes(root, arrayOf("lvl", "schoolyear", "rem"))
 
@@ -615,13 +616,10 @@ class GoigoiXmlParser {
                 throw ParsingFailed("Missing mandatory attribute: rom")
             }
 
-            requireChildless(root)
-
             checkAttributes(
                 root,
                 arrayOf(
                     "allowSpaces",
-                    "hasDifferentForm",
                     "hint",
                     "href",
                     "explanation_de",
@@ -653,7 +651,6 @@ class GoigoiXmlParser {
                 translation = IntlString().apply { getMandatoryAttr(root, "tr", this) }
                 explanation = IntlString().apply { getOptionalAttr(root, "explanation", this) }
                 level = JLPTLevel.fromStringOrNull(getMandatoryAttr(root, "lvl"))
-                hasDifferentForm = getBooleanAttr(root, "hasDifferentForm")
                 allowSpaces = getBooleanAttrOrNull(root, "allowSpaces")
                 origin = getOptionalAttr(root, "origin") ?: ""
                 href = getOptionalAttr(root, "href") ?: ""
@@ -661,6 +658,13 @@ class GoigoiXmlParser {
             }
 
             word.phrases.add(phrase)
+
+            forEachChild(root) { tag ->
+                when (tag.nodeName) {
+                    "ask" -> readWordFormToAsk(tag, phrase, word)
+                    else -> throw ParsingFailed("Tag not handled: <${tag.nodeName}>")
+                }
+            }
         } catch (e: Exception) {
             rethrow(e, errorCtx)
         }
@@ -682,13 +686,10 @@ class GoigoiXmlParser {
                 throw ParsingFailed("Missing mandatory attribute: rom")
             }
 
-            requireChildless(root)
-
             checkAttributes(
                 root,
                 arrayOf(
                     "allowSpaces",
-                    "hasDifferentForm",
                     "hint",
                     "href",
                     "explanation_de",
@@ -720,7 +721,6 @@ class GoigoiXmlParser {
                 translation = IntlString().apply { getMandatoryAttr(root, "tr", this) }
                 explanation = IntlString().apply { getOptionalAttr(root, "explanation", this) }
                 level = JLPTLevel.fromStringOrNull(getMandatoryAttr(root, "lvl"))
-                hasDifferentForm = getBooleanAttr(root, "hasDifferentForm")
                 allowSpaces = getBooleanAttrOrNull(root, "allowSpaces")
                 origin = getOptionalAttr(root, "origin") ?: ""
                 href = getOptionalAttr(root, "href") ?: ""
@@ -728,6 +728,82 @@ class GoigoiXmlParser {
             }
 
             word.sentences.add(sentence)
+
+            // Later, we might extend this to break down the entire sentence:
+            // <ignore w="【田：た】【中：なか】さん、お" />
+            // <ask w="【昼：ひる】ごはん" />
+            // <ignore w="、" />
+            // <ref w="【食：た】べ" id="taberu-eat" />
+            // <ignore w="に" />
+            // <ref ="【行：い】かない" id="iku-go" />
+            // <ignore w="？" />
+
+            forEachChild(root) { tag ->
+                when (tag.nodeName) {
+                    "ask" -> readWordFormToAsk(tag, sentence, word)
+                    else -> throw ParsingFailed("Tag not handled: <${tag.nodeName}>")
+                }
+            }
+        } catch (e: Exception) {
+            rethrow(e, errorCtx)
+        }
+    }
+
+    private fun readWordFormToAsk(root: Element, phraseOrSentence: GoigoiPhraseOrSentence, word: GoigoiWord) {
+        var errorCtx = "Word form"
+
+        try {
+            val w = getOptionalAttr(root, "w")
+            val stem = getOptionalAttr(root, "stem")
+            val suffix = getOptionalAttr(root, "suffix")
+
+            if (w != null) {
+                if (stem != null || suffix != null) {
+                    throw ParsingFailed("Word form cannot have both w and stem/suffix")
+                }
+
+                if (w.isEmpty()) {
+                    throw ParsingFailed("Word form: w cannot be empty when defined")
+                }
+
+                if (w != w.trim()) {
+                    throw ParsingFailed("Word form is not properly trimmed: '$w'")
+                }
+
+                errorCtx += " ($w)"
+            } else {
+                if (stem == null || suffix == null) {
+                    throw ParsingFailed("Word form needs to have either w or both stem and suffix")
+                }
+
+                if (stem.isEmpty()) {
+                    throw ParsingFailed("Word form: stem cannot be empty when defined")
+                }
+
+                if (suffix.isEmpty()) {
+                    throw ParsingFailed("Word form: suffix cannot be empty when defined")
+                }
+
+                if (stem != stem.trim()) {
+                    throw ParsingFailed("Word form: stem is not properly trimmed")
+                }
+
+                if (suffix != suffix.trim()) {
+                    throw ParsingFailed("Word form: suffix is not properly trimmed")
+                }
+
+                errorCtx += " ($stem + $suffix)"
+            }
+
+            checkAttributes(root, arrayOf("w", "stem", "suffix"))
+            requireChildless(root)
+
+            if (phraseOrSentence.wordFormToAsk.isNotEmpty()) {
+                throw ParsingFailed("The <ask> tag can only appear once")
+            }
+
+            phraseOrSentence.wordFormToAsk = FuriganaString(w ?: stem ?: "")
+            phraseOrSentence.wordFormToAskSuffix = suffix ?: ""
         } catch (e: Exception) {
             rethrow(e, errorCtx)
         }
@@ -820,140 +896,6 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun rethrow(e: Throwable, errorCtx: String): Nothing {
-        val newMsg = when {
-            errorCtx.isEmpty() -> e.message // error context is suppressed, e.g. <section>
-            else -> "$errorCtx:\n${e.message?.prependIndent("   ")}"
-        }
-        throw ParsingFailed(newMsg, e)
-    }
-
-    private fun makeTopicId(name: String): String {
-        return "$TOPIC_ID_PREFIX${name.replace(" ", "")}"
-    }
-
-    private fun makeUnytId(name: String, studyLang: String): String {
-        // Add "/en" here. This used to be the unyt's translationLang.
-        // I still do this in order not to break productive stats.
-        return "$UNYT_ID_PREFIX$name($studyLang/en)"
-    }
-
-    private fun makeSectionId(unyt: GoigoiUnyt, name: IntlString): String {
-        return arrayOf(
-            SECTION_ID_PREFIX,
-            name.en,
-            "@",
-            unyt.name.en,
-            "(",
-            unyt.studyLang,
-            ")"
-        ).joinToString("")
-    }
-
-    private fun makeWordId(primaryForm: String, romaji: String): String {
-        // NOTE: When rōmaji is non-empty, we don't take the primary form into account, because we
-        // might miss duplicates when the furigana braces are put differently.
-        // NOTE: Don't change this method, wordIds should stay stable across app version!
-
-        val id = arrayOf(
-            WORD_ID_PREFIX,
-            when {
-                romaji.isEmpty() -> primaryForm
-                else -> romaji
-            }
-        ).joinToString("")
-
-        return when {
-            id.length <= MAX_LENGTH_OF_TEXT_IN_ID -> id
-            else -> id.substring(0 ..< MAX_LENGTH_OF_TEXT_IN_ID)
-        }
-    }
-
-    private fun checkAttributes(e: Element, recognizedAttrs: Array<String>) {
-        val map = e.attributes
-
-        for (i in 0 ..< map.length) {
-            val name = map.item(i).nodeName
-
-            if (!recognizedAttrs.contains(name)) {
-                throw ParsingFailed("Tag uses unknown attribute: $name")
-            }
-        }
-    }
-
-    private fun getOptionalAttr(e: Element, attr: String): String? {
-        return if (e.hasAttribute(attr)) {
-            e.getAttribute(attr)
-        } else {
-            null
-        }
-    }
-
-    private fun getMandatoryAttr(e: Element, attr: String): String {
-        return if (e.hasAttribute(attr)) {
-            e.getAttribute(attr)
-        } else {
-            throw ParsingFailed("Missing mandatory attribute $attr")
-        }
-    }
-
-    private fun getOptionalAttr(root: Element, key: String, dst: IntlString) {
-        if (getOptionalAttr(root, key) != null) {
-            throw ParsingFailed("Attribute $key is deprecated, use ${key}_en instead!")
-        }
-
-        dst.en = getOptionalAttr(root, "${key}_en") ?: ""
-        dst.de = getOptionalAttr(root, "${key}_de") ?: ""
-        dst.fr = getOptionalAttr(root, "${key}_fr") ?: ""
-        dst.it = getOptionalAttr(root, "${key}_it") ?: ""
-        dst.ja = getOptionalAttr(root, "${key}_ja") ?: ""
-    }
-
-    private fun getMandatoryAttr(root: Element, key: String, dst: IntlString) {
-        val xx = getOptionalAttr(root, key)
-        val en = getOptionalAttr(root, "${key}_en")
-
-        if (xx == null && en == null) {
-            throw ParsingFailed("Mandatory attribute must have at least a value for English: $key")
-        }
-
-        getOptionalAttr(root, key, dst)
-    }
-
-    private fun getBooleanAttr(e: Element, attr: String) =
-        getBooleanAttrOrNull(e, attr) ?: false
-
-    private fun getBooleanAttrOrNull(e: Element, attr: String) =
-        if (e.hasAttribute(attr)) {
-            val value = e.getAttribute(attr)
-            when (value) {
-                "yes" -> true
-                "true" -> true
-                "no" -> false
-                "false" -> false
-                else -> throw ParsingFailed("Bad value for Boolean attribute: ${attr}=\"${value}\"")
-            }
-        } else {
-            null
-        }
-
-    private fun forEachChild(root: Node, lambda: (tag: Element) -> Unit) {
-        var node = root.firstChild
-
-        while (node != null) {
-            if (node.nodeType == Node.ELEMENT_NODE) {
-                lambda(node as Element)
-            }
-            node = node.nextSibling
-        }
-    }
-
-    private fun requireChildless(element: Element) {
-        if (element.firstChild != null) {
-            throw ParsingFailed("Unexpected child node")
-        }
-    }
-
     companion object {
         private const val TOPIC_ID_PREFIX = "#"
         private const val UNYT_ID_PREFIX = "="
@@ -961,5 +903,144 @@ class GoigoiXmlParser {
         private const val WORD_ID_PREFIX = "-"
 
         private const val MAX_LENGTH_OF_TEXT_IN_ID = 28
+
+        private fun rethrow(e: Throwable, errorCtx: String): Nothing {
+            val newMsg = when {
+                errorCtx.isEmpty() -> e.message // error context is suppressed, e.g. <section>
+                else -> "$errorCtx:\n${e.message?.prependIndent("   ")}"
+            }
+            throw ParsingFailed(newMsg, e)
+        }
+
+        private fun makeTopicId(name: String): String {
+            return "$TOPIC_ID_PREFIX${name.replace(" ", "")}"
+        }
+
+        private fun makeUnytId(name: String, studyLang: String): String {
+            // Add "/en" here. This used to be the unyt's translationLang.
+            // I still do this in order not to break productive stats.
+            return "$UNYT_ID_PREFIX$name($studyLang/en)"
+        }
+
+        private fun makeSectionId(unyt: GoigoiUnyt, name: IntlString): String {
+            return arrayOf(
+                SECTION_ID_PREFIX,
+                name.en,
+                "@",
+                unyt.name.en,
+                "(",
+                unyt.studyLang,
+                ")"
+            ).joinToString("")
+        }
+
+        private fun makeWordId(primaryForm: String, romaji: String): String {
+            // NOTE: When rōmaji is non-empty, we don't take the primary form into account, because we
+            // might miss duplicates when the furigana braces are put differently.
+            // NOTE: Don't change this method, wordIds should stay stable across app version!
+
+            val id = arrayOf(
+                WORD_ID_PREFIX,
+                when {
+                    romaji.isEmpty() -> primaryForm
+                    else -> romaji
+                }
+            ).joinToString("")
+
+            return when {
+                id.length <= MAX_LENGTH_OF_TEXT_IN_ID -> id
+                else -> id.substring(0 ..< MAX_LENGTH_OF_TEXT_IN_ID)
+            }
+        }
+
+        private fun checkAttributes(e: Element, recognizedAttrs: Array<String>) {
+            val map = e.attributes
+
+            for (i in 0 ..< map.length) {
+                val name = map.item(i).nodeName
+
+                if (!recognizedAttrs.contains(name)) {
+                    throw ParsingFailed("Tag uses unknown attribute: $name")
+                }
+            }
+        }
+
+        private fun getOptionalAttr(e: Element, attr: String): String? {
+            return if (e.hasAttribute(attr)) {
+                e.getAttribute(attr)
+            } else {
+                null
+            }
+        }
+
+        private fun getMandatoryAttr(e: Element, attr: String): String {
+            return if (e.hasAttribute(attr)) {
+                e.getAttribute(attr)
+            } else {
+                throw ParsingFailed("Missing mandatory attribute $attr")
+            }
+        }
+
+        private fun getOptionalAttr(root: Element, key: String, dst: IntlString) {
+            if (getOptionalAttr(root, key) != null) {
+                throw ParsingFailed("Attribute $key is deprecated, use ${key}_en instead!")
+            }
+
+            dst.en = getOptionalAttr(root, "${key}_en") ?: ""
+            dst.de = getOptionalAttr(root, "${key}_de") ?: ""
+            dst.fr = getOptionalAttr(root, "${key}_fr") ?: ""
+            dst.it = getOptionalAttr(root, "${key}_it") ?: ""
+            dst.ja = getOptionalAttr(root, "${key}_ja") ?: ""
+        }
+
+        private fun getMandatoryAttr(root: Element, key: String, dst: IntlString) {
+            val xx = getOptionalAttr(root, key)
+            val en = getOptionalAttr(root, "${key}_en")
+
+            if (xx == null && en == null) {
+                throw ParsingFailed("Mandatory attribute must have at least a value for English: $key")
+            }
+
+            getOptionalAttr(root, key, dst)
+        }
+
+        private fun getBooleanAttr(e: Element, attr: String) =
+            getBooleanAttrOrNull(e, attr) ?: false
+
+        private fun getBooleanAttrOrNull(e: Element, attr: String) =
+            if (e.hasAttribute(attr)) {
+                val value = e.getAttribute(attr)
+                when (value) {
+                    "yes" -> true
+                    "true" -> true
+                    "no" -> false
+                    "false" -> false
+                    else -> throw ParsingFailed("Bad value for Boolean attribute: ${attr}=\"${value}\"")
+                }
+            } else {
+                null
+            }
+
+        private fun forEachChild(root: Node, lambda: (tag: Element) -> Unit) {
+            var node = root.firstChild
+
+            while (node != null) {
+                if (node.nodeType == Node.ELEMENT_NODE) {
+                    lambda(node as Element)
+                }
+                node = node.nextSibling
+            }
+        }
+
+        private fun requireChildless(element: Element, allowText: Boolean = false) {
+            var node = element.firstChild
+
+            while (node != null) {
+                if (!allowText || node !is XMLText) {
+                    throw ParsingFailed("Unexpected child node: $node")
+                }
+                node = node.nextSibling
+            }
+        }
     }
 }

@@ -12,7 +12,7 @@
       defaultHint_de="Nomen"
       lvl="n4"
       requiresSentences="true"
-      requiresPhrases="false"
+      requiresPhrases="true"
     >
         <section>
             <!-- people -->
@@ -1356,8 +1356,9 @@
                   tr_en="five-star hotel"
                   tr_de="Fünf-Stern-Hotel"
                   lvl="n4"
-                  hasDifferentForm="true"
-                />
+                >
+                    <ask w="【星：ぼし】" />
+                </phrase>
                 <sentence
                   s="【暗：くら】い【空：そら】に【星：ほし】が【光：ひか】っている。"
                   rom="Kurai sora ni hoshi ga hikatte iru."
@@ -1697,12 +1698,13 @@
                   rom="Mai-nichi kodomo ni, kuruma ni ki o tsukeru yō ni itte imasu."
                   tr_en="I tell my kids to watch out for cars every day."
                   tr_de="Ich sage meinen Kindern jeden Tag, sie sollen wegen den Autos aufpassen."
-                  hasDifferentForm="true"
                   allowSpaces="true"
                   lvl="n4"
                   origin="500mon q456"
                   rem="500mon doesn't use kanji here"
-                />
+                >
+                    <ask w="ように" />
+                </sentence>
             </word>
             <word
               w="【遊：あそ】び"

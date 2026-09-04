@@ -8,7 +8,6 @@ import java.io.FileNotFoundException
 import java.io.RandomAccessFile
 import java.nio.charset.Charset
 
-@Suppress("unused")
 class StringsFile(val path: String) {
     private val utf8 = Charset.forName("UTF-8")
     private var access: RandomAccessFile? = null
@@ -34,7 +33,7 @@ class StringsFile(val path: String) {
             }
 
             access = RandomAccessFile(path, "rw")
-        } catch (e: FileNotFoundException) {
+        } catch (_: FileNotFoundException) {
             Log.debug(TAG, "File not found: $path")
         }
     }
@@ -100,6 +99,7 @@ class StringsFile(val path: String) {
         }
     }
 
+    @Suppress("unused")
     fun writeln(s: String) {
         val bytes = encode(s)
         writeln(bytes)

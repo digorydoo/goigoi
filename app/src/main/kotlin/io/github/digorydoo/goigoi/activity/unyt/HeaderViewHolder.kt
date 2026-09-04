@@ -9,7 +9,7 @@ import androidx.core.view.updateLayoutParams
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.drawable.IconBuilder
-import io.github.digorydoo.goigoi.drawable.SheetHead
+import io.github.digorydoo.goigoi.drawable.SheetHeadDrawable
 import io.github.digorydoo.goigoi.list.AbstrListItem
 import io.github.digorydoo.goigoi.listviewholder.AbstrViewHolder
 import io.github.digorydoo.goigoi.utils.SingletonHolder
@@ -17,7 +17,7 @@ import io.github.digorydoo.goigoi.utils.SingletonHolder
 class HeaderViewHolder private constructor(
     private val rootView: View,
     private val unyt: Unyt,
-    private val sheetHead: SheetHead,
+    private val sheetHead: SheetHeadDrawable,
     private val delegate: Delegate,
 ): AbstrViewHolder(rootView) {
     interface Delegate {
@@ -61,7 +61,13 @@ class HeaderViewHolder private constructor(
     }
 
     companion object {
-        fun create(parent: ViewGroup, inflater: LayoutInflater, unyt: Unyt, sheetHead: SheetHead, delegate: Delegate) =
+        fun create(
+            parent: ViewGroup,
+            inflater: LayoutInflater,
+            unyt: Unyt,
+            sheetHead: SheetHeadDrawable,
+            delegate: Delegate,
+        ) =
             HeaderViewHolder(
                 inflater.inflate(R.layout.words_list_header, parent, false),
                 unyt,

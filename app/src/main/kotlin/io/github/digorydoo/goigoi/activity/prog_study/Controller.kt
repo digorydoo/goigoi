@@ -20,7 +20,6 @@ import io.github.digorydoo.goigoi.furigana.FuriganaSpan
 import io.github.digorydoo.goigoi.furigana.buildSpan
 import kotlin.math.ceil
 import kotlin.math.max
-import kotlin.random.Random
 
 class Controller(
     private val delegate: Delegate,
@@ -34,7 +33,6 @@ class Controller(
     private val vocab: Vocabulary,
 ) {
     interface Delegate {
-        fun isInTestLab(): Boolean
         fun showKeyboardHintIfAppropriate(qa: QuestionAndAnswer, mode: Keyboard.Mode)
     }
 
@@ -73,7 +71,7 @@ class Controller(
 
         fun seenCount(kind: QAKind) = stats.getWordSeenCount(word, kind.toStatsKey())
         val seenAskNothing = seenCount(QAKind.SHOW_PHRASE_ASK_NOTHING)
-        val seenAskKanji = seenCount(QAKind.SHOW_PHRASE_ASK_KANJI)
+        val seenAskKanji = seenCount(QAKind.SHOW_PHRASE_ASK_WORD_KANJI)
         val seenTranslationAskKana = seenCount(QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA)
 
         val numPhrasesWithWordRemoved = word.phrases.filter { it.canRemoveWordFromPrimaryForm(word) }.size
@@ -91,7 +89,7 @@ class Controller(
 
         fun seenCount(kind: QAKind) = stats.getWordSeenCount(word, kind.toStatsKey())
         val seenAskNothing = seenCount(QAKind.SHOW_SENTENCE_ASK_NOTHING)
-        val seenAskKanji = seenCount(QAKind.SHOW_SENTENCE_ASK_KANJI)
+        val seenAskKanji = seenCount(QAKind.SHOW_SENTENCE_ASK_WORD_KANJI)
 
         val numSentencesWithWordRemoved = word.sentences.filter { it.canRemoveWordFromPrimaryForm(word) }.size
 
@@ -112,7 +110,6 @@ class Controller(
         val qa = qaProvider.qa
 
         val allowExtendedKeyboard = when {
-            delegate.isInTestLab() -> Random.nextFloat() > 0.5f // random when in Google Play Test Lab
             qa.presentWholeWords -> false // whole words need FIXED_KEYS
             qa.word.level == JLPTLevel.N5 -> false // N5 learners have rōmaji instead
             qa.kind == QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> false // answers would get too ambiguous
@@ -171,14 +168,14 @@ class Controller(
             }
         }
 
-        val text = qa.questionWithGapFilled.let {
+        val updatedQuestion = qa.questionAfterReveal?.let {
             when (it) {
                 is OneOf.First -> it.first
                 is OneOf.Second -> it.second.buildSpan(FuriganaSpan.Options(relVOffset = qa.furiganaRelVOffset))
             }
         }
 
-        choreo.revealAnswer(answer, text)
+        choreo.revealAnswer(answer, updatedQuestion)
         qaProvider.notifyAnswer(answer)
         bindings.nextBtn.show()
     }

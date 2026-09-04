@@ -1,11 +1,8 @@
 package io.github.digorydoo.goigoi.dialog
 
-import android.content.ActivityNotFoundException
-import android.content.Intent
 import android.util.Log
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.net.toUri
 import androidx.lifecycle.lifecycleScope
 import ch.digorydoo.kutils.cjk.hasDakuten
 import ch.digorydoo.kutils.cjk.hasHandakuten
@@ -26,33 +23,6 @@ import kotlin.coroutines.suspendCoroutine
 class HintDialogManager(private val stats: Stats) {
     private var activeDlg: AlertDialog? = null
     private var activeJob: Job? = null
-
-    fun showRateUsDlgIfAppropriate(activity: AppCompatActivity) {
-        if (activeDlg != null) {
-            cancel()
-            return
-        }
-
-        if (MARKET_PLAY_STORE_URI.isNotEmpty()) {
-            if (stats.launchCount > 3 && !stats.hasHintBeenShown(HintDlgKey.RATE_US_REQUEST_SHOWN)) {
-                stats.didShowHint(HintDlgKey.RATE_US_REQUEST_SHOWN)
-                doAsyncOnUIThread(activity) {
-                    MyDlgBuilder.showRateUsDlg(activity) { ok ->
-                        if (ok) {
-                            try {
-                                val intent = Intent(Intent.ACTION_VIEW, MARKET_PLAY_STORE_URI.toUri())
-                                activity.startActivity(intent)
-                            } catch (_: ActivityNotFoundException) {
-                                // We come here if Play Store app is not installed. Open url in browser!
-                                val intent = Intent(Intent.ACTION_VIEW, BROWSER_PLAY_STORE_URI.toUri())
-                                activity.startActivity(intent)
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    }
 
     fun showKeyboardHintIfAppropriate(qa: QuestionAndAnswer, keyboardMode: Keyboard.Mode, activity: AppCompatActivity) {
         if (activeDlg != null) {
@@ -127,7 +97,6 @@ class HintDialogManager(private val stats: Stats) {
             HintDlgKey.FIRST_TIME_EXTENDED_KEYBOARD_SHOWN -> R.string.first_time_extkb_shown
             HintDlgKey.FIRST_TIME_EXTKB_SMALL_KANA -> R.string.first_time_extkb_small_kana
             HintDlgKey.FIRST_TIME_EXTKB_DAKUTEN_HANDAKUTEN -> R.string.first_time_extkb_dakuten_handakuten
-            HintDlgKey.RATE_US_REQUEST_SHOWN -> throw Exception("Should have called a two-way dialog: $hint")
         }
         // NOTE: We need to pass activity as Context here. applicationContext leads to a crash!
         activeDlg = MyDlgBuilder.showHintDlg(hintTextResId, activity) {
@@ -142,11 +111,5 @@ class HintDialogManager(private val stats: Stats) {
         private const val TAG = "HintDialogMgr"
         private const val INITIAL_DELAY_MILLIS = 1000L
         private const val DELAY_BEFORE_EACH_DLG_MILLIS = 1000L // also adds to initial delay!
-
-        // Goigoi is no longer in the play store
-        // "market://details?id=${BuildConfig.APPLICATION_ID}"
-        // "https://play.google.com/store/apps/details?id=${BuildConfig.APPLICATION_ID}"
-        private const val MARKET_PLAY_STORE_URI = ""
-        private const val BROWSER_PLAY_STORE_URI = ""
     }
 }

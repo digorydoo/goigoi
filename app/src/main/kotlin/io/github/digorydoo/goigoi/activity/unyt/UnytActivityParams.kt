@@ -26,6 +26,11 @@ class UnytActivityParams(val unytId: String) {
 /**
  * Starts the UnytActivity. The unyt is loaded before navigating. The UnytActivity does not strictly require this, but
  * it improves the transition. Important: Make sure to disallow selecting the item again until done is called!
+ * FIXME get rid of this
+ *  TopicScreen should add an overlay that captures all input while activity is  launching. Also, startUnytActivityAsync
+ *  should better be a suspending function. Then, wrap it with a try block, and re-enable UI from finally block. Same
+ *  goes for the call in WelcomeActivity.
+ *
  */
 fun Activity.startUnytActivityAsync(unyt: Unyt, done: () -> Unit) {
     val vocab = SingletonHolder.vocab

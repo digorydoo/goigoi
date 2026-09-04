@@ -41,9 +41,10 @@
                   rom="kudaranai"
                   tr_en="not worth bothering with; useless; absurd"
                   tr_de="nicht der Mühe wert; nutzlos; absurd"
-                  hasDifferentForm="true"
                   lvl="n2"
-                />
+                >
+                    <ask w="くだらない" />
+                </phrase>
                 <sentence
                   s="その【坂：さか】【道：みち】を【下：くだ】ろう。"
                   rom="Sono saka-michi o kudarō."
@@ -52,7 +53,9 @@
                   lvl="n2"
                   origin="lib0"
                   rem="jisho has nx for saka-michi, but n4 for saka, n5 for michi"
-                />
+                >
+                    <ask w="【下：くだ】ろう" />
+                </sentence>
                 <sentence
                   s="ボートは【川：かわ】を【流：なが】れ【下：くだ】った。"
                   rom="Bōto wa kawa o nagare-kudatta."
@@ -60,7 +63,9 @@
                   tr_de="Das Boot trieb den Fluss hinunter."
                   lvl="n2"
                   origin="lib0"
-                />
+                >
+                    <ask w="【下：くだ】った" />
+                </sentence>
             </word>
             <word
               w="【下：くだ】らない"
@@ -100,7 +105,9 @@
                   tr_de="Wir haben Ihre Bestellung erhalten. (bescheiden)"
                   lvl="n2"
                   origin="ChatGPT"
-                />
+                >
+                    <ask stem="【承：うけたまわ】り" suffix="ました" />
+                </sentence>
             </word>
             <word
               w="【萎：しぼ】む"
@@ -119,7 +126,9 @@
                   tr_en="wilted flower"
                   tr_de="verwelkte Blume"
                   lvl="n2"
-                />
+                >
+                    <ask w="しぼんだ" />
+                </phrase>
                 <sentence
                   s="【花：はな】がしぼんだ。"
                   rom="Hana ga shibonda."
@@ -127,7 +136,9 @@
                   tr_de="Die Blumen sind verwelkt."
                   lvl="n2"
                   origin="lib0"
-                />
+                >
+                    <ask w="しぼんだ" />
+                </sentence>
             </word>
             <word
               w="【放：ほう】る"
@@ -147,11 +158,12 @@
                   rom="hotteoku"
                   tr_en="to leave sb. alone; to neglect sth."
                   tr_de="jem. sein lassen; etw. vernachlässigen"
-                  hasDifferentForm="true"
                   lvl="n2"
                   origin="GENKI2 p.231"
                   rem="often pronounced hotteoku instead of hōtteoku"
-                />
+                >
+                    <ask w="【放：ほ】って" />
+                </phrase>
                 <sentence
                   s="カバンを【隅：すみ】に【放：ほう】って、ソファに【座：すわ】った。"
                   rom="Kaban o sumi ni hōtte, sofa ni suwatta."
@@ -160,16 +172,19 @@
                   lvl="n2"
                   origin="self"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【放：ほう】って" />
+                </sentence>
                 <sentence
                   s="【少：すこ】し【放：ほ】っておいてよ。"
                   rom="Sukoshi hotteoite yo."
                   tr_en="Give me some space."
                   tr_de="Lass mich mal alleine."
-                  hasDifferentForm="true"
                   lvl="n2"
                   origin="GENKI2 p.228"
-                />
+                >
+                    <ask w="【放：ほ】って" />
+                </sentence>
             </word>
             <word
               w="【飢：う】える"
@@ -180,6 +195,7 @@
               lvl="n2"
               id="ueru-starve"
             >
+                <!-- the noun is ue, which is nx -->
                 <phrase
                   ph="【飢：う】えた【虎：とら】"
                   rom="ueta tora"
@@ -187,7 +203,9 @@
                   tr_de="ein hungriger Tiger"
                   lvl="n2"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【飢：う】えた" />
+                </phrase>
             </word>
             <word
               w="【畳：たた】む"
@@ -207,7 +225,9 @@
                   tr_de="Falte deine Matratze zusammen."
                   lvl="n2"
                   origin="lib0"
-                />
+                >
+                    <ask w="たたみ" />
+                </sentence>
             </word>
             <word
               w="【打：ぶ】【付：つ】かる"
@@ -233,7 +253,9 @@
                   tr_de="Die Wellen schlugen heftig gegen die Küste."
                   lvl="n2"
                   origin="lib0"
-                />
+                >
+                    <ask w="ぶつかった" />
+                </sentence>
             </word>
             <word
               w="【拭：ふ】く"
@@ -251,7 +273,9 @@
                   tr_de="Ich machte das Frottiertuch nass und wusch mein Gesicht."
                   lvl="n2"
                   origin="ChatGPT"
-                />
+                >
+                    <ask w="【拭：ふ】いた" />
+                </sentence>
             </word>
             <word
               w="【散：ち】らかる"
@@ -271,7 +295,9 @@
                   tr_de="Es ist ein bisschen unorderntlich, aber bitte kommen Sie doch herein."
                   lvl="n2"
                   origin="500mon N3 q59"
-                />
+                >
+                    <ask w="【散：ち】らかって" />
+                </sentence>
             </word>
             <word
               w="【散：ち】らかす"
@@ -397,7 +423,9 @@
                   tr_de="Ich habe mir geschworen, mehr Bücher zu lesen."
                   lvl="n2"
                   origin="lib0"
-                />
+                >
+                    <ask stem="【誓：ちか】い" suffix="ました" />
+                </sentence>
             </word>
             <word
               w="【出：で】【来：き】【上：あ】がる"
@@ -414,7 +442,9 @@
                   tr_en="Done! I'm finished!"
                   tr_de="Fertig! Ich bin fertig!"
                   lvl="n2"
-                />
+                >
+                    <ask w="【出：で】【来：き】【上：あ】がり" />
+                </sentence>
             </word>
             <word
               w="【刺：さ】さる"
@@ -444,7 +474,9 @@
                   explanation_de="「〜ておきます」zeigt auf, dass die Aktion eine Vorbereitung für späteren Gebrauch ist"
                   lvl="n2"
                   origin="Oxford p.52"
-                />
+                >
+                    <ask w="【冷：ひ】やして" />
+                </sentence>
             </word>
             <word
               w="【固：かた】まる"
@@ -483,7 +515,9 @@
                   tr_de="Ich roch es."
                   lvl="n2"
                   origin="lib0"
-                />
+                >
+                    <ask w="【嗅：か】いだ" />
+                </sentence>
             </word>
             <word
               w="【飛：と】び【込：こ】む"
@@ -501,7 +535,9 @@
                   tr_de="Ich sprang in den Swimming-Pool."
                   lvl="n2"
                   origin="lib0"
-                />
+                >
+                    <ask w="【飛：と】び【込：こ】んだ" />
+                </sentence>
                 <sentence
                   s="ボールが【窓：まど】から【飛：と】び【込：こ】んできた。"
                   rom="Bōru ga mado kara tobikonde kita."
@@ -509,7 +545,9 @@
                   tr_de="Ein Ball kam durchs Fenster geflogen."
                   lvl="n2"
                   origin="lib0"
-                />
+                >
+                    <ask w="【飛：と】び【込：こ】んで" />
+                </sentence>
             </word>
             <word
               w="【追：お】いかける"
@@ -527,7 +565,9 @@
                   tr_de="Der Hund rannte hinter dem Hasen her."
                   lvl="n2"
                   origin="lib0"
-                />
+                >
+                    <ask w="【追：お】いかけた" />
+                </sentence>
             </word>
             <word
               w="【慌：あわ】てる"
@@ -545,7 +585,9 @@
                   tr_de="Ich suchte panisch nach meinem Portemonnaie."
                   lvl="n2"
                   origin="Oxford p.41"
-                />
+                >
+                    <ask w="【慌：あわ】てて" />
+                </sentence>
             </word>
             <word
               w="【潜：もぐ】る"
@@ -593,7 +635,9 @@
                   tr_de="Der Vorgang fing Feuer."
                   lvl="n2"
                   origin="lib0"
-                />
+                >
+                    <ask w="【点：つ】いた" />
+                </sentence>
             </word>
             <word
               w="【落：お】ち【着：つ】く"
@@ -610,7 +654,9 @@
                   tr_en="to be calm; to be at ease"
                   tr_de="ruhig sein; sich wohlfühlen"
                   lvl="n2"
-                />
+                >
+                    <ask w="【落：お】ち【着：つ】いて" />
+                </phrase>
             </word>
             <word
               w="【嫌：いや】がる"
@@ -628,7 +674,9 @@
                   tr_de="Der Sohn hasst Schule."
                   lvl="n2"
                   origin="Oxford p.104 modified"
-                />
+                >
+                    <ask w="【嫌：いや】がって" />
+                </sentence>
             </word>
             <word
               w="【散：ち】る"
@@ -646,7 +694,9 @@
                   tr_de="Als ich nach Japan zurückkam, waren die Kirschblüten gefallen."
                   lvl="n2"
                   origin="Oxford p.44"
-                />
+                >
+                    <ask w="【散：ち】って" />
+                </sentence>
             </word>
             <word
               w="【捕：と】る"
@@ -666,7 +716,9 @@
                   lvl="n2"
                   origin="500mon q153"
                   rem="rated n2 because of 捕る"
-                />
+                >
+                    <ask stem="【捕：と】り" suffix="ます" />
+                </sentence>
             </word>
             <word
               w="【締：し】め【切：き】る"
@@ -860,8 +912,10 @@
               tr_en="to (happen to) pass by"
               tr_de="an etw. vorbei gehen"
               lvl="n2"
-              id="tōrikakaru-happentopassby"
-            />
+              id="tōrikakaru-passby"
+            >
+                <keep_apart_from id="tōrisugiru-gopast" />
+            </word>
             <word
               w="ひっくり【返：かえ】る"
               rom="hikkuri-kaeru"
