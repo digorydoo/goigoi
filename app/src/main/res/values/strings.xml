@@ -1,30 +1,24 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
-    <!-- WelcomeActivity -->
     <string name="app_name" translatable="false">Go Go Japanese</string>
     <string name="preferences">Preferences</string>
     <string name="todays_progress">Today\'s progress</string>
     <string name="continue_studying">Click here to continue studying</string>
     <string name="learnt_n_of_m_words">You\'ve learnt ${N} of ${M} words</string>
 
-    <!-- PrefsActivity -->
     <string name="changeThemePrimary">Theme</string>
     <string name="changeThemeSecondary">Enable for dark mode</string>
     <string name="aboutAppPrimary">About Go Go Japanese</string>
     <string name="aboutAppSecondary">Copyrights and license</string>
 
-    <!-- ProgStudyActivity -->
-    <string name="n_of_m">${N} of ${M}</string>
     <string name="correct_wrong_counts">Correct: ${N} &#160; Wrong: ${M}</string>
     <string name="study_set_restarted">Study set restarted</string>
     <string name="next_word">Next word</string>
     <string name="reveal_btn">Reveal</string>
 
-    <!-- FlipThruWordsActivity -->
     <string name="skip_action_text">SKIP</string>
     <string name="info_action_text">INFORMATION</string>
 
-    <!-- ProgStudyActivity -->
     <string name="hint_when_show_kanji_ask_kana">Write in kana how you would pronounce this.</string>
     <string name="hint_when_show_kana_ask_kanji_singular">Select the kanji that is pronounced as shown.</string>
     <string name="hint_when_show_kana_ask_kanji_plural">Select the kanjis that are pronounced as shown.</string>
@@ -45,24 +39,20 @@
     <string name="enter_key">Enter</string>
     <string name="transforms_key">Transform</string>
 
-    <!-- UnytActivity -->
     <string name="show_romaji" translatable="false">Rōmaji</string>
     <string name="show_kana" translatable="false">Kana</string>
     <string name="show_translation">Translation</string>
     <string name="start_btn">Start</string>
-    <string name="too_few_words">Too few words in unit</string>
 
-    <!-- UnitCtxDialogFragment -->
     <string name="item_reset_unyt_progress">Reset progress</string>
     <string name="confirm_reset_unyt_progress_msg">The progress statistics of the selected unit and its containing ${N} word(s) will be reset.</string>
     <string name="confirm_reset_unyt_progress_ok">RESET</string>
     <string name="confirm_set_super_prog_idx_to_unyt_msg">The super progressive index will be set to the start of this unit.</string>
-    <string name="confirm_set_super_prog_idx_to_unyt_ok">SET</string>
+    <string name="confirm_set_super_prog_idx_to_word_msg">The super progressive index will be set to this word.</string>
+    <string name="confirm_set_super_prog_idx_ok">SET</string>
 
-    <!-- UnitsOverviewActivity -->
     <string name="n_words">${N} words</string>
 
-    <!-- Utils -->
     <string-array name="language_ids" translatable="false">
         <item>zh</item>
         <item>nl</item>
@@ -109,14 +99,12 @@
     </string-array>
     <string name="just_now">Just now</string>
 
-    <!-- WordCtxDialogFragment -->
     <string name="item_reset_word_progress">Reset progress</string>
     <string name="item_add_word">Add to my words</string>
     <string name="item_remove_word">Remove from my words</string>
     <string name="confirm_reset_word_progress_msg">The progress statistics of the selected word will be reset</string>
     <string name="confirm_reset_word_progress_ok">RESET</string>
 
-    <!-- WordInfoBottomSheet -->
     <string name="look_it_up">Look up ${word}</string>
     <string name="kanji_details">Kanji details</string>
     <string name="jlpt_level_unknown">JLPT level unknown</string>
@@ -128,7 +116,6 @@
     <string name="rating">Rating</string>
     <string name="examples">Examples</string>
     <string name="see_also">See also</string>
-    <string name="functions">Functions</string>
     <string name="other_languages">Other languages</string>
     <string name="transitive_verb">Transitive verb</string>
     <string name="intransitive_verb">Intransitive verb</string>
@@ -141,18 +128,12 @@
     <string name="similar_meaning">Similar meaning</string>
     <string name="closely_related">Related term</string>
 
-    <!-- words_list_header -->
-    <string name="overflow_btn">Actions</string>
-
-    <!-- MyDlgBuilder -->
     <string name="got_it">GOT IT</string>
 
-    <!-- HintDialogManager -->
     <string name="first_time_extkb_shown">This is the extended kana keyboard. Drag the buttons left, right, up or down to see additional characters.</string>
     <string name="first_time_extkb_small_kana">Small kana can be produced by first writing the kana in normal size, and then making it smaller by pulling the transforms key downwards.</string>
     <string name="first_time_extkb_dakuten_handakuten">Dakuten such as ば and handakuten such as ぱ can be produced by first writing the kana は and then pulling the transforms key to the left or right.</string>
 
-    <!-- AboutActivity -->
     <string name="copyright_and_license" translatable="false"><![CDATA[
         <p>
             <b>Go Go Japanese</b> is distributed under the GPL 3.0 license.<br />

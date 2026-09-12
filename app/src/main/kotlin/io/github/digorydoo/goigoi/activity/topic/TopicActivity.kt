@@ -44,7 +44,7 @@ class TopicActivity: ComponentActivity() {
                 DevicePropsProvider(this) {
                     GoigoiTheme {
                         TopicScreen(
-                            topic,
+                            topic, // TODO the model should provide controlled access, don't pass it here
                             model,
                             onUnytClicked = { unyt ->
                                 startUnytActivityAsync(

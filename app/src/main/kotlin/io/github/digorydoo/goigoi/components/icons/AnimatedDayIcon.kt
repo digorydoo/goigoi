@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.remember
 import io.github.digorydoo.goigoi.core.welcome.DailyProgressTracker.Companion.CHECKMARK_THRESHOLD
-import io.github.digorydoo.goigoi.drawable.RingIconDrawable.Variant
+import io.github.digorydoo.goigoi.legacy.drawable.RingIconDrawable.Variant
 
 @Composable
 fun AnimatedDayIcon(

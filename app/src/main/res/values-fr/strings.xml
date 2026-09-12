@@ -1,29 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- WelcomeActivity -->
     <string name="preferences">Préférences</string>
     <string name="todays_progress">Les progrès d\'aujourd\'hui</string>
     <string name="continue_studying">Cliquez ici pour continuer à étudier</string>
     <string name="learnt_n_of_m_words">Vous avez appris ${N} de ${M} mots</string>
 
-    <!-- PrefsActivity -->
     <string name="changeThemePrimary">Thème</string>
     <string name="changeThemeSecondary">Activé pour le mode sombre</string>
     <string name="aboutAppPrimary">À propos de Go Go Japanese</string>
     <string name="aboutAppSecondary">Droits d\'auteur et licence</string>
 
-    <!-- ChallengeStudyActivity -->
-    <string name="n_of_m">${N} de ${M}</string>
     <string name="correct_wrong_counts">Correct : ${N} &#160; Faux : ${M}</string>
     <string name="study_set_restarted">La pile de mots a été redémarrée</string>
     <string name="next_word">Mot suivant</string>
     <string name="reveal_btn">Montrer</string>
 
-    <!-- FlipThruWordsActivity -->
     <string name="skip_action_text">SAUTER</string>
     <string name="info_action_text">INFORMATIONS</string>
 
-    <!-- ProgStudyActivity -->
     <string name="hint_when_show_kanji_ask_kana">Écrivez en kana la façon dont vous prononcez ce mot.</string>
     <string name="hint_when_show_kana_ask_kanji_singular">Sélectionnez le kanji qui se prononce comme indiqué.</string>
     <string name="hint_when_show_kana_ask_kanji_plural">Sélectionnez les kanjis qui se prononcent comme indiqué.</string>
@@ -44,22 +38,18 @@
     <string name="enter_key">Touche d\'entrée</string>
     <string name="transforms_key">Transformer</string>
 
-    <!-- UnytActivity -->
     <string name="show_translation">Traduction</string>
     <string name="start_btn">Début</string>
-    <string name="too_few_words">Trop peu de mots dans la leçon</string>
 
-    <!-- UnitCtxDialogFragment -->
     <string name="item_reset_unyt_progress">Réinitialisation de la progression</string>
     <string name="confirm_reset_unyt_progress_msg">Les statistiques de progression de la leçon sélectionnée et les ${N} mots qu\'elle contient seront remises à zéro.</string>
     <string name="confirm_reset_unyt_progress_ok">RÉINITIALISATION</string>
     <string name="confirm_set_super_prog_idx_to_unyt_msg">L\'index super progressif sera défini au début de cette leçon.</string>
-    <string name="confirm_set_super_prog_idx_to_unyt_ok">DÉFINIR</string>
+    <string name="confirm_set_super_prog_idx_to_word_msg">L\'index super progressif sera défini sur ce mot.</string>
+    <string name="confirm_set_super_prog_idx_ok">DÉFINIR</string>
 
-    <!-- UnitsOverviewActivity -->
     <string name="n_words">${N} mots</string>
 
-    <!-- Utils -->
     <string-array name="language_names">
         <item>Chinois</item>
         <item>Néerlandais</item>
@@ -84,7 +74,6 @@
     </string-array>
     <string name="just_now">A l\'instant</string>
 
-    <!-- WordCtxDialogFragment -->
     <string name="item_reset_word_progress">Réinitialisation de la progression</string>
     <string name="item_add_word">Ajouter à ma liste de mots</string>
     <string name="item_remove_word">Retirer de ma liste de mots</string>
@@ -92,7 +81,6 @@
 sélectionné seront remises à zéro.</string>
     <string name="confirm_reset_word_progress_ok">RÉINITIALISATION</string>
 
-    <!-- WordInfoBottomSheet -->
     <string name="look_it_up">Recherchez ${word}</string>
     <string name="kanji_details">Informations sur les kanji</string>
     <string name="jlpt_level_unknown">Niveau JLPT inconnu</string>
@@ -104,7 +92,6 @@ sélectionné seront remises à zéro.</string>
     <string name="rating">Classement</string>
     <string name="examples">Exemples</string>
     <string name="see_also">Voir également</string>
-    <string name="functions">Fonctions</string>
     <string name="other_languages">Autres langues</string>
     <string name="transitive_verb">Verbe transitif</string>
     <string name="intransitive_verb">Verbe intransitif</string>
@@ -117,13 +104,8 @@ sélectionné seront remises à zéro.</string>
     <string name="similar_meaning">Sens similaire</string>
     <string name="closely_related">Terme connexe</string>
 
-    <!-- words_list_header -->
-    <string name="overflow_btn">Actions</string>
-
-    <!-- MyDlgBuilder -->
     <string name="got_it">D\'ACCORD</string>
 
-    <!-- HintDialogManager -->
     <string name="first_time_extkb_shown">Voici le clavier kana étendu. Faites glisser les boutons vers la gauche, la droite, le haut ou le bas pour afficher des caractères supplémentaires.</string>
     <string name="first_time_extkb_small_kana">Les petits kana peuvent être produits en écrivant d\'abord le kana en taille normale, puis en le réduisant en tirant le bouton de transformation vers le bas.</string>
     <string name="first_time_extkb_dakuten_handakuten">Le dakuten tel que ば et le handakuten tel que ぱ peuvent être produits en écrivant d\'abord le kana は et en tirant ensuite le bouton de transformation vers la gauche ou vers la droite.</string>

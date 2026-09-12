@@ -23,7 +23,6 @@ import io.github.digorydoo.goigoi.core.db.Topic
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.providers.DeviceProps
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.utils.Orientation
 import io.github.digorydoo.goigoi.utils.ScreenSize
 
 private interface TopicContentStyles {
@@ -36,25 +35,19 @@ private fun getStyles(): TopicContentStyles {
     val themeColours = GoigoiTheme.colours
     val density = LocalDensity.current
     val screenSize = DeviceProps.size
-    val orientation = DeviceProps.orientation
+    val isPortrait = DeviceProps.isPortrait
 
-    return remember(themeColours, density, screenSize, orientation) {
+    return remember(themeColours, density, screenSize, isPortrait) {
         object: TopicContentStyles {
             override val contentPaddingLR = when (screenSize) {
                 ScreenSize.LARGE -> 32.dp
-                ScreenSize.NORMAL -> when (orientation) {
-                    Orientation.PORTRAIT -> 24.dp
-                    else -> 32.dp
-                }
+                ScreenSize.NORMAL -> if (isPortrait) 24.dp else 32.dp
                 ScreenSize.SMALL -> 16.dp
             }
 
             override val contentPaddingBottom = when (screenSize) {
                 ScreenSize.LARGE -> 24.dp
-                ScreenSize.NORMAL -> when (orientation) {
-                    Orientation.PORTRAIT -> 16.dp
-                    else -> 8.dp
-                }
+                ScreenSize.NORMAL -> if (isPortrait) 16.dp else 8.dp
                 ScreenSize.SMALL -> 8.dp
             }
         }
@@ -85,7 +78,7 @@ fun TopicContent(
             when (item) {
                 is Subheader -> ListSubheader(
                     text = item.text,
-                    textPaddingLR = styles.contentPaddingLR,
+                    textHorizPadding = styles.contentPaddingLR,
                     hasTopDivider = idx > 0
                 )
                 is UnytInfo -> {

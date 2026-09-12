@@ -5,7 +5,6 @@ import android.content.Context
 import android.util.Log
 import android.util.TypedValue
 import androidx.appcompat.view.ContextThemeWrapper
-import ch.digorydoo.kutils.colour.Colour
 import io.github.digorydoo.goigoi.R
 
 object ResUtils {
@@ -66,10 +65,6 @@ object ResUtils {
     fun getARGBFromAttr(attrResId: Int, ctx: Context): Int {
         val resId = getTypedValueResId(attrResId, ctx, R.color.opacity_black_1f)
         return ctx.getColor(resId)
-    }
-
-    fun getColourFromRes(resId: Int, ctx: Context): Colour {
-        return Colour.fromARGB(getARGBFromRes(resId, ctx))
     }
 
     fun getDimensionFromAttr(attrResId: Int, activity: Activity): Float {

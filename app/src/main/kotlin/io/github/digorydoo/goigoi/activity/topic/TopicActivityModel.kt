@@ -3,6 +3,7 @@ package io.github.digorydoo.goigoi.activity.topic
 import android.util.Log
 import androidx.lifecycle.LifecycleCoroutineScope
 import io.github.digorydoo.goigoi.components.list.UnytListItemData
+import io.github.digorydoo.goigoi.components.menus.UnytCtxMenuModel
 import io.github.digorydoo.goigoi.core.db.Unyt
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -13,7 +14,10 @@ import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlin.coroutines.resume
 import kotlin.time.Duration.Companion.milliseconds
 
-class TopicActivityModel(private val tasks: TopicActivityTasks, private val lifecycleScope: LifecycleCoroutineScope) {
+class TopicActivityModel(
+    private val tasks: TopicActivityTasks,
+    private val lifecycleScope: LifecycleCoroutineScope,
+): UnytCtxMenuModel {
     sealed interface UnytsListItem
     class Subheader(val text: String): UnytsListItem
     class UnytInfo(val unyt: Unyt, val isMyWordsUnyt: Boolean, var data: UnytListItemData? = null): UnytsListItem
@@ -57,7 +61,7 @@ class TopicActivityModel(private val tasks: TopicActivityTasks, private val life
                 oldList.map { item ->
                     if (item == info) {
                         // Replace the existing UnytInfo to cause the necessary re-rendering
-                        Log.d(TAG, "Updating item of unyt ${info.unyt.id}")
+                        // Log.d(TAG, "Updating item of unyt ${info.unyt.id}")
                         UnytInfo(unyt = info.unyt, isMyWordsUnyt = info.isMyWordsUnyt, data = newData)
                     } else {
                         item
@@ -85,30 +89,26 @@ class TopicActivityModel(private val tasks: TopicActivityTasks, private val life
         updateItem(info, onDone)
     }
 
-    fun fakeGoodStats(unyt: Unyt) = fakeStats(unyt, 5, 1)
-    fun fakeAvgStats(unyt: Unyt) = fakeStats(unyt, 4, 2)
-    fun fakePoorStats(unyt: Unyt) = fakeStats(unyt, 3, 20)
+    override suspend fun fakeGoodStats(unyt: Unyt) = fakeStats(unyt, 5, 1)
+    override suspend fun fakeAvgStats(unyt: Unyt) = fakeStats(unyt, 4, 2)
+    override suspend fun fakePoorStats(unyt: Unyt) = fakeStats(unyt, 3, 20)
 
-    private fun fakeStats(unyt: Unyt, numCorrect: Int, numWrong: Int) {
-        lifecycleScope.launch {
-            tasks.fakeStats(unyt, numCorrect, numWrong)
-            updateItemOfUnyt(unyt)
-        }
+    private suspend fun fakeStats(unyt: Unyt, numCorrect: Int, numWrong: Int) {
+        tasks.fakeStats(unyt, numCorrect, numWrong)
+        updateItemOfUnyt(unyt)
     }
 
-    fun resetStats(unyt: Unyt) {
-        lifecycleScope.launch {
-            tasks.resetStats(unyt)
-            updateItemOfUnyt(unyt)
-        }
+    override suspend fun resetStats(unyt: Unyt) {
+        tasks.resetStats(unyt)
+        updateItemOfUnyt(unyt)
     }
 
-    fun setSuperProgIdx(unyt: Unyt) {
+    override fun setSuperProgIdx(unyt: Unyt) {
         tasks.setSuperProgIdx(unyt)
     }
 
     companion object {
         private const val TAG = "TopicActvModel"
-        private const val MIN_ITEM_LOAD_TIME_MILLIS = 10L
+        private const val MIN_ITEM_LOAD_TIME_MILLIS = 1L
     }
 }

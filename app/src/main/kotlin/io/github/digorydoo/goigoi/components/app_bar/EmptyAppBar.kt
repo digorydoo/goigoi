@@ -30,7 +30,7 @@ fun EmptyAppBar(onBack: () -> Unit) {
         modifier = Modifier.height(statusBarHeightDp),
         title = {},
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = GoigoiTheme.colours.statusBar, // works
+            containerColor = GoigoiTheme.colours.statusBarWhenEmptyAppBar, // works
             titleContentColor = GoigoiTheme.colours.onStatusBar, // doesn't work
         )
     )

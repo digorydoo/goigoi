@@ -31,12 +31,12 @@ import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupPositionProvider
 import androidx.compose.ui.window.PopupProperties
 import ch.digorydoo.kutils.math.clamp
-import io.github.digorydoo.goigoi.drawable.HintBalloonDrawable
-import io.github.digorydoo.goigoi.drawable.HintBalloonDrawable.Companion.SHADOW_MARGIN
-import io.github.digorydoo.goigoi.drawable.HintBalloonDrawable.Companion.SHADOW_MARGIN_TIP_BOTTOM
-import io.github.digorydoo.goigoi.drawable.HintBalloonDrawable.Companion.SHADOW_MARGIN_TIP_TOP
-import io.github.digorydoo.goigoi.drawable.HintBalloonDrawable.Companion.TIP_HEIGHT
-import io.github.digorydoo.goigoi.drawable.HintBalloonDrawable.Direction
+import io.github.digorydoo.goigoi.legacy.drawable.HintBalloonDrawable
+import io.github.digorydoo.goigoi.legacy.drawable.HintBalloonDrawable.Companion.SHADOW_MARGIN
+import io.github.digorydoo.goigoi.legacy.drawable.HintBalloonDrawable.Companion.SHADOW_MARGIN_TIP_BOTTOM
+import io.github.digorydoo.goigoi.legacy.drawable.HintBalloonDrawable.Companion.SHADOW_MARGIN_TIP_TOP
+import io.github.digorydoo.goigoi.legacy.drawable.HintBalloonDrawable.Companion.TIP_HEIGHT
+import io.github.digorydoo.goigoi.legacy.drawable.HintBalloonDrawable.Direction
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
 
 private interface HintBalloonStyles {

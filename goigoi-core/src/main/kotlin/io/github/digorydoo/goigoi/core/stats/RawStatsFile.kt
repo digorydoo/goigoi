@@ -67,17 +67,6 @@ class RawStatsFile(dir: File, filename: String, version: Int) {
         setInt(key, c)
     }
 
-    @Suppress("unused")
-    fun getLong(key: String): Long? {
-        val s = file.get(key) ?: return null
-        return s.toLong()
-    }
-
-    @Suppress("unused")
-    fun setLong(key: String, value: Long) {
-        file.set(key, "$value")
-    }
-
     fun getFloat(key: String): Float? {
         val s = file.get(key) ?: return null
         return s.toFloat()

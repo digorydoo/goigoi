@@ -572,16 +572,6 @@
                 >
                     <ask w="【遊：あそ】び" />
                 </phrase>
-                <!--
-                  s="【渋：しぶ】【谷：や】に【遊：あそ】びに【行：い】く。"
-                  rom="Shibuya ni asobi ni iku."
-                  tr_en="(I'll) hang out in Shibuya."
-                  tr_de="(Ich) werde (mich) in Shibuya vergnügen."
-                  lvl="-"
-                  origin="Miku"
-                  href="https://youtu.be/TjmlAiqjpmk"
-                  rem="rated nx because of Shibuya; too similar to phrase"
-                -->
                 <sentence
                   s="また、【遊：あそ】びに 【来：き】て ください。"
                   rom="Mata, asobi ni kite kudasai."
@@ -591,6 +581,18 @@
                   origin="500mon q131"
                 >
                     <ask w="【遊：あそ】び" />
+                </sentence>
+                <sentence
+                  s="【子：こ】【供：ども】のころ、この【公：こう】【園：えん】で【遊：あそ】んだものだ。"
+                  rom="Kodomo no koro, kono kōen de asonda mono da."
+                  tr_en="When I was a child, I used to play in this park."
+                  tr_de="Als Kind spielte ich (oft) in diesem Park."
+                  lvl="n3"
+                  origin="500mon N3 q3"
+                  rem="ChatGPT says 「ものだ」 is a fixed grammatical pattern used to look back on something that was
+                    habitual in the past. 「こと」 turns an event or action into an abstract thing/fact/matter."
+                >
+                    <ask w="【遊：あそ】んだ" />
                 </sentence>
             </word>
             <word
@@ -1090,13 +1092,15 @@
             <word
               w="【出：で】る"
               rom="deru"
-              tr_en="to depart (on a journey); to leave"
-              tr_de="abfahren; losgehen (auf eine Reise)"
+              tr_en="to leave; to exit"
+              tr_de="aufbrechen; hinausgehen"
               hint_en="v.i."
               lvl="n5"
-              id="deru-depart"
+              id="deru-exit"
             >
                 <see id="dasu-takeout" rem="v.t." />
+                <see id="hairu-enter" rem="antonym" />
+                <keep_apart_from id="dekakeru-setout" />
                 <phrase
                   ph="【早：はや】く【出：で】る"
                   rom="hayaku deru"
@@ -1104,6 +1108,14 @@
                   tr_de="früh aufbrechen"
                   lvl="n5"
                   origin="lib0"
+                />
+                <phrase
+                  ph="【家：いえ】を【出：で】る"
+                  rom="ie o deru"
+                  tr_en="to leave home"
+                  tr_de="aus dem Haus gehen"
+                  lvl="n3"
+                  origin="jpod101 audio"
                 />
                 <sentence
                   s="【鼻：はな】【水：みず】が 【出：で】て いるよ。"
@@ -1126,7 +1138,7 @@
               lvl="n5"
               id="dasu-takeout"
             >
-                <see id="deru-depart" rem="v.i." />
+                <see id="deru-exit" rem="v.i." />
                 <phrase
                   ph="【本：ほん】をカバンから【出：だ】す"
                   rom="hon o kaban kara dasu"

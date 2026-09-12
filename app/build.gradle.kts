@@ -14,14 +14,14 @@ android {
 
     // api level 23 == Android 6 == e.g. Samsung Galaxy S5
     // api level 31 == Android 12 == e.g. Samsung Galaxy S10
-    // targetSdkVersion should be set to the highest value after having tested it on that api.
-    // compileSdk should be the same as targetSdkVersion (unclear)
+    // targetSdk should be set to the highest value after having tested it on that api.
+    // compileSdk should be the same as targetSdk (unclear)
 
     defaultConfig {
         applicationId = "io.github.digorydoo.goigoi"
         minSdk = 31
         compileSdk = 37
-        targetSdk = 36
+        targetSdk = 37
         versionCode = 50
         versionName = "2.5.3"
     }
@@ -39,13 +39,14 @@ android {
         named("debug") {
             isDebuggable = true
             isMinifyEnabled = false
+            // noinspection NotShrinkingResources
             isShrinkResources = false
             buildConfigField("boolean", "ENABLE_CRASHLYTICS", "false")
         }
         named("release") {
             isDebuggable = false
             isMinifyEnabled = true
-            isShrinkResources = false // enabling this would mean we need rules to keep custom assets
+            isShrinkResources = true // Android Resource Shrinker ignores our custom assets in assets/ directory
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
@@ -80,8 +81,6 @@ dependencies {
     implementation(libs.activity)
     implementation(libs.activity.ktx)
     implementation(libs.fragment.ktx)
-    implementation(libs.recyclerview)
-    implementation(libs.cardview)
     implementation(libs.core.ktx)
     implementation(libs.material)
     implementation(libs.constraintlayout)
@@ -90,13 +89,10 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.graphics)
-    implementation(libs.compose.ui.tooling.preview)
+    // implementation(libs.compose.ui.tooling.preview)
     debugImplementation(libs.compose.ui.tooling)
     implementation(libs.compose.material3)
-    implementation(libs.compose.material.icons.extended)
     implementation(libs.activity.compose)
-
-    // implementation(libs.kstruct)
 
     implementation(project(":goigoi-core"))
     implementation(project(":kutils"))

@@ -18,18 +18,22 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import ch.digorydoo.kutils.cjk.FuriganaString
+import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.activity.welcome.WelcomeActivityModel
 import io.github.digorydoo.goigoi.components.HintBalloon
-import io.github.digorydoo.goigoi.drawable.BigRingDrawable
-import io.github.digorydoo.goigoi.furigana.FuriganaBuilder
+import io.github.digorydoo.goigoi.legacy.drawable.BigRingDrawable
+import io.github.digorydoo.goigoi.legacy.spannable.FuriganaBuilder
 import io.github.digorydoo.goigoi.providers.DeviceProps
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.utils.Orientation
 import io.github.digorydoo.goigoi.utils.ScreenSize
 import io.github.digorydoo.goigoi.utils.clickableNoRipple
+import kotlin.math.roundToInt
 
 private interface BigRingStyles {
     val ringSize: Dp
@@ -45,22 +49,19 @@ private fun getStyles(): BigRingStyles {
     val themeColours = GoigoiTheme.colours
     val density = LocalDensity.current
     val screenSize = DeviceProps.size
-    val orientation = DeviceProps.orientation
+    val isPortrait = DeviceProps.isPortrait
 
-    return remember(themeColours, density, screenSize, orientation) {
-        object : BigRingStyles {
+    return remember(themeColours, density, screenSize, isPortrait) {
+        object: BigRingStyles {
             override val ringSize = when (screenSize) {
                 ScreenSize.LARGE -> 256.dp
-                ScreenSize.NORMAL -> when (orientation) {
-                    Orientation.PORTRAIT -> 224.dp
-                    else -> 192.dp
-                }
+                ScreenSize.NORMAL -> if (isPortrait) 224.dp else 192.dp
                 ScreenSize.SMALL -> 192.dp
             }
             override val clickableAreaSize = ringSize * 0.6f
             override val marginTop = 8.dp
             override val marginBottom = 16.dp
-            override val drawableColours = object : BigRingDrawable.Colours {
+            override val drawableColours = object: BigRingDrawable.Colours {
                 override val trail = themeColours.ring
                 override val track = themeColours.faintRing
                 override val text = themeColours.onBackground
@@ -68,7 +69,7 @@ private fun getStyles(): BigRingStyles {
                 override val headBg = themeColours.primary
                 override val headFg = themeColours.onPrimary
             }
-            override val drawableDims = object : BigRingDrawable.Dimensions {
+            override val drawableDims = object: BigRingDrawable.Dimensions {
                 override val insetSizePx = with(density) { 1.dp.toPx() }.toInt()
                 override val markInsetSizePx = with(density) { 48.dp.toPx() }.toInt()
                 override val textSizePx = with(density) { 17.dp.toPx() }
@@ -113,11 +114,14 @@ fun BigRingArea(
         }
     }
 
+    val contentDescr = stringResource(R.string.todays_progress) + ": ${(todaysProgress * 100).roundToInt()}%"
+
     Box(
         modifier = Modifier
+            .semantics { contentDescription = contentDescr }
             .fillMaxWidth()
             .padding(top = styles.marginTop, bottom = styles.marginBottom),
-        contentAlignment = Alignment.Center
+        contentAlignment = Alignment.Center,
     ) {
         Canvas(
             modifier = Modifier

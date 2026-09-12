@@ -13,11 +13,7 @@ import androidx.compose.ui.unit.dp
 import ch.digorydoo.kutils.cjk.Unicode
 import io.github.digorydoo.goigoi.R.drawable
 import io.github.digorydoo.goigoi.R.string
-import io.github.digorydoo.goigoi.components.icons.BubbleIcon
-import io.github.digorydoo.goigoi.components.icons.RingIcon
-import io.github.digorydoo.goigoi.components.icons.ZzzIcon
-import io.github.digorydoo.goigoi.drawable.BubbleIconDrawable
-import io.github.digorydoo.goigoi.drawable.RingIconDrawable
+import io.github.digorydoo.goigoi.components.icons.UnytIcon
 import io.github.digorydoo.goigoi.utils.DiamondShape
 
 private const val ANIM_DURATION_MILLIS = 300
@@ -43,7 +39,7 @@ private fun getStyles(): UnytListItemStyles {
 fun UnytListItem(
     data: UnytListItemData?, // will render a skeleton if null
     paddingLR: Dp,
-    onClick: (() -> Unit)? = null,
+    onClick: () -> Unit,
     onLongPress: (() -> Unit)? = null,
 ) {
     val styles = getStyles()
@@ -87,24 +83,13 @@ fun UnytListItem(
                     onClick = onClick,
                     onLongPress = onLongPress,
                     startContent = {
-                        when {
-                            data.asleep -> ZzzIcon(
-                                modifier = Modifier.padding(end = styles.iconMarginEnd),
-                                size = styles.iconSize
-                            )
-                            data.progress < 1f -> RingIcon(
-                                data.progress,
-                                RingIconDrawable.Variant.DIAMOND,
-                                modifier = Modifier.padding(end = styles.iconMarginEnd),
-                                size = styles.iconSize
-                            )
-                            else -> BubbleIcon(
-                                data.rating,
-                                BubbleIconDrawable.Variant.DIAMOND,
-                                modifier = Modifier.padding(end = styles.iconMarginEnd),
-                                size = styles.iconSize
-                            )
-                        }
+                        UnytIcon(
+                            modifier = Modifier.padding(end = styles.iconMarginEnd),
+                            progress = data.progress,
+                            rating = data.rating,
+                            asleep = data.asleep,
+                            size = styles.iconSize,
+                        )
                     }
                 )
             }

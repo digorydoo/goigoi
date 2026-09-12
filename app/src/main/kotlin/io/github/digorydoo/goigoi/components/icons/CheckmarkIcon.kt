@@ -11,14 +11,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import io.github.digorydoo.goigoi.drawable.CheckmarkIconDrawable
-import io.github.digorydoo.goigoi.drawable.CheckmarkIconDrawable.Colours
-import io.github.digorydoo.goigoi.drawable.CheckmarkIconDrawable.Dimensions
+import io.github.digorydoo.goigoi.legacy.drawable.CheckmarkIconDrawable
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
 
 private interface CheckmarkIconStyles {
-    val colours: Colours
-    val dims: Dimensions
+    val colours: CheckmarkIconDrawable.Colours
+    val dims: CheckmarkIconDrawable.Dimensions
 }
 
 @Composable
@@ -28,11 +26,11 @@ private fun getStyles(): CheckmarkIconStyles {
 
     return remember(colours, density) {
         object: CheckmarkIconStyles {
-            override val colours = object: Colours {
+            override val colours = object: CheckmarkIconDrawable.Colours {
                 override val background = colours.primary
                 override val mark = colours.onPrimary
             }
-            override val dims = object: Dimensions {
+            override val dims = object: CheckmarkIconDrawable.Dimensions {
                 override val insetPx = with(density) { 1.dp.toPx() }.toInt()
                 override val markMinSizePx = with(density) { 23.dp.toPx() }.toInt()
             }

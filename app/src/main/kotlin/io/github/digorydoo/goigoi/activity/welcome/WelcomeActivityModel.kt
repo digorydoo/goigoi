@@ -31,7 +31,7 @@ class WelcomeActivityModel(private val vocab: Vocabulary, private val stats: Sta
     private val _progressMsg = MutableStateFlow("")
     val progressMsg = _progressMsg.asStateFlow()
 
-    private val _myWordsData = MutableStateFlow(UnytListItemData())
+    private val _myWordsData = MutableStateFlow(UnytListItemData.createEmpty())
     val myWordsData = _myWordsData.asStateFlow()
 
     private val _highlightedItem = MutableStateFlow(null as Item?)
@@ -55,7 +55,7 @@ class WelcomeActivityModel(private val vocab: Vocabulary, private val stats: Sta
         }
 
         _myWordsData.update { _ ->
-            UnytListItemData(vocab.myWordsUnyt, isMyWordsUnyt = true, vocab, stats, ctx)
+            UnytListItemData.create(vocab.myWordsUnyt, isMyWordsUnyt = true, vocab, stats, ctx)
         }
     }
 }

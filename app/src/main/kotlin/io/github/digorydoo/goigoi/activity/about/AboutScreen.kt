@@ -21,12 +21,10 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.R.string
 import io.github.digorydoo.goigoi.components.SheetHead
 import io.github.digorydoo.goigoi.components.app_bar.GoigoiAppBar
 import io.github.digorydoo.goigoi.providers.DeviceProps
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.utils.Orientation
 import io.github.digorydoo.goigoi.utils.ScreenSize
 
 private interface AboutScreenStyles {
@@ -40,34 +38,25 @@ private fun getStyles(): AboutScreenStyles {
     val themeColours = GoigoiTheme.colours
     val density = LocalDensity.current
     val screenSize = DeviceProps.size
-    val orientation = DeviceProps.orientation
+    val isPortrait = DeviceProps.isPortrait
 
-    return remember(themeColours, density, screenSize, orientation) {
+    return remember(themeColours, density, screenSize, isPortrait) {
         object: AboutScreenStyles {
             override val contentPaddingLR = when (screenSize) {
                 ScreenSize.LARGE -> 32.dp
-                ScreenSize.NORMAL -> when (orientation) {
-                    Orientation.PORTRAIT -> 24.dp
-                    else -> 32.dp
-                }
+                ScreenSize.NORMAL -> if (isPortrait) 24.dp else 32.dp
                 ScreenSize.SMALL -> 16.dp
             }
 
             override val contentPaddingTop = when (screenSize) {
                 ScreenSize.LARGE -> 24.dp
-                ScreenSize.NORMAL -> when (orientation) {
-                    Orientation.PORTRAIT -> 16.dp
-                    else -> 8.dp
-                }
+                ScreenSize.NORMAL -> if (isPortrait) 16.dp else 8.dp
                 ScreenSize.SMALL -> 8.dp
             }
 
             override val contentPaddingBottom = when (screenSize) {
                 ScreenSize.LARGE -> 24.dp
-                ScreenSize.NORMAL -> when (orientation) {
-                    Orientation.PORTRAIT -> 16.dp
-                    else -> 8.dp
-                }
+                ScreenSize.NORMAL -> if (isPortrait) 16.dp else 8.dp
                 ScreenSize.SMALL -> 8.dp
             }
         }
@@ -81,7 +70,7 @@ fun AboutScreen(onBack: () -> Unit) {
     Scaffold(
         topBar = {
             GoigoiAppBar(
-                titleResId = string.aboutAppPrimary,
+                titleResId = R.string.aboutAppPrimary,
                 onBack = onBack
             )
         }

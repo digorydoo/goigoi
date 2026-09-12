@@ -629,6 +629,16 @@
                   lvl="n4"
                   origin="500mon q264"
                 />
+                <sentence
+                  s="【郵：ゆう】【便：びん】【局：きょく】の【近：ちか】くに【引：ひ】っ【越：こ】したので【便：べん】【利：り】です。"
+                  rom="Yūbinkyoku no chikaku ni hikkoshita no de benri desu."
+                  tr_en="It is convenient, because I moved near the post office."
+                  tr_de="Da ich in die Nähe von einem Postamt gezogen bin, ist das praktisch."
+                  lvl="n4"
+                  origin="500mon N3 q1"
+                >
+                    <ask w="【引：ひ】っ【越：こ】した" />
+                </sentence>
             </word>
             <word
               w="【似：に】る"
@@ -817,6 +827,14 @@
                 >
                     <ask w="【太：ふと】り" />
                 </sentence>
+                <sentence
+                  s="【食：た】べてばかりいるから、【太：ふと】るんですよ。"
+                  rom="Tabete bakari iru kara, futoru n desu yo."
+                  tr_en="It's because you're always eating that you're putting on weight."
+                  tr_de="Du nimmst zu, weil du ständig am Essen bist."
+                  lvl="n3"
+                  origin="500mon N3 q6"
+                />
             </word>
             <word
               w="【思：おも】い【出：だ】す"
@@ -1440,11 +1458,13 @@
               rom="makeru"
               tr_en="to lose; to be defeated; to surrender"
               tr_de="verlieren; besiegt werden"
+              hint_en="v.i."
               lvl="n4"
               category="sports, games"
               id="makeru-lose"
               rem="appears in GENKI2 L22 vocab section"
             >
+                <see id="makasu-defeat" rem="v.t." />
                 <keep_together id="katsu-win" />
                 <keep_apart_from id="ushinau-lose" />
                 <phrase

@@ -4,8 +4,9 @@ import android.text.SpannableStringBuilder
 import android.text.Spanned
 import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import ch.digorydoo.kutils.cjk.IntlString
-import ch.digorydoo.kutils.colour.Colour
 import io.github.digorydoo.goigoi.BuildConfig
 
 @Suppress("KotlinConstantConditions")
@@ -29,13 +30,13 @@ fun SpannableStringBuilder.appendStyled(
 }
 
 fun SpannableStringBuilder.appendColoured(
-    fg: Colour,
+    fg: Color,
     flags: Int = Spanned.SPAN_EXCLUSIVE_EXCLUSIVE,
     buildText: SpannableStringBuilder.() -> CharSequence,
 ): SpannableStringBuilder {
     val start = length
     val text = SpannableStringBuilder().buildText()
     append(text)
-    setSpan(ForegroundColorSpan(fg.toARGB()), start, length, flags)
+    setSpan(ForegroundColorSpan(fg.toArgb()), start, length, flags)
     return this
 }

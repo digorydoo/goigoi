@@ -11,10 +11,10 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import io.github.digorydoo.goigoi.drawable.RingIconDrawable
-import io.github.digorydoo.goigoi.drawable.RingIconDrawable.Colours
-import io.github.digorydoo.goigoi.drawable.RingIconDrawable.Dimensions
-import io.github.digorydoo.goigoi.drawable.RingIconDrawable.Variant
+import io.github.digorydoo.goigoi.legacy.drawable.RingIconDrawable
+import io.github.digorydoo.goigoi.legacy.drawable.RingIconDrawable.Colours
+import io.github.digorydoo.goigoi.legacy.drawable.RingIconDrawable.Dimensions
+import io.github.digorydoo.goigoi.legacy.drawable.RingIconDrawable.Variant
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
 
 private interface RingIconStyles {

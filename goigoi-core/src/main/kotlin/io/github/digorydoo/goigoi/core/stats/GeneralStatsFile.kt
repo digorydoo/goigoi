@@ -75,7 +75,7 @@ class GeneralStatsFile(dir: File): Exportable {
         val count = file.getFloat(key) ?: 0.0f
 
         val increment = when (reason) {
-            StatsKey.BOTTOM_SHEET -> 0.5f
+            StatsKey.BOTTOM_SHEET -> 0.1f
             else -> 1.0f
         }
 

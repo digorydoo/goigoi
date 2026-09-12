@@ -15,11 +15,10 @@ import ch.digorydoo.kutils.cjk.dateToIntlStringLong
 import ch.digorydoo.kutils.cjk.japaneseDayOfWeekAbbrev
 import ch.digorydoo.kutils.utils.Moment
 import io.github.digorydoo.goigoi.components.HintBalloon
-import io.github.digorydoo.goigoi.drawable.RingIconDrawable.Variant
-import io.github.digorydoo.goigoi.furigana.FuriganaBuilder
+import io.github.digorydoo.goigoi.legacy.drawable.RingIconDrawable.Variant
+import io.github.digorydoo.goigoi.legacy.spannable.FuriganaBuilder
 import io.github.digorydoo.goigoi.providers.DeviceProps
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.utils.Orientation
 import io.github.digorydoo.goigoi.utils.ScreenSize
 import io.github.digorydoo.goigoi.utils.clickableNoRipple
 
@@ -34,16 +33,13 @@ private interface DayIconStyles {
 private fun getStyles(): DayIconStyles {
     val density = LocalDensity.current
     val screenSize = DeviceProps.size
-    val orientation = DeviceProps.orientation
+    val isPortrait = DeviceProps.isPortrait
 
-    return remember(density) {
+    return remember(density, isPortrait) {
         object: DayIconStyles {
             override val spacing = when (screenSize) {
                 ScreenSize.LARGE -> 24.dp
-                ScreenSize.NORMAL -> when (orientation) {
-                    Orientation.PORTRAIT -> 16.dp
-                    else -> 24.dp
-                }
+                ScreenSize.NORMAL -> if (isPortrait) 16.dp else 24.dp
                 ScreenSize.SMALL -> 16.dp
             }
 

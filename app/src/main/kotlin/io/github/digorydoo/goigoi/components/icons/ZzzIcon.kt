@@ -11,9 +11,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import io.github.digorydoo.goigoi.drawable.ZzzIconDrawable
-import io.github.digorydoo.goigoi.drawable.ZzzIconDrawable.Colours
-import io.github.digorydoo.goigoi.drawable.ZzzIconDrawable.Dimensions
+import io.github.digorydoo.goigoi.legacy.drawable.ZzzIconDrawable
+import io.github.digorydoo.goigoi.legacy.drawable.ZzzIconDrawable.Colours
+import io.github.digorydoo.goigoi.legacy.drawable.ZzzIconDrawable.Dimensions
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
 
 private interface ZzzIconStyles {

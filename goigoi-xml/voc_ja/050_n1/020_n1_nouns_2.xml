@@ -399,14 +399,25 @@
               id="taka-amount"
             />
             <word
-              w="【理：り】【論：ろん】"
-              rom="riron"
+              w="【学：がく】【説：せつ】"
+              rom="gakusetsu"
               tr_en="theory"
               tr_de="Theorie"
               lvl="n1"
-              category="science"
-              id="riron-theory"
-            />
+              id="gakusetsu-theory"
+              rem="appears in Doraemon 17, p.39"
+            >
+                <keep_apart_from id="setsu-theory" />
+                <keep_apart_from id="riron-theory" />
+                <phrase
+                  ph="【新：あたら】しい【学：がく】【説：せつ】"
+                  rom="atarashii gakusetsu"
+                  tr_en="a new theory"
+                  tr_de="eine neue Theorie"
+                  lvl="n1"
+                  origin="Doraemon 17, p.39"
+                />
+            </word>
             <word
               w="【初：はつ】【耳：みみ】"
               rom="hatsumimi"

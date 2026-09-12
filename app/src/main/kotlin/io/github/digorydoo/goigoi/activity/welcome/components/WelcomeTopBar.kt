@@ -6,8 +6,6 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material.icons.Icons.Outlined
-import androidx.compose.material.icons.outlined.Settings
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
@@ -16,14 +14,17 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import ch.digorydoo.kutils.cjk.FuriganaString
 import ch.digorydoo.kutils.cjk.dateToIntlStringLong
 import ch.digorydoo.kutils.cjk.japaneseDayOfWeek
 import ch.digorydoo.kutils.utils.Moment
+import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.components.HintBalloon
-import io.github.digorydoo.goigoi.furigana.FuriganaBuilder
+import io.github.digorydoo.goigoi.legacy.spannable.FuriganaBuilder
 
 @Composable
 fun WelcomeTopBar(paddingLR: Dp, onPrefsBtnClicked: () -> Unit) {
@@ -68,7 +69,7 @@ fun WelcomeTopBar(paddingLR: Dp, onPrefsBtnClicked: () -> Unit) {
             onClick = onPrefsBtnClicked,
         ) {
             Icon(
-                imageVector = Outlined.Settings,
+                imageVector = ImageVector.vectorResource(R.drawable.ic_gear_24dp),
                 contentDescription = null
             )
         }

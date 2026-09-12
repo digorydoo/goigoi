@@ -532,6 +532,7 @@
             >
                 <!-- the noun 入り is pronounced いり, so we don't link from here -->
                 <see id="ireru-insert" rem="v.t." />
+                <see id="deru-exit" rem="antonym" />
                 <phrase
                   ph="【風：ふ】【呂：ろ】に【入：はい】る"
                   rom="furo ni hairu"
@@ -1417,8 +1418,9 @@
               hint_de="auf eine Exkursion, etc."
               lvl="n5"
               category="travelling"
-              id="n5-dekakeru"
+              id="dekakeru-setout"
             >
+                <keep_apart_from id="deru-exit" />
                 <phrase
                   ph="【早：はや】く【出：で】かける"
                   rom="hayaku dekakeru"

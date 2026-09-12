@@ -179,7 +179,7 @@ Sentences sometimes use fictional names to give them some context. They do not r
 * (11) ナオミ（さん） - Naomi (w., exchange student from America)
 * (10) ハルト（さん） - Haruto (m., failed to enter university)
 * (11) カオル（さん） - Kaoru (w.), wants to study literature, plays the guitar, piano
-* ( 8) ヨシ（さん） - Yoshi (m., cousin of Miki, middleschool student, bully)
+* (10) ヨシ（さん） - Yoshi (m., cousin of Miki, middleschool student, bully)
 * ( 8) ミキ（さん） - Miki (w., cousin of Yoshi, middleschool, diligent)
 * ( 8) マリ（さん） - Mari Ikeda (w., daughter of Ms Ikeda, not good at sports)
 * ( 9) レオ（くん） - Reo (m.; junior, likes comics, his father is a doctor)

@@ -6,12 +6,11 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import io.github.digorydoo.goigoi.BuildConfig
 import io.github.digorydoo.goigoi.activity.prefs.startPrefsActivity
-import io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivityParams
-import io.github.digorydoo.goigoi.activity.prog_study.startProgStudyActivity
 import io.github.digorydoo.goigoi.activity.topic.TopicActivityParams
 import io.github.digorydoo.goigoi.activity.topic.startTopicActivity
 import io.github.digorydoo.goigoi.activity.unyt.startUnytActivityAsync
 import io.github.digorydoo.goigoi.activity.welcome.components.WelcomeScreen
+import io.github.digorydoo.goigoi.legacy.activity.prog_study.startProgStudyActivity
 import io.github.digorydoo.goigoi.providers.DevicePropsProvider
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.providers.SingletonsProvider
@@ -51,7 +50,7 @@ class WelcomeActivity: ComponentActivity() {
                                 finish() // PrefsActivity may change theme
                             },
                             onBigStudyBtnClicked = {
-                                startProgStudyActivity(ProgStudyActivityParams())
+                                startProgStudyActivity()
                             },
                             onTopicClicked = { topic ->
                                 startTopicActivity(TopicActivityParams(topicId = topic.id))

@@ -17,7 +17,6 @@ import io.github.digorydoo.goigoi.activity.welcome.WelcomeActivityModel
 import io.github.digorydoo.goigoi.components.app_bar.EmptyAppBar
 import io.github.digorydoo.goigoi.core.db.Topic
 import io.github.digorydoo.goigoi.providers.DeviceProps
-import io.github.digorydoo.goigoi.utils.Orientation
 import io.github.digorydoo.goigoi.utils.ScreenSize
 import kotlinx.coroutines.launch
 
@@ -32,18 +31,15 @@ private interface WelcomeScreenStyles {
 private fun getStyles(): WelcomeScreenStyles {
     val density = LocalDensity.current
     val screenSize = DeviceProps.size
-    val orientation = DeviceProps.orientation
+    val isPortrait = DeviceProps.isPortrait
 
     fun dpToPx(value: Dp) = with(density) { value.toPx() }
 
-    return remember(density) {
+    return remember(density, isPortrait) {
         object: WelcomeScreenStyles {
             override val paddingLR = when (screenSize) {
                 ScreenSize.LARGE -> 48.dp
-                ScreenSize.NORMAL -> when (orientation) {
-                    Orientation.PORTRAIT -> 24.dp
-                    else -> 32.dp
-                }
+                ScreenSize.NORMAL -> if (isPortrait) 24.dp else 32.dp
                 ScreenSize.SMALL -> 16.dp
             }
 

@@ -2,11 +2,7 @@ package io.github.digorydoo.goigoi.components.list
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.heightIn
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -44,11 +40,14 @@ private fun getStyles(): ListItemStyles {
 fun ListItem(
     primaryText: String,
     secondaryText: String = "",
-    horizontalPadding: Dp,
-    onClick: (() -> Unit)? = null,
+    horizontalPadding: Dp = 0.dp, // ignored if both paddingStart and paddingEnd are specified
+    paddingStart: Dp = horizontalPadding,
+    paddingEnd: Dp = horizontalPadding,
+    onClick: (() -> Unit)? = null, // not clickable when null
+    enabled: Boolean = onClick != null, // useful when state changes dynamically, to allow ripple effect to finish
     onLongPress: (() -> Unit)? = null,
-    startContent: @Composable (() -> Unit)? = null,
-    endContent: @Composable (() -> Unit)? = null,
+    startContent: @Composable (RowScope.() -> Unit)? = null,
+    endContent: @Composable (RowScope.() -> Unit)? = null,
 ) {
     val styles = getStyles()
 
@@ -61,17 +60,19 @@ fun ListItem(
                     onClick != null && onLongPress != null -> {
                         Modifier.combinedClickable(
                             onClick = { onClick.invoke() },
-                            onLongClick = { onLongPress.invoke() }
+                            onLongClick = { onLongPress.invoke() },
+                            enabled = enabled,
                         )
                     }
-                    onClick != null -> Modifier.clickable(onClick = onClick)
+                    onClick != null -> Modifier.clickable(onClick = onClick, enabled = enabled)
                     else -> Modifier
                 }
             )
-            .padding(horizontal = horizontalPadding, vertical = styles.verticalPadding),
+            .padding(start = paddingStart, end = paddingEnd)
+            .padding(vertical = styles.verticalPadding),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        startContent?.invoke()
+        startContent?.invoke(this)
         Column(modifier = Modifier.weight(1f)) {
             Text(
                 text = primaryText,
@@ -91,31 +92,78 @@ fun ListItem(
                 )
             }
         }
-        endContent?.invoke()
+        endContent?.invoke(this)
     }
 }
 
 @Composable
 fun ListItem(
-    iconResId: Int,
+    iconResId: Int?,
     primaryText: String,
     secondaryText: String = "",
-    horizontalPadding: Dp,
-    onClick: (() -> Unit)? = null,
+    horizontalPadding: Dp = 0.dp, // ignored if both paddingStart and paddingEnd are specified
+    paddingStart: Dp = horizontalPadding,
+    paddingEnd: Dp = horizontalPadding,
+    iconMarginEnd: Dp = 24.dp,
+    onClick: (() -> Unit)? = null, // not clickable when null
+    enabled: Boolean = onClick != null, // useful when state changes dynamically, to allow ripple effect to finish
     onLongPress: (() -> Unit)? = null,
 ) {
     ListItem(
         primaryText = primaryText,
         secondaryText = secondaryText,
         horizontalPadding = horizontalPadding,
+        paddingStart = paddingStart,
+        paddingEnd = paddingEnd,
         onClick = onClick,
+        enabled = enabled,
         onLongPress = onLongPress,
         startContent = {
-            Icon(
-                modifier = Modifier.padding(end = 24.dp),
-                imageVector = ImageVector.vectorResource(iconResId),
-                contentDescription = null,
-                tint = GoigoiTheme.colours.decorativeIconTint
+            if (iconResId != null) {
+                Icon(
+                    modifier = Modifier.padding(end = iconMarginEnd),
+                    imageVector = ImageVector.vectorResource(iconResId),
+                    contentDescription = null,
+                    tint = GoigoiTheme.colours.decorativeIconTint
+                )
+            }
+        }
+    )
+}
+
+@Composable
+fun ListItem(
+    iconFromChar: Char,
+    primaryText: String,
+    secondaryText: String = "",
+    horizontalPadding: Dp = 0.dp, // ignored if both paddingStart and paddingEnd are specified
+    paddingStart: Dp = horizontalPadding,
+    paddingEnd: Dp = horizontalPadding,
+    iconMarginEnd: Dp = 24.dp,
+    onClick: (() -> Unit)? = null, // not clickable when null
+    enabled: Boolean = onClick != null, // useful when state changes dynamically, to allow ripple effect to finish
+    onLongPress: (() -> Unit)? = null,
+) {
+    val density = LocalDensity.current
+
+    // We need to specify the textSize in sp, but we actually don't want the icon to scale with font scaling
+    val iconSizeSp = with(density) { (24.dp.toPx() / fontScale).toSp() }
+
+    ListItem(
+        primaryText = primaryText,
+        secondaryText = secondaryText,
+        horizontalPadding = horizontalPadding,
+        paddingStart = paddingStart,
+        paddingEnd = paddingEnd,
+        onClick = onClick,
+        enabled = enabled,
+        onLongPress = onLongPress,
+        startContent = {
+            Text(
+                modifier = Modifier.padding(end = iconMarginEnd),
+                text = iconFromChar.toString(),
+                style = GoigoiTheme.typography.iconFromChar,
+                fontSize = iconSizeSp,
             )
         }
     )

@@ -5,20 +5,20 @@ import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBars
-import androidx.compose.material.icons.Icons.AutoMirrored.Filled
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.providers.DeviceProps
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.utils.Orientation
 import io.github.digorydoo.goigoi.utils.ScreenSize
 
 private interface GoigoiAppBarStyles {
@@ -34,16 +34,11 @@ private fun getStyles(): GoigoiAppBarStyles {
     val density = LocalDensity.current
     val typography = GoigoiTheme.typography
     val screenSize = DeviceProps.size
-    val orientation = DeviceProps.orientation
-
-    // fun dpToPx(value: Dp) = with(density) { value.toPx() }
+    val isPortrait = DeviceProps.isPortrait
 
     val small = when (screenSize) {
         ScreenSize.LARGE -> false
-        ScreenSize.NORMAL -> when (orientation) {
-            Orientation.PORTRAIT -> false
-            else -> true
-        }
+        ScreenSize.NORMAL -> !isPortrait
         ScreenSize.SMALL -> true
     }
 
@@ -80,7 +75,7 @@ fun GoigoiAppBar(title: String, onBack: () -> Unit) {
         navigationIcon = {
             IconButton(onClick = onBack) {
                 Icon(
-                    imageVector = Filled.ArrowBack,
+                    imageVector = ImageVector.vectorResource(R.drawable.ic_arrow_left_24dp),
                     contentDescription = null
                 )
             }

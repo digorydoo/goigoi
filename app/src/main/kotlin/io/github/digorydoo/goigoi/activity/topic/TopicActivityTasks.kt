@@ -42,9 +42,8 @@ class TopicActivityTasks(
                             // If we're loading the unyt's words, we need to wait.
                             unytWordsMutex.withLock { unytWordsRequest[unyt] }?.await()
 
-                            // The c'tor of UnytListItemData is doing the heavy lifting of obtaining the stats.
-                            // If stats cache is stale, it may even load the unyt.
-                            UnytListItemData(unyt, isMyWordsUnyt, vocab, stats, ctx)
+                            // If stats cache is stale, the following may load the unyt.
+                            UnytListItemData.create(unyt, isMyWordsUnyt, vocab, stats, ctx)
                         } finally {
                             itemDataMutex.withLock {
                                 itemDataRequests -= unyt // same as remove(unyt), but no warning about unused result

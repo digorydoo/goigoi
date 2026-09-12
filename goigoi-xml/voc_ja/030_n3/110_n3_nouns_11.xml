@@ -736,20 +736,6 @@
                 <!-- 無理な期待 - むりなきたい - Unrealistic expectations (ChatGPT) -->
             </word>
             <word
-              w="【診：しん】【察：さつ】"
-              rom="shinsatsu"
-              tr_en="medical examination"
-              tr_de="ärztliche Untersuchung"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n3"
-              category="health"
-              id="shinsatsu-medexamination"
-            >
-                <keep_apart_from id="kensa-examination" />
-                <keep_apart_from id="kenshin-healthcheckup" />
-            </word>
-            <word
               w="【合：ごう】【計：けい】"
               rom="gōkei"
               tr_en="sum; total amount"
@@ -762,6 +748,40 @@
               rem="appears in GENKI2 p.329 kanji section"
             >
                 <keep_apart_from id="kingaku-moneyamount" />
+                <sentence
+                  s="【合：ごう】【計：けい】【20：にじゅう】【点：てん】、お【前：まえ】のために【損：そん】したんだ。"
+                  rom="Gōkei ni-jū ten, o-mae no tame ni son shita n da."
+                  tr_en="In total, we've lost a whole 20 points because of you."
+                  tr_de="Insgesamt haben wir wegen dir ganze 20 Punkte verloren."
+                  lvl="n3"
+                  origin="Doraemon 15, p.125"
+                />
+            </word>
+            <word
+              w="【世：せい】【紀：き】"
+              rom="seiki"
+              tr_en="century"
+              tr_de="Jahrhundert"
+              lvl="n3"
+              category="time, historical"
+              id="seiki-century"
+            >
+                <keep_apart_from id="jiki-period" />
+                <keep_apart_from id="jikan-timespan" />
+                <keep_apart_from id="jidai-era" />
+                <keep_apart_from id="nendai-era" />
+                <keep_apart_from id="kindai-presentday" />
+                <keep_apart_from id="gendai-presentage" />
+                <keep_apart_from id="sendai-prevage" />
+                <keep_apart_from id="sedai-generation" />
+                <phrase
+                  ph="20【世：せい】【紀：き】"
+                  rom="20 seiki"
+                  tr_en="20th century"
+                  tr_de="20stes Jahrhundert"
+                  lvl="n3"
+                  origin="Doraemon 17, p.38"
+                />
             </word>
             <word
               w="【冒：ぼう】【険：けん】"
@@ -880,7 +900,92 @@
               lvl="n3"
               category="relationships"
               id="shinyō-confidence"
-            />
+            >
+                <sentence
+                  s="それ、ほんとに【信：しん】【用：よう】できるの？"
+                  rom="Sore, honto ni shinyō dekiru no?"
+                  tr_en="Can we really trust that (thing)?"
+                  tr_de="Können wir diesem (Ding) wirklich vertrauen?"
+                  lvl="n3"
+                  origin="Doraemon 15, p.28"
+                />
+            </word>
+            <word
+              w="【友：ゆう】【人：じん】"
+              rom="yūjin"
+              tr_en="friend"
+              tr_de="Freund"
+              hint_en="formal"
+              hint_de="formell"
+              lvl="n3"
+              category="relationships"
+              id="yūjin-friend"
+            >
+                <keep_apart_from id="tomodachi-friend" />
+                <phrase
+                  ph="【友：ゆう】【人：じん】と【出：で】【会：あ】う"
+                  rom="yūjin to deau"
+                  tr_en="to meet a friend"
+                  tr_de="einen Freund treffen"
+                  lvl="n3"
+                  origin="500mon N3 q5"
+                />
+            </word>
+            <word
+              w="【感：かん】【謝：しゃ】"
+              rom="kansha"
+              tr_en="thanks; gratitude"
+              tr_de="Dank; Dankbarkeit"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="relationships"
+              id="kansha-thanks"
+            >
+                <keep_apart_from id="okage-grace" />
+                <keep_apart_from id="arigatou-thanks" />
+                <phrase
+                  ph="【感：かん】【謝：しゃ】を【表：あらわ】す"
+                  rom="kansha o arawasu"
+                  tr_en="to express thanks"
+                  tr_de="Dank ausdrücken"
+                  lvl="n3"
+                  origin="500mon N3 q9"
+                />
+            </word>
+            <word
+              w="【診：しん】【察：さつ】"
+              rom="shinsatsu"
+              tr_en="medical examination"
+              tr_de="ärztliche Untersuchung"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n3"
+              category="health"
+              id="shinsatsu-medexamination"
+            >
+                <keep_apart_from id="kensa-examination" />
+                <keep_apart_from id="kenshin-healthcheckup" />
+            </word>
+            <word
+              w="【勢：いきお】い"
+              rom="ikioi"
+              tr_en="vigour; force; energy"
+              tr_de="Vitalität; Elan; Energie"
+              lvl="n3"
+              category="health"
+              id="ikioi-vigour"
+            >
+                <keep_apart_from id="genki-liveliness" />
+                <sentence
+                  s="すごい【勢：いきお】いで【走：はし】って【行：い】ったよ。"
+                  rom="Sugoi ikioi de hashitte itta yo."
+                  tr_en="He ran off at a tremendous pace."
+                  tr_de="Er ist mit unglaublicher Energie davongerannt."
+                  lvl="n3"
+                  origin="Doraemon 17, p.54"
+                />
+            </word>
             <word
               w="【論：ろん】【争：そう】"
               rom="ronsō"

@@ -18,8 +18,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.drawable.BigStudyBtnDrawable
-import io.github.digorydoo.goigoi.drawable.BitmapPool
+import io.github.digorydoo.goigoi.legacy.drawable.BigStudyBtnDrawable
+import io.github.digorydoo.goigoi.legacy.drawable.BitmapPool
 import io.github.digorydoo.goigoi.providers.DeviceProps
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.utils.ScreenSize
@@ -43,14 +43,14 @@ private fun getStyles(): BigStudyBtnStyles {
     fun dpToPx(value: Dp) = with(density) { value.toPx() }
 
     return remember(themeColours, density, screenSize) {
-        object : BigStudyBtnStyles {
+        object: BigStudyBtnStyles {
             override val marginTop = 8.dp
             override val marginBottom = 16.dp
-            override val drawableColours = object : BigStudyBtnDrawable.Colours {
+            override val drawableColours = object: BigStudyBtnDrawable.Colours {
                 override val background = bgColour
                 override val text = themeColours.onPrimary
             }
-            override val drawableDims = object : BigStudyBtnDrawable.Dimensions {
+            override val drawableDims = object: BigStudyBtnDrawable.Dimensions {
                 override val leftPaddingPx = dpToPx(24.dp)
                 override val primaryTextVDeltaPx = dpToPx(48.dp)
                 override val secondaryTextVDeltaPx = dpToPx(24.dp)

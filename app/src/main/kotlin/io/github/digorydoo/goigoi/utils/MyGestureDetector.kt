@@ -252,9 +252,6 @@ class MyGestureDetector(ctx: Context) {
     }
 
     companion object {
-        @Suppress("unused")
-        private const val TAG = "MyGestureDetector"
-
         private const val FLING_SPEED_THRESHOLD = 180.0f // millimeters per second
         private const val FLING_MIN_DISTANCE = 12.0f // millimeters
         private const val QUIET_FLING_THRESHOLD = 24.0f // millimeters

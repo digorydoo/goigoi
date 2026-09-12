@@ -10,6 +10,8 @@ import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
@@ -19,7 +21,7 @@ private object Palette {
     val green700 = Color(0xFF349A35)
     val green750 = Color(0xFF318B34)
     val green800 = Color(0xFF2E7D32)
-    val green900 = Color(0xFF1B5E20)
+    // val green900 = Color(0xFF1B5E20)
 
     val white = Color(0xFFFFFFFF)
     val grey50 = Color(0xFFFAFAFA)
@@ -29,18 +31,22 @@ private object Palette {
     val grey400 = Color(0xFFBDBDBD)
     val grey500 = Color(0xFF9E9E9E)
     val grey550 = Color(0xFF898989)
-    val grey600 = Color(0xFF757575)
+
+    // val grey600 = Color(0xFF757575)
     val grey700 = Color(0xFF616161)
     val grey800 = Color(0xFF424242)
-    val grey875 = Color(0xFF292929)
+    val grey850 = Color(0xFF323232)
+
+    // val grey875 = Color(0xFF292929)
     val grey900 = Color(0xFF212121)
     val grey925 = Color(0xFF191919)
     val grey950 = Color(0xFF111111)
     val black = Color(0xFF000000)
 
+    val green800Opacity7F = green800.copy(alpha = 0.5f)
+
     val opacityBlack1F = Color(0x1F000000)
     val opacityBlack3D = Color(0x3D000000)
-    val opacityBlack42 = Color(0x42000000)
     val opacityBlack8A = Color(0x8A000000)
     val opacityBlackDD = Color(0xDD000000)
 
@@ -66,7 +72,8 @@ data class GoigoiColors(
     val onAppBarContainer: Color,
     val emphasizedText: Color,
     val onBackgroundSecondary: Color,
-    val statusBar: Color,
+    val statusBarWhenEmptyAppBar: Color,
+    val statusBarAboveBottomSheet: Color,
     val onStatusBar: Color,
     val decorativeIconTint: Color, // an icon that does not represent an action
     val dimmedDecorativeIconBackground: Color, // e.g. ZzzIconDrawable's background
@@ -79,6 +86,14 @@ data class GoigoiColors(
     val bubbleBackground: Color, // BubbleIcon
     val bubbleOutline: Color, // BubbleIcon
     val highlight: Color, // Highlightable
+    val bottomSheetContainer: Color, // WordInfoBottomSheet
+    val onBottomSheetContainer: Color, // WordInfoBottomSheet
+    val dragHandle: Color, // DragHandle
+    val fabBackground: Color, // GoigoiFab
+    val pressedFabBackground: Color, // GoigoiFab
+    val fabShimColour: Color, // GoigoiFab
+    val fabGlowColour: Color, // GoigoiFab
+    val onFabBackground: Color, // GoigoiFab
 )
 
 private val darkGoigoiScheme = GoigoiColors(
@@ -86,15 +101,16 @@ private val darkGoigoiScheme = GoigoiColors(
     onPrimary = Palette.white,
     background = Palette.grey900,
     onBackground = Palette.white,
-    surface = Palette.grey875,
+    surface = Palette.grey850,
     onSurface = Palette.white,
-    surfaceContainerHigh = Palette.grey875,
+    surfaceContainerHigh = Palette.grey850,
     outlineVariant = Palette.opacityWhite22,
     appBarContainer = Palette.grey925,
     onAppBarContainer = Palette.grey500,
     emphasizedText = Palette.green750,
     onBackgroundSecondary = Palette.opacityWhite77,
-    statusBar = Palette.black,
+    statusBarWhenEmptyAppBar = Palette.black,
+    statusBarAboveBottomSheet = Palette.opacityBlack3D,
     onStatusBar = Palette.white,
     decorativeIconTint = Palette.white,
     ring = Palette.grey700,
@@ -107,6 +123,14 @@ private val darkGoigoiScheme = GoigoiColors(
     bubbleBackground = Palette.grey950,
     bubbleOutline = Palette.black,
     highlight = Palette.opacityWhite1A,
+    bottomSheetContainer = Palette.grey850,
+    onBottomSheetContainer = Palette.white,
+    dragHandle = Palette.opacityWhite22,
+    fabBackground = Palette.green800,
+    pressedFabBackground = Palette.green700,
+    fabShimColour = Palette.grey900,
+    fabGlowColour = Palette.grey400,
+    onFabBackground = Palette.white,
 )
 
 private val lightGoigoiScheme = GoigoiColors(
@@ -122,7 +146,8 @@ private val lightGoigoiScheme = GoigoiColors(
     onAppBarContainer = Palette.white,
     emphasizedText = Palette.green800,
     onBackgroundSecondary = Palette.opacityBlack8A,
-    statusBar = Palette.grey500,
+    statusBarWhenEmptyAppBar = Palette.grey500,
+    statusBarAboveBottomSheet = Palette.green800Opacity7F,
     onStatusBar = Palette.opacityBlackDD,
     decorativeIconTint = Palette.opacityBlack8A,
     ring = Palette.grey400,
@@ -135,6 +160,14 @@ private val lightGoigoiScheme = GoigoiColors(
     bubbleBackground = Palette.grey250,
     bubbleOutline = Palette.grey300,
     highlight = Palette.opacityBlack1F,
+    bottomSheetContainer = Palette.white,
+    onBottomSheetContainer = Palette.opacityBlackDD,
+    dragHandle = Palette.opacityBlack3D,
+    fabBackground = Palette.green800,
+    pressedFabBackground = Palette.green700,
+    fabShimColour = Palette.grey50,
+    fabGlowColour = Palette.grey900,
+    onFabBackground = Palette.white,
 )
 
 private val darkMaterialScheme = darkColorScheme(
@@ -173,7 +206,8 @@ private val LocalGoigoiCustomScheme = staticCompositionLocalOf {
         onAppBarContainer = Color.Unspecified,
         emphasizedText = Color.Unspecified,
         onBackgroundSecondary = Color.Unspecified,
-        statusBar = Color.Unspecified,
+        statusBarWhenEmptyAppBar = Color.Unspecified,
+        statusBarAboveBottomSheet = Color.Unspecified,
         onStatusBar = Color.Unspecified,
         decorativeIconTint = Color.Unspecified,
         ring = Color.Unspecified,
@@ -186,6 +220,14 @@ private val LocalGoigoiCustomScheme = staticCompositionLocalOf {
         bubbleBackground = Color.Unspecified,
         bubbleOutline = Color.Unspecified,
         highlight = Color.Unspecified,
+        bottomSheetContainer = Color.Unspecified,
+        onBottomSheetContainer = Color.Unspecified,
+        dragHandle = Color.Unspecified,
+        fabBackground = Color.Unspecified,
+        pressedFabBackground = Color.Unspecified,
+        fabShimColour = Color.Unspecified,
+        fabGlowColour = Color.Unspecified,
+        onFabBackground = Color.Unspecified,
     )
 }
 
@@ -196,6 +238,9 @@ data class GoigoiCustomTypography(
     val bigContentTitle: TextStyle,
     val listItemPrimaryText: TextStyle,
     val listItemSecondaryText: TextStyle,
+    val hint: TextStyle,
+    val iconFromChar: TextStyle,
+    val badge: TextStyle,
 )
 
 private val customTypography = GoigoiCustomTypography(
@@ -211,15 +256,19 @@ private val customTypography = GoigoiCustomTypography(
         lineHeight = 17.sp,
         letterSpacing = 0.em,
     ),
-    bigContentTitle = TextStyle(
-        fontSize = 26.sp,
-    ),
-    listItemPrimaryText = TextStyle(
-        fontSize = 17.sp,
-    ),
-    listItemSecondaryText = TextStyle(
+    bigContentTitle = TextStyle(fontSize = 26.sp),
+    listItemPrimaryText = TextStyle(fontSize = 17.sp),
+    listItemSecondaryText = TextStyle(fontSize = 14.sp),
+    hint = TextStyle(
         fontSize = 14.sp,
-    )
+        fontStyle = FontStyle.Italic,
+        fontFamily = FontFamily.Serif,
+    ),
+    iconFromChar = TextStyle(
+        fontWeight = FontWeight.Medium,
+        // fontSize needs to be computed, see ListItem
+    ),
+    badge = TextStyle(fontSize = 12.sp),
 )
 
 private val LocalGoigoiCustomTypography = staticCompositionLocalOf {
@@ -229,6 +278,9 @@ private val LocalGoigoiCustomTypography = staticCompositionLocalOf {
         bigContentTitle = TextStyle.Default,
         listItemPrimaryText = TextStyle.Default,
         listItemSecondaryText = TextStyle.Default,
+        hint = TextStyle.Default,
+        iconFromChar = TextStyle.Default,
+        badge = TextStyle.Default,
     )
 }
 

@@ -14,14 +14,13 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import io.github.digorydoo.goigoi.R.string
+import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.components.SheetHead
 import io.github.digorydoo.goigoi.components.app_bar.GoigoiAppBar
 import io.github.digorydoo.goigoi.components.list.ListItem
 import io.github.digorydoo.goigoi.providers.DeviceProps
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.providers.Singletons
-import io.github.digorydoo.goigoi.utils.Orientation
 import io.github.digorydoo.goigoi.utils.ScreenSize
 
 private interface PrefsScreenStyles {
@@ -35,34 +34,25 @@ private fun getStyles(): PrefsScreenStyles {
     val themeColours = GoigoiTheme.colours
     val density = LocalDensity.current
     val screenSize = DeviceProps.size
-    val orientation = DeviceProps.orientation
+    val isPortrait = DeviceProps.isPortrait
 
-    return remember(themeColours, density, screenSize, orientation) {
+    return remember(themeColours, density, screenSize, isPortrait) {
         object: PrefsScreenStyles {
             override val contentPaddingLR = when (screenSize) {
                 ScreenSize.LARGE -> 32.dp
-                ScreenSize.NORMAL -> when (orientation) {
-                    Orientation.PORTRAIT -> 24.dp
-                    else -> 32.dp
-                }
+                ScreenSize.NORMAL -> if (isPortrait) 24.dp else 32.dp
                 ScreenSize.SMALL -> 16.dp
             }
 
             override val contentPaddingTop = when (screenSize) {
                 ScreenSize.LARGE -> 16.dp
-                ScreenSize.NORMAL -> when (orientation) {
-                    Orientation.PORTRAIT -> 8.dp
-                    else -> 0.dp
-                }
+                ScreenSize.NORMAL -> if (isPortrait) 8.dp else 0.dp
                 ScreenSize.SMALL -> 0.dp
             }
 
             override val contentPaddingBottom = when (screenSize) {
                 ScreenSize.LARGE -> 24.dp
-                ScreenSize.NORMAL -> when (orientation) {
-                    Orientation.PORTRAIT -> 16.dp
-                    else -> 8.dp
-                }
+                ScreenSize.NORMAL -> if (isPortrait) 16.dp else 8.dp
                 ScreenSize.SMALL -> 8.dp
             }
         }
@@ -82,7 +72,7 @@ fun PrefsScreen(
     Scaffold(
         topBar = {
             GoigoiAppBar(
-                titleResId = string.preferences,
+                titleResId = R.string.preferences,
                 onBack = onBack
             )
         }
@@ -96,8 +86,8 @@ fun PrefsScreen(
         ) {
             SheetHead(modifier = Modifier.padding(bottom = styles.contentPaddingTop))
             ListItem(
-                primaryText = stringResource(string.changeThemePrimary),
-                secondaryText = stringResource(string.changeThemeSecondary),
+                primaryText = stringResource(R.string.changeThemePrimary),
+                secondaryText = stringResource(R.string.changeThemeSecondary),
                 horizontalPadding = styles.contentPaddingLR,
                 onClick = { onDarkModeChange(!darkMode) },
                 endContent = {
@@ -108,8 +98,8 @@ fun PrefsScreen(
                 }
             )
             ListItem(
-                primaryText = stringResource(string.aboutAppPrimary),
-                secondaryText = stringResource(string.aboutAppSecondary),
+                primaryText = stringResource(R.string.aboutAppPrimary),
+                secondaryText = stringResource(R.string.aboutAppSecondary),
                 horizontalPadding = styles.contentPaddingLR,
                 onClick = onAboutItemSelected
             )

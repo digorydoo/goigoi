@@ -6,6 +6,7 @@ import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.file.AssetsAccessor
 import io.github.digorydoo.goigoi.core.study.Answer
+import kotlin.time.Duration.Companion.days
 
 class Stats(private val assets: AssetsAccessor) {
     private val generalStatsFile = GeneralStatsFile(assets.filesDir)
@@ -82,11 +83,23 @@ class Stats(private val assets: AssetsAccessor) {
     fun getWordStudyMoment(word: Word) =
         wordStatsFile.getStudyMoment(word)
 
+    fun getWordIsAsleep(word: Word): Boolean {
+        val m = getWordStudyMoment(word)
+        val minDat = Moment.now() - DAYS_BEFORE_ASLEEP.days
+        return m != null && m < minDat
+    }
+
     fun getUnytStudyMoment(unyt: Unyt) =
         unytStatsFile.getStudyMoment(unyt)
 
     fun setUnytStudyMoment(unyt: Unyt) {
         unytStatsFile.setStudyMoment(unyt)
+    }
+
+    fun getUnytIsAsleep(unyt: Unyt): Boolean {
+        val m = getUnytStudyMoment(unyt)
+        val minDat = Moment.now() - DAYS_BEFORE_ASLEEP.days
+        return m != null && m < minDat
     }
 
     fun getUnytStudyProgress(unyt: Unyt): Float {
@@ -255,5 +268,6 @@ class Stats(private val assets: AssetsAccessor) {
         private const val EXPORTED_GENERAL_STATS_FILE_NAME = "goigoi-general-stats.txt"
         private const val EXPORTED_UNYT_STATS_FILE_NAME = "goigoi-unyt-stats.txt"
         private const val EXPORTED_WORD_STATS_FILE_NAME = "goigoi-word-stats.txt"
+        private const val DAYS_BEFORE_ASLEEP = 99
     }
 }

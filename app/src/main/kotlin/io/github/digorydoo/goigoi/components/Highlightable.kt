@@ -16,7 +16,7 @@ import ch.digorydoo.kutils.math.accel
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
 
 private const val ANIM_DELAY_MILLIS = 150
-private const val ANIM_DURATION_MILLIS = 800
+private const val ANIM_DURATION_MILLIS = 600
 
 /**
  * Highlights the area for a short time when highlightOnce goes from false to true. Does not do anything particular when

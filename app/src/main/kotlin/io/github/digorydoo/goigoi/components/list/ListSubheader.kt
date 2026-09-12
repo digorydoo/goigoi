@@ -30,8 +30,8 @@ private fun getStyles(): ListSubheaderStyles {
         object: ListSubheaderStyles {
             override val dividerTopMargin = 16.dp
             override val extraTopMarginWhenNoDivider = 8.dp
-            override val textTopMargin = 8.dp
-            override val textBottomMargin = 4.dp
+            override val textTopMargin = 16.dp
+            override val textBottomMargin = 8.dp
             override val textStyle = typography.listItemSecondaryText
             override val colour = themeColours.onBackgroundSecondary
         }
@@ -39,7 +39,7 @@ private fun getStyles(): ListSubheaderStyles {
 }
 
 @Composable
-fun ListSubheader(text: String, textPaddingLR: Dp, hasTopDivider: Boolean = true) {
+fun ListSubheader(text: String, textHorizPadding: Dp, hasTopDivider: Boolean = true) {
     val styles = getStyles()
 
     if (hasTopDivider) {
@@ -50,9 +50,9 @@ fun ListSubheader(text: String, textPaddingLR: Dp, hasTopDivider: Boolean = true
 
     Text(
         modifier = Modifier.padding(
-            start = textPaddingLR,
+            start = textHorizPadding,
             top = styles.textTopMargin + (if (hasTopDivider) 0.dp else styles.extraTopMarginWhenNoDivider),
-            end = textPaddingLR,
+            end = textHorizPadding,
             bottom = styles.textBottomMargin,
         ),
         text = text,

@@ -1,9 +1,6 @@
 package io.github.digorydoo.goigoi.core.db
 
-import ch.digorydoo.kutils.cjk.FuriganaString
-import ch.digorydoo.kutils.cjk.IntlString
-import ch.digorydoo.kutils.cjk.JLPTLevel
-import ch.digorydoo.kutils.cjk.isKana
+import ch.digorydoo.kutils.cjk.*
 import kotlin.math.min
 
 class Word {
@@ -74,6 +71,40 @@ class Word {
             return suffix
         }
 
+    val dictionaryWordWithHeuristic: String
+        get() {
+            var dw = dictionaryWord
+
+            if (dw.isNotEmpty()) {
+                return if (dw == "-") "" else dw
+            }
+
+            dw = kanji
+
+            if (dw.hasPunctuation() || dw.hasBracket()) {
+                return ""
+            }
+
+            for (prefix in cutDictionaryWordPrefixes) {
+                if (dw.length > prefix.length && dw.startsWith(prefix)) {
+                    dw = dw.slice(prefix.length ..< dw.length)
+                }
+            }
+
+            for (suffix in cutDictionaryWordSuffixes) {
+                if (dw.length > suffix.length && dw.endsWith(suffix)) {
+                    dw = dw.slice(0 ..< dw.length - suffix.length)
+                }
+            }
+
+            return dw
+        }
+
     override fun toString() =
         "Word($id, $kanji, $kana)"
+
+    companion object {
+        private val cutDictionaryWordPrefixes = arrayOf("〜")
+        private val cutDictionaryWordSuffixes = arrayOf("〜", "をする", "する")
+    }
 }

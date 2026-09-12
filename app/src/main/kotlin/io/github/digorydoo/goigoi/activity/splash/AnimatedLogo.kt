@@ -4,17 +4,17 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Path
-import io.github.digorydoo.goigoi.BuildConfig
-import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.drawable.AnimatedDrawable
-import io.github.digorydoo.goigoi.drawable.Artist
-import io.github.digorydoo.goigoi.drawable.Artist.Arc
-import io.github.digorydoo.goigoi.utils.DimUtils
-import io.github.digorydoo.goigoi.utils.ResUtils
 import ch.digorydoo.kutils.filter.delay
 import ch.digorydoo.kutils.flow.compose
 import ch.digorydoo.kutils.math.accel
 import ch.digorydoo.kutils.math.scurve
+import io.github.digorydoo.goigoi.BuildConfig
+import io.github.digorydoo.goigoi.R
+import io.github.digorydoo.goigoi.legacy.drawable.AnimatedDrawable
+import io.github.digorydoo.goigoi.legacy.drawable.Artist
+import io.github.digorydoo.goigoi.legacy.drawable.Artist.Arc
+import io.github.digorydoo.goigoi.utils.DimUtils
+import io.github.digorydoo.goigoi.utils.ResUtils
 
 class AnimatedLogo(ctx: Context): AnimatedDrawable() {
     private val oneDip: Float = DimUtils.dpToPx(1.0f, ctx)
@@ -94,9 +94,6 @@ class AnimatedLogo(ctx: Context): AnimatedDrawable() {
     }
 
     companion object {
-        @Suppress("unused")
-        private const val TAG = "AnimatedLogo"
-
         // Circle around the logo
         private val arc1 = arrayOf(
             //  time   left  top   right bttm  shift start   end     ang

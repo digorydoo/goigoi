@@ -11,8 +11,10 @@ import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import io.github.digorydoo.goigoi.drawable.SheetHeadDrawable
+import io.github.digorydoo.goigoi.legacy.drawable.SheetHeadDrawable
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
+
+val SHEET_CORNER_SIZE = 24.dp
 
 private interface SheetHeadStyles {
     val sheetHeadHeight: Dp
@@ -32,14 +34,12 @@ private fun getStyles(): SheetHeadStyles {
 
     fun dpToPx(value: Dp) = with(density) { value.toPx() }
 
-    val cornerSize = 24.dp
-
     return remember(density) {
         object: SheetHeadStyles {
-            override val sheetHeadHeight = cornerSize + 8.dp
+            override val sheetHeadHeight = SHEET_CORNER_SIZE + 8.dp
 
             override val sheetHeadDims = object: SheetHeadDrawable.Dimensions {
-                override val cornerSizePx = dpToPx(cornerSize).toInt()
+                override val cornerSizePx = dpToPx(SHEET_CORNER_SIZE).toInt()
                 override val headHeightPx = dpToPx(sheetHeadHeight).toInt()
             }
 

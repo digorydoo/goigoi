@@ -83,7 +83,7 @@
       tools:text="Question text (pencil font)"
       style="?attr/myPrimaryTextStyle"
       />
-    <io.github.digorydoo.goigoi.view.TategakiView
+    <io.github.digorydoo.goigoi.legacy.view.TategakiView
       android:id="@+id/question_in_calligraphy_font"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -117,7 +117,7 @@
       android:importantForAccessibility="no"
       app:tint="?attr/decorativeIconTintColour"
       />
-    <io.github.digorydoo.goigoi.view.TextWithCaret
+    <io.github.digorydoo.goigoi.legacy.view.TextWithCaret
       android:id="@+id/input_text"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
@@ -253,7 +253,7 @@
       android:alpha="0"
       app:tint="?attr/activeIconTintColour"
       />
-    <io.github.digorydoo.goigoi.view.FloatingActionBtn
+    <io.github.digorydoo.goigoi.legacy.view.FloatingActionBtn
       android:id="@+id/next_btn"
       android:layout_width="80dp"
       android:layout_height="80dp"
@@ -265,5 +265,10 @@
       app:initiallyShown="false"
       app:iconName="arrowRight"
       app:animDuration="150"
+      />
+    <androidx.compose.ui.platform.ComposeView
+      android:id="@+id/compose_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
       />
 </RelativeLayout>

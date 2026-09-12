@@ -7,6 +7,8 @@
 
 * Bug: Height available for TategakiView is slightly too high for 4.95inch Nexus
 
+* We could show origin in bottom sheet if it's one of the Manga or GENKI.
+
 * Show streak in header
 
 * When picking word from past, the study moment should be taken into account

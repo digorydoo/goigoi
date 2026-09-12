@@ -131,28 +131,6 @@
                 -->
             </word>
             <word
-              w="【世：せい】【紀：き】"
-              rom="seiki"
-              tr_en="century; era"
-              tr_de="Jahrhundert; Ära"
-              hint_en="noun"
-              hint_de="Nomen"
-              lvl="n3"
-              category="time, historical"
-              id="seiki-century"
-              HIDDEN="true"
-            >
-                <keep_apart_from id="jiki-period" />
-                <keep_apart_from id="jikan-timespan" />
-                <keep_apart_from id="jidai-era" />
-                <keep_apart_from id="nendai-era" />
-                <keep_apart_from id="kindai-presentday" />
-                <keep_apart_from id="gendai-presentage" />
-                <keep_apart_from id="sendai-prevage" />
-                <keep_apart_from id="sedai-generation" />
-                <!-- can have the meaning of 'of the century' -->
-            </word>
-            <word
               w="【現：げん】【在：ざい】"
               rom="genzai"
               tr_en="now; current; the present"
@@ -639,7 +617,9 @@
               hint_en="noun; suffix"
               lvl="n3"
               id="setsu-theory"
-            />
+            >
+                <keep_apart_from id="gakusetsu-theory" />
+            </word>
             <word
               w="【可：か】"
               rom="ka"
@@ -962,12 +942,6 @@
               tr_en="tradition; convention"
               lvl="n3"
               id="dentō-tradition"
-            />
-            <word
-              w="【友：ゆう】【人：じん】"
-              rom="yūjin"
-              tr_en="friend"
-              lvl="n3"
             />
             <word
               w="【友：ゆう】【情：じょう】"
@@ -1688,14 +1662,6 @@
               id="un-luck"
             />
             <word
-              w="【勢：いきお】い"
-              rom="ikioi"
-              tr_en="force; strength"
-              hint_en="e.g. of a storm, etc."
-              hint_de="z.B. eines Sturmes, etc."
-              lvl="n3"
-            />
-            <word
               w="【異：い】【常：じょう】"
               rom="ijō"
               tr_en="strangeness; abnormality; disorder"
@@ -2297,6 +2263,7 @@
               tr_en="identical; same; one and the same; equal / fair; equal treatment; without discrimination"
               hint_en="noun; na-adjective (keiyodoshi)"
               lvl="n3"
+              id="dōitsu-same"
             />
             <word
               w="【同：どう】【様：よう】"

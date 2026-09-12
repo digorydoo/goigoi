@@ -1,15 +1,13 @@
 [versions]
 activityCompose = "1.13.0"
-agp = "9.3.2"
+agp = "9.4.0"
 appcompat = "1.8.0"
-cardview = "1.0.0"
 composeBom = "2026.08.00"
 constraintlayout = "2.2.2"
 coreSplashscreen = "1.2.0"
 fragmentKtx = "1.9.0"
-kotlin = "2.4.10"
+kotlin = "2.4.20"
 material = "1.14.0"
-recyclerview = "1.4.0"
 xmlparser = "23.26.3.0.0"
 
 # Can't update these unless I raise API level and lose compatibility with Samsung Galaxy S10
@@ -20,13 +18,10 @@ activity = { module = "androidx.activity:activity", version.ref = "activityCompo
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityCompose" }
 appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
-cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
 compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 compose-ui = { group = "androidx.compose.ui", name = "ui" }
 compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
-compose-ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
-compose-material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended" }
 compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
 constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
 core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
@@ -36,7 +31,6 @@ kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", versi
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 kotlinx-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version = "0.8.0" }
 material = { module = "com.google.android.material:material", version.ref = "material" }
-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
 xmlparserv2 = { module = "com.oracle.database.xml:xmlparserv2", version.ref = "xmlparser" }
 
 kokuban = { module = "io.github.digorydoo:kokuban", version = "0.9.2" }
