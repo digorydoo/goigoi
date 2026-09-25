@@ -203,13 +203,14 @@ fun HintBalloon(
 
                         // Our furigana is still using legacy Spanned
                         is Spanned -> AndroidView(
-                            factory = { context ->
-                                TextView(context).apply {
+                            factory = { ctx -> TextView(ctx) },
+                            update = { textView ->
+                                textView.apply {
+                                    text = line
                                     setTextColor(textColour.toArgb())
                                     setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeSp)
                                 }
-                            },
-                            update = { it.text = line }
+                            }
                         )
 
                         else -> Text(text = line.toString(), color = textColour, style = textStyle)

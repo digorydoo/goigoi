@@ -15,6 +15,19 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【教：きょう】【授：じゅ】"
+              rom="kyōju"
+              tr_en="professor; teaching"
+              tr_de="Professor; Lehren"
+              lvl="n3"
+              category="education, occupations"
+              id="kyōju-professor"
+            >
+                <keep_apart_from id="sensei-teacher" />
+                <keep_apart_from id="kyōshi-teacher" />
+                <keep_apart_from id="kōshi-lecturer" />
+            </word>
+            <word
               w="【陸：りく】"
               rom="riku"
               tr_en="land; shore"
@@ -517,6 +530,16 @@
                 <keep_apart_from id="jitsugen-impl" />
             </word>
             <word
+              w="【向：むか】い"
+              rom="mukai"
+              tr_en="opposite side; other side"
+              tr_de="gegenüber; andere Seite"
+              lvl="n3"
+              id="mukai-opposite"
+            >
+                <see id="mukau-face" rem="verb" />
+            </word>
+            <word
               w="【増：ぞう】【加：か】"
               rom="zōka"
               tr_en="increase; growth; rise"
@@ -655,6 +678,7 @@
               category="quarrel, science"
               id="kaiketsu-solution"
             >
+                <keep_apart_from id="toku-untie" />
                 <!-- 問題を解決する - mondai o kaiketsu suru - to solve a problem (ChatGPT) -->
             </word>
             <word
@@ -1246,6 +1270,7 @@
               lvl="n3"
             >
                 <!-- 職を失う - to lose one's job (lib0) -->
+                <!-- 職を求める - to look for a job (lib0) -->
             </word>
             <word
               w="【通：つう】【過：か】"
@@ -1625,13 +1650,6 @@
               lvl="n3"
             />
             <word
-              w="【能：のう】【力：りょく】"
-              rom="nōryoku"
-              tr_en="ability; faculty"
-              hint_en="noun"
-              lvl="n3"
-            />
-            <word
               w="【脇：わき】"
               rom="waki"
               tr_en="armpit; under one's arm; side; flank / beside; close to; near; by / aside; to the side; away; out of the way / off-track; off-topic / deuteragonist; supporting role / second verse (in a linked series of poems)"
@@ -1776,13 +1794,6 @@
               w="【事：じ】【務：む】"
               rom="jimu"
               tr_en="office work; clerical work; administration; business; affairs"
-              hint_en="noun"
-              lvl="n3"
-            />
-            <word
-              w="【参：さん】【考：こう】"
-              rom="sankō"
-              tr_en="reference; consultation"
               hint_en="noun"
               lvl="n3"
             />

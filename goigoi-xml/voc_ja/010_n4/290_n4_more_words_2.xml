@@ -1006,6 +1006,7 @@
               rom="daitai"
               tr_en="mostly; generally; for the most part"
               tr_de="hauptsächlich; grösstenteils"
+              usuallyInKana="true"
               hint_en="adverb"
               hint_de="Adverb"
               lvl="n4"
@@ -1020,15 +1021,25 @@
                   lvl="n4"
                   origin="lib0"
                   rem="verified with ChatGPT"
-                />
+                >
+                    <ask w="【大：だい】【体：たい】" />
+                </phrase>
                 <sentence
-                  s="【日：に】【本：ほん】は【大：だい】【体：たい】【住：す】みやすいところだ。"
+                  s="【日：に】【本：ほん】はだいたい【住：す】みやすいところだ。"
                   rom="Nihon wa daitai sumi-yasui tokoro da."
                   tr_en="Japan is generally a comfortable place to live."
                   tr_de="Japan ist grösstenteils ein Ort, an dem sich's gut wohnt."
                   lvl="n4"
                   origin="lib0 modified"
                   rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【試：し】【験：けん】はところどころわからなかったけど、だいたいできた。"
+                  rom="Shiken wa tokoro-dokoro wakaranakatta kedo, daitai dekita."
+                  tr_en="Even though I didn't know the answer here and there, I was able to do the test for the most part."
+                  tr_de="Obwohl ich die Antwort hier und dort nicht gewusst habe, habe ich die Prüfung grösstenteils machen können."
+                  lvl="n4"
+                  origin="500mon N3 q20 modified"
                 />
             </word>
             <word

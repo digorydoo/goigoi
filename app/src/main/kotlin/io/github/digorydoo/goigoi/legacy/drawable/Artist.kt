@@ -10,8 +10,6 @@ import kotlin.math.min
 import kotlin.math.sin
 
 object Artist {
-    class TextExtent(val width: Float, val ascent: Float, val descent: Float)
-
     /**
      * Draws the SpannableString on the canvas. This currently only works for ReplacementSpans,
      * and we currently ignore str.getSpanFlags.
@@ -45,45 +43,6 @@ object Artist {
         if (i < str.length) {
             canvas.drawText(str, i, str.length, x, yBaseLine, p)
         }
-    }
-
-    /**
-     * Measures the given spannable string.
-     * @return An instance of TextExtent
-     */
-    fun measureSpan(str: SpannableString, p: Paint): TextExtent {
-        val spans = str.getSpans(0, str.length, ReplacementSpan::class.java)
-        var i = 0
-        var width = 0.0f
-        var minAscent = 0.0f
-        var maxDescent = 0.0f
-        val metrics = FontMetricsInt()
-
-        for (span in spans) {
-            val start = str.getSpanStart(span)
-            val end = str.getSpanEnd(span)
-
-            if (start < 0 || end < 0) continue
-
-            if (i < start) {
-                width += p.measureText(str, i, start)
-                minAscent = min(minAscent, p.fontMetrics.ascent)
-                maxDescent = max(maxDescent, p.fontMetrics.descent)
-            }
-
-            width += span.getSize(p, str, start, end, metrics)
-            minAscent = min(minAscent, metrics.ascent.toFloat())
-            maxDescent = max(maxDescent, metrics.descent.toFloat())
-            i = end
-        }
-
-        if (i < str.length) {
-            width += p.measureText(str, i, str.length)
-            minAscent = min(minAscent, p.fontMetrics.ascent)
-            maxDescent = max(maxDescent, p.fontMetrics.descent)
-        }
-
-        return TextExtent(width, minAscent, maxDescent)
     }
 
     fun drawBitmapScaleToFit(

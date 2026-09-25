@@ -62,7 +62,7 @@ private fun getStyles(): GoigoiAppBarStyles {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun GoigoiAppBar(title: String, onBack: () -> Unit) {
+private fun GoigoiAppBar(title: @Composable () -> Unit, onBack: () -> Unit) {
     val styles = getStyles()
 
     // The default implementation of the Android back button is to finish the current activity.
@@ -80,6 +80,20 @@ fun GoigoiAppBar(title: String, onBack: () -> Unit) {
                 )
             }
         },
+        title = title,
+        colors = TopAppBarDefaults.topAppBarColors(
+            containerColor = GoigoiTheme.colours.appBarContainer,
+            titleContentColor = GoigoiTheme.colours.onAppBarContainer,
+            navigationIconContentColor = GoigoiTheme.colours.onAppBarContainer
+        )
+    )
+}
+
+@Composable
+fun GoigoiAppBar(title: String, onBack: () -> Unit) {
+    val styles = getStyles()
+
+    GoigoiAppBar(
         title = {
             Text(
                 modifier = Modifier.padding(top = styles.titlePaddingTop, start = styles.titlePaddingStart),
@@ -87,11 +101,7 @@ fun GoigoiAppBar(title: String, onBack: () -> Unit) {
                 style = styles.titleTextStyle
             )
         },
-        colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = GoigoiTheme.colours.appBarContainer,
-            titleContentColor = GoigoiTheme.colours.onAppBarContainer,
-            navigationIconContentColor = GoigoiTheme.colours.onAppBarContainer
-        )
+        onBack
     )
 }
 

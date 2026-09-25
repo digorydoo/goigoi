@@ -555,6 +555,16 @@
                 >
                     <ask w="【撮：と】らない" />
                 </sentence>
+                <sentence
+                  s="ここは【写：しゃ】【真：しん】をとっちゃいけないんだよ。"
+                  rom="Koko wa shashin o toccha ikenai n da yo."
+                  tr_en="You are not allowed to take pictures here."
+                  tr_de="Man darf hier keine Fotos schiessen."
+                  lvl="n4"
+                  origin="500mon N3 q12"
+                >
+                    <ask w="とっちゃ" />
+                </sentence>
             </word>
             <word
               w="【困：こま】る"
@@ -974,6 +984,7 @@
               category="directions"
               id="magaru-turn"
             >
+                <see id="mageru-bend" rem="v.t." />
                 <keep_apart_from id="muku-turntoward" />
                 <phrase
                   ph="【左：ひだり】へ【曲：ま】がる"

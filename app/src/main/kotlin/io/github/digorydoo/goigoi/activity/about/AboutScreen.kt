@@ -91,14 +91,13 @@ fun AboutScreen(onBack: () -> Unit) {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = styles.contentPaddingLR),
-                factory = { context ->
-                    TextView(context).apply {
+                factory = { ctx -> TextView(ctx) },
+                update = { textView ->
+                    textView.apply {
+                        text = Html.fromHtml(copyrightAndLicense, Html.FROM_HTML_MODE_LEGACY)
+                        setTextColor(textColor)
                         setTextSize(TypedValue.COMPLEX_UNIT_SP, 16f)
                     }
-                },
-                update = { textView ->
-                    textView.text = Html.fromHtml(copyrightAndLicense, Html.FROM_HTML_MODE_LEGACY)
-                    textView.setTextColor(textColor)
                 }
             )
         }

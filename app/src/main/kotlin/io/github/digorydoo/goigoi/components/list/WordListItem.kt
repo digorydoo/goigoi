@@ -129,7 +129,7 @@ fun WordListItem(
                                 .padding(end = 4.dp), // align with UnytActivity's overflow btn
                             text = data.level.toPrettyString(),
                             style = GoigoiTheme.typography.listItemSecondaryText,
-                            color = GoigoiTheme.colours.onBackgroundSecondary,
+                            color = GoigoiTheme.colours.secondaryOnBackground,
                         )
                     }
                 }

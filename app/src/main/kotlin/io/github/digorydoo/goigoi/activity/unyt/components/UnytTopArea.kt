@@ -95,7 +95,7 @@ fun UnytTopArea(model: UnytActivityModel, contentHorizPadding: Dp) {
                     .padding(start = contentHorizPadding)
                     .padding(top = styles.textMarginTop),
                 text = numWordsAsString,
-                color = GoigoiTheme.colours.onBackgroundSecondary,
+                color = GoigoiTheme.colours.secondaryOnBackground,
                 style = GoigoiTheme.typography.listItemSecondaryText,
             )
             Spacer(modifier = Modifier.weight(1f))
@@ -140,7 +140,7 @@ fun UnytTopArea(model: UnytActivityModel, contentHorizPadding: Dp) {
                 Text(
                     modifier = Modifier.padding(end = contentHorizPadding, bottom = styles.chartMarginBottom),
                     text = numWordsAsString,
-                    color = GoigoiTheme.colours.onBackgroundSecondary,
+                    color = GoigoiTheme.colours.secondaryOnBackground,
                     style = GoigoiTheme.typography.listItemSecondaryText,
                 )
             }

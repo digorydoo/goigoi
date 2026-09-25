@@ -1925,7 +1925,11 @@
               hint_en="noun; suru verb"
               lvl="n1"
               id="chūkoku-advice"
-            />
+            >
+                <!-- 忠告を求める - to ask for advice (lib0) -->
+                <keep_apart_from id="sōdan-consultation" />
+                <keep_apart_from id="jogen-advice" />
+            </word>
             <word
               w="【役：やく】【職：しょく】"
               rom="yakushoku"
@@ -3274,7 +3278,9 @@
               tr_en="riches; wealth; fortune / resources / lottery"
               hint_en="noun"
               lvl="n1"
-            />
+            >
+                <!-- 富を求める - to seek wealth (lib0) -->
+            </word>
             <word
               w="【季：き】【刊：かん】"
               rom="kikan"
@@ -3872,10 +3878,13 @@
             <word
               w="【助：じょ】【言：げん】"
               rom="jogen"
-              tr_en="advice; counsel; suggestion; tip; hint / Advice (constitutional)"
+              tr_en="advice; counsel; suggestion; tip; hint"
               hint_en="noun; suru verb; v.t. &amp; i."
               lvl="n1"
-            />
+              id="jogen-advice"
+            >
+                <keep_apart_from id="chūkoku-advice" />
+            </word>
             <word
               w="【探：たん】【検：けん】"
               rom="tanken"

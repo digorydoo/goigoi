@@ -6,6 +6,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import ch.digorydoo.kutils.string.initCap
+import ch.digorydoo.kutils.string.toPercent
 import io.github.digorydoo.goigoi.components.list.ListSubheader
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Word
@@ -30,8 +32,8 @@ fun SheetDebugInfo(word: Word, unyt: Unyt, sheetHorizPadding: Dp) {
     )
 
     val wordInfo = arrayOf(
-        "Progress: ${stats.getWordStudyProgress(word)} (based on total correct)",
-        "Rating: ${stats.getWordTotalRating(word)}, " +
+        "Progress: ${stats.getWordStudyProgress(word).toPercent()} (based on total correct)",
+        "Rating: ${stats.getWordTotalRating(word).toPercent()}, " +
             "seen: ${stats.getWordTotalSeenCount(word)}, " +
             "correct: ${stats.getWordTotalCorrectCount(word)}, " +
             "wrong: ${stats.getWordTotalWrongCount(word)}",
@@ -44,7 +46,7 @@ fun SheetDebugInfo(word: Word, unyt: Unyt, sheetHorizPadding: Dp) {
             .padding(top = 4.dp),
         text = wordInfo,
         style = GoigoiTheme.typography.listItemSecondaryText,
-        color = GoigoiTheme.colours.onBackgroundSecondary,
+        color = GoigoiTheme.colours.secondaryOnBackground,
     )
 
     // Unyt
@@ -58,7 +60,8 @@ fun SheetDebugInfo(word: Word, unyt: Unyt, sheetHorizPadding: Dp) {
         color = GoigoiTheme.colours.onBottomSheetContainer,
     )
 
-    val unytInfo = "Study moment: ${stats.getUnytStudyMoment(unyt)?.formatAsZoneAgnosticDateTime()}"
+    val unytInfo = "${unyt.name.withSystemLang}\n" +
+        "Study moment: ${stats.getUnytStudyMoment(unyt)?.formatAsZoneAgnosticDateTime()}"
 
     Text(
         modifier = Modifier
@@ -66,10 +69,10 @@ fun SheetDebugInfo(word: Word, unyt: Unyt, sheetHorizPadding: Dp) {
             .padding(top = 4.dp),
         text = unytInfo,
         style = GoigoiTheme.typography.listItemSecondaryText,
-        color = GoigoiTheme.colours.onBackgroundSecondary,
+        color = GoigoiTheme.colours.secondaryOnBackground,
     )
 
-    // Details
+    // Details per StatsKey
 
     Text(
         modifier = Modifier
@@ -80,21 +83,32 @@ fun SheetDebugInfo(word: Word, unyt: Unyt, sheetHorizPadding: Dp) {
         color = GoigoiTheme.colours.onBottomSheetContainer,
     )
 
-    val details = StatsKey.entries.joinToString("\n\n") { statsKey ->
-        val rating = stats.getWordRating(word, statsKey)
+    var isFirst = true
+
+    for (statsKey in StatsKey.entries) {
+        val name = statsKey.name
+            .let {
+                if (it.startsWith("PROGSTUDY_")) it.substring(10)
+                else it
+            }
+            .replace("_", " ")
+            .let { initCap(it) }
+
+        val rating = stats.getWordRating(word, statsKey).toPercent()
         val seenCount = stats.getWordSeenCount(word, statsKey)
         val correctCount = stats.getWordCorrectCount(word, statsKey)
         val wrongCount = stats.getWordWrongCount(word, statsKey)
-        val name = if (statsKey.name.startsWith("PROGSTUDY_")) statsKey.name.substring(10) else statsKey.name
-        return@joinToString "$name\n    Rating: $rating, seen: $seenCount, correct: $correctCount, wrong: $wrongCount"
-    }
+        val details = "Rating: $rating   Seen: $seenCount   Correct: $correctCount   Wrong: $wrongCount"
 
-    Text(
-        modifier = Modifier
-            .padding(horizontal = sheetHorizPadding)
-            .padding(top = 4.dp),
-        text = details,
-        style = GoigoiTheme.typography.listItemSecondaryText,
-        color = GoigoiTheme.colours.onBackgroundSecondary,
-    )
+        Text(
+            modifier = Modifier
+                .padding(horizontal = sheetHorizPadding)
+                .padding(top = if (isFirst) 4.dp else 12.dp),
+            text = "$name\n$details",
+            style = GoigoiTheme.typography.listItemSecondaryText,
+            color = GoigoiTheme.colours.secondaryOnBackground,
+        )
+
+        isFirst = false
+    }
 }

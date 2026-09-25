@@ -148,6 +148,25 @@ class Unyt(val id: String) {
         }
     }
 
+    /**
+     * Should be called on the myWordsUnyt only.
+     */
+    fun removeAllWithFilename(filename: String) {
+        lock.lock()
+
+        try {
+            if (theWords.removeAll { it.filename == filename }) {
+                modified = true
+            }
+
+            if (wordFilenames.removeAll { it == filename }) {
+                modified = true
+            }
+        } finally {
+            lock.unlock()
+        }
+    }
+
     fun hasWordWithId(wordId: String): Boolean {
         val result: Boolean
         lock.lock()
@@ -173,9 +192,6 @@ class Unyt(val id: String) {
 
         return result
     }
-
-    fun hasEnoughWordsForStudy() =
-        numWordsLoaded >= MIN_NUM_WORDS_FOR_STUDY
 
     fun averageLevelOfWords(): JLPTLevel? {
         var sum = 0

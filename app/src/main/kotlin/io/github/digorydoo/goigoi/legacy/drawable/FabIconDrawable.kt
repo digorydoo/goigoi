@@ -30,6 +30,7 @@ class FabIconDrawable(
         val outlinedIconStrokeWidthPx: Float
     }
 
+    var backgroundOverride: Color? = null
     var glow = 0.0f
 
     private val glowPaint = Paint().apply {
@@ -83,12 +84,11 @@ class FabIconDrawable(
                 canvas.drawCircle(cx, cy, r, glowPaint)
             }
 
-            bgndPaint.color =
-                if (state.contains(android.R.attr.state_pressed)) {
-                    colours.pressed.toArgb()
-                } else {
-                    colours.normal.toArgb()
-                }
+            val bgnd = backgroundOverride
+                ?: if (state.contains(android.R.attr.state_pressed)) colours.pressed
+                else colours.normal
+
+            bgndPaint.color = bgnd.toArgb()
 
             canvas.drawCircle(cx, cy, r, bgndPaint)
 

@@ -86,7 +86,7 @@ fun ListItem(
                     modifier = Modifier.padding(top = styles.secondaryTextTopMargin),
                     text = secondaryText,
                     style = GoigoiTheme.typography.listItemSecondaryText,
-                    color = GoigoiTheme.colours.onBackgroundSecondary,
+                    color = GoigoiTheme.colours.secondaryOnBackground,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )

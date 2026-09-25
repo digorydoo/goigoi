@@ -36,26 +36,6 @@
                 />
             </word>
             <word
-              w="【碁：ご】"
-              rom="Go"
-              tr_en="a kind of board game of capturing territory"
-              tr_de="Brettspiel, bei dem Territorien erobert werden"
-              lvl="n2"
-              category="games"
-              id="go-game"
-            >
-                <sentence
-                  s="【私：わたし】はよく【碁：ご】を【打：う】ちます。"
-                  rom="Watashi wa yoku Go o uchimasu."
-                  tr_en="I often play a game of Go."
-                  tr_de="Ich spiele oft Go."
-                  lvl="n2"
-                  origin="lib0 modified"
-                  rem="all correct: 碁を打つ, 碁をやる, 碁をする"
-                  href="https://hinative.com/questions/22272536"
-                />
-            </word>
-            <word
               w="【大：だい】【工：く】"
               rom="daiku"
               tr_en="carpenter; so. who builds a house"
@@ -93,7 +73,9 @@
               hint_de="Nomen"
               lvl="n2"
               id="kasen-underline"
+              rem="appears in 500mon N3 q19 (no example)"
             >
+                <keep_apart_from id="sen-line" />
                 <phrase
                   ph="【赤：あか】で【下：か】【線：せん】を【引：ひ】く"
                   rom="aka de kasen o hiku"
@@ -325,6 +307,25 @@
                   tr_de="Abstellen einer Funktion; nicht in Betrieb"
                   lvl="n2"
                   origin="ChatGPT"
+                />
+            </word>
+            <word
+              w="【祝：しゅく】【日：じつ】"
+              rom="shukujitsu"
+              tr_en="national holiday"
+              tr_de="Nationalfeiertag"
+              lvl="n2"
+              category="holidays, culture"
+              id="shukujitsu-holiday"
+            >
+                <keep_apart_from id="saijitsu-festivalday" />
+                <sentence
+                  s="【冷：れい】【蔵：ぞう】【庫：こ】の【中：なか】は【祝：しゅく】【日：じつ】のための【食：た】べ【物：もの】でいっぱいだ。"
+                  rom="Reizōko no naka wa shukujitsu no tame no tabemono de ippai da."
+                  tr_en="The fridge is full for the national holiday."
+                  tr_de="Der Kühlschrank ist voll für den Nationalfeiertag."
+                  lvl="n2"
+                  origin="lib0"
                 />
             </word>
             <word

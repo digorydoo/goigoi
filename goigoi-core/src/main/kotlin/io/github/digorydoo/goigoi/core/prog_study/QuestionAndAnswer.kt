@@ -1,39 +1,55 @@
 package io.github.digorydoo.goigoi.core.prog_study
 
 import ch.digorydoo.kutils.cjk.FuriganaString
+import ch.digorydoo.kutils.cjk.JLPTLevel
 import ch.digorydoo.kutils.cjk.isHiragana
 import ch.digorydoo.kutils.utils.OneOf
 import io.github.digorydoo.goigoi.core.db.PhraseOrSentence
 import io.github.digorydoo.goigoi.core.db.PhraseOrSentence.SplitPrimaryForm
 import io.github.digorydoo.goigoi.core.db.Word
+import io.github.digorydoo.goigoi.core.stats.Stats
 
 // This class is immutable
 class QuestionAndAnswer private constructor(
     val word: Word,
     val kind: QAKind,
     val index: Int,
-    val questionHasFurigana: Boolean,
+    val showFuriganaWithQuestion: Boolean,
     val question: OneOf<String, FuriganaString>,
+
+    @Deprecated("Only for legacy activity")
     val questionWithoutFurigana: String,
+
     val questionAfterReveal: OneOf<String, FuriganaString>?, // null = no change
     val questionHint: OneOf<String, Hint>,
     val answers: List<String>,
     val kanjiOrKanaToReveal: String,
     val translationToReveal: String,
     val hintToReveal: String,
-    val explanation: String,
+    val explanation: FuriganaString?,
     val presentWholeWords: Boolean,
+    val allowExtendedKeyboard: Boolean,
 ) {
     enum class Hint { PHRASE }
     enum class FontType { DEFAULT, BOLD_HIRAGANA, BOLD_KATAKANA, PENCIL, CALLIGRAPHY }
 
+    @Deprecated("Only for legacy activity")
     var fontType = FontType.DEFAULT // will be set by Choreographer
+
+    @Deprecated("Only for legacy activity")
     var furiganaRelVOffset = 0.0f // dito
 
     companion object {
         private const val GAP = "___"
+        private const val GAP_WITH_EMPTY_FURIGANA = "$GAP【：】" // to preserve the height of the furigana
 
-        fun create(word: Word, kind: QAKind, index: Int, questionHasFurigana: Boolean): QuestionAndAnswer {
+        fun create(
+            word: Word,
+            stats: Stats,
+            kind: QAKind,
+            index: Int,
+            showFuriganaWithQuestion: Boolean,
+        ): QuestionAndAnswer {
             val phrase = word.phrases.getOrNull(index)
             val sentence = word.sentences.getOrNull(index)
 
@@ -45,7 +61,6 @@ class QuestionAndAnswer private constructor(
             val question: OneOf<String, FuriganaString> = getQuestion(
                 word,
                 kind,
-                questionHasFurigana,
                 phrase,
                 sentence,
                 phrasePrimaryFormInParts,
@@ -55,11 +70,20 @@ class QuestionAndAnswer private constructor(
                 gapIncludesSuffix = presentWholeWords,
             )
 
+            val allowExtendedKeyboard = when {
+                presentWholeWords -> false // whole words need FIXED_KEYS
+                word.level == JLPTLevel.N5 -> false // N5 learners have rōmaji instead
+                kind == QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> false // answers would get too ambiguous
+                stats.getWordTotalSeenCount(word) < 5 -> false // FIXED_KEYS is easier
+                stats.getWordTotalRating(word) < 0.77f -> false
+                else -> true
+            }
+
             return QuestionAndAnswer(
                 word = word,
                 kind = kind,
                 index = index,
-                questionHasFurigana = questionHasFurigana,
+                showFuriganaWithQuestion = showFuriganaWithQuestion,
                 question = question,
                 questionWithoutFurigana = when (question) {
                     is OneOf.First -> question.first
@@ -80,13 +104,13 @@ class QuestionAndAnswer private constructor(
                 hintToReveal = getHintToReveal(word, kind),
                 explanation = getExplanation(kind, phrase, sentence),
                 presentWholeWords = presentWholeWords,
+                allowExtendedKeyboard = allowExtendedKeyboard,
             )
         }
 
         private fun getQuestion(
             word: Word,
             kind: QAKind,
-            questionHasFurigana: Boolean,
             phrase: PhraseOrSentence?,
             sentence: PhraseOrSentence?,
             phrasePrimaryFormInParts: SplitPrimaryForm?,
@@ -104,28 +128,21 @@ class QuestionAndAnswer private constructor(
 
             QAKind.SHOW_WORD_ASK_NOTHING -> when {
                 word.usuallyInKana -> OneOf.First(word.kana)
-                questionHasFurigana -> OneOf.Second(word.primaryForm)
-                else -> OneOf.First(word.primaryForm.kanji)
+                else -> OneOf.Second(word.primaryForm)
             }
 
-            QAKind.SHOW_PHRASE_ASK_NOTHING -> when {
-                questionHasFurigana -> OneOf.Second(phrase!!.primaryForm)
-                else -> OneOf.First(phrase!!.primaryForm.kanji)
-            }
-
-            QAKind.SHOW_SENTENCE_ASK_NOTHING -> when {
-                questionHasFurigana -> OneOf.Second(sentence!!.primaryForm)
-                else -> OneOf.First(sentence!!.primaryForm.kanji)
-            }
+            QAKind.SHOW_PHRASE_ASK_NOTHING -> OneOf.Second(phrase!!.primaryForm)
+            QAKind.SHOW_SENTENCE_ASK_NOTHING -> OneOf.Second(sentence!!.primaryForm)
 
             QAKind.SHOW_PHRASE_ASK_WORD_KANA,
             QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
             -> OneOf.Second(
                 phrasePrimaryFormInParts!!.let { phrase ->
+                    val gap = if (phrase.wordStem.kanji != phrase.wordStem.kana) GAP_WITH_EMPTY_FURIGANA else GAP
                     if (gapIncludesSuffix) {
-                        FuriganaString(phrase.begin.raw + GAP + phrase.end.raw)
+                        FuriganaString(phrase.begin.raw + gap + phrase.end.raw)
                     } else {
-                        FuriganaString(phrase.begin.raw + GAP + phrase.wordSuffix + phrase.end.raw)
+                        FuriganaString(phrase.begin.raw + gap + phrase.wordSuffix + phrase.end.raw)
                     }
                 }
             )
@@ -134,10 +151,11 @@ class QuestionAndAnswer private constructor(
             QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
             -> OneOf.Second(
                 sentencePrimaryFormInParts!!.let { sentence ->
+                    val gap = if (sentence.wordStem.kanji != sentence.wordStem.kana) GAP_WITH_EMPTY_FURIGANA else GAP
                     if (gapIncludesSuffix) {
-                        FuriganaString(sentence.begin.raw + GAP + sentence.end.raw)
+                        FuriganaString(sentence.begin.raw + gap + sentence.end.raw)
                     } else {
-                        FuriganaString(sentence.begin.raw + GAP + sentence.wordSuffix + sentence.end.raw)
+                        FuriganaString(sentence.begin.raw + gap + sentence.wordSuffix + sentence.end.raw)
                     }
                 }
             )
@@ -284,6 +302,8 @@ class QuestionAndAnswer private constructor(
             when (kind) {
                 QAKind.SHOW_ROMAJI_ASK_KANA,
                 QAKind.SHOW_TRANSLATION_ASK_KANA,
+                QAKind.SHOW_PHRASE_ASK_WORD_KANA,
+                QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
                 -> when {
                     word.kanji != word.kana && !word.usuallyInKana -> word.kanji
                     else -> ""
@@ -291,6 +311,8 @@ class QuestionAndAnswer private constructor(
 
                 QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR,
                 QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS,
+                QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
+                QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
                 -> when {
                     word.kana != word.kanji -> word.kana
                     else -> ""
@@ -301,8 +323,12 @@ class QuestionAndAnswer private constructor(
                     phrase?.kana != phrase?.kanji -> phrase?.kanji ?: ""
                     else -> ""
                 }
-
-                else -> ""
+                QAKind.SHOW_KANA_ASK_KANJI,
+                QAKind.SHOW_KANJI_ASK_KANA,
+                QAKind.SHOW_PHRASE_ASK_NOTHING,
+                QAKind.SHOW_SENTENCE_ASK_NOTHING,
+                QAKind.SHOW_WORD_ASK_NOTHING,
+                -> ""
             }
 
         private fun getTranslationToReveal(
@@ -335,19 +361,23 @@ class QuestionAndAnswer private constructor(
                 else -> ""
             }
 
-        private fun getExplanation(kind: QAKind, phrase: PhraseOrSentence?, sentence: PhraseOrSentence?): String =
+        private fun getExplanation(
+            kind: QAKind,
+            phrase: PhraseOrSentence?,
+            sentence: PhraseOrSentence?,
+        ): FuriganaString? =
             when (kind) {
                 QAKind.SHOW_PHRASE_ASK_NOTHING,
                 QAKind.SHOW_PHRASE_ASK_WORD_KANA,
                 QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
                 QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA,
-                -> phrase?.explanation?.withSystemLang ?: ""
+                -> phrase?.explanation?.withSystemLang?.takeIf { it.isNotEmpty() }?.let { FuriganaString(it) }
 
                 QAKind.SHOW_SENTENCE_ASK_NOTHING,
                 QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
-                -> sentence?.explanation?.withSystemLang ?: ""
+                -> sentence?.explanation?.withSystemLang?.takeIf { it.isNotEmpty() }?.let { FuriganaString(it) }
 
-                else -> ""
+                else -> null
             }
 
         private fun getPresentWholeWords(kind: QAKind): Boolean =

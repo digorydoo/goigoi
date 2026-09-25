@@ -5,6 +5,7 @@ import android.graphics.Canvas
 import android.graphics.DashPathEffect
 import android.graphics.Paint
 import android.graphics.Paint.Style
+import android.graphics.Typeface
 import android.text.SpannableString
 import android.text.TextPaint
 import android.util.AttributeSet
@@ -51,25 +52,34 @@ class TategakiView: View {
     private val layout = TategakiLayout()
 
     constructor(ctx: Context, attrs: AttributeSet?): super(ctx, attrs) {
-        initWithContext(attrs, ctx)
+        initialize(attrs, ctx)
     }
 
     constructor(ctx: Context, attrs: AttributeSet?, defStyleAttr: Int): super(ctx, attrs, defStyleAttr) {
-        initWithContext(attrs, ctx)
+        initialize(attrs, ctx)
     }
 
-    private fun initWithContext(attrs: AttributeSet?, ctx: Context) {
+    constructor(ctx: Context, typeface: Typeface?, color: Int): super(ctx) {
+        initialize(ctx, typeface, color)
+    }
+
+    private fun initialize(attrs: AttributeSet?, ctx: Context) {
         context.withStyledAttributes(attrs, R.styleable.TategakiView) {
             // Attributes need to be declared in attrs.xml
 
-            textPaint.typeface = getResourceId(R.styleable.TategakiView_android_fontFamily, 0)
+            val typeface = getResourceId(R.styleable.TategakiView_android_fontFamily, 0)
                 .takeIf { it > 0 }
                 ?.let { ResourcesCompat.getFont(ctx, it) }
 
-            textPaint.color = getColor(R.styleable.TategakiView_android_textColor, Colour.black.toARGB())
-            textPaint.textSize = DimUtils.dpToPx(DEFAULT_FONT_SIZE_DP, ctx)
+            val color = getColor(R.styleable.TategakiView_android_textColor, Colour.black.toARGB())
+            initialize(ctx, typeface = typeface, color = color)
         }
+    }
 
+    private fun initialize(ctx: Context, typeface: Typeface?, color: Int) {
+        textPaint.typeface = typeface ?: Typeface.DEFAULT
+        textPaint.textSize = DimUtils.dpToPx(DEFAULT_FONT_SIZE_DP, ctx)
+        textPaint.color = color
         columnSpacing = DimUtils.dpToPx(COLUMN_SPACING_DP, ctx)
         emptyFuriganaWidth = DimUtils.dpToPx(EMPTY_FURIGANA_WIDTH_DP, ctx)
         furiganaXDelta = DimUtils.dpToPx(FURIGANA_X_DELTA_DP, ctx)
@@ -97,6 +107,7 @@ class TategakiView: View {
     }
 
     fun setText(text: CharSequence) {
+        // Log.d(TAG, "viewMaxHeightPx=$viewMaxHeightPx") // was: 1020
         layout.clear()
 
         when (text) {
@@ -312,6 +323,7 @@ class TategakiView: View {
     }
 
     companion object {
+        // private const val TAG = "TategakiView"
         private const val DEFAULT_FONT_SIZE_DP = 16.0f
         private const val COLUMN_SPACING_DP = 16.0f // adds to the width of any furigana present
         private const val EMPTY_FURIGANA_WIDTH_DP = 4.0f // must be less than the minimal expected furigana size

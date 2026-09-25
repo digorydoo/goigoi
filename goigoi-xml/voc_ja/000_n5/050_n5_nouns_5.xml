@@ -1593,14 +1593,17 @@
             <word
               w="【方：かた】"
               rom="kata"
-              tr_en="instructions; way (of doing it); person"
-              tr_de="Anleitung; wie man etwas macht; Person"
+              tr_en="way; instructions; person"
+              tr_de="Art und Weise; Anleitung; Person"
+              studyInContext="preferred"
               hint_en="noun"
               hint_de="Nomen"
               lvl="n5"
               category="general"
               id="kata-way"
             >
+                <keep_apart_from id="hōhō-method" />
+                <keep_apart_from id="shikata-method" />
                 <phrase
                   ph="【漢：かん】【字：じ】の【書：か】き【方：かた】"
                   rom="kanji no kaki-kata"
@@ -1608,6 +1611,14 @@
                   tr_de="wie man Kanjis schreibt"
                   lvl="n5"
                   origin="ChatGPT"
+                />
+                <phrase
+                  ph="やり【方：かた】"
+                  rom="yari-kata"
+                  tr_en="the way of doing it"
+                  tr_de="wie man etw. macht"
+                  lvl="n5"
+                  origin="500mon N3 q18"
                 />
                 <sentence
                   s="【手：て】【紙：がみ】の 【書：か】き【方：かた】を 【教：おし】えて ください。"

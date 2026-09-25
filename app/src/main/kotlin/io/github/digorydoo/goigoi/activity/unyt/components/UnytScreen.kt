@@ -13,9 +13,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import io.github.digorydoo.goigoi.activity.unyt.UnytActivityModel
 import io.github.digorydoo.goigoi.activity.unyt.UnytActivityModel.WordInfo
-import io.github.digorydoo.goigoi.components.GoigoiFab
 import io.github.digorydoo.goigoi.components.app_bar.GoigoiAppBar
 import io.github.digorydoo.goigoi.components.bottom_sheet.word_info.WordInfoBottomSheet
+import io.github.digorydoo.goigoi.components.buttons.GoigoiFab
 import io.github.digorydoo.goigoi.components.menus.WordCtxMenu
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.legacy.drawable.FabIconDrawable.IconName

@@ -1120,6 +1120,7 @@
               id="sumu-end"
             >
                 <see id="sumaseru-finish" rem="v.t." />
+                <keep_apart_from id="toku-untie" />
                 <phrase
                   ph="【仕：し】【事：ごと】が【済：す】む"
                   rom="shigoto ga sumu"
@@ -1532,6 +1533,16 @@
                 >
                     <ask w="【謝：あやま】って" />
                 </sentence>
+                <sentence
+                  s="そんなに【謝：あやま】らなくてもいいよ。"
+                  rom="Sonna ni ayamaranakute mo ii yo."
+                  tr_en="You don't have to apologize so much."
+                  tr_de="Du musst dich nicht so sehr entschuldigen."
+                  lvl="n4"
+                  origin="500mon N3 q14"
+                >
+                    <ask w="【謝：あやま】らなくて" />
+                </sentence>
             </word>
             <word
               w="【似：に】【合：あ】う"
@@ -1775,21 +1786,12 @@
               rom="mukaeru"
               tr_en="to meet; to approach; to welcome"
               tr_de="jem. treffen; sich nähern; jem. Willkommen heissen"
+              hint_en="v.t."
               lvl="n4"
               category="relationships, meetings"
               id="mukaeru-approach"
             >
                 <see id="mukae-meeting" rem="noun" />
-                <phrase
-                  ph="【迎：むか】えに【行：い】く"
-                  rom="mukae ni iku"
-                  tr_en="to go to pick sb. up"
-                  tr_de="jem. abholen gehen"
-                  lvl="n4"
-                  origin="GENKI2 p.95"
-                >
-                    <ask w="【迎：むか】え" />
-                </phrase>
                 <phrase
                   ph="お【客：きゃく】【様：さま】を【迎：むか】える"
                   rom="o-kyaku-sama o mukaeru"

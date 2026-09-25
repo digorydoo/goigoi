@@ -4,13 +4,10 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Paint.Style
-import android.graphics.Path
-import android.graphics.Path.Direction
 import android.graphics.RectF
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.core.graphics.toRectF
-import androidx.core.graphics.withClip
 import ch.digorydoo.kutils.colour.Colour
 import io.github.digorydoo.goigoi.legacy.spannable.FuriganaBuilder
 
@@ -30,7 +27,6 @@ class BigStudyBtnDrawable(
         val leftPaddingPx: Float
         val primaryTextVDeltaPx: Float
         val secondaryTextVDeltaPx: Float
-        val outerCornerSizePx: Float
         val textShadowSizePx: Float
         val primaryTextSizePx: Float
         val secondaryTextSizePx: Float
@@ -67,17 +63,9 @@ class BigStudyBtnDrawable(
         val bmp = bgndBitmap
 
         if (bmp == null) {
-            canvas.drawRoundRect(dstR, dimensions.outerCornerSizePx, dimensions.outerCornerSizePx, bgndPaint)
+            canvas.drawRect(dstR, bgndPaint)
         } else {
-            val path = Path()
-            path.addRoundRect(dstR, dimensions.outerCornerSizePx, dimensions.outerCornerSizePx, Direction.CW)
-
-            // We should probably use BitmapShader instead of withClip. Unfortunately, this would require us to load a
-            // separate Bitmap that has the desired proportion, because you can't offset the bitmap with BitmapShader!
-
-            canvas.withClip(path) {
-                Artist.drawBitmapScaleToFit(bmp, dstR, bgndPaint, this, 0, 0)
-            }
+            Artist.drawBitmapScaleToFit(bmp, dstR, bgndPaint, canvas, 0, 0)
         }
     }
 

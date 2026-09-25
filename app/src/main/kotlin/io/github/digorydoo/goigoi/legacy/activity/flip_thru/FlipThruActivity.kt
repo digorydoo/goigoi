@@ -9,6 +9,9 @@ import androidx.compose.runtime.mutableStateOf
 import ch.digorydoo.kutils.cjk.JLPTLevel
 import com.google.android.material.snackbar.Snackbar
 import io.github.digorydoo.goigoi.R
+import io.github.digorydoo.goigoi.activity.prog_study.utils.StudyItemIteratorState
+import io.github.digorydoo.goigoi.activity.prog_study.utils.restoreState
+import io.github.digorydoo.goigoi.activity.prog_study.utils.saveState
 import io.github.digorydoo.goigoi.components.bottom_sheet.word_info.WordInfoBottomSheet
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Word
@@ -23,7 +26,10 @@ import io.github.digorydoo.goigoi.legacy.drawable.IconBuilder
 import io.github.digorydoo.goigoi.providers.DevicePropsProvider
 import io.github.digorydoo.goigoi.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.providers.SingletonsProvider
-import io.github.digorydoo.goigoi.utils.*
+import io.github.digorydoo.goigoi.utils.DimUtils
+import io.github.digorydoo.goigoi.utils.MyGestureDetector
+import io.github.digorydoo.goigoi.utils.ResUtils
+import io.github.digorydoo.goigoi.utils.SingletonHolder
 import kotlin.random.Random
 
 class FlipThruActivity: AppCompatActivity() {

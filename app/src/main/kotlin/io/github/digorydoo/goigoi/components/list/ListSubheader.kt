@@ -33,7 +33,7 @@ private fun getStyles(): ListSubheaderStyles {
             override val textTopMargin = 16.dp
             override val textBottomMargin = 8.dp
             override val textStyle = typography.listItemSecondaryText
-            override val colour = themeColours.onBackgroundSecondary
+            override val colour = themeColours.secondaryOnBackground
         }
     }
 }

@@ -40,12 +40,7 @@ private fun getStyles(): UnytContentStyles {
                 ScreenSize.NORMAL -> if (isPortrait) 24.dp else 32.dp
                 ScreenSize.SMALL -> 16.dp
             }
-
-            override val contentPaddingBottom = when (screenSize) {
-                ScreenSize.LARGE -> 24.dp
-                ScreenSize.NORMAL -> if (isPortrait) 16.dp else 8.dp
-                ScreenSize.SMALL -> 8.dp
-            }
+            override val contentPaddingBottom = 72.dp // large, because FAB overlaps content
         }
     }
 }

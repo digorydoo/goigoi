@@ -11,6 +11,8 @@ import ch.digorydoo.kutils.math.clamp
 import kotlin.math.ceil
 import kotlin.math.max
 
+const val DEFAULT_FURIGANA_OPACITY = 0.56f
+
 class FuriganaSpan(
     val primaryText: CharSequence,
     val secondaryText: CharSequence, // furigana
@@ -22,7 +24,7 @@ class FuriganaSpan(
         val fontSizeFactor: Float = 0.5f,
         val fontSizeMin: Float = 0.0f,
         val fontSizeMax: Float = 8192.0f,
-        val opacity: Float = 0.56f,
+        val opacity: Float = DEFAULT_FURIGANA_OPACITY,
         val relVOffset: Float = 0.3f,
     )
 

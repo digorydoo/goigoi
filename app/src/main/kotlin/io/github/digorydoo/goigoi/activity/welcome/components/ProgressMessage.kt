@@ -47,6 +47,6 @@ fun ProgressMessage(paddingLR: Dp, model: WelcomeActivityModel) {
         text = progressMsg,
         textAlign = TextAlign.Center,
         style = GoigoiTheme.typography.listItemSecondaryText,
-        color = GoigoiTheme.colours.onBackgroundSecondary,
+        color = GoigoiTheme.colours.secondaryOnBackground,
     )
 }

@@ -113,6 +113,34 @@ class WordChecker {
             }
         }
 
+        // Check if German translation of known hint was used, but hint_en was different
+
+        if (!unyt.hidden && !word.hidden) {
+            WordHint.entries.forEach { knownHint ->
+                if (word.hint.en.isNotEmpty() && word.hint.en == knownHint.en) {
+                    // Known hints should be moved to hint2 by GoigoiXmlParser
+                    throw CheckFailed("Internal error: hint_en (${word.hint.en}) should have been replaced by $knownHint")
+                }
+                if (word.hint.de.isNotEmpty() && word.hint.de == knownHint.de) {
+                    // We already know hint_en differs from the known hint
+                    throw CheckFailed(
+                        "hint_de is: ${word.hint.de}\n" +
+                            "   expected hint_en to be: ${knownHint.en}\n" +
+                            "   actual: ${word.hint.en}"
+                    )
+                }
+            }
+        }
+
+        // Check if translation of hint is missing
+
+        if (!unyt.hidden && !word.hidden) {
+            // Exceptions like v.i., etc. already have been moved to hint2.
+            if (word.hint.en.isNotEmpty() && word.hint.de.isEmpty()) {
+                throw CheckFailed("Missing German translation for hint: ${word.hint.en}")
+            }
+        }
+
         // Check that furigana are single-character except when unyt or word allow combined readings
 
         if (unyt.hasFurigana && !unyt.ignoresCombinedReadings) {
@@ -259,25 +287,6 @@ class WordChecker {
             unyt.requiredTranslations.forEach { langId ->
                 if (word.translation.withLanguage(langId).isEmpty()) {
                     throw CheckFailed("Missing required translation: $langId")
-                }
-            }
-        }
-
-        // Check if German translation of known hint was used, but hint_en was different
-
-        if (!unyt.hidden && !word.hidden) {
-            WordHint.entries.forEach { knownHint ->
-                if (word.hint.en.isNotEmpty() && word.hint.en == knownHint.en) {
-                    // Known hints should be moved to hint2 by GoigoiXmlParser
-                    throw CheckFailed("Internal error: hint_en (${word.hint.en}) should have been replaced by $knownHint")
-                }
-                if (word.hint.de.isNotEmpty() && word.hint.de == knownHint.de) {
-                    // We already know hint_en differs from the known hint
-                    throw CheckFailed(
-                        "hint_de is: ${word.hint.de}\n" +
-                            "   expected hint_en to be: ${knownHint.en}\n" +
-                            "   actual: ${word.hint.en}"
-                    )
                 }
             }
         }

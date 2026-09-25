@@ -25,13 +25,13 @@ class StudyItemIterator private constructor(
     val curWord get() = curItem.word
     val curWordOrNull get() = list.getOrNull(index)?.word
 
-    private var answer = Answer.NONE
+    var answer = Answer.NONE; private set
     var numCorrect = 0; private set
     var numWrong = 0; private set
     private var currentChanged = false
     private val updateMyWordsUnyt = unyt != vocab.myWordsUnyt
 
-    fun set(newIndex: Int, curWordId: String, newNumCorrect: Int, newNumWrong: Int) {
+    fun set(newIndex: Int, curWordId: String, newAnswer: Answer, newNumCorrect: Int, newNumWrong: Int) {
         index = if (newIndex in list.indices) newIndex else 0
 
         val curItem = curWordId
@@ -43,6 +43,7 @@ class StudyItemIterator private constructor(
             list.add(index, curItem)
         }
 
+        answer = newAnswer
         numCorrect = newNumCorrect
         numWrong = newNumWrong
         Log.debug(TAG, "StudyItemIterator was set to index=$newIndex, size=$size")

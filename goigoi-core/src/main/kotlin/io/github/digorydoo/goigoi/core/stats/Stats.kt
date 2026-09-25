@@ -5,15 +5,16 @@ import ch.digorydoo.kutils.utils.Moment
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.file.AssetsAccessor
+import io.github.digorydoo.goigoi.core.prog_study.QAKind
 import io.github.digorydoo.goigoi.core.study.Answer
+import kotlin.math.ceil
+import kotlin.math.max
 import kotlin.time.Duration.Companion.days
 
 class Stats(private val assets: AssetsAccessor) {
     private val generalStatsFile = GeneralStatsFile(assets.filesDir)
     private val wordStatsFile = WordStatsFile(assets.filesDir)
     private val unytStatsFile = UnytStatsFile(assets.filesDir)
-
-    val launchCount get() = generalStatsFile.launchCount
 
     fun notifyAppLaunch() {
         generalStatsFile.notifyAppLaunch()
@@ -32,13 +33,6 @@ class Stats(private val assets: AssetsAccessor) {
 
     fun incUserStudyCountOfToday(reason: StatsKey) {
         generalStatsFile.incUserStudyCountOfToday(reason)
-    }
-
-    fun hasHintBeenShown(hintDlgKey: HintDlgKey) =
-        generalStatsFile.hasHintBeenShown(hintDlgKey)
-
-    fun didShowHint(hintDlgKey: HintDlgKey) {
-        generalStatsFile.didShowHint(hintDlgKey)
     }
 
     val superProgressiveIdx get() = generalStatsFile.superProgressiveIdx
@@ -87,6 +81,42 @@ class Stats(private val assets: AssetsAccessor) {
         val m = getWordStudyMoment(word)
         val minDat = Moment.now() - DAYS_BEFORE_ASLEEP.days
         return m != null && m < minDat
+    }
+
+    fun phraseTotalSeenCount(word: Word, phraseIdx: Int): Int {
+        require(phraseIdx in word.phrases.indices)
+
+        fun seenCount(kind: QAKind) = getWordSeenCount(word, kind.toStatsKey())
+        val seenAskNothing = seenCount(QAKind.SHOW_PHRASE_ASK_NOTHING)
+        val seenAskKana = seenCount(QAKind.SHOW_PHRASE_ASK_WORD_KANA)
+        val seenAskKanji = seenCount(QAKind.SHOW_PHRASE_ASK_WORD_KANJI)
+        val seenTranslationAskKana = seenCount(QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA)
+
+        val numPhrasesWithWordRemoved = word.phrases.filter { it.canRemoveWordFromPrimaryForm(word) }.size
+
+        val result = (ceil(max(0, seenAskNothing - phraseIdx) / word.phrases.size.toFloat()) +
+            ceil(max(0, seenAskKana - phraseIdx) / numPhrasesWithWordRemoved.toFloat()) +
+            ceil(max(0, seenAskKanji - phraseIdx) / numPhrasesWithWordRemoved.toFloat()) +
+            ceil(max(0, seenTranslationAskKana - phraseIdx) / word.phrases.size.toFloat())).toInt()
+
+        return result
+    }
+
+    fun sentenceTotalSeenCount(word: Word, sentenceIdx: Int): Int {
+        require(sentenceIdx in word.sentences.indices)
+
+        fun seenCount(kind: QAKind) = getWordSeenCount(word, kind.toStatsKey())
+        val seenAskNothing = seenCount(QAKind.SHOW_SENTENCE_ASK_NOTHING)
+        val seenAskKana = seenCount(QAKind.SHOW_SENTENCE_ASK_WORD_KANA)
+        val seenAskKanji = seenCount(QAKind.SHOW_SENTENCE_ASK_WORD_KANJI)
+
+        val numSentencesWithWordRemoved = word.sentences.filter { it.canRemoveWordFromPrimaryForm(word) }.size
+
+        val result = (ceil(max(0, seenAskNothing - sentenceIdx) / word.phrases.size.toFloat()) +
+            ceil(max(0, seenAskKana - sentenceIdx) / numSentencesWithWordRemoved.toFloat()).toInt() +
+            ceil(max(0, seenAskKanji - sentenceIdx) / numSentencesWithWordRemoved.toFloat())).toInt()
+
+        return result
     }
 
     fun getUnytStudyMoment(unyt: Unyt) =

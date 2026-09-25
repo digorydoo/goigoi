@@ -54,7 +54,7 @@ class QAPicker(
         Log.debug(TAG, "Picked: $picked, index=$index")
         val kindSeenCount = picked?.let { stats.getWordSeenCount(word, it.toStatsKey()) } ?: 0
         val questionHasFurigana = picked?.doesNotAskAnything != true && kindSeenCount < 1
-        return picked?.let { QuestionAndAnswer.create(word, it, index, questionHasFurigana) }
+        return picked?.let { QuestionAndAnswer.create(word, stats, it, index, questionHasFurigana) }
     }
 
     private fun getIndexOfNextPhraseOrSentence(word: Word, info: WordInfo, kind: QAKind): Int {

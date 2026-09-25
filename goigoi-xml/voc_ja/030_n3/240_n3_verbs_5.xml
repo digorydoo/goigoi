@@ -11,8 +11,8 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n3"
-      requiresSentences="false"
-      requiresPhrases="false"
+      requiresSentences="true"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -578,13 +578,23 @@
             <word
               w="【生：しょう】じる"
               rom="shōjiru"
-              tr_en="to produce; to yield; to arise"
-              tr_de="etw. produzieren; etw. abgeben; aufkommen"
+              tr_en="to result from; to lead to; to arise"
+              tr_de="von etw. herkommen; zu etw. führen; eintreten"
               hint_en="v.t. &amp; i."
               lvl="n3"
-              category="general, work"
+              category="general"
               id="shōjiru-yield"
             >
+                <keep_apart_from id="motodzuku-basedon" />
+                <keep_apart_from id="osameru-pay" />
+                <phrase
+                  ph="【必：ひつ】【要：よう】から【生：しょう】じる"
+                  rom="hitsuyō kara shōjiru"
+                  tr_en="to arise from necessity"
+                  tr_de="sich aus Notwendigkeit ergeben"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【最：さい】【悪：あく】の【事：じ】【態：たい】が【生：しょう】じた。"
                   rom="Saiaku no jitai ga shōjita."
@@ -595,26 +605,15 @@
                 >
                     <ask w="【生：しょう】じた" />
                 </sentence>
+                <sentence
+                  s="【事：じ】【故：こ】は【不：ふ】【注：ちゅう】【意：い】から【生：しょう】じる。"
+                  rom="Jiko wa fuchūi kara shōjiru."
+                  tr_en="Accidents arise from carelessness."
+                  tr_de="Fahrlässigkeit führt zu Unfällen."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
-            <word
-              w="【扱：あつか】う"
-              rom="atsukau"
-              tr_en="to deal with (a person, problem); to operate (a machine)"
-              tr_de="sich (einem Problem, einer Person) annehmen; (Maschine) bedienen"
-              lvl="n3"
-              category="work, technical"
-              id="atsukau-dealwith"
-            />
-            <word
-              w="【得：う】る"
-              rom="uru"
-              tr_en="to be able to; to acquire sth.; to gain"
-              tr_de="etw. können; sich etw. aneignen; etw. gewinnen"
-              hint_en="v.t."
-              lvl="n3"
-              category="work"
-              id="uru-obtain"
-            />
             <word
               w="【疑：うたが】う"
               rom="utagau"
@@ -624,56 +623,65 @@
               lvl="n3"
               category="relationships, thinking"
               id="utagau-doubt"
-            />
-            <word
-              w="【収：おさ】める"
-              rom="osameru"
-              tr_en="to pay (fees); to bring to a close; to achieve (a result)"
-              tr_de="(Gebühren) zahlen; beenden; (ein Resultat) erreichen"
-              lvl="n3"
-              category="work, finances"
-              id="osameru-pay"
             >
-                <keep_apart_from id="eru-earn" />
                 <phrase
-                  ph="【成：せい】【功：こう】を【収：おさ】める"
-                  rom="seikō o osameru"
-                  tr_en="to come out successful; to achieve success"
-                  tr_de="erfolgreich sein; Erfolg haben"
+                  ph="その【噂：うわさ】が【本：ほん】【当：とう】かどうか【疑：うたが】う"
+                  rom="sono uwasa ga hontō ka dō ka utagau"
+                  tr_en="to doubt whether or not that rumour is true"
+                  tr_de="bezweifeln, ob dieses Gerücht wirklich wahr ist"
                   lvl="n3"
-                  origin="lib0"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="どうして【君：きみ】は【僕：ぼく】を【疑：うたが】うんですか。"
+                  rom="Dōshite kimi wa boku o utagau n desu ka?"
+                  tr_en="Why do you suspect me?"
+                  tr_de="Warum misstraust du mir?"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
-              w="【防：ふせ】ぐ"
-              rom="fusegu"
-              tr_en="to defend against; to protect against; to avert"
-              tr_de="sich gegen etw. verteidigen; sich gegen etw. schützen; etw. abwenden"
+              w="【解：と】く"
+              rom="toku"
+              tr_en="to unfasten; to untangle; to unravel"
+              tr_de="aufbinden; entwirren"
               hint_en="v.t."
               lvl="n3"
-              category="general, politics"
-              id="fusegu-avert"
-            />
-            <word
-              w="【解：と】ける"
-              rom="tokeru"
-              tr_en="to be solved; to come undone; (spell) to be broken"
-              tr_de="gelöst sein; lose werden; (Bann) aufgehoben sein"
-              hint_en="v.i."
-              lvl="n3"
-              category="general"
-              id="tokeru-besolved"
-            />
-            <word
-              w="【支：ささ】える"
-              rom="sasaeru"
-              tr_en="to support; to defend; to hold at bay"
-              tr_de="etw. unterstützen; etw. verteidigen; etw. in Schach halten"
-              hint_en="v.t."
-              lvl="n3"
-              category="general, politics"
-              id="sasaeru-support"
-            />
+              id="toku-untie"
+              rem="appears in Doraemon 13, p.185 (example already used)"
+            >
+                <keep_apart_from id="kaiketsu-solution" />
+                <keep_apart_from id="sumu-end" />
+                <phrase
+                  ph="ひもを【解：と】く"
+                  rom="himo o toku"
+                  tr_en="to undo a string"
+                  tr_de="eine Schnur aufbinden"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="【謎：なぞ】を【解：と】く"
+                  rom="nazo o toku"
+                  tr_en="to unravel a mistery"
+                  tr_de="einem Rätsel auf die Spur kommen"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="すべての【問：もん】【題：だい】を【解：と】いた。"
+                  rom="Subete no mondai o toita."
+                  tr_en="I solved all the problems."
+                  tr_de="Ich habe alle Probleme gelöst."
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【解：と】いた" />
+                </sentence>
+            </word>
         </section>
     </unit>
 </vocabulary>

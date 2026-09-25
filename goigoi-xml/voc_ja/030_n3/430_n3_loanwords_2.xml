@@ -234,6 +234,20 @@
                 />
             </word>
             <word
+              w="アイデア"
+              rom="aidea"
+              tr_en="idea"
+              tr_de="Idee"
+              lvl="n3"
+              id="aidea-idea"
+              rem="appears in 500mon N3 q17 as the answer (example already used); jisho has n2"
+            >
+                <!-- アイデアが三つあります。 (ChatGPT) -->
+                <keep_apart_from id="shisō-idea" />
+                <keep_apart_from id="an-idea" />
+                <keep_apart_from id="hassō-idea" />
+            </word>
+            <word
               w="スタイル"
               rom="sutairu"
               tr_en="clothing style; figure"
@@ -411,35 +425,8 @@
               lvl="n3"
               id="kēsu-case"
             />
-            <word
-              w="パス"
-              rom="pasu"
-              tr_en="passing (a test); pass (of a ball); skipping one's turn"
-              tr_de="erfolgreiche Prüfung; (Ball) zuspielen; (Runde) aussetzen"
-              lvl="n3"
-              id="pasu-pass"
-            />
 
             <!-- HIDDEN -->
-            <word
-              w="ボーイ"
-              rom="bōi"
-              tr_en="bellboy; porter; waiter"
-              tr_de="Hoteljunge; Portier"
-              lvl="n3"
-              category="occupations"
-              id="bōi-porter"
-              HIDDEN="true"
-            >
-                <sentence
-                  s="【私：わたし】は【鞄：かばん】をボーイに【運：はこ】んでもらった。"
-                  rom="Watashi wa kaban o bōi ni hakonde moratta."
-                  tr_en="I had the porter carry my bags."
-                  tr_de="Ich liess den Portier meine Taschen tragen."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
             <word
               w="ゴール"
               rom="gōru"
@@ -459,6 +446,35 @@
                   origin="lib0"
                 />
             </word>
+            <word
+              w="ボーイ"
+              rom="bōi"
+              tr_en="bellboy; porter; waiter"
+              tr_de="Hoteljunge; Portier"
+              lvl="n3"
+              category="occupations"
+              id="bōi-porter"
+              rem="is this old-fashioned?"
+              HIDDEN="true"
+            >
+                <sentence
+                  s="【私：わたし】は【鞄：かばん】をボーイに【運：はこ】んでもらった。"
+                  rom="Watashi wa kaban o bōi ni hakonde moratta."
+                  tr_en="I had the porter carry my bags."
+                  tr_de="Ich liess den Portier meine Taschen tragen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="パス"
+              rom="pasu"
+              tr_en="passing (a test); pass (of a ball); skipping one's turn"
+              tr_de="erfolgreiche Prüfung; (Ball) zuspielen; (Runde) aussetzen"
+              lvl="n3"
+              id="pasu-pass"
+              HIDDEN="true"
+            />
             <word
               w="ボール"
               rom="bōru"

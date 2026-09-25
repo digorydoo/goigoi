@@ -28,7 +28,6 @@
           android:noHistory="true"
           android:theme="@style/Theme.App.Starting"
           android:exported="true"
-          android:screenOrientation="locked"
           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -87,12 +86,12 @@
               />
         </activity>
         <activity
-          android:name="io.github.digorydoo.goigoi.legacy.activity.prog_study.ProgStudyActivity"
+          android:name="io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivity"
           android:launchMode="singleTop"
           >
             <meta-data
               android:name="android.support.PARENT_ACTIVITY"
-              android:value="io.github.digorydoo.goigoi.activity.unyt.UnytActivity"
+              android:value="io.github.digorydoo.goigoi.activity.welcome.WelcomeActivity"
               />
         </activity>
     </application>

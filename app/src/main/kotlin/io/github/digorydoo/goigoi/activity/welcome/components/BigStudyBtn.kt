@@ -6,9 +6,11 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.graphics.nativeCanvas
@@ -54,7 +56,6 @@ private fun getStyles(): BigStudyBtnStyles {
                 override val leftPaddingPx = dpToPx(24.dp)
                 override val primaryTextVDeltaPx = dpToPx(48.dp)
                 override val secondaryTextVDeltaPx = dpToPx(24.dp)
-                override val outerCornerSizePx = dpToPx(16.dp)
                 override val textShadowSizePx = dpToPx(1.dp)
 
                 override val primaryTextSizePx = when (screenSize) {
@@ -90,8 +91,6 @@ fun BigStudyBtn(paddingLR: Dp, onClick: () -> Unit) {
                 top = styles.marginTop,
                 bottom = styles.marginBottom
             )
-            // Ripple effect is inside top-bottom padding, but around start-end padding!
-            .clickable(onClick = onClick)
             .padding(start = paddingLR, end = paddingLR)
     ) {
         // We can use aspectRatio modifier to ensure a certain aspect ratio based on width.
@@ -101,6 +100,8 @@ fun BigStudyBtn(paddingLR: Dp, onClick: () -> Unit) {
             modifier = Modifier
                 .fillMaxWidth()
                 .aspectRatio(16f / 7f)
+                .clip(RoundedCornerShape(size = 16.dp))
+                .clickable(onClick = onClick)
         ) {
             drawable.setBounds(0, 0, size.width.toInt(), size.height.toInt())
             drawIntoCanvas { drawable.draw(it.nativeCanvas) }

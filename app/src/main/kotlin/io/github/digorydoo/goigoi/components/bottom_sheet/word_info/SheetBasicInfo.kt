@@ -130,14 +130,13 @@ private fun PrimaryForm(
             .fillMaxWidth()
             .padding(horizontal = horizPadding)
             .padding(top = marginTop),
-        factory = { ctx ->
-            TextView(ctx).apply {
+        factory = { ctx -> TextView(ctx) },
+        update = { textView ->
+            textView.apply {
+                text = primaryFormText
                 setTextSize(TypedValue.COMPLEX_UNIT_SP, primaryFormSize)
                 setTextColor(colours.onBackground.toArgb())
             }
-        },
-        update = { textView ->
-            textView.text = primaryFormText
         }
     )
 }
@@ -151,7 +150,8 @@ private fun Romaji(romaji: String, horizPadding: Dp, marginTop: Dp) {
             .padding(top = marginTop),
         text = romaji,
         style = GoigoiTheme.typography.hint,
-        color = GoigoiTheme.colours.onBackgroundSecondary,
+        fontSize = GoigoiTheme.typography.listItemSecondaryText.fontSize,
+        color = GoigoiTheme.colours.secondaryOnBackground,
     )
 }
 
@@ -179,7 +179,8 @@ private fun Hint(hint: String, horizPadding: Dp, marginTop: Dp) {
             .padding(top = marginTop),
         text = hint,
         style = GoigoiTheme.typography.hint,
-        color = GoigoiTheme.colours.onBackgroundSecondary,
+        fontSize = GoigoiTheme.typography.listItemSecondaryText.fontSize,
+        color = GoigoiTheme.colours.secondaryOnBackground,
     )
 }
 
@@ -195,7 +196,8 @@ private fun Categories(categories: List<WordCategory>, horizPadding: Dp, marginT
             .padding(top = marginTop),
         text = cats,
         style = GoigoiTheme.typography.hint,
-        color = GoigoiTheme.colours.onBackgroundSecondary,
+        fontSize = GoigoiTheme.typography.listItemSecondaryText.fontSize,
+        color = GoigoiTheme.colours.secondaryOnBackground,
     )
 }
 
@@ -228,7 +230,7 @@ private fun SometimesWithKanji(
                 .padding(top = marginTop),
             text = stringResource(R.string.sometimes_with_kanji).replace("\${kanji}", kanji),
             style = GoigoiTheme.typography.listItemSecondaryText, // not italic, because text contains kanji
-            color = GoigoiTheme.colours.onBackgroundSecondary,
+            color = GoigoiTheme.colours.secondaryOnBackground,
         )
     }
 }
@@ -272,7 +274,7 @@ private fun KanjiDifficultForLevel(
                 .padding(top = marginTop),
             text = kanjiDifficultForLevel,
             style = GoigoiTheme.typography.listItemSecondaryText, // keep this consistent with SometimesWithKanji
-            color = GoigoiTheme.colours.onBackgroundSecondary,
+            color = GoigoiTheme.colours.secondaryOnBackground,
         )
     }
 }
@@ -297,7 +299,7 @@ private fun WordStats(seenCount: Int, progress: Float, rating: Float, horizPaddi
             .padding(top = marginTop),
         text = seenCountMsg,
         style = GoigoiTheme.typography.listItemSecondaryText,
-        color = GoigoiTheme.colours.onBackgroundSecondary,
+        color = GoigoiTheme.colours.secondaryOnBackground,
     )
 
     if (progressOrRatingMsg != null) {
@@ -307,7 +309,7 @@ private fun WordStats(seenCount: Int, progress: Float, rating: Float, horizPaddi
                 .padding(horizontal = horizPadding),
             text = progressOrRatingMsg,
             style = GoigoiTheme.typography.listItemSecondaryText,
-            color = GoigoiTheme.colours.onBackgroundSecondary,
+            color = GoigoiTheme.colours.secondaryOnBackground,
         )
     }
 }

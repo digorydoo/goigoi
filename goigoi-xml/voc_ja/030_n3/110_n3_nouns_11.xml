@@ -182,6 +182,54 @@
                 />
             </word>
             <word
+              w="【和：わ】【室：しつ】"
+              rom="washitsu"
+              tr_en="Japanese-style room"
+              tr_de="Raum im japanischen Stil"
+              lvl="n3"
+              category="home"
+              id="washitsu-japanesestyleroom"
+              rem="appears in 500mon q454, 500mon N3 q10; jisho has nx"
+            >
+                <keep_apart_from id="ima-livingroom" />
+                <sentence
+                  s="【向：む】こうの【和：わ】【室：しつ】でお【茶：ちゃ】とお【菓：か】【子：し】をいただきましょう。"
+                  rom="Mukō no washitsu de o-cha to o-kashi o itadakimashō."
+                  tr_en="Let's have tea and sweets at the Japanese-style room over there."
+                  tr_de="Lasst uns Tea und Süssigkeiten im japanischen Raum gegenüber einnehmen."
+                  lvl="n3"
+                  origin="500mon N3 q10"
+                />
+                <sentence
+                  s="この【和：わ】【室：しつ】の【雨：あま】【戸：ど】は【古：ふる】くて【重：おも】いので【閉：し】めるのに【力：ちから】がいります。"
+                  rom="Kono washitsu no amado wa furukute omoi no de shimeru no ni chikara ga irimasu."
+                  tr_en="Since the shutters of this Japanese-style room are old and heavy, it takes some strength to close them."
+                  tr_de="Da die Fensterläden dieses japanischen Raumes so alt und schwer sind, braucht es Kraft, um sie zu schliessen."
+                  explanation_en="「【要：い】る」= to need, to want"
+                  explanation_de="「【要：い】る」= brauchen, wollen"
+                  lvl="n3"
+                  origin="500mon q454"
+                  rem="jisho has nx for washitsu, n2 for amado"
+                />
+            </word>
+            <word
+              w="【参：さん】【考：こう】"
+              rom="sankō"
+              tr_en="reference; consultation"
+              tr_de="Referenz; Konsultation"
+              lvl="n3"
+              id="sankō-ref"
+            >
+                <phrase
+                  ph="【参：さん】【考：こう】【書：しょ】"
+                  rom="sankō-sho"
+                  tr_en="reference book; study-aid book"
+                  tr_de="Referenzbuch; Studienhilfsbuch"
+                  lvl="n3"
+                  origin="500mon N3 q19"
+                />
+            </word>
+            <word
               w="【供：きょう】【給：きゅう】"
               rom="kyōkyū"
               tr_en="supply; provision"
@@ -600,17 +648,30 @@
                 />
             </word>
             <word
-              w="【教：きょう】【授：じゅ】"
-              rom="kyōju"
-              tr_en="professor; teaching"
-              tr_de="Professor; Lehren"
+              w="【能：のう】【力：りょく】"
+              rom="nōryoku"
+              tr_en="ability; expertise"
+              tr_de="Fähigkeit; Kompetenz"
+              Langenscheidt="Fähigkeit; Kompetenz"
               lvl="n3"
-              category="education, occupations"
-              id="kyōju-professor"
+              id="nōryoku-ability"
             >
-                <keep_apart_from id="sensei-teacher" />
-                <keep_apart_from id="kyōshi-teacher" />
-                <keep_apart_from id="kōshi-lecturer" />
+                <phrase
+                  ph="【日：に】【本：ほん】【語：ご】【能：のう】【力：りょく】【試：し】【験：けん】のN3"
+                  rom="Nihon-go nōryoku shiken no N3"
+                  tr_en="N3 Japanese Proficiency Test"
+                  tr_de="Japanisch-Sprachprüfung N3"
+                  lvl="n3"
+                  origin="500mon N3 q21"
+                />
+                <sentence
+                  s="【今：こ】【年：とし】は、【日：に】【本：ほん】【語：ご】【能：のう】【力：りょく】【試：し】【験：けん】のN3を【受：う】けようと【思：おも】います。"
+                  rom="Kotoshi wa, Nihon-go nōryoku shiken no N3 o ukeyō to omoimasu."
+                  tr_en="I think I will take the N3 Japanese Proficiency Test this year."
+                  tr_de="Ich denke, ich werde dieses Jahr die Japanisch-Sprachprüfung N3 ablegen."
+                  lvl="n3"
+                  origin="500mon N3 q21"
+                />
             </word>
             <word
               w="【作：さ】【業：ぎょう】"

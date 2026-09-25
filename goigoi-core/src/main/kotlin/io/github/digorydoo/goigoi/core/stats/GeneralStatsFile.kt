@@ -14,7 +14,7 @@ class GeneralStatsFile(dir: File): Exportable {
     override fun exportTo(dst: OutputStream) =
         file.exportTo(dst)
 
-    val launchCount: Int get() = file.getInt(APP_LAUNCH_COUNT_ID) ?: 1
+    private val launchCount: Int get() = file.getInt(APP_LAUNCH_COUNT_ID) ?: 1
 
     fun notifyAppLaunch() {
         var id = file.getString(APP_INSTALL_ID_ID)
@@ -92,16 +92,6 @@ class GeneralStatsFile(dir: File): Exportable {
         file.remove(key)
     }
 
-    fun hasHintBeenShown(hintDlgKey: HintDlgKey): Boolean {
-        val key = "$HINT_SHOWN_ID.$hintDlgKey"
-        return file.getBoolean(key) ?: false
-    }
-
-    fun didShowHint(hintDlgKey: HintDlgKey) {
-        val key = "$HINT_SHOWN_ID.$hintDlgKey"
-        file.setBoolean(key, true)
-    }
-
     val superProgressiveIdx: Int get() = file.getInt(SUPER_PROGRESSIVE_IDX_ID) ?: 0
 
     fun setSuperProgressiveIdx(idx: Int) {
@@ -119,7 +109,6 @@ class GeneralStatsFile(dir: File): Exportable {
         private const val APP_LAUNCH_COUNT_ID = "appLaunchCount"
         private const val USER_STUDY_COUNT_ID = "userActivity"
         private const val PAST_STATS_LIMIT_ID = "pastStatsLimit"
-        private const val HINT_SHOWN_ID = "hintShown"
         private const val SUPER_PROGRESSIVE_IDX_ID = "superProgIdx"
     }
 }

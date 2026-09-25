@@ -88,8 +88,12 @@ class BigRingDrawable(
         val cx = bounds.exactCenterX()
         val cy = bounds.exactCenterY()
         val r = 0.5f * min(bounds.width(), bounds.height())
-        val phi = max(0.0f, value * 360.0f) * animValue
         val shouldDrawCheckmark = value >= DailyProgressTracker.CHECKMARK_THRESHOLD
+
+        val phi =
+            if (shouldDrawCheckmark) 360f * animValue
+            else max(0.0f, value * 360.0f) * animValue
+
         var checkmarkAnimValue = 0.0f
         var ringHeadAnimValue = 0.0f
 

@@ -218,6 +218,17 @@
                 >
                     <ask w="【頑：がん】【張：ば】って" />
                 </sentence>
+                <sentence
+                  s="【今：こ】【年：とし】は【日：に】【本：ほん】【語：ご】の【勉：べん】【強：きょう】を【頑：がん】【張：ば】ろうと【思：おも】う。"
+                  rom="Kotoshi wa Nihon-go no benkyō o ganbarō to omou."
+                  tr_en="I think this year, I will do my best with my Japanese studies."
+                  tr_de="Ich denke, dieses Jahr werde ich mein Bestes geben mit meinem Japanischstudium."
+                  lvl="n4"
+                  origin="500mon N3 q21 modified"
+                  rem="500mon N3 q21 uses kana alone, but 500mon q380 uses kanji"
+                >
+                    <ask w="【頑：がん】【張：ば】ろう" />
+                </sentence>
             </word>
             <word
               w="【祈：いの】る"
@@ -620,6 +631,16 @@
                 >
                     <ask w="【触：さわ】らない" />
                 </sentence>
+                <sentence
+                  s="それ、さわっちゃいけないよ。"
+                  rom="Sore, sawaccha ikenai yo."
+                  tr_en="You are not allowed to touch this."
+                  tr_de="Man darf das nicht berühren."
+                  lvl="n4"
+                  origin="500mon N3 q12"
+                >
+                    <ask w="さわっちゃ" />
+                </sentence>
             </word>
             <word
               w="【寄：よ】る"
@@ -772,6 +793,16 @@
                   lvl="n4"
                   origin="self"
                   rem="verified with ChatGPT"
+                >
+                    <ask w="【下：さ】がって" />
+                </sentence>
+                <sentence
+                  s="【黄：き】【色：いろ】い【線：せん】まで【下：さ】がってお【待：ま】ちください。"
+                  rom="Kīroi sen made sagatte o-machi kudasai."
+                  tr_en="Please wait behind the yellow line."
+                  tr_de="Bitte warten Sie hinter der gelben Linie."
+                  lvl="n4"
+                  origin="500mon N3 q19"
                 >
                     <ask w="【下：さ】がって" />
                 </sentence>
@@ -951,8 +982,9 @@
               hint_en="v.i."
               lvl="n4"
               category="directions"
-              id="mukau-gotowards"
+              id="mukau-face"
             >
+                <see id="mukai-opposite" rem="noun" />
                 <phrase
                   ph="【机：つくえ】に【向：む】かっている"
                   rom="tsukue ni mukatte iru"
@@ -971,6 +1003,16 @@
                   origin="lib0"
                 >
                     <ask w="【向：む】かって" />
+                </sentence>
+                <sentence
+                  s="これからそちらに【向：む】かいますから、【３：さん】【時：じ】までには【着：つ】くと【思：おも】います。"
+                  rom="Kore kara sochira ni mukaimasu kara, san-ji made ni wa tsuku to omoimasu."
+                  tr_en="I'm heading there now, and I think I'll be there by 3 o'clock."
+                  tr_de="Ich mache mich jetzt auf dorthin, und werde um 3 Uhr dort sein, denke ich."
+                  lvl="n4"
+                  origin="500mon N3 q4"
+                >
+                    <ask stem="【向：む】かい" suffix="ます" />
                 </sentence>
             </word>
             <word

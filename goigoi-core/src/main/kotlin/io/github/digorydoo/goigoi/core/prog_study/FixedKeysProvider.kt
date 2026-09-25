@@ -12,17 +12,16 @@ import io.github.digorydoo.goigoi.core.db.Word
 import kotlin.math.abs
 
 class FixedKeysProvider(
-    private val qa: QuestionAndAnswer,
     private val unytToTakeWordsFrom: Unyt, // will be set to myWordsUnyt in super progressive mode
     private val kanjiIndex: KanjiIndex,
 ) {
-    fun get() = when {
-        qa.kind == QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR -> getWordWithIncorrectKanjis()
-        qa.presentWholeWords -> getWords()
-        else -> getChars()
+    fun get(qa: QuestionAndAnswer) = when {
+        qa.kind == QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR -> getWordWithIncorrectKanjis(qa)
+        qa.presentWholeWords -> getWords(qa)
+        else -> getChars(qa)
     }
 
-    private fun getWordWithIncorrectKanjis(): List<String> {
+    private fun getWordWithIncorrectKanjis(qa: QuestionAndAnswer): List<String> {
         var permutations = 1
         val primaryAnswer = qa.answers.firstOrNull() ?: throw Exception("qa.answers is empty")
 
@@ -72,7 +71,7 @@ class FixedKeysProvider(
         return result
     }
 
-    private fun getWords(): List<String> {
+    private fun getWords(qa: QuestionAndAnswer): List<String> {
         val result = mutableSetOf<String>()
         val enough = { result.size >= MIN_NUM_CHIPS_WHEN_WORDS * 2 }
         val primaryAnswer = qa.answers.firstOrNull() ?: throw Exception("qa.answers is empty")
@@ -163,21 +162,21 @@ class FixedKeysProvider(
             .shuffled()
     }
 
-    private fun getChars(): List<String> {
+    private fun getChars(qa: QuestionAndAnswer): List<String> {
         val primaryAnswer = qa.answers.firstOrNull() ?: throw Exception("qa.answers is empty")
 
         val chars = primaryAnswer.map { it }.toMutableSet()
 
         // Answers can get too ambiguous if we add more chars when asking full phrase
         if (qa.kind != QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA) {
-            addRandomChars(chars)
+            addRandomChars(qa, chars)
         }
 
         // Shuffle the keys in a way that avoids revealing parts of the answer
         return chars.map { it.toString() }.shuffledWhileAvoiding(qa.answers)
     }
 
-    private fun addRandomChars(to: MutableSet<Char>) {
+    private fun addRandomChars(qa: QuestionAndAnswer, to: MutableSet<Char>) {
         val numToAdd = MIN_NUM_CHIPS_WHEN_CHARS - to.size
 
         if (numToAdd <= 0) {
@@ -186,14 +185,14 @@ class FixedKeysProvider(
 
         to.addAll(
             when {
-                qa.kind.asksForKanji -> getRandomKanjis(numToAdd, except = to)
-                qa.kind.asksForKana -> getRandomKana(numToAdd, except = to)
+                qa.kind.asksForKanji -> getRandomKanjis(qa, numToAdd, except = to)
+                qa.kind.asksForKana -> getRandomKana(qa, numToAdd, except = to)
                 else -> getRandomRomaji(numToAdd, except = to)
             }
         )
     }
 
-    private fun getRandomKanjis(desiredCount: Int, except: Set<Char>): Set<Char> {
+    private fun getRandomKanjis(qa: QuestionAndAnswer, desiredCount: Int, except: Set<Char>): Set<Char> {
         // We want to avoid adding any kanjis that have the same readings as the ones from our question!
         val avoidReadings = qa.word.primaryForm.readings
             .map { it.kana }
@@ -209,7 +208,7 @@ class FixedKeysProvider(
         )
     }
 
-    private fun getRandomKana(desiredCount: Int, except: Set<Char>) =
+    private fun getRandomKana(qa: QuestionAndAnswer, desiredCount: Int, except: Set<Char>) =
         if (qa.word.kana.isHiragana()) {
             kanjiIndex.getRandomHiragana(desiredCount, except)
         } else {

@@ -424,27 +424,29 @@
                 />
             </word>
             <word
-              w="アイデア"
-              rom="aidea"
-              tr_en="idea"
-              tr_de="Idee"
-              lvl="n2"
-              id="aidea-idea"
-            >
-                <!-- アイデアが三つあります。 (ChatGPT) -->
-                <keep_apart_from id="shisō-idea" />
-                <keep_apart_from id="an-idea" />
-                <keep_apart_from id="hassō-idea" />
-            </word>
-            <word
               w="テーマ"
               rom="tēma"
               tr_en="theme; topic; motif"
               tr_de="Thema; Motiv"
               lvl="n2"
               id="tēma-theme"
+              rem="appears in 500mon N3 q17 (without example)"
             >
                 <!-- 科学は広いテーマです - かがくは ひろいテーマです - science is a wide topic (ChatGPT) -->
+            </word>
+            <word
+              w="クリーニング"
+              rom="kurīningu"
+              tr_en="laundry service; cleaning"
+              tr_de="Wäscheservice; putzen"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n2"
+              category="cleaning"
+              id="kurīningu-cleaning"
+            >
+                <keep_apart_from id="n5-sentaku" />
+                <keep_apart_from id="n5-sōji" />
             </word>
             <word
               w="プラスチック"
@@ -491,6 +493,7 @@
               hint_de="Nomen; Suru-Verb"
               lvl="n2"
               id="baransu-balance"
+              rem="appears in 500mon N3 q17 (without example)"
             />
             <word
               w="ビルディング"

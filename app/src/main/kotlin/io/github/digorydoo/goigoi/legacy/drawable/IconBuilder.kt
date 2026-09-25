@@ -19,22 +19,6 @@ object IconBuilder {
         return CheckmarkIconDrawable(colours, dims)
     }
 
-    fun getFabIconDrawable(ctx: Context, iconName: FabIconDrawable.IconName): FabIconDrawable {
-        val colours = object: FabIconDrawable.Colours {
-            override val normal = Color(ResUtils.getARGBFromRes(R.color.green_800, ctx))
-            override val pressed = Color(ResUtils.getARGBFromRes(R.color.green_700, ctx))
-            override val shim = Color(ResUtils.getARGBFromAttr(R.attr.fabShimColour, ctx))
-            override val glow = Color(ResUtils.getARGBFromAttr(R.attr.fabGlowColour, ctx))
-            override val icon = Color(ResUtils.getARGBFromRes(R.color.white, ctx))
-        }
-        val dims = object: FabIconDrawable.Dimensions {
-            override val shimWidthPx = DimUtils.dpToPx(8, ctx)
-            override val glowRadiusPx = DimUtils.dpToPx(8.0f, ctx)
-            override val outlinedIconStrokeWidthPx = DimUtils.dpToPx(2.5f, ctx)
-        }
-        return FabIconDrawable(iconName, colours, dims)
-    }
-
     fun getFlashIconDrawable(ctx: Context): FlashIconDrawable {
         val colours = object: FlashIconDrawable.Colours {
             override val background = Color(ResUtils.getARGBFromAttr(R.attr.flashBgColour, ctx))

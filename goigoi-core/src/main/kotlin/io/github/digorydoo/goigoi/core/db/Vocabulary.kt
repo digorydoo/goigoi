@@ -16,9 +16,7 @@ class Vocabulary(private val flavour: Flavour, private val assets: AssetsAccesso
     private val theTopics = mutableListOf<Topic>()
     val topics get() = theTopics.iterator()
 
-    private val _allWordFilenames = mutableListOf<String>()
-    val allWordFilenames: List<String> get() = _allWordFilenames
-
+    val allWordFilenames: List<String>; field = mutableListOf<String>()
     val myWordsUnyt = Unyt(id = MY_WORDS_UNYT_ID)
 
     fun createNewTopic(id: String): Topic {
@@ -40,9 +38,9 @@ class Vocabulary(private val flavour: Flavour, private val assets: AssetsAccesso
     }
 
     fun setWordFilenames(filenames: List<String>) {
-        _allWordFilenames.clear()
-        _allWordFilenames.addAll(filenames)
-        _allWordFilenames.sort() // filenames start with the super progressive index
+        allWordFilenames.clear()
+        allWordFilenames.addAll(filenames)
+        allWordFilenames.sort() // filenames start with the super progressive index
     }
 
     fun findTopicById(id: String) = theTopics.find { u -> u.id == id }
@@ -93,14 +91,22 @@ class Vocabulary(private val flavour: Flavour, private val assets: AssetsAccesso
     fun loadUnytIfNecessary(unyt: Unyt) {
         if (unyt.numWordsAvailable > 0 && unyt.numWordsLoaded == 0) {
             Log.debug(TAG, "Loading unyt including words: ${unyt.name.en}")
+            val failed = mutableSetOf<String>()
 
-            unyt.wordFilenames.forEach { filename ->
+            for (filename in unyt.wordFilenames) {
                 val word = loadWordFile(filename)
 
                 if (word != null) {
                     unyt.add(word)
                 } else {
                     Log.error(TAG, "Failed to load word file: $filename")
+                    failed += filename
+                }
+            }
+
+            if (unyt == myWordsUnyt) {
+                for (filename in failed) {
+                    unyt.removeAllWithFilename(filename)
                 }
             }
         }
@@ -122,7 +128,7 @@ class Vocabulary(private val flavour: Flavour, private val assets: AssetsAccesso
     }
 
     fun loadVocab() {
-        require(_allWordFilenames.isEmpty())
+        require(allWordFilenames.isEmpty())
         val path = "voc_${flavour.studyLang}/index.voc"
 
         try {
@@ -195,7 +201,7 @@ class Vocabulary(private val flavour: Flavour, private val assets: AssetsAccesso
         if (!myWordsUnyt.modified) return
 
         try {
-            Log.debug(TAG, "Writing my words unyt file")
+            Log.debug(TAG, "Writing My Words file (${myWordsUnyt.numWordsAvailable} words)")
             assets.usePrivateFileOutput(MY_WORDS_UNYT_FILE_NAME) {
                 MyWordsUnytFileWriter(myWordsUnyt, it).write()
             }

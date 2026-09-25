@@ -29,6 +29,11 @@ object DeviceProps {
         @ReadOnlyComposable
         get() = LocalDevicePropsData.current.size
 
+    val orientation
+        @Composable
+        @ReadOnlyComposable
+        get() = LocalDevicePropsData.current.orientation
+
     val isPortrait
         @Composable
         @ReadOnlyComposable

@@ -1,14 +1,10 @@
 package io.github.digorydoo.goigoi.utils
 
-import android.app.Activity
 import android.content.Context
 import android.util.TypedValue
 import kotlin.math.roundToInt
 
 object DimUtils {
-    fun fromAttr(attrResId: Int, activity: Activity) =
-        ResUtils.getDimensionFromAttr(attrResId, activity)
-
     fun dpToPx(dp: Int, ctx: Context): Int {
         val metrics = ctx.resources.displayMetrics
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), metrics)

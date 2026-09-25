@@ -12,7 +12,7 @@
       defaultHint_de="Verb"
       lvl="n3"
       requiresSentences="true"
-      requiresPhrases="false"
+      requiresPhrases="true"
     >
         <section>
             <!-- unsorted -->
@@ -501,6 +501,7 @@
               category="general, thinking"
               id="motodzuku-basedon"
             >
+                <keep_apart_from id="shōjiru-yield" />
                 <phrase
                   ph="【経：けい】【験：けん】に【基：もと】づいている"
                   rom="keiken ni motodzuite iru"
@@ -2032,6 +2033,24 @@
                 <!--
                     lib0 has 夢を求める; ChatGPT says 夢を追う is more common
                 -->
+                <phrase
+                  ph="【賛：さん】【成：せい】を【求：もと】める"
+                  rom="sansei o motomeru"
+                  tr_en="to ask for approval"
+                  tr_de="um Zustimmung bitten"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【彼：かれ】は【何：なに】を【求：もと】めているのか。"
+                  rom="Kare wa nani o motomete iru no ka?"
+                  tr_en="What is he after?"
+                  tr_de="Was hat er vor? (Was steckt dahinter?)"
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【求：もと】めて" />
+                </sentence>
                 <sentence
                   s="【困：こま】ったときは、【誰：だれ】かに【助：たす】けを【求：もと】めてください。"
                   rom="Komatta toki wa, dareka ni tasuke o motomete kudasai."

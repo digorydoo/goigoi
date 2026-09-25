@@ -23,9 +23,8 @@ private interface SheetHeadStyles {
 }
 
 // FIXME In landscape, the SheetHead should cover the area of the nav bar / status bar
-//    Alternative: Don't cover that area from AppBar
-//    Alternative: Don't call edgeToEdge. But then we can no longer control that status bar/nav bar area easily
-//       And it may also affect the positioning of the hint balloon
+//    Reproduce: PrefsScreen, landscape, NOT simulator: sheet head does not extend far enough, because we're rendering
+//    it from content, not from Scaffold's topBar area.
 
 @Composable
 private fun getStyles(): SheetHeadStyles {

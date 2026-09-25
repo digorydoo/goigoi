@@ -4,7 +4,7 @@ import ch.digorydoo.kutils.cjk.JLPTLevel
 import ch.digorydoo.kutils.logging.Log
 import ch.digorydoo.kutils.string.lpad
 import ch.digorydoo.kutils.string.rpad
-import ch.digorydoo.kutils.string.toPrecision
+import ch.digorydoo.kutils.string.toFixed
 import io.github.digorydoo.goigoi.core.db.KanjiIndex
 import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 import io.github.digorydoo.goigoi.core.db.Word
@@ -33,7 +33,7 @@ class QAWeightAssigner(
         val seen = stats.getWordSeenCount(word, kind.toStatsKey())
 
         fun Float.percent() = (this * 100).let {
-            it.toPrecision(
+            it.toFixed(
                 when {
                     it >= 100 -> 3
                     it >= 10 -> 4

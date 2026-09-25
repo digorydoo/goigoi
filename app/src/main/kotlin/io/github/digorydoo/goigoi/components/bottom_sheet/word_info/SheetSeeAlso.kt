@@ -74,14 +74,13 @@ fun SheetSeeAlso(word: Word, sheetHorizPadding: Dp) {
                         .fillMaxWidth()
                         .padding(horizontal = sheetHorizPadding)
                         .padding(top = if (anyEmitted) 16.dp else 4.dp),
-                    factory = { ctx ->
-                        TextView(ctx).apply {
+                    factory = { ctx -> TextView(ctx) },
+                    update = { textView ->
+                        textView.apply {
+                            this.text = primaryText
                             setTextSize(TypedValue.COMPLEX_UNIT_SP, SEE_ALSO_PRIMARY_FORM_SIZE_SP)
                             setTextColor(colours.onBackground.toArgb())
                         }
-                    },
-                    update = { textView ->
-                        textView.text = primaryText
                     }
                 )
 
@@ -92,7 +91,7 @@ fun SheetSeeAlso(word: Word, sheetHorizPadding: Dp) {
                         .padding(top = 4.dp), // keep this consistent with ListItem's secondaryTextTopMargin
                     text = secondaryText,
                     style = typography.listItemSecondaryText,
-                    color = colours.onBackgroundSecondary,
+                    color = colours.secondaryOnBackground,
                 )
 
                 linksEmitted.add(link.wordId)

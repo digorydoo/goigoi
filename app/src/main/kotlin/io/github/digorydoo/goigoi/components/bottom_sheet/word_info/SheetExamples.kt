@@ -59,14 +59,13 @@ private fun Example(phraseOrSentence: PhraseOrSentence, word: Word, marginTop: D
             .fillMaxWidth()
             .padding(horizontal = sheetHorizPadding)
             .padding(top = marginTop),
-        factory = { ctx ->
-            TextView(ctx).apply {
+        factory = { ctx -> TextView(ctx) },
+        update = { textView ->
+            textView.apply {
+                text = primaryForm
                 setTextSize(TypedValue.COMPLEX_UNIT_SP, EXAMPLE_PRIMARY_FORM_SIZE_SP)
                 setTextColor(colours.onBackground.toArgb())
             }
-        },
-        update = { textView ->
-            textView.text = primaryForm
         }
     )
 
@@ -77,7 +76,7 @@ private fun Example(phraseOrSentence: PhraseOrSentence, word: Word, marginTop: D
             .padding(top = 4.dp), // keep this consistent with ListItem's secondaryTextTopMargin
         text = phraseOrSentence.translation.withSystemLang,
         style = typography.listItemSecondaryText,
-        color = colours.onBackgroundSecondary,
+        color = colours.secondaryOnBackground,
     )
 
     val explanation = phraseOrSentence.explanation.withSystemLang
@@ -100,15 +99,14 @@ private fun Example(phraseOrSentence: PhraseOrSentence, word: Word, marginTop: D
                 modifier = Modifier
                     .weight(1f)
                     .padding(top = 2.dp),
-                factory = { ctx ->
-                    TextView(ctx).apply {
+                factory = { ctx -> TextView(ctx) },
+                update = { textView ->
+                    textView.apply {
+                        text = FuriganaBuilder.buildSpan(explanation)
                         setTextSize(TypedValue.COMPLEX_UNIT_PX, secondaryTextSizePx)
                         setTextColor(colours.onBackground.toArgb())
                         setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC))
                     }
-                },
-                update = { textView ->
-                    textView.text = FuriganaBuilder.buildSpan(explanation)
                 }
             )
         }
