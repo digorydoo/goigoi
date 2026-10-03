@@ -8,13 +8,13 @@ import androidx.lifecycle.lifecycleScope
 import io.github.digorydoo.goigoi.activity.topic.TopicActivityModel.Subheader
 import io.github.digorydoo.goigoi.activity.topic.TopicActivityModel.UnytInfo
 import io.github.digorydoo.goigoi.activity.topic.TopicActivityModel.UnytsListItem
-import io.github.digorydoo.goigoi.activity.topic.components.TopicScreen
+import io.github.digorydoo.goigoi.activity.topic.composables.TopicScreen
 import io.github.digorydoo.goigoi.activity.unyt.startUnytActivityAsync
+import io.github.digorydoo.goigoi.composables.providers.DevicePropsProvider
+import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.composables.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.core.db.Topic
 import io.github.digorydoo.goigoi.core.db.Unyt
-import io.github.digorydoo.goigoi.providers.DevicePropsProvider
-import io.github.digorydoo.goigoi.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.utils.ResUtils
 import io.github.digorydoo.goigoi.utils.SingletonHolder
 

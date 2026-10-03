@@ -4,16 +4,17 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import ch.digorydoo.kutils.utils.Moment
 import io.github.digorydoo.goigoi.BuildConfig
 import io.github.digorydoo.goigoi.activity.prefs.startPrefsActivity
 import io.github.digorydoo.goigoi.activity.prog_study.startProgStudyActivity
 import io.github.digorydoo.goigoi.activity.topic.TopicActivityParams
 import io.github.digorydoo.goigoi.activity.topic.startTopicActivity
 import io.github.digorydoo.goigoi.activity.unyt.startUnytActivityAsync
-import io.github.digorydoo.goigoi.activity.welcome.components.WelcomeScreen
-import io.github.digorydoo.goigoi.providers.DevicePropsProvider
-import io.github.digorydoo.goigoi.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.providers.SingletonsProvider
+import io.github.digorydoo.goigoi.activity.welcome.composables.WelcomeScreen
+import io.github.digorydoo.goigoi.composables.providers.DevicePropsProvider
+import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.composables.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.utils.ResUtils
 import io.github.digorydoo.goigoi.utils.SingletonHolder
 
@@ -32,7 +33,7 @@ class WelcomeActivity: ComponentActivity() {
         // The model contains the values that might change
 
         model = WelcomeActivityModel(vocab, stats, applicationContext)
-        model.update()
+        model.update(cachedStudyCount)
 
         // Topics never change, therefore we don't need to wrap them in the model
 
@@ -59,7 +60,7 @@ class WelcomeActivity: ComponentActivity() {
                             onMyWordsUnytClicked = {
                                 startUnytActivityAsync(
                                     vocab.myWordsUnyt,
-                                    done = { navigatedToItem = WelcomeActivityModel.MyWordsUnytItem() }
+                                    done = { navigatedToItem = WelcomeActivityModel.MyWordsUnytItem }
                                 )
                             },
                             onBack = {
@@ -72,18 +73,28 @@ class WelcomeActivity: ComponentActivity() {
         }
     }
 
+    override fun onPause() {
+        super.onPause()
+        val stats = SingletonHolder.stats
+        cachedStudyCount = stats.getUserStudyCountOfDay(Moment.now())
+    }
+
     override fun onResume() {
         super.onResume()
 
         val stats = SingletonHolder.stats
         stats.notifyMainActivityResume() // to clear old statistics
 
-        model.update()
+        model.update(cachedStudyCount)
 
         navigatedToItem?.let { item ->
             model.setHighlightedItem(item)
         }
 
         navigatedToItem = null
+    }
+
+    companion object {
+        private var cachedStudyCount = Float.NaN
     }
 }

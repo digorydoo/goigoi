@@ -4,9 +4,9 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import io.github.digorydoo.goigoi.providers.DevicePropsProvider
-import io.github.digorydoo.goigoi.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.providers.SingletonsProvider
+import io.github.digorydoo.goigoi.composables.providers.DevicePropsProvider
+import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.composables.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.utils.ResUtils
 
 class AboutActivity: ComponentActivity() {

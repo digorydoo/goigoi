@@ -7,7 +7,7 @@ import android.view.View
 import android.view.animation.AccelerateInterpolator
 import android.view.animation.DecelerateInterpolator
 import android.view.animation.LinearInterpolator
-import ch.digorydoo.kutils.filter.delay
+import ch.digorydoo.kutils.filter.envDelay
 import ch.digorydoo.kutils.math.clamp
 import ch.digorydoo.kutils.waveforms.nsin
 import io.github.digorydoo.goigoi.legacy.activity.flip_thru.fragment.FlipThruFragment
@@ -256,7 +256,7 @@ class Choreographer(private val delegate: Delegate, private val bindings: Bindin
 
         if (xrel < 1.0f) {
             val pre = clamp(1.8f * iconHalfWidth / containerWidth)
-            xrel = delay(xrel, pre)
+            xrel = envDelay(xrel, pre)
             val edge = cardHalfWidth - iconHalfWidth - edgeOffset
             delta = (1.0f - xrel) * edge
         } else {
@@ -313,7 +313,7 @@ class Choreographer(private val delegate: Delegate, private val bindings: Bindin
 
         if (yrel < 1.0f) {
             val pre = clamp(1.8f * textHalfHeight / containerHeight)
-            yrel = delay(yrel, pre)
+            yrel = envDelay(yrel, pre)
             val edge = cardHalfHeight - textHalfHeight - edgeOffset
             delta = (1.0f - yrel) * edge
         } else {
@@ -390,7 +390,7 @@ class Choreographer(private val delegate: Delegate, private val bindings: Bindin
         ValueAnimator.ofFloat(0.0f, 1.0f).apply {
             addUpdateListener { a: ValueAnimator ->
                 val v = a.animatedValue as Float
-                val r = 1.0f - delay(v, 0.3f)
+                val r = 1.0f - envDelay(v, 0.3f)
                 val w = r * nsin(3.0f * v)
                 val x = cx + dx * w
                 val y = cy + dy * w

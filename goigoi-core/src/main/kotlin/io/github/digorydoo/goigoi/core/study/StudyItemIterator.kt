@@ -24,6 +24,7 @@ class StudyItemIterator private constructor(
     val size get() = list.size
     val curWord get() = curItem.word
     val curWordOrNull get() = list.getOrNull(index)?.word
+    val streak get() = listMaintainer.streak
 
     var answer = Answer.NONE; private set
     var numCorrect = 0; private set
@@ -92,7 +93,9 @@ class StudyItemIterator private constructor(
             Answer.SKIP -> {
                 curItem.localNumSkipped++
             }
-            Answer.CORRECT_EXCEPT_KANA_SIZE,
+            Answer.CORRECT_EXCEPT_KANA_SIZE -> {
+                listMaintainer.onAnswerAlmostCorrect()
+            }
             Answer.TRIVIAL,
             Answer.NONE,
             -> Unit

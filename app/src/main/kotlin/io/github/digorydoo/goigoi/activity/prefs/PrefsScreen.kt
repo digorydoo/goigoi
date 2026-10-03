@@ -15,12 +15,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.components.SheetHead
-import io.github.digorydoo.goigoi.components.app_bar.GoigoiAppBar
-import io.github.digorydoo.goigoi.components.list.ListItem
-import io.github.digorydoo.goigoi.providers.DeviceProps
-import io.github.digorydoo.goigoi.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.providers.Singletons
+import io.github.digorydoo.goigoi.composables.SheetHead
+import io.github.digorydoo.goigoi.composables.app_bar.GoigoiAppBar
+import io.github.digorydoo.goigoi.composables.list.ListItem
+import io.github.digorydoo.goigoi.composables.providers.DeviceProps
+import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.composables.providers.Singletons
 import io.github.digorydoo.goigoi.utils.ScreenSize
 
 private interface PrefsScreenStyles {

@@ -7,13 +7,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.lifecycle.lifecycleScope
 import io.github.digorydoo.goigoi.activity.unyt.UnytActivityModel.WordInfo
 import io.github.digorydoo.goigoi.activity.unyt.UnytActivityModel.WordsListItem
-import io.github.digorydoo.goigoi.activity.unyt.components.UnytScreen
+import io.github.digorydoo.goigoi.activity.unyt.composables.UnytScreen
+import io.github.digorydoo.goigoi.composables.providers.DevicePropsProvider
+import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.composables.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.legacy.activity.flip_thru.FlipThruActivityParams
 import io.github.digorydoo.goigoi.legacy.activity.flip_thru.startFlipThruActivity
-import io.github.digorydoo.goigoi.providers.DevicePropsProvider
-import io.github.digorydoo.goigoi.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.utils.ResUtils
 import io.github.digorydoo.goigoi.utils.SingletonHolder
 

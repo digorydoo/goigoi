@@ -2,8 +2,8 @@ package io.github.digorydoo.goigoi.activity.unyt
 
 import android.util.Log
 import androidx.lifecycle.LifecycleCoroutineScope
-import io.github.digorydoo.goigoi.components.list.WordListItemData
-import io.github.digorydoo.goigoi.components.menus.WordCtxMenuModel
+import io.github.digorydoo.goigoi.composables.list.WordListItemData
+import io.github.digorydoo.goigoi.composables.menus.WordCtxMenuModel
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Vocabulary
 import io.github.digorydoo.goigoi.core.db.Word

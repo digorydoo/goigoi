@@ -144,11 +144,14 @@ class Vocabulary(private val flavour: Flavour, private val assets: AssetsAccesso
     }
 
     private fun loadOrCreateMyWordsUnyt() {
+        val title = "学習中の単語"
+
         myWordsUnyt.apply {
-            name.en = "My words"
-            name.de = "Meine Wörter"
-            name.fr = "Mes mots"
-            name.it = "Parole mie"
+            name.en = title
+            name.de = title
+            name.fr = title
+            name.it = title
+            name.ja = title
             studyLang = flavour.studyLang
             hasRomaji = flavour == Flavour.JAPANESE
             hasFurigana = flavour == Flavour.JAPANESE

@@ -5,20 +5,22 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.lifecycle.lifecycleScope
-import io.github.digorydoo.goigoi.activity.prog_study.components.ProgStudyScreen
+import io.github.digorydoo.goigoi.activity.prog_study.composables.ProgStudyScreen
 import io.github.digorydoo.goigoi.activity.prog_study.utils.ProgStudyState
 import io.github.digorydoo.goigoi.activity.prog_study.utils.restoreState
 import io.github.digorydoo.goigoi.activity.prog_study.utils.saveState
+import io.github.digorydoo.goigoi.composables.providers.DevicePropsProvider
+import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.composables.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.core.prog_study.FixedKeysProvider
 import io.github.digorydoo.goigoi.core.prog_study.KeyActionHandler
 import io.github.digorydoo.goigoi.core.prog_study.QAProvider
 import io.github.digorydoo.goigoi.core.prog_study.QuestionAndAnswer
 import io.github.digorydoo.goigoi.core.prog_study.RoundsTracker
+import io.github.digorydoo.goigoi.core.study.AnswerChecker
+import io.github.digorydoo.goigoi.core.study.AnswerCommentator
 import io.github.digorydoo.goigoi.core.study.StudyItemIterator
 import io.github.digorydoo.goigoi.core.study.StudyItemIterator.HowToStudy
-import io.github.digorydoo.goigoi.providers.DevicePropsProvider
-import io.github.digorydoo.goigoi.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.utils.ResUtils
 import io.github.digorydoo.goigoi.utils.SingletonHolder
 
@@ -38,6 +40,8 @@ class ProgStudyActivity: ComponentActivity() {
         val kanjiIndex = SingletonHolder.kanjiIndex
         val fixedKeysProvider = FixedKeysProvider(vocab.myWordsUnyt, kanjiIndex)
         val keyActionHandler = KeyActionHandler()
+        val answerChecker = AnswerChecker()
+        val answerCommentator = AnswerCommentator()
 
         studyItemIterator = StudyItemIterator.create(vocab, stats, null, HowToStudy.WORST_CONTINUOUSLY)
         rounds = RoundsTracker()
@@ -64,6 +68,8 @@ class ProgStudyActivity: ComponentActivity() {
         model = ProgStudyActivityModel(
             qaProvider,
             studyItemIterator,
+            answerChecker,
+            answerCommentator,
             fixedKeysProvider,
             keyActionHandler,
             stats,

@@ -2,16 +2,14 @@
 activityCompose = "1.13.0"
 agp = "9.4.1"
 appcompat = "1.8.0"
-composeBom = "2026.08.00"
+composeBom = "2026.09.00"
 constraintlayout = "2.2.2"
 coreSplashscreen = "1.2.0"
-fragmentKtx = "1.9.0"
+fragmentKtx = "1.9.1"
 kotlin = "2.4.20"
 material = "1.14.0"
 xmlparser = "23.26.3.0.0"
-
-# Can't update these unless I raise API level and lose compatibility with Samsung Galaxy S10
-coreKtx = "1.19.0"
+coreKtx = "1.19.1"
 
 [libraries]
 activity = { module = "androidx.activity:activity", version.ref = "activityCompose" }

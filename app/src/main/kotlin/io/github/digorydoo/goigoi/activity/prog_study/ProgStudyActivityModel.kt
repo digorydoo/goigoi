@@ -3,37 +3,46 @@ package io.github.digorydoo.goigoi.activity.prog_study
 import android.util.Log
 import androidx.lifecycle.LifecycleCoroutineScope
 import ch.digorydoo.kutils.cjk.FuriganaString
-import ch.digorydoo.kutils.cjk.toNormalSizedKana
 import ch.digorydoo.kutils.math.clamp
+import ch.digorydoo.kutils.utils.Moment
 import ch.digorydoo.kutils.utils.OneOf
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Vocabulary
 import io.github.digorydoo.goigoi.core.db.Word
-import io.github.digorydoo.goigoi.core.db.WordHint
-import io.github.digorydoo.goigoi.core.prog_study.*
+import io.github.digorydoo.goigoi.core.prog_study.FixedKeysProvider
+import io.github.digorydoo.goigoi.core.prog_study.KeyActionHandler
 import io.github.digorydoo.goigoi.core.prog_study.KeyActionHandler.Action
 import io.github.digorydoo.goigoi.core.prog_study.KeyActionHandler.TextAndCaret
+import io.github.digorydoo.goigoi.core.prog_study.KeyDef
+import io.github.digorydoo.goigoi.core.prog_study.QAKind
+import io.github.digorydoo.goigoi.core.prog_study.QAProvider
 import io.github.digorydoo.goigoi.core.prog_study.QuestionAndAnswer.Hint
 import io.github.digorydoo.goigoi.core.stats.Stats
 import io.github.digorydoo.goigoi.core.study.Answer
+import io.github.digorydoo.goigoi.core.study.AnswerChecker
+import io.github.digorydoo.goigoi.core.study.AnswerCommentator
 import io.github.digorydoo.goigoi.core.study.StudyItemIterator
+import io.github.digorydoo.goigoi.core.welcome.DailyProgressTracker.Companion.STUDY_COUNT_OF_FULL_MARK
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import kotlin.math.min
 import kotlin.time.Duration.Companion.milliseconds
 
 class ProgStudyActivityModel(
     private val qaProvider: QAProvider,
     private val studyItemIterator: StudyItemIterator,
+    private val answerChecker: AnswerChecker,
+    private val answerCommentator: AnswerCommentator,
     private val fixedKeysProvider: FixedKeysProvider,
     private val keyActionHandler: KeyActionHandler,
     private val stats: Stats,
     private val vocab: Vocabulary,
     private val lifecycleScope: LifecycleCoroutineScope,
 ) {
-    enum class PresentationMode { BEFORE_QUESTION, QUESTION, ANSWER_CHECK, EXPLANATION, NOTHING }
+    enum class PresentationMode { BEFORE_QUESTION, QUESTION, ANSWER_CHECK, REVEAL_TEXTS, EXPLANATION, NOTHING }
     enum class KeyboardMode { TRIVIAL, FIXED_KEYS, HIRAGANA, KATAKANA }
 
     private var _presentationMode = MutableStateFlow(PresentationMode.NOTHING)
@@ -69,6 +78,9 @@ class ProgStudyActivityModel(
     private val _answerPrefill = MutableStateFlow("")
     val answerPrefill = _answerPrefill.asStateFlow()
 
+    private val _answerComment = MutableStateFlow("")
+    val answerComment = _answerComment.asStateFlow()
+
     private val _caretPos = MutableStateFlow(0)
     val caretPos = _caretPos.asStateFlow()
 
@@ -96,11 +108,8 @@ class ProgStudyActivityModel(
     private val _fixedKeys = MutableStateFlow(listOf<String>())
     val fixedKeys = _fixedKeys.asStateFlow()
 
-    private val _numCorrect = MutableStateFlow(0)
-    val numCorrect = _numCorrect.asStateFlow()
-
-    private val _numWrong = MutableStateFlow(0)
-    val numWrong = _numWrong.asStateFlow()
+    private val _todaysProgress = MutableStateFlow(0f)
+    val todaysProgress = _todaysProgress.asStateFlow()
 
     fun showNextQuestion(initial: Boolean = false) {
         _presentationMode.update { PresentationMode.NOTHING }
@@ -128,22 +137,23 @@ class ProgStudyActivityModel(
             _questionHint.update { qa.questionHint }
             _acceptableAnswers.update { qa.answers }
             _answerCorrectness.update { if (initial) studyItemIterator.answer else Answer.NONE }
+            _answerComment.update { "" }
             _kanjiOrKanaToReveal.update { qa.kanjiOrKanaToReveal }
             _translationToReveal.update { qa.translationToReveal }
             _hintToReveal.update { qa.hintToReveal }
             _explanation.update { qa.explanation }
             _allowSetCaret.update { !qa.presentWholeWords }
 
-            val prefill = getAnswerPrefill(qa)
+            val prefill = qa.answerPrefill
 
             if (prefill == null) {
                 _answerPrefill.update { "" }
                 _currentAnswer.update { "" }
                 _caretPos.update { 0 }
             } else {
-                _answerPrefill.update { prefill.first + prefill.second }
-                _currentAnswer.update { prefill.first + prefill.second }
-                _caretPos.update { prefill.first.length }
+                _answerPrefill.update { prefill.prefix + prefill.suffix }
+                _currentAnswer.update { prefill.prefix + prefill.suffix }
+                _caretPos.update { prefill.prefix.length }
             }
 
             val primaryAnswer = qa.answers.firstOrNull() ?: ""
@@ -165,6 +175,9 @@ class ProgStudyActivityModel(
                     listOf()
                 }
             }
+
+            val studyCount = stats.getUserStudyCountOfDay(Moment.now())
+            _todaysProgress.update { min(1.0f, studyCount / STUDY_COUNT_OF_FULL_MARK) }
 
             // Wait until the hidden components have updated for the above changes
             delay(AWAIT_RENDER_DELAY_MILLIS.milliseconds)
@@ -232,8 +245,8 @@ class ProgStudyActivityModel(
         val pmode = _presentationMode.value
         when (pmode) {
             PresentationMode.QUESTION -> checkAndRevealAnswer()
-            PresentationMode.ANSWER_CHECK -> showExplanationOrNextQuestion()
-            PresentationMode.EXPLANATION -> showNextQuestion()
+            PresentationMode.ANSWER_CHECK -> showExplanationRevealTextsOrNextQuestion()
+            PresentationMode.REVEAL_TEXTS, PresentationMode.EXPLANATION -> showNextQuestion()
             else -> Log.w(TAG, "Unexpected call to onNextBtnClicked while presentationMode=$pmode")
         }
     }
@@ -248,123 +261,46 @@ class ProgStudyActivityModel(
         }
 
         val qa = qaProvider.qa
-        val answerEntered = _currentAnswer.value
-
-        var correctness = when {
-            qa.kind.doesNotAskAnything -> Answer.TRIVIAL
-            qa.answers.any { it == answerEntered } -> Answer.CORRECT
-            else -> Answer.WRONG
-        }
-
-        // FIXME hiragana へ and katakana ヘ should be treated as equivalent
-
-        fun isCorrectExceptWrongKanaSize(answerEntered: String): Boolean =
-            qa.answers.any { it.toNormalSizedKana() == answerEntered.toNormalSizedKana() }
-
-        fun isCorrectExceptUnexpectedSuru(answerEntered: String): Boolean {
-            return if (qa.word.hint2 != WordHint.NOUN_SURU && !qa.word.hint.en.lowercase().contains("suru")) {
-                false // no tolerance without these criteria
-            } else {
-                suruSuffix.any { suru ->
-                    answerEntered.endsWith(suru) && qa.answers.any { it == answerEntered.dropLast(suru.length) }
-                }
-            }
-        }
-
-        fun isCorrectExceptMissingExpectedSuru(answerEntered: String): Boolean {
-            return if (!qa.kind.involvesPhrasesOrSentences) {
-                false // no tolerance without this criterion
-            } else {
-                suruSuffix.any { suru ->
-                    qa.answers.any {
-                        it.endsWith(suru) && it.length > suru.length && it == "$answerEntered$suru"
-                    }
-                }
-            }
-        }
-
-        if (correctness == Answer.WRONG) {
-            if (isCorrectExceptWrongKanaSize(answerEntered)) {
-                // The user just confused small kana with normal-sized kana.
-                correctness = Answer.CORRECT_EXCEPT_KANA_SIZE
-            } else if (isCorrectExceptUnexpectedSuru(answerEntered)) {
-                // We allow this, e.g. when we asked for 掃除, and the user entered 掃除する
-                correctness = Answer.CORRECT
-            } else if (isCorrectExceptMissingExpectedSuru(answerEntered)) {
-                // We allow this, e.g. when we asked for 掃除する, and the user entered 掃除
-                correctness = Answer.CORRECT
-            }
-        }
-
+        val correctness = answerChecker.check(qa, _currentAnswer.value)
         qaProvider.notifyAnswer(correctness)
 
         _question.update { qa.questionAfterReveal ?: qa.question }
         _showFurigana.update { true }
         _presentationMode.update { PresentationMode.ANSWER_CHECK }
         _answerCorrectness.update { correctness }
-
-        when (correctness) {
-            Answer.CORRECT, Answer.CORRECT_EXCEPT_KANA_SIZE -> _numCorrect.update { it + 1 }
-            Answer.WRONG -> _numWrong.update { it + 1 }
-            else -> Unit
-        }
+        _answerComment.update { answerCommentator.getComment(correctness, studyItemIterator.streak) }
     }
 
-    private fun showExplanationOrNextQuestion() {
+    private fun showExplanationRevealTextsOrNextQuestion() {
         val qa = qaProvider.qa
 
-        val shouldShow = when {
+        val shouldShowExplanation = when {
             _explanation.value == null -> false
             qa.kind.doesNotAskAnything -> false // no room when using calligraphy font!
-            _answerCorrectness.value == Answer.WRONG -> true
+            _answerCorrectness.value == Answer.CORRECT_EXCEPT_KANA_SIZE -> false // hide when simple spelling mistake
+            _answerCorrectness.value == Answer.WRONG -> true // show explanation whenever answer is wrong
             qa.kind.involvesPhrases -> stats.phraseTotalSeenCount(qa.word, qa.index) < 2
             qa.kind.involvesSentences -> stats.sentenceTotalSeenCount(qa.word, qa.index) < 2
             else -> stats.getWordTotalSeenCount(qa.word) < 2
         }
 
-        if (shouldShow) {
+        if (shouldShowExplanation) {
             _presentationMode.update { PresentationMode.EXPLANATION }
+            return
+        }
+
+        val shouldRevealTexts = when {
+            qa.kind.doesNotAskAnything -> false // we showed the revealed texts during ANSWER_CHECK here
+            _answerCorrectness.value == Answer.CORRECT_EXCEPT_KANA_SIZE -> false // hide when simple spelling mistake
+            else -> qa.kanjiOrKanaToReveal.isNotEmpty() ||
+                qa.translationToReveal.isNotEmpty() ||
+                qa.hintToReveal.isNotEmpty()
+        }
+
+        if (shouldRevealTexts) {
+            _presentationMode.update { PresentationMode.REVEAL_TEXTS }
         } else {
             showNextQuestion()
-        }
-    }
-
-    /**
-     * If the word has a kana prefix, it may be an honorific prefix. Since the word without honorific prefix would also
-     * be correct, we pre-fill the prefix to make it non-ambigous. On the other hand, if we're showing kana or kanji and
-     * are asking kanji or kana, and there is a kana prefix and/or suffix, we also pre-fill the prefix or suffix,
-     * because the user would simply have to copy the same kana in the answer.
-     * @return a Pair of prefix and suffix to fill in automatically; null if nothing should be prefilled.
-     */
-    private fun getAnswerPrefill(qa: QuestionAndAnswer): Pair<String, String>? {
-        val word = qa.word
-        val kind = qa.kind
-        val answers = qa.answers
-        val presentWholeWords = qa.presentWholeWords
-        val question = qa.question
-
-        val questionWithoutFurigana = when (question) {
-            is OneOf.First -> question.first
-            is OneOf.Second -> question.second.kanji
-        }
-
-        return when {
-            presentWholeWords -> null
-            kind.doesNotAskAnything -> null
-            kind == QAKind.SHOW_ROMAJI_ASK_KANA -> null
-            word.kanji == word.kana -> null
-            else -> {
-                val prefix = word.kanaPrefix
-                val suffix = word.kanaSuffix
-                val answer = answers.firstOrNull() // the other answers are synonyms
-                val answerHasPrefix = answer?.startsWith(prefix) ?: false
-                val answerHasSuffix = answer?.endsWith(suffix) ?: false
-                val questionHasSuffix = questionWithoutFurigana.endsWith(suffix)
-                Pair(
-                    if (answerHasPrefix) prefix else "",
-                    if (answerHasSuffix && questionHasSuffix) suffix else "",
-                )
-            }
         }
     }
 
@@ -373,6 +309,5 @@ class ProgStudyActivityModel(
         private const val INITIAL_DELAY_MILLIS = 4 // just to avoid doing too much work in the initial frame
         private const val AWAIT_RENDER_DELAY_MILLIS = 100 // wait until AnimatedElements have been rendered
         const val DELAY_BEFORE_NEXT_QUESTION_MILLIS = 400 // also controls AnimatedElement's exit transition
-        private val suruSuffix = arrayOf("する", "をする")
     }
 }

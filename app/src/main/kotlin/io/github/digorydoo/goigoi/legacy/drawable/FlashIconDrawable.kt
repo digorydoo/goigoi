@@ -6,7 +6,7 @@ import android.graphics.Paint.Style
 import android.graphics.Path
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
-import ch.digorydoo.kutils.filter.delay
+import ch.digorydoo.kutils.filter.envDelay
 import kotlin.math.min
 
 class FlashIconDrawable(
@@ -35,7 +35,7 @@ class FlashIconDrawable(
     }
 
     override fun draw(canvas: Canvas) {
-        val bounds = getAnimatedBounds(delay(animValue, 0.0f, 0.8f))
+        val bounds = getAnimatedBounds(envDelay(animValue, 0.0f, 0.8f))
         bounds.inset(dims.insetPx, dims.insetPx)
 
         val cx = bounds.exactCenterX()

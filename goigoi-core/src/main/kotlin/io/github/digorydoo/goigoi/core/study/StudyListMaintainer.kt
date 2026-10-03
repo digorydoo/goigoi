@@ -24,7 +24,7 @@ class StudyListMaintainer(
     }
 
     private var roundsSinceAddMoreWords = 0
-    private var streak = 0
+    var streak = 0; private set
 
     // @return true if the word was removed from the list, false otherwise
     fun onAnswerCorrect(word: Word): Boolean {
@@ -161,6 +161,10 @@ class StudyListMaintainer(
                 list.remove(drop)
             }
         }
+    }
+
+    fun onAnswerAlmostCorrect() {
+        streak = 0
     }
 
     fun pushBack(item: StudyItem, answer: Answer) {

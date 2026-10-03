@@ -4,7 +4,7 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Path
-import ch.digorydoo.kutils.filter.delay
+import ch.digorydoo.kutils.filter.envDelay
 import ch.digorydoo.kutils.flow.compose
 import ch.digorydoo.kutils.math.accel
 import ch.digorydoo.kutils.math.scurve
@@ -28,23 +28,23 @@ class AnimatedLogo(ctx: Context): AnimatedDrawable() {
 
         val funs = arrayOf(
             compose<Double>(
-                { delay(it, 0.10, 0.35) },
+                { envDelay(it, 0.10, 0.35) },
                 { scurve(it, 1.0) }
             ),
             compose(
-                { delay(it, 0.0, 0.45) },
+                { envDelay(it, 0.0, 0.45) },
                 { scurve(it, 1.0) }
             ),
             compose(
-                { delay(it, 0.31, 0.43) },
+                { envDelay(it, 0.31, 0.43) },
                 { accel(it, 1.6) }
             ),
             compose(
-                { delay(it, 0.44, 0.57) },
+                { envDelay(it, 0.44, 0.57) },
                 { accel(it, 1.7) }
             ),
             compose(
-                { delay(it, 0.57) },
+                { envDelay(it, 0.57) },
                 { scurve(it, 1.5) }
             )
         )

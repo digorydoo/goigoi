@@ -8,7 +8,7 @@ import android.graphics.Paint.Style
 import android.graphics.Rect
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
-import ch.digorydoo.kutils.filter.delay
+import ch.digorydoo.kutils.filter.envDelay
 import kotlin.math.floor
 import kotlin.math.min
 
@@ -40,7 +40,7 @@ class CheckmarkIconDrawable(
     }
 
     override fun draw(canvas: Canvas) {
-        val bounds = getAnimatedBounds(delay(animValue, 0.0f, 0.8f))
+        val bounds = getAnimatedBounds(envDelay(animValue, 0.0f, 0.8f))
         bounds.inset(dims.insetPx, dims.insetPx)
 
         val cx = bounds.exactCenterX()
@@ -51,7 +51,7 @@ class CheckmarkIconDrawable(
 
         // Determine whether the checkmark will be drawn
 
-        val markAnimValue = delay(animValue, 0.9f)
+        val markAnimValue = envDelay(animValue, 0.9f)
 
         if (markAnimValue < 0) {
             return

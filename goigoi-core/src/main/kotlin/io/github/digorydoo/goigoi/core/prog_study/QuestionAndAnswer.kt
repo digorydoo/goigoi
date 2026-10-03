@@ -16,10 +16,6 @@ class QuestionAndAnswer private constructor(
     val index: Int,
     val showFuriganaWithQuestion: Boolean,
     val question: OneOf<String, FuriganaString>,
-
-    @Deprecated("Only for legacy activity")
-    val questionWithoutFurigana: String,
-
     val questionAfterReveal: OneOf<String, FuriganaString>?, // null = no change
     val questionHint: OneOf<String, Hint>,
     val answers: List<String>,
@@ -31,13 +27,37 @@ class QuestionAndAnswer private constructor(
     val allowExtendedKeyboard: Boolean,
 ) {
     enum class Hint { PHRASE }
-    enum class FontType { DEFAULT, BOLD_HIRAGANA, BOLD_KATAKANA, PENCIL, CALLIGRAPHY }
+    data class Prefill(val prefix: String, val suffix: String)
 
-    @Deprecated("Only for legacy activity")
-    var fontType = FontType.DEFAULT // will be set by Choreographer
+    private val questionWithoutFurigana = when (question) {
+        is OneOf.First -> question.first
+        is OneOf.Second -> question.second.kanji
+    }
 
-    @Deprecated("Only for legacy activity")
-    var furiganaRelVOffset = 0.0f // dito
+    /**
+     * If the word has a kana prefix, it may be an honorific prefix. Since the word without honorific prefix would also
+     * be correct, ProgStudyActivityModel pre-fills the prefix to make it non-ambigous. However, if we're showing kana
+     * or kanji and are asking kanji or kana, and if there is a kana prefix and/or suffix, we also pre-fill the prefix
+     * or suffix, because the user would simply have to copy the same kana in the answer.
+     */
+    val answerPrefill: Prefill? = when {
+        presentWholeWords -> null
+        kind.doesNotAskAnything -> null
+        kind == QAKind.SHOW_ROMAJI_ASK_KANA -> null
+        word.kanji == word.kana -> null
+        else -> {
+            val prefix = word.kanaPrefix
+            val suffix = word.kanaSuffix
+            val answer = answers.firstOrNull() // the other answers are synonyms
+            val answerHasPrefix = answer?.startsWith(prefix) ?: false
+            val answerHasSuffix = answer?.endsWith(suffix) ?: false
+            val questionHasSuffix = questionWithoutFurigana.endsWith(suffix)
+            Prefill(
+                prefix = if (answerHasPrefix) prefix else "",
+                suffix = if (answerHasSuffix && questionHasSuffix) suffix else "",
+            )
+        }
+    }
 
     companion object {
         private const val GAP = "___"
@@ -85,10 +105,6 @@ class QuestionAndAnswer private constructor(
                 index = index,
                 showFuriganaWithQuestion = showFuriganaWithQuestion,
                 question = question,
-                questionWithoutFurigana = when (question) {
-                    is OneOf.First -> question.first
-                    is OneOf.Second -> question.second.kanji
-                },
                 questionAfterReveal = getQuestionAfterReveal(word, kind, phrase, sentence),
                 questionHint = getQuestionHint(word, kind, phrase, sentence),
                 answers = getAnswers(
@@ -99,7 +115,7 @@ class QuestionAndAnswer private constructor(
                     sentencePrimaryFormInParts,
                     includeSuffix = presentWholeWords,
                 ),
-                kanjiOrKanaToReveal = getKanjiOrKanaToReveal(word, kind, phrase),
+                kanjiOrKanaToReveal = getKanjiOrKanaToReveal(word, kind),
                 translationToReveal = getTranslationToReveal(word, kind, phrase, sentence),
                 hintToReveal = getHintToReveal(word, kind),
                 explanation = getExplanation(kind, phrase, sentence),
@@ -298,12 +314,10 @@ class QuestionAndAnswer private constructor(
                 else -> listOf(parts.wordStem.kanji)
             }
 
-        private fun getKanjiOrKanaToReveal(word: Word, kind: QAKind, phrase: PhraseOrSentence?): String =
+        private fun getKanjiOrKanaToReveal(word: Word, kind: QAKind): String =
             when (kind) {
                 QAKind.SHOW_ROMAJI_ASK_KANA,
                 QAKind.SHOW_TRANSLATION_ASK_KANA,
-                QAKind.SHOW_PHRASE_ASK_WORD_KANA,
-                QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
                 -> when {
                     word.kanji != word.kana && !word.usuallyInKana -> word.kanji
                     else -> ""
@@ -311,23 +325,21 @@ class QuestionAndAnswer private constructor(
 
                 QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR,
                 QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS,
-                QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
-                QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
                 -> when {
                     word.kana != word.kanji -> word.kana
                     else -> ""
                 }
 
-                QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA,
-                -> when {
-                    phrase?.kana != phrase?.kanji -> phrase?.kanji ?: ""
-                    else -> ""
-                }
-                QAKind.SHOW_KANA_ASK_KANJI,
-                QAKind.SHOW_KANJI_ASK_KANA,
+                QAKind.SHOW_WORD_ASK_NOTHING,
                 QAKind.SHOW_PHRASE_ASK_NOTHING,
                 QAKind.SHOW_SENTENCE_ASK_NOTHING,
-                QAKind.SHOW_WORD_ASK_NOTHING,
+                QAKind.SHOW_KANA_ASK_KANJI,
+                QAKind.SHOW_KANJI_ASK_KANA,
+                QAKind.SHOW_PHRASE_ASK_WORD_KANA,
+                QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
+                QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA,
+                QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
+                QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
                 -> ""
             }
 
@@ -347,7 +359,15 @@ class QuestionAndAnswer private constructor(
                 QAKind.SHOW_PHRASE_ASK_NOTHING -> phrase?.translation?.withSystemLang ?: ""
                 QAKind.SHOW_SENTENCE_ASK_NOTHING -> sentence?.translation?.withSystemLang ?: ""
 
-                else -> ""
+                QAKind.SHOW_PHRASE_ASK_WORD_KANA,
+                QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
+                QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA,
+                QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
+                QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
+                QAKind.SHOW_TRANSLATION_ASK_KANA,
+                QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR,
+                QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS,
+                -> ""
             }
 
         private fun getHintToReveal(word: Word, kind: QAKind): String =
@@ -355,10 +375,20 @@ class QuestionAndAnswer private constructor(
                 QAKind.SHOW_KANJI_ASK_KANA,
                 QAKind.SHOW_KANA_ASK_KANJI,
                 QAKind.SHOW_ROMAJI_ASK_KANA,
-                QAKind.SHOW_WORD_ASK_NOTHING,
                 -> word.hintsWithSystemLang
 
-                else -> ""
+                QAKind.SHOW_WORD_ASK_NOTHING,
+                QAKind.SHOW_PHRASE_ASK_NOTHING,
+                QAKind.SHOW_SENTENCE_ASK_NOTHING,
+                QAKind.SHOW_PHRASE_ASK_WORD_KANA,
+                QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
+                QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA,
+                QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
+                QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
+                QAKind.SHOW_TRANSLATION_ASK_KANA,
+                QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR,
+                QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS,
+                -> ""
             }
 
         private fun getExplanation(

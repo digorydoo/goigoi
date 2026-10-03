@@ -2,8 +2,8 @@ package io.github.digorydoo.goigoi.activity.topic
 
 import android.util.Log
 import androidx.lifecycle.LifecycleCoroutineScope
-import io.github.digorydoo.goigoi.components.list.UnytListItemData
-import io.github.digorydoo.goigoi.components.menus.UnytCtxMenuModel
+import io.github.digorydoo.goigoi.composables.list.UnytListItemData
+import io.github.digorydoo.goigoi.composables.menus.UnytCtxMenuModel
 import io.github.digorydoo.goigoi.core.db.Unyt
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow

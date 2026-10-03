@@ -8,7 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import ch.digorydoo.kutils.logging.Log
 import io.github.digorydoo.goigoi.activity.welcome.startWelcomeActivity
-import io.github.digorydoo.goigoi.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.utils.AndroidLogStrategy
 import io.github.digorydoo.goigoi.utils.SingletonHolder
 
