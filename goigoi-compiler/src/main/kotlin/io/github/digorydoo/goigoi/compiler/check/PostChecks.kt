@@ -26,7 +26,7 @@ class PostChecks(
         }
 
         checkSchoolYears()
-        checkDontConfuseKanjis()
+        checkVisuallySimilarKanjis()
         checkRequiredManualKanjiLevels()
         checkKanjisInPhrasesAndSentences()
         checkUsuallyInKana()
@@ -242,14 +242,14 @@ class PostChecks(
         }
     }
 
-    private fun checkDontConfuseKanjis() {
+    private fun checkVisuallySimilarKanjis() {
         // these are valid Japanese characters, but not currently used by any word,
         // so they were removed from vocab.kanjiByFreq
         val allowedChars = arrayOf('龍', '々')
 
         val illegalChars = mutableSetOf<Char>()
 
-        vocab.dontConfuseKanjis.forEach { similarKanjis ->
+        vocab.visuallySimilar.forEach { similarKanjis ->
             similarKanjis.forEach { kanji ->
                 if (
                     !vocab.kanjiByFreq.contains(kanji) &&
@@ -264,7 +264,7 @@ class PostChecks(
 
         if (illegalChars.isNotEmpty()) {
             throw CheckFailed(
-                "dont_confuse mentions character(s) that are not part of the list of kanji by " +
+                "visually_similar mentions character(s) that are not part of the list of kanji by " +
                     "frequency. Using non-Japanese characters may lead to missing glyph problems in Goigoi.\n" +
                     "Offending characters: ${illegalChars.joinToString(", ")}"
             )

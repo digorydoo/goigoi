@@ -152,7 +152,6 @@ class Vocabulary(private val flavour: Flavour, private val assets: AssetsAccesso
             name.fr = title
             name.it = title
             name.ja = title
-            studyLang = flavour.studyLang
             hasRomaji = flavour == Flavour.JAPANESE
             hasFurigana = flavour == Flavour.JAPANESE
         }

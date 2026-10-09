@@ -1,9 +1,10 @@
 package io.github.digorydoo.goigoi.compiler.vocab
 
+// Keep this class in sync with WordLink from goigoi/core
 class GoigoiWordLink(
     val kind: Kind,
     var wordId: String,
-    val remark: String,
+    val type: String,
     var word: GoigoiWord? = null,
 ) {
     enum class Kind {
@@ -16,7 +17,6 @@ class GoigoiWordLink(
         AUTO_SAME_DE_TRANSLATION,
     }
 
-    // This will be used by WordFileWriter. Values need to be unique. Keep this list in sync with Goigoi!
     enum class ExtendedKind(val value: Int) {
         SAME_READING(1),
         SAME_KANJI(2),
@@ -44,7 +44,7 @@ class GoigoiWordLink(
             Kind.AUTO_SAME_DE_TRANSLATION -> ExtendedKind.SAME_DE_TRANSLATION
             Kind.XML_KEEP_APART -> ExtendedKind.KEEP_APART
             Kind.XML_KEEP_TOGETHER -> null // not relevant for Goigoi
-            Kind.XML_SEE_ALSO -> when (remark) {
+            Kind.XML_SEE_ALSO -> when (type) {
                 "closely related" -> ExtendedKind.CLOSELY_RELATED
                 "v.t." -> ExtendedKind.TRANSITIVE_VERB
                 "v.i." -> ExtendedKind.INTRANSITIVE_VERB

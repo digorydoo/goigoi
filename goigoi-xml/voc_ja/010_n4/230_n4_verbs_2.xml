@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N4 verbs ②"
       name_de="N4-Verben ②"
       name_fr="Les verbes N4 ②"
       name_it="Verbi N4 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -26,7 +28,7 @@
               category="looking"
               id="mieru-beseen"
             >
-                <see id="miru-see" rem="v.t." />
+                <see id="miru-see" type="v.t." />
                 <keep_apart_from id="mirareru-cansee" />
                 <keep_apart_from id="arawareru-becomevisible" />
                 <phrase
@@ -64,7 +66,7 @@
               category="looking"
               id="mitsukeru-find"
             >
-                <see id="mitsukaru-befound" rem="v.i." />
+                <see id="mitsukaru-befound" type="v.i." />
                 <phrase
                   ph="【新：あたら】しい【仕：し】【事：ごと】を【見：み】つける"
                   rom="atarashii shigoto o mitsukeru"
@@ -94,7 +96,7 @@
               category="looking"
               id="mitsukaru-befound"
             >
-                <see id="mitsukeru-find" rem="v.t." />
+                <see id="mitsukeru-find" type="v.t." />
                 <phrase
                   ph="【押：お】し【入：い】れの【中：なか】で【見：み】つかる"
                   rom="oshiire no naka de mitsukaru"
@@ -127,7 +129,7 @@
               category="hearing"
               id="kikoeru-beheard"
             >
-                <see id="kiku-hear" rem="v.t." />
+                <see id="kiku-hear" type="v.t." />
                 <phrase
                   ph="【音：おと】が【聞：き】こえる"
                   rom="oto ga kikoeru"
@@ -155,7 +157,7 @@
               category="hearing"
               id="naru-sound"
             >
-                <see id="naku-sing" rem="closely related" />
+                <see id="naku-sing" type="closely related" />
                 <phrase
                   ph="【大：おお】きな【音：おと】で【鳴：な】っている"
                   rom="ōkina oto de natte iru"
@@ -275,7 +277,7 @@
               category="feet"
               id="modoru-turnback"
             >
-                <see id="modosu-putback" rem="v.t." />
+                <see id="modosu-putback" type="v.t." />
                 <keep_apart_from id="kaeru-return" />
                 <keep_apart_from id="saru-goaway" />
                 <phrase
@@ -348,7 +350,8 @@
                   tr_de="Man darf Tiere nicht misshandeln."
                   lvl="n4"
                   origin="500mon q452"
-                  href="https://hinative.com/questions/22296459 (いじめるのは would not be quite right)"
+                  href="https://hinative.com/questions/22296459"
+                  rem="link verifies that いじめるのは would not be quite right"
                 >
                     <ask w="いじめて" />
                 </sentence>
@@ -365,7 +368,7 @@
               category="general"
               id="kaeru-change"
             >
-                <see id="kawaru-change" rem="v.i." />
+                <see id="kawaru-change" type="v.i." />
                 <keep_apart_from id="kaeru-substitute" />
                 <phrase
                   ph="【仕：し】【事：ごと】を【変：か】える"
@@ -413,7 +416,7 @@
               category="general"
               id="kawaru-change"
             >
-                <see id="kaeru-change" rem="v.t." />
+                <see id="kaeru-change" type="v.t." />
                 <keep_apart_from id="kawaru-takeover" />
                 <phrase
                   ph="【急：きゅう】に【変：か】わる"
@@ -465,7 +468,7 @@
               category="general, thinking"
               id="kimeru-decide"
             >
-                <see id="kimaru-bedecided" rem="v.i." />
+                <see id="kimaru-bedecided" type="v.i." />
                 <keep_apart_from id="erabu-choose" />
                 <phrase
                   ph="【会：かい】【議：ぎ】の【時：じ】【間：かん】を【決：き】める"
@@ -507,8 +510,8 @@
               category="general, thinking"
               id="kimaru-bedecided"
             >
-                <see id="kimeru-decide" rem="v.t." />
-                <see id="kimari-rules" rem="noun" />
+                <see id="kimeru-decide" type="v.t." />
+                <see id="kimari-rules" type="noun" />
                 <phrase
                   ph="【早：はや】く【決：き】まる"
                   rom="hayaku kimaru"
@@ -540,8 +543,8 @@
               category="general, time"
               id="tsudzuku-continue"
             >
-                <see id="tsudzukeru-keepon" rem="v.t." />
-                <see id="tsudzuki-continuation" rem="noun" />
+                <see id="tsudzukeru-keepon" type="v.t." />
+                <see id="tsudzuki-continuation" type="noun" />
                 <phrase
                   ph="【問：もん】【題：だい】が【続：つづ】く"
                   rom="mondai ga tsudzuku"
@@ -571,7 +574,7 @@
               category="general, time"
               id="tsudzukeru-keepon"
             >
-                <see id="tsudzuku-continue" rem="v.i." />
+                <see id="tsudzuku-continue" type="v.i." />
                 <keep_apart_from id="susumeru-advance" />
                 <phrase
                   ph="【勉：べん】【強：きょう】を【続：つづ】ける"
@@ -619,7 +622,7 @@
               id="yameru-stop"
               usuallyInKana="true"
             >
-                <see id="tomeru-stop" rem="closely related" />
+                <see id="tomeru-stop" type="closely related" />
                 <keep_apart_from id="tomeru-stop" />
                 <keep_apart_from id="yosu-cease" />
                 <phrase
@@ -661,8 +664,8 @@
               id="yamu-cease"
               usuallyInKana="true"
             >
-                <see id="tomaru-stop" rem="closely related" />
-                <see id="owaru-finish" rem="closely related" />
+                <see id="tomaru-stop" type="closely related" />
+                <see id="owaru-finish" type="closely related" />
                 <phrase
                   ph="【風：かぜ】がやんだ"
                   rom="kaze ga yanda"
@@ -739,7 +742,7 @@
               category="not-good"
               id="kowasu-ruin"
             >
-                <see id="kowareru-bebroken" rem="v.i." />
+                <see id="kowareru-bebroken" type="v.i." />
                 <keep_apart_from id="waru-split" />
                 <phrase
                   ph="【花：か】【瓶：びん】を【壊：こわ】してしまう"
@@ -774,7 +777,7 @@
               category="not-good"
               id="kowareru-bebroken"
             >
-                <see id="kowasu-ruin" rem="v.t." />
+                <see id="kowasu-ruin" type="v.t." />
                 <keep_apart_from id="wareru-crack" />
                 <phrase
                   ph="【壊：こわ】れているパソコン"
@@ -837,7 +840,7 @@
               category="light"
               id="hikaru-shine"
             >
-                <see id="hikari-ray" rem="noun" />
+                <see id="hikari-ray" type="noun" />
                 <keep_apart_from id="kagayaku-shine" />
                 <keep_apart_from id="sasu-shine" />
                 <phrase
@@ -951,7 +954,7 @@
               category="general"
               id="ochiru-fall"
             >
-                <see id="otosu-drop" rem="v.t." />
+                <see id="otosu-drop" type="v.t." />
                 <keep_apart_from id="sagaru-drop" />
                 <keep_apart_from id="ochikomu-feelsad" />
                 <keep_apart_from id="korobu-falldown" />
@@ -996,7 +999,7 @@
               category="general"
               id="otosu-drop"
             >
-                <see id="ochiru-fall" rem="v.i." />
+                <see id="ochiru-fall" type="v.i." />
                 <keep_apart_from id="sageru-lower" />
                 <phrase
                   ph="【橋：はし】から【石：いし】を【落：お】とす"
@@ -1030,7 +1033,7 @@
               category="general, technical"
               id="tsuku-stick"
             >
-                <see id="tsukeru-turnon" rem="v.t." />
+                <see id="tsukeru-turnon" type="v.t." />
                 <!--
                     Acc. to ChatGPT, the kanji 付く is more often used in contexts like "to adhere
                     to" or "to be accompanied", kana is preferred for "to be switched on".
@@ -1083,10 +1086,11 @@
               lvl="n4"
               category="time, health"
               id="nemuru-sleep"
-              href="https://hinative.com/questions/22229768 (difference between neru and nemuru)"
+              href="https://hinative.com/questions/22229768"
+              rem="link is about difference between neru and nemuru"
             >
                 <!-- the noun is nemuri, which is nx -->
-                <see id="neru-liedown" rem="closely related" />
+                <see id="neru-liedown" type="closely related" />
                 <phrase
                   ph="【深：ふか】く【眠：ねむ】る"
                   rom="fukaku nemuru"
@@ -1195,7 +1199,7 @@
               category="general"
               id="agaru-rise"
             >
-                <see id="ageru-raise" rem="v.t." />
+                <see id="ageru-raise" type="v.t." />
                 <phrase
                   ph="【値：ね】【段：だん】が【上：あ】がっている"
                   rom="nedan ga agatte iru"
@@ -1306,7 +1310,7 @@
               category="general, hands"
               id="tsutsumu-wrap"
             >
-                <see id="tsutsumi-parcel" rem="noun" />
+                <see id="tsutsumi-parcel" type="noun" />
                 <phrase
                   ph="ケーキを【包：つつ】む"
                   rom="kēki o tsutsumu"
@@ -1339,8 +1343,8 @@
               category="motion"
               id="susumu-advance"
             >
-                <see id="susumeru-advance" rem="v.t." />
-                <see id="susumi-progress" rem="noun" />
+                <see id="susumeru-advance" type="v.t." />
+                <see id="susumi-progress" type="noun" />
                 <keep_apart_from id="hakadoru-makeprogress" />
                 <phrase
                   ph="【気：き】が【進：すす】まない"
@@ -1383,7 +1387,7 @@
               category="happiness"
               id="yorokobu-bedelighted"
             >
-                <see id="yorokobi-delight" rem="noun" />
+                <see id="yorokobi-delight" type="noun" />
                 <phrase
                   ph="【喜：よろこ】びそうな【顔：かお】"
                   rom="yorokobisō na kao"
@@ -1431,7 +1435,7 @@
               category="general, work"
               id="tetsudau-assist"
             >
-                <see id="tetsudai-helper" rem="noun" />
+                <see id="tetsudai-helper" type="noun" />
                 <phrase
                   ph="【宿：しゅく】【題：だい】を【手：て】【伝：つだ】う"
                   rom="shukudai o tetsudau"
@@ -1484,9 +1488,10 @@
               lvl="n4"
               category="general, work"
               id="hajimeru-beginsth"
-              href="https://hinative.com/en-US/questions/21842519 (初めまして has a different kanji)"
+              href="https://hinative.com/en-US/questions/21842519"
+              rem="link is about 初めまして having a different kanji"
             >
-                <see id="hajimaru-begin" rem="v.i." />
+                <see id="hajimaru-begin" type="v.i." />
                 <phrase
                   ph="【本：ほん】を【読：よ】み【始：はじ】める"
                   rom="hon o yomi-hajimeru"
@@ -1537,7 +1542,7 @@
               category="general, work"
               id="hiraku-openup"
             >
-                <see id="tojiru-close" rem="antonym" />
+                <see id="tojiru-close" type="antonym" />
                 <!--
                     hiraku vs. akeru:
                     店をひらく: launch new shop
@@ -1645,7 +1650,7 @@
               id="shaberu-chat"
               rem="appears in GENKI2 p.73; jisho has n3"
             >
-                <see id="oshaberi-gossip" rem="noun" />
+                <see id="oshaberi-gossip" type="noun" />
                 <phrase
                   ph="よくしゃべる【人：ひと】"
                   rom="yoku shaberu hito"
@@ -1675,7 +1680,7 @@
               id="wakareru-breakup"
             >
                 <!-- the transitive verb is 別ける, but wakeru-divide (n3) uses different kanji 分ける -->
-                <see id="wakare-parting" rem="noun" />
+                <see id="wakare-parting" type="noun" />
                 <keep_apart_from id="wareru-crack" />
                 <phrase
                   ph="【別：わか】れることにする"

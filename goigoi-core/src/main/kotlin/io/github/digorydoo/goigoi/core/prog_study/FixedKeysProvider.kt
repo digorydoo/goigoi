@@ -26,13 +26,13 @@ class FixedKeysProvider(
         val primaryAnswer = qa.answers.firstOrNull() ?: throw Exception("qa.answers is empty")
 
         val variants: List<Set<Char>> = primaryAnswer.map { char ->
-            val dontConfuse = kanjiIndex.getVisuallySimilarKanjis(char)
+            val similar = kanjiIndex.getVisuallySimilarKanjis(char)
 
-            if (dontConfuse.isEmpty()) {
+            if (similar.isEmpty()) {
                 setOf(char) // a kanji for which we don't know any visually similar kanjis, or okurigana
             } else {
-                require(!dontConfuse.contains(char)) { "Kanji $char appears in set as visually similar to itself" }
-                val chooseFrom = dontConfuse.toMutableSet().also { it.add(char) }
+                require(!similar.contains(char)) { "Kanji $char appears in set as visually similar to itself" }
+                val chooseFrom = similar.toMutableSet().also { it.add(char) }
                 permutations *= chooseFrom.size
                 chooseFrom
             }

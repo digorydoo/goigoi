@@ -26,7 +26,7 @@ enum class GoigoiFileMarker(override val value: UShort): FileMarker {
     UNYT_NAME_FR(2004u),
     UNYT_NAME_IT(2005u),
     UNYT_NAME_JA(2006u),
-    UNYT_STUDY_LANG(2007u),
+    // UNYT_STUDY_LANG(2007u),
     UNYT_HAS_ROMAJI(2008u),
     UNYT_HAS_FURIGANA(2009u),
     UNYT_SUBHEADER_DE(2010u),

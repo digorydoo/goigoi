@@ -16,7 +16,7 @@ class FinalStats(
         printReadingsStats()
         printHintStats()
         printSynonymStats()
-        printDontConfuseKanjisStats()
+        printVisuallySimilarKanjisStats()
         printMissingCatStats()
         printWordOrdering()
     }
@@ -189,11 +189,11 @@ class FinalStats(
         println("")
     }
 
-    private fun printDontConfuseKanjisStats() {
+    private fun printVisuallySimilarKanjisStats() {
         run {
             var count = 0
 
-            vocab.dontConfuseKanjis.forEach { groupOfKanjis ->
+            vocab.visuallySimilar.forEach { groupOfKanjis ->
                 count += groupOfKanjis.length
             }
 
@@ -212,7 +212,7 @@ class FinalStats(
 
             vocab.kanjiByFreq.forEachIndexed { rank, kanji ->
                 if (rankOfKanjiNotCovered == Int.MAX_VALUE && !excludedKanjis.contains(kanji)) {
-                    val found = vocab.dontConfuseKanjis.any { groupOfKanjis ->
+                    val found = vocab.visuallySimilar.any { groupOfKanjis ->
                         groupOfKanjis.contains(kanji)
                     }
 
@@ -230,7 +230,7 @@ class FinalStats(
         arrayOf(JLPTLevel.N5, JLPTLevel.N4, JLPTLevel.N3, JLPTLevel.N2, JLPTLevel.N1).forEach { lvl ->
             vocab.manualKanjiLevels[lvl]
                 ?.filter { kanji ->
-                    vocab.dontConfuseKanjis.all { groupOfKanjis ->
+                    vocab.visuallySimilar.all { groupOfKanjis ->
                         groupOfKanjis.none { it == kanji }
                     }
                 }

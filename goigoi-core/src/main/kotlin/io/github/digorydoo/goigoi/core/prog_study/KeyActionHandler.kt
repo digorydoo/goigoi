@@ -1,9 +1,12 @@
 package io.github.digorydoo.goigoi.core.prog_study
 
 import ch.digorydoo.kutils.cjk.*
+import ch.digorydoo.kutils.math.clamp
 
 class KeyActionHandler {
-    enum class Action { NONE, LITERAL, AUTO_TRANSFORM, DAKUTEN, HANDAKUTEN, NORMAL_SIZE, SMALL_SIZE }
+    enum class Action {
+        NONE, LITERAL, AUTO_TRANSFORM, DAKUTEN, HANDAKUTEN, NORMAL_SIZE, SMALL_SIZE, MOVE_CARET_LEFT, MOVE_CARET_RIGHT
+    }
 
     interface TextAndCaret {
         var text: CharSequence
@@ -19,11 +22,17 @@ class KeyActionHandler {
             Action.HANDAKUTEN -> transformPrevChar(textAndCaret, ::toggleHandakuten)
             Action.NORMAL_SIZE -> transformPrevChar(textAndCaret) { it.toNormalSizedKana() }
             Action.SMALL_SIZE -> transformPrevChar(textAndCaret, ::makeSmallKana)
+            Action.MOVE_CARET_LEFT -> moveCaret(-1, textAndCaret)
+            Action.MOVE_CARET_RIGHT -> moveCaret(1, textAndCaret)
         }
     }
 
     fun handleBackspace(textAndCaret: TextAndCaret) {
         transformPrevChar(textAndCaret) { Char(0) }
+    }
+
+    private fun moveCaret(distance: Int, textAndCaret: TextAndCaret) {
+        textAndCaret.caretPos = clamp(textAndCaret.caretPos + distance, 0, textAndCaret.text.length)
     }
 
     private fun insert(key: String, textAndCaret: TextAndCaret) {

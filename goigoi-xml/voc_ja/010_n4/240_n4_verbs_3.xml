@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N4 verbs ③"
       name_de="N4-Verben ③"
       name_fr="Les verbes N4 ③"
       name_it="Verbi N4 ③"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -26,7 +28,7 @@
               category="general, time"
               id="okosu-wakeup"
             >
-                <see id="okiru-wakeup" rem="v.i." />
+                <see id="okiru-wakeup" type="v.i." />
                 <keep_apart_from id="samasu-awaken" />
                 <keep_apart_from id="mezameru-wakeup" />
                 <phrase
@@ -239,7 +241,7 @@
               category="culture, thinking"
               id="inoru-wish"
             >
-                <see id="inori-prayer" rem="noun" />
+                <see id="inori-prayer" type="noun" />
                 <keep_apart_from id="nozomu-desire" />
                 <phrase
                   ph="【安：あん】【全：ぜん】を【祈：いの】る"
@@ -306,7 +308,7 @@
                     手紙を受ける is grammatically correct, but not the best choice of words
                     ボールを受ける works, but ボールを取る is more common
                 -->
-                <see id="ukaru-pass" rem="v.i." />
+                <see id="ukaru-pass" type="v.i." />
                 <keep_apart_from id="morau-receive" />
                 <keep_apart_from id="uketoru-receive" />
                 <phrase
@@ -385,7 +387,7 @@
               category="general"
               id="nareru-getusedto"
             >
-                <see id="narasu-accustom" rem="v.t." />
+                <see id="narasu-accustom" type="v.t." />
                 <phrase
                   ph="【仕：し】【事：ごと】に【慣：な】れる"
                   rom="shigoto ni nareru"
@@ -438,7 +440,7 @@
               id="todokeru-deliver"
             >
                 <!-- the noun is お届け (delivery, nx) or 届け (report, notification, n1) -->
-                <see id="todoku-reach" rem="v.i." />
+                <see id="todoku-reach" type="v.i." />
                 <keep_apart_from id="haitatsu-delivery" />
                 <phrase
                   ph="【手：て】【紙：がみ】を【届：とど】ける"
@@ -482,8 +484,8 @@
               category="general"
               id="tomeru-stop"
             >
-                <see id="tomaru-stop" rem="v.i." />
-                <see id="yameru-stop" rem="closely related" />
+                <see id="tomaru-stop" type="v.i." />
+                <see id="yameru-stop" type="closely related" />
                 <keep_apart_from id="yameru-stop" />
                 <keep_apart_from id="yosu-cease" />
                 <phrase
@@ -593,7 +595,7 @@
               id="sawaru-touch"
               rem="appears in GENKI2 L21 vocab section"
             >
-                <see id="fureru-touch" rem="closely related" />
+                <see id="fureru-touch" type="closely related" />
                 <keep_apart_from id="fureru-touch" />
                 <phrase
                   ph="【触：さわ】らないで"
@@ -709,7 +711,7 @@
               id="utsuru-movehouse"
             >
                 <!-- the noun is 移り, which is nx -->
-                <see id="utsusu-swap" rem="v.t." />
+                <see id="utsusu-swap" type="v.t." />
                 <keep_apart_from id="kawaru-takeplaceof" />
                 <keep_apart_from id="kawaru-beexchanged" />
                 <keep_apart_from id="kawaru-takeover" />
@@ -771,7 +773,7 @@
               category="general"
               id="sagaru-drop"
             >
-                <see id="sageru-lower" rem="v.t." />
+                <see id="sageru-lower" type="v.t." />
                 <keep_apart_from id="oriru-descend" />
                 <keep_apart_from id="ochiru-fall" />
                 <keep_apart_from id="kudaru-godown" />
@@ -817,7 +819,7 @@
               category="directions"
               id="sageru-lower"
             >
-                <see id="sagaru-drop" rem="v.i." />
+                <see id="sagaru-drop" type="v.i." />
                 <keep_apart_from id="orosu-bringdown" />
                 <keep_apart_from id="otosu-drop" />
                 <keep_apart_from id="taosu-throwdown" />
@@ -894,7 +896,7 @@
               category="general, weather"
               id="nureru-getwet"
             >
-                <see id="nurasu-wet" rem="v.t." />
+                <see id="nurasu-wet" type="v.t." />
                 <phrase
                   ph="【雨：あめ】に【濡：ぬ】れる"
                   rom="ame ni nureru"
@@ -945,7 +947,7 @@
               category="general"
               id="kazaru-decorate"
             >
-                <see id="kazari-decoration" rem="noun" />
+                <see id="kazari-decoration" type="noun" />
                 <phrase
                   ph="【部：へ】【屋：や】を【飾：かざ】る"
                   rom="heya o kazaru"
@@ -984,7 +986,7 @@
               category="directions"
               id="mukau-face"
             >
-                <see id="mukai-opposite" rem="noun" />
+                <see id="mukai-opposite" type="noun" />
                 <phrase
                   ph="【机：つくえ】に【向：む】かっている"
                   rom="tsukue ni mukatte iru"
@@ -1025,7 +1027,7 @@
               category="general, work"
               id="okonau-carryout"
             >
-                <see id="okonai-act" rem="noun" />
+                <see id="okonai-act" type="noun" />
                 <phrase
                   ph="【研：けん】【究：きゅう】を【行：おこな】う"
                   rom="kenkyū o okonau"
@@ -1137,7 +1139,7 @@
               id="tsukiau-gooutwith"
               rem="appears in GENKI2 p.73 vocab section and p.283; jisho has n2"
             >
-                <see id="tsukiai-socialising" rem="noun" />
+                <see id="tsukiai-socialising" type="noun" />
                 <phrase
                   ph="【友：とも】だちと【付：つ】き【合：あ】う"
                   rom="tomodachi to tsukiau"
@@ -1236,7 +1238,7 @@
               category="diy, hobby"
               id="naosu-repair"
             >
-                <see id="naoru-berepaired" rem="v.i." />
+                <see id="naoru-berepaired" type="v.i." />
                 <keep_apart_from id="shūri-repair" />
                 <phrase
                   ph="ズボンを【直：なお】す"
@@ -1286,7 +1288,7 @@
               category="diy, hobby"
               id="naoru-berepaired"
             >
-                <see id="naosu-repair" rem="v.t." />
+                <see id="naosu-repair" type="v.t." />
                 <phrase
                   ph="まだ【直：なお】らない"
                   rom="mada naoranai"
@@ -1319,8 +1321,8 @@
               category="motion, directions"
               id="mawaru-turn"
             >
-                <see id="mawari-rotation" rem="noun" />
-                <see id="mawasu-turn" rem="v.t." />
+                <see id="mawari-rotation" type="noun" />
+                <see id="mawasu-turn" type="v.t." />
                 <phrase
                   ph="【早：はや】く【回：まわ】る"
                   rom="hayaku mawaru"
@@ -1362,8 +1364,8 @@
               category="general"
               id="aku-empty"
             >
-                <see id="umaru-overflow" rem="antonym" /><!-- https://hinative.com/questions/22452052 -->
-                <see id="aki-space" rem="noun" />
+                <see id="umaru-overflow" type="antonym" /><!-- https://hinative.com/questions/22452052 -->
+                <see id="aki-space" type="noun" />
                 <keep_apart_from id="suku-becomeempty" />
                 <phrase
                   ph="【席：せき】が【空：あ】く"
@@ -1419,7 +1421,7 @@
               category="temperature"
               id="atatameru-warmup"
             >
-                <see id="atatamaru-warmup" rem="v.i." />
+                <see id="atatamaru-warmup" type="v.i." />
                 <!-- see id="atatakai-warm" rem="adjective" NO, different kanji! -->
                 <phrase
                   ph="【牛：ぎゅう】【乳：にゅう】を【温：あたた】める"
@@ -1450,7 +1452,7 @@
               category="general"
               id="okuru-escort"
             >
-                <see id="ookuri-seeingoff" rem="noun" />
+                <see id="ookuri-seeingoff" type="noun" />
                 <phrase
                   ph="ハガキを【送：おく】る"
                   rom="hagaki o okuru"
@@ -1535,7 +1537,7 @@
               category="transportation"
               id="norikaeru-transfer"
             >
-                <see id="norikae-transfer" rem="noun" />
+                <see id="norikae-transfer" type="noun" />
                 <phrase
                   ph="【電：でん】【車：しゃ】を【乗：の】り【換：か】える"
                   rom="densha o norikaeru"
@@ -1589,8 +1591,8 @@
                     machigaeru is more 'to make a mistake'
                     machigau is more 'to be mistaken', even though it also can take a direct object
                 -->
-                <see id="machigau-mistake" rem="closely related" />
-                <see id="machigai-mistake" rem="noun" />
+                <see id="machigau-mistake" type="closely related" />
+                <see id="machigai-mistake" type="noun" />
                 <phrase
                   ph="【答：こた】えを【間：ま】【違：ちが】える"
                   rom="kotae o machigaeru"
@@ -1697,8 +1699,8 @@
               category="general, technical"
               id="ugoku-move"
             >
-                <see id="ugokasu-move" rem="v.t." />
-                <see id="ugoki-motion" rem="noun" />
+                <see id="ugokasu-move" type="v.t." />
+                <see id="ugoki-motion" type="noun" />
                 <phrase
                   ph="【心：こころ】が【動：うご】く"
                   rom="kokoro ga ugoku"
@@ -1837,7 +1839,7 @@
               id="tsutaeru-convey"
               rem="appears in GENKI2 L20 vocab section"
             >
-                <see id="tsutawaru-beintroduced" rem="v.i." />
+                <see id="tsutawaru-beintroduced" type="v.i." />
                 <keep_apart_from id="noberu-mention" />
                 <keep_apart_from id="mōshiageru-tell" />
                 <keep_apart_from id="arawasu-represent" />

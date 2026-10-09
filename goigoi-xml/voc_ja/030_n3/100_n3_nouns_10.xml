@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 nouns (10)"
       name_de="N3-Nomen (10)"
       name_fr="Les noms N3 (10)"
       name_it="Nomi N3 (10)"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -630,7 +632,7 @@
               id="susumi-progress"
               rem="jisho has n1, but n4 for susumu"
             >
-                <see id="susumu-advance" rem="verb" />
+                <see id="susumu-advance" type="verb" />
                 <keep_apart_from id="shinpo-progress" />
                 <keep_apart_from id="kōjō-elevation" />
                 <keep_apart_from id="shinten-progress" />
@@ -720,7 +722,7 @@
               lvl="n3"
               id="deai-encounter"
             >
-                <see id="deau-encounter" rem="verb" />
+                <see id="deau-encounter" type="verb" />
             </word>
             <word
               w="【居：い】【間：ま】"
@@ -819,7 +821,7 @@
               rem="Note that there is also seichō-growth, which is n2 and uses different kanji"
             >
                 <!-- 日本経済は成長している - Nihon keizai wa seichō shite iru - The Japanese economy is growing (ChatGPT) -->
-                <see id="teitai-stagnation" rem="antonym" />
+                <see id="teitai-stagnation" type="antonym" />
             </word>
             <word
               w="【招：まね】き"
@@ -831,7 +833,7 @@
               id="maneki-invitation"
               rem="jisho has n1"
             >
-                <see id="maneku-invite" rem="verb" />
+                <see id="maneku-invite" type="verb" />
                 <keep_apart_from id="shōtai-invitation" />
                 <keep_apart_from id="ogoru-givetreat" />
             </word>
@@ -929,7 +931,7 @@
               category="science"
               id="tetsu-iron"
             >
-                <see id="dō-copper" rem="closely related" />
+                <see id="dō-copper" type="closely related" />
                 <keep_apart_from id="kinzoku-metal" />
             </word>
             <word

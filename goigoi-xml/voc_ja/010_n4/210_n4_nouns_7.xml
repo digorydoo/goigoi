@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N4 nouns ⑦"
       name_de="N4-Nomen ⑦"
       name_fr="Les noms N4 ⑦"
       name_it="Nomi N4 ⑦"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -339,7 +341,7 @@
               id="nayami-worry"
               rem="appears in GENKI2 p.283; jisho has n1; Langenscheidt: Sorge, Leid"
             >
-                <see id="nayamu-worried" rem="verb" />
+                <see id="nayamu-worried" type="verb" />
                 <phrase
                   ph="【先：せん】【生：せい】に【悩：なや】み【事：ごと】を【相：そう】【談：だん】する"
                   rom="sensei ni nayamigoto o sōdan suru"

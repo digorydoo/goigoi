@@ -10,7 +10,7 @@ import java.io.OutputStream
 import kotlin.math.min
 
 class WordStatsFile(dir: File): Exportable {
-    private val file: RawStatsFile = RawStatsFile(dir, FILE_NAME, FILE_VERSION)
+    private val file: RawStatsFile = RawStatsFile(dir, FILE_NAME)
 
     override fun exportTo(dst: OutputStream) =
         file.exportTo(dst)
@@ -229,7 +229,6 @@ class WordStatsFile(dir: File): Exportable {
 
     companion object {
         private const val FILE_NAME = "word"
-        private const val FILE_VERSION = 6
 
         private const val WORD_SEEN_ID = "seen"
         private const val ANSWER_CORRECT_ID = "ok"

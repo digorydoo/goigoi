@@ -10,7 +10,7 @@ import oracle.xml.parser.v2.DOMParser
 import oracle.xml.parser.v2.XMLText
 import org.w3c.dom.Element
 import org.w3c.dom.Node
-import java.io.InputStream
+import java.io.File
 
 class GoigoiXmlParser {
     private lateinit var vocab: GoigoiVocab
@@ -18,14 +18,14 @@ class GoigoiXmlParser {
     private val subheader = IntlString()
     private var filename = ""
 
-    fun parse(stream: InputStream, voc: GoigoiVocab, filename: String) {
+    fun parse(file: File, voc: GoigoiVocab) {
         val parser = DOMParser()
         parser.setErrorStream(System.err)
-        parser.setValidationMode(DOMParser.NONVALIDATING)
+        parser.setValidationMode(DOMParser.SCHEMA_STRICT_VALIDATION)
         parser.showWarnings(true)
-        parser.parse(stream)
+        parser.parse(file.toURI().toURL())
 
-        this.filename = filename
+        filename = file.name
         vocab = voc
         topic = voc.topics.lastOrNull() // unyts are appended to this topic until a new topic is seen
         subheader.clear()
@@ -34,6 +34,15 @@ class GoigoiXmlParser {
 
         if (root.nodeName != "vocabulary") {
             throw ParsingFailed("XML root is not vocabulary")
+        }
+
+        val schema = root.getAttributeNS(
+            "http://www.w3.org/2001/XMLSchema-instance",
+            "noNamespaceSchemaLocation"
+        ) ?: ""
+
+        if (schema.isEmpty()) {
+            throw ParsingFailed("XML schema is missing from $filename")
         }
 
         forEachChild(root) { tag ->
@@ -60,7 +69,24 @@ class GoigoiXmlParser {
                 when (tag.nodeName) {
                     "set" -> readKanjiSetTag(tag)
                     "freq" -> readKanjiFreq(tag)
-                    "dont_confuse" -> readKanjiDontConfuse(tag)
+                    "visually_similar" -> readVisuallySimilar(tag)
+                    else -> throw ParsingFailed("Tag not handled: <${tag.nodeName}>")
+                }
+            }
+        } catch (e: Exception) {
+            rethrow(e, errorCtx)
+        }
+    }
+
+    private fun readVisuallySimilar(root: Element) {
+        val errorCtx = "<visually_similar>"
+
+        try {
+            checkAttributes(root, arrayOf())
+
+            forEachChild(root) { tag ->
+                when (tag.nodeName) {
+                    "group" -> readVisuallySimilarGroup(tag)
                     else -> throw ParsingFailed("Tag not handled: <${tag.nodeName}>")
                 }
             }
@@ -141,8 +167,8 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun readKanjiDontConfuse(root: Element) {
-        val errorCtx = "<dont_confuse>"
+    private fun readVisuallySimilarGroup(root: Element) {
+        val errorCtx = "<group>"
 
         try {
             checkAttributes(root, arrayOf())
@@ -150,9 +176,9 @@ class GoigoiXmlParser {
             val kanjis = root.textContent?.filter { !it.isWhitespace() }
 
             if (kanjis == null || kanjis.length <= 1) {
-                throw ParsingFailed("dont_confuse entry needs to mention at least two kanjis")
+                throw ParsingFailed("visually_similar entry needs to mention at least two kanjis")
             } else if (kanjis.length >= 7) {
-                throw ParsingFailed("dont_confuse entry should be split into two: $kanjis")
+                throw ParsingFailed("visually_similar entry should be split into two: $kanjis")
             }
 
             val badChars = kanjis.filter { !it.isCJKNotKana() && !it.isKatakana() && !it.isHiragana() }
@@ -176,7 +202,7 @@ class GoigoiXmlParser {
             badPairs.forEach { (a, b) ->
                 if (kanjis.contains(a) && kanjis.contains(b)) {
                     throw ParsingFailed(
-                        "Do not put $a and $b into the same dont_confuse group, because they're too similar"
+                        "Do not put $a and $b into the same visually_similar group, because they're too similar"
                     )
                 }
             }
@@ -184,18 +210,18 @@ class GoigoiXmlParser {
             kanjis.forEachIndexed { idx, kanji ->
                 for (followingIdx in idx + 1 ..< kanjis.length) {
                     if (kanjis[followingIdx] == kanji) {
-                        throw ParsingFailed("Kanji is mentioned more than once in same dont_confuse entry: $kanji")
+                        throw ParsingFailed("Kanji is mentioned more than once in same visually_similar entry: $kanji")
                     }
                 }
 
-                vocab.dontConfuseKanjis.forEach { haveAlready ->
+                vocab.visuallySimilar.forEach { haveAlready ->
                     if (haveAlready.contains(kanji)) {
-                        throw ParsingFailed("Multiple dont_confuse entries mention this kanji: $kanji")
+                        throw ParsingFailed("Multiple visually_similar entries mention this kanji: $kanji")
                     }
                 }
             }
 
-            vocab.dontConfuseKanjis.add(kanjis)
+            vocab.visuallySimilar.add(kanjis)
         } catch (e: Exception) {
             rethrow(e, errorCtx)
         }
@@ -312,12 +338,10 @@ class GoigoiXmlParser {
                     "name_ja",
                     "requiresPhrases",
                     "requiresSentences",
-                    "studyLang",
                 )
             )
 
-            val theStudyLang = getMandatoryAttr(root, "studyLang")
-            val unytId = makeUnytId(nameEn, theStudyLang)
+            val unytId = makeUnytId(nameEn)
 
             if (vocab.findUnytById(unytId) != null) {
                 throw ParsingFailed("Unyt id not unique: $unytId")
@@ -330,7 +354,6 @@ class GoigoiXmlParser {
                 getMandatoryAttr(root, "name", name)
                 getOptionalAttr(root, "defaultHint", defaultHint)
 
-                studyLang = theStudyLang
                 id = unytId
                 filename = this@GoigoiXmlParser.filename
 
@@ -427,7 +450,6 @@ class GoigoiXmlParser {
                     "id",
                     "Langenscheidt",
                     "lvl",
-                    "origin",
                     "rem",
                     "rom",
                     "studyInContext",
@@ -641,7 +663,7 @@ class GoigoiXmlParser {
             )
 
             if (getOptionalAttr(root, "hint") != null) {
-                // Hint is not currently supported. Check ensures we don't confuse hint with rem.
+                // Hint is not currently supported. Check ensures we don't confuse hint with explanation.
                 throw ParsingFailed("Hints are not supported with <phrase>")
             }
 
@@ -661,7 +683,7 @@ class GoigoiXmlParser {
 
             forEachChild(root) { tag ->
                 when (tag.nodeName) {
-                    "ask" -> readWordFormToAsk(tag, phrase, word)
+                    "ask" -> readWordFormToAsk(tag, phrase)
                     else -> throw ParsingFailed("Tag not handled: <${tag.nodeName}>")
                 }
             }
@@ -711,7 +733,7 @@ class GoigoiXmlParser {
             )
 
             if (getOptionalAttr(root, "hint") != null) {
-                // Hint is not currently supported. Check ensures we don't confuse hint with rem.
+                // Hint is not currently supported. Check ensures we don't confuse hint with explanation.
                 throw ParsingFailed("Hints are not supported with <sentence>")
             }
 
@@ -740,7 +762,7 @@ class GoigoiXmlParser {
 
             forEachChild(root) { tag ->
                 when (tag.nodeName) {
-                    "ask" -> readWordFormToAsk(tag, sentence, word)
+                    "ask" -> readWordFormToAsk(tag, sentence)
                     else -> throw ParsingFailed("Tag not handled: <${tag.nodeName}>")
                 }
             }
@@ -749,7 +771,7 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun readWordFormToAsk(root: Element, phraseOrSentence: GoigoiPhraseOrSentence, word: GoigoiWord) {
+    private fun readWordFormToAsk(root: Element, phraseOrSentence: GoigoiPhraseOrSentence) {
         var errorCtx = "Word form"
 
         try {
@@ -823,12 +845,13 @@ class GoigoiXmlParser {
                 throw ParsingFailed("id of see-also link must not be the word's own id!")
             }
 
-            checkAttributes(root, arrayOf("id", "rem"))
+            checkAttributes(root, arrayOf("id", "type", "rem"))
 
             val link = GoigoiWordLink(
                 GoigoiWordLink.Kind.XML_SEE_ALSO,
                 wordId = WORD_ID_PREFIX + id,
-                remark = getOptionalAttr(root, "rem") ?: ""
+                type = getOptionalAttr(root, "type") ?: "",
+                // remark = getOptionalAttr(root, "rem") ?: ""
             )
 
             word.links.add(link)
@@ -857,7 +880,8 @@ class GoigoiXmlParser {
             val link = GoigoiWordLink(
                 GoigoiWordLink.Kind.XML_KEEP_APART,
                 wordId = WORD_ID_PREFIX + id,
-                remark = getOptionalAttr(root, "rem") ?: ""
+                type = "",
+                // remark = getOptionalAttr(root, "rem") ?: ""
             )
 
             word.links.add(link)
@@ -886,7 +910,8 @@ class GoigoiXmlParser {
             val link = GoigoiWordLink(
                 GoigoiWordLink.Kind.XML_KEEP_TOGETHER,
                 wordId = WORD_ID_PREFIX + id,
-                remark = getOptionalAttr(root, "rem") ?: ""
+                type = "",
+                // remark = getOptionalAttr(root, "rem") ?: ""
             )
 
             word.links.add(link)
@@ -916,10 +941,10 @@ class GoigoiXmlParser {
             return "$TOPIC_ID_PREFIX${name.replace(" ", "")}"
         }
 
-        private fun makeUnytId(name: String, studyLang: String): String {
-            // Add "/en" here. This used to be the unyt's translationLang.
+        private fun makeUnytId(name: String): String {
+            // Add "ja/en" here. This used to be the unyt's studyLang/translationLang.
             // I still do this in order not to break productive stats.
-            return "$UNYT_ID_PREFIX$name($studyLang/en)"
+            return "$UNYT_ID_PREFIX$name(ja/en)"
         }
 
         private fun makeSectionId(unyt: GoigoiUnyt, name: IntlString): String {
@@ -928,9 +953,7 @@ class GoigoiXmlParser {
                 name.en,
                 "@",
                 unyt.name.en,
-                "(",
-                unyt.studyLang,
-                ")"
+                "(ja)"
             ).joinToString("")
         }
 

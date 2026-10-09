@@ -10,7 +10,6 @@ import kotlin.math.roundToInt
 
 class Unyt(val id: String) {
     val name = IntlString()
-    var studyLang = ""
     var hasRomaji = false
     var hasFurigana = false
     val subheader = IntlString()

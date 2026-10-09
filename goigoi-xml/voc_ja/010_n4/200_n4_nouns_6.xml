@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N4 nouns ⑥"
       name_de="N4-Nomen ⑥"
       name_fr="Les noms N4 ⑥"
       name_it="Nomi N4 ⑥"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -72,7 +74,7 @@
               category="education"
               id="kōtōgakkō-highschool"
             >
-                <see id="kōkō-highschool" rem="closely related" />
+                <see id="kōkō-highschool" type="closely related" />
                 <phrase
                   ph="【高：こう】【等：とう】【学：がっ】【校：こう】の【先：せん】【生：せい】"
                   rom="kōtōgakkō no sensei"
@@ -931,7 +933,7 @@
               category="mood, happiness"
               id="anzen-safety"
             >
-                <see id="buji-safety" rem="closely related" />
+                <see id="buji-safety" type="closely related" />
                 <phrase
                   ph="【安：あん】【全：ぜん】【運：うん】【転：てん】の【規：き】【則：そく】"
                   rom="anzen-unten no kisoku"
@@ -959,7 +961,7 @@
               id="omote-frontside"
               Langenscheidt="Vorderseite, Oberfläche"
             >
-                <see id="ura-rear" rem="antonym" />
+                <see id="ura-rear" type="antonym" />
                 <phrase
                   ph="【表：おもて】に【出：で】る"
                   rom="omote ni deru"
@@ -1433,7 +1435,7 @@
               id="tanomi-request"
               rem="jisho has n1"
             >
-                <see id="tanomu-request" rem="verb" />
+                <see id="tanomu-request" type="verb" />
                 <keep_apart_from id="onegai-wish" />
                 <keep_apart_from id="chūmon-order" />
                 <keep_apart_from id="on-favour" />
@@ -1472,7 +1474,7 @@
                        There is also kaiten-rotation, which is more commonly used for speed of rotation, etc. A link
                     could be confusing, because it's not 'closely related'.
                 -->
-                <see id="mawaru-turn" rem="verb" />
+                <see id="mawaru-turn" type="verb" />
                 <phrase
                   ph="【回：まわ】り【道：みち】"
                   rom="mawari-michi"
@@ -1513,7 +1515,7 @@
               id="chikoku-lateness"
               rem="appears in 500mon q446 and GENKI2 p.329 kanji section; jisho has n3"
             >
-                <see id="okureru-delayed" rem="closely related" />
+                <see id="okureru-delayed" type="closely related" />
                 <keep_apart_from id="okureru-delayed" />
                 <phrase
                   ph="【遅：ち】【刻：こく】する"

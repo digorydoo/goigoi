@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Hidden N1 verbs"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -23,7 +25,7 @@
               id="takamaru-rise"
               rem="why is this n1???"
             >
-                <see id="takameru-raise" rem="v.t." />
+                <see id="takameru-raise" type="v.t." />
             </word>
             <word
               w="【染：し】みる"
@@ -526,7 +528,7 @@
               lvl="n1"
               id="hatasu-accomplish"
             >
-                <see id="hatashite-sureenough" rem="closely related" />
+                <see id="hatashite-sureenough" type="closely related" />
             </word>
             <word
               w="【改：あらた】まる"
@@ -678,7 +680,7 @@
               lvl="n1"
               id="kurushimeru-torment"
             >
-                <see id="kurushimu-suffer" rem="v.i." />
+                <see id="kurushimu-suffer" type="v.i." />
             </word>
             <word
               w="【蕩：とろ】ける"
@@ -973,7 +975,7 @@
               lvl="n1"
               id="kakimawasu-stir"
             >
-                <see id="mawasu-turn" rem="closely related" />
+                <see id="mawasu-turn" type="closely related" />
                 <keep_apart_from id="mawasu-turn" />
             </word>
             <word

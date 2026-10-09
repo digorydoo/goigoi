@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N5 nouns ③"
       name_de="N5-Nomen ③"
       name_fr="Les noms N5 ③"
       name_it="Nomi N5 ③"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -282,7 +284,7 @@
               category="family, people"
               id="okusan-wife"
             >
-                <see id="tsuma-wife" rem="closely related" />
+                <see id="tsuma-wife" type="closely related" />
                 <phrase
                   ph="きれいな【奥：おく】さん"
                   rom="kirei na oku-san"
@@ -1059,8 +1061,8 @@
               category="weather"
               id="hare-clearweather"
             >
-                <see id="seiten-fineweather" rem="closely related" />
-                <see id="n5-hareru" rem="verb" />
+                <see id="seiten-fineweather" type="closely related" />
+                <see id="n5-hareru" type="verb" />
                 <phrase
                   ph="【晴：は】れの【日：ひ】"
                   rom="hare no hi"
@@ -1141,7 +1143,7 @@
               category="animal"
               id="inu-dog"
             >
-                <see id="inu-zodiac" rem="closely related" />
+                <see id="inu-zodiac" type="closely related" />
                 <phrase
                   ph="うるさい【犬：いぬ】"
                   rom="urusai inu"
@@ -1168,7 +1170,7 @@
               category="bird, animal"
               id="tori-bird"
             >
-                <see id="tori-zodiac" rem="closely related" />
+                <see id="tori-zodiac" type="closely related" />
                 <phrase
                   ph="【飛：と】べない【鳥：とり】"
                   rom="tobenai tori"
@@ -1492,7 +1494,8 @@
                   tr_de="Sayumi sieht gelangweilt aus!"
                   lvl="n5"
                   origin="Miku"
-                  href="https://youtu.be/l7xZ1TDZ7MU, modified"
+                  href="https://youtu.be/l7xZ1TDZ7MU"
+                  rem="modified"
                 />
             </word>
             <word
@@ -1559,7 +1562,8 @@
                   tr_de="Um welche Zeit öffnet die Kantine?"
                   lvl="n5"
                   origin="lib0"
-                  href="https://hinative.com/questions/22446551; https://hinative.com/questions/22440576"
+                  href="https://hinative.com/questions/22446551"
+                  rem="also hinative.com/questions/22440576"
                 />
                 <sentence
                   s="【食：しょく】【堂：どう】が 【閉：し】まったから 【近：ちか】くの レストランで 【食：た】べましょう。"

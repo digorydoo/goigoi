@@ -41,7 +41,6 @@ class VocabIndexReader(
             UNYT_NAME_FR -> unyt!!.name.fr = value
             UNYT_NAME_IT -> unyt!!.name.it = value
             UNYT_NAME_JA -> unyt!!.name.ja = value
-            UNYT_STUDY_LANG -> unyt!!.studyLang = value
             UNYT_HAS_ROMAJI -> unyt!!.hasRomaji = value.toBoolean()
             UNYT_HAS_FURIGANA -> unyt!!.hasFurigana = value.toBoolean()
             UNYT_SUBHEADER_DE -> unyt!!.subheader.de = value

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N4 loanwords"
       name_de="N4-Lehnwörter"
       name_fr="Les mots d'emprunt N4"
       name_it="Parole di prestito N4"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="false"
       defaultHint_en="loanword"
@@ -79,7 +81,7 @@
               lvl="n4"
               id="garasu-glass"
             >
-                <see id="gurasu-cup" rem="closely related" />
+                <see id="gurasu-cup" type="closely related" />
                 <phrase
                   ph="【窓：まど】ガラスを【掃：そう】【除：じ】する"
                   rom="mado garasu o sōji suru"

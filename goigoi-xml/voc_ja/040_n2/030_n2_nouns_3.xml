@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N2 nouns ③"
       name_de="N2-Nomen ③"
       name_fr="Les noms N2 ③"
       name_it="Nomi N2 ③"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -326,7 +328,7 @@
               lvl="n2"
               id="nerai-aim"
             >
-                <see id="nerau-aim" rem="verb" />
+                <see id="nerau-aim" type="verb" />
                 <keep_apart_from id="nerau-aim" />
                 <phrase
                   ph="【狙：ねら】いをつける"
@@ -561,7 +563,7 @@
               category="transportation"
               id="katamichi-oneway"
             >
-                <see id="ōfuku-roundtrip" rem="closely related" />
+                <see id="ōfuku-roundtrip" type="closely related" />
                 <keep_together id="ōfuku-roundtrip" />
             </word>
             <word
@@ -575,7 +577,7 @@
               category="transportation"
               id="ōfuku-roundtrip"
             >
-                <see id="katamichi-oneway" rem="closely related" />
+                <see id="katamichi-oneway" type="closely related" />
                 <keep_together id="katamichi-oneway" />
             </word>
             <word
@@ -598,7 +600,7 @@
               lvl="n2"
               id="norikae-transfer"
             >
-                <see id="norikaeru-transfer" rem="verb" />
+                <see id="norikaeru-transfer" type="verb" />
             </word>
             <word
               w="【街：まち】【角：かど】"
@@ -719,7 +721,7 @@
               category="fashion"
               id="kōsui-perfume"
             >
-                <see id="kaori-fragrance" rem="closely related" />
+                <see id="kaori-fragrance" type="closely related" />
                 <keep_apart_from id="kaori-fragrance" />
             </word>
             <word
@@ -732,7 +734,7 @@
               id="kakitori-dictation"
               rem="why is this n2???"
             >
-                <see id="kakitoru-writedown" rem="verb" />
+                <see id="kakitoru-writedown" type="verb" />
             </word>
             <word
               w="【歌：か】【留：る】【多：た】"

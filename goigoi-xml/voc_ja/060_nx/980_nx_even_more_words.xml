@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Even more words"
       name_de="Noch mehr Wörter"
       name_fr="Encore plus de mots"
       name_it="Ancora più parole"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       lvl="-"
@@ -223,7 +225,6 @@
               hint_en="i-adjective"
               hint_de="I-Adjektiv"
               lvl="-"
-              origin="lib0"
               id="negurushii-sleepless"
               rem="also a phrase of kurushii-tough; kept here to provide the furigana"
             />
@@ -355,7 +356,7 @@
                     However, when another clause modifies the adjective, 多い and not 多くの　is used before nouns.
                     See examples below and examples at 多い.
                 -->
-                <see id="ōi-many" rem="adjective" />
+                <see id="ōi-many" type="adjective" />
                 <phrase
                   ph="【多：おお】くの【人：ひと】"
                   rom="ōku no hito"
@@ -405,7 +406,7 @@
               id="ōkisa-size"
               rem="appears in GENKI2 p.94 vocab section"
             >
-                <see id="ōkii-big" rem="adjective" />
+                <see id="ōkii-big" type="adjective" />
                 <sentence
                   s="この【靴：くつ】は【同：おな】じ【大：おお】きさだ。"
                   rom="Kono kutsu wa onaji ōkisa da."
@@ -428,7 +429,7 @@
                     重り (nx): counter-weight for balance; an object specifically designed to provide weight
                     体重・たいじゅう (nx): body weight
                 -->
-                <see id="omoi-heavy" rem="adjective" />
+                <see id="omoi-heavy" type="adjective" />
                 <sentence
                   s="【雪：ゆき】の【重：おも】さで【家：いえ】が【潰：つぶ】れた。"
                   rom="Yuki no omosa de ie ga tsubureta."
@@ -447,7 +448,7 @@
               lvl="-"
               id="amami-sweetness"
             >
-                <see id="amai-sweet" rem="adjective" />
+                <see id="amai-sweet" type="adjective" />
             </word>
         </section>
     </unit>

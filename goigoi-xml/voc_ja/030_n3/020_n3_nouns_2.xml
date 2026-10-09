@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 nouns ②"
       name_de="N3-Nomen ②"
       name_fr="Les noms N3 ②"
       name_it="Nomi N3 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -25,7 +27,7 @@
               category="thinking"
               id="omoide-memories"
             >
-                <see id="omoidasu-remember" rem="verb" />
+                <see id="omoidasu-remember" type="verb" />
                 <keep_apart_from id="omoi-thought" />
                 <keep_apart_from id="kioku-memory" />
                 <keep_apart_from id="oboe-memory" />
@@ -86,7 +88,7 @@
               category="animal"
               id="ushi-cow"
             >
-                <see id="ushi-zodiac" rem="closely related" />
+                <see id="ushi-zodiac" type="closely related" />
                 <phrase
                   ph="【水：すい】【牛：ぎゅう】"
                   rom="suigyū"
@@ -125,7 +127,7 @@
               category="animal"
               id="uma-horse"
             >
-                <see id="uma-zodiac" rem="closely related" />
+                <see id="uma-zodiac" type="closely related" />
                 <phrase
                   ph="【黒：くろ】【馬：うま】"
                   rom="kurouma"
@@ -168,7 +170,7 @@
               id="nezumi-mouse"
               usuallyInKana="true"
             >
-                <see id="ne-rat" rem="closely related" />
+                <see id="ne-rat" type="closely related" />
                 <phrase
                   ph="【小：ちい】さなネズミ"
                   rom="chīsana nezumi"
@@ -252,7 +254,7 @@
               category="animal"
               id="tora-tiger"
             >
-                <see id="tora-zodiac" rem="closely related" />
+                <see id="tora-zodiac" type="closely related" />
                 <phrase
                   ph="【虎：とら】の【唸：うな】り【声：ごえ】"
                   rom="tora no unarigoe"
@@ -281,7 +283,7 @@
               id="saru-monkey"
               rem="appears in GENKI2 L22 vocab section"
             >
-                <see id="saru-zodiac" rem="closely related" />
+                <see id="saru-zodiac" type="closely related" />
                 <phrase
                   ph="【猿：さる】みたいに【騒：さわ】ぐ"
                   rom="saru-mitai ni sawagu"
@@ -479,9 +481,9 @@
                     ayamari is formal or literary and typically used in official contexts;
                     machigai is more neutral
                 -->
-                <see id="ayamari-error" rem="closely related" />
-                <see id="machigaeru-mistakesth" rem="verb" />
-                <see id="machigau-mistake" rem="verb" />
+                <see id="ayamari-error" type="closely related" />
+                <see id="machigaeru-mistakesth" type="verb" />
+                <see id="machigau-mistake" type="verb" />
                 <keep_apart_from id="ayamari-error" />
                 <keep_apart_from id="shippai-mistake" />
                 <phrase
@@ -697,6 +699,7 @@
             >
                 <keep_apart_from id="kinsen-money" />
                 <keep_apart_from id="okane-money" />
+                <keep_apart_from id="kingaku-moneyamount" />
                 <phrase
                   ph="【現：げん】【金：きん】で【払：はら】う"
                   rom="genkin de harau"
@@ -724,7 +727,7 @@
               category="relationships"
               id="wakare-parting"
             >
-                <see id="wakareru-breakup" rem="verb" />
+                <see id="wakareru-breakup" type="verb" />
                 <phrase
                   ph="【悲：かな】しい【別：わか】れ"
                   rom="kanashii wakare"
@@ -753,7 +756,7 @@
               id="kari-loan"
               rem="jisho has n1; appears in GENKI2 p.185"
             >
-                <see id="kariru-borrow" rem="verb" />
+                <see id="kariru-borrow" type="verb" />
                 <keep_apart_from id="kashi-loan" />
                 <keep_apart_from id="shakkin-debt" />
                 <keep_apart_from id="shōgakukin-scholarship" />
@@ -785,7 +788,7 @@
               category="nature, weather"
               id="kaminari-thunder"
             >
-                <see id="inabikari-lightning" rem="closely related" />
+                <see id="inabikari-lightning" type="closely related" />
                 <phrase
                   ph="【雷：かみなり】に【驚：おどろ】く"
                   rom="kaminari ni odoroku"
@@ -885,7 +888,7 @@
               id="mukae-meeting"
               rem="appears in GENKI2 p.95"
             >
-                <see id="mukaeru-approach" rem="verb" />
+                <see id="mukaeru-approach" type="verb" />
                 <phrase
                   ph="【迎：むか】えに【来：く】る"
                   rom="mukae ni kuru"
@@ -1128,7 +1131,7 @@
               id="ugoki-motion"
               rem="jisho has n1"
             >
-                <see id="ugoku-move" rem="verb" />
+                <see id="ugoku-move" type="verb" />
                 <phrase
                   ph="【動：うご】き【続：つづ】ける"
                   rom="ugoki-tsudzukeru"
@@ -1159,8 +1162,8 @@
             >
                 <keep_apart_from id="onnanoko-girl" />
                 <keep_apart_from id="shōjo-maiden" />
-                <see id="onnanoko-girl" rem="closely related" />
-                <see id="shōjo-maiden" rem="closely related" />
+                <see id="onnanoko-girl" type="closely related" />
+                <see id="shōjo-maiden" type="closely related" />
                 <phrase
                   ph="【女：じょ】【子：し】【生：せい】【徒：と】"
                   rom="joshi seito"
@@ -1230,7 +1233,7 @@
                     no explicit link to niou, because kanjis differ
                 -->
                 <keep_apart_from id="kusai-smelly" />
-                <see id="kusai-smelly" rem="closely related" />
+                <see id="kusai-smelly" type="closely related" />
                 <phrase
                   ph="ひどい【臭：にお】い"
                   rom="hidoi nioi"
@@ -1671,7 +1674,7 @@
               category="city, travelling"
               id="shiro-castle"
             >
-                <see id="jōka-castletown" rem="closely related" />
+                <see id="jōka-castletown" type="closely related" />
                 <keep_apart_from id="oshiro-castle" />
                 <keep_together id="oshiro-castle" />
                 <phrase

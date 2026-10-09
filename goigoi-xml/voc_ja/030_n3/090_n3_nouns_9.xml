@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 nouns ⑨"
       name_de="N3-Nomen ⑨"
       name_fr="Les noms N3 ⑨"
       name_it="Nomi N3 ⑨"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -261,7 +263,7 @@
               id="chōsa-survey"
               rem="appears in GENKI2 L23 vocab section"
             >
-                <see id="sōsa-enquiry" rem="closely related" />
+                <see id="sōsa-enquiry" type="closely related" />
                 <keep_apart_from id="kenkyū-research" />
                 <keep_apart_from id="sōsa-enquiry" />
                 <keep_apart_from id="kensa-examination" />
@@ -498,6 +500,14 @@
               category="astronomy"
               id="eisei-satellite"
             >
+                <phrase
+                  ph="【人：じん】【工：こう】【衛：えい】【星：せい】"
+                  rom="jinkō eisei"
+                  tr_en="man-made satellite"
+                  tr_de="von Menschen gemachter Satellit"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【月：つき】は【地：ち】【球：きゅう】の【衛：えい】【星：せい】だ。"
                   rom="Tsuki wa chikyū no eisei da."
@@ -516,6 +526,16 @@
               id="hei-fence"
             >
                 <keep_apart_from id="saku-fence" />
+                <keep_apart_from id="koeru-crossover" />
+                <phrase
+                  ph="【塀：へい】を【乗：の】り【越：こ】える"
+                  rom="hei o nori-koeru"
+                  tr_en="to climb over the fence"
+                  tr_de="über den Zaun klettern"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for nori-koeru, but n3 for koeru"
+                />
                 <sentence
                   s="【庭：にわ】の【回：まわ】りに【高：たか】い【塀：へい】があった。"
                   rom="Niwa no mawari ni takai hei ga atta."
@@ -535,6 +555,14 @@
               category="literature"
               id="insatsu-printing"
             >
+                <phrase
+                  ph="【印：いん】【刷：さつ】の【誤：あやま】り"
+                  rom="insatsu no ayamari"
+                  tr_en="printing errors"
+                  tr_de="Druckfehler"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【印：いん】【刷：さつ】したいのです。"
                   rom="Insatsu shitai no desu."
@@ -553,6 +581,14 @@
               category="crime"
               id="ihan-violation"
             >
+                <phrase
+                  ph="【法：ほう】【律：りつ】【違：い】【反：はん】"
+                  rom="hōritsu ihan"
+                  tr_en="against the law"
+                  tr_de="Verstoss gegen das Gesetz"
+                  lvl="n3"
+                  origin="lib0"
+                />
                 <sentence
                   s="【規：き】【則：そく】に【違：い】【反：はん】してはいけない。"
                   rom="Kisoku ni ihan shite wa ikenai."
@@ -571,7 +607,18 @@
               category="finances"
               id="kingaku-moneyamount"
             >
+                <keep_apart_from id="okane-money" />
+                <keep_apart_from id="genkin-cash" />
+                <keep_apart_from id="kinsen-money" />
                 <keep_apart_from id="gōkei-sum" />
+                <phrase
+                  ph="【注：ちゅう】【文：もん】【金：きん】【額：がく】"
+                  rom="chūmon kingaku"
+                  tr_en="order total; the order's amount of money"
+                  tr_de="Bestellwert; Geldbetrag der Bestellung"
+                  lvl="n3"
+                  origin="jpod101 audio"
+                />
                 <sentence
                   s="【私：わたし】はその【金：きん】【額：がく】の【２：に】【倍：ばい】【払：はら】った。"
                   rom="Watashi wa sono kingaku no ni-bai haratta."
@@ -580,6 +627,15 @@
                   lvl="n3"
                   origin="lib0"
                   rem="ni-bai is n4"
+                />
+                <sentence
+                  s="【使：つか】った【金：きん】【額：がく】は【全：ぜん】【部：ぶ】でいくらですか。"
+                  rom="Tsukatta kingaku wa zenbu de ikura desu ka?"
+                  tr_en="How much money did you spend in total?"
+                  tr_de="Wieviel Geld hast du insgesamt gebraucht?"
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
                 />
             </word>
             <word
@@ -602,16 +658,35 @@
                   lvl="n3"
                   origin="ChatGPT"
                 />
+                <sentence
+                  s="【食：しょく】【物：もつ】は【生：せい】【命：めい】に【必：ひつ】【要：よう】だ。"
+                  rom="Shokumotsu wa seimei ni hitsuyō da."
+                  tr_en="Food is essential for life."
+                  tr_de="Esswaren sind essentiell zum Leben."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【詐：さ】【欺：ぎ】"
               rom="sagi"
               tr_en="fraud; swindle; cheating"
               tr_de="Betrug; Schwindel; Trick"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              studyInContext="preferred"
               lvl="n3"
               id="sagi-fraud"
               rem="appears in GENKI2 p.225; jisho has n1"
             >
+                <phrase
+                  ph="【詐：さ】【欺：ぎ】をする"
+                  rom="sagi o suru"
+                  tr_en="to commit fraud"
+                  tr_de="jem. betrügen; schwindeln"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
                 <phrase
                   ph="【詐：さ】【欺：ぎ】【師：し】"
                   rom="sagishi"
@@ -619,6 +694,24 @@
                   tr_de="Betrüger; Schwindler"
                   lvl="n3"
                   origin="GENKI2 p.225"
+                />
+                <phrase
+                  ph="【詐：さ】【欺：ぎ】に【遭：あ】う"
+                  rom="sagi ni au"
+                  tr_en="to fall victim to a scam"
+                  tr_de="einem Betrug zum Opfer fallen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has n2 for 遭う"
+                />
+                <sentence
+                  s="【詐：さ】【欺：ぎ】に【遭：あ】って、お【金：かね】を【取：と】られた。"
+                  rom="Sagi ni atte, o-kane o torareta."
+                  tr_en="I fell victim to a scam, and money was taken from me."
+                  tr_de="Ich bin einem Betrug zum Opfer gefallen, und sie haben mir Geld abgenommen."
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="jisho has n2 for 遭う"
                 />
             </word>
             <word
@@ -988,8 +1081,15 @@
                 <keep_apart_from id="daikin-bill" />
                 <!--
                     お勘定をお願いします。 May I have the bill, please? (ChatGPT)
-                    お勘定を払う (おかんじょうをはらう) to pay the bill (ChatGPT)
                 -->
+                <phrase
+                  ph="お【勘：かん】【定：じょう】を【払：はら】う"
+                  rom="o-kanjō o harau"
+                  tr_en="to pay the bill"
+                  tr_de="die Rechnung zahlen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
                 <sentence
                   s="【勘：かん】【定：じょう】は【5000：ごせん】【円：えん】なる。"
                   rom="Kanjō wa go-sen-en naru."
@@ -1093,6 +1193,16 @@
               id="shōnin-merchant"
             >
                 <!-- implicit see-also link to shōnin-recognition -->
+                <!-- ChatGPT says 商人 is somewhat old-fashioned or literary -->
+                <phrase
+                  ph="【成：せい】【功：こう】した【商：しょう】【人：にん】"
+                  rom="seikō shita shōnin"
+                  tr_en="a successful merchant"
+                  tr_de="ein erfolgreicher Kaufmann"
+                  lvl="n3"
+                  origin="DeepL"
+                  rem="verified with ChatGPT; ChatGPT is ambiguous whether it thinks it natural"
+                />
                 <sentence
                   s="【商：しょう】【人：にん】は【商：しょう】【品：ひん】を【売：う】り【買：か】いする【人：ひと】だ。"
                   rom="Shōnin wa shōhin o uri-kai suru hito da."
@@ -1113,12 +1223,22 @@
               id="jōkyaku-passenger"
               rem="used to be n1 in jisho; they changed it to n3, which makes more sense"
             >
+                <phrase
+                  ph="【乗：じょう】【客：きゃく】でいっぱいの【列：れっ】【車：しゃ】"
+                  rom="jōkyaku de ippai no ressha"
+                  tr_en="a train full of passengers"
+                  tr_de="ein Zug voll mit Passagieren"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
                 <sentence
                   s="【大：おお】【勢：ぜい】の【乗：じょう】【客：きゃく】がケガをした。"
                   rom="Ōzei no jōkyaku ga kega o shita."
                   tr_en="A lot of passengers got injured."
                   tr_de="Viele Passagiere wurden verletzt."
                   lvl="n3"
+                  origin="lib0 modified"
                 />
             </word>
             <word
@@ -1387,7 +1507,7 @@
               category="mood"
               id="konomi-liking"
             >
-                <see id="konomu-prefer" rem="verb" />
+                <see id="konomu-prefer" type="verb" />
                 <keep_apart_from id="nozomi-wish" />
             </word>
             <word

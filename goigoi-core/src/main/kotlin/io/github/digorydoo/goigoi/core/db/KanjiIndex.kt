@@ -7,9 +7,9 @@ import ch.digorydoo.kutils.cjk.toHiragana
 import ch.digorydoo.kutils.collections.getRandomSubset
 import ch.digorydoo.kutils.logging.Log
 import io.github.digorydoo.goigoi.core.file.AssetsAccessor
-import io.github.digorydoo.goigoi.core.file.DontConfuseFileReader
 import io.github.digorydoo.goigoi.core.file.KanjiIndexReader
 import io.github.digorydoo.goigoi.core.file.KanjiReadingsReader
+import io.github.digorydoo.goigoi.core.file.VisuallySimilarKanjisFileReader
 import io.github.digorydoo.goigoi.core.utils.Flavour
 import java.io.InputStream
 
@@ -21,7 +21,7 @@ class KanjiIndex(private val flavour: Flavour, private val assets: AssetsAccesso
     private val n1Kanjis = mutableSetOf<Char>()
     private val otherKanjis = mutableSetOf<Char>()
     private val readings = mutableMapOf<String, Set<String>>()
-    private val dontConfuse = mutableMapOf<Char, Set<Char>>()
+    private val visuallySimilar = mutableMapOf<Char, Set<Char>>()
 
     fun getRandomKanjisOfLevel(level: JLPTLevel, desiredCount: Int, except: Set<Char>, avoidReadings: List<String>) =
         getKanjisWithReadings(avoidReadings) // e.g. へん, avoid 変 and 辺
@@ -83,7 +83,7 @@ class KanjiIndex(private val flavour: Flavour, private val assets: AssetsAccesso
             ?.let { JLPTLevel.fromInt(it) }
 
     fun getVisuallySimilarKanjis(kanji: Char) =
-        dontConfuse[kanji] ?: emptySet()
+        visuallySimilar[kanji] ?: emptySet()
 
     fun loadFiles() {
         if (flavour != Flavour.JAPANESE) {
@@ -92,12 +92,12 @@ class KanjiIndex(private val flavour: Flavour, private val assets: AssetsAccesso
         }
 
         require(readings.isEmpty())
-        require(dontConfuse.isEmpty())
+        require(visuallySimilar.isEmpty())
 
         assets.apply {
             useAsset(KANJI_INDEX_FILE_NAME) { loadKanjiIndexFile(it) }
             useAsset(READINGS_FILE_NAME) { loadReadingsFile(it) }
-            useAsset(DONT_CONFUSE_FILE_NAME) { loadDontConfuseFile(it) }
+            useAsset(VISUALLY_SIMILAR_FILE_NAME) { loadVisuallySimilarKanjisFile(it) }
         }
     }
 
@@ -142,21 +142,21 @@ class KanjiIndex(private val flavour: Flavour, private val assets: AssetsAccesso
         require(readings.isNotEmpty())
     }
 
-    private fun loadDontConfuseFile(stream: InputStream) {
-        require(dontConfuse.isEmpty())
+    private fun loadVisuallySimilarKanjisFile(stream: InputStream) {
+        require(visuallySimilar.isEmpty())
 
-        DontConfuseFileReader(stream).read { kanji, similarKanjis ->
-            dontConfuse[kanji] = mutableSetOf<Char>().apply { addAll(similarKanjis) }
+        VisuallySimilarKanjisFileReader(stream).read { kanji, similarKanjis ->
+            visuallySimilar[kanji] = mutableSetOf<Char>().apply { addAll(similarKanjis) }
         }
 
-        Log.debug(TAG, "DontConfuse: ${dontConfuse.size}")
-        require(dontConfuse.isNotEmpty())
+        Log.debug(TAG, "Visually similar: ${visuallySimilar.size}")
+        require(visuallySimilar.isNotEmpty())
     }
 
     companion object {
         private val TAG = Log.Tag("KanjiIndex")
         private const val KANJI_INDEX_FILE_NAME = "voc_ja/all-kanjis.txt"
         private const val READINGS_FILE_NAME = "voc_ja/readings.txt"
-        private const val DONT_CONFUSE_FILE_NAME = "voc_ja/dont-confuse.txt"
+        private const val VISUALLY_SIMILAR_FILE_NAME = "voc_ja/visually-similar.txt"
     }
 }

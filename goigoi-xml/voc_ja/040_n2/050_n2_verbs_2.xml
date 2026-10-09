@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N2 verbs ②"
       name_de="N2-Verben ②"
       name_fr="Les verbes N2 ②"
       name_it="Verbi N2 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -72,7 +74,7 @@
               category="general, maths"
               id="fuyasu-increasesth"
             >
-                <see id="fueru-increase" rem="v.i." />
+                <see id="fueru-increase" type="v.i." />
                 <keep_apart_from id="masu-grow" />
                 <keep_apart_from id="fueru-increase" />
             </word>
@@ -85,7 +87,7 @@
               lvl="n2"
               id="tsutawaru-beintroduced"
             >
-                <see id="tsutaeru-convey" rem="v.t." />
+                <see id="tsutaeru-convey" type="v.t." />
             </word>
             <word
               w="【逃：に】がす"
@@ -96,7 +98,7 @@
               lvl="n2"
               id="nigasu-setfree"
             >
-                <see id="nigeru-escape" rem="v.i." />
+                <see id="nigeru-escape" type="v.i." />
                 <keep_apart_from id="hanareru-getfree" />
             </word>
             <word
@@ -108,7 +110,7 @@
               lvl="n2"
               id="tomeru-lodge"
             >
-                <see id="tomaru-stay" rem="v.i." />
+                <see id="tomaru-stay" type="v.i." />
             </word>
             <word
               w="【零：こぼ】す"
@@ -120,7 +122,7 @@
               lvl="n2"
               id="kobosu-shedtears"
             >
-                <see id="koboreru-overflow" rem="v.i." />
+                <see id="koboreru-overflow" type="v.i." />
             </word>
             <word
               w="【零：こぼ】れる"
@@ -131,7 +133,7 @@
               lvl="n2"
               id="koboreru-overflow"
             >
-                <see id="kobosu-shedtears" rem="v.t." />
+                <see id="kobosu-shedtears" type="v.t." />
             </word>
             <word
               w="【打：う】ち【消：け】す"
@@ -143,7 +145,7 @@
               rem="Langenscheidt: uchikeshi: Verneinung"
               id="uchikesu-deny"
             >
-                <see id="uchikeshi-denial" rem="noun" />
+                <see id="uchikeshi-denial" type="noun" />
             </word>
             <word
               w="【繋：つな】がる"
@@ -154,8 +156,8 @@
               lvl="n2"
               id="tsunagaru-linked"
             >
-                <see id="tsunagari-link" rem="noun" />
-                <see id="tsunageru-connect" rem="v.t." />
+                <see id="tsunagari-link" type="noun" />
+                <see id="tsunageru-connect" type="v.t." />
                 <keep_apart_from id="tsunagari-link" />
             </word>
             <word
@@ -167,7 +169,7 @@
               lvl="n2"
               id="tsunageru-connect"
             >
-                <see id="tsunagaru-linked" rem="v.i." />
+                <see id="tsunagaru-linked" type="v.i." />
             </word>
             <word
               w="【裏：うら】【返：がえ】す"
@@ -178,7 +180,7 @@
               lvl="n2"
               id="uragaesu-insideout"
             >
-                <see id="uragaeshi-insideout" rem="noun" />
+                <see id="uragaeshi-insideout" type="noun" />
             </word>
             <word
               w="【溜：た】まる"
@@ -189,7 +191,7 @@
               lvl="n2"
               id="tamaru-collect"
             >
-                <see id="tameru-amass" rem="v.t." />
+                <see id="tameru-amass" type="v.t." />
             </word>
             <word
               w="【溜：た】める"
@@ -201,7 +203,7 @@
               id="tameru-amass"
             >
                 <!-- implicit see-also link to tameru-saveupmoney -->
-                <see id="tamaru-collect" rem="v.i." />
+                <see id="tamaru-collect" type="v.i." />
             </word>
             <word
               w="【外：はず】れる"
@@ -213,7 +215,7 @@
               category="not-good"
               id="hazureru-getitwrong"
             >
-                <see id="hazure-failure" rem="noun" />
+                <see id="hazure-failure" type="noun" />
             </word>
             <word
               w="【配：くば】る"
@@ -251,8 +253,8 @@
               lvl="n2"
               id="tatoeru-compare"
             >
-                <see id="tatoeba-forexample" rem="closely related" />
-                <see id="tatoe-example" rem="noun" />
+                <see id="tatoeba-forexample" type="closely related" />
+                <see id="tatoe-example" type="noun" />
             </word>
             <word
               w="【跳：は】ねる"
@@ -276,7 +278,7 @@
               id="chidzimu-shrink"
             >
                 <!-- the noun is chidzimi, nx, common -->
-                <see id="chidzimeru-reduce" rem="v.t." />
+                <see id="chidzimeru-reduce" type="v.t." />
                 <keep_together id="chidzimeru-reduce" />
                 <keep_apart_from id="chidzireru-curled" />
             </word>
@@ -289,7 +291,7 @@
               lvl="n2"
               id="chidzimeru-reduce"
             >
-                <see id="chidzimu-shrink" rem="v.i." />
+                <see id="chidzimu-shrink" type="v.i." />
                 <keep_together id="chidzimu-shrink" />
                 <keep_apart_from id="chidzireru-curled" />
             </word>
@@ -303,7 +305,7 @@
               id="omoitsuku-thinkof"
               rem="appears in 500mon N3 q38 (no example)"
             >
-                <see id="omoitsuki-idea" rem="noun" />
+                <see id="omoitsuki-idea" type="noun" />
                 <keep_apart_from id="omoi-thought" />
             </word>
             <word
@@ -382,7 +384,7 @@
               lvl="n2"
               id="nerau-aim"
             >
-                <see id="nerai-aim" rem="noun" />
+                <see id="nerai-aim" type="noun" />
                 <keep_apart_from id="nerai-aim" />
             </word>
         </section>

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 verbs ②"
       name_de="N3-Verben ②"
       name_fr="Les verbes N3 ②"
       name_it="Verbi N3 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -26,7 +28,7 @@
               category="looking"
               id="arawareru-becomevisible"
             >
-                <see id="arawasu-reveal" rem="v.t." />
+                <see id="arawasu-reveal" type="v.t." />
                 <keep_apart_from id="mirareru-cansee" />
                 <keep_apart_from id="mieru-beseen" />
                 <phrase
@@ -70,7 +72,7 @@
               id="arawasu-reveal"
             >
                 <!-- automatic see-also link to arawasu-represent -->
-                <see id="arawareru-becomevisible" rem="v.i." />
+                <see id="arawareru-becomevisible" type="v.i." />
                 <keep_apart_from id="shimesu-indicate" />
                 <keep_apart_from id="akasu-spend" />
                 <keep_apart_from id="arawasu-represent" />
@@ -139,7 +141,7 @@
               id="tokasu-comb"
               rem="appears in GENKI2 p.117 vocab section; jisho has nx"
             >
-                <see id="kushi-comb" rem="closely related" />
+                <see id="kushi-comb" type="closely related" />
                 <phrase
                   ph="【髪：かみ】をとかす"
                   rom="kami o tokasu"
@@ -253,7 +255,7 @@
               category="hands"
               id="fureru-touch"
             >
-                <see id="sawaru-touch" rem="closely related" />
+                <see id="sawaru-touch" type="closely related" />
                 <keep_apart_from id="sawaru-touch" />
                 <keep_apart_from id="kanjiru-feel" />
                 <phrase
@@ -369,7 +371,7 @@
               category="work, motion"
               id="todoku-reach"
             >
-                <see id="todokeru-deliver" rem="v.t." />
+                <see id="todokeru-deliver" type="v.t." />
                 <keep_apart_from id="haitatsu-delivery" />
                 <phrase
                   ph="【手：て】の【届：とど】かない【所：ところ】"
@@ -415,7 +417,7 @@
               id="awaseru-join"
               rem="appears in 500mon q187"
             >
-                <see id="au-match" rem="v.i." />
+                <see id="au-match" type="v.i." />
                 <phrase
                   ph="【調：ちょう】【子：し】を【合：あ】わせる"
                   rom="chōshi o awaseru"
@@ -574,7 +576,7 @@
               category="general"
               id="kagiru-restrict"
             >
-                <see id="kagiri-limits" rem="noun" />
+                <see id="kagiri-limits" type="noun" />
                 <keep_apart_from id="seigen-restrict" />
                 <keep_apart_from id="genkai-limit" />
                 <phrase
@@ -623,7 +625,7 @@
               id="orosu-dropoff"
               rem="has same kanji as furu-fall"
             >
-                <see id="oriru-getoff" rem="v.i." />
+                <see id="oriru-getoff" type="v.i." />
                 <phrase
                   ph="【荷：に】【物：もつ】を【降：お】ろす"
                   rom="nimotsu o orosu"
@@ -715,7 +717,7 @@
               category="temperature"
               id="kōru-freeze"
             >
-                <see id="kōri-ice" rem="closely related" />
+                <see id="kōri-ice" type="closely related" />
                 <phrase
                   ph="【凍：こお】った【歩：ほ】【道：どう】"
                   rom="kōtta hodō"
@@ -748,7 +750,7 @@
               category="general, hands"
               id="modosu-putback"
             >
-                <see id="modoru-turnback" rem="v.i." />
+                <see id="modoru-turnback" type="v.i." />
                 <keep_apart_from id="kaesu-returnsth" />
                 <keep_apart_from id="torimodosu-regain" />
                 <keep_apart_from id="yobu-summon" rem="ambiguity in phrases" />
@@ -809,7 +811,7 @@
               category="general"
               id="tōsu-stickthru"
             >
-                <see id="tōru-gopast" rem="v.i." />
+                <see id="tōru-gopast" type="v.i." />
                 <keep_apart_from id="tsūjiru-getthru" />
                 <phrase
                   ph="【一：ひと】【晩：ばん】【中：じゅう】【泣：な】き【通：とお】す"
@@ -850,7 +852,7 @@
               category="talking"
               id="hanashiau-discuss"
             >
-                <see id="hanashiai-discussion" rem="noun" />
+                <see id="hanashiai-discussion" type="noun" />
                 <keep_apart_from id="hanasu-talk" />
                 <keep_apart_from id="iu-say" />
                 <keep_apart_from id="mōsu-say" />
@@ -886,7 +888,7 @@
               category="transportation"
               id="noseru-givesbride"
             >
-                <see id="noru-geton" rem="v.i." />
+                <see id="noru-geton" type="v.i." />
                 <phrase
                   ph="【車：くるま】に【乗：の】せてあげる"
                   rom="kuruma ni nosete ageru"
@@ -938,7 +940,7 @@
               category="business, trade"
               id="ureru-sellwell"
             >
-                <see id="uru-sell" rem="v.t." />
+                <see id="uru-sell" type="v.t." />
                 <phrase
                   ph="【高：たか】く【売：う】れる"
                   rom="takaku ureru"
@@ -976,7 +978,7 @@
               category="work, motion"
               id="susumeru-advance"
             >
-                <see id="susumu-advance" rem="v.i." />
+                <see id="susumu-advance" type="v.i." />
                 <keep_apart_from id="tsudzukeru-keepon" />
                 <!--
                     続ける・つづける: focus is on not stopping
@@ -1012,7 +1014,7 @@
               id="amu-toknit"
               rem="appears in GENKI2 p.25 vocab section; jisho has n2"
             >
-                <see id="amimono-knitting" rem="closely related" />
+                <see id="amimono-knitting" type="closely related" />
                 <keep_apart_from id="oru-weave" />
                 <!--
                     縫う・ぬう: to sew; to stitch (n2)
@@ -1048,9 +1050,9 @@
               id="machigau-mistake"
               rem="jisho has n1"
             >
-                <see id="machigai-mistake" rem="noun" />
-                <see id="machigaeru-mistakesth" rem="closely related" />
-                <see id="ayamaru-err" rem="closely related" />
+                <see id="machigai-mistake" type="noun" />
+                <see id="machigaeru-mistakesth" type="closely related" />
+                <see id="ayamaru-err" type="closely related" />
                 <keep_apart_from id="ayamaru-err" />
                 <phrase
                   ph="【間：ま】【違：ちが】ったバスに【乗：の】る"
@@ -1230,7 +1232,7 @@
               id="nayamu-worried"
               rem="Langenscheidt: leiden"
             >
-                <see id="nayami-worry" rem="noun" />
+                <see id="nayami-worry" type="noun" />
                 <phrase
                   ph="【思：おも】い【悩：なや】む"
                   rom="omoi-nayamu"
@@ -1261,7 +1263,7 @@
               category="motion"
               id="ugokasu-move"
             >
-                <see id="ugoku-move" rem="v.i." />
+                <see id="ugoku-move" type="v.i." />
                 <phrase
                   ph="【家：か】【具：ぐ】を【動：うご】かす"
                   rom="kagu o ugokasu"
@@ -1292,9 +1294,9 @@
               category="directions"
               id="muku-turntoward"
             >
-                <see id="muki-direction" rem="noun" />
-                <see id="mukeru-turn" rem="v.t." />
-                <see id="mukō-opposite" rem="closely related" />
+                <see id="muki-direction" type="noun" />
+                <see id="mukeru-turn" type="v.t." />
+                <see id="mukō-opposite" type="closely related" />
                 <keep_apart_from id="magaru-turn" />
                 <keep_apart_from id="sasu-point" />
                 <phrase
@@ -1349,7 +1351,7 @@
               category="directions"
               id="mukeru-turn"
             >
-                <see id="muku-turntoward" rem="v.i." />
+                <see id="muku-turntoward" type="v.i." />
                 <phrase
                   ph="【背：せ】【中：なか】を【向：む】ける"
                   rom="senaka o mukeru"
@@ -1381,7 +1383,7 @@
               id="chikadzuku-approach"
               rem="appears in Doraemon 7, p.76; jisho has n1, but n5 for 近い, n4 for 付く"
             >
-                <see id="chikadzukeru-bringnear" rem="v.t." />
+                <see id="chikadzukeru-bringnear" type="v.t." />
                 <phrase
                   ph="【近：ちか】づかないで"
                   rom="chikadzukanaide"
@@ -1429,7 +1431,7 @@
               category="general"
               id="wakeru-divide"
             >
-                <see id="wakaru-understand" rem="v.i." />
+                <see id="wakaru-understand" type="v.i." />
                 <phrase
                   ph="【見：み】【分：わ】ける"
                   rom="mi-wakeru"
@@ -1490,7 +1492,7 @@
               category="light"
               id="akeru-dawn"
             >
-                <see id="akari-illum" rem="verb" />
+                <see id="akari-illum" type="verb" />
                 <keep_apart_from id="shōmei-iilumination" />
                 <keep_apart_from id="yoake-dawn" />
                 <phrase
@@ -1521,8 +1523,8 @@
               category="motion"
               id="mawasu-turn"
             >
-                <see id="mawaru-turn" rem="v.i." />
-                <see id="kakimawasu-stir" rem="closely related" />
+                <see id="mawaru-turn" type="v.i." />
+                <see id="kakimawasu-stir" type="closely related" />
                 <keep_apart_from id="kakimawasu-stir" />
                 <keep_apart_from id="toritsugu-passon" rem="mawasu can have the meaning of 'pass around'" />
                 <phrase
@@ -1698,7 +1700,7 @@
               category="mood, not-good"
               id="kanashimu-mourn"
             >
-                <see id="kanashii-sad" rem="adjective" />
+                <see id="kanashii-sad" type="adjective" />
                 <!--
                     嘆き悲む・なげきかなしむ: to grieve; to lament (nx)
                 -->
@@ -1734,8 +1736,8 @@
               id="hirogeru-widen"
               rem="jisho has n2, but n3 for hirogaru"
             >
-                <see id="hirogaru-spread" rem="v.i." />
-                <see id="hiroi-spacious" rem="adjective" />
+                <see id="hirogaru-spread" type="v.i." />
+                <see id="hiroi-spacious" type="adjective" />
                 <phrase
                   ph="【机：つくえ】の【上：うえ】に【地：ち】【図：ず】を【広：ひろ】げる"
                   rom="tsukue no ue ni chizu o hirogeru"
@@ -1766,7 +1768,7 @@
               category="general"
               id="hirogaru-spread"
             >
-                <see id="hirogeru-widen" rem="v.t." />
+                <see id="hirogeru-widen" type="v.t." />
                 <!-- there are two nouns: hirogari and hirosa -->
                 <phrase
                   ph="【全：ぜん】【国：こく】に【広：ひろ】がる"
@@ -1833,7 +1835,7 @@
               category="sports, business"
               id="ataru-hit"
             >
-                <see id="ateru-hit" rem="v.t." />
+                <see id="ateru-hit" type="v.t." />
                 <keep_apart_from id="butsu-hit" />
                 <keep_apart_from id="naguru-hit" />
                 <phrase
@@ -1877,7 +1879,7 @@
               category="general, light"
               id="ateru-hit"
             >
-                <see id="ataru-hit" rem="v.i." />
+                <see id="ataru-hit" type="v.i." />
                 <keep_apart_from id="naguru-hit" />
                 <phrase
                   ph="【言：い】い【当：あ】てる"
@@ -1958,7 +1960,7 @@
               lvl="n3"
               id="kaeru-substitute"
             >
-                <see id="kawaru-takeover" rem="v.i." />
+                <see id="kawaru-takeover" type="v.i." />
                 <keep_apart_from id="kaeru-change" />
                 <keep_apart_from id="kaeru-replace" />
                 <keep_together id="kaeru-replace" />
@@ -2049,8 +2051,8 @@
               lvl="n3"
               id="kawaru-takeover"
             >
-                <see id="kaeru-substitute" rem="v.t." />
-                <see id="kawari-substitute" rem="noun" />
+                <see id="kaeru-substitute" type="v.t." />
+                <see id="kawari-substitute" type="noun" />
                 <keep_apart_from id="kawaru-change" />
                 <keep_apart_from id="kawari-substitute" />
                 <keep_apart_from id="kawaru-takeplaceof" />
@@ -2104,7 +2106,7 @@
               id="kaeru-replace"
               HIDDEN="true"
             >
-                <see id="kawaru-takeplaceof" rem="v.i." />
+                <see id="kawaru-takeplaceof" type="v.i." />
                 <keep_apart_from id="kaeru-substitute" />
                 <keep_together id="kaeru-substitute" />
                 <keep_apart_from id="kaeru-exchange" />
@@ -2122,7 +2124,7 @@
               id="kawaru-takeplaceof"
               HIDDEN="true"
             >
-                <see id="kaeru-replace" rem="v.t." />
+                <see id="kaeru-replace" type="v.t." />
                 <keep_apart_from id="kawaru-beexchanged" />
                 <keep_together id="kawaru-beexchanged" />
                 <keep_apart_from id="kawaru-takeover" />
@@ -2140,7 +2142,7 @@
               id="kaeru-exchange"
               HIDDEN="true"
             >
-                <see id="kawaru-beexchanged" rem="v.i." />
+                <see id="kawaru-beexchanged" type="v.i." />
                 <keep_apart_from id="kaeru-replace" />
                 <keep_together id="kaeru-replace" />
                 <keep_apart_from id="kaeru-substitute" />
@@ -2156,7 +2158,7 @@
               id="kawaru-beexchanged"
               HIDDEN="true"
             >
-                <see id="kaeru-exchange" rem="v.t." />
+                <see id="kaeru-exchange" type="v.t." />
                 <keep_apart_from id="kawaru-takeplaceof" />
                 <keep_together id="kawaru-takeplaceof" />
                 <keep_apart_from id="kawaru-takeover" />

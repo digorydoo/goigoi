@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 na-adjectives ②"
       name_de="N3 Na-Adjektive ②"
       name_fr="Les na-adjectifs N3 ②"
       name_it="Na-aggettivi N3 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="na-adjective"
@@ -297,7 +299,7 @@
               id="buji-safety"
               HIDDEN="true"
             >
-                <see id="anzen-safety" rem="closely related" />
+                <see id="anzen-safety" type="closely related" />
             </word>
             <word
               w="たっぷり"

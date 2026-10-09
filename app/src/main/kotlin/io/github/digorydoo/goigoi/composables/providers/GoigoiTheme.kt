@@ -43,8 +43,8 @@ private object Palette {
     val grey650 = Color(0xFF6B6B6B)
     val grey700 = Color(0xFF616161)
     val grey800 = Color(0xFF424242)
+    val grey825 = Color(0xFF3A3A3A)
     val grey850 = Color(0xFF323232)
-    // val grey875 = Color(0xFF292929)
     val grey900 = Color(0xFF212121)
     val grey925 = Color(0xFF191919)
     val grey950 = Color(0xFF111111)
@@ -90,11 +90,13 @@ data class GoigoiColours(
     val decorativeIconTint: Color, // an icon that does not represent an action
     val dimmedDecorativeIconBackground: Color,
     val onDimmedDecorativeIconBackground: Color,
+    val bigRingTrack: Color,
     val bigRingTrail: Color,
     val bigRingTip: Color,
-    val ringBackground: Color,
     val ringTrack: Color,
     val ringTrail: Color,
+    val dayIconTrack: Color,
+    val dayIconTrail: Color,
     val popupOutline: Color,
     val popupShadow: Color,
     val poorRating: Color,
@@ -138,11 +140,13 @@ private val darkGoigoiScheme = GoigoiColours(
     statusBarAboveBottomSheet = Palette.opacityBlack3D,
     onStatusBar = Palette.white,
     decorativeIconTint = Palette.white,
+    bigRingTrack = Palette.grey850,
     bigRingTrail = Palette.green850,
     bigRingTip = Palette.grey300,
-    ringBackground = Palette.grey850,
-    ringTrack = Palette.grey950,
+    ringTrack = Palette.grey850,
     ringTrail = Palette.grey600,
+    dayIconTrack = Palette.grey825,
+    dayIconTrail = Palette.green800,
     popupOutline = Palette.opacityBlack1F,
     popupShadow = Palette.opacityBlack3D,
     dimmedDecorativeIconBackground = Palette.grey800,
@@ -166,7 +170,7 @@ private val darkGoigoiScheme = GoigoiColours(
     wrongAnswerBackground = Palette.orange800,
     wrongAnswerOutline = Palette.black,
     wrongAnswerOutlinedText = Palette.orange750,
-    wrongAnswerText = Palette.orange750,
+    wrongAnswerText = Palette.orange750.copy(alpha = 0.8f),
     caret = Palette.green700,
 )
 
@@ -188,11 +192,13 @@ private val lightGoigoiScheme = GoigoiColours(
     statusBarAboveBottomSheet = Palette.green800Opacity7F,
     onStatusBar = Palette.opacityBlackDD,
     decorativeIconTint = Palette.opacityBlack8A,
+    bigRingTrack = Palette.grey250,
     bigRingTrail = Palette.green800,
     bigRingTip = Palette.white,
-    ringBackground = Palette.white,
     ringTrack = Palette.grey250,
     ringTrail = Palette.grey500,
+    dayIconTrack = Palette.grey250,
+    dayIconTrail = Palette.green800,
     popupOutline = Palette.opacityBlackDD,
     popupShadow = Palette.opacityBlack3D,
     dimmedDecorativeIconBackground = Palette.grey300,
@@ -216,7 +222,7 @@ private val lightGoigoiScheme = GoigoiColours(
     wrongAnswerBackground = Palette.orange750,
     wrongAnswerOutline = Palette.grey950,
     wrongAnswerOutlinedText = Palette.orange750,
-    wrongAnswerText = Palette.orange800,
+    wrongAnswerText = Palette.orange800.copy(alpha = 0.8f),
     caret = Palette.green800,
 )
 
@@ -263,11 +269,13 @@ private val LocalGoigoiColours = staticCompositionLocalOf {
         statusBarAboveBottomSheet = Color.Unspecified,
         onStatusBar = Color.Unspecified,
         decorativeIconTint = Color.Unspecified,
+        bigRingTrack = Color.Unspecified,
         bigRingTrail = Color.Unspecified,
         bigRingTip = Color.Unspecified,
-        ringBackground = Color.Unspecified,
         ringTrack = Color.Unspecified,
         ringTrail = Color.Unspecified,
+        dayIconTrack = Color.Unspecified,
+        dayIconTrail = Color.Unspecified,
         popupOutline = Color.Unspecified,
         popupShadow = Color.Unspecified,
         dimmedDecorativeIconBackground = Color.Unspecified,

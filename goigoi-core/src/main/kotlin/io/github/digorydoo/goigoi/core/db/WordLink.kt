@@ -2,6 +2,7 @@ package io.github.digorydoo.goigoi.core.db
 
 import ch.digorydoo.kutils.cjk.IntlString
 
+// Keep this class in sync with GoigoiWordLink from goigoi/compiler
 class WordLink(val wordId: String) {
     enum class Kind(val value: Int) {
         SAME_READING(1),

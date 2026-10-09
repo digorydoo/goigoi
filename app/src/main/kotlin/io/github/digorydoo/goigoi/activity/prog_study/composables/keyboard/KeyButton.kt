@@ -25,6 +25,7 @@ import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.utils.ScreenSize
 
 private const val SMALL_TEXT_SCALING = 0.8f // used for making small kana more obvious
+private val KANA_KEYBOARD_BUTTON_WIDTH = 56.dp
 
 enum class KeyButtonSize { XXLARGE, XLARGE, LARGE, NORMAL }
 
@@ -107,7 +108,7 @@ private fun KeyButton(
             ),
         shape = shape,
         color = background,
-        shadowElevation = 2.dp,
+        shadowElevation = if (enabled) 2.dp else 0.dp,
         tonalElevation = 0.dp,
     ) {
         Box(

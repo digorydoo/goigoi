@@ -1,0 +1,258 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--
+        JLPT level associated with this item. The value "-" explicitly states the item is not associated with any
+        particular JLPT level.
+    -->
+    <xs:simpleType name="JLPTLevel">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="n5" />
+            <xs:enumeration value="n4" />
+            <xs:enumeration value="n3" />
+            <xs:enumeration value="n2" />
+            <xs:enumeration value="n1" />
+            <xs:enumeration value="-" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--
+        Comma-separated list of JLPT levels.
+    -->
+    <xs:simpleType name="JLPTLevelList">
+        <!--
+            xs:list itemType="JLPTLevel" doesn't work, because we want a comma-separated list, which reads better
+        -->
+        <xs:restriction base="xs:string">
+            <xs:pattern value="-|n[1-5](,\s*(-|n[1-5]))*" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--
+        Tells whether the word should be studied in context rather than on its own.
+        Typically used for abstract words whose descriptions are rather hard to grasp.
+    -->
+    <xs:simpleType name="StudyInContext">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="preferred" />
+            <xs:enumeration value="required" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--
+        The topic divides the entire vocabulary into large sections. There should only be a few.
+    -->
+    <xs:complexType name="Topic">
+        <xs:attribute name="name_ja" type="xs:string" use="required" />
+        <xs:attribute name="name_en" type="xs:string" use="required" />
+        <xs:attribute name="name_de" type="xs:string" use="required" />
+        <xs:attribute name="name_fr" type="xs:string" use="required" />
+        <xs:attribute name="name_it" type="xs:string" use="required" />
+        <xs:attribute name="lvl" type="JLPTLevelList" use="required" />
+        <xs:attribute name="notice_en" type="xs:string" use="required" />
+        <xs:attribute name="imgSrc" type="xs:string" />
+        <xs:attribute name="bgColour" type="xs:string" />
+        <xs:attribute name="linkText" type="xs:string" />
+        <xs:attribute name="linkHref" type="xs:string" />
+    </xs:complexType>
+
+    <!--
+        The unyts of a topic can be grouped by putting a subheader before each group of unyts.
+    -->
+    <xs:complexType name="TopicSubheader">
+        <xs:attribute name="name_en" type="xs:string" use="required" />
+        <xs:attribute name="name_de" type="xs:string" use="required" />
+        <xs:attribute name="name_fr" type="xs:string" use="required" />
+        <xs:attribute name="name_it" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <!--
+        A unyt is a lesson. It's called unyt and not unit to avoid confusion with Kotlin type Unit.
+    -->
+    <xs:complexType name="Unyt">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="section" type="UnytSection" />
+        </xs:choice>
+        <xs:attribute name="name_en" type="xs:string" use="required" />
+        <xs:attribute name="name_de" type="xs:string" />
+        <xs:attribute name="name_fr" type="xs:string" />
+        <xs:attribute name="name_it" type="xs:string" />
+        <xs:attribute name="hasRomaji" type="xs:boolean" use="required" />
+        <xs:attribute name="hasFurigana" type="xs:boolean" use="required" />
+        <xs:attribute name="defaultHint_en" type="xs:string" />
+        <xs:attribute name="defaultHint_de" type="xs:string" />
+        <xs:attribute name="lvl" type="JLPTLevelList" use="required" />
+        <xs:attribute name="requiresSentences" type="xs:boolean" />
+        <xs:attribute name="requiresPhrases" type="xs:boolean" />
+        <xs:attribute name="ignoresCombinedReadings" type="xs:boolean" />
+        <xs:attribute name="HIDDEN" type="xs:boolean" />
+    </xs:complexType>
+
+    <!--
+        The words of a unyt can be grouped by wrapping them into sections.
+        If there is only one section in a unyt, it can be anonymous, otherwise at least name_en is required.
+    -->
+    <xs:complexType name="UnytSection">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="word" type="Word" />
+        </xs:choice>
+        <xs:attribute name="name_en" type="xs:string" />
+        <xs:attribute name="name_de" type="xs:string" />
+        <xs:attribute name="name_fr" type="xs:string" />
+        <xs:attribute name="name_it" type="xs:string" />
+    </xs:complexType>
+
+    <!--
+        A word in the vocabulary inside a particular unyt.
+    -->
+    <xs:complexType name="Word">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="phrase" type="Phrase" />
+            <xs:element name="sentence" type="Sentence" />
+            <xs:element name="keep_apart_from" type="KeepApartFrom" />
+            <xs:element name="keep_together" type="KeepTogether" />
+            <xs:element name="see" type="SeeAlso" />
+            <xs:element name="synonym" type="Synonym" />
+        </xs:choice>
+
+        <xs:attribute name="w" type="xs:string" use="required" />
+        <xs:attribute name="rom" type="xs:string" use="required" />
+        <xs:attribute name="tr_en" type="xs:string" use="required" />
+        <xs:attribute name="tr_de" type="xs:string" />
+        <xs:attribute name="Langenscheidt" type="xs:string" />
+        <xs:attribute name="hint_en" type="xs:string" />
+        <xs:attribute name="hint_de" type="xs:string" />
+        <xs:attribute name="lvl" type="JLPTLevel" use="required" />
+        <xs:attribute name="dict" type="xs:string" />
+        <xs:attribute name="id" type="xs:string" />
+        <xs:attribute name="usuallyInKana" type="xs:boolean" />
+        <xs:attribute name="hasCombinedReading" type="xs:boolean" />
+        <xs:attribute name="common" type="xs:boolean" />
+        <xs:attribute name="studyInContext" type="StudyInContext" />
+        <xs:attribute name="href" type="xs:anyURI" />
+        <xs:attribute name="rem" type="xs:string" />
+        <xs:attribute name="HIDDEN" type="xs:boolean" />
+
+        <!--
+            The category is restricted, see enum class WordCategory.
+            We don't use xs:enumeration/xs:list here, because unfortunately, members of xs:list are separated by
+            whitespace only, which reads very confusingly, e.g. "old-fashioned plant" instead of "old-fashioned, plant".
+        -->
+        <xs:attribute name="category" type="xs:string" />
+    </xs:complexType>
+
+    <!--
+        Phrases are short, usually not full sentences, and never end with a punctuation character.
+    -->
+    <xs:complexType name="Phrase">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="ask" type="Ask" />
+        </xs:choice>
+
+        <xs:attribute name="ph" type="xs:string" use="required" />
+        <xs:attribute name="rom" type="xs:string" use="required" />
+        <xs:attribute name="tr_en" type="xs:string" use="required" />
+        <xs:attribute name="tr_de" type="xs:string" />
+        <xs:attribute name="explanation_en" type="xs:string" />
+        <xs:attribute name="explanation_de" type="xs:string" />
+        <xs:attribute name="lvl" type="JLPTLevel" use="required" />
+        <xs:attribute name="allowSpaces" type="xs:boolean" />
+        <xs:attribute name="origin" type="xs:string" />
+        <xs:attribute name="href" type="xs:anyURI" />
+        <xs:attribute name="rem" type="xs:string" />
+    </xs:complexType>
+
+    <!--
+        Sentences are longer than phrases, should be full sentences, and must end with a punctuation character.
+    -->
+    <xs:complexType name="Sentence">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="ask" type="Ask" />
+        </xs:choice>
+
+        <xs:attribute name="s" type="xs:string" use="required" />
+        <xs:attribute name="rom" type="xs:string" use="required" />
+        <xs:attribute name="tr_en" type="xs:string" use="required" />
+        <xs:attribute name="tr_de" type="xs:string" />
+        <xs:attribute name="explanation_en" type="xs:string" />
+        <xs:attribute name="explanation_de" type="xs:string" />
+        <xs:attribute name="lvl" type="JLPTLevel" use="required" />
+        <xs:attribute name="allowSpaces" type="xs:boolean" />
+        <xs:attribute name="origin" type="xs:string" />
+        <xs:attribute name="href" type="xs:anyURI" />
+        <xs:attribute name="rem" type="xs:string" />
+    </xs:complexType>
+
+    <!--
+        When the word is used inside a phrase or sentence in a different form rather than its dictionary form, we need
+        to declare how the App should ask about the word.
+    -->
+    <xs:complexType name="Ask">
+        <!-- Either "w" alone or both "stem" and "suffix" are required, but we cannot express this in XSD 1.0 -->
+        <xs:attribute name="w" type="xs:string" />
+        <xs:attribute name="stem" type="xs:string" />
+        <xs:attribute name="suffix" type="xs:string" />
+    </xs:complexType>
+
+    <!--
+        Marks a word as potentially confusing together with another word. These words should not be studied together,
+        and they must appear in different unyts. We usually mark synonyms and almost synonyms with this, and sometimes
+        words whose declared phrases become ambiguous when the user may enter either of them.
+    -->
+    <xs:complexType name="KeepApartFrom">
+        <xs:attribute name="id" type="xs:string" use="required" />
+        <xs:attribute name="rem" type="xs:string" />
+    </xs:complexType>
+
+    <!--
+        Marks words that should be studied together. If their JLPT levels match, they should also be kept in the same
+        unyt. We use this mostly for hidden words that should not wander from another, non-hidden word that is
+        essentially the same, such as 風呂 and お風呂.
+    -->
+    <xs:complexType name="KeepTogether">
+        <xs:attribute name="id" type="xs:string" use="required" />
+        <xs:attribute name="rem" type="xs:string" />
+    </xs:complexType>
+
+    <!--
+        Adds a see-also link from this word to another.
+    -->
+    <xs:complexType name="SeeAlso">
+        <xs:attribute name="id" type="xs:string" use="required" />
+        <xs:attribute name="type" type="SeeAlsoType" use="required" />
+        <xs:attribute name="rem" type="xs:string" />
+    </xs:complexType>
+
+    <!--
+        The type of see-also link
+    -->
+    <xs:simpleType name="SeeAlsoType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="adjective" />
+            <xs:enumeration value="antonym" />
+            <xs:enumeration value="closely related" />
+            <xs:enumeration value="noun" />
+            <xs:enumeration value="v.i." />
+            <xs:enumeration value="v.t." />
+            <xs:enumeration value="verb" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--
+        Marks the word as the synonym of another.
+    -->
+    <xs:complexType name="Synonym">
+        <xs:attribute name="w" type="xs:string" use="required" />
+    </xs:complexType>
+
+    <!--
+        This is the root of the XML document.
+    -->
+    <xs:element name="vocabulary">
+        <xs:complexType>
+            <xs:choice minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="topic" type="Topic" />
+                <xs:element name="subheader" type="TopicSubheader" />
+                <xs:element name="unit" type="Unyt" />
+            </xs:choice>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

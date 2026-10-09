@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="More N4 words ①"
       name_de="Weitere N4-Wörter ①"
       name_fr="Plus de mots N4 ①"
       name_it="Più parole N4 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       lvl="n4"
@@ -225,7 +227,7 @@
               id="kare-he"
               rem="appears in GENKI1 p.268 vocab section as 'boyfriend'"
             >
-                <see id="kareshi-boyfriend" rem="closely related" />
+                <see id="kareshi-boyfriend" type="closely related" />
                 <keep_apart_from id="kareshi-boyfriend" />
                 <phrase
                   ph="【彼：かれ】の【話：はなし】を【聞：き】く"
@@ -866,8 +868,8 @@
               id="tatoeba-forexample"
             >
                 <!-- tatoeba comes from tatoeru-compare, and originally meant "if we compare" -->
-                <see id="tatoe-example" rem="closely related" />
-                <see id="tatoeru-compare" rem="closely related" />
+                <see id="tatoe-example" type="closely related" />
+                <see id="tatoeru-compare" type="closely related" />
                 <phrase
                   ph="【例：たと】えば【飛：ひ】【行：こう】【機：き】"
                   rom="tatoeba hikōki"
@@ -1044,8 +1046,8 @@
               id="dake-only"
               rem="appears in 500mon q405; jisho has n1"
             >
-                <see id="bakari-nothingbut" rem="closely related" />
-                <see id="shika-only" rem="closely related" />
+                <see id="bakari-nothingbut" type="closely related" />
+                <see id="shika-only" type="closely related" />
                 <keep_apart_from id="bakari-nothingbut" />
                 <keep_apart_from id="shika-only" />
                 <phrase

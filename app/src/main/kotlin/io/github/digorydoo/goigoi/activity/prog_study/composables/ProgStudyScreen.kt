@@ -104,14 +104,14 @@ fun ProgStudyScreen(model: ProgStudyActivityModel, onBack: () -> Unit) {
                                 .padding(
                                     start = styles.contentHorizPadding + 40.dp,
                                     top = 18.dp,
-                                    end = styles.contentHorizPadding + 40.dp,
+                                    end = styles.contentHorizPadding + 48.dp,
                                 ),
                             model = model,
                         )
                         StudyProgressIcon(
                             modifier = Modifier
                                 .align(Alignment.CenterEnd)
-                                .padding(end = styles.contentHorizPadding),
+                                .padding(end = maxOf(0.dp, styles.contentHorizPadding - 4.dp)),
                             model = model,
                         )
                         AnswerCommentFlag(
@@ -162,7 +162,9 @@ fun ProgStudyScreen(model: ProgStudyActivityModel, onBack: () -> Unit) {
                         x = styles.infoBtnMarginStart + innerPaddingStart,
                         y = -(styles.infoBtnMarginBottom + innerPaddingBottom),
                     ),
-                shown = mode == PresentationMode.ANSWER_CHECK,
+                shown = mode == PresentationMode.ANSWER_CHECK ||
+                    mode == PresentationMode.REVEAL_TEXTS ||
+                    mode == PresentationMode.EXPLANATION,
                 onClick = { wordOfBottomSheet.value = word }
             )
 

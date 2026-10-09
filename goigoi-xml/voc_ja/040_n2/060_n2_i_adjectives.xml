@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N2 i-adjectives"
       name_de="N2 I-Adjektive"
       name_fr="Les i-adjectifs N2"
       name_it="I-aggettivi N2"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="i-adjective"
@@ -145,7 +147,7 @@
               lvl="n2"
               id="mendokusai-bothersome"
             >
-                <see id="mendō-bother" rem="closely related" />
+                <see id="mendō-bother" type="closely related" />
                 <keep_apart_from id="mendō-bother" />
             </word>
             <word

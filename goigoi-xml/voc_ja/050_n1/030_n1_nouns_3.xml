@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N1 nouns ③"
       name_de="N1-Nomen ③"
       name_fr="Les noms N1 ③"
       name_it="Nomi N1 ③"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -300,7 +302,7 @@
               id="uketori-receipt"
               rem="why is this n1?"
             >
-                <see id="uketoru-receive" rem="verb" />
+                <see id="uketoru-receive" type="verb" />
                 <keep_apart_from id="uketori-alt" />
                 <keep_together id="uketori-alt" />
             </word>
@@ -425,7 +427,7 @@
               category="nature, weather"
               id="inabikari-lightning"
             >
-                <see id="kaminari-thunder" rem="closely related" />
+                <see id="kaminari-thunder" type="closely related" />
             </word>
             <word
               w="【三：しゃ】【味：み】【線：せん】"
@@ -474,7 +476,7 @@
               lvl="n1"
               id="uragaeshi-insideout"
             >
-                <see id="uragaesu-insideout" rem="verb" />
+                <see id="uragaesu-insideout" type="verb" />
             </word>
             <word
               w="【打：う】ち【消：け】し"
@@ -485,7 +487,7 @@
               id="uchikeshi-denial"
               rem="Langenscheidt: Verneinung"
             >
-                <see id="uchikesu-deny" rem="verb" />
+                <see id="uchikesu-deny" type="verb" />
             </word>
             <word
               w="【晴：せい】【天：てん】"
@@ -496,7 +498,7 @@
               category="weather"
               id="seiten-fineweather"
             >
-                <see id="hare-clearweather" rem="closely related" />
+                <see id="hare-clearweather" type="closely related" />
             </word>
             <word
               w="【資：し】【金：きん】"
@@ -527,7 +529,7 @@
               lvl="n1"
               id="katadzuke-tidyingup"
             >
-                <see id="katadzukeru-putinorder" rem="verb" />
+                <see id="katadzukeru-putinorder" type="verb" />
             </word>
             <word
               w="【仕：し】【舞：ま】い"
@@ -537,7 +539,7 @@
               lvl="n1"
               id="shimai-end"
             >
-                <see id="shimau-finish" rem="verb" />
+                <see id="shimau-finish" type="verb" />
             </word>
             <word
               w="【作：つく】り"
@@ -547,7 +549,7 @@
               lvl="n1"
               id="tsukuri-making"
             >
-                <see id="tsukuru-make" rem="verb" />
+                <see id="tsukuru-make" type="verb" />
             </word>
             <word
               w="【申：もう】し【込：こ】み"
@@ -557,7 +559,7 @@
               lvl="n1"
               id="mōshikomi-application"
             >
-                <see id="mōshikomu-applyfor" rem="verb" />
+                <see id="mōshikomu-applyfor" type="verb" />
             </word>
             <word
               w="【蕾：つぼみ】"

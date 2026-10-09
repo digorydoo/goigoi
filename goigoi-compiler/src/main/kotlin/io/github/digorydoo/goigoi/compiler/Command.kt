@@ -69,7 +69,7 @@ class Command(private val options: Options) {
             readings,
             vocab.kanjiBySchoolYear,
             vocab.kanjiByFreq,
-            vocab.dontConfuseKanjis,
+            vocab.visuallySimilar,
         )
         if (options.quiet) print(".")
 
@@ -124,9 +124,8 @@ class Command(private val options: Options) {
 
     private fun readGoigoiXml(xmlFile: File) {
         try {
-            val stream = xmlFile.inputStream()
             val parser = GoigoiXmlParser()
-            parser.parse(stream, vocab, xmlFile.name)
+            parser.parse(xmlFile, vocab)
         } catch (e: MalformedFuriganaException) {
             throw MalformedFuriganaException("${xmlFile.path}\n${e.message?.prependIndent("   ")}", e)
         } catch (e: ParsingFailed) {

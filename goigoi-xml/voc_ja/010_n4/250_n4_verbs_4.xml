@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N4 verbs ④"
       name_de="N4-Verben ④"
       name_fr="Les verbes N4 ④"
       name_it="Verbi N4 ④"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -26,8 +28,8 @@
               category="general"
               id="atsumaru-gather"
             >
-                <see id="atsumeru-collect" rem="v.t." />
-                <see id="atsumari-meeting" rem="noun" />
+                <see id="atsumeru-collect" type="v.t." />
+                <see id="atsumari-meeting" type="noun" />
                 <phrase
                   ph="【鳥：とり】が【集：あつ】まっている"
                   rom="tori ga atsumatte iru"
@@ -72,7 +74,7 @@
               category="general, hands"
               id="atsumeru-collect"
             >
-                <see id="atsumaru-gather" rem="v.i." />
+                <see id="atsumaru-gather" type="v.i." />
                 <phrase
                   ph="【切：きっ】【手：て】を【集：あつ】める"
                   rom="kitte o atsumeru"
@@ -144,7 +146,7 @@
                     混む means to become crowded
                     込む means to go in, to fill in (a form), to enter
                 -->
-                <see id="suku-becomeempty" rem="antonym" /><!-- https://hinative.com/questions/22452052 -->
+                <see id="suku-becomeempty" type="antonym" /><!-- https://hinative.com/questions/22452052 -->
                 <keep_apart_from id="hitogomi-crowd" />
                 <keep_apart_from id="konzatsu-congestion" />
                 <phrase
@@ -202,7 +204,7 @@
               id="suku-becomeempty"
             >
                 <!-- antonym suggested by 500mon N3 q26 -->
-                <see id="komu-crowded" rem="antonym" />
+                <see id="komu-crowded" type="antonym" />
                 <keep_apart_from id="aku-empty" />
                 <phrase
                   ph="お【腹：なか】が【空：す】いた"
@@ -294,7 +296,7 @@
               category="not-good"
               id="taoreru-crumble"
             >
-                <see id="taosu-throwdown" rem="v.t." />
+                <see id="taosu-throwdown" type="v.t." />
                 <phrase
                   ph="【地：じ】【震：しん】で【倒：たお】れる"
                   rom="jishin de taoreru"
@@ -325,7 +327,7 @@
               id="tsukamaru-tobecaught"
               rem="appears in 500mon q312; jisho has n3"
             >
-                <see id="tsukamaeru-catch" rem="v.t." />
+                <see id="tsukamaeru-catch" type="v.t." />
                 <keep_apart_from id="motsu-carry" />
                 <keep_apart_from id="nigiru-grasp" />
                 <phrase
@@ -380,7 +382,7 @@
               category="crime, hands"
               id="tsukamaeru-catch"
             >
-                <see id="tsukamaru-tobecaught" rem="v.i." />
+                <see id="tsukamaru-tobecaught" type="v.i." />
                 <keep_apart_from id="tsukamu-grab" />
                 <phrase
                   ph="【虫：むし】を【捕：つか】まえる"
@@ -412,7 +414,7 @@
               id="tsureru-takesbwithyou"
               rem="appears in 500mon q185 and GENKI2 p.95 vocab section as 連れていく; jisho has nx"
             >
-                <see id="otsure-companion" rem="noun" />
+                <see id="otsure-companion" type="noun" />
                 <phrase
                   ph="【連：つ】れていく"
                   rom="tsurete iku"
@@ -445,7 +447,7 @@
               category="mood"
               id="odoroku-besurprised"
             >
-                <see id="odorokaseru-startle" rem="v.t." />
+                <see id="odorokaseru-startle" type="v.t." />
                 <phrase
                   ph="【驚：おどろ】くほど【多：おお】くの【人：ひと】"
                   rom="odoroku hodo ōku no hito"
@@ -483,7 +485,7 @@
               category="news, talking"
               id="shiraseru-letknow"
             >
-                <see id="shirase-news" rem="noun" />
+                <see id="shirase-news" type="noun" />
                 <phrase
                   ph="【両：りょう】【親：しん】に【知：し】らせる"
                   rom="ryōshin ni shiraseru"
@@ -570,7 +572,7 @@
               id="shiraberu-lookup"
               rem="appears in GENKI2 p.73 vocab section"
             >
-                <see id="shirabe-investigation" rem="noun" />
+                <see id="shirabe-investigation" type="noun" />
                 <keep_apart_from id="torishiraberu-investigate" />
                 <phrase
                   ph="【倒：たお】れる【原：げん】【因：いん】を【調：しら】べる"
@@ -611,8 +613,8 @@
               category="general, home"
               id="katadzukeru-putinorder"
             >
-                <see id="katadzuku-putinorder" rem="v.i." />
-                <see id="katadzuke-tidyingup" rem="noun" />
+                <see id="katadzuku-putinorder" type="v.i." />
+                <see id="katadzuke-tidyingup" type="noun" />
                 <phrase
                   ph="【部：へ】【屋：や】を【片：かた】【付：づ】ける"
                   rom="heya o katadzukeru"
@@ -654,7 +656,7 @@
               rem="appears in GENKI2 L22 vocab section"
             >
                 <!-- the noun is sodate, which is nx -->
-                <see id="sodatsu-beraised" rem="v.i." />
+                <see id="sodatsu-beraised" type="v.i." />
                 <keep_apart_from id="ueru-grow" />
                 <keep_apart_from id="sasu-raise" />
                 <keep_apart_from id="ageru-raise" />
@@ -718,7 +720,7 @@
               category="mood"
               id="sawagu-makemerry"
             >
-                <see id="sawagi-uproar" rem="noun" />
+                <see id="sawagi-uproar" type="noun" />
                 <phrase
                   ph="うるさく【騒：さわ】ぐ"
                   rom="urusaku sawagu"
@@ -796,8 +798,8 @@
               category="transportation"
               id="tōru-gopast"
             >
-                <see id="tōri-street" rem="noun" />
-                <see id="tōsu-stickthru" rem="v.t." />
+                <see id="tōri-street" type="noun" />
+                <see id="tōsu-stickthru" type="v.t." />
                 <keep_apart_from id="tōrisugiru-gopast" />
                 <keep_apart_from id="tsūjiru-getthru" />
                 <phrase
@@ -893,7 +895,7 @@
               category="maths"
               id="fueru-increase"
             >
-                <see id="fuyasu-increasesth" rem="v.t." />
+                <see id="fuyasu-increasesth" type="v.t." />
                 <keep_apart_from id="zōka-increase" />
                 <keep_apart_from id="masu-grow" />
                 <keep_apart_from id="fuyasu-increasesth" />
@@ -939,7 +941,7 @@
               id="heru-decrease"
               rem="appears in 500mon q163; jisho has n3"
             >
-                <see id="herasu-decrease" rem="v.t." />
+                <see id="herasu-decrease" type="v.t." />
                 <phrase
                   ph="【人：じん】【口：こう】が【減：へ】る"
                   rom="jinkō ga heru"
@@ -1031,7 +1033,7 @@
               id="waru-split"
               rem="appears in 500mon q419; jisho has n3"
             >
-                <see id="wareru-crack" rem="v.i." />
+                <see id="wareru-crack" type="v.i." />
                 <keep_apart_from id="kowasu-ruin" />
                 <phrase
                   ph="【卵：たまご】を【割：わ】る"
@@ -1063,7 +1065,7 @@
               category="general"
               id="wareru-crack"
             >
-                <see id="waru-split" rem="v.t." />
+                <see id="waru-split" type="v.t." />
                 <keep_apart_from id="wakareru-breakup" />
                 <keep_apart_from id="kowareru-bebroken" />
                 <phrase
@@ -1119,7 +1121,7 @@
               category="work, quarrel"
               id="sumu-end"
             >
-                <see id="sumaseru-finish" rem="v.t." />
+                <see id="sumaseru-finish" type="v.t." />
                 <keep_apart_from id="toku-untie" />
                 <phrase
                   ph="【仕：し】【事：ごと】が【済：す】む"
@@ -1190,8 +1192,8 @@
               category="general"
               id="nokoru-remain"
             >
-                <see id="nokosu-leavebehind" rem="v.t." />
-                <see id="nokori-remnant" rem="noun" />
+                <see id="nokosu-leavebehind" type="v.t." />
+                <see id="nokori-remnant" type="noun" />
                 <keep_apart_from id="amaru-remain" />
                 <phrase
                   ph="【心：こころ】に【残：のこ】る"
@@ -1351,7 +1353,7 @@
               id="orosu-bringdown"
               rem="appears in GENKI2 p.72 vocab section; jisho has n3"
             >
-                <see id="oriru-descend" rem="v.i." />
+                <see id="oriru-descend" type="v.i." />
                 <keep_apart_from id="sageru-lower" />
                 <keep_apart_from id="taosu-throwdown" />
                 <phrase
@@ -1383,7 +1385,7 @@
               category="general"
               id="oru-fold"
             >
-                <see id="oreru-snap" rem="v.i." />
+                <see id="oreru-snap" type="v.i." />
                 <phrase
                   ph="【紙：かみ】を【折：お】る"
                   rom="kami o oru"
@@ -1424,7 +1426,7 @@
               category="general"
               id="oreru-snap"
             >
-                <see id="oru-fold" rem="v.t." />
+                <see id="oru-fold" type="v.t." />
                 <phrase
                   ph="【折：お】れた【鉛：えん】【筆：ぴつ】"
                   rom="oreta enpitsu"
@@ -1591,7 +1593,7 @@
               category="general"
               id="utsusu-imitate"
             >
-                <see id="utsushi-copy" rem="noun" />
+                <see id="utsushi-copy" type="noun" />
                 <phrase
                   ph="ノートを【写：うつ】す"
                   rom="nōto o utsusu"
@@ -1631,8 +1633,8 @@
               category="body, health"
               id="sameru-wakeup"
             >
-                <see id="samasu-awaken" rem="v.t." />
-                <see id="okiru-wakeup" rem="closely related" />
+                <see id="samasu-awaken" type="v.t." />
+                <see id="okiru-wakeup" type="closely related" />
                 <keep_apart_from id="okiru-wakeup" />
                 <keep_apart_from id="ishiki-awareness" />
                 <phrase
@@ -1666,7 +1668,7 @@
               id="yogosu-pollute"
               rem="appears in GENKI2 p.139 vocab section; jisho has n2"
             >
-                <see id="yogoreru-becomedirty" rem="v.i." />
+                <see id="yogoreru-becomedirty" type="v.i." />
                 <phrase
                   ph="【服：ふく】を【汚：よご】す"
                   rom="fuku o yogosu"
@@ -1706,7 +1708,7 @@
               category="not-good"
               id="yogoreru-becomedirty"
             >
-                <see id="yogosu-pollute" rem="v.t." />
+                <see id="yogosu-pollute" type="v.t." />
                 <!-- the noun is yogore, which is nx -->
                 <phrase
                   ph="【服：ふく】が【汚：よご】れる"
@@ -1791,7 +1793,7 @@
               category="relationships, meetings"
               id="mukaeru-approach"
             >
-                <see id="mukae-meeting" rem="noun" />
+                <see id="mukae-meeting" type="noun" />
                 <phrase
                   ph="お【客：きゃく】【様：さま】を【迎：むか】える"
                   rom="o-kyaku-sama o mukaeru"

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N5 nouns ⑤"
       name_de="N5-Nomen ⑤"
       name_fr="Les noms N5 ⑤"
       name_it="Nomi N5 ⑤"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -645,7 +647,7 @@
               category="relationships"
               id="kekkon-marriage"
             >
-                <see id="rikon-divorce" rem="closely related" />
+                <see id="rikon-divorce" type="closely related" />
                 <phrase
                   ph="【結：けっ】【婚：こん】する"
                   rom="kekkon suru"
@@ -914,7 +916,7 @@
               category="talking"
               id="hanashi-talk"
             >
-                <see id="hanasu-talk" rem="verb" />
+                <see id="hanasu-talk" type="verb" />
                 <keep_apart_from id="monogatari-tale" />
                 <phrase
                   ph="【本：ほん】【当：とう】の【話：はなし】"
@@ -1261,7 +1263,7 @@
               id="denki-electricity"
               rem="dentō is more specific for 'electric light', which is n4"
             >
-                <see id="dentō-light" rem="closely related" />
+                <see id="dentō-light" type="closely related" />
                 <phrase
                   ph="【電：でん】【気：き】をつける"
                   rom="denki o tsukeru"
@@ -1472,8 +1474,8 @@
               category="directions"
               id="mukō-opposite"
             >
-                <see id="muki-direction" rem="closely related" />
-                <see id="muku-turntoward" rem="closely related" />
+                <see id="muki-direction" type="closely related" />
+                <see id="muku-turntoward" type="closely related" />
                 <phrase
                   ph="【川：かわ】の【向：む】こう"
                   rom="kawa no mukō"
@@ -1528,7 +1530,7 @@
               category="general, directions"
               id="tate-height"
             >
-                <see id="yoko-horizontal" rem="antonym" />
+                <see id="yoko-horizontal" type="antonym" />
                 <phrase
                   ph="【縦：たて】に【書：か】く"
                   rom="tate ni kaku"
@@ -1565,7 +1567,7 @@
               category="general, directions"
               id="yoko-horizontal"
             >
-                <see id="tate-height" rem="antonym" />
+                <see id="tate-height" type="antonym" />
                 <phrase
                   ph="ベッドに【横：よこ】になる"
                   rom="beddo ni yoko ni naru"
@@ -1694,9 +1696,9 @@
                     kado is a corner of a street, outside-corner
                     sumi is a corner of a room, nook, inside-corner, sheltered place
                 -->
-                <see id="sumi-corner" rem="closely related" />
-                <see id="sankaku-triangle" rem="closely related" />
-                <see id="shikaku-square" rem="closely related" />
+                <see id="sumi-corner" type="closely related" />
+                <see id="sankaku-triangle" type="closely related" />
+                <see id="shikaku-square" type="closely related" />
                 <keep_apart_from id="sumi-corner" />
                 <keep_apart_from id="katasumi-corner" />
                 <phrase

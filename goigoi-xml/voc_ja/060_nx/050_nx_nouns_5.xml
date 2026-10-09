@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Even more nouns ⑤"
       name_de="Noch mehr Nomen ⑤"
       name_fr="Encore plus de noms ⑤"
       name_it="Ancora più sostantivi ⑤"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       lvl="-"
@@ -72,7 +74,7 @@
               category="fashion"
               id="biyōin-beautysalon"
             >
-                <see id="tokoya-barber" rem="closely related" />
+                <see id="tokoya-barber" type="closely related" />
                 <keep_apart_from id="tokoya-barber" />
             </word>
             <word

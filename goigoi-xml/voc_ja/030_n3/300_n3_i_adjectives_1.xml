@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 i-adjectives ①"
       name_de="N3 I-Adjektive ①"
       name_fr="Les i-adjectifs N3 ①"
       name_it="I-aggettivi N3 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="i-adjective"
@@ -26,7 +28,7 @@
               id="atsui-thick"
               rem="jisho has n5; moved to n3, because 厚 is not n5, which would cause ambiguity with atsui-hotweather"
             >
-                <see id="usui-thin" rem="antonym" />
+                <see id="usui-thin" type="antonym" />
                 <phrase
                   ph="【厚：あつ】い【封：ふう】【筒：とう】"
                   rom="atsui fūtō"
@@ -262,7 +264,7 @@
               id="kusai-smelly"
             >
                 <keep_apart_from id="nioi-stench" />
-                <see id="nioi-stench" rem="closely related" />
+                <see id="nioi-stench" type="closely related" />
                 <!-- is this from kusai, or is it something else??
                   w="くそ！"
                   rom="Kuso!"

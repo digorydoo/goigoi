@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 nouns ③"
       name_de="N3-Nomen ③"
       name_fr="Les noms N3 ③"
       name_it="Nomi N3 ③"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -367,7 +369,7 @@
               category="relationships, quarrel"
               id="mōshiwake-apology"
             >
-                <see id="iiwake-excuse" rem="closely related" />
+                <see id="iiwake-excuse" type="closely related" />
                 <keep_apart_from id="iiwake-excuse" />
                 <keep_apart_from id="mōsu-say" />
                 <keep_apart_from id="wake-conclusion" />
@@ -498,7 +500,7 @@
               category="government, people"
               id="sawagi-uproar"
             >
-                <see id="sawagu-makemerry" rem="verb" />
+                <see id="sawagu-makemerry" type="verb" />
                 <phrase
                   ph="【大：おお】【騒：さわ】ぎ"
                   rom="ōsawagi"
@@ -686,8 +688,8 @@
                     失敗: failure, blunder; unsuccessful attempt, bad result; sense of regret
                     誤り: error, fault; formal and precise
                 -->
-                <see id="ayamaru-err" rem="verb" />
-                <see id="machigai-mistake" rem="closely related" />
+                <see id="ayamaru-err" type="verb" />
+                <see id="machigai-mistake" type="closely related" />
                 <keep_apart_from id="machigai-mistake" />
                 <keep_apart_from id="shippai-mistake" />
                 <phrase
@@ -932,7 +934,7 @@
               category="entertainment"
               id="haiyū-actor"
             >
-                <see id="joyū-actress" rem="closely related" />
+                <see id="joyū-actress" type="closely related" />
                 <keep_apart_from id="joyū-actress" />
                 <phrase
                   ph="【好：す】きな【俳：はい】【優：ゆう】"
@@ -1031,7 +1033,7 @@
               category="light"
               id="kage-background"
             >
-                <see id="kage-shadow" rem="closely related" />
+                <see id="kage-shadow" type="closely related" />
                 <keep_apart_from id="kage-shadow" />
                 <keep_apart_from id="hikage-shade" />
                 <phrase
@@ -1074,7 +1076,7 @@
               category="shopping, city"
               id="ichiba-market"
             >
-                <see id="shijō-market" rem="closely related" />
+                <see id="shijō-market" type="closely related" />
                 <keep_apart_from id="māketto-market" />
                 <keep_apart_from id="shijō-market" />
                 <keep_apart_from id="ichi-fair" />
@@ -1149,7 +1151,7 @@
               id="kōri-ice"
             >
                 <!-- the verb is kōru-freeze, but uses a different kanji -->
-                <see id="kōru-freeze" rem="closely related" />
+                <see id="kōru-freeze" type="closely related" />
                 <phrase
                   ph="【厚：あつ】い【氷：こおり】"
                   rom="atsui kōri"
@@ -1178,7 +1180,7 @@
               lvl="n3"
               id="shusseki-attend"
             >
-                <see id="kesseki-absence" rem="antonym" />
+                <see id="kesseki-absence" type="antonym" />
                 <keep_apart_from id="sanka-participation" />
                 <phrase
                   ph="【会：かい】【議：ぎ】に【出：しゅっ】【席：せき】する"
@@ -1217,7 +1219,7 @@
               id="inori-prayer"
               rem="appears in GENKI2 p.117 vocab section as o-inori; jisho has nx for o-inori, n1 for inori"
             >
-                <see id="inoru-wish" rem="verb" />
+                <see id="inoru-wish" type="verb" />
                 <keep_apart_from id="oinori-prayer" />
                 <keep_together id="oinori-prayer" />
                 <phrase
@@ -1363,8 +1365,8 @@
               id="muki-direction"
               rem="jisho has n1"
             >
-                <see id="muku-turntoward" rem="verb" />
-                <see id="mukō-opposite" rem="closely related" />
+                <see id="muku-turntoward" type="verb" />
+                <see id="mukō-opposite" type="closely related" />
                 <keep_apart_from id="hō-way" />
                 <keep_apart_from id="hōkō-orientation" />
                 <phrase
@@ -1457,7 +1459,7 @@
                 -->
                 <keep_apart_from id="bin-flight" />
                 <keep_apart_from id="sōjū-piloting" />
-                <see id="sōjū-piloting" rem="closely related" />
+                <see id="sōjū-piloting" type="closely related" />
                 <phrase
                   ph="【飛：ひ】【行：こう】【船：せん】"
                   rom="hikōsen"
@@ -1494,7 +1496,7 @@
               category="fashion"
               id="kaori-fragrance"
             >
-                <see id="kōsui-perfume" rem="closely related" />
+                <see id="kōsui-perfume" type="closely related" />
                 <keep_apart_from id="kōsui-perfume" />
                 <keep_apart_from id="nioi-fragrance" />
                 <phrase
@@ -1633,7 +1635,7 @@
               id="rikon-divorce"
               rem="appears in GENKI2 p.117 vocab section"
             >
-                <see id="kekkon-marriage" rem="closely related" />
+                <see id="kekkon-marriage" type="closely related" />
                 <phrase
                   ph="【離：り】【婚：こん】【率：りつ】"
                   rom="rikon ritsu"

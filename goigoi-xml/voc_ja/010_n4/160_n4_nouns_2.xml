@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N4 nouns ②"
       name_de="N4-Nomen ②"
       name_fr="Les noms N4 ②"
       name_it="Nomi N4 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -25,7 +27,7 @@
               category="relationships"
               id="otto-husband"
             >
-                <see id="goshujin-husband" rem="closely related" />
+                <see id="goshujin-husband" type="closely related" />
                 <keep_apart_from id="goshujin-husband" rem="it would create ambiguity in phrases and sentences" />
                 <phrase
                   ph="いい【夫：おっと】になる"
@@ -63,8 +65,8 @@
               category="family, relationships"
               id="tsuma-wife"
             >
-                <see id="okusan-wife" rem="closely related" />
-                <see id="kanai-wife" rem="closely related" />
+                <see id="okusan-wife" type="closely related" />
+                <see id="kanai-wife" type="closely related" />
                 <phrase
                   ph="【妻：つま】と【一：いっ】【緒：しょ】に【出：で】かける"
                   rom="tsuma to issho ni dekakeru"
@@ -607,7 +609,7 @@
             >
                 <keep_apart_from id="e-stalk" />
                 <keep_apart_from id="kuki-stem" />
-                <see id="miki-treetrunk" rem="closely related" />
+                <see id="miki-treetrunk" type="closely related" />
                 <phrase
                   ph="【細：ほそ】い【枝：えだ】"
                   rom="hosoi eda"
@@ -965,7 +967,8 @@
                   tr_de="Ich bin bis zur Küste gefahren (und zurück)."
                   lvl="n4"
                   origin="lib0"
-                  href="https://hinative.com/questions/22273856 (concerning 'and back')"
+                  href="https://hinative.com/questions/22273856"
+                  rem="link is about 'and back'"
                 />
             </word>
             <word
@@ -1236,7 +1239,8 @@
                   tr_de="Sie haben mir nicht das richtige Rückgeld gegeben."
                   lvl="n4"
                   origin="lib0"
-                  href="https://hinative.com/questions/22596650 (whether it's impolite)"
+                  href="https://hinative.com/questions/22596650"
+                  rem="link asks about whether it's impolite"
                 />
             </word>
             <word
@@ -1456,7 +1460,7 @@
               category="education"
               id="chūgakkō-middleschool"
             >
-                <see id="chūgaku-middleschool" rem="closely related" />
+                <see id="chūgaku-middleschool" type="closely related" />
                 <keep_apart_from id="chūgaku-middleschool" />
                 <phrase
                   ph="【中：ちゅう】【学：がっ】【校：こう】の【時：とき】"
@@ -1496,7 +1500,7 @@
               category="education"
               id="kōkō-highschool"
             >
-                <see id="kōtōgakkō-highschool" rem="closely related" />
+                <see id="kōtōgakkō-highschool" type="closely related" />
                 <phrase
                   ph="【高：こう】【校：こう】【生：せい】【活：かつ】"
                   rom="kōkō seikatsu"
@@ -1597,7 +1601,7 @@
               id="senpai-superior"
               rem="appears in GENKI2 L22 vocab section"
             >
-                <see id="kōhai-junior" rem="antonym" />
+                <see id="kōhai-junior" type="antonym" />
                 <keep_apart_from id="shachō-director" />
                 <keep_apart_from id="buchō-headofdep" />
                 <keep_apart_from id="kachō-sectionmgr" />
@@ -1719,7 +1723,7 @@
               category="general"
               id="owari-end"
             >
-                <see id="owaru-finish" rem="verb" />
+                <see id="owaru-finish" type="verb" />
                 <keep_apart_from id="saigo-end" />
                 <keep_apart_from id="saishū-final" />
                 <phrase

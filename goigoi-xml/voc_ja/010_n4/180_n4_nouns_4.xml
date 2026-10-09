@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N4 nouns ④"
       name_de="N4-Nomen ④"
       name_fr="Les noms N4 ④"
       name_it="Nomi N4 ④"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -41,7 +43,8 @@
                   tr_de="Der Konferenzraum ist im unteren Stock."
                   lvl="n4"
                   origin="lib0"
-                  href="https://hinative.com/questions/22615038 (下りる vs. 降りる)"
+                  href="https://hinative.com/questions/22615038"
+                  rem="link is about 下りる vs. 降りる"
                 />
             </word>
             <word
@@ -183,7 +186,7 @@
               id="kanai-wife"
               rem="ChatGPT says kanai is somewhat dated; tsuma is more modern"
             >
-                <see id="tsuma-wife" rem="closely related" />
+                <see id="tsuma-wife" type="closely related" />
                 <phrase
                   ph="【家：か】【内：ない】が【好：す】きな【料：りょう】【理：り】"
                   rom="kanai ga suki na ryōri"
@@ -299,7 +302,7 @@
               id="hantai-resistance"
               rem="appears in GENKI2 L22 vocab section"
             >
-                <see id="sansei-approval" rem="antonym" />
+                <see id="sansei-approval" type="antonym" />
                 <keep_apart_from id="sakarau-oppose" />
                 <phrase
                   ph="【反：はん】【対：たい】している【会：かい】【社：しゃ】【員：いん】"
@@ -336,8 +339,8 @@
               category="objects, relationships"
               id="okurimono-gift"
             >
-                <see id="omiyage-souvenir" rem="closely related" />
-                <see id="okuru-give" rem="closely related" />
+                <see id="omiyage-souvenir" type="closely related" />
+                <see id="okuru-give" type="closely related" />
                 <phrase
                   ph="【贈：おく】り【物：もの】をもらう"
                   rom="okurimono o morau"
@@ -580,9 +583,9 @@
                     電球 n2 light bulb
                     ランプ n1 usu. a portable lamp, such as a desk lamp
                 -->
-                <see id="denki-electricity" rem="closely related" />
-                <see id="denkyū-lightbulb" rem="closely related" />
-                <see id="ranpu-lamp" rem="closely related" />
+                <see id="denki-electricity" type="closely related" />
+                <see id="denkyū-lightbulb" type="closely related" />
+                <see id="ranpu-lamp" type="closely related" />
                 <phrase
                   ph="【電：でん】【灯：とう】をつける"
                   rom="dentō o tsukeru"
@@ -727,7 +730,7 @@
               category="culture, top-words"
               id="tatami-floor"
             >
-                <see id="tatamu-fold" rem="verb" />
+                <see id="tatamu-fold" type="verb" />
                 <keep_apart_from id="jūtan-rug" />
                 <keep_apart_from id="kāpetto-carpet" />
                 <phrase
@@ -773,7 +776,8 @@
                   tr_de="Schau dir die Wandgemälde an!"
                   lvl="n4"
                   origin="lib0"
-                  href="https://hinative.com/questions/22626452 (it could also be just a framed picture)"
+                  href="https://hinative.com/questions/22626452"
+                  rem="link is about whether it could also be just a framed picture"
                 />
             </word>
             <word
@@ -1523,7 +1527,7 @@
               id="usagi-rabbit"
               rem="appears in 500mon q159; jisho has n3"
             >
-                <see id="u-hare" rem="closely related" />
+                <see id="u-hare" type="closely related" />
                 <phrase
                   ph="ウサギを【捕：つか】まえる"
                   rom="usagi o tsukamaeru"
@@ -1592,7 +1596,7 @@
               id="hajimari-beginning"
               rem="jisho has n3"
             >
-                <see id="hajimaru-begin" rem="verb" />
+                <see id="hajimaru-begin" type="verb" />
                 <keep_apart_from id="hajime-start" />
                 <!-- TODO what's the difference between hajimari and hajime -->
                 <phrase
@@ -1624,7 +1628,7 @@
               id="kawari-substitute"
               rem="o-kawari is n2 and means second helping; Langenscheidt also distinguishes between kawari and o-kawari"
             >
-                <see id="kawaru-takeover" rem="verb" />
+                <see id="kawaru-takeover" type="verb" />
                 <keep_apart_from id="torikae-swap" />
                 <keep_apart_from id="kawaru-takeover" />
                 <keep_apart_from id="kōkan-exchange" />
@@ -1654,7 +1658,7 @@
               category="light"
               id="hikari-ray"
             >
-                <see id="hikaru-shine" rem="verb" />
+                <see id="hikaru-shine" type="verb" />
                 <keep_apart_from id="hizashi-sunlight" />
                 <phrase
                   ph="【光：ひかり】の【速：はや】さ"

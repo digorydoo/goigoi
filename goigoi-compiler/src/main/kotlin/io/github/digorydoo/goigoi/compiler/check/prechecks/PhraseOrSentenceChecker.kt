@@ -380,10 +380,6 @@ class PhraseOrSentenceChecker {
         }
 
         if (phors.remark.isNotEmpty()) {
-            if (phors.remark.contains("local db")) {
-                throw CheckFailed("Remark should not contain deprecated origin: ${phors.remark}")
-            }
-
             phors.remark.split(';')
                 .map { it.trim() }
                 .forEach { part ->

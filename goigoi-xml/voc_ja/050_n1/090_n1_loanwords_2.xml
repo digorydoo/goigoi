@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N1 loanwords ②"
       name_de="N1-Lehnwörter ②"
       name_fr="Les mots d'emprunt N1 ②"
       name_it="Parole di prestito N1 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="false"
       defaultHint_en="loanword"
@@ -98,7 +100,7 @@
               lvl="n1"
               id="ranpu-lamp"
             >
-                <see id="dentō-light" rem="closely related" />
+                <see id="dentō-light" type="closely related" />
             </word>
             <word
               w="ファン"

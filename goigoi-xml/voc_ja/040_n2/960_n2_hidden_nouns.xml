@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Hidden N2 nouns"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -54,7 +56,7 @@
               lvl="n2"
               id="tanki-shortterm"
             >
-                <see id="chōki-longterm" rem="antonym" />
+                <see id="chōki-longterm" type="antonym" />
             </word>
             <word
               w="【祭：さい】【日：じつ】"
@@ -86,7 +88,7 @@
               category="science"
               id="dō-copper"
             >
-                <see id="tetsu-iron" rem="closely related" />
+                <see id="tetsu-iron" type="closely related" />
                 <keep_apart_from id="kinzoku-metal" />
                 <!-- implicit see-also link to dō-how -->
             </word>
@@ -1130,7 +1132,8 @@
               tr_de="Selbstverwaltung; Autonomie"
               lvl="n2"
               id="jichi-autonomy"
-              href="https://hinative.com/en-US/questions/21944891 (pronounciation)"
+              href="https://hinative.com/en-US/questions/21944891"
+              rem="link is about pronounciation"
             />
             <word
               w="【船：ふな】【便：びん】"

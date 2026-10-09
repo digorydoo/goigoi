@@ -2,32 +2,90 @@ package io.github.digorydoo.goigoi.core.file
 
 import ch.digorydoo.kutils.cjk.Unicode
 import ch.digorydoo.kutils.logging.Log
+import java.io.File
 import java.io.OutputStream
 
-class KeyValueFile(val path: String) {
+class KeyValueFile(private val pathToStringsFile: String, private val pathToBackup: String) {
     private class KeyValue(val key: String, val value: String)
     private class Location(val pos: Long, val length: Long)
 
-    private val file = StringsFile(path)
+    private val stringsFile = StringsFile(pathToStringsFile)
     private val mapKeysToPos: HashMap<String, Location> = HashMap()
     private val invalidPos: ArrayList<Location> = ArrayList()
     private val cache: HashMap<String, String?> = HashMap()
 
     fun open() {
-        file.open()
+        var success: Boolean
 
         try {
+            stringsFile.open()
             readEntireFile()
+            success = true
         } catch (e: Exception) {
-            // If Goigoi crashed while the stats file was written, the file may get corrupted, and we
-            // come here.
-            e.printStackTrace()
+            // If Goigoi crashed while the stats file was written, the file may get corrupted, and we come here.
+            Log.error(TAG, "Loading strings file crashed: $e")
+            success = false
+        }
+
+        if (success && mapKeysToPos.isNotEmpty()) {
+            // Write a backup
+
+            try {
+                val bak = File(pathToBackup)
+                bak.parentFile?.mkdirs()
+                File(stringsFile.path).copyTo(bak, overwrite = true)
+                Log.debug(TAG, "Backup file written to: $pathToBackup")
+            } catch (e: Exception) {
+                Log.error(TAG, "Failed to write backup: $e")
+                e.printStackTrace()
+            }
+        } else {
+            // Try to recover the backup
+
             clear()
+            val bak = File(pathToBackup)
+
+            if (!bak.exists()) {
+                Log.warn(TAG, "Cannot recover backup, because it does not exist: $pathToBackup")
+            } else {
+                try {
+                    stringsFile.close()
+                    bak.copyTo(File(stringsFile.path), overwrite = true)
+                    stringsFile.open()
+                    readEntireFile()
+                } catch (e: Exception) {
+                    Log.error(TAG, "Failed to recover backup: $e")
+                    clear()
+                }
+            }
         }
     }
 
+    private fun readEntireFile() {
+        stringsFile.seek(0)
+        mapKeysToPos.clear()
+        invalidPos.clear()
+
+        while (stringsFile.pos < stringsFile.length) {
+            val start = stringsFile.pos
+            val line = stringsFile.readln() ?: throw RuntimeException("Could not parse line!")
+            val end = stringsFile.pos
+            val kv = parseLine(line)
+            val loc = Location(start, end - start)
+
+            if (kv == null) {
+                invalidPos.add(loc)
+            } else {
+                checkKey(kv.key)
+                mapKeysToPos[kv.key] = loc
+            }
+        }
+
+        Log.debug(TAG, "Read ${stringsFile.length / 1024} kB of stats data (${pathToStringsFile.split("/").last()})")
+    }
+
     fun close() {
-        file.close()
+        stringsFile.close()
     }
 
     fun exportTo(dst: OutputStream) {
@@ -40,7 +98,7 @@ class KeyValueFile(val path: String) {
     }
 
     fun clear() {
-        file.clear()
+        stringsFile.clear()
         mapKeysToPos.clear()
         invalidPos.clear()
     }
@@ -68,8 +126,8 @@ class KeyValueFile(val path: String) {
     private fun getFromFile(key: String): String? {
         val loc = mapKeysToPos[key] ?: return null
 
-        file.seek(loc.pos)
-        val line = file.readln()
+        stringsFile.seek(loc.pos)
+        val line = stringsFile.readln()
 
         if (line == null) {
             Log.error(TAG, "Readln failed at pos ${loc.pos}")
@@ -94,7 +152,7 @@ class KeyValueFile(val path: String) {
         removeInFile(key)
 
         val entry = "${key}$KEY_VALUE_SEPARATOR${value}"
-        val encodedEntry = file.encode(entry)
+        val encodedEntry = stringsFile.encode(entry)
         val bytesNeeded = encodedEntry.size.toLong()
         var foundIdx = -1
 
@@ -107,25 +165,25 @@ class KeyValueFile(val path: String) {
         if (foundIdx < 0) {
             // Append a new entry at the end of the file
             // Log.d(TAG, "Adding new slot@${file.length}: $entry")
-            file.seek(file.length)
+            stringsFile.seek(stringsFile.length)
         } else {
             // Replace the area at foundIdx
             val pos = invalidPos[foundIdx].pos
             // Log.d(TAG, "Overwriting slot@$pos with same length: $entry")
-            file.seek(pos)
+            stringsFile.seek(pos)
             invalidPos.removeAt(foundIdx)
         }
 
-        val start = file.pos
-        file.writeln(encodedEntry)
-        val end = file.pos
+        val start = stringsFile.pos
+        stringsFile.writeln(encodedEntry)
+        val end = stringsFile.pos
         mapKeysToPos[key] = Location(start, end - start)
     }
 
     private fun removeInFile(key: String) {
         val loc = mapKeysToPos[key] ?: return
-        file.seek(loc.pos)
-        file.overwriteln()
+        stringsFile.seek(loc.pos)
+        stringsFile.overwriteln()
         mapKeysToPos.remove(key)
         invalidPos.add(loc)
     }
@@ -135,36 +193,6 @@ class KeyValueFile(val path: String) {
 
         if (!good) {
             throw RuntimeException("Bad key: $key")
-        }
-    }
-
-    private fun readEntireFile() {
-        try {
-            file.seek(0)
-            mapKeysToPos.clear()
-            invalidPos.clear()
-
-            while (file.pos < file.length) {
-                val start = file.pos
-                val line = file.readln() ?: throw RuntimeException("Could not parse line!")
-                val end = file.pos
-                val kv = parseLine(line)
-                val loc = Location(start, end - start)
-
-                if (kv == null) {
-                    invalidPos.add(loc)
-                } else {
-                    checkKey(kv.key)
-                    mapKeysToPos[kv.key] = loc
-                }
-            }
-
-            Log.debug(TAG, "Read ${file.length / 1024} kB of stats data (${path.split("/").last()})")
-        } catch (e: Exception) {
-            Log.error(TAG, "readEntireFile: Exception: $e")
-            // FIXME: No access to BuildConfig from here
-            // if (BuildConfig.DEBUG) throw e else clear()
-            throw e
         }
     }
 

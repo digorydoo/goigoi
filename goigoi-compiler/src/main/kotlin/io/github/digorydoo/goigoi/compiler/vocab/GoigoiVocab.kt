@@ -7,7 +7,7 @@ class GoigoiVocab {
     val manualKanjiLevels = mutableMapOf<JLPTLevel, MutableSet<Char>>() // manual JLPT level corrections
     val kanjiBySchoolYear = mutableMapOf<Int, MutableSet<Char>>() // first grade has key=1 (not 0)
     var kanjiByFreq = "" // characters at smaller indexes are more frequent
-    val dontConfuseKanjis = mutableListOf<String>() // each entry is a string of kanjis
+    val visuallySimilar = mutableListOf<String>() // each entry is a string of kanjis
     val warnings = mutableListOf<String>() // warnings and hints found during parsing
 
     fun findUnytById(unytId: String): GoigoiUnyt? {

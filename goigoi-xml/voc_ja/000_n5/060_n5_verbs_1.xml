@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N5 verbs ①"
       name_de="N5-Verben ①"
       name_fr="Les verbes N5 ①"
       name_it="Verbi N5 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -26,8 +28,8 @@
               category="transportation, top-words"
               id="noru-geton"
             >
-                <see id="noseru-givesbride" rem="v.t." />
-                <see id="oriru-getoff" rem="antonym" />
+                <see id="noseru-givesbride" type="v.t." />
+                <see id="oriru-getoff" type="antonym" />
                 <phrase
                   ph="【電：でん】【車：しゃ】に【乗：の】る"
                   rom="densha ni noru"
@@ -59,8 +61,8 @@
               id="oriru-getoff"
               rem="must not be together with oriru-descend"
             >
-                <see id="noru-geton" rem="antonym" />
-                <see id="orosu-dropoff" rem="v.t." />
+                <see id="noru-geton" type="antonym" />
+                <see id="orosu-dropoff" type="v.t." />
                 <keep_apart_from id="oriru-descend" />
                 <phrase
                   ph="【次：つぎ】の【駅：えき】で【降：お】りる"
@@ -90,7 +92,7 @@
               category="writing, top-words"
               id="yomu-read"
             >
-                <see id="yomi-reading" rem="noun" />
+                <see id="yomi-reading" type="noun" />
                 <phrase
                   ph="【新：しん】【聞：ぶん】を【読：よ】む"
                   rom="shinbun o yomu"
@@ -164,7 +166,7 @@
               lvl="n5"
               id="oshieru-teach"
             >
-                <see id="oshie-teaching" rem="noun" />
+                <see id="oshie-teaching" type="noun" />
                 <phrase
                   ph="【子：こ】【供：ども】に【教：おし】える"
                   rom="kodomo ni oshieru"
@@ -195,7 +197,7 @@
               category="thinking"
               id="oboeru-memorize"
             >
-                <see id="oboe-memory" rem="noun" />
+                <see id="oboe-memory" type="noun" />
                 <phrase
                   ph="【漢：かん】【字：じ】を【覚：おぼ】える"
                   rom="kanji o oboeru"
@@ -258,7 +260,7 @@
               id="taberu-eat"
             >
                 <!-- 食べ物 is the noun, but uses a different kanji, so we mark it as 'closely related' -->
-                <see id="tabemono-food" rem="closely related" />
+                <see id="tabemono-food" type="closely related" />
                 <keep_apart_from id="meshiagaru-eatdrink" />
                 <phrase
                   ph="テーブルで【食：た】べる"
@@ -299,7 +301,7 @@
               id="nomu-drink"
             >
                 <!-- 飲み物 is the noun, but uses a different kanji, so we mark it as 'closely related' -->
-                <see id="nomimono-beverage" rem="closely related" />
+                <see id="nomimono-beverage" type="closely related" />
                 <keep_apart_from id="meshiagaru-eatdrink" />
                 <phrase
                   ph="【水：みず】を【飲：の】む"
@@ -340,7 +342,7 @@
               category="talking"
               id="hanasu-talk"
             >
-                <see id="hanashi-talk" rem="noun" />
+                <see id="hanashi-talk" type="noun" />
                 <keep_apart_from id="iu-say" />
                 <keep_apart_from id="mōsu-say" />
                 <keep_apart_from id="mōshiageru-tell" />
@@ -385,7 +387,7 @@
               lvl="n5"
               id="kotaeru-answer"
             >
-                <see id="kotae-response" rem="noun" />
+                <see id="kotae-response" type="noun" />
                 <phrase
                   ph="【質：しつ】【問：もん】に【答：こた】える"
                   rom="shitsumon ni kotaeru"
@@ -416,7 +418,7 @@
               category="hands, top-words"
               id="toru-take"
             >
-                <see id="otori-taking" rem="noun" />
+                <see id="otori-taking" type="noun" />
                 <phrase
                   ph="【帽：ぼう】【子：し】を【取：と】る"
                   rom="bōshi o toru"
@@ -531,8 +533,8 @@
               id="hairu-enter"
             >
                 <!-- the noun 入り is pronounced いり, so we don't link from here -->
-                <see id="ireru-insert" rem="v.t." />
-                <see id="deru-exit" rem="antonym" />
+                <see id="ireru-insert" type="v.t." />
+                <see id="deru-exit" type="antonym" />
                 <phrase
                   ph="【風：ふ】【呂：ろ】に【入：はい】る"
                   rom="furo ni hairu"
@@ -572,8 +574,8 @@
               lvl="n5"
               id="akeru-open"
             >
-                <see id="aku-open" rem="v.i." />
-                <see id="shimeru-close" rem="antonym" />
+                <see id="aku-open" type="v.i." />
+                <see id="shimeru-close" type="antonym" />
                 <phrase
                   ph="ドアを【開：あ】ける"
                   rom="doa o akeru"
@@ -613,8 +615,8 @@
               lvl="n5"
               id="aku-open"
             >
-                <see id="akeru-open" rem="v.t." />
-                <see id="fusagaru-blocked" rem="antonym" />
+                <see id="akeru-open" type="v.t." />
+                <see id="fusagaru-blocked" type="antonym" />
                 <phrase
                   ph="【開：あ】いている【窓：まど】"
                   rom="aite iru mado"
@@ -655,8 +657,8 @@
               lvl="n5"
               id="shimeru-close"
             >
-                <see id="shimaru-tobeclosed" rem="v.i." />
-                <see id="akeru-open" rem="antonym" />
+                <see id="shimaru-tobeclosed" type="v.i." />
+                <see id="akeru-open" type="antonym" />
                 <phrase
                   ph="【窓：まど】を【閉：し】める"
                   rom="mado o shimeru"
@@ -684,7 +686,7 @@
               lvl="n5"
               id="shimaru-tobeclosed"
             >
-                <see id="shimeru-close" rem="v.t." />
+                <see id="shimeru-close" type="v.t." />
                 <phrase
                   ph="よく【閉：し】まる"
                   rom="yoku shimaru"
@@ -882,7 +884,7 @@
               lvl="n5"
               id="aru-thereis"
             >
-                <see id="oari-existing" rem="noun" />
+                <see id="oari-existing" type="noun" />
                 <phrase
                   ph="ある【日：ひ】"
                   rom="aru hi"
@@ -989,8 +991,8 @@
               category="home, feet"
               id="kaeru-return"
             >
-                <see id="kaeri-return" rem="noun" />
-                <see id="kaesu-sendback" rem="v.t." />
+                <see id="kaeri-return" type="noun" />
+                <see id="kaesu-sendback" type="v.t." />
                 <keep_apart_from id="saru-goaway" />
                 <keep_apart_from id="modoru-turnback" />
                 <phrase
@@ -1049,7 +1051,7 @@
               category="mood"
               id="tsukareru-gettired"
             >
-                <see id="tsukare-tiredness" rem="noun" />
+                <see id="tsukare-tiredness" type="noun" />
                 <phrase
                   ph="【勉：べん】【強：きょう】に【疲：つか】れる"
                   rom="benkyō ni tsukareru"
@@ -1087,7 +1089,7 @@
               category="work"
               id="hataraku-work"
             >
-                <see id="hataraki-work" rem="noun" />
+                <see id="hataraki-work" type="noun" />
                 <phrase
                   ph="【９：く】【時：じ】から【働：はたら】く"
                   rom="ku-ji kara hataraku"
@@ -1117,7 +1119,7 @@
               category="weather"
               id="n5-hareru"
             >
-                <see id="hare-clearweather" rem="noun" />
+                <see id="hare-clearweather" type="noun" />
                 <phrase
                   ph="【晴：は】れた【日：ひ】に"
                   rom="hareta hi ni"
@@ -1159,7 +1161,7 @@
               lvl="n5"
               id="watasu-transfer"
             >
-                <see id="wataru-cross" rem="closely related" />
+                <see id="wataru-cross" type="closely related" />
                 <phrase
                   ph="【鍵：かぎ】を【渡：わた】す"
                   rom="kagi o watasu"
@@ -1215,7 +1217,7 @@
               lvl="n5"
               id="chigau-differ"
             >
-                <see id="chigai-difference" rem="noun" />
+                <see id="chigai-difference" type="noun" />
                 <phrase
                   ph="【大：おお】きく【違：ちが】う"
                   rom="ōkiku chigau"
@@ -1273,9 +1275,9 @@
               lvl="n5"
               id="hajimaru-begin"
             >
-                <see id="hajimeru-beginsth" rem="v.t." />
-                <see id="hajimari-beginning" rem="noun" />
-                <see id="owaru-finish" rem="antonym" />
+                <see id="hajimeru-beginsth" type="v.t." />
+                <see id="hajimari-beginning" type="noun" />
+                <see id="owaru-finish" type="antonym" />
                 <phrase
                   ph="【春：はる】が【始：はじ】まる"
                   rom="haru ga hajimaru"
@@ -1314,7 +1316,7 @@
               id="tsukeru-turnon"
               usuallyInKana="true"
             >
-                <see id="tsuku-stick" rem="v.i." />
+                <see id="tsuku-stick" type="v.i." />
                 <phrase
                   ph="テレビをつける"
                   rom="terebi o tsukeru"
@@ -1358,7 +1360,7 @@
               id="ireru-insert"
             >
                 <!-- the noun is 入り・いり, nx, common -->
-                <see id="hairu-enter" rem="v.i." />
+                <see id="hairu-enter" type="v.i." />
                 <keep_apart_from id="sosogu-water" />
                 <keep_apart_from id="tsugu-pour" />
                 <!-- there are actually two related v.i., but iru-getin is uncommon and n1 -->

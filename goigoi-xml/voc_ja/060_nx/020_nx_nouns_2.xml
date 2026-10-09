@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Even more nouns ②"
       name_de="Noch mehr Nomen ②"
       name_fr="Encore plus de noms ②"
       name_it="Ancora più sostantivi ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       lvl="-"
@@ -121,7 +123,7 @@
               category="games, culture"
               id="ryū-dragon"
             >
-                <see id="tatsu-zodiac" rem="closely related" />
+                <see id="tatsu-zodiac" type="closely related" />
                 <sentence
                   s="【竜：りゅう】は【巨：きょ】【大：だい】なトカゲのように【見：み】えます。"
                   rom="Ryū wa kyodai na tokage no yō ni miemasu."
@@ -216,7 +218,7 @@
               category="relationships"
               id="kareshi-boyfriend"
             >
-                <see id="kare-he" rem="closely related" />
+                <see id="kare-he" type="closely related" />
                 <keep_apart_from id="kare-he" />
                 <sentence
                   s="【友：とも】【達：だち】の【彼：かれ】【氏：し】は【優：やさ】しそう！"
@@ -237,7 +239,7 @@
               category="people"
               id="hitorikko-onlychild"
             >
-                <see id="suekko-youngestchild" rem="closely related" />
+                <see id="suekko-youngestchild" type="closely related" />
                 <sentence
                   s="【私：わたし】は【一：ひと】【人：り】っ【子：こ】です。"
                   rom="Watashi wa hitorikko desu."
@@ -651,7 +653,7 @@
               lvl="-"
               id="hazure-failure"
             >
-                <see id="hazureru-getitwrong" rem="verb" />
+                <see id="hazureru-getitwrong" type="verb" />
                 <!-- seems to be often combined with another word, such as 的外れ・まとはずれ, nx -->
             </word>
             <word

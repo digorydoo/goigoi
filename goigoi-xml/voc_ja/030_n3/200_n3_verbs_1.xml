@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 verbs ①"
       name_de="N3-Verben ①"
       name_fr="Les verbes N3 ①"
       name_it="Verbi N3 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -442,7 +444,7 @@
               id="tasukeru-help"
               rem="appears in GENKI2 L22 vocab section"
             >
-                <see id="tasukaru-behelped" rem="v.i." />
+                <see id="tasukaru-behelped" type="v.i." />
                 <keep_apart_from id="sukuu-rescue" />
                 <keep_apart_from id="kyūjo-aid" />
                 <phrase
@@ -483,7 +485,7 @@
               id="tasukaru-behelped"
               rem="jisho has n2, but n3 for tasukeru"
             >
-                <see id="tasukeru-help" rem="v.t." />
+                <see id="tasukeru-help" type="v.t." />
                 <phrase
                   ph="ただ【運：うん】がよくて【助：たす】かる"
                   rom="tada un ga yokute tasukaru"
@@ -545,7 +547,7 @@
               category="general, looking"
               id="samasu-awaken"
             >
-                <see id="sameru-wakeup" rem="v.i." />
+                <see id="sameru-wakeup" type="v.i." />
                 <keep_apart_from id="okosu-wakeup" />
                 <keep_apart_from id="kidzuku-notice" />
                 <keep_apart_from id="mezameru-wakeup" />
@@ -777,8 +779,8 @@
               category="general"
               id="nagareru-flow"
             >
-                <see id="nagasu-spill" rem="v.t." />
-                <see id="nagare-flow" rem="noun" />
+                <see id="nagasu-spill" type="v.t." />
+                <see id="nagare-flow" type="noun" />
                 <phrase
                   ph="【流：なが】れている"
                   rom="nagarete iru"
@@ -832,7 +834,7 @@
               category="general"
               id="nagasu-spill"
             >
-                <see id="nagareru-flow" rem="v.i." />
+                <see id="nagareru-flow" type="v.i." />
                 <phrase
                   ph="【涙：なみだ】を【流：なが】す"
                   rom="namida o nagasu"
@@ -977,7 +979,7 @@
               category="general"
               id="tojiru-close"
             >
-                <see id="hiraku-openup" rem="antonym" /><!-- https://hinative.com/questions/22446551 -->
+                <see id="hiraku-openup" type="antonym" /><!-- https://hinative.com/questions/22446551 -->
                 <phrase
                   ph="【目：め】を【閉：と】じる"
                   rom="me o tojiru"
@@ -1054,7 +1056,7 @@
               category="arts"
               id="egaku-draw"
             >
-                <see id="kaku-draw" rem="closely related" />
+                <see id="kaku-draw" type="closely related" />
                 <keep_apart_from id="kaku-draw" />
                 <!-- 夢を描く (Dream about) To envision or plan one's future (ChatGPT) -->
                 <phrase
@@ -1191,8 +1193,8 @@
               category="family"
               id="sodatsu-beraised"
             >
-                <see id="sodateru-makegrow" rem="v.t." />
-                <see id="sodachi-growth" rem="noun" />
+                <see id="sodateru-makegrow" type="v.t." />
+                <see id="sodachi-growth" type="noun" />
                 <phrase
                   ph="【田舎：いなか】で【育：そだ】つ"
                   rom="inaka de sodatsu"
@@ -1225,7 +1227,7 @@
               category="hands"
               id="uketoru-receive"
             >
-                <see id="uketori-receipt" rem="noun" />
+                <see id="uketori-receipt" type="noun" />
                 <keep_apart_from id="morau-receive" />
                 <keep_apart_from id="ukeru-receive" />
                 <!--
@@ -1352,7 +1354,7 @@
               id="kakusu-hide"
             >
                 <keep_apart_from id="ōu-cover" />
-                <see id="kakureru-hide" rem="v.i." />
+                <see id="kakureru-hide" type="v.i." />
                 <phrase
                   ph="【誤：あやま】りを【隠：かく】す"
                   rom="ayamari o kakusu"
@@ -1382,7 +1384,7 @@
               category="looking"
               id="kakureru-hide"
             >
-                <see id="kakusu-hide" rem="v.t." />
+                <see id="kakusu-hide" type="v.t." />
                 <phrase
                   ph="【戸：と】の【陰：かげ】に【隠：かく】れる"
                   rom="to no kage ni kakureru"
@@ -1461,7 +1463,7 @@
               id="nokosu-leavebehind"
               rem="appears in GENKI2 p.288"
             >
-                <see id="nokoru-remain" rem="v.i." />
+                <see id="nokoru-remain" type="v.i." />
                 <phrase
                   ph="【食：た】べ【残：のこ】し"
                   rom="tabe-nokoshi"
@@ -1503,7 +1505,7 @@
               category="general, meetings"
               id="deau-encounter"
             >
-                <see id="deai-encounter" rem="noun" />
+                <see id="deai-encounter" type="noun" />
                 <phrase
                   ph="【友：とも】だちに【偶：ぐう】【然：ぜん】【出：で】【会：あ】う"
                   rom="tomodachi ni gūzen deau"
@@ -1652,7 +1654,7 @@
               category="not-good"
               id="kireru-snap"
             >
-                <see id="kiru-cut" rem="v.t." />
+                <see id="kiru-cut" type="v.t." />
                 <keep_apart_from id="urikireru-soldout" />
                 <phrase
                   ph="【売：う】り【切：き】れている"
@@ -1871,7 +1873,7 @@
               category="general, maths"
               id="kuwaeru-add"
             >
-                <see id="kuwawaru-beadded" rem="v.i." />
+                <see id="kuwawaru-beadded" type="v.i." />
                 <keep_apart_from id="tasu-add" />
                 <keep_apart_from id="tsukekuwaeru-add" />
                 <keep_apart_from id="tameru-saveupmoney" />
@@ -1916,7 +1918,7 @@
               category="general, maths"
               id="kuwawaru-beadded"
             >
-                <see id="kuwaeru-add" rem="v.t." />
+                <see id="kuwaeru-add" type="v.t." />
                 <phrase
                   ph="【会：かい】【話：わ】に【加：くわ】わる"
                   rom="kaiwa ni kuwawaru"
@@ -1959,7 +1961,7 @@
             >
                 <!-- ヒゲが伸びる (hige ga nobiru) - The beard grows (ChatGPT) -->
                 <!-- 髪の毛が伸びた。 (My hair has grown.) ChatGPT -->
-                <see id="nobasu-grow" rem="v.t." />
+                <see id="nobasu-grow" type="v.t." />
                 <phrase
                   ph="【伸：の】びをする"
                   rom="nobi o suru"
@@ -2012,7 +2014,7 @@
               category="general, fashion"
               id="nobasu-grow"
             >
-                <see id="nobiru-grow" rem="v.i." />
+                <see id="nobiru-grow" type="v.i." />
                 <phrase
                   ph="【腕：うで】を【伸：の】ばす"
                   rom="ude o nobasu"
@@ -2060,7 +2062,7 @@
               category="mood"
               id="kanjiru-feel"
             >
-                <see id="kanji-feeling" rem="noun" />
+                <see id="kanji-feeling" type="noun" />
                 <keep_apart_from id="fureru-touch" />
                 <phrase
                   ph="【寒：さむ】く【感：かん】じる"

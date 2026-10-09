@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Hidden N1 words"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       lvl="n1"
@@ -22,7 +24,7 @@
               category="travelling"
               id="sōjū-piloting"
             >
-                <see id="hikō-aviation" rem="closely related" />
+                <see id="hikō-aviation" type="closely related" />
                 <keep_apart_from id="hikō-aviation" />
                 <sentence
                   s="パイロットは【飛：ひ】【行：こう】【機：き】を【操：そう】【縦：じゅう】した。"
@@ -259,7 +261,7 @@
               lvl="n1"
               id="okonai-act"
             >
-                <see id="okonau-carryout" rem="verb" />
+                <see id="okonau-carryout" type="verb" />
             </word>
             <word
               w="【訴：うった】え"
@@ -270,7 +272,7 @@
               id="uttae-complaint"
             >
                 <keep_apart_from id="soshō-lawsuit" />
-                <see id="uttaeru-complain" rem="verb" />
+                <see id="uttaeru-complain" type="verb" />
             </word>
             <word
               w="【一：いっ】【切：さい】"
@@ -478,7 +480,7 @@
               lvl="n1"
               id="sodachi-growth"
             >
-                <see id="sodatsu-beraised" rem="verb" />
+                <see id="sodatsu-beraised" type="verb" />
             </word>
             <word
               w="【鱝：えい】"
@@ -679,7 +681,7 @@
               lvl="n1"
               id="butsuzō-buddha"
             >
-                <see id="hotoke-buddha" rem="closely related" />
+                <see id="hotoke-buddha" type="closely related" />
                 <keep_apart_from id="hotoke-buddha" />
             </word>
             <word
@@ -1496,7 +1498,7 @@
               lvl="n1"
               id="jōka-castletown"
             >
-                <see id="shiro-castle" rem="closely related" />
+                <see id="shiro-castle" type="closely related" />
             </word>
             <word
               w="【合：ごう】【議：ぎ】"
@@ -2179,7 +2181,7 @@
               lvl="n1"
               id="omoitsuki-idea"
             >
-                <see id="omoitsuku-thinkof" rem="verb" />
+                <see id="omoitsuku-thinkof" type="verb" />
                 <keep_apart_from id="omoi-thought" />
             </word>
             <word
@@ -2418,7 +2420,7 @@
               lvl="n1"
               id="utsushi-copy"
             >
-                <see id="utsusu-imitate" rem="verb" />
+                <see id="utsusu-imitate" type="verb" />
             </word>
             <word
               w="【掲：かか】げる"
@@ -2505,7 +2507,7 @@
               lvl="n1"
               id="sukui-aid"
             >
-                <see id="sukuu-rescue" rem="verb" />
+                <see id="sukuu-rescue" type="verb" />
             </word>
             <word
               w="【救：きゅう】【援：えん】"

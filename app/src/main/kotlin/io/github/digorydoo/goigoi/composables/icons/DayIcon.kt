@@ -16,7 +16,6 @@ import io.github.digorydoo.goigoi.core.welcome.DailyProgressTracker.Companion.CH
 @Composable
 fun DayIcon(
     progress: Float,
-    animValue: Float,
     modifier: Modifier = Modifier,
     centreText: String = "",
     size: Dp = 32.dp,
@@ -24,18 +23,24 @@ fun DayIcon(
     val density = LocalDensity.current
     val colours = GoigoiTheme.colours
     val fontSize = with(density) { (size * 0.42f).toSp() }
+    val ringStrokeWidth = size / 8
 
     Box(modifier = modifier, contentAlignment = Alignment.Center) {
         if (progress < CHECKMARK_THRESHOLD) {
-            RingIcon(progress = progress, animValue = animValue, size = size, drawBackground = true)
-        } else {
             RingIcon(
                 progress = progress,
-                animValue = animValue,
                 size = size,
-                drawBackground = true,
+                trackColour = colours.dayIconTrack,
+                trailColour = colours.dayIconTrail,
+                trailStrokeWidth = ringStrokeWidth,
+            )
+        } else {
+            RingIcon(
+                progress = 1f,
+                size = size,
                 bgColour = colours.primary,
                 trailColour = colours.primary,
+                trailStrokeWidth = ringStrokeWidth,
             )
         }
 

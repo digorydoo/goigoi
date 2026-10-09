@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 nouns ④"
       name_de="N3-Nomen ④"
       name_fr="Les noms N3 ④"
       name_it="Nomi N3 ④"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -161,7 +163,7 @@
               id="omoi-thought"
               rem="jisho has nx"
             >
-                <see id="omou-think" rem="verb" />
+                <see id="omou-think" type="verb" />
                 <keep_apart_from id="kangae-thought" />
                 <keep_apart_from id="omoide-memories" />
                 <keep_apart_from id="omoidasu-remember" />
@@ -285,7 +287,7 @@
               category="body"
               id="hone-bone"
             >
-                <see id="kossetsu-bonefracture" rem="closely related" />
+                <see id="kossetsu-bonefracture" type="closely related" />
                 <keep_apart_from id="sebone-spine" />
                 <keep_together id="sebone-spine" />
                 <phrase
@@ -381,7 +383,7 @@
               category="nature, physics"
               id="nagare-flow"
             >
-                <see id="nagareru-flow" rem="verb" />
+                <see id="nagareru-flow" type="verb" />
                 <phrase
                   ph="【時：じ】【代：だい】の【流：なが】れ"
                   rom="jidai no nagare"
@@ -610,8 +612,8 @@
               category="health"
               id="itami-pain"
             >
-                <see id="itai-painful" rem="adjective" />
-                <see id="itamu-hurt" rem="verb" />
+                <see id="itai-painful" type="adjective" />
+                <see id="itamu-hurt" type="verb" />
                 <keep_apart_from id="kutsū-pain" />
                 <phrase
                   ph="のどの【痛：いた】み"
@@ -880,7 +882,7 @@
               category="fire"
               id="kemuri-smoke"
             >
-                <see id="kemuru-smoulder" rem="verb" />
+                <see id="kemuru-smoulder" type="verb" />
                 <keep_together id="kinen-nosmoking" rem="uses same kanji" />
                 <keep_apart_from id="kemuru-smoulder" rem="too similar" />
                 <phrase
@@ -1058,7 +1060,7 @@
               category="shopping"
               id="shijō-market"
             >
-                <see id="ichiba-market" rem="closely related" />
+                <see id="ichiba-market" type="closely related" />
                 <keep_apart_from id="māketto-market" />
                 <keep_apart_from id="ichiba-market" />
                 <keep_apart_from id="ichi-fair" />
@@ -1131,7 +1133,7 @@
               lvl="n3"
               id="aki-space"
             >
-                <see id="aku-empty" rem="verb" />
+                <see id="aku-empty" type="verb" />
                 <keep_apart_from id="ana-hole" />
                 <keep_apart_from id="sukima-gap" />
                 <phrase
@@ -1205,7 +1207,7 @@
               id="iiwake-excuse"
               rem="jisho has n1"
             >
-                <see id="mōshiwake-apology" rem="closely related" />
+                <see id="mōshiwake-apology" type="closely related" />
                 <keep_apart_from id="mōshiwake-apology" />
                 <keep_apart_from id="wake-conclusion" />
                 <phrase
@@ -1298,7 +1300,7 @@
               category="relationships"
               id="otsure-companion"
             >
-                <see id="tsureru-takesbwithyou" rem="verb" />
+                <see id="tsureru-takesbwithyou" type="verb" />
                 <keep_apart_from id="naka-relation" rem="ambiguity in phrases" />
                 <keep_apart_from id="aite-companion" />
                 <keep_apart_from id="dōryō-coworker" />
@@ -1675,7 +1677,7 @@
               category="health"
               id="kossetsu-bonefracture"
             >
-                <see id="hone-bone" rem="closely related" />
+                <see id="hone-bone" type="closely related" />
                 <phrase
                   ph="【腕：うで】を【骨：こっ】【折：せつ】する"
                   rom="ude o kossetsu suru"

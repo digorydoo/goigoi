@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 loanwords ①"
       name_de="N3-Lehnwörter ①"
       name_fr="Les mots d'emprunt N3 ①"
       name_it="Parole di prestito N3 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="false"
       defaultHint_en="loanword"
@@ -87,7 +89,7 @@
               lvl="n3"
               id="gurasu-cup"
             >
-                <see id="garasu-glass" rem="closely related" />
+                <see id="garasu-glass" type="closely related" />
                 <phrase
                   ph="ビールの【入：はい】ったグラス"
                   rom="bīru no haitta gurasu"

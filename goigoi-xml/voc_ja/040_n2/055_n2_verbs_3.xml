@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N2 verbs ③"
       name_de="N2-Verben ③"
       name_fr="Les verbes N2 ③"
       name_it="Verbi N2 ③"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -152,7 +154,9 @@
               hint_en="v.t."
               lvl="n2"
               id="koeru-crossover"
-            />
+            >
+                <keep_apart_from id="hei-fence" rem="ambiguity in phrases" />
+            </word>
             <word
               w="【砕：くだ】ける"
               rom="kudakeru"

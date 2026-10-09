@@ -26,7 +26,7 @@ class Options private constructor() {
     lateinit var generateReadingsIndexFile: File; private set
     lateinit var generateSchoolYearsIndexFile: File; private set
     lateinit var generateKanjiFreqIndexFile: File; private set
-    lateinit var generateDontConfuseIndexFile: File; private set
+    lateinit var generateVisuallySimilarKanjisIndexFile: File; private set
 
     var quiet = false; private set
     private var showHelp = false
@@ -89,7 +89,7 @@ class Options private constructor() {
         generateReadingsIndexFile = File(dstDir, "readings.txt")
         generateSchoolYearsIndexFile = File(dstDir, "schoolyears.txt")
         generateKanjiFreqIndexFile = File(dstDir, "kanji-freq.txt")
-        generateDontConfuseIndexFile = File(dstDir, "dont-confuse.txt")
+        generateVisuallySimilarKanjisIndexFile = File(dstDir, "visually-similar.txt")
 
         if (!wordVocFilesDir.exists()) {
             if (!wordVocFilesDir.mkdir()) {

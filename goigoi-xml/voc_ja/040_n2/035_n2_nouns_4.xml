@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N2 nouns ④"
       name_de="N2-Nomen ④"
       name_fr="Les noms N2 ④"
       name_it="Nomi N2 ④"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -26,7 +28,7 @@
               id="sankaku-triangle"
               rem="appears in 500mon N3 q55 (no example); can this be used as a な adjective?"
             >
-                <see id="kado-corner" rem="closely related" />
+                <see id="kado-corner" type="closely related" />
                 <keep_together id="shikaku-square" />
             </word>
             <word
@@ -40,7 +42,7 @@
               id="shikaku-square"
               rem="appears in 500mon N3 q55 (no example); can this be used as a な adjective?"
             >
-                <see id="kado-corner" rem="closely related" />
+                <see id="kado-corner" type="closely related" />
                 <keep_together id="sankaku-triangle" />
             </word>
             <word
@@ -53,7 +55,7 @@
               lvl="n2"
               id="shōji-door"
             >
-                <see id="fusuma-slidingdoor" rem="closely related" />
+                <see id="fusuma-slidingdoor" type="closely related" />
                 <keep_apart_from id="fusuma-slidingdoor" />
                 <keep_apart_from id="to-door" />
                 <keep_apart_from id="doa-door" />
@@ -104,7 +106,7 @@
               lvl="n2"
               id="kandzume-cannedfood"
             >
-                <see id="tsumeru-pack" rem="closely related" />
+                <see id="tsumeru-pack" type="closely related" />
                 <keep_apart_from id="kan-tin" />
             </word>
             <word
@@ -169,7 +171,7 @@
               id="yopparai-drunk"
               rem="appears in Doraemon 17, p.56"
             >
-                <see id="you-getdrunk" rem="closely related" />
+                <see id="you-getdrunk" type="closely related" />
             </word>
             <word
               w="【生：い】け【花：ばな】"

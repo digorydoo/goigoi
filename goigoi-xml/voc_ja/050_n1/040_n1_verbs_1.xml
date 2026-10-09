@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N1 verbs ①"
       name_de="N1-Verben ①"
       name_fr="Les verbes N1 ①"
       name_it="Verbi N1 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -344,7 +346,7 @@
               lvl="n1"
               id="kakitoru-writedown"
             >
-                <see id="kakitori-dictation" rem="noun" />
+                <see id="kakitori-dictation" type="noun" />
             </word>
             <word
               w="【丸：まる】める"
@@ -391,9 +393,9 @@
               id="itamu-hurt"
               rem="is this really n1???"
             >
-                <see id="itai-painful" rem="adjective" />
-                <see id="itami-pain" rem="noun" />
-                <see id="itameru-hurt" rem="v.t." />
+                <see id="itai-painful" type="adjective" />
+                <see id="itami-pain" type="noun" />
+                <see id="itameru-hurt" type="v.t." />
                 <keep_apart_from id="kurushimu-suffer" />
                 <keep_apart_from id="kizutsuku-gethurt" />
                 <!-- 心が痛む (こころがいたむ) To feel pained; to feel emotional pain (ChatGPT) -->
@@ -407,7 +409,7 @@
               lvl="n1"
               id="itameru-hurt"
             >
-                <see id="itamu-hurt" rem="v.i." />
+                <see id="itamu-hurt" type="v.i." />
                 <keep_apart_from id="itameru-fry" />
             </word>
             <word
@@ -419,7 +421,7 @@
               lvl="n1"
               id="akaramu-getred"
             >
-                <see id="akai-red" rem="adjective" />
+                <see id="akai-red" type="adjective" />
             </word>
             <word
               w="【可愛：かわい】がる"
@@ -431,7 +433,7 @@
               lvl="n1"
               id="kawaigaru-cherish"
             >
-                <see id="kawaii-cute" rem="adjective" />
+                <see id="kawaii-cute" type="adjective" />
             </word>
             <word
               w="【弱：よわ】る"
@@ -442,7 +444,7 @@
               lvl="n1"
               id="yowaru-weaken"
             >
-                <see id="yowai-weak" rem="adjective" />
+                <see id="yowai-weak" type="adjective" />
             </word>
             <word
               w="【目：め】【覚：ざ】める"
@@ -465,7 +467,7 @@
               lvl="n1"
               id="okurasu-postpone"
             >
-                <see id="okureru-delayed" rem="v.i." />
+                <see id="okureru-delayed" type="v.i." />
             </word>
             <word
               w="【慣：な】らす"
@@ -476,7 +478,7 @@
               lvl="n1"
               id="narasu-accustom"
             >
-                <see id="nareru-getusedto" rem="v.i." />
+                <see id="nareru-getusedto" type="v.i." />
             </word>
             <word
               w="【取：と】り【除：のぞ】く"

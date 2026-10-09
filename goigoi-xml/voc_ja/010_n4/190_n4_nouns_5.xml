@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N4 nouns ⑤"
       name_de="N4-Nomen ⑤"
       name_fr="Les noms N4 ⑤"
       name_it="Nomi N4 ⑤"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -320,7 +322,8 @@
                   tr_de="Der Tag wird kommen, wo es keine Kriege mehr gibt."
                   lvl="n4"
                   origin="lib0"
-                  href="https://hinative.com/questions/22590048 (kuru is correct)"
+                  href="https://hinative.com/questions/22590048"
+                  rem="link verifies that kuru is correct"
                 />
             </word>
             <word
@@ -445,7 +448,7 @@
               Langenscheidt="(Abgabe-) Frist"
               rem="appears in GENKI2 p.72 vocab section; jisho has n2"
             >
-                <see id="shimekiru-shutup" rem="verb" />
+                <see id="shimekiru-shutup" type="verb" />
                 <keep_apart_from id="kiri-cut" />
                 <phrase
                   ph="【締：し】め【切：き】りに【遅：おく】れる"
@@ -647,7 +650,7 @@
               category="directions"
               id="ura-rear"
             >
-                <see id="omote-frontside" rem="antonym" />
+                <see id="omote-frontside" type="antonym" />
                 <phrase
                   ph="【足：あし】の【裏：うら】"
                   rom="ashi no ura"
@@ -677,7 +680,7 @@
               id="sumi-corner"
               href="https://hinative.com/questions/703776"
             >
-                <see id="kado-corner" rem="closely related" />
+                <see id="kado-corner" type="closely related" />
                 <keep_apart_from id="kado-corner" />
                 <keep_apart_from id="katasumi-corner" />
                 <phrase
@@ -724,7 +727,7 @@
               category="general"
               id="saigo-end"
             >
-                <see id="saishū-final" rem="closely related" />
+                <see id="saishū-final" type="closely related" />
                 <keep_apart_from id="saishū-final" />
                 <keep_apart_from id="owari-end" />
                 <phrase
@@ -781,7 +784,8 @@
                   explanation_de="「なら」ist die hypothetische Form von「だ」"
                   lvl="n4"
                   origin="Oxford p.136"
-                  href="https://hinative.com/questions/22211300 (instead of ireru, you could also use tsukeru)"
+                  href="https://hinative.com/questions/22211300"
+                  rem="link verified that instead of ireru, you could also use tsukeru"
                 />
                 <sentence
                   s="この【部：へ】【屋：や】は、【暖：だん】【房：ぼう】が【入：はい】っていて【暖：あたた】かいです。"
@@ -917,7 +921,7 @@
               category="home, general"
               id="hikidashi-drawer"
             >
-                <see id="hikidasu-withdraw" rem="verb" />
+                <see id="hikidasu-withdraw" type="verb" />
                 <phrase
                   ph="【机：つくえ】の【引：ひ】き【出：だ】し"
                   rom="tsukue no hikidashi"
@@ -1456,7 +1460,7 @@
               category="general, physics"
               id="kūki-air"
             >
-                <see id="taiki-atmosphere" rem="closely related" />
+                <see id="taiki-atmosphere" type="closely related" />
                 <keep_apart_from id="taiki-atmosphere" />
                 <keep_apart_from id="ki-mood" />
                 <phrase
@@ -1589,7 +1593,7 @@
               id="yomi-reading"
               rem="jisho has n3"
             >
-                <see id="yomu-read" rem="verb" />
+                <see id="yomu-read" type="verb" />
                 <keep_apart_from id="oyomi-reading" />
                 <phrase
                   ph="【読：よ】みやすい【本：ほん】"
@@ -1635,7 +1639,7 @@
               id="kashi-loan"
               rem="jisho has n3"
             >
-                <see id="kasu-lend" rem="verb" />
+                <see id="kasu-lend" type="verb" />
                 <keep_apart_from id="shakkin-debt" />
                 <keep_apart_from id="kari-loan" />
                 <keep_apart_from id="shōgakukin-scholarship" />
@@ -1732,7 +1736,7 @@
               id="tsukai-use"
               rem="jisho has n1"
             >
-                <see id="otsukai-use" rem="closely related" />
+                <see id="otsukai-use" type="closely related" />
                 <keep_apart_from id="yō-use" />
                 <keep_apart_from id="tsukaimichi-purpose" />
                 <keep_together id="tsukaimichi-purpose" />
@@ -1792,7 +1796,7 @@
               id="hataraki-work"
               rem="jisho has n1"
             >
-                <see id="hataraku-work" rem="verb" />
+                <see id="hataraku-work" type="verb" />
                 <phrase
                   ph="【働：はたら】き【続：つづ】ける"
                   rom="hataraki-tsudzukeru"

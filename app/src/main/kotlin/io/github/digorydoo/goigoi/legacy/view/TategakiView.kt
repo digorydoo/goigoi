@@ -9,16 +9,14 @@ import android.graphics.Typeface
 import android.text.SpannableString
 import android.text.TextPaint
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
-import androidx.core.content.res.ResourcesCompat
-import androidx.core.content.withStyledAttributes
 import androidx.core.graphics.withRotation
 import androidx.core.graphics.withScale
 import ch.digorydoo.kutils.cjk.Unicode
 import ch.digorydoo.kutils.cjk.isKatakana
 import ch.digorydoo.kutils.colour.Colour
 import ch.digorydoo.kutils.math.clamp
-import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.core.tategaki.CharacterPlacement
 import io.github.digorydoo.goigoi.core.tategaki.TategakiLayout
 import io.github.digorydoo.goigoi.legacy.spannable.FuriganaSpan
@@ -52,28 +50,17 @@ class TategakiView: View {
     private val layout = TategakiLayout()
 
     constructor(ctx: Context, attrs: AttributeSet?): super(ctx, attrs) {
-        initialize(attrs, ctx)
+        Log.w(TAG, "Styling via attributes no longer supported")
+        initialize(ctx, Typeface.DEFAULT, Colour.black.toARGB())
     }
 
     constructor(ctx: Context, attrs: AttributeSet?, defStyleAttr: Int): super(ctx, attrs, defStyleAttr) {
-        initialize(attrs, ctx)
+        Log.w(TAG, "Styling via attributes no longer supported")
+        initialize(ctx, Typeface.DEFAULT, Colour.black.toARGB())
     }
 
     constructor(ctx: Context, typeface: Typeface?, color: Int): super(ctx) {
         initialize(ctx, typeface, color)
-    }
-
-    private fun initialize(attrs: AttributeSet?, ctx: Context) {
-        context.withStyledAttributes(attrs, R.styleable.TategakiView) {
-            // Attributes need to be declared in attrs.xml
-
-            val typeface = getResourceId(R.styleable.TategakiView_android_fontFamily, 0)
-                .takeIf { it > 0 }
-                ?.let { ResourcesCompat.getFont(ctx, it) }
-
-            val color = getColor(R.styleable.TategakiView_android_textColor, Colour.black.toARGB())
-            initialize(ctx, typeface = typeface, color = color)
-        }
     }
 
     private fun initialize(ctx: Context, typeface: Typeface?, color: Int) {
@@ -323,7 +310,7 @@ class TategakiView: View {
     }
 
     companion object {
-        // private const val TAG = "TategakiView"
+        private const val TAG = "TategakiView"
         private const val DEFAULT_FONT_SIZE_DP = 16.0f
         private const val COLUMN_SPACING_DP = 16.0f // adds to the width of any furigana present
         private const val EMPTY_FURIGANA_WIDTH_DP = 4.0f // must be less than the minimal expected furigana size

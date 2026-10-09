@@ -2,18 +2,9 @@
 <resources>
     <!-- dynamic styles, use them with style="?attr/someStyle" -->
     <attr name="myAppBarTheme" format="reference" />
-    <attr name="myDialogStyle" format="reference" />
     <attr name="myPrimaryTextStyle" format="reference" />
     <attr name="mySecondaryTextStyle" format="reference" />
     <attr name="serifSecondaryTextStyle" format="reference" />
-
-    <!-- dynamic dimensions -->
-    <attr name="progStudyElementSpacing" format="dimension" />
-    <attr name="progStudyKeyboardLRPadding" format="dimension" />
-    <attr name="progStudyKeyboardTBPadding" format="dimension" />
-    <attr name="progStudyAnswerTextSize" format="dimension" />
-    <attr name="progStudyRevealedKanjiOrKanaTextSize" format="dimension" />
-    <attr name="progStudyWhatToDoTextSize" format="dimension" />
 
     <!-- dynamic colours -->
     <attr name="activeIconTintColour" format="color" />
@@ -23,26 +14,8 @@
     <attr name="cardBgColour" format="color" />
     <attr name="behindCardsColour" format="color" />
     <attr name="decorativeIconTintColour" format="color" />
-    <attr name="fabGlowColour" format="color" />
-    <attr name="fabShimColour" format="color" />
     <attr name="flashBgColour" format="color" />
     <attr name="flashFgColour" format="color" />
-    <attr name="hintBalloonBgColour" format="color" />
-    <attr name="hintBalloonOutlineColour" format="color" />
-    <attr name="keyLensBgColour" format="color" />
-    <attr name="keyLensFgColour" format="color" />
     <attr name="myPrimaryTextColour" format="color" />
     <attr name="mySecondaryTextColour" format="color" />
-
-    <declare-styleable name="FloatingActionBtn">
-        <attr name="initiallyShown" format="boolean" />
-        <attr name="iconName" format="string" />
-        <attr name="animDuration" format="integer" />
-        <attr name="glowing" format="boolean" />
-    </declare-styleable>
-
-    <declare-styleable name="TategakiView">
-        <attr name="android:fontFamily" format="integer" />
-        <attr name="android:textColor" format="color" />
-    </declare-styleable>
 </resources>

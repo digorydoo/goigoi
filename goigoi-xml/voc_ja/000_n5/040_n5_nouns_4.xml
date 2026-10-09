@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N5 nouns ④"
       name_de="N5-Nomen ④"
       name_fr="Les noms N5 ④"
       name_it="Nomi N5 ④"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -62,8 +64,8 @@
                 <keep_apart_from id="onna-woman" />
                 <keep_apart_from id="joshi-girl" />
                 <keep_apart_from id="shōjo-maiden" />
-                <see id="joshi-girl" rem="closely related" />
-                <see id="shōjo-maiden" rem="closely related" />
+                <see id="joshi-girl" type="closely related" />
+                <see id="shōjo-maiden" type="closely related" />
                 <phrase
                   ph="【笑：わら】っている【女：おんな】の【子：こ】"
                   rom="waratte iru onna no ko"
@@ -1350,7 +1352,7 @@
                     Also, when chikai refers to time rather than distance, chikaku no is not used.
                     See examples below and at chikai-near.
                 -->
-                <see id="chikai-near" rem="adjective" />
+                <see id="chikai-near" type="adjective" />
                 <phrase
                   ph="【近：ちか】くの【八：や】【百屋：おや】"
                   rom="chikaku no yaoya"
@@ -1385,7 +1387,7 @@
                     Also, when tōi refers to time rather than distance, tōku no is not used.
                     See examples below and at tōi-far.
                 -->
-                <see id="tōi-far" rem="adjective" />
+                <see id="tōi-far" type="adjective" />
                 <phrase
                   ph="【遠：とお】くの【町：まち】"
                   rom="tōku no machi"
@@ -1415,7 +1417,7 @@
               category="fashion"
               id="kutsushita-socks"
             >
-                <see id="tabi-socks" rem="closely related" />
+                <see id="tabi-socks" type="closely related" />
                 <keep_apart_from id="tabi-socks" />
                 <keep_apart_from id="sokkusu-socks" />
                 <phrase

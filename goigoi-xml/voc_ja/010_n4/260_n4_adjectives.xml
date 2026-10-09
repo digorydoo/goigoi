@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N4 adjectives"
       name_de="N4-Adjektive"
       name_fr="Les adjectifs N4"
       name_it="Aggettivi N4"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="adjective"
@@ -58,7 +60,7 @@
               id="fukai-deep"
             >
                 <!-- the noun is 深さ, nx, common -->
-                <see id="asai-shallow" rem="antonym" />
+                <see id="asai-shallow" type="antonym" />
                 <phrase
                   ph="【深：ふか】い【湖：みずうみ】"
                   rom="fukai mizūmi"
@@ -87,7 +89,7 @@
               lvl="n4"
               id="asai-shallow"
             >
-                <see id="fukai-deep" rem="antonym" />
+                <see id="fukai-deep" type="antonym" />
                 <phrase
                   ph="【浅：あさ】く【眠：ねむ】る"
                   rom="asaku nemuru"
@@ -427,7 +429,8 @@
               lvl="n4"
               category="mood"
               id="sugoi-amazing"
-              href="https://hinative.com/questions/22626238 (difference between sugoi and monosugoi)"
+              href="https://hinative.com/questions/22626238"
+              rem="difference between sugoi and monosugoi"
             >
                 <phrase
                   ph="すごい【車：くるま】"
@@ -586,7 +589,7 @@
               id="kanashii-sad"
             >
                 <!-- the noun is 悲しさ, nx, not marked as common -->
-                <see id="kanashimu-mourn" rem="verb" />
+                <see id="kanashimu-mourn" type="verb" />
                 <phrase
                   ph="その【悲：かな】しい【日：ひ】"
                   rom="sono kanashii hi"
@@ -949,7 +952,7 @@
               id="daiji-valuable"
               rem="ChatGPT says taisetsu is more about personal value, while daiji is more sth of general significance"
             >
-                <see id="taisetsu-important" rem="closely related" />
+                <see id="taisetsu-important" type="closely related" />
                 <phrase
                   ph="【大：だい】【事：じ】なこと"
                   rom="daiji na koto"
@@ -1160,7 +1163,7 @@
               lvl="n4"
               id="tashika-sure"
             >
-                <see id="tashikameru-check" rem="verb" />
+                <see id="tashikameru-check" type="verb" />
                 <keep_apart_from id="tashikani-surely" />
                 <keep_together id="tashikani-surely" />
                 <keep_apart_from id="kitto-mostlikely" />

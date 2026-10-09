@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Hidden N2 verbs"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -53,7 +55,7 @@
               lvl="n2"
               id="umeru-fillaposition"
             >
-                <see id="umaru-overflow" rem="v.i." />
+                <see id="umaru-overflow" type="v.i." />
                 <!-- 埋め合わせる・うめあわせる: to make up for; to compensate for -->
             </word>
             <word
@@ -66,7 +68,7 @@
               rem="appears in 500mon N3 q26 (without examples)"
             >
                 <!-- antonym suggested by 500mon N3 q26 -->
-                <see id="aku-open" rem="antonym" />
+                <see id="aku-open" type="antonym" />
             </word>
             <word
               w="【余：あま】る"
@@ -341,7 +343,7 @@
               lvl="n2"
               id="atehameru-apply"
             >
-                <see id="atehamaru-applicable" rem="v.i." />
+                <see id="atehamaru-applicable" type="v.i." />
             </word>
             <word
               w="【当：あ】てはまる"
@@ -351,7 +353,7 @@
               lvl="n2"
               id="atehamaru-applicable"
             >
-                <see id="atehameru-apply" rem="v.t." />
+                <see id="atehameru-apply" type="v.t." />
             </word>
             <word
               w="【崩：くず】す"
@@ -361,7 +363,7 @@
               lvl="n2"
               id="kuzusu-destroy"
             >
-                <see id="kuzureru-collapse" rem="v.i." />
+                <see id="kuzureru-collapse" type="v.i." />
             </word>
             <word
               w="【崩：くず】れる"
@@ -371,7 +373,7 @@
               lvl="n2"
               id="kuzureru-collapse"
             >
-                <see id="kuzusu-destroy" rem="v.t." />
+                <see id="kuzusu-destroy" type="v.t." />
             </word>
             <word
               w="【澄：す】む"

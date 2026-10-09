@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="preferences">Préférences</string>
-    <string name="todays_progress">Les progrès d\'aujourd\'hui</string>
+    <string name="todays_progress">Le progrès d\'aujourd\'hui</string>
+    <string name="todays_progress_percent">Le progrès d\'aujourd\'hui : ${N}%</string>
     <string name="continue_studying">Cliquez ici pour continuer à étudier</string>
     <string name="learnt_n_of_m_words">Vous avez appris ${N} de ${M} mots.</string>
 
@@ -10,7 +11,8 @@
     <string name="aboutAppPrimary">À propos de Go Go Japanese</string>
     <string name="aboutAppSecondary">Droits d\'auteur et licence</string>
 
-    <string name="correct_wrong_counts">Correct : ${N} &#160; Faux : ${M}</string>
+    <string name="correct_count">Correct : ${N}</string>
+    <string name="wrong_count">Faux : ${N}</string>
 
     <string name="study_set_restarted">La pile de mots a été redémarrée</string>
     <string name="next_word">Mot suivant</string>
@@ -38,6 +40,8 @@
     <string name="backspace_key">Supprimer le caractère à gauche</string>
     <string name="enter_key">Touche d\'entrée</string>
     <string name="transforms_key">Transformer</string>
+    <string name="move_caret_left">Déplacer le curseur vers la gauche</string>
+    <string name="move_caret_right">Déplacer le curseur vers la droite</string>
 
     <string name="show_translation">Traduction</string>
     <string name="start_btn">Début</string>

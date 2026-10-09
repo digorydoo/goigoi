@@ -1,20 +1,18 @@
 package io.github.digorydoo.goigoi.activity.welcome.composables
 
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import io.github.digorydoo.goigoi.activity.welcome.WelcomeActivityModel
+import io.github.digorydoo.goigoi.activity.welcome.composables.big_ring.AnimatedBigRing
 import io.github.digorydoo.goigoi.composables.app_bar.EmptyAppBar
 import io.github.digorydoo.goigoi.composables.providers.DeviceProps
 import io.github.digorydoo.goigoi.core.db.Topic
@@ -71,12 +69,34 @@ fun WelcomeScreen(
                 .verticalScroll(scrollState)
                 .padding(bottom = 16.dp)
         ) {
-            WelcomeTopBar(horizPadding, onPrefsBtnClicked)
-            AnimatedBigRing(model)
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 8.dp),
+            ) {
+                DayIconsArea(
+                    modifier = Modifier
+                        .align(Alignment.Center)
+                        .widthIn(max = 320.dp)
+                        .padding(top = 24.dp),
+                    model = model,
+                ) {
+                    AnimatedBigRing(model = model)
+                }
+                PrefsBtn(
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        // We want to align the icon, not its enclosing area.
+                        .padding(
+                            top = 4.dp,
+                            end = (horizPadding - 14.dp).coerceAtLeast(0.dp)
+                        ),
+                    onClick = onPrefsBtnClicked,
+                )
+            }
 
             Encouragement(model, horizPadding)
             BigStudyBtn(horizPadding, onBigStudyBtnClicked)
-            DayIconsArea(model, horizPadding)
 
             HorizontalDivider(modifier = Modifier.padding(top = 32.dp, bottom = 8.dp))
             TopicsAndMyWordsList(

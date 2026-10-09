@@ -323,7 +323,7 @@ class WordChecker {
 
         // Check against miscategorised nouns and verbs
 
-        if (!word.hidden && unyt.studyLang == "ja") {
+        if (!word.hidden) {
             unyt.name.en.lowercase().let { uname ->
                 if (uname.contains("verb") && !uname.contains("adverb")) {
                     val exceptions = arrayOf("いる", "ある", "【居：い】る", "【有：あ】る")

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 i-adjectives ②"
       name_de="N3 I-Adjektive ②"
       name_fr="Les i-adjectifs N3 ②"
       name_it="I-aggettivi N3 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="i-adjective"
@@ -43,7 +45,7 @@
               id="kurushii-tough"
             >
                 <!-- the noun is 苦しみ, nx, common -->
-                <see id="kurushimu-suffer" rem="verb" />
+                <see id="kurushimu-suffer" type="verb" />
                 <keep_apart_from id="kitsui-tough" />
                 <phrase
                   ph="【寝：ね】【苦：ぐる】しい"

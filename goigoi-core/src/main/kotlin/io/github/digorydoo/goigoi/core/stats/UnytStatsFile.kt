@@ -6,7 +6,7 @@ import java.io.File
 import java.io.OutputStream
 
 class UnytStatsFile(dir: File): Exportable {
-    private val file: RawStatsFile = RawStatsFile(dir, FILE_NAME, FILE_VERSION)
+    private val file: RawStatsFile = RawStatsFile(dir, FILE_NAME)
 
     override fun exportTo(dst: OutputStream) =
         file.exportTo(dst)
@@ -70,7 +70,6 @@ class UnytStatsFile(dir: File): Exportable {
 
     companion object {
         private const val FILE_NAME = "unit"
-        private const val FILE_VERSION = 6
         private const val STUDY_DATE_ID = "stdt"
         private const val UNYT_STUDY_PROGRESS_ID = "progress"
         private const val UNYT_RATING_ID = "rating"

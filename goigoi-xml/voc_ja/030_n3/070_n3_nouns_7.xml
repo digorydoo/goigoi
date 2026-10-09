@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 nouns ⑦"
       name_de="N3-Nomen ⑦"
       name_fr="Les noms N3 ⑦"
       name_it="Nomi N3 ⑦"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -242,7 +244,7 @@
               lvl="n3"
               id="kesseki-absence"
             >
-                <see id="shusseki-attend" rem="antonym" />
+                <see id="shusseki-attend" type="antonym" />
                 <keep_apart_from id="rusu-absence" />
                 <phrase
                   ph="【会：かい】【議：ぎ】に【欠：けっ】【席：せき】する"
@@ -755,7 +757,8 @@
                   tr_de="Ich habe mich angestrengt, um gute Noten zu bekommen."
                   lvl="n3"
                   origin="lib0"
-                  href="https://hinative.com/questions/22110146 (pronounciation of 点)"
+                  href="https://hinative.com/questions/22110146"
+                  rem="link is about pronounciation of 点"
                 />
             </word>
             <word
@@ -1131,7 +1134,7 @@
             >
                 <keep_apart_from id="kegawa-fur" />
                 <keep_together id="kegawa-fur" />
-                <see id="hifu-skin" rem="closely related" />
+                <see id="hifu-skin" type="closely related" />
                 <keep_apart_from id="hifu-skin" />
                 <!-- human skin is 皮膚・ひふ (n2) -->
                 <!-- the scalp is 頭皮・とうひ (nx) -->
@@ -1193,7 +1196,7 @@
               category="science, astronomy"
               id="taiki-atmosphere"
             >
-                <see id="kūki-air" rem="closely related" />
+                <see id="kūki-air" type="closely related" />
                 <keep_apart_from id="kūki-air" />
                 <phrase
                   ph="【地：ち】【球：きゅう】の【大：たい】【気：き】"
@@ -1486,7 +1489,7 @@
               category="top-words"
               id="nokori-remnant"
             >
-                <see id="nokoru-remain" rem="verb" />
+                <see id="nokoru-remain" type="verb" />
                 <phrase
                   ph="【残：のこ】り【時：じ】【間：かん】"
                   rom="nokori-jikan"
@@ -1513,7 +1516,7 @@
               category="transportation"
               id="miokuri-farewell"
             >
-                <see id="miokuru-seesboff" rem="verb" />
+                <see id="miokuru-seesboff" type="verb" />
                 <keep_apart_from id="miokuru-seesboff" />
                 <phrase
                   ph="【見：み】【送：おく】りに【行：い】く"
@@ -1543,7 +1546,7 @@
               id="torikae-swap"
               rem="jisho has n1"
             >
-                <see id="torikaeru-swap" rem="verb" />
+                <see id="torikaeru-swap" type="verb" />
                 <keep_apart_from id="torikaeru-swap" />
                 <keep_apart_from id="kawari-substitute" />
                 <keep_apart_from id="kōkan-exchange" />
@@ -1577,7 +1580,7 @@
               id="onigiri-riceball"
               rem="appears in GENKI2 L20 vocab section"
             >
-                <see id="nigiru-grasp" rem="verb" />
+                <see id="nigiru-grasp" type="verb" />
                 <phrase
                   ph="おにぎりを【作：つく】る"
                   rom="o-nigiri o tsukuru"
@@ -1681,7 +1684,7 @@
               category="culture, top-words"
               id="hotoke-buddha"
             >
-                <see id="butsuzō-buddha" rem="closely related" />
+                <see id="butsuzō-buddha" type="closely related" />
                 <keep_apart_from id="butsuzō-buddha" />
                 <phrase
                   ph="【知：し】らぬが【仏：ほとけ】"
@@ -1725,7 +1728,7 @@
               category="cooking"
               id="meshi-meal"
             >
-                <see id="meshiagaru-eatdrink" rem="closely related" />
+                <see id="meshiagaru-eatdrink" type="closely related" />
                 <keep_apart_from id="meshiagaru-eatdrink" />
                 <keep_apart_from id="gohan-meal" />
                 <keep_apart_from id="shokuji-meal" />

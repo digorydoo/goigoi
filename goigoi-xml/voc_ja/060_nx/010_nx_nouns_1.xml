@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Even more nouns ①"
       name_de="Noch mehr Nomen ①"
       name_fr="Encore plus de noms ①"
       name_it="Ancora più sostantivi ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       lvl="-"
@@ -881,7 +883,7 @@
               category="animal"
               id="hitsuji-sheep"
             >
-                <see id="hitsuji-zodiac" rem="closely related" />
+                <see id="hitsuji-zodiac" type="closely related" />
                 <sentence
                   s="【羊：ひつじ】は【草：くさ】を【食：た】べる。"
                   rom="Hitsuji wa kusa o taberu."
@@ -971,7 +973,8 @@
                   tr_en="Spiders have eight legs."
                   tr_de="Spinnen haben acht Beine."
                   lvl="-"
-                  href="https://hinative.com/questions/20378375 (脚 vs. 足)"
+                  href="https://hinative.com/questions/20378375"
+                  rem="link is about 脚 vs. 足"
                 />
             </word>
             <word

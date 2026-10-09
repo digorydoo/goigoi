@@ -33,7 +33,6 @@ class VocabIndexWriter(private val vocab: GoigoiVocab, stream: OutputStream): Ab
                         write(UNYT_NAME_FR, unyt.name.fr)
                         write(UNYT_NAME_IT, unyt.name.it)
                         write(UNYT_NAME_JA, unyt.name.ja)
-                        write(UNYT_STUDY_LANG, unyt.studyLang)
                         write(UNYT_HAS_ROMAJI, unyt.hasRomaji)
                         write(UNYT_HAS_FURIGANA, unyt.hasFurigana)
                         write(UNYT_SUBHEADER_DE, unyt.subheader.de)

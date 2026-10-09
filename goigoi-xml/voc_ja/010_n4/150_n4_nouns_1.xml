@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <!-- subheader cannot be in a file of its own, because it's just a state of the parser -->
     <subheader
       name_en="JLPT N4"
@@ -12,7 +15,6 @@
       name_de="N4-Nomen ①"
       name_fr="Les noms N4 ①"
       name_it="Nomi N4 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -113,7 +115,7 @@
               id="omiyage-souvenir"
               hasCombinedReading="true"
             >
-                <see id="okurimono-gift" rem="closely related" />
+                <see id="okurimono-gift" type="closely related" />
                 <phrase
                   ph="お【土産：みやげ】を【買：か】う"
                   rom="o-miyage o kau"
@@ -625,7 +627,7 @@
               category="city, fashion"
               id="tokoya-barber"
             >
-                <see id="biyōin-beautysalon" rem="closely related" />
+                <see id="biyōin-beautysalon" type="closely related" />
                 <keep_apart_from id="biyōin-beautysalon" />
                 <phrase
                   ph="【床：とこ】【屋：や】で【髪：かみ】を【切：き】ってもらう"
@@ -1118,7 +1120,7 @@
               category="family, people"
               id="goshujin-husband"
             >
-                <see id="otto-husband" rem="closely related" />
+                <see id="otto-husband" type="closely related" />
                 <keep_apart_from id="otto-husband" rem="it would create ambiguity in phrases and sentences" />
                 <phrase
                   ph="【谷：たに】【口：ぐち】【様：さま】のご【主：しゅ】【人：じん】"
@@ -1462,7 +1464,7 @@
               id="kaeri-return"
               rem="appears in GENKI2 p.165 as o-kaeri"
             >
-                <see id="kaeru-return" rem="verb" />
+                <see id="kaeru-return" type="verb" />
                 <keep_apart_from id="okaeri-return" />
                 <keep_together id="okaeri-return" />
                 <phrase
@@ -1653,7 +1655,7 @@
               category="happiness"
               id="tanoshimi-enjoyment"
             >
-                <see id="tanoshii-fun" rem="adjective" />
+                <see id="tanoshii-fun" type="adjective" />
                 <phrase
                   ph="【楽：たの】しみのない【生：せい】【活：かつ】"
                   rom="tanoshimi no nai seikatsu"
@@ -1689,7 +1691,7 @@
               category="hearing, talking"
               id="kotae-response"
             >
-                <see id="kotaeru-answer" rem="verb" />
+                <see id="kotaeru-answer" type="verb" />
                 <phrase
                   ph="【間：ま】【違：ちが】った【答：こた】え"
                   rom="machigatta kotae"

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N2 nouns ②"
       name_de="N2-Nomen ②"
       name_fr="Les noms N2 ②"
       name_it="Nomi N2 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -261,8 +263,8 @@
               id="suekko-youngestchild"
               rem="appears in 500mon N3 q47 as the answer"
             >
-                <see id="chōnan-eldestson" rem="closely related" />
-                <see id="hitorikko-onlychild" rem="closely related" />
+                <see id="chōnan-eldestson" type="closely related" />
+                <see id="hitorikko-onlychild" type="closely related" />
                 <sentence
                   s="【僕：ぼく】は【末：すえ】っ【子：こ】で、【姉：あね】が【一：ひと】【人：り】、【兄：あに】が【二：ふた】【人：り】います。"
                   rom="Boku wa suekko de, ane ga hitori, ani ga futari imasu."
@@ -339,7 +341,7 @@
               id="urikire-soldout"
               rem="appears in 500mon N3 q62 (no example)"
             >
-                <see id="urikireru-soldout" rem="verb" />
+                <see id="urikireru-soldout" type="verb" />
             </word>
             <word
               w="【長：ちょう】【男：なん】"
@@ -351,8 +353,8 @@
               id="chōnan-eldestson"
               rem="appears in 500mon N3 q47 (no example)"
             >
-                <see id="jinan-2ndson" rem="closely related" />
-                <see id="suekko-youngestchild" rem="closely related" />
+                <see id="jinan-2ndson" type="closely related" />
+                <see id="suekko-youngestchild" type="closely related" />
             </word>
             <word
               w="【櫛：くし】"
@@ -363,7 +365,7 @@
               category="fashion"
               id="kushi-comb"
             >
-                <see id="tokasu-comb" rem="closely related" />
+                <see id="tokasu-comb" type="closely related" />
             </word>
             <word
               w="【電：でん】【球：きゅう】"
@@ -374,7 +376,7 @@
               category="home, light"
               id="denkyū-lightbulb"
             >
-                <see id="dentō-light" rem="closely related" />
+                <see id="dentō-light" type="closely related" />
             </word>
             <word
               w="【足：た】【袋：び】"
@@ -387,7 +389,7 @@
               category="fashion"
               id="tabi-socks"
             >
-                <see id="kutsushita-socks" rem="closely related" />
+                <see id="kutsushita-socks" type="closely related" />
                 <keep_apart_from id="kutsushita-socks" />
                 <keep_apart_from id="sokkusu-socks" />
             </word>
@@ -412,7 +414,7 @@
               category="home"
               id="makura-pillow"
             >
-                <see id="zabuton-floorcushion" rem="closely related" />
+                <see id="zabuton-floorcushion" type="closely related" />
                 <keep_apart_from id="zabuton-floorcushion" />
             </word>
             <word

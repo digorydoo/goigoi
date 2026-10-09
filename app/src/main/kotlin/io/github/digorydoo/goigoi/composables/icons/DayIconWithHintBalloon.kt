@@ -14,17 +14,16 @@ import io.github.digorydoo.goigoi.composables.clickableNoRipple
 import io.github.digorydoo.goigoi.legacy.spannable.FuriganaBuilder
 
 @Composable
-fun DayIconWithHintBalloon(day: Moment, progress: Float, animValue: Float, size: Dp = 32.dp) {
+fun DayIconWithHintBalloon(day: Moment, progress: Float, modifier: Modifier = Modifier, size: Dp = 32.dp) {
     val showBalloon = remember { mutableStateOf(false) }
     val intlDate = day.dateToIntlStringLong(true)
 
     HintBalloon(
         wrappedContent = {
             DayIcon(
-                modifier = Modifier.clickableNoRipple { showBalloon.value = true },
+                modifier = modifier.clickableNoRipple { showBalloon.value = true },
                 centreText = day.japaneseDayOfWeekAbbrev.toString(),
                 progress = progress,
-                animValue = animValue,
                 size = size,
             )
         },

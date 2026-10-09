@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N5 nouns ②"
       name_de="N5-Nomen ②"
       name_fr="Les noms N5 ②"
       name_it="Nomi N5 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -665,7 +667,8 @@
                   tr_de="Darf ich zu dir nach Hause kommen, Mari?"
                   lvl="n4"
                   origin="Miku"
-                  href="https://youtu.be/IBzblHryNJE, modified"
+                  href="https://youtu.be/IBzblHryNJE"
+                  rem="modified"
                 />
                 <sentence
                   s="【母：はは】は 【毎：まい】【日：にち】 うちに います。"
@@ -1028,7 +1031,8 @@
                   tr_de="Gibt es ein Café in der Nähe?"
                   lvl="n5"
                   origin="Langenscheidt"
-                  href="https://hinative.com/questions/21966081 (は vs. が)"
+                  href="https://hinative.com/questions/21966081"
+                  rem="link is about は vs. が"
                 />
                 <sentence
                   s="【駅：えき】の 【北：きた】【口：ぐち】の 【喫：きっ】【茶：さ】【店：てん】で 【待：ま】って います。"
@@ -1050,7 +1054,6 @@
               category="city"
               id="hashi-bridge"
             >
-                <see id="ohashi-chopsticks" rem="not auto-generated due to honorific prefix" />
                 <phrase
                   ph="【橋：はし】の【下：した】"
                   rom="hashi no shita"

@@ -170,10 +170,9 @@ class FlipThruActivity: AppCompatActivity() {
 
     private fun updateActionBarSubtitle() {
         val ctx = applicationContext
-
-        supportActionBar?.subtitle = ctx.getString(R.string.correct_wrong_counts)
-            .replace("\${N}", "${studyItemIterator.numCorrect}")
-            .replace("\${M}", "${studyItemIterator.numWrong}")
+        val correct = ctx.getString(R.string.correct_count).replace("\${N}", "${studyItemIterator.numCorrect}")
+        val wrong = ctx.getString(R.string.wrong_count).replace("\${N}", "${studyItemIterator.numWrong}")
+        supportActionBar?.subtitle = "$correct　$wrong"
     }
 
     private inner class ChoreoDelegate(ctx: Context): Choreographer.Delegate() {

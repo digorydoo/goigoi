@@ -8,7 +8,6 @@ class GoigoiUnyt {
     var filename = ""
     val name = IntlString()
     val defaultHint = IntlString()
-    var studyLang = ""
     var hidden = false
     var hasRomaji = false
     var hasFurigana = false

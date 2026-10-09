@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Hidden N2 words"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       lvl="n2"
@@ -37,7 +39,7 @@
               category="home"
               id="zabuton-floorcushion"
             >
-                <see id="makura-pillow" rem="closely related" />
+                <see id="makura-pillow" type="closely related" />
                 <keep_apart_from id="makura-pillow" />
             </word>
             <word
@@ -171,7 +173,7 @@
               rem="also a phrase of kireru"
             >
                 <keep_apart_from id="kireru-snap" />
-                <see id="urikire-soldout" rem="noun" />
+                <see id="urikire-soldout" type="noun" />
             </word>
             <word
               w="【個：こ】【体：たい】"
@@ -1118,7 +1120,7 @@
               lvl="n2"
               id="bindzume-bottling"
             >
-                <see id="tsumeru-pack" rem="closely related" />
+                <see id="tsumeru-pack" type="closely related" />
             </word>
             <word
               w="【生：せい】【長：ちょう】"
@@ -1321,7 +1323,7 @@
               lvl="n2"
               id="hifu-skin"
             >
-                <see id="kawa-skin" rem="closely related" />
+                <see id="kawa-skin" type="closely related" />
                 <keep_apart_from id="kawa-skin" />
             </word>
             <word

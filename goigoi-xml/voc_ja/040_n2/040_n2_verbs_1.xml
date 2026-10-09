@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N2 verbs ①"
       name_de="N2-Verben ①"
       name_fr="Les verbes N2 ①"
       name_it="Verbi N2 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -25,7 +27,7 @@
               category="general, directions"
               id="kudaru-godown"
             >
-                <see id="kudari-downbound" rem="noun" />
+                <see id="kudari-downbound" type="noun" />
                 <keep_apart_from id="kudaranai-absurd" />
                 <keep_together id="kudaranai-absurd" />
                 <keep_apart_from id="sagaru-drop" />
@@ -217,7 +219,7 @@
               id="tatamu-fold"
               usuallyInKana="true"
             >
-                <see id="tatami-floor" rem="noun" />
+                <see id="tatami-floor" type="noun" />
                 <sentence
                   s="【布：ふ】【団：とん】をたたみなさい。"
                   rom="Futon o tatami-nasai."
@@ -240,7 +242,7 @@
               category="motion"
               id="butsukaru-collide"
             >
-                <see id="butsukeru-hitsb" rem="v.t." />
+                <see id="butsukeru-hitsb" type="v.t." />
                 <keep_apart_from id="butsukaru-alt1" />
                 <keep_apart_from id="butsukaru-alt2" />
                 <keep_together id="butsukaru-alt1" />
@@ -287,7 +289,7 @@
               id="chirakaru-indisorder"
               rem="appears in 500mon N3 q59 as the answer"
             >
-                <see id="chirakasu-scatter" rem="v.t." />
+                <see id="chirakasu-scatter" type="v.t." />
                 <sentence
                   s="【散：ち】らかっていますが、どうぞお【入：はい】りください。"
                   rom="Chirakatte imasu ga, dōzo o-hairi kudasai."
@@ -308,7 +310,7 @@
               lvl="n2"
               id="chirakasu-scatter"
             >
-                <see id="chirakaru-indisorder" rem="v.i." />
+                <see id="chirakaru-indisorder" type="v.i." />
                 <keep_apart_from id="chirasu-spread" />
                 <!-- what's the difference to chirasu? -->
             </word>
@@ -323,7 +325,7 @@
               category="not-good"
               id="butsukeru-hitsb"
             >
-                <see id="butsukaru-collide" rem="v.i." />
+                <see id="butsukaru-collide" type="v.i." />
                 <keep_apart_from id="butsu-hit" />
                 <!--
                     膝をぶつけてしまった。I've banged my knee. (DeepL)
@@ -362,7 +364,7 @@
               lvl="n2"
               id="chikadzukeru-bringnear"
             >
-                <see id="chikadzuku-approach" rem="v.i." />
+                <see id="chikadzuku-approach" type="v.i." />
             </word>
             <word
               w="【足：た】る"
@@ -455,7 +457,7 @@
               lvl="n2"
               id="sasaru-pricked"
             >
-                <see id="sasu-sting" rem="v.t." />
+                <see id="sasu-sting" type="v.t." />
             </word>
             <word
               w="【冷：ひ】やす"
@@ -620,7 +622,7 @@
               id="tsuku-tobelit"
               usuallyInKana="true"
             >
-                <see id="tsukeru-lightup" rem="v.t." />
+                <see id="tsukeru-lightup" type="v.t." />
                 <!-- too similar to the word itself
                   ph="ついている"
                   rom="tsuite iru"
@@ -729,7 +731,7 @@
               lvl="n2"
               id="shimekiru-shutup"
             >
-                <see id="shimekiri-deadline" rem="noun" />
+                <see id="shimekiri-deadline" type="noun" />
             </word>
             <word
               w="【帰：かえ】す"
@@ -740,7 +742,7 @@
               lvl="n2"
               id="kaesu-sendback"
             >
-                <see id="kaeru-return" rem="v.i." />
+                <see id="kaeru-return" type="v.i." />
             </word>
             <word
               w="【匂：にお】う"
@@ -752,7 +754,7 @@
               id="niou-smell"
               rem="jisho has n4 for nioi; niou might be uncommon, because you commonly say (ii) nioi ga suru"
             >
-                <see id="nioi-fragrance" rem="noun" />
+                <see id="nioi-fragrance" type="noun" />
             </word>
             <word
               w="【点：つ】ける"
@@ -764,7 +766,7 @@
               rem="付ける is n5, 漬ける is n4"
               id="tsukeru-lightup"
             >
-                <see id="tsuku-tobelit" rem="v.i." />
+                <see id="tsuku-tobelit" type="v.i." />
             </word>
             <word
               w="【見：み】【送：おく】る"
@@ -777,7 +779,7 @@
               category="travelling, transportation"
               id="miokuru-seesboff"
             >
-                <see id="miokuri-farewell" rem="noun" />
+                <see id="miokuri-farewell" type="noun" />
                 <keep_apart_from id="miokuri-farewell" />
             </word>
             <word
@@ -870,7 +872,7 @@
               rem="appears in Doraemon 13, p.114 (not usable as example)"
             >
                 <!-- 氷が溶けている (こおりがとけている) The ice is melting (ChatGPT) -->
-                <see id="tokasu-dissolve" rem="v.t." />
+                <see id="tokasu-dissolve" type="v.t." />
             </word>
             <word
               w="【溶：と】かす"
@@ -883,7 +885,7 @@
               rem="melt: 熔かす and 鎔かす are used for metal;
                 appears in Doraemon 13 p.113 (example not usable)"
             >
-                <see id="tokeru-melt" rem="v.i." />
+                <see id="tokeru-melt" type="v.i." />
             </word>
             <word
               w="【温：あたた】まる"
@@ -895,7 +897,7 @@
               category="temperature, body"
               id="atatamaru-warmup"
             >
-                <see id="atatameru-warmup" rem="v.t." />
+                <see id="atatameru-warmup" type="v.t." />
             </word>
             <word
               w="【出：で】【迎：むか】える"
@@ -934,7 +936,7 @@
               id="mageru-bend"
               rem="appears in 500mon N3 q16 (without example)"
             >
-                <see id="magaru-turn" rem="v.i." />
+                <see id="magaru-turn" type="v.i." />
             </word>
             <word
               w="【言：い】い【出：だ】す"

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 na-adjectives ①"
       name_de="N3 Na-Adjektive ①"
       name_fr="Les na-adjectifs N3 ①"
       name_it="Na-aggettivi N3 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="na-adjective"
@@ -500,7 +502,7 @@
                 <!--
                   Acc. to 500mon N3 q23, nigate and tokui are opposites.
                 -->
-                <see id="tokui-pride" rem="antonym" />
+                <see id="tokui-pride" type="antonym" />
                 <phrase
                   ph="【苦：にが】【手：て】な【科：か】【目：もく】"
                   rom="nigate na kamoku"

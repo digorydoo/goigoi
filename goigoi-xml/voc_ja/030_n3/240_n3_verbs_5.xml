@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 verbs ⑤"
       name_de="N3-Verben ⑤"
       name_fr="Les verbes N3 ⑤"
       name_it="Verbi N3 ⑤"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -393,7 +395,7 @@
               category="relationships, technical"
               id="tayoru-relyon"
             >
-                <see id="tayori-reliance" rem="noun" />
+                <see id="tayori-reliance" type="noun" />
                 <keep_apart_from id="makaseru-entrust" />
                 <phrase
                   ph="【人：ひと】に【頼：たよ】る"
@@ -515,7 +517,7 @@
               category="going-out, beverage"
               id="you-getdrunk"
             >
-                <see id="yopparai-drunk" rem="closely related" />
+                <see id="yopparai-drunk" type="closely related" />
                 <phrase
                   ph="【酒：さけ】に【酔：よ】った【男：おとこ】"
                   rom="sake ni yotta otoko"

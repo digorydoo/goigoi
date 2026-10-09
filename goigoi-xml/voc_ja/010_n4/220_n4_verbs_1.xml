@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N4 verbs ①"
       name_de="N4-Verben ①"
       name_fr="Les verbes N4 ①"
       name_it="Verbi N4 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -554,7 +556,7 @@
               category="culture, entertainment"
               id="odoru-todance"
             >
-                <see id="odori-dance" rem="noun" />
+                <see id="odori-dance" type="noun" />
                 <keep_apart_from id="dansu-dance" />
                 <phrase
                   ph="【音：おん】【楽：がく】に【合：あ】わせて【踊：おど】る"
@@ -845,7 +847,7 @@
               category="thinking"
               id="omoidasu-remember"
             >
-                <see id="omoide-memories" rem="noun" />
+                <see id="omoide-memories" type="noun" />
                 <keep_apart_from id="omoi-thought" />
                 <phrase
                   ph="あの【日：ひ】のことを【思：おも】い【出：だ】す"
@@ -937,7 +939,7 @@
               category="hands"
               id="torikaeru-swap"
             >
-                <see id="torikae-swap" rem="noun" />
+                <see id="torikae-swap" type="noun" />
                 <keep_apart_from id="torikae-swap" />
                 <phrase
                   ph="【壊：こわ】れた【窓：まど】を【取：と】り【替：か】える"
@@ -977,7 +979,7 @@
               category="general, hands"
               id="hikidasu-withdraw"
             >
-                <see id="hikidashi-drawer" rem="noun" />
+                <see id="hikidashi-drawer" type="noun" />
                 <phrase
                   ph="【銀：ぎん】【行：こう】からお【金：かね】を【引：ひ】き【出：だ】す"
                   rom="ginkō kara o-kane o hikidasu"
@@ -1021,7 +1023,7 @@
               id="shimau-finish"
               rem="appears in 500mon q205, q267, q304, q417, q426; jisho has n3"
             >
-                <see id="shimai-end" rem="noun" />
+                <see id="shimai-end" type="noun" />
                 <phrase
                   ph="【食：た】べてしまう"
                   rom="tabete shimau"
@@ -1120,7 +1122,7 @@
               category="happiness, mood"
               id="warau-laugh"
             >
-                <see id="warai-laughter" rem="noun" />
+                <see id="warai-laughter" type="noun" />
                 <phrase
                   ph="【写：しゃ】【真：しん】を【見：み】て【笑：わら】う"
                   rom="shashin o mite warau"
@@ -1161,7 +1163,7 @@
               rem="appears in GENKI2 p.72 vocab section; jisho has n3"
             >
                 <!-- ChatGPT says egaku is more formal and literary-style than kaku -->
-                <see id="egaku-draw" rem="closely related" />
+                <see id="egaku-draw" type="closely related" />
                 <keep_apart_from id="nuru-smear" />
                 <keep_apart_from id="egaku-draw" />
                 <phrase
@@ -1316,7 +1318,7 @@
               category="holidays, hobby"
               id="tsuru-fish"
             >
-                <see id="tsuri-fishing" rem="noun" />
+                <see id="tsuri-fishing" type="noun" />
                 <phrase
                   ph="【釣：つ】りに【行：い】く"
                   rom="tsuri ni iku"
@@ -1348,9 +1350,9 @@
               category="transportation"
               id="okureru-delayed"
             >
-                <see id="okure-delay" rem="noun" />
-                <see id="chikoku-lateness" rem="closely related" />
-                <see id="okurasu-postpone" rem="v.t." />
+                <see id="okure-delay" type="noun" />
+                <see id="chikoku-lateness" type="closely related" />
+                <see id="okurasu-postpone" type="v.t." />
                 <keep_apart_from id="chikoku-lateness" />
                 <phrase
                   ph="いつも【遅：おく】れる"
@@ -1430,7 +1432,7 @@
               id="katsu-win"
               rem="appears in GENKI2 L22 vocab section"
             >
-                <see id="kachi-win" rem="noun" />
+                <see id="kachi-win" type="noun" />
                 <keep_together id="makeru-lose" />
                 <phrase
                   ph="【試：し】【合：あい】に【勝：か】つ"
@@ -1464,7 +1466,7 @@
               id="makeru-lose"
               rem="appears in GENKI2 L22 vocab section"
             >
-                <see id="makasu-defeat" rem="v.t." />
+                <see id="makasu-defeat" type="v.t." />
                 <keep_together id="katsu-win" />
                 <keep_apart_from id="ushinau-lose" />
                 <phrase
@@ -1578,7 +1580,7 @@
               category="fashion"
               id="au-match"
             >
-                <see id="awaseru-join" rem="v.t." />
+                <see id="awaseru-join" type="v.t." />
                 <phrase
                   ph="【色：いろ】が【合：あ】わない"
                   rom="iro ga awanai"
@@ -1630,7 +1632,7 @@
               category="crime"
               id="nigeru-escape"
             >
-                <see id="nigasu-setfree" rem="v.t." />
+                <see id="nigasu-setfree" type="v.t." />
                 <phrase
                   ph="【静：しず】かに【逃：に】げる"
                   rom="shizuka ni nigeru"
@@ -1764,7 +1766,7 @@
               category="holidays"
               id="tomaru-stay"
             >
-                <see id="tomeru-lodge" rem="v.t." />
+                <see id="tomeru-lodge" type="v.t." />
                 <phrase
                   ph="ホテルに【泊：と】まる"
                   rom="hoteru ni tomaru"
@@ -1803,7 +1805,7 @@
               category="cooking"
               id="wakasu-boil"
             >
-                <see id="waku-boil" rem="v.i." />
+                <see id="waku-boil" type="v.i." />
                 <keep_apart_from id="yuderu-boil" />
                 <phrase
                   ph="お【湯：ゆ】を【沸：わ】かす"
@@ -1846,7 +1848,7 @@
               category="cooking"
               id="waku-boil"
             >
-                <see id="wakasu-boil" rem="v.t." />
+                <see id="wakasu-boil" type="v.t." />
                 <phrase
                   ph="お【湯：ゆ】がまだ【沸：わ】かない"
                   rom="o-yu ga mada wakanai"
@@ -2212,7 +2214,7 @@
               category="thinking"
               id="omou-think"
             >
-                <see id="omoi-thought" rem="noun" />
+                <see id="omoi-thought" type="noun" />
                 <keep_apart_from id="kangaeru-thinkabout" />
                 <keep_apart_from id="kamau-mind" />
                 <phrase

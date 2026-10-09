@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N5 verbs ②"
       name_de="N5-Verben ②"
       name_fr="Les verbes N5 ②"
       name_it="Verbi N5 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -25,7 +27,7 @@
               category="looking, top-words"
               id="miru-see"
             >
-                <see id="mieru-beseen" rem="v.i." />
+                <see id="mieru-beseen" type="v.i." />
                 <keep_apart_from id="mitomeru-recognise" />
                 <phrase
                   ph="【甘：あま】く【見：み】る"
@@ -59,7 +61,7 @@
               category="hearing"
               id="kiku-hear"
             >
-                <see id="kikoeru-beheard" rem="v.i." />
+                <see id="kikoeru-beheard" type="v.i." />
                 <keep_apart_from id="tazuneru-enquire" />
                 <phrase
                   ph="【他：ほか】の【誰：だれ】かに【聞：き】く"
@@ -189,7 +191,7 @@
               id="neru-liedown"
             >
                 <!-- o-yasumi ni naru is honorific (sonkeigo) for neru; but that isn't n5 -->
-                <see id="nemuru-sleep" rem="closely related" />
+                <see id="nemuru-sleep" type="closely related" />
                 <phrase
                   ph="【早：はや】く【寝：ね】る"
                   rom="hayaku neru"
@@ -230,8 +232,8 @@
               lvl="n5"
               id="okiru-wakeup"
             >
-                <see id="okosu-wakeup" rem="v.t." />
-                <see id="sameru-wakeup" rem="closely related" />
+                <see id="okosu-wakeup" type="v.t." />
+                <see id="sameru-wakeup" type="closely related" />
                 <keep_apart_from id="sameru-wakeup" />
                 <phrase
                   ph="【八：はち】【時：じ】に【起：お】きる"
@@ -259,7 +261,7 @@
               lvl="n5"
               id="kasu-lend"
             >
-                <see id="kashi-loan" rem="noun" />
+                <see id="kashi-loan" type="noun" />
                 <phrase
                   ph="【手：て】を【貸：か】す"
                   rom="te o kasu"
@@ -289,7 +291,7 @@
               lvl="n5"
               id="kariru-borrow"
             >
-                <see id="kari-loan" rem="noun" />
+                <see id="kari-loan" type="noun" />
                 <phrase
                   ph="【車：くるま】を【借：か】りる"
                   rom="kuruma o kariru"
@@ -335,7 +337,7 @@
               category="thinking, top-words"
               id="wakaru-understand"
             >
-                <see id="wakeru-divide" rem="v.t." />
+                <see id="wakeru-divide" type="v.t." />
                 <keep_apart_from id="mitomeru-recognise" />
                 <phrase
                   ph="【意：い】【味：み】が【分：わ】かる"
@@ -706,8 +708,8 @@
               category="fashion"
               id="kiru-wear"
             >
-                <see id="kaburu-wear" rem="closely related" />
-                <see id="haku-wear" rem="closely related" />
+                <see id="kaburu-wear" type="closely related" />
+                <see id="haku-wear" type="closely related" />
                 <phrase
                   ph="シャツを【着：き】ている"
                   rom="shatsu o kite iru"
@@ -742,8 +744,8 @@
               category="fashion"
               id="kaburu-wear"
             >
-                <see id="kiru-wear" rem="closely related" />
-                <see id="haku-wear" rem="closely related" />
+                <see id="kiru-wear" type="closely related" />
+                <see id="haku-wear" type="closely related" />
                 <phrase
                   ph="【帽：ぼう】【子：し】をかぶる"
                   rom="bōshi o kaburu"
@@ -775,8 +777,8 @@
               category="fashion"
               id="haku-wear"
             >
-                <see id="kiru-wear" rem="closely related" />
-                <see id="kaburu-wear" rem="closely related" />
+                <see id="kiru-wear" type="closely related" />
+                <see id="kaburu-wear" type="closely related" />
                 <phrase
                   ph="【靴：くつ】を【履：は】く"
                   rom="kutsu o haku"
@@ -846,8 +848,8 @@
               category="directions"
               id="noboru-ascend"
             >
-                <see id="oriru-descend" rem="antonym" />
-                <see id="nobori-upbound" rem="noun" />
+                <see id="oriru-descend" type="antonym" />
+                <see id="nobori-upbound" type="noun" />
                 <phrase
                   ph="【階：かい】【段：だん】を【上：のぼ】る"
                   rom="kaidan o noboru"
@@ -878,8 +880,8 @@
               category="directions"
               id="oriru-descend"
             >
-                <see id="orosu-bringdown" rem="v.t." />
-                <see id="noboru-ascend" rem="antonym" />
+                <see id="orosu-bringdown" type="v.t." />
+                <see id="noboru-ascend" type="antonym" />
                 <keep_apart_from id="oriru-getoff" />
                 <keep_apart_from id="sagaru-drop" />
                 <keep_apart_from id="kudaru-godown" />
@@ -913,7 +915,7 @@
               category="employment"
               id="tsutomeru-beemployed"
             >
-                <see id="tsutome-task" rem="noun" />
+                <see id="tsutome-task" type="noun" />
                 <phrase
                   ph="【小：ちい】さな【会：かい】【社：しゃ】に【勤：つと】めている"
                   rom="chīsana kaisha ni tsutomete iru"
@@ -945,7 +947,7 @@
               category="holidays, sports"
               id="oyogu-swim"
             >
-                <see id="oyogi-swimming" rem="noun" />
+                <see id="oyogi-swimming" type="noun" />
                 <phrase
                   ph="【海：うみ】を【泳：およ】いでいる"
                   rom="umi o oyoide iru"
@@ -1098,8 +1100,8 @@
               lvl="n5"
               id="deru-exit"
             >
-                <see id="dasu-takeout" rem="v.t." />
-                <see id="hairu-enter" rem="antonym" />
+                <see id="dasu-takeout" type="v.t." />
+                <see id="hairu-enter" type="antonym" />
                 <keep_apart_from id="dekakeru-setout" />
                 <phrase
                   ph="【早：はや】く【出：で】る"
@@ -1138,7 +1140,7 @@
               lvl="n5"
               id="dasu-takeout"
             >
-                <see id="deru-exit" rem="v.i." />
+                <see id="deru-exit" type="v.i." />
                 <phrase
                   ph="【本：ほん】をカバンから【出：だ】す"
                   rom="hon o kaban kara dasu"
@@ -1414,7 +1416,7 @@
               category="health, family"
               id="umareru-tobeborn"
             >
-                <see id="umare-birth" rem="noun" />
+                <see id="umare-birth" type="noun" />
                 <phrase
                   ph="【東：とう】【京：きょう】で【生：う】まれた"
                   rom="Tōkyō de umareta"

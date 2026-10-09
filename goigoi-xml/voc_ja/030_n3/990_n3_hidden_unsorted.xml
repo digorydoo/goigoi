@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Hidden N3 words"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       lvl="n3"
@@ -231,6 +233,7 @@
             >
                 <keep_apart_from id="okane-money" />
                 <keep_apart_from id="genkin-cash" />
+                <keep_apart_from id="kingaku-moneyamount" />
             </word>
             <word
               w="【水：すい】【準：じゅん】"
@@ -267,7 +270,7 @@
               HIDDEN="true"
               rem="why is chōki n3, but tanki n2???"
             >
-                <see id="tanki-shortterm" rem="antonym" />
+                <see id="tanki-shortterm" type="antonym" />
             </word>
             <word
               w="【夫：ふう】【婦：ふ】"

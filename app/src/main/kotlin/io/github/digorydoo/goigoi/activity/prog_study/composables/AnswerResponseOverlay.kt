@@ -11,6 +11,7 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.drawscope.Fill
 import androidx.compose.ui.graphics.drawscope.Stroke
@@ -24,6 +25,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import ch.digorydoo.kutils.cjk.Unicode
+import ch.digorydoo.kutils.cjk.isCJKOrKana
 import ch.digorydoo.kutils.math.lerp
 import io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivityModel
 import io.github.digorydoo.goigoi.composables.providers.DeviceProps
@@ -57,7 +59,7 @@ private const val WRONG_YSHIFT_NUM_PERIODS = 17f
 
 @Composable
 fun AnswerResponseOverlay(model: ProgStudyActivityModel, modifier: Modifier = Modifier) {
-    val text = model.answerComment.collectAsState().value
+    val kanji = model.answerCommentJa.collectAsState().value?.kanji ?: ""
     val correctness = model.answerCorrectness.collectAsState().value
 
     val textStyle = remember {
@@ -72,13 +74,13 @@ fun AnswerResponseOverlay(model: ProgStudyActivityModel, modifier: Modifier = Mo
 
     val measurer = rememberTextMeasurer()
 
-    val measuredText = remember(text) {
+    val measuredText = remember(kanji) {
         // Use AnnotatedString to make the exclamation mark italic
         val annotated = buildAnnotatedString {
-            if (text.isNotEmpty()) {
-                append(text.slice(0 ..< text.length - 1))
+            if (kanji.isNotEmpty()) {
+                append(kanji.slice(0 ..< kanji.length - 1))
 
-                if (text.last() == '!' || text.last() == '！') {
+                if (kanji.last() == '!' || kanji.last() == '！') {
                     withStyle(SpanStyle(fontStyle = FontStyle.Italic)) {
                         // Ideally, we would append a wide exclamation mark here, but that glyph is off-centre in
                         // Android system font, so I use this workaround instead.
@@ -86,7 +88,7 @@ fun AnswerResponseOverlay(model: ProgStudyActivityModel, modifier: Modifier = Mo
                         append("${spc}!${spc}")
                     }
                 } else {
-                    append(text.last())
+                    append(kanji.last())
                 }
             }
         }
@@ -119,7 +121,7 @@ fun AnswerResponseOverlay(model: ProgStudyActivityModel, modifier: Modifier = Mo
         }
     }
 
-    if (anim.value <= 0f || text.isEmpty() || measuredText.size.width <= 0 || measuredText.size.height <= 0) {
+    if (anim.value <= 0f || kanji.isEmpty() || measuredText.size.width <= 0 || measuredText.size.height <= 0) {
         return // may be better for performance
     }
 
@@ -195,28 +197,42 @@ fun AnswerResponseOverlay(model: ProgStudyActivityModel, modifier: Modifier = Mo
         // width. Changing the path's fillType to FillType.EVEN_ODD did not help, in fact it got worse, because font
         // glyphs rely on the default fillType.
 
-        // As a workaround, we draw a circle behind problematic characters to fill the holes. We assume here that the
-        // text is always in Japanese and the characters don't vary much in width with Android system fonts.
+        // As a workaround, we draw a circle behind problematic characters to fill the holes.
 
-        val charWidth = (size.width - 2 * outlineSizePx) / text.length
+        val estimatedRelCharWidths = kanji.map { if (it.isCJKOrKana() || it in Unicode.WIDE_DIGITS) 1f else 0.5f }
+        val estimatedRelCharWidthsSum = estimatedRelCharWidths.sum()
+
         val charHeight = size.height - 2 * outlineSizePx
-        val dotRadius = minOf(0.42f * charWidth / 2, charHeight / 2)
+        var x = outlineSizePx
+        val y = size.height / 2
 
-        text.forEachIndexed { idx, c ->
-            val offset = when (c) {
-                '５', '６' -> Offset(0.18f * charWidth, 0.07f * charHeight)
-                '９' -> Offset(0.18f * charWidth, -0.14f * charHeight)
-                '正' -> Offset(0.32f * charWidth, 0.1f * charHeight)
+        class Dot(val cx: Float, val cy: Float, val rx: Float, val ry: Float = rx)
+
+        kanji.forEachIndexed { idx, c ->
+            val charWidth = estimatedRelCharWidths[idx] * (size.width - 2 * outlineSizePx) / estimatedRelCharWidthsSum
+
+            val dot = when (c) {
+                '正' -> Dot(cx = 0.32f * charWidth, cy = 0.1f * charHeight, rx = 0.21f * charWidth)
+                '５', '６' -> Dot(cx = 0.09f * charWidth, cy = 0.07f * charHeight, rx = 0.18f * charWidth)
+                '９' -> Dot(cx = 0.09f * charWidth, cy = -0.13f * charHeight, rx = 0.18f * charWidth)
+                '5', '6' -> Dot(cx = 0.09f * charWidth, cy = 0.07f * charHeight, rx = 0.32f * charWidth)
+                '8' -> Dot(cx = 0.09f * charWidth, cy = 0f, rx = 0.19f * charWidth, ry = 0.19f * charHeight)
+                '9' -> Dot(cx = 0.09f * charWidth, cy = -0.11f * charHeight, rx = 0.33f * charWidth)
                 else -> null
             }
-            if (offset != null) {
-                drawCircle(
-                    center = Offset(outlineSizePx + idx * charWidth + charWidth / 2, size.height / 2) + offset,
-                    radius = dotRadius,
+
+            if (dot != null) {
+                val cx = x + dot.cx + charWidth / 2
+                val cy = y + dot.cy
+                drawOval(
+                    topLeft = Offset(cx - dot.rx, cy - dot.ry),
+                    size = Size(2 * dot.rx, 2 * dot.ry),
                     color = outlineColour,
                     style = Fill,
                 )
             }
+
+            x += charWidth
         }
 
         withTransform({

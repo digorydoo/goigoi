@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="More N4 words ②"
       name_de="Weitere N4-Wörter ②"
       name_fr="Plus de mots N4 ②"
       name_it="Più parole N4 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       lvl="n4"
@@ -1279,8 +1281,8 @@
               id="bakari-nothingbut"
               rem="appears in 500mon q137; jisho has nx"
             >
-                <see id="dake-only" rem="closely related" />
-                <see id="shika-only" rem="closely related" />
+                <see id="dake-only" type="closely related" />
+                <see id="shika-only" type="closely related" />
                 <keep_apart_from id="dake-only" />
                 <keep_apart_from id="shika-only" />
                 <keep_apart_from id="kurai-approximately" />

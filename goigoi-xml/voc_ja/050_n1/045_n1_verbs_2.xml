@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N1 verbs ②"
       name_de="N1-Verben ②"
       name_fr="Les verbes N1 ②"
       name_it="Verbi N1 ②"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -43,7 +45,7 @@
               lvl="n1"
               id="makasu-defeat"
             >
-                <see id="makeru-lose" rem="v.i." />
+                <see id="makeru-lose" type="v.i." />
             </word>
             <word
               w="【付：つ】け【加：くわ】える"
@@ -66,7 +68,7 @@
               lvl="n1"
               id="kizutsuku-gethurt"
             >
-                <see id="kizu-scar" rem="noun" />
+                <see id="kizu-scar" type="noun" />
                 <keep_apart_from id="itamu-hurt" />
                 <keep_apart_from id="kurushimu-suffer" />
             </word>
@@ -79,7 +81,7 @@
               lvl="n1"
               id="yurumu-becomeloose"
             >
-                <see id="yurumeru-loosen" rem="v.t." />
+                <see id="yurumeru-loosen" type="v.t." />
             </word>
             <word
               w="【緩：ゆる】める"
@@ -90,7 +92,7 @@
               lvl="n1"
               id="yurumeru-loosen"
             >
-                <see id="yurumu-becomeloose" rem="v.i." />
+                <see id="yurumu-becomeloose" type="v.i." />
             </word>
             <word
               w="【試：こころ】みる"
@@ -113,8 +115,8 @@
               lvl="n1"
               id="umaru-overflow"
             >
-                <see id="aku-empty" rem="antonym" />
-                <see id="umeru-fillaposition" rem="v.t." />
+                <see id="aku-empty" type="antonym" />
+                <see id="umeru-fillaposition" type="v.t." />
             </word>
             <word
               w="【帯：お】びる"
@@ -125,7 +127,7 @@
               lvl="n1"
               id="obiru-wear"
             >
-                <see id="obi-belt" rem="closely related" />
+                <see id="obi-belt" type="closely related" />
             </word>
             <word
               w="やり【遂：と】げる"

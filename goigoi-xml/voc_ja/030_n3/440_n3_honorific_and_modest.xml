@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 Honorific and modest"
       name_de="N3 Ehrend und bescheiden"
       name_fr="Expr. honorifiques et modestes N3"
       name_it="Espr. onorifiche e modeste N3"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       lvl="n3"
@@ -228,7 +230,7 @@
               lvl="n3"
               rem="appears in GENKI2 p.166; jisho has nx for tori; doesn't have o-tori"
             >
-                <see id="toru-take" rem="verb" />
+                <see id="toru-take" type="verb" />
                 <sentence
                   s="【切：きっ】【符：ぷ】をお【取：と】りください。"
                   rom="Kippu o o-tori kudasai."
@@ -252,8 +254,8 @@
               id="otsukai-use"
               rem="appears in GENKI2 p.166; appears in Doraemon 0, p.19; jisho has n1"
             >
-                <see id="tsukai-use" rem="closely related" />
-                <see id="otsukai-errand" rem="closely related" />
+                <see id="tsukai-use" type="closely related" />
+                <see id="otsukai-errand" type="closely related" />
                 <sentence
                   s="どうぞお【使：つか】いになってください。"
                   rom="Dōzo o-tsukai ni natte kudasai."
@@ -276,7 +278,7 @@
               id="okaeshi-returning"
               rem="jisho has nx for o-kaeshi, n5 for kaesu"
             >
-                <see id="kaesu-returnsth" rem="verb" />
+                <see id="kaesu-returnsth" type="verb" />
                 <phrase
                   ph="お【返：かえ】しする"
                   rom="o-kaeshi suru"
@@ -306,7 +308,7 @@
               id="ookuri-seeingoff"
               rem="jisho has nx for okuri, doesn't have o-okuri, n4 for okuru"
             >
-                <see id="okuru-escort" rem="verb" />
+                <see id="okuru-escort" type="verb" />
                 <phrase
                   ph="お【送：おく】りする"
                   rom="o-okuri suru"
@@ -381,7 +383,7 @@
               id="oari-existing"
               rem="jisho has nx for ari, hasn't o-ari at all; appears in GENKI2 p.192 audio"
             >
-                <see id="aru-thereis" rem="verb" />
+                <see id="aru-thereis" type="verb" />
                 <sentence
                   s="【日：に】【本：ほん】【文：ぶん】【学：がく】に【興：きょう】【味：み】がおありになりますか。"
                   rom="Nihon bungaku ni kyōmi ga o-ari ni narimasu ka?"

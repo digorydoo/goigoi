@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Chinese zodiac"
       name_de="Chinesischer Tierkreis"
       name_fr="Le zodiaque chinois"
       name_it="Lo zodiaco cinese"
-      studyLang="ja"
       lvl="-"
       hasRomaji="true"
       hasFurigana="true"
@@ -21,7 +23,7 @@
               lvl="-"
               id="ne-rat"
             >
-                <see id="nezumi-mouse" rem="closely related" />
+                <see id="nezumi-mouse" type="closely related" />
             </word>
             <word
               w="【丑：うし】"
@@ -31,7 +33,7 @@
               lvl="-"
               id="ushi-zodiac"
             >
-                <see id="ushi-cow" rem="closely related" />
+                <see id="ushi-cow" type="closely related" />
             </word>
             <word
               w="【寅：とら】"
@@ -41,7 +43,7 @@
               lvl="-"
               id="tora-zodiac"
             >
-                <see id="tora-tiger" rem="closely related" />
+                <see id="tora-tiger" type="closely related" />
             </word>
             <word
               w="【卯：う】"
@@ -51,7 +53,7 @@
               lvl="-"
               id="u-hare"
             >
-                <see id="usagi-rabbit" rem="closely related" />
+                <see id="usagi-rabbit" type="closely related" />
             </word>
             <word
               w="【辰：たつ】"
@@ -61,7 +63,7 @@
               lvl="-"
               id="tatsu-zodiac"
             >
-                <see id="ryū-dragon" rem="closely related" />
+                <see id="ryū-dragon" type="closely related" />
             </word>
             <word
               w="【巳：み】"
@@ -71,7 +73,7 @@
               lvl="-"
               id="mi-zodiac"
             >
-                <see id="hebi-snake" rem="closely related" />
+                <see id="hebi-snake" type="closely related" />
             </word>
             <word
               w="【午：うま】"
@@ -81,7 +83,7 @@
               lvl="-"
               id="uma-zodiac"
             >
-                <see id="uma-horse" rem="closely related" />
+                <see id="uma-horse" type="closely related" />
             </word>
             <word
               w="【未：ひつじ】"
@@ -91,7 +93,7 @@
               lvl="-"
               id="hitsuji-zodiac"
             >
-                <see id="hitsuji-sheep" rem="closely related" />
+                <see id="hitsuji-sheep" type="closely related" />
             </word>
             <word
               w="【申：さる】"
@@ -101,7 +103,7 @@
               lvl="-"
               id="saru-zodiac"
             >
-                <see id="saru-monkey" rem="closely related" />
+                <see id="saru-monkey" type="closely related" />
             </word>
             <word
               w="【酉：とり】"
@@ -111,7 +113,7 @@
               lvl="-"
               id="tori-zodiac"
             >
-                <see id="tori-bird" rem="closely related" />
+                <see id="tori-bird" type="closely related" />
             </word>
             <word
               w="【戌：いぬ】"
@@ -121,7 +123,7 @@
               lvl="-"
               id="inu-zodiac"
             >
-                <see id="inu-dog" rem="closely related" />
+                <see id="inu-dog" type="closely related" />
             </word>
             <word
               w="【亥：い】"
@@ -131,7 +133,7 @@
               lvl="-"
               id="i-boar"
             >
-                <see id="buta-pig" rem="closely related" />
+                <see id="buta-pig" type="closely related" />
             </word>
         </section>
     </unit>

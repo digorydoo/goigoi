@@ -9,7 +9,7 @@ import kotlin.time.DurationUnit
 import kotlin.time.toDuration
 
 class GeneralStatsFile(dir: File): Exportable {
-    private val file: RawStatsFile = RawStatsFile(dir, FILE_NAME, FILE_VERSION)
+    private val file: RawStatsFile = RawStatsFile(dir, FILE_NAME)
 
     override fun exportTo(dst: OutputStream) =
         file.exportTo(dst)
@@ -102,8 +102,6 @@ class GeneralStatsFile(dir: File): Exportable {
         private val TAG = Log.Tag("GeneralStats")
 
         private const val FILE_NAME = "app"
-        private const val FILE_VERSION = 5
-
         private const val APP_INSTALL_ID_ID = "appInstallId"
         private const val APP_INSTALL_DATE_ID = "appInstallDate"
         private const val APP_LAUNCH_COUNT_ID = "appLaunchCount"

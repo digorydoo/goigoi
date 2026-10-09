@@ -10,13 +10,13 @@ class KanjiIndexWriter(private val options: Options) {
         readings: Map<String, Set<String>>,
         kanjiBySchoolYear: Map<Int, Set<Char>>,
         kanjiByFreq: String,
-        dontConfuse: List<String>,
+        visuallySimilar: List<String>,
     ) {
         writeKanjiIndex(kanjiLevels) // JLPT level followed by all kanjis of that level
         writeReadings(readings) // hiragana followed by all kanjis with that reading
         writeKanjiBySchoolYear(kanjiBySchoolYear) // grade number followed by all kanjis of that school year
         writeKanjiByFrequency(kanjiByFreq) // kanjis ordered by descending frequency
-        writeDontConfuse(dontConfuse) // kanji followed by visually similar kanjis
+        writeVisuallySimilar(visuallySimilar) // kanji followed by visually similar kanjis
     }
 
     private fun writeKanjiIndex(kanjiLevels: KanjiLevels) {
@@ -72,11 +72,11 @@ class KanjiIndexWriter(private val options: Options) {
         }
     }
 
-    private fun writeDontConfuse(dontConfuse: List<String>) {
-        val file = options.generateDontConfuseIndexFile
+    private fun writeVisuallySimilar(visuallySimilar: List<String>) {
+        val file = options.generateVisuallySimilarKanjisIndexFile
         if (!options.quiet) println("Writing ${file.name}...")
         FileWriter(file).use { writer ->
-            dontConfuse.forEach { similarKanjis ->
+            visuallySimilar.forEach { similarKanjis ->
                 similarKanjis.forEach { kanji ->
                     writer.apply {
                         write("$kanji:")

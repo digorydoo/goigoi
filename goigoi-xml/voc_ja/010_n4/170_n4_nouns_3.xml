@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N4 nouns ③"
       name_de="N4-Nomen ③"
       name_fr="Les noms N4 ③"
       name_it="Nomi N4 ③"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -442,7 +444,7 @@
               id="chūgaku-middleschool"
               rem="appears in GENKI2 p.162 vocab section as chūgakusei; jisho has n3"
             >
-                <see id="chūgakkō-middleschool" rem="closely related" />
+                <see id="chūgakkō-middleschool" type="closely related" />
                 <keep_apart_from id="chūgakkō-middleschool" />
                 <phrase
                   ph="【中：ちゅう】【学：がく】に【入：はい】る"
@@ -830,7 +832,7 @@
               rem="jisho has n3 for oyogi, but n4 for oyogikata, n5 for oyogu"
             >
                 <synonym w="【水：すい】【泳：えい】" />
-                <see id="oyogu-swim" rem="verb" />
+                <see id="oyogu-swim" type="verb" />
                 <keep_apart_from id="suiei-swimming" />
                 <phrase
                   ph="【泳：およ】ぎ【方：かた】"
@@ -1090,7 +1092,7 @@
               category="culture, entertainment"
               id="odori-dance"
             >
-                <see id="odoru-todance" rem="verb" />
+                <see id="odoru-todance" type="verb" />
                 <keep_apart_from id="dansu-dance" />
                 <phrase
                   ph="【難：むずか】しそうな【踊：おど】り"

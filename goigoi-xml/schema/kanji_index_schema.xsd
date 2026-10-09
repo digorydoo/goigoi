@@ -1,0 +1,76 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--
+        JLPT level associated with this kanji. The value "-" explicitly states the kanji is not associated with any
+        particular JLPT level.
+    -->
+    <xs:simpleType name="JLPTLevel">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="n5" />
+            <xs:enumeration value="n4" />
+            <xs:enumeration value="n3" />
+            <xs:enumeration value="n2" />
+            <xs:enumeration value="n1" />
+            <xs:enumeration value="-" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--
+        Used to set the JLPT level or schoolyear of a list of kanjis.
+    -->
+    <xs:complexType name="Set">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="lvl" type="JLPTLevel" />
+                <xs:attribute name="schoolyear" type="xs:int" />
+                <xs:attribute name="rem" type="xs:string" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <!--
+        Marks groups of kanjis as visually similar.
+    -->
+    <xs:complexType name="VisuallySimilar">
+        <xs:sequence>
+            <xs:element name="group" type="VisuallySimilarGroup" minOccurs="0" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <!--
+        One group of visually similar kanjis.
+    -->
+    <xs:simpleType name="VisuallySimilarGroup">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="2" />
+            <xs:maxLength value="5" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--
+        Marks the list of kanjis as occurring in the frequency in the order as they appear here in this list.
+    -->
+    <xs:complexType name="Frequency">
+        <xs:simpleContent>
+            <xs:extension base="xs:token">
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:element name="vocabulary">
+        <xs:complexType>
+            <xs:all>
+                <xs:element name="kanji">
+                    <xs:complexType>
+                        <xs:choice minOccurs="0" maxOccurs="unbounded">
+                            <xs:element name="set" type="Set" />
+                            <xs:element name="visually_similar" type="VisuallySimilar" />
+
+                            <!-- freq should only occur once, but we can't express this in xs apparently -->
+                            <xs:element name="freq" type="Frequency" />
+                        </xs:choice>
+                    </xs:complexType>
+                </xs:element>
+            </xs:all>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -4,10 +4,10 @@ import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeJoin
-import androidx.compose.ui.graphics.drawscope.Fill
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
@@ -16,10 +16,7 @@ import ch.digorydoo.kutils.math.clamp
 import ch.digorydoo.kutils.math.lerp
 import ch.digorydoo.kutils.vector.Vector2f
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import kotlin.math.max
 import kotlin.math.min
-
-private const val DIAMOND_REL_STROKEWIDTH = 0.125f
 
 @Composable
 fun DiamondIcon(
@@ -27,12 +24,10 @@ fun DiamondIcon(
     modifier: Modifier = Modifier,
     animValue: Float = 1f, // 0..1
     size: Dp = 32.dp,
-    drawBackground: Boolean = false,
+    trailStrokeWidth: Dp = size / 12,
+    trackColour: Color = GoigoiTheme.colours.ringTrack,
+    trailColour: Color = GoigoiTheme.colours.ringTrail,
 ) {
-    val trailColour = GoigoiTheme.colours.ringTrail
-    val trackColour = GoigoiTheme.colours.ringTrack
-    val bgColour = GoigoiTheme.colours.ringBackground
-
     Canvas(modifier = modifier.size(size)) {
         val sz = this.size
         val cx = sz.width / 2f
@@ -45,13 +40,12 @@ fun DiamondIcon(
         if (width <= 0f || height <= 0f) return@Canvas
 
         val r = 0.5f * min(width, height)
-        val minStrokeWidthPx = 3.dp.toPx()
-        val trailStrokeWidth = max(r * DIAMOND_REL_STROKEWIDTH, minStrokeWidthPx)
-        val r2 = r - trailStrokeWidth / 2.0f
+        val trailStrokeWidthPx = trailStrokeWidth.toPx()
+        val r2 = r - trailStrokeWidthPx / 2.0f
 
         if (r2 <= 0f) return@Canvas
 
-        val trackStrokeWidth = trailStrokeWidth * 0.8f
+        val trackStrokeWidthPx = trailStrokeWidthPx * 0.8f
         val shouldDrawTrail = progress > 0.00001f
 
         val corners = arrayOf(
@@ -62,12 +56,7 @@ fun DiamondIcon(
         )
 
         val closedPath = makeClosedPath(corners)
-
-        if (drawBackground) {
-            drawPath(path = closedPath, color = bgColour, style = Fill)
-        }
-
-        drawPath(path = closedPath, color = trackColour, style = Stroke(width = trackStrokeWidth))
+        drawPath(path = closedPath, color = trackColour, style = Stroke(width = trackStrokeWidthPx))
 
         if (shouldDrawTrail) {
             val openPath = makeOpenPath(corners, progress * animValue)
@@ -75,7 +64,7 @@ fun DiamondIcon(
             drawPath(
                 path = openPath,
                 color = trailColour,
-                style = Stroke(width = trailStrokeWidth, cap = StrokeCap.Round, join = StrokeJoin.Round),
+                style = Stroke(width = trailStrokeWidthPx, cap = StrokeCap.Round, join = StrokeJoin.Round),
             )
         }
     }

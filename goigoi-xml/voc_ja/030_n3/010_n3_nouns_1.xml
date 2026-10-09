@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <!-- subheader cannot be in a file of its own, because it's just a state of the parser -->
     <subheader
       name_en="JLPT N3"
@@ -12,7 +15,6 @@
       name_de="N3-Nomen ①"
       name_fr="Les noms N3 ①"
       name_it="Nomi N3 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -65,8 +67,8 @@
             >
                 <keep_apart_from id="onnanoko-girl" />
                 <keep_apart_from id="joshi-girl" />
-                <see id="onnanoko-girl" rem="closely related" />
-                <see id="joshi-girl" rem="closely related" />
+                <see id="onnanoko-girl" type="closely related" />
+                <see id="joshi-girl" type="closely related" />
                 <phrase
                   ph="【可愛：かわい】い【少：しょう】【女：じょ】"
                   rom="kawaii shōjo"
@@ -155,7 +157,7 @@
               category="happiness, top-words"
               id="warai-laughter"
             >
-                <see id="warau-laugh" rem="verb" />
+                <see id="warau-laugh" type="verb" />
                 <!-- 笑いを誘う To provoke laughter (ChatGPT) -->
                 <phrase
                   ph="【急：きゅう】に【笑：わら】い【出：だ】す"
@@ -194,7 +196,7 @@
               category="mood, top-words"
               id="kanji-feeling"
             >
-                <see id="kanjiru-feel" rem="verb" />
+                <see id="kanjiru-feel" type="verb" />
                 <keep_apart_from id="ki-mood" />
                 <keep_apart_from id="kibun-feeling" />
                 <keep_apart_from id="kanjō-emotion" />
@@ -286,7 +288,7 @@
               id="nioi-fragrance"
               rem="automatic see-also link to nioi-n4 (same reading)"
             >
-                <see id="niou-smell" rem="verb" />
+                <see id="niou-smell" type="verb" />
                 <keep_apart_from id="kaori-fragrance" />
                 <phrase
                   ph="いい【匂：にお】いがする"
@@ -440,7 +442,7 @@
               id="osusume-recommend"
               rem="appears in GENKI2 p.91; jisho has n1"
             >
-                <see id="susumeru-recommend" rem="verb" />
+                <see id="susumeru-recommend" type="verb" />
                 <keep_apart_from id="suisen-recommendation" />
                 <phrase
                   ph="おすすめ【料：りょう】【理：り】"
@@ -714,7 +716,7 @@
                     影 is the shape of the shadow
                     陰 is the shade, the blocking of the sun
                 -->
-                <see id="kage-background" rem="closely related" />
+                <see id="kage-background" type="closely related" />
                 <keep_apart_from id="kage-background" />
                 <keep_apart_from id="hikage-shade" />
                 <phrase
@@ -919,7 +921,7 @@
               category="news"
               id="shirase-news"
             >
-                <see id="shiraseru-letknow" rem="verb" />
+                <see id="shiraseru-letknow" type="verb" />
                 <keep_apart_from id="jōhō-info" />
                 <keep_apart_from id="hōkoku-report" />
                 <keep_apart_from id="repōto-report" />
@@ -954,7 +956,7 @@
               category="hobby, shopping"
               id="tsuri-fishing"
             >
-                <see id="tsuru-fish" rem="verb" />
+                <see id="tsuru-fish" type="verb" />
                 <phrase
                   ph="【釣：つ】り【船：ぶね】"
                   rom="tsuribune"
@@ -1021,7 +1023,7 @@
               lvl="n3"
               id="chigai-difference"
             >
-                <see id="chigau-differ" rem="verb" />
+                <see id="chigau-differ" type="verb" />
                 <!-- 文化の違い (bunka no chigai) - Cultural differences (ChatGPT) -->
                 <phrase
                   ph="【習：しゅう】【慣：かん】の【違：ちが】い"
@@ -1126,7 +1128,7 @@
               category="city"
               id="tōri-street"
             >
-                <see id="tōru-gopast" rem="verb" />
+                <see id="tōru-gopast" type="verb" />
                 <!--
                     ChatGPT says とおり is often written in kana when used figuratively;
                     lib0 has both, Oxford uses kanji
@@ -1185,7 +1187,7 @@
               category="employment, business"
               id="tsutome-task"
             >
-                <see id="tsutomeru-beemployed" rem="verb" />
+                <see id="tsutomeru-beemployed" type="verb" />
                 <phrase
                   ph="【教：きょう】【師：し】のお【勤：つと】め"
                   rom="kyōshi no o-tsutome"
@@ -1220,7 +1222,7 @@
               category="crime"
               id="shirabe-investigation"
             >
-                <see id="shiraberu-lookup" rem="verb" />
+                <see id="shiraberu-lookup" type="verb" />
                 <phrase
                   ph="【複：ふく】【雑：ざつ】な【調：しら】べ"
                   rom="fukuzatsu na shirabe"
@@ -1251,7 +1253,7 @@
               category="relationships"
               id="tsukiai-socialising"
             >
-                <see id="tsukiau-gooutwith" rem="verb" />
+                <see id="tsukiau-gooutwith" type="verb" />
                 <phrase
                   ph="【近：きん】【所：じょ】【付：づ】き【合：あ】い"
                   rom="kinjo-dzukiai"
@@ -1290,8 +1292,8 @@
               category="light, technical"
               id="akari-illum"
             >
-                <see id="akarui-bright" rem="adjective" />
-                <see id="akeru-dawn" rem="noun" />
+                <see id="akarui-bright" type="adjective" />
+                <see id="akeru-dawn" type="noun" />
                 <phrase
                   ph="【明：あ】かりをつける"
                   rom="akari o tsukeru"
@@ -1335,7 +1337,7 @@
               category="hands"
               id="tetsudai-helper"
             >
-                <see id="tetsudau-assist" rem="verb" />
+                <see id="tetsudau-assist" type="verb" />
                 <phrase
                   ph="お【手：て】【伝：つだ】いさん"
                   rom="o-tetsudai-san"
@@ -1387,7 +1389,7 @@
               lvl="n3"
               id="kimari-rules"
             >
-                <see id="kimaru-bedecided" rem="verb" />
+                <see id="kimaru-bedecided" type="verb" />
                 <keep_apart_from id="rūru-rule" />
                 <phrase
                   ph="【学：がっ】【校：こう】の【決：き】まりを【守：まも】る"
@@ -1426,7 +1428,7 @@
                 <!--
                     Related: tetsudzuki-procedure (n2): proceedings
                 -->
-                <see id="tsudzuku-continue" rem="verb" />
+                <see id="tsudzuku-continue" type="verb" />
                 <phrase
                   ph="【長：なが】【続：つづ】きしない"
                   rom="naga-tsudzuki shinai"
@@ -1464,7 +1466,7 @@
               category="happiness, mood"
               id="yorokobi-delight"
             >
-                <see id="yorokobu-bedelighted" rem="verb" />
+                <see id="yorokobu-bedelighted" type="verb" />
                 <phrase
                   ph="【大：おお】【喜：よろこ】び"
                   rom="ōyorokobi"
@@ -1493,7 +1495,7 @@
               category="family"
               id="umare-birth"
             >
-                <see id="umareru-tobeborn" rem="verb" />
+                <see id="umareru-tobeborn" type="verb" />
                 <keep_apart_from id="tanjō-birth" />
                 <phrase
                   ph="【生：う】まれながらの【画：が】【家：か】"
@@ -1533,7 +1535,7 @@
               category="people, talking"
               id="oshaberi-gossip"
             >
-                <see id="shaberu-chat" rem="verb" />
+                <see id="shaberu-chat" type="verb" />
                 <keep_apart_from id="uwasa-rumour" />
                 <keep_apart_from id="muda-waste" rem="ambiguity with mudabanashi" />
                 <phrase
@@ -1564,7 +1566,7 @@
               category="sports"
               id="kachi-win"
             >
-                <see id="katsu-win" rem="verb" />
+                <see id="katsu-win" type="verb" />
                 <keep_apart_from id="yūshō-victory" />
                 <phrase
                   ph="【逃：に】げるが【勝：か】ち"
@@ -1593,7 +1595,7 @@
               lvl="n3"
               id="kire-slice"
             >
-                <see id="kiru-cut" rem="verb" />
+                <see id="kiru-cut" type="verb" />
                 <!--
                     ひときれ、ふたきれ、みきれ、よきれ、ごきれ、ろっきれ、ななきれ、はちきれ、きゅうきれ、じっきれ
                     https://detail.chiebukuro.yahoo.co.jp/qa/question_detail/q1091354630
@@ -1655,7 +1657,7 @@
               category="mood"
               id="tsukare-tiredness"
             >
-                <see id="tsukareru-gettired" rem="verb" />
+                <see id="tsukareru-gettired" type="verb" />
                 <phrase
                   ph="【歩：ある】き【疲：つか】れ"
                   rom="aruki-tsukare"
@@ -1711,7 +1713,7 @@
               id="oshie-teaching"
               rem="jisho has n1"
             >
-                <see id="oshieru-teach" rem="verb" />
+                <see id="oshieru-teach" type="verb" />
                 <phrase
                   ph="【厳：きび】しい【教：おし】え【方：かた】"
                   rom="kibishii oshie-kata"
@@ -1752,7 +1754,7 @@
                     集まり is an intentional coming-together, typically small and informal;
                     the gathering of birds is usually 群れ・むれ (n2)
                 -->
-                <see id="atsumaru-gather" rem="verb" />
+                <see id="atsumaru-gather" type="verb" />
                 <keep_apart_from id="kaigi-meeting" />
                 <keep_apart_from id="kaigō-meeting" />
                 <keep_apart_from id="mītingu-meeting" />
@@ -1785,7 +1787,7 @@
               id="oboe-memory"
               rem="jisho has n1"
             >
-                <see id="oboeru-memorize" rem="verb" />
+                <see id="oboeru-memorize" type="verb" />
                 <keep_apart_from id="kioku-memory" />
                 <keep_apart_from id="omoide-memories" />
                 <phrase
@@ -1849,7 +1851,7 @@
               category="government"
               id="tsutsumi-parcel"
             >
-                <see id="tsutsumu-wrap" rem="verb" />
+                <see id="tsutsumu-wrap" type="verb" />
                 <keep_apart_from id="kodzutsumi-parcel" />
                 <keep_together id="kodzutsumi-parcel" />
                 <phrase

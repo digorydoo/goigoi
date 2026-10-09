@@ -138,7 +138,7 @@ class FlipThruFragment: Fragment() {
             }
         }
 
-        if ((params.studyPrimaryForm || params.studyFurigana) && !isBack && unyt.studyLang == "ja") {
+        if ((params.studyPrimaryForm || params.studyFurigana) && !isBack) {
             val activity = activity
 
             if (activity != null) {

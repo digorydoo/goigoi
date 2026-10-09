@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Hidden N3 nouns"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -537,7 +539,7 @@
               lvl="n3"
               id="mukai-opposite"
             >
-                <see id="mukau-face" rem="verb" />
+                <see id="mukau-face" type="verb" />
             </word>
             <word
               w="【増：ぞう】【加：か】"
@@ -1238,8 +1240,8 @@
               lvl="n3"
               id="tatoe-example"
             >
-                <see id="tatoeba-forexample" rem="closely related" />
-                <see id="tatoeru-compare" rem="verb" />
+                <see id="tatoeba-forexample" type="closely related" />
+                <see id="tatoeru-compare" type="verb" />
             </word>
             <word
               w="【支：し】【払：はら】い"
@@ -1250,7 +1252,7 @@
               category="business, trade"
               id="shiharai-payment"
             >
-                <see id="shiharau-topay" rem="verb" />
+                <see id="shiharau-topay" type="verb" />
             </word>
             <word
               w="【独：どく】【身：しん】"

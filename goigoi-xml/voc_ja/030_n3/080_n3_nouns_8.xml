@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 nouns ⑧"
       name_de="N3-Nomen ⑧"
       name_fr="Les noms N3 ⑧"
       name_it="Nomi N3 ⑧"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -1154,7 +1156,7 @@
               category="mood, thinking"
               id="nozomi-wish"
             >
-                <see id="nozomu-desire" rem="verb" />
+                <see id="nozomu-desire" type="verb" />
                 <keep_apart_from id="shinkō-belief" />
                 <keep_apart_from id="kibō-hope" />
                 <keep_apart_from id="onegai-wish" />
@@ -1505,7 +1507,7 @@
               category="mood"
               id="tokui-pride"
             >
-                <see id="nigate-notlike" rem="antonym" />
+                <see id="nigate-notlike" type="antonym" />
                 <keep_apart_from id="jiman-boast" />
                 <keep_apart_from id="jōtō-superior" />
                 <phrase
@@ -1584,7 +1586,7 @@
               id="kōhai-junior"
               rem="appears in GENKI2 L22 vocab section; jisho has n2"
             >
-                <see id="senpai-superior" rem="antonym" />
+                <see id="senpai-superior" type="antonym" />
                 <phrase
                   ph="【後：こう】【輩：はい】にアドバイスする"
                   rom="kōhai ni adobaisu suru"
@@ -1783,7 +1785,7 @@
               lvl="n3"
               id="hōseki-gem"
             >
-                <see id="takara-treasure" rem="closely related" />
+                <see id="takara-treasure" type="closely related" />
                 <!--
                     偽物の宝石・にせもののほうせき: fake jewels (n1) (ChatGPT)
                 -->
@@ -1877,7 +1879,7 @@
               category="culture, top-words"
               id="obi-belt"
             >
-                <see id="obiru-wear" rem="closely related" />
+                <see id="obiru-wear" type="closely related" />
                 <!--
                     地帯・ちたい (n2) geographical belt (region)
                 -->

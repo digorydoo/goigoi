@@ -20,9 +20,9 @@ class WordLinkChecker {
         }
 
         if (link.kind == GoigoiWordLink.Kind.XML_SEE_ALSO) {
-            // Check see-also link's remark.
+            // Check see-also link's type.
 
-            val allowedRem = arrayOf(
+            val allowedTypes = arrayOf(
                 "v.i.",
                 "v.t.",
                 "noun",
@@ -30,20 +30,19 @@ class WordLinkChecker {
                 "adjective",
                 "closely related",
                 "antonym",
-                "not auto-generated due to honorific prefix"
             )
 
-            if (link.remark.isEmpty()) {
+            if (link.type.isEmpty()) {
                 throw CheckFailed(
-                    "See-also link has no remark!\n  But we expected one of: ${allowedRem.joinToString(", ")}",
+                    "See-also link has no type!\n  But we expected one of: ${allowedTypes.joinToString(", ")}",
                 )
-            } else if (!allowedRem.contains(link.remark)) {
+            } else if (!allowedTypes.contains(link.type)) {
                 throw CheckFailed(
-                    "See-also link has remark: ${link.remark}\n  But we expected one of: ${allowedRem.joinToString(", ")}"
+                    "See-also link has type: ${link.type}\n  But we expected one of: ${allowedTypes.joinToString(", ")}"
                 )
             }
 
-            val checkHint = when (link.remark) {
+            val checkHint = when (link.type) {
                 "v.i." -> "v.t."
                 "v.t." -> "v.i."
                 else -> ""
@@ -51,25 +50,15 @@ class WordLinkChecker {
 
             if (checkHint.isNotEmpty() && !word.hint.en.contains(checkHint) && word.hint2?.en != checkHint) {
                 throw CheckFailed(
-                    "See-also link (rem=${link.remark}) requires that its own word be marked as $checkHint in hint_en"
+                    "See-also link (type=${link.type}) requires that its own word be marked as $checkHint in hint_en"
                 )
             }
         }
 
         when (link.kind) {
             GoigoiWordLink.Kind.XML_SEE_ALSO -> checkSeeAlso(link, word, vocab)
-            GoigoiWordLink.Kind.XML_KEEP_APART -> checkKeepApart(
-                link,
-                word,
-                unyt,
-                vocab
-            )
-            GoigoiWordLink.Kind.XML_KEEP_TOGETHER -> checkKeepTogether(
-                link,
-                word,
-                unyt,
-                vocab
-            )
+            GoigoiWordLink.Kind.XML_KEEP_APART -> checkKeepApart(link, word, unyt, vocab)
+            GoigoiWordLink.Kind.XML_KEEP_TOGETHER -> checkKeepTogether(link, word, unyt, vocab)
             else -> throw CheckFailed("Unexpected kind of link: ${link.kind}")
         }
     }
@@ -102,33 +91,33 @@ class WordLinkChecker {
 
                 // Check that pairs of see-also links are properly marked in rem.
 
-                val expectedBackRem = when (see.remark) {
+                val expectedBackRem = when (see.type) {
                     "v.t." -> arrayOf("v.i.")
                     "v.i." -> arrayOf("v.t.")
                     "noun" -> arrayOf("verb", "adjective")
                     "verb" -> arrayOf("noun", "adjective")
                     "adjective" -> arrayOf("noun", "verb")
-                    else -> arrayOf(see.remark) // i.e. remarks must be same
+                    else -> arrayOf(see.type) // i.e. remarks must be same
                 }
 
-                if (!expectedBackRem.contains(backLink.remark)) {
+                if (!expectedBackRem.contains(backLink.type)) {
                     if (expectedBackRem.size == 1) {
                         throw CheckFailed(
-                            "See-also linked with rem=${see.remark}\n" +
+                            "See-also linked with rem=${see.type}\n" +
                                 "   requires that the back-link have rem=${expectedBackRem[0]},\n" +
-                                "   but found: ${backLink.remark}"
+                                "   but found: ${backLink.type}"
                         )
                     } else {
                         throw CheckFailed(
-                            "See-also linked with rem=${see.remark}\n" +
+                            "See-also linked with rem=${see.type}\n" +
                                 "   requires that back-link's rem be one of: ${expectedBackRem.joinToString(", ")},\n" +
-                                "   but found: ${backLink.remark}"
+                                "   but found: ${backLink.type}"
                         )
                     }
                 }
 
                 // If this see-also link is marked as v.t., then fromWord must be toWord's counterpart.
-                val isCounterPart = arrayOf("v.t.", "v.i").contains(see.remark)
+                val isCounterPart = arrayOf("v.t.", "v.i").contains(see.type)
 
                 if (isCounterPart) {
                     counterparts.add(UnytAndWord(toUnyt, toWord))
@@ -136,10 +125,10 @@ class WordLinkChecker {
 
                 // Some see-also links require that the toWord be marked in its hint.
 
-                if (see.remark == "v.t." || see.remark == "v.i.") {
-                    if (!toWord.hint.en.contains(see.remark) && toWord.hint2?.en != see.remark) {
+                if (see.type == "v.t." || see.type == "v.i.") {
+                    if (!toWord.hint.en.contains(see.type) && toWord.hint2?.en != see.type) {
                         throw CheckFailed(
-                            "See-also link has rem=${see.remark}, but the linked word does not mention this in " +
+                            "See-also link has rem=${see.type}, but the linked word does not mention this in " +
                                 "its hint_en!"
                         )
                     }
@@ -148,18 +137,18 @@ class WordLinkChecker {
                 // Some see-also links require that both words use the same kanjis.
 
                 if (
-                    see.remark == "v.t." ||
-                    see.remark == "v.i." ||
-                    see.remark == "verb" ||
-                    see.remark == "noun" ||
-                    see.remark == "adjective"
+                    see.type == "v.t." ||
+                    see.type == "v.i." ||
+                    see.type == "verb" ||
+                    see.type == "noun" ||
+                    see.type == "adjective"
                 ) {
                     val kanji1 = fromWord.kanji.filter { c -> !c.isHiragana() && !c.isKatakana() }
                     val kanji2 = toWord.kanji.filter { c -> !c.isHiragana() && !c.isKatakana() }
 
                     if (kanji1 != kanji2) {
                         throw CheckFailed(
-                            "See-also link is marked as ${see.remark}, but the kanjis differ!\n" +
+                            "See-also link is marked as ${see.type}, but the kanjis differ!\n" +
                                 "   fromWord has kanji $kanji1\n   toWord has kanji $kanji2"
                         )
                     }
@@ -184,13 +173,13 @@ class WordLinkChecker {
                 if (otherId == "") {
                     otherId = other.word.id
                 } else if (otherId != other.word.id) {
-                    throw CheckFailed("The counterparts of see-also link ${see.remark} do not share a common id!")
+                    throw CheckFailed("The counterparts of see-also link ${see.type} do not share a common id!")
                 }
 
                 if (otherLevel == null) {
                     otherLevel = other.word.level ?: JLPTLevel.Nx
                 } else if (otherLevel != other.word.level) {
-                    throw CheckFailed("The counterparts of see-also link ${see.remark} do not have a common JLPT level!")
+                    throw CheckFailed("The counterparts of see-also link ${see.type} do not have a common JLPT level!")
                 }
             }
 
@@ -203,7 +192,7 @@ class WordLinkChecker {
                         .filter { it != "" }
                         .filterNotNull()
                         .joinToString("; ")
-                    checkWordsInSameUnyt(vocab, fromWord, fromCtx, otherId, otherLevel, see.remark)
+                    checkWordsInSameUnyt(vocab, fromWord, fromCtx, otherId, otherLevel, see.type)
                 }
             }
         }

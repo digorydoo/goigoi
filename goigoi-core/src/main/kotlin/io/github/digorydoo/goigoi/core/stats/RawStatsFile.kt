@@ -1,6 +1,5 @@
 package io.github.digorydoo.goigoi.core.stats
 
-import ch.digorydoo.kutils.logging.Log
 import ch.digorydoo.kutils.utils.Moment
 import io.github.digorydoo.goigoi.core.file.KeyValueFile
 import java.io.File
@@ -8,8 +7,15 @@ import java.io.OutputStream
 import kotlin.math.max
 import kotlin.math.min
 
-class RawStatsFile(dir: File, filename: String, version: Int) {
-    private val file: KeyValueFile
+class RawStatsFile(dir: File, filename: String) {
+    private val file = KeyValueFile(
+        pathToStringsFile = "${dir.absolutePath}/${filename}.dat",
+        pathToBackup = "${dir.absolutePath}/${filename}.bak",
+    )
+
+    init {
+        file.open()
+    }
 
     fun exportTo(dst: OutputStream) =
         file.exportTo(dst)
@@ -33,17 +39,6 @@ class RawStatsFile(dir: File, filename: String, version: Int) {
 
     fun setInt(key: String, value: Int) {
         file.set(key, "$value")
-    }
-
-    fun getBoolean(key: String): Boolean? =
-        getInt(key)?.let { it > 0 }
-
-    fun setBoolean(key: String, value: Boolean?) {
-        if (value == null) {
-            file.remove(key)
-        } else {
-            setInt(key, if (value) 1 else 0)
-        }
     }
 
     fun incInt(key: String, defaultVal: Int, maxVal: Int?) {
@@ -96,24 +91,5 @@ class RawStatsFile(dir: File, filename: String, version: Int) {
 
     fun remove(key: String) {
         file.remove(key)
-    }
-
-    init {
-        val path = "${dir.absolutePath}/${filename}.dat"
-        file = KeyValueFile(path)
-        file.open()
-
-        val v = getInt(VERSION_KEY) ?: 0
-
-        if (version != v) {
-            Log.debug(TAG, "Versions differ: $version vs. $v, clearing")
-            file.clear()
-            setInt(VERSION_KEY, version)
-        }
-    }
-
-    companion object {
-        private val TAG = Log.Tag("RawStatsFile")
-        private const val VERSION_KEY = "__RawStatsFile.version"
     }
 }

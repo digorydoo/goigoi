@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N5 adverbs and adjectives"
       name_de="N5-Adverbien und Adjektive"
       name_fr="Les adverbes et plus d'adjectifs N5"
       name_it="Avverbi e più aggettivi N5"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       lvl="n5"
@@ -123,7 +125,7 @@
               category="top-words"
               id="suki-likeable"
             >
-                <see id="konomu-prefer" rem="closely related" />
+                <see id="konomu-prefer" type="closely related" />
                 <phrase
                   ph="【大：だい】【好：す】き"
                   rom="daisuki"
@@ -508,7 +510,7 @@
               rem="appears in GENKI2 L21 vocab section"
             >
                 <!-- 少ない cannot stand in front of a noun; instead, 少しの is used. -->
-                <see id="sukunai-few" rem="closely related" />
+                <see id="sukunai-few" type="closely related" />
                 <phrase
                   ph="【牛：ぎゅう】【乳：にゅう】を【少：すこ】し【入：い】れる"
                   rom="gyūnyū o sukoshi ireru"
@@ -1015,7 +1017,8 @@
                   tr_de="Nach dem Winter kommt der Frühling."
                   lvl="n5"
                   origin="lib0"
-                  href="https://hinative.com/en-US/questions/22171078 (後 could also be read as のち)"
+                  href="https://hinative.com/en-US/questions/22171078"
+                  rem="link is about 後 could also be read as のち"
                 />
                 <sentence
                   s="【東：とう】【京：きょう】まであとどのくらいかかりますか。"

@@ -330,13 +330,13 @@ class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
                         .sortedBy { "${it.word?.id}" }
                         .forEach { see ->
                             val rem = when (see.kind) {
-                                Kind.XML_SEE_ALSO -> "<see> ${see.remark}"
+                                Kind.XML_SEE_ALSO -> "<see> ${see.type}"
                                 Kind.XML_KEEP_APART -> "<keep_apart_from>"
                                 Kind.XML_KEEP_TOGETHER -> "<keep_together>"
                                 Kind.AUTO_SAME_READING -> "auto, same reading"
                                 Kind.AUTO_SAME_KANJI -> "auto, same kanji"
-                                Kind.AUTO_SAME_EN_TRANSLATION -> "auto, same EN translation '${see.remark}'"
-                                Kind.AUTO_SAME_DE_TRANSLATION -> "auto, same DE translation '${see.remark}'"
+                                Kind.AUTO_SAME_EN_TRANSLATION -> "auto, same EN translation '${see.type}'"
+                                Kind.AUTO_SAME_DE_TRANSLATION -> "auto, same DE translation '${see.type}'"
                             }
 
                             val to = see.word

@@ -1,4 +1,4 @@
-package io.github.digorydoo.goigoi.activity.welcome.composables
+package io.github.digorydoo.goigoi.activity.welcome.composables.big_ring
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.EaseOutCubic
@@ -8,9 +8,10 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Modifier
 import io.github.digorydoo.goigoi.activity.welcome.WelcomeActivityModel
 
-private const val ANIM_BASE_DURATION_MILLIS = 500
+private const val ANIM_BASE_DURATION_MILLIS = 900
 private const val ANIM_PROGRESS_DURATION_MILLIS = 1200
 
 data class BigRingAnimProps(val shouldAnimate: Boolean, val duration: Int, val animDependencies: String)
@@ -30,8 +31,8 @@ fun getBigRingAnimProps(model: WelcomeActivityModel): BigRingAnimProps {
 }
 
 @Composable
-fun AnimatedBigRing(model: WelcomeActivityModel) {
-    val todaysProgress = model.todaysProgress.collectAsState().value // 0..1
+fun AnimatedBigRing(model: WelcomeActivityModel, modifier: Modifier = Modifier) {
+    val progress = model.todaysProgress.collectAsState().value // 0..1
 
     val animProps = getBigRingAnimProps(model)
     val shouldAnimate = animProps.shouldAnimate
@@ -53,5 +54,5 @@ fun AnimatedBigRing(model: WelcomeActivityModel) {
         }
     }
 
-    BigRing(todaysProgress, anim.value)
+    BigRing(modifier = modifier, todaysProgress = progress, animValue = anim.value)
 }

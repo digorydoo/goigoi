@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 verbs ③"
       name_de="N3-Verben ③"
       name_fr="Les verbes N3 ③"
       name_it="Verbi N3 ③"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -26,7 +28,7 @@
               category="quarrel, relationships"
               id="hanasu-separate"
             >
-                <see id="hanareru-drift" rem="v.i." />
+                <see id="hanareru-drift" type="v.i." />
                 <phrase
                   ph="【木：き】から【枝：えだ】を【切：き】り【離：はな】す"
                   rom="ki kara eda o kiri-hanasu"
@@ -58,7 +60,7 @@
               category="motion, mood"
               id="hanareru-drift"
             >
-                <see id="hanasu-separate" rem="v.t." />
+                <see id="hanasu-separate" type="v.t." />
                 <phrase
                   ph="【船：ふね】を【離：はな】れる"
                   rom="fune o hanareru"
@@ -231,7 +233,7 @@
               category="hands, relationships"
               id="okuru-give"
             >
-                <see id="okurimono-gift" rem="closely related" />
+                <see id="okurimono-gift" type="closely related" />
                 <keep_apart_from id="ageru-give" />
                 <keep_apart_from id="sashiageru-give" />
                 <keep_apart_from id="ataeru-grant" />
@@ -323,7 +325,7 @@
               category="life, relationships"
               id="kurasu-live"
             >
-                <see id="kurashi-livelihood" rem="noun" />
+                <see id="kurashi-livelihood" type="noun" />
                 <keep_apart_from id="sumu-live" />
                 <phrase
                   ph="【幸：しあわ】せに【暮：く】らす"
@@ -356,8 +358,8 @@
               id="ayamaru-err"
               rem="jisho has n1"
             >
-                <see id="ayamari-error" rem="noun" />
-                <see id="machigau-mistake" rem="closely related" />
+                <see id="ayamari-error" type="noun" />
+                <see id="machigau-mistake" type="closely related" />
                 <keep_apart_from id="machigau-mistake" />
                 <phrase
                   ph="【判：はん】【断：だん】を【誤：あやま】る"
@@ -535,7 +537,7 @@
               category="work, relationships"
               id="mōshikomu-applyfor"
             >
-                <see id="mōshikomi-application" rem="noun" />
+                <see id="mōshikomi-application" type="noun" />
                 <phrase
                   ph="【結：けっ】【婚：こん】を【申：もう】し【込：こ】む"
                   rom="kekkon o mōshi-komu"
@@ -571,7 +573,7 @@
               category="general"
               id="oeru-finish"
             >
-                <see id="owaru-finish" rem="v.i." />
+                <see id="owaru-finish" type="v.i." />
                 <keep_apart_from id="sumaseru-finish" />
                 <keep_apart_from id="tomaru-stop" />
                 <phrase
@@ -754,7 +756,7 @@
               id="sasu-sting"
               rem="appears in GENKI2 L21 vocab section; jisho has n2"
             >
-                <see id="sasaru-pricked" rem="v.i." />
+                <see id="sasaru-pricked" type="v.i." />
                 <phrase
                   ph="【蚊：か】に【刺：さ】された【跡：あと】"
                   rom="ka ni sasareta ato"
@@ -875,7 +877,7 @@
               category="business, trade"
               id="shiharau-topay"
             >
-                <see id="shiharai-payment" rem="noun" />
+                <see id="shiharai-payment" type="noun" />
                 <keep_apart_from id="harau-topay" />
                 <!--
                     支払う is always about settling a bill, fee, cost, and sounds more formal than just 払う
@@ -1004,7 +1006,7 @@
               id="odorokaseru-startle"
               rem="appears in Doraemon 12 p.89 as odorokasu"
             >
-                <see id="odoroku-besurprised" rem="v.i." />
+                <see id="odoroku-besurprised" type="v.i." />
                 <keep_apart_from id="odorokasu-surprise" />
                 <keep_together id="odorokasu-surprise" />
                 <phrase
@@ -1053,7 +1055,7 @@
               id="shizumaru-calmdown"
               rem="jisho has n2"
             >
-                <see id="shizuka-quiet" rem="adjective" />
+                <see id="shizuka-quiet" type="adjective" />
                 <phrase
                   ph="【静：しず】まり【返：かえ】る"
                   rom="shizumari-kaeru"
@@ -1094,7 +1096,7 @@
               id="nurasu-wet"
               rem="jisho has n2, but n4 for nureru"
             >
-                <see id="nureru-getwet" rem="v.i." />
+                <see id="nureru-getwet" type="v.i." />
                 <phrase
                   ph="【髪：かみ】を【濡：ぬ】らす"
                   rom="kami o nurasu"
@@ -1133,8 +1135,8 @@
               id="takameru-raise"
               rem="jisho has n2"
             >
-                <see id="takai-expensive" rem="adjective" />
-                <see id="takamaru-rise" rem="v.i." />
+                <see id="takai-expensive" type="adjective" />
+                <see id="takamaru-rise" type="v.i." />
                 <keep_apart_from id="sasu-raise" />
                 <keep_apart_from id="ageru-raise" />
                 <keep_apart_from id="kau-raise" />
@@ -1263,7 +1265,7 @@
               category="relationships, talking"
               id="maneku-invite"
             >
-                <see id="maneki-invitation" rem="noun" />
+                <see id="maneki-invitation" type="noun" />
                 <keep_apart_from id="shōtai-invitation" />
                 <keep_apart_from id="ogoru-givetreat" />
                 <!--
@@ -1397,8 +1399,8 @@
               category="mood, thinking"
               id="konomu-prefer"
             >
-                <see id="konomi-liking" rem="noun" />
-                <see id="suki-likeable" rem="closely related" />
+                <see id="konomi-liking" type="noun" />
+                <see id="suki-likeable" type="closely related" />
                 <phrase
                   ph="【黒：くろ】い【服：ふく】を【好：この】んで【着：き】る"
                   rom="kuroi fuku o kononde kiru"
@@ -1430,7 +1432,7 @@
               category="technical, maths"
               id="herasu-decrease"
             >
-                <see id="heru-decrease" rem="v.i." />
+                <see id="heru-decrease" type="v.i." />
                 <phrase
                   ph="【甘：あま】いものの【量：りょう】を【減：へ】らす"
                   rom="amai mono no ryō o herasu"
@@ -1640,7 +1642,7 @@
               id="katadzuku-putinorder"
               rem="jisho has n2, but n4 for katadzukeru"
             >
-                <see id="katadzukeru-putinorder" rem="v.t." />
+                <see id="katadzukeru-putinorder" type="v.t." />
                 <!--
                     verified with ChatGPT that 片付く may be more common than 片づく, even though both are correct
                 -->
@@ -1705,7 +1707,7 @@
               category="hands"
               id="taosu-throwdown"
             >
-                <see id="taoreru-crumble" rem="v.i." />
+                <see id="taoreru-crumble" type="v.i." />
                 <keep_apart_from id="sageru-lower" />
                 <keep_apart_from id="orosu-bringdown" />
                 <keep_apart_from id="korobu-falldown" />
@@ -1926,7 +1928,7 @@
               category="general, work"
               id="tashikameru-check"
             >
-                <see id="tashika-sure" rem="adjective" />
+                <see id="tashika-sure" type="adjective" />
                 <keep_apart_from id="kakunin-check" />
                 <keep_apart_from id="kensa-examination" />
                 <phrase
@@ -1958,7 +1960,7 @@
               lvl="n3"
               id="nigiru-grasp"
             >
-                <see id="onigiri-riceball" rem="noun" />
+                <see id="onigiri-riceball" type="noun" />
                 <keep_apart_from id="motsu-carry" />
                 <keep_apart_from id="tsukamu-grab" />
                 <keep_apart_from id="tsukamaru-tobecaught" />
@@ -1993,7 +1995,7 @@
               category="general"
               id="utsusu-swap"
             >
-                <see id="utsuru-movehouse" rem="v.i." />
+                <see id="utsuru-movehouse" type="v.i." />
                 <keep_apart_from id="kaeru-substitute" />
                 <keep_apart_from id="kaeru-exchange" />
                 <keep_apart_from id="kaeru-replace" />
@@ -2061,7 +2063,7 @@
               lvl="n3"
               id="nozomu-desire"
             >
-                <see id="nozomi-wish" rem="noun" />
+                <see id="nozomi-wish" type="noun" />
                 <keep_apart_from id="onegai-wish" />
                 <keep_apart_from id="inoru-wish" />
                 <keep_apart_from id="motomeru-wishfor" />

@@ -50,6 +50,7 @@ private fun HintBalloon(
     balloonContent: @Composable BoxScope.() -> Unit,
     open: Boolean,
     onDismiss: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     val bgColour = GoigoiTheme.colours.primary
     val shadowColour = GoigoiTheme.colours.popupShadow
@@ -63,7 +64,7 @@ private fun HintBalloon(
     val parentView = LocalView.current
 
     Box(
-        modifier = Modifier
+        modifier = modifier
             .onGloballyPositioned { coords ->
                 val r = coords.boundsInWindow()
 
@@ -141,6 +142,7 @@ fun HintBalloon(
     lines: Array<CharSequence>,
     open: Boolean,
     onDismiss: () -> Unit,
+    modifier: Modifier = Modifier,
 ) {
     val textColour = GoigoiTheme.colours.onPrimary
     val textStyle: TextStyle = GoigoiTheme.typography.listItemPrimaryText
@@ -149,6 +151,7 @@ fun HintBalloon(
     val textSizeSp = textStyle.fontSize.value
 
     HintBalloon(
+        modifier = modifier,
         open = open,
         wrappedContent = wrappedContent,
         balloonContent = {

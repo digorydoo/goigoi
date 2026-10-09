@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 nouns ⑥"
       name_de="N3-Nomen ⑥"
       name_fr="Les noms N3 ⑥"
       name_it="Nomi N3 ⑥"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -193,7 +195,7 @@
               category="entertainment, occupations"
               id="joyū-actress"
             >
-                <see id="haiyū-actor" rem="closely related" />
+                <see id="haiyū-actor" type="closely related" />
                 <keep_apart_from id="haiyū-actor" />
                 <phrase
                   ph="きれいな【女：じょ】【優：ゆう】"
@@ -623,7 +625,7 @@
               id="takara-treasure"
             >
                 <keep_together id="takarajima-treasureisland" />
-                <see id="hōseki-gem" rem="closely related" />
+                <see id="hōseki-gem" type="closely related" />
                 <phrase
                   ph="【宝：たから】【島：じま】"
                   rom="takarajima"
@@ -873,7 +875,7 @@
               id="sansei-approval"
               rem="appears in GENKI2 L22 vocab section"
             >
-                <see id="hantai-resistance" rem="antonym" />
+                <see id="hantai-resistance" type="antonym" />
                 <keep_apart_from id="ōjiru-accept" />
                 <phrase
                   ph="【計：けい】【画：かく】に【賛：さん】【成：せい】する"
@@ -1523,7 +1525,7 @@
               category="relationships, not-good"
               id="mendō-bother"
             >
-                <see id="mendokusai-bothersome" rem="closely related" />
+                <see id="mendokusai-bothersome" type="closely related" />
                 <!--
                     面倒・めんどう・annoying task, inconvenience
                     迷惑・めいわく・nuisance for others, troublesome behaviour
@@ -1585,7 +1587,7 @@
               id="kiri-cut"
               rem="jisho has n1"
             >
-                <see id="kiru-cut" rem="closely related" />
+                <see id="kiru-cut" type="closely related" />
                 <keep_apart_from id="kiri-limits" />
                 <keep_apart_from id="shimekiri-deadline" />
                 <keep_apart_from id="omoikiri-withallstrength" />
@@ -1672,7 +1674,7 @@
               id="tayori-reliance"
               rem="jisho has nx, but n3 for tayoru; appears in Doraemon 0, p.25 as tayori nai"
             >
-                <see id="tayoru-relyon" rem="verb" />
+                <see id="tayoru-relyon" type="verb" />
                 <phrase
                   ph="【頼：たよ】りない"
                   rom="tayori nai"
@@ -1924,7 +1926,7 @@
               lvl="n3"
               id="saishū-final"
             >
-                <see id="saigo-end" rem="closely related" />
+                <see id="saigo-end" type="closely related" />
                 <keep_apart_from id="owari-end" />
                 <keep_apart_from id="saigo-end" />
                 <phrase

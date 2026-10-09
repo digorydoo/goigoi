@@ -8,23 +8,29 @@ import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
+import androidx.compose.material3.IconButton
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.Dp
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
+import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivityModel
 import io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivityModel.PresentationMode
+import io.github.digorydoo.goigoi.composables.HintBalloon
 import io.github.digorydoo.goigoi.composables.icons.CheckmarkIcon
 import io.github.digorydoo.goigoi.composables.icons.DayIcon
 import io.github.digorydoo.goigoi.core.welcome.DailyProgressTracker.Companion.CHECKMARK_THRESHOLD
+import kotlin.math.roundToInt
 
 private const val ANIM_DURATION_MILLIS = 300
 
 @Composable
-fun StudyProgressIcon(model: ProgStudyActivityModel, modifier: Modifier = Modifier, size: Dp = 32.dp) {
+fun StudyProgressIcon(model: ProgStudyActivityModel, modifier: Modifier = Modifier) {
     val firstRender = remember { mutableStateOf(true) }
+    val showBalloon = remember { mutableStateOf(false) }
 
     val progress = model.todaysProgress.collectAsState().value
+    val numCorrect = model.numCorrect.collectAsState().value
+    val numWrong = model.numWrong.collectAsState().value
     val pmode = model.presentationMode.collectAsState().value
     val qaKind = model.qaKind.collectAsState().value
 
@@ -56,18 +62,34 @@ fun StudyProgressIcon(model: ProgStudyActivityModel, modifier: Modifier = Modifi
         }
     }
 
-    AnimatedVisibility(
+    val visible = !firstRender.value && !hasScoresFlag
+
+    HintBalloon(
         modifier = modifier,
-        visible = !firstRender.value && !hasScoresFlag,
-        enter = fadeIn(fadeInSpec),
-        exit = fadeOut(fadeOutSpec),
-    ) {
-        if (progress >= CHECKMARK_THRESHOLD) {
-            CheckmarkIcon(animValue = animValue.value, size = size)
-        } else {
-            DayIcon(progress = progress, animValue = animValue.value, size = size)
-        }
-    }
+        wrappedContent = {
+            AnimatedVisibility(
+                visible = visible,
+                enter = fadeIn(fadeInSpec),
+                exit = fadeOut(fadeOutSpec),
+            ) {
+                IconButton(onClick = { showBalloon.value = true }, enabled = visible) {
+                    if (progress >= CHECKMARK_THRESHOLD) {
+                        CheckmarkIcon(animValue = animValue.value)
+                    } else {
+                        DayIcon(progress = progress)
+                    }
+                }
+            }
+        },
+        lines = arrayOf(
+            stringResource(R.string.todays_progress_percent)
+                .replace("\${N}", minOf(100, (progress * 100f).roundToInt()).toString()),
+            stringResource(R.string.correct_count).replace("\${N}", numCorrect.toString()),
+            stringResource(R.string.wrong_count).replace("\${N}", numWrong.toString()),
+        ),
+        open = showBalloon.value,
+        onDismiss = { showBalloon.value = false },
+    )
 
     LaunchedEffect(Unit) {
         firstRender.value = false

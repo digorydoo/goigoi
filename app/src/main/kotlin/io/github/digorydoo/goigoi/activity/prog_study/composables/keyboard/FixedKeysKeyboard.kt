@@ -11,10 +11,14 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import ch.digorydoo.kutils.cjk.isKana
 import ch.digorydoo.kutils.cjk.isSmallKana
+import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivityModel
 import io.github.digorydoo.goigoi.composables.providers.DeviceProps
 import io.github.digorydoo.goigoi.utils.ScreenSize
@@ -45,6 +49,7 @@ private fun getStyles(): FixedKeysStyles {
 fun FixedKeysKeyboard(model: ProgStudyActivityModel, modifier: Modifier = Modifier) {
     val styles = getStyles()
     val fixedKeys = model.fixedKeys.collectAsState().value
+    val backspaceKeyDescr = stringResource(R.string.backspace_key)
 
     val size = remember(fixedKeys) {
         when {
@@ -84,7 +89,11 @@ fun FixedKeysKeyboard(model: ProgStudyActivityModel, modifier: Modifier = Modifi
                 .padding(top = styles.horizActionRowMarginTop),
             horizontalArrangement = Arrangement.spacedBy(styles.keySpacing),
         ) {
-            BackspaceButton(model)
+            KeyButton(
+                modifier = Modifier.semantics { contentDescription = backspaceKeyDescr },
+                iconResId = R.drawable.ic_backspace_24dp,
+                onClick = model::onBackspaceBtnClicked,
+            )
             EnterButton(model)
         }
     }

@@ -4,7 +4,7 @@ import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
 
-class DontConfuseFileReader(private val stream: InputStream) {
+class VisuallySimilarKanjisFileReader(private val stream: InputStream) {
     /**
      * Reads the "don't confuse" kanji list, and calls the given lambda for each line
      */

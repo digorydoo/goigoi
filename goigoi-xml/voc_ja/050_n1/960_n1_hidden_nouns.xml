@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="Hidden N1 nouns"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -171,7 +173,7 @@
               id="teitai-stagnation"
             >
                 <!-- 日本経済は停滞している - Nihon keizai wa teitai shite iru - The Japanese economy is stagnating (ChatGPT) -->
-                <see id="seichō-growing" rem="antonym" />
+                <see id="seichō-growing" type="antonym" />
             </word>
             <word
               w="【地：じ】【元：もと】"

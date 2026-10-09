@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N5 adjectives ①"
       name_de="N5-Adjektive ①"
       name_fr="Les adjectifs N5 ①"
       name_it="Aggettivi N5 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="adjective"
@@ -26,7 +28,7 @@
               id="akai-red"
             >
                 <!-- the noun is 赤, n5, see below; or 赤み, nx, not marked as common -->
-                <see id="akaramu-getred" rem="verb" />
+                <see id="akaramu-getred" type="verb" />
                 <phrase
                   ph="【赤：あか】い【封：ふう】【筒：とう】"
                   rom="akai fūtō"
@@ -378,7 +380,7 @@
               id="akarui-bright"
             >
                 <!-- there is also a noun 明るさ, nx, not marked as common -->
-                <see id="akari-illum" rem="noun" />
+                <see id="akari-illum" type="noun" />
                 <phrase
                   ph="【明：あか】るい【黄：き】【色：いろ】"
                   rom="akarui kiiro"
@@ -445,7 +447,7 @@
               lvl="n5"
               id="usui-thin"
             >
-                <see id="atsui-thick" rem="antonym" />
+                <see id="atsui-thick" type="antonym" />
                 <phrase
                   ph="【薄：うす】い【本：ほん】"
                   rom="usui hon"
@@ -475,7 +477,7 @@
               lvl="n5"
               id="hosoi-thin"
             >
-                <see id="futoi-fat" rem="antonym" />
+                <see id="futoi-fat" type="antonym" />
                 <phrase
                   ph="【細：ほそ】いペン"
                   rom="hosoi pen"
@@ -509,7 +511,7 @@
               id="futoi-fat"
             >
                 <!-- futoi means thick with a large diameter; atsui is used instead for a thick curtain, book, etc. -->
-                <see id="hosoi-thin" rem="antonym" />
+                <see id="hosoi-thin" type="antonym" />
                 <phrase
                   ph="【太：ふと】い【足：あし】"
                   rom="futoi ashi"
@@ -580,7 +582,7 @@
               lvl="n5"
               id="omoi-heavy"
             >
-                <see id="omosa-weight" rem="noun" />
+                <see id="omosa-weight" type="noun" />
                 <phrase
                   ph="【重：おも】い【箱：はこ】"
                   rom="omoi hako"
@@ -598,7 +600,8 @@
                   explanation_de="「じゃ」ist umgangssprachlich für「では」"
                   lvl="n5"
                   origin="500mon q463"
-                  href="https://hinative.com/en-US/questions/21927429 (じゃ)"
+                  href="https://hinative.com/en-US/questions/21927429"
+                  rem="link is about じゃ"
                 />
             </word>
 
@@ -875,7 +878,7 @@
               category="happiness"
               id="tanoshii-fun"
             >
-                <see id="tanoshimi-enjoyment" rem="noun" />
+                <see id="tanoshimi-enjoyment" type="noun" />
                 <phrase
                   ph="【楽：たの】しい【夢：ゆめ】"
                   rom="tanoshii yume"
@@ -972,7 +975,7 @@
               id="kirai-hateful"
             >
                 <!-- the noun is 嫌・いや or 嫌み・いやみ, see iya-disagreeable -->
-                <see id="iya-disagreeable" rem="closely related" />
+                <see id="iya-disagreeable" type="closely related" />
                 <phrase
                   ph="【果：くだ】【物：もの】を【嫌：きら】いな【人：ひと】"
                   rom="kudamono o kirai na hito"
@@ -1147,7 +1150,7 @@
               category="top-words"
               id="ōkii-big"
             >
-                <see id="ōkisa-size" rem="noun" />
+                <see id="ōkisa-size" type="noun" />
                 <phrase
                   ph="【大：おお】きな【声：こえ】で"
                   rom="ōki na koe de"
@@ -1194,7 +1197,8 @@
                   tr_en="a small room"
                   tr_de="ein kleiner Raum"
                   lvl="n5"
-                  href="https://hinative.com/questions/22152543 (小さな vs. 小さい)"
+                  href="https://hinative.com/questions/22152543"
+                  rem="link is about 小さな vs. 小さい"
                 >
                     <ask w="【小：ちい】さな" />
                 </phrase>
@@ -1275,7 +1279,7 @@
               category="culture, top-words"
               id="kawaii-cute"
             >
-                <see id="kawaigaru-cherish" rem="verb" />
+                <see id="kawaigaru-cherish" type="verb" />
                 <phrase
                   ph="かわいい【女：おんな】の【子：こ】"
                   rom="kawaii onna no ko"

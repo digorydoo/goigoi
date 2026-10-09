@@ -18,20 +18,17 @@ import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
 import kotlin.math.max
 import kotlin.math.min
 
-private const val RING_REL_STROKEWIDTH = 0.125f
-
 @Composable
 fun RingIcon(
     progress: Float, // 0..1
     modifier: Modifier = Modifier,
     animValue: Float = 1f, // 0..1
     size: Dp = 32.dp,
-    drawBackground: Boolean = false,
-    bgColour: Color = GoigoiTheme.colours.ringBackground,
+    bgColour: Color? = null,
+    trailStrokeWidth: Dp = 4.dp,
+    trackColour: Color = GoigoiTheme.colours.ringTrack,
     trailColour: Color = GoigoiTheme.colours.ringTrail,
 ) {
-    val trackColour = GoigoiTheme.colours.ringTrack
-
     Canvas(modifier = modifier.size(size)) {
         val sz = this.size
         val cx = sz.width / 2f
@@ -46,15 +43,14 @@ fun RingIcon(
         if (width <= 0f || height <= 0f) return@Canvas
 
         val r = 0.5f * min(width, height)
-        val minStrokeWidthPx = 3.dp.toPx()
-        val trailStrokeWidth = max(r * RING_REL_STROKEWIDTH, minStrokeWidthPx)
-        val r2 = r - trailStrokeWidth / 2.0f
+        val trailStrokeWidthPx = trailStrokeWidth.toPx()
+        val r2 = r - trailStrokeWidthPx / 2.0f
 
         if (r2 <= 0f) return@Canvas
 
-        val trackStrokeWidth = trailStrokeWidth * 0.8f
+        val trackStrokeWidthPx = trailStrokeWidthPx * 0.8f
 
-        if (drawBackground) {
+        if (bgColour != null) {
             drawCircle(
                 color = bgColour,
                 radius = r,
@@ -68,7 +64,7 @@ fun RingIcon(
                 color = trackColour,
                 radius = r,
                 center = Offset(cx, cy),
-                style = Stroke(width = trackStrokeWidth),
+                style = Stroke(width = trackStrokeWidthPx),
             )
         }
 
@@ -80,7 +76,7 @@ fun RingIcon(
                 useCenter = false,
                 topLeft = Offset(cx - r, cy - r),
                 size = Size(2 * r, 2 * r),
-                style = Stroke(width = trailStrokeWidth, cap = StrokeCap.Round, join = StrokeJoin.Round),
+                style = Stroke(width = trailStrokeWidthPx, cap = StrokeCap.Round, join = StrokeJoin.Round),
             )
         }
     }

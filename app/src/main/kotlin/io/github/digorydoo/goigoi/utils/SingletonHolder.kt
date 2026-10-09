@@ -33,18 +33,13 @@ object SingletonHolder {
             else -> Flavour.FRENCH
         }
 
-        val assets = AndroidAssetsAccessor(getContext)
+        Log.debug(TAG, "Creating singletons")
 
-        Log.info(TAG, "About to initialize stats")
+        val assets = AndroidAssetsAccessor(getContext)
         val stats = Stats(assets).also { _stats = it }
 
-        Log.info(TAG, "About to load kanji index")
         _kanjiIndex = KanjiIndex(flavour, assets).apply { loadFiles() }
-
-        Log.info(TAG, "About to load vocabulary")
         _vocab = Vocabulary(flavour, assets, stats).apply { loadVocab() }
-
-        Log.info(TAG, "About to load prefs")
         _prefs = UserPrefs(ctx)
 
         singletonsExist = true

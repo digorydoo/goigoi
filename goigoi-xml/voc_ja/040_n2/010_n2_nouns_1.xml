@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <!-- subheader cannot be in a file of its own, because it's just a state of the parser -->
     <subheader
       name_en="JLPT N2"
@@ -12,7 +15,6 @@
       name_de="N2-Nomen ①"
       name_fr="Les noms N2 ①"
       name_it="Nomi N2 ①"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -107,7 +109,7 @@
               id="tsunagari-link"
               usuallyInKana="true"
             >
-                <see id="tsunagaru-linked" rem="verb" />
+                <see id="tsunagaru-linked" type="verb" />
                 <keep_apart_from id="tsunagaru-linked" />
                 <keep_apart_from id="setsuzoku-link" />
                 <phrase
@@ -352,8 +354,8 @@
               category="diy, hobby"
               id="amimono-knitting"
             >
-                <see id="amu-toknit" rem="closely related" />
-                <see id="ami-net" rem="closely related" />
+                <see id="amu-toknit" type="closely related" />
+                <see id="ami-net" type="closely related" />
                 <keep_apart_from id="orimono-textile" />
                 <sentence
                   s="【古：ふる】【川：かわ】さんは【編：あ】み【物：もの】にたいへん【熱：ねっ】【心：しん】です。"
@@ -389,7 +391,7 @@
               lvl="n2"
               id="kazari-decoration"
             >
-                <see id="kazaru-decorate" rem="verb" />
+                <see id="kazaru-decorate" type="verb" />
                 <phrase
                   ph="【祝：しゅく】【日：じつ】の【飾：かざ】り【付：つ】け"
                   rom="shukujitsu no kazari tsuke"
@@ -693,7 +695,7 @@
               lvl="n2"
               id="hanashiai-discussion"
             >
-                <see id="hanashiau-discuss" rem="verb" />
+                <see id="hanashiau-discuss" type="verb" />
             </word>
             <word
               w="【美：び】【容：よう】"
@@ -770,7 +772,7 @@
               lvl="n2"
               id="hirosa-extent"
             >
-                <see id="hiroi-spacious" rem="adjective" />
+                <see id="hiroi-spacious" type="adjective" />
             </word>
             <word
               w="【新：しん】【幹：かん】【線：せん】"
@@ -927,7 +929,7 @@
               category="home"
               id="fusuma-slidingdoor"
             >
-                <see id="shōji-door" rem="closely related" />
+                <see id="shōji-door" type="closely related" />
                 <keep_apart_from id="shōji-door" />
                 <keep_apart_from id="to-door" />
                 <keep_apart_from id="doa-door" />

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 verbs ④"
       name_de="N3-Verben ④"
       name_fr="Les verbes N3 ④"
       name_it="Verbi N3 ④"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -460,7 +462,7 @@
               category="talking, not-good"
               id="uttaeru-complain"
             >
-                <see id="uttae-complaint" rem="noun" />
+                <see id="uttae-complaint" type="noun" />
                 <keep_apart_from id="semeru-blame" />
                 <keep_apart_from id="monku-complaint" />
                 <phrase
@@ -761,7 +763,7 @@
               id="azukaru-keepincustody"
               rem="appears in GENKI2 p.91; jisho has n2"
             >
-                <see id="azukeru-putincare" rem="closely related" />
+                <see id="azukeru-putincare" type="closely related" />
                 <keep_apart_from id="kakari-incharge" />
                 <phrase
                   ph="【鍵：かぎ】を【預：あず】かる"
@@ -1205,7 +1207,7 @@
               category="general"
               id="sumaseru-finish"
             >
-                <see id="sumu-end" rem="v.i." />
+                <see id="sumu-end" type="v.i." />
                 <keep_apart_from id="oeru-finish" />
                 <keep_apart_from id="tomaru-stop" />
                 <phrase
@@ -1286,7 +1288,7 @@
               category="general, relationships"
               id="sukuu-rescue"
             >
-                <see id="sukui-aid" rem="noun" />
+                <see id="sukui-aid" type="noun" />
                 <keep_apart_from id="tasukeru-help" />
                 <keep_apart_from id="kyūjo-aid" />
                 <!--
@@ -1637,7 +1639,7 @@
               lvl="n3"
               id="susumeru-recommend"
             >
-                <see id="osusume-recommend" rem="noun" />
+                <see id="osusume-recommend" type="noun" />
                 <keep_apart_from id="keikoku-advice" />
                 <phrase
                   ph="【息：むす】【子：こ】に【野：や】【球：きゅう】を【勧：すす】める"
@@ -1672,7 +1674,7 @@
               id="kemuru-smoulder"
               rem="jisho has n1, but n3 for kemuri"
             >
-                <see id="kemuri-smoke" rem="noun" />
+                <see id="kemuri-smoke" type="noun" />
                 <keep_apart_from id="kemuri-smoke" rem="too similar" />
                 <keep_apart_from id="kemui-smoky" rem="too similar" />
                 <!--
@@ -1782,8 +1784,8 @@
               category="hands, motion"
               id="tsumeru-pack"
             >
-                <see id="bindzume-bottling" rem="closely related" />
-                <see id="kandzume-cannedfood" rem="closely related" />
+                <see id="bindzume-bottling" type="closely related" />
+                <see id="kandzume-cannedfood" type="closely related" />
                 <!-- the noun is 詰め物 (nx): filling; filler -->
                 <!-- 切り詰める・きりつめる (nx): to cut short; to trim; to economize -->
                 <!-- 追い詰める・おいつめる (nx): to corner; to drive to the wall; to chase after -->
@@ -1938,8 +1940,8 @@
               id="kurushimu-suffer"
             >
                 <!-- the noun is kurushimi, which is nx -->
-                <see id="kurushii-tough" rem="adjective" />
-                <see id="kurushimeru-torment" rem="v.t." />
+                <see id="kurushii-tough" type="adjective" />
+                <see id="kurushimeru-torment" type="v.t." />
                 <keep_apart_from id="itamu-hurt" />
                 <keep_apart_from id="kizutsuku-gethurt" />
                 <keep_apart_from id="kakaru-suffer" />

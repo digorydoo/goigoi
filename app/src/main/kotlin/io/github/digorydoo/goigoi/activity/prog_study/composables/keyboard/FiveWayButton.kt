@@ -57,7 +57,7 @@ fun FiveWayButton(def: KeyDef, modifier: Modifier = Modifier, onAction: (text: S
                 val delta = change.position - down.position
 
                 part = when {
-                    delta.getDistance() < viewConfiguration.touchSlop -> {
+                    delta.getDistance() <= viewConfiguration.touchSlop -> {
                         KeyLensPart.CENTRE
                     }
                     abs(delta.x) > abs(delta.y) -> {

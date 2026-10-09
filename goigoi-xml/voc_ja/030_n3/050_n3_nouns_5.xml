@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N3 nouns ⑤"
       name_de="N3-Nomen ⑤"
       name_fr="Les noms N3 ⑤"
       name_it="Nomi N3 ⑤"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="noun"
@@ -26,7 +28,7 @@
               category="health"
               id="kizu-scar"
             >
-                <see id="kizutsuku-gethurt" rem="verb" />
+                <see id="kizutsuku-gethurt" type="verb" />
                 <keep_apart_from id="kega-injury" />
                 <keep_apart_from id="kiri-cut" />
                 <phrase
@@ -1339,8 +1341,8 @@
               lvl="n3"
               id="kudari-downbound"
             >
-                <see id="kudaru-godown" rem="verb" />
-                <see id="nobori-upbound" rem="antonym" />
+                <see id="kudaru-godown" type="verb" />
+                <see id="nobori-upbound" type="antonym" />
                 <keep_together id="nobori-upbound" />
                 <phrase
                   ph="【下：くだ】り【電：でん】【車：しゃ】"
@@ -1378,8 +1380,8 @@
               id="nobori-upbound"
               rem="jisho has n2 for nobori, n3 for kudari"
             >
-                <see id="noboru-ascend" rem="verb" />
-                <see id="kudari-downbound" rem="antonym" />
+                <see id="noboru-ascend" type="verb" />
+                <see id="kudari-downbound" type="antonym" />
                 <keep_together id="kudari-downbound" />
                 <phrase
                   ph="【上：のぼ】り【電：でん】【車：しゃ】"

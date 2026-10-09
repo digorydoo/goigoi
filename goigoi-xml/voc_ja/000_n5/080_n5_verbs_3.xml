@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="N5 verbs ③"
       name_de="N5-Verben ③"
       name_fr="Les verbes N5 ③"
       name_it="Verbi N5 ③"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       defaultHint_en="verb"
@@ -28,7 +30,7 @@
               id="wataru-cross"
               rem="kanji is asked by 500mon N3 q55"
             >
-                <see id="watasu-transfer" rem="closely related" />
+                <see id="watasu-transfer" type="closely related" />
                 <keep_apart_from id="yokogiru-cross" />
                 <keep_apart_from id="ōdan-crossing" />
                 <phrase
@@ -165,7 +167,7 @@
               lvl="n5"
               id="kakaru-taketime"
             >
-                <see id="kakeru-hangup" rem="v.t." />
+                <see id="kakeru-hangup" type="v.t." />
                 <phrase
                   ph="【２：に】【時：じ】【間：かん】かかる"
                   rom="ni-jikan kakaru"
@@ -205,7 +207,7 @@
               lvl="n5"
               id="kakeru-hangup"
             >
-                <see id="kakaru-taketime" rem="v.i." />
+                <see id="kakaru-taketime" type="v.i." />
                 <phrase
                   ph="コートをかける"
                   rom="kōto o kakeru"
@@ -241,9 +243,9 @@
               lvl="n5"
               id="kiru-cut"
             >
-                <see id="kireru-snap" rem="v.i." />
-                <see id="kire-slice" rem="noun" />
-                <see id="kiri-cut" rem="closely related" />
+                <see id="kireru-snap" type="v.i." />
+                <see id="kire-slice" type="noun" />
+                <see id="kiri-cut" type="closely related" />
                 <phrase
                   ph="【薄：うす】く【切：き】る"
                   rom="usuku kiru"
@@ -300,7 +302,7 @@
               lvl="n5"
               id="kaesu-returnsth"
             >
-                <see id="okaeshi-returning" rem="noun" />
+                <see id="okaeshi-returning" type="noun" />
                 <keep_apart_from id="modosu-putback" />
                 <phrase
                   ph="【本：ほん】を【返：かえ】す"
@@ -402,7 +404,7 @@
               category="hands"
               id="hiku-pull"
             >
-                <see id="osu-push" rem="antonym" />
+                <see id="osu-push" type="antonym" />
                 <keep_apart_from id="kakaru-suffer" rem="ambiguity in phrases" />
                 <phrase
                   ph="【風邪：かぜ】を【引：ひ】く"
@@ -428,7 +430,7 @@
               lvl="n5"
               id="tsukuru-make"
             >
-                <see id="tsukuri-making" rem="noun" />
+                <see id="tsukuri-making" type="noun" />
                 <keep_apart_from id="seisan-production" />
                 <keep_apart_from id="kōgyō-manufacturing" />
                 <keep_apart_from id="sekkei-design" />
@@ -460,7 +462,7 @@
               lvl="n5"
               id="tanomu-request"
             >
-                <see id="tanomi-request" rem="noun" />
+                <see id="tanomi-request" type="noun" />
                 <keep_apart_from id="meijiru-command" />
                 <keep_apart_from id="nozomu-desire" />
                 <keep_apart_from id="chūmon-order" />
@@ -697,10 +699,10 @@
               lvl="n5"
               id="owaru-finish"
             >
-                <see id="oeru-finish" rem="v.t." />
-                <see id="owari-end" rem="noun" />
-                <see id="hajimaru-begin" rem="antonym" />
-                <see id="yamu-cease" rem="closely related" />
+                <see id="oeru-finish" type="v.t." />
+                <see id="owari-end" type="noun" />
+                <see id="hajimaru-begin" type="antonym" />
+                <see id="yamu-cease" type="closely related" />
                 <keep_apart_from id="kureru-dark" />
                 <phrase
                   ph="もう【終：お】わっている"
@@ -743,7 +745,7 @@
               category="hands"
               id="osu-push"
             >
-                <see id="hiku-pull" rem="antonym" />
+                <see id="hiku-pull" type="antonym" />
                 <phrase
                   ph="ボタンを【押：お】す"
                   rom="botan o osu"
@@ -771,8 +773,8 @@
               lvl="n5"
               id="tomaru-stop"
             >
-                <see id="tomeru-stop" rem="v.t." />
-                <see id="yamu-cease" rem="closely related" />
+                <see id="tomeru-stop" type="v.t." />
+                <see id="yamu-cease" type="closely related" />
                 <keep_apart_from id="oeru-finish" />
                 <keep_apart_from id="sumaseru-finish" />
                 <phrase
@@ -859,7 +861,7 @@
               id="ageru-raise"
               rem="Note that n4 ageru-give is also 上げる"
             >
-                <see id="agaru-rise" rem="v.i." />
+                <see id="agaru-rise" type="v.i." />
                 <keep_apart_from id="sasu-raise" />
                 <keep_apart_from id="kau-raise" />
                 <keep_apart_from id="takameru-raise" />
@@ -984,7 +986,7 @@
               category="directions"
               id="magaru-turn"
             >
-                <see id="mageru-bend" rem="v.t." />
+                <see id="mageru-bend" type="v.t." />
                 <keep_apart_from id="muku-turntoward" />
                 <phrase
                   ph="【左：ひだり】へ【曲：ま】がる"
@@ -1104,7 +1106,7 @@
               category="bird"
               id="naku-sing"
             >
-                <see id="naru-sound" rem="closely related" />
+                <see id="naru-sound" type="closely related" />
                 <keep_apart_from id="saezuru-chirp" />
                 <phrase
                   ph="【小：ちい】さな【声：こえ】で【鳴：な】く"
@@ -1136,7 +1138,7 @@
               category="shopping, trade"
               id="uru-sell"
             >
-                <see id="ureru-sellwell" rem="v.i." />
+                <see id="ureru-sellwell" type="v.i." />
                 <keep_apart_from id="hanbai-sales" />
                 <phrase
                   ph="【自：じ】【動：どう】【車：しゃ】を【売：う】る"

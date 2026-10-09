@@ -5,6 +5,7 @@ import androidx.compose.animation.core.EaseInCubic
 import androidx.compose.animation.core.EaseOutCubic
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
@@ -26,18 +27,29 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivityModel
 import io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivityModel.PresentationMode
+import io.github.digorydoo.goigoi.composables.HintBalloon
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.core.study.Answer
+import io.github.digorydoo.goigoi.legacy.spannable.buildSpan
 
 private val SCORE_FONT_SIZE = 17.sp
 private val gradientSteps = listOf(0f, 0.1f, 0.68f, 0.84f, 0.92f, 0.96f, 0.98f, 0.99f, 1f, 1f)
 
 @Composable
 fun AnswerCommentFlag(model: ProgStudyActivityModel, modifier: Modifier = Modifier) {
+    val currentBgnd = remember { mutableStateOf<Brush>(SolidColor(Color.Transparent)) }
+    val currentText = remember { mutableStateOf("") }
+    val anim = remember { Animatable(0f) }
+    val showBalloon = remember { mutableStateOf(false) }
+
     val colours = GoigoiTheme.colours
     val density = LocalDensity.current
 
     val correctness = model.answerCorrectness.collectAsState().value
+    val pmode = model.presentationMode.collectAsState().value
+    val commentJa = model.answerCommentJa.collectAsState().value
+    val commentKanji = commentJa?.kanji ?: ""
+    val commentTranslation = model.answerCommentTranslation.collectAsState().value
 
     val correctBgnd = remember {
         val c = colours.primary
@@ -54,8 +66,6 @@ fun AnswerCommentFlag(model: ProgStudyActivityModel, modifier: Modifier = Modifi
         Brush.linearGradient(colors = gradientSteps.map { c.copy(alpha = it) })
     }
 
-    val pmode = model.presentationMode.collectAsState().value
-
     val bgnd = when (pmode) {
         PresentationMode.ANSWER_CHECK -> when (correctness) {
             Answer.CORRECT -> correctBgnd
@@ -66,17 +76,11 @@ fun AnswerCommentFlag(model: ProgStudyActivityModel, modifier: Modifier = Modifi
         else -> null
     }
 
-    val text = model.answerComment.collectAsState().value
-
-    val currentBgnd = remember { mutableStateOf<Brush>(SolidColor(Color.Transparent)) }
-    val currentText = remember { mutableStateOf("") }
-    val anim = remember { Animatable(0f) }
-
     LaunchedEffect(bgnd) {
         if (bgnd != null) {
             // Entering
             currentBgnd.value = bgnd
-            currentText.value = text
+            currentText.value = commentKanji
             anim.snapTo(0f)
             anim.animateTo(1f, animationSpec = tween(durationMillis = 200, easing = EaseOutCubic))
         } else {
@@ -85,23 +89,36 @@ fun AnswerCommentFlag(model: ProgStudyActivityModel, modifier: Modifier = Modifi
         }
     }
 
-    if (anim.value <= 0f || text.isEmpty()) return
+    if (anim.value <= 0f || commentKanji.isEmpty()) return
     val maxTranslationPx = with(density) { 48.dp.toPx() }
 
-    Box(
-        modifier = modifier.heightIn(min = 32.dp),
-        contentAlignment = Alignment.CenterEnd,
-    ) {
-        Text(
-            modifier = Modifier
-                .graphicsLayer(alpha = anim.value, translationX = (1f - anim.value) * maxTranslationPx)
-                .background(currentBgnd.value)
-                .padding(start = 72.dp, end = 24.dp, top = 2.dp, bottom = 2.dp),
-            color = colours.onPrimary,
-            text = currentText.value,
-            fontSize = SCORE_FONT_SIZE,
-            fontWeight = FontWeight.Medium,
-            maxLines = 1,
-        )
-    }
+    HintBalloon(
+        modifier = modifier,
+        wrappedContent = {
+            Box(
+                modifier = Modifier
+                    .heightIn(min = 32.dp)
+                    .clickable(enabled = anim.value >= 0.5f) { showBalloon.value = true },
+                contentAlignment = Alignment.CenterEnd,
+            ) {
+                Text(
+                    modifier = Modifier
+                        .graphicsLayer(alpha = anim.value, translationX = (1f - anim.value) * maxTranslationPx)
+                        .background(currentBgnd.value)
+                        .padding(start = 72.dp, end = 24.dp, top = 2.dp, bottom = 2.dp),
+                    color = colours.onPrimary,
+                    text = currentText.value,
+                    fontSize = SCORE_FONT_SIZE,
+                    fontWeight = FontWeight.Medium,
+                    maxLines = 1,
+                )
+            }
+        },
+        lines = arrayOf(
+            commentJa?.buildSpan() ?: "",
+            commentTranslation,
+        ),
+        open = showBalloon.value,
+        onDismiss = { showBalloon.value = false },
+    )
 }

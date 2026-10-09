@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<vocabulary>
+<vocabulary
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../schema/vocab_schema.xsd"
+>
     <unit
       name_en="More N3 words"
       name_de="Weitere N3-Wörter"
       name_fr="Plus de mots N3"
       name_it="Più parole N3"
-      studyLang="ja"
       hasRomaji="true"
       hasFurigana="true"
       lvl="n3"
@@ -495,7 +497,7 @@
               id="kurashi-livelihood"
               studyInContext="preferred"
             >
-                <see id="kurasu-live" rem="verb" />
+                <see id="kurasu-live" type="verb" />
                 <keep_apart_from id="inochi-life" />
                 <keep_apart_from id="seikatsu-living" />
                 <keep_apart_from id="seimei-life" />
@@ -1103,8 +1105,8 @@
               rem="appears in 500mon q128, q436; also in 500mon N3 q57; jisho has nx"
               id="shika-only"
             >
-                <see id="dake-only" rem="closely related" />
-                <see id="bakari-nothingbut" rem="closely related" />
+                <see id="dake-only" type="closely related" />
+                <see id="bakari-nothingbut" type="closely related" />
                 <keep_apart_from id="dake-only" />
                 <keep_apart_from id="bakari-nothingbut" />
                 <sentence

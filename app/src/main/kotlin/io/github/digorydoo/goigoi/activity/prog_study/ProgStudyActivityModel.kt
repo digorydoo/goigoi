@@ -78,8 +78,11 @@ class ProgStudyActivityModel(
     private val _answerPrefill = MutableStateFlow("")
     val answerPrefill = _answerPrefill.asStateFlow()
 
-    private val _answerComment = MutableStateFlow("")
-    val answerComment = _answerComment.asStateFlow()
+    private val _answerCommentJa = MutableStateFlow(null as FuriganaString?)
+    val answerCommentJa = _answerCommentJa.asStateFlow()
+
+    private val _answerCommentTranslation = MutableStateFlow("")
+    val answerCommentTranslation = _answerCommentTranslation.asStateFlow()
 
     private val _caretPos = MutableStateFlow(0)
     val caretPos = _caretPos.asStateFlow()
@@ -111,6 +114,12 @@ class ProgStudyActivityModel(
     private val _todaysProgress = MutableStateFlow(0f)
     val todaysProgress = _todaysProgress.asStateFlow()
 
+    private val _numCorrect = MutableStateFlow(0)
+    val numCorrect = _numCorrect.asStateFlow()
+
+    private val _numWrong = MutableStateFlow(0)
+    val numWrong = _numWrong.asStateFlow()
+
     fun showNextQuestion(initial: Boolean = false) {
         _presentationMode.update { PresentationMode.NOTHING }
 
@@ -137,7 +146,8 @@ class ProgStudyActivityModel(
             _questionHint.update { qa.questionHint }
             _acceptableAnswers.update { qa.answers }
             _answerCorrectness.update { if (initial) studyItemIterator.answer else Answer.NONE }
-            _answerComment.update { "" }
+            _answerCommentJa.update { null }
+            _answerCommentTranslation.update { "" }
             _kanjiOrKanaToReveal.update { qa.kanjiOrKanaToReveal }
             _translationToReveal.update { qa.translationToReveal }
             _hintToReveal.update { qa.hintToReveal }
@@ -178,6 +188,8 @@ class ProgStudyActivityModel(
 
             val studyCount = stats.getUserStudyCountOfDay(Moment.now())
             _todaysProgress.update { min(1.0f, studyCount / STUDY_COUNT_OF_FULL_MARK) }
+            _numCorrect.update { studyItemIterator.numCorrect }
+            _numWrong.update { studyItemIterator.numWrong }
 
             // Wait until the hidden components have updated for the above changes
             delay(AWAIT_RENDER_DELAY_MILLIS.milliseconds)
@@ -268,7 +280,12 @@ class ProgStudyActivityModel(
         _showFurigana.update { true }
         _presentationMode.update { PresentationMode.ANSWER_CHECK }
         _answerCorrectness.update { correctness }
-        _answerComment.update { answerCommentator.getComment(correctness, studyItemIterator.streak) }
+        _numCorrect.update { studyItemIterator.numCorrect }
+        _numWrong.update { studyItemIterator.numWrong }
+
+        val comment = answerCommentator.getComment(correctness, studyItemIterator.streak)
+        _answerCommentJa.update { comment?.ja }
+        _answerCommentTranslation.update { comment?.translation ?: "" }
     }
 
     private fun showExplanationRevealTextsOrNextQuestion() {
