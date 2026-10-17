@@ -18,6 +18,7 @@ import io.github.digorydoo.goigoi.composables.icons.BubbleIconVariant
 import io.github.digorydoo.goigoi.composables.icons.RingIcon
 import io.github.digorydoo.goigoi.composables.icons.ZzzIcon
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.core.list.WordListItemData
 import io.github.digorydoo.goigoi.utils.UserPrefs.WordListItemMode
 
 private const val ANIM_DURATION_MILLIS = 300

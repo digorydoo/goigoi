@@ -3,6 +3,8 @@ package io.github.digorydoo.goigoi.activity.prog_study.composables.keyboard
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -17,6 +19,7 @@ fun EnterButton(model: ProgStudyActivityModel) {
     val currentAnswer = model.currentAnswer.collectAsState().value
     val prefill = model.answerPrefill.collectAsState().value
     val badAnswer = currentAnswer.isEmpty() || currentAnswer.length <= prefill.length
+    val hapticFeedback = LocalHapticFeedback.current
 
     KeyButton(
         modifier = Modifier.semantics { contentDescription = enterKeyDescr },
@@ -27,6 +30,9 @@ fun EnterButton(model: ProgStudyActivityModel) {
         color =
             if (badAnswer) colours.onSurface
             else colours.onPrimary,
-        onClick = model::onEnterBtnClicked,
+        onClick = {
+            hapticFeedback.performHapticFeedback(HapticFeedbackType.VirtualKey)
+            model.onEnterBtnClicked()
+        }
     )
 }

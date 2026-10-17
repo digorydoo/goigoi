@@ -14,6 +14,7 @@ import ch.digorydoo.kutils.cjk.Unicode
 import io.github.digorydoo.goigoi.R.drawable
 import io.github.digorydoo.goigoi.R.string
 import io.github.digorydoo.goigoi.composables.icons.UnytIcon
+import io.github.digorydoo.goigoi.core.list.UnytListItemData
 import io.github.digorydoo.goigoi.utils.DiamondShape
 
 private const val ANIM_DURATION_MILLIS = 300

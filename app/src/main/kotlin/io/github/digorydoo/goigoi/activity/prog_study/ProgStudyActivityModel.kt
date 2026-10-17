@@ -17,7 +17,7 @@ import io.github.digorydoo.goigoi.core.prog_study.KeyDef
 import io.github.digorydoo.goigoi.core.prog_study.QAKind
 import io.github.digorydoo.goigoi.core.prog_study.QAProvider
 import io.github.digorydoo.goigoi.core.prog_study.QuestionAndAnswer.Hint
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.stats.IWordAndDailyStats
 import io.github.digorydoo.goigoi.core.study.Answer
 import io.github.digorydoo.goigoi.core.study.AnswerChecker
 import io.github.digorydoo.goigoi.core.study.AnswerCommentator
@@ -38,7 +38,7 @@ class ProgStudyActivityModel(
     private val answerCommentator: AnswerCommentator,
     private val fixedKeysProvider: FixedKeysProvider,
     private val keyActionHandler: KeyActionHandler,
-    private val stats: Stats,
+    private val stats: IWordAndDailyStats,
     private val vocab: Vocabulary,
     private val lifecycleScope: LifecycleCoroutineScope,
 ) {
@@ -69,8 +69,8 @@ class ProgStudyActivityModel(
     private val _questionHint = MutableStateFlow<OneOf<String, Hint>>(OneOf.First(""))
     val questionHint = _questionHint.asStateFlow()
 
-    private val _acceptableAnswers = MutableStateFlow(listOf<String>())
-    val acceptableAnswers = _acceptableAnswers.asStateFlow()
+    private val _expectedAnswer = MutableStateFlow("")
+    val expectedAnswer = _expectedAnswer.asStateFlow()
 
     private val _currentAnswer = MutableStateFlow("")
     val currentAnswer = _currentAnswer.asStateFlow()
@@ -144,7 +144,7 @@ class ProgStudyActivityModel(
             _showFurigana.update { qa.showFuriganaWithQuestion }
             _questionAfterReveal.update { qa.questionAfterReveal ?: qa.question }
             _questionHint.update { qa.questionHint }
-            _acceptableAnswers.update { qa.answers }
+            _expectedAnswer.update { qa.expectedAnswer }
             _answerCorrectness.update { if (initial) studyItemIterator.answer else Answer.NONE }
             _answerCommentJa.update { null }
             _answerCommentTranslation.update { "" }
@@ -166,13 +166,11 @@ class ProgStudyActivityModel(
                 _caretPos.update { prefill.prefix.length }
             }
 
-            val primaryAnswer = qa.answers.firstOrNull() ?: ""
-
             val newKeyboardMode = when {
                 qaKind.doesNotAskAnything -> KeyboardMode.TRIVIAL
                 !qa.allowExtendedKeyboard -> KeyboardMode.FIXED_KEYS
-                primaryAnswer.all { KeyDef.supportedHiraganaAndPunctuation.contains(it) } -> KeyboardMode.HIRAGANA
-                primaryAnswer.all { KeyDef.supportedKatakanaAndPunctuation.contains(it) } -> KeyboardMode.KATAKANA
+                qa.expectedAnswer.all { KeyDef.supportedHiraganaAndPunctuation.contains(it) } -> KeyboardMode.HIRAGANA
+                qa.expectedAnswer.all { KeyDef.supportedKatakanaAndPunctuation.contains(it) } -> KeyboardMode.KATAKANA
                 else -> KeyboardMode.FIXED_KEYS
             }
 
@@ -296,8 +294,8 @@ class ProgStudyActivityModel(
             qa.kind.doesNotAskAnything -> false // no room when using calligraphy font!
             _answerCorrectness.value == Answer.CORRECT_EXCEPT_KANA_SIZE -> false // hide when simple spelling mistake
             _answerCorrectness.value == Answer.WRONG -> true // show explanation whenever answer is wrong
-            qa.kind.involvesPhrases -> stats.phraseTotalSeenCount(qa.word, qa.index) < 2
-            qa.kind.involvesSentences -> stats.sentenceTotalSeenCount(qa.word, qa.index) < 2
+            qa.kind.involvesPhrases -> stats.getPhraseTotalSeenCount(qa.word, qa.index) < 2
+            qa.kind.involvesSentences -> stats.getSentenceTotalSeenCount(qa.word, qa.index) < 2
             else -> stats.getWordTotalSeenCount(qa.word) < 2
         }
 

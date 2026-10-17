@@ -22,7 +22,7 @@ import io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivityModel
 import io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivityModel.PresentationMode
 import io.github.digorydoo.goigoi.activity.prog_study.composables.AnimatedElement
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.legacy.spannable.buildSpan
+import io.github.digorydoo.goigoi.legacy.buildSpan
 
 @Composable
 fun Explanation(model: ProgStudyActivityModel) {

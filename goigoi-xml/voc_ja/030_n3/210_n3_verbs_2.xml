@@ -19,86 +19,6 @@
         <section>
             <!-- unsorted -->
             <word
-              w="【現：あらわ】れる"
-              rom="arawareru"
-              tr_en="to come into sight; to become visible; to become apparent"
-              tr_de="sichtbar werden; ins Blickfeld rücken; erscheinen"
-              hint_en="v.i."
-              lvl="n3"
-              category="looking"
-              id="arawareru-becomevisible"
-            >
-                <see id="arawasu-reveal" type="v.t." />
-                <keep_apart_from id="mirareru-cansee" />
-                <keep_apart_from id="mieru-beseen" />
-                <phrase
-                  ph="【急：きゅう】に【現：あらわ】れる"
-                  rom="kyū ni arawareru"
-                  tr_en="to suddenly appear"
-                  tr_de="plötzlich erscheinen"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【空：そら】に【雲：くも】が【現：あらわ】れた。"
-                  rom="Sora ni kumo ga arawareta."
-                  tr_en="Clouds become visible in the sky."
-                  tr_de="Wolken wurden am Himmel sichtbar."
-                  lvl="n3"
-                  origin="lib0"
-                >
-                    <ask w="【現：あらわ】れた" />
-                </sentence>
-                <sentence
-                  s="オバケが【庭：にわ】に【現：あらわ】れた。"
-                  rom="Obake ga niwa ni arawareta."
-                  tr_en="A spirit appeared in the garden."
-                  tr_de="Ein Gespenst erschien im Garten."
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT; jisho has nx for obake"
-                >
-                    <ask w="【現：あらわ】れた" />
-                </sentence>
-            </word>
-            <word
-              w="【現：あらわ】す"
-              rom="arawasu"
-              tr_en="to reveal sth.; to show sth.; to represent sth."
-              tr_de="etw. aufdecken; etw. zeigen; etw. repräsentieren"
-              hint_en="v.t."
-              lvl="n3"
-              category="general"
-              id="arawasu-reveal"
-            >
-                <!-- automatic see-also link to arawasu-represent -->
-                <see id="arawareru-becomevisible" type="v.i." />
-                <keep_apart_from id="shimesu-indicate" />
-                <keep_apart_from id="akasu-spend" />
-                <keep_apart_from id="arawasu-represent" />
-                <keep_apart_from id="tsutaeru-convey" />
-                <keep_apart_from id="hyōgen-expression" />
-                <phrase
-                  ph="【頭：とう】【角：かく】を【現：あらわ】す"
-                  rom="tōkaku o arawasu"
-                  tr_en="to distinguish oneself; to stand out"
-                  tr_de="sich von anderen abheben; auffallen"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="jisho has nx for tōkaku"
-                />
-                <sentence
-                  s="【彼：かの】【女：じょ】は【姿：すがた】を【現：あらわ】さなかった。"
-                  rom="Kanojo wa sugata o arawasanakatta."
-                  tr_en="She did not turn up."
-                  tr_de="Sie hat sich nicht blicken lassen."
-                  lvl="n3"
-                  origin="lib0"
-                >
-                    <ask w="【現：あらわ】さなかった" />
-                </sentence>
-            </word>
-            <word
               w="【任：まか】せる"
               rom="makaseru"
               tr_en="to entrust (a task) to another; to leave sth. to so."
@@ -109,6 +29,8 @@
               id="makaseru-entrust"
             >
                 <keep_apart_from id="tayoru-relyon" />
+                <keep_apart_from id="makasu-entrust" />
+                <accept_for_translation w="【任：まか】す" rem="verified with ChatGPT" />
                 <phrase
                   ph="【任：まか】せて"
                   rom="makasete"
@@ -142,6 +64,7 @@
               rem="appears in GENKI2 p.117 vocab section; jisho has nx"
             >
                 <see id="kushi-comb" type="closely related" />
+                <accept_for_translation w="【梳：す】く" rem="verified with ChatGPT" />
                 <phrase
                   ph="【髪：かみ】をとかす"
                   rom="kami o tokasu"
@@ -173,6 +96,7 @@
               id="kidzuku-notice"
             >
                 <keep_apart_from id="samasu-awaken" />
+                <accept_for_translation w="【気：き】【付：づ】く" interchangeable="true" />
                 <!--
                   ph="【正：しょう】【気：き】づく"
                   rom="shōkidzuku"
@@ -258,6 +182,7 @@
                 <see id="sawaru-touch" type="closely related" />
                 <keep_apart_from id="sawaru-touch" />
                 <keep_apart_from id="kanjiru-feel" />
+                <accept_for_translation w="【触：さわ】る" rem="not always interchangeable, though" />
                 <phrase
                   ph="【間：ま】【違：ちが】ってボタンに【触：ふ】れる"
                   rom="machigatte botan ni fureru"
@@ -289,6 +214,50 @@
                   rem="verified with ChatGPT"
                 >
                     <ask w="【触：ふ】れた" />
+                </sentence>
+            </word>
+            <word
+              w="【帰：かえ】らせる"
+              rom="kaeraseru"
+              tr_en="to let so. go home; to send so. home"
+              tr_de="jem. nach Hause gehen lassen; jem. nach Hause schicken"
+              studyInContext="preferred"
+              lvl="n3"
+              id="kaeraseru-letgohome"
+            >
+                <phrase
+                  ph="【家：いえ】に【帰：かえ】らせてあげる"
+                  rom="ie ni kaerasete ageru"
+                  tr_en="to let so. go home"
+                  tr_de="jem. nach Hause gehen lassen"
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【帰：かえ】らせて" />
+                </phrase>
+                <phrase
+                  ph="【家：いえ】に【帰：かえ】らされてしまう"
+                  rom="ie ni kaerasarete shimau"
+                  tr_en="to end up being sent home"
+                  tr_de="(leider) nach Hause geschickt werden"
+                  explanation_en="「帰らされる」 is the causative-passive form of 「帰る」."
+                  explanation_de="「帰らされる」 ist die kausativ-passive Form von 「帰る」."
+                  lvl="n3"
+                  origin="self"
+                >
+                    <ask w="【帰：かえ】らされて" />
+                </phrase>
+                <sentence
+                  s="すみません、【頭：あたま】が【痛：いた】いので、【今日：きょう】は【早：はや】く【帰：かえ】らせてください。"
+                  rom="Sumimasen, atama ga itai no de, kyō wa hayaku kaerasete kudasai."
+                  tr_en="Excuse me, can I go home early since I have a headache?"
+                  tr_de="Entschuldigen Sie, kann ich heute früh nach Hause gehen, da ich Kopfschmerzen habe?"
+                  explanation_en="「帰らせる」is the causative form of 「帰る」"
+                  explanation_de="「帰らせる」ist die kausative Form von 「帰る」"
+                  lvl="n3"
+                  origin="500mon q331"
+                >
+                    <ask w="【帰：かえ】らせて" />
                 </sentence>
             </word>
             <word
@@ -373,6 +342,11 @@
             >
                 <see id="todokeru-deliver" type="v.t." />
                 <keep_apart_from id="haitatsu-delivery" />
+                <accept_for_translation
+                  w="【配：はい】【達：たつ】される"
+                  inaccurate="true"
+                  rem="not a good fit for: (a letter) arrives"
+                />
                 <phrase
                   ph="【手：て】の【届：とど】かない【所：ところ】"
                   rom="te no todokanai tokoro"
@@ -1950,6 +1924,53 @@
             >
                 <keep_apart_from id="mataseru-keepwaiting" />
                 <keep_together id="mataseru-keepwaiting" />
+            </word>
+            <word
+              w="【高：たか】める"
+              rom="takameru"
+              tr_en="to heighten; to boost; to elevate"
+              tr_de="höher machen; erhöhen; steigern"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="takameru-raise"
+              rem="jisho has n2"
+            >
+                <see id="takai-expensive" type="adjective" />
+                <see id="takamaru-rise" type="v.i." />
+                <keep_apart_from id="sasu-raise" />
+                <keep_apart_from id="ageru-raise" />
+                <keep_apart_from id="kau-raise" />
+                <keep_apart_from id="sodateru-makegrow" />
+                <!--
+                    Acc. to ChatGPT, 上げる is broad and versatile,
+                    while 高める is usu. about quality, intensity, awareness, reputation, motivation.
+                -->
+                <phrase
+                  ph="【人：にん】【気：き】を【高：たか】める"
+                  rom="ninki o takameru"
+                  tr_en="to boost the popularity of sth."
+                  tr_de="die Beliebtheit von etw. steigern"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <phrase
+                  ph="【意：い】【識：しき】を【高：たか】める"
+                  rom="ishiki o takameru"
+                  tr_en="to raise the awareness of sth."
+                  tr_de="das Bewusstsein für etw. fördern"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【環：かん】【境：きょう】【問：もん】【題：だい】への【関：かん】【心：しん】を【高：たか】めるために、さまざまな【取：と】り【組：く】みが【行：おこな】われている。"
+                  rom="Kankyō mondai e no kanshin o takameru tame ni, samazama na tori-kumi ga okonawarete iru."
+                  tr_en="Various initiatives are being carried out to raise awareness in environmental issues."
+                  tr_de="Verschiedene Initiativen sind im Begriff, durchgeführt zu werden, um das Bewusstsein für Umweltsprobleme zu fördern."
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
             </word>
             <word
               w="【代：か】える"

@@ -11,79 +11,79 @@ import kotlin.math.ceil
 import kotlin.math.max
 import kotlin.time.Duration.Companion.days
 
-class Stats(private val assets: AssetsAccessor) {
+class Stats(private val assets: AssetsAccessor): IStats {
     private val generalStatsFile = GeneralStatsFile(assets.filesDir)
     private val wordStatsFile = WordStatsFile(assets.filesDir)
     private val unytStatsFile = UnytStatsFile(assets.filesDir)
 
-    fun notifyAppLaunch() {
+    override fun notifyAppLaunch() {
         generalStatsFile.notifyAppLaunch()
     }
 
-    fun notifyMainActivityResume() {
+    override fun notifyMainActivityResume() {
         generalStatsFile.notifyMainActivityResume()
     }
 
-    fun notifyUnytActivityLaunched(u: Unyt) {
+    override fun notifyUnytActivityLaunched(u: Unyt) {
         unytStatsFile.notifyUnytActivityLaunched(u)
     }
 
-    fun getUserStudyCountOfDay(m: Moment) =
+    override fun getUserStudyCountOfDay(m: Moment) =
         generalStatsFile.getUserStudyCountOfDay(m)
 
-    fun incUserStudyCountOfToday(reason: StatsKey) {
+    override fun incUserStudyCountOfToday(reason: StatsKey) {
         generalStatsFile.incUserStudyCountOfToday(reason)
     }
 
-    val superProgressiveIdx get() = generalStatsFile.superProgressiveIdx
+    override val superProgressiveIdx get() = generalStatsFile.superProgressiveIdx
 
-    fun setSuperProgressiveIdx(idx: Int) {
+    override fun setSuperProgressiveIdx(idx: Int) {
         generalStatsFile.setSuperProgressiveIdx(idx)
     }
 
-    fun notifyAnswer(w: Word, u: Unyt, key: StatsKey, answer: Answer) {
+    override fun notifyAnswer(w: Word, u: Unyt, key: StatsKey, answer: Answer) {
         wordStatsFile.notifyAnswer(w, key, answer)
         unytStatsFile.setStudyMoment(u)
         incUserStudyCountOfToday(key)
     }
 
-    fun getWordSeenCount(word: Word, key: StatsKey) =
+    override fun getWordSeenCount(word: Word, key: StatsKey) =
         wordStatsFile.getSeenCount(word, key)
 
-    fun getWordCorrectCount(word: Word, key: StatsKey) =
+    override fun getWordCorrectCount(word: Word, key: StatsKey) =
         wordStatsFile.getCorrectCount(word, key)
 
-    fun getWordWrongCount(word: Word, key: StatsKey) =
+    override fun getWordWrongCount(word: Word, key: StatsKey) =
         wordStatsFile.getWrongCount(word, key)
 
-    fun getWordTotalSeenCount(word: Word) =
+    override fun getWordTotalSeenCount(word: Word) =
         wordStatsFile.getTotalSeenCount(word)
 
-    fun getWordTotalCorrectCount(word: Word) =
+    override fun getWordTotalCorrectCount(word: Word) =
         wordStatsFile.getTotalCorrectCount(word)
 
-    fun getWordTotalWrongCount(word: Word) =
+    override fun getWordTotalWrongCount(word: Word) =
         wordStatsFile.getTotalWrongCount(word)
 
-    fun getWordStudyProgress(word: Word): Float =
+    override fun getWordStudyProgress(word: Word): Float =
         wordStatsFile.getStudyProgress(word)
 
-    fun getWordRating(word: Word, key: StatsKey) =
+    override fun getWordRating(word: Word, key: StatsKey) =
         wordStatsFile.getRating(word, key)
 
-    fun getWordTotalRating(word: Word): Float =
+    override fun getWordTotalRating(word: Word): Float =
         wordStatsFile.getTotalRating(word)
 
-    fun getWordStudyMoment(word: Word) =
+    override fun getWordStudyMoment(word: Word) =
         wordStatsFile.getStudyMoment(word)
 
-    fun getWordIsAsleep(word: Word): Boolean {
+    override fun getWordIsAsleep(word: Word): Boolean {
         val m = getWordStudyMoment(word)
         val minDat = Moment.now() - DAYS_BEFORE_ASLEEP.days
         return m != null && m < minDat
     }
 
-    fun phraseTotalSeenCount(word: Word, phraseIdx: Int): Int {
+    override fun getPhraseTotalSeenCount(word: Word, phraseIdx: Int): Int {
         require(phraseIdx in word.phrases.indices)
 
         fun seenCount(kind: QAKind) = getWordSeenCount(word, kind.toStatsKey())
@@ -102,7 +102,7 @@ class Stats(private val assets: AssetsAccessor) {
         return result
     }
 
-    fun sentenceTotalSeenCount(word: Word, sentenceIdx: Int): Int {
+    override fun getSentenceTotalSeenCount(word: Word, sentenceIdx: Int): Int {
         require(sentenceIdx in word.sentences.indices)
 
         fun seenCount(kind: QAKind) = getWordSeenCount(word, kind.toStatsKey())
@@ -119,20 +119,20 @@ class Stats(private val assets: AssetsAccessor) {
         return result
     }
 
-    fun getUnytStudyMoment(unyt: Unyt) =
+    override fun getUnytStudyMoment(unyt: Unyt) =
         unytStatsFile.getStudyMoment(unyt)
 
-    fun setUnytStudyMoment(unyt: Unyt) {
+    override fun setUnytStudyMoment(unyt: Unyt) {
         unytStatsFile.setStudyMoment(unyt)
     }
 
-    fun getUnytIsAsleep(unyt: Unyt): Boolean {
+    override fun getUnytIsAsleep(unyt: Unyt): Boolean {
         val m = getUnytStudyMoment(unyt)
         val minDat = Moment.now() - DAYS_BEFORE_ASLEEP.days
         return m != null && m < minDat
     }
 
-    fun getUnytStudyProgress(unyt: Unyt): Float {
+    override fun getUnytStudyProgress(unyt: Unyt): Float {
         val cached = unytStatsFile.getStudyProgress(unyt)
 
         if (cached != null) {
@@ -149,7 +149,7 @@ class Stats(private val assets: AssetsAccessor) {
         return progress
     }
 
-    fun getUnytRating(unyt: Unyt): Float {
+    override fun getUnytRating(unyt: Unyt): Float {
         val cached = unytStatsFile.getRating(unyt)
 
         if (cached != null) {
@@ -236,7 +236,7 @@ class Stats(private val assets: AssetsAccessor) {
 
     // This may take a while, so be sure to always call this from a coroutine!
     // FIXME: wordStatsFile and unytStatsFile are not Thread-safe!
-    fun resetUnytStatsExpensively(unyt: Unyt) {
+    override fun resetUnytStatsExpensively(unyt: Unyt) {
         // Do not use unyt.forEachWord, as this would lock the unyt for the entire loop!
         unyt.getWordsShallowClone().forEach { w ->
             wordStatsFile.reset(w)
@@ -258,7 +258,7 @@ class Stats(private val assets: AssetsAccessor) {
 
     // This may take a while, so be sure to always call this from a coroutine!
     // FIXME: wordStatsFile and unytStatsFile are not Thread-safe!
-    fun resetWordStatsExpensively(w: Word, u: Unyt, fakeNumCorrect: Int?, fakeNumWrong: Int?) {
+    override fun resetWordStatsExpensively(w: Word, u: Unyt, fakeNumCorrect: Int?, fakeNumWrong: Int?) {
         wordStatsFile.reset(w)
         unytStatsFile.setStudyProgress(u, null) // clear cache
         unytStatsFile.setRating(u, null) // clear cache
@@ -280,7 +280,7 @@ class Stats(private val assets: AssetsAccessor) {
 
     // Called from SplashActivity if active.
     @Suppress("unused")
-    fun export() {
+    override fun export() {
         export(generalStatsFile, EXPORTED_GENERAL_STATS_FILE_NAME)
         export(unytStatsFile, EXPORTED_UNYT_STATS_FILE_NAME)
         export(wordStatsFile, EXPORTED_WORD_STATS_FILE_NAME)

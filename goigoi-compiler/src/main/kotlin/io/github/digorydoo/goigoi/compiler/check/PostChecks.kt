@@ -4,7 +4,6 @@ import ch.digorydoo.kutils.cjk.*
 import ch.digorydoo.kutils.cjk.JLPTLevel.Companion.toJLPTLevelOrNull
 import io.github.digorydoo.goigoi.compiler.CheckFailed
 import io.github.digorydoo.goigoi.compiler.KanjiLevels
-import io.github.digorydoo.goigoi.compiler.Options
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhraseOrSentence
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
@@ -18,23 +17,14 @@ class PostChecks(
     private val vocab: GoigoiVocab,
     private val kanjiLevels: KanjiLevels,
     private val readings: Map<String, MutableSet<String>>,
-    private val options: Options,
 ) {
     fun check() {
-        if (!options.quiet) {
-            println("Final integrity checks...")
-        }
-
         checkSchoolYears()
         checkVisuallySimilarKanjis()
         checkRequiredManualKanjiLevels()
         checkKanjisInPhrasesAndSentences()
         checkUsuallyInKana()
         checkConsistentKanjiLevels()
-
-        if (!options.quiet) {
-            vocab.warnings.forEach { println(it) }
-        }
     }
 
     private fun checkSchoolYears() {
@@ -71,16 +61,11 @@ class PostChecks(
 
         vocab.forEachWord { word ->
             if (word.level == JLPTLevel.N5 || word.level == JLPTLevel.N4) {
-                val withoutManualLevel = word.kanji
-                    .filter { c ->
-                        if (!c.isCJKNotKana()) {
-                            false
-                        } else {
-                            !vocab.manualKanjiLevels.any { (_, kanjis) ->
-                                kanjis.contains(c)
-                            }
-                        }
+                val withoutManualLevel = word.kanji.filter { c ->
+                    c.isCJKNotKana() && !vocab.manualKanjiLevels.any { (_, kanjis) ->
+                        kanjis.contains(c)
                     }
+                }
 
                 if (withoutManualLevel.isNotEmpty()) {
                     println(word.toPrettyString(withRomaji = true, withLvl = true, withKanjiKanaSeparated = true))
@@ -243,30 +228,75 @@ class PostChecks(
     }
 
     private fun checkVisuallySimilarKanjis() {
-        // these are valid Japanese characters, but not currently used by any word,
-        // so they were removed from vocab.kanjiByFreq
-        val allowedChars = arrayOf('龍', '々')
+        val notInKanjiByFreq = mutableSetOf<Char>()
+        val allowedEvenIfNotInKanjiByFreq = arrayOf('龍', '々')
+        val allKanjisMentioned = mutableSetOf<Char>()
+        val discouragedKana = "カエロタニハ"
 
-        val illegalChars = mutableSetOf<Char>()
+        vocab.visuallySimilar.forEach { kanjis ->
+            if (kanjis.length < 2) {
+                throw CheckFailed("visually_similar entry needs to mention at least two kanjis")
+            } else if (kanjis.length >= 7) {
+                throw CheckFailed("visually_similar entry should be split into two: $kanjis")
+            }
 
-        vocab.visuallySimilar.forEach { similarKanjis ->
-            similarKanjis.forEach { kanji ->
+            val badPairs = arrayOf(Pair('末', '未'))
+
+            badPairs.forEach { (a, b) ->
+                if (kanjis.contains(a) && kanjis.contains(b)) {
+                    throw CheckFailed(
+                        "Do not put $a and $b into the same visually_similar group, because they're too similar"
+                    )
+                }
+            }
+
+            kanjis.forEachIndexed { idx, kanji ->
+                if (kanji.isHiragana()) {
+                    throw CheckFailed(
+                        "Do not use hiragana in visually_similar groups, because they create ambiguities: $kanjis"
+                    )
+                }
+
+                if (!kanji.isCJKNotKana() && !kanji.isKatakana()) {
+                    throw CheckFailed(
+                        "visually_similar group contains character that is neither kanji nor kana: $kanji"
+                    )
+                }
+
+                if (discouragedKana.contains(kanji)) {
+                    throw CheckFailed(
+                        "Do not use these kana characters, because there are kanji that look the same: $kanji"
+                    )
+                }
+
+                for (followingIdx in idx + 1 ..< kanjis.length) {
+                    if (kanjis[followingIdx] == kanji) {
+                        throw CheckFailed("Kanji is mentioned more than once in same visually_similar group: $kanji")
+                    }
+                }
+
+                if (allKanjisMentioned.contains(kanji)) {
+                    throw CheckFailed("Multiple visually_similar entries mention this kanji: $kanji")
+                }
+
+                allKanjisMentioned.add(kanji)
+
                 if (
                     !vocab.kanjiByFreq.contains(kanji) &&
-                    !allowedChars.contains(kanji) &&
+                    !allowedEvenIfNotInKanjiByFreq.contains(kanji) &&
                     !kanji.isHiragana() &&
                     !kanji.isKatakana()
                 ) {
-                    illegalChars.add(kanji)
+                    notInKanjiByFreq.add(kanji)
                 }
             }
         }
 
-        if (illegalChars.isNotEmpty()) {
+        if (notInKanjiByFreq.isNotEmpty()) {
             throw CheckFailed(
                 "visually_similar mentions character(s) that are not part of the list of kanji by " +
                     "frequency. Using non-Japanese characters may lead to missing glyph problems in Goigoi.\n" +
-                    "Offending characters: ${illegalChars.joinToString(", ")}"
+                    "Offending characters: ${notInKanjiByFreq.joinToString(", ")}"
             )
         }
     }

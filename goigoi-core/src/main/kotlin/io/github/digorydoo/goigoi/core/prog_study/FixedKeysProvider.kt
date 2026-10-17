@@ -23,9 +23,8 @@ class FixedKeysProvider(
 
     private fun getWordWithIncorrectKanjis(qa: QuestionAndAnswer): List<String> {
         var permutations = 1
-        val primaryAnswer = qa.answers.firstOrNull() ?: throw Exception("qa.answers is empty")
 
-        val variants: List<Set<Char>> = primaryAnswer.map { char ->
+        val variants: List<Set<Char>> = qa.expectedAnswer.map { char ->
             val similar = kanjiIndex.getVisuallySimilarKanjis(char)
 
             if (similar.isEmpty()) {
@@ -48,11 +47,13 @@ class FixedKeysProvider(
         require(allPermutations.size == permutations) { "Unexpected permutation count: Expected $permutations" }
 
         return allPermutations
-            .filter { permutation -> qa.answers.none { it == permutation } }
+            .filter { permutation ->
+                qa.expectedAnswer != permutation && qa.acceptableAnswers.none { it.answer == permutation }
+            }
             .shuffled()
             .take(NUM_CHIPS_WHEN_SIMILAR_KANJIS - 1)
             .toMutableList()
-            .also { it.add(primaryAnswer) }
+            .also { it.add(qa.expectedAnswer) }
             .shuffled()
     }
 
@@ -74,8 +75,8 @@ class FixedKeysProvider(
     private fun getWords(qa: QuestionAndAnswer): List<String> {
         val result = mutableSetOf<String>()
         val enough = { result.size >= MIN_NUM_CHIPS_WHEN_WORDS * 2 }
-        val primaryAnswer = qa.answers.firstOrNull() ?: throw Exception("qa.answers is empty")
-        val addKana = primaryAnswer.isHiragana() || primaryAnswer.isKatakana()
+        val expectedAnswer = qa.expectedAnswer
+        val addKana = expectedAnswer.isHiragana() || expectedAnswer.isKatakana()
 
         val checkAndAdd = { w: Word, requireSameLength: Boolean ->
             if (w == qa.word) {
@@ -83,7 +84,7 @@ class FixedKeysProvider(
             } else {
                 val toBeAdded = if (addKana) w.kana else w.kanji
 
-                if (requireSameLength && toBeAdded.length != primaryAnswer.length) {
+                if (requireSameLength && toBeAdded.length != expectedAnswer.length) {
                     false
                 } else {
                     result.add(toBeAdded)
@@ -158,14 +159,13 @@ class FixedKeysProvider(
             .shuffled()
             .take(MIN_NUM_CHIPS_WHEN_WORDS - 1)
             .toMutableList()
-            .also { it.add(primaryAnswer) }
+            .also { it.add(expectedAnswer) }
             .shuffled()
     }
 
     private fun getChars(qa: QuestionAndAnswer): List<String> {
-        val primaryAnswer = qa.answers.firstOrNull() ?: throw Exception("qa.answers is empty")
-
-        val chars = primaryAnswer.map { it }.toMutableSet()
+        val expectedAnswer = qa.expectedAnswer
+        val chars = expectedAnswer.map { it }.toMutableSet()
 
         // Answers can get too ambiguous if we add more chars when asking full phrase
         if (qa.kind != QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA) {
@@ -173,7 +173,14 @@ class FixedKeysProvider(
         }
 
         // Shuffle the keys in a way that avoids revealing parts of the answer
-        return chars.map { it.toString() }.shuffledWhileAvoiding(qa.answers)
+
+        val avoid = mutableListOf(expectedAnswer)
+
+        for (acceptable in qa.acceptableAnswers) {
+            avoid.add(acceptable.answer)
+        }
+
+        return chars.map { it.toString() }.shuffledWhileAvoiding(avoid)
     }
 
     private fun addRandomChars(qa: QuestionAndAnswer, to: MutableSet<Char>) {

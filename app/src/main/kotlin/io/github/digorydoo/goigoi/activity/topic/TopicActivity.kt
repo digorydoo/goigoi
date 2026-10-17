@@ -12,11 +12,10 @@ import io.github.digorydoo.goigoi.activity.topic.composables.TopicScreen
 import io.github.digorydoo.goigoi.activity.unyt.startUnytActivityAsync
 import io.github.digorydoo.goigoi.composables.providers.DevicePropsProvider
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.composables.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.core.db.Topic
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.utils.ResUtils
-import io.github.digorydoo.goigoi.utils.SingletonHolder
+import io.github.digorydoo.goigoi.utils.getOrCreateSingletons
 
 class TopicActivity: ComponentActivity() {
     private lateinit var topic: Topic
@@ -30,31 +29,34 @@ class TopicActivity: ComponentActivity() {
         enableEdgeToEdge()
 
         val params = TopicActivityParams.fromIntent(intent)
-        val vocab = SingletonHolder.vocab
+
+        val singletons = getOrCreateSingletons()
+        val listItemDataFactory = singletons.listItemDataFactory
+        val prefs = singletons.prefs
+        val stats = singletons.stats
+        val vocab = singletons.vocab
+
         topic = vocab.findTopicById(params.topicId)!!
 
-        val stats = SingletonHolder.stats
-        tasks = TopicActivityTasks(vocab, stats, applicationContext, lifecycleScope)
+        tasks = TopicActivityTasks(vocab, stats, listItemDataFactory, lifecycleScope)
 
         model = TopicActivityModel(tasks, lifecycleScope)
         fillListWithPlaceholders()
 
         setContent {
-            SingletonsProvider(this) {
-                DevicePropsProvider(this) {
-                    GoigoiTheme {
-                        TopicScreen(
-                            topic, // TODO the model should provide controlled access, don't pass it here
-                            model,
-                            onUnytClicked = { unyt ->
-                                startUnytActivityAsync(
-                                    unyt,
-                                    done = { navigatedToUnyt = unyt }
-                                )
-                            },
-                            onBack = { finish() }
-                        )
-                    }
+            DevicePropsProvider(this) {
+                GoigoiTheme(prefs.theme) {
+                    TopicScreen(
+                        topic, // TODO the model should provide controlled access, don't pass it here
+                        model,
+                        onUnytClicked = { unyt ->
+                            startUnytActivityAsync(
+                                unyt,
+                                done = { navigatedToUnyt = unyt }
+                            )
+                        },
+                        onBack = { finish() }
+                    )
                 }
             }
         }
@@ -70,7 +72,7 @@ class TopicActivity: ComponentActivity() {
                 list.add(Subheader(subheader))
             }
 
-            list.add(UnytInfo(unyt, isMyWordsUnyt = false, data = null))
+            list.add(UnytInfo(unyt, data = null))
         }
 
         model.setList(list)

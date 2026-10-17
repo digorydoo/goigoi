@@ -1,7 +1,5 @@
 # TODO
 
-* Bug: Flip thru font size is too large, and word is not properly centred
-
 * Save and restore state when orientation changes in ProgStudyActivty
 
 * When answer is a verb with furigana, and showing choices with fixed keys, we should not simply pick other words from
@@ -11,6 +9,33 @@
 
 * Bottom sheet should have actions again, at least the fake stats actions
 
+* My Words unyt should be called like this again, because "Add to My Words" still exists.
+
+* FAB of UnytActivity should replace words in My Words unyt with the words from selected unyt, and then start
+  progressive mode. No flip-through any more! Should show dialogue: "Start learning this lesson?" No need to mention
+  that My Words get overwritten as that list is automatically maintained anyway.
+
+* My Words unyt should have a notice at the top: "This is the list of words you're currently studying. It is
+  automatically updated as you progress. You can manually add or remove words to control what you want to study next."
+
+* Instead of showing underlines, answer and question fields should merge when answer is part of the question text.
+
+* Make topic subheaders more visible by moving them into separate files. We should use the same instance of
+  GoigoiXmlParser to read the files in order to support this.
+
+* Can we resolve topic subheaders in app at loading time instead of having to detect them when building the list?
+
+* Make an abstraction of the underlying XmlParser, moving all helper functions there. Then, break GoigoiXmlParser into
+  VocabXmlParser and KanjiIndexXmlParser.
+
+* All checks should happen when everything has been parsed, and none should happen after word files have been written.
+
+* All words which are basically just the stem of a verb should have studyInContext=preferred, e.g. kari, tabe, nomi,
+  etc.
+
+* Apparently, words from My Words are simply added to the study set at launch without checking for ambiguities. This can
+  be a problem if the user added those manually.
+
 * When picking word from past, the study moment should be taken into account: Find a list of candidates just like now,
   then sort the candidates by study moment and then take the half that is further into the past.
 
@@ -18,13 +43,7 @@
   characters should be disabled once they're typed, and enter key should be disabled until all characters have been
   typed (= if length of answer equals length of input)
 
-* Get rid of <synonym>, make a <accept_for_translation> instead
-    * When word is a synonym of another, this does not mean that you can simply replace it with any phrase/sentence
-    * Therefore, accept_for_translation should apply only to where it was declared
-    * Phrase/sentence also need an <accept_for_kanji>, because 入れる could be いれる or はいれる
-    * A flag may be needed inside <accept_...> to indicate whether the App should count it as correct or as skip
-    * The app should probably always respond with a grey text and a pointer hint
-    * Note that antonyms are a see-also link
+* Add <accept_for_kanji> to words, phrases, sentences, e.g. 入れる could be read as いれる or はいれる
 
 * Remove furigana dots in TategakiView when furigana spans more than one kanji. It is rather unusual.
 
@@ -48,11 +67,6 @@
 * Compiler: When hint has "noun; suru verb", tr_en should have -ing rather than "to ~"
 
 * Prefs: Allow defining the daily goal in prefs (just LOW, NORMAL, HIGH)
-
-* Prefs: Instead of a Switch, dark mode should have three modes: AUTO, LIGHT, DARK; default should be AUTO
-
-* Flip Thru should not have their own stats, because Prog Study cannot affect score enough if Flip Thru score is bad.
-  Instead, Flip Thru should use the Prog Study stats key based on what was asked on the frontside of the card.
 
 * Add a tool that checks jisho db if none of kanjis in visually_similar groups are ambiguously used in jisho words
 
@@ -96,19 +110,16 @@
   error, the backspace should glow. The buttons should glow at any time when it's the first time the user has to pick
   one of: ん, dakuten, handakuten, ー
 
-* Unyts with progress == 0 should have a lock icon, and clicking them should show a message like, "You have not reached
-  this level yet."
-
-* When SHOW_WORD_ASK_NOTHING was shown once for word, we could now show a MATCH_WORDS_WITH_TRANSLATIONS along with three
-  other words. This new kind is shown only once for the word. Criteria: translations must not exceed a certain length;
-  SHOW_WORD_ASK_NOTHING must have been shown for the other words, too; numCorrect of the other words must be
-  < 3.
+* When SHOW_WORD_ASK_NOTHING was shown once for a given word, we could now show a MATCH_WORDS_WITH_TRANSLATIONS along
+  with three other words. This new kind is shown only once for the word. Criteria: translations must not exceed a
+  certain length; SHOW_WORD_ASK_NOTHING must have been shown for the other words, too; numCorrect of the other words
+  must be < 3.
 
 * Words linked with noun--verb should also be treated like keep_apart in StudyItemProvider.
 
 * Image of large button could have a glowing outline or maybe flickering light, to make it pop out even more
 
-* Big study button's background image should be lighter in light mode and should suggest daytime; maybe even reposition
+* Big study button's background image should be brighter in light mode and should suggest daytime; maybe even reposition
   objects in the image
 
 * Achieving daily goal should unlock a background image for BigRing. Text should NOT change its colour; make two
@@ -126,3 +137,37 @@
 * Train a model to recognize hand-drawn kanji; use different fonts and slightly different sizes for training. Train the
   official kanji list per schoolyear; maybe even more to make sure incorrect kanji are not accepted. Use that for a new
   QAKind that shows for single-kanji words.
+
+* If Flashcards mode (AKA "flip through") should ever come back, here's how it was implemented in an earlier version:
+    * Frontside shows question, which contains of kanji/kana/translation, can have furigana, and question hint
+    * Backside shows everything about the word including the question, but never explanation, never phrases, never
+      sentences
+    * Gesture towards left means CORRECT, pulls the card, and reveals a checkmark icon at the right-hand side. As the
+      gesture continues, the icon moves towards the centre of the screen. The icon stays for a couple of milliseconds
+      when the card is fully flung out of the screen boundaries, and then also follows the same direction and vanishes
+      at the left screen border.
+    * Gesture towards right means WRONG, pulls the card, and reveals a flash icon at the left-hand side
+    * Gesture towards the top means SKIP, pulls the card, and reveals the text "SKIP"
+    * Gesture towards the bottom means INFORMATION, pulls the card, and reveals the text "INFORMATION"
+    * The INFORMATION gesture opens the bottom sheet. The INFORMATION label stays in the centre behind the bottom sheet.
+      When the bottom sheet is dismissed, the label drop towards the bottom of the screen.
+    * When frontside is shown, gestures left and right are prevented: allow pulling it a little, but the further out the
+      gesture goes, the less effect it has on the pull
+    * When tapping the frontside, the card is flipped, which was implemented with a crossfade of the card content (the
+      card itself does not change as it always has the same size disregarding content).
+    * When tapping the backside, the card just shook. The shake direction altered between up/down and left/right. The
+      shake distance was just large enough to reveal a little from the icons/texts underneath the card.
+    * In the last stage of the implementation, the words were shuffled initially, then shown one by one. When the list
+      repeated, a snackbar appeared.
+    * What we could do better in a new implementation:
+        * Allow choosing between:
+            * Show kanji and nothing else (no furigana; kana if kanji not available): Lets the user focus on reading as
+              well as translation
+            * Show kana and nothing else: Lets the user focus on thinking how they would write the kanji (ProgStudy
+              currently cannot cover this use case, because it always gives away something by showing kanji in
+              multiple-choice fashion)
+            * Show translation and question hint: Lets the user focus on their active vocabulary
+        * Do not make an extra settings screen, just show these options in a modal dialogue as ListItems with primary
+          and secondary texts. The secondary text describes the use case similar to the above.
+        * Make the transition between frontside and backside nicer with an Oxyd-like paper folding effect and shadow
+    * I hardly ever used FlipThrough after I created ProgStudyActivity, so maybe there's no need for it

@@ -11,7 +11,7 @@ import ch.digorydoo.kutils.cjk.japaneseDayOfWeekAbbrev
 import ch.digorydoo.kutils.utils.Moment
 import io.github.digorydoo.goigoi.composables.HintBalloon
 import io.github.digorydoo.goigoi.composables.clickableNoRipple
-import io.github.digorydoo.goigoi.legacy.spannable.FuriganaBuilder
+import io.github.digorydoo.goigoi.legacy.FuriganaBuilder
 
 @Composable
 fun DayIconWithHintBalloon(day: Moment, progress: Float, modifier: Modifier = Modifier, size: Dp = 32.dp) {

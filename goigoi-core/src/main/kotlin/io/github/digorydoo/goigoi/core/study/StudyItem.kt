@@ -3,7 +3,7 @@ package io.github.digorydoo.goigoi.core.study
 import ch.digorydoo.kutils.flow.into
 import ch.digorydoo.kutils.math.lerp
 import io.github.digorydoo.goigoi.core.db.Word
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.stats.IWordStats
 import kotlin.math.max
 import kotlin.math.min
 import kotlin.random.Random
@@ -14,10 +14,10 @@ class StudyItem private constructor(val word: Word, val score: Float) {
     var localNumSkipped = 0
 
     companion object {
-        fun create(word: Word, stats: Stats) =
+        fun create(word: Word, stats: IWordStats) =
             StudyItem(word, computeScore(word, stats))
 
-        private fun computeScore(word: Word, stats: Stats): Float {
+        private fun computeScore(word: Word, stats: IWordStats): Float {
             val progress = stats.getWordStudyProgress(word)
             val rating = stats.getWordTotalRating(word)
             val rnd = Random.nextFloat()

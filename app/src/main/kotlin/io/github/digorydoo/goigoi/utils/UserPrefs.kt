@@ -5,6 +5,7 @@ import androidx.core.content.edit
 
 class UserPrefs(ctx: Context) {
     enum class WordListItemMode { SHOW_KANA, SHOW_ROMAJI, SHOW_TRANSLATION }
+    enum class ThemePref { DARK, LIGHT, SYSTEM }
 
     private val prefsFile = ctx.getSharedPreferences(PREFS_FILE_ID, Context.MODE_PRIVATE)
 
@@ -25,9 +26,17 @@ class UserPrefs(ctx: Context) {
             setValue(WORD_LIST_ITEM_MODE, s)
         }
 
-    var darkMode: Boolean
-        get() = getBoolean(DARK_MODE) ?: false
-        set(b) = setBoolean(DARK_MODE, b)
+    var theme: ThemePref
+        get() = when (getBoolean(DARK_MODE)) {
+            true -> ThemePref.DARK
+            false -> ThemePref.LIGHT
+            null -> ThemePref.SYSTEM
+        }
+        set(m) = when (m) {
+            ThemePref.DARK -> setBoolean(DARK_MODE, true)
+            ThemePref.LIGHT -> setBoolean(DARK_MODE, false)
+            ThemePref.SYSTEM -> clearValue(DARK_MODE)
+        }
 
     private fun getValue(key: String): String? {
         return prefsFile.getString(key, null)
@@ -36,6 +45,12 @@ class UserPrefs(ctx: Context) {
     private fun setValue(key: String, value: String?) {
         prefsFile.edit {
             putString(key, value)
+        }
+    }
+
+    private fun clearValue(key: String) {
+        prefsFile.edit {
+            remove(key)
         }
     }
 

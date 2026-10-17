@@ -1,9 +1,6 @@
 package io.github.digorydoo.goigoi.compiler
 
 import ch.digorydoo.kutils.cjk.toHiragana
-import ch.digorydoo.kutils.string.lpad
-import ch.digorydoo.kutils.string.rpad
-import ch.digorydoo.kutils.string.trunc
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiTopic
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
@@ -12,27 +9,29 @@ import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWordLink
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWordLink.Kind
 
 class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
-    private data class WordUnytTopic(val word: GoigoiWord, val unyt: GoigoiUnyt, val topic: GoigoiTopic) {
+    data class WordUnytTopic(val word: GoigoiWord, val unyt: GoigoiUnyt, val topic: GoigoiTopic) {
         override fun toString() =
             "WordUnytTopic(${word}, ${unyt}, ${topic})"
     }
 
-    private var hiraganaWithMostWords = ""
-    private var countOfWordsForHiraganaWithMostWords = 0
-    private var totalNumWordLinks = 0
-    private var numSeeAlsoLinksFromXML = 0
-    private var numKeepApartLinksFromXML = 0
-    private var numKeepTogetherLinksFromXML = 0
-    private var numAutoSameReadingLinks = 0
-    private var numAutoSameKanjiLinks = 0
-    private var numAutoSameTranslationLinks = 0
-    private var numHiddenWordsWithLinks = 0
-    private var numVisibleWordsWithActiveLinks = 0
-    private var mostActiveLinksWord: GoigoiWord? = null
-    private var mostActiveLinksUnyt: GoigoiUnyt? = null
-    private var mostActiveLinksCount = 0
+    var hiraganaWithMostWords = ""; private set
+    var countOfWordsForHiraganaWithMostWords = 0; private set
+    var totalNumWordLinks = 0; private set
+    var numSeeAlsoLinksFromXML = 0; private set
+    var numKeepApartLinksFromXML = 0; private set
+    var numKeepTogetherLinksFromXML = 0; private set
+    var numAutoSameReadingLinks = 0; private set
+    var numAutoSameKanjiLinks = 0; private set
+    var numAutoSameTranslationLinks = 0; private set
+    var numHiddenWordsWithLinks = 0; private set
+    var numVisibleWordsWithActiveLinks = 0; private set
+    var mostActiveLinksWord: GoigoiWord? = null; private set
+    var mostActiveLinksUnyt: GoigoiUnyt? = null; private set
+    var mostActiveLinksCount = 0; private set
 
-    private val hiraganaToVisibleWords = mutableMapOf<String, MutableList<WordUnytTopic>>()
+    val hiraganaToVisibleWords: Map<String, List<WordUnytTopic>>
+        field = mutableMapOf<String, MutableList<WordUnytTopic>>()
+
     private val kanjiToVisibleWords = mutableMapOf<String, MutableList<WordUnytTopic>>()
     private val enTranslationToVisibleWords = mutableMapOf<String, MutableList<WordUnytTopic>>()
     private val deTranslationToVisibleWords = mutableMapOf<String, MutableList<WordUnytTopic>>()
@@ -48,10 +47,6 @@ class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
         generateSameKanjiLinks() // adds AUTO_SAME_KANJI between visible words with identical kanji
         generateSameTranslationLinks() // adds AUTO_SAME_TRANSLATION when at least one translation is identical
         buildSeeAlsoLinkStats() // do this even in quiet mode, because it also does some integrity checks
-
-        if (!options.quiet) {
-            printStats()
-        }
 
         // Free some memory
         hiraganaToVisibleWords.clear()
@@ -263,102 +258,4 @@ class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
             }
         }
     }
-
-    private fun printStats() {
-        println("")
-        println("Hiragana reading with most #words  . ${lpad(hiraganaWithMostWords)}")
-        println("# of vis. words using that reading . ${lpad(countOfWordsForHiraganaWithMostWords)}")
-
-        hiraganaToVisibleWords[hiraganaWithMostWords]?.forEach { (w, u, _) ->
-            print("   ${lpad(trunc(u.name.en, 20), 20)}: ")
-            println(
-                w.toPrettyString(withRomaji = true, withLvl = true, withKanjiKanaSeparated = true, withColour = false)
-            )
-        }
-
-        println("")
-        println("Total # word links . . . . . . . . . ${lpad(totalNumWordLinks)}")
-        println("   manual see-also links . . . . . . ${lpad(numSeeAlsoLinksFromXML)}")
-        println("   manual keep-apart links . . . . . ${lpad(numKeepApartLinksFromXML)}")
-        println("   manual keep-together links  . . . ${lpad(numKeepTogetherLinksFromXML)}")
-        println("   generated (same reading)  . . . . ${lpad(numAutoSameReadingLinks)}")
-        println("   generated (same kanji)  . . . . . ${lpad(numAutoSameKanjiLinks)}")
-        println("   generated (same translation)  . . ${lpad(numAutoSameTranslationLinks)}")
-        println("")
-        println("# of vis. words with active links  . ${lpad(numVisibleWordsWithActiveLinks)}")
-        println("# of hidden words with links . . . . ${lpad(numHiddenWordsWithLinks)}")
-
-        print("\nWord with the most of active links:")
-
-        val mostActiveLinksWord = mostActiveLinksWord
-
-        if (mostActiveLinksWord == null) {
-            println(" none")
-        } else {
-            print("\n   ")
-
-            println(
-                mostActiveLinksWord.toPrettyString(
-                    withRomaji = true,
-                    withLvl = true,
-                    withKanjiKanaSeparated = true,
-                    withColour = false
-                )
-            )
-
-            println("   Unyt ${mostActiveLinksUnyt?.nameForStdout}")
-            println("   # of links: $mostActiveLinksCount")
-
-            mostActiveLinksWord.links.forEach { see ->
-                println("   - id=${see.wordId}")
-            }
-        }
-
-        println("\nAll see-also links of visible words:")
-
-        val words = mutableListOf<GoigoiWord>()
-        vocab.forEachVisibleWord { words.add(it) }
-
-        words
-            .sortedBy { it.id }
-            .forEach { word ->
-                if (word.links.isNotEmpty()) {
-                    println("")
-                    println("   from ${wordToString(word, word.id)}")
-
-                    word.links
-                        .sortedBy { "${it.word?.id}" }
-                        .forEach { see ->
-                            val rem = when (see.kind) {
-                                Kind.XML_SEE_ALSO -> "<see> ${see.type}"
-                                Kind.XML_KEEP_APART -> "<keep_apart_from>"
-                                Kind.XML_KEEP_TOGETHER -> "<keep_together>"
-                                Kind.AUTO_SAME_READING -> "auto, same reading"
-                                Kind.AUTO_SAME_KANJI -> "auto, same kanji"
-                                Kind.AUTO_SAME_EN_TRANSLATION -> "auto, same EN translation '${see.type}'"
-                                Kind.AUTO_SAME_DE_TRANSLATION -> "auto, same DE translation '${see.type}'"
-                            }
-
-                            val to = see.word
-
-                            if (to == null) {
-                                // Happens with explicit see-also links when the target word is hidden
-                                println("     to HIDDEN word id=${see.wordId} ($rem)")
-                            } else {
-                                println("     to ${wordToString(to, "${rpad(to.id, 20)} ($rem)")}")
-                            }
-                        }
-                }
-            }
-    }
-
-    private fun wordToString(word: GoigoiWord, rem: String) =
-        arrayOf(
-            lpad(word.romaji, 20),
-            lpad(word.level?.toString() ?: "", 2),
-            lpad(word.kanji, 4, '　'),
-            lpad(word.kana, 6, '　'),
-            rem,
-        )
-            .joinToString(" ・ ")
 }

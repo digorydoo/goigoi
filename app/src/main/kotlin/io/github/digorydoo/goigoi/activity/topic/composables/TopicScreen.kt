@@ -1,7 +1,6 @@
 package io.github.digorydoo.goigoi.activity.topic.composables
 
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
@@ -13,7 +12,6 @@ import io.github.digorydoo.goigoi.composables.menus.UnytCtxMenu
 import io.github.digorydoo.goigoi.core.db.Topic
 import io.github.digorydoo.goigoi.core.db.Unyt
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun TopicScreen(topic: Topic, model: TopicActivityModel, onUnytClicked: (Unyt) -> Unit, onBack: () -> Unit) {
     val unytOfMenu = remember { mutableStateOf(null as Unyt?) }

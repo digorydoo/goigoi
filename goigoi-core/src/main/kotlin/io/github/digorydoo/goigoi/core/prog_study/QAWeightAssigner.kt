@@ -9,13 +9,13 @@ import io.github.digorydoo.goigoi.core.db.KanjiIndex
 import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.prog_study.QAPicker.WordInfo
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.stats.IWordStats
 import kotlin.math.max
 
 class QAWeightAssigner(
     private val kanjiIndex: KanjiIndex,
     private val rounds: RoundsTracker,
-    private val stats: Stats,
+    private val stats: IWordStats,
 ) {
     fun getWeight(
         kind: QAKind,

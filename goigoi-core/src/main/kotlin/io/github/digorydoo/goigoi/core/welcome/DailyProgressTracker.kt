@@ -2,12 +2,12 @@ package io.github.digorydoo.goigoi.core.welcome
 
 import ch.digorydoo.kutils.cjk.IntlString
 import ch.digorydoo.kutils.utils.Moment
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.stats.IDailyStats
 import kotlin.math.min
 import kotlin.time.DurationUnit
 import kotlin.time.toDuration
 
-class DailyProgressTracker(private val stats: Stats) {
+class DailyProgressTracker(private val stats: IDailyStats) {
     val daily = Array(NUM_DAYS_TO_TRACK) { 0.0f }
     var today = 0f; private set
     var message = IntlString(); private set

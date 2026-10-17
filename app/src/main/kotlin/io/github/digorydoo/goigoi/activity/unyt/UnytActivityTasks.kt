@@ -2,11 +2,12 @@ package io.github.digorydoo.goigoi.activity.unyt
 
 import android.util.Log
 import androidx.lifecycle.LifecycleCoroutineScope
-import io.github.digorydoo.goigoi.composables.list.WordListItemData
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Vocabulary
 import io.github.digorydoo.goigoi.core.db.Word
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.list.ListItemDataFactory
+import io.github.digorydoo.goigoi.core.list.WordListItemData
+import io.github.digorydoo.goigoi.core.stats.IStats
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -17,7 +18,8 @@ import kotlinx.coroutines.withContext
 class UnytActivityTasks(
     private val unyt: Unyt,
     private val vocab: Vocabulary,
-    private val stats: Stats,
+    private val stats: IStats,
+    private val listItemDataFactory: ListItemDataFactory,
     private val lifecycleScope: LifecycleCoroutineScope,
 ) {
     private val itemDataMutex = Mutex()
@@ -36,7 +38,7 @@ class UnytActivityTasks(
                     // This is achieved with another mutex.
                     itemDataLoadingMutex.withLock {
                         try {
-                            WordListItemData.create(word, vocab, stats)
+                            listItemDataFactory.createWordListItemData(word, vocab, stats)
                         } finally {
                             itemDataMutex.withLock {
                                 itemDataRequests -= word // same as remove(word), but no warning about unused result

@@ -10,10 +10,6 @@ class KanjiIndexBuilder(
     private val options: Options,
 ) {
     fun build() {
-        if (!options.quiet) {
-            println("Building kanji index...")
-        }
-
         vocab.topics.forEach { topic ->
             topic.unyts.forEach { unyt ->
                 unyt.sections.forEach { section ->
@@ -115,7 +111,7 @@ class KanjiIndexBuilder(
 
     private fun applyManualKanjiLevels() {
         if (!options.quiet) {
-            println("Manual kanji level corrections")
+            println("Applying manual kanji level corrections...")
         }
 
         class Change(val from: JLPTLevel, val to: JLPTLevel, val kanji: Char)
@@ -137,11 +133,7 @@ class KanjiIndexBuilder(
 
                         if (before.contains(kanji)) {
                             found = true
-                            if (lvl == setToLvl) {
-                                if (!options.quiet) {
-                                    println("   $kanji: $lvl is already $setToLvl")
-                                }
-                            } else {
+                            if (lvl != setToLvl) {
                                 changes.add(Change(from = lvl, to = setToLvl, kanji = kanji))
                             }
                         }
@@ -160,16 +152,8 @@ class KanjiIndexBuilder(
         }
 
         changes.forEach {
-            if (!options.quiet) {
-                println("   ${it.kanji}: ${it.from} -> ${it.to}")
-            }
-
             kanjiLevels.get(it.from).remove(it.kanji)
             kanjiLevels.get(it.to).add(it.kanji)
-        }
-
-        if (!options.quiet) {
-            println("")
         }
     }
 

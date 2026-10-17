@@ -1,26 +1,45 @@
 package io.github.digorydoo.goigoi.activity.splash
 
 import android.content.Context
-import android.graphics.Canvas
-import android.graphics.Paint
-import android.graphics.Path
+import android.graphics.*
+import android.graphics.drawable.Drawable
 import ch.digorydoo.kutils.filter.envDelay
 import ch.digorydoo.kutils.flow.compose
 import ch.digorydoo.kutils.math.accel
 import ch.digorydoo.kutils.math.scurve
 import io.github.digorydoo.goigoi.BuildConfig
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.legacy.drawable.AnimatedDrawable
-import io.github.digorydoo.goigoi.legacy.drawable.Artist
-import io.github.digorydoo.goigoi.legacy.drawable.Artist.Arc
 import io.github.digorydoo.goigoi.utils.DimUtils
 import io.github.digorydoo.goigoi.utils.ResUtils
+import kotlin.math.cos
+import kotlin.math.max
+import kotlin.math.sin
 
-class AnimatedLogo(ctx: Context): AnimatedDrawable() {
+class AnimatedLogo(ctx: Context): Drawable() {
+    private class Arc(
+        var time: Float,
+        var left: Float,
+        var top: Float,
+        var right: Float,
+        var bottom: Float,
+        var radialShift: Float,
+        var start: Float,
+        var end: Float,
+        var angularShift: Float,
+    )
+
     private val oneDip: Float = DimUtils.dpToPx(1.0f, ctx)
     private val penSize = 6.0f * oneDip
     private val bgndColour = ResUtils.getARGBFromRes(R.color.green_800, ctx)
     private val arcColour = ResUtils.getARGBFromRes(R.color.white, ctx)
+
+    var animValue: Float = 1.0f
+
+    override fun setAlpha(alpha: Int) {}
+    override fun setColorFilter(colorFilter: ColorFilter?) {}
+
+    @Deprecated("Deprecated in Java; still needed for API < 29", ReplaceWith(""))
+    override fun getOpacity() = PixelFormat.TRANSLUCENT
 
     override fun draw(canvas: Canvas) {
         val p = Paint()
@@ -66,21 +85,21 @@ class AnimatedLogo(ctx: Context): AnimatedDrawable() {
         p.style = Paint.Style.STROKE
         p.strokeWidth = penSize
         val path = Path()
-        Artist.addAnimatedArc(arc1, path, t1, bounds, false)
+        addAnimatedArc(arc1, path, t1, bounds, false)
 
         if (t2 > 0) {
-            Artist.addAnimatedArc(arc2, path, t2, bounds, false)
+            addAnimatedArc(arc2, path, t2, bounds, false)
         }
 
         if (t3 > 0) {
-            Artist.addAnimatedArc(arc3, path, t3, bounds, false)
+            addAnimatedArc(arc3, path, t3, bounds, false)
         }
 
         if (t4 > 0) {
-            Artist.addAnimatedArc(arc4, path, t4, bounds, false)
-            Artist.addAnimatedArc(arc5, path, t4, bounds, true)
-            Artist.addAnimatedArc(arc6, path, t4, bounds, true)
-            Artist.addAnimatedArc(arc7, path, t4, bounds, true)
+            addAnimatedArc(arc4, path, t4, bounds, false)
+            addAnimatedArc(arc5, path, t4, bounds, true)
+            addAnimatedArc(arc6, path, t4, bounds, true)
+            addAnimatedArc(arc7, path, t4, bounds, true)
         }
 
         canvas.drawPath(path, p)
@@ -142,5 +161,78 @@ class AnimatedLogo(ctx: Context): AnimatedDrawable() {
             Arc(0.76f, 0.21f, 0.4f, 0.79f, 0.8f, 0.0f, 302.0f, 302.0f, 0.0f),
             Arc(1.00f, 0.21f, 0.4f, 0.79f, 0.8f, 0.0f, 302.0f, 436.0f, 0.0f)
         )
+
+        private fun addAnimatedArc(arcs: Array<Arc>, path: Path, time: Float, bounds: Rect, connect: Boolean) {
+            var fromArc: Arc? = null
+            var toArc: Arc? = null
+
+            for (a in arcs) {
+                if (a.time <= time) {
+                    fromArc = a
+                } else {
+                    toArc = a
+                    break
+                }
+            }
+
+            if (fromArc == null) {
+                // This set of arcs don't show yet
+                return
+            }
+
+            var x1: Float
+            var y1: Float
+            var x2: Float
+            var y2: Float
+            val start: Float
+            val end: Float
+            val radialShift: Float
+            val angularShift: Float
+
+            if (toArc == null) {
+                // This set of arcs have completed animation.
+                x1 = bounds.left + bounds.width() * fromArc.left
+                y1 = bounds.top + bounds.height() * fromArc.top
+                x2 = bounds.left + bounds.width() * fromArc.right
+                y2 = bounds.top + bounds.height() * fromArc.bottom
+                start = fromArc.start
+                end = fromArc.end
+                radialShift = fromArc.radialShift
+                angularShift = fromArc.angularShift
+            } else {
+                // Interpolate between fromArc and toArc.
+                val p = (time - fromArc.time) / (toArc.time - fromArc.time) // 0..1
+                val q = 1.0f - p
+                x1 = bounds.left + bounds.width() * (q * fromArc.left + p * toArc.left)
+                y1 = bounds.top + bounds.height() * (q * fromArc.top + p * toArc.top)
+                x2 = bounds.left + bounds.width() * (q * fromArc.right + p * toArc.right)
+                y2 = bounds.top + bounds.height() * (q * fromArc.bottom + p * toArc.bottom)
+                start = q * fromArc.start + p * toArc.start
+                end = q * fromArc.end + p * toArc.end
+                radialShift = q * fromArc.radialShift + p * toArc.radialShift
+                angularShift = q * fromArc.angularShift + p * toArc.angularShift
+            }
+
+            if (radialShift != 0.0f) {
+                val phi = 0.5f * (start + end) * Math.PI / 180.0f
+                val r = 0.5f * max(bounds.width(), bounds.height())
+                val xShift = (radialShift * r * cos(phi)).toFloat()
+                val yShift = (radialShift * r * sin(phi)).toFloat()
+                x1 += xShift
+                y1 += yShift
+                x2 += xShift
+                y2 += yShift
+            }
+
+            var sweep = end - start
+
+            if (sweep <= 0) {
+                return
+            } else if (sweep >= 360.0f) {
+                sweep = 359.999f
+            }
+
+            path.arcTo(x1, y1, x2, y2, start + angularShift, sweep, !connect)
+        }
     }
 }

@@ -7,13 +7,11 @@ import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
 import java.io.File
 import java.io.FileWriter
 
-class WordIndexWriter(private val vocab: GoigoiVocab, private val quiet: Boolean) {
+class WordIndexWriter(private val vocab: GoigoiVocab) {
     /**
      * The word index is used by jwotd/goigoi-find-missing.sh to iterate over Goigoi words.
      */
     fun writeWordIndex(file: File) {
-        if (!quiet) println("Writing ${file.name}...")
-
         FileWriter(file).use { writer ->
             writer.write("[\n")
             // goigoi-find-missing must find the word even if it's hidden in Goigoi
@@ -28,8 +26,6 @@ class WordIndexWriter(private val vocab: GoigoiVocab, private val quiet: Boolean
      * The phrase index is used by Sites/api/search.php to include Goigoi phrases in the search results.
      */
     fun writePhraseIndex(file: File) {
-        if (!quiet) println("Writing ${file.name}...")
-
         FileWriter(file).use { writer ->
             writer.write("[\n")
             // Only phrases from visible words should appear in the index
@@ -46,8 +42,6 @@ class WordIndexWriter(private val vocab: GoigoiVocab, private val quiet: Boolean
      * The sentence index is used by Sites/api/search.php to include Goigoi sentences in the search results.
      */
     fun writeSentenceIndex(file: File) {
-        if (!quiet) println("Writing ${file.name}...")
-
         FileWriter(file).use { writer ->
             writer.write("[\n")
             // Only sentences from visible words should appear in the index

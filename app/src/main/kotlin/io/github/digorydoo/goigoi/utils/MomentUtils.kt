@@ -6,12 +6,10 @@ import ch.digorydoo.kutils.utils.Moment
 import io.github.digorydoo.goigoi.R
 import kotlin.math.abs
 import kotlin.time.Clock
-import kotlin.time.ExperimentalTime
 
 /**
  * @return a string representing the relative time span in human-readable form
  */
-@OptIn(ExperimentalTime::class)
 fun Moment.formatRelativeTime(ctx: Context): String {
     val nowMillis = Clock.System.now().toEpochMilliseconds()
     val thisMillis = toInstant().toEpochMilliseconds()

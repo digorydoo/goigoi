@@ -1,7 +1,7 @@
 package io.github.digorydoo.goigoi.compiler.writer
 
 import ch.digorydoo.kutils.file.KDataInputStream.FileMarker
-import io.github.digorydoo.goigoi.core.file.GoigoiFileMarker.*
+import io.github.digorydoo.goigoi.core.file.GoigoiFileMarker.EOF
 import java.io.OutputStream
 
 // FIXME get rid of this, use KDataOutputStream from kutils
@@ -9,26 +9,6 @@ abstract class AbstrWriter(private val stream: OutputStream) {
     private val buf = ByteArray(2)
 
     abstract fun write()
-
-    protected fun beginTopic(id: String) {
-        write(TOPIC_ID, id)
-    }
-
-    protected fun beginUnyt(id: String) {
-        write(UNYT_ID, id)
-    }
-
-    protected fun beginPhrase() {
-        write(PHRASE_ID, "") // currently without id
-    }
-
-    protected fun beginSentence() {
-        write(SENTENCE_ID, "") // currently without id
-    }
-
-    protected fun beginSeeAlso(otherWordId: String) {
-        write(WORDLINK_ID, otherWordId)
-    }
 
     protected fun writeEOFMarker() {
         writeUInt16(EOF.value)

@@ -2,9 +2,9 @@ package io.github.digorydoo.goigoi.activity.topic
 
 import android.util.Log
 import androidx.lifecycle.LifecycleCoroutineScope
-import io.github.digorydoo.goigoi.composables.list.UnytListItemData
 import io.github.digorydoo.goigoi.composables.menus.UnytCtxMenuModel
 import io.github.digorydoo.goigoi.core.db.Unyt
+import io.github.digorydoo.goigoi.core.list.UnytListItemData
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -20,7 +20,7 @@ class TopicActivityModel(
 ): UnytCtxMenuModel {
     sealed interface UnytsListItem
     class Subheader(val text: String): UnytsListItem
-    class UnytInfo(val unyt: Unyt, val isMyWordsUnyt: Boolean, var data: UnytListItemData? = null): UnytsListItem
+    class UnytInfo(val unyt: Unyt, var data: UnytListItemData? = null): UnytsListItem
 
     private val _list = MutableStateFlow(listOf<UnytsListItem>())
     val list = _list.asStateFlow()
@@ -55,14 +55,14 @@ class TopicActivityModel(
 
     private fun updateItem(info: UnytInfo, onDone: (() -> Unit)? = null) {
         lifecycleScope.launch {
-            val newData = tasks.getItemData(info.unyt, info.isMyWordsUnyt)
+            val newData = tasks.getItemData(info.unyt)
 
             _list.update { oldList ->
                 oldList.map { item ->
                     if (item == info) {
                         // Replace the existing UnytInfo to cause the necessary re-rendering
                         // Log.d(TAG, "Updating item of unyt ${info.unyt.id}")
-                        UnytInfo(unyt = info.unyt, isMyWordsUnyt = info.isMyWordsUnyt, data = newData)
+                        UnytInfo(unyt = info.unyt, data = newData)
                     } else {
                         item
                     }

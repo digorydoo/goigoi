@@ -31,9 +31,12 @@ fun MessageAfterAnswer(model: ProgStudyActivityModel) {
     if (qaKind.doesNotAskAnything) return
 
     val correctness = model.answerCorrectness.collectAsState().value
-    if (correctness != Answer.CORRECT_EXCEPT_KANA_SIZE) return
 
-    val text = stringResource(R.string.answer_correct_except_kana_size)
+    val text = when (correctness) {
+        Answer.CORRECT_BUT_INACCURATE -> stringResource(R.string.answer_correct_but_inaccurate)
+        Answer.CORRECT_EXCEPT_KANA_SIZE -> stringResource(R.string.answer_correct_except_kana_size)
+        else -> return
+    }
 
     AnimatedElement(
         visible = pmode == PresentationMode.ANSWER_CHECK,

@@ -14,6 +14,7 @@ class WordFileReader(
     private var phrase: PhraseOrSentence? = null
     private var sentence: PhraseOrSentence? = null
     private var link: WordLink? = null
+    private var acceptableAnswer: AcceptableAnswer? = null
 
     override fun process(marker: FileMarker, value: String) {
         when (marker) {
@@ -40,9 +41,11 @@ class WordFileReader(
             WORD_CATEGORY -> value.toIntOrNull()
                 ?.let { WordCategory.fromInt(it) }
                 ?.let { word.cats.add(it) }
-            WORD_SYNONYM -> value
-                .also { require(it.isNotEmpty()) }
-                .let { word.synonyms.add(FuriganaString(value)) }
+
+            WORD_ACCEPT_FOR_TRANSLATION -> startAcceptForTranslation(value)
+            WORD_ANSWER_INACCURATE -> acceptableAnswer!!.inaccurate = value.toBoolean()
+            WORD_ALT_READING -> value.takeIf { it.isNotEmpty() }?.let { word.alternativeReadings.add(it) }
+            WORD_ALT_SPELLING -> value.takeIf { it.isNotEmpty() }?.let { word.alternativeSpellings.add(it) }
 
             PHRASE_ID -> startNewPhrase()
             PHRASE_PRIMARY_FORM -> phrase!!.primaryForm = FuriganaString(value)
@@ -59,6 +62,7 @@ class WordFileReader(
             PHRASE_EXPLANATION_JA -> phrase!!.explanation.ja = value
             PHRASE_WORD_FORM -> phrase!!.wordFormToAsk = FuriganaString(value)
             PHRASE_WORD_FORM_SUFFIX -> phrase!!.wordFormToAskSuffix = value
+            PHRASE_ACCEPTABLE_ANSWER -> phrase!!.acceptableAnswers.add(FuriganaString(value))
 
             SENTENCE_ID -> startNewSentence()
             SENTENCE_PRIMARY_FORM -> sentence!!.primaryForm = FuriganaString(value)
@@ -75,6 +79,7 @@ class WordFileReader(
             SENTENCE_EXPLANATION_JA -> sentence!!.explanation.ja = value
             SENTENCE_WORD_FORM -> sentence!!.wordFormToAsk = FuriganaString(value)
             SENTENCE_WORD_FORM_SUFFIX -> sentence!!.wordFormToAskSuffix = value
+            SENTENCE_ACCEPTABLE_ANSWER -> phrase!!.acceptableAnswers.add(FuriganaString(value))
 
             WORDLINK_ID -> startNewLink(value)
             WORDLINK_PRIMARY_FORM -> link!!.primaryForm = value
@@ -86,6 +91,13 @@ class WordFileReader(
             WORDLINK_KIND -> link!!.kind = value.toIntOrNull()?.let { WordLink.Kind.fromInt(it) }
 
             else -> throw Exception("Unexpected marker: $marker")
+        }
+    }
+
+    private fun startAcceptForTranslation(answer: String) {
+        acceptableAnswer = AcceptableAnswer().also {
+            it.answer = answer
+            word.acceptForTranslation.add(it)
         }
     }
 

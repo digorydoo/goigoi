@@ -17,7 +17,6 @@ import androidx.compose.ui.graphics.drawscope.drawIntoCanvas
 import androidx.compose.ui.graphics.nativeCanvas
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import io.github.digorydoo.goigoi.utils.SingletonHolder
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -29,10 +28,9 @@ private const val PROCEED_AFTER = 2100L // milliseconds
 private const val POLL_INTERVAL_MILLIS = 100
 
 @Composable
-fun SplashScreen(init: suspend CoroutineScope.() -> Unit, onInitComplete: () -> Unit) {
+fun SplashScreen(shouldAnimate: Boolean, init: suspend CoroutineScope.() -> Unit, onInitComplete: () -> Unit) {
     BackHandler { } // disable Android back button
 
-    val shouldAnimate = !SingletonHolder.singletonsExist
     var coroutineEnded = false
     val animValue = remember { Animatable(if (shouldAnimate) 0.0f else 1.0f) }
 

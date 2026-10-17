@@ -19,19 +19,19 @@ import io.github.digorydoo.goigoi.core.prog_study.QAKind.*
 fun InstructionHint(model: ProgStudyActivityModel, modifier: Modifier = Modifier) {
     val mode = model.presentationMode.collectAsState().value
     val qaKind = model.qaKind.collectAsState().value
-    val acceptableAnswers = model.acceptableAnswers.collectAsState().value
+    val expectedAnswer = model.expectedAnswer.collectAsState().value
     val answerCorrectness = model.answerCorrectness.collectAsState().value
 
     val shownInstructionResId = remember { mutableIntStateOf(-1) }
 
-    SideEffect(qaKind, mode, acceptableAnswers, answerCorrectness) {
+    SideEffect(qaKind, mode, expectedAnswer, answerCorrectness) {
         shownInstructionResId.intValue = when (mode) {
             PresentationMode.BEFORE_QUESTION,
             PresentationMode.QUESTION,
             -> when (qaKind) {
                 SHOW_KANJI_ASK_KANA -> R.string.hint_when_show_kanji_ask_kana
 
-                SHOW_KANA_ASK_KANJI -> when (acceptableAnswers.firstOrNull()?.length == 1) {
+                SHOW_KANA_ASK_KANJI -> when (expectedAnswer.length == 1) {
                     true -> R.string.hint_when_show_kana_ask_kanji_singular
                     false -> R.string.hint_when_show_kana_ask_kanji_plural
                 }

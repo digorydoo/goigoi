@@ -3,6 +3,7 @@ package io.github.digorydoo.goigoi.compiler.vocab
 import ch.digorydoo.kutils.cjk.FuriganaString
 import ch.digorydoo.kutils.cjk.IntlString
 import ch.digorydoo.kutils.cjk.JLPTLevel
+import io.github.digorydoo.goigoi.core.db.AcceptableAnswer
 import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 import io.github.digorydoo.goigoi.core.db.WordCategory
 import io.github.digorydoo.goigoi.core.db.WordHint
@@ -34,11 +35,14 @@ class GoigoiWord {
     var crossDict = false
     var hasCombinedReading = false
     var fileName = ""
-    val synonyms = mutableListOf<FuriganaString>()
     val phrases = mutableListOf<GoigoiPhraseOrSentence>()
     val sentences = mutableListOf<GoigoiPhraseOrSentence>()
     val links = mutableListOf<GoigoiWordLink>()
     val cats = mutableSetOf<WordCategory>()
+
+    val acceptForTranslation = mutableListOf<AcceptableAnswer>()
+    val alternativeSpellings = mutableListOf<String>() // kanji/okurigana
+    val alternativeReadings = mutableListOf<String>() // kana
 
     override fun toString() =
         "Word " + id.ifEmpty { romaji }.ifEmpty { translation.en }.ifEmpty { kana }.ifEmpty { kanji }

@@ -25,10 +25,11 @@ import androidx.compose.ui.unit.dp
 import ch.digorydoo.kutils.colour.Colour
 import io.github.digorydoo.goigoi.composables.providers.DeviceProps
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.legacy.drawable.Artist
-import io.github.digorydoo.goigoi.legacy.drawable.BitmapPool
-import io.github.digorydoo.goigoi.legacy.spannable.FuriganaBuilder
+import io.github.digorydoo.goigoi.legacy.FuriganaBuilder
 import io.github.digorydoo.goigoi.utils.ScreenSize
+import io.github.digorydoo.goigoi.utils.drawBitmapScaleToFit
+import io.github.digorydoo.goigoi.utils.drawSpan
+import io.github.digorydoo.goigoi.utils.getBitmapFromAssets
 
 @Composable
 fun BigStudyBtn(horizPadding: Dp, onClick: () -> Unit) {
@@ -66,7 +67,7 @@ fun BigStudyBtn(horizPadding: Dp, onClick: () -> Unit) {
     }
 
     val bgndBitmap = remember(ctx) {
-        BitmapPool.getFromAssets("img/btn-00-continue.webp", ctx)
+        getBitmapFromAssets("img/btn-00-continue.webp", ctx)
     }
 
     val primaryTextSpan = remember(primaryTextWithFurigana) {
@@ -98,12 +99,12 @@ fun BigStudyBtn(horizPadding: Dp, onClick: () -> Unit) {
                 if (bgndBitmap == null) {
                     nativeCanvas.drawRect(dstR, bgndPaint)
                 } else {
-                    Artist.drawBitmapScaleToFit(bgndBitmap, dstR, bgndPaint, nativeCanvas, 0, 0)
+                    nativeCanvas.drawBitmapScaleToFit(bgndBitmap, dstR, bgndPaint, 0, 0)
                 }
 
                 val y = height - primaryTextVDeltaPx
                 primaryTextPaint.setShadowLayer(textShadowSizePx, 0.0f, 0.0f, Colour.black.toARGB())
-                Artist.drawSpan(primaryTextSpan, leftPaddingPx, y, primaryTextPaint, nativeCanvas)
+                nativeCanvas.drawSpan(primaryTextSpan, leftPaddingPx, y, primaryTextPaint)
             }
         }
     }

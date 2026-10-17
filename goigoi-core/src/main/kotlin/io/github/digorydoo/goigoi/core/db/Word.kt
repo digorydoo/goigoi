@@ -16,12 +16,14 @@ class Word {
     var level: JLPTLevel? = null
     var usuallyInKana = false
     var studyInContext = StudyInContextKind.NOT_REQUIRED
-    val synonyms = mutableListOf<FuriganaString>()
     val phrases = mutableListOf<PhraseOrSentence>()
     val sentences = mutableListOf<PhraseOrSentence>()
     val links = mutableListOf<WordLink>()
     val cats = mutableListOf<WordCategory>()
     var filename = ""
+    val acceptForTranslation = mutableListOf<AcceptableAnswer>()
+    val alternativeSpellings = mutableListOf<String>() // kanji/okurigana
+    val alternativeReadings = mutableListOf<String>() // kana
 
     val hintsWithSystemLang: String
         get() = arrayOf(
@@ -99,6 +101,11 @@ class Word {
 
             return dw
         }
+
+    fun isSuruWord() =
+        hint2 == WordHint.NOUN_SURU ||
+            hint2 == WordHint.ADVERB_SURU ||
+            hint.en.contains("suru", ignoreCase = true)
 
     override fun toString() =
         "Word($id, $kanji, $kana)"

@@ -1,30 +1,27 @@
 package io.github.digorydoo.goigoi.core.prog_study
 
 import ch.digorydoo.kutils.cjk.FuriganaString
-import ch.digorydoo.kutils.cjk.JLPTLevel
-import ch.digorydoo.kutils.cjk.isHiragana
 import ch.digorydoo.kutils.utils.OneOf
-import io.github.digorydoo.goigoi.core.db.PhraseOrSentence
-import io.github.digorydoo.goigoi.core.db.PhraseOrSentence.SplitPrimaryForm
+import io.github.digorydoo.goigoi.core.db.AcceptableAnswer
 import io.github.digorydoo.goigoi.core.db.Word
-import io.github.digorydoo.goigoi.core.stats.Stats
 
 // This class is immutable
-class QuestionAndAnswer private constructor(
+class QuestionAndAnswer(
     val word: Word,
-    val kind: QAKind,
-    val index: Int,
-    val showFuriganaWithQuestion: Boolean,
+    val kind: QAKind, // defines the way how we're going to present this question
+    val index: Int, // index of phrase or sentence if kind.involvesPhrasesOrSentences is true
+    val showFuriganaWithQuestion: Boolean, // false = hide the furigana initially
     val question: OneOf<String, FuriganaString>,
     val questionAfterReveal: OneOf<String, FuriganaString>?, // null = no change
-    val questionHint: OneOf<String, Hint>,
-    val answers: List<String>,
+    val questionHint: OneOf<String, Hint>, // this hint is shown along with the question
+    val expectedAnswer: String,
+    val acceptableAnswers: List<AcceptableAnswer>,
     val kanjiOrKanaToReveal: String,
     val translationToReveal: String,
-    val hintToReveal: String,
-    val explanation: FuriganaString?,
-    val presentWholeWords: Boolean,
-    val allowExtendedKeyboard: Boolean,
+    val hintToReveal: String, // this hint is shown after the answer has been revealed
+    val explanation: FuriganaString?, // the explanation is always shown only after the answer has been revealed
+    val presentWholeWords: Boolean, // true = multiple choice style, false = allow typing individual characters
+    val allowExtendedKeyboard: Boolean, // true = full kana keyboard, false = show only a limited number of keys
 ) {
     enum class Hint { PHRASE }
     data class Prefill(val prefix: String, val suffix: String)
@@ -36,9 +33,10 @@ class QuestionAndAnswer private constructor(
 
     /**
      * If the word has a kana prefix, it may be an honorific prefix. Since the word without honorific prefix would also
-     * be correct, ProgStudyActivityModel pre-fills the prefix to make it non-ambigous. However, if we're showing kana
-     * or kanji and are asking kanji or kana, and if there is a kana prefix and/or suffix, we also pre-fill the prefix
-     * or suffix, because the user would simply have to copy the same kana in the answer.
+     * be correct, but possibly not covered by acceptableAnswers, we need to pre-fill the prefix to make it non-
+     * ambigous. On the other hand, if we're showing kana or kanji and are asking kanji or kana, and if there is a kana
+     * prefix and/or suffix, we will also pre-fill the prefix or suffix, because the user would simply have to copy the
+     * same kana in the answer, which is pointless.
      */
     val answerPrefill: Prefill? = when {
         presentWholeWords -> null
@@ -48,384 +46,13 @@ class QuestionAndAnswer private constructor(
         else -> {
             val prefix = word.kanaPrefix
             val suffix = word.kanaSuffix
-            val answer = answers.firstOrNull() // the other answers are synonyms
-            val answerHasPrefix = answer?.startsWith(prefix) ?: false
-            val answerHasSuffix = answer?.endsWith(suffix) ?: false
+            val answerHasPrefix = expectedAnswer.startsWith(prefix)
+            val answerHasSuffix = expectedAnswer.endsWith(suffix)
             val questionHasSuffix = questionWithoutFurigana.endsWith(suffix)
             Prefill(
                 prefix = if (answerHasPrefix) prefix else "",
                 suffix = if (answerHasSuffix && questionHasSuffix) suffix else "",
             )
         }
-    }
-
-    companion object {
-        private const val GAP = "___"
-        private const val GAP_WITH_EMPTY_FURIGANA = "$GAP【：】" // to preserve the height of the furigana
-
-        fun create(
-            word: Word,
-            stats: Stats,
-            kind: QAKind,
-            index: Int,
-            showFuriganaWithQuestion: Boolean,
-        ): QuestionAndAnswer {
-            val phrase = word.phrases.getOrNull(index)
-            val sentence = word.sentences.getOrNull(index)
-
-            val phrasePrimaryFormInParts = phrase?.primaryFormInParts(word)
-            val sentencePrimaryFormInParts = sentence?.primaryFormInParts(word)
-
-            val presentWholeWords = getPresentWholeWords(kind)
-
-            val question: OneOf<String, FuriganaString> = getQuestion(
-                word,
-                kind,
-                phrase,
-                sentence,
-                phrasePrimaryFormInParts,
-                sentencePrimaryFormInParts,
-                // When we're not presenting whole words, i.e. allowing the user to type in, we do not ask for the
-                // word form suffix (e.g. 〜ます, 〜ました, etc.) in order to make the answer less ambiguous.
-                gapIncludesSuffix = presentWholeWords,
-            )
-
-            val allowExtendedKeyboard = when {
-                presentWholeWords -> false // whole words need FIXED_KEYS
-                word.level == JLPTLevel.N5 -> false // N5 learners have rōmaji instead
-                kind == QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> false // answers would get too ambiguous
-                stats.getWordTotalSeenCount(word) < 5 -> false // FIXED_KEYS is easier
-                stats.getWordTotalRating(word) < 0.77f -> false
-                else -> true
-            }
-
-            return QuestionAndAnswer(
-                word = word,
-                kind = kind,
-                index = index,
-                showFuriganaWithQuestion = showFuriganaWithQuestion,
-                question = question,
-                questionAfterReveal = getQuestionAfterReveal(word, kind, phrase, sentence),
-                questionHint = getQuestionHint(word, kind, phrase, sentence),
-                answers = getAnswers(
-                    word,
-                    kind,
-                    phrase,
-                    phrasePrimaryFormInParts,
-                    sentencePrimaryFormInParts,
-                    includeSuffix = presentWholeWords,
-                ),
-                kanjiOrKanaToReveal = getKanjiOrKanaToReveal(word, kind),
-                translationToReveal = getTranslationToReveal(word, kind, phrase, sentence),
-                hintToReveal = getHintToReveal(word, kind),
-                explanation = getExplanation(kind, phrase, sentence),
-                presentWholeWords = presentWholeWords,
-                allowExtendedKeyboard = allowExtendedKeyboard,
-            )
-        }
-
-        private fun getQuestion(
-            word: Word,
-            kind: QAKind,
-            phrase: PhraseOrSentence?,
-            sentence: PhraseOrSentence?,
-            phrasePrimaryFormInParts: SplitPrimaryForm?,
-            sentencePrimaryFormInParts: SplitPrimaryForm?,
-            gapIncludesSuffix: Boolean,
-        ): OneOf<String, FuriganaString> = when (kind) {
-            QAKind.SHOW_KANJI_ASK_KANA -> OneOf.First(word.kanji)
-            QAKind.SHOW_KANA_ASK_KANJI -> OneOf.First(word.kana)
-            QAKind.SHOW_ROMAJI_ASK_KANA -> OneOf.First(word.romaji)
-            QAKind.SHOW_TRANSLATION_ASK_KANA -> OneOf.First(word.translation.withSystemLang)
-
-            QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR,
-            QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS,
-            -> OneOf.First(word.translation.withSystemLang)
-
-            QAKind.SHOW_WORD_ASK_NOTHING -> when {
-                word.usuallyInKana -> OneOf.First(word.kana)
-                else -> OneOf.Second(word.primaryForm)
-            }
-
-            QAKind.SHOW_PHRASE_ASK_NOTHING -> OneOf.Second(phrase!!.primaryForm)
-            QAKind.SHOW_SENTENCE_ASK_NOTHING -> OneOf.Second(sentence!!.primaryForm)
-
-            QAKind.SHOW_PHRASE_ASK_WORD_KANA,
-            QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
-            -> OneOf.Second(
-                phrasePrimaryFormInParts!!.let { phrase ->
-                    val gap = if (phrase.wordStem.kanji != phrase.wordStem.kana) GAP_WITH_EMPTY_FURIGANA else GAP
-                    if (gapIncludesSuffix) {
-                        FuriganaString(phrase.begin.raw + gap + phrase.end.raw)
-                    } else {
-                        FuriganaString(phrase.begin.raw + gap + phrase.wordSuffix + phrase.end.raw)
-                    }
-                }
-            )
-
-            QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
-            QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
-            -> OneOf.Second(
-                sentencePrimaryFormInParts!!.let { sentence ->
-                    val gap = if (sentence.wordStem.kanji != sentence.wordStem.kana) GAP_WITH_EMPTY_FURIGANA else GAP
-                    if (gapIncludesSuffix) {
-                        FuriganaString(sentence.begin.raw + gap + sentence.end.raw)
-                    } else {
-                        FuriganaString(sentence.begin.raw + gap + sentence.wordSuffix + sentence.end.raw)
-                    }
-                }
-            )
-
-            QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> OneOf.First(phrase!!.translation.withSystemLang)
-        }
-
-        private fun getQuestionAfterReveal(
-            word: Word,
-            kind: QAKind,
-            phrase: PhraseOrSentence?,
-            sentence: PhraseOrSentence?,
-        ): OneOf<String, FuriganaString>? = when (kind) {
-            QAKind.SHOW_WORD_ASK_NOTHING -> when {
-                word.usuallyInKana -> OneOf.First(word.kana)
-                else -> OneOf.Second(word.primaryForm)
-            }
-
-            QAKind.SHOW_PHRASE_ASK_NOTHING,
-            QAKind.SHOW_PHRASE_ASK_WORD_KANA,
-            QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
-            -> OneOf.Second(phrase!!.primaryForm)
-
-            QAKind.SHOW_SENTENCE_ASK_NOTHING,
-            QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
-            QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
-            -> OneOf.Second(sentence!!.primaryForm)
-
-            else -> null // no change
-        }
-
-        private fun getQuestionHint(
-            word: Word,
-            kind: QAKind,
-            phrase: PhraseOrSentence?,
-            sentence: PhraseOrSentence?,
-        ): OneOf<String, Hint> = when (kind) {
-            QAKind.SHOW_KANJI_ASK_KANA,
-            QAKind.SHOW_KANA_ASK_KANJI,
-            QAKind.SHOW_ROMAJI_ASK_KANA,
-            QAKind.SHOW_WORD_ASK_NOTHING,
-            QAKind.SHOW_PHRASE_ASK_NOTHING,
-            QAKind.SHOW_SENTENCE_ASK_NOTHING,
-            -> OneOf.First("")
-
-            QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA,
-            -> OneOf.Second(Hint.PHRASE)
-
-            QAKind.SHOW_TRANSLATION_ASK_KANA,
-            QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR,
-            QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS,
-            -> OneOf.First(word.hintsWithSystemLang)
-
-            QAKind.SHOW_PHRASE_ASK_WORD_KANA,
-            QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
-            -> OneOf.First(phrase?.translation?.withSystemLang ?: "")
-
-            QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
-            QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
-            -> OneOf.First(sentence?.translation?.withSystemLang ?: "")
-        }
-
-        private fun getAnswers(
-            word: Word,
-            kind: QAKind,
-            phrase: PhraseOrSentence?,
-            phrasePrimaryFormInParts: SplitPrimaryForm?,
-            sentencePrimaryFormInParts: SplitPrimaryForm?,
-            includeSuffix: Boolean,
-        ) = when (kind) {
-            QAKind.SHOW_KANJI_ASK_KANA,
-            QAKind.SHOW_ROMAJI_ASK_KANA,
-            QAKind.SHOW_TRANSLATION_ASK_KANA,
-            -> mutableListOf(word.kana).apply { addAll(word.synonyms.map { it.kana }) }
-
-            QAKind.SHOW_KANA_ASK_KANJI,
-            QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR,
-            QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS,
-            -> mutableListOf(word.kanji).apply { addAll(word.synonyms.map { it.kanji }) }
-
-            QAKind.SHOW_WORD_ASK_NOTHING,
-            QAKind.SHOW_PHRASE_ASK_NOTHING,
-            QAKind.SHOW_SENTENCE_ASK_NOTHING,
-            -> listOf()
-
-            QAKind.SHOW_PHRASE_ASK_WORD_KANA -> getKanaAnswersForPhraseOrSentence(
-                word,
-                phrasePrimaryFormInParts!!,
-                includeSuffix
-            )
-            QAKind.SHOW_PHRASE_ASK_WORD_KANJI -> getKanjiAnswersForPhraseOrSentence(
-                word,
-                phrasePrimaryFormInParts!!,
-                includeSuffix
-            )
-            QAKind.SHOW_SENTENCE_ASK_WORD_KANA -> getKanaAnswersForPhraseOrSentence(
-                word,
-                sentencePrimaryFormInParts!!,
-                includeSuffix
-            )
-            QAKind.SHOW_SENTENCE_ASK_WORD_KANJI -> getKanjiAnswersForPhraseOrSentence(
-                word,
-                sentencePrimaryFormInParts!!,
-                includeSuffix
-            )
-            QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> listOf(phrase?.kana ?: "")
-        }
-
-        private fun getKanaAnswersForPhraseOrSentence(
-            word: Word,
-            parts: SplitPrimaryForm,
-            includeSuffix: Boolean,
-        ): List<String> =
-            when {
-                parts.wordStem.kana == word.kana && parts.wordSuffix.isEmpty() -> {
-                    mutableListOf(word.kana).apply { addAll(word.synonyms.map { it.kana }) }
-                }
-                includeSuffix -> {
-                    require(parts.wordSuffix.isEmpty() || parts.wordSuffix.isHiragana()) {
-                        "Word form suffix is not Hiragana: ${parts.wordSuffix}"
-                    }
-                    listOf(parts.wordStem.kana + parts.wordSuffix)
-                }
-                else -> listOf(parts.wordStem.kana)
-            }
-
-        private fun getKanjiAnswersForPhraseOrSentence(
-            word: Word,
-            parts: SplitPrimaryForm,
-            includeSuffix: Boolean,
-        ): List<String> =
-            when {
-                word.usuallyInKana && (parts.wordStem.raw == word.kana && parts.wordSuffix.isEmpty()) -> {
-                    mutableListOf(word.kana).apply { addAll(word.synonyms.map { it.kana }) }
-                }
-                !word.usuallyInKana && (parts.wordStem.raw == word.kanji && parts.wordSuffix.isEmpty()) -> {
-                    mutableListOf(word.kanji).apply { addAll(word.synonyms.map { it.kanji }) }
-                }
-                includeSuffix -> listOf(parts.wordStem.kanji + parts.wordSuffix)
-                else -> listOf(parts.wordStem.kanji)
-            }
-
-        private fun getKanjiOrKanaToReveal(word: Word, kind: QAKind): String =
-            when (kind) {
-                QAKind.SHOW_ROMAJI_ASK_KANA,
-                QAKind.SHOW_TRANSLATION_ASK_KANA,
-                -> when {
-                    word.kanji != word.kana && !word.usuallyInKana -> word.kanji
-                    else -> ""
-                }
-
-                QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR,
-                QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS,
-                -> when {
-                    word.kana != word.kanji -> word.kana
-                    else -> ""
-                }
-
-                QAKind.SHOW_WORD_ASK_NOTHING,
-                QAKind.SHOW_PHRASE_ASK_NOTHING,
-                QAKind.SHOW_SENTENCE_ASK_NOTHING,
-                QAKind.SHOW_KANA_ASK_KANJI,
-                QAKind.SHOW_KANJI_ASK_KANA,
-                QAKind.SHOW_PHRASE_ASK_WORD_KANA,
-                QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
-                QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA,
-                QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
-                QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
-                -> ""
-            }
-
-        private fun getTranslationToReveal(
-            word: Word,
-            kind: QAKind,
-            phrase: PhraseOrSentence?,
-            sentence: PhraseOrSentence?,
-        ): String =
-            when (kind) {
-                QAKind.SHOW_KANJI_ASK_KANA,
-                QAKind.SHOW_KANA_ASK_KANJI,
-                QAKind.SHOW_ROMAJI_ASK_KANA,
-                QAKind.SHOW_WORD_ASK_NOTHING,
-                -> word.translation.withSystemLang
-
-                QAKind.SHOW_PHRASE_ASK_NOTHING -> phrase?.translation?.withSystemLang ?: ""
-                QAKind.SHOW_SENTENCE_ASK_NOTHING -> sentence?.translation?.withSystemLang ?: ""
-
-                QAKind.SHOW_PHRASE_ASK_WORD_KANA,
-                QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
-                QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA,
-                QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
-                QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
-                QAKind.SHOW_TRANSLATION_ASK_KANA,
-                QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR,
-                QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS,
-                -> ""
-            }
-
-        private fun getHintToReveal(word: Word, kind: QAKind): String =
-            when (kind) {
-                QAKind.SHOW_KANJI_ASK_KANA,
-                QAKind.SHOW_KANA_ASK_KANJI,
-                QAKind.SHOW_ROMAJI_ASK_KANA,
-                -> word.hintsWithSystemLang
-
-                QAKind.SHOW_WORD_ASK_NOTHING,
-                QAKind.SHOW_PHRASE_ASK_NOTHING,
-                QAKind.SHOW_SENTENCE_ASK_NOTHING,
-                QAKind.SHOW_PHRASE_ASK_WORD_KANA,
-                QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
-                QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA,
-                QAKind.SHOW_SENTENCE_ASK_WORD_KANA,
-                QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
-                QAKind.SHOW_TRANSLATION_ASK_KANA,
-                QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR,
-                QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS,
-                -> ""
-            }
-
-        private fun getExplanation(
-            kind: QAKind,
-            phrase: PhraseOrSentence?,
-            sentence: PhraseOrSentence?,
-        ): FuriganaString? =
-            when (kind) {
-                QAKind.SHOW_PHRASE_ASK_NOTHING,
-                QAKind.SHOW_PHRASE_ASK_WORD_KANA,
-                QAKind.SHOW_PHRASE_ASK_WORD_KANJI,
-                QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA,
-                -> phrase?.explanation?.withSystemLang?.takeIf { it.isNotEmpty() }?.let { FuriganaString(it) }
-
-                QAKind.SHOW_SENTENCE_ASK_NOTHING,
-                QAKind.SHOW_SENTENCE_ASK_WORD_KANJI,
-                -> sentence?.explanation?.withSystemLang?.takeIf { it.isNotEmpty() }?.let { FuriganaString(it) }
-
-                else -> null
-            }
-
-        private fun getPresentWholeWords(kind: QAKind): Boolean =
-            when (kind) {
-                QAKind.SHOW_KANJI_ASK_KANA -> false
-                QAKind.SHOW_KANA_ASK_KANJI -> false
-                QAKind.SHOW_ROMAJI_ASK_KANA -> false
-                QAKind.SHOW_TRANSLATION_ASK_KANA -> false
-                QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_SIMILAR -> true
-                QAKind.SHOW_TRANSLATION_ASK_KANJI_AMONG_WORDS -> false
-                QAKind.SHOW_WORD_ASK_NOTHING -> false
-                QAKind.SHOW_PHRASE_ASK_NOTHING -> false
-                QAKind.SHOW_SENTENCE_ASK_NOTHING -> false
-                QAKind.SHOW_PHRASE_ASK_WORD_KANA -> false
-                QAKind.SHOW_PHRASE_ASK_WORD_KANJI -> true
-                QAKind.SHOW_SENTENCE_ASK_WORD_KANA -> false
-                QAKind.SHOW_SENTENCE_ASK_WORD_KANJI -> true
-                QAKind.SHOW_PHRASE_TRANSLATION_ASK_PHRASE_KANA -> false
-            }
     }
 }

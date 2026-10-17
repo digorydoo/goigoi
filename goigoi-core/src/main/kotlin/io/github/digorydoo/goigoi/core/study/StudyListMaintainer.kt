@@ -4,7 +4,7 @@ import ch.digorydoo.kutils.logging.Log
 import ch.digorydoo.kutils.utils.Moment
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Word
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.stats.IWordStats
 import io.github.digorydoo.goigoi.core.study.MyWordsMaintainer.Companion.MIN_RATING_FOR_REMOVAL_FROM_MY_WORDS
 import kotlin.math.min
 import kotlin.math.roundToInt
@@ -16,7 +16,7 @@ class StudyListMaintainer(
     private val list: MutableList<StudyItem>,
     private val pool: StudyItemPool,
     private val superProgressive: Boolean,
-    private val stats: Stats,
+    private val stats: IWordStats,
 ) {
     interface Delegate {
         fun loadWordFile(filename: String): Word?
@@ -172,6 +172,7 @@ class StudyListMaintainer(
 
         val step = when (answer) {
             Answer.CORRECT,
+            Answer.CORRECT_BUT_INACCURATE,
             Answer.CORRECT_EXCEPT_KANA_SIZE,
             -> stepWhenAnswerWasCorrect(item)
 

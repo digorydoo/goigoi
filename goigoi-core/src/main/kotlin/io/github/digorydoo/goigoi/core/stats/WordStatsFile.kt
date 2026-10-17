@@ -30,11 +30,12 @@ class WordStatsFile(dir: File): Exportable {
                 setStudyMoment(word)
             }
 
-            Answer.CORRECT_EXCEPT_KANA_SIZE, // counted as neither correct nor wrong
+            Answer.CORRECT_BUT_INACCURATE, // counted as neither correct nor wrong
+            Answer.CORRECT_EXCEPT_KANA_SIZE, // dito
             Answer.TRIVIAL, // word, phrase or sentence just presented
             -> setStudyMoment(word)
 
-            Answer.SKIP, // user skipped word in FlipThru
+            Answer.SKIP, // FIXME remove, because flip-thru no longer exists
             Answer.NONE, // shouldn't happen
             -> Unit
         }

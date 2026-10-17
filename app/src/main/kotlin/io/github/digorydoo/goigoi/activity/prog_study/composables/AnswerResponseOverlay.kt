@@ -107,7 +107,7 @@ fun AnswerResponseOverlay(model: ProgStudyActivityModel, modifier: Modifier = Mo
         val dur = when (correctness) {
             Answer.CORRECT -> CORRECT_ANIM_DURATION_MILLIS
             Answer.WRONG -> WRONG_ANIM_DURATION_MILLIS
-            Answer.CORRECT_EXCEPT_KANA_SIZE -> ALMOST_CORRECT_ANIM_DURATION_MILLIS
+            Answer.CORRECT_BUT_INACCURATE, Answer.CORRECT_EXCEPT_KANA_SIZE -> ALMOST_CORRECT_ANIM_DURATION_MILLIS
             else -> 0
         }
 
@@ -157,7 +157,9 @@ fun AnswerResponseOverlay(model: ProgStudyActivityModel, modifier: Modifier = Mo
             translationY = wrongYShiftAmplitudePx *
                 (0.5 + 0.5 * (1f - anim.value) * sin(WRONG_YSHIFT_NUM_PERIODS * anim.value * 2 * PI)).toFloat()
         }
-        Answer.CORRECT_EXCEPT_KANA_SIZE -> {
+        Answer.CORRECT_BUT_INACCURATE,
+        Answer.CORRECT_EXCEPT_KANA_SIZE,
+        -> {
             alpha = 1f - abs(anim.value * 2f - 1f).pow(2.5f)
             zoomFactor = lerp(ALMOST_CORRECT_MIN_ZOOM_FACTOR, ALMOST_CORRECT_MAX_ZOOM_FACTOR, alpha)
             translationY = 0f

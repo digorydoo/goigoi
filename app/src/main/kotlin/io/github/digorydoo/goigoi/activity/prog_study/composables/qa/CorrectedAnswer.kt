@@ -15,19 +15,17 @@ fun CorrectedAnswer(model: ProgStudyActivityModel) {
     if (qaKind.doesNotAskAnything) return
 
     val pmode = model.presentationMode.collectAsState().value
-    val acceptableAnswers = model.acceptableAnswers.collectAsState().value
+    val expectedAnswer = model.expectedAnswer.collectAsState().value
     val answerCorrectness = model.answerCorrectness.collectAsState().value
 
     val density = LocalDensity.current
     val fontSize = with(density) { ANSWER_FONT_SIZE.toSp() }
 
-    // Ideally, we would show the acceptable answer that is closest to the given answer.
-    // For now, just show the first acceptable answer.
     val correctedAnswer = when (answerCorrectness) {
         Answer.CORRECT, Answer.SKIP, Answer.NONE, Answer.TRIVIAL -> ""
-        Answer.WRONG, Answer.CORRECT_EXCEPT_KANA_SIZE -> when {
+        Answer.WRONG, Answer.CORRECT_BUT_INACCURATE, Answer.CORRECT_EXCEPT_KANA_SIZE -> when {
             pmode == PresentationMode.QUESTION -> ""
-            else -> acceptableAnswers.firstOrNull() ?: ""
+            else -> expectedAnswer
         }
     }
 

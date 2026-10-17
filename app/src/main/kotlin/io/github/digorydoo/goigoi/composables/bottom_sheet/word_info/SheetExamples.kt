@@ -25,8 +25,8 @@ import io.github.digorydoo.goigoi.composables.list.ListSubheader
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.core.db.PhraseOrSentence
 import io.github.digorydoo.goigoi.core.db.Word
-import io.github.digorydoo.goigoi.legacy.spannable.FuriganaBuilder
-import io.github.digorydoo.goigoi.legacy.spannable.buildSpan
+import io.github.digorydoo.goigoi.legacy.FuriganaBuilder
+import io.github.digorydoo.goigoi.legacy.buildSpan
 import io.github.digorydoo.goigoi.utils.appendColoured
 import io.github.digorydoo.goigoi.utils.appendStyled
 
@@ -105,7 +105,7 @@ private fun Example(phraseOrSentence: PhraseOrSentence, word: Word, marginTop: D
                         text = FuriganaBuilder.buildSpan(explanation)
                         setTextSize(TypedValue.COMPLEX_UNIT_PX, secondaryTextSizePx)
                         setTextColor(colours.onBackground.toArgb())
-                        setTypeface(Typeface.defaultFromStyle(Typeface.ITALIC))
+                        typeface = Typeface.defaultFromStyle(Typeface.ITALIC)
                     }
                 }
             )

@@ -4,7 +4,7 @@ import ch.digorydoo.kutils.logging.Log
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Vocabulary
 import io.github.digorydoo.goigoi.core.db.Word
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.stats.IStats
 import io.github.digorydoo.goigoi.core.stats.StatsKey
 
 class StudyItemIterator private constructor(
@@ -14,7 +14,7 @@ class StudyItemIterator private constructor(
     private val unyt: Unyt?, // null = super progressive mode
     private val vocab: Vocabulary,
     private val howToStudy: HowToStudy,
-    private val stats: Stats,
+    private val stats: IStats,
 ) {
     enum class HowToStudy { WORST_CONTINUOUSLY, EACH_ONCE }
 
@@ -80,6 +80,7 @@ class StudyItemIterator private constructor(
 
                 currentChanged = listMaintainer.onAnswerCorrect(curWord)
             }
+
             Answer.WRONG -> {
                 numWrong++
                 curItem.localNumWrong++
@@ -90,12 +91,14 @@ class StudyItemIterator private constructor(
 
                 listMaintainer.onAnswerWrong()
             }
-            Answer.SKIP -> {
-                curItem.localNumSkipped++
-            }
-            Answer.CORRECT_EXCEPT_KANA_SIZE -> {
-                listMaintainer.onAnswerAlmostCorrect()
-            }
+
+            Answer.SKIP,
+            -> curItem.localNumSkipped++
+
+            Answer.CORRECT_BUT_INACCURATE,
+            Answer.CORRECT_EXCEPT_KANA_SIZE,
+            -> listMaintainer.onAnswerAlmostCorrect()
+
             Answer.TRIVIAL,
             Answer.NONE,
             -> Unit
@@ -124,6 +127,14 @@ class StudyItemIterator private constructor(
         if (updateMyWordsUnyt) {
             myWordsMaintainer.onNextWord(curWord)
         }
+    }
+
+    @Suppress("unused") // for debugging purposes, see QAProvider
+    fun setCurrent(wordId: String) {
+        val item = list.find { it.word.id == wordId }
+        require(item != null) { "Word not found: $wordId" }
+        list.remove(item)
+        list.add(index, item)
     }
 
     init {
@@ -164,7 +175,7 @@ class StudyItemIterator private constructor(
 
         fun create(
             vocab: Vocabulary,
-            stats: Stats,
+            stats: IStats,
             unyt: Unyt?, // null = super progressive mode
             howToStudy: HowToStudy,
         ): StudyItemIterator {

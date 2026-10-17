@@ -355,11 +355,6 @@ class WordLinkChecker {
                     "Counterpart of see-also link should be kept in the same unyt" +
                         " when their JLPT levels allow it!\n$msg"
                 )
-            } else {
-                vocab.warnings.add(
-                    "Hint: Counterpart of see-also link could be kept in the same unyt" +
-                        " if their JLPT levels allowed it\n$msg"
-                )
             }
         }
     }

@@ -8,7 +8,7 @@ class VocabIndexWriter(private val vocab: GoigoiVocab, stream: OutputStream): Ab
     override fun write() {
         for (topic in vocab.topics) {
             if (!topic.hidden) {
-                beginTopic(topic.id)
+                write(TOPIC_ID, topic.id)
                 write(TOPIC_NAME_DE, topic.name.de)
                 write(TOPIC_NAME_EN, topic.name.en)
                 write(TOPIC_NAME_FR, topic.name.fr)
@@ -27,7 +27,7 @@ class VocabIndexWriter(private val vocab: GoigoiVocab, stream: OutputStream): Ab
 
                 for (unyt in topic.unyts) {
                     if (!unyt.hidden) {
-                        beginUnyt(unyt.id)
+                        write(UNYT_ID, unyt.id)
                         write(UNYT_NAME_DE, unyt.name.de)
                         write(UNYT_NAME_EN, unyt.name.en)
                         write(UNYT_NAME_FR, unyt.name.fr)

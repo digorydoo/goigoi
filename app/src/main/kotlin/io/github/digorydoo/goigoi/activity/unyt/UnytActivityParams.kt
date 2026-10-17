@@ -6,7 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import io.github.digorydoo.goigoi.BuildConfig
 import io.github.digorydoo.goigoi.core.db.Unyt
-import io.github.digorydoo.goigoi.utils.SingletonHolder
+import io.github.digorydoo.goigoi.utils.getOrCreateSingletons
 
 class UnytActivityParams(val unytId: String) {
     fun putInto(intent: Intent) {
@@ -33,7 +33,8 @@ class UnytActivityParams(val unytId: String) {
  *
  */
 fun Activity.startUnytActivityAsync(unyt: Unyt, done: () -> Unit) {
-    val vocab = SingletonHolder.vocab
+    val singletons = getOrCreateSingletons()
+    val vocab = singletons.vocab
 
     Thread {
         vocab.loadUnytIfNecessary(unyt)

@@ -19,7 +19,7 @@ import io.github.digorydoo.goigoi.composables.list.ListSubheader
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.db.WordLink
-import io.github.digorydoo.goigoi.legacy.spannable.FuriganaBuilder
+import io.github.digorydoo.goigoi.legacy.FuriganaBuilder
 import java.util.Locale
 
 private const val SEE_ALSO_PRIMARY_FORM_SIZE_SP = 20f

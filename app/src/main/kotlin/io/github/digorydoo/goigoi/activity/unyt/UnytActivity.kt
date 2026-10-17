@@ -8,14 +8,12 @@ import androidx.lifecycle.lifecycleScope
 import io.github.digorydoo.goigoi.activity.unyt.UnytActivityModel.WordInfo
 import io.github.digorydoo.goigoi.activity.unyt.UnytActivityModel.WordsListItem
 import io.github.digorydoo.goigoi.activity.unyt.composables.UnytScreen
+import io.github.digorydoo.goigoi.composables.bottom_sheet.word_info.WordInfoBottomSheetModel
 import io.github.digorydoo.goigoi.composables.providers.DevicePropsProvider
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.composables.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.core.db.Unyt
-import io.github.digorydoo.goigoi.legacy.activity.flip_thru.FlipThruActivityParams
-import io.github.digorydoo.goigoi.legacy.activity.flip_thru.startFlipThruActivity
 import io.github.digorydoo.goigoi.utils.ResUtils
-import io.github.digorydoo.goigoi.utils.SingletonHolder
+import io.github.digorydoo.goigoi.utils.getOrCreateSingletons
 
 class UnytActivity: ComponentActivity() {
     private lateinit var unyt: Unyt
@@ -28,31 +26,33 @@ class UnytActivity: ComponentActivity() {
         ResUtils.setActivityTheme(this)
         enableEdgeToEdge()
 
-        val vocab = SingletonHolder.vocab
-        val prefs = SingletonHolder.prefs
-        val stats = SingletonHolder.stats
+        val singletons = getOrCreateSingletons()
+        val kanjiIndex = singletons.kanjiIndex
+        val listItemDataFactory = singletons.listItemDataFactory
+        val prefs = singletons.prefs
+        val stats = singletons.stats
+        val vocab = singletons.vocab
 
         val params = UnytActivityParams.fromIntent(intent)
         unyt = vocab.findUnytById(params.unytId)!!
 
         stats.notifyUnytActivityLaunched(unyt)
 
-        tasks = UnytActivityTasks(unyt, vocab, stats, lifecycleScope)
-        model = UnytActivityModel(unyt, vocab, prefs, stats, tasks, lifecycleScope)
+        tasks = UnytActivityTasks(unyt, vocab, stats, listItemDataFactory, lifecycleScope)
+        model = UnytActivityModel(unyt, prefs, stats, tasks, vocab, lifecycleScope)
+        val bottomSheetModel = WordInfoBottomSheetModel(kanjiIndex, stats)
 
         fillListWithPlaceholders()
         model.updateAllItemsBlocking() // should be OK, because stuff was preloaded by startUnytActivity()
 
         setContent {
-            SingletonsProvider(this) {
-                DevicePropsProvider(this) {
-                    GoigoiTheme {
-                        UnytScreen(
-                            model,
-                            onLaunchFlipThruActivity = { startFlipThruActivity(FlipThruActivityParams(unyt.id)) },
-                            onBack = { finish() }
-                        )
-                    }
+            DevicePropsProvider(this) {
+                GoigoiTheme(prefs.theme) {
+                    UnytScreen(
+                        model,
+                        bottomSheetModel,
+                        onBack = { finish() }
+                    )
                 }
             }
         }

@@ -4,13 +4,8 @@ import android.content.Context
 import android.util.TypedValue
 import kotlin.math.roundToInt
 
+@Deprecated("Use LocalDensity instead")
 object DimUtils {
-    fun dpToPx(dp: Int, ctx: Context): Int {
-        val metrics = ctx.resources.displayMetrics
-        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp.toFloat(), metrics)
-            .roundToInt()
-    }
-
     fun dpToPx(dp: Float, ctx: Context): Float {
         val metrics = ctx.resources.displayMetrics
         return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, metrics)
@@ -21,13 +16,13 @@ object DimUtils {
         return (px / oneDip).roundToInt()
     }
 
-    fun mmToPx(mm: Float, ctx: Context): Float {
-        val metrics = ctx.resources.displayMetrics
-        return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_MM, mm, metrics)
-    }
-
-    fun pxToMm(px: Float, ctx: Context): Float {
-        val oneMm = mmToPx(1.0f, ctx)
-        return px / oneMm
-    }
+    // fun mmToPx(mm: Float, ctx: Context): Float {
+    //     val metrics = ctx.resources.displayMetrics
+    //     return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_MM, mm, metrics)
+    // }
+    //
+    // fun pxToMm(px: Float, ctx: Context): Float {
+    //     val oneMm = mmToPx(1.0f, ctx)
+    //     return px / oneMm
+    // }
 }

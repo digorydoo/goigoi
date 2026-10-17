@@ -3,12 +3,12 @@ package io.github.digorydoo.goigoi.core.study
 import ch.digorydoo.kutils.logging.Log
 import ch.digorydoo.kutils.math.randomIntBiasedTowardsEnd
 import io.github.digorydoo.goigoi.core.db.Word
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.stats.IWordAndSuperProgressiveStats
 
 class StudyItemPool(
     private val delegate: Delegate,
     private val allWordFilenames: List<String>,
-    private val stats: Stats,
+    private val stats: IWordAndSuperProgressiveStats,
 ) {
     interface Delegate {
         fun loadWordFile(filename: String): Word?

@@ -1,21 +1,22 @@
-package io.github.digorydoo.goigoi.compiler.stats
+package io.github.digorydoo.goigoi.compiler
 
 import ch.digorydoo.kutils.cjk.JLPTLevel
-import ch.digorydoo.kutils.string.dots
-import ch.digorydoo.kutils.string.lpad
-import ch.digorydoo.kutils.string.lpadOrEmpty
-import ch.digorydoo.kutils.string.trunc
-import ch.digorydoo.kutils.string.withPercent
-import io.github.digorydoo.goigoi.compiler.CheckFailed
-import io.github.digorydoo.goigoi.compiler.knownFirstnames
-import io.github.digorydoo.goigoi.compiler.knownSurnames
+import ch.digorydoo.kutils.string.*
+import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhraseOrSentence
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
+import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWordLink.Kind
 import io.github.digorydoo.goigoi.core.db.WordCategory
+import io.github.digorydoo.goigoi.core.db.WordHint
 import kotlin.math.roundToInt
 
-object Stats {
+class Stats(
+    private val vocab: GoigoiVocab,
+    private val prep: PrepWordLinks,
+    private val kanjiLevels: KanjiLevels,
+    private val readings: Map<String, Set<String>>,
+) {
     private data class VisibleHidden(var visible: Int, var hidden: Int)
 
     private class UnytAndCount(val unyt: GoigoiUnyt, val count: Int) {
@@ -26,47 +27,31 @@ object Stats {
         }
     }
 
-    private val originPrefixes = arrayOf(
-        "self",
-        "500mon N3", // must appear before 500mon in this list
-        "500mon N2", // dito
-        "500mon N1", // dito
-        "500mon", // denotes 500mon N5/n4
-        "BondLingo",
-        "ChatGPT",
-        "DeepL",
-        "Dragon Ball",
-        "Doraemon",
-        "GENKI",
-        "Kaname Naito",
-        "Langenscheidt",
-        "Miku",
-        "Oxford",
-        "Yuko",
-        "duolingo",
-        "hinative",
-        "jisho",
-        "jpod",
-        "lib0",
-        "tofugu",
-    )
-
-    fun printStats(vocab: GoigoiVocab) {
-        printWordsStats(vocab)
-        printGeneralSentencePhraseStats(vocab)
-        printTopicsAndUnytsStats(vocab)
-        printLengthyWordsStats(vocab)
-        printRequireSentencesStats(vocab)
-        printUnytsWithHiddenSentences(vocab)
-        printSurnameFirstnameStats(vocab)
-        printSentenceOriginStats(vocab)
-        printRequirePhrasesStats(vocab)
-        printPhraseOriginStats(vocab)
-        printManualKanjiLevelStats(vocab)
-        printCategories(vocab)
+    fun print() {
+        printWordsStats()
+        printGeneralSentencePhraseStats()
+        printTopicsAndUnytsStats()
+        printRequirePhrasesStats()
+        printRequireSentencesStats()
+        printPhraseOriginStats()
+        printSentenceOriginStats()
+        printUnytsWithHiddenSentences()
+        printPhraseSentenceAskStats()
+        printSurnameFirstnameStats()
+        printHintStats()
+        printLengthyWordsStats()
+        printAcceptableAnswersStats()
+        printCategories()
+        printMissingCatStats()
+        printManualKanjiLevelStats()
+        printKanjiStats()
+        printVisuallySimilarKanjisStats()
+        printReadingsStats()
+        printWordLinkStats()
+        printWordOrdering()
     }
 
-    private fun printWordsStats(vocab: GoigoiVocab) {
+    private fun printWordsStats() {
         var totalNumUnyts = 0
         var totalNumWords = 0
         var numVisibleWords = 0
@@ -231,7 +216,7 @@ object Stats {
         println("   Visible words with phrases  . . . ${withPercent(numVisibleWordsWithPhrases, numVisibleWords)}\n")
     }
 
-    private fun printTopicsAndUnytsStats(vocab: GoigoiVocab) {
+    private fun printTopicsAndUnytsStats() {
         for (topic in vocab.topics) {
             var text = topic.name.en
 
@@ -271,7 +256,7 @@ object Stats {
         }
     }
 
-    private fun printLengthyWordsStats(vocab: GoigoiVocab) {
+    private fun printLengthyWordsStats() {
         var foundLengthyWords = false
 
         vocab.forEachUnyt { unyt, _ ->
@@ -285,7 +270,7 @@ object Stats {
 
                 if (text.length > 20) {
                     if (!foundLengthyWords) {
-                        println("\nLengthy words")
+                        println("Lengthy words")
                         foundLengthyWords = true
                     }
 
@@ -298,9 +283,11 @@ object Stats {
                 }
             }
         }
+
+        println("")
     }
 
-    private fun printGeneralSentencePhraseStats(vocab: GoigoiVocab) {
+    private fun printGeneralSentencePhraseStats() {
         var totalNumSentences = 0
         var totalNumPhrases = 0
         var numSentencesWithFormUnchanged = 0
@@ -359,7 +346,7 @@ object Stats {
         println("   should specify form . . . . . . . $strPhrasesThatShouldSpecifyForm")
     }
 
-    private fun printUnytsWithHiddenSentences(vocab: GoigoiVocab) {
+    private fun printUnytsWithHiddenSentences() {
         println("\nUnyts with hidden sentences")
 
         mutableMapOf<GoigoiUnyt, Int>()
@@ -377,7 +364,7 @@ object Stats {
             .also { println("   total: ${it.size}") }
     }
 
-    private fun printSurnameFirstnameStats(vocab: GoigoiVocab) {
+    private fun printSurnameFirstnameStats() {
         println("\nSurnames used in visible sentences")
 
         knownSurnames.forEach { (surname, _) ->
@@ -407,7 +394,7 @@ object Stats {
         }
     }
 
-    private fun printRequireSentencesStats(vocab: GoigoiVocab) {
+    private fun printRequireSentencesStats() {
         println("\nUnyts that require sentences for each word")
 
         mutableListOf<UnytAndCount>()
@@ -439,7 +426,7 @@ object Stats {
             .also { println("   total: ${it.size}") }
     }
 
-    private fun printRequirePhrasesStats(vocab: GoigoiVocab) {
+    private fun printRequirePhrasesStats() {
         println("\nUnyts that require phrases for each word")
 
         mutableListOf<UnytAndCount>()
@@ -471,7 +458,7 @@ object Stats {
             .also { println("   total: ${it.size}") }
     }
 
-    private fun printSentenceOriginStats(vocab: GoigoiVocab) {
+    private fun printSentenceOriginStats() {
         println("\nOrigins of sentences")
 
         val originsMap = mutableMapOf<String, Int>()
@@ -499,7 +486,7 @@ object Stats {
         println(dots("   empty") + lpad(originsMap["empty"] ?: 0))
     }
 
-    private fun printPhraseOriginStats(vocab: GoigoiVocab) {
+    private fun printPhraseOriginStats() {
         println("\nOrigins of phrases")
 
         val originsMap = mutableMapOf<String, Int>()
@@ -527,8 +514,8 @@ object Stats {
         println(dots("   empty") + lpad(originsMap["empty"] ?: 0))
     }
 
-    private fun printManualKanjiLevelStats(vocab: GoigoiVocab) {
-        println("\nManual kanji levels")
+    private fun printManualKanjiLevelStats() {
+        println("Manual kanji levels")
 
         JLPTLevel.entries.forEach { lvl ->
             val count = vocab.manualKanjiLevels[lvl]?.size ?: 0
@@ -536,8 +523,8 @@ object Stats {
         }
     }
 
-    private fun printCategories(vocab: GoigoiVocab) {
-        println("\nCategories")
+    private fun printCategories() {
+        println("Categories")
 
         val categoriesUsedByVisibleWordsSolo = mutableMapOf<WordCategory, MutableSet<GoigoiWord>>()
         val categoriesUsedByVisibleWordsInCombination = mutableMapOf<WordCategory, MutableSet<GoigoiWord>>()
@@ -570,6 +557,103 @@ object Stats {
         }
     }
 
+    private fun printWordLinkStats() {
+        println("Hiragana reading with most #words  . ${lpad(prep.hiraganaWithMostWords)}")
+        println("# of vis. words using that reading . ${lpad(prep.countOfWordsForHiraganaWithMostWords)}")
+
+        prep.hiraganaToVisibleWords[prep.hiraganaWithMostWords]?.forEach { (w, u, _) ->
+            print("   ${lpad(trunc(u.name.en, 20), 20)}: ")
+            println(
+                w.toPrettyString(withRomaji = true, withLvl = true, withKanjiKanaSeparated = true, withColour = false)
+            )
+        }
+
+        println("")
+        println("Total # word links . . . . . . . . . ${lpad(prep.totalNumWordLinks)}")
+        println("   manual see-also links . . . . . . ${lpad(prep.numSeeAlsoLinksFromXML)}")
+        println("   manual keep-apart links . . . . . ${lpad(prep.numKeepApartLinksFromXML)}")
+        println("   manual keep-together links  . . . ${lpad(prep.numKeepTogetherLinksFromXML)}")
+        println("   generated (same reading)  . . . . ${lpad(prep.numAutoSameReadingLinks)}")
+        println("   generated (same kanji)  . . . . . ${lpad(prep.numAutoSameKanjiLinks)}")
+        println("   generated (same translation)  . . ${lpad(prep.numAutoSameTranslationLinks)}")
+        println("")
+        println("# of vis. words with active links  . ${lpad(prep.numVisibleWordsWithActiveLinks)}")
+        println("# of hidden words with links . . . . ${lpad(prep.numHiddenWordsWithLinks)}")
+
+        print("\nWord with the most of active links:")
+
+        val mostActiveLinksWord = prep.mostActiveLinksWord
+
+        if (mostActiveLinksWord == null) {
+            println(" none")
+        } else {
+            print("\n   ")
+
+            println(
+                mostActiveLinksWord.toPrettyString(
+                    withRomaji = true,
+                    withLvl = true,
+                    withKanjiKanaSeparated = true,
+                    withColour = false
+                )
+            )
+
+            println("   Unyt ${prep.mostActiveLinksUnyt?.nameForStdout}")
+            println("   # of links: ${prep.mostActiveLinksCount}")
+
+            mostActiveLinksWord.links.forEach { see ->
+                println("   - id=${see.wordId}")
+            }
+        }
+
+        println("\nAll see-also links of visible words:")
+
+        val words = mutableListOf<GoigoiWord>()
+        vocab.forEachVisibleWord { words.add(it) }
+
+        words
+            .sortedBy { it.id }
+            .forEach { word ->
+                if (word.links.isNotEmpty()) {
+                    println("")
+                    println("   from ${wordToString(word, word.id)}")
+
+                    word.links
+                        .sortedBy { "${it.word?.id}" }
+                        .forEach { see ->
+                            val rem = when (see.kind) {
+                                Kind.XML_SEE_ALSO -> "<see> ${see.type}"
+                                Kind.XML_KEEP_APART -> "<keep_apart_from>"
+                                Kind.XML_KEEP_TOGETHER -> "<keep_together>"
+                                Kind.AUTO_SAME_READING -> "auto, same reading"
+                                Kind.AUTO_SAME_KANJI -> "auto, same kanji"
+                                Kind.AUTO_SAME_EN_TRANSLATION -> "auto, same EN translation '${see.type}'"
+                                Kind.AUTO_SAME_DE_TRANSLATION -> "auto, same DE translation '${see.type}'"
+                            }
+
+                            val to = see.word
+
+                            if (to == null) {
+                                // Happens with explicit see-also links when the target word is hidden
+                                println("     to HIDDEN word id=${see.wordId} ($rem)")
+                            } else {
+                                println("     to ${wordToString(to, "${rpad(to.id, 20)} ($rem)")}")
+                            }
+                        }
+                }
+            }
+    }
+
+    private fun wordToString(word: GoigoiWord, rem: String) =
+        arrayOf(
+            lpad(word.romaji, 20),
+            lpad(word.level?.toString() ?: "", 2),
+            lpad(word.kanji, 4, '　'),
+            lpad(word.kana, 6, '　'),
+            rem,
+        )
+            .joinToString(" ・ ")
+
     private fun countVisibleHidden(map: Map<String, VisibleHidden>, visible: Boolean): Int {
         var result = 0
 
@@ -582,5 +666,419 @@ object Stats {
         }
 
         return result
+    }
+
+    private fun printKanjiStats() {
+        val allKanjis = mutableSetOf<Char>().apply {
+            JLPTLevel.entries.forEach { lvl ->
+                addAll(kanjiLevels.get(lvl))
+            }
+        }
+
+        println("\nTotal number of known kanjis: ${allKanjis.size}")
+
+        JLPTLevel.entries.forEach { lvl ->
+            println("   $lvl: ${kanjiLevels.get(lvl).size}")
+        }
+
+        println("\nManual kanji JLPT level corrections:")
+
+        vocab.manualKanjiLevels.forEach { (level, kanjis) ->
+            println("   ${level}: ${kanjis.size}")
+        }
+
+        println("\nKanjis by schoolyear:")
+
+        vocab.kanjiBySchoolYear.forEach { (year, kanjis) ->
+            println("   ${year}: ${kanjis.size}")
+        }
+
+        val kanjisNotInAnySchoolYear = mutableSetOf<Char>()
+            .apply { addAll(allKanjis) }
+            .filter { kanji ->
+                !vocab.kanjiBySchoolYear.any { (_, kanjis) ->
+                    kanjis.contains(kanji)
+                }
+            }
+            .sorted()
+
+        println("\nKanjis not in any schoolyear: ${kanjisNotInAnySchoolYear.size}")
+        println("   ${kanjisNotInAnySchoolYear.joinToString("")}")
+
+        println(
+            "\nKanjis by frequency: ${vocab.kanjiByFreq.length} (after removing all kanjis not appearing in Goigoi)"
+        )
+
+        val kanjisWithUnknownFreq = mutableSetOf<Char>()
+            .apply { addAll(allKanjis) }
+            .filter { kanji -> !vocab.kanjiByFreq.contains(kanji) }
+            .sorted()
+
+        println("\nKanjis with unknown frequency: ${kanjisWithUnknownFreq.size}")
+        println("   ${kanjisWithUnknownFreq.joinToString("")}")
+    }
+
+    private fun printReadingsStats() {
+        println("\nTotal number of readings: ${readings.size}")
+
+        val kanjisMap = mutableMapOf<String, MutableSet<String>>()
+        var mostReadingsCount = 0
+        var mostReadingsKanji = ""
+        var readingWithMostKanji: Map.Entry<String, Set<String>>? = null
+
+        readings.forEach { reading ->
+            val kana = reading.component1()
+            val kanjis = reading.component2()
+
+            if (kanjis.size > (readingWithMostKanji?.component2()?.size ?: 0)) {
+                readingWithMostKanji = reading
+            }
+
+            kanjis.forEach { kanji ->
+                val set = kanjisMap[kanji]
+                    ?: mutableSetOf<String>().also { kanjisMap[kanji] = it }
+
+                set.add(kana)
+
+                if (set.size > mostReadingsCount) {
+                    mostReadingsCount = set.size
+                    mostReadingsKanji = kanji
+                }
+            }
+        }
+
+        println("")
+        println("Kanji with the most readings: . $mostReadingsKanji")
+        println("   Count: . . . . . . . . . . . $mostReadingsCount")
+        println("   Readings: " + (kanjisMap[mostReadingsKanji]?.sorted()?.joinToString("、") ?: ""))
+        println("")
+
+        println("Reading with the most kanjis: . ${readingWithMostKanji?.component1()}")
+        println("   Count: . . . . . . . . . . . ${readingWithMostKanji?.component2()?.size ?: 0}")
+        println("   Kanjis: " + (readingWithMostKanji?.component2()?.sorted()?.joinToString("、") ?: ""))
+        println("")
+
+        println("All kanjis with their readings:")
+
+        kanjisMap
+            .toSortedMap()
+            .forEach { (kanji, readings) ->
+                println("   $kanji: " + readings.sorted().joinToString("、"))
+            }
+
+        println("")
+        println("All readings with their kanjis:")
+
+        readings
+            .toSortedMap()
+            .forEach { (kana, kanjis) ->
+                println("   $kana: " + kanjis.sorted().joinToString("、"))
+            }
+
+        println("")
+    }
+
+    private fun printHintStats() {
+        val enHintCounts = mutableMapOf<String, Int>()
+        val hint2Counts = mutableMapOf<WordHint, Int>()
+
+        vocab.forEachVisibleWord { word ->
+            if (word.hint.en != "") {
+                enHintCounts[word.hint.en] = (enHintCounts[word.hint.en] ?: 0) + 1
+            }
+
+            if (word.hint2 != null) {
+                hint2Counts[word.hint2!!] = (hint2Counts[word.hint2] ?: 0) + 1
+            }
+        }
+
+        println("\nHints most often used that do not have an enum yet")
+
+        enHintCounts.entries
+            .sortedBy { (_, value) -> -value } // minus reverses the list
+            .take(10)
+            .forEach { (hint, count) ->
+                println("   ${count}x $hint")
+            }
+
+        println("\nHints that have an enum used the least number of times")
+
+        hint2Counts.entries
+            .sortedBy { (_, value) -> value }
+            .take(10)
+            .forEach { (hint, count) ->
+                println("   ${count}x ${hint.en}")
+            }
+
+        println("")
+    }
+
+    private fun printAcceptableAnswersStats() {
+        class Values {
+            var numWords = 0
+            var topWord: GoigoiWord? = null
+            var countOfTopWord = 0
+
+            fun add(word: GoigoiWord, count: Int) {
+                if (count > 0) {
+                    numWords++
+
+                    if (topWord == null || count > countOfTopWord) {
+                        topWord = word
+                        countOfTopWord = count
+                    }
+                }
+            }
+
+            fun printTopWord() {
+                print("   Top word: . . . . . . . . . . . . . . . . ")
+                print(
+                    topWord?.toPrettyString(
+                        withKanjiKanaSeparated = true,
+                        withId = true,
+                        withColour = false
+                    )
+                )
+                println(" ($countOfTopWord entries)")
+            }
+        }
+
+        val acceptForTranslation = Values()
+        val alternativeSpellings = Values()
+        val alternativeReadings = Values()
+
+        vocab.forEachWord { word ->
+            acceptForTranslation.add(word, word.acceptForTranslation.size)
+            alternativeSpellings.add(word, word.alternativeSpellings.size)
+            alternativeReadings.add(word, word.alternativeReadings.size)
+        }
+
+        println("Total # words with accept_for_translation: . ${acceptForTranslation.numWords}")
+        acceptForTranslation.printTopWord()
+
+        println("\nTotal # words with alternative spellings:  . ${alternativeSpellings.numWords}")
+        alternativeSpellings.printTopWord()
+
+        println("\nTotal # words with alternative readings: . . ${alternativeReadings.numWords}")
+        alternativeReadings.printTopWord()
+
+        println("")
+    }
+
+    private fun printPhraseSentenceAskStats() {
+        class Values {
+            var numAsk = 0
+            var numAskWithSuffix = 0
+            var numAskWithAccept = 0
+
+            var curWord: GoigoiWord? = null
+            var countOfCurWord = 0
+
+            var wordWithMostAsk: GoigoiWord? = null
+            var countOfWordWithMostAsk = 0
+
+            fun add(word: GoigoiWord, phraseOrSentence: GoigoiPhraseOrSentence) {
+                if (phraseOrSentence.wordFormToAsk.isNotEmpty()) {
+                    numAsk++
+
+                    if (word == curWord) {
+                        countOfCurWord++
+                    } else {
+                        curWord = word
+                        countOfCurWord = 1
+                    }
+
+                    if (wordWithMostAsk == null || countOfWordWithMostAsk < countOfCurWord) {
+                        wordWithMostAsk = word
+                        countOfWordWithMostAsk = countOfCurWord
+                    }
+                }
+
+                if (phraseOrSentence.wordFormToAskSuffix.isNotEmpty()) {
+                    numAskWithSuffix++
+                }
+
+                if (phraseOrSentence.acceptableAnswers.isNotEmpty()) {
+                    numAskWithAccept++
+                }
+            }
+
+            fun printDetails() {
+                println("   with stem/suffix:  . . . . . . . . . $numAskWithSuffix")
+                println("   with <accept>: . . . . . . . . . . . $numAskWithAccept")
+                print("   Word with most <ask>:  . . . . . . . ")
+
+                print(
+                    wordWithMostAsk?.toPrettyString(
+                        withKanjiKanaSeparated = true,
+                        withId = true,
+                        withColour = false
+                    )
+                )
+
+                println(" ($countOfWordWithMostAsk)")
+            }
+        }
+
+        val phraseValues = Values()
+        val sentenceValues = Values()
+
+        vocab.forEachWord { word ->
+            for (phrase in word.phrases) {
+                phraseValues.add(word, phrase)
+            }
+
+            for (sentence in word.sentences) {
+                sentenceValues.add(word, sentence)
+            }
+        }
+
+        println("\nTotal number of phrases with <ask>: . . ${phraseValues.numAsk}")
+        phraseValues.printDetails()
+
+        println("\nTotal number of sentences with <ask>: . ${sentenceValues.numAsk}")
+        sentenceValues.printDetails()
+
+        println("")
+    }
+
+    private fun printVisuallySimilarKanjisStats() {
+        run {
+            var count = 0
+
+            vocab.visuallySimilar.forEach { groupOfKanjis ->
+                count += groupOfKanjis.length
+            }
+
+            println("\"Visually similar kanjis:")
+            println("   - Total number of kanjis covered: $count")
+        }
+
+        run {
+            // we cannot provide good "don't confuse" siblings for these
+            val excludedKanjis = arrayOf(
+                '一', '二', '三', '七', '八', '十', '口', '中', '川', '山', '出', '多', '母', '気', '雨'
+            )
+
+            var kanjiNotCovered = Char(0)
+            var rankOfKanjiNotCovered = Int.MAX_VALUE
+
+            vocab.kanjiByFreq.forEachIndexed { rank, kanji ->
+                if (rankOfKanjiNotCovered == Int.MAX_VALUE && !excludedKanjis.contains(kanji)) {
+                    val found = vocab.visuallySimilar.any { groupOfKanjis ->
+                        groupOfKanjis.contains(kanji)
+                    }
+
+                    if (!found) {
+                        kanjiNotCovered = kanji
+                        rankOfKanjiNotCovered = rank
+                    }
+                }
+            }
+
+            print("   - Kanji that is not excluded with least rank not covered: $kanjiNotCovered")
+            println(", rank $rankOfKanjiNotCovered")
+        }
+
+        arrayOf(JLPTLevel.N5, JLPTLevel.N4, JLPTLevel.N3, JLPTLevel.N2, JLPTLevel.N1).forEach { lvl ->
+            vocab.manualKanjiLevels[lvl]
+                ?.filter { kanji ->
+                    vocab.visuallySimilar.all { groupOfKanjis ->
+                        groupOfKanjis.none { it == kanji }
+                    }
+                }
+                .let { kanjisOrNull ->
+                    print("   - $lvl kanjis not covered: ")
+                    println(if (kanjisOrNull?.isEmpty() != false) "none" else kanjisOrNull.joinToString(""))
+                }
+        }
+    }
+
+    private fun printMissingCatStats() {
+        val missingCatsMap = mutableMapOf<JLPTLevel, Int>()
+
+        vocab.forEachVisibleWord { w ->
+            if (w.cats.isEmpty()) {
+                missingCatsMap[w.level ?: JLPTLevel.Nx] = 1 + (missingCatsMap[w.level ?: JLPTLevel.Nx] ?: 0)
+            }
+        }
+
+        println("\nUncategorised words:")
+
+        arrayOf(JLPTLevel.N5, JLPTLevel.N4, JLPTLevel.N3, JLPTLevel.N2, JLPTLevel.N1).forEach { level ->
+            val count = missingCatsMap[level] ?: 0
+            println("   $level: . . . $count")
+        }
+
+        println("")
+    }
+
+    private fun printWordOrdering() {
+        // The word ordering is relevant for super progressive mode and is based on the filenames.
+        println("\nWord ordering:")
+        val words = mutableListOf<GoigoiWord>()
+        vocab.forEachVisibleWord { words.add(it) }
+
+        words.sortWith { w1, w2 ->
+            w1.fileName.compareTo(w2.fileName)
+        }
+
+        var firstWordWithNoPhrase: GoigoiWord? = null
+        var firstWordWithNoSentence: GoigoiWord? = null
+
+        words.forEach { word ->
+            if (firstWordWithNoPhrase == null && word.phrases.isEmpty()) {
+                firstWordWithNoPhrase = word
+            }
+            if (firstWordWithNoSentence == null && word.sentences.isEmpty()) {
+                firstWordWithNoSentence = word
+            }
+            println(
+                "   " + word.toPrettyString(
+                    withKanjiKanaSeparated = true,
+                    withLvl = true,
+                    withId = true,
+                    withCats = true,
+                    withColour = false,
+                )
+            )
+        }
+
+        firstWordWithNoPhrase
+            ?.toPrettyString(withKanjiKanaSeparated = true, withLvl = true, withId = true, withColour = false)
+            .let { print("\nFirst word with no phrase: $it") }
+
+        firstWordWithNoSentence
+            ?.toPrettyString(withKanjiKanaSeparated = true, withLvl = true, withId = true, withColour = false)
+            .let { print("\nFirst word with no sentence: $it") }
+
+        println()
+    }
+
+    companion object {
+        private val originPrefixes = arrayOf(
+            "self",
+            "500mon N3", // must appear before 500mon in this list
+            "500mon N2", // dito
+            "500mon N1", // dito
+            "500mon", // denotes 500mon N5/n4
+            "BondLingo",
+            "ChatGPT",
+            "DeepL",
+            "Dragon Ball",
+            "Doraemon",
+            "GENKI",
+            "Kaname Naito",
+            "Langenscheidt",
+            "Miku",
+            "Oxford",
+            "Yuko",
+            "duolingo",
+            "hinative",
+            "jisho",
+            "jpod",
+            "lib0",
+            "tofugu",
+        )
     }
 }

@@ -7,13 +7,13 @@ import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.prog_study.FixedKeysProvider.Companion.NUM_CHIPS_WHEN_SIMILAR_KANJIS
 import io.github.digorydoo.goigoi.core.prog_study.QAWeightAssigner.Companion.RARE
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.stats.IWordStats
 import kotlin.random.Random
 
 class QAPicker(
     private val kanjiIndex: KanjiIndex,
     private val rounds: RoundsTracker,
-    private val stats: Stats,
+    private val stats: IWordStats,
 ) {
     private class KindAndWeight(val kind: QAKind, val weight: Float) {
         override fun toString() = "{ kind = $kind, weight = $weight }"
@@ -32,6 +32,7 @@ class QAPicker(
         val shortPhrases = word.phrases.filter { it.kana.length <= maxNumCharsInAnswer }
     }
 
+    private val qaFactory = QAFactory(stats)
     private val weightAssigner = QAWeightAssigner(kanjiIndex, rounds, stats)
 
     fun getQA(word: Word, avgLevelOfWords: JLPTLevel, canUseRomaji: Boolean): QuestionAndAnswer? {
@@ -54,7 +55,7 @@ class QAPicker(
         Log.debug(TAG, "Picked: $picked, index=$index")
         val kindSeenCount = picked?.let { stats.getWordSeenCount(word, it.toStatsKey()) } ?: 0
         val questionHasFurigana = picked?.doesNotAskAnything != true && kindSeenCount < 1
-        return picked?.let { QuestionAndAnswer.create(word, stats, it, index, questionHasFurigana) }
+        return picked?.let { qaFactory.createQA(word, it, index, questionHasFurigana) }
     }
 
     private fun getIndexOfNextPhraseOrSentence(word: Word, info: WordInfo, kind: QAKind): Int {

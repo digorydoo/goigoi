@@ -3,23 +3,21 @@
     <string name="preferences">Préférences</string>
     <string name="todays_progress">Le progrès d\'aujourd\'hui</string>
     <string name="todays_progress_percent">Le progrès d\'aujourd\'hui : ${N}%</string>
-    <string name="continue_studying">Cliquez ici pour continuer à étudier</string>
     <string name="learnt_n_of_m_words">Vous avez appris ${N} de ${M} mots.</string>
 
-    <string name="changeThemePrimary">Thème</string>
-    <string name="changeThemeSecondary">Activé pour le mode sombre</string>
+    <string name="changeTheme">Thème</string>
+    <string name="darkTheme">Thème sombre</string>
+    <string name="lightTheme">Thème clair</string>
+    <string name="systemTheme">Identique à celui du système</string>
+
     <string name="aboutAppPrimary">À propos de Go Go Japanese</string>
     <string name="aboutAppSecondary">Droits d\'auteur et licence</string>
 
     <string name="correct_count">Correct : ${N}</string>
     <string name="wrong_count">Faux : ${N}</string>
 
-    <string name="study_set_restarted">La pile de mots a été redémarrée</string>
     <string name="next_word">Mot suivant</string>
     <string name="reveal_btn">Montrer</string>
-
-    <string name="skip_action_text">SAUTER</string>
-    <string name="info_action_text">INFORMATIONS</string>
 
     <string name="hint_when_show_kanji_ask_kana">Écrivez en kana la façon dont vous prononcez ce mot.</string>
     <string name="hint_when_show_kana_ask_kanji_singular">Sélectionnez le kanji qui se prononce comme indiqué.</string>
@@ -34,8 +32,7 @@
     <string name="hint_when_asking_nothing">Prononcez cette phrase à haute voix.</string>
     <string name="hint_when_show_ph_translation_ask_ph_kana">Écrivez cette phrase en kana.</string>
     <string name="asking_phrase">Expression</string>
-    <string name="answer_correct">C\'est exact ! Très bien !</string>
-    <string name="answer_wrong">Oups ! Ce n\'est pas correct !</string>
+    <string name="answer_correct_but_inaccurate">Ta réponse est peut-être correcte, mais un peu imprécise.</string>
     <string name="answer_correct_except_kana_size">Presque correct ! Attention à la taille des kana !</string>
     <string name="backspace_key">Supprimer le caractère à gauche</string>
     <string name="enter_key">Touche d\'entrée</string>
@@ -96,6 +93,8 @@ sélectionné seront remises à zéro.</string>
     <string name="progress">Progrès</string>
     <string name="rating">Classement</string>
     <string name="examples">Exemples</string>
+    <string name="alternative_readings">Autres lectures possibles de « ${kanji} »</string>
+    <string name="alternative_spellings">Autres orthographes de « ${kana} »</string>
     <string name="see_also">Voir également</string>
     <string name="other_languages">Autres langues</string>
     <string name="transitive_verb">Verbe transitif</string>

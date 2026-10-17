@@ -4,7 +4,7 @@ import ch.digorydoo.kutils.cjk.JLPTLevel
 import ch.digorydoo.kutils.logging.Log
 import io.github.digorydoo.goigoi.core.db.KanjiIndex
 import io.github.digorydoo.goigoi.core.db.Vocabulary
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.stats.IWordAndSuperProgressiveStats
 import io.github.digorydoo.goigoi.core.study.Answer
 import io.github.digorydoo.goigoi.core.study.StudyItemIterator
 
@@ -12,7 +12,7 @@ class QAProvider(
     private val iterator: StudyItemIterator,
     kanjiIndex: KanjiIndex,
     private val rounds: RoundsTracker,
-    private val stats: Stats,
+    private val stats: IWordAndSuperProgressiveStats,
     private val vocab: Vocabulary,
 ) {
     class NoQAAvailableError: Exception()
@@ -48,6 +48,11 @@ class QAProvider(
 
         @Suppress("unused")
         for (i in 0 ..< 10) {
+            // Use the following for debugging to force show a certain word.
+            // Make sure the word is part of the study list by putting it to My Words list.
+            // You may also need to deactivate removal of the word in StudyListMaintainer.
+            // iterator.setCurrent("-todoku-reach")
+
             val word = iterator.curWord
             val newQA = qaPicker.getQA(word, avgLevel, canUseRomaji)
 

@@ -3,8 +3,6 @@ package io.github.digorydoo.goigoi.compiler
 import ch.digorydoo.kutils.cjk.FuriganaIterator.MalformedFuriganaException
 import io.github.digorydoo.goigoi.compiler.check.PostChecks
 import io.github.digorydoo.goigoi.compiler.check.PreChecks
-import io.github.digorydoo.goigoi.compiler.stats.FinalStats
-import io.github.digorydoo.goigoi.compiler.stats.Stats
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
 import io.github.digorydoo.goigoi.compiler.vocab.GoigoiXmlParser
@@ -18,86 +16,39 @@ import kotlin.math.floor
 import kotlin.math.log10
 
 class Command(private val options: Options) {
-    private val vocab = GoigoiVocab()
+    private data class CheckAndPrepareResults(
+        val prep: PrepWordLinks,
+        val kanjiLevels: KanjiLevels,
+        val readings: Map<String, Set<String>>,
+    )
 
     fun execute() {
-        if (!options.quiet) {
-            println("Parsing XML...")
-        }
-
-        val xmlFiles = mutableListOf<File>()
-        findGoigoiXmlFiles(options.srcDir, xmlFiles)
-
-        xmlFiles.forEachIndexed { i, file ->
-            readGoigoiXml(file)
-            if (options.quiet && i % 10 == 0) print(".")
-        }
-
-        if (!options.quiet) {
-            println("Checking...")
-        }
-
-        PreChecks(options).check(vocab)
-
-        if (!options.quiet) {
-            Stats.printStats(vocab) // stats about see-also links will be emitted by prepare below
-            println("Preparing see-also links...")
-        }
-
-        val prep = PrepWordLinks(vocab, options)
-        prep.prepare() // prepares see-also links and prints statistics about those
-
-        if (!options.quiet) {
-            println("Writing vocab index...")
-        }
-
-        buildFileNames() // also defines the rank; must happen after PrepWordLinks, because links affect the rank!
-        writeVocabIndex() // this writes the binary index.voc, not the JSON word index (see WordIndexWriter)
-        if (options.quiet) print(".")
-
-        writeWordVocFiles()
-        if (!options.quiet) println()
-
-        val kanjiLevels = KanjiLevels()
-        val readings = mutableMapOf<String, MutableSet<String>>()
-
-        KanjiIndexBuilder(vocab, kanjiLevels, readings, options).build()
-        if (options.quiet) print(".")
-
-        KanjiIndexWriter(options).writeFiles(
-            kanjiLevels,
-            readings,
-            vocab.kanjiBySchoolYear,
-            vocab.kanjiByFreq,
-            vocab.visuallySimilar,
-        )
-        if (options.quiet) print(".")
-
-        PostChecks(vocab, kanjiLevels, readings, options).check()
-        if (options.quiet) print(".")
-
-        val wordIndexWriter = WordIndexWriter(vocab, options.quiet)
-
-        options.generateWordIndexFile?.let { file ->
-            wordIndexWriter.writeWordIndex(file)
-            if (options.quiet) print(".")
-        }
-
-        options.generatePhraseIndexFile?.let { file ->
-            wordIndexWriter.writePhraseIndex(file)
-            if (options.quiet) print(".")
-        }
-
-        options.generateSentenceIndexFile?.let { file ->
-            wordIndexWriter.writeSentenceIndex(file)
-            if (options.quiet) print(".")
-        }
+        val vocab = readFiles()
+        val (prep, kanjiLevels, readings) = checkAndPrepare(vocab)
+        writeFiles(vocab, kanjiLevels, readings)
 
         if (options.quiet) {
             println()
         } else {
-            FinalStats(vocab, kanjiLevels, readings).print()
+            val stats = Stats(vocab, prep, kanjiLevels, readings)
+            stats.print()
         }
+    }
+
+    private fun readFiles(): GoigoiVocab {
+        logInfo("Reading XML...")
+
+        val xmlFiles = mutableListOf<File>()
+        findGoigoiXmlFiles(options.srcDir, xmlFiles)
+
+        val vocab = GoigoiVocab()
+
+        xmlFiles.forEachIndexed { i, file ->
+            readGoigoiXml(file, vocab)
+            if (options.quiet && i % 10 == 0) print(".")
+        }
+
+        return vocab
     }
 
     private fun findGoigoiXmlFiles(dir: File, xmlFiles: MutableList<File>) {
@@ -122,7 +73,7 @@ class Command(private val options: Options) {
             }
     }
 
-    private fun readGoigoiXml(xmlFile: File) {
+    private fun readGoigoiXml(xmlFile: File, vocab: GoigoiVocab) {
         try {
             val parser = GoigoiXmlParser()
             parser.parse(xmlFile, vocab)
@@ -137,7 +88,39 @@ class Command(private val options: Options) {
         }
     }
 
-    private fun buildFileNames() {
+    private fun checkAndPrepare(vocab: GoigoiVocab): CheckAndPrepareResults {
+        // Invoke pre-checks
+
+        logInfo("Checking...")
+        PreChecks(options).check(vocab)
+
+        // Prepare see-also links
+
+        logInfo("Preparing see-also links...")
+        val prep = PrepWordLinks(vocab, options)
+        prep.prepare()
+
+        // Build the kanji index
+
+        logInfo("Building kanji index...")
+        val kanjiLevels = KanjiLevels()
+        val readings = mutableMapOf<String, MutableSet<String>>()
+        KanjiIndexBuilder(vocab, kanjiLevels, readings, options).build()
+
+        // Sort words and build filenames
+
+        logInfo("Sorting words and building filenames...")
+        buildFileNames(vocab) // must happen after PrepWordLinks and KanjiIndexBuilder, they affect word rank!
+
+        // Invoke PostChecks
+
+        logInfo("Final integrity checks...")
+        PostChecks(vocab, kanjiLevels, readings).check()
+
+        return CheckAndPrepareResults(prep, kanjiLevels, readings)
+    }
+
+    private fun buildFileNames(vocab: GoigoiVocab) {
         val sortedWords = WordSorter(vocab).getSortedWords()
 
         // Filenames should be short and unique, to make the VocabIndex occupy less disk space.
@@ -170,7 +153,49 @@ class Command(private val options: Options) {
         }
     }
 
-    private fun writeVocabIndex() {
+    private fun writeFiles(vocab: GoigoiVocab, kanjiLevels: KanjiLevels, readings: Map<String, Set<String>>) {
+        // Write the binary index.voc
+
+        logInfo("Writing vocab index...")
+        writeVocabIndex(vocab)
+
+        // Write kanji index
+
+        logInfo("Writing kanji index...")
+        KanjiIndexWriter(options).writeFiles(
+            kanjiLevels,
+            readings,
+            vocab.kanjiBySchoolYear,
+            vocab.kanjiByFreq,
+            vocab.visuallySimilar,
+        )
+
+        // Write the binary word *.voc files
+
+        logInfo("Writing word files...")
+        writeWordVocFiles(vocab)
+
+        // Write the JSON word index
+
+        val wordIndexWriter = WordIndexWriter(vocab)
+
+        options.generateWordIndexFile?.let { file ->
+            logInfo("Writing ${file.name}...")
+            wordIndexWriter.writeWordIndex(file)
+        }
+
+        options.generatePhraseIndexFile?.let { file ->
+            logInfo("Writing ${file.name}...")
+            wordIndexWriter.writePhraseIndex(file)
+        }
+
+        options.generateSentenceIndexFile?.let { file ->
+            logInfo("Writing ${file.name}...")
+            wordIndexWriter.writeSentenceIndex(file)
+        }
+    }
+
+    private fun writeVocabIndex(vocab: GoigoiVocab) {
         val file = options.vocabIndexFile
 
         if (file.exists()) {
@@ -185,11 +210,7 @@ class Command(private val options: Options) {
         VocabIndexWriter(vocab, indexStream).write()
     }
 
-    private fun writeWordVocFiles() {
-        if (!options.quiet) {
-            println("Writing word files...")
-        }
-
+    private fun writeWordVocFiles(vocab: GoigoiVocab) {
         var count = 0
 
         for (topic in vocab.topics) {
@@ -219,5 +240,10 @@ class Command(private val options: Options) {
         file.outputStream().use {
             WordFileWriter(word, it).write()
         }
+    }
+
+    private fun logInfo(verboseMsg: String) {
+        if (options.quiet) print(".")
+        else println(verboseMsg)
     }
 }

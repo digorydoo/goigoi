@@ -6,13 +6,13 @@ import io.github.digorydoo.goigoi.core.file.MyWordsUnytFileReader
 import io.github.digorydoo.goigoi.core.file.MyWordsUnytFileWriter
 import io.github.digorydoo.goigoi.core.file.VocabIndexReader
 import io.github.digorydoo.goigoi.core.file.WordFileReader
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.stats.IStats
 import io.github.digorydoo.goigoi.core.utils.Flavour
 import java.io.FileNotFoundException
 import java.io.IOException
 import java.io.InputStream
 
-class Vocabulary(private val flavour: Flavour, private val assets: AssetsAccessor, private val stats: Stats) {
+class Vocabulary(private val flavour: Flavour, private val assets: AssetsAccessor, private val stats: IStats) {
     private val theTopics = mutableListOf<Topic>()
     val topics get() = theTopics.iterator()
 

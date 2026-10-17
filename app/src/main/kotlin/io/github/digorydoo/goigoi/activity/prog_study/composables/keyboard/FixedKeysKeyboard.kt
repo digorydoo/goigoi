@@ -10,7 +10,9 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -50,6 +52,7 @@ fun FixedKeysKeyboard(model: ProgStudyActivityModel, modifier: Modifier = Modifi
     val styles = getStyles()
     val fixedKeys = model.fixedKeys.collectAsState().value
     val backspaceKeyDescr = stringResource(R.string.backspace_key)
+    val hapticFeedback = LocalHapticFeedback.current
 
     val size = remember(fixedKeys) {
         when {
@@ -78,7 +81,10 @@ fun FixedKeysKeyboard(model: ProgStudyActivityModel, modifier: Modifier = Modifi
                     text = keyText,
                     size = size,
                     smallText = keyText.length == 1 && keyText[0].isSmallKana(),
-                    onClick = { model.onKeyBtnClicked(keyText) }
+                    onClick = {
+                        hapticFeedback.performHapticFeedback(HapticFeedbackType.KeyboardTap)
+                        model.onKeyBtnClicked(keyText)
+                    }
                 )
             }
         }
@@ -92,7 +98,10 @@ fun FixedKeysKeyboard(model: ProgStudyActivityModel, modifier: Modifier = Modifi
             KeyButton(
                 modifier = Modifier.semantics { contentDescription = backspaceKeyDescr },
                 iconResId = R.drawable.ic_backspace_24dp,
-                onClick = model::onBackspaceBtnClicked,
+                onClick = {
+                    hapticFeedback.performHapticFeedback(HapticFeedbackType.VirtualKey)
+                    model.onBackspaceBtnClicked()
+                }
             )
             EnterButton(model)
         }

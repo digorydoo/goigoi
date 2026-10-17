@@ -20,8 +20,8 @@ import androidx.compose.ui.viewinterop.AndroidView
 import io.github.digorydoo.goigoi.activity.welcome.WelcomeActivityModel
 import io.github.digorydoo.goigoi.composables.HintBalloon
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.legacy.spannable.FuriganaSpan
-import io.github.digorydoo.goigoi.legacy.spannable.buildSpan
+import io.github.digorydoo.goigoi.legacy.FuriganaSpan
+import io.github.digorydoo.goigoi.legacy.buildSpan
 
 @Composable
 fun ProgressMessage(model: WelcomeActivityModel, horizPadding: Dp) {

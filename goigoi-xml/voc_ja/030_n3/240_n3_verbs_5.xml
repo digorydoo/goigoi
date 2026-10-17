@@ -19,6 +19,45 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【生：しょう】じる"
+              rom="shōjiru"
+              tr_en="to result from; to lead to; to arise"
+              tr_de="von etw. herkommen; zu etw. führen; eintreten"
+              hint_en="v.t. &amp; i."
+              lvl="n3"
+              category="general"
+              id="shōjiru-yield"
+            >
+                <keep_apart_from id="motodzuku-basedon" />
+                <keep_apart_from id="osameru-pay" />
+                <phrase
+                  ph="【必：ひつ】【要：よう】から【生：しょう】じる"
+                  rom="hitsuyō kara shōjiru"
+                  tr_en="to arise from necessity"
+                  tr_de="sich aus Notwendigkeit ergeben"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【最：さい】【悪：あく】の【事：じ】【態：たい】が【生：しょう】じた。"
+                  rom="Saiaku no jitai ga shōjita."
+                  tr_en="It lead to the worst of all situations."
+                  tr_de="Das Schlimmste ist eingetreten."
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【生：しょう】じた" />
+                </sentence>
+                <sentence
+                  s="【事：じ】【故：こ】は【不：ふ】【注：ちゅう】【意：い】から【生：しょう】じる。"
+                  rom="Jiko wa fuchūi kara shōjiru."
+                  tr_en="Accidents arise from carelessness."
+                  tr_de="Fahrlässigkeit führt zu Unfällen."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【論：ろん】じる"
               rom="ronjiru"
               tr_en="to discuss sth.; to talk about sth."
@@ -56,6 +95,125 @@
                 >
                     <ask w="【論：ろん】じない" />
                 </sentence>
+            </word>
+            <word
+              w="【酔：よ】う"
+              rom="you"
+              tr_en="to get drunk; to feel sick; to be spellbound"
+              tr_de="sich betrinken; sich nicht wohl fühlen; gebannt sein"
+              hint_en="v.i."
+              lvl="n3"
+              category="going-out, beverage"
+              id="you-getdrunk"
+            >
+                <see id="yopparai-drunk" type="closely related" />
+                <phrase
+                  ph="【酒：さけ】に【酔：よ】った【男：おとこ】"
+                  rom="sake ni yotta otoko"
+                  tr_en="a drunken man"
+                  tr_de="ein Betrunkener"
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【酔：よ】った" />
+                </phrase>
+                <sentence
+                  s="【船：ふね】に【乗：の】ると、いつも【酔：よ】ってしまいます。"
+                  rom="Fune ni noru to, itsumo yotte shimaimasu."
+                  tr_en="When I get on a ship, I always end up getting seasick."
+                  tr_de="Wenn ich in ein Schiff steige, wird mir immer schlecht."
+                  lvl="n3"
+                  rem="there is also 船酔いする・ふなよいする (nx)"
+                >
+                    <ask w="【酔：よ】って" />
+                </sentence>
+            </word>
+            <word
+              w="【述：の】べる"
+              rom="noberu"
+              tr_en="to state sth.; to express sth.; to mention"
+              tr_de="etw. ausdrücken; etw. erwähnen"
+              Langenscheidt="erwähnen"
+              hint_en="v.t.; formal"
+              hint_de="v.t.; formell"
+              lvl="n3"
+              category="science, talking"
+              id="noberu-mention"
+            >
+                <!--
+                    伝える・つたえる: convey, inform, pass on information
+                    述べる・のべる: describe in a formal way
+                -->
+                <keep_apart_from id="iu-say" />
+                <keep_apart_from id="mōshiageru-tell" />
+                <keep_apart_from id="tsutaeru-convey" />
+                <keep_apart_from id="arawasu-represent" />
+                <phrase
+                  ph="【意：い】【見：けん】を【述：の】べる"
+                  rom="iken o noberu"
+                  tr_en="to express one's opinion"
+                  tr_de="die eigene Meinung ausdrücken"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【自：じ】【分：ぶん】の【経：けい】【験：けん】を【述：の】べる"
+                  rom="jibun no keiken o noberu"
+                  tr_en="to describe one's own experience"
+                  tr_de="die eigenen Erfahrungen beschreiben"
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【自：じ】【由：ゆう】に【意：い】【見：けん】を【述：の】べてください。"
+                  rom="Jiyū ni iken o nobete kudasai."
+                  tr_en="Please state your opinion freely."
+                  tr_de="Bitte drücken Sie offen Ihre Meinung aus."
+                  explanation_en="For a less formal tone, you could use the verb 【伝：つた】える."
+                  explanation_de="Für einen weniger formellen Ton könnte man auch das Verb 【伝：つた】える verwenden."
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT; also natural, less formal: 自由に意見を伝えてください"
+                >
+                    <ask w="【述：の】べて" />
+                </sentence>
+            </word>
+            <word
+              w="【示：しめ】す"
+              rom="shimesu"
+              tr_en="to indicate; to signify; to represent"
+              tr_de="etw. anzeigen; etw. bedeuten; etw. repräsentieren"
+              lvl="n3"
+              category="general"
+              id="shimesu-indicate"
+            >
+                <keep_apart_from id="arawasu-represent" />
+                <keep_apart_from id="arawasu-reveal" />
+                <phrase
+                  ph="【以：い】【下：か】に【示：しめ】す【通：とお】り"
+                  rom="ika ni shimesu tōri"
+                  tr_en="as shown below; see below"
+                  tr_de="wie unten gezeigt; siehe unten"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <phrase
+                  ph="ホテルの【場：ば】【所：しょ】を【地：ち】【図：ず】で【示：しめ】す"
+                  rom="hoteru no basho o chizu de shimesu"
+                  tr_en="to point at the location of the hotel on the map"
+                  tr_de="den Ort des Hotels auf der Karte (mit dem Finger) zeigen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【地：ち】【図：ず】の【赤：あか】【丸：まる】は【学：がっ】【校：こう】を【示：しめ】す。"
+                  rom="Chizu no akamaru wa gakkō o shimesu."
+                  tr_en="Red circles on the map mark schools."
+                  tr_de="Die roten Kreise auf der Karte markieren Schulen."
+                  lvl="n3"
+                  origin="lib0"
+                />
             </word>
             <word
               w="【罹：かか】る"
@@ -508,38 +666,6 @@
                 </sentence>
             </word>
             <word
-              w="【酔：よ】う"
-              rom="you"
-              tr_en="to get drunk; to feel sick; to be spellbound"
-              tr_de="sich betrinken; sich nicht wohl fühlen; gebannt sein"
-              hint_en="v.i."
-              lvl="n3"
-              category="going-out, beverage"
-              id="you-getdrunk"
-            >
-                <see id="yopparai-drunk" type="closely related" />
-                <phrase
-                  ph="【酒：さけ】に【酔：よ】った【男：おとこ】"
-                  rom="sake ni yotta otoko"
-                  tr_en="a drunken man"
-                  tr_de="ein Betrunkener"
-                  lvl="n3"
-                  origin="lib0"
-                >
-                    <ask w="【酔：よ】った" />
-                </phrase>
-                <sentence
-                  s="【船：ふね】に【乗：の】ると、いつも【酔：よ】ってしまいます。"
-                  rom="Fune ni noru to, itsumo yotte shimaimasu."
-                  tr_en="When I get on a ship, I always end up getting seasick."
-                  tr_de="Wenn ich in ein Schiff steige, wird mir immer schlecht."
-                  lvl="n3"
-                  rem="there is also 船酔いする・ふなよいする (nx)"
-                >
-                    <ask w="【酔：よ】って" />
-                </sentence>
-            </word>
-            <word
               w="【追：お】う"
               rom="ou"
               tr_en="to chase; to pursue; to follow"
@@ -577,45 +703,6 @@
                 >
                     <ask w="【追：お】って" />
                 </sentence>
-            </word>
-            <word
-              w="【生：しょう】じる"
-              rom="shōjiru"
-              tr_en="to result from; to lead to; to arise"
-              tr_de="von etw. herkommen; zu etw. führen; eintreten"
-              hint_en="v.t. &amp; i."
-              lvl="n3"
-              category="general"
-              id="shōjiru-yield"
-            >
-                <keep_apart_from id="motodzuku-basedon" />
-                <keep_apart_from id="osameru-pay" />
-                <phrase
-                  ph="【必：ひつ】【要：よう】から【生：しょう】じる"
-                  rom="hitsuyō kara shōjiru"
-                  tr_en="to arise from necessity"
-                  tr_de="sich aus Notwendigkeit ergeben"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【最：さい】【悪：あく】の【事：じ】【態：たい】が【生：しょう】じた。"
-                  rom="Saiaku no jitai ga shōjita."
-                  tr_en="It lead to the worst of all situations."
-                  tr_de="Das Schlimmste ist eingetreten."
-                  lvl="n3"
-                  origin="lib0"
-                >
-                    <ask w="【生：しょう】じた" />
-                </sentence>
-                <sentence
-                  s="【事：じ】【故：こ】は【不：ふ】【注：ちゅう】【意：い】から【生：しょう】じる。"
-                  rom="Jiko wa fuchūi kara shōjiru."
-                  tr_en="Accidents arise from carelessness."
-                  tr_de="Fahrlässigkeit führt zu Unfällen."
-                  lvl="n3"
-                  origin="lib0"
-                />
             </word>
             <word
               w="【疑：うたが】う"

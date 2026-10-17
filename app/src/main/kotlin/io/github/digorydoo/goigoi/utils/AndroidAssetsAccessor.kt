@@ -2,12 +2,17 @@ package io.github.digorydoo.goigoi.utils
 
 import android.content.ContentValues
 import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.BitmapFactory
 import android.os.Environment
 import android.provider.MediaStore
 import android.util.Log
 import io.github.digorydoo.goigoi.core.file.AssetsAccessor
+import java.io.FileNotFoundException
 import java.io.InputStream
 import java.io.OutputStream
+
+private const val TAG = "AndroidAssetsAccessor"
 
 class AndroidAssetsAccessor(private val getContext: () -> Context): AssetsAccessor {
     override val filesDir = getContext().filesDir!!
@@ -49,8 +54,20 @@ class AndroidAssetsAccessor(private val getContext: () -> Context): AssetsAccess
 
         stream.use(lambda)
     }
+}
 
-    companion object {
-        private const val TAG = "AndroidAssetsAccessor"
+fun getBitmapFromAssets(path: String, ctx: Context): Bitmap? {
+    var bmp: Bitmap? = null
+
+    try {
+        val stream = ctx.assets.open(path)
+        val bytes = stream.readBytes()
+        stream.close()
+        val opts = BitmapFactory.Options()
+        bmp = BitmapFactory.decodeByteArray(bytes, 0, bytes.size, opts)
+    } catch (_: FileNotFoundException) {
+        Log.e(TAG, "File not found: $path")
     }
+
+    return bmp
 }

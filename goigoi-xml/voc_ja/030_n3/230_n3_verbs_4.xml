@@ -13,11 +13,55 @@
       defaultHint_en="verb"
       defaultHint_de="Verb"
       lvl="n3"
-      requiresSentences="true"
-      requiresPhrases="true"
+      requiresSentences="false"
+      requiresPhrases="false"
     >
         <section>
             <!-- unsorted -->
+            <word
+              w="【表：あらわ】す"
+              rom="arawasu"
+              tr_en="to represent; to stand for; to express"
+              tr_de="etw. repräsentieren; für etw. stehen; etw. ausdrücken"
+              lvl="n3"
+              category="talking"
+              id="arawasu-represent"
+            >
+                <keep_apart_from id="mōshiageru-tell" />
+                <keep_apart_from id="tsutaeru-convey" />
+                <keep_apart_from id="noberu-mention" />
+                <keep_apart_from id="shimesu-indicate" />
+                <keep_apart_from id="arawasu-reveal" />
+                <phrase
+                  ph="【迷：めい】【惑：わく】している【気：き】【持：も】ちを【表：あらわ】す"
+                  rom="meiwaku shite iru kimochi o arawasu"
+                  tr_en="to express the feeling of being annoyed"
+                  tr_de="das Gefühl ausdrücken, genervt zu sein"
+                  lvl="n3"
+                  origin="self"
+                  rem="rephrased by ChatGPT"
+                />
+                <sentence
+                  s="これは【何：なに】を【表：あらわ】しますか。"
+                  rom="Kore wa nani o arawashimasu ka?"
+                  tr_en="What does this stand for?"
+                  tr_de="Für was steht dies?"
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask stem="【表：あらわ】し" suffix="ます" />
+                </sentence>
+                <sentence
+                  s="この【喜：よろこ】びを、なんといい【表：あらわ】せばいいだろう。"
+                  rom="Kono yorokobi o, nanto ii arawaseba ii darō."
+                  tr_en="How can I possibly put this joy into words?"
+                  tr_de="Wie kann ich diese Freude nur in Worte fassen?"
+                  lvl="n3"
+                  origin="Doraemon 14, p.158"
+                >
+                    <ask w="【表：あらわ】せば" />
+                </sentence>
+            </word>
             <word
               w="【訳：やく】す"
               rom="yakusu"
@@ -222,6 +266,42 @@
                 </sentence>
             </word>
             <word
+              w="【申：もう】し【込：こ】む"
+              rom="mōshi-komu"
+              tr_en="to apply for; to ask for; to subscribe for"
+              tr_de="beantragen; sich bewerben; sich für etw. einschreiben"
+              hint_en="v.t."
+              lvl="n3"
+              category="work, relationships"
+              id="mōshikomu-applyfor"
+            >
+                <see id="mōshikomi-application" type="noun" />
+                <phrase
+                  ph="【結：けっ】【婚：こん】を【申：もう】し【込：こ】む"
+                  rom="kekkon o mōshi-komu"
+                  tr_en="to propose marriage"
+                  tr_de="einen Heiratsantrag stellen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="【入：にゅう】【学：がく】を【申：もう】し【込：こ】む"
+                  rom="nyūgaku o mōshi-komu"
+                  tr_en="to apply for matriculation"
+                  tr_de="sich für die Immatrikulation bewerben"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【奨：しょう】【学：がく】【金：きん】を【申：もう】し【込：こ】むつもりだ。"
+                  rom="Shōgakukin o mōshi-komu tsumori da."
+                  tr_en="I'm going to apply for a scholarship."
+                  tr_de="Ich habe vor, mich für ein Stipendium zu bewerben."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
               w="【奪：うば】う"
               rom="ubau"
               tr_en="to snatch sth. away; to deprive sb. of sth."
@@ -357,57 +437,6 @@
                   origin="lib0 modified"
                   rem="verified with ChatGPT"
                 />
-            </word>
-            <word
-              w="【述：の】べる"
-              rom="noberu"
-              tr_en="to state sth.; to express sth.; to mention"
-              tr_de="etw. ausdrücken; etw. erwähnen"
-              Langenscheidt="erwähnen"
-              hint_en="v.t.; formal"
-              hint_de="v.t.; formell"
-              lvl="n3"
-              category="science, talking"
-              id="noberu-mention"
-            >
-                <!--
-                    伝える・つたえる: convey, inform, pass on information
-                    述べる・のべる: describe in a formal way
-                -->
-                <keep_apart_from id="iu-say" />
-                <keep_apart_from id="mōshiageru-tell" />
-                <keep_apart_from id="tsutaeru-convey" />
-                <keep_apart_from id="arawasu-represent" />
-                <phrase
-                  ph="【意：い】【見：けん】を【述：の】べる"
-                  rom="iken o noberu"
-                  tr_en="to express one's opinion"
-                  tr_de="die eigene Meinung ausdrücken"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <phrase
-                  ph="【自：じ】【分：ぶん】の【経：けい】【験：けん】を【述：の】べる"
-                  rom="jibun no keiken o noberu"
-                  tr_en="to describe one's own experience"
-                  tr_de="die eigenen Erfahrungen beschreiben"
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【自：じ】【由：ゆう】に【意：い】【見：けん】を【述：の】べてください。"
-                  rom="Jiyū ni iken o nobete kudasai."
-                  tr_en="Please state your opinion freely."
-                  tr_de="Bitte drücken Sie offen Ihre Meinung aus."
-                  explanation_en="For a less formal tone, you could use the verb 【伝：つた】える."
-                  explanation_de="Für einen weniger formellen Ton könnte man auch das Verb 【伝：つた】える verwenden."
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT; also natural, less formal: 自由に意見を伝えてください"
-                >
-                    <ask w="【述：の】べて" />
-                </sentence>
             </word>
             <word
               w="【応：おう】じる"
@@ -667,42 +696,6 @@
                 >
                     <ask w="【譲：ゆず】らない" />
                 </sentence>
-            </word>
-            <word
-              w="【示：しめ】す"
-              rom="shimesu"
-              tr_en="to indicate; to signify; to represent"
-              tr_de="etw. anzeigen; etw. bedeuten; etw. repräsentieren"
-              lvl="n3"
-              category="general"
-              id="shimesu-indicate"
-            >
-                <keep_apart_from id="arawasu-represent" />
-                <keep_apart_from id="arawasu-reveal" />
-                <phrase
-                  ph="【以：い】【下：か】に【示：しめ】す【通：とお】り"
-                  rom="ika ni shimesu tōri"
-                  tr_en="as shown below; see below"
-                  tr_de="wie unten gezeigt; siehe unten"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <phrase
-                  ph="ホテルの【場：ば】【所：しょ】を【地：ち】【図：ず】で【示：しめ】す"
-                  rom="hoteru no basho o chizu de shimesu"
-                  tr_en="to point at the location of the hotel on the map"
-                  tr_de="den Ort des Hotels auf der Karte (mit dem Finger) zeigen"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【地：ち】【図：ず】の【赤：あか】【丸：まる】は【学：がっ】【校：こう】を【示：しめ】す。"
-                  rom="Chizu no akamaru wa gakkō o shimesu."
-                  tr_en="Red circles on the map mark schools."
-                  tr_de="Die roten Kreise auf der Karte markieren Schulen."
-                  lvl="n3"
-                  origin="lib0"
-                />
             </word>
             <word
               w="【計：はか】る"
@@ -2064,6 +2057,16 @@
                     <ask w="【求：もと】めて" />
                 </sentence>
             </word>
+            <word
+              w="【強：つよ】める"
+              rom="tsuyomeru"
+              tr_en="to strengthen; to emphasise"
+              tr_de="stärken; etw. betonen"
+              hint_en="v.t."
+              lvl="n3"
+              rem="jisho has n1; appears in Doraemon 17, p.149"
+              id="tsuyomeru-strengthen"
+            />
         </section>
     </unit>
 </vocabulary>

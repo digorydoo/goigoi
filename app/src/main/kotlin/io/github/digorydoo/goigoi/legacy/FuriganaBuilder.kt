@@ -1,4 +1,4 @@
-package io.github.digorydoo.goigoi.legacy.spannable
+package io.github.digorydoo.goigoi.legacy
 
 import android.text.SpannableString
 import android.text.Spanned

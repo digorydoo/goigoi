@@ -21,6 +21,7 @@ import io.github.digorydoo.goigoi.activity.prog_study.composables.keyboard.Keybo
 import io.github.digorydoo.goigoi.activity.prog_study.composables.qa.*
 import io.github.digorydoo.goigoi.composables.app_bar.EmptyAppBar
 import io.github.digorydoo.goigoi.composables.bottom_sheet.word_info.WordInfoBottomSheet
+import io.github.digorydoo.goigoi.composables.bottom_sheet.word_info.WordInfoBottomSheetModel
 import io.github.digorydoo.goigoi.composables.buttons.GoigoiFab
 import io.github.digorydoo.goigoi.composables.buttons.IconName
 import io.github.digorydoo.goigoi.composables.buttons.OverlappingIconBtn
@@ -66,7 +67,7 @@ private fun getStyles(): ProgStudyScreenStyles {
 }
 
 @Composable
-fun ProgStudyScreen(model: ProgStudyActivityModel, onBack: () -> Unit) {
+fun ProgStudyScreen(model: ProgStudyActivityModel, bottomSheetModel: WordInfoBottomSheetModel, onBack: () -> Unit) {
     val styles = getStyles()
     val dir = LocalLayoutDirection.current
     val density = LocalDensity.current
@@ -206,6 +207,7 @@ fun ProgStudyScreen(model: ProgStudyActivityModel, onBack: () -> Unit) {
             if (unytOfWord != null) {
                 wordOfBottomSheet.value?.let { word ->
                     WordInfoBottomSheet(
+                        bottomSheetModel,
                         word,
                         unytOfWord,
                         onDismissRequest = {

@@ -4,7 +4,7 @@ import java.io.OutputStream
 
 enum class StatsKey(private val key: String) {
     BOTTOM_SHEET("btm-sheet"),
-    FLIPTHRU("flip-thru"),
+    FLIPTHRU("flip-thru"), // FIXME remove
     PROGSTUDY_SHOW_KANJI_ASK_KANA("progstudy-01"),
     PROGSTUDY_SHOW_KANA_ASK_KANJI("progstudy-04"),
     PROGSTUDY_SHOW_ROMAJI_ASK_KANA("progstudy-06"),

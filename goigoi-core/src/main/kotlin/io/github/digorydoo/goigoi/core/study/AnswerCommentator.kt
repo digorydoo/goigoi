@@ -15,7 +15,7 @@ class AnswerCommentator {
         } else {
             val comments = when (answer) {
                 Answer.CORRECT -> responsesIfCorrect
-                Answer.CORRECT_EXCEPT_KANA_SIZE -> responseIfAlmostCorrect
+                Answer.CORRECT_BUT_INACCURATE, Answer.CORRECT_EXCEPT_KANA_SIZE -> responsesIfAlmostCorrect
                 Answer.WRONG -> responsesIfWrong
                 else -> return null
             }
@@ -111,7 +111,7 @@ class AnswerCommentator {
                 ja = "ハズレ！"
             )
         )
-        private val responseIfAlmostCorrect = arrayOf(
+        private val responsesIfAlmostCorrect = arrayOf(
             IntlString(
                 de = "Knapp!",
                 en = "So close!",

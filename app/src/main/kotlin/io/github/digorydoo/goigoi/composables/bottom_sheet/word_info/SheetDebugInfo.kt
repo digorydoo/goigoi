@@ -10,15 +10,15 @@ import ch.digorydoo.kutils.string.initCap
 import ch.digorydoo.kutils.string.toPercent
 import io.github.digorydoo.goigoi.composables.list.ListSubheader
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.composables.providers.Singletons
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.stats.StatsKey
 
 @Composable
-fun SheetDebugInfo(word: Word, unyt: Unyt, sheetHorizPadding: Dp) {
+fun SheetDebugInfo(model: WordInfoBottomSheetModel, word: Word, unyt: Unyt, sheetHorizPadding: Dp) {
+    val stats = model.stats
+
     ListSubheader("DEBUG", sheetHorizPadding)
-    val stats = Singletons.stats
 
     // Word
 

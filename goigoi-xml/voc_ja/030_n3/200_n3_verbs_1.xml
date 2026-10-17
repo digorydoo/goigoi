@@ -30,6 +30,7 @@
               id="toriageru-takeup"
               studyInContext="preferred"
             >
+                <accept_for_translation w="【取：とり】【上：あ】げる" interchangeable="true" />
                 <phrase
                   ph="【計：けい】【画：かく】を【取：と】り【上：あ】げる"
                   rom="keikaku o toriageru"
@@ -55,7 +56,9 @@
                   origin="self"
                   rem="verified with ChatGPT"
                 >
-                    <ask stem="【取：と】り【上：あ】げ" suffix="ました" />
+                    <ask stem="【取：と】り【上：あ】げ" suffix="ました">
+                        <accept w="【取：とり】【上：あ】げ" suffix="ました" />
+                    </ask>
                 </sentence>
                 <sentence
                   s="【警：けい】【官：かん】は【少：しょう】【年：ねん】からナイフを【取：と】り【上：あ】げた。"
@@ -1052,10 +1055,12 @@
               rom="egaku"
               tr_en="to draw; to paint; to sketch"
               tr_de="zeichnen; malen; skizzieren"
+              hint_en="v.t."
               lvl="n3"
               category="arts"
               id="egaku-draw"
             >
+                <accept_for_translation w="【描：か】く" interchangeable="true" />
                 <see id="kaku-draw" type="closely related" />
                 <keep_apart_from id="kaku-draw" />
                 <!-- 夢を描く (Dream about) To envision or plan one's future (ChatGPT) -->
@@ -1163,6 +1168,7 @@
               category="feet"
               id="tachiagaru-standup"
             >
+                <accept_for_translation w="【立：たち】【上：あ】がる" interchangeable="true" />
                 <phrase
                   ph="ゆっくり【立：た】ち【上：あ】がる"
                   rom="yukkuri tachi-agaru"
@@ -1227,6 +1233,7 @@
               category="hands"
               id="uketoru-receive"
             >
+                <accept_for_translation w="【受：うけ】【取：と】る" interchangeable="true" />
                 <see id="uketori-receipt" type="noun" />
                 <keep_apart_from id="morau-receive" />
                 <keep_apart_from id="ukeru-receive" />
@@ -1545,6 +1552,7 @@
               category="motion, sports"
               id="mochiageru-lift"
             >
+                <accept_for_translation w="【持：もち】【上：あ】げる" interchangeable="true" />
                 <phrase
                   ph="【重：おも】い【荷：に】【物：もつ】を【持：も】ち【上：あ】げる"
                   rom="omoi nimotsu o mochiageru"
@@ -2099,6 +2107,7 @@
               category="top-words"
               id="tobidasu-jumpout"
             >
+                <accept_for_translation w="【飛：とび】【出：だ】す" interchangeable="true" />
                 <phrase
                   ph="【部：へ】【屋：や】から【飛：と】び【出：だ】す"
                   rom="heya kara tobidasu"

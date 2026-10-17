@@ -1,12 +1,12 @@
 package io.github.digorydoo.goigoi.activity.topic
 
-import android.content.Context
 import android.util.Log
 import androidx.lifecycle.LifecycleCoroutineScope
-import io.github.digorydoo.goigoi.composables.list.UnytListItemData
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Vocabulary
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.list.ListItemDataFactory
+import io.github.digorydoo.goigoi.core.list.UnytListItemData
+import io.github.digorydoo.goigoi.core.stats.IStats
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
@@ -16,8 +16,8 @@ import kotlinx.coroutines.withContext
 
 class TopicActivityTasks(
     private val vocab: Vocabulary,
-    private val stats: Stats,
-    private val ctx: Context,
+    private val stats: IStats,
+    private val listItemDataFactory: ListItemDataFactory,
     private val lifecycleScope: LifecycleCoroutineScope,
 ) {
     private val itemDataMutex = Mutex()
@@ -27,7 +27,7 @@ class TopicActivityTasks(
     private val unytWordsMutex = Mutex()
     private val unytWordsRequest = mutableMapOf<Unyt, Deferred<Unit>>()
 
-    suspend fun getItemData(unyt: Unyt, isMyWordsUnyt: Boolean): UnytListItemData {
+    suspend fun getItemData(unyt: Unyt): UnytListItemData {
         // Whenever accessing itemDataRequest, we need to obtain the lock of itemDataMutex
         val deferred = itemDataMutex.withLock {
             // If we're already loading item data for the same unyt, getOrPut will just return the `Deferred` of
@@ -43,7 +43,7 @@ class TopicActivityTasks(
                             unytWordsMutex.withLock { unytWordsRequest[unyt] }?.await()
 
                             // If stats cache is stale, the following may load the unyt.
-                            UnytListItemData.create(unyt, isMyWordsUnyt, vocab, stats, ctx)
+                            listItemDataFactory.createUnytListItemData(unyt, vocab, stats)
                         } finally {
                             itemDataMutex.withLock {
                                 itemDataRequests -= unyt // same as remove(unyt), but no warning about unused result

@@ -2,12 +2,12 @@ package io.github.digorydoo.goigoi.activity.unyt
 
 import android.util.Log
 import androidx.lifecycle.LifecycleCoroutineScope
-import io.github.digorydoo.goigoi.composables.list.WordListItemData
 import io.github.digorydoo.goigoi.composables.menus.WordCtxMenuModel
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Vocabulary
 import io.github.digorydoo.goigoi.core.db.Word
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.list.WordListItemData
+import io.github.digorydoo.goigoi.core.stats.IUnytAndDailyStats
 import io.github.digorydoo.goigoi.core.stats.StatsKey
 import io.github.digorydoo.goigoi.utils.UserPrefs
 import io.github.digorydoo.goigoi.utils.UserPrefs.WordListItemMode
@@ -21,10 +21,10 @@ import kotlin.time.Duration.Companion.milliseconds
 
 class UnytActivityModel(
     val unyt: Unyt,
-    private val vocab: Vocabulary,
     private val prefs: UserPrefs,
-    private val stats: Stats,
+    private val stats: IUnytAndDailyStats,
     private val tasks: UnytActivityTasks,
+    private val vocab: Vocabulary,
     private val lifecycleScope: LifecycleCoroutineScope,
 ): WordCtxMenuModel {
     sealed interface WordsListItem

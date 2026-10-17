@@ -19,12 +19,12 @@ import ch.digorydoo.kutils.cjk.JLPTLevel
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.composables.GoigoiBadge
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.composables.providers.Singletons
+import io.github.digorydoo.goigoi.core.db.KanjiIndex
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.db.WordCategory
-import io.github.digorydoo.goigoi.legacy.spannable.FuriganaSpan
-import io.github.digorydoo.goigoi.legacy.spannable.buildSpan
+import io.github.digorydoo.goigoi.legacy.FuriganaSpan
+import io.github.digorydoo.goigoi.legacy.buildSpan
 import kotlin.math.roundToInt
 
 private const val XLARGE_PRIMARY_TEXT_MAX_SIZE = 5
@@ -32,7 +32,7 @@ private const val XLARGE_PRIMARY_TEXT_SIZE_SP = 48f
 private const val LARGE_PRIMARY_TEXT_SIZE_SP = 32f
 
 @Composable
-fun SheetBasicInfo(word: Word, unyt: Unyt, horizPadding: Dp) {
+fun SheetBasicInfo(model: WordInfoBottomSheetModel, word: Word, unyt: Unyt, horizPadding: Dp) {
     val kanji = word.kanji
     val kana = word.kana
 
@@ -43,7 +43,9 @@ fun SheetBasicInfo(word: Word, unyt: Unyt, horizPadding: Dp) {
         else -> false
     }
 
-    val stats = Singletons.stats
+    val kanjiIndex = model.kanjiIndex
+    val stats = model.stats
+
     val seenCount = stats.getWordTotalSeenCount(word)
     val progress = stats.getWordStudyProgress(word)
     val rating = stats.getWordTotalRating(word)
@@ -77,6 +79,7 @@ fun SheetBasicInfo(word: Word, unyt: Unyt, horizPadding: Dp) {
         kana = kana,
         usuallyInKana = word.usuallyInKana,
         unytLevel = unyt.levelOfMostDifficultWord,
+        kanjiIndex = kanjiIndex,
         horizPadding = horizPadding,
         marginTop = 16.dp
     )
@@ -241,11 +244,10 @@ private fun KanjiDifficultForLevel(
     kana: String,
     usuallyInKana: Boolean,
     unytLevel: JLPTLevel,
+    kanjiIndex: KanjiIndex,
     horizPadding: Dp,
     marginTop: Dp,
 ) {
-    val kanjiIndex = Singletons.kanjiIndex
-
     val kanjiDifficultForLevel = when {
         usuallyInKana || kanji == kana -> null
         else -> {

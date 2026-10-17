@@ -10,7 +10,9 @@ import ch.digorydoo.kutils.logging.Log
 import io.github.digorydoo.goigoi.activity.welcome.startWelcomeActivity
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.utils.AndroidLogStrategy
-import io.github.digorydoo.goigoi.utils.SingletonHolder
+import io.github.digorydoo.goigoi.utils.UserPrefs.ThemePref
+import io.github.digorydoo.goigoi.utils.getOrCreateSingletons
+import io.github.digorydoo.goigoi.utils.singletonsExist
 
 /**
  * An application should not provide its own launch screen. Problem is, the animated logo needs to be an Animated Vector
@@ -30,8 +32,9 @@ class SplashActivity: ComponentActivity() {
         Log.strategies = mutableListOf(AndroidLogStrategy())
 
         setContent {
-            GoigoiTheme(useFixedDarkModeAndAvoidAccessingSingletons = true) {
+            GoigoiTheme(themePref = ThemePref.DARK /* must not access UserPrefs yet */) {
                 SplashScreen(
+                    shouldAnimate = !singletonsExist,
                     init = { asyncInit() },
                     onInitComplete = {
                         startWelcomeActivity()
@@ -44,7 +47,7 @@ class SplashActivity: ComponentActivity() {
 
     // Called in a coroutine!
     private fun asyncInit() {
-        SingletonHolder.createSingletons(applicationContext)
-        SingletonHolder.stats.notifyAppLaunch()
+        val singletons = getOrCreateSingletons()
+        singletons.stats.notifyAppLaunch()
     }
 }

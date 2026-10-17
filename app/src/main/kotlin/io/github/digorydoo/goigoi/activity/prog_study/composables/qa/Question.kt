@@ -28,10 +28,10 @@ import io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivityModel.Pre
 import io.github.digorydoo.goigoi.activity.prog_study.composables.AnimatedElement
 import io.github.digorydoo.goigoi.composables.providers.DeviceProps
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.legacy.spannable.DEFAULT_FURIGANA_OPACITY
-import io.github.digorydoo.goigoi.legacy.spannable.FuriganaSpan
-import io.github.digorydoo.goigoi.legacy.spannable.buildSpan
-import io.github.digorydoo.goigoi.legacy.view.TategakiView
+import io.github.digorydoo.goigoi.legacy.DEFAULT_FURIGANA_OPACITY
+import io.github.digorydoo.goigoi.legacy.FuriganaSpan
+import io.github.digorydoo.goigoi.legacy.TategakiView
+import io.github.digorydoo.goigoi.legacy.buildSpan
 import io.github.digorydoo.goigoi.utils.Orientation
 import io.github.digorydoo.goigoi.utils.ScreenSize
 

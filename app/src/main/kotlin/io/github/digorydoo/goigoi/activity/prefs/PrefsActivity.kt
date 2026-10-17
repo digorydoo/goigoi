@@ -8,9 +8,8 @@ import io.github.digorydoo.goigoi.activity.about.startAboutActivity
 import io.github.digorydoo.goigoi.activity.welcome.startWelcomeActivity
 import io.github.digorydoo.goigoi.composables.providers.DevicePropsProvider
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.composables.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.utils.ResUtils
-import io.github.digorydoo.goigoi.utils.SingletonHolder
+import io.github.digorydoo.goigoi.utils.getOrCreateSingletons
 
 class PrefsActivity: ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,30 +17,30 @@ class PrefsActivity: ComponentActivity() {
         ResUtils.setActivityTheme(this)
         enableEdgeToEdge()
 
+        val singletons = getOrCreateSingletons()
+        val prefs = singletons.prefs
 
         setContent {
-            SingletonsProvider(this) {
-                DevicePropsProvider(this) {
-                    GoigoiTheme {
-                        PrefsScreen(
-                            onDarkModeChange = {
-                                val prefs = SingletonHolder.prefs
-                                prefs.darkMode = it
-                                // recreate() -- NO, problems with status bar styling!
-                                finish()
-                                startPrefsActivity()
-                            },
-                            onAboutItemSelected = { startAboutActivity() },
-                            onBack = {
-                                // NavUtils.navigateUpFromSameTask(this) -- NO
-                                // Since we may have changed the theme, we have to completely recreate WelcomeActivity.
-                                // WelcomeActivity is expected to have called finish() before navigating to
-                                // PrefsActivity.
-                                startWelcomeActivity()
-                                finish()
-                            }
-                        )
-                    }
+            DevicePropsProvider(this) {
+                GoigoiTheme(prefs.theme) {
+                    PrefsScreen(
+                        prefs = prefs,
+                        onDarkModeChange = {
+                            prefs.theme = it
+                            // recreate() -- NO, problems with status bar styling!
+                            finish()
+                            startPrefsActivity()
+                        },
+                        onAboutItemSelected = { startAboutActivity() },
+                        onBack = {
+                            // NavUtils.navigateUpFromSameTask(this) -- NO
+                            // Since we may have changed the theme, we have to completely recreate WelcomeActivity.
+                            // WelcomeActivity is expected to have called finish() before navigating to
+                            // PrefsActivity.
+                            startWelcomeActivity()
+                            finish()
+                        }
+                    )
                 }
             }
         }

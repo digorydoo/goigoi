@@ -32,10 +32,22 @@ class WordFileWriter(private val word: GoigoiWord, stream: OutputStream): AbstrW
         write(WORD_STUDY_IN_CONTEXT, word.studyInContext.id)
 
         word.cats.forEach { write(WORD_CATEGORY, it.id) }
-        word.synonyms.forEach { write(WORD_SYNONYM, it.raw) }
+
+        for (acceptable in word.acceptForTranslation) {
+            write(WORD_ACCEPT_FOR_TRANSLATION, acceptable.answer)
+            write(WORD_ANSWER_INACCURATE, acceptable.inaccurate)
+        }
+
+        for (reading in word.alternativeReadings) {
+            write(WORD_ALT_READING, reading)
+        }
+
+        for (spelling in word.alternativeSpellings) {
+            write(WORD_ALT_SPELLING, spelling)
+        }
 
         for (phrase in word.phrases) {
-            beginPhrase()
+            write(PHRASE_ID, "") // currently without id
             write(PHRASE_PRIMARY_FORM, phrase.primaryForm.raw)
             writeIfNonEmpty(PHRASE_ROMAJI, phrase.romaji)
 
@@ -54,11 +66,15 @@ class WordFileWriter(private val word: GoigoiWord, stream: OutputStream): AbstrW
             if (phrase.wordFormToAsk.raw.isNotEmpty()) {
                 write(PHRASE_WORD_FORM, phrase.wordFormToAsk.raw)
                 writeIfNonEmpty(PHRASE_WORD_FORM_SUFFIX, phrase.wordFormToAskSuffix)
+
+                for (acceptable in phrase.acceptableAnswers) {
+                    write(PHRASE_ACCEPTABLE_ANSWER, acceptable.raw)
+                }
             }
         }
 
         for (sentence in word.sentences) {
-            beginSentence()
+            write(SENTENCE_ID, "") // currently without id
             write(SENTENCE_PRIMARY_FORM, sentence.primaryForm.raw)
             writeIfNonEmpty(SENTENCE_ROMAJI, sentence.romaji)
 
@@ -77,6 +93,10 @@ class WordFileWriter(private val word: GoigoiWord, stream: OutputStream): AbstrW
             if (sentence.wordFormToAsk.raw.isNotEmpty()) {
                 write(SENTENCE_WORD_FORM, sentence.wordFormToAsk.raw)
                 writeIfNonEmpty(SENTENCE_WORD_FORM_SUFFIX, sentence.wordFormToAskSuffix)
+
+                for (acceptable in sentence.acceptableAnswers) {
+                    write(SENTENCE_ACCEPTABLE_ANSWER, acceptable.raw)
+                }
             }
         }
 
@@ -89,7 +109,7 @@ class WordFileWriter(private val word: GoigoiWord, stream: OutputStream): AbstrW
             if (otherWord != null && extKind != null) {
                 require(!otherWord.hidden) { "Internal error: Link to hidden word was not cleared" }
 
-                beginSeeAlso(otherWord.id)
+                write(WORDLINK_ID, otherWord.id)
                 write(WORDLINK_KIND, extKind.value)
                 write(WORDLINK_PRIMARY_FORM, otherWord.primaryForm.raw)
 

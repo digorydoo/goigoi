@@ -91,12 +91,21 @@
               category="body"
               id="atama-head"
             >
+                <keep_apart_from id="okoru-getangry" rem="ambiguity in phrases" />
                 <phrase
                   ph="【頭：あたま】がいい"
                   rom="atama ga ii"
                   tr_en="intelligent"
                   tr_de="intelligent"
                   lvl="n5"
+                />
+                <phrase
+                  ph="【頭：あたま】にくる"
+                  rom="atama ni kuru"
+                  tr_en="to lose one's temper; to get angry"
+                  tr_de="die Geduld verlieren; wütend werden"
+                  lvl="n3"
+                  rem="jisho has nx; appears in Doraemon 17, p.147"
                 />
                 <sentence
                   s="【母：はは】は 【頭：あたま】が 【古：ふる】い。"
@@ -106,16 +115,6 @@
                   lvl="n5"
                   origin="lib0"
                 />
-                <!-- FIXME move to kaeraseru
-                  s="すみません、【頭：あたま】が【痛：いた】いので、【今日：きょう】は【早：はや】く【帰：かえ】らせてください。"
-                  rom="Sumimasen, atama ga itai no de, kyō wa hayaku kaerasete kudasai."
-                  tr_en="Excuse me, can I go home early since I have a headache?"
-                  tr_de="Entschuldigen Sie, kann ich heute früh nach Hause gehen, da ich Kopfschmerzen habe?"
-                  explanation_en="「帰らせる」is the causative form of 「帰る」"
-                  explanation_de="「帰らせる」ist die kausative Form von 「帰る」"
-                  lvl="n4"
-                  origin="500mon q331"
-                -->
             </word>
             <word
               w="【足：あし】"

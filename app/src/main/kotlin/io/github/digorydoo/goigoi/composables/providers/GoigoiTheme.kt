@@ -1,5 +1,6 @@
 package io.github.digorydoo.goigoi.composables.providers
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
@@ -16,6 +17,7 @@ import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.em
 import androidx.compose.ui.unit.sp
+import io.github.digorydoo.goigoi.utils.UserPrefs.ThemePref
 
 // Keep this private; colours need to be accessed through theme
 private object Palette {
@@ -387,12 +389,18 @@ object GoigoiTheme {
 }
 
 @Composable
-fun GoigoiTheme(useFixedDarkModeAndAvoidAccessingSingletons: Boolean = false, content: @Composable () -> Unit) {
-    @Suppress("RedundantIf")
-    val darkTheme = if (useFixedDarkModeAndAvoidAccessingSingletons) true else Singletons.prefs.darkMode
+fun GoigoiTheme(
+    themePref: ThemePref, // Activity needs to be recreated when prefs change
+    content: @Composable () -> Unit,
+) {
+    val darkMode = when (themePref) {
+        ThemePref.DARK -> true
+        ThemePref.LIGHT -> false
+        ThemePref.SYSTEM -> isSystemInDarkTheme()
+    }
 
-    val customScheme = if (darkTheme) darkGoigoiScheme else lightGoigoiScheme
-    val materialScheme = if (darkTheme) darkMaterialScheme else lightMaterialScheme
+    val customScheme = if (darkMode) darkGoigoiScheme else lightGoigoiScheme
+    val materialScheme = if (darkMode) darkMaterialScheme else lightMaterialScheme
 
     CompositionLocalProvider(
         LocalGoigoiColours provides customScheme,

@@ -6,6 +6,8 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
@@ -24,6 +26,7 @@ fun ExtendedKanaKeyboard(mode: KanaMode, model: ProgStudyActivityModel, modifier
     val backspaceKeyDescr = stringResource(R.string.backspace_key)
     val moveCaretLeftDescr = stringResource(R.string.move_caret_left)
     val moveCaretRightDescr = stringResource(R.string.move_caret_right)
+    val hapticFeedback = LocalHapticFeedback.current
 
     Column(
         modifier = modifier,
@@ -49,7 +52,10 @@ fun ExtendedKanaKeyboard(mode: KanaMode, model: ProgStudyActivityModel, modifier
             KeyButton(
                 modifier = Modifier.semantics { contentDescription = backspaceKeyDescr },
                 iconResId = R.drawable.ic_backspace_24dp,
-                onClick = model::onBackspaceBtnClicked,
+                onClick = {
+                    hapticFeedback.performHapticFeedback(HapticFeedbackType.VirtualKey)
+                    model.onBackspaceBtnClicked()
+                }
             )
         }
 
@@ -59,7 +65,10 @@ fun ExtendedKanaKeyboard(mode: KanaMode, model: ProgStudyActivityModel, modifier
             KeyButton(
                 modifier = Modifier.semantics { contentDescription = moveCaretLeftDescr },
                 iconResId = R.drawable.ic_triangle_left_24dp,
-                onClick = { model.onKeyBtnClicked("", Action.MOVE_CARET_LEFT) }
+                onClick = {
+                    hapticFeedback.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                    model.onKeyBtnClicked("", Action.MOVE_CARET_LEFT)
+                }
             )
             FiveWayButton(
                 def = if (isHiragana) KeyDef.hiraganaTxKey else KeyDef.katakanaTxKey,
@@ -76,7 +85,10 @@ fun ExtendedKanaKeyboard(mode: KanaMode, model: ProgStudyActivityModel, modifier
             KeyButton(
                 modifier = Modifier.semantics { contentDescription = moveCaretRightDescr },
                 iconResId = R.drawable.ic_triangle_right_24dp,
-                onClick = { model.onKeyBtnClicked("", Action.MOVE_CARET_RIGHT) }
+                onClick = {
+                    hapticFeedback.performHapticFeedback(HapticFeedbackType.TextHandleMove)
+                    model.onKeyBtnClicked("", Action.MOVE_CARET_RIGHT)
+                }
             )
         }
 

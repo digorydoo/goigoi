@@ -10,7 +10,6 @@ import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.composables.list.ListItem
 import io.github.digorydoo.goigoi.composables.list.ListSubheader
 import io.github.digorydoo.goigoi.core.db.Word
-import io.github.digorydoo.goigoi.utils.SingletonHolder
 
 private const val JISHO_KANJI_URL = "https://jisho.org/search/{KANJI}%23kanji"
 
@@ -18,7 +17,13 @@ private fun getJishoKanjiUri(kanji: Char) =
     JISHO_KANJI_URL.replace("{KANJI}", "$kanji").toUri()
 
 @Composable
-fun SheetKanjiDetails(word: Word, sheetHorizPadding: Dp, onLinkSelected: (Uri) -> Unit) {
+fun SheetKanjiDetails(
+    model: WordInfoBottomSheetModel,
+    word: Word,
+    sheetHorizPadding: Dp,
+    onLinkSelected: (Uri) -> Unit,
+) {
+    val kanjiIndex = model.kanjiIndex
     val kanjis = word.kanji.filter { it.isCJKNotKana() }.toSet()
 
     if (kanjis.isEmpty()) {
@@ -26,8 +31,6 @@ fun SheetKanjiDetails(word: Word, sheetHorizPadding: Dp, onLinkSelected: (Uri) -
     }
 
     ListSubheader(stringResource(R.string.kanji_details), sheetHorizPadding)
-
-    val kanjiIndex = SingletonHolder.kanjiIndex
 
     for (kanji in kanjis) {
         val kanjiStr = kanji.toString()

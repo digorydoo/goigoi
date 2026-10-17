@@ -16,12 +16,14 @@ class GoigoiPhraseOrSentence(val kind: Kind) {
     var translation = IntlString()
     var explanation = IntlString()
     var level: JLPTLevel? = null
-    var wordFormToAsk = FuriganaString() // if the word appears in a different form, e.g. kana, verb form, etc.
-    var wordFormToAskSuffix = "" // if this is defined, wordFormToAsk is the stem
     var allowSpaces: Boolean? = null // null = determine based on JLPT level
     var origin = ""
     var href = ""
     var remark = ""
+
+    var wordFormToAsk = FuriganaString() // if the word appears in a different form, e.g. kana, verb form, etc.
+    var wordFormToAskSuffix = "" // if this is defined, wordFormToAsk is the stem
+    val acceptableAnswers = mutableListOf<FuriganaString>()
 
     override fun toString() = when (kind) {
         Kind.PHRASE -> "Phrase "

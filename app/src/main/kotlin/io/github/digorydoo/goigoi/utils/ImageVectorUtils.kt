@@ -7,6 +7,7 @@ import androidx.compose.ui.graphics.vector.VectorNode
 import androidx.compose.ui.graphics.vector.VectorPath
 import androidx.compose.ui.graphics.vector.toPath
 
+@Suppress("unused")
 fun ImageVector.toPath(): Path {
     val path = Path()
 

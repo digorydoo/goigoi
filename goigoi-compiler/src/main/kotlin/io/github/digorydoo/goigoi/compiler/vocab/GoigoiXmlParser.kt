@@ -1,8 +1,13 @@
 package io.github.digorydoo.goigoi.compiler.vocab
 
-import ch.digorydoo.kutils.cjk.*
+import ch.digorydoo.kutils.cjk.FuriganaString
+import ch.digorydoo.kutils.cjk.IntlString
+import ch.digorydoo.kutils.cjk.JLPTLevel
+import ch.digorydoo.kutils.cjk.isCJKNotKana
+import ch.digorydoo.kutils.cjk.toHiragana
 import io.github.digorydoo.goigoi.compiler.CheckFailed
 import io.github.digorydoo.goigoi.compiler.ParsingFailed
+import io.github.digorydoo.goigoi.core.db.AcceptableAnswer
 import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 import io.github.digorydoo.goigoi.core.db.WordCategory
 import io.github.digorydoo.goigoi.core.db.WordHint
@@ -172,53 +177,10 @@ class GoigoiXmlParser {
 
         try {
             checkAttributes(root, arrayOf())
-
             val kanjis = root.textContent?.filter { !it.isWhitespace() }
 
-            if (kanjis == null || kanjis.length <= 1) {
-                throw ParsingFailed("visually_similar entry needs to mention at least two kanjis")
-            } else if (kanjis.length >= 7) {
-                throw ParsingFailed("visually_similar entry should be split into two: $kanjis")
-            }
-
-            val badChars = kanjis.filter { !it.isCJKNotKana() && !it.isKatakana() && !it.isHiragana() }
-
-            if (badChars.isNotEmpty()) {
-                throw ParsingFailed("Tag contains content that aren't kanji: $badChars")
-            }
-
-            val discouragedKana = kanjis.filter {
-                it == 'カ' || it == 'エ' || it == 'ロ' || it == 'タ' || it == 'ニ' || it == 'ハ'
-            }
-
-            if (discouragedKana.isNotEmpty()) {
-                throw ParsingFailed(
-                    "Do not use these kana characters, because there are kanji that look the same: $discouragedKana"
-                )
-            }
-
-            val badPairs = arrayOf(Pair('末', '未'))
-
-            badPairs.forEach { (a, b) ->
-                if (kanjis.contains(a) && kanjis.contains(b)) {
-                    throw ParsingFailed(
-                        "Do not put $a and $b into the same visually_similar group, because they're too similar"
-                    )
-                }
-            }
-
-            kanjis.forEachIndexed { idx, kanji ->
-                for (followingIdx in idx + 1 ..< kanjis.length) {
-                    if (kanjis[followingIdx] == kanji) {
-                        throw ParsingFailed("Kanji is mentioned more than once in same visually_similar entry: $kanji")
-                    }
-                }
-
-                vocab.visuallySimilar.forEach { haveAlready ->
-                    if (haveAlready.contains(kanji)) {
-                        throw ParsingFailed("Multiple visually_similar entries mention this kanji: $kanji")
-                    }
-                }
+            if (kanjis.isNullOrEmpty()) {
+                throw ParsingFailed("visually_similar group is empty!")
             }
 
             vocab.visuallySimilar.add(kanjis)
@@ -576,7 +538,7 @@ class GoigoiXmlParser {
 
             forEachChild(root) { tag ->
                 when (tag.nodeName) {
-                    "synonym" -> readWordSynonym(tag, word)
+                    "accept_for_translation" -> readWordAcceptForTranslation(tag, word)
                     "phrase" -> readPhrase(tag, word)
                     "sentence" -> readSentence(tag, word)
                     "see" -> readSee(tag, word)
@@ -599,24 +561,145 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun readWordSynonym(root: Element, word: GoigoiWord) {
-        val errorCtx = "<synonym>"
+    private fun readWordAcceptForTranslation(root: Element, word: GoigoiWord) {
+        val errorCtx = "<accept_for_translation>"
 
         try {
             requireChildless(root)
-            checkAttributes(root, arrayOf("w", "rem"))
+            checkAttributes(root, arrayOf("w", "inaccurate", "interchangeable", "rem"))
 
             val rawPrimaryForm = getMandatoryAttr(root, "w")
 
             if (rawPrimaryForm.isEmpty()) {
-                throw ParsingFailed("Attribute w of synonym must not be empty")
-            } else if (rawPrimaryForm == word.primaryForm.raw) {
-                throw ParsingFailed("Synonym must not be the same as the word itself")
-            } else if (rawPrimaryForm == word.primaryForm.kana || rawPrimaryForm == word.primaryForm.kanji) {
-                throw ParsingFailed("Synonym must not be the same as the word kana or kanji")
+                throw ParsingFailed("Attribute w of accept_for_translation must not be empty")
+            } else if (
+                rawPrimaryForm == word.primaryForm.raw ||
+                rawPrimaryForm == word.primaryForm.kana ||
+                rawPrimaryForm == word.primaryForm.kanji
+            ) {
+                throw ParsingFailed("Attribute w of accept_for_translation must not be the same as the word itself")
             }
 
-            word.synonyms.add(FuriganaString(rawPrimaryForm))
+            val primaryForm = FuriganaString(rawPrimaryForm)
+            val inaccurate = getBooleanAttr(root, "inaccurate")
+            val interchangeable = getBooleanAttrOrNull(root, "interchangeable")
+
+            if (inaccurate && interchangeable == true) {
+                throw ParsingFailed("Variant cannot be both inaccurate and also fully interchangeable")
+            }
+
+            if (primaryForm.kanji != primaryForm.kana && primaryForm.kanji != word.kanji) {
+                word.acceptForTranslation.add(
+                    AcceptableAnswer(
+                        answer = primaryForm.kanji,
+                        inaccurate = inaccurate,
+                        interchangeable = interchangeable ?: false,
+                    )
+                )
+
+                if (!inaccurate && primaryForm.kana == word.kana) {
+                    // The meaning is not inaccurate, and the word has the same reading, so this kanji is just an
+                    // alternative spelling of the word.
+
+                    if (interchangeable == null) {
+                        throw ParsingFailed(
+                            "Specifying interchangeable is required when accept_for_translation marks " +
+                                "an alternative spelling: ${primaryForm.kanji}"
+                        )
+                    }
+
+                    word.alternativeSpellings.add(primaryForm.kanji)
+                }
+            }
+
+            // If primaryForm.kanji == primaryForm.kana, the form is kana alone. We've excluded those above; they will
+            // be handled here.
+
+            if (primaryForm.kana != word.kana) {
+                word.acceptForTranslation.add(
+                    AcceptableAnswer(
+                        answer = primaryForm.kana,
+                        inaccurate = inaccurate,
+                        interchangeable = interchangeable ?: false,
+                    )
+                )
+
+                if (!inaccurate && primaryForm.kanji == word.kanji) {
+                    // The meaning is not inaccurate, and the word uses the same kanji/okurigana, so this must be an
+                    // alternative reading.
+
+                    if (interchangeable == null) {
+                        throw ParsingFailed(
+                            "Specifying interchangeable is required when accept_for_translation marks " +
+                                "an alternative reading: ${primaryForm.kana}"
+                        )
+                    }
+
+                    // When the word is often spelled in katakana, XML sometimes uses katakana as furigana. For
+                    // acceptForTranslation, we'll use katakana, while we store the alternative reading as hiragana.
+
+                    word.alternativeReadings.add(primaryForm.kana.toHiragana())
+                }
+
+                if (primaryForm.kanji == primaryForm.kana && primaryForm.kana.toHiragana() == word.kana.toHiragana()) {
+                    // This form simply uses different kinds of kana.
+
+                    if (inaccurate) {
+                        throw ParsingFailed(
+                            "The form is the kana-only rendering of the word using different kinds of kana. " +
+                                "This shouldn't change its meaning, so please remove the inaccurate flag."
+                        )
+                    } else if (interchangeable != true) {
+                        throw ParsingFailed(
+                            "The form is the kana-only rendering of the word using different kinds of kana. " +
+                                "This shouldn't change its meaning, so please set interchangeable to true."
+                        )
+                    }
+
+                    word.alternativeSpellings.add(primaryForm.kana)
+                }
+            }
+        } catch (e: Exception) {
+            rethrow(e, errorCtx)
+        }
+    }
+
+    private fun readAskAccept(root: Element, word: GoigoiWord, phraseOrSentence: GoigoiPhraseOrSentence) {
+        val errorCtx = "<accept>"
+
+        try {
+            requireChildless(root)
+            checkAttributes(root, arrayOf("w", "suffix", "rem"))
+
+            val rawPrimaryForm = getMandatoryAttr(root, "w")
+
+            if (rawPrimaryForm.isEmpty()) {
+                throw ParsingFailed("Attribute w of accept must not be empty")
+            } else if (
+                rawPrimaryForm == word.primaryForm.raw ||
+                rawPrimaryForm == word.primaryForm.kana ||
+                rawPrimaryForm == word.primaryForm.kanji
+            ) {
+                throw ParsingFailed("Attribute w must not be the same as the word itself")
+            } else if (rawPrimaryForm == phraseOrSentence.wordFormToAsk.raw) {
+                throw ParsingFailed("Attribute w must not be the same as the word form to ask")
+            }
+
+            val suffix = getOptionalAttr(root, "suffix") ?: ""
+
+            if (phraseOrSentence.wordFormToAskSuffix != suffix) {
+                throw ParsingFailed("Suffix attribute must be the same in <ask> and <accept>")
+            }
+
+            val primaryForm = FuriganaString(rawPrimaryForm)
+
+            if (primaryForm.kanji != primaryForm.kana && primaryForm.kanji != word.kanji) {
+                phraseOrSentence.acceptableAnswers.add(FuriganaString(primaryForm.kanji))
+            }
+
+            if (primaryForm.kana != word.kana) {
+                phraseOrSentence.acceptableAnswers.add(FuriganaString(primaryForm.kana))
+            }
         } catch (e: Exception) {
             rethrow(e, errorCtx)
         }
@@ -683,7 +766,7 @@ class GoigoiXmlParser {
 
             forEachChild(root) { tag ->
                 when (tag.nodeName) {
-                    "ask" -> readWordFormToAsk(tag, phrase)
+                    "ask" -> readWordFormToAsk(tag, word, phrase)
                     else -> throw ParsingFailed("Tag not handled: <${tag.nodeName}>")
                 }
             }
@@ -762,7 +845,7 @@ class GoigoiXmlParser {
 
             forEachChild(root) { tag ->
                 when (tag.nodeName) {
-                    "ask" -> readWordFormToAsk(tag, sentence)
+                    "ask" -> readWordFormToAsk(tag, word, sentence)
                     else -> throw ParsingFailed("Tag not handled: <${tag.nodeName}>")
                 }
             }
@@ -771,7 +854,7 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun readWordFormToAsk(root: Element, phraseOrSentence: GoigoiPhraseOrSentence) {
+    private fun readWordFormToAsk(root: Element, word: GoigoiWord, phraseOrSentence: GoigoiPhraseOrSentence) {
         var errorCtx = "Word form"
 
         try {
@@ -818,7 +901,6 @@ class GoigoiXmlParser {
             }
 
             checkAttributes(root, arrayOf("w", "stem", "suffix"))
-            requireChildless(root)
 
             if (phraseOrSentence.wordFormToAsk.isNotEmpty()) {
                 throw ParsingFailed("The <ask> tag can only appear once")
@@ -826,6 +908,13 @@ class GoigoiXmlParser {
 
             phraseOrSentence.wordFormToAsk = FuriganaString(w ?: stem ?: "")
             phraseOrSentence.wordFormToAskSuffix = suffix ?: ""
+
+            forEachChild(root) { tag ->
+                when (tag.nodeName) {
+                    "accept" -> readAskAccept(tag, word, phraseOrSentence)
+                    else -> throw ParsingFailed("Tag not handled: <${tag.nodeName}>")
+                }
+            }
         } catch (e: Exception) {
             rethrow(e, errorCtx)
         }

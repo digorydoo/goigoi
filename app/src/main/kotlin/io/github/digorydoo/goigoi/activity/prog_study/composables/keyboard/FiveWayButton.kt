@@ -15,7 +15,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.IntRect
 import androidx.compose.ui.unit.IntSize
@@ -39,6 +41,7 @@ fun FiveWayButton(def: KeyDef, modifier: Modifier = Modifier, onAction: (text: S
     val centreText = def.getText(KeyLensPart.CENTRE)
     val popupShown = remember { mutableStateOf(false) }
     val keyLensPart = remember { mutableStateOf(KeyLensPart.CENTRE) }
+    val hapticFeedback = LocalHapticFeedback.current
 
     fun Modifier.handleGestures() = pointerInput(Unit) {
         awaitEachGesture {
@@ -70,10 +73,14 @@ fun FiveWayButton(def: KeyDef, modifier: Modifier = Modifier, onAction: (text: S
                     }
                 }
 
-                keyLensPart.value = part
+                if (keyLensPart.value != part) {
+                    hapticFeedback.performHapticFeedback(HapticFeedbackType.SegmentTick)
+                    keyLensPart.value = part
+                }
             }
 
             popupShown.value = false
+            hapticFeedback.performHapticFeedback(HapticFeedbackType.GestureEnd)
             onAction(def.getText(part), def.getAction(part))
         }
     }

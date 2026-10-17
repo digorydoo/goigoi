@@ -4,16 +4,22 @@ import android.content.Context
 import ch.digorydoo.kutils.cjk.FuriganaString
 import ch.digorydoo.kutils.utils.Moment
 import io.github.digorydoo.goigoi.R
-import io.github.digorydoo.goigoi.composables.list.UnytListItemData
 import io.github.digorydoo.goigoi.core.db.Topic
 import io.github.digorydoo.goigoi.core.db.Vocabulary
-import io.github.digorydoo.goigoi.core.stats.Stats
+import io.github.digorydoo.goigoi.core.list.ListItemDataFactory
+import io.github.digorydoo.goigoi.core.list.UnytListItemData
+import io.github.digorydoo.goigoi.core.stats.IStats
 import io.github.digorydoo.goigoi.core.welcome.DailyProgressTracker
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 
-class WelcomeActivityModel(private val vocab: Vocabulary, private val stats: Stats, private val ctx: Context) {
+class WelcomeActivityModel(
+    private val vocab: Vocabulary,
+    private val stats: IStats,
+    private val listItemDataFactory: ListItemDataFactory,
+    private val ctx: Context,
+) {
     sealed interface Item
     class TopicItem(val topic: Topic): Item
     object MyWordsUnytItem: Item
@@ -44,7 +50,7 @@ class WelcomeActivityModel(private val vocab: Vocabulary, private val stats: Sta
     private val _progressMsgTranslation = MutableStateFlow("")
     val progressMsgTranslation = _progressMsgTranslation.asStateFlow()
 
-    private val _myWordsData = MutableStateFlow(UnytListItemData.createEmpty())
+    private val _myWordsData = MutableStateFlow(UnytListItemData())
     val myWordsData = _myWordsData.asStateFlow()
 
     private val _highlightedItem = MutableStateFlow(null as Item?)
@@ -80,7 +86,7 @@ class WelcomeActivityModel(private val vocab: Vocabulary, private val stats: Sta
         }
 
         _myWordsData.update {
-            UnytListItemData.create(vocab.myWordsUnyt, isMyWordsUnyt = true, vocab, stats, ctx)
+            listItemDataFactory.createUnytListItemData(vocab.myWordsUnyt, vocab, stats)
         }
     }
 }

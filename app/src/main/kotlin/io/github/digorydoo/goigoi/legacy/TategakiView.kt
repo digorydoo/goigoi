@@ -1,4 +1,4 @@
-package io.github.digorydoo.goigoi.legacy.view
+package io.github.digorydoo.goigoi.legacy
 
 import android.content.Context
 import android.graphics.Canvas
@@ -19,7 +19,6 @@ import ch.digorydoo.kutils.colour.Colour
 import ch.digorydoo.kutils.math.clamp
 import io.github.digorydoo.goigoi.core.tategaki.CharacterPlacement
 import io.github.digorydoo.goigoi.core.tategaki.TategakiLayout
-import io.github.digorydoo.goigoi.legacy.spannable.FuriganaSpan
 import io.github.digorydoo.goigoi.utils.DimUtils
 import kotlin.math.max
 import kotlin.math.min

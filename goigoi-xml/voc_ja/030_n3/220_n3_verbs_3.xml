@@ -19,6 +19,229 @@
         <section>
             <!-- unsorted -->
             <word
+              w="【静：しず】まる"
+              rom="shizumaru"
+              tr_en="to become quiet; to calm down"
+              tr_de="still werden; ruhig werden"
+              hint_en="v.i."
+              lvl="n3"
+              category="hearing"
+              id="shizumaru-calmdown"
+              rem="jisho has n2"
+            >
+                <see id="shizuka-quiet" type="adjective" />
+                <phrase
+                  ph="【静：しず】まり【返：かえ】る"
+                  rom="shizumari-kaeru"
+                  tr_en="to fall completely silent; to become still as death"
+                  tr_de="völlig verstummen; ganz still werden"
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【静：しず】まり" />
+                </phrase>
+                <sentence
+                  s="【嵐：あらし】が【静：しず】まった。"
+                  rom="Arashi ga shizumatta."
+                  tr_en="The storm has calmed down."
+                  tr_de="Der Sturm hat sich gelegt."
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【静：しず】まった" />
+                </sentence>
+                <sentence
+                  s="【海：うみ】をじっと【眺：なが】めていると【私：わたし】は【気：き】が【静：しず】まる【感：かん】じがする。"
+                  rom="Umi o jitto nagamete iru to watashi wa ki ga shizumaru kanji ga suru."
+                  tr_en="When I don't move and gaze out at the sea, I feel my mind calm down."
+                  tr_de="Wenn ich still auf das Meer blicke, fühle ich mich innerlich ruhig."
+                  lvl="n3"
+                  origin="lib0"
+                />
+            </word>
+            <word
+              w="【好：この】む"
+              rom="konomu"
+              tr_en="to like sth.; to prefer sth."
+              tr_de="etw. mögen; etw. vorziehen"
+              hint_en="v.t.; formal"
+              hint_de="v.t.; formell"
+              lvl="n3"
+              category="mood, thinking"
+              id="konomu-prefer"
+            >
+                <see id="konomi-liking" type="noun" />
+                <see id="suki-likeable" type="closely related" />
+                <phrase
+                  ph="【黒：くろ】い【服：ふく】を【好：この】んで【着：き】る"
+                  rom="kuroi fuku o kononde kiru"
+                  tr_en="to prefer wearing black clothes"
+                  tr_de="es vorziehen, schwarze Kleider zu tragen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                  rem="ChatGPT says 〜好んで〜する pattern is very common"
+                >
+                    <ask w="【好：この】んで" />
+                </phrase>
+                <sentence
+                  s="【猫：ねこ】はたいてい【肉：にく】より【魚：さかな】を【好：この】む。"
+                  rom="Neko wa taitei niku yori sakana o konomu."
+                  tr_en="Cats tend to prefer fish to meat."
+                  tr_de="Katzen mögen generell lieber Fisch als Fleisch."
+                  lvl="n3"
+                  origin="lib0 modified"
+                  rem="verified with ChatGPT"
+                />
+            </word>
+            <word
+              w="【殴：なぐ】る"
+              rom="naguru"
+              tr_en="to hit; to beat; to punch"
+              tr_de="schlagen; boxen"
+              lvl="n3"
+              category="hands, not-good"
+              id="naguru-hit"
+              rem="appears in GENKI2 L21 vocab section; jisho has n2"
+            >
+                <keep_apart_from id="butsu-hit" />
+                <keep_apart_from id="ataru-hit" />
+                <keep_apart_from id="ateru-hit" />
+                <phrase
+                  ph="【殴：なぐ】り【返：かえ】す"
+                  rom="naguri-kaesu"
+                  tr_en="to hit back; to strike back"
+                  tr_de="zurückschlagen"
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【殴：なぐ】り" />
+                </phrase>
+                <sentence
+                  s="【殴：なぐ】られました。"
+                  rom="Naguraremashita."
+                  tr_en="I was beaten."
+                  tr_de="Ich bin zusammengeschlagen worden."
+                  explanation_en="「殴られる」is the passive form of「殴る」"
+                  explanation_de="「殴られる」ist die passive Form von「殴る」"
+                  lvl="n3"
+                  origin="Langenscheidt p.197"
+                >
+                    <ask stem="【殴：なぐ】られ" suffix="ました" />
+                </sentence>
+                <sentence
+                  s="【彼：かれ】は【僕：ぼく】の【顔：かお】をひどく【殴：なぐ】った。"
+                  rom="Kare wa boku no kao o hidoku nagutta."
+                  tr_en="He struck me a heavy blow in the face."
+                  tr_de="Er schlug mir brutal ins Gesicht."
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【殴：なぐ】った" />
+                </sentence>
+            </word>
+            <word
+              w="【濡：ぬ】らす"
+              rom="nurasu"
+              tr_en="to wet sth.; to soak; to moisten"
+              tr_de="etw. nass machen; einwichen; befeuchten"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="nurasu-wet"
+              rem="jisho has n2, but n4 for nureru"
+            >
+                <see id="nureru-getwet" type="v.i." />
+                <phrase
+                  ph="【髪：かみ】を【濡：ぬ】らす"
+                  rom="kami o nurasu"
+                  tr_en="to wet one's hair"
+                  tr_de="die Haare nass machen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <phrase
+                  ph="ハンカチを【涙：なみだ】で【濡：ぬ】らす"
+                  rom="hankachi o namida de nurasu"
+                  tr_en="to soak one's handkerchief with tears"
+                  tr_de="das Taschentuch mit Tränen durchnässen"
+                  lvl="n3"
+                  origin="ChatGPT"
+                />
+                <sentence
+                  s="【床：ゆか】を【濡：ぬ】らさないように【気：き】をつけて。"
+                  rom="Yuka o nurasanai yō ni ki o tsukete."
+                  tr_en="Be careful not to get the floor wet."
+                  tr_de="Pass auf, dass du nicht den Boden nass machst."
+                  lvl="n3"
+                  origin="ChatGPT"
+                >
+                    <ask w="【濡：ぬ】らさない" />
+                </sentence>
+            </word>
+            <word
+              w="【吐：は】く"
+              rom="haku"
+              tr_en="to vomit; to throw up; to confess"
+              tr_de="sich übergeben; kotzen; etw. gestehen"
+              hint_en="v.t."
+              lvl="n3"
+              category="health"
+              id="haku-vomit"
+            >
+                <keep_apart_from id="hakike-nausea" />
+                <phrase
+                  ph="【吐：は】き【気：け】"
+                  rom="hakike"
+                  tr_en="nausea; sickness in the stomach"
+                  tr_de="Übelkeit; Brechreiz"
+                  lvl="n3"
+                  rem="jisho has n2"
+                >
+                    <ask w="【吐：は】き" />
+                </phrase>
+                <sentence
+                  s="【何：なん】【度：ど】も【吐：は】いてしまいました。"
+                  rom="Nando mo haite shimaimashita."
+                  tr_en="I have vomited several times."
+                  tr_de="Ich habe mich mehrmals übergeben."
+                  lvl="n3"
+                  origin="Langenscheidt p.204"
+                >
+                    <ask w="【吐：は】いて" />
+                </sentence>
+            </word>
+            <word
+              w="【暮：く】らす"
+              rom="kurasu"
+              tr_en="to live; to get along"
+              tr_de="ein Leben führen; über die Runden kommen"
+              lvl="n3"
+              category="life, relationships"
+              id="kurasu-live"
+            >
+                <see id="kurashi-livelihood" type="noun" />
+                <keep_apart_from id="sumu-live" />
+                <phrase
+                  ph="【幸：しあわ】せに【暮：く】らす"
+                  rom="shiawase ni kurasu"
+                  tr_en="to live happily"
+                  tr_de="glücklich leben"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="verified with ChatGPT"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】と【彼：かれ】は【別：べつ】【々：べつ】に【暮：く】らしている。"
+                  rom="Kanojo to kare wa betsu-betsu ni kurashite iru."
+                  tr_en="She and he live separately."
+                  tr_de="Sie und er leben getrennt."
+                  lvl="n3"
+                  origin="ChatGPT"
+                >
+                    <ask w="【暮：く】らして" />
+                </sentence>
+            </word>
+            <word
               w="【離：はな】す"
               rom="hanasu"
               tr_en="to separate; to keep apart from"
@@ -102,50 +325,6 @@
                   rem="verified with ChatGPT"
                 >
                     <ask w="【離：はな】れない" />
-                </sentence>
-            </word>
-            <word
-              w="【表：あらわ】す"
-              rom="arawasu"
-              tr_en="to represent; to stand for; to express"
-              tr_de="etw. repräsentieren; für etw. stehen; etw. ausdrücken"
-              lvl="n3"
-              category="talking"
-              id="arawasu-represent"
-            >
-                <keep_apart_from id="mōshiageru-tell" />
-                <keep_apart_from id="tsutaeru-convey" />
-                <keep_apart_from id="noberu-mention" />
-                <keep_apart_from id="shimesu-indicate" />
-                <keep_apart_from id="arawasu-reveal" />
-                <phrase
-                  ph="【迷：めい】【惑：わく】している【気：き】【持：も】ちを【表：あらわ】す"
-                  rom="meiwaku shite iru kimochi o arawasu"
-                  tr_en="to express the feeling of being annoyed"
-                  tr_de="das Gefühl ausdrücken, genervt zu sein"
-                  lvl="n3"
-                  origin="self"
-                  rem="rephrased by ChatGPT"
-                />
-                <sentence
-                  s="これは【何：なに】を【表：あらわ】しますか。"
-                  rom="Kore wa nani o arawashimasu ka?"
-                  tr_en="What does this stand for?"
-                  tr_de="Für was steht dies?"
-                  lvl="n3"
-                  origin="lib0"
-                >
-                    <ask stem="【表：あらわ】し" suffix="ます" />
-                </sentence>
-                <sentence
-                  s="この【喜：よろこ】びを、なんといい【表：あらわ】せばいいだろう。"
-                  rom="Kono yorokobi o, nanto ii arawaseba ii darō."
-                  tr_en="How can I possibly put this joy into words?"
-                  tr_de="Wie kann ich diese Freude nur in Worte fassen?"
-                  lvl="n3"
-                  origin="Doraemon 14, p.158"
-                >
-                    <ask w="【表：あらわ】せば" />
                 </sentence>
             </word>
             <word
@@ -285,69 +464,6 @@
                 </sentence>
             </word>
             <word
-              w="【吐：は】く"
-              rom="haku"
-              tr_en="to vomit; to throw up; to confess"
-              tr_de="sich übergeben; kotzen; etw. gestehen"
-              hint_en="v.t."
-              lvl="n3"
-              category="health"
-              id="haku-vomit"
-            >
-                <keep_apart_from id="hakike-nausea" />
-                <phrase
-                  ph="【吐：は】き【気：け】"
-                  rom="hakike"
-                  tr_en="nausea; sickness in the stomach"
-                  tr_de="Übelkeit; Brechreiz"
-                  lvl="n3"
-                  rem="jisho has n2"
-                >
-                    <ask w="【吐：は】き" />
-                </phrase>
-                <sentence
-                  s="【何：なん】【度：ど】も【吐：は】いてしまいました。"
-                  rom="Nando mo haite shimaimashita."
-                  tr_en="I have vomited several times."
-                  tr_de="Ich habe mich mehrmals übergeben."
-                  lvl="n3"
-                  origin="Langenscheidt p.204"
-                >
-                    <ask w="【吐：は】いて" />
-                </sentence>
-            </word>
-            <word
-              w="【暮：く】らす"
-              rom="kurasu"
-              tr_en="to live; to get along"
-              tr_de="ein Leben führen; über die Runden kommen"
-              lvl="n3"
-              category="life, relationships"
-              id="kurasu-live"
-            >
-                <see id="kurashi-livelihood" type="noun" />
-                <keep_apart_from id="sumu-live" />
-                <phrase
-                  ph="【幸：しあわ】せに【暮：く】らす"
-                  rom="shiawase ni kurasu"
-                  tr_en="to live happily"
-                  tr_de="glücklich leben"
-                  lvl="n3"
-                  origin="lib0"
-                  rem="verified with ChatGPT"
-                />
-                <sentence
-                  s="【彼：かの】【女：じょ】と【彼：かれ】は【別：べつ】【々：べつ】に【暮：く】らしている。"
-                  rom="Kanojo to kare wa betsu-betsu ni kurashite iru."
-                  tr_en="She and he live separately."
-                  tr_de="Sie und er leben getrennt."
-                  lvl="n3"
-                  origin="ChatGPT"
-                >
-                    <ask w="【暮：く】らして" />
-                </sentence>
-            </word>
-            <word
               w="【誤：あやま】る"
               rom="ayamaru"
               tr_en="to make a mistake; to err; to mislead"
@@ -480,88 +596,6 @@
                 >
                     <ask w="【輝：かがや】いて" />
                 </sentence>
-            </word>
-            <word
-              w="【殴：なぐ】る"
-              rom="naguru"
-              tr_en="to hit; to beat; to punch"
-              tr_de="schlagen; boxen"
-              lvl="n3"
-              category="hands, not-good"
-              id="naguru-hit"
-              rem="appears in GENKI2 L21 vocab section; jisho has n2"
-            >
-                <keep_apart_from id="butsu-hit" />
-                <keep_apart_from id="ataru-hit" />
-                <keep_apart_from id="ateru-hit" />
-                <phrase
-                  ph="【殴：なぐ】り【返：かえ】す"
-                  rom="naguri-kaesu"
-                  tr_en="to hit back; to strike back"
-                  tr_de="zurückschlagen"
-                  lvl="n3"
-                  origin="lib0"
-                >
-                    <ask w="【殴：なぐ】り" />
-                </phrase>
-                <sentence
-                  s="【殴：なぐ】られました。"
-                  rom="Naguraremashita."
-                  tr_en="I was beaten."
-                  tr_de="Ich bin zusammengeschlagen worden."
-                  explanation_en="「殴られる」is the passive form of「殴る」"
-                  explanation_de="「殴られる」ist die passive Form von「殴る」"
-                  lvl="n3"
-                  origin="Langenscheidt p.197"
-                >
-                    <ask stem="【殴：なぐ】られ" suffix="ました" />
-                </sentence>
-                <sentence
-                  s="【彼：かれ】は【僕：ぼく】の【顔：かお】をひどく【殴：なぐ】った。"
-                  rom="Kare wa boku no kao o hidoku nagutta."
-                  tr_en="He struck me a heavy blow in the face."
-                  tr_de="Er schlug mir brutal ins Gesicht."
-                  lvl="n3"
-                  origin="lib0"
-                >
-                    <ask w="【殴：なぐ】った" />
-                </sentence>
-            </word>
-            <word
-              w="【申：もう】し【込：こ】む"
-              rom="mōshi-komu"
-              tr_en="to apply for; to ask for; to subscribe for"
-              tr_de="beantragen; sich bewerben; sich für etw. einschreiben"
-              hint_en="v.t."
-              lvl="n3"
-              category="work, relationships"
-              id="mōshikomu-applyfor"
-            >
-                <see id="mōshikomi-application" type="noun" />
-                <phrase
-                  ph="【結：けっ】【婚：こん】を【申：もう】し【込：こ】む"
-                  rom="kekkon o mōshi-komu"
-                  tr_en="to propose marriage"
-                  tr_de="einen Heiratsantrag stellen"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <phrase
-                  ph="【入：にゅう】【学：がく】を【申：もう】し【込：こ】む"
-                  rom="nyūgaku o mōshi-komu"
-                  tr_en="to apply for matriculation"
-                  tr_de="sich für die Immatrikulation bewerben"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <sentence
-                  s="【奨：しょう】【学：がく】【金：きん】を【申：もう】し【込：こ】むつもりだ。"
-                  rom="Shōgakukin o mōshi-komu tsumori da."
-                  tr_en="I'm going to apply for a scholarship."
-                  tr_de="Ich habe vor, mich für ein Stipendium zu bewerben."
-                  lvl="n3"
-                  origin="lib0"
-                />
             </word>
             <word
               w="【終：お】える"
@@ -700,6 +734,17 @@
                   tr_de="Ich probier's mal aus."
                   lvl="n3"
                   origin="Doraemon 7, p.76"
+                >
+                    <ask w="【試：ため】して" />
+                </sentence>
+                <sentence
+                  s="【疑：うたが】うなら、【試：ため】してみれば。"
+                  rom="Utagau nara, tameshite mireba."
+                  tr_en="If you're in any doubt, why don't you give it a try?"
+                  tr_de="Wenn du daran zweifelst, warum probierst du's nicht aus?"
+                  lvl="n3"
+                  origin="Doraemon 17, p.160 modified"
+                  rem="Doraemon uses kana alone"
                 >
                     <ask w="【試：ため】して" />
                 </sentence>
@@ -1045,133 +1090,6 @@
                 <keep_together id="odorokaseru-startle" />
             </word>
             <word
-              w="【静：しず】まる"
-              rom="shizumaru"
-              tr_en="to become quiet; to calm down"
-              tr_de="still werden; ruhig werden"
-              hint_en="v.i."
-              lvl="n3"
-              category="hearing"
-              id="shizumaru-calmdown"
-              rem="jisho has n2"
-            >
-                <see id="shizuka-quiet" type="adjective" />
-                <phrase
-                  ph="【静：しず】まり【返：かえ】る"
-                  rom="shizumari-kaeru"
-                  tr_en="to fall completely silent; to become still as death"
-                  tr_de="völlig verstummen; ganz still werden"
-                  lvl="n3"
-                  origin="lib0"
-                >
-                    <ask w="【静：しず】まり" />
-                </phrase>
-                <sentence
-                  s="【嵐：あらし】が【静：しず】まった。"
-                  rom="Arashi ga shizumatta."
-                  tr_en="The storm has calmed down."
-                  tr_de="Der Sturm hat sich gelegt."
-                  lvl="n3"
-                  origin="lib0"
-                >
-                    <ask w="【静：しず】まった" />
-                </sentence>
-                <sentence
-                  s="【海：うみ】をじっと【眺：なが】めていると【私：わたし】は【気：き】が【静：しず】まる【感：かん】じがする。"
-                  rom="Umi o jitto nagamete iru to watashi wa ki ga shizumaru kanji ga suru."
-                  tr_en="When I don't move and gaze out at the sea, I feel my mind calm down."
-                  tr_de="Wenn ich still auf das Meer blicke, fühle ich mich innerlich ruhig."
-                  lvl="n3"
-                  origin="lib0"
-                />
-            </word>
-            <word
-              w="【濡：ぬ】らす"
-              rom="nurasu"
-              tr_en="to wet sth.; to soak; to moisten"
-              tr_de="etw. nass machen; einwichen; befeuchten"
-              hint_en="v.t."
-              lvl="n3"
-              category="general"
-              id="nurasu-wet"
-              rem="jisho has n2, but n4 for nureru"
-            >
-                <see id="nureru-getwet" type="v.i." />
-                <phrase
-                  ph="【髪：かみ】を【濡：ぬ】らす"
-                  rom="kami o nurasu"
-                  tr_en="to wet one's hair"
-                  tr_de="die Haare nass machen"
-                  lvl="n3"
-                  origin="lib0"
-                />
-                <phrase
-                  ph="ハンカチを【涙：なみだ】で【濡：ぬ】らす"
-                  rom="hankachi o namida de nurasu"
-                  tr_en="to soak one's handkerchief with tears"
-                  tr_de="das Taschentuch mit Tränen durchnässen"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【床：ゆか】を【濡：ぬ】らさないように【気：き】をつけて。"
-                  rom="Yuka o nurasanai yō ni ki o tsukete."
-                  tr_en="Be careful not to get the floor wet."
-                  tr_de="Pass auf, dass du nicht den Boden nass machst."
-                  lvl="n3"
-                  origin="ChatGPT"
-                >
-                    <ask w="【濡：ぬ】らさない" />
-                </sentence>
-            </word>
-            <word
-              w="【高：たか】める"
-              rom="takameru"
-              tr_en="to heighten; to boost; to elevate"
-              tr_de="höher machen; erhöhen; steigern"
-              hint_en="v.t."
-              lvl="n3"
-              category="general"
-              id="takameru-raise"
-              rem="jisho has n2"
-            >
-                <see id="takai-expensive" type="adjective" />
-                <see id="takamaru-rise" type="v.i." />
-                <keep_apart_from id="sasu-raise" />
-                <keep_apart_from id="ageru-raise" />
-                <keep_apart_from id="kau-raise" />
-                <keep_apart_from id="sodateru-makegrow" />
-                <!--
-                    Acc. to ChatGPT, 上げる is broad and versatile,
-                    while 高める is usu. about quality, intensity, awareness, reputation, motivation.
-                -->
-                <phrase
-                  ph="【人：にん】【気：き】を【高：たか】める"
-                  rom="ninki o takameru"
-                  tr_en="to boost the popularity of sth."
-                  tr_de="die Beliebtheit von etw. steigern"
-                  lvl="n3"
-                  origin="self"
-                  rem="verified with ChatGPT"
-                />
-                <phrase
-                  ph="【意：い】【識：しき】を【高：たか】める"
-                  rom="ishiki o takameru"
-                  tr_en="to raise the awareness of sth."
-                  tr_de="das Bewusstsein für etw. fördern"
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-                <sentence
-                  s="【環：かん】【境：きょう】【問：もん】【題：だい】への【関：かん】【心：しん】を【高：たか】めるために、さまざまな【取：と】り【組：く】みが【行：おこな】われている。"
-                  rom="Kankyō mondai e no kanshin o takameru tame ni, samazama na tori-kumi ga okonawarete iru."
-                  tr_en="Various initiatives are being carried out to raise awareness in environmental issues."
-                  tr_de="Verschiedene Initiativen sind im Begriff, durchgeführt zu werden, um das Bewusstsein für Umweltsprobleme zu fördern."
-                  lvl="n3"
-                  origin="ChatGPT"
-                />
-            </word>
-            <word
               w="【混：ま】ぜる"
               rom="mazeru"
               tr_en="to mix; to stir"
@@ -1387,40 +1305,6 @@
             >
                 <keep_apart_from id="kumu-puttogether" />
                 <keep_together id="kumu-puttogether" />
-            </word>
-            <word
-              w="【好：この】む"
-              rom="konomu"
-              tr_en="to like sth.; to prefer sth."
-              tr_de="etw. mögen; etw. vorziehen"
-              hint_en="v.t.; formal"
-              hint_de="v.t.; formell"
-              lvl="n3"
-              category="mood, thinking"
-              id="konomu-prefer"
-            >
-                <see id="konomi-liking" type="noun" />
-                <see id="suki-likeable" type="closely related" />
-                <phrase
-                  ph="【黒：くろ】い【服：ふく】を【好：この】んで【着：き】る"
-                  rom="kuroi fuku o kononde kiru"
-                  tr_en="to prefer wearing black clothes"
-                  tr_de="es vorziehen, schwarze Kleider zu tragen"
-                  lvl="n3"
-                  origin="ChatGPT"
-                  rem="ChatGPT says 〜好んで〜する pattern is very common"
-                >
-                    <ask w="【好：この】んで" />
-                </phrase>
-                <sentence
-                  s="【猫：ねこ】はたいてい【肉：にく】より【魚：さかな】を【好：この】む。"
-                  rom="Neko wa taitei niku yori sakana o konomu."
-                  tr_en="Cats tend to prefer fish to meat."
-                  tr_de="Katzen mögen generell lieber Fisch als Fleisch."
-                  lvl="n3"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
             </word>
             <word
               w="【減：へ】らす"
@@ -2089,6 +1973,112 @@
                 >
                     <ask w="【望：のぞ】まない" />
                 </sentence>
+            </word>
+            <word
+              w="【現：あらわ】れる"
+              rom="arawareru"
+              tr_en="to come into sight; to become visible; to become apparent"
+              tr_de="sichtbar werden; ins Blickfeld rücken; erscheinen"
+              hint_en="v.i."
+              lvl="n3"
+              category="looking"
+              id="arawareru-becomevisible"
+            >
+                <see id="arawasu-reveal" type="v.t." />
+                <keep_apart_from id="mirareru-cansee" />
+                <keep_apart_from id="mieru-beseen" />
+                <phrase
+                  ph="【急：きゅう】に【現：あらわ】れる"
+                  rom="kyū ni arawareru"
+                  tr_en="to suddenly appear"
+                  tr_de="plötzlich erscheinen"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【空：そら】に【雲：くも】が【現：あらわ】れた。"
+                  rom="Sora ni kumo ga arawareta."
+                  tr_en="Clouds become visible in the sky."
+                  tr_de="Wolken wurden am Himmel sichtbar."
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【現：あらわ】れた" />
+                </sentence>
+                <sentence
+                  s="オバケが【庭：にわ】に【現：あらわ】れた。"
+                  rom="Obake ga niwa ni arawareta."
+                  tr_en="A spirit appeared in the garden."
+                  tr_de="Ein Gespenst erschien im Garten."
+                  lvl="n3"
+                  origin="self"
+                  rem="verified with ChatGPT; jisho has nx for obake"
+                >
+                    <ask w="【現：あらわ】れた" />
+                </sentence>
+            </word>
+            <word
+              w="【現：あらわ】す"
+              rom="arawasu"
+              tr_en="to reveal sth.; to show sth.; to represent sth."
+              tr_de="etw. aufdecken; etw. zeigen; etw. repräsentieren"
+              hint_en="v.t."
+              lvl="n3"
+              category="general"
+              id="arawasu-reveal"
+            >
+                <!-- automatic see-also link to arawasu-represent -->
+                <see id="arawareru-becomevisible" type="v.i." />
+                <keep_apart_from id="shimesu-indicate" />
+                <keep_apart_from id="akasu-spend" />
+                <keep_apart_from id="arawasu-represent" />
+                <keep_apart_from id="tsutaeru-convey" />
+                <keep_apart_from id="hyōgen-expression" />
+                <phrase
+                  ph="【頭：とう】【角：かく】を【現：あらわ】す"
+                  rom="tōkaku o arawasu"
+                  tr_en="to distinguish oneself; to stand out"
+                  tr_de="sich von anderen abheben; auffallen"
+                  lvl="n3"
+                  origin="lib0"
+                  rem="jisho has nx for tōkaku"
+                />
+                <sentence
+                  s="【彼：かの】【女：じょ】は【姿：すがた】を【現：あらわ】さなかった。"
+                  rom="Kanojo wa sugata o arawasanakatta."
+                  tr_en="She did not turn up."
+                  tr_de="Sie hat sich nicht blicken lassen."
+                  lvl="n3"
+                  origin="lib0"
+                >
+                    <ask w="【現：あらわ】さなかった" />
+                </sentence>
+            </word>
+            <word
+              w="【知：し】れ【渡：わた】る"
+              rom="shire-wataru"
+              tr_en="to become widely known"
+              tr_de="weit herum bekannt werden"
+              lvl="n3"
+              id="shirewataru-becomeknown"
+              rem="jisho has nx; appears in Doraemon 17, p.138"
+            >
+                <phrase
+                  ph="みんなに【知：し】れ【渡：わた】る"
+                  rom="minna ni shire-wataru"
+                  tr_en="to become known to everybody"
+                  tr_de="es wird allen bekannt"
+                  lvl="n3"
+                  origin="lib0"
+                />
+                <sentence
+                  s="【日：にっ】【本：ぽん】【中：じゅう】にぼくのことが【知：し】れ【渡：わた】る。"
+                  rom="Nippon-jū ni boku no koto ga shire-wataru."
+                  tr_en="My name will become known throughout Japan."
+                  tr_de="Mein Name wird in ganz Japan bekannt werden."
+                  lvl="n3"
+                  origin="Doraemon 17, p.138"
+                />
             </word>
         </section>
     </unit>

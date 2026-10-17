@@ -30,7 +30,7 @@ import io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivityModel.Pre
 import io.github.digorydoo.goigoi.composables.HintBalloon
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.core.study.Answer
-import io.github.digorydoo.goigoi.legacy.spannable.buildSpan
+import io.github.digorydoo.goigoi.legacy.buildSpan
 
 private val SCORE_FONT_SIZE = 17.sp
 private val gradientSteps = listOf(0f, 0.1f, 0.68f, 0.84f, 0.92f, 0.96f, 0.98f, 0.99f, 1f, 1f)
@@ -69,9 +69,9 @@ fun AnswerCommentFlag(model: ProgStudyActivityModel, modifier: Modifier = Modifi
     val bgnd = when (pmode) {
         PresentationMode.ANSWER_CHECK -> when (correctness) {
             Answer.CORRECT -> correctBgnd
-            Answer.CORRECT_EXCEPT_KANA_SIZE -> almostCorrectBgnd
+            Answer.CORRECT_BUT_INACCURATE, Answer.CORRECT_EXCEPT_KANA_SIZE -> almostCorrectBgnd
             Answer.WRONG -> wrongBgnd
-            else -> null
+            Answer.NONE, Answer.TRIVIAL, Answer.SKIP -> null
         }
         else -> null
     }

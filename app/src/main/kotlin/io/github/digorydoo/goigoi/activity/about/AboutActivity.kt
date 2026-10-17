@@ -6,8 +6,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import io.github.digorydoo.goigoi.composables.providers.DevicePropsProvider
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.composables.providers.SingletonsProvider
 import io.github.digorydoo.goigoi.utils.ResUtils
+import io.github.digorydoo.goigoi.utils.getOrCreateSingletons
 
 class AboutActivity: ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,12 +15,13 @@ class AboutActivity: ComponentActivity() {
         ResUtils.setActivityTheme(this)
         enableEdgeToEdge()
 
+        val singletons = getOrCreateSingletons()
+        val prefs = singletons.prefs
+
         setContent {
-            SingletonsProvider(this) {
-                DevicePropsProvider(this) {
-                    GoigoiTheme {
-                        AboutScreen(onBack = { finish() })
-                    }
+            DevicePropsProvider(this) {
+                GoigoiTheme(prefs.theme) {
+                    AboutScreen(onBack = { finish() })
                 }
             }
         }

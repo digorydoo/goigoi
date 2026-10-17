@@ -53,7 +53,6 @@ object DeviceProps {
         @ReadOnlyComposable
         get() = LocalDevicePropsData.current.widthDp
 
-    @Suppress("unused")
     val heightDp
         @Composable
         @ReadOnlyComposable

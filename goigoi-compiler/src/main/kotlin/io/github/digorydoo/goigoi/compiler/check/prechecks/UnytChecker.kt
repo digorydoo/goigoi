@@ -200,7 +200,7 @@ class UnytChecker {
                 for (word in section.words) {
                     if (!word.hidden) {
                         if (found.contains(word.romaji)) {
-                            throw CheckFailed("Rōmaji not unique in unyt!")
+                            throw CheckFailed("Rōmaji not unique in unyt: ${word.romaji}")
                         } else {
                             found.add(word.romaji)
                         }

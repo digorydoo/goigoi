@@ -27,7 +27,7 @@ import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.composables.HintBalloon
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.core.welcome.DailyProgressTracker.Companion.CHECKMARK_THRESHOLD
-import io.github.digorydoo.goigoi.legacy.spannable.FuriganaBuilder
+import io.github.digorydoo.goigoi.legacy.FuriganaBuilder
 import kotlin.math.roundToInt
 
 @Composable
