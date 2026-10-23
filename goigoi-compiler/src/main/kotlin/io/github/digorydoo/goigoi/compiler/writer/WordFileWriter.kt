@@ -1,10 +1,10 @@
 package io.github.digorydoo.goigoi.compiler.writer
 
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWord
 import io.github.digorydoo.goigoi.core.file.GoigoiFileMarker.*
 import java.io.OutputStream
 
-class WordFileWriter(private val word: GoigoiWord, stream: OutputStream): AbstrWriter(stream) {
+class WordFileWriter(private val word: CompilerWord, stream: OutputStream): AbstrWriter(stream) {
     override fun write() {
         require(!word.hidden) { "WordFileWriter invoked on a hidden word: $word" }
 
@@ -33,17 +33,10 @@ class WordFileWriter(private val word: GoigoiWord, stream: OutputStream): AbstrW
 
         word.cats.forEach { write(WORD_CATEGORY, it.id) }
 
-        for (acceptable in word.acceptForTranslation) {
-            write(WORD_ACCEPT_FOR_TRANSLATION, acceptable.answer)
-            write(WORD_ANSWER_INACCURATE, acceptable.inaccurate)
-        }
-
-        for (reading in word.alternativeReadings) {
-            write(WORD_ALT_READING, reading)
-        }
-
-        for (spelling in word.alternativeSpellings) {
-            write(WORD_ALT_SPELLING, spelling)
+        for (acceptable in word.acceptableAnswers) {
+            write(WORD_BEGIN_ACCEPT, acceptable.answer)
+            write(WORD_ANSWER_ACCURACY, acceptable.accuracy.intValue)
+            write(WORD_END_ACCEPT, "")
         }
 
         for (phrase in word.phrases) {
@@ -68,7 +61,9 @@ class WordFileWriter(private val word: GoigoiWord, stream: OutputStream): AbstrW
                 writeIfNonEmpty(PHRASE_WORD_FORM_SUFFIX, phrase.wordFormToAskSuffix)
 
                 for (acceptable in phrase.acceptableAnswers) {
-                    write(PHRASE_ACCEPTABLE_ANSWER, acceptable.raw)
+                    write(PHRASE_BEGIN_ACCEPT, acceptable.answer)
+                    write(PHRASE_ANSWER_ACCURACY, acceptable.accuracy.intValue)
+                    write(PHRASE_END_ACCEPT, "")
                 }
             }
         }
@@ -95,7 +90,9 @@ class WordFileWriter(private val word: GoigoiWord, stream: OutputStream): AbstrW
                 writeIfNonEmpty(SENTENCE_WORD_FORM_SUFFIX, sentence.wordFormToAskSuffix)
 
                 for (acceptable in sentence.acceptableAnswers) {
-                    write(SENTENCE_ACCEPTABLE_ANSWER, acceptable.raw)
+                    write(SENTENCE_BEGIN_ACCEPT, acceptable.answer)
+                    write(SENTENCE_ANSWER_ACCURACY, acceptable.accuracy.intValue)
+                    write(SENTENCE_END_ACCEPT, "")
                 }
             }
         }

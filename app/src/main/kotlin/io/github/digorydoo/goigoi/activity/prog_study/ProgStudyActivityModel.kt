@@ -305,11 +305,23 @@ class ProgStudyActivityModel(
         }
 
         val shouldRevealTexts = when {
-            qa.kind.doesNotAskAnything -> false // we showed the revealed texts during ANSWER_CHECK here
-            _answerCorrectness.value == Answer.CORRECT_EXCEPT_KANA_SIZE -> false // hide when simple spelling mistake
-            else -> qa.kanjiOrKanaToReveal.isNotEmpty() ||
-                qa.translationToReveal.isNotEmpty() ||
-                qa.hintToReveal.isNotEmpty()
+            // If we did not ask a question, revealed texts are shown during ANSWER_CHECK, not here
+            qa.kind.doesNotAskAnything -> false
+
+            // Check if we have anything to reveal at all
+            qa.kanjiOrKanaToReveal.isEmpty() && qa.translationToReveal.isEmpty() && qa.hintToReveal.isEmpty() -> false
+
+            // Reveal the texts if and only if the answer was either completely correct, or completely wrong. Don't
+            // reveal them when answer was almost correct, because the revealed texts might not match, e.g. when we
+            // reveal the kanji of the expected kana answer, but the user entered a valid kana answer that does not
+            // match that kanji.
+            else -> when (_answerCorrectness.value) {
+                Answer.CORRECT_EXCEPT_KANA_SIZE -> false
+                Answer.CORRECT_BUT_INACCURATE -> false
+                Answer.CORRECT -> _currentAnswer.value == _expectedAnswer.value
+                Answer.WRONG -> true
+                Answer.TRIVIAL, Answer.NONE -> false // unexpected, should never come here
+            }
         }
 
         if (shouldRevealTexts) {

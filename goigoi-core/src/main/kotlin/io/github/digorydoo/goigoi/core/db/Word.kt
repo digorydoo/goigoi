@@ -21,9 +21,13 @@ class Word {
     val links = mutableListOf<WordLink>()
     val cats = mutableListOf<WordCategory>()
     var filename = ""
-    val acceptForTranslation = mutableListOf<AcceptableAnswer>()
-    val alternativeSpellings = mutableListOf<String>() // kanji/okurigana
-    val alternativeReadings = mutableListOf<String>() // kana
+    val acceptableAnswers = mutableListOf<AcceptableAnswer>()
+
+    val alternativeReadings
+        get() = acceptableAnswers.filter { it.accuracy == AnswerAccuracy.ALT_READING_SAME_WORD }.map { it.answer }
+
+    val alternativeSpellings
+        get() = acceptableAnswers.filter { it.accuracy == AnswerAccuracy.ALT_SPELLING_SAME_WORD }.map { it.answer }
 
     val hintsWithSystemLang: String
         get() = arrayOf(

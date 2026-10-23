@@ -33,6 +33,7 @@ enum class WordHint(val id: Int, val en: String, val de: String) {
     V_I(30, "v.i.", ""), // hint_de is expected to be empty
     V_T(31, "v.t.", ""), // hint_de is expected to be empty
     V_T_AND_I(32, "v.t. & i.", ""), // hint_de is expected to be empty
+    NA_ADJECTIVE_NOUN(33, "na-adjective; noun", "Na-Adjektiv; Nomen"),
     ;
 
     companion object {

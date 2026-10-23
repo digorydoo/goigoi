@@ -22,7 +22,6 @@ import kotlinx.coroutines.launch
 @Composable
 fun WelcomeScreen(
     model: WelcomeActivityModel,
-    topics: List<Topic>,
     onPrefsBtnClicked: () -> Unit,
     onBigStudyBtnClicked: () -> Unit,
     onTopicClicked: (Topic) -> Unit,
@@ -102,7 +101,6 @@ fun WelcomeScreen(
             TopicsAndMyWordsList(
                 model = model,
                 horizPadding = horizPadding,
-                topics = topics,
                 onTopicClicked = onTopicClicked,
                 onMyWordsUnytClicked = onMyWordsUnytClicked
             )

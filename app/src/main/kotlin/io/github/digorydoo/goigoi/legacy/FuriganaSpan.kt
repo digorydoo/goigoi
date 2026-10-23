@@ -20,7 +20,6 @@ class FuriganaSpan(
 ): ReplacementSpan() {
     class Options(
         val canSeeFurigana: Boolean = true,
-        val fontSizeBase: Float = 0.0f,
         val fontSizeFactor: Float = 0.5f,
         val fontSizeMin: Float = 0.0f,
         val fontSizeMax: Float = 8192.0f,
@@ -33,7 +32,7 @@ class FuriganaSpan(
     private var totalHeight = 0.0f
 
     private fun Options.getFuriganaTextSize(mainTextSize: Float): Float {
-        return clamp(fontSizeBase + fontSizeFactor * mainTextSize, fontSizeMin, fontSizeMax)
+        return clamp(fontSizeFactor * mainTextSize, fontSizeMin, fontSizeMax)
     }
 
     override fun getSize(

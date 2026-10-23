@@ -3,7 +3,7 @@ package io.github.digorydoo.goigoi.compiler.vocab
 import ch.digorydoo.kutils.cjk.IntlString
 import ch.digorydoo.kutils.cjk.JLPTLevel
 
-class GoigoiTopic {
+class CompilerTopic {
     var id = ""
     val name = IntlString()
     var imgSrc = ""
@@ -11,11 +11,11 @@ class GoigoiTopic {
     var linkText = ""
     var linkHref = ""
     var levels = listOf<JLPTLevel>()
-    val unyts = mutableListOf<GoigoiUnyt>()
+    val unyts = mutableListOf<CompilerUnyt>()
     var hidden = false
     var bgColour = ""
 
-    fun forEachVisibleUnyt(lambda: (u: GoigoiUnyt) -> Unit) {
+    fun forEachVisibleUnyt(lambda: (u: CompilerUnyt) -> Unit) {
         for (u in unyts) {
             if (!u.hidden) {
                 lambda(u)
@@ -23,7 +23,7 @@ class GoigoiTopic {
         }
     }
 
-    fun forEachWord(lambda: (w: GoigoiWord, s: GoigoiSection, u: GoigoiUnyt) -> Unit) {
+    fun forEachWord(lambda: (w: CompilerWord, s: CompilerTopicSection, u: CompilerUnyt) -> Unit) {
         for (u in unyts) {
             u.forEachWord { w, s ->
                 lambda(w, s, u)
@@ -31,7 +31,7 @@ class GoigoiTopic {
         }
     }
 
-    fun forEachVisibleWord(lambda: (w: GoigoiWord, s: GoigoiSection, u: GoigoiUnyt) -> Unit) {
+    fun forEachVisibleWord(lambda: (w: CompilerWord, s: CompilerTopicSection, u: CompilerUnyt) -> Unit) {
         for (u in unyts) {
             if (!u.hidden) {
                 u.forEachVisibleWord { w, s ->
@@ -44,7 +44,7 @@ class GoigoiTopic {
     /**
      * Note: ids are now unique since sharedId is no longer supported
      */
-    fun forEachWordWithId(wordId: String, lambda: (word: GoigoiWord, unyt: GoigoiUnyt) -> Unit) {
+    fun forEachWordWithId(wordId: String, lambda: (word: CompilerWord, unyt: CompilerUnyt) -> Unit) {
         if (wordId.isEmpty()) {
             return
         }

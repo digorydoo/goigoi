@@ -685,7 +685,7 @@
                 <sentence
                   s="【明日：あした】はきっと【晴：は】れるでしょう。"
                   rom="Ashita wa kitto hareru deshō."
-                  tr_en="It’ll surely be sunny tomorrow."
+                  tr_en="It'll surely be sunny tomorrow."
                   tr_de="Morgen wird es bestimmt sonnig sein."
                   lvl="n4"
                   origin="ChatGPT"
@@ -1091,11 +1091,6 @@
               rem="jisho has n1"
               id="kurai-approximately"
             >
-                <!--
-                    Acc. to ChatGPT, くらい and ぐらい are the same, but ぐらい can be more colloquial.
-                    What's the difference between くらい/ぐらい and ころ/ごろ ?
-                -->
-                <accept_for_translation w="ぐらい" />
                 <keep_apart_from id="hodo-extent" />
                 <keep_apart_from id="bakari-nothingbut" />
                 <keep_apart_from id="goro-approxtime" />
@@ -1104,6 +1099,11 @@
                 <keep_apart_from id="ōzappa-rough" />
                 <keep_apart_from id="ōyoso-roughly" />
                 <keep_apart_from id="zatto-roughly" />
+                <!--
+                    Acc. to ChatGPT, くらい and ぐらい are the same, but ぐらい can be more colloquial.
+                    What's the difference between くらい/ぐらい and ころ/ごろ ?
+                -->
+                <accept w="ぐらい" as="correct-in-phrases-and-sentences" />
                 <phrase
                   ph="このぐらい"
                   rom="kono gurai"

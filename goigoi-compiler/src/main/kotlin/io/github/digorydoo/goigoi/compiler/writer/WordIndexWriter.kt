@@ -1,13 +1,13 @@
 package io.github.digorydoo.goigoi.compiler.writer
 
 import ch.digorydoo.kutils.json.stringify
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhraseOrSentence
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerPhraseOrSentence
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerVocab
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWord
 import java.io.File
 import java.io.FileWriter
 
-class WordIndexWriter(private val vocab: GoigoiVocab) {
+class WordIndexWriter(private val vocab: CompilerVocab) {
     /**
      * The word index is used by jwotd/goigoi-find-missing.sh to iterate over Goigoi words.
      */
@@ -54,7 +54,7 @@ class WordIndexWriter(private val vocab: GoigoiVocab) {
         }
     }
 
-    private fun writeWord(word: GoigoiWord, writer: FileWriter) {
+    private fun writeWord(word: CompilerWord, writer: FileWriter) {
         val body = arrayOf(
             "\"k\":${stringify(if (word.usuallyInKana || word.kanji == word.kana) "" else word.kanji)}",
             "\"n\":${stringify(word.kana)}",
@@ -66,7 +66,7 @@ class WordIndexWriter(private val vocab: GoigoiVocab) {
         writer.write("{$body},\n")
     }
 
-    private fun writePhraseOrSentence(phrase: GoigoiPhraseOrSentence, writer: FileWriter) {
+    private fun writePhraseOrSentence(phrase: CompilerPhraseOrSentence, writer: FileWriter) {
         val body = arrayOf(
             "\"jp\":${stringify(phrase.kanji)}",
             "\"en\":${stringify(phrase.translation.en)}",

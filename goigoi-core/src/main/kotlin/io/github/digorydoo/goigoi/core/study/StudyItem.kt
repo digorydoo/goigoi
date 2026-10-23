@@ -11,7 +11,6 @@ import kotlin.random.Random
 class StudyItem private constructor(val word: Word, val score: Float) {
     var localNumCorrect = 0
     var localNumWrong = 0
-    var localNumSkipped = 0
 
     companion object {
         fun create(word: Word, stats: IWordStats) =

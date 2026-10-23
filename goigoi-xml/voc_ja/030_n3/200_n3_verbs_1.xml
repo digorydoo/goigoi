@@ -30,7 +30,7 @@
               id="toriageru-takeup"
               studyInContext="preferred"
             >
-                <accept_for_translation w="【取：とり】【上：あ】げる" interchangeable="true" />
+                <accept w="取上げる" as="alt-spelling-same-word" />
                 <phrase
                   ph="【計：けい】【画：かく】を【取：と】り【上：あ】げる"
                   rom="keikaku o toriageru"
@@ -57,7 +57,7 @@
                   rem="verified with ChatGPT"
                 >
                     <ask stem="【取：と】り【上：あ】げ" suffix="ました">
-                        <accept w="【取：とり】【上：あ】げ" suffix="ました" />
+                        <accept w="取上げ" suffix="ました" as="correct" />
                     </ask>
                 </sentence>
                 <sentence
@@ -1060,7 +1060,7 @@
               category="arts"
               id="egaku-draw"
             >
-                <accept_for_translation w="【描：か】く" interchangeable="true" />
+                <accept w="かく" as="alt-reading-same-word" />
                 <see id="kaku-draw" type="closely related" />
                 <keep_apart_from id="kaku-draw" />
                 <!-- 夢を描く (Dream about) To envision or plan one's future (ChatGPT) -->
@@ -1078,17 +1078,21 @@
                   tr_de="auf die Wand gemalt sein"
                   lvl="n3"
                 >
-                    <ask w="【描：えが】いて" />
+                    <ask w="【描：えが】いて">
+                        <accept w="かいて" as="correct" />
+                    </ask>
                 </phrase>
                 <sentence
                   s="【将：しょう】【来：らい】の【夢：ゆめ】を【心：こころ】に【描：えが】いている。"
                   rom="Shōrai no yume o kokoro ni egaite iru."
-                  tr_en="I’m picturing my future dreams in my mind."
+                  tr_en="I'm picturing my future dreams in my mind."
                   tr_de="Ich male mir meine Träume der Zukunft im Herzen aus."
                   lvl="n3"
                   origin="ChatGPT"
                 >
-                    <ask w="【描：えが】いて" />
+                    <ask w="【描：えが】いて">
+                        <accept w="かいて" as="correct" />
+                    </ask>
                 </sentence>
             </word>
             <word
@@ -1168,7 +1172,7 @@
               category="feet"
               id="tachiagaru-standup"
             >
-                <accept_for_translation w="【立：たち】【上：あ】がる" interchangeable="true" />
+                <accept w="立上がる" as="alt-spelling-same-word" />
                 <phrase
                   ph="ゆっくり【立：た】ち【上：あ】がる"
                   rom="yukkuri tachi-agaru"
@@ -1233,7 +1237,7 @@
               category="hands"
               id="uketoru-receive"
             >
-                <accept_for_translation w="【受：うけ】【取：と】る" interchangeable="true" />
+                <accept w="受取る" as="alt-spelling-same-word" />
                 <see id="uketori-receipt" type="noun" />
                 <keep_apart_from id="morau-receive" />
                 <keep_apart_from id="ukeru-receive" />
@@ -1552,7 +1556,7 @@
               category="motion, sports"
               id="mochiageru-lift"
             >
-                <accept_for_translation w="【持：もち】【上：あ】げる" interchangeable="true" />
+                <accept w="持上げる" as="alt-spelling-same-word" />
                 <phrase
                   ph="【重：おも】い【荷：に】【物：もつ】を【持：も】ち【上：あ】げる"
                   rom="omoi nimotsu o mochiageru"
@@ -2107,7 +2111,7 @@
               category="top-words"
               id="tobidasu-jumpout"
             >
-                <accept_for_translation w="【飛：とび】【出：だ】す" interchangeable="true" />
+                <accept w="飛出す" as="alt-spelling-same-word" />
                 <phrase
                   ph="【部：へ】【屋：や】から【飛：と】び【出：だ】す"
                   rom="heya kara tobidasu"

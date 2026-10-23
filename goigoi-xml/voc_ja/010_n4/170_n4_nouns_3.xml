@@ -831,7 +831,8 @@
               id="oyogi-swimming"
               rem="jisho has n3 for oyogi, but n4 for oyogikata, n5 for oyogu"
             >
-                <accept_for_translation w="【水：すい】【泳：えい】" />
+                <accept w="水泳" as="correct-for-translation" />
+                <accept w="すいえい" as="correct-for-translation" />
                 <see id="oyogu-swim" type="verb" />
                 <keep_apart_from id="suiei-swimming" />
                 <phrase

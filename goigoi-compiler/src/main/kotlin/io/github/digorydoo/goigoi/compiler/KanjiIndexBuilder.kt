@@ -1,10 +1,10 @@
 package io.github.digorydoo.goigoi.compiler
 
 import ch.digorydoo.kutils.cjk.*
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerVocab
 
 class KanjiIndexBuilder(
-    private val vocab: GoigoiVocab,
+    private val vocab: CompilerVocab,
     private val kanjiLevels: KanjiLevels,
     private val readings: MutableMap<String, MutableSet<String>>,
     private val options: Options,
@@ -101,7 +101,6 @@ class KanjiIndexBuilder(
         // Apply manual kanji level corrections from Goigoi XML.
 
         applyManualKanjiLevels()
-        removeUnusedKanjiByFreq()
 
         // Readings appear in Goigoi XML as either hiragana or katakana. To make it easier to look them up by Goigoi,
         // we convert all of them to hiragana.
@@ -155,18 +154,6 @@ class KanjiIndexBuilder(
             kanjiLevels.get(it.from).remove(it.kanji)
             kanjiLevels.get(it.to).add(it.kanji)
         }
-    }
-
-    private fun removeUnusedKanjiByFreq() {
-        // We remove all kanjis in kanjiByFreq list that are not otherwise used by Goigoi, in order to reduce the size.
-
-        val allKanjis = mutableSetOf<Char>().apply {
-            JLPTLevel.entries.forEach { lvl ->
-                addAll(kanjiLevels.get(lvl))
-            }
-        }
-
-        vocab.kanjiByFreq = vocab.kanjiByFreq.filter { allKanjis.contains(it) }
     }
 
     private fun convertReadings() {

@@ -2,24 +2,25 @@ package io.github.digorydoo.goigoi.compiler
 
 import ch.digorydoo.kutils.cjk.JLPTLevel
 import ch.digorydoo.kutils.string.*
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhraseOrSentence
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWordLink.Kind
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerPhraseOrSentence
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerUnyt
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerVocab
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWord
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWordLink.Kind
+import io.github.digorydoo.goigoi.core.db.AnswerAccuracy
 import io.github.digorydoo.goigoi.core.db.WordCategory
 import io.github.digorydoo.goigoi.core.db.WordHint
 import kotlin.math.roundToInt
 
 class Stats(
-    private val vocab: GoigoiVocab,
+    private val vocab: CompilerVocab,
     private val prep: PrepWordLinks,
     private val kanjiLevels: KanjiLevels,
     private val readings: Map<String, Set<String>>,
 ) {
     private data class VisibleHidden(var visible: Int, var hidden: Int)
 
-    private class UnytAndCount(val unyt: GoigoiUnyt, val count: Int) {
+    private class UnytAndCount(val unyt: CompilerUnyt, val count: Int) {
         fun print(postfix: String) {
             val total = unyt.countWords { !it.hidden }
             val percent = (100.0f * count / total).roundToInt()
@@ -349,7 +350,7 @@ class Stats(
     private fun printUnytsWithHiddenSentences() {
         println("\nUnyts with hidden sentences")
 
-        mutableMapOf<GoigoiUnyt, Int>()
+        mutableMapOf<CompilerUnyt, Int>()
             .also { map ->
                 vocab.forEachWord { word, _, unyt, topic ->
                     if (word.sentences.isNotEmpty() && (topic.hidden || unyt.hidden || word.hidden)) {
@@ -526,9 +527,9 @@ class Stats(
     private fun printCategories() {
         println("Categories")
 
-        val categoriesUsedByVisibleWordsSolo = mutableMapOf<WordCategory, MutableSet<GoigoiWord>>()
-        val categoriesUsedByVisibleWordsInCombination = mutableMapOf<WordCategory, MutableSet<GoigoiWord>>()
-        val categoriesUsedByHiddenWords = mutableMapOf<WordCategory, MutableSet<GoigoiWord>>()
+        val categoriesUsedByVisibleWordsSolo = mutableMapOf<WordCategory, MutableSet<CompilerWord>>()
+        val categoriesUsedByVisibleWordsInCombination = mutableMapOf<WordCategory, MutableSet<CompilerWord>>()
+        val categoriesUsedByHiddenWords = mutableMapOf<WordCategory, MutableSet<CompilerWord>>()
 
         vocab.forEachUnyt { unyt, topic ->
             unyt.forEachWord { word, _ ->
@@ -608,7 +609,7 @@ class Stats(
 
         println("\nAll see-also links of visible words:")
 
-        val words = mutableListOf<GoigoiWord>()
+        val words = mutableListOf<CompilerWord>()
         vocab.forEachVisibleWord { words.add(it) }
 
         words
@@ -644,7 +645,7 @@ class Stats(
             }
     }
 
-    private fun wordToString(word: GoigoiWord, rem: String) =
+    private fun wordToString(word: CompilerWord, rem: String) =
         arrayOf(
             lpad(word.romaji, 20),
             lpad(word.level?.toString() ?: "", 2),
@@ -706,7 +707,7 @@ class Stats(
         println("   ${kanjisNotInAnySchoolYear.joinToString("")}")
 
         println(
-            "\nKanjis by frequency: ${vocab.kanjiByFreq.length} (after removing all kanjis not appearing in Goigoi)"
+            "\nKanjis by frequency: ${vocab.kanjiByFreq.length}"
         )
 
         val kanjisWithUnknownFreq = mutableSetOf<Char>()
@@ -816,18 +817,20 @@ class Stats(
     private fun printAcceptableAnswersStats() {
         class Values {
             var numWords = 0
-            var topWord: GoigoiWord? = null
+            var topWord: CompilerWord? = null
             var countOfTopWord = 0
+            var prevWord: CompilerWord? = null
 
-            fun add(word: GoigoiWord, count: Int) {
+            fun add(word: CompilerWord, count: Int) {
                 if (count > 0) {
-                    numWords++
+                    if (word != prevWord) numWords++
 
                     if (topWord == null || count > countOfTopWord) {
                         topWord = word
                         countOfTopWord = count
                     }
                 }
+                prevWord = word
             }
 
             fun printTopWord() {
@@ -843,24 +846,22 @@ class Stats(
             }
         }
 
-        val acceptForTranslation = Values()
-        val alternativeSpellings = Values()
-        val alternativeReadings = Values()
+        val map = mutableMapOf<AnswerAccuracy, Values>()
 
         vocab.forEachWord { word ->
-            acceptForTranslation.add(word, word.acceptForTranslation.size)
-            alternativeSpellings.add(word, word.alternativeSpellings.size)
-            alternativeReadings.add(word, word.alternativeReadings.size)
+            for (acceptable in word.acceptableAnswers) {
+                val values = map[acceptable.accuracy] ?: Values().also { map[acceptable.accuracy] = it }
+                values.add(word, 1)
+            }
         }
 
-        println("Total # words with accept_for_translation: . ${acceptForTranslation.numWords}")
-        acceptForTranslation.printTopWord()
-
-        println("\nTotal # words with alternative spellings:  . ${alternativeSpellings.numWords}")
-        alternativeSpellings.printTopWord()
-
-        println("\nTotal # words with alternative readings: . . ${alternativeReadings.numWords}")
-        alternativeReadings.printTopWord()
+        AnswerAccuracy.entries.forEach { reason ->
+            if (reason.intendedForWord) {
+                val values = map[reason]
+                println("Total # words with ${reason.xmlKey}: ${values?.numWords ?: 0}")
+                values?.printTopWord()
+            }
+        }
 
         println("")
     }
@@ -871,13 +872,13 @@ class Stats(
             var numAskWithSuffix = 0
             var numAskWithAccept = 0
 
-            var curWord: GoigoiWord? = null
+            var curWord: CompilerWord? = null
             var countOfCurWord = 0
 
-            var wordWithMostAsk: GoigoiWord? = null
+            var wordWithMostAsk: CompilerWord? = null
             var countOfWordWithMostAsk = 0
 
-            fun add(word: GoigoiWord, phraseOrSentence: GoigoiPhraseOrSentence) {
+            fun add(word: CompilerWord, phraseOrSentence: CompilerPhraseOrSentence) {
                 if (phraseOrSentence.wordFormToAsk.isNotEmpty()) {
                     numAsk++
 
@@ -954,32 +955,6 @@ class Stats(
             println("   - Total number of kanjis covered: $count")
         }
 
-        run {
-            // we cannot provide good "don't confuse" siblings for these
-            val excludedKanjis = arrayOf(
-                '一', '二', '三', '七', '八', '十', '口', '中', '川', '山', '出', '多', '母', '気', '雨'
-            )
-
-            var kanjiNotCovered = Char(0)
-            var rankOfKanjiNotCovered = Int.MAX_VALUE
-
-            vocab.kanjiByFreq.forEachIndexed { rank, kanji ->
-                if (rankOfKanjiNotCovered == Int.MAX_VALUE && !excludedKanjis.contains(kanji)) {
-                    val found = vocab.visuallySimilar.any { groupOfKanjis ->
-                        groupOfKanjis.contains(kanji)
-                    }
-
-                    if (!found) {
-                        kanjiNotCovered = kanji
-                        rankOfKanjiNotCovered = rank
-                    }
-                }
-            }
-
-            print("   - Kanji that is not excluded with least rank not covered: $kanjiNotCovered")
-            println(", rank $rankOfKanjiNotCovered")
-        }
-
         arrayOf(JLPTLevel.N5, JLPTLevel.N4, JLPTLevel.N3, JLPTLevel.N2, JLPTLevel.N1).forEach { lvl ->
             vocab.manualKanjiLevels[lvl]
                 ?.filter { kanji ->
@@ -1016,15 +991,15 @@ class Stats(
     private fun printWordOrdering() {
         // The word ordering is relevant for super progressive mode and is based on the filenames.
         println("\nWord ordering:")
-        val words = mutableListOf<GoigoiWord>()
+        val words = mutableListOf<CompilerWord>()
         vocab.forEachVisibleWord { words.add(it) }
 
         words.sortWith { w1, w2 ->
             w1.fileName.compareTo(w2.fileName)
         }
 
-        var firstWordWithNoPhrase: GoigoiWord? = null
-        var firstWordWithNoSentence: GoigoiWord? = null
+        var firstWordWithNoPhrase: CompilerWord? = null
+        var firstWordWithNoSentence: CompilerWord? = null
 
         words.forEach { word ->
             if (firstWordWithNoPhrase == null && word.phrases.isEmpty()) {

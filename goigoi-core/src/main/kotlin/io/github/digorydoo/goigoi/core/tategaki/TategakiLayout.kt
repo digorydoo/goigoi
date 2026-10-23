@@ -1,5 +1,7 @@
 package io.github.digorydoo.goigoi.core.tategaki
 
+import ch.digorydoo.kutils.cjk.FuriganaIterator
+import ch.digorydoo.kutils.cjk.FuriganaString
 import ch.digorydoo.kutils.cjk.isCJKNotKana
 import ch.digorydoo.kutils.cjk.isHiragana
 import ch.digorydoo.kutils.cjk.isKatakana
@@ -25,9 +27,32 @@ class TategakiLayout {
 
     private val elements = mutableListOf<Element>()
 
-    fun clear() = elements.clear()
+    private fun clear() = elements.clear()
     fun isEmpty() = elements.isEmpty()
     fun forEachElement(lambda: (Element) -> Unit) = elements.forEach(lambda)
+
+    fun set(text: FuriganaString, showFurigana: Boolean) {
+        clear()
+
+        val iterator = FuriganaIterator(text.raw)
+        var startIdx = 0
+
+        // Spans that have furigana get a single layout element; they can never be broken apart.
+        // Characters of spans that do not have furigana get individual elements each, allowing them to break freely.
+        iterator.forEachPart(
+            furigana = { kanji, kana ->
+                if (showFurigana) {
+                    add(startIdx, kanji.toString(), kana.toString())
+                    startIdx += kanji.length
+                } else {
+                    kanji.forEach { c -> add(startIdx++, c) }
+                }
+            },
+            between = {
+                it.forEach { c -> add(startIdx++, c) }
+            },
+        )
+    }
 
     fun add(idx: Int, char: Char) {
         if (char in WHITESPACE) {

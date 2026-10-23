@@ -30,7 +30,8 @@
             >
                 <keep_apart_from id="tayoru-relyon" />
                 <keep_apart_from id="makasu-entrust" />
-                <accept_for_translation w="【任：まか】す" rem="verified with ChatGPT" />
+                <accept w="任す" as="correct-for-translation" rem="verified with ChatGPT" />
+                <accept w="まかす" as="correct-for-translation" rem="verified with ChatGPT" />
                 <phrase
                   ph="【任：まか】せて"
                   rom="makasete"
@@ -64,7 +65,8 @@
               rem="appears in GENKI2 p.117 vocab section; jisho has nx"
             >
                 <see id="kushi-comb" type="closely related" />
-                <accept_for_translation w="【梳：す】く" rem="verified with ChatGPT" />
+                <accept w="梳く" as="correct-for-translation" rem="verified with ChatGPT" />
+                <accept w="すく" as="correct-for-translation" rem="verified with ChatGPT" />
                 <phrase
                   ph="【髪：かみ】をとかす"
                   rom="kami o tokasu"
@@ -96,7 +98,7 @@
               id="kidzuku-notice"
             >
                 <keep_apart_from id="samasu-awaken" />
-                <accept_for_translation w="【気：き】【付：づ】く" interchangeable="true" />
+                <accept w="気付く" as="alt-spelling-same-word" />
                 <!--
                   ph="【正：しょう】【気：き】づく"
                   rom="shōkidzuku"
@@ -182,7 +184,8 @@
                 <see id="sawaru-touch" type="closely related" />
                 <keep_apart_from id="sawaru-touch" />
                 <keep_apart_from id="kanjiru-feel" />
-                <accept_for_translation w="【触：さわ】る" rem="not always interchangeable, though" />
+                <accept w="触る" as="correct-for-translation" />
+                <accept w="さわる" as="correct-for-translation" />
                 <phrase
                   ph="【間：ま】【違：ちが】ってボタンに【触：ふ】れる"
                   rom="machigatte botan ni fureru"
@@ -342,11 +345,8 @@
             >
                 <see id="todokeru-deliver" type="v.t." />
                 <keep_apart_from id="haitatsu-delivery" />
-                <accept_for_translation
-                  w="【配：はい】【達：たつ】される"
-                  inaccurate="true"
-                  rem="not a good fit for: (a letter) arrives"
-                />
+                <accept w="配達される" as="inaccurate" />
+                <accept w="はいたつされる" as="inaccurate" />
                 <phrase
                   ph="【手：て】の【届：とど】かない【所：ところ】"
                   rom="te no todokanai tokoro"

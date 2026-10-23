@@ -3,8 +3,8 @@ package io.github.digorydoo.goigoi.compiler.check.prechecks
 import ch.digorydoo.kutils.cjk.*
 import io.github.digorydoo.goigoi.compiler.CheckFailed
 import io.github.digorydoo.goigoi.compiler.checkRomaji
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerUnyt
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWord
 import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 import io.github.digorydoo.goigoi.core.db.WordCategory
 import io.github.digorydoo.goigoi.core.db.WordHint
@@ -15,7 +15,7 @@ import io.github.digorydoo.goigoi.core.prog_study.QAPicker.Companion.MAX_NUM_CHA
 class WordChecker {
     private val romajisSet = mutableSetOf<String>()
 
-    fun check(word: GoigoiWord, unyt: GoigoiUnyt) {
+    fun check(word: CompilerWord, unyt: CompilerUnyt) {
         @Suppress("SimplifyBooleanWithConstants")
         require(KANJI_MAX_LENGTH <= MAX_NUM_CHARS_IN_ANSWER_WHEN_STUDY_IN_CONTEXT_NOT_REQUIRED)
 
@@ -521,6 +521,17 @@ class WordChecker {
 
         if (word.remark.contains("http")) {
             throw CheckFailed("Remark should not contain any hrefs, use href instead: ${word.remark}")
+        }
+
+        // This is basically a unit test for joinFurigana based on the words of Goigoi
+
+        val furigana = joinFurigana(word.primaryForm.kanji, word.primaryForm.kana)
+
+        require(furigana.kanji == word.primaryForm.kanji) {
+            "Bug in joinFurigana: ${furigana.kanji} != ${word.primaryForm.kanji}"
+        }
+        require(furigana.kana == word.primaryForm.kana) {
+            "Bug in joinFurigana: ${furigana.kana} != ${word.primaryForm.kana}"
         }
     }
 

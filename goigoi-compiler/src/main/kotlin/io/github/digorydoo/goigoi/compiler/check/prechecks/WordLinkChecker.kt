@@ -4,22 +4,22 @@ import ch.digorydoo.kutils.cjk.JLPTLevel
 import ch.digorydoo.kutils.cjk.isHiragana
 import ch.digorydoo.kutils.cjk.isKatakana
 import io.github.digorydoo.goigoi.compiler.CheckFailed
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWordLink
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerUnyt
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerVocab
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWord
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWordLink
 
 class WordLinkChecker {
-    private data class UnytAndWord(val unyt: GoigoiUnyt, val word: GoigoiWord)
+    private data class UnytAndWord(val unyt: CompilerUnyt, val word: CompilerWord)
 
-    fun check(link: GoigoiWordLink, word: GoigoiWord, unyt: GoigoiUnyt, vocab: GoigoiVocab) {
+    fun check(link: CompilerWordLink, word: CompilerWord, unyt: CompilerUnyt, vocab: CompilerVocab) {
         // Check that the link doesn't point to its own word
 
         if (link.wordId == word.id) {
             throw CheckFailed("Link must not refer to its own word!")
         }
 
-        if (link.kind == GoigoiWordLink.Kind.XML_SEE_ALSO) {
+        if (link.kind == CompilerWordLink.Kind.XML_SEE_ALSO) {
             // Check see-also link's type.
 
             val allowedTypes = arrayOf(
@@ -56,14 +56,14 @@ class WordLinkChecker {
         }
 
         when (link.kind) {
-            GoigoiWordLink.Kind.XML_SEE_ALSO -> checkSeeAlso(link, word, vocab)
-            GoigoiWordLink.Kind.XML_KEEP_APART -> checkKeepApart(link, word, unyt, vocab)
-            GoigoiWordLink.Kind.XML_KEEP_TOGETHER -> checkKeepTogether(link, word, unyt, vocab)
+            CompilerWordLink.Kind.XML_SEE_ALSO -> checkSeeAlso(link, word, vocab)
+            CompilerWordLink.Kind.XML_KEEP_APART -> checkKeepApart(link, word, unyt, vocab)
+            CompilerWordLink.Kind.XML_KEEP_TOGETHER -> checkKeepTogether(link, word, unyt, vocab)
             else -> throw CheckFailed("Unexpected kind of link: ${link.kind}")
         }
     }
 
-    private fun checkSeeAlso(see: GoigoiWordLink, fromWord: GoigoiWord, vocab: GoigoiVocab) {
+    private fun checkSeeAlso(see: CompilerWordLink, fromWord: CompilerWord, vocab: CompilerVocab) {
         var foundLinkedWord = false
         val counterparts = mutableListOf<UnytAndWord>()
 
@@ -78,7 +78,7 @@ class WordLinkChecker {
                 // Check that see-also link is mentioned by both sides.
 
                 val backLink = toWord.links.firstOrNull {
-                    it.wordId == fromWord.id && it.kind == GoigoiWordLink.Kind.XML_SEE_ALSO
+                    it.wordId == fromWord.id && it.kind == CompilerWordLink.Kind.XML_SEE_ALSO
                 }
 
                 if (backLink == null) {
@@ -187,7 +187,7 @@ class WordLinkChecker {
             require(otherId != fromWord.id) // otherwise we have a see-also link that links to its own word
 
             if (otherLevel != JLPTLevel.Nx) {
-                if (fromWord.links.none { it.wordId == otherId && it.kind == GoigoiWordLink.Kind.XML_KEEP_APART }) {
+                if (fromWord.links.none { it.wordId == otherId && it.kind == CompilerWordLink.Kind.XML_KEEP_APART }) {
                     val fromCtx = arrayOf(fromWord.hint.en, fromWord.hint2?.en)
                         .filter { it != "" }
                         .filterNotNull()
@@ -199,14 +199,14 @@ class WordLinkChecker {
     }
 
     private fun checkKeepApart(
-        see: GoigoiWordLink,
-        fromWord: GoigoiWord,
-        fromUnyt: GoigoiUnyt,
-        vocab: GoigoiVocab,
+        see: CompilerWordLink,
+        fromWord: CompilerWord,
+        fromUnyt: CompilerUnyt,
+        vocab: CompilerVocab,
     ) {
         var otherFound = false
-        var missingBackLink: GoigoiWord? = null
-        var unytOfWordMissingBackLink: GoigoiUnyt? = null
+        var missingBackLink: CompilerWord? = null
+        var unytOfWordMissingBackLink: CompilerUnyt? = null
 
         vocab.forEachWordWithId(see.wordId) { otherWord, otherUnyt, _ ->
             otherFound = true
@@ -217,7 +217,7 @@ class WordLinkChecker {
                 )
             }
 
-            if (otherWord.links.none { it.wordId == fromWord.id && it.kind == GoigoiWordLink.Kind.XML_KEEP_APART }) {
+            if (otherWord.links.none { it.wordId == fromWord.id && it.kind == CompilerWordLink.Kind.XML_KEEP_APART }) {
                 missingBackLink = otherWord
                 unytOfWordMissingBackLink = otherUnyt
             }
@@ -239,14 +239,14 @@ class WordLinkChecker {
     }
 
     private fun checkKeepTogether(
-        see: GoigoiWordLink,
-        fromWord: GoigoiWord,
-        fromUnyt: GoigoiUnyt,
-        vocab: GoigoiVocab,
+        see: CompilerWordLink,
+        fromWord: CompilerWord,
+        fromUnyt: CompilerUnyt,
+        vocab: CompilerVocab,
     ) {
         var otherFound = false
-        var missingBackLink: GoigoiWord? = null
-        var unytOfWordMissingBackLink: GoigoiUnyt? = null
+        var missingBackLink: CompilerWord? = null
+        var unytOfWordMissingBackLink: CompilerUnyt? = null
 
         vocab.forEachWordWithId(see.wordId) { otherWord, otherUnyt, _ ->
             otherFound = true
@@ -258,7 +258,7 @@ class WordLinkChecker {
             var backLinkFound = false
 
             otherWord.links.forEach {
-                if (it.wordId == fromWord.id && it.kind == GoigoiWordLink.Kind.XML_KEEP_TOGETHER) {
+                if (it.wordId == fromWord.id && it.kind == CompilerWordLink.Kind.XML_KEEP_TOGETHER) {
                     if (backLinkFound) {
                         throw CheckFailed("Multiple back-links from word ${fromWord.id} to ${see.wordId} found")
                     }
@@ -300,16 +300,16 @@ class WordLinkChecker {
     }
 
     private fun checkWordsInSameUnyt(
-        vocab: GoigoiVocab,
-        fromWord: GoigoiWord,
+        vocab: CompilerVocab,
+        fromWord: CompilerWord,
         fromCtx: String,
         otherId: String, // passing a wordId here, because there may be multiple instances
         otherLevel: JLPTLevel,
         otherCtx: String,
     ) {
         // Look for any unyt that has both ids.
-        var unytThatHasFromWord: GoigoiUnyt? = null
-        var unytThatHasOtherWord: GoigoiUnyt? = null
+        var unytThatHasFromWord: CompilerUnyt? = null
+        var unytThatHasOtherWord: CompilerUnyt? = null
         var foundPair = false
 
         vocab.forEachUnyt { u, _ ->

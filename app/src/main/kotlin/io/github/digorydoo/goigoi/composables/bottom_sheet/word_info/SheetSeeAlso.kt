@@ -1,25 +1,23 @@
 package io.github.digorydoo.goigoi.composables.bottom_sheet.word_info
 
 import android.util.Log
-import android.util.TypedValue
-import android.widget.TextView
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.ui.unit.sp
+import ch.digorydoo.kutils.cjk.FuriganaString
 import ch.digorydoo.kutils.cjk.Unicode
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.composables.list.ListSubheader
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.composables.text.FuriganaText
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.db.WordLink
-import io.github.digorydoo.goigoi.legacy.FuriganaBuilder
 import java.util.Locale
 
 private const val SEE_ALSO_PRIMARY_FORM_SIZE_SP = 20f
@@ -66,22 +64,14 @@ fun SheetSeeAlso(word: Word, sheetHorizPadding: Dp) {
                     ListSubheader(text = stringResource(R.string.see_also), textHorizPadding = sheetHorizPadding)
                 }
 
-                val primaryText = FuriganaBuilder.buildSpan(link.primaryForm)
-                val secondaryText = "${link.translation.withSystemLang} ${Unicode.MIDDLE_DOT} $text"
-
-                AndroidView(
+                FuriganaText(
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(horizontal = sheetHorizPadding)
                         .padding(top = if (anyEmitted) 16.dp else 4.dp),
-                    factory = { ctx -> TextView(ctx) },
-                    update = { textView ->
-                        textView.apply {
-                            this.text = primaryText
-                            setTextSize(TypedValue.COMPLEX_UNIT_SP, SEE_ALSO_PRIMARY_FORM_SIZE_SP)
-                            setTextColor(colours.onBackground.toArgb())
-                        }
-                    }
+                    text = FuriganaString(link.primaryForm),
+                    textFontSize = SEE_ALSO_PRIMARY_FORM_SIZE_SP.sp,
+                    color = colours.onBackground
                 )
 
                 Text(
@@ -89,7 +79,7 @@ fun SheetSeeAlso(word: Word, sheetHorizPadding: Dp) {
                         .fillMaxWidth()
                         .padding(horizontal = sheetHorizPadding)
                         .padding(top = 4.dp), // keep this consistent with ListItem's secondaryTextTopMargin
-                    text = secondaryText,
+                    text = "${link.translation.withSystemLang} ${Unicode.MIDDLE_DOT} $text",
                     style = typography.listItemSecondaryText,
                     color = colours.secondaryOnBackground,
                 )

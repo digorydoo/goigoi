@@ -773,6 +773,7 @@
               category="garden, plant"
               id="kusa-grass"
             >
+                <keep_apart_from id="shokubutsu-plant" rem="ambiguity in phrases" />
                 <phrase
                   ph="【長：なが】い【草：くさ】"
                   rom="nagai kusa"
@@ -781,6 +782,20 @@
                   lvl="n4"
                   origin="ChatGPT"
                 />
+                <phrase
+                  ph="【草：くさ】【木：き】"
+                  rom="kusaki"
+                  tr_en="plants; vegetation"
+                  tr_de="Pflanzen; Vegetation"
+                  lvl="n3"
+                  origin="Doraemon 17, p.168"
+                  rem="jisho has nx, but n4 for kusa, n5 for ki"
+                >
+                    <ask w="【草：くさ】【木：き】">
+                        <accept w="植物" as="correct" />
+                        <accept w="しょくぶつ" as="correct" />
+                    </ask>
+                </phrase>
                 <sentence
                   s="【私：わたし】は【草：くさ】の【上：うえ】に【寝：ね】た。"
                   rom="Watashi wa kusa no ue ni neta."

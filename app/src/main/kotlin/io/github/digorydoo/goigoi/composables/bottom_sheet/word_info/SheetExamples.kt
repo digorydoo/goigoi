@@ -2,8 +2,6 @@ package io.github.digorydoo.goigoi.composables.bottom_sheet.word_info
 
 import android.graphics.Typeface
 import android.text.SpannableStringBuilder
-import android.util.TypedValue
-import android.widget.TextView
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -12,20 +10,19 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.ui.unit.sp
+import ch.digorydoo.kutils.cjk.FuriganaString
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.composables.list.ListSubheader
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.composables.text.FuriganaText
 import io.github.digorydoo.goigoi.core.db.PhraseOrSentence
 import io.github.digorydoo.goigoi.core.db.Word
-import io.github.digorydoo.goigoi.legacy.FuriganaBuilder
 import io.github.digorydoo.goigoi.legacy.buildSpan
 import io.github.digorydoo.goigoi.utils.appendColoured
 import io.github.digorydoo.goigoi.utils.appendStyled
@@ -36,8 +33,6 @@ private const val EXAMPLE_PRIMARY_FORM_SIZE_SP = 24f
 private fun Example(phraseOrSentence: PhraseOrSentence, word: Word, marginTop: Dp, sheetHorizPadding: Dp) {
     val colours = GoigoiTheme.colours
     val typography = GoigoiTheme.typography
-    val density = LocalDensity.current
-    val secondaryTextSizePx = with(density) { typography.listItemSecondaryText.fontSize.toPx() }
 
     val parts = phraseOrSentence.primaryFormInParts(word)
 
@@ -54,19 +49,14 @@ private fun Example(phraseOrSentence: PhraseOrSentence, word: Word, marginTop: D
         append(parts.end.buildSpan())
     }
 
-    AndroidView(
+    FuriganaText(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = sheetHorizPadding)
             .padding(top = marginTop),
-        factory = { ctx -> TextView(ctx) },
-        update = { textView ->
-            textView.apply {
-                text = primaryForm
-                setTextSize(TypedValue.COMPLEX_UNIT_SP, EXAMPLE_PRIMARY_FORM_SIZE_SP)
-                setTextColor(colours.onBackground.toArgb())
-            }
-        }
+        text = primaryForm,
+        fontSize = EXAMPLE_PRIMARY_FORM_SIZE_SP.sp,
+        color = colours.onBackground,
     )
 
     Text(
@@ -79,7 +69,7 @@ private fun Example(phraseOrSentence: PhraseOrSentence, word: Word, marginTop: D
         color = colours.secondaryOnBackground,
     )
 
-    val explanation = phraseOrSentence.explanation.withSystemLang
+    val explanation = FuriganaString(phraseOrSentence.explanation.withSystemLang)
 
     if (explanation.isNotEmpty()) {
         Row(
@@ -90,24 +80,22 @@ private fun Example(phraseOrSentence: PhraseOrSentence, word: Word, marginTop: D
             verticalAlignment = Alignment.Top,
         ) {
             Icon(
-                modifier = Modifier.padding(end = 24.dp),
+                modifier = Modifier.padding(
+                    top = if (explanation.hasFurigana) 6.dp else 0.dp,
+                    end = 24.dp,
+                ),
                 imageVector = ImageVector.vectorResource(R.drawable.ic_point_right_black_24dp),
                 contentDescription = null,
                 tint = GoigoiTheme.colours.decorativeIconTint
             )
-            AndroidView(
+            FuriganaText(
                 modifier = Modifier
                     .weight(1f)
                     .padding(top = 2.dp),
-                factory = { ctx -> TextView(ctx) },
-                update = { textView ->
-                    textView.apply {
-                        text = FuriganaBuilder.buildSpan(explanation)
-                        setTextSize(TypedValue.COMPLEX_UNIT_PX, secondaryTextSizePx)
-                        setTextColor(colours.onBackground.toArgb())
-                        typeface = Typeface.defaultFromStyle(Typeface.ITALIC)
-                    }
-                }
+                text = explanation,
+                textFontSize = typography.listItemSecondaryText.fontSize,
+                color = colours.onBackground,
+                typeface = Typeface.defaultFromStyle(Typeface.ITALIC),
             )
         }
     }

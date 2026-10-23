@@ -1,5 +1,17 @@
 # TODO
 
+* Bug: CorrectedAnswer has zero spacing between lines when it wraps (showed kana-only answer)
+
+* Missing dakuten/handakuten should also be "almost correct". Use equalsExceptDakutenHandakuten to check.
+
+* If <ask> is the same as the phrase, e.g. with phrase kakkoii inside word kakkō, SHOW_PHRASE_ASK_* should not be shown
+
+* SHOW_PHRASE_ASK_WORD_KANJI should show kana as a second step (kamawanai)
+
+-----
+
+* When there is at least one phrase, sentences should not be shown before at least one phrase has been shown
+
 * Save and restore state when orientation changes in ProgStudyActivty
 
 * When answer is a verb with furigana, and showing choices with fixed keys, we should not simply pick other words from
@@ -45,11 +57,7 @@
 
 * Add <accept_for_kanji> to words, phrases, sentences, e.g. 入れる could be read as いれる or はいれる
 
-* Remove furigana dots in TategakiView when furigana spans more than one kanji. It is rather unusual.
-
 * UnytListItem and WordListItem: Secondary text should be in Japanese (number of items/date studied)
-
-* Compiler should reject phrases whose <ask> form is the same as the phrase
 
 * If phrase is shown of a word whose hint is "formal", "honorific", "extra-modest", etc., the hint should include that
   with the phrase as well.

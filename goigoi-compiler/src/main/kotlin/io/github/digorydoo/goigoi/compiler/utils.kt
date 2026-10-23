@@ -89,6 +89,8 @@ fun checkRomaji(primaryForm: String, givenRomaji: String) {
         .replace("-", "") // o-kashi or okashi
         .replace(" ", "")
         .replace("?", ".")
+        .replace("‘", "'")
+        .replace("’", "'")
 
     val ck2 = computedRomaji
         .lowercase()
@@ -97,6 +99,8 @@ fun checkRomaji(primaryForm: String, givenRomaji: String) {
         .replace("-", "")
         .replace(" ", "")
         .replace("?", ".")
+        .replace("‘", "'")
+        .replace("’", "'")
 
     if (ck1 != ck2) {
         throw CheckFailed(

@@ -71,7 +71,7 @@ fun AnswerCommentFlag(model: ProgStudyActivityModel, modifier: Modifier = Modifi
             Answer.CORRECT -> correctBgnd
             Answer.CORRECT_BUT_INACCURATE, Answer.CORRECT_EXCEPT_KANA_SIZE -> almostCorrectBgnd
             Answer.WRONG -> wrongBgnd
-            Answer.NONE, Answer.TRIVIAL, Answer.SKIP -> null
+            Answer.NONE, Answer.TRIVIAL -> null
         }
         else -> null
     }

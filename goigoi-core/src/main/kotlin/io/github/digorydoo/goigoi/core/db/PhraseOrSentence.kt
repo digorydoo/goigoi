@@ -20,7 +20,7 @@ class PhraseOrSentence {
 
     var wordFormToAsk = FuriganaString() // if the word appears in a different form, e.g. kana, verb form, etc.
     var wordFormToAskSuffix = "" // if this is defined, wordFormToAsk is the stem
-    val acceptableAnswers = mutableListOf<FuriganaString>()
+    val acceptableAnswers = mutableListOf<AcceptableAnswer>() // if suffix is defined, these are only the stems
 
     private fun wordFormToLookFor(word: Word): String =
         when {

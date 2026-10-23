@@ -13,7 +13,7 @@ import io.github.digorydoo.kokuban.ttyGreen
 import io.github.digorydoo.kokuban.ttyPlain
 import io.github.digorydoo.kokuban.ttyYellow
 
-class GoigoiWord {
+class CompilerWord {
     var id = ""
     var primaryForm = FuriganaString()
     val kanji: String get() = primaryForm.kanji
@@ -35,14 +35,11 @@ class GoigoiWord {
     var crossDict = false
     var hasCombinedReading = false
     var fileName = ""
-    val phrases = mutableListOf<GoigoiPhraseOrSentence>()
-    val sentences = mutableListOf<GoigoiPhraseOrSentence>()
-    val links = mutableListOf<GoigoiWordLink>()
+    val phrases = mutableListOf<CompilerPhraseOrSentence>()
+    val sentences = mutableListOf<CompilerPhraseOrSentence>()
+    val links = mutableListOf<CompilerWordLink>()
     val cats = mutableSetOf<WordCategory>()
-
-    val acceptForTranslation = mutableListOf<AcceptableAnswer>()
-    val alternativeSpellings = mutableListOf<String>() // kanji/okurigana
-    val alternativeReadings = mutableListOf<String>() // kana
+    val acceptableAnswers = mutableListOf<AcceptableAnswer>()
 
     override fun toString() =
         "Word " + id.ifEmpty { romaji }.ifEmpty { translation.en }.ifEmpty { kana }.ifEmpty { kanji }

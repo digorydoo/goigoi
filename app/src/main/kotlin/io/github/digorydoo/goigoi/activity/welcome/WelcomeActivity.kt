@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import ch.digorydoo.kutils.utils.Moment
-import io.github.digorydoo.goigoi.BuildConfig
 import io.github.digorydoo.goigoi.activity.prefs.startPrefsActivity
 import io.github.digorydoo.goigoi.activity.prog_study.startProgStudyActivity
 import io.github.digorydoo.goigoi.activity.topic.TopicActivityParams
@@ -39,27 +38,27 @@ class WelcomeActivity: ComponentActivity() {
         model = WelcomeActivityModel(vocab, stats, listItemDataFactory, ctx)
         model.update(cachedStudyCount)
 
-        // Topics never change, therefore we don't need to wrap them in the model
-        val topics = vocab.topics.asSequence().filter { BuildConfig.DEBUG || !it.hidden }.toList()
-
         setContent {
             DevicePropsProvider(this) {
                 GoigoiTheme(prefs.theme) {
                     WelcomeScreen(
                         model,
-                        topics,
                         onPrefsBtnClicked = {
+                            navigatedToItem = null
                             startPrefsActivity()
                             finish() // PrefsActivity may change theme
                         },
                         onBigStudyBtnClicked = {
+                            navigatedToItem = null
                             startProgStudyActivity()
                         },
                         onTopicClicked = { topic ->
+                            navigatedToItem = null
                             startTopicActivity(TopicActivityParams(topicId = topic.id))
                             navigatedToItem = WelcomeActivityModel.TopicItem(topic)
                         },
                         onMyWordsUnytClicked = {
+                            navigatedToItem = null
                             startUnytActivityAsync(
                                 vocab.myWordsUnyt,
                                 done = { navigatedToItem = WelcomeActivityModel.MyWordsUnytItem }
@@ -83,7 +82,6 @@ class WelcomeActivity: ComponentActivity() {
         super.onResume()
 
         stats.notifyMainActivityResume() // to clear old statistics
-
         model.update(cachedStudyCount)
 
         navigatedToItem?.let { item ->

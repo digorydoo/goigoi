@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
-    <!--
-        Note: If you use the dot notation to extend a style, and you also include the parent
-        attribute, then the parent styles override any styles inherited through the dot notation.
-    -->
-    <!-- ======================================================================================= -->
-
     <!-- These are the styles of my custom SplashActivity -->
     <style name="SplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowBackground">@color/grey_900</item>
         <item name="android:statusBarColor">@color/grey_900</item>
         <item name="android:navigationBarColor">@color/grey_900</item>
@@ -25,147 +20,33 @@
 
     <!-- ======================================================================================= -->
 
-    <style name="MyBaseTheme.PrimaryTextStyle" parent="TextAppearance.AppCompat.Medium">
-        <item name="android:textSize">17sp</item>
-    </style>
-
-    <style name="MyBaseTheme.SecondaryTextStyle" parent="TextAppearance.AppCompat.Small">
-        <item name="android:textSize">14sp</item>
-    </style>
-
-    <style name="MyBaseTheme.SerifSecondaryTextStyle" parent="TextAppearance.AppCompat.Body1">
-        <item name="android:textSize">17sp</item>
-        <item name="android:textStyle">italic</item>
-        <item name="android:typeface">serif</item>
-    </style>
-
-    <style name="MyBaseTheme.SnackbarStyle" parent="Theme.AppCompat.Light.Dialog">
-        <item name="android:background">@color/green_800</item>
-    </style>
-
-    <style name="MyBaseTheme.SnackbarTextViewStyle" parent="TextAppearance.AppCompat.Widget.DropDownItem">
-        <item name="android:textColor">@color/white</item>
-        <item name="android:paddingStart">16dp</item>
-        <item name="android:paddingEnd">16dp</item>
-    </style>
-
-    <style name="MyBaseTheme.SnackbarButtonStyle" parent="Widget.AppCompat.Button">
-        <!-- This style must be defined for SnackbarTextViewStyle to work! -->
-    </style>
-
-    <!-- ======================================================================================= -->
-
     <style name="MyBaseLightTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <!-- flags -->
-        <item name="android:windowLightStatusBar">false</item>
-
-        <!-- colours -->
-        <item name="android:colorAccent">@color/green_800</item>
-        <item name="android:colorPrimary">@color/green_800</item>
-        <item name="android:colorPrimaryDark">@color/green_900</item>
+        <item name="android:windowLightStatusBar">true</item>
         <item name="android:navigationBarColor">@color/grey_200</item>
-        <item name="android:statusBarColor">@color/green_800</item>
-        <item name="android:textColor">@color/opacity_black_dd</item>
-        <item name="android:textColorPrimary">@color/opacity_black_dd</item>
+        <item name="android:statusBarColor">@color/grey_200</item>
         <item name="android:windowBackground">@color/grey_50</item>
-        <item name="activeIconTintColour">@color/opacity_black_dd</item>
-        <item name="appBarColour">@color/green_800</item>
-        <item name="appBarPrimaryTextColour">@color/white</item>
-        <item name="appBarSecondaryTextColour">@color/opacity_white_77</item>
-        <item name="cardBgColour">@color/grey_50</item>
-        <item name="behindCardsColour">@color/grey_300</item>
-        <item name="decorativeIconTintColour">@color/opacity_black_89</item>
-        <item name="flashBgColour">@color/opacity_black_89</item>
-        <item name="flashFgColour">@color/grey_50</item>
-        <item name="myPrimaryTextColour">@color/opacity_black_dd</item>
-        <item name="mySecondaryTextColour">@color/opacity_black_89</item>
-
-        <!-- styles -->
-        <item name="myAppBarTheme">@style/MyLightTheme.AppBarTheme</item>
-        <item name="myPrimaryTextStyle">@style/MyLightTheme.PrimaryTextStyle</item>
-        <item name="mySecondaryTextStyle">@style/MyLightTheme.SecondaryTextStyle</item>
-        <item name="serifSecondaryTextStyle">@style/MyLightTheme.SerifSecondaryTextStyle</item>
-        <item name="snackbarStyle">@style/MyBaseTheme.SnackbarStyle</item>
-        <item name="snackbarTextViewStyle">@style/MyBaseTheme.SnackbarTextViewStyle</item>
-        <item name="snackbarButtonStyle">@style/MyBaseTheme.SnackbarButtonStyle</item>
     </style>
 
-    <style name="MyLightTheme" parent="MyBaseLightTheme">
-        <!-- Leave this blank, platform-specific styles will be added here -->
-    </style>
+    <style name="MyLightTheme" parent="MyBaseLightTheme" />
 
     <style name="MyLightTheme.AppBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorPrimary">@color/opacity_black_89</item>
         <item name="android:paddingRight">8dp</item>
-    </style>
-
-    <style name="MyLightTheme.PrimaryTextStyle" parent="MyBaseTheme.PrimaryTextStyle">
-        <item name="android:textColor">@color/opacity_black_dd</item>
-    </style>
-
-    <style name="MyLightTheme.SecondaryTextStyle" parent="MyBaseTheme.SecondaryTextStyle">
-        <item name="android:textColor">@color/opacity_black_89</item>
-    </style>
-
-    <style name="MyLightTheme.SerifSecondaryTextStyle" parent="MyBaseTheme.SerifSecondaryTextStyle">
-        <item name="android:textColor">@color/opacity_black_89</item>
     </style>
 
     <!-- ======================================================================================= -->
 
     <style name="MyBaseDarkTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
-        <!-- flags -->
         <item name="android:windowLightStatusBar">false</item>
-
-        <!-- colours -->
-        <item name="android:colorAccent">@color/green_800</item>
-        <item name="android:colorPrimary">@color/green_800</item>
-        <item name="android:colorPrimaryDark">@color/green_900</item>
         <item name="android:navigationBarColor">@color/grey_950</item>
-        <item name="android:statusBarColor">@color/grey_925</item>
-        <item name="android:textColor">@color/white</item>
-        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/grey_950</item>
         <item name="android:windowBackground">@color/grey_900</item>
-        <item name="activeIconTintColour">@color/white</item>
-        <item name="appBarColour">@color/grey_925</item>
-        <item name="appBarPrimaryTextColour">@color/grey_500</item>
-        <item name="appBarSecondaryTextColour">@color/grey_600</item>
-        <item name="cardBgColour">@color/grey_875</item>
-        <item name="behindCardsColour">@color/grey_950</item>
-        <item name="decorativeIconTintColour">@color/white</item>
-        <item name="flashBgColour">@color/grey_700</item>
-        <item name="flashFgColour">@color/grey_200</item>
-        <item name="myPrimaryTextColour">@color/white</item>
-        <item name="mySecondaryTextColour">@color/opacity_white_77</item>
-
-        <!-- styles -->
-        <item name="myAppBarTheme">@style/MyDarkTheme.AppBarTheme</item>
-        <item name="myPrimaryTextStyle">@style/MyDarkTheme.PrimaryTextStyle</item>
-        <item name="mySecondaryTextStyle">@style/MyDarkTheme.SecondaryTextStyle</item>
-        <item name="serifSecondaryTextStyle">@style/MyDarkTheme.SerifSecondaryTextStyle</item>
-        <item name="snackbarStyle">@style/MyBaseTheme.SnackbarStyle</item>
-        <item name="snackbarTextViewStyle">@style/MyBaseTheme.SnackbarTextViewStyle</item>
-        <item name="snackbarButtonStyle">@style/MyBaseTheme.SnackbarButtonStyle</item>
     </style>
 
-    <style name="MyDarkTheme" parent="MyBaseDarkTheme">
-        <!-- Leave this blank, platform-specific styles will be added here -->
-    </style>
+    <style name="MyDarkTheme" parent="MyBaseDarkTheme" />
 
     <style name="MyDarkTheme.AppBarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:textColorPrimary">@color/grey_500</item>
         <item name="android:paddingRight">8dp</item>
-    </style>
-
-    <style name="MyDarkTheme.PrimaryTextStyle" parent="MyBaseTheme.PrimaryTextStyle">
-        <item name="android:textColor">@color/white</item>
-    </style>
-
-    <style name="MyDarkTheme.SecondaryTextStyle" parent="MyBaseTheme.SecondaryTextStyle">
-        <item name="android:textColor">@color/opacity_white_77</item>
-    </style>
-
-    <style name="MyDarkTheme.SerifSecondaryTextStyle" parent="MyBaseTheme.SerifSecondaryTextStyle">
-        <item name="android:textColor">@color/opacity_white_77</item>
     </style>
 </resources>

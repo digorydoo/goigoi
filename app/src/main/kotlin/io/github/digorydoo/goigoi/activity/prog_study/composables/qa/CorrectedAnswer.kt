@@ -22,7 +22,7 @@ fun CorrectedAnswer(model: ProgStudyActivityModel) {
     val fontSize = with(density) { ANSWER_FONT_SIZE.toSp() }
 
     val correctedAnswer = when (answerCorrectness) {
-        Answer.CORRECT, Answer.SKIP, Answer.NONE, Answer.TRIVIAL -> ""
+        Answer.CORRECT, Answer.NONE, Answer.TRIVIAL -> ""
         Answer.WRONG, Answer.CORRECT_BUT_INACCURATE, Answer.CORRECT_EXCEPT_KANA_SIZE -> when {
             pmode == PresentationMode.QUESTION -> ""
             else -> expectedAnswer

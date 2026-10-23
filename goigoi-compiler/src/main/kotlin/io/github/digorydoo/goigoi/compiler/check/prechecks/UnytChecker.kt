@@ -3,12 +3,12 @@ package io.github.digorydoo.goigoi.compiler.check.prechecks
 import ch.digorydoo.kutils.cjk.JLPTLevel
 import io.github.digorydoo.goigoi.compiler.CheckFailed
 import io.github.digorydoo.goigoi.compiler.supportedLanguages
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiTopic
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerTopic
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerUnyt
 import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 
 class UnytChecker {
-    fun check(unyt: GoigoiUnyt, topic: GoigoiTopic) {
+    fun check(unyt: CompilerUnyt, topic: CompilerTopic) {
         // Check that the unyt's levels match those required by the topic.
 
         if (topic.levels.isNotEmpty()) {

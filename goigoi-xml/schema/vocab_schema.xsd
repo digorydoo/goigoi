@@ -65,7 +65,7 @@
     </xs:complexType>
 
     <!--
-        A unyt is a lesson. It's called unyt and not unit to avoid confusion with Kotlin type Unit.
+        A unyt is a lesson. It's called "unyt" rather than "unit" to avoid confusion with Kotlin type Unit.
     -->
     <xs:complexType name="Unyt">
         <xs:choice minOccurs="0" maxOccurs="unbounded">
@@ -110,17 +110,14 @@
             <xs:element name="keep_apart_from" type="KeepApartFrom" />
             <xs:element name="keep_together" type="KeepTogether" />
             <xs:element name="see" type="SeeAlso" />
-            <xs:element name="accept_for_translation" type="WordAcceptForTranslation" />
+            <xs:element name="accept" type="WordAccept" />
         </xs:choice>
 
         <!--
-            The word is defined with the `w` attribute. If the word has kana, we need to provide furigana. The furigana
-            also defines the kana reading. The place where the okurigana is put matters: If it is put outside the
-            furigana, it becomes actual okurigana, but if it is put inside the furigana, it becomes mere pronounciation.
-            For instance, "【取：と】り【上：あ】げる" and "【取：とり】【上：あ】げる" both define the kana as "とりあげる", but
-            the kanji rendering of the former is "取り上げる" (with okurigana), while the kanji rendering of the latter
-            is "取上げる" (without okurigana). We usually use the most common rendering as the `w` parameter and mark
-            other acceptable forms with <accept_for_translation>.
+            `w` defines the word. If it has kanji, we need to provide the furigana, e.g.: "【電：でん】【車：しゃ】".
+            Sometimes it is necessary to distribute the furigana over multiple kanjis, e.g.: "【今日：きょう】"
+            Okurigana needs to be outside of brackets, e.g.: "【取：と】り【上：あ】げる" is rendered with okurigana as
+            取り上げる, while "【取：とり】【上：あ】げる" is rendered as "取上げる".
         -->
         <xs:attribute name="w" type="xs:string" use="required" />
 
@@ -142,9 +139,10 @@
         <xs:attribute name="HIDDEN" type="xs:boolean" />
 
         <!--
-            The category is restricted, see enum class WordCategory.
-            We don't use xs:enumeration/xs:list here, because unfortunately, members of xs:list are separated by
-            whitespace only, which reads very confusingly, e.g. "old-fashioned plant" instead of "old-fashioned, plant".
+            The category is mainly used for grouping words of the same topic together. The value restricted, see enum
+            class WordCategory. We don't use xs:enumeration/xs:list here, because unfortunately, members of xs:list are
+            separated by whitespace only, which reads very confusingly, e.g. "old-fashioned plant" instead of
+            "old-fashioned, plant".
         -->
         <xs:attribute name="category" type="xs:string" />
     </xs:complexType>
@@ -192,21 +190,6 @@
     </xs:complexType>
 
     <!--
-        When the word is used inside a phrase or sentence in a different form rather than its dictionary form, we need
-        to declare how the App should ask about the word.
-    -->
-    <xs:complexType name="Ask">
-        <xs:choice minOccurs="0" maxOccurs="unbounded">
-            <xs:element name="accept" type="AskAccept" />
-        </xs:choice>
-
-        <!-- Either "w" alone or both "stem" and "suffix" are required, but we cannot express this in XSD 1.0 -->
-        <xs:attribute name="w" type="xs:string" />
-        <xs:attribute name="stem" type="xs:string" />
-        <xs:attribute name="suffix" type="xs:string" />
-    </xs:complexType>
-
-    <!--
         Marks a word as potentially confusing together with another word. These words should not be studied together,
         and they must appear in different unyts. We usually mark synonyms and almost synonyms with this, and sometimes
         words whose declared phrases become ambiguous when the user may enter either of them.
@@ -251,61 +234,129 @@
     </xs:simpleType>
 
     <!--
-        When the user is presented the translation of a word without the context of a phrase or sentence, we can add
-        more acceptable answers.
+        Marks acceptable answers when we ask about the given word.
     -->
-    <xs:complexType name="WordAcceptForTranslation">
+    <xs:complexType name="WordAccept">
         <!--
-            The attribute `w` takes furigana; both kanji/okurigana and kana parts become acceptable answers. For
-            instance, if w="【入：い】り【口：ぐち】", we'd accept either 入り口 or いりぐち.
+            The attribute `w` cannot take furigana here.
         -->
         <xs:attribute name="w" type="xs:string" use="required" />
 
         <!--
-            Marks this variant as inaccurate. The app will not count this answer as wrong, but will encourage the user
-            to use the expected answer instead.
+            Declares the reason why we accept this answer.
         -->
-        <xs:attribute name="inaccurate" type="xs:boolean" />
+        <xs:attribute name="as" type="WordAcceptReason" use="required" />
 
         <!--
-            Marks this variant as always interchangable. If you set this to "true", the variant will also be allowed in
-            phrases and sentences when they use the word in the exact form as it was defined. If the phrase or sentence
-            uses the word in a slightly altered form (e.g. not in dictionary form if it's a verb), the variant is still
-            not allowed, because the app cannot apply the form directly. In those cases, mark the acceptable answers
-            with <accept> inside <ask>. On the other hand, if you set interchangable="false", the variant will never
-            be allowed in phrases and sentences.
-
-            If the word's kana reading and the variant's kana reading are the same, the variant is treated as an
-            alternate spelling. In that case, specifying `interchangeable` is required. If the word's kanji/okurigana
-            and the variant's kanji/okurigana are the same, the variant is treated as an alternate reading. In that
-            case, too, specifying `interchangeable` is required. Otherwise, `interchangeable` is optional and defaults
-            to "false".
-
-            Examples: (i) Suppose the word is defined as w="【入：いり】【口：ぐち】", and an acceptable answer is defined
-            as w="【入：い】り【口：ぐち】". The kana reading is いりぐち for both variants, so the app will treat this as an
-            alternate spelling. Set interchangeable="true" to allow using this variant in phrases and sentences.
-
-            (ii) Word defined as w="【早：はや】い", translation is "early; fast", acceptable for this translation is
-            w="【速：はや】い", whose translation is "fast". The kana reading is はやい for both variants, and the app will
-            treat this as an alternate spelling. However, the alternate spelling cannot be used in a phrase or sentence
-            whose context makes it clear that the meaning is "early", not "fast". Set interchangeable="false".
-
-            (iii) Word defined as w="【描：えが】く", translation is "to draw; to paint", acceptable answer is
-            w="【描：か】く". The kanji/okurigana is 描く for both variants, so the app will treat this as an alternate
-            reading. If the app asks the user to type their answer in kana given the translation "to draw; to paint",
-            we'll accept かく. Using that reading in a phrase or sentence about "【描：えが】く" might be acceptable, but
-            in some cases it might lead to confusion with "【書：か】く". Better set interchangeable="false".
-        -->
-        <xs:attribute name="interchangeable" type="xs:boolean" />
-
-        <!--
-            Remark, ignored by the app.
+            Remark, ignored.
         -->
         <xs:attribute name="rem" type="xs:string" />
     </xs:complexType>
 
-    <xs:complexType name="AskAccept">
+    <!--
+        The reason why we accept a certain answer
+    -->
+    <xs:simpleType name="WordAcceptReason">
+        <xs:restriction base="xs:string">
+            <!--
+                Marks an alternate reading for the kanji. For instance, the word "【描：えが】く" has the alternate
+                reading "【描：か】く".
+
+                Note that "【方：ほう】" and "【方：かた】" should NOT be marked with this, because the former means
+                "direction, way", while the other means "people". Since their translations don't match, they should be
+                declared as two different words instead.
+
+                Declared alternate readings automatically propagate to phrases and sentences if the word appears there
+                in unchanged dictionary form.
+            -->
+            <xs:enumeration value="alt-reading-same-word" />
+
+            <!--
+                Marks an alternative spelling of the same word. The kana reading of both the word and the declared
+                other form must match. The same kanji may be involved, e.g. "【入：いり】【口：ぐち】" is an alternative
+                spelling of "【入：い】り【口：ぐち】" while the reading is いりぐち in both cases. It may also involve
+                different kanjis, e.g. "【速：はや】い" (fast) may also be spelled as "【早：はや】い". Note that the latter
+                rendering has a broader meaning (early, fast), therefore the word "【早：はや】い" should NOT mark
+                "【速：はや】い" as an alternative spelling.
+
+                Declared alternate spellings automatically propagate to phrases and sentences if the word appears there
+                in unchanged dictionary form.
+            -->
+            <xs:enumeration value="alt-spelling-same-word" />
+
+            <!--
+                Marks an acceptable answer when the user is shown the word's translation with no context. For instance,
+                when showing translation "müde vom Gehen" we expect the noun "【歩：ある】き【疲：つか】れ", but we should
+                also accept the phrase "【歩：ある】き【疲：つか】れた". The answer will be accepted as correct with no
+                indication that the user should use something different.
+
+                Answers declared like this are never propagated to phrases and sentences.
+            -->
+            <xs:enumeration value="correct-for-translation" />
+
+            <!--
+                Similar to correct-for-translation, but this also propagates to phrases and sentences. For instance,
+                when we expect the word "【妙：みょう】", we can always allow 奇妙 or きみょう instead.
+            -->
+            <xs:enumeration value="correct-in-phrases-and-sentences" />
+
+            <!--
+                Marks an answer that is close to the translation, but inaccurate. When the user is shown the word's
+                translation with no context, and they enter this, we won't count it as neither correct nor wrong, but
+                we will inform the user that they should use the expected form instead.
+
+                Answers declared like this are never propagated to phrases and sentences.
+            -->
+            <xs:enumeration value="inaccurate" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--
+        Similar to WordAcceptReason, but for phrases or sentences
+    -->
+    <xs:simpleType name="PhraseOrSentenceAcceptReason">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="correct" />
+            <xs:enumeration value="inaccurate" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <!--
+        When the word is used inside a phrase or sentence in a different form rather than its dictionary form, we need
+        to declare how the App should ask about the word.
+    -->
+    <xs:complexType name="Ask">
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+            <xs:element name="accept" type="PhraseOrSentenceAccept" />
+        </xs:choice>
+
+        <!--
+            The attribute `w` can take furigana here. Either "w" alone or both "stem" and "suffix" are required (we
+            cannot express this in XSD 1.0.)
+        -->
+        <xs:attribute name="w" type="xs:string" />
+        <xs:attribute name="stem" type="xs:string" />
+        <xs:attribute name="suffix" type="xs:string" />
+    </xs:complexType>
+
+    <!--
+        Marks an acceptable answer for word inside the given phrase or sentence. They are always accepted as correct
+        without any indication that the user should use something different.
+    -->
+    <xs:complexType name="PhraseOrSentenceAccept">
+        <!--
+            The attribute `w` cannot take furigana here.
+        -->
         <xs:attribute name="w" type="xs:string" use="required" />
+
+        <!--
+            Declares the reason why we accept this answer.
+        -->
+        <xs:attribute name="as" type="PhraseOrSentenceAcceptReason" use="required" />
+
+        <!--
+            The suffix always needs to match what was declared in the <ask> tag.
+        -->
         <xs:attribute name="suffix" type="xs:string" />
         <xs:attribute name="rem" type="xs:string" />
     </xs:complexType>

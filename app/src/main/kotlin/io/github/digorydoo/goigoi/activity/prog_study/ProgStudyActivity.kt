@@ -15,9 +15,9 @@ import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.core.db.Vocabulary
 import io.github.digorydoo.goigoi.core.prog_study.FixedKeysProvider
 import io.github.digorydoo.goigoi.core.prog_study.KeyActionHandler
-import io.github.digorydoo.goigoi.core.prog_study.QAFactory
 import io.github.digorydoo.goigoi.core.prog_study.QAProvider
 import io.github.digorydoo.goigoi.core.prog_study.RoundsTracker
+import io.github.digorydoo.goigoi.core.qa_factory.QAFactory
 import io.github.digorydoo.goigoi.core.study.AnswerChecker
 import io.github.digorydoo.goigoi.core.study.AnswerCommentator
 import io.github.digorydoo.goigoi.core.study.StudyItemIterator

@@ -27,11 +27,11 @@ import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.composables.HintBalloon
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
 import io.github.digorydoo.goigoi.core.welcome.DailyProgressTracker.Companion.CHECKMARK_THRESHOLD
-import io.github.digorydoo.goigoi.legacy.FuriganaBuilder
+import io.github.digorydoo.goigoi.legacy.buildSpan
 import kotlin.math.roundToInt
 
 @Composable
-fun BigRing(todaysProgress: Float, animValue: Float, modifier: Modifier = Modifier) {
+fun BigRing(today: Moment, todaysProgress: Float, animValue: Float, modifier: Modifier = Modifier) {
     val showBalloon = remember { mutableStateOf(false) }
 
     val density = LocalDensity.current
@@ -55,8 +55,7 @@ fun BigRing(todaysProgress: Float, animValue: Float, modifier: Modifier = Modifi
         )
     }
 
-    val now = Moment.now()
-    val intlDate = now.dateToIntlStringLong(true)
+    val intlDate = today.dateToIntlStringLong(true)
 
     BoxWithConstraints(
         modifier = modifier.semantics { contentDescription = contentDescr },
@@ -79,7 +78,7 @@ fun BigRing(todaysProgress: Float, animValue: Float, modifier: Modifier = Modifi
                     onClick = { showBalloon.value = true }
                 ) {
                     Text(
-                        text = now.japaneseDayOfWeekAbbrev.toString(),
+                        text = today.japaneseDayOfWeekAbbrev.toString(),
                         color = when (todaysProgress >= CHECKMARK_THRESHOLD) {
                             false -> colours.onBackground
                             true -> lerp(colours.onBackground, colours.onPrimary, envDelay(animValue, 0.9f))
@@ -90,7 +89,7 @@ fun BigRing(todaysProgress: Float, animValue: Float, modifier: Modifier = Modifi
                 }
             },
             lines = arrayOf(
-                FuriganaBuilder.buildSpan(intlDate.ja),
+                intlDate.ja.buildSpan(),
                 intlDate.en,
                 stringResource(R.string.todays_progress_percent)
                     .replace("\${N}", minOf(100, (todaysProgress * 100f).roundToInt()).toString()),

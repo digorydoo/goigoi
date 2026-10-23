@@ -4,9 +4,9 @@ import ch.digorydoo.kutils.cjk.*
 import ch.digorydoo.kutils.cjk.JLPTLevel.Companion.toJLPTLevelOrNull
 import io.github.digorydoo.goigoi.compiler.CheckFailed
 import io.github.digorydoo.goigoi.compiler.KanjiLevels
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhraseOrSentence
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerPhraseOrSentence
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerVocab
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWord
 import kotlin.math.min
 
 /**
@@ -14,7 +14,7 @@ import kotlin.math.min
  * access to the kanji index should be implemented in PreChecks.
  */
 class PostChecks(
-    private val vocab: GoigoiVocab,
+    private val vocab: CompilerVocab,
     private val kanjiLevels: KanjiLevels,
     private val readings: Map<String, MutableSet<String>>,
 ) {
@@ -25,6 +25,7 @@ class PostChecks(
         checkKanjisInPhrasesAndSentences()
         checkUsuallyInKana()
         checkConsistentKanjiLevels()
+        checkKanjiByFreq()
     }
 
     private fun checkSchoolYears() {
@@ -95,7 +96,7 @@ class PostChecks(
         }
     }
 
-    private fun checkKanjis(s: GoigoiPhraseOrSentence, what: String) {
+    private fun checkKanjis(s: CompilerPhraseOrSentence, what: String) {
         FuriganaIterator(s.primaryForm.raw).forEach { range ->
             val errorCtx = "${what}\n   ${s.primaryForm.kanji}\n   ${s.romaji}"
             val kanji = range.primaryText.toString()
@@ -128,9 +129,9 @@ class PostChecks(
 
     private fun checkUsuallyInKana() {
         // data classes implicitly declare component1() and component2()
-        data class WordAndKanjis(val word: GoigoiWord, val kanjis: Set<Char>)
+        data class WordAndKanjis(val word: CompilerWord, val kanjis: Set<Char>)
 
-        fun GoigoiWord.isAtLeastN1() =
+        fun CompilerWord.isAtLeastN1() =
             level?.isEasierThan(JLPTLevel.Nx) ?: true
 
         fun Char.isAtLeastN1() =
@@ -161,7 +162,7 @@ class PostChecks(
     }
 
     private fun checkConsistentKanjiLevels() {
-        class WordAndKanjiLevel(val word: GoigoiWord) {
+        class WordAndKanjiLevel(val word: CompilerWord) {
             val kanjiLevel = word.primaryForm.kanji
                 .filter { it.isCJKNotKana() && it != '〜' }
                 .map { (kanjiLevels.findLevelOf(it) ?: JLPTLevel.Nx).toInt() }
@@ -175,7 +176,7 @@ class PostChecks(
 
         class Problem(val wordMinLevel: JLPTLevel, val w1: WordAndKanjiLevel, val w2: WordAndKanjiLevel)
 
-        val wordsByReadings = mutableMapOf<String, MutableList<GoigoiWord>>()
+        val wordsByReadings = mutableMapOf<String, MutableList<CompilerWord>>()
 
         vocab.forEachVisibleWord { word ->
             if (!word.usuallyInKana) {
@@ -298,6 +299,17 @@ class PostChecks(
                     "frequency. Using non-Japanese characters may lead to missing glyph problems in Goigoi.\n" +
                     "Offending characters: ${notInKanjiByFreq.joinToString(", ")}"
             )
+        }
+    }
+
+    private fun checkKanjiByFreq() {
+        val kanjis = mutableSetOf<Char>()
+
+        for (kanji in vocab.kanjiByFreq) {
+            if (kanjis.contains(kanji)) {
+                throw CheckFailed("Kanji $kanji appears more than once in the list of <freq>.")
+            }
+            kanjis.add(kanji)
         }
     }
 }

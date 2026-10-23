@@ -35,7 +35,6 @@ class WordStatsFile(dir: File): Exportable {
             Answer.TRIVIAL, // word, phrase or sentence just presented
             -> setStudyMoment(word)
 
-            Answer.SKIP, // FIXME remove, because flip-thru no longer exists
             Answer.NONE, // shouldn't happen
             -> Unit
         }

@@ -349,6 +349,7 @@
               category="looking, feet"
               id="tachiba-pov"
             >
+                <keep_apart_from id="mikata-angle" />
                 <phrase
                   ph="【両：りょう】【方：ほう】の【立：たち】【場：ば】"
                   rom="ryōhō no tachiba"
@@ -411,6 +412,9 @@
               category="plant, top-words"
               id="shokubutsu-plant"
             >
+                <keep_apart_from id="kusa-grass" rem="ambiguity in phrases" />
+                <accept w="草木" as="correct-for-translation" />
+                <accept w="くさき" as="correct-for-translation" />
                 <phrase
                   ph="【食：た】べられない【植：しょく】【物：ぶつ】"
                   rom="taberarenai shokubutsu"
@@ -957,6 +961,7 @@
               id="tsuri-fishing"
             >
                 <see id="tsuru-fish" type="verb" />
+                <keep_apart_from id="hokaku-capture" />
                 <phrase
                   ph="【釣：つ】り【船：ぶね】"
                   rom="tsuribune"
@@ -1770,7 +1775,7 @@
                 <sentence
                   s="【去：きょ】【年：ねん】の【花：はな】【見：み】の【集：あつ】まりは【雨：あめ】で【中：ちゅう】【止：し】になってしまった。"
                   rom="Kyonen no hanami no atsumari wa ame de chūshi ni natte shimatta."
-                  tr_en="Last year’s cherry-blossom viewing gathering ended up being cancelled because of the rain."
+                  tr_en="Last year's cherry-blossom viewing gathering ended up being cancelled because of the rain."
                   tr_de="Das Kirschblütenschau-Treffen wurde letztes Jahr wegen dem Regen abgesagt."
                   lvl="n3"
                   origin="ChatGPT"

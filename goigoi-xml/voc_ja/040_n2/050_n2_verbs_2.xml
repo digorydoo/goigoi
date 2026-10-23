@@ -73,10 +73,72 @@
               lvl="n2"
               category="general, maths"
               id="fuyasu-increasesth"
+              rem="appears in Doraemon 17, p.174"
             >
                 <see id="fueru-increase" type="v.i." />
                 <keep_apart_from id="masu-grow" />
                 <keep_apart_from id="fueru-increase" />
+            </word>
+            <word
+              w="【配：くば】る"
+              rom="kubaru"
+              tr_en="to distribute; to hand out"
+              tr_de="etw. verteilen; aushändigen"
+              hint_en="v.t."
+              lvl="n2"
+              id="kubaru-distribute"
+              rem="appears in GENKI2 p.329 kanji section"
+            >
+                <keep_apart_from id="okuru-give" />
+                <!--
+                人気を高めるために、農夫は人々にリンゴを配った。
+                Um seine Beliebtheit zu steigern, hat der Bauer den Leuten Äpfel verschenkt.
+                self/DeepL
+                -->
+            </word>
+            <word
+              w="【覗：のぞ】く"
+              rom="nozoku"
+              tr_en="to peek into; to peep through"
+              tr_de="hineinschauen; hindurchspähen"
+              lvl="n2"
+              category="looking"
+              id="nozoku-peakinto"
+              rem="appears in Doraemon 17, p.80"
+            />
+            <word
+              w="【騙：だま】す"
+              rom="damasu"
+              tr_en="to trick; to cheat; to deceive"
+              tr_de="austricksen; schummeln; täuschen"
+              hint_en="v.t."
+              lvl="n2"
+              id="damasu-cheat"
+              usuallyInKana="true"
+              rem="appears in GENKI2 p.225 in hiragana; marked as usuallyInKana, because kanji is nx"
+            />
+            <word
+              w="【重：かさ】ねる"
+              rom="kasaneru"
+              tr_en="to pile up; to put on top of another"
+              tr_de="übereinander stapeln"
+              hint_en="v.t."
+              lvl="n2"
+              id="kasaneru-pileup"
+              rem="appears in GENKI2 p.328 kanji section"
+            />
+            <word
+              w="【狙：ねら】う"
+              rom="nerau"
+              tr_en="to aim at; to aim for; to be after sth."
+              tr_de="auf etw. zielen; auf etw. abzielen"
+              hint_en="v.t."
+              lvl="n2"
+              id="nerau-aim"
+              rem="appears in Doraemon 17, p.175"
+            >
+                <see id="nerai-aim" type="noun" />
+                <keep_apart_from id="nerai-aim" />
             </word>
             <word
               w="【伝：つた】わる"
@@ -218,33 +280,6 @@
                 <see id="hazure-failure" type="noun" />
             </word>
             <word
-              w="【配：くば】る"
-              rom="kubaru"
-              tr_en="to distribute; to hand out"
-              tr_de="etw. verteilen; aushändigen"
-              hint_en="v.t."
-              lvl="n2"
-              id="kubaru-distribute"
-              rem="appears in GENKI2 p.329 kanji section"
-            >
-                <keep_apart_from id="okuru-give" />
-                <!--
-                人気を高めるために、農夫は人々にリンゴを配った。
-                Um seine Beliebtheit zu steigern, hat der Bauer den Leuten Äpfel verschenkt.
-                self/DeepL
-                -->
-            </word>
-            <word
-              w="【覗：のぞ】く"
-              rom="nozoku"
-              tr_en="to peek into; to peep through"
-              tr_de="hineinschauen; hindurchspähen"
-              lvl="n2"
-              category="looking"
-              id="nozoku-peakinto"
-              rem="appears in Doraemon 17, p.80"
-            />
-            <word
               w="【例：たと】える"
               rom="tatoeru"
               tr_en="to compare sth. with sth.; to liken; to use a metaphor"
@@ -353,39 +388,6 @@
               id="todomaru-confined"
             >
                 <!-- implicit see-also link to tomaru-stop -->
-            </word>
-            <word
-              w="【騙：だま】す"
-              rom="damasu"
-              tr_en="to trick; to cheat; to deceive"
-              tr_de="austricksen; schummeln; täuschen"
-              hint_en="v.t."
-              lvl="n2"
-              id="damasu-cheat"
-              usuallyInKana="true"
-              rem="appears in GENKI2 p.225 in hiragana; marked as usuallyInKana, because kanji is nx"
-            />
-            <word
-              w="【重：かさ】ねる"
-              rom="kasaneru"
-              tr_en="to pile up; to put on top of another"
-              tr_de="übereinander stapeln"
-              hint_en="v.t."
-              lvl="n2"
-              id="kasaneru-pileup"
-              rem="appears in GENKI2 p.328 kanji section"
-            />
-            <word
-              w="【狙：ねら】う"
-              rom="nerau"
-              tr_en="to aim at; to aim for; to be after sth."
-              tr_de="auf etw. zielen; auf etw. abzielen"
-              hint_en="v.t."
-              lvl="n2"
-              id="nerau-aim"
-            >
-                <see id="nerai-aim" type="noun" />
-                <keep_apart_from id="nerai-aim" />
             </word>
         </section>
     </unit>

@@ -23,12 +23,12 @@ import io.github.digorydoo.goigoi.utils.withStudyLang
 fun TopicsAndMyWordsList(
     model: WelcomeActivityModel,
     horizPadding: Dp,
-    topics: List<Topic>,
     onTopicClicked: (Topic) -> Unit,
     onMyWordsUnytClicked: () -> Unit,
 ) {
     val myWordsData = model.myWordsData.collectAsState().value
     val highlightedItem = model.highlightedItem.collectAsState().value
+    val topics = model.topics
     val dividerMargin = 8.dp
 
     for (topic in topics) {

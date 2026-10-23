@@ -1,13 +1,10 @@
 package io.github.digorydoo.goigoi.compiler.vocab
 
-import ch.digorydoo.kutils.cjk.FuriganaString
-import ch.digorydoo.kutils.cjk.IntlString
-import ch.digorydoo.kutils.cjk.JLPTLevel
-import ch.digorydoo.kutils.cjk.isCJKNotKana
-import ch.digorydoo.kutils.cjk.toHiragana
+import ch.digorydoo.kutils.cjk.*
 import io.github.digorydoo.goigoi.compiler.CheckFailed
 import io.github.digorydoo.goigoi.compiler.ParsingFailed
 import io.github.digorydoo.goigoi.core.db.AcceptableAnswer
+import io.github.digorydoo.goigoi.core.db.AnswerAccuracy
 import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 import io.github.digorydoo.goigoi.core.db.WordCategory
 import io.github.digorydoo.goigoi.core.db.WordHint
@@ -17,13 +14,13 @@ import org.w3c.dom.Element
 import org.w3c.dom.Node
 import java.io.File
 
-class GoigoiXmlParser {
-    private lateinit var vocab: GoigoiVocab
-    private var topic: GoigoiTopic? = null
+class VocabXmlParser {
+    private lateinit var vocab: CompilerVocab
+    private var topic: CompilerTopic? = null
     private val subheader = IntlString()
     private var filename = ""
 
-    fun parse(file: File, voc: GoigoiVocab) {
+    fun parse(file: File, voc: CompilerVocab) {
         val parser = DOMParser()
         parser.setErrorStream(System.err)
         parser.setValidationMode(DOMParser.SCHEMA_STRICT_VALIDATION)
@@ -224,7 +221,7 @@ class GoigoiXmlParser {
                 throw ParsingFailed("Topic id not unique: $topicId")
             }
 
-            val theTopic = GoigoiTopic().apply {
+            val theTopic = CompilerTopic().apply {
                 id = topicId
                 getMandatoryAttr(root, "name", name)
                 imgSrc = getOptionalAttr(root, "imgSrc") ?: ""
@@ -273,7 +270,7 @@ class GoigoiXmlParser {
 
     private fun readUnyt(root: Element) {
         var errorCtx = "<unit>"
-        val unyt: GoigoiUnyt
+        val unyt: CompilerUnyt
 
         try {
             val topic = topic ?: throw ParsingFailed("No topic has been defined!")
@@ -309,15 +306,15 @@ class GoigoiXmlParser {
                 throw ParsingFailed("Unyt id not unique: $unytId")
             }
 
-            unyt = GoigoiUnyt().apply {
-                subheader.set(this@GoigoiXmlParser.subheader)
-                this@GoigoiXmlParser.subheader.clear()
+            unyt = CompilerUnyt().apply {
+                subheader.set(this@VocabXmlParser.subheader)
+                this@VocabXmlParser.subheader.clear()
 
                 getMandatoryAttr(root, "name", name)
                 getOptionalAttr(root, "defaultHint", defaultHint)
 
                 id = unytId
-                filename = this@GoigoiXmlParser.filename
+                filename = this@VocabXmlParser.filename
 
                 hidden = getBooleanAttr(root, "HIDDEN")
                 hasRomaji = getBooleanAttr(root, "hasRomaji")
@@ -351,7 +348,7 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun readSection(root: Element, unyt: GoigoiUnyt) {
+    private fun readSection(root: Element, unyt: CompilerUnyt) {
         var errorCtx = "<section>"
 
         try {
@@ -366,7 +363,7 @@ class GoigoiXmlParser {
                 )
             )
 
-            val section = GoigoiSection().apply {
+            val section = CompilerTopicSection().apply {
                 unyt.sections.add(this)
                 getOptionalAttr(root, "name", name)
                 id = makeSectionId(unyt, name)
@@ -385,7 +382,7 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun readWord(root: Element, section: GoigoiSection, unyt: GoigoiUnyt) {
+    private fun readWord(root: Element, section: CompilerTopicSection, unyt: CompilerUnyt) {
         var errorCtx = "<word>"
 
         try {
@@ -493,7 +490,7 @@ class GoigoiXmlParser {
 
             // Initialize the word
 
-            val word = GoigoiWord().apply {
+            val word = CompilerWord().apply {
                 id = wordId
                 primaryForm = FuriganaString(thePrimaryForm)
                 romaji = theRomaji
@@ -538,7 +535,7 @@ class GoigoiXmlParser {
 
             forEachChild(root) { tag ->
                 when (tag.nodeName) {
-                    "accept_for_translation" -> readWordAcceptForTranslation(tag, word)
+                    "accept" -> readWordAccept(tag, word)
                     "phrase" -> readPhrase(tag, word)
                     "sentence" -> readSentence(tag, word)
                     "see" -> readSee(tag, word)
@@ -561,128 +558,115 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun readWordAcceptForTranslation(root: Element, word: GoigoiWord) {
-        val errorCtx = "<accept_for_translation>"
+    private fun readWordAccept(root: Element, word: CompilerWord) {
+        val errorCtx = "<accept>"
 
         try {
             requireChildless(root)
-            checkAttributes(root, arrayOf("w", "inaccurate", "interchangeable", "rem"))
+            checkAttributes(root, arrayOf("w", "as", "rem"))
 
-            val rawPrimaryForm = getMandatoryAttr(root, "w")
+            val acceptable = getMandatoryAttr(root, "w")
 
-            if (rawPrimaryForm.isEmpty()) {
-                throw ParsingFailed("Attribute w of accept_for_translation must not be empty")
-            } else if (
-                rawPrimaryForm == word.primaryForm.raw ||
-                rawPrimaryForm == word.primaryForm.kana ||
-                rawPrimaryForm == word.primaryForm.kanji
-            ) {
-                throw ParsingFailed("Attribute w of accept_for_translation must not be the same as the word itself")
+            when {
+                acceptable.isEmpty() -> throw ParsingFailed("Attribute w of <accept> must not be empty")
+                acceptable.contains('【') -> throw ParsingFailed("Attribute w of <accept> cannot have any furigana")
+
+                acceptable == word.primaryForm.raw ||
+                    acceptable == word.primaryForm.kana ||
+                    acceptable == word.primaryForm.kanji
+                -> throw ParsingFailed("Attribute w of <accept> must not be the same as the word itself")
             }
 
-            val primaryForm = FuriganaString(rawPrimaryForm)
-            val inaccurate = getBooleanAttr(root, "inaccurate")
-            val interchangeable = getBooleanAttrOrNull(root, "interchangeable")
+            val accuracyRaw = getMandatoryAttr(root, "as")
 
-            if (inaccurate && interchangeable == true) {
-                throw ParsingFailed("Variant cannot be both inaccurate and also fully interchangeable")
+            val accuracy = AnswerAccuracy.fromXmlKey(accuracyRaw)
+                ?: throw ParsingFailed("Illegal value for attribute `as`: $accuracyRaw")
+
+            if (!accuracy.intendedForWord) {
+                throw ParsingFailed("$accuracyRaw is not intended for the use with <word>")
             }
 
-            if (primaryForm.kanji != primaryForm.kana && primaryForm.kanji != word.kanji) {
-                word.acceptForTranslation.add(
-                    AcceptableAnswer(
-                        answer = primaryForm.kanji,
-                        inaccurate = inaccurate,
-                        interchangeable = interchangeable ?: false,
-                    )
-                )
+            // TODO: Move these checks to the checking phase
 
-                if (!inaccurate && primaryForm.kana == word.kana) {
-                    // The meaning is not inaccurate, and the word has the same reading, so this kanji is just an
-                    // alternative spelling of the word.
-
-                    if (interchangeable == null) {
-                        throw ParsingFailed(
-                            "Specifying interchangeable is required when accept_for_translation marks " +
-                                "an alternative spelling: ${primaryForm.kanji}"
-                        )
+            when (accuracy) {
+                AnswerAccuracy.ALT_READING_SAME_WORD -> {
+                    if (!acceptable.isHiragana()) {
+                        throw ParsingFailed("$accuracyRaw requires w to be in hiragana only")
                     }
 
-                    word.alternativeSpellings.add(primaryForm.kanji)
+                    // For alternate reading entries, only the kanji-part is allowed to be different from the word; the
+                    // kana part outside furigana must match. As a simplified check, we simply check that all kana from
+                    // the word's kanji part also appear somewhere inside `acceptable`.
+
+                    word.kanji.filter { it.isKana() }.forEach { kana ->
+                        if (!acceptable.contains(kana)) {
+                            throw ParsingFailed(
+                                "$accuracyRaw requires that okurigana remains unchanged. Check character: $kana"
+                            )
+                        }
+                    }
                 }
-            }
 
-            // If primaryForm.kanji == primaryForm.kana, the form is kana alone. We've excluded those above; they will
-            // be handled here.
+                AnswerAccuracy.ALT_SPELLING_SAME_WORD -> {
+                    if (acceptable.isKana()) {
+                        // When alternative spelling does not involve kanji, only Hiragana/Katakana change is allowed.
 
-            if (primaryForm.kana != word.kana) {
-                word.acceptForTranslation.add(
-                    AcceptableAnswer(
-                        answer = primaryForm.kana,
-                        inaccurate = inaccurate,
-                        interchangeable = interchangeable ?: false,
-                    )
-                )
+                        if (acceptable.toHiragana() != word.kana.toHiragana()) {
+                            throw ParsingFailed("$accuracyRaw requires that pronounciation remain the same")
+                        }
+                    }
+                }
 
-                if (!inaccurate && primaryForm.kanji == word.kanji) {
-                    // The meaning is not inaccurate, and the word uses the same kanji/okurigana, so this must be an
-                    // alternative reading.
+                AnswerAccuracy.CORRECT_FOR_TRANSLATION,
+                AnswerAccuracy.CORRECT_IN_PHRASES_AND_SENTENCES,
+                AnswerAccuracy.INACCURATE,
+                -> {
+                    val kanjisInAcceptable = acceptable.filter { it.isCJKNotKana() }
 
-                    if (interchangeable == null) {
-                        throw ParsingFailed(
-                            "Specifying interchangeable is required when accept_for_translation marks " +
-                                "an alternative reading: ${primaryForm.kana}"
-                        )
+                    if (kanjisInAcceptable.isEmpty()) {
+                        if (acceptable.toHiragana() == word.kana.toHiragana()) {
+                            throw ParsingFailed(
+                                "Forms appear to differ just in kana form, should be alt-spelling-same-word"
+                            )
+                        }
                     }
 
-                    // When the word is often spelled in katakana, XML sometimes uses katakana as furigana. For
-                    // acceptForTranslation, we'll use katakana, while we store the alternative reading as hiragana.
-
-                    word.alternativeReadings.add(primaryForm.kana.toHiragana())
+                    // Note that if kanjis are the same, this does not mean that this should be alt-reading-same-word,
+                    // e.g. 任せる・まかせる and 任す・まかす share the same kanji, but it isn't just an alternate reading.
                 }
-
-                if (primaryForm.kanji == primaryForm.kana && primaryForm.kana.toHiragana() == word.kana.toHiragana()) {
-                    // This form simply uses different kinds of kana.
-
-                    if (inaccurate) {
-                        throw ParsingFailed(
-                            "The form is the kana-only rendering of the word using different kinds of kana. " +
-                                "This shouldn't change its meaning, so please remove the inaccurate flag."
-                        )
-                    } else if (interchangeable != true) {
-                        throw ParsingFailed(
-                            "The form is the kana-only rendering of the word using different kinds of kana. " +
-                                "This shouldn't change its meaning, so please set interchangeable to true."
-                        )
-                    }
-
-                    word.alternativeSpellings.add(primaryForm.kana)
-                }
+                AnswerAccuracy.CORRECT -> Unit
             }
+
+            word.acceptableAnswers.add(
+                AcceptableAnswer(answer = acceptable, accuracy = accuracy)
+            )
         } catch (e: Exception) {
             rethrow(e, errorCtx)
         }
     }
 
-    private fun readAskAccept(root: Element, word: GoigoiWord, phraseOrSentence: GoigoiPhraseOrSentence) {
+    private fun readAskAccept(root: Element, word: CompilerWord, phraseOrSentence: CompilerPhraseOrSentence) {
         val errorCtx = "<accept>"
 
         try {
             requireChildless(root)
-            checkAttributes(root, arrayOf("w", "suffix", "rem"))
+            checkAttributes(root, arrayOf("w", "as", "suffix", "rem"))
 
-            val rawPrimaryForm = getMandatoryAttr(root, "w")
+            val acceptable = getMandatoryAttr(root, "w")
 
-            if (rawPrimaryForm.isEmpty()) {
-                throw ParsingFailed("Attribute w of accept must not be empty")
-            } else if (
-                rawPrimaryForm == word.primaryForm.raw ||
-                rawPrimaryForm == word.primaryForm.kana ||
-                rawPrimaryForm == word.primaryForm.kanji
-            ) {
-                throw ParsingFailed("Attribute w must not be the same as the word itself")
-            } else if (rawPrimaryForm == phraseOrSentence.wordFormToAsk.raw) {
-                throw ParsingFailed("Attribute w must not be the same as the word form to ask")
+            when {
+                acceptable.isEmpty() -> throw ParsingFailed("Attribute w of <accept> must not be empty")
+                acceptable.contains('【') -> throw ParsingFailed("Attribute w of <accept> cannot have any furigana")
+
+                acceptable == word.primaryForm.raw ||
+                    acceptable == word.primaryForm.kana ||
+                    acceptable == word.primaryForm.kanji
+                -> throw ParsingFailed("Attribute w of <accept> must not be the same as the word itself")
+
+                acceptable == phraseOrSentence.wordFormToAsk.raw ||
+                    acceptable == phraseOrSentence.wordFormToAsk.kanji ||
+                    acceptable == phraseOrSentence.wordFormToAsk.kana
+                -> throw ParsingFailed("Attribute w of <accept> must not be the same as the word form to ask")
             }
 
             val suffix = getOptionalAttr(root, "suffix") ?: ""
@@ -691,21 +675,22 @@ class GoigoiXmlParser {
                 throw ParsingFailed("Suffix attribute must be the same in <ask> and <accept>")
             }
 
-            val primaryForm = FuriganaString(rawPrimaryForm)
+            val accuracyRaw = getMandatoryAttr(root, "as")
 
-            if (primaryForm.kanji != primaryForm.kana && primaryForm.kanji != word.kanji) {
-                phraseOrSentence.acceptableAnswers.add(FuriganaString(primaryForm.kanji))
+            val accuracy = AnswerAccuracy.fromXmlKey(accuracyRaw)
+                ?: throw ParsingFailed("Illegal value for attribute `as`: $accuracyRaw")
+
+            if (!accuracy.intendedForPhraseOrSentence) {
+                throw ParsingFailed("$accuracyRaw is not intended for the use with phrases or sentences")
             }
 
-            if (primaryForm.kana != word.kana) {
-                phraseOrSentence.acceptableAnswers.add(FuriganaString(primaryForm.kana))
-            }
+            phraseOrSentence.acceptableAnswers.add(AcceptableAnswer(acceptable, accuracy))
         } catch (e: Exception) {
             rethrow(e, errorCtx)
         }
     }
 
-    private fun readPhrase(root: Element, word: GoigoiWord) {
+    private fun readPhrase(root: Element, word: CompilerWord) {
         var errorCtx = "<phrase>"
 
         try {
@@ -750,7 +735,7 @@ class GoigoiXmlParser {
                 throw ParsingFailed("Hints are not supported with <phrase>")
             }
 
-            val phrase = GoigoiPhraseOrSentence(GoigoiPhraseOrSentence.Kind.PHRASE).apply {
+            val phrase = CompilerPhraseOrSentence(CompilerPhraseOrSentence.Kind.PHRASE).apply {
                 primaryForm = FuriganaString(thePrimaryForm)
                 romaji = theRomaji
                 translation = IntlString().apply { getMandatoryAttr(root, "tr", this) }
@@ -775,7 +760,7 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun readSentence(root: Element, word: GoigoiWord) {
+    private fun readSentence(root: Element, word: CompilerWord) {
         var errorCtx = "<sentence>"
 
         try {
@@ -820,7 +805,7 @@ class GoigoiXmlParser {
                 throw ParsingFailed("Hints are not supported with <sentence>")
             }
 
-            val sentence = GoigoiPhraseOrSentence(GoigoiPhraseOrSentence.Kind.SENTENCE).apply {
+            val sentence = CompilerPhraseOrSentence(CompilerPhraseOrSentence.Kind.SENTENCE).apply {
                 primaryForm = FuriganaString(thePrimaryForm)
                 romaji = theRomaji
                 translation = IntlString().apply { getMandatoryAttr(root, "tr", this) }
@@ -854,7 +839,7 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun readWordFormToAsk(root: Element, word: GoigoiWord, phraseOrSentence: GoigoiPhraseOrSentence) {
+    private fun readWordFormToAsk(root: Element, word: CompilerWord, phraseOrSentence: CompilerPhraseOrSentence) {
         var errorCtx = "Word form"
 
         try {
@@ -920,7 +905,7 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun readSee(root: Element, word: GoigoiWord) {
+    private fun readSee(root: Element, word: CompilerWord) {
         val errorCtx = "<see>"
 
         try {
@@ -936,8 +921,8 @@ class GoigoiXmlParser {
 
             checkAttributes(root, arrayOf("id", "type", "rem"))
 
-            val link = GoigoiWordLink(
-                GoigoiWordLink.Kind.XML_SEE_ALSO,
+            val link = CompilerWordLink(
+                CompilerWordLink.Kind.XML_SEE_ALSO,
                 wordId = WORD_ID_PREFIX + id,
                 type = getOptionalAttr(root, "type") ?: "",
                 // remark = getOptionalAttr(root, "rem") ?: ""
@@ -950,7 +935,7 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun readKeepApartFrom(root: Element, word: GoigoiWord) {
+    private fun readKeepApartFrom(root: Element, word: CompilerWord) {
         val errorCtx = "<keep_apart_from>"
 
         try {
@@ -966,8 +951,8 @@ class GoigoiXmlParser {
 
             checkAttributes(root, arrayOf("id", "rem"))
 
-            val link = GoigoiWordLink(
-                GoigoiWordLink.Kind.XML_KEEP_APART,
+            val link = CompilerWordLink(
+                CompilerWordLink.Kind.XML_KEEP_APART,
                 wordId = WORD_ID_PREFIX + id,
                 type = "",
                 // remark = getOptionalAttr(root, "rem") ?: ""
@@ -980,7 +965,7 @@ class GoigoiXmlParser {
         }
     }
 
-    private fun readKeepTogether(root: Element, word: GoigoiWord) {
+    private fun readKeepTogether(root: Element, word: CompilerWord) {
         val errorCtx = "<keep_together>"
 
         try {
@@ -996,8 +981,8 @@ class GoigoiXmlParser {
 
             checkAttributes(root, arrayOf("id", "rem"))
 
-            val link = GoigoiWordLink(
-                GoigoiWordLink.Kind.XML_KEEP_TOGETHER,
+            val link = CompilerWordLink(
+                CompilerWordLink.Kind.XML_KEEP_TOGETHER,
                 wordId = WORD_ID_PREFIX + id,
                 type = "",
                 // remark = getOptionalAttr(root, "rem") ?: ""
@@ -1036,7 +1021,7 @@ class GoigoiXmlParser {
             return "$UNYT_ID_PREFIX$name(ja/en)"
         }
 
-        private fun makeSectionId(unyt: GoigoiUnyt, name: IntlString): String {
+        private fun makeSectionId(unyt: CompilerUnyt, name: IntlString): String {
             return arrayOf(
                 SECTION_ID_PREFIX,
                 name.en,

@@ -2,18 +2,18 @@ package io.github.digorydoo.goigoi.compiler.vocab
 
 import ch.digorydoo.kutils.cjk.IntlString
 
-class GoigoiSection {
+class CompilerTopicSection {
     var id = ""
     var name = IntlString()
-    val words = mutableListOf<GoigoiWord>()
+    val words = mutableListOf<CompilerWord>()
 
-    fun forEachWord(lambda: (word: GoigoiWord) -> Unit) {
+    fun forEachWord(lambda: (word: CompilerWord) -> Unit) {
         for (w in words) {
             lambda(w)
         }
     }
 
-    fun forEachVisibleWord(lambda: (word: GoigoiWord) -> Unit) {
+    fun forEachVisibleWord(lambda: (word: CompilerWord) -> Unit) {
         for (w in words) {
             if (!w.hidden) {
                 lambda(w)
@@ -21,12 +21,12 @@ class GoigoiSection {
         }
     }
 
-    fun findWordById(wordId: String): GoigoiWord? {
+    fun findWordById(wordId: String): CompilerWord? {
         if (wordId.isEmpty()) {
             return null
         }
 
-        var result: GoigoiWord? = null
+        var result: CompilerWord? = null
 
         for (w in words) {
             if (w.id == wordId) {

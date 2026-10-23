@@ -2,6 +2,7 @@ package io.github.digorydoo.goigoi.core.study
 
 import ch.digorydoo.kutils.utils.OneOf
 import io.github.digorydoo.goigoi.core.db.AcceptableAnswer
+import io.github.digorydoo.goigoi.core.db.AnswerAccuracy
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.db.WordHint
 import io.github.digorydoo.goigoi.core.prog_study.QAKind
@@ -55,7 +56,7 @@ internal class AnswerCheckerTest {
     fun `should return CORRECT when answer matches an accurate acceptable answer`() {
         val qa = createQA(
             expectedAnswer = "食べる",
-            acceptableAnswers = listOf(AcceptableAnswer("たべる", inaccurate = false, interchangeable = false))
+            acceptableAnswers = listOf(AcceptableAnswer("たべる", AnswerAccuracy.CORRECT))
         )
         val result = answerChecker.check(qa, "たべる")
         assertEquals(Answer.CORRECT, result)
@@ -65,7 +66,7 @@ internal class AnswerCheckerTest {
     fun `should return CORRECT_BUT_INACCURATE when answer matches an inaccurate acceptable answer`() {
         val qa = createQA(
             expectedAnswer = "食べる",
-            acceptableAnswers = listOf(AcceptableAnswer("たべる", inaccurate = true, interchangeable = false))
+            acceptableAnswers = listOf(AcceptableAnswer("たべる", AnswerAccuracy.INACCURATE))
         )
         val result = answerChecker.check(qa, "たべる")
         assertEquals(Answer.CORRECT_BUT_INACCURATE, result)
@@ -82,7 +83,7 @@ internal class AnswerCheckerTest {
     fun `should return CORRECT_EXCEPT_KANA_SIZE when user enters wrong kana size for accurate acceptable answer`() {
         val qa = createQA(
             expectedAnswer = "今日",
-            acceptableAnswers = listOf(AcceptableAnswer("きょう", inaccurate = false, interchangeable = false))
+            acceptableAnswers = listOf(AcceptableAnswer("きょう", AnswerAccuracy.CORRECT))
         )
         val result = answerChecker.check(qa, "きよう")
         assertEquals(Answer.CORRECT_EXCEPT_KANA_SIZE, result)
@@ -92,7 +93,7 @@ internal class AnswerCheckerTest {
     fun `should return CORRECT_EXCEPT_KANA_SIZE when user enters wrong kana size for inaccurate acceptable answer`() {
         val qa = createQA(
             expectedAnswer = "今日",
-            acceptableAnswers = listOf(AcceptableAnswer("きょう", inaccurate = true, interchangeable = false))
+            acceptableAnswers = listOf(AcceptableAnswer("きょう", AnswerAccuracy.CORRECT))
         )
         val result = answerChecker.check(qa, "きよう")
         assertEquals(Answer.CORRECT_EXCEPT_KANA_SIZE, result)
@@ -109,7 +110,7 @@ internal class AnswerCheckerTest {
     fun `should return CORRECT when answer differs only by kind of kana for acceptable answer`() {
         val qa = createQA(
             expectedAnswer = "部屋",
-            acceptableAnswers = listOf(AcceptableAnswer("へや", inaccurate = false, interchangeable = false))
+            acceptableAnswers = listOf(AcceptableAnswer("へや", AnswerAccuracy.CORRECT))
         )
         val result = answerChecker.check(qa, "ヘヤ")
         assertEquals(Answer.CORRECT, result)
@@ -128,7 +129,7 @@ internal class AnswerCheckerTest {
     fun `should return CORRECT when user omitted suru from acceptable answer`() {
         val qa = createQA(
             expectedAnswer = "掃除",
-            acceptableAnswers = listOf(AcceptableAnswer("掃除する", inaccurate = false, interchangeable = false))
+            acceptableAnswers = listOf(AcceptableAnswer("掃除する", AnswerAccuracy.CORRECT))
         )
         assertEquals(Answer.CORRECT, answerChecker.check(qa, "掃除"))
     }
@@ -197,11 +198,7 @@ internal class AnswerCheckerTest {
         val qa = createQA(
             expectedAnswer = "ごちそうさまでした",
             acceptableAnswers = listOf(
-                AcceptableAnswer(
-                    "〜ご馳走様でした。",
-                    inaccurate = false,
-                    interchangeable = false
-                )
+                AcceptableAnswer("〜ご馳走様でした。", AnswerAccuracy.CORRECT)
             )
         )
         assertEquals(Answer.CORRECT, answerChecker.check(qa, "ご馳走様でした"))

@@ -7,6 +7,7 @@ import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.prog_study.FixedKeysProvider.Companion.NUM_CHIPS_WHEN_SIMILAR_KANJIS
 import io.github.digorydoo.goigoi.core.prog_study.QAWeightAssigner.Companion.RARE
+import io.github.digorydoo.goigoi.core.qa_factory.QAFactory
 import io.github.digorydoo.goigoi.core.stats.IWordStats
 import kotlin.random.Random
 

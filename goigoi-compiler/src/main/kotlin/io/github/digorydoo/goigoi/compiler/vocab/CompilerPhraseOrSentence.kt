@@ -3,12 +3,12 @@ package io.github.digorydoo.goigoi.compiler.vocab
 import ch.digorydoo.kutils.cjk.FuriganaString
 import ch.digorydoo.kutils.cjk.IntlString
 import ch.digorydoo.kutils.cjk.JLPTLevel
+import io.github.digorydoo.goigoi.core.db.AcceptableAnswer
 
-class GoigoiPhraseOrSentence(val kind: Kind) {
+class CompilerPhraseOrSentence(val kind: Kind) {
     enum class Kind { PHRASE, SENTENCE }
 
     val isPhrase = kind == Kind.PHRASE
-
     var primaryForm = FuriganaString()
     val kanji: String get() = primaryForm.kanji
     val kana: String get() = primaryForm.kana
@@ -23,7 +23,7 @@ class GoigoiPhraseOrSentence(val kind: Kind) {
 
     var wordFormToAsk = FuriganaString() // if the word appears in a different form, e.g. kana, verb form, etc.
     var wordFormToAskSuffix = "" // if this is defined, wordFormToAsk is the stem
-    val acceptableAnswers = mutableListOf<FuriganaString>()
+    val acceptableAnswers = mutableListOf<AcceptableAnswer>() // if suffix is defined, these are only the stems
 
     override fun toString() = when (kind) {
         Kind.PHRASE -> "Phrase "

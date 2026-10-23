@@ -168,8 +168,6 @@ class StudyListMaintainer(
     }
 
     fun pushBack(item: StudyItem, answer: Answer) {
-        val localNumSkipped = item.localNumSkipped
-
         val step = when (answer) {
             Answer.CORRECT,
             Answer.CORRECT_BUT_INACCURATE,
@@ -178,7 +176,7 @@ class StudyListMaintainer(
 
             Answer.WRONG -> stepWhenAnswerWasWrong(item)
             Answer.TRIVIAL -> stepWhenAnswerWasTrivial(item)
-            Answer.SKIP -> (10.0f + (10 * localNumSkipped)).roundToInt()
+            // Answer.SKIP -> (10.0f + (10 * localNumSkipped)).roundToInt()
             Answer.NONE -> 0
         }
 

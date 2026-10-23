@@ -1,15 +1,15 @@
 package io.github.digorydoo.goigoi.compiler
 
 import ch.digorydoo.kutils.cjk.toHiragana
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiTopic
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWordLink
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWordLink.Kind
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerTopic
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerUnyt
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerVocab
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWord
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWordLink
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWordLink.Kind
 
-class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
-    data class WordUnytTopic(val word: GoigoiWord, val unyt: GoigoiUnyt, val topic: GoigoiTopic) {
+class PrepWordLinks(val vocab: CompilerVocab, val options: Options) {
+    data class WordUnytTopic(val word: CompilerWord, val unyt: CompilerUnyt, val topic: CompilerTopic) {
         override fun toString() =
             "WordUnytTopic(${word}, ${unyt}, ${topic})"
     }
@@ -25,8 +25,8 @@ class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
     var numAutoSameTranslationLinks = 0; private set
     var numHiddenWordsWithLinks = 0; private set
     var numVisibleWordsWithActiveLinks = 0; private set
-    var mostActiveLinksWord: GoigoiWord? = null; private set
-    var mostActiveLinksUnyt: GoigoiUnyt? = null; private set
+    var mostActiveLinksWord: CompilerWord? = null; private set
+    var mostActiveLinksUnyt: CompilerUnyt? = null; private set
     var mostActiveLinksCount = 0; private set
 
     val hiraganaToVisibleWords: Map<String, List<WordUnytTopic>>
@@ -148,7 +148,7 @@ class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
                     else -> {
                         // Add a link from word to otherWord.
                         // No need to do the other way round, because the iteration will see that one, too.
-                        word.links.add(GoigoiWordLink(Kind.AUTO_SAME_READING, otherWord.id, "", otherWord))
+                        word.links.add(CompilerWordLink(Kind.AUTO_SAME_READING, otherWord.id, "", otherWord))
                     }
                 }
             }
@@ -167,7 +167,7 @@ class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
                     else -> {
                         // Add a link from word to otherWord.
                         // No need to do the other way round, because the iteration will see that one, too.
-                        word.links.add(GoigoiWordLink(Kind.AUTO_SAME_KANJI, otherWord.id, "", otherWord))
+                        word.links.add(CompilerWordLink(Kind.AUTO_SAME_KANJI, otherWord.id, "", otherWord))
                     }
                 }
             }
@@ -189,11 +189,11 @@ class PrepWordLinks(val vocab: GoigoiVocab, val options: Options) {
                         }
 
                         if (word.links.none { it.kind == kind && it.wordId == other.word.id }) {
-                            word.links.add(GoigoiWordLink(kind, other.word.id, tr, other.word))
+                            word.links.add(CompilerWordLink(kind, other.word.id, tr, other.word))
                         }
 
                         if (other.word.links.none { it.kind == kind && it.wordId == word.id }) {
-                            other.word.links.add(GoigoiWordLink(kind, word.id, tr, word))
+                            other.word.links.add(CompilerWordLink(kind, word.id, tr, word))
                         }
                     }
                 }

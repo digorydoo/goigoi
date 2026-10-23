@@ -25,16 +25,15 @@ import androidx.compose.ui.unit.dp
 import ch.digorydoo.kutils.colour.Colour
 import io.github.digorydoo.goigoi.composables.providers.DeviceProps
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.legacy.FuriganaBuilder
 import io.github.digorydoo.goigoi.utils.ScreenSize
 import io.github.digorydoo.goigoi.utils.drawBitmapScaleToFit
-import io.github.digorydoo.goigoi.utils.drawSpan
 import io.github.digorydoo.goigoi.utils.getBitmapFromAssets
+
+private const val BIG_STUDY_BTN_TEXT = "つづきへ"
 
 @Composable
 fun BigStudyBtn(horizPadding: Dp, onClick: () -> Unit) {
     val ctx = LocalContext.current
-    val primaryTextWithFurigana = "つづきへ"
     val onPrimary = GoigoiTheme.colours.onPrimary
 
     val density = LocalDensity.current
@@ -70,10 +69,6 @@ fun BigStudyBtn(horizPadding: Dp, onClick: () -> Unit) {
         getBitmapFromAssets("img/btn-00-continue.webp", ctx)
     }
 
-    val primaryTextSpan = remember(primaryTextWithFurigana) {
-        FuriganaBuilder.buildSpan(primaryTextWithFurigana, canSeeFurigana = false)
-    }
-
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -104,7 +99,15 @@ fun BigStudyBtn(horizPadding: Dp, onClick: () -> Unit) {
 
                 val y = height - primaryTextVDeltaPx
                 primaryTextPaint.setShadowLayer(textShadowSizePx, 0.0f, 0.0f, Colour.black.toARGB())
-                nativeCanvas.drawSpan(primaryTextSpan, leftPaddingPx, y, primaryTextPaint)
+
+                nativeCanvas.drawText(
+                    BIG_STUDY_BTN_TEXT,
+                    0,
+                    BIG_STUDY_BTN_TEXT.length,
+                    leftPaddingPx,
+                    y,
+                    primaryTextPaint
+                )
             }
         }
     }

@@ -7,7 +7,7 @@ import io.github.digorydoo.goigoi.compiler.check.prechecks.TopicChecker
 import io.github.digorydoo.goigoi.compiler.check.prechecks.UnytChecker
 import io.github.digorydoo.goigoi.compiler.check.prechecks.WordChecker
 import io.github.digorydoo.goigoi.compiler.check.prechecks.WordLinkChecker
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerVocab
 
 /**
  * These checks happen after the XML has parsed, but before anything gets written. Note that compileGoigoi's kanjiIndex
@@ -20,7 +20,7 @@ class PreChecks(private val options: Options) {
     private val wordLinkChecker = WordLinkChecker()
     private val phraseOrSentenceChecker = PhraseOrSentenceChecker()
 
-    fun check(vocab: GoigoiVocab) {
+    fun check(vocab: CompilerVocab) {
         var count = 0
 
         for (topic in vocab.topics) {

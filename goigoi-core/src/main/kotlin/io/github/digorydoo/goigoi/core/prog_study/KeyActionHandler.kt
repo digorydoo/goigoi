@@ -71,29 +71,24 @@ class KeyActionHandler {
     }
 
     private fun autoTransform(c: Char) = when {
-        c.isDakuten() -> c.toggleHandakuten().takeIf { it != c } ?: c.toggleDakuten() // dakuten -> handakuten/none
-        c.isHandakuten() -> c.toggleHandakuten() // handakuten -> none
-        c.toggleDakuten() != c -> c.toggleDakuten() // add dakuten if we can
-        c.isSmallKana() -> c.toNormalSizedKana() // small kana -> normal sized kana
-        else -> c.toSmallKana() // normal sized kana -> small kana
+        c.isDakuten() -> c.toHandakuten().takeIf { it != c } ?: c.removeDakutenHandakuten().toSmallKana()
+        c.isHandakuten() -> c.removeDakutenHandakuten().toSmallKana()
+        c.isSmallKana() -> c.toNormalSizedKana()
+        else -> c.toDakuten().takeIf { it != c } ?: c.toSmallKana()
     }
 
-    private fun toggleDakuten(c: Char) =
-        c.toggleDakuten().takeIf { it != c } ?: when {
-            c.isSmallKana() -> c.toNormalSizedKana().toggleDakuten() // ヶ -> ケ -> ゲ
-            else -> c
-        }
+    private fun toggleDakuten(c: Char) = when {
+        c.isDakuten() -> c.removeDakutenHandakuten()
+        c.isSmallKana() -> c.toNormalSizedKana().toDakuten()
+        else -> c.toDakuten()
+    }
 
-    private fun toggleHandakuten(c: Char) =
-        c.toggleHandakuten().takeIf { it != c } ?: when {
-            c.isSmallKana() -> c.toNormalSizedKana().toggleHandakuten() // there is no such case, is there?
-            else -> c
-        }
+    private fun toggleHandakuten(c: Char) = when {
+        c.isHandakuten() -> c.removeDakutenHandakuten()
+        c.isSmallKana() -> c.toNormalSizedKana().toHandakuten()
+        else -> c.toHandakuten()
+    }
 
-    private fun makeSmallKana(c: Char) =
-        c.toSmallKana().takeIf { it != c } ?: when {
-            c.isDakuten() -> c.toggleDakuten().toSmallKana() // ガ -> カ -> ヵ
-            c.isHandakuten() -> c.toggleHandakuten().toSmallKana() // there is no such case, is there?
-            else -> c
-        }
+    // Small kana cannot have dakuten or handakuten
+    private fun makeSmallKana(c: Char) = c.removeDakutenHandakuten().toSmallKana()
 }

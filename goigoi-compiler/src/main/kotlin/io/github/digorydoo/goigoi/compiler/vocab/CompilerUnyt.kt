@@ -3,7 +3,7 @@ package io.github.digorydoo.goigoi.compiler.vocab
 import ch.digorydoo.kutils.cjk.IntlString
 import ch.digorydoo.kutils.cjk.JLPTLevel
 
-class GoigoiUnyt {
+class CompilerUnyt {
     var id = ""
     var filename = ""
     val name = IntlString()
@@ -17,7 +17,7 @@ class GoigoiUnyt {
     var requiredTranslations = listOf<String>()
     val subheader = IntlString()
     var levels = listOf<JLPTLevel>()
-    val sections = mutableListOf<GoigoiSection>()
+    val sections = mutableListOf<CompilerTopicSection>()
 
     /**
      * @return the number of visible words with at least one sentence
@@ -66,7 +66,7 @@ class GoigoiUnyt {
             .replace("⑨", "(9)")
             .replace("⑩", "(10)")
 
-    fun forEachWord(lambda: (w: GoigoiWord, s: GoigoiSection) -> Unit) {
+    fun forEachWord(lambda: (w: CompilerWord, s: CompilerTopicSection) -> Unit) {
         for (s in sections) {
             s.forEachWord { w ->
                 lambda(w, s)
@@ -74,7 +74,7 @@ class GoigoiUnyt {
         }
     }
 
-    fun forEachVisibleWord(lambda: (w: GoigoiWord, s: GoigoiSection) -> Unit) {
+    fun forEachVisibleWord(lambda: (w: CompilerWord, s: CompilerTopicSection) -> Unit) {
         for (s in sections) {
             s.forEachVisibleWord { w ->
                 lambda(w, s)
@@ -82,12 +82,12 @@ class GoigoiUnyt {
         }
     }
 
-    fun findWordById(wordId: String): GoigoiWord? {
+    fun findWordById(wordId: String): CompilerWord? {
         if (wordId.isEmpty()) {
             return null
         }
 
-        var result: GoigoiWord? = null
+        var result: CompilerWord? = null
 
         for (s in sections) {
             val w = s.findWordById(wordId)
@@ -104,7 +104,7 @@ class GoigoiUnyt {
         return result
     }
 
-    fun countWords(predicate: ((w: GoigoiWord) -> Boolean)? = null): Int {
+    fun countWords(predicate: ((w: CompilerWord) -> Boolean)? = null): Int {
         var count = 0
 
         for (s in sections) {

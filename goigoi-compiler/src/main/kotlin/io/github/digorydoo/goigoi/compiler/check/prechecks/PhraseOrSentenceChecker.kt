@@ -3,15 +3,15 @@ package io.github.digorydoo.goigoi.compiler.check.prechecks
 import ch.digorydoo.kutils.cjk.JLPTLevel
 import ch.digorydoo.kutils.cjk.isHiragana
 import io.github.digorydoo.goigoi.compiler.*
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiPhraseOrSentence
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerPhraseOrSentence
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerUnyt
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWord
 
 class PhraseOrSentenceChecker {
     private val sentenceRomajis = mutableSetOf<String>()
     private val phraseRomajis = mutableSetOf<String>()
 
-    fun check(phors: GoigoiPhraseOrSentence, word: GoigoiWord, unyt: GoigoiUnyt) {
+    fun check(phors: CompilerPhraseOrSentence, word: CompilerWord, unyt: CompilerUnyt) {
         val kindAsString = if (phors.isPhrase) "Phrase" else "Sentence"
 
         // Check mandatory members
@@ -166,14 +166,20 @@ class PhraseOrSentenceChecker {
                 )
             }
 
+            var askingUnchangedForm = false
+
             if (word.usuallyInKana) {
                 if (kanaToAsk.contains(word.kana)) {
                     if (word.kanji == word.kana || !wordFormToAsk.raw.contains(word.primaryForm.raw)) {
-                        throw CheckFailed("Custom form containing the unchanged word is pointless")
+                        askingUnchangedForm = true
                     }
                 }
             } else if (wordFormToAsk.raw.contains(word.primaryForm.raw)) {
-                throw CheckFailed("Custom form containing the unchanged word is pointless")
+                askingUnchangedForm = true
+            }
+
+            if (askingUnchangedForm && phors.acceptableAnswers.isEmpty()) {
+                throw CheckFailed("Custom form containing the unchanged word is pointless unless you also use <accept>")
             }
 
             val kanjiAndSuffix = kanjiToAsk + suffix

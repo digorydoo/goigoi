@@ -2,14 +2,14 @@ package io.github.digorydoo.goigoi.compiler.vocab
 
 import ch.digorydoo.kutils.cjk.JLPTLevel
 
-class GoigoiVocab {
-    val topics = mutableListOf<GoigoiTopic>()
+class CompilerVocab {
+    val topics = mutableListOf<CompilerTopic>()
     val manualKanjiLevels = mutableMapOf<JLPTLevel, MutableSet<Char>>() // manual JLPT level corrections
     val kanjiBySchoolYear = mutableMapOf<Int, MutableSet<Char>>() // first grade has key=1 (not 0)
     var kanjiByFreq = "" // characters at smaller indexes are more frequent
     val visuallySimilar = mutableListOf<String>() // each entry is a string of kanjis
 
-    fun findUnytById(unytId: String): GoigoiUnyt? {
+    fun findUnytById(unytId: String): CompilerUnyt? {
         for (t in topics) {
             for (u in t.unyts) {
                 if (u.id == unytId) {
@@ -21,7 +21,7 @@ class GoigoiVocab {
         return null
     }
 
-    fun forEachUnyt(lambda: (u: GoigoiUnyt, t: GoigoiTopic) -> Unit) {
+    fun forEachUnyt(lambda: (u: CompilerUnyt, t: CompilerTopic) -> Unit) {
         for (t in topics) {
             t.unyts.forEach { u ->
                 lambda(u, t)
@@ -29,7 +29,7 @@ class GoigoiVocab {
         }
     }
 
-    fun forEachWord(lambda: (w: GoigoiWord, s: GoigoiSection, u: GoigoiUnyt, t: GoigoiTopic) -> Unit) {
+    fun forEachWord(lambda: (w: CompilerWord, s: CompilerTopicSection, u: CompilerUnyt, t: CompilerTopic) -> Unit) {
         for (t in topics) {
             t.forEachWord { w, s, u ->
                 lambda(w, s, u, t)
@@ -37,7 +37,7 @@ class GoigoiVocab {
         }
     }
 
-    fun forEachWord(lambda: (w: GoigoiWord) -> Unit) {
+    fun forEachWord(lambda: (w: CompilerWord) -> Unit) {
         for (t in topics) {
             t.forEachWord { w, _, _ ->
                 lambda(w)
@@ -45,7 +45,7 @@ class GoigoiVocab {
         }
     }
 
-    fun forEachVisibleWord(lambda: (w: GoigoiWord) -> Unit) {
+    fun forEachVisibleWord(lambda: (w: CompilerWord) -> Unit) {
         for (t in topics) {
             if (!t.hidden) {
                 t.forEachVisibleWord { w, _, _ ->
@@ -55,7 +55,7 @@ class GoigoiVocab {
         }
     }
 
-    fun forEachVisibleWord(lambda: (w: GoigoiWord, s: GoigoiSection, u: GoigoiUnyt, t: GoigoiTopic) -> Unit) {
+    fun forEachVisibleWord(lambda: (w: CompilerWord, s: CompilerTopicSection, u: CompilerUnyt, t: CompilerTopic) -> Unit) {
         for (t in topics) {
             if (!t.hidden) {
                 t.forEachVisibleWord { w, s, u ->
@@ -70,7 +70,7 @@ class GoigoiVocab {
      */
     fun forEachWordWithId(
         wordId: String,
-        lambda: (word: GoigoiWord, unyt: GoigoiUnyt, topic: GoigoiTopic) -> Unit,
+        lambda: (word: CompilerWord, unyt: CompilerUnyt, topic: CompilerTopic) -> Unit,
     ) {
         if (wordId.isEmpty()) {
             return

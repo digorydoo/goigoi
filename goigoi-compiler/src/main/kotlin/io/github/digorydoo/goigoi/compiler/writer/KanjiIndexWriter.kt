@@ -1,5 +1,6 @@
 package io.github.digorydoo.goigoi.compiler.writer
 
+import ch.digorydoo.kutils.cjk.JLPTLevel
 import io.github.digorydoo.goigoi.compiler.KanjiLevels
 import io.github.digorydoo.goigoi.compiler.Options
 import java.io.FileWriter
@@ -15,7 +16,7 @@ class KanjiIndexWriter(private val options: Options) {
         writeKanjiIndex(kanjiLevels) // JLPT level followed by all kanjis of that level
         writeReadings(readings) // hiragana followed by all kanjis with that reading
         writeKanjiBySchoolYear(kanjiBySchoolYear) // grade number followed by all kanjis of that school year
-        writeKanjiByFrequency(kanjiByFreq) // kanjis ordered by descending frequency
+        writeKanjiByFrequency(kanjiByFreq, kanjiLevels) // kanjis ordered by descending frequency
         writeVisuallySimilar(visuallySimilar) // kanji followed by visually similar kanjis
     }
 
@@ -64,11 +65,28 @@ class KanjiIndexWriter(private val options: Options) {
         }
     }
 
-    private fun writeKanjiByFrequency(kanjiByFreq: String) {
+    private fun writeKanjiByFrequency(kanjiByFreq: String, kanjiLevels: KanjiLevels) {
         val file = options.generateKanjiFreqIndexFile
-        if (!options.quiet) println("Writing ${file.name}...")
+        if (!options.quiet) print("Writing ${file.name}...")
+
+        // Remove all kanjis in kanjiByFreq list that are not otherwise used by Goigoi, in order to reduce the size.
+
+        val kanjisUsed = mutableSetOf<Char>().apply {
+            JLPTLevel.entries.forEach { lvl ->
+                addAll(kanjiLevels.get(lvl))
+            }
+        }
+
+        val filteredKanjiByFreq = kanjiByFreq.filter { kanjisUsed.contains(it) }
+
         FileWriter(file).use { writer ->
-            writer.write("$kanjiByFreq\n")
+            writer.write("$filteredKanjiByFreq\n")
+        }
+
+        if (!options.quiet) {
+            val written = filteredKanjiByFreq.length
+            val dropped = kanjiByFreq.length - filteredKanjiByFreq.length
+            println(" ($written written, $dropped dropped)")
         }
     }
 

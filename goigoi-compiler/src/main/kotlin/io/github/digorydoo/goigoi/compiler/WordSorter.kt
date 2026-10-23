@@ -8,10 +8,10 @@ import ch.digorydoo.kutils.cjk.isKatakana
 import ch.digorydoo.kutils.collections.ValueAndWeight
 import ch.digorydoo.kutils.collections.weightedAverageOrNull
 import ch.digorydoo.kutils.math.lerp
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiUnyt
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWordLink
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerUnyt
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerVocab
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWord
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWordLink
 import io.github.digorydoo.goigoi.core.db.StudyInContextKind
 import io.github.digorydoo.goigoi.core.db.WordCategory
 import io.github.digorydoo.goigoi.core.db.WordHint
@@ -19,19 +19,19 @@ import kotlin.math.max
 import kotlin.math.min
 import kotlin.math.pow
 
-class WordSorter(private val vocab: GoigoiVocab) {
+class WordSorter(private val vocab: CompilerVocab) {
     private class WordWithSortIndex(
-        val word: GoigoiWord,
-        val unyt: GoigoiUnyt,
+        val word: CompilerWord,
+        val unyt: CompilerUnyt,
         val unytIdx: Int,
         val wordWithinUnytIdx: Int,
     ) {
         var sortIndex = 0.0f
     }
 
-    private class UnytWithPrefixSuffix(val unyt: GoigoiUnyt, val prefix: String, val suffixIdx: Int)
+    private class UnytWithPrefixSuffix(val unyt: CompilerUnyt, val prefix: String, val suffixIdx: Int)
 
-    fun getSortedWords(): List<GoigoiWord> {
+    fun getSortedWords(): List<CompilerWord> {
         val words = mutableListOf<WordWithSortIndex>()
         val unyts = mutableListOf<UnytWithPrefixSuffix>()
         var totalNumVisibleUnyts = 0
@@ -62,7 +62,7 @@ class WordSorter(private val vocab: GoigoiVocab) {
             }
         }
 
-        val mapUnytToSuffixWeight = mutableMapOf<GoigoiUnyt, Double>()
+        val mapUnytToSuffixWeight = mutableMapOf<CompilerUnyt, Double>()
 
         unyts.forEach { wrapper ->
             val count = mapUnytNamePrefixToCount[wrapper.prefix]!! // entry must exist, otherwise something's odd
@@ -102,7 +102,7 @@ class WordSorter(private val vocab: GoigoiVocab) {
         return words.map { it.word }
     }
 
-    private fun GoigoiWord.isDifficult(): Boolean {
+    private fun CompilerWord.isDifficult(): Boolean {
         // DAYS_OF_THE_WEEK and MONTHS are rated difficult, because they shouldn't come all grouped together.
         fun hasDifficultCat() = cats.let {
             it.contains(WordCategory.DAYS_OF_THE_WEEK) ||
@@ -121,7 +121,7 @@ class WordSorter(private val vocab: GoigoiVocab) {
         return common == false || hasDifficultCat() || hasDifficultHint() || primaryForm.raw.hasDigitOfAnyForm()
     }
 
-    private fun getJLPTLevelScore(w: GoigoiWord) = when (w.level) {
+    private fun getJLPTLevelScore(w: CompilerWord) = when (w.level) {
         JLPTLevel.N5 -> 0
         JLPTLevel.N4 -> 1
         JLPTLevel.N3 -> 2
@@ -130,19 +130,19 @@ class WordSorter(private val vocab: GoigoiVocab) {
         JLPTLevel.Nx, null -> 5
     }.toFloat() / 5.0
 
-    private fun getUnytScore(w: GoigoiWord) = when {
+    private fun getUnytScore(w: CompilerWord) = when {
         w.isDifficult() -> 1.0 // separate these by unyt
         else -> 0.0001
     }
 
-    private fun getAmbiguityScore(w: GoigoiWord) = min(
+    private fun getAmbiguityScore(w: CompilerWord) = min(
         10,
         w.links.count {
-            it.kind == GoigoiWordLink.Kind.XML_KEEP_APART || it.kind == GoigoiWordLink.Kind.AUTO_SAME_READING
+            it.kind == CompilerWordLink.Kind.XML_KEEP_APART || it.kind == CompilerWordLink.Kind.AUTO_SAME_READING
         }
     ) / 10.0f
 
-    private fun getKanjiDifficulty(w: GoigoiWord) =
+    private fun getKanjiDifficulty(w: CompilerWord) =
         (if (w.usuallyInKana) 0.42f else 1.0f) * w.kanji.maxOf { c ->
             when {
                 !c.isCJKNotKana() || c.isHiragana() || c.isKatakana() -> 0.0
@@ -151,13 +151,13 @@ class WordSorter(private val vocab: GoigoiVocab) {
                     val idx = kanjiByFreq.indexOf(c)
                     when {
                         idx < 0 -> 0.0
-                        else -> 0.1 + (idx.toDouble() / kanjiByFreq.length).pow(4.2)
+                        else -> 0.1 + (idx.toDouble() / kanjiByFreq.length).pow(2.0)
                     }
                 }
             }
         }
 
-    private fun getCharTypeDifficulty(w: GoigoiWord) = when {
+    private fun getCharTypeDifficulty(w: CompilerWord) = when {
         w.primaryForm.raw.isHiragana() -> 1.0
         w.primaryForm.raw.isKatakana() -> 1.1
         w.usuallyInKana -> 1.2 // Goigoi may still ask about the kanji sometimes
@@ -165,7 +165,7 @@ class WordSorter(private val vocab: GoigoiVocab) {
         else -> 2.0 + min(8, w.kanji.filter { !it.isHiragana() && !it.isKatakana() }.length) / 8.0
     }
 
-    private fun getWordWithinUnytScore(w: GoigoiWord) = when {
+    private fun getWordWithinUnytScore(w: CompilerWord) = when {
         w.isDifficult() -> 1.0
         w.cats.contains(WordCategory.TIME) -> 0.3 // there are TIME words that are not difficult
         w.hint2 == WordHint.LOANWORD || w.primaryForm.raw.isKatakana() -> 0.21 // don't cluster loanwords together
@@ -176,13 +176,13 @@ class WordSorter(private val vocab: GoigoiVocab) {
         else -> 0.000001
     }
 
-    private fun getFlagsScore(w: GoigoiWord) = when {
+    private fun getFlagsScore(w: CompilerWord) = when {
         w.common == false -> 10
         w.romaji.let { it.startsWith("go-") && it != "go-gatsu" } -> 9 // go-ryōshin, go-chisō, go-zonji
         w.hint.en.contains("with neg") -> 8 // usually adverbs 'with neg. verb'
         w.romaji.startsWith("o-") -> 7 // o-kane, o-yomi
-        w.links.any { it.extendedKind == GoigoiWordLink.ExtendedKind.ADJECTIVE } -> 6 // push away from NOUN
-        w.links.any { it.extendedKind == GoigoiWordLink.ExtendedKind.VERB } -> 5 // push away from NOUN
+        w.links.any { it.extendedKind == CompilerWordLink.ExtendedKind.ADJECTIVE } -> 6 // push away from NOUN
+        w.links.any { it.extendedKind == CompilerWordLink.ExtendedKind.VERB } -> 5 // push away from NOUN
         w.studyInContext == StudyInContextKind.REQUIRED -> 4
         w.studyInContext == StudyInContextKind.PREFERRED -> 3
         w.sentences.isEmpty() -> 2
@@ -190,7 +190,7 @@ class WordSorter(private val vocab: GoigoiVocab) {
         else -> 0
     } / 10.0
 
-    private fun getHintScore(w: GoigoiWord) = when (w.hint2) {
+    private fun getHintScore(w: CompilerWord) = when (w.hint2) {
         null -> 0
         WordHint.LOANWORD -> 1
         WordHint.NOUN -> 2
@@ -198,35 +198,36 @@ class WordSorter(private val vocab: GoigoiVocab) {
         WordHint.I_ADJECTIVE -> 4
         WordHint.NA_ADJECTIVE -> 5
         WordHint.NOUN_NA_ADJECTIVE -> 6
-        WordHint.VERB -> 7
-        WordHint.V_I -> 8
-        WordHint.V_T -> 9
-        WordHint.V_T_AND_I -> 10
-        WordHint.ADJECTIVE -> 11
-        WordHint.COLLOQUIAL -> 12
-        WordHint.EXPRESSION -> 13
-        WordHint.NOUN_ADVERB -> 14
-        WordHint.ADVERB -> 15
-        WordHint.ADVERB_SURU -> 16
-        WordHint.PRONOUN -> 17
-        WordHint.CONJUNCTION -> 18
-        WordHint.NOUN_SUFFIX -> 19
-        WordHint.ABBREV -> 20
-        WordHint.PARTICLE -> 21
-        WordHint.MODEST -> 22
-        WordHint.HUMBLE -> 23
-        WordHint.EXTRA_MODEST -> 24
-        WordHint.POLITE -> 25
-        WordHint.HONORIFIC -> 26
-        WordHint.RESPECTFUL -> 27
-        WordHint.FORMAL -> 28
-        WordHint.NUMBER -> 29
-        WordHint.COUNTER -> 30
-        WordHint.PREFIX -> 31
-        WordHint.SUFFIX -> 32
-    } / 32.0f
+        WordHint.NA_ADJECTIVE_NOUN -> 7
+        WordHint.VERB -> 8
+        WordHint.V_I -> 9
+        WordHint.V_T -> 10
+        WordHint.V_T_AND_I -> 11
+        WordHint.ADJECTIVE -> 12
+        WordHint.COLLOQUIAL -> 13
+        WordHint.EXPRESSION -> 14
+        WordHint.NOUN_ADVERB -> 15
+        WordHint.ADVERB -> 16
+        WordHint.ADVERB_SURU -> 17
+        WordHint.PRONOUN -> 18
+        WordHint.CONJUNCTION -> 19
+        WordHint.NOUN_SUFFIX -> 20
+        WordHint.ABBREV -> 21
+        WordHint.PARTICLE -> 22
+        WordHint.MODEST -> 23
+        WordHint.HUMBLE -> 24
+        WordHint.EXTRA_MODEST -> 25
+        WordHint.POLITE -> 26
+        WordHint.HONORIFIC -> 27
+        WordHint.RESPECTFUL -> 28
+        WordHint.FORMAL -> 29
+        WordHint.NUMBER -> 30
+        WordHint.COUNTER -> 31
+        WordHint.PREFIX -> 32
+        WordHint.SUFFIX -> 33
+    } / 33.0f
 
-    private fun getCatAvgIndex(w: GoigoiWord): Double {
+    private fun getCatAvgIndex(w: CompilerWord): Double {
         val weightedAvg = w.cats
             .weightedAverageOrNull { index, cat ->
                 ValueAndWeight(

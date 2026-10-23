@@ -1,11 +1,11 @@
 package io.github.digorydoo.goigoi.compiler.vocab
 
 // Keep this class in sync with WordLink from goigoi/core
-class GoigoiWordLink(
+class CompilerWordLink(
     val kind: Kind,
     var wordId: String,
     val type: String,
-    var word: GoigoiWord? = null,
+    var word: CompilerWord? = null,
 ) {
     enum class Kind {
         XML_SEE_ALSO, // manual <see> link from goigoi-xml

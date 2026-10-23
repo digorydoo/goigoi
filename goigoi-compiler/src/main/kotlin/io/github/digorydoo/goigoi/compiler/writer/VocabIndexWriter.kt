@@ -1,10 +1,10 @@
 package io.github.digorydoo.goigoi.compiler.writer
 
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerVocab
 import io.github.digorydoo.goigoi.core.file.GoigoiFileMarker.*
 import java.io.OutputStream
 
-class VocabIndexWriter(private val vocab: GoigoiVocab, stream: OutputStream): AbstrWriter(stream) {
+class VocabIndexWriter(private val vocab: CompilerVocab, stream: OutputStream): AbstrWriter(stream) {
     override fun write() {
         for (topic in vocab.topics) {
             if (!topic.hidden) {

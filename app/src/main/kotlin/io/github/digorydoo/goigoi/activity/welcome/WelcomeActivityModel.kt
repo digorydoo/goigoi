@@ -3,6 +3,7 @@ package io.github.digorydoo.goigoi.activity.welcome
 import android.content.Context
 import ch.digorydoo.kutils.cjk.FuriganaString
 import ch.digorydoo.kutils.utils.Moment
+import io.github.digorydoo.goigoi.BuildConfig
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.core.db.Topic
 import io.github.digorydoo.goigoi.core.db.Vocabulary
@@ -32,6 +33,9 @@ class WelcomeActivityModel(
     private val _todaysProgress = MutableStateFlow(0f)
     val todaysProgress = _todaysProgress.asStateFlow()
 
+    private val _momentOfUpdate = MutableStateFlow(Moment.now())
+    val momentOfUpdate = _momentOfUpdate.asStateFlow()
+
     private val _studyCountOfDay = MutableStateFlow(0f)
     val studyCountOfDay = _studyCountOfDay.asStateFlow()
 
@@ -56,6 +60,9 @@ class WelcomeActivityModel(
     private val _highlightedItem = MutableStateFlow(null as Item?)
     val highlightedItem = _highlightedItem.asStateFlow()
 
+    // Topics never change, therefore we don't need to wrap them in a StateFlow
+    val topics: List<Topic> = vocab.topics.asSequence().filter { BuildConfig.DEBUG || !it.hidden }.toList()
+
     fun setHighlightedItem(item: Item?) {
         _highlightedItem.update { item }
     }
@@ -65,7 +72,10 @@ class WelcomeActivityModel(
 
         _dailyProgress.update { dailyProgressTracker.daily.copyOf() } // copy to ensure re-render
         _todaysProgress.update { dailyProgressTracker.today }
-        _studyCountOfDay.update { stats.getUserStudyCountOfDay(Moment.now()) }
+
+        val now = Moment.now()
+        _momentOfUpdate.update { now }
+        _studyCountOfDay.update { stats.getUserStudyCountOfDay(now) }
         _prevStudyCountOfDay.update { cachedStudyCount }
 
         _encouragementJa.update { FuriganaString(dailyProgressTracker.message.ja) }

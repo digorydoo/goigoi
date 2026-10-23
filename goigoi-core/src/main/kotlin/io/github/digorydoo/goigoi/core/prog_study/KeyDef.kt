@@ -1,8 +1,8 @@
 package io.github.digorydoo.goigoi.core.prog_study
 
+import ch.digorydoo.kutils.cjk.toDakuten
+import ch.digorydoo.kutils.cjk.toHandakuten
 import ch.digorydoo.kutils.cjk.toSmallKana
-import ch.digorydoo.kutils.cjk.toggleDakuten
-import ch.digorydoo.kutils.cjk.toggleHandakuten
 import io.github.digorydoo.goigoi.core.prog_study.KeyActionHandler.Action
 
 // KeyDef is immutable
@@ -112,8 +112,8 @@ class KeyDef private constructor(
                 val more = mutableSetOf<Char>()
 
                 forEach {
-                    more.add(it.toggleDakuten())
-                    more.add(it.toggleHandakuten())
+                    more.add(it.toDakuten())
+                    more.add(it.toHandakuten())
                     more.add(it.toSmallKana())
                 }
 
@@ -138,8 +138,8 @@ class KeyDef private constructor(
                 val more = mutableSetOf<Char>()
 
                 forEach {
-                    more.add(it.toggleDakuten())
-                    more.add(it.toggleHandakuten())
+                    more.add(it.toDakuten())
+                    more.add(it.toHandakuten())
                     more.add(it.toSmallKana())
                 }
 

@@ -1,30 +1,25 @@
 package io.github.digorydoo.goigoi.composables.bottom_sheet.word_info
 
-import android.util.TypedValue
-import android.widget.TextView
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.toArgb
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
+import androidx.compose.ui.unit.sp
 import ch.digorydoo.kutils.cjk.FuriganaString
 import ch.digorydoo.kutils.cjk.IntlString
 import ch.digorydoo.kutils.cjk.JLPTLevel
 import io.github.digorydoo.goigoi.R
 import io.github.digorydoo.goigoi.composables.GoigoiBadge
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.composables.text.FuriganaText
 import io.github.digorydoo.goigoi.core.db.KanjiIndex
 import io.github.digorydoo.goigoi.core.db.Unyt
 import io.github.digorydoo.goigoi.core.db.Word
 import io.github.digorydoo.goigoi.core.db.WordCategory
-import io.github.digorydoo.goigoi.legacy.FuriganaSpan
-import io.github.digorydoo.goigoi.legacy.buildSpan
 import kotlin.math.roundToInt
 
 private const val XLARGE_PRIMARY_TEXT_MAX_SIZE = 5
@@ -104,43 +99,27 @@ private fun PrimaryForm(
     marginTop: Dp,
 ) {
     val colours = GoigoiTheme.colours
-    val density = LocalDensity.current
-    val furiganaMinFontSizePx = with(density) { 12.dp.toPx() }
-    val furiganaMaxFontSizePx = with(density) { 14.dp.toPx() }
-
-    val primaryFormText = when {
-        primaryForm.isEmpty() -> "?"
-        showKanaAsPrimary -> kana
-        else -> primaryForm.buildSpan(
-            FuriganaSpan.Options(
-                fontSizeMin = furiganaMinFontSizePx,
-                fontSizeMax = furiganaMaxFontSizePx,
-            )
-        )
-    }
 
     val primaryFormVisuallyRelevantLength = when {
         usuallyInKana -> kana.length
         else -> kanji.length
     }
 
-    val primaryFormSize =
-        if (primaryFormVisuallyRelevantLength <= XLARGE_PRIMARY_TEXT_MAX_SIZE) XLARGE_PRIMARY_TEXT_SIZE_SP
-        else LARGE_PRIMARY_TEXT_SIZE_SP
-
-    AndroidView(
+    FuriganaText(
         modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = horizPadding)
             .padding(top = marginTop),
-        factory = { ctx -> TextView(ctx) },
-        update = { textView ->
-            textView.apply {
-                text = primaryFormText
-                setTextSize(TypedValue.COMPLEX_UNIT_SP, primaryFormSize)
-                setTextColor(colours.onBackground.toArgb())
-            }
-        }
+        text = when {
+            showKanaAsPrimary -> FuriganaString(kana)
+            else -> primaryForm
+        },
+        textFontSize =
+            if (primaryFormVisuallyRelevantLength <= XLARGE_PRIMARY_TEXT_MAX_SIZE) XLARGE_PRIMARY_TEXT_SIZE_SP.sp
+            else LARGE_PRIMARY_TEXT_SIZE_SP.sp,
+        color = colours.onBackground,
+        furiganaFontSizeMin = 12.dp,
+        furiganaFontSizeMax = 14.dp,
     )
 }
 

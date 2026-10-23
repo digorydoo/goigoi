@@ -17,108 +17,6 @@
     >
         <section>
             <word
-              w="ロープ"
-              rom="rōpu"
-              tr_en="rope"
-              tr_de="Seil"
-              lvl="n1"
-              id="rōpu-rope"
-            >
-                <phrase
-                  ph="ロープを【下：お】ろす"
-                  rom="rōpu o orosu"
-                  tr_en="to let down the rope"
-                  tr_de="das Seil herunterlassen"
-                  lvl="n1"
-                  origin="lib0 modified"
-                />
-                <sentence
-                  s="ロープにしっかり【捕：つか】まってください。"
-                  rom="Rōpu ni shikkari tsukamatte kudasai."
-                  tr_en="Hold on tight to the rope."
-                  tr_de="Halte dich gut am Seil fest."
-                  lvl="n1"
-                  origin="lib0 modified"
-                  rem="verified with ChatGPT"
-                />
-            </word>
-            <word
-              w="フェリー"
-              rom="ferī"
-              tr_en="ferry (boat)"
-              tr_de="Fähre (Boot)"
-              lvl="n1"
-              id="ferī-ferry"
-            >
-                <sentence
-                  s="フェリー【代：だい】を【払：はら】ってもフランスでワインを【買：か】うほうが【安：やす】い。"
-                  rom="Ferī-dai o haratte mo Furansu de wain o kau hō ga yasui."
-                  tr_en="Even after paying for the ferry, wine is cheaper in France."
-                  tr_de="Sogar wenn man die Fähre mitbezahlt, ist es billiger, Wein in Frankreich zu kaufen."
-                  lvl="n1"
-                  origin="Oxford p.54"
-                  rem="jisho has nx for 代; not a good sentence, because it implies one lives in England"
-                />
-            </word>
-            <word
-              w="パンク"
-              rom="panku"
-              tr_en="puncture; flat tyre; collapse"
-              tr_de="Punktur; platter Reifen; Kollaps"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n1"
-              category="transportation"
-              id="panku-puncture"
-            >
-                <sentence
-                  s="【車：くるま】がパンクしてしまいました。"
-                  rom="Kuruma ga panku shite shimaimashita."
-                  tr_en="The car has a flat tyre."
-                  tr_de="Der Wagen hat einen platten Reifen."
-                  lvl="n1"
-                  origin="Langenscheidt"
-                />
-            </word>
-            <word
-              w="モニター"
-              rom="monitā"
-              tr_en="(computer) monitor; to monitor something"
-              tr_de="Computermonitor; etw. überwachen"
-              hint_en="noun; suru verb"
-              hint_de="Nomen; Suru-Verb"
-              lvl="n1"
-              id="monitā-monitor"
-            >
-                <keep_apart_from id="sukurīn-screen" />
-            </word>
-            <word
-              w="ランプ"
-              rom="ranpu"
-              tr_en="(desk) lamp"
-              tr_de="(Tisch-) Lampe"
-              lvl="n1"
-              id="ranpu-lamp"
-            >
-                <see id="dentō-light" type="closely related" />
-            </word>
-            <word
-              w="ファン"
-              rom="fan"
-              tr_en="fan (enthusiast); fan (electric)"
-              tr_de="Fan (Enthusiast); Ventilator"
-              lvl="n1"
-              id="fan-fan"
-            />
-            <word
-              w="フロント"
-              rom="furonto"
-              tr_en="front (weather, etc.); front desk"
-              tr_de="Front (Wetter-, usw.); Rezeption"
-              lvl="n1"
-              id="furonto-front"
-            />
-            <word
               w="ブーム"
               rom="būmu"
               tr_en="boom; fad"
@@ -316,8 +214,45 @@
               id="arumi-aluminium"
               rem="American English: aluminum"
             />
+            <word
+              w="コンタクト"
+              rom="kontakuto"
+              tr_en="contact; touch; contact lens"
+              tr_de="Kontakt; Berührung; Kontaktlinse"
+              hint_en="noun; suru verb"
+              hint_de="Nomen; Suru-Verb"
+              lvl="n1"
+              id="kontakuto-contact"
+            />
+            <word
+              w="スチーム"
+              rom="suchīmu"
+              tr_en="steam"
+              tr_de="Dampf"
+              lvl="n1"
+              id="suchīmu-steam"
+            >
+                <keep_apart_from id="yuge-steam" />
+            </word>
+            <word
+              w="サイクル"
+              rom="saikuru"
+              tr_en="cycle"
+              tr_de="Kreis; Kreislauf"
+              lvl="n1"
+              id="saikuru-cycle"
+            />
 
             <!-- HIDDEN -->
+            <word
+              w="ファン"
+              rom="fan"
+              tr_en="fan (enthusiast); fan (electric)"
+              tr_de="Fan (Enthusiast); Ventilator"
+              lvl="n1"
+              id="fan-fan"
+              HIDDEN="true"
+            />
             <word
               w="サンタクロース"
               rom="santakurōsu"
@@ -338,17 +273,6 @@
               HIDDEN="true"
             />
             <word
-              w="スチーム"
-              rom="suchīmu"
-              tr_en="steam"
-              tr_de="Dampf"
-              lvl="n1"
-              id="suchīmu-steam"
-              HIDDEN="true"
-            >
-                <keep_apart_from id="yuge-steam" />
-            </word>
-            <word
               w="ショー"
               rom="shō"
               tr_en="show"
@@ -365,15 +289,6 @@
               lvl="n1"
               id="sankyū-thankyou"
               HIDDEN="true"
-            />
-            <word
-              w="サボる"
-              rom="saboru"
-              tr_en="to be truant; to slack off; to play hooky; to skip school; to cut class; to skip out"
-              hint_en="godan verb with ru ending; intransitive verb"
-              lvl="n1"
-              HIDDEN="true"
-              id="saboru-skip"
             />
             <word
               w="シック"
@@ -410,15 +325,6 @@
               lvl="n1"
               HIDDEN="true"
               id="bēsu-base"
-            />
-            <word
-              w="サイクル"
-              rom="saikuru"
-              tr_en="cycle"
-              tr_de="Kreis; Kreislauf"
-              lvl="n1"
-              id="saikuru-cycle"
-              HIDDEN="true"
             />
             <word
               w="ウイルス"

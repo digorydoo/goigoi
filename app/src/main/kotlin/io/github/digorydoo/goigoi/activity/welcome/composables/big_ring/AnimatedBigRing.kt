@@ -34,6 +34,10 @@ fun getBigRingAnimProps(model: WelcomeActivityModel): BigRingAnimProps {
 fun AnimatedBigRing(model: WelcomeActivityModel, modifier: Modifier = Modifier) {
     val progress = model.todaysProgress.collectAsState().value // 0..1
 
+    // Rather than getting the current time directly, we need to ask the Model, because the component needs to update
+    // if WelcomeActivity's onResume reports the next day.
+    val today = model.momentOfUpdate.collectAsState().value
+
     val animProps = getBigRingAnimProps(model)
     val shouldAnimate = animProps.shouldAnimate
     val bigRingAnimDur = animProps.duration
@@ -54,5 +58,5 @@ fun AnimatedBigRing(model: WelcomeActivityModel, modifier: Modifier = Modifier) 
         }
     }
 
-    BigRing(modifier = modifier, todaysProgress = progress, animValue = anim.value)
+    BigRing(modifier = modifier, today = today, todaysProgress = progress, animValue = anim.value)
 }

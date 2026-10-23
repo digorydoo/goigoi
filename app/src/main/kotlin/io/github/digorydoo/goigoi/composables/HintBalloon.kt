@@ -4,8 +4,6 @@ import android.graphics.Paint
 import android.graphics.Paint.Style
 import android.graphics.Path
 import android.text.Spanned
-import android.util.TypedValue
-import android.widget.TextView
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.Column
@@ -30,12 +28,12 @@ import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.*
-import androidx.compose.ui.viewinterop.AndroidView
 import androidx.compose.ui.window.Popup
 import androidx.compose.ui.window.PopupPositionProvider
 import androidx.compose.ui.window.PopupProperties
 import ch.digorydoo.kutils.math.clamp
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
+import io.github.digorydoo.goigoi.composables.text.FuriganaText
 
 const val TIP_HEIGHT = 12 // dp
 const val SHADOW_MARGIN = 12 // dp
@@ -159,19 +157,7 @@ fun HintBalloon(
                 for (line in lines) {
                     when (line) {
                         is AnnotatedString -> Text(text = line, color = textColour, style = textStyle)
-
-                        // Our furigana is still using legacy Spanned
-                        is Spanned -> AndroidView(
-                            factory = { ctx -> TextView(ctx) },
-                            update = { textView ->
-                                textView.apply {
-                                    text = line
-                                    setTextColor(textColour.toArgb())
-                                    setTextSize(TypedValue.COMPLEX_UNIT_SP, textSizeSp)
-                                }
-                            }
-                        )
-
+                        is Spanned -> FuriganaText(text = line, color = textColour, fontSize = textSizeSp.sp)
                         else -> Text(text = line.toString(), color = textColour, style = textStyle)
                     }
                 }

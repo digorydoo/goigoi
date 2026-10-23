@@ -92,9 +92,6 @@ class StudyItemIterator private constructor(
                 listMaintainer.onAnswerWrong()
             }
 
-            Answer.SKIP,
-            -> curItem.localNumSkipped++
-
             Answer.CORRECT_BUT_INACCURATE,
             Answer.CORRECT_EXCEPT_KANA_SIZE,
             -> listMaintainer.onAnswerAlmostCorrect()

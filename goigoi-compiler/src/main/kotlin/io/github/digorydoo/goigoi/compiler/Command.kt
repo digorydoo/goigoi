@@ -3,9 +3,9 @@ package io.github.digorydoo.goigoi.compiler
 import ch.digorydoo.kutils.cjk.FuriganaIterator.MalformedFuriganaException
 import io.github.digorydoo.goigoi.compiler.check.PostChecks
 import io.github.digorydoo.goigoi.compiler.check.PreChecks
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiVocab
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiWord
-import io.github.digorydoo.goigoi.compiler.vocab.GoigoiXmlParser
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerVocab
+import io.github.digorydoo.goigoi.compiler.vocab.CompilerWord
+import io.github.digorydoo.goigoi.compiler.vocab.VocabXmlParser
 import io.github.digorydoo.goigoi.compiler.writer.KanjiIndexWriter
 import io.github.digorydoo.goigoi.compiler.writer.VocabIndexWriter
 import io.github.digorydoo.goigoi.compiler.writer.WordFileWriter
@@ -35,13 +35,13 @@ class Command(private val options: Options) {
         }
     }
 
-    private fun readFiles(): GoigoiVocab {
+    private fun readFiles(): CompilerVocab {
         logInfo("Reading XML...")
 
         val xmlFiles = mutableListOf<File>()
         findGoigoiXmlFiles(options.srcDir, xmlFiles)
 
-        val vocab = GoigoiVocab()
+        val vocab = CompilerVocab()
 
         xmlFiles.forEachIndexed { i, file ->
             readGoigoiXml(file, vocab)
@@ -73,9 +73,9 @@ class Command(private val options: Options) {
             }
     }
 
-    private fun readGoigoiXml(xmlFile: File, vocab: GoigoiVocab) {
+    private fun readGoigoiXml(xmlFile: File, vocab: CompilerVocab) {
         try {
-            val parser = GoigoiXmlParser()
+            val parser = VocabXmlParser()
             parser.parse(xmlFile, vocab)
         } catch (e: MalformedFuriganaException) {
             throw MalformedFuriganaException("${xmlFile.path}\n${e.message?.prependIndent("   ")}", e)
@@ -88,7 +88,7 @@ class Command(private val options: Options) {
         }
     }
 
-    private fun checkAndPrepare(vocab: GoigoiVocab): CheckAndPrepareResults {
+    private fun checkAndPrepare(vocab: CompilerVocab): CheckAndPrepareResults {
         // Invoke pre-checks
 
         logInfo("Checking...")
@@ -120,7 +120,7 @@ class Command(private val options: Options) {
         return CheckAndPrepareResults(prep, kanjiLevels, readings)
     }
 
-    private fun buildFileNames(vocab: GoigoiVocab) {
+    private fun buildFileNames(vocab: CompilerVocab) {
         val sortedWords = WordSorter(vocab).getSortedWords()
 
         // Filenames should be short and unique, to make the VocabIndex occupy less disk space.
@@ -153,7 +153,7 @@ class Command(private val options: Options) {
         }
     }
 
-    private fun writeFiles(vocab: GoigoiVocab, kanjiLevels: KanjiLevels, readings: Map<String, Set<String>>) {
+    private fun writeFiles(vocab: CompilerVocab, kanjiLevels: KanjiLevels, readings: Map<String, Set<String>>) {
         // Write the binary index.voc
 
         logInfo("Writing vocab index...")
@@ -195,7 +195,7 @@ class Command(private val options: Options) {
         }
     }
 
-    private fun writeVocabIndex(vocab: GoigoiVocab) {
+    private fun writeVocabIndex(vocab: CompilerVocab) {
         val file = options.vocabIndexFile
 
         if (file.exists()) {
@@ -210,7 +210,7 @@ class Command(private val options: Options) {
         VocabIndexWriter(vocab, indexStream).write()
     }
 
-    private fun writeWordVocFiles(vocab: GoigoiVocab) {
+    private fun writeWordVocFiles(vocab: CompilerVocab) {
         var count = 0
 
         for (topic in vocab.topics) {
@@ -225,7 +225,7 @@ class Command(private val options: Options) {
         }
     }
 
-    private fun writeWordVocFile(word: GoigoiWord) {
+    private fun writeWordVocFile(word: CompilerWord) {
         require(word.fileName.isNotEmpty())
         val file = File(options.wordVocFilesDir, word.fileName)
 

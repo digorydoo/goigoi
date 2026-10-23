@@ -1,24 +1,17 @@
 package io.github.digorydoo.goigoi.activity.prog_study.composables.qa
 
 import android.graphics.Typeface
-import android.util.TypedValue
-import android.widget.TextView
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
-import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.viewinterop.AndroidView
 import androidx.core.content.res.ResourcesCompat
-import ch.digorydoo.kutils.cjk.hasCJKIgnoringKana
-import ch.digorydoo.kutils.cjk.hasCJKOrKana
-import ch.digorydoo.kutils.cjk.hasKana
-import ch.digorydoo.kutils.cjk.isHiragana
-import ch.digorydoo.kutils.cjk.isKatakana
+import ch.digorydoo.kutils.cjk.*
 import ch.digorydoo.kutils.math.clamp
 import ch.digorydoo.kutils.math.lerp
 import ch.digorydoo.kutils.utils.OneOf
@@ -28,10 +21,8 @@ import io.github.digorydoo.goigoi.activity.prog_study.ProgStudyActivityModel.Pre
 import io.github.digorydoo.goigoi.activity.prog_study.composables.AnimatedElement
 import io.github.digorydoo.goigoi.composables.providers.DeviceProps
 import io.github.digorydoo.goigoi.composables.providers.GoigoiTheme
-import io.github.digorydoo.goigoi.legacy.DEFAULT_FURIGANA_OPACITY
-import io.github.digorydoo.goigoi.legacy.FuriganaSpan
-import io.github.digorydoo.goigoi.legacy.TategakiView
-import io.github.digorydoo.goigoi.legacy.buildSpan
+import io.github.digorydoo.goigoi.composables.text.FuriganaText
+import io.github.digorydoo.goigoi.composables.text.tategaki.TategakiText
 import io.github.digorydoo.goigoi.utils.Orientation
 import io.github.digorydoo.goigoi.utils.ScreenSize
 
@@ -93,13 +84,13 @@ private fun determineFontType(
     }
 }
 
-private fun determineFontSizePx(
+private fun determineFontSize(
     text: String,
     fontType: FontType,
     density: Density,
     screenSize: ScreenSize,
     orientation: Orientation,
-): Float {
+): TextUnit {
     val len = text.length
 
     // Note that these sizes must not be too large, because we may need additional vertical space when
@@ -198,7 +189,7 @@ private fun determineFontSizePx(
         ScreenSize.LARGE -> 1.1f
     }
 
-    return size
+    return with(density) { size.toSp() }
 }
 
 @Composable
@@ -213,7 +204,6 @@ fun Question(model: ProgStudyActivityModel, outerContainerMaxIdealHeight: Dp) {
     val orientation = DeviceProps.orientation
     val context = LocalContext.current
     val density = LocalDensity.current
-    val maxFuriganaSizePx = with(density) { 16.dp.toPx() }
 
     val questionAfterRevealWithoutFurigana = when (questionAfterReveal) {
         is OneOf.First -> questionAfterReveal.first
@@ -224,7 +214,8 @@ fun Question(model: ProgStudyActivityModel, outerContainerMaxIdealHeight: Dp) {
         determineFontType(questionAfterRevealWithoutFurigana, qaKind.doesNotAskAnything, screenSize, orientation)
     }
 
-    // For compose, we'd use FontFamily(Font(R.font.xy)), but since we're using AndroidView, we do it like this.
+    // For compose, we'd use FontFamily(Font(R.font.xy)), but since FuriganaText is still using AndroidView, we do it
+    // like this.
     val typeface = remember(fontType) {
         when (fontType) {
             FontType.DEFAULT -> Typeface.DEFAULT
@@ -235,49 +226,15 @@ fun Question(model: ProgStudyActivityModel, outerContainerMaxIdealHeight: Dp) {
         }
     }
 
-    val fontSizePx = remember(questionAfterRevealWithoutFurigana, fontType, density, screenSize, orientation) {
-        determineFontSizePx(questionAfterRevealWithoutFurigana, fontType, density, screenSize, orientation)
+    val fontSize = remember(questionAfterRevealWithoutFurigana, fontType, density, screenSize, orientation) {
+        determineFontSize(questionAfterRevealWithoutFurigana, fontType, density, screenSize, orientation)
     }
 
-    val furiganaRelVOffset = when (fontType) {
-        FontType.CALLIGRAPHY -> 0.0f // furigana handled by TategakiView itself, offset is ignored
-        FontType.PENCIL -> PENCIL_FONT_FURIGANA_REL_V_OFFSET
-        FontType.BOLD_HIRAGANA -> 0.0f // hiragana-only word not expected to have furigana
-        FontType.BOLD_KATAKANA -> 0.0f // katakana-only word not expected to have furigana
-        FontType.DEFAULT -> DEFAULT_FONT_FURIGANA_REL_V_OFFSET
+    val text = when (question) {
+        is OneOf.First -> FuriganaString(question.first)
+        is OneOf.Second -> question.second
     }
 
-    val questionText = remember(question, furiganaRelVOffset, showFurigana, pmode) {
-        when (question) {
-            is OneOf.First -> question.first
-            is OneOf.Second -> question.second.buildSpan(
-                if (fontType == FontType.CALLIGRAPHY) {
-                    FuriganaSpan.Options(
-                        relVOffset = furiganaRelVOffset,
-                        fontSizeMax = maxFuriganaSizePx,
-                        canSeeFurigana = showFurigana,
-                        // opacity is currently ignored by TategakiView
-                    )
-                } else {
-                    FuriganaSpan.Options(
-                        relVOffset = furiganaRelVOffset,
-                        fontSizeMax = maxFuriganaSizePx,
-                        // We conceal furigana with opacity rather than using canSeeFurigana in order to save the space
-                        // for when it will be revealed later. Note that this may also widen the space occupied by
-                        // kanjis whose furigana is long, which can look odd sometimes. FIXME keep?
-                        canSeeFurigana = true,
-                        opacity = if (showFurigana) DEFAULT_FURIGANA_OPACITY else 0f
-                    )
-                }
-            )
-        }
-    }
-
-    // Enter animation could differ based on questionText (but only when solo, i.e. when answer is trivial):
-    // - Hiragana only: swipe from left to right
-    // - Katakana only: flash zoom, starting from double size
-    // - Tategaki: Roll from the top
-    // - Sentence: character by character
     AnimatedElement(visible = pmode != PresentationMode.NOTHING && pmode != PresentationMode.BEFORE_QUESTION) {
         when (fontType) {
             FontType.CALLIGRAPHY -> {
@@ -285,33 +242,29 @@ fun Question(model: ProgStudyActivityModel, outerContainerMaxIdealHeight: Dp) {
                 // scrolling. Limit the height further to avoid very high tategaki text on large screens.
                 val tategakiMaxHeight = minOf(outerContainerMaxIdealHeight, 340.dp)
 
-                // println("max=" + with(density) { 340.dp.toPx() }) // 1020px, which is also what was used previously
-
-                AndroidView(
-                    factory = { ctx -> TategakiView(ctx, typeface, colours.onBackground.toArgb()) },
-                    update = { view ->
-                        view.apply {
-                            textSizePx = fontSizePx
-                            viewMaxHeightPx = with(density) { tategakiMaxHeight.roundToPx() }
-                            // Not ideal: We pass furigana down as SpannableString, and TategakiView has to parse it
-                            // again. We should pass the FuriganaString itself.
-                            setText(questionText)
-                        }
-                    }
+                TategakiText(
+                    text = text,
+                    showFurigana = showFurigana,
+                    maxHeight = tategakiMaxHeight,
+                    fontSize = fontSize,
+                    color = colours.onBackground,
+                    typeface = typeface ?: Typeface.DEFAULT,
                 )
             }
             else -> {
-                // The text may be a SpannableString, so we use AndroidView.
-                AndroidView(
-                    factory = { ctx -> TextView(ctx) },
-                    update = { view ->
-                        view.apply {
-                            text = questionText
-                            setTextSize(TypedValue.COMPLEX_UNIT_PX, fontSizePx)
-                            setTextColor(colours.onBackground.toArgb())
-                            setTypeface(typeface)
-                        }
-                    }
+                FuriganaText(
+                    text = text,
+                    textFontSize = fontSize,
+                    color = colours.onBackground,
+                    typeface = typeface ?: Typeface.DEFAULT,
+                    furiganaFontSizeMax = 16.dp,
+                    furiganaRelVOffset = when (fontType) {
+                        FontType.PENCIL -> PENCIL_FONT_FURIGANA_REL_V_OFFSET
+                        FontType.BOLD_HIRAGANA -> 0.0f // hiragana-only word not expected to have furigana
+                        FontType.BOLD_KATAKANA -> 0.0f // katakana-only word not expected to have furigana
+                        FontType.DEFAULT -> DEFAULT_FONT_FURIGANA_REL_V_OFFSET
+                    },
+                    showFurigana = showFurigana,
                 )
             }
         }
